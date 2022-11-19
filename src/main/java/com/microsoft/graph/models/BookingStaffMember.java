@@ -74,16 +74,16 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingStaffMember currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("availabilityIsAffectedByPersonalCalendar", (n) -> { currentObject.setAvailabilityIsAffectedByPersonalCalendar(n.getBooleanValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
-            this.put("isEmailNotificationEnabled", (n) -> { currentObject.setIsEmailNotificationEnabled(n.getBooleanValue()); });
-            this.put("role", (n) -> { currentObject.setRole(n.getEnumValue(BookingStaffRole.class)); });
-            this.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });
-            this.put("useBusinessHours", (n) -> { currentObject.setUseBusinessHours(n.getBooleanValue()); });
-            this.put("workingHours", (n) -> { currentObject.setWorkingHours(n.getCollectionOfObjectValues(BookingWorkHours::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("availabilityIsAffectedByPersonalCalendar", (n) -> { currentObject.setAvailabilityIsAffectedByPersonalCalendar(n.getBooleanValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
+        deserializerMap.put("isEmailNotificationEnabled", (n) -> { currentObject.setIsEmailNotificationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("role", (n) -> { currentObject.setRole(n.getEnumValue(BookingStaffRole.class)); });
+        deserializerMap.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });
+        deserializerMap.put("useBusinessHours", (n) -> { currentObject.setUseBusinessHours(n.getBooleanValue()); });
+        deserializerMap.put("workingHours", (n) -> { currentObject.setWorkingHours(n.getCollectionOfObjectValues(BookingWorkHours::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the isEmailNotificationEnabled property value. The isEmailNotificationEnabled property

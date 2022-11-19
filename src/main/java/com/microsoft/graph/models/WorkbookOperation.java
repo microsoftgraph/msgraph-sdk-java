@@ -49,11 +49,11 @@ public class WorkbookOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookOperation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("error", (n) -> { currentObject.setError(n.getObjectValue(WorkbookOperationError::createFromDiscriminatorValue)); });
-            this.put("resourceLocation", (n) -> { currentObject.setResourceLocation(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(WorkbookOperationStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("error", (n) -> { currentObject.setError(n.getObjectValue(WorkbookOperationError::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceLocation", (n) -> { currentObject.setResourceLocation(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(WorkbookOperationStatus.class)); });
+        return deserializerMap
     }
     /**
      * Gets the resourceLocation property value. The resource URI for the result.

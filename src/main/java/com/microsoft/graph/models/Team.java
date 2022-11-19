@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class Team extends Entity implements Parsable {
     /** List of channels either hosted in or shared with the team (incoming channels). */
     private java.util.List<Channel> _allChannels;
@@ -138,35 +137,35 @@ public class Team extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Team currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("allChannels", (n) -> { currentObject.setAllChannels(n.getCollectionOfObjectValues(Channel::createFromDiscriminatorValue)); });
-            this.put("channels", (n) -> { currentObject.setChannels(n.getCollectionOfObjectValues(Channel::createFromDiscriminatorValue)); });
-            this.put("classification", (n) -> { currentObject.setClassification(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("funSettings", (n) -> { currentObject.setFunSettings(n.getObjectValue(TeamFunSettings::createFromDiscriminatorValue)); });
-            this.put("group", (n) -> { currentObject.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
-            this.put("guestSettings", (n) -> { currentObject.setGuestSettings(n.getObjectValue(TeamGuestSettings::createFromDiscriminatorValue)); });
-            this.put("incomingChannels", (n) -> { currentObject.setIncomingChannels(n.getCollectionOfObjectValues(Channel::createFromDiscriminatorValue)); });
-            this.put("installedApps", (n) -> { currentObject.setInstalledApps(n.getCollectionOfObjectValues(TeamsAppInstallation::createFromDiscriminatorValue)); });
-            this.put("internalId", (n) -> { currentObject.setInternalId(n.getStringValue()); });
-            this.put("isArchived", (n) -> { currentObject.setIsArchived(n.getBooleanValue()); });
-            this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
-            this.put("memberSettings", (n) -> { currentObject.setMemberSettings(n.getObjectValue(TeamMemberSettings::createFromDiscriminatorValue)); });
-            this.put("messagingSettings", (n) -> { currentObject.setMessagingSettings(n.getObjectValue(TeamMessagingSettings::createFromDiscriminatorValue)); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(TeamsAsyncOperation::createFromDiscriminatorValue)); });
-            this.put("photo", (n) -> { currentObject.setPhoto(n.getObjectValue(ProfilePhoto::createFromDiscriminatorValue)); });
-            this.put("primaryChannel", (n) -> { currentObject.setPrimaryChannel(n.getObjectValue(Channel::createFromDiscriminatorValue)); });
-            this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(Schedule::createFromDiscriminatorValue)); });
-            this.put("specialization", (n) -> { currentObject.setSpecialization(n.getEnumValue(TeamSpecialization.class)); });
-            this.put("summary", (n) -> { currentObject.setSummary(n.getObjectValue(TeamSummary::createFromDiscriminatorValue)); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfObjectValues(TeamworkTag::createFromDiscriminatorValue)); });
-            this.put("template", (n) -> { currentObject.setTemplate(n.getObjectValue(TeamsTemplate::createFromDiscriminatorValue)); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("visibility", (n) -> { currentObject.setVisibility(n.getEnumValue(TeamVisibilityType.class)); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allChannels", (n) -> { currentObject.setAllChannels(n.getCollectionOfObjectValues(Channel::createFromDiscriminatorValue)); });
+        deserializerMap.put("channels", (n) -> { currentObject.setChannels(n.getCollectionOfObjectValues(Channel::createFromDiscriminatorValue)); });
+        deserializerMap.put("classification", (n) -> { currentObject.setClassification(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("funSettings", (n) -> { currentObject.setFunSettings(n.getObjectValue(TeamFunSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("group", (n) -> { currentObject.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
+        deserializerMap.put("guestSettings", (n) -> { currentObject.setGuestSettings(n.getObjectValue(TeamGuestSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("incomingChannels", (n) -> { currentObject.setIncomingChannels(n.getCollectionOfObjectValues(Channel::createFromDiscriminatorValue)); });
+        deserializerMap.put("installedApps", (n) -> { currentObject.setInstalledApps(n.getCollectionOfObjectValues(TeamsAppInstallation::createFromDiscriminatorValue)); });
+        deserializerMap.put("internalId", (n) -> { currentObject.setInternalId(n.getStringValue()); });
+        deserializerMap.put("isArchived", (n) -> { currentObject.setIsArchived(n.getBooleanValue()); });
+        deserializerMap.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
+        deserializerMap.put("memberSettings", (n) -> { currentObject.setMemberSettings(n.getObjectValue(TeamMemberSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("messagingSettings", (n) -> { currentObject.setMessagingSettings(n.getObjectValue(TeamMessagingSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(TeamsAsyncOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("photo", (n) -> { currentObject.setPhoto(n.getObjectValue(ProfilePhoto::createFromDiscriminatorValue)); });
+        deserializerMap.put("primaryChannel", (n) -> { currentObject.setPrimaryChannel(n.getObjectValue(Channel::createFromDiscriminatorValue)); });
+        deserializerMap.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(Schedule::createFromDiscriminatorValue)); });
+        deserializerMap.put("specialization", (n) -> { currentObject.setSpecialization(n.getEnumValue(TeamSpecialization.class)); });
+        deserializerMap.put("summary", (n) -> { currentObject.setSummary(n.getObjectValue(TeamSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfObjectValues(TeamworkTag::createFromDiscriminatorValue)); });
+        deserializerMap.put("template", (n) -> { currentObject.setTemplate(n.getObjectValue(TeamsTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
+        deserializerMap.put("visibility", (n) -> { currentObject.setVisibility(n.getEnumValue(TeamVisibilityType.class)); });
+        deserializerMap.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the funSettings property value. Settings to configure use of Giphy, memes, and stickers in the team.

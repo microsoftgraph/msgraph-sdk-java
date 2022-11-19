@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class PlannerBucket extends Entity implements Parsable {
     /** Name of the bucket. */
     private String _name;
@@ -43,12 +43,12 @@ public class PlannerBucket extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerBucket currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("orderHint", (n) -> { currentObject.setOrderHint(n.getStringValue()); });
-            this.put("planId", (n) -> { currentObject.setPlanId(n.getStringValue()); });
-            this.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("orderHint", (n) -> { currentObject.setOrderHint(n.getStringValue()); });
+        deserializerMap.put("planId", (n) -> { currentObject.setPlanId(n.getStringValue()); });
+        deserializerMap.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the name property value. Name of the bucket.

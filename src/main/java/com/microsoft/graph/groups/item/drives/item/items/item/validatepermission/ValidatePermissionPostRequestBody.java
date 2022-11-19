@@ -57,10 +57,10 @@ public class ValidatePermissionPostRequestBody implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ValidatePermissionPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("challengeToken", (n) -> { currentObject.setChallengeToken(n.getStringValue()); });
-            this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("challengeToken", (n) -> { currentObject.setChallengeToken(n.getStringValue()); });
+        deserializerMap.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the password property value. The password property

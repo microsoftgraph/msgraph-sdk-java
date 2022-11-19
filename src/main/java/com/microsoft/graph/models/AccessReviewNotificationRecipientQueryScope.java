@@ -40,11 +40,11 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewNotificationRecipientQueryScope currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("query", (n) -> { currentObject.setQuery(n.getStringValue()); });
-            this.put("queryRoot", (n) -> { currentObject.setQueryRoot(n.getStringValue()); });
-            this.put("queryType", (n) -> { currentObject.setQueryType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("query", (n) -> { currentObject.setQuery(n.getStringValue()); });
+        deserializerMap.put("queryRoot", (n) -> { currentObject.setQueryRoot(n.getStringValue()); });
+        deserializerMap.put("queryType", (n) -> { currentObject.setQueryType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the query property value. Represents the query for who the recipients are. For example, /groups/{group id}/members for group members and /users/{user id} for a specific user.

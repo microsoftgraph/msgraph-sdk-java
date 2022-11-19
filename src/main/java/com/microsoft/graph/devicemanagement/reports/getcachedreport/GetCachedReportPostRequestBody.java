@@ -59,15 +59,15 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetCachedReportPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("groupBy", (n) -> { currentObject.setGroupBy(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("orderBy", (n) -> { currentObject.setOrderBy(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("search", (n) -> { currentObject.setSearch(n.getStringValue()); });
-            this.put("select", (n) -> { currentObject.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("skip", (n) -> { currentObject.setSkip(n.getIntegerValue()); });
-            this.put("top", (n) -> { currentObject.setTop(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("groupBy", (n) -> { currentObject.setGroupBy(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+        deserializerMap.put("orderBy", (n) -> { currentObject.setOrderBy(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("search", (n) -> { currentObject.setSearch(n.getStringValue()); });
+        deserializerMap.put("select", (n) -> { currentObject.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("skip", (n) -> { currentObject.setSkip(n.getIntegerValue()); });
+        deserializerMap.put("top", (n) -> { currentObject.setTop(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the groupBy property value. The groupBy property

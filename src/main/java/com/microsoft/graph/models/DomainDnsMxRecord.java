@@ -38,10 +38,10 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DomainDnsMxRecord currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("mailExchange", (n) -> { currentObject.setMailExchange(n.getStringValue()); });
-            this.put("preference", (n) -> { currentObject.setPreference(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("mailExchange", (n) -> { currentObject.setMailExchange(n.getStringValue()); });
+        deserializerMap.put("preference", (n) -> { currentObject.setPreference(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the mailExchange property value. Value used when configuring the answer/destination/value of the MX record at the DNS host.

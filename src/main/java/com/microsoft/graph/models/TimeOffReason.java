@@ -48,11 +48,11 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TimeOffReason currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("iconType", (n) -> { currentObject.setIconType(n.getEnumValue(TimeOffReasonIconType.class)); });
-            this.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("iconType", (n) -> { currentObject.setIconType(n.getEnumValue(TimeOffReasonIconType.class)); });
+        deserializerMap.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the iconType property value. Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required.

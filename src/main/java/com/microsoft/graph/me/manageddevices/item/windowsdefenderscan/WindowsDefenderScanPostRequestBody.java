@@ -47,9 +47,9 @@ public class WindowsDefenderScanPostRequestBody implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDefenderScanPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("quickScan", (n) -> { currentObject.setQuickScan(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("quickScan", (n) -> { currentObject.setQuickScan(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the quickScan property value. The quickScan property

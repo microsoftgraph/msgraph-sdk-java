@@ -61,12 +61,12 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubjectRightsRequestStageDetail currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(SubjectRightsRequestStage.class)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(SubjectRightsRequestStageStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(SubjectRightsRequestStage.class)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(SubjectRightsRequestStageStatus.class)); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property

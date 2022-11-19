@@ -199,32 +199,32 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PstnCallLogRow currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(24) {{
-            this.put("callDurationSource", (n) -> { currentObject.setCallDurationSource(n.getEnumValue(PstnCallDurationSource.class)); });
-            this.put("calleeNumber", (n) -> { currentObject.setCalleeNumber(n.getStringValue()); });
-            this.put("callerNumber", (n) -> { currentObject.setCallerNumber(n.getStringValue()); });
-            this.put("callId", (n) -> { currentObject.setCallId(n.getStringValue()); });
-            this.put("callType", (n) -> { currentObject.setCallType(n.getStringValue()); });
-            this.put("charge", (n) -> { currentObject.setCharge(n.getBigDecimalValue()); });
-            this.put("conferenceId", (n) -> { currentObject.setConferenceId(n.getStringValue()); });
-            this.put("connectionCharge", (n) -> { currentObject.setConnectionCharge(n.getBigDecimalValue()); });
-            this.put("currency", (n) -> { currentObject.setCurrency(n.getStringValue()); });
-            this.put("destinationContext", (n) -> { currentObject.setDestinationContext(n.getStringValue()); });
-            this.put("destinationName", (n) -> { currentObject.setDestinationName(n.getStringValue()); });
-            this.put("duration", (n) -> { currentObject.setDuration(n.getIntegerValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("inventoryType", (n) -> { currentObject.setInventoryType(n.getStringValue()); });
-            this.put("licenseCapability", (n) -> { currentObject.setLicenseCapability(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operator", (n) -> { currentObject.setOperator(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("tenantCountryCode", (n) -> { currentObject.setTenantCountryCode(n.getStringValue()); });
-            this.put("usageCountryCode", (n) -> { currentObject.setUsageCountryCode(n.getStringValue()); });
-            this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(24);
+        deserializerMap.put("callDurationSource", (n) -> { currentObject.setCallDurationSource(n.getEnumValue(PstnCallDurationSource.class)); });
+        deserializerMap.put("calleeNumber", (n) -> { currentObject.setCalleeNumber(n.getStringValue()); });
+        deserializerMap.put("callerNumber", (n) -> { currentObject.setCallerNumber(n.getStringValue()); });
+        deserializerMap.put("callId", (n) -> { currentObject.setCallId(n.getStringValue()); });
+        deserializerMap.put("callType", (n) -> { currentObject.setCallType(n.getStringValue()); });
+        deserializerMap.put("charge", (n) -> { currentObject.setCharge(n.getBigDecimalValue()); });
+        deserializerMap.put("conferenceId", (n) -> { currentObject.setConferenceId(n.getStringValue()); });
+        deserializerMap.put("connectionCharge", (n) -> { currentObject.setConnectionCharge(n.getBigDecimalValue()); });
+        deserializerMap.put("currency", (n) -> { currentObject.setCurrency(n.getStringValue()); });
+        deserializerMap.put("destinationContext", (n) -> { currentObject.setDestinationContext(n.getStringValue()); });
+        deserializerMap.put("destinationName", (n) -> { currentObject.setDestinationName(n.getStringValue()); });
+        deserializerMap.put("duration", (n) -> { currentObject.setDuration(n.getIntegerValue()); });
+        deserializerMap.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+        deserializerMap.put("inventoryType", (n) -> { currentObject.setInventoryType(n.getStringValue()); });
+        deserializerMap.put("licenseCapability", (n) -> { currentObject.setLicenseCapability(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operator", (n) -> { currentObject.setOperator(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("tenantCountryCode", (n) -> { currentObject.setTenantCountryCode(n.getStringValue()); });
+        deserializerMap.put("usageCountryCode", (n) -> { currentObject.setUsageCountryCode(n.getStringValue()); });
+        deserializerMap.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the id property value. Unique call identifier. GUID.

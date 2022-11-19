@@ -48,10 +48,10 @@ public class BaseCollectionPaginationCountResponse implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BaseCollectionPaginationCountResponse currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("@odata.count", (n) -> { currentObject.setOdataCount(n.getLongValue()); });
-            this.put("@odata.nextLink", (n) -> { currentObject.setOdataNextLink(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("@odata.count", (n) -> { currentObject.setOdataCount(n.getLongValue()); });
+        deserializerMap.put("@odata.nextLink", (n) -> { currentObject.setOdataNextLink(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.count property value. The OdataCount property

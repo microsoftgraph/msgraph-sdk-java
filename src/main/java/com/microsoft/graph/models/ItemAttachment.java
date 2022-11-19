@@ -36,9 +36,9 @@ public class ItemAttachment extends Attachment implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemAttachment currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("item", (n) -> { currentObject.setItem(n.getObjectValue(OutlookItem::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("item", (n) -> { currentObject.setItem(n.getObjectValue(OutlookItem::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the item property value. The attached message or event. Navigation property.

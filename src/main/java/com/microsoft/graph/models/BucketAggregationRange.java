@@ -51,11 +51,11 @@ public class BucketAggregationRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BucketAggregationRange currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("from", (n) -> { currentObject.setFrom(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("to", (n) -> { currentObject.setTo(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("from", (n) -> { currentObject.setFrom(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("to", (n) -> { currentObject.setTo(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the from property value. Defines the lower bound from which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.

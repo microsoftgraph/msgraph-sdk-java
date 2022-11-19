@@ -59,11 +59,11 @@ public class ApplicationServicePrincipal implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApplicationServicePrincipal currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("application", (n) -> { currentObject.setApplication(n.getObjectValue(Application::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("servicePrincipal", (n) -> { currentObject.setServicePrincipal(n.getObjectValue(ServicePrincipal::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("application", (n) -> { currentObject.setApplication(n.getObjectValue(Application::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("servicePrincipal", (n) -> { currentObject.setServicePrincipal(n.getObjectValue(ServicePrincipal::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property

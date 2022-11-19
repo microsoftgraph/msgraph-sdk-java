@@ -38,10 +38,10 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChartGridlines currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartGridlinesFormat::createFromDiscriminatorValue)); });
-            this.put("visible", (n) -> { currentObject.setVisible(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartGridlinesFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("visible", (n) -> { currentObject.setVisible(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the format property value. Represents the formatting of chart gridlines. Read-only.

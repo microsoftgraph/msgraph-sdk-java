@@ -36,9 +36,9 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationAssignmentPointsGrade currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("points", (n) -> { currentObject.setPoints(n.getFloatValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("points", (n) -> { currentObject.setPoints(n.getFloatValue()); });
+        return deserializerMap
     }
     /**
      * Gets the points property value. Number of points a teacher is giving this submission object.

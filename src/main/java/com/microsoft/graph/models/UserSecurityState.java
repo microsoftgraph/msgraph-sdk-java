@@ -108,23 +108,23 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserSecurityState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(15) {{
-            this.put("aadUserId", (n) -> { currentObject.setAadUserId(n.getStringValue()); });
-            this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
-            this.put("domainName", (n) -> { currentObject.setDomainName(n.getStringValue()); });
-            this.put("emailRole", (n) -> { currentObject.setEmailRole(n.getEnumValue(EmailRole.class)); });
-            this.put("isVpn", (n) -> { currentObject.setIsVpn(n.getBooleanValue()); });
-            this.put("logonDateTime", (n) -> { currentObject.setLogonDateTime(n.getOffsetDateTimeValue()); });
-            this.put("logonId", (n) -> { currentObject.setLogonId(n.getStringValue()); });
-            this.put("logonIp", (n) -> { currentObject.setLogonIp(n.getStringValue()); });
-            this.put("logonLocation", (n) -> { currentObject.setLogonLocation(n.getStringValue()); });
-            this.put("logonType", (n) -> { currentObject.setLogonType(n.getEnumValue(LogonType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("onPremisesSecurityIdentifier", (n) -> { currentObject.setOnPremisesSecurityIdentifier(n.getStringValue()); });
-            this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
-            this.put("userAccountType", (n) -> { currentObject.setUserAccountType(n.getEnumValue(UserAccountSecurityType.class)); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(15);
+        deserializerMap.put("aadUserId", (n) -> { currentObject.setAadUserId(n.getStringValue()); });
+        deserializerMap.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
+        deserializerMap.put("domainName", (n) -> { currentObject.setDomainName(n.getStringValue()); });
+        deserializerMap.put("emailRole", (n) -> { currentObject.setEmailRole(n.getEnumValue(EmailRole.class)); });
+        deserializerMap.put("isVpn", (n) -> { currentObject.setIsVpn(n.getBooleanValue()); });
+        deserializerMap.put("logonDateTime", (n) -> { currentObject.setLogonDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("logonId", (n) -> { currentObject.setLogonId(n.getStringValue()); });
+        deserializerMap.put("logonIp", (n) -> { currentObject.setLogonIp(n.getStringValue()); });
+        deserializerMap.put("logonLocation", (n) -> { currentObject.setLogonLocation(n.getStringValue()); });
+        deserializerMap.put("logonType", (n) -> { currentObject.setLogonType(n.getEnumValue(LogonType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { currentObject.setOnPremisesSecurityIdentifier(n.getStringValue()); });
+        deserializerMap.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
+        deserializerMap.put("userAccountType", (n) -> { currentObject.setUserAccountType(n.getEnumValue(UserAccountSecurityType.class)); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isVpn property value. Indicates whether the user logged on through a VPN.

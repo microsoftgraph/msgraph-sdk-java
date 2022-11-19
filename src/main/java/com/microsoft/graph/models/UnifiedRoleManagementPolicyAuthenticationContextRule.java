@@ -46,10 +46,10 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleManagementPolicyAuthenticationContextRule currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("claimValue", (n) -> { currentObject.setClaimValue(n.getStringValue()); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("claimValue", (n) -> { currentObject.setClaimValue(n.getStringValue()); });
+        deserializerMap.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isEnabled property value. Whether this rule is enabled.

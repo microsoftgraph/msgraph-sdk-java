@@ -137,30 +137,30 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(22) {{
-            this.put("captureDeviceDriver", (n) -> { currentObject.setCaptureDeviceDriver(n.getStringValue()); });
-            this.put("captureDeviceName", (n) -> { currentObject.setCaptureDeviceName(n.getStringValue()); });
-            this.put("captureNotFunctioningEventRatio", (n) -> { currentObject.setCaptureNotFunctioningEventRatio(n.getFloatValue()); });
-            this.put("cpuInsufficentEventRatio", (n) -> { currentObject.setCpuInsufficentEventRatio(n.getFloatValue()); });
-            this.put("deviceClippingEventRatio", (n) -> { currentObject.setDeviceClippingEventRatio(n.getFloatValue()); });
-            this.put("deviceGlitchEventRatio", (n) -> { currentObject.setDeviceGlitchEventRatio(n.getFloatValue()); });
-            this.put("howlingEventCount", (n) -> { currentObject.setHowlingEventCount(n.getIntegerValue()); });
-            this.put("initialSignalLevelRootMeanSquare", (n) -> { currentObject.setInitialSignalLevelRootMeanSquare(n.getFloatValue()); });
-            this.put("lowSpeechLevelEventRatio", (n) -> { currentObject.setLowSpeechLevelEventRatio(n.getFloatValue()); });
-            this.put("lowSpeechToNoiseEventRatio", (n) -> { currentObject.setLowSpeechToNoiseEventRatio(n.getFloatValue()); });
-            this.put("micGlitchRate", (n) -> { currentObject.setMicGlitchRate(n.getFloatValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("receivedNoiseLevel", (n) -> { currentObject.setReceivedNoiseLevel(n.getIntegerValue()); });
-            this.put("receivedSignalLevel", (n) -> { currentObject.setReceivedSignalLevel(n.getIntegerValue()); });
-            this.put("renderDeviceDriver", (n) -> { currentObject.setRenderDeviceDriver(n.getStringValue()); });
-            this.put("renderDeviceName", (n) -> { currentObject.setRenderDeviceName(n.getStringValue()); });
-            this.put("renderMuteEventRatio", (n) -> { currentObject.setRenderMuteEventRatio(n.getFloatValue()); });
-            this.put("renderNotFunctioningEventRatio", (n) -> { currentObject.setRenderNotFunctioningEventRatio(n.getFloatValue()); });
-            this.put("renderZeroVolumeEventRatio", (n) -> { currentObject.setRenderZeroVolumeEventRatio(n.getFloatValue()); });
-            this.put("sentNoiseLevel", (n) -> { currentObject.setSentNoiseLevel(n.getIntegerValue()); });
-            this.put("sentSignalLevel", (n) -> { currentObject.setSentSignalLevel(n.getIntegerValue()); });
-            this.put("speakerGlitchRate", (n) -> { currentObject.setSpeakerGlitchRate(n.getFloatValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(22);
+        deserializerMap.put("captureDeviceDriver", (n) -> { currentObject.setCaptureDeviceDriver(n.getStringValue()); });
+        deserializerMap.put("captureDeviceName", (n) -> { currentObject.setCaptureDeviceName(n.getStringValue()); });
+        deserializerMap.put("captureNotFunctioningEventRatio", (n) -> { currentObject.setCaptureNotFunctioningEventRatio(n.getFloatValue()); });
+        deserializerMap.put("cpuInsufficentEventRatio", (n) -> { currentObject.setCpuInsufficentEventRatio(n.getFloatValue()); });
+        deserializerMap.put("deviceClippingEventRatio", (n) -> { currentObject.setDeviceClippingEventRatio(n.getFloatValue()); });
+        deserializerMap.put("deviceGlitchEventRatio", (n) -> { currentObject.setDeviceGlitchEventRatio(n.getFloatValue()); });
+        deserializerMap.put("howlingEventCount", (n) -> { currentObject.setHowlingEventCount(n.getIntegerValue()); });
+        deserializerMap.put("initialSignalLevelRootMeanSquare", (n) -> { currentObject.setInitialSignalLevelRootMeanSquare(n.getFloatValue()); });
+        deserializerMap.put("lowSpeechLevelEventRatio", (n) -> { currentObject.setLowSpeechLevelEventRatio(n.getFloatValue()); });
+        deserializerMap.put("lowSpeechToNoiseEventRatio", (n) -> { currentObject.setLowSpeechToNoiseEventRatio(n.getFloatValue()); });
+        deserializerMap.put("micGlitchRate", (n) -> { currentObject.setMicGlitchRate(n.getFloatValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("receivedNoiseLevel", (n) -> { currentObject.setReceivedNoiseLevel(n.getIntegerValue()); });
+        deserializerMap.put("receivedSignalLevel", (n) -> { currentObject.setReceivedSignalLevel(n.getIntegerValue()); });
+        deserializerMap.put("renderDeviceDriver", (n) -> { currentObject.setRenderDeviceDriver(n.getStringValue()); });
+        deserializerMap.put("renderDeviceName", (n) -> { currentObject.setRenderDeviceName(n.getStringValue()); });
+        deserializerMap.put("renderMuteEventRatio", (n) -> { currentObject.setRenderMuteEventRatio(n.getFloatValue()); });
+        deserializerMap.put("renderNotFunctioningEventRatio", (n) -> { currentObject.setRenderNotFunctioningEventRatio(n.getFloatValue()); });
+        deserializerMap.put("renderZeroVolumeEventRatio", (n) -> { currentObject.setRenderZeroVolumeEventRatio(n.getFloatValue()); });
+        deserializerMap.put("sentNoiseLevel", (n) -> { currentObject.setSentNoiseLevel(n.getIntegerValue()); });
+        deserializerMap.put("sentSignalLevel", (n) -> { currentObject.setSentSignalLevel(n.getIntegerValue()); });
+        deserializerMap.put("speakerGlitchRate", (n) -> { currentObject.setSpeakerGlitchRate(n.getFloatValue()); });
+        return deserializerMap
     }
     /**
      * Gets the howlingEventCount property value. Number of times during the call that the media endpoint detected howling or screeching audio.

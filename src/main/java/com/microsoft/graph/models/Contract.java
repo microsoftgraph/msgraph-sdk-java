@@ -74,12 +74,12 @@ public class Contract extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Contract currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("contractType", (n) -> { currentObject.setContractType(n.getStringValue()); });
-            this.put("customerId", (n) -> { currentObject.setCustomerId(n.getStringValue()); });
-            this.put("defaultDomainName", (n) -> { currentObject.setDefaultDomainName(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contractType", (n) -> { currentObject.setContractType(n.getStringValue()); });
+        deserializerMap.put("customerId", (n) -> { currentObject.setCustomerId(n.getStringValue()); });
+        deserializerMap.put("defaultDomainName", (n) -> { currentObject.setDefaultDomainName(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object

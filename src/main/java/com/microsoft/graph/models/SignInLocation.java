@@ -71,13 +71,13 @@ public class SignInLocation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SignInLocation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
-            this.put("countryOrRegion", (n) -> { currentObject.setCountryOrRegion(n.getStringValue()); });
-            this.put("geoCoordinates", (n) -> { currentObject.setGeoCoordinates(n.getObjectValue(GeoCoordinates::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
+        deserializerMap.put("countryOrRegion", (n) -> { currentObject.setCountryOrRegion(n.getStringValue()); });
+        deserializerMap.put("geoCoordinates", (n) -> { currentObject.setGeoCoordinates(n.getObjectValue(GeoCoordinates::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the geoCoordinates property value. Provides the latitude, longitude and altitude where the sign-in originated.

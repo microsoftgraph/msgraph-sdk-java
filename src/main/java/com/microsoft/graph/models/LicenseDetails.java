@@ -41,11 +41,11 @@ public class LicenseDetails extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LicenseDetails currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("servicePlans", (n) -> { currentObject.setServicePlans(n.getCollectionOfObjectValues(ServicePlanInfo::createFromDiscriminatorValue)); });
-            this.put("skuId", (n) -> { currentObject.setSkuId(n.getStringValue()); });
-            this.put("skuPartNumber", (n) -> { currentObject.setSkuPartNumber(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("servicePlans", (n) -> { currentObject.setServicePlans(n.getCollectionOfObjectValues(ServicePlanInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("skuId", (n) -> { currentObject.setSkuId(n.getStringValue()); });
+        deserializerMap.put("skuPartNumber", (n) -> { currentObject.setSkuPartNumber(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the servicePlans property value. Information about the service plans assigned with the license. Read-only, Not nullable

@@ -51,11 +51,11 @@ public class OnenotePagePreview implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnenotePagePreview currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(OnenotePagePreviewLinks::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("previewText", (n) -> { currentObject.setPreviewText(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(OnenotePagePreviewLinks::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("previewText", (n) -> { currentObject.setPreviewText(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the links property value. The links property

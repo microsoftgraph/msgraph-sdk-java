@@ -69,13 +69,13 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAppPolicyDeploymentSummary currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("configurationDeployedUserCount", (n) -> { currentObject.setConfigurationDeployedUserCount(n.getIntegerValue()); });
-            this.put("configurationDeploymentSummaryPerApp", (n) -> { currentObject.setConfigurationDeploymentSummaryPerApp(n.getCollectionOfObjectValues(ManagedAppPolicyDeploymentSummaryPerApp::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastRefreshTime", (n) -> { currentObject.setLastRefreshTime(n.getOffsetDateTimeValue()); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("configurationDeployedUserCount", (n) -> { currentObject.setConfigurationDeployedUserCount(n.getIntegerValue()); });
+        deserializerMap.put("configurationDeploymentSummaryPerApp", (n) -> { currentObject.setConfigurationDeploymentSummaryPerApp(n.getCollectionOfObjectValues(ManagedAppPolicyDeploymentSummaryPerApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastRefreshTime", (n) -> { currentObject.setLastRefreshTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the lastRefreshTime property value. Not yet documented

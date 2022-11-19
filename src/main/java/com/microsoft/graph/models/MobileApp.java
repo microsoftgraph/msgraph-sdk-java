@@ -28,6 +28,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** An abstract class containing the base properties for Intune mobile apps. */
 public class MobileApp extends Entity implements Parsable {
     /** The list of group assignments for this mobile app. */
     private java.util.List<MobileAppAssignment> _assignments;
@@ -60,7 +61,7 @@ public class MobileApp extends Entity implements Parsable {
     /** Indicates the publishing state of an app. */
     private MobileAppPublishingState _publishingState;
     /**
-     * Instantiates a new MobileApp and sets the default values.
+     * Instantiates a new mobileApp and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -71,7 +72,7 @@ public class MobileApp extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MobileApp
+     * @return a mobileApp
      */
     @javax.annotation.Nonnull
     public static MobileApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -159,23 +160,23 @@ public class MobileApp extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileApp currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(MobileAppAssignment::createFromDiscriminatorValue)); });
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfObjectValues(MobileAppCategory::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("developer", (n) -> { currentObject.setDeveloper(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("informationUrl", (n) -> { currentObject.setInformationUrl(n.getStringValue()); });
-            this.put("isFeatured", (n) -> { currentObject.setIsFeatured(n.getBooleanValue()); });
-            this.put("largeIcon", (n) -> { currentObject.setLargeIcon(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
-            this.put("owner", (n) -> { currentObject.setOwner(n.getStringValue()); });
-            this.put("privacyInformationUrl", (n) -> { currentObject.setPrivacyInformationUrl(n.getStringValue()); });
-            this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
-            this.put("publishingState", (n) -> { currentObject.setPublishingState(n.getEnumValue(MobileAppPublishingState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(MobileAppAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfObjectValues(MobileAppCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("developer", (n) -> { currentObject.setDeveloper(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("informationUrl", (n) -> { currentObject.setInformationUrl(n.getStringValue()); });
+        deserializerMap.put("isFeatured", (n) -> { currentObject.setIsFeatured(n.getBooleanValue()); });
+        deserializerMap.put("largeIcon", (n) -> { currentObject.setLargeIcon(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
+        deserializerMap.put("owner", (n) -> { currentObject.setOwner(n.getStringValue()); });
+        deserializerMap.put("privacyInformationUrl", (n) -> { currentObject.setPrivacyInformationUrl(n.getStringValue()); });
+        deserializerMap.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
+        deserializerMap.put("publishingState", (n) -> { currentObject.setPublishingState(n.getEnumValue(MobileAppPublishingState.class)); });
+        return deserializerMap
     }
     /**
      * Gets the informationUrl property value. The more information Url.

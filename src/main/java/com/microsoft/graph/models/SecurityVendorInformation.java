@@ -55,13 +55,13 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityVendorInformation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("provider", (n) -> { currentObject.setProvider(n.getStringValue()); });
-            this.put("providerVersion", (n) -> { currentObject.setProviderVersion(n.getStringValue()); });
-            this.put("subProvider", (n) -> { currentObject.setSubProvider(n.getStringValue()); });
-            this.put("vendor", (n) -> { currentObject.setVendor(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("provider", (n) -> { currentObject.setProvider(n.getStringValue()); });
+        deserializerMap.put("providerVersion", (n) -> { currentObject.setProviderVersion(n.getStringValue()); });
+        deserializerMap.put("subProvider", (n) -> { currentObject.setSubProvider(n.getStringValue()); });
+        deserializerMap.put("vendor", (n) -> { currentObject.setVendor(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property

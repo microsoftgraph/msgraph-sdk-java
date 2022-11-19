@@ -36,9 +36,9 @@ public class SharePointIdentity extends Identity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharePointIdentity currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("loginName", (n) -> { currentObject.setLoginName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("loginName", (n) -> { currentObject.setLoginName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the loginName property value. The sign in name of the SharePoint identity.

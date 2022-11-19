@@ -12,7 +12,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class ThreatAssessmentRequest extends Entity implements Parsable {
     /** The category property */
     private ThreatCategory _category;
@@ -106,16 +106,16 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ThreatAssessmentRequest currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(ThreatCategory.class)); });
-            this.put("contentType", (n) -> { currentObject.setContentType(n.getEnumValue(ThreatAssessmentContentType.class)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("expectedAssessment", (n) -> { currentObject.setExpectedAssessment(n.getEnumValue(ThreatExpectedAssessment.class)); });
-            this.put("requestSource", (n) -> { currentObject.setRequestSource(n.getEnumValue(ThreatAssessmentRequestSource.class)); });
-            this.put("results", (n) -> { currentObject.setResults(n.getCollectionOfObjectValues(ThreatAssessmentResult::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ThreatAssessmentStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(ThreatCategory.class)); });
+        deserializerMap.put("contentType", (n) -> { currentObject.setContentType(n.getEnumValue(ThreatAssessmentContentType.class)); });
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("expectedAssessment", (n) -> { currentObject.setExpectedAssessment(n.getEnumValue(ThreatExpectedAssessment.class)); });
+        deserializerMap.put("requestSource", (n) -> { currentObject.setRequestSource(n.getEnumValue(ThreatAssessmentRequestSource.class)); });
+        deserializerMap.put("results", (n) -> { currentObject.setResults(n.getCollectionOfObjectValues(ThreatAssessmentResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ThreatAssessmentStatus.class)); });
+        return deserializerMap
     }
     /**
      * Gets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.

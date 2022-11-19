@@ -74,14 +74,14 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecureScoreControlStateUpdate currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });
-            this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
-            this.put("updatedBy", (n) -> { currentObject.setUpdatedBy(n.getStringValue()); });
-            this.put("updatedDateTime", (n) -> { currentObject.setUpdatedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });
+        deserializerMap.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
+        deserializerMap.put("updatedBy", (n) -> { currentObject.setUpdatedBy(n.getStringValue()); });
+        deserializerMap.put("updatedDateTime", (n) -> { currentObject.setUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property

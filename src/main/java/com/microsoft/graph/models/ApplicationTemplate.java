@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of applicationTemplate entities. */
 public class ApplicationTemplate extends Entity implements Parsable {
     /** The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer, Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design & hosting. */
     private java.util.List<String> _categories;
@@ -26,7 +25,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     /** The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported. */
     private java.util.List<String> _supportedSingleSignOnModes;
     /**
-     * Instantiates a new applicationTemplate and sets the default values.
+     * Instantiates a new ApplicationTemplate and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -37,7 +36,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a applicationTemplate
+     * @return a ApplicationTemplate
      */
     @javax.annotation.Nonnull
     public static ApplicationTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -75,16 +74,16 @@ public class ApplicationTemplate extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApplicationTemplate currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("homePageUrl", (n) -> { currentObject.setHomePageUrl(n.getStringValue()); });
-            this.put("logoUrl", (n) -> { currentObject.setLogoUrl(n.getStringValue()); });
-            this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
-            this.put("supportedProvisioningTypes", (n) -> { currentObject.setSupportedProvisioningTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("supportedSingleSignOnModes", (n) -> { currentObject.setSupportedSingleSignOnModes(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("homePageUrl", (n) -> { currentObject.setHomePageUrl(n.getStringValue()); });
+        deserializerMap.put("logoUrl", (n) -> { currentObject.setLogoUrl(n.getStringValue()); });
+        deserializerMap.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
+        deserializerMap.put("supportedProvisioningTypes", (n) -> { currentObject.setSupportedProvisioningTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("supportedSingleSignOnModes", (n) -> { currentObject.setSupportedSingleSignOnModes(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the homePageUrl property value. The home page URL of the application.

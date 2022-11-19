@@ -76,15 +76,15 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConfigurationManagerClientEnabledFeatures currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("compliancePolicy", (n) -> { currentObject.setCompliancePolicy(n.getBooleanValue()); });
-            this.put("deviceConfiguration", (n) -> { currentObject.setDeviceConfiguration(n.getBooleanValue()); });
-            this.put("inventory", (n) -> { currentObject.setInventory(n.getBooleanValue()); });
-            this.put("modernApps", (n) -> { currentObject.setModernApps(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("resourceAccess", (n) -> { currentObject.setResourceAccess(n.getBooleanValue()); });
-            this.put("windowsUpdateForBusiness", (n) -> { currentObject.setWindowsUpdateForBusiness(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("compliancePolicy", (n) -> { currentObject.setCompliancePolicy(n.getBooleanValue()); });
+        deserializerMap.put("deviceConfiguration", (n) -> { currentObject.setDeviceConfiguration(n.getBooleanValue()); });
+        deserializerMap.put("inventory", (n) -> { currentObject.setInventory(n.getBooleanValue()); });
+        deserializerMap.put("modernApps", (n) -> { currentObject.setModernApps(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("resourceAccess", (n) -> { currentObject.setResourceAccess(n.getBooleanValue()); });
+        deserializerMap.put("windowsUpdateForBusiness", (n) -> { currentObject.setWindowsUpdateForBusiness(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the inventory property value. Whether inventory is managed by Intune

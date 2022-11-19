@@ -40,11 +40,11 @@ public class OfficeGraphInsights extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OfficeGraphInsights currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("shared", (n) -> { currentObject.setShared(n.getCollectionOfObjectValues(SharedInsight::createFromDiscriminatorValue)); });
-            this.put("trending", (n) -> { currentObject.setTrending(n.getCollectionOfObjectValues(Trending::createFromDiscriminatorValue)); });
-            this.put("used", (n) -> { currentObject.setUsed(n.getCollectionOfObjectValues(UsedInsight::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("shared", (n) -> { currentObject.setShared(n.getCollectionOfObjectValues(SharedInsight::createFromDiscriminatorValue)); });
+        deserializerMap.put("trending", (n) -> { currentObject.setTrending(n.getCollectionOfObjectValues(Trending::createFromDiscriminatorValue)); });
+        deserializerMap.put("used", (n) -> { currentObject.setUsed(n.getCollectionOfObjectValues(UsedInsight::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the shared property value. Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.

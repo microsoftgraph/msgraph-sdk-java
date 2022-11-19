@@ -61,12 +61,12 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BatchRecordDecisionsPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("decision", (n) -> { currentObject.setDecision(n.getStringValue()); });
-            this.put("justification", (n) -> { currentObject.setJustification(n.getStringValue()); });
-            this.put("principalId", (n) -> { currentObject.setPrincipalId(n.getStringValue()); });
-            this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("decision", (n) -> { currentObject.setDecision(n.getStringValue()); });
+        deserializerMap.put("justification", (n) -> { currentObject.setJustification(n.getStringValue()); });
+        deserializerMap.put("principalId", (n) -> { currentObject.setPrincipalId(n.getStringValue()); });
+        deserializerMap.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the justification property value. The justification property

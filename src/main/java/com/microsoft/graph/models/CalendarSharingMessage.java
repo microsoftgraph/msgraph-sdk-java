@@ -50,12 +50,12 @@ public class CalendarSharingMessage extends Message implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CalendarSharingMessage currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("canAccept", (n) -> { currentObject.setCanAccept(n.getBooleanValue()); });
-            this.put("sharingMessageAction", (n) -> { currentObject.setSharingMessageAction(n.getObjectValue(CalendarSharingMessageAction::createFromDiscriminatorValue)); });
-            this.put("sharingMessageActions", (n) -> { currentObject.setSharingMessageActions(n.getCollectionOfObjectValues(CalendarSharingMessageAction::createFromDiscriminatorValue)); });
-            this.put("suggestedCalendarName", (n) -> { currentObject.setSuggestedCalendarName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("canAccept", (n) -> { currentObject.setCanAccept(n.getBooleanValue()); });
+        deserializerMap.put("sharingMessageAction", (n) -> { currentObject.setSharingMessageAction(n.getObjectValue(CalendarSharingMessageAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharingMessageActions", (n) -> { currentObject.setSharingMessageActions(n.getCollectionOfObjectValues(CalendarSharingMessageAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("suggestedCalendarName", (n) -> { currentObject.setSuggestedCalendarName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the sharingMessageAction property value. The sharingMessageAction property

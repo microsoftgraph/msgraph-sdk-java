@@ -44,9 +44,9 @@ public class WorkbookApplication extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookApplication currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("calculationMode", (n) -> { currentObject.setCalculationMode(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("calculationMode", (n) -> { currentObject.setCalculationMode(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object

@@ -66,16 +66,16 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsUniversalAppX currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("applicableArchitectures", (n) -> { currentObject.setApplicableArchitectures(n.getEnumValue(WindowsArchitecture.class)); });
-            this.put("applicableDeviceTypes", (n) -> { currentObject.setApplicableDeviceTypes(n.getEnumValue(WindowsDeviceType.class)); });
-            this.put("identityName", (n) -> { currentObject.setIdentityName(n.getStringValue()); });
-            this.put("identityPublisherHash", (n) -> { currentObject.setIdentityPublisherHash(n.getStringValue()); });
-            this.put("identityResourceIdentifier", (n) -> { currentObject.setIdentityResourceIdentifier(n.getStringValue()); });
-            this.put("identityVersion", (n) -> { currentObject.setIdentityVersion(n.getStringValue()); });
-            this.put("isBundle", (n) -> { currentObject.setIsBundle(n.getBooleanValue()); });
-            this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(WindowsMinimumOperatingSystem::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicableArchitectures", (n) -> { currentObject.setApplicableArchitectures(n.getEnumValue(WindowsArchitecture.class)); });
+        deserializerMap.put("applicableDeviceTypes", (n) -> { currentObject.setApplicableDeviceTypes(n.getEnumValue(WindowsDeviceType.class)); });
+        deserializerMap.put("identityName", (n) -> { currentObject.setIdentityName(n.getStringValue()); });
+        deserializerMap.put("identityPublisherHash", (n) -> { currentObject.setIdentityPublisherHash(n.getStringValue()); });
+        deserializerMap.put("identityResourceIdentifier", (n) -> { currentObject.setIdentityResourceIdentifier(n.getStringValue()); });
+        deserializerMap.put("identityVersion", (n) -> { currentObject.setIdentityVersion(n.getStringValue()); });
+        deserializerMap.put("isBundle", (n) -> { currentObject.setIsBundle(n.getBooleanValue()); });
+        deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(WindowsMinimumOperatingSystem::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the identityName property value. The Identity Name.

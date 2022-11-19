@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of externalConnection entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class ExternalItem extends Entity implements Parsable {
     /** An array of access control entries. Each entry specifies the access granted to a user or group. Required. */
     private java.util.List<Acl> _acl;
@@ -58,11 +58,11 @@ public class ExternalItem extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExternalItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("acl", (n) -> { currentObject.setAcl(n.getCollectionOfObjectValues(Acl::createFromDiscriminatorValue)); });
-            this.put("content", (n) -> { currentObject.setContent(n.getObjectValue(ExternalItemContent::createFromDiscriminatorValue)); });
-            this.put("properties", (n) -> { currentObject.setProperties(n.getObjectValue(Properties::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("acl", (n) -> { currentObject.setAcl(n.getCollectionOfObjectValues(Acl::createFromDiscriminatorValue)); });
+        deserializerMap.put("content", (n) -> { currentObject.setContent(n.getObjectValue(ExternalItemContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("properties", (n) -> { currentObject.setProperties(n.getObjectValue(Properties::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the properties property value. A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required.

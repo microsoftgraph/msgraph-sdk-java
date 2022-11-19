@@ -44,9 +44,9 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosHomeScreenApp currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("bundleID", (n) -> { currentObject.setBundleID(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("bundleID", (n) -> { currentObject.setBundleID(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object

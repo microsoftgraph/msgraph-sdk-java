@@ -158,30 +158,30 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeleconferenceDeviceMediaQuality currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(22) {{
-            this.put("averageInboundJitter", (n) -> { currentObject.setAverageInboundJitter(n.getPeriodValue()); });
-            this.put("averageInboundPacketLossRateInPercentage", (n) -> { currentObject.setAverageInboundPacketLossRateInPercentage(n.getDoubleValue()); });
-            this.put("averageInboundRoundTripDelay", (n) -> { currentObject.setAverageInboundRoundTripDelay(n.getPeriodValue()); });
-            this.put("averageOutboundJitter", (n) -> { currentObject.setAverageOutboundJitter(n.getPeriodValue()); });
-            this.put("averageOutboundPacketLossRateInPercentage", (n) -> { currentObject.setAverageOutboundPacketLossRateInPercentage(n.getDoubleValue()); });
-            this.put("averageOutboundRoundTripDelay", (n) -> { currentObject.setAverageOutboundRoundTripDelay(n.getPeriodValue()); });
-            this.put("channelIndex", (n) -> { currentObject.setChannelIndex(n.getIntegerValue()); });
-            this.put("inboundPackets", (n) -> { currentObject.setInboundPackets(n.getLongValue()); });
-            this.put("localIPAddress", (n) -> { currentObject.setLocalIPAddress(n.getStringValue()); });
-            this.put("localPort", (n) -> { currentObject.setLocalPort(n.getIntegerValue()); });
-            this.put("maximumInboundJitter", (n) -> { currentObject.setMaximumInboundJitter(n.getPeriodValue()); });
-            this.put("maximumInboundPacketLossRateInPercentage", (n) -> { currentObject.setMaximumInboundPacketLossRateInPercentage(n.getDoubleValue()); });
-            this.put("maximumInboundRoundTripDelay", (n) -> { currentObject.setMaximumInboundRoundTripDelay(n.getPeriodValue()); });
-            this.put("maximumOutboundJitter", (n) -> { currentObject.setMaximumOutboundJitter(n.getPeriodValue()); });
-            this.put("maximumOutboundPacketLossRateInPercentage", (n) -> { currentObject.setMaximumOutboundPacketLossRateInPercentage(n.getDoubleValue()); });
-            this.put("maximumOutboundRoundTripDelay", (n) -> { currentObject.setMaximumOutboundRoundTripDelay(n.getPeriodValue()); });
-            this.put("mediaDuration", (n) -> { currentObject.setMediaDuration(n.getPeriodValue()); });
-            this.put("networkLinkSpeedInBytes", (n) -> { currentObject.setNetworkLinkSpeedInBytes(n.getLongValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("outboundPackets", (n) -> { currentObject.setOutboundPackets(n.getLongValue()); });
-            this.put("remoteIPAddress", (n) -> { currentObject.setRemoteIPAddress(n.getStringValue()); });
-            this.put("remotePort", (n) -> { currentObject.setRemotePort(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(22);
+        deserializerMap.put("averageInboundJitter", (n) -> { currentObject.setAverageInboundJitter(n.getPeriodValue()); });
+        deserializerMap.put("averageInboundPacketLossRateInPercentage", (n) -> { currentObject.setAverageInboundPacketLossRateInPercentage(n.getDoubleValue()); });
+        deserializerMap.put("averageInboundRoundTripDelay", (n) -> { currentObject.setAverageInboundRoundTripDelay(n.getPeriodValue()); });
+        deserializerMap.put("averageOutboundJitter", (n) -> { currentObject.setAverageOutboundJitter(n.getPeriodValue()); });
+        deserializerMap.put("averageOutboundPacketLossRateInPercentage", (n) -> { currentObject.setAverageOutboundPacketLossRateInPercentage(n.getDoubleValue()); });
+        deserializerMap.put("averageOutboundRoundTripDelay", (n) -> { currentObject.setAverageOutboundRoundTripDelay(n.getPeriodValue()); });
+        deserializerMap.put("channelIndex", (n) -> { currentObject.setChannelIndex(n.getIntegerValue()); });
+        deserializerMap.put("inboundPackets", (n) -> { currentObject.setInboundPackets(n.getLongValue()); });
+        deserializerMap.put("localIPAddress", (n) -> { currentObject.setLocalIPAddress(n.getStringValue()); });
+        deserializerMap.put("localPort", (n) -> { currentObject.setLocalPort(n.getIntegerValue()); });
+        deserializerMap.put("maximumInboundJitter", (n) -> { currentObject.setMaximumInboundJitter(n.getPeriodValue()); });
+        deserializerMap.put("maximumInboundPacketLossRateInPercentage", (n) -> { currentObject.setMaximumInboundPacketLossRateInPercentage(n.getDoubleValue()); });
+        deserializerMap.put("maximumInboundRoundTripDelay", (n) -> { currentObject.setMaximumInboundRoundTripDelay(n.getPeriodValue()); });
+        deserializerMap.put("maximumOutboundJitter", (n) -> { currentObject.setMaximumOutboundJitter(n.getPeriodValue()); });
+        deserializerMap.put("maximumOutboundPacketLossRateInPercentage", (n) -> { currentObject.setMaximumOutboundPacketLossRateInPercentage(n.getDoubleValue()); });
+        deserializerMap.put("maximumOutboundRoundTripDelay", (n) -> { currentObject.setMaximumOutboundRoundTripDelay(n.getPeriodValue()); });
+        deserializerMap.put("mediaDuration", (n) -> { currentObject.setMediaDuration(n.getPeriodValue()); });
+        deserializerMap.put("networkLinkSpeedInBytes", (n) -> { currentObject.setNetworkLinkSpeedInBytes(n.getLongValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("outboundPackets", (n) -> { currentObject.setOutboundPackets(n.getLongValue()); });
+        deserializerMap.put("remoteIPAddress", (n) -> { currentObject.setRemoteIPAddress(n.getStringValue()); });
+        deserializerMap.put("remotePort", (n) -> { currentObject.setRemotePort(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the inboundPackets property value. The total number of the inbound packets.

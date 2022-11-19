@@ -131,32 +131,32 @@ public class BookingAppointment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingAppointment currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getStringValue()); });
-            this.put("anonymousJoinWebUrl", (n) -> { currentObject.setAnonymousJoinWebUrl(n.getStringValue()); });
-            this.put("customers", (n) -> { currentObject.setCustomers(n.getCollectionOfObjectValues(BookingCustomerInformationBase::createFromDiscriminatorValue)); });
-            this.put("customerTimeZone", (n) -> { currentObject.setCustomerTimeZone(n.getStringValue()); });
-            this.put("duration", (n) -> { currentObject.setDuration(n.getPeriodValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("filledAttendeesCount", (n) -> { currentObject.setFilledAttendeesCount(n.getIntegerValue()); });
-            this.put("isLocationOnline", (n) -> { currentObject.setIsLocationOnline(n.getBooleanValue()); });
-            this.put("joinWebUrl", (n) -> { currentObject.setJoinWebUrl(n.getStringValue()); });
-            this.put("maximumAttendeesCount", (n) -> { currentObject.setMaximumAttendeesCount(n.getIntegerValue()); });
-            this.put("optOutOfCustomerEmail", (n) -> { currentObject.setOptOutOfCustomerEmail(n.getBooleanValue()); });
-            this.put("postBuffer", (n) -> { currentObject.setPostBuffer(n.getPeriodValue()); });
-            this.put("preBuffer", (n) -> { currentObject.setPreBuffer(n.getPeriodValue()); });
-            this.put("price", (n) -> { currentObject.setPrice(n.getDoubleValue()); });
-            this.put("priceType", (n) -> { currentObject.setPriceType(n.getEnumValue(BookingPriceType.class)); });
-            this.put("reminders", (n) -> { currentObject.setReminders(n.getCollectionOfObjectValues(BookingReminder::createFromDiscriminatorValue)); });
-            this.put("selfServiceAppointmentId", (n) -> { currentObject.setSelfServiceAppointmentId(n.getStringValue()); });
-            this.put("serviceId", (n) -> { currentObject.setServiceId(n.getStringValue()); });
-            this.put("serviceLocation", (n) -> { currentObject.setServiceLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
-            this.put("serviceName", (n) -> { currentObject.setServiceName(n.getStringValue()); });
-            this.put("serviceNotes", (n) -> { currentObject.setServiceNotes(n.getStringValue()); });
-            this.put("smsNotificationsEnabled", (n) -> { currentObject.setSmsNotificationsEnabled(n.getBooleanValue()); });
-            this.put("staffMemberIds", (n) -> { currentObject.setStaffMemberIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getStringValue()); });
+        deserializerMap.put("anonymousJoinWebUrl", (n) -> { currentObject.setAnonymousJoinWebUrl(n.getStringValue()); });
+        deserializerMap.put("customers", (n) -> { currentObject.setCustomers(n.getCollectionOfObjectValues(BookingCustomerInformationBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("customerTimeZone", (n) -> { currentObject.setCustomerTimeZone(n.getStringValue()); });
+        deserializerMap.put("duration", (n) -> { currentObject.setDuration(n.getPeriodValue()); });
+        deserializerMap.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("filledAttendeesCount", (n) -> { currentObject.setFilledAttendeesCount(n.getIntegerValue()); });
+        deserializerMap.put("isLocationOnline", (n) -> { currentObject.setIsLocationOnline(n.getBooleanValue()); });
+        deserializerMap.put("joinWebUrl", (n) -> { currentObject.setJoinWebUrl(n.getStringValue()); });
+        deserializerMap.put("maximumAttendeesCount", (n) -> { currentObject.setMaximumAttendeesCount(n.getIntegerValue()); });
+        deserializerMap.put("optOutOfCustomerEmail", (n) -> { currentObject.setOptOutOfCustomerEmail(n.getBooleanValue()); });
+        deserializerMap.put("postBuffer", (n) -> { currentObject.setPostBuffer(n.getPeriodValue()); });
+        deserializerMap.put("preBuffer", (n) -> { currentObject.setPreBuffer(n.getPeriodValue()); });
+        deserializerMap.put("price", (n) -> { currentObject.setPrice(n.getDoubleValue()); });
+        deserializerMap.put("priceType", (n) -> { currentObject.setPriceType(n.getEnumValue(BookingPriceType.class)); });
+        deserializerMap.put("reminders", (n) -> { currentObject.setReminders(n.getCollectionOfObjectValues(BookingReminder::createFromDiscriminatorValue)); });
+        deserializerMap.put("selfServiceAppointmentId", (n) -> { currentObject.setSelfServiceAppointmentId(n.getStringValue()); });
+        deserializerMap.put("serviceId", (n) -> { currentObject.setServiceId(n.getStringValue()); });
+        deserializerMap.put("serviceLocation", (n) -> { currentObject.setServiceLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
+        deserializerMap.put("serviceName", (n) -> { currentObject.setServiceName(n.getStringValue()); });
+        deserializerMap.put("serviceNotes", (n) -> { currentObject.setServiceNotes(n.getStringValue()); });
+        deserializerMap.put("smsNotificationsEnabled", (n) -> { currentObject.setSmsNotificationsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("staffMemberIds", (n) -> { currentObject.setStaffMemberIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the filledAttendeesCount property value. The current number of customers in the appointment

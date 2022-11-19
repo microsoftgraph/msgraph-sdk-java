@@ -73,17 +73,17 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceGeoLocation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(9) {{
-            this.put("altitude", (n) -> { currentObject.setAltitude(n.getDoubleValue()); });
-            this.put("heading", (n) -> { currentObject.setHeading(n.getDoubleValue()); });
-            this.put("horizontalAccuracy", (n) -> { currentObject.setHorizontalAccuracy(n.getDoubleValue()); });
-            this.put("lastCollectedDateTime", (n) -> { currentObject.setLastCollectedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("latitude", (n) -> { currentObject.setLatitude(n.getDoubleValue()); });
-            this.put("longitude", (n) -> { currentObject.setLongitude(n.getDoubleValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("speed", (n) -> { currentObject.setSpeed(n.getDoubleValue()); });
-            this.put("verticalAccuracy", (n) -> { currentObject.setVerticalAccuracy(n.getDoubleValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("altitude", (n) -> { currentObject.setAltitude(n.getDoubleValue()); });
+        deserializerMap.put("heading", (n) -> { currentObject.setHeading(n.getDoubleValue()); });
+        deserializerMap.put("horizontalAccuracy", (n) -> { currentObject.setHorizontalAccuracy(n.getDoubleValue()); });
+        deserializerMap.put("lastCollectedDateTime", (n) -> { currentObject.setLastCollectedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("latitude", (n) -> { currentObject.setLatitude(n.getDoubleValue()); });
+        deserializerMap.put("longitude", (n) -> { currentObject.setLongitude(n.getDoubleValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("speed", (n) -> { currentObject.setSpeed(n.getDoubleValue()); });
+        deserializerMap.put("verticalAccuracy", (n) -> { currentObject.setVerticalAccuracy(n.getDoubleValue()); });
+        return deserializerMap
     }
     /**
      * Gets the heading property value. Heading in degrees from true north

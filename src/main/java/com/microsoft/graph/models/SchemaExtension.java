@@ -52,13 +52,13 @@ public class SchemaExtension extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SchemaExtension currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("owner", (n) -> { currentObject.setOwner(n.getStringValue()); });
-            this.put("properties", (n) -> { currentObject.setProperties(n.getCollectionOfObjectValues(ExtensionSchemaProperty::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-            this.put("targetTypes", (n) -> { currentObject.setTargetTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("owner", (n) -> { currentObject.setOwner(n.getStringValue()); });
+        deserializerMap.put("properties", (n) -> { currentObject.setProperties(n.getCollectionOfObjectValues(ExtensionSchemaProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
+        deserializerMap.put("targetTypes", (n) -> { currentObject.setTargetTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the owner property value. The appId of the application that is the owner of the schema extension. This property can be supplied on creation, to set the owner.  If not supplied, then the calling application's appId will be set as the owner. In either case, the signed-in user must be the owner of the application. So, for example, if creating a new schema extension definition using Graph Explorer, you must supply the owner property. Once set, this property is read-only and cannot be changed. Supports $filter (eq).

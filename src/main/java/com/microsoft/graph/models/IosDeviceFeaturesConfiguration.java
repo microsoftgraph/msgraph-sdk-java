@@ -52,13 +52,13 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosDeviceFeaturesConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("assetTagTemplate", (n) -> { currentObject.setAssetTagTemplate(n.getStringValue()); });
-            this.put("homeScreenDockIcons", (n) -> { currentObject.setHomeScreenDockIcons(n.getCollectionOfObjectValues(IosHomeScreenItem::createFromDiscriminatorValue)); });
-            this.put("homeScreenPages", (n) -> { currentObject.setHomeScreenPages(n.getCollectionOfObjectValues(IosHomeScreenPage::createFromDiscriminatorValue)); });
-            this.put("lockScreenFootnote", (n) -> { currentObject.setLockScreenFootnote(n.getStringValue()); });
-            this.put("notificationSettings", (n) -> { currentObject.setNotificationSettings(n.getCollectionOfObjectValues(IosNotificationSettings::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assetTagTemplate", (n) -> { currentObject.setAssetTagTemplate(n.getStringValue()); });
+        deserializerMap.put("homeScreenDockIcons", (n) -> { currentObject.setHomeScreenDockIcons(n.getCollectionOfObjectValues(IosHomeScreenItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("homeScreenPages", (n) -> { currentObject.setHomeScreenPages(n.getCollectionOfObjectValues(IosHomeScreenPage::createFromDiscriminatorValue)); });
+        deserializerMap.put("lockScreenFootnote", (n) -> { currentObject.setLockScreenFootnote(n.getStringValue()); });
+        deserializerMap.put("notificationSettings", (n) -> { currentObject.setNotificationSettings(n.getCollectionOfObjectValues(IosNotificationSettings::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the homeScreenDockIcons property value. A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.

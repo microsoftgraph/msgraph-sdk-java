@@ -54,13 +54,13 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SamlOrWsFedProvider currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("issuerUri", (n) -> { currentObject.setIssuerUri(n.getStringValue()); });
-            this.put("metadataExchangeUri", (n) -> { currentObject.setMetadataExchangeUri(n.getStringValue()); });
-            this.put("passiveSignInUri", (n) -> { currentObject.setPassiveSignInUri(n.getStringValue()); });
-            this.put("preferredAuthenticationProtocol", (n) -> { currentObject.setPreferredAuthenticationProtocol(n.getEnumValue(AuthenticationProtocol.class)); });
-            this.put("signingCertificate", (n) -> { currentObject.setSigningCertificate(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("issuerUri", (n) -> { currentObject.setIssuerUri(n.getStringValue()); });
+        deserializerMap.put("metadataExchangeUri", (n) -> { currentObject.setMetadataExchangeUri(n.getStringValue()); });
+        deserializerMap.put("passiveSignInUri", (n) -> { currentObject.setPassiveSignInUri(n.getStringValue()); });
+        deserializerMap.put("preferredAuthenticationProtocol", (n) -> { currentObject.setPreferredAuthenticationProtocol(n.getEnumValue(AuthenticationProtocol.class)); });
+        deserializerMap.put("signingCertificate", (n) -> { currentObject.setSigningCertificate(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the issuerUri property value. Issuer URI of the federation server.

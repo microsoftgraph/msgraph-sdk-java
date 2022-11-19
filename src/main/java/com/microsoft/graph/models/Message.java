@@ -173,38 +173,38 @@ public class Message extends OutlookItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Message currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(Attachment::createFromDiscriminatorValue)); });
-            this.put("bccRecipients", (n) -> { currentObject.setBccRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("bodyPreview", (n) -> { currentObject.setBodyPreview(n.getStringValue()); });
-            this.put("ccRecipients", (n) -> { currentObject.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("conversationId", (n) -> { currentObject.setConversationId(n.getStringValue()); });
-            this.put("conversationIndex", (n) -> { currentObject.setConversationIndex(n.getByteArrayValue()); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("flag", (n) -> { currentObject.setFlag(n.getObjectValue(FollowupFlag::createFromDiscriminatorValue)); });
-            this.put("from", (n) -> { currentObject.setFrom(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
-            this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
-            this.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(Importance.class)); });
-            this.put("inferenceClassification", (n) -> { currentObject.setInferenceClassification(n.getEnumValue(InferenceClassificationType.class)); });
-            this.put("internetMessageHeaders", (n) -> { currentObject.setInternetMessageHeaders(n.getCollectionOfObjectValues(InternetMessageHeader::createFromDiscriminatorValue)); });
-            this.put("internetMessageId", (n) -> { currentObject.setInternetMessageId(n.getStringValue()); });
-            this.put("isDeliveryReceiptRequested", (n) -> { currentObject.setIsDeliveryReceiptRequested(n.getBooleanValue()); });
-            this.put("isDraft", (n) -> { currentObject.setIsDraft(n.getBooleanValue()); });
-            this.put("isRead", (n) -> { currentObject.setIsRead(n.getBooleanValue()); });
-            this.put("isReadReceiptRequested", (n) -> { currentObject.setIsReadReceiptRequested(n.getBooleanValue()); });
-            this.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("parentFolderId", (n) -> { currentObject.setParentFolderId(n.getStringValue()); });
-            this.put("receivedDateTime", (n) -> { currentObject.setReceivedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("replyTo", (n) -> { currentObject.setReplyTo(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("sender", (n) -> { currentObject.setSender(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
-            this.put("sentDateTime", (n) -> { currentObject.setSentDateTime(n.getOffsetDateTimeValue()); });
-            this.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
-            this.put("toRecipients", (n) -> { currentObject.setToRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("uniqueBody", (n) -> { currentObject.setUniqueBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("webLink", (n) -> { currentObject.setWebLink(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(Attachment::createFromDiscriminatorValue)); });
+        deserializerMap.put("bccRecipients", (n) -> { currentObject.setBccRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("bodyPreview", (n) -> { currentObject.setBodyPreview(n.getStringValue()); });
+        deserializerMap.put("ccRecipients", (n) -> { currentObject.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("conversationId", (n) -> { currentObject.setConversationId(n.getStringValue()); });
+        deserializerMap.put("conversationIndex", (n) -> { currentObject.setConversationIndex(n.getByteArrayValue()); });
+        deserializerMap.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("flag", (n) -> { currentObject.setFlag(n.getObjectValue(FollowupFlag::createFromDiscriminatorValue)); });
+        deserializerMap.put("from", (n) -> { currentObject.setFrom(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
+        deserializerMap.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(Importance.class)); });
+        deserializerMap.put("inferenceClassification", (n) -> { currentObject.setInferenceClassification(n.getEnumValue(InferenceClassificationType.class)); });
+        deserializerMap.put("internetMessageHeaders", (n) -> { currentObject.setInternetMessageHeaders(n.getCollectionOfObjectValues(InternetMessageHeader::createFromDiscriminatorValue)); });
+        deserializerMap.put("internetMessageId", (n) -> { currentObject.setInternetMessageId(n.getStringValue()); });
+        deserializerMap.put("isDeliveryReceiptRequested", (n) -> { currentObject.setIsDeliveryReceiptRequested(n.getBooleanValue()); });
+        deserializerMap.put("isDraft", (n) -> { currentObject.setIsDraft(n.getBooleanValue()); });
+        deserializerMap.put("isRead", (n) -> { currentObject.setIsRead(n.getBooleanValue()); });
+        deserializerMap.put("isReadReceiptRequested", (n) -> { currentObject.setIsReadReceiptRequested(n.getBooleanValue()); });
+        deserializerMap.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentFolderId", (n) -> { currentObject.setParentFolderId(n.getStringValue()); });
+        deserializerMap.put("receivedDateTime", (n) -> { currentObject.setReceivedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("replyTo", (n) -> { currentObject.setReplyTo(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("sender", (n) -> { currentObject.setSender(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("sentDateTime", (n) -> { currentObject.setSentDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
+        deserializerMap.put("toRecipients", (n) -> { currentObject.setToRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("uniqueBody", (n) -> { currentObject.setUniqueBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("webLink", (n) -> { currentObject.setWebLink(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the flag property value. The flag value that indicates the status, start date, due date, or completion date for the message.

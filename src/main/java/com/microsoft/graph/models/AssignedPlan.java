@@ -72,13 +72,13 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignedPlan currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("assignedDateTime", (n) -> { currentObject.setAssignedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("capabilityStatus", (n) -> { currentObject.setCapabilityStatus(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
-            this.put("servicePlanId", (n) -> { currentObject.setServicePlanId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("assignedDateTime", (n) -> { currentObject.setAssignedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("capabilityStatus", (n) -> { currentObject.setCapabilityStatus(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
+        deserializerMap.put("servicePlanId", (n) -> { currentObject.setServicePlanId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property

@@ -51,11 +51,11 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MediaContentRatingFrance currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("movieRating", (n) -> { currentObject.setMovieRating(n.getEnumValue(RatingFranceMoviesType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("tvRating", (n) -> { currentObject.setTvRating(n.getEnumValue(RatingFranceTelevisionType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("movieRating", (n) -> { currentObject.setMovieRating(n.getEnumValue(RatingFranceMoviesType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("tvRating", (n) -> { currentObject.setTvRating(n.getEnumValue(RatingFranceTelevisionType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the movieRating property value. Movies rating labels in France

@@ -50,12 +50,12 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Shift currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("draftShift", (n) -> { currentObject.setDraftShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
-            this.put("schedulingGroupId", (n) -> { currentObject.setSchedulingGroupId(n.getStringValue()); });
-            this.put("sharedShift", (n) -> { currentObject.setSharedShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("draftShift", (n) -> { currentObject.setDraftShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("schedulingGroupId", (n) -> { currentObject.setSchedulingGroupId(n.getStringValue()); });
+        deserializerMap.put("sharedShift", (n) -> { currentObject.setSharedShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the schedulingGroupId property value. ID of the scheduling group the shift is part of. Required.

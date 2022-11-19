@@ -53,12 +53,12 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final X509CertificateRule currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("identifier", (n) -> { currentObject.setIdentifier(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("x509CertificateAuthenticationMode", (n) -> { currentObject.setX509CertificateAuthenticationMode(n.getEnumValue(X509CertificateAuthenticationMode.class)); });
-            this.put("x509CertificateRuleType", (n) -> { currentObject.setX509CertificateRuleType(n.getEnumValue(X509CertificateRuleType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("identifier", (n) -> { currentObject.setIdentifier(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("x509CertificateAuthenticationMode", (n) -> { currentObject.setX509CertificateAuthenticationMode(n.getEnumValue(X509CertificateAuthenticationMode.class)); });
+        deserializerMap.put("x509CertificateRuleType", (n) -> { currentObject.setX509CertificateRuleType(n.getEnumValue(X509CertificateRuleType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the identifier property value. The identifier of the X.509 certificate. Required.

@@ -36,9 +36,9 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResetPasscodeActionResult currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("passcode", (n) -> { currentObject.setPasscode(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("passcode", (n) -> { currentObject.setPasscode(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the passcode property value. Newly generated passcode for the device

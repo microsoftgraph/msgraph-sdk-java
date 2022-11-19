@@ -45,9 +45,9 @@ public class CasesRoot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CasesRoot currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("ediscoveryCases", (n) -> { currentObject.setEdiscoveryCases(n.getCollectionOfObjectValues(EdiscoveryCase::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("ediscoveryCases", (n) -> { currentObject.setEdiscoveryCases(n.getCollectionOfObjectValues(EdiscoveryCase::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object

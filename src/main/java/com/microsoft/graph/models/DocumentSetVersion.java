@@ -69,13 +69,13 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DocumentSetVersion currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(DocumentSetVersionItem::createFromDiscriminatorValue)); });
-            this.put("shouldCaptureMinorVersion", (n) -> { currentObject.setShouldCaptureMinorVersion(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(DocumentSetVersionItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("shouldCaptureMinorVersion", (n) -> { currentObject.setShouldCaptureMinorVersion(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the items property value. Items within the document set that are captured as part of this version.

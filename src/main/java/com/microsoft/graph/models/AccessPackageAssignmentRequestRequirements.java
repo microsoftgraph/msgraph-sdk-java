@@ -69,16 +69,16 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentRequestRequirements currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("allowCustomAssignmentSchedule", (n) -> { currentObject.setAllowCustomAssignmentSchedule(n.getBooleanValue()); });
-            this.put("isApprovalRequiredForAdd", (n) -> { currentObject.setIsApprovalRequiredForAdd(n.getBooleanValue()); });
-            this.put("isApprovalRequiredForUpdate", (n) -> { currentObject.setIsApprovalRequiredForUpdate(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("policyDescription", (n) -> { currentObject.setPolicyDescription(n.getStringValue()); });
-            this.put("policyDisplayName", (n) -> { currentObject.setPolicyDisplayName(n.getStringValue()); });
-            this.put("policyId", (n) -> { currentObject.setPolicyId(n.getStringValue()); });
-            this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(EntitlementManagementSchedule::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("allowCustomAssignmentSchedule", (n) -> { currentObject.setAllowCustomAssignmentSchedule(n.getBooleanValue()); });
+        deserializerMap.put("isApprovalRequiredForAdd", (n) -> { currentObject.setIsApprovalRequiredForAdd(n.getBooleanValue()); });
+        deserializerMap.put("isApprovalRequiredForUpdate", (n) -> { currentObject.setIsApprovalRequiredForUpdate(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("policyDescription", (n) -> { currentObject.setPolicyDescription(n.getStringValue()); });
+        deserializerMap.put("policyDisplayName", (n) -> { currentObject.setPolicyDisplayName(n.getStringValue()); });
+        deserializerMap.put("policyId", (n) -> { currentObject.setPolicyId(n.getStringValue()); });
+        deserializerMap.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(EntitlementManagementSchedule::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the isApprovalRequiredForAdd property value. Indicates whether a request to add must be approved by an approver.

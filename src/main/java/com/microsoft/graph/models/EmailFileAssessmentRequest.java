@@ -56,11 +56,11 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EmailFileAssessmentRequest currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("contentData", (n) -> { currentObject.setContentData(n.getStringValue()); });
-            this.put("destinationRoutingReason", (n) -> { currentObject.setDestinationRoutingReason(n.getEnumValue(MailDestinationRoutingReason.class)); });
-            this.put("recipientEmail", (n) -> { currentObject.setRecipientEmail(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contentData", (n) -> { currentObject.setContentData(n.getStringValue()); });
+        deserializerMap.put("destinationRoutingReason", (n) -> { currentObject.setDestinationRoutingReason(n.getEnumValue(MailDestinationRoutingReason.class)); });
+        deserializerMap.put("recipientEmail", (n) -> { currentObject.setRecipientEmail(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.

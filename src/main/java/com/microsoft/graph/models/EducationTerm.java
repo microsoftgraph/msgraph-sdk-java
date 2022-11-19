@@ -80,13 +80,13 @@ public class EducationTerm implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationTerm currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("endDate", (n) -> { currentObject.setEndDate(n.getLocalDateValue()); });
-            this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("startDate", (n) -> { currentObject.setStartDate(n.getLocalDateValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("endDate", (n) -> { currentObject.setEndDate(n.getLocalDateValue()); });
+        deserializerMap.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("startDate", (n) -> { currentObject.setStartDate(n.getLocalDateValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property

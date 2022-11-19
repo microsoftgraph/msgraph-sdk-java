@@ -75,15 +75,15 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleManagementPolicyRuleTarget currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("caller", (n) -> { currentObject.setCaller(n.getStringValue()); });
-            this.put("enforcedSettings", (n) -> { currentObject.setEnforcedSettings(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("inheritableSettings", (n) -> { currentObject.setInheritableSettings(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("level", (n) -> { currentObject.setLevel(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfEnumValues(UnifiedRoleManagementPolicyRuleTargetOperations.class)); });
-            this.put("targetObjects", (n) -> { currentObject.setTargetObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("caller", (n) -> { currentObject.setCaller(n.getStringValue()); });
+        deserializerMap.put("enforcedSettings", (n) -> { currentObject.setEnforcedSettings(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("inheritableSettings", (n) -> { currentObject.setInheritableSettings(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("level", (n) -> { currentObject.setLevel(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfEnumValues(UnifiedRoleManagementPolicyRuleTargetOperations.class)); });
+        deserializerMap.put("targetObjects", (n) -> { currentObject.setTargetObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the inheritableSettings property value. The list of role settings that can be inherited by child scopes. Use All for all settings.

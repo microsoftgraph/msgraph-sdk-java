@@ -11,7 +11,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
     /** Indicates whether turn-in celebration animation will be shown. A value of true indicates that the animation will not be shown. Default value is false. */
     private Boolean _submissionAnimationDisabled;
     /**
-     * Instantiates a new EducationAssignmentSettings and sets the default values.
+     * Instantiates a new educationAssignmentSettings and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationAssignmentSettings
+     * @return a educationAssignmentSettings
      */
     @javax.annotation.Nonnull
     public static EducationAssignmentSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,9 +36,9 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationAssignmentSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("submissionAnimationDisabled", (n) -> { currentObject.setSubmissionAnimationDisabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("submissionAnimationDisabled", (n) -> { currentObject.setSubmissionAnimationDisabled(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation will be shown. A value of true indicates that the animation will not be shown. Default value is false.

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class GroupSetting extends Entity implements Parsable {
     /** Display name of this group of settings, which comes from the associated template. */
     private String _displayName;
@@ -49,11 +49,11 @@ public class GroupSetting extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupSetting currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("templateId", (n) -> { currentObject.setTemplateId(n.getStringValue()); });
-            this.put("values", (n) -> { currentObject.setValues(n.getCollectionOfObjectValues(SettingValue::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("templateId", (n) -> { currentObject.setTemplateId(n.getStringValue()); });
+        deserializerMap.put("values", (n) -> { currentObject.setValues(n.getCollectionOfObjectValues(SettingValue::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the templateId property value. Unique identifier for the tenant-level groupSettingTemplates object that's been customized for this group-level settings object. Read-only.

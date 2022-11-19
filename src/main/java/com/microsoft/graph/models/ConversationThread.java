@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class ConversationThread extends Entity implements Parsable {
     /** The Cc: recipients for the thread. Returned only on $select. */
     private java.util.List<Recipient> _ccRecipients;
@@ -62,17 +62,17 @@ public class ConversationThread extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConversationThread currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("ccRecipients", (n) -> { currentObject.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
-            this.put("isLocked", (n) -> { currentObject.setIsLocked(n.getBooleanValue()); });
-            this.put("lastDeliveredDateTime", (n) -> { currentObject.setLastDeliveredDateTime(n.getOffsetDateTimeValue()); });
-            this.put("posts", (n) -> { currentObject.setPosts(n.getCollectionOfObjectValues(Post::createFromDiscriminatorValue)); });
-            this.put("preview", (n) -> { currentObject.setPreview(n.getStringValue()); });
-            this.put("topic", (n) -> { currentObject.setTopic(n.getStringValue()); });
-            this.put("toRecipients", (n) -> { currentObject.setToRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("uniqueSenders", (n) -> { currentObject.setUniqueSenders(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("ccRecipients", (n) -> { currentObject.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
+        deserializerMap.put("isLocked", (n) -> { currentObject.setIsLocked(n.getBooleanValue()); });
+        deserializerMap.put("lastDeliveredDateTime", (n) -> { currentObject.setLastDeliveredDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("posts", (n) -> { currentObject.setPosts(n.getCollectionOfObjectValues(Post::createFromDiscriminatorValue)); });
+        deserializerMap.put("preview", (n) -> { currentObject.setPreview(n.getStringValue()); });
+        deserializerMap.put("topic", (n) -> { currentObject.setTopic(n.getStringValue()); });
+        deserializerMap.put("toRecipients", (n) -> { currentObject.setToRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("uniqueSenders", (n) -> { currentObject.setUniqueSenders(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the hasAttachments property value. Indicates whether any of the posts within this thread has at least one attachment. Returned by default.

@@ -62,14 +62,14 @@ public class WorkbookRangeFont extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookRangeFont currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("bold", (n) -> { currentObject.setBold(n.getBooleanValue()); });
-            this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
-            this.put("italic", (n) -> { currentObject.setItalic(n.getBooleanValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("size", (n) -> { currentObject.setSize(n.getDoubleValue()); });
-            this.put("underline", (n) -> { currentObject.setUnderline(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("bold", (n) -> { currentObject.setBold(n.getBooleanValue()); });
+        deserializerMap.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
+        deserializerMap.put("italic", (n) -> { currentObject.setItalic(n.getBooleanValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("size", (n) -> { currentObject.setSize(n.getDoubleValue()); });
+        deserializerMap.put("underline", (n) -> { currentObject.setUnderline(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the italic property value. Represents the italic status of the font.

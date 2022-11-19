@@ -46,10 +46,10 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationFeedbackOutcome currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("feedback", (n) -> { currentObject.setFeedback(n.getObjectValue(EducationFeedback::createFromDiscriminatorValue)); });
-            this.put("publishedFeedback", (n) -> { currentObject.setPublishedFeedback(n.getObjectValue(EducationFeedback::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("feedback", (n) -> { currentObject.setFeedback(n.getObjectValue(EducationFeedback::createFromDiscriminatorValue)); });
+        deserializerMap.put("publishedFeedback", (n) -> { currentObject.setPublishedFeedback(n.getObjectValue(EducationFeedback::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the publishedFeedback property value. A copy of the feedback property that is made when the grade is released to the student.

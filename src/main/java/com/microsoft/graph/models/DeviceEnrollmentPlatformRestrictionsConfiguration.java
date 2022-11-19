@@ -52,13 +52,13 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceEnrollmentPlatformRestrictionsConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("androidRestriction", (n) -> { currentObject.setAndroidRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
-            this.put("iosRestriction", (n) -> { currentObject.setIosRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
-            this.put("macOSRestriction", (n) -> { currentObject.setMacOSRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
-            this.put("windowsMobileRestriction", (n) -> { currentObject.setWindowsMobileRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
-            this.put("windowsRestriction", (n) -> { currentObject.setWindowsRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("androidRestriction", (n) -> { currentObject.setAndroidRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
+        deserializerMap.put("iosRestriction", (n) -> { currentObject.setIosRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
+        deserializerMap.put("macOSRestriction", (n) -> { currentObject.setMacOSRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsMobileRestriction", (n) -> { currentObject.setWindowsMobileRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsRestriction", (n) -> { currentObject.setWindowsRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the iosRestriction property value. Ios restrictions based on platform, platform operating system version, and device ownership

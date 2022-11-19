@@ -61,12 +61,12 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConvertIdResult currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("errorDetails", (n) -> { currentObject.setErrorDetails(n.getObjectValue(GenericError::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
-            this.put("targetId", (n) -> { currentObject.setTargetId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("errorDetails", (n) -> { currentObject.setErrorDetails(n.getObjectValue(GenericError::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
+        deserializerMap.put("targetId", (n) -> { currentObject.setTargetId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property

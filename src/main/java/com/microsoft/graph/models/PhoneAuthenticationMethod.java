@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the admin singleton. */
 public class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** The phone number to text or call for authentication. Phone numbers use the format +{country code} {number}x{extension}, with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating or updating if they do not match the required format. */
     private String _phoneNumber;
@@ -15,7 +16,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     /** Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue. */
     private AuthenticationMethodSignInState _smsSignInState;
     /**
-     * Instantiates a new PhoneAuthenticationMethod and sets the default values.
+     * Instantiates a new phoneAuthenticationMethod and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -26,7 +27,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PhoneAuthenticationMethod
+     * @return a phoneAuthenticationMethod
      */
     @javax.annotation.Nonnull
     public static PhoneAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +41,11 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PhoneAuthenticationMethod currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("phoneNumber", (n) -> { currentObject.setPhoneNumber(n.getStringValue()); });
-            this.put("phoneType", (n) -> { currentObject.setPhoneType(n.getEnumValue(AuthenticationPhoneType.class)); });
-            this.put("smsSignInState", (n) -> { currentObject.setSmsSignInState(n.getEnumValue(AuthenticationMethodSignInState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("phoneNumber", (n) -> { currentObject.setPhoneNumber(n.getStringValue()); });
+        deserializerMap.put("phoneType", (n) -> { currentObject.setPhoneType(n.getEnumValue(AuthenticationPhoneType.class)); });
+        deserializerMap.put("smsSignInState", (n) -> { currentObject.setSmsSignInState(n.getEnumValue(AuthenticationMethodSignInState.class)); });
+        return deserializerMap
     }
     /**
      * Gets the phoneNumber property value. The phone number to text or call for authentication. Phone numbers use the format +{country code} {number}x{extension}, with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating or updating if they do not match the required format.

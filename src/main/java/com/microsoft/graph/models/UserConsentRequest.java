@@ -46,10 +46,10 @@ public class UserConsentRequest extends Request implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserConsentRequest currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("approval", (n) -> { currentObject.setApproval(n.getObjectValue(Approval::createFromDiscriminatorValue)); });
-            this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("approval", (n) -> { currentObject.setApproval(n.getObjectValue(Approval::createFromDiscriminatorValue)); });
+        deserializerMap.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the reason property value. The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.

@@ -36,9 +36,9 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftStoreForBusinessAppAssignmentSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("useDeviceContext", (n) -> { currentObject.setUseDeviceContext(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("useDeviceContext", (n) -> { currentObject.setUseDeviceContext(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the useDeviceContext property value. Whether or not to use device execution context for Microsoft Store for Business mobile app.

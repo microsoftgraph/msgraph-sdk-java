@@ -38,10 +38,10 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookFormatProtection currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("formulaHidden", (n) -> { currentObject.setFormulaHidden(n.getBooleanValue()); });
-            this.put("locked", (n) -> { currentObject.setLocked(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("formulaHidden", (n) -> { currentObject.setFormulaHidden(n.getBooleanValue()); });
+        deserializerMap.put("locked", (n) -> { currentObject.setLocked(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the formulaHidden property value. Indicates if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.

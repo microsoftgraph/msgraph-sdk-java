@@ -84,15 +84,15 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LicenseAssignmentState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("assignedByGroup", (n) -> { currentObject.setAssignedByGroup(n.getStringValue()); });
-            this.put("disabledPlans", (n) -> { currentObject.setDisabledPlans(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("error", (n) -> { currentObject.setError(n.getStringValue()); });
-            this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("skuId", (n) -> { currentObject.setSkuId(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("assignedByGroup", (n) -> { currentObject.setAssignedByGroup(n.getStringValue()); });
+        deserializerMap.put("disabledPlans", (n) -> { currentObject.setDisabledPlans(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("error", (n) -> { currentObject.setError(n.getStringValue()); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("skuId", (n) -> { currentObject.setSkuId(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property

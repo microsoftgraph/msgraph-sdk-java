@@ -71,13 +71,13 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NumberColumn currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("decimalPlaces", (n) -> { currentObject.setDecimalPlaces(n.getStringValue()); });
-            this.put("displayAs", (n) -> { currentObject.setDisplayAs(n.getStringValue()); });
-            this.put("maximum", (n) -> { currentObject.setMaximum(n.getDoubleValue()); });
-            this.put("minimum", (n) -> { currentObject.setMinimum(n.getDoubleValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("decimalPlaces", (n) -> { currentObject.setDecimalPlaces(n.getStringValue()); });
+        deserializerMap.put("displayAs", (n) -> { currentObject.setDisplayAs(n.getStringValue()); });
+        deserializerMap.put("maximum", (n) -> { currentObject.setMaximum(n.getDoubleValue()); });
+        deserializerMap.put("minimum", (n) -> { currentObject.setMinimum(n.getDoubleValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the maximum property value. The maximum permitted value.

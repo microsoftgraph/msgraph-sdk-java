@@ -136,22 +136,22 @@ public class UserActivity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserActivity currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("activationUrl", (n) -> { currentObject.setActivationUrl(n.getStringValue()); });
-            this.put("activitySourceHost", (n) -> { currentObject.setActivitySourceHost(n.getStringValue()); });
-            this.put("appActivityId", (n) -> { currentObject.setAppActivityId(n.getStringValue()); });
-            this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
-            this.put("contentInfo", (n) -> { currentObject.setContentInfo(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("contentUrl", (n) -> { currentObject.setContentUrl(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("fallbackUrl", (n) -> { currentObject.setFallbackUrl(n.getStringValue()); });
-            this.put("historyItems", (n) -> { currentObject.setHistoryItems(n.getCollectionOfObjectValues(ActivityHistoryItem::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(Status.class)); });
-            this.put("userTimezone", (n) -> { currentObject.setUserTimezone(n.getStringValue()); });
-            this.put("visualElements", (n) -> { currentObject.setVisualElements(n.getObjectValue(VisualInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activationUrl", (n) -> { currentObject.setActivationUrl(n.getStringValue()); });
+        deserializerMap.put("activitySourceHost", (n) -> { currentObject.setActivitySourceHost(n.getStringValue()); });
+        deserializerMap.put("appActivityId", (n) -> { currentObject.setAppActivityId(n.getStringValue()); });
+        deserializerMap.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("contentInfo", (n) -> { currentObject.setContentInfo(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentUrl", (n) -> { currentObject.setContentUrl(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("fallbackUrl", (n) -> { currentObject.setFallbackUrl(n.getStringValue()); });
+        deserializerMap.put("historyItems", (n) -> { currentObject.setHistoryItems(n.getCollectionOfObjectValues(ActivityHistoryItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(Status.class)); });
+        deserializerMap.put("userTimezone", (n) -> { currentObject.setUserTimezone(n.getStringValue()); });
+        deserializerMap.put("visualElements", (n) -> { currentObject.setVisualElements(n.getObjectValue(VisualInfo::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the historyItems property value. Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.

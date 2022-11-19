@@ -73,14 +73,14 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApprovalSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("approvalMode", (n) -> { currentObject.setApprovalMode(n.getStringValue()); });
-            this.put("approvalStages", (n) -> { currentObject.setApprovalStages(n.getCollectionOfObjectValues(UnifiedApprovalStage::createFromDiscriminatorValue)); });
-            this.put("isApprovalRequired", (n) -> { currentObject.setIsApprovalRequired(n.getBooleanValue()); });
-            this.put("isApprovalRequiredForExtension", (n) -> { currentObject.setIsApprovalRequiredForExtension(n.getBooleanValue()); });
-            this.put("isRequestorJustificationRequired", (n) -> { currentObject.setIsRequestorJustificationRequired(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("approvalMode", (n) -> { currentObject.setApprovalMode(n.getStringValue()); });
+        deserializerMap.put("approvalStages", (n) -> { currentObject.setApprovalStages(n.getCollectionOfObjectValues(UnifiedApprovalStage::createFromDiscriminatorValue)); });
+        deserializerMap.put("isApprovalRequired", (n) -> { currentObject.setIsApprovalRequired(n.getBooleanValue()); });
+        deserializerMap.put("isApprovalRequiredForExtension", (n) -> { currentObject.setIsApprovalRequiredForExtension(n.getBooleanValue()); });
+        deserializerMap.put("isRequestorJustificationRequired", (n) -> { currentObject.setIsRequestorJustificationRequired(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isApprovalRequired property value. Indicates whether approval is required for requests in this policy.

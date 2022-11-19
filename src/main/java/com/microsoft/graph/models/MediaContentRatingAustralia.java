@@ -51,11 +51,11 @@ public class MediaContentRatingAustralia implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MediaContentRatingAustralia currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("movieRating", (n) -> { currentObject.setMovieRating(n.getEnumValue(RatingAustraliaMoviesType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("tvRating", (n) -> { currentObject.setTvRating(n.getEnumValue(RatingAustraliaTelevisionType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("movieRating", (n) -> { currentObject.setMovieRating(n.getEnumValue(RatingAustraliaMoviesType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("tvRating", (n) -> { currentObject.setTvRating(n.getEnumValue(RatingAustraliaTelevisionType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the movieRating property value. Movies rating labels in Australia

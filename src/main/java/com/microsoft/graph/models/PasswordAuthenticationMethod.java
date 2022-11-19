@@ -8,13 +8,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the admin singleton. */
 public class PasswordAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** The date and time when this password was last updated. This property is currently not populated. Read-only. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _createdDateTime;
     /** For security, the password is always returned as null from a LIST or GET operation. */
     private String _password;
     /**
-     * Instantiates a new PasswordAuthenticationMethod and sets the default values.
+     * Instantiates a new passwordAuthenticationMethod and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -25,7 +26,7 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PasswordAuthenticationMethod
+     * @return a passwordAuthenticationMethod
      */
     @javax.annotation.Nonnull
     public static PasswordAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -47,10 +48,10 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PasswordAuthenticationMethod currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the password property value. For security, the password is always returned as null from a LIST or GET operation.

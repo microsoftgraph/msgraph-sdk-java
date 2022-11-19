@@ -61,16 +61,16 @@ public class GetHistoricalReportPostRequestBody implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetHistoricalReportPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("filter", (n) -> { currentObject.setFilter(n.getStringValue()); });
-            this.put("groupBy", (n) -> { currentObject.setGroupBy(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("orderBy", (n) -> { currentObject.setOrderBy(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("search", (n) -> { currentObject.setSearch(n.getStringValue()); });
-            this.put("select", (n) -> { currentObject.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("skip", (n) -> { currentObject.setSkip(n.getIntegerValue()); });
-            this.put("top", (n) -> { currentObject.setTop(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("filter", (n) -> { currentObject.setFilter(n.getStringValue()); });
+        deserializerMap.put("groupBy", (n) -> { currentObject.setGroupBy(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("orderBy", (n) -> { currentObject.setOrderBy(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("search", (n) -> { currentObject.setSearch(n.getStringValue()); });
+        deserializerMap.put("select", (n) -> { currentObject.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("skip", (n) -> { currentObject.setSkip(n.getIntegerValue()); });
+        deserializerMap.put("top", (n) -> { currentObject.setTop(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the filter property value. The filter property

@@ -79,18 +79,18 @@ public class IosVppApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosVppApp currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("applicableDeviceType", (n) -> { currentObject.setApplicableDeviceType(n.getObjectValue(IosDeviceType::createFromDiscriminatorValue)); });
-            this.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
-            this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
-            this.put("licensingType", (n) -> { currentObject.setLicensingType(n.getObjectValue(VppLicensingType::createFromDiscriminatorValue)); });
-            this.put("releaseDateTime", (n) -> { currentObject.setReleaseDateTime(n.getOffsetDateTimeValue()); });
-            this.put("totalLicenseCount", (n) -> { currentObject.setTotalLicenseCount(n.getIntegerValue()); });
-            this.put("usedLicenseCount", (n) -> { currentObject.setUsedLicenseCount(n.getIntegerValue()); });
-            this.put("vppTokenAccountType", (n) -> { currentObject.setVppTokenAccountType(n.getEnumValue(VppTokenAccountType.class)); });
-            this.put("vppTokenAppleId", (n) -> { currentObject.setVppTokenAppleId(n.getStringValue()); });
-            this.put("vppTokenOrganizationName", (n) -> { currentObject.setVppTokenOrganizationName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicableDeviceType", (n) -> { currentObject.setApplicableDeviceType(n.getObjectValue(IosDeviceType::createFromDiscriminatorValue)); });
+        deserializerMap.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
+        deserializerMap.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
+        deserializerMap.put("licensingType", (n) -> { currentObject.setLicensingType(n.getObjectValue(VppLicensingType::createFromDiscriminatorValue)); });
+        deserializerMap.put("releaseDateTime", (n) -> { currentObject.setReleaseDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("totalLicenseCount", (n) -> { currentObject.setTotalLicenseCount(n.getIntegerValue()); });
+        deserializerMap.put("usedLicenseCount", (n) -> { currentObject.setUsedLicenseCount(n.getIntegerValue()); });
+        deserializerMap.put("vppTokenAccountType", (n) -> { currentObject.setVppTokenAccountType(n.getEnumValue(VppTokenAccountType.class)); });
+        deserializerMap.put("vppTokenAppleId", (n) -> { currentObject.setVppTokenAppleId(n.getStringValue()); });
+        deserializerMap.put("vppTokenOrganizationName", (n) -> { currentObject.setVppTokenOrganizationName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the licensingType property value. The supported License Type.

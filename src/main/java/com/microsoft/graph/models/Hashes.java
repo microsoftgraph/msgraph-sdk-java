@@ -63,13 +63,13 @@ public class Hashes implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Hashes currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("crc32Hash", (n) -> { currentObject.setCrc32Hash(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("quickXorHash", (n) -> { currentObject.setQuickXorHash(n.getStringValue()); });
-            this.put("sha1Hash", (n) -> { currentObject.setSha1Hash(n.getStringValue()); });
-            this.put("sha256Hash", (n) -> { currentObject.setSha256Hash(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("crc32Hash", (n) -> { currentObject.setCrc32Hash(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("quickXorHash", (n) -> { currentObject.setQuickXorHash(n.getStringValue()); });
+        deserializerMap.put("sha1Hash", (n) -> { currentObject.setSha1Hash(n.getStringValue()); });
+        deserializerMap.put("sha256Hash", (n) -> { currentObject.setSha256Hash(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property

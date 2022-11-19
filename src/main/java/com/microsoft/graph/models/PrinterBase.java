@@ -86,17 +86,17 @@ public class PrinterBase extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterBase currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("capabilities", (n) -> { currentObject.setCapabilities(n.getObjectValue(PrinterCapabilities::createFromDiscriminatorValue)); });
-            this.put("defaults", (n) -> { currentObject.setDefaults(n.getObjectValue(PrinterDefaults::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isAcceptingJobs", (n) -> { currentObject.setIsAcceptingJobs(n.getBooleanValue()); });
-            this.put("jobs", (n) -> { currentObject.setJobs(n.getCollectionOfObjectValues(PrintJob::createFromDiscriminatorValue)); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(PrinterLocation::createFromDiscriminatorValue)); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(PrinterStatus::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("capabilities", (n) -> { currentObject.setCapabilities(n.getObjectValue(PrinterCapabilities::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaults", (n) -> { currentObject.setDefaults(n.getObjectValue(PrinterDefaults::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isAcceptingJobs", (n) -> { currentObject.setIsAcceptingJobs(n.getBooleanValue()); });
+        deserializerMap.put("jobs", (n) -> { currentObject.setJobs(n.getCollectionOfObjectValues(PrintJob::createFromDiscriminatorValue)); });
+        deserializerMap.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(PrinterLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(PrinterStatus::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the isAcceptingJobs property value. Whether the printer/printerShare is currently accepting new print jobs.

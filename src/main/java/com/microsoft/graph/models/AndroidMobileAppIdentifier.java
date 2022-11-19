@@ -36,9 +36,9 @@ public class AndroidMobileAppIdentifier extends MobileAppIdentifier implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidMobileAppIdentifier currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the packageId property value. The identifier for an app, as specified in the play store.

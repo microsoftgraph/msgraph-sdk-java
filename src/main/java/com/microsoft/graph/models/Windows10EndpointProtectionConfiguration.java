@@ -274,44 +274,44 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10EndpointProtectionConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("applicationGuardAllowPersistence", (n) -> { currentObject.setApplicationGuardAllowPersistence(n.getBooleanValue()); });
-            this.put("applicationGuardAllowPrintToLocalPrinters", (n) -> { currentObject.setApplicationGuardAllowPrintToLocalPrinters(n.getBooleanValue()); });
-            this.put("applicationGuardAllowPrintToNetworkPrinters", (n) -> { currentObject.setApplicationGuardAllowPrintToNetworkPrinters(n.getBooleanValue()); });
-            this.put("applicationGuardAllowPrintToPDF", (n) -> { currentObject.setApplicationGuardAllowPrintToPDF(n.getBooleanValue()); });
-            this.put("applicationGuardAllowPrintToXPS", (n) -> { currentObject.setApplicationGuardAllowPrintToXPS(n.getBooleanValue()); });
-            this.put("applicationGuardBlockClipboardSharing", (n) -> { currentObject.setApplicationGuardBlockClipboardSharing(n.getEnumValue(ApplicationGuardBlockClipboardSharingType.class)); });
-            this.put("applicationGuardBlockFileTransfer", (n) -> { currentObject.setApplicationGuardBlockFileTransfer(n.getEnumValue(ApplicationGuardBlockFileTransferType.class)); });
-            this.put("applicationGuardBlockNonEnterpriseContent", (n) -> { currentObject.setApplicationGuardBlockNonEnterpriseContent(n.getBooleanValue()); });
-            this.put("applicationGuardEnabled", (n) -> { currentObject.setApplicationGuardEnabled(n.getBooleanValue()); });
-            this.put("applicationGuardForceAuditing", (n) -> { currentObject.setApplicationGuardForceAuditing(n.getBooleanValue()); });
-            this.put("appLockerApplicationControl", (n) -> { currentObject.setAppLockerApplicationControl(n.getEnumValue(AppLockerApplicationControlType.class)); });
-            this.put("bitLockerDisableWarningForOtherDiskEncryption", (n) -> { currentObject.setBitLockerDisableWarningForOtherDiskEncryption(n.getBooleanValue()); });
-            this.put("bitLockerEnableStorageCardEncryptionOnMobile", (n) -> { currentObject.setBitLockerEnableStorageCardEncryptionOnMobile(n.getBooleanValue()); });
-            this.put("bitLockerEncryptDevice", (n) -> { currentObject.setBitLockerEncryptDevice(n.getBooleanValue()); });
-            this.put("bitLockerRemovableDrivePolicy", (n) -> { currentObject.setBitLockerRemovableDrivePolicy(n.getObjectValue(BitLockerRemovableDrivePolicy::createFromDiscriminatorValue)); });
-            this.put("defenderAdditionalGuardedFolders", (n) -> { currentObject.setDefenderAdditionalGuardedFolders(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderAttackSurfaceReductionExcludedPaths", (n) -> { currentObject.setDefenderAttackSurfaceReductionExcludedPaths(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderExploitProtectionXml", (n) -> { currentObject.setDefenderExploitProtectionXml(n.getByteArrayValue()); });
-            this.put("defenderExploitProtectionXmlFileName", (n) -> { currentObject.setDefenderExploitProtectionXmlFileName(n.getStringValue()); });
-            this.put("defenderGuardedFoldersAllowedAppPaths", (n) -> { currentObject.setDefenderGuardedFoldersAllowedAppPaths(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderSecurityCenterBlockExploitProtectionOverride", (n) -> { currentObject.setDefenderSecurityCenterBlockExploitProtectionOverride(n.getBooleanValue()); });
-            this.put("firewallBlockStatefulFTP", (n) -> { currentObject.setFirewallBlockStatefulFTP(n.getBooleanValue()); });
-            this.put("firewallCertificateRevocationListCheckMethod", (n) -> { currentObject.setFirewallCertificateRevocationListCheckMethod(n.getEnumValue(FirewallCertificateRevocationListCheckMethodType.class)); });
-            this.put("firewallIdleTimeoutForSecurityAssociationInSeconds", (n) -> { currentObject.setFirewallIdleTimeoutForSecurityAssociationInSeconds(n.getIntegerValue()); });
-            this.put("firewallIPSecExemptionsAllowDHCP", (n) -> { currentObject.setFirewallIPSecExemptionsAllowDHCP(n.getBooleanValue()); });
-            this.put("firewallIPSecExemptionsAllowICMP", (n) -> { currentObject.setFirewallIPSecExemptionsAllowICMP(n.getBooleanValue()); });
-            this.put("firewallIPSecExemptionsAllowNeighborDiscovery", (n) -> { currentObject.setFirewallIPSecExemptionsAllowNeighborDiscovery(n.getBooleanValue()); });
-            this.put("firewallIPSecExemptionsAllowRouterDiscovery", (n) -> { currentObject.setFirewallIPSecExemptionsAllowRouterDiscovery(n.getBooleanValue()); });
-            this.put("firewallMergeKeyingModuleSettings", (n) -> { currentObject.setFirewallMergeKeyingModuleSettings(n.getBooleanValue()); });
-            this.put("firewallPacketQueueingMethod", (n) -> { currentObject.setFirewallPacketQueueingMethod(n.getEnumValue(FirewallPacketQueueingMethodType.class)); });
-            this.put("firewallPreSharedKeyEncodingMethod", (n) -> { currentObject.setFirewallPreSharedKeyEncodingMethod(n.getEnumValue(FirewallPreSharedKeyEncodingMethodType.class)); });
-            this.put("firewallProfileDomain", (n) -> { currentObject.setFirewallProfileDomain(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
-            this.put("firewallProfilePrivate", (n) -> { currentObject.setFirewallProfilePrivate(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
-            this.put("firewallProfilePublic", (n) -> { currentObject.setFirewallProfilePublic(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
-            this.put("smartScreenBlockOverrideForFiles", (n) -> { currentObject.setSmartScreenBlockOverrideForFiles(n.getBooleanValue()); });
-            this.put("smartScreenEnableInShell", (n) -> { currentObject.setSmartScreenEnableInShell(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationGuardAllowPersistence", (n) -> { currentObject.setApplicationGuardAllowPersistence(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowPrintToLocalPrinters", (n) -> { currentObject.setApplicationGuardAllowPrintToLocalPrinters(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowPrintToNetworkPrinters", (n) -> { currentObject.setApplicationGuardAllowPrintToNetworkPrinters(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowPrintToPDF", (n) -> { currentObject.setApplicationGuardAllowPrintToPDF(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowPrintToXPS", (n) -> { currentObject.setApplicationGuardAllowPrintToXPS(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardBlockClipboardSharing", (n) -> { currentObject.setApplicationGuardBlockClipboardSharing(n.getEnumValue(ApplicationGuardBlockClipboardSharingType.class)); });
+        deserializerMap.put("applicationGuardBlockFileTransfer", (n) -> { currentObject.setApplicationGuardBlockFileTransfer(n.getEnumValue(ApplicationGuardBlockFileTransferType.class)); });
+        deserializerMap.put("applicationGuardBlockNonEnterpriseContent", (n) -> { currentObject.setApplicationGuardBlockNonEnterpriseContent(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardEnabled", (n) -> { currentObject.setApplicationGuardEnabled(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardForceAuditing", (n) -> { currentObject.setApplicationGuardForceAuditing(n.getBooleanValue()); });
+        deserializerMap.put("appLockerApplicationControl", (n) -> { currentObject.setAppLockerApplicationControl(n.getEnumValue(AppLockerApplicationControlType.class)); });
+        deserializerMap.put("bitLockerDisableWarningForOtherDiskEncryption", (n) -> { currentObject.setBitLockerDisableWarningForOtherDiskEncryption(n.getBooleanValue()); });
+        deserializerMap.put("bitLockerEnableStorageCardEncryptionOnMobile", (n) -> { currentObject.setBitLockerEnableStorageCardEncryptionOnMobile(n.getBooleanValue()); });
+        deserializerMap.put("bitLockerEncryptDevice", (n) -> { currentObject.setBitLockerEncryptDevice(n.getBooleanValue()); });
+        deserializerMap.put("bitLockerRemovableDrivePolicy", (n) -> { currentObject.setBitLockerRemovableDrivePolicy(n.getObjectValue(BitLockerRemovableDrivePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("defenderAdditionalGuardedFolders", (n) -> { currentObject.setDefenderAdditionalGuardedFolders(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderAttackSurfaceReductionExcludedPaths", (n) -> { currentObject.setDefenderAttackSurfaceReductionExcludedPaths(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderExploitProtectionXml", (n) -> { currentObject.setDefenderExploitProtectionXml(n.getByteArrayValue()); });
+        deserializerMap.put("defenderExploitProtectionXmlFileName", (n) -> { currentObject.setDefenderExploitProtectionXmlFileName(n.getStringValue()); });
+        deserializerMap.put("defenderGuardedFoldersAllowedAppPaths", (n) -> { currentObject.setDefenderGuardedFoldersAllowedAppPaths(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderSecurityCenterBlockExploitProtectionOverride", (n) -> { currentObject.setDefenderSecurityCenterBlockExploitProtectionOverride(n.getBooleanValue()); });
+        deserializerMap.put("firewallBlockStatefulFTP", (n) -> { currentObject.setFirewallBlockStatefulFTP(n.getBooleanValue()); });
+        deserializerMap.put("firewallCertificateRevocationListCheckMethod", (n) -> { currentObject.setFirewallCertificateRevocationListCheckMethod(n.getEnumValue(FirewallCertificateRevocationListCheckMethodType.class)); });
+        deserializerMap.put("firewallIdleTimeoutForSecurityAssociationInSeconds", (n) -> { currentObject.setFirewallIdleTimeoutForSecurityAssociationInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("firewallIPSecExemptionsAllowDHCP", (n) -> { currentObject.setFirewallIPSecExemptionsAllowDHCP(n.getBooleanValue()); });
+        deserializerMap.put("firewallIPSecExemptionsAllowICMP", (n) -> { currentObject.setFirewallIPSecExemptionsAllowICMP(n.getBooleanValue()); });
+        deserializerMap.put("firewallIPSecExemptionsAllowNeighborDiscovery", (n) -> { currentObject.setFirewallIPSecExemptionsAllowNeighborDiscovery(n.getBooleanValue()); });
+        deserializerMap.put("firewallIPSecExemptionsAllowRouterDiscovery", (n) -> { currentObject.setFirewallIPSecExemptionsAllowRouterDiscovery(n.getBooleanValue()); });
+        deserializerMap.put("firewallMergeKeyingModuleSettings", (n) -> { currentObject.setFirewallMergeKeyingModuleSettings(n.getBooleanValue()); });
+        deserializerMap.put("firewallPacketQueueingMethod", (n) -> { currentObject.setFirewallPacketQueueingMethod(n.getEnumValue(FirewallPacketQueueingMethodType.class)); });
+        deserializerMap.put("firewallPreSharedKeyEncodingMethod", (n) -> { currentObject.setFirewallPreSharedKeyEncodingMethod(n.getEnumValue(FirewallPreSharedKeyEncodingMethodType.class)); });
+        deserializerMap.put("firewallProfileDomain", (n) -> { currentObject.setFirewallProfileDomain(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("firewallProfilePrivate", (n) -> { currentObject.setFirewallProfilePrivate(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("firewallProfilePublic", (n) -> { currentObject.setFirewallProfilePublic(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("smartScreenBlockOverrideForFiles", (n) -> { currentObject.setSmartScreenBlockOverrideForFiles(n.getBooleanValue()); });
+        deserializerMap.put("smartScreenEnableInShell", (n) -> { currentObject.setSmartScreenEnableInShell(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the firewallBlockStatefulFTP property value. Blocks stateful FTP connections to the device

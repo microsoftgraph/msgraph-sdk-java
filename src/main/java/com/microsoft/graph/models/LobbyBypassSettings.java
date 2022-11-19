@@ -51,11 +51,11 @@ public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LobbyBypassSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("isDialInBypassEnabled", (n) -> { currentObject.setIsDialInBypassEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("scope", (n) -> { currentObject.setScope(n.getEnumValue(LobbyBypassScope.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("isDialInBypassEnabled", (n) -> { currentObject.setIsDialInBypassEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("scope", (n) -> { currentObject.setScope(n.getEnumValue(LobbyBypassScope.class)); });
+        return deserializerMap
     }
     /**
      * Gets the isDialInBypassEnabled property value. Specifies whether or not to always let dial-in callers bypass the lobby. Optional.

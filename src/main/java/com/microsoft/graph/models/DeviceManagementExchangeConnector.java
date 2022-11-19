@@ -86,17 +86,17 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementExchangeConnector currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("connectorServerName", (n) -> { currentObject.setConnectorServerName(n.getStringValue()); });
-            this.put("exchangeAlias", (n) -> { currentObject.setExchangeAlias(n.getStringValue()); });
-            this.put("exchangeConnectorType", (n) -> { currentObject.setExchangeConnectorType(n.getEnumValue(DeviceManagementExchangeConnectorType.class)); });
-            this.put("exchangeOrganization", (n) -> { currentObject.setExchangeOrganization(n.getStringValue()); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("primarySmtpAddress", (n) -> { currentObject.setPrimarySmtpAddress(n.getStringValue()); });
-            this.put("serverName", (n) -> { currentObject.setServerName(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DeviceManagementExchangeConnectorStatus.class)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("connectorServerName", (n) -> { currentObject.setConnectorServerName(n.getStringValue()); });
+        deserializerMap.put("exchangeAlias", (n) -> { currentObject.setExchangeAlias(n.getStringValue()); });
+        deserializerMap.put("exchangeConnectorType", (n) -> { currentObject.setExchangeConnectorType(n.getEnumValue(DeviceManagementExchangeConnectorType.class)); });
+        deserializerMap.put("exchangeOrganization", (n) -> { currentObject.setExchangeOrganization(n.getStringValue()); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("primarySmtpAddress", (n) -> { currentObject.setPrimarySmtpAddress(n.getStringValue()); });
+        deserializerMap.put("serverName", (n) -> { currentObject.setServerName(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DeviceManagementExchangeConnectorStatus.class)); });
+        deserializerMap.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the lastSyncDateTime property value. Last sync time for the Exchange Connector

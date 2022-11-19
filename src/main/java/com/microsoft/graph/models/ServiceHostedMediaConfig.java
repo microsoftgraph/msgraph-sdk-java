@@ -36,9 +36,9 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServiceHostedMediaConfig currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("preFetchMedia", (n) -> { currentObject.setPreFetchMedia(n.getCollectionOfObjectValues(MediaInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("preFetchMedia", (n) -> { currentObject.setPreFetchMedia(n.getCollectionOfObjectValues(MediaInfo::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the preFetchMedia property value. The list of media to pre-fetch.

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class Relation extends Entity implements Parsable {
     /** The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set]. */
     private Term _fromTerm;
@@ -44,12 +44,12 @@ public class Relation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Relation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("fromTerm", (n) -> { currentObject.setFromTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
-            this.put("relationship", (n) -> { currentObject.setRelationship(n.getEnumValue(RelationType.class)); });
-            this.put("set", (n) -> { currentObject.setSet(n.getObjectValue(Set::createFromDiscriminatorValue)); });
-            this.put("toTerm", (n) -> { currentObject.setToTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fromTerm", (n) -> { currentObject.setFromTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
+        deserializerMap.put("relationship", (n) -> { currentObject.setRelationship(n.getEnumValue(RelationType.class)); });
+        deserializerMap.put("set", (n) -> { currentObject.setSet(n.getObjectValue(Set::createFromDiscriminatorValue)); });
+        deserializerMap.put("toTerm", (n) -> { currentObject.setToTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the fromTerm property value. The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].

@@ -65,11 +65,11 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionAppLearningSummary currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("applicationName", (n) -> { currentObject.setApplicationName(n.getStringValue()); });
-            this.put("applicationType", (n) -> { currentObject.setApplicationType(n.getEnumValue(ApplicationType.class)); });
-            this.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationName", (n) -> { currentObject.setApplicationName(n.getStringValue()); });
+        deserializerMap.put("applicationType", (n) -> { currentObject.setApplicationType(n.getEnumValue(ApplicationType.class)); });
+        deserializerMap.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object

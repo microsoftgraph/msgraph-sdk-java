@@ -59,11 +59,11 @@ public class CommsNotification implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CommsNotification currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("changeType", (n) -> { currentObject.setChangeType(n.getEnumValue(ChangeType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("resourceUrl", (n) -> { currentObject.setResourceUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("changeType", (n) -> { currentObject.setChangeType(n.getEnumValue(ChangeType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("resourceUrl", (n) -> { currentObject.setResourceUrl(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property

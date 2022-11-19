@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the admin singleton. */
 public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** The date and time that this Windows Hello for Business key was registered. */
     private OffsetDateTime _createdDateTime;
@@ -18,7 +19,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     /** Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown. */
     private AuthenticationMethodKeyStrength _keyStrength;
     /**
-     * Instantiates a new WindowsHelloForBusinessAuthenticationMethod and sets the default values.
+     * Instantiates a new windowsHelloForBusinessAuthenticationMethod and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -29,7 +30,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsHelloForBusinessAuthenticationMethod
+     * @return a windowsHelloForBusinessAuthenticationMethod
      */
     @javax.annotation.Nonnull
     public static WindowsHelloForBusinessAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -67,12 +68,12 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsHelloForBusinessAuthenticationMethod currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("device", (n) -> { currentObject.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("keyStrength", (n) -> { currentObject.setKeyStrength(n.getEnumValue(AuthenticationMethodKeyStrength.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("device", (n) -> { currentObject.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("keyStrength", (n) -> { currentObject.setKeyStrength(n.getEnumValue(AuthenticationMethodKeyStrength.class)); });
+        return deserializerMap
     }
     /**
      * Gets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.

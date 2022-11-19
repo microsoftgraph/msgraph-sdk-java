@@ -36,9 +36,9 @@ public class TimeOffItem extends ScheduleEntity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TimeOffItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("timeOffReasonId", (n) -> { currentObject.setTimeOffReasonId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("timeOffReasonId", (n) -> { currentObject.setTimeOffReasonId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the timeOffReasonId property value. ID of the timeOffReason for this timeOffItem. Required.

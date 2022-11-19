@@ -61,12 +61,12 @@ public class AlertDetection implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AlertDetection currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("detectionType", (n) -> { currentObject.setDetectionType(n.getStringValue()); });
-            this.put("method", (n) -> { currentObject.setMethod(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("detectionType", (n) -> { currentObject.setDetectionType(n.getStringValue()); });
+        deserializerMap.put("method", (n) -> { currentObject.setMethod(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the method property value. The method property

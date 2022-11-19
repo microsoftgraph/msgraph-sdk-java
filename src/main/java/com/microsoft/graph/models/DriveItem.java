@@ -155,40 +155,40 @@ public class DriveItem extends BaseItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DriveItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("analytics", (n) -> { currentObject.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
-            this.put("audio", (n) -> { currentObject.setAudio(n.getObjectValue(Audio::createFromDiscriminatorValue)); });
-            this.put("bundle", (n) -> { currentObject.setBundle(n.getObjectValue(Bundle::createFromDiscriminatorValue)); });
-            this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
-            this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
-            this.put("cTag", (n) -> { currentObject.setCTag(n.getStringValue()); });
-            this.put("deleted", (n) -> { currentObject.setDeleted(n.getObjectValue(Deleted::createFromDiscriminatorValue)); });
-            this.put("file", (n) -> { currentObject.setFile(n.getObjectValue(File::createFromDiscriminatorValue)); });
-            this.put("fileSystemInfo", (n) -> { currentObject.setFileSystemInfo(n.getObjectValue(FileSystemInfo::createFromDiscriminatorValue)); });
-            this.put("folder", (n) -> { currentObject.setFolder(n.getObjectValue(Folder::createFromDiscriminatorValue)); });
-            this.put("image", (n) -> { currentObject.setImage(n.getObjectValue(Image::createFromDiscriminatorValue)); });
-            this.put("listItem", (n) -> { currentObject.setListItem(n.getObjectValue(ListItem::createFromDiscriminatorValue)); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(GeoCoordinates::createFromDiscriminatorValue)); });
-            this.put("malware", (n) -> { currentObject.setMalware(n.getObjectValue(Malware::createFromDiscriminatorValue)); });
-            this.put("package", (n) -> { currentObject.setPackage(n.getObjectValue(Package_escaped::createFromDiscriminatorValue)); });
-            this.put("pendingOperations", (n) -> { currentObject.setPendingOperations(n.getObjectValue(PendingOperations::createFromDiscriminatorValue)); });
-            this.put("permissions", (n) -> { currentObject.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
-            this.put("photo", (n) -> { currentObject.setPhoto(n.getObjectValue(Photo::createFromDiscriminatorValue)); });
-            this.put("publication", (n) -> { currentObject.setPublication(n.getObjectValue(PublicationFacet::createFromDiscriminatorValue)); });
-            this.put("remoteItem", (n) -> { currentObject.setRemoteItem(n.getObjectValue(RemoteItem::createFromDiscriminatorValue)); });
-            this.put("root", (n) -> { currentObject.setRoot(n.getObjectValue(Root::createFromDiscriminatorValue)); });
-            this.put("searchResult", (n) -> { currentObject.setSearchResult(n.getObjectValue(SearchResult::createFromDiscriminatorValue)); });
-            this.put("shared", (n) -> { currentObject.setShared(n.getObjectValue(Shared::createFromDiscriminatorValue)); });
-            this.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
-            this.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
-            this.put("specialFolder", (n) -> { currentObject.setSpecialFolder(n.getObjectValue(SpecialFolder::createFromDiscriminatorValue)); });
-            this.put("subscriptions", (n) -> { currentObject.setSubscriptions(n.getCollectionOfObjectValues(Subscription::createFromDiscriminatorValue)); });
-            this.put("thumbnails", (n) -> { currentObject.setThumbnails(n.getCollectionOfObjectValues(ThumbnailSet::createFromDiscriminatorValue)); });
-            this.put("versions", (n) -> { currentObject.setVersions(n.getCollectionOfObjectValues(DriveItemVersion::createFromDiscriminatorValue)); });
-            this.put("video", (n) -> { currentObject.setVideo(n.getObjectValue(Video::createFromDiscriminatorValue)); });
-            this.put("webDavUrl", (n) -> { currentObject.setWebDavUrl(n.getStringValue()); });
-            this.put("workbook", (n) -> { currentObject.setWorkbook(n.getObjectValue(Workbook::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("analytics", (n) -> { currentObject.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
+        deserializerMap.put("audio", (n) -> { currentObject.setAudio(n.getObjectValue(Audio::createFromDiscriminatorValue)); });
+        deserializerMap.put("bundle", (n) -> { currentObject.setBundle(n.getObjectValue(Bundle::createFromDiscriminatorValue)); });
+        deserializerMap.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("cTag", (n) -> { currentObject.setCTag(n.getStringValue()); });
+        deserializerMap.put("deleted", (n) -> { currentObject.setDeleted(n.getObjectValue(Deleted::createFromDiscriminatorValue)); });
+        deserializerMap.put("file", (n) -> { currentObject.setFile(n.getObjectValue(File::createFromDiscriminatorValue)); });
+        deserializerMap.put("fileSystemInfo", (n) -> { currentObject.setFileSystemInfo(n.getObjectValue(FileSystemInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("folder", (n) -> { currentObject.setFolder(n.getObjectValue(Folder::createFromDiscriminatorValue)); });
+        deserializerMap.put("image", (n) -> { currentObject.setImage(n.getObjectValue(Image::createFromDiscriminatorValue)); });
+        deserializerMap.put("listItem", (n) -> { currentObject.setListItem(n.getObjectValue(ListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(GeoCoordinates::createFromDiscriminatorValue)); });
+        deserializerMap.put("malware", (n) -> { currentObject.setMalware(n.getObjectValue(Malware::createFromDiscriminatorValue)); });
+        deserializerMap.put("package", (n) -> { currentObject.setPackage(n.getObjectValue(Package_escaped::createFromDiscriminatorValue)); });
+        deserializerMap.put("pendingOperations", (n) -> { currentObject.setPendingOperations(n.getObjectValue(PendingOperations::createFromDiscriminatorValue)); });
+        deserializerMap.put("permissions", (n) -> { currentObject.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
+        deserializerMap.put("photo", (n) -> { currentObject.setPhoto(n.getObjectValue(Photo::createFromDiscriminatorValue)); });
+        deserializerMap.put("publication", (n) -> { currentObject.setPublication(n.getObjectValue(PublicationFacet::createFromDiscriminatorValue)); });
+        deserializerMap.put("remoteItem", (n) -> { currentObject.setRemoteItem(n.getObjectValue(RemoteItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("root", (n) -> { currentObject.setRoot(n.getObjectValue(Root::createFromDiscriminatorValue)); });
+        deserializerMap.put("searchResult", (n) -> { currentObject.setSearchResult(n.getObjectValue(SearchResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("shared", (n) -> { currentObject.setShared(n.getObjectValue(Shared::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
+        deserializerMap.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
+        deserializerMap.put("specialFolder", (n) -> { currentObject.setSpecialFolder(n.getObjectValue(SpecialFolder::createFromDiscriminatorValue)); });
+        deserializerMap.put("subscriptions", (n) -> { currentObject.setSubscriptions(n.getCollectionOfObjectValues(Subscription::createFromDiscriminatorValue)); });
+        deserializerMap.put("thumbnails", (n) -> { currentObject.setThumbnails(n.getCollectionOfObjectValues(ThumbnailSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("versions", (n) -> { currentObject.setVersions(n.getCollectionOfObjectValues(DriveItemVersion::createFromDiscriminatorValue)); });
+        deserializerMap.put("video", (n) -> { currentObject.setVideo(n.getObjectValue(Video::createFromDiscriminatorValue)); });
+        deserializerMap.put("webDavUrl", (n) -> { currentObject.setWebDavUrl(n.getStringValue()); });
+        deserializerMap.put("workbook", (n) -> { currentObject.setWorkbook(n.getObjectValue(Workbook::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the file property value. File metadata, if the item is a file. Read-only.

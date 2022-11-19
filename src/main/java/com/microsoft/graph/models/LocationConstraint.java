@@ -53,12 +53,12 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LocationConstraint currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("isRequired", (n) -> { currentObject.setIsRequired(n.getBooleanValue()); });
-            this.put("locations", (n) -> { currentObject.setLocations(n.getCollectionOfObjectValues(LocationConstraintItem::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("suggestLocation", (n) -> { currentObject.setSuggestLocation(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("isRequired", (n) -> { currentObject.setIsRequired(n.getBooleanValue()); });
+        deserializerMap.put("locations", (n) -> { currentObject.setLocations(n.getCollectionOfObjectValues(LocationConstraintItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("suggestLocation", (n) -> { currentObject.setSuggestLocation(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isRequired property value. The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes will not return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations.

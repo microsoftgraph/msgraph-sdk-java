@@ -44,9 +44,9 @@ public class DaylightTimeZoneOffset extends StandardTimeZoneOffset implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DaylightTimeZoneOffset currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("daylightBias", (n) -> { currentObject.setDaylightBias(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("daylightBias", (n) -> { currentObject.setDaylightBias(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object

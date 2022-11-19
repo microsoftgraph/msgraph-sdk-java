@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreement entities. */
 public class PrintConnector extends Entity implements Parsable {
     /** The connector's version. */
     private String _appVersion;
@@ -22,7 +23,7 @@ public class PrintConnector extends Entity implements Parsable {
     /** The DateTimeOffset when the connector was registered. */
     private OffsetDateTime _registeredDateTime;
     /**
-     * Instantiates a new PrintConnector and sets the default values.
+     * Instantiates a new printConnector and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -33,7 +34,7 @@ public class PrintConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrintConnector
+     * @return a printConnector
      */
     @javax.annotation.Nonnull
     public static PrintConnector createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -63,14 +64,14 @@ public class PrintConnector extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintConnector currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("appVersion", (n) -> { currentObject.setAppVersion(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("fullyQualifiedDomainName", (n) -> { currentObject.setFullyQualifiedDomainName(n.getStringValue()); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(PrinterLocation::createFromDiscriminatorValue)); });
-            this.put("operatingSystem", (n) -> { currentObject.setOperatingSystem(n.getStringValue()); });
-            this.put("registeredDateTime", (n) -> { currentObject.setRegisteredDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appVersion", (n) -> { currentObject.setAppVersion(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("fullyQualifiedDomainName", (n) -> { currentObject.setFullyQualifiedDomainName(n.getStringValue()); });
+        deserializerMap.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(PrinterLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("operatingSystem", (n) -> { currentObject.setOperatingSystem(n.getStringValue()); });
+        deserializerMap.put("registeredDateTime", (n) -> { currentObject.setRegisteredDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap
     }
     /**
      * Gets the fullyQualifiedDomainName property value. The connector machine's hostname.

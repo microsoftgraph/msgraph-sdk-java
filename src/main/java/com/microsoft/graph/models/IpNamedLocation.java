@@ -38,10 +38,10 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IpNamedLocation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("ipRanges", (n) -> { currentObject.setIpRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
-            this.put("isTrusted", (n) -> { currentObject.setIsTrusted(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("ipRanges", (n) -> { currentObject.setIpRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("isTrusted", (n) -> { currentObject.setIsTrusted(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the ipRanges property value. List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596. Required.

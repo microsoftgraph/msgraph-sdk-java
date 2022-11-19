@@ -64,11 +64,11 @@ public class FileAttachment extends Attachment implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FileAttachment currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("contentBytes", (n) -> { currentObject.setContentBytes(n.getByteArrayValue()); });
-            this.put("contentId", (n) -> { currentObject.setContentId(n.getStringValue()); });
-            this.put("contentLocation", (n) -> { currentObject.setContentLocation(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contentBytes", (n) -> { currentObject.setContentBytes(n.getByteArrayValue()); });
+        deserializerMap.put("contentId", (n) -> { currentObject.setContentId(n.getStringValue()); });
+        deserializerMap.put("contentLocation", (n) -> { currentObject.setContentLocation(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object

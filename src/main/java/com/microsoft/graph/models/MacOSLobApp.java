@@ -76,17 +76,17 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSLobApp currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("buildNumber", (n) -> { currentObject.setBuildNumber(n.getStringValue()); });
-            this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
-            this.put("childApps", (n) -> { currentObject.setChildApps(n.getCollectionOfObjectValues(MacOSLobChildApp::createFromDiscriminatorValue)); });
-            this.put("ignoreVersionDetection", (n) -> { currentObject.setIgnoreVersionDetection(n.getBooleanValue()); });
-            this.put("installAsManaged", (n) -> { currentObject.setInstallAsManaged(n.getBooleanValue()); });
-            this.put("md5Hash", (n) -> { currentObject.setMd5Hash(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("md5HashChunkSize", (n) -> { currentObject.setMd5HashChunkSize(n.getIntegerValue()); });
-            this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(MacOSMinimumOperatingSystem::createFromDiscriminatorValue)); });
-            this.put("versionNumber", (n) -> { currentObject.setVersionNumber(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("buildNumber", (n) -> { currentObject.setBuildNumber(n.getStringValue()); });
+        deserializerMap.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
+        deserializerMap.put("childApps", (n) -> { currentObject.setChildApps(n.getCollectionOfObjectValues(MacOSLobChildApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("ignoreVersionDetection", (n) -> { currentObject.setIgnoreVersionDetection(n.getBooleanValue()); });
+        deserializerMap.put("installAsManaged", (n) -> { currentObject.setInstallAsManaged(n.getBooleanValue()); });
+        deserializerMap.put("md5Hash", (n) -> { currentObject.setMd5Hash(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("md5HashChunkSize", (n) -> { currentObject.setMd5HashChunkSize(n.getIntegerValue()); });
+        deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(MacOSMinimumOperatingSystem::createFromDiscriminatorValue)); });
+        deserializerMap.put("versionNumber", (n) -> { currentObject.setVersionNumber(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the ignoreVersionDetection property value. When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature.

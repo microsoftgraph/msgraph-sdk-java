@@ -99,19 +99,19 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessConditionSet currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(11) {{
-            this.put("applications", (n) -> { currentObject.setApplications(n.getObjectValue(ConditionalAccessApplications::createFromDiscriminatorValue)); });
-            this.put("clientApplications", (n) -> { currentObject.setClientApplications(n.getObjectValue(ConditionalAccessClientApplications::createFromDiscriminatorValue)); });
-            this.put("clientAppTypes", (n) -> { currentObject.setClientAppTypes(n.getCollectionOfEnumValues(ConditionalAccessClientApp.class)); });
-            this.put("devices", (n) -> { currentObject.setDevices(n.getObjectValue(ConditionalAccessDevices::createFromDiscriminatorValue)); });
-            this.put("locations", (n) -> { currentObject.setLocations(n.getObjectValue(ConditionalAccessLocations::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("platforms", (n) -> { currentObject.setPlatforms(n.getObjectValue(ConditionalAccessPlatforms::createFromDiscriminatorValue)); });
-            this.put("servicePrincipalRiskLevels", (n) -> { currentObject.setServicePrincipalRiskLevels(n.getCollectionOfEnumValues(RiskLevel.class)); });
-            this.put("signInRiskLevels", (n) -> { currentObject.setSignInRiskLevels(n.getCollectionOfEnumValues(RiskLevel.class)); });
-            this.put("userRiskLevels", (n) -> { currentObject.setUserRiskLevels(n.getCollectionOfEnumValues(RiskLevel.class)); });
-            this.put("users", (n) -> { currentObject.setUsers(n.getObjectValue(ConditionalAccessUsers::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(11);
+        deserializerMap.put("applications", (n) -> { currentObject.setApplications(n.getObjectValue(ConditionalAccessApplications::createFromDiscriminatorValue)); });
+        deserializerMap.put("clientApplications", (n) -> { currentObject.setClientApplications(n.getObjectValue(ConditionalAccessClientApplications::createFromDiscriminatorValue)); });
+        deserializerMap.put("clientAppTypes", (n) -> { currentObject.setClientAppTypes(n.getCollectionOfEnumValues(ConditionalAccessClientApp.class)); });
+        deserializerMap.put("devices", (n) -> { currentObject.setDevices(n.getObjectValue(ConditionalAccessDevices::createFromDiscriminatorValue)); });
+        deserializerMap.put("locations", (n) -> { currentObject.setLocations(n.getObjectValue(ConditionalAccessLocations::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("platforms", (n) -> { currentObject.setPlatforms(n.getObjectValue(ConditionalAccessPlatforms::createFromDiscriminatorValue)); });
+        deserializerMap.put("servicePrincipalRiskLevels", (n) -> { currentObject.setServicePrincipalRiskLevels(n.getCollectionOfEnumValues(RiskLevel.class)); });
+        deserializerMap.put("signInRiskLevels", (n) -> { currentObject.setSignInRiskLevels(n.getCollectionOfEnumValues(RiskLevel.class)); });
+        deserializerMap.put("userRiskLevels", (n) -> { currentObject.setUserRiskLevels(n.getCollectionOfEnumValues(RiskLevel.class)); });
+        deserializerMap.put("users", (n) -> { currentObject.setUsers(n.getObjectValue(ConditionalAccessUsers::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the locations property value. Locations included in and excluded from the policy.

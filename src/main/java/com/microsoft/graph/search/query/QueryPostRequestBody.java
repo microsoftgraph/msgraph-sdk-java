@@ -48,9 +48,9 @@ public class QueryPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final QueryPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("requests", (n) -> { currentObject.setRequests(n.getCollectionOfObjectValues(SearchRequest::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("requests", (n) -> { currentObject.setRequests(n.getCollectionOfObjectValues(SearchRequest::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the requests property value. The requests property

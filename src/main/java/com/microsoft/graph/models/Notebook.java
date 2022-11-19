@@ -50,16 +50,16 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Notebook currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
-            this.put("isShared", (n) -> { currentObject.setIsShared(n.getBooleanValue()); });
-            this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(NotebookLinks::createFromDiscriminatorValue)); });
-            this.put("sectionGroups", (n) -> { currentObject.setSectionGroups(n.getCollectionOfObjectValues(SectionGroup::createFromDiscriminatorValue)); });
-            this.put("sectionGroupsUrl", (n) -> { currentObject.setSectionGroupsUrl(n.getStringValue()); });
-            this.put("sections", (n) -> { currentObject.setSections(n.getCollectionOfObjectValues(OnenoteSection::createFromDiscriminatorValue)); });
-            this.put("sectionsUrl", (n) -> { currentObject.setSectionsUrl(n.getStringValue()); });
-            this.put("userRole", (n) -> { currentObject.setUserRole(n.getEnumValue(OnenoteUserRole.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
+        deserializerMap.put("isShared", (n) -> { currentObject.setIsShared(n.getBooleanValue()); });
+        deserializerMap.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(NotebookLinks::createFromDiscriminatorValue)); });
+        deserializerMap.put("sectionGroups", (n) -> { currentObject.setSectionGroups(n.getCollectionOfObjectValues(SectionGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("sectionGroupsUrl", (n) -> { currentObject.setSectionGroupsUrl(n.getStringValue()); });
+        deserializerMap.put("sections", (n) -> { currentObject.setSections(n.getCollectionOfObjectValues(OnenoteSection::createFromDiscriminatorValue)); });
+        deserializerMap.put("sectionsUrl", (n) -> { currentObject.setSectionsUrl(n.getStringValue()); });
+        deserializerMap.put("userRole", (n) -> { currentObject.setUserRole(n.getEnumValue(OnenoteUserRole.class)); });
+        return deserializerMap
     }
     /**
      * Gets the isDefault property value. Indicates whether this is the user's default notebook. Read-only.

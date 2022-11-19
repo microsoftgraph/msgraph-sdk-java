@@ -131,39 +131,39 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MessageRulePredicates currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(31) {{
-            this.put("bodyContains", (n) -> { currentObject.setBodyContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("bodyOrSubjectContains", (n) -> { currentObject.setBodyOrSubjectContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("fromAddresses", (n) -> { currentObject.setFromAddresses(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
-            this.put("headerContains", (n) -> { currentObject.setHeaderContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(Importance.class)); });
-            this.put("isApprovalRequest", (n) -> { currentObject.setIsApprovalRequest(n.getBooleanValue()); });
-            this.put("isAutomaticForward", (n) -> { currentObject.setIsAutomaticForward(n.getBooleanValue()); });
-            this.put("isAutomaticReply", (n) -> { currentObject.setIsAutomaticReply(n.getBooleanValue()); });
-            this.put("isEncrypted", (n) -> { currentObject.setIsEncrypted(n.getBooleanValue()); });
-            this.put("isMeetingRequest", (n) -> { currentObject.setIsMeetingRequest(n.getBooleanValue()); });
-            this.put("isMeetingResponse", (n) -> { currentObject.setIsMeetingResponse(n.getBooleanValue()); });
-            this.put("isNonDeliveryReport", (n) -> { currentObject.setIsNonDeliveryReport(n.getBooleanValue()); });
-            this.put("isPermissionControlled", (n) -> { currentObject.setIsPermissionControlled(n.getBooleanValue()); });
-            this.put("isReadReceipt", (n) -> { currentObject.setIsReadReceipt(n.getBooleanValue()); });
-            this.put("isSigned", (n) -> { currentObject.setIsSigned(n.getBooleanValue()); });
-            this.put("isVoicemail", (n) -> { currentObject.setIsVoicemail(n.getBooleanValue()); });
-            this.put("messageActionFlag", (n) -> { currentObject.setMessageActionFlag(n.getEnumValue(MessageActionFlag.class)); });
-            this.put("notSentToMe", (n) -> { currentObject.setNotSentToMe(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recipientContains", (n) -> { currentObject.setRecipientContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("senderContains", (n) -> { currentObject.setSenderContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("sensitivity", (n) -> { currentObject.setSensitivity(n.getEnumValue(Sensitivity.class)); });
-            this.put("sentCcMe", (n) -> { currentObject.setSentCcMe(n.getBooleanValue()); });
-            this.put("sentOnlyToMe", (n) -> { currentObject.setSentOnlyToMe(n.getBooleanValue()); });
-            this.put("sentToAddresses", (n) -> { currentObject.setSentToAddresses(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("sentToMe", (n) -> { currentObject.setSentToMe(n.getBooleanValue()); });
-            this.put("sentToOrCcMe", (n) -> { currentObject.setSentToOrCcMe(n.getBooleanValue()); });
-            this.put("subjectContains", (n) -> { currentObject.setSubjectContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("withinSizeRange", (n) -> { currentObject.setWithinSizeRange(n.getObjectValue(SizeRange::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(31);
+        deserializerMap.put("bodyContains", (n) -> { currentObject.setBodyContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("bodyOrSubjectContains", (n) -> { currentObject.setBodyOrSubjectContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("fromAddresses", (n) -> { currentObject.setFromAddresses(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
+        deserializerMap.put("headerContains", (n) -> { currentObject.setHeaderContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(Importance.class)); });
+        deserializerMap.put("isApprovalRequest", (n) -> { currentObject.setIsApprovalRequest(n.getBooleanValue()); });
+        deserializerMap.put("isAutomaticForward", (n) -> { currentObject.setIsAutomaticForward(n.getBooleanValue()); });
+        deserializerMap.put("isAutomaticReply", (n) -> { currentObject.setIsAutomaticReply(n.getBooleanValue()); });
+        deserializerMap.put("isEncrypted", (n) -> { currentObject.setIsEncrypted(n.getBooleanValue()); });
+        deserializerMap.put("isMeetingRequest", (n) -> { currentObject.setIsMeetingRequest(n.getBooleanValue()); });
+        deserializerMap.put("isMeetingResponse", (n) -> { currentObject.setIsMeetingResponse(n.getBooleanValue()); });
+        deserializerMap.put("isNonDeliveryReport", (n) -> { currentObject.setIsNonDeliveryReport(n.getBooleanValue()); });
+        deserializerMap.put("isPermissionControlled", (n) -> { currentObject.setIsPermissionControlled(n.getBooleanValue()); });
+        deserializerMap.put("isReadReceipt", (n) -> { currentObject.setIsReadReceipt(n.getBooleanValue()); });
+        deserializerMap.put("isSigned", (n) -> { currentObject.setIsSigned(n.getBooleanValue()); });
+        deserializerMap.put("isVoicemail", (n) -> { currentObject.setIsVoicemail(n.getBooleanValue()); });
+        deserializerMap.put("messageActionFlag", (n) -> { currentObject.setMessageActionFlag(n.getEnumValue(MessageActionFlag.class)); });
+        deserializerMap.put("notSentToMe", (n) -> { currentObject.setNotSentToMe(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recipientContains", (n) -> { currentObject.setRecipientContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("senderContains", (n) -> { currentObject.setSenderContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("sensitivity", (n) -> { currentObject.setSensitivity(n.getEnumValue(Sensitivity.class)); });
+        deserializerMap.put("sentCcMe", (n) -> { currentObject.setSentCcMe(n.getBooleanValue()); });
+        deserializerMap.put("sentOnlyToMe", (n) -> { currentObject.setSentOnlyToMe(n.getBooleanValue()); });
+        deserializerMap.put("sentToAddresses", (n) -> { currentObject.setSentToAddresses(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("sentToMe", (n) -> { currentObject.setSentToMe(n.getBooleanValue()); });
+        deserializerMap.put("sentToOrCcMe", (n) -> { currentObject.setSentToOrCcMe(n.getBooleanValue()); });
+        deserializerMap.put("subjectContains", (n) -> { currentObject.setSubjectContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("withinSizeRange", (n) -> { currentObject.setWithinSizeRange(n.getObjectValue(SizeRange::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the fromAddresses property value. Represents the specific sender email addresses of an incoming message in order for the condition or exception to apply.

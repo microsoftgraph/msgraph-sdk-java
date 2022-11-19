@@ -69,12 +69,12 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DriveRecipient currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("alias", (n) -> { currentObject.setAlias(n.getStringValue()); });
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("objectId", (n) -> { currentObject.setObjectId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("alias", (n) -> { currentObject.setAlias(n.getStringValue()); });
+        deserializerMap.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
+        deserializerMap.put("objectId", (n) -> { currentObject.setObjectId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the objectId property value. The unique identifier for the recipient in the directory.

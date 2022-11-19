@@ -58,12 +58,12 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClientUserAgent currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("azureADAppId", (n) -> { currentObject.setAzureADAppId(n.getStringValue()); });
-            this.put("communicationServiceId", (n) -> { currentObject.setCommunicationServiceId(n.getStringValue()); });
-            this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(ClientPlatform.class)); });
-            this.put("productFamily", (n) -> { currentObject.setProductFamily(n.getEnumValue(ProductFamily.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("azureADAppId", (n) -> { currentObject.setAzureADAppId(n.getStringValue()); });
+        deserializerMap.put("communicationServiceId", (n) -> { currentObject.setCommunicationServiceId(n.getStringValue()); });
+        deserializerMap.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(ClientPlatform.class)); });
+        deserializerMap.put("productFamily", (n) -> { currentObject.setProductFamily(n.getEnumValue(ProductFamily.class)); });
+        return deserializerMap
     }
     /**
      * Gets the platform property value. The platform property

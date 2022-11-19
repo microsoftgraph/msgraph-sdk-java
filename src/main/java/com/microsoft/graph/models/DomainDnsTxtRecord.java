@@ -36,9 +36,9 @@ public class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DomainDnsTxtRecord currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the text property value. Value used when configuring the text property at the DNS host.

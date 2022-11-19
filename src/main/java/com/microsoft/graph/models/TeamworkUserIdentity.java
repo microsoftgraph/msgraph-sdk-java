@@ -36,9 +36,9 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkUserIdentity currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("userIdentityType", (n) -> { currentObject.setUserIdentityType(n.getEnumValue(TeamworkUserIdentityType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("userIdentityType", (n) -> { currentObject.setUserIdentityType(n.getEnumValue(TeamworkUserIdentityType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, unknownFutureValue and emailUser.

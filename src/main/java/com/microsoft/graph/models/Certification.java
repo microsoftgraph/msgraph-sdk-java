@@ -74,14 +74,14 @@ public class Certification implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Certification currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("certificationDetailsUrl", (n) -> { currentObject.setCertificationDetailsUrl(n.getStringValue()); });
-            this.put("certificationExpirationDateTime", (n) -> { currentObject.setCertificationExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("isCertifiedByMicrosoft", (n) -> { currentObject.setIsCertifiedByMicrosoft(n.getBooleanValue()); });
-            this.put("isPublisherAttested", (n) -> { currentObject.setIsPublisherAttested(n.getBooleanValue()); });
-            this.put("lastCertificationDateTime", (n) -> { currentObject.setLastCertificationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("certificationDetailsUrl", (n) -> { currentObject.setCertificationDetailsUrl(n.getStringValue()); });
+        deserializerMap.put("certificationExpirationDateTime", (n) -> { currentObject.setCertificationExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("isCertifiedByMicrosoft", (n) -> { currentObject.setIsCertifiedByMicrosoft(n.getBooleanValue()); });
+        deserializerMap.put("isPublisherAttested", (n) -> { currentObject.setIsPublisherAttested(n.getBooleanValue()); });
+        deserializerMap.put("lastCertificationDateTime", (n) -> { currentObject.setLastCertificationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isCertifiedByMicrosoft property value. Indicates whether the application is certified by Microsoft.

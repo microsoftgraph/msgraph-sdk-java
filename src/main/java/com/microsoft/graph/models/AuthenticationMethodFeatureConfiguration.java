@@ -61,12 +61,12 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationMethodFeatureConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("excludeTarget", (n) -> { currentObject.setExcludeTarget(n.getObjectValue(FeatureTarget::createFromDiscriminatorValue)); });
-            this.put("includeTarget", (n) -> { currentObject.setIncludeTarget(n.getObjectValue(FeatureTarget::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(AdvancedConfigState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("excludeTarget", (n) -> { currentObject.setExcludeTarget(n.getObjectValue(FeatureTarget::createFromDiscriminatorValue)); });
+        deserializerMap.put("includeTarget", (n) -> { currentObject.setIncludeTarget(n.getObjectValue(FeatureTarget::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(AdvancedConfigState.class)); });
+        return deserializerMap
     }
     /**
      * Gets the includeTarget property value. A single entity that is included in this feature.

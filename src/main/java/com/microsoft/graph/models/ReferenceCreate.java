@@ -46,9 +46,9 @@ public class ReferenceCreate implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ReferenceCreate currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("@odata.id", (n) -> { currentObject.setOdataId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("@odata.id", (n) -> { currentObject.setOdataId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.id property value. The OdataId property

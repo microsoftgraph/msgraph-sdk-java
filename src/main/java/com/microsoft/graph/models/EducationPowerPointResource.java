@@ -36,9 +36,9 @@ public class EducationPowerPointResource extends EducationResource implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationPowerPointResource currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("fileUrl", (n) -> { currentObject.setFileUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fileUrl", (n) -> { currentObject.setFileUrl(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the fileUrl property value. Location of the file on disk.

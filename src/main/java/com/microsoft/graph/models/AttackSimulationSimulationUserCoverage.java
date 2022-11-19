@@ -82,14 +82,14 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttackSimulationSimulationUserCoverage currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("attackSimulationUser", (n) -> { currentObject.setAttackSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
-            this.put("clickCount", (n) -> { currentObject.setClickCount(n.getIntegerValue()); });
-            this.put("compromisedCount", (n) -> { currentObject.setCompromisedCount(n.getIntegerValue()); });
-            this.put("latestSimulationDateTime", (n) -> { currentObject.setLatestSimulationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("simulationCount", (n) -> { currentObject.setSimulationCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("attackSimulationUser", (n) -> { currentObject.setAttackSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("clickCount", (n) -> { currentObject.setClickCount(n.getIntegerValue()); });
+        deserializerMap.put("compromisedCount", (n) -> { currentObject.setCompromisedCount(n.getIntegerValue()); });
+        deserializerMap.put("latestSimulationDateTime", (n) -> { currentObject.setLatestSimulationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("simulationCount", (n) -> { currentObject.setSimulationCount(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the latestSimulationDateTime property value. Date and time of the latest attack simulation and training campaign that the user was included in.

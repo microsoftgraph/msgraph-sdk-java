@@ -53,12 +53,12 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BroadcastMeetingCaptionSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("isCaptionEnabled", (n) -> { currentObject.setIsCaptionEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("spokenLanguage", (n) -> { currentObject.setSpokenLanguage(n.getStringValue()); });
-            this.put("translationLanguages", (n) -> { currentObject.setTranslationLanguages(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("isCaptionEnabled", (n) -> { currentObject.setIsCaptionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("spokenLanguage", (n) -> { currentObject.setSpokenLanguage(n.getStringValue()); });
+        deserializerMap.put("translationLanguages", (n) -> { currentObject.setTranslationLanguages(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the isCaptionEnabled property value. Indicates whether captions are enabled for this Teams live event.

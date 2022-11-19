@@ -297,34 +297,34 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerCategoryDescriptions currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(26) {{
-            this.put("category1", (n) -> { currentObject.setCategory1(n.getStringValue()); });
-            this.put("category10", (n) -> { currentObject.setCategory10(n.getStringValue()); });
-            this.put("category11", (n) -> { currentObject.setCategory11(n.getStringValue()); });
-            this.put("category12", (n) -> { currentObject.setCategory12(n.getStringValue()); });
-            this.put("category13", (n) -> { currentObject.setCategory13(n.getStringValue()); });
-            this.put("category14", (n) -> { currentObject.setCategory14(n.getStringValue()); });
-            this.put("category15", (n) -> { currentObject.setCategory15(n.getStringValue()); });
-            this.put("category16", (n) -> { currentObject.setCategory16(n.getStringValue()); });
-            this.put("category17", (n) -> { currentObject.setCategory17(n.getStringValue()); });
-            this.put("category18", (n) -> { currentObject.setCategory18(n.getStringValue()); });
-            this.put("category19", (n) -> { currentObject.setCategory19(n.getStringValue()); });
-            this.put("category2", (n) -> { currentObject.setCategory2(n.getStringValue()); });
-            this.put("category20", (n) -> { currentObject.setCategory20(n.getStringValue()); });
-            this.put("category21", (n) -> { currentObject.setCategory21(n.getStringValue()); });
-            this.put("category22", (n) -> { currentObject.setCategory22(n.getStringValue()); });
-            this.put("category23", (n) -> { currentObject.setCategory23(n.getStringValue()); });
-            this.put("category24", (n) -> { currentObject.setCategory24(n.getStringValue()); });
-            this.put("category25", (n) -> { currentObject.setCategory25(n.getStringValue()); });
-            this.put("category3", (n) -> { currentObject.setCategory3(n.getStringValue()); });
-            this.put("category4", (n) -> { currentObject.setCategory4(n.getStringValue()); });
-            this.put("category5", (n) -> { currentObject.setCategory5(n.getStringValue()); });
-            this.put("category6", (n) -> { currentObject.setCategory6(n.getStringValue()); });
-            this.put("category7", (n) -> { currentObject.setCategory7(n.getStringValue()); });
-            this.put("category8", (n) -> { currentObject.setCategory8(n.getStringValue()); });
-            this.put("category9", (n) -> { currentObject.setCategory9(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(26);
+        deserializerMap.put("category1", (n) -> { currentObject.setCategory1(n.getStringValue()); });
+        deserializerMap.put("category10", (n) -> { currentObject.setCategory10(n.getStringValue()); });
+        deserializerMap.put("category11", (n) -> { currentObject.setCategory11(n.getStringValue()); });
+        deserializerMap.put("category12", (n) -> { currentObject.setCategory12(n.getStringValue()); });
+        deserializerMap.put("category13", (n) -> { currentObject.setCategory13(n.getStringValue()); });
+        deserializerMap.put("category14", (n) -> { currentObject.setCategory14(n.getStringValue()); });
+        deserializerMap.put("category15", (n) -> { currentObject.setCategory15(n.getStringValue()); });
+        deserializerMap.put("category16", (n) -> { currentObject.setCategory16(n.getStringValue()); });
+        deserializerMap.put("category17", (n) -> { currentObject.setCategory17(n.getStringValue()); });
+        deserializerMap.put("category18", (n) -> { currentObject.setCategory18(n.getStringValue()); });
+        deserializerMap.put("category19", (n) -> { currentObject.setCategory19(n.getStringValue()); });
+        deserializerMap.put("category2", (n) -> { currentObject.setCategory2(n.getStringValue()); });
+        deserializerMap.put("category20", (n) -> { currentObject.setCategory20(n.getStringValue()); });
+        deserializerMap.put("category21", (n) -> { currentObject.setCategory21(n.getStringValue()); });
+        deserializerMap.put("category22", (n) -> { currentObject.setCategory22(n.getStringValue()); });
+        deserializerMap.put("category23", (n) -> { currentObject.setCategory23(n.getStringValue()); });
+        deserializerMap.put("category24", (n) -> { currentObject.setCategory24(n.getStringValue()); });
+        deserializerMap.put("category25", (n) -> { currentObject.setCategory25(n.getStringValue()); });
+        deserializerMap.put("category3", (n) -> { currentObject.setCategory3(n.getStringValue()); });
+        deserializerMap.put("category4", (n) -> { currentObject.setCategory4(n.getStringValue()); });
+        deserializerMap.put("category5", (n) -> { currentObject.setCategory5(n.getStringValue()); });
+        deserializerMap.put("category6", (n) -> { currentObject.setCategory6(n.getStringValue()); });
+        deserializerMap.put("category7", (n) -> { currentObject.setCategory7(n.getStringValue()); });
+        deserializerMap.put("category8", (n) -> { currentObject.setCategory8(n.getStringValue()); });
+        deserializerMap.put("category9", (n) -> { currentObject.setCategory9(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property

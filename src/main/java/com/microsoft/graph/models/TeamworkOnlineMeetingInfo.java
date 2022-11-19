@@ -61,12 +61,12 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkOnlineMeetingInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("calendarEventId", (n) -> { currentObject.setCalendarEventId(n.getStringValue()); });
-            this.put("joinWebUrl", (n) -> { currentObject.setJoinWebUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("organizer", (n) -> { currentObject.setOrganizer(n.getObjectValue(TeamworkUserIdentity::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("calendarEventId", (n) -> { currentObject.setCalendarEventId(n.getStringValue()); });
+        deserializerMap.put("joinWebUrl", (n) -> { currentObject.setJoinWebUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("organizer", (n) -> { currentObject.setOrganizer(n.getObjectValue(TeamworkUserIdentity::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the joinWebUrl property value. The URL that users click to join or uniquely identify the meeting.

@@ -63,13 +63,13 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessApplications currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("excludeApplications", (n) -> { currentObject.setExcludeApplications(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("includeApplications", (n) -> { currentObject.setIncludeApplications(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("includeAuthenticationContextClassReferences", (n) -> { currentObject.setIncludeAuthenticationContextClassReferences(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("includeUserActions", (n) -> { currentObject.setIncludeUserActions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("excludeApplications", (n) -> { currentObject.setExcludeApplications(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("includeApplications", (n) -> { currentObject.setIncludeApplications(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("includeAuthenticationContextClassReferences", (n) -> { currentObject.setIncludeAuthenticationContextClassReferences(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("includeUserActions", (n) -> { currentObject.setIncludeUserActions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the includeApplications property value. Can be one of the following:  The list of client IDs (appId) the policy applies to, unless explicitly excluded (in excludeApplications)  All  Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365

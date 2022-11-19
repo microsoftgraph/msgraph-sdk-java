@@ -57,11 +57,11 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImportedWindowsAutopilotDeviceIdentityUpload currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdDateTimeUtc", (n) -> { currentObject.setCreatedDateTimeUtc(n.getOffsetDateTimeValue()); });
-            this.put("deviceIdentities", (n) -> { currentObject.setDeviceIdentities(n.getCollectionOfObjectValues(ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ImportedWindowsAutopilotDeviceIdentityUploadStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTimeUtc", (n) -> { currentObject.setCreatedDateTimeUtc(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceIdentities", (n) -> { currentObject.setDeviceIdentities(n.getCollectionOfObjectValues(ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ImportedWindowsAutopilotDeviceIdentityUploadStatus.class)); });
+        return deserializerMap
     }
     /**
      * Gets the status property value. The status property

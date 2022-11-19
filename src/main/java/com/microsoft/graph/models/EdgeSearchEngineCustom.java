@@ -44,9 +44,9 @@ public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdgeSearchEngineCustom currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("edgeSearchEngineOpenSearchXmlUrl", (n) -> { currentObject.setEdgeSearchEngineOpenSearchXmlUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("edgeSearchEngineOpenSearchXmlUrl", (n) -> { currentObject.setEdgeSearchEngineOpenSearchXmlUrl(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object

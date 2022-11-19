@@ -54,12 +54,12 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TraceRouteHop currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("hopCount", (n) -> { currentObject.setHopCount(n.getIntegerValue()); });
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("roundTripTime", (n) -> { currentObject.setRoundTripTime(n.getPeriodValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("hopCount", (n) -> { currentObject.setHopCount(n.getIntegerValue()); });
+        deserializerMap.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("roundTripTime", (n) -> { currentObject.setRoundTripTime(n.getPeriodValue()); });
+        return deserializerMap
     }
     /**
      * Gets the hopCount property value. The network path count of this hop that was used to compute the RTT.

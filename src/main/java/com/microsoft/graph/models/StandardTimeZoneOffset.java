@@ -82,14 +82,14 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final StandardTimeZoneOffset currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("dayOccurrence", (n) -> { currentObject.setDayOccurrence(n.getIntegerValue()); });
-            this.put("dayOfWeek", (n) -> { currentObject.setDayOfWeek(n.getEnumValue(DayOfWeek.class)); });
-            this.put("month", (n) -> { currentObject.setMonth(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("time", (n) -> { currentObject.setTime(n.getLocalTimeValue()); });
-            this.put("year", (n) -> { currentObject.setYear(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("dayOccurrence", (n) -> { currentObject.setDayOccurrence(n.getIntegerValue()); });
+        deserializerMap.put("dayOfWeek", (n) -> { currentObject.setDayOfWeek(n.getEnumValue(DayOfWeek.class)); });
+        deserializerMap.put("month", (n) -> { currentObject.setMonth(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("time", (n) -> { currentObject.setTime(n.getLocalTimeValue()); });
+        deserializerMap.put("year", (n) -> { currentObject.setYear(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the month property value. Represents the month of the year when the transition from daylight saving time to standard time occurs.

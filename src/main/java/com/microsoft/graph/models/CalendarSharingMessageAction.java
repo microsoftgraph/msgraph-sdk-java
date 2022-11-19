@@ -69,12 +69,12 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CalendarSharingMessageAction currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(CalendarSharingAction.class)); });
-            this.put("actionType", (n) -> { currentObject.setActionType(n.getEnumValue(CalendarSharingActionType.class)); });
-            this.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(CalendarSharingActionImportance.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("action", (n) -> { currentObject.setAction(n.getEnumValue(CalendarSharingAction.class)); });
+        deserializerMap.put("actionType", (n) -> { currentObject.setActionType(n.getEnumValue(CalendarSharingActionType.class)); });
+        deserializerMap.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(CalendarSharingActionImportance.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the importance property value. The importance property

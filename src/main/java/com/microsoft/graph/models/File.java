@@ -53,12 +53,12 @@ public class File implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final File currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("hashes", (n) -> { currentObject.setHashes(n.getObjectValue(Hashes::createFromDiscriminatorValue)); });
-            this.put("mimeType", (n) -> { currentObject.setMimeType(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("processingMetadata", (n) -> { currentObject.setProcessingMetadata(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("hashes", (n) -> { currentObject.setHashes(n.getObjectValue(Hashes::createFromDiscriminatorValue)); });
+        deserializerMap.put("mimeType", (n) -> { currentObject.setMimeType(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("processingMetadata", (n) -> { currentObject.setProcessingMetadata(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the hashes property value. Hashes of the file's binary content, if available. Read-only.

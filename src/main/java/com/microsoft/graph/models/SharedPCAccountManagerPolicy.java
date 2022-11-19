@@ -72,13 +72,13 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharedPCAccountManagerPolicy currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("accountDeletionPolicy", (n) -> { currentObject.setAccountDeletionPolicy(n.getEnumValue(SharedPCAccountDeletionPolicyType.class)); });
-            this.put("cacheAccountsAboveDiskFreePercentage", (n) -> { currentObject.setCacheAccountsAboveDiskFreePercentage(n.getIntegerValue()); });
-            this.put("inactiveThresholdDays", (n) -> { currentObject.setInactiveThresholdDays(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("removeAccountsBelowDiskFreePercentage", (n) -> { currentObject.setRemoveAccountsBelowDiskFreePercentage(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("accountDeletionPolicy", (n) -> { currentObject.setAccountDeletionPolicy(n.getEnumValue(SharedPCAccountDeletionPolicyType.class)); });
+        deserializerMap.put("cacheAccountsAboveDiskFreePercentage", (n) -> { currentObject.setCacheAccountsAboveDiskFreePercentage(n.getIntegerValue()); });
+        deserializerMap.put("inactiveThresholdDays", (n) -> { currentObject.setInactiveThresholdDays(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("removeAccountsBelowDiskFreePercentage", (n) -> { currentObject.setRemoveAccountsBelowDiskFreePercentage(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the inactiveThresholdDays property value. Specifies when the accounts will start being deleted when they have not been logged on during the specified period, given as number of days. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold.

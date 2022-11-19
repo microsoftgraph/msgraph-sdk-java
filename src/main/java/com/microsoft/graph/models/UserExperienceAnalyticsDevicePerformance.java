@@ -146,28 +146,28 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsDevicePerformance currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("averageBlueScreens", (n) -> { currentObject.setAverageBlueScreens(n.getDoubleValue()); });
-            this.put("averageRestarts", (n) -> { currentObject.setAverageRestarts(n.getDoubleValue()); });
-            this.put("blueScreenCount", (n) -> { currentObject.setBlueScreenCount(n.getIntegerValue()); });
-            this.put("bootScore", (n) -> { currentObject.setBootScore(n.getIntegerValue()); });
-            this.put("coreBootTimeInMs", (n) -> { currentObject.setCoreBootTimeInMs(n.getIntegerValue()); });
-            this.put("coreLoginTimeInMs", (n) -> { currentObject.setCoreLoginTimeInMs(n.getIntegerValue()); });
-            this.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getLongValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("diskType", (n) -> { currentObject.setDiskType(n.getEnumValue(DiskType.class)); });
-            this.put("groupPolicyBootTimeInMs", (n) -> { currentObject.setGroupPolicyBootTimeInMs(n.getIntegerValue()); });
-            this.put("groupPolicyLoginTimeInMs", (n) -> { currentObject.setGroupPolicyLoginTimeInMs(n.getIntegerValue()); });
-            this.put("healthStatus", (n) -> { currentObject.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
-            this.put("loginScore", (n) -> { currentObject.setLoginScore(n.getIntegerValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("modelStartupPerformanceScore", (n) -> { currentObject.setModelStartupPerformanceScore(n.getDoubleValue()); });
-            this.put("operatingSystemVersion", (n) -> { currentObject.setOperatingSystemVersion(n.getStringValue()); });
-            this.put("responsiveDesktopTimeInMs", (n) -> { currentObject.setResponsiveDesktopTimeInMs(n.getIntegerValue()); });
-            this.put("restartCount", (n) -> { currentObject.setRestartCount(n.getIntegerValue()); });
-            this.put("startupPerformanceScore", (n) -> { currentObject.setStartupPerformanceScore(n.getDoubleValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("averageBlueScreens", (n) -> { currentObject.setAverageBlueScreens(n.getDoubleValue()); });
+        deserializerMap.put("averageRestarts", (n) -> { currentObject.setAverageRestarts(n.getDoubleValue()); });
+        deserializerMap.put("blueScreenCount", (n) -> { currentObject.setBlueScreenCount(n.getIntegerValue()); });
+        deserializerMap.put("bootScore", (n) -> { currentObject.setBootScore(n.getIntegerValue()); });
+        deserializerMap.put("coreBootTimeInMs", (n) -> { currentObject.setCoreBootTimeInMs(n.getIntegerValue()); });
+        deserializerMap.put("coreLoginTimeInMs", (n) -> { currentObject.setCoreLoginTimeInMs(n.getIntegerValue()); });
+        deserializerMap.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getLongValue()); });
+        deserializerMap.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("diskType", (n) -> { currentObject.setDiskType(n.getEnumValue(DiskType.class)); });
+        deserializerMap.put("groupPolicyBootTimeInMs", (n) -> { currentObject.setGroupPolicyBootTimeInMs(n.getIntegerValue()); });
+        deserializerMap.put("groupPolicyLoginTimeInMs", (n) -> { currentObject.setGroupPolicyLoginTimeInMs(n.getIntegerValue()); });
+        deserializerMap.put("healthStatus", (n) -> { currentObject.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
+        deserializerMap.put("loginScore", (n) -> { currentObject.setLoginScore(n.getIntegerValue()); });
+        deserializerMap.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
+        deserializerMap.put("modelStartupPerformanceScore", (n) -> { currentObject.setModelStartupPerformanceScore(n.getDoubleValue()); });
+        deserializerMap.put("operatingSystemVersion", (n) -> { currentObject.setOperatingSystemVersion(n.getStringValue()); });
+        deserializerMap.put("responsiveDesktopTimeInMs", (n) -> { currentObject.setResponsiveDesktopTimeInMs(n.getIntegerValue()); });
+        deserializerMap.put("restartCount", (n) -> { currentObject.setRestartCount(n.getIntegerValue()); });
+        deserializerMap.put("startupPerformanceScore", (n) -> { currentObject.setStartupPerformanceScore(n.getDoubleValue()); });
+        return deserializerMap
     }
     /**
      * Gets the groupPolicyBootTimeInMs property value. The user experience analytics device group policy boot time in milliseconds.

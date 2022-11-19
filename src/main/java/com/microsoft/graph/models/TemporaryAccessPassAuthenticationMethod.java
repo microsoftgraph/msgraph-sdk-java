@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the admin singleton. */
 public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** The date and time when the Temporary Access Pass was created. */
     private OffsetDateTime _createdDateTime;
@@ -24,7 +25,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     /** The Temporary Access Pass used to authenticate. Returned only on creation of a new temporaryAccessPassAuthenticationMethod object; Hidden in subsequent read operations and returned as null with GET. */
     private String _temporaryAccessPass;
     /**
-     * Instantiates a new TemporaryAccessPassAuthenticationMethod and sets the default values.
+     * Instantiates a new temporaryAccessPassAuthenticationMethod and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +36,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TemporaryAccessPassAuthenticationMethod
+     * @return a temporaryAccessPassAuthenticationMethod
      */
     @javax.annotation.Nonnull
     public static TemporaryAccessPassAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -57,15 +58,15 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TemporaryAccessPassAuthenticationMethod currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("isUsable", (n) -> { currentObject.setIsUsable(n.getBooleanValue()); });
-            this.put("isUsableOnce", (n) -> { currentObject.setIsUsableOnce(n.getBooleanValue()); });
-            this.put("lifetimeInMinutes", (n) -> { currentObject.setLifetimeInMinutes(n.getIntegerValue()); });
-            this.put("methodUsabilityReason", (n) -> { currentObject.setMethodUsabilityReason(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("temporaryAccessPass", (n) -> { currentObject.setTemporaryAccessPass(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("isUsable", (n) -> { currentObject.setIsUsable(n.getBooleanValue()); });
+        deserializerMap.put("isUsableOnce", (n) -> { currentObject.setIsUsableOnce(n.getBooleanValue()); });
+        deserializerMap.put("lifetimeInMinutes", (n) -> { currentObject.setLifetimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("methodUsabilityReason", (n) -> { currentObject.setMethodUsabilityReason(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("temporaryAccessPass", (n) -> { currentObject.setTemporaryAccessPass(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isUsable property value. The state of the authentication method that indicates whether it's currently usable by the user.

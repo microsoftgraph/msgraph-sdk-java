@@ -52,17 +52,17 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChartDataLabels currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartDataLabelFormat::createFromDiscriminatorValue)); });
-            this.put("position", (n) -> { currentObject.setPosition(n.getStringValue()); });
-            this.put("separator", (n) -> { currentObject.setSeparator(n.getStringValue()); });
-            this.put("showBubbleSize", (n) -> { currentObject.setShowBubbleSize(n.getBooleanValue()); });
-            this.put("showCategoryName", (n) -> { currentObject.setShowCategoryName(n.getBooleanValue()); });
-            this.put("showLegendKey", (n) -> { currentObject.setShowLegendKey(n.getBooleanValue()); });
-            this.put("showPercentage", (n) -> { currentObject.setShowPercentage(n.getBooleanValue()); });
-            this.put("showSeriesName", (n) -> { currentObject.setShowSeriesName(n.getBooleanValue()); });
-            this.put("showValue", (n) -> { currentObject.setShowValue(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartDataLabelFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("position", (n) -> { currentObject.setPosition(n.getStringValue()); });
+        deserializerMap.put("separator", (n) -> { currentObject.setSeparator(n.getStringValue()); });
+        deserializerMap.put("showBubbleSize", (n) -> { currentObject.setShowBubbleSize(n.getBooleanValue()); });
+        deserializerMap.put("showCategoryName", (n) -> { currentObject.setShowCategoryName(n.getBooleanValue()); });
+        deserializerMap.put("showLegendKey", (n) -> { currentObject.setShowLegendKey(n.getBooleanValue()); });
+        deserializerMap.put("showPercentage", (n) -> { currentObject.setShowPercentage(n.getBooleanValue()); });
+        deserializerMap.put("showSeriesName", (n) -> { currentObject.setShowSeriesName(n.getBooleanValue()); });
+        deserializerMap.put("showValue", (n) -> { currentObject.setShowValue(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the format property value. Represents the format of chart data labels, which includes fill and font formatting. Read-only.

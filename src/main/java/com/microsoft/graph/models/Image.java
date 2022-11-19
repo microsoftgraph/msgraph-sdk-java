@@ -51,11 +51,11 @@ public class Image implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Image currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("height", (n) -> { currentObject.setHeight(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("width", (n) -> { currentObject.setWidth(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("height", (n) -> { currentObject.setHeight(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("width", (n) -> { currentObject.setWidth(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the height property value. Optional. Height of the image, in pixels. Read-only.

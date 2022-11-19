@@ -71,13 +71,13 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OptionalClaim currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("additionalProperties", (n) -> { currentObject.setAdditionalProperties(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("essential", (n) -> { currentObject.setEssential(n.getBooleanValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("source", (n) -> { currentObject.setSource(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("additionalProperties", (n) -> { currentObject.setAdditionalProperties(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("essential", (n) -> { currentObject.setEssential(n.getBooleanValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("source", (n) -> { currentObject.setSource(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the name property value. The name of the optional claim.

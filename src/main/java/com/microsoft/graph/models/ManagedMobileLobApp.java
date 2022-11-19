@@ -68,12 +68,12 @@ public class ManagedMobileLobApp extends ManagedApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedMobileLobApp currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("committedContentVersion", (n) -> { currentObject.setCommittedContentVersion(n.getStringValue()); });
-            this.put("contentVersions", (n) -> { currentObject.setContentVersions(n.getCollectionOfObjectValues(MobileAppContent::createFromDiscriminatorValue)); });
-            this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
-            this.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("committedContentVersion", (n) -> { currentObject.setCommittedContentVersion(n.getStringValue()); });
+        deserializerMap.put("contentVersions", (n) -> { currentObject.setContentVersions(n.getCollectionOfObjectValues(MobileAppContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
+        deserializerMap.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
+        return deserializerMap
     }
     /**
      * Gets the fileName property value. The name of the main Lob application file.

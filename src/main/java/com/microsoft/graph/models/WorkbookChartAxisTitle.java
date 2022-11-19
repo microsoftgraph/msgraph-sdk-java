@@ -40,11 +40,11 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChartAxisTitle currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartAxisTitleFormat::createFromDiscriminatorValue)); });
-            this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
-            this.put("visible", (n) -> { currentObject.setVisible(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartAxisTitleFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
+        deserializerMap.put("visible", (n) -> { currentObject.setVisible(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the format property value. Represents the formatting of chart axis title. Read-only.

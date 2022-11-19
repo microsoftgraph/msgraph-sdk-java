@@ -52,11 +52,11 @@ public class ProxiedDomain implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProxiedDomain currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("ipAddressOrFQDN", (n) -> { currentObject.setIpAddressOrFQDN(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("proxy", (n) -> { currentObject.setProxy(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("ipAddressOrFQDN", (n) -> { currentObject.setIpAddressOrFQDN(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("proxy", (n) -> { currentObject.setProxy(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the ipAddressOrFQDN property value. The IP address or FQDN

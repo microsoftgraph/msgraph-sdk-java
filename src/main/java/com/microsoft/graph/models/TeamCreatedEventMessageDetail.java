@@ -42,12 +42,12 @@ public class TeamCreatedEventMessageDetail extends EventMessageDetail implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamCreatedEventMessageDetail currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("teamDescription", (n) -> { currentObject.setTeamDescription(n.getStringValue()); });
-            this.put("teamDisplayName", (n) -> { currentObject.setTeamDisplayName(n.getStringValue()); });
-            this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("teamDescription", (n) -> { currentObject.setTeamDescription(n.getStringValue()); });
+        deserializerMap.put("teamDisplayName", (n) -> { currentObject.setTeamDisplayName(n.getStringValue()); });
+        deserializerMap.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the initiator property value. Initiator of the event.

@@ -51,11 +51,11 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PatternedRecurrence currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("pattern", (n) -> { currentObject.setPattern(n.getObjectValue(RecurrencePattern::createFromDiscriminatorValue)); });
-            this.put("range", (n) -> { currentObject.setRange(n.getObjectValue(RecurrenceRange::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("pattern", (n) -> { currentObject.setPattern(n.getObjectValue(RecurrencePattern::createFromDiscriminatorValue)); });
+        deserializerMap.put("range", (n) -> { currentObject.setRange(n.getObjectValue(RecurrenceRange::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property

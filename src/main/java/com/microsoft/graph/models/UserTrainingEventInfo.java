@@ -65,14 +65,14 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserTrainingEventInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("latestTrainingStatus", (n) -> { currentObject.setLatestTrainingStatus(n.getEnumValue(TrainingStatus.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("trainingAssignedProperties", (n) -> { currentObject.setTrainingAssignedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
-            this.put("trainingCompletedProperties", (n) -> { currentObject.setTrainingCompletedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
-            this.put("trainingUpdatedProperties", (n) -> { currentObject.setTrainingUpdatedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("latestTrainingStatus", (n) -> { currentObject.setLatestTrainingStatus(n.getEnumValue(TrainingStatus.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("trainingAssignedProperties", (n) -> { currentObject.setTrainingAssignedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("trainingCompletedProperties", (n) -> { currentObject.setTrainingCompletedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("trainingUpdatedProperties", (n) -> { currentObject.setTrainingUpdatedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the latestTrainingStatus property value. Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.

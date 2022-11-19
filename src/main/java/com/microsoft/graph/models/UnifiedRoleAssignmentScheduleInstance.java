@@ -73,15 +73,15 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleAssignmentScheduleInstance currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("activatedUsing", (n) -> { currentObject.setActivatedUsing(n.getObjectValue(UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue)); });
-            this.put("assignmentType", (n) -> { currentObject.setAssignmentType(n.getStringValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("memberType", (n) -> { currentObject.setMemberType(n.getStringValue()); });
-            this.put("roleAssignmentOriginId", (n) -> { currentObject.setRoleAssignmentOriginId(n.getStringValue()); });
-            this.put("roleAssignmentScheduleId", (n) -> { currentObject.setRoleAssignmentScheduleId(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activatedUsing", (n) -> { currentObject.setActivatedUsing(n.getObjectValue(UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignmentType", (n) -> { currentObject.setAssignmentType(n.getStringValue()); });
+        deserializerMap.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("memberType", (n) -> { currentObject.setMemberType(n.getStringValue()); });
+        deserializerMap.put("roleAssignmentOriginId", (n) -> { currentObject.setRoleAssignmentOriginId(n.getStringValue()); });
+        deserializerMap.put("roleAssignmentScheduleId", (n) -> { currentObject.setRoleAssignmentScheduleId(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap
     }
     /**
      * Gets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).

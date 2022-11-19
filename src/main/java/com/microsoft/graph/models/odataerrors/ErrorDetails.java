@@ -58,11 +58,11 @@ public class ErrorDetails implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ErrorDetails currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
-            this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
+        deserializerMap.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
+        deserializerMap.put("target", (n) -> { currentObject.setTarget(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the message property value. The message property

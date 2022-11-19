@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class Domain extends Entity implements Parsable {
     /** Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Azure AD performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. This property is read-only and is not nullable. */
     private String _authenticationType;
@@ -43,7 +44,7 @@ public class Domain extends Entity implements Parsable {
     /** DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable. Supports $expand. */
     private java.util.List<DomainDnsRecord> _verificationDnsRecords;
     /**
-     * Instantiates a new Domain and sets the default values.
+     * Instantiates a new domain and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -54,7 +55,7 @@ public class Domain extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Domain
+     * @return a domain
      */
     @javax.annotation.Nonnull
     public static Domain createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -100,25 +101,25 @@ public class Domain extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Domain currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("authenticationType", (n) -> { currentObject.setAuthenticationType(n.getStringValue()); });
-            this.put("availabilityStatus", (n) -> { currentObject.setAvailabilityStatus(n.getStringValue()); });
-            this.put("domainNameReferences", (n) -> { currentObject.setDomainNameReferences(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("federationConfiguration", (n) -> { currentObject.setFederationConfiguration(n.getCollectionOfObjectValues(InternalDomainFederation::createFromDiscriminatorValue)); });
-            this.put("isAdminManaged", (n) -> { currentObject.setIsAdminManaged(n.getBooleanValue()); });
-            this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
-            this.put("isInitial", (n) -> { currentObject.setIsInitial(n.getBooleanValue()); });
-            this.put("isRoot", (n) -> { currentObject.setIsRoot(n.getBooleanValue()); });
-            this.put("isVerified", (n) -> { currentObject.setIsVerified(n.getBooleanValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("passwordNotificationWindowInDays", (n) -> { currentObject.setPasswordNotificationWindowInDays(n.getIntegerValue()); });
-            this.put("passwordValidityPeriodInDays", (n) -> { currentObject.setPasswordValidityPeriodInDays(n.getIntegerValue()); });
-            this.put("serviceConfigurationRecords", (n) -> { currentObject.setServiceConfigurationRecords(n.getCollectionOfObjectValues(DomainDnsRecord::createFromDiscriminatorValue)); });
-            this.put("state", (n) -> { currentObject.setState(n.getObjectValue(DomainState::createFromDiscriminatorValue)); });
-            this.put("supportedServices", (n) -> { currentObject.setSupportedServices(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("verificationDnsRecords", (n) -> { currentObject.setVerificationDnsRecords(n.getCollectionOfObjectValues(DomainDnsRecord::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationType", (n) -> { currentObject.setAuthenticationType(n.getStringValue()); });
+        deserializerMap.put("availabilityStatus", (n) -> { currentObject.setAvailabilityStatus(n.getStringValue()); });
+        deserializerMap.put("domainNameReferences", (n) -> { currentObject.setDomainNameReferences(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("federationConfiguration", (n) -> { currentObject.setFederationConfiguration(n.getCollectionOfObjectValues(InternalDomainFederation::createFromDiscriminatorValue)); });
+        deserializerMap.put("isAdminManaged", (n) -> { currentObject.setIsAdminManaged(n.getBooleanValue()); });
+        deserializerMap.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
+        deserializerMap.put("isInitial", (n) -> { currentObject.setIsInitial(n.getBooleanValue()); });
+        deserializerMap.put("isRoot", (n) -> { currentObject.setIsRoot(n.getBooleanValue()); });
+        deserializerMap.put("isVerified", (n) -> { currentObject.setIsVerified(n.getBooleanValue()); });
+        deserializerMap.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
+        deserializerMap.put("passwordNotificationWindowInDays", (n) -> { currentObject.setPasswordNotificationWindowInDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordValidityPeriodInDays", (n) -> { currentObject.setPasswordValidityPeriodInDays(n.getIntegerValue()); });
+        deserializerMap.put("serviceConfigurationRecords", (n) -> { currentObject.setServiceConfigurationRecords(n.getCollectionOfObjectValues(DomainDnsRecord::createFromDiscriminatorValue)); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getObjectValue(DomainState::createFromDiscriminatorValue)); });
+        deserializerMap.put("supportedServices", (n) -> { currentObject.setSupportedServices(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("verificationDnsRecords", (n) -> { currentObject.setVerificationDnsRecords(n.getCollectionOfObjectValues(DomainDnsRecord::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the isAdminManaged property value. The value of the property is false if the DNS record management of the domain has been delegated to Microsoft 365. Otherwise, the value is true. Not nullable

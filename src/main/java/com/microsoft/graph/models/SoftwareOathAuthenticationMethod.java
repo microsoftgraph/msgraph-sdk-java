@@ -7,11 +7,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the admin singleton. */
 public class SoftwareOathAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** The secret key of the method. Always returns null. */
     private String _secretKey;
     /**
-     * Instantiates a new SoftwareOathAuthenticationMethod and sets the default values.
+     * Instantiates a new softwareOathAuthenticationMethod and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +23,7 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SoftwareOathAuthenticationMethod
+     * @return a softwareOathAuthenticationMethod
      */
     @javax.annotation.Nonnull
     public static SoftwareOathAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,9 +37,9 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SoftwareOathAuthenticationMethod currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("secretKey", (n) -> { currentObject.setSecretKey(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("secretKey", (n) -> { currentObject.setSecretKey(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the secretKey property value. The secret key of the method. Always returns null.

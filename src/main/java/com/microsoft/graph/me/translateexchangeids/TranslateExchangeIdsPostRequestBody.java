@@ -52,11 +52,11 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TranslateExchangeIdsPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("inputIds", (n) -> { currentObject.setInputIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("sourceIdType", (n) -> { currentObject.setSourceIdType(n.getEnumValue(ExchangeIdFormat.class)); });
-            this.put("targetIdType", (n) -> { currentObject.setTargetIdType(n.getEnumValue(ExchangeIdFormat.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("inputIds", (n) -> { currentObject.setInputIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("sourceIdType", (n) -> { currentObject.setSourceIdType(n.getEnumValue(ExchangeIdFormat.class)); });
+        deserializerMap.put("targetIdType", (n) -> { currentObject.setTargetIdType(n.getEnumValue(ExchangeIdFormat.class)); });
+        return deserializerMap
     }
     /**
      * Gets the inputIds property value. The InputIds property

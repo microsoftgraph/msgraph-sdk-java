@@ -77,15 +77,15 @@ public class AgreementFileProperties extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AgreementFileProperties currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("fileData", (n) -> { currentObject.setFileData(n.getObjectValue(AgreementFileData::createFromDiscriminatorValue)); });
-            this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
-            this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
-            this.put("isMajorVersion", (n) -> { currentObject.setIsMajorVersion(n.getBooleanValue()); });
-            this.put("language", (n) -> { currentObject.setLanguage(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("fileData", (n) -> { currentObject.setFileData(n.getObjectValue(AgreementFileData::createFromDiscriminatorValue)); });
+        deserializerMap.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
+        deserializerMap.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
+        deserializerMap.put("isMajorVersion", (n) -> { currentObject.setIsMajorVersion(n.getBooleanValue()); });
+        deserializerMap.put("language", (n) -> { currentObject.setLanguage(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the fileData property value. Data that represents the terms of use PDF document. Read-only.

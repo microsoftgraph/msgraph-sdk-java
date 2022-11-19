@@ -59,11 +59,11 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final StaffAvailabilityItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("availabilityItems", (n) -> { currentObject.setAvailabilityItems(n.getCollectionOfObjectValues(AvailabilityItem::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("staffId", (n) -> { currentObject.setStaffId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("availabilityItems", (n) -> { currentObject.setAvailabilityItems(n.getCollectionOfObjectValues(AvailabilityItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("staffId", (n) -> { currentObject.setStaffId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property

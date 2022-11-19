@@ -46,10 +46,10 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharedWithChannelTeamInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("allowedMembers", (n) -> { currentObject.setAllowedMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
-            this.put("isHostTeam", (n) -> { currentObject.setIsHostTeam(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedMembers", (n) -> { currentObject.setAllowedMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
+        deserializerMap.put("isHostTeam", (n) -> { currentObject.setIsHostTeam(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isHostTeam property value. Indicates whether the team is the host of the channel.

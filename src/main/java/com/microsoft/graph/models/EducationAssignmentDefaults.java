@@ -18,7 +18,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
     /** Default Teams channel to which notifications will be sent. Default value is null. */
     private String _notificationChannelUrl;
     /**
-     * Instantiates a new EducationAssignmentDefaults and sets the default values.
+     * Instantiates a new educationAssignmentDefaults and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -29,7 +29,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationAssignmentDefaults
+     * @return a educationAssignmentDefaults
      */
     @javax.annotation.Nonnull
     public static EducationAssignmentDefaults createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -67,12 +67,12 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationAssignmentDefaults currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("addedStudentAction", (n) -> { currentObject.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction.class)); });
-            this.put("addToCalendarAction", (n) -> { currentObject.setAddToCalendarAction(n.getEnumValue(EducationAddToCalendarOptions.class)); });
-            this.put("dueTime", (n) -> { currentObject.setDueTime(n.getLocalTimeValue()); });
-            this.put("notificationChannelUrl", (n) -> { currentObject.setNotificationChannelUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("addedStudentAction", (n) -> { currentObject.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction.class)); });
+        deserializerMap.put("addToCalendarAction", (n) -> { currentObject.setAddToCalendarAction(n.getEnumValue(EducationAddToCalendarOptions.class)); });
+        deserializerMap.put("dueTime", (n) -> { currentObject.setDueTime(n.getLocalTimeValue()); });
+        deserializerMap.put("notificationChannelUrl", (n) -> { currentObject.setNotificationChannelUrl(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the notificationChannelUrl property value. Default Teams channel to which notifications will be sent. Default value is null.

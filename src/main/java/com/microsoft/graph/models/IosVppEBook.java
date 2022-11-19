@@ -58,16 +58,16 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosVppEBook currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("appleId", (n) -> { currentObject.setAppleId(n.getStringValue()); });
-            this.put("genres", (n) -> { currentObject.setGenres(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("language", (n) -> { currentObject.setLanguage(n.getStringValue()); });
-            this.put("seller", (n) -> { currentObject.setSeller(n.getStringValue()); });
-            this.put("totalLicenseCount", (n) -> { currentObject.setTotalLicenseCount(n.getIntegerValue()); });
-            this.put("usedLicenseCount", (n) -> { currentObject.setUsedLicenseCount(n.getIntegerValue()); });
-            this.put("vppOrganizationName", (n) -> { currentObject.setVppOrganizationName(n.getStringValue()); });
-            this.put("vppTokenId", (n) -> { currentObject.setVppTokenId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appleId", (n) -> { currentObject.setAppleId(n.getStringValue()); });
+        deserializerMap.put("genres", (n) -> { currentObject.setGenres(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("language", (n) -> { currentObject.setLanguage(n.getStringValue()); });
+        deserializerMap.put("seller", (n) -> { currentObject.setSeller(n.getStringValue()); });
+        deserializerMap.put("totalLicenseCount", (n) -> { currentObject.setTotalLicenseCount(n.getIntegerValue()); });
+        deserializerMap.put("usedLicenseCount", (n) -> { currentObject.setUsedLicenseCount(n.getIntegerValue()); });
+        deserializerMap.put("vppOrganizationName", (n) -> { currentObject.setVppOrganizationName(n.getStringValue()); });
+        deserializerMap.put("vppTokenId", (n) -> { currentObject.setVppTokenId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the genres property value. Genres.

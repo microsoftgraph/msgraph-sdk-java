@@ -49,10 +49,10 @@ public class CurrencyColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CurrencyColumn currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("locale", (n) -> { currentObject.setLocale(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("locale", (n) -> { currentObject.setLocale(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the locale property value. Specifies the locale from which to infer the currency symbol.

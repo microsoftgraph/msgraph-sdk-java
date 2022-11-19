@@ -48,11 +48,11 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MailAssessmentRequest currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("destinationRoutingReason", (n) -> { currentObject.setDestinationRoutingReason(n.getEnumValue(MailDestinationRoutingReason.class)); });
-            this.put("messageUri", (n) -> { currentObject.setMessageUri(n.getStringValue()); });
-            this.put("recipientEmail", (n) -> { currentObject.setRecipientEmail(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("destinationRoutingReason", (n) -> { currentObject.setDestinationRoutingReason(n.getEnumValue(MailDestinationRoutingReason.class)); });
+        deserializerMap.put("messageUri", (n) -> { currentObject.setMessageUri(n.getStringValue()); });
+        deserializerMap.put("recipientEmail", (n) -> { currentObject.setRecipientEmail(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the messageUri property value. The resource URI of the mail message for assessment.

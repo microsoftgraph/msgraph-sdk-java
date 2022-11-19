@@ -50,12 +50,12 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsMobileMSI currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("commandLine", (n) -> { currentObject.setCommandLine(n.getStringValue()); });
-            this.put("ignoreVersionDetection", (n) -> { currentObject.setIgnoreVersionDetection(n.getBooleanValue()); });
-            this.put("productCode", (n) -> { currentObject.setProductCode(n.getStringValue()); });
-            this.put("productVersion", (n) -> { currentObject.setProductVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("commandLine", (n) -> { currentObject.setCommandLine(n.getStringValue()); });
+        deserializerMap.put("ignoreVersionDetection", (n) -> { currentObject.setIgnoreVersionDetection(n.getBooleanValue()); });
+        deserializerMap.put("productCode", (n) -> { currentObject.setProductCode(n.getStringValue()); });
+        deserializerMap.put("productVersion", (n) -> { currentObject.setProductVersion(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the ignoreVersionDetection property value. A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.

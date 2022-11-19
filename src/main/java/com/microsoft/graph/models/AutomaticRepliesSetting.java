@@ -75,15 +75,15 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AutomaticRepliesSetting currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("externalAudience", (n) -> { currentObject.setExternalAudience(n.getEnumValue(ExternalAudienceScope.class)); });
-            this.put("externalReplyMessage", (n) -> { currentObject.setExternalReplyMessage(n.getStringValue()); });
-            this.put("internalReplyMessage", (n) -> { currentObject.setInternalReplyMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("scheduledEndDateTime", (n) -> { currentObject.setScheduledEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("scheduledStartDateTime", (n) -> { currentObject.setScheduledStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AutomaticRepliesStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("externalAudience", (n) -> { currentObject.setExternalAudience(n.getEnumValue(ExternalAudienceScope.class)); });
+        deserializerMap.put("externalReplyMessage", (n) -> { currentObject.setExternalReplyMessage(n.getStringValue()); });
+        deserializerMap.put("internalReplyMessage", (n) -> { currentObject.setInternalReplyMessage(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("scheduledEndDateTime", (n) -> { currentObject.setScheduledEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("scheduledStartDateTime", (n) -> { currentObject.setScheduledStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AutomaticRepliesStatus.class)); });
+        return deserializerMap
     }
     /**
      * Gets the internalReplyMessage property value. The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.

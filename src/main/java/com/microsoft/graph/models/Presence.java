@@ -13,7 +13,7 @@ public class Presence extends Entity implements Parsable {
     /** The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown */
     private String _availability;
     /**
-     * Instantiates a new presence and sets the default values.
+     * Instantiates a new Presence and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -24,7 +24,7 @@ public class Presence extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a presence
+     * @return a Presence
      */
     @javax.annotation.Nonnull
     public static Presence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -54,10 +54,10 @@ public class Presence extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Presence currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getStringValue()); });
-            this.put("availability", (n) -> { currentObject.setAvailability(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activity", (n) -> { currentObject.setActivity(n.getStringValue()); });
+        deserializerMap.put("availability", (n) -> { currentObject.setAvailability(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object

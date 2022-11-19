@@ -167,35 +167,35 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAppProtection currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("allowedDataStorageLocations", (n) -> { currentObject.setAllowedDataStorageLocations(n.getCollectionOfEnumValues(ManagedAppDataStorageLocation.class)); });
-            this.put("allowedInboundDataTransferSources", (n) -> { currentObject.setAllowedInboundDataTransferSources(n.getEnumValue(ManagedAppDataTransferLevel.class)); });
-            this.put("allowedOutboundClipboardSharingLevel", (n) -> { currentObject.setAllowedOutboundClipboardSharingLevel(n.getEnumValue(ManagedAppClipboardSharingLevel.class)); });
-            this.put("allowedOutboundDataTransferDestinations", (n) -> { currentObject.setAllowedOutboundDataTransferDestinations(n.getEnumValue(ManagedAppDataTransferLevel.class)); });
-            this.put("contactSyncBlocked", (n) -> { currentObject.setContactSyncBlocked(n.getBooleanValue()); });
-            this.put("dataBackupBlocked", (n) -> { currentObject.setDataBackupBlocked(n.getBooleanValue()); });
-            this.put("deviceComplianceRequired", (n) -> { currentObject.setDeviceComplianceRequired(n.getBooleanValue()); });
-            this.put("disableAppPinIfDevicePinIsSet", (n) -> { currentObject.setDisableAppPinIfDevicePinIsSet(n.getBooleanValue()); });
-            this.put("fingerprintBlocked", (n) -> { currentObject.setFingerprintBlocked(n.getBooleanValue()); });
-            this.put("managedBrowser", (n) -> { currentObject.setManagedBrowser(n.getEnumValue(ManagedBrowserType.class)); });
-            this.put("managedBrowserToOpenLinksRequired", (n) -> { currentObject.setManagedBrowserToOpenLinksRequired(n.getBooleanValue()); });
-            this.put("maximumPinRetries", (n) -> { currentObject.setMaximumPinRetries(n.getIntegerValue()); });
-            this.put("minimumPinLength", (n) -> { currentObject.setMinimumPinLength(n.getIntegerValue()); });
-            this.put("minimumRequiredAppVersion", (n) -> { currentObject.setMinimumRequiredAppVersion(n.getStringValue()); });
-            this.put("minimumRequiredOsVersion", (n) -> { currentObject.setMinimumRequiredOsVersion(n.getStringValue()); });
-            this.put("minimumWarningAppVersion", (n) -> { currentObject.setMinimumWarningAppVersion(n.getStringValue()); });
-            this.put("minimumWarningOsVersion", (n) -> { currentObject.setMinimumWarningOsVersion(n.getStringValue()); });
-            this.put("organizationalCredentialsRequired", (n) -> { currentObject.setOrganizationalCredentialsRequired(n.getBooleanValue()); });
-            this.put("periodBeforePinReset", (n) -> { currentObject.setPeriodBeforePinReset(n.getPeriodValue()); });
-            this.put("periodOfflineBeforeAccessCheck", (n) -> { currentObject.setPeriodOfflineBeforeAccessCheck(n.getPeriodValue()); });
-            this.put("periodOfflineBeforeWipeIsEnforced", (n) -> { currentObject.setPeriodOfflineBeforeWipeIsEnforced(n.getPeriodValue()); });
-            this.put("periodOnlineBeforeAccessCheck", (n) -> { currentObject.setPeriodOnlineBeforeAccessCheck(n.getPeriodValue()); });
-            this.put("pinCharacterSet", (n) -> { currentObject.setPinCharacterSet(n.getEnumValue(ManagedAppPinCharacterSet.class)); });
-            this.put("pinRequired", (n) -> { currentObject.setPinRequired(n.getBooleanValue()); });
-            this.put("printBlocked", (n) -> { currentObject.setPrintBlocked(n.getBooleanValue()); });
-            this.put("saveAsBlocked", (n) -> { currentObject.setSaveAsBlocked(n.getBooleanValue()); });
-            this.put("simplePinBlocked", (n) -> { currentObject.setSimplePinBlocked(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedDataStorageLocations", (n) -> { currentObject.setAllowedDataStorageLocations(n.getCollectionOfEnumValues(ManagedAppDataStorageLocation.class)); });
+        deserializerMap.put("allowedInboundDataTransferSources", (n) -> { currentObject.setAllowedInboundDataTransferSources(n.getEnumValue(ManagedAppDataTransferLevel.class)); });
+        deserializerMap.put("allowedOutboundClipboardSharingLevel", (n) -> { currentObject.setAllowedOutboundClipboardSharingLevel(n.getEnumValue(ManagedAppClipboardSharingLevel.class)); });
+        deserializerMap.put("allowedOutboundDataTransferDestinations", (n) -> { currentObject.setAllowedOutboundDataTransferDestinations(n.getEnumValue(ManagedAppDataTransferLevel.class)); });
+        deserializerMap.put("contactSyncBlocked", (n) -> { currentObject.setContactSyncBlocked(n.getBooleanValue()); });
+        deserializerMap.put("dataBackupBlocked", (n) -> { currentObject.setDataBackupBlocked(n.getBooleanValue()); });
+        deserializerMap.put("deviceComplianceRequired", (n) -> { currentObject.setDeviceComplianceRequired(n.getBooleanValue()); });
+        deserializerMap.put("disableAppPinIfDevicePinIsSet", (n) -> { currentObject.setDisableAppPinIfDevicePinIsSet(n.getBooleanValue()); });
+        deserializerMap.put("fingerprintBlocked", (n) -> { currentObject.setFingerprintBlocked(n.getBooleanValue()); });
+        deserializerMap.put("managedBrowser", (n) -> { currentObject.setManagedBrowser(n.getEnumValue(ManagedBrowserType.class)); });
+        deserializerMap.put("managedBrowserToOpenLinksRequired", (n) -> { currentObject.setManagedBrowserToOpenLinksRequired(n.getBooleanValue()); });
+        deserializerMap.put("maximumPinRetries", (n) -> { currentObject.setMaximumPinRetries(n.getIntegerValue()); });
+        deserializerMap.put("minimumPinLength", (n) -> { currentObject.setMinimumPinLength(n.getIntegerValue()); });
+        deserializerMap.put("minimumRequiredAppVersion", (n) -> { currentObject.setMinimumRequiredAppVersion(n.getStringValue()); });
+        deserializerMap.put("minimumRequiredOsVersion", (n) -> { currentObject.setMinimumRequiredOsVersion(n.getStringValue()); });
+        deserializerMap.put("minimumWarningAppVersion", (n) -> { currentObject.setMinimumWarningAppVersion(n.getStringValue()); });
+        deserializerMap.put("minimumWarningOsVersion", (n) -> { currentObject.setMinimumWarningOsVersion(n.getStringValue()); });
+        deserializerMap.put("organizationalCredentialsRequired", (n) -> { currentObject.setOrganizationalCredentialsRequired(n.getBooleanValue()); });
+        deserializerMap.put("periodBeforePinReset", (n) -> { currentObject.setPeriodBeforePinReset(n.getPeriodValue()); });
+        deserializerMap.put("periodOfflineBeforeAccessCheck", (n) -> { currentObject.setPeriodOfflineBeforeAccessCheck(n.getPeriodValue()); });
+        deserializerMap.put("periodOfflineBeforeWipeIsEnforced", (n) -> { currentObject.setPeriodOfflineBeforeWipeIsEnforced(n.getPeriodValue()); });
+        deserializerMap.put("periodOnlineBeforeAccessCheck", (n) -> { currentObject.setPeriodOnlineBeforeAccessCheck(n.getPeriodValue()); });
+        deserializerMap.put("pinCharacterSet", (n) -> { currentObject.setPinCharacterSet(n.getEnumValue(ManagedAppPinCharacterSet.class)); });
+        deserializerMap.put("pinRequired", (n) -> { currentObject.setPinRequired(n.getBooleanValue()); });
+        deserializerMap.put("printBlocked", (n) -> { currentObject.setPrintBlocked(n.getBooleanValue()); });
+        deserializerMap.put("saveAsBlocked", (n) -> { currentObject.setSaveAsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("simplePinBlocked", (n) -> { currentObject.setSimplePinBlocked(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the fingerprintBlocked property value. Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True.

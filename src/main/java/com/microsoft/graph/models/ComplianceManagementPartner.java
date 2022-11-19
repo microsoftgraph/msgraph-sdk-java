@@ -78,17 +78,17 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ComplianceManagementPartner currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("androidEnrollmentAssignments", (n) -> { currentObject.setAndroidEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
-            this.put("androidOnboarded", (n) -> { currentObject.setAndroidOnboarded(n.getBooleanValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("iosEnrollmentAssignments", (n) -> { currentObject.setIosEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
-            this.put("iosOnboarded", (n) -> { currentObject.setIosOnboarded(n.getBooleanValue()); });
-            this.put("lastHeartbeatDateTime", (n) -> { currentObject.setLastHeartbeatDateTime(n.getOffsetDateTimeValue()); });
-            this.put("macOsEnrollmentAssignments", (n) -> { currentObject.setMacOsEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
-            this.put("macOsOnboarded", (n) -> { currentObject.setMacOsOnboarded(n.getBooleanValue()); });
-            this.put("partnerState", (n) -> { currentObject.setPartnerState(n.getEnumValue(DeviceManagementPartnerTenantState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("androidEnrollmentAssignments", (n) -> { currentObject.setAndroidEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("androidOnboarded", (n) -> { currentObject.setAndroidOnboarded(n.getBooleanValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("iosEnrollmentAssignments", (n) -> { currentObject.setIosEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("iosOnboarded", (n) -> { currentObject.setIosOnboarded(n.getBooleanValue()); });
+        deserializerMap.put("lastHeartbeatDateTime", (n) -> { currentObject.setLastHeartbeatDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("macOsEnrollmentAssignments", (n) -> { currentObject.setMacOsEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("macOsOnboarded", (n) -> { currentObject.setMacOsOnboarded(n.getBooleanValue()); });
+        deserializerMap.put("partnerState", (n) -> { currentObject.setPartnerState(n.getEnumValue(DeviceManagementPartnerTenantState.class)); });
+        return deserializerMap
     }
     /**
      * Gets the iosEnrollmentAssignments property value. User groups which enroll ios devices through partner.

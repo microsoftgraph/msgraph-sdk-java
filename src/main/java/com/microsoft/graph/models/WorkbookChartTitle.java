@@ -42,12 +42,12 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChartTitle currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartTitleFormat::createFromDiscriminatorValue)); });
-            this.put("overlay", (n) -> { currentObject.setOverlay(n.getBooleanValue()); });
-            this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
-            this.put("visible", (n) -> { currentObject.setVisible(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartTitleFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("overlay", (n) -> { currentObject.setOverlay(n.getBooleanValue()); });
+        deserializerMap.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
+        deserializerMap.put("visible", (n) -> { currentObject.setVisible(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the format property value. Represents the formatting of a chart title, which includes fill and font formatting. Read-only.

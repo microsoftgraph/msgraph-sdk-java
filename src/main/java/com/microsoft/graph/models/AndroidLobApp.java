@@ -42,12 +42,12 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidLobApp currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
-            this.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
-            this.put("versionCode", (n) -> { currentObject.setVersionCode(n.getStringValue()); });
-            this.put("versionName", (n) -> { currentObject.setVersionName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
+        deserializerMap.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
+        deserializerMap.put("versionCode", (n) -> { currentObject.setVersionCode(n.getStringValue()); });
+        deserializerMap.put("versionName", (n) -> { currentObject.setVersionName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.

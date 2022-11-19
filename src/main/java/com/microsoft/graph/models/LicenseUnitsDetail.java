@@ -61,12 +61,12 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LicenseUnitsDetail currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("enabled", (n) -> { currentObject.setEnabled(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("suspended", (n) -> { currentObject.setSuspended(n.getIntegerValue()); });
-            this.put("warning", (n) -> { currentObject.setWarning(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("enabled", (n) -> { currentObject.setEnabled(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("suspended", (n) -> { currentObject.setSuspended(n.getIntegerValue()); });
+        deserializerMap.put("warning", (n) -> { currentObject.setWarning(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property

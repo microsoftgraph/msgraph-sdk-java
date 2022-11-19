@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class Permission extends Entity implements Parsable {
     /** A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional. */
     private OffsetDateTime _expirationDateTime;
@@ -66,19 +66,19 @@ public class Permission extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Permission currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("grantedTo", (n) -> { currentObject.setGrantedTo(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("grantedToIdentities", (n) -> { currentObject.setGrantedToIdentities(n.getCollectionOfObjectValues(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("grantedToIdentitiesV2", (n) -> { currentObject.setGrantedToIdentitiesV2(n.getCollectionOfObjectValues(SharePointIdentitySet::createFromDiscriminatorValue)); });
-            this.put("grantedToV2", (n) -> { currentObject.setGrantedToV2(n.getObjectValue(SharePointIdentitySet::createFromDiscriminatorValue)); });
-            this.put("hasPassword", (n) -> { currentObject.setHasPassword(n.getBooleanValue()); });
-            this.put("inheritedFrom", (n) -> { currentObject.setInheritedFrom(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
-            this.put("invitation", (n) -> { currentObject.setInvitation(n.getObjectValue(SharingInvitation::createFromDiscriminatorValue)); });
-            this.put("link", (n) -> { currentObject.setLink(n.getObjectValue(SharingLink::createFromDiscriminatorValue)); });
-            this.put("roles", (n) -> { currentObject.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("shareId", (n) -> { currentObject.setShareId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("grantedTo", (n) -> { currentObject.setGrantedTo(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("grantedToIdentities", (n) -> { currentObject.setGrantedToIdentities(n.getCollectionOfObjectValues(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("grantedToIdentitiesV2", (n) -> { currentObject.setGrantedToIdentitiesV2(n.getCollectionOfObjectValues(SharePointIdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("grantedToV2", (n) -> { currentObject.setGrantedToV2(n.getObjectValue(SharePointIdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("hasPassword", (n) -> { currentObject.setHasPassword(n.getBooleanValue()); });
+        deserializerMap.put("inheritedFrom", (n) -> { currentObject.setInheritedFrom(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
+        deserializerMap.put("invitation", (n) -> { currentObject.setInvitation(n.getObjectValue(SharingInvitation::createFromDiscriminatorValue)); });
+        deserializerMap.put("link", (n) -> { currentObject.setLink(n.getObjectValue(SharingLink::createFromDiscriminatorValue)); });
+        deserializerMap.put("roles", (n) -> { currentObject.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("shareId", (n) -> { currentObject.setShareId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the grantedTo property value. The grantedTo property

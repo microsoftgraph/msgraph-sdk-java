@@ -62,14 +62,14 @@ public class EBookInstallSummary extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EBookInstallSummary currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("failedDeviceCount", (n) -> { currentObject.setFailedDeviceCount(n.getIntegerValue()); });
-            this.put("failedUserCount", (n) -> { currentObject.setFailedUserCount(n.getIntegerValue()); });
-            this.put("installedDeviceCount", (n) -> { currentObject.setInstalledDeviceCount(n.getIntegerValue()); });
-            this.put("installedUserCount", (n) -> { currentObject.setInstalledUserCount(n.getIntegerValue()); });
-            this.put("notInstalledDeviceCount", (n) -> { currentObject.setNotInstalledDeviceCount(n.getIntegerValue()); });
-            this.put("notInstalledUserCount", (n) -> { currentObject.setNotInstalledUserCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("failedDeviceCount", (n) -> { currentObject.setFailedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("failedUserCount", (n) -> { currentObject.setFailedUserCount(n.getIntegerValue()); });
+        deserializerMap.put("installedDeviceCount", (n) -> { currentObject.setInstalledDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("installedUserCount", (n) -> { currentObject.setInstalledUserCount(n.getIntegerValue()); });
+        deserializerMap.put("notInstalledDeviceCount", (n) -> { currentObject.setNotInstalledDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("notInstalledUserCount", (n) -> { currentObject.setNotInstalledUserCount(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the installedDeviceCount property value. Number of Devices that have successfully installed this book.

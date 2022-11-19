@@ -46,14 +46,14 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DomainDnsSrvRecord currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("nameTarget", (n) -> { currentObject.setNameTarget(n.getStringValue()); });
-            this.put("port", (n) -> { currentObject.setPort(n.getIntegerValue()); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("protocol", (n) -> { currentObject.setProtocol(n.getStringValue()); });
-            this.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
-            this.put("weight", (n) -> { currentObject.setWeight(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("nameTarget", (n) -> { currentObject.setNameTarget(n.getStringValue()); });
+        deserializerMap.put("port", (n) -> { currentObject.setPort(n.getIntegerValue()); });
+        deserializerMap.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("protocol", (n) -> { currentObject.setProtocol(n.getStringValue()); });
+        deserializerMap.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
+        deserializerMap.put("weight", (n) -> { currentObject.setWeight(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the nameTarget property value. Value to use when configuring the Target property of the SRV record at the DNS host.

@@ -38,10 +38,10 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationPointsOutcome currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("points", (n) -> { currentObject.setPoints(n.getObjectValue(EducationAssignmentPointsGrade::createFromDiscriminatorValue)); });
-            this.put("publishedPoints", (n) -> { currentObject.setPublishedPoints(n.getObjectValue(EducationAssignmentPointsGrade::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("points", (n) -> { currentObject.setPoints(n.getObjectValue(EducationAssignmentPointsGrade::createFromDiscriminatorValue)); });
+        deserializerMap.put("publishedPoints", (n) -> { currentObject.setPublishedPoints(n.getObjectValue(EducationAssignmentPointsGrade::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the points property value. The numeric grade the teacher has given the student for this assignment.

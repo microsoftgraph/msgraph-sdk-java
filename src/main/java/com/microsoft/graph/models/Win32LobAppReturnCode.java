@@ -52,11 +52,11 @@ public class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppReturnCode currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("returnCode", (n) -> { currentObject.setReturnCode(n.getIntegerValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(Win32LobAppReturnCodeType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("returnCode", (n) -> { currentObject.setReturnCode(n.getIntegerValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getEnumValue(Win32LobAppReturnCodeType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property

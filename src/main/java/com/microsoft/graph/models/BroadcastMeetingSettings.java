@@ -75,15 +75,15 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BroadcastMeetingSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("allowedAudience", (n) -> { currentObject.setAllowedAudience(n.getEnumValue(BroadcastMeetingAudience.class)); });
-            this.put("captions", (n) -> { currentObject.setCaptions(n.getObjectValue(BroadcastMeetingCaptionSettings::createFromDiscriminatorValue)); });
-            this.put("isAttendeeReportEnabled", (n) -> { currentObject.setIsAttendeeReportEnabled(n.getBooleanValue()); });
-            this.put("isQuestionAndAnswerEnabled", (n) -> { currentObject.setIsQuestionAndAnswerEnabled(n.getBooleanValue()); });
-            this.put("isRecordingEnabled", (n) -> { currentObject.setIsRecordingEnabled(n.getBooleanValue()); });
-            this.put("isVideoOnDemandEnabled", (n) -> { currentObject.setIsVideoOnDemandEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("allowedAudience", (n) -> { currentObject.setAllowedAudience(n.getEnumValue(BroadcastMeetingAudience.class)); });
+        deserializerMap.put("captions", (n) -> { currentObject.setCaptions(n.getObjectValue(BroadcastMeetingCaptionSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("isAttendeeReportEnabled", (n) -> { currentObject.setIsAttendeeReportEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isQuestionAndAnswerEnabled", (n) -> { currentObject.setIsQuestionAndAnswerEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isRecordingEnabled", (n) -> { currentObject.setIsRecordingEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isVideoOnDemandEnabled", (n) -> { currentObject.setIsVideoOnDemandEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isAttendeeReportEnabled property value. Indicates whether attendee report is enabled for this Teams live event. Default value is false.

@@ -77,16 +77,16 @@ public class Set extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Set currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(Term::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("localizedNames", (n) -> { currentObject.setLocalizedNames(n.getCollectionOfObjectValues(LocalizedName::createFromDiscriminatorValue)); });
-            this.put("parentGroup", (n) -> { currentObject.setParentGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
-            this.put("properties", (n) -> { currentObject.setProperties(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
-            this.put("relations", (n) -> { currentObject.setRelations(n.getCollectionOfObjectValues(Relation::createFromDiscriminatorValue)); });
-            this.put("terms", (n) -> { currentObject.setTerms(n.getCollectionOfObjectValues(Term::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(Term::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("localizedNames", (n) -> { currentObject.setLocalizedNames(n.getCollectionOfObjectValues(LocalizedName::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentGroup", (n) -> { currentObject.setParentGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
+        deserializerMap.put("properties", (n) -> { currentObject.setProperties(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("relations", (n) -> { currentObject.setRelations(n.getCollectionOfObjectValues(Relation::createFromDiscriminatorValue)); });
+        deserializerMap.put("terms", (n) -> { currentObject.setTerms(n.getCollectionOfObjectValues(Term::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the localizedNames property value. Name of the set for each languageTag.

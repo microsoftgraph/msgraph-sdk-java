@@ -112,18 +112,18 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalBrandingProperties currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("backgroundColor", (n) -> { currentObject.setBackgroundColor(n.getStringValue()); });
-            this.put("backgroundImage", (n) -> { currentObject.setBackgroundImage(n.getByteArrayValue()); });
-            this.put("backgroundImageRelativeUrl", (n) -> { currentObject.setBackgroundImageRelativeUrl(n.getStringValue()); });
-            this.put("bannerLogo", (n) -> { currentObject.setBannerLogo(n.getByteArrayValue()); });
-            this.put("bannerLogoRelativeUrl", (n) -> { currentObject.setBannerLogoRelativeUrl(n.getStringValue()); });
-            this.put("cdnList", (n) -> { currentObject.setCdnList(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("signInPageText", (n) -> { currentObject.setSignInPageText(n.getStringValue()); });
-            this.put("squareLogo", (n) -> { currentObject.setSquareLogo(n.getByteArrayValue()); });
-            this.put("squareLogoRelativeUrl", (n) -> { currentObject.setSquareLogoRelativeUrl(n.getStringValue()); });
-            this.put("usernameHintText", (n) -> { currentObject.setUsernameHintText(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("backgroundColor", (n) -> { currentObject.setBackgroundColor(n.getStringValue()); });
+        deserializerMap.put("backgroundImage", (n) -> { currentObject.setBackgroundImage(n.getByteArrayValue()); });
+        deserializerMap.put("backgroundImageRelativeUrl", (n) -> { currentObject.setBackgroundImageRelativeUrl(n.getStringValue()); });
+        deserializerMap.put("bannerLogo", (n) -> { currentObject.setBannerLogo(n.getByteArrayValue()); });
+        deserializerMap.put("bannerLogoRelativeUrl", (n) -> { currentObject.setBannerLogoRelativeUrl(n.getStringValue()); });
+        deserializerMap.put("cdnList", (n) -> { currentObject.setCdnList(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("signInPageText", (n) -> { currentObject.setSignInPageText(n.getStringValue()); });
+        deserializerMap.put("squareLogo", (n) -> { currentObject.setSquareLogo(n.getByteArrayValue()); });
+        deserializerMap.put("squareLogoRelativeUrl", (n) -> { currentObject.setSquareLogoRelativeUrl(n.getStringValue()); });
+        deserializerMap.put("usernameHintText", (n) -> { currentObject.setUsernameHintText(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the signInPageText property value. Text that appears at the bottom of the sign-in box. You can use this to communicate additional information, such as the phone number to your help desk or a legal statement. This text must be Unicode and not exceed 1024 characters.

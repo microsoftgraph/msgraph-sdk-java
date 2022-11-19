@@ -58,16 +58,16 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharedDriveItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("driveItem", (n) -> { currentObject.setDriveItem(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
-            this.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
-            this.put("list", (n) -> { currentObject.setList(n.getObjectValue(List::createFromDiscriminatorValue)); });
-            this.put("listItem", (n) -> { currentObject.setListItem(n.getObjectValue(ListItem::createFromDiscriminatorValue)); });
-            this.put("owner", (n) -> { currentObject.setOwner(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("permission", (n) -> { currentObject.setPermission(n.getObjectValue(Permission::createFromDiscriminatorValue)); });
-            this.put("root", (n) -> { currentObject.setRoot(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
-            this.put("site", (n) -> { currentObject.setSite(n.getObjectValue(Site::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("driveItem", (n) -> { currentObject.setDriveItem(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("list", (n) -> { currentObject.setList(n.getObjectValue(List::createFromDiscriminatorValue)); });
+        deserializerMap.put("listItem", (n) -> { currentObject.setListItem(n.getObjectValue(ListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("owner", (n) -> { currentObject.setOwner(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("permission", (n) -> { currentObject.setPermission(n.getObjectValue(Permission::createFromDiscriminatorValue)); });
+        deserializerMap.put("root", (n) -> { currentObject.setRoot(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("site", (n) -> { currentObject.setSite(n.getObjectValue(Site::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the items property value. All driveItems contained in the sharing root. This collection cannot be enumerated.

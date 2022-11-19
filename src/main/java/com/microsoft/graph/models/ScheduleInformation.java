@@ -73,14 +73,14 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ScheduleInformation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("availabilityView", (n) -> { currentObject.setAvailabilityView(n.getStringValue()); });
-            this.put("error", (n) -> { currentObject.setError(n.getObjectValue(FreeBusyError::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("scheduleId", (n) -> { currentObject.setScheduleId(n.getStringValue()); });
-            this.put("scheduleItems", (n) -> { currentObject.setScheduleItems(n.getCollectionOfObjectValues(ScheduleItem::createFromDiscriminatorValue)); });
-            this.put("workingHours", (n) -> { currentObject.setWorkingHours(n.getObjectValue(WorkingHours::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("availabilityView", (n) -> { currentObject.setAvailabilityView(n.getStringValue()); });
+        deserializerMap.put("error", (n) -> { currentObject.setError(n.getObjectValue(FreeBusyError::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("scheduleId", (n) -> { currentObject.setScheduleId(n.getStringValue()); });
+        deserializerMap.put("scheduleItems", (n) -> { currentObject.setScheduleItems(n.getCollectionOfObjectValues(ScheduleItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("workingHours", (n) -> { currentObject.setWorkingHours(n.getObjectValue(WorkingHours::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property

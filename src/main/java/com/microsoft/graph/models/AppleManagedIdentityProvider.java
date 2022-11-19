@@ -58,12 +58,12 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppleManagedIdentityProvider currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("certificateData", (n) -> { currentObject.setCertificateData(n.getStringValue()); });
-            this.put("developerId", (n) -> { currentObject.setDeveloperId(n.getStringValue()); });
-            this.put("keyId", (n) -> { currentObject.setKeyId(n.getStringValue()); });
-            this.put("serviceId", (n) -> { currentObject.setServiceId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certificateData", (n) -> { currentObject.setCertificateData(n.getStringValue()); });
+        deserializerMap.put("developerId", (n) -> { currentObject.setDeveloperId(n.getStringValue()); });
+        deserializerMap.put("keyId", (n) -> { currentObject.setKeyId(n.getStringValue()); });
+        deserializerMap.put("serviceId", (n) -> { currentObject.setServiceId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the keyId property value. The Apple key identifier. Required.

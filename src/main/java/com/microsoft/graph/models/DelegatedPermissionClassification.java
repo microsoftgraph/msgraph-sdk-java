@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the instantiate method. */
+/** Provides operations to manage the admin singleton. */
 public class DelegatedPermissionClassification extends Entity implements Parsable {
     /** The classification value being given. Possible value: low. Does not support $filter. */
     private PermissionClassificationType _classification;
@@ -49,11 +49,11 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DelegatedPermissionClassification currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("classification", (n) -> { currentObject.setClassification(n.getEnumValue(PermissionClassificationType.class)); });
-            this.put("permissionId", (n) -> { currentObject.setPermissionId(n.getStringValue()); });
-            this.put("permissionName", (n) -> { currentObject.setPermissionName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("classification", (n) -> { currentObject.setClassification(n.getEnumValue(PermissionClassificationType.class)); });
+        deserializerMap.put("permissionId", (n) -> { currentObject.setPermissionId(n.getStringValue()); });
+        deserializerMap.put("permissionName", (n) -> { currentObject.setPermissionName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the permissionId property value. The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.

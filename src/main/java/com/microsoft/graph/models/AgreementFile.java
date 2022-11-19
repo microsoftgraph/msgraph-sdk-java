@@ -36,9 +36,9 @@ public class AgreementFile extends AgreementFileProperties implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AgreementFile currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("localizations", (n) -> { currentObject.setLocalizations(n.getCollectionOfObjectValues(AgreementFileLocalization::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("localizations", (n) -> { currentObject.setLocalizations(n.getCollectionOfObjectValues(AgreementFileLocalization::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the localizations property value. The localized version of the terms of use agreement files attached to the agreement.

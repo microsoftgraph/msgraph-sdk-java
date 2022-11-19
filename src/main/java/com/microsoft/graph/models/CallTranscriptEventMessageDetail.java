@@ -56,11 +56,11 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CallTranscriptEventMessageDetail currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("callId", (n) -> { currentObject.setCallId(n.getStringValue()); });
-            this.put("callTranscriptICalUid", (n) -> { currentObject.setCallTranscriptICalUid(n.getStringValue()); });
-            this.put("meetingOrganizer", (n) -> { currentObject.setMeetingOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("callId", (n) -> { currentObject.setCallId(n.getStringValue()); });
+        deserializerMap.put("callTranscriptICalUid", (n) -> { currentObject.setCallTranscriptICalUid(n.getStringValue()); });
+        deserializerMap.put("meetingOrganizer", (n) -> { currentObject.setMeetingOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the meetingOrganizer property value. The organizer of the meeting.

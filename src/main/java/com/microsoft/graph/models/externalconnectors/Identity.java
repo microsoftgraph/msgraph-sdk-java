@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of externalConnection entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class Identity extends Entity implements Parsable {
     /** The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system. */
     private IdentityType _type;
@@ -38,9 +38,9 @@ public class Identity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Identity currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(IdentityType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getEnumValue(IdentityType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the type property value. The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system.

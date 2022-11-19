@@ -40,11 +40,11 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingPolicyUpdatedEventMessageDetail currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("meetingChatEnabled", (n) -> { currentObject.setMeetingChatEnabled(n.getBooleanValue()); });
-            this.put("meetingChatId", (n) -> { currentObject.setMeetingChatId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("meetingChatEnabled", (n) -> { currentObject.setMeetingChatEnabled(n.getBooleanValue()); });
+        deserializerMap.put("meetingChatId", (n) -> { currentObject.setMeetingChatId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the initiator property value. Initiator of the event.

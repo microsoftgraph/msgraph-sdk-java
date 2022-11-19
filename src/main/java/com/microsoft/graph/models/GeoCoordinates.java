@@ -61,12 +61,12 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GeoCoordinates currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("altitude", (n) -> { currentObject.setAltitude(n.getDoubleValue()); });
-            this.put("latitude", (n) -> { currentObject.setLatitude(n.getDoubleValue()); });
-            this.put("longitude", (n) -> { currentObject.setLongitude(n.getDoubleValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("altitude", (n) -> { currentObject.setAltitude(n.getDoubleValue()); });
+        deserializerMap.put("latitude", (n) -> { currentObject.setLatitude(n.getDoubleValue()); });
+        deserializerMap.put("longitude", (n) -> { currentObject.setLongitude(n.getDoubleValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the latitude property value. Optional. The latitude, in decimal, for the item. Read-only.

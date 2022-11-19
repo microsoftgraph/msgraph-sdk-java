@@ -62,14 +62,14 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppRegistryRule currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("check32BitOn64System", (n) -> { currentObject.setCheck32BitOn64System(n.getBooleanValue()); });
-            this.put("comparisonValue", (n) -> { currentObject.setComparisonValue(n.getStringValue()); });
-            this.put("keyPath", (n) -> { currentObject.setKeyPath(n.getStringValue()); });
-            this.put("operationType", (n) -> { currentObject.setOperationType(n.getEnumValue(Win32LobAppRegistryRuleOperationType.class)); });
-            this.put("operator", (n) -> { currentObject.setOperator(n.getEnumValue(Win32LobAppRuleOperator.class)); });
-            this.put("valueName", (n) -> { currentObject.setValueName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("check32BitOn64System", (n) -> { currentObject.setCheck32BitOn64System(n.getBooleanValue()); });
+        deserializerMap.put("comparisonValue", (n) -> { currentObject.setComparisonValue(n.getStringValue()); });
+        deserializerMap.put("keyPath", (n) -> { currentObject.setKeyPath(n.getStringValue()); });
+        deserializerMap.put("operationType", (n) -> { currentObject.setOperationType(n.getEnumValue(Win32LobAppRegistryRuleOperationType.class)); });
+        deserializerMap.put("operator", (n) -> { currentObject.setOperator(n.getEnumValue(Win32LobAppRuleOperator.class)); });
+        deserializerMap.put("valueName", (n) -> { currentObject.setValueName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the keyPath property value. The full path of the registry entry containing the value to detect.

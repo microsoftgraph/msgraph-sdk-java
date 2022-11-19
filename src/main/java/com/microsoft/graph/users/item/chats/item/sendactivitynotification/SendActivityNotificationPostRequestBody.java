@@ -77,14 +77,14 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SendActivityNotificationPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("activityType", (n) -> { currentObject.setActivityType(n.getStringValue()); });
-            this.put("chainId", (n) -> { currentObject.setChainId(n.getLongValue()); });
-            this.put("previewText", (n) -> { currentObject.setPreviewText(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("recipient", (n) -> { currentObject.setRecipient(n.getObjectValue(TeamworkNotificationRecipient::createFromDiscriminatorValue)); });
-            this.put("templateParameters", (n) -> { currentObject.setTemplateParameters(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("topic", (n) -> { currentObject.setTopic(n.getObjectValue(TeamworkActivityTopic::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("activityType", (n) -> { currentObject.setActivityType(n.getStringValue()); });
+        deserializerMap.put("chainId", (n) -> { currentObject.setChainId(n.getLongValue()); });
+        deserializerMap.put("previewText", (n) -> { currentObject.setPreviewText(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("recipient", (n) -> { currentObject.setRecipient(n.getObjectValue(TeamworkNotificationRecipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("templateParameters", (n) -> { currentObject.setTemplateParameters(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("topic", (n) -> { currentObject.setTopic(n.getObjectValue(TeamworkActivityTopic::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the previewText property value. The previewText property

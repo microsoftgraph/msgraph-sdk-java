@@ -55,9 +55,9 @@ public class AddCopyFromContentTypeHubPostRequestBody implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AddCopyFromContentTypeHubPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("contentTypeId", (n) -> { currentObject.setContentTypeId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("contentTypeId", (n) -> { currentObject.setContentTypeId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object

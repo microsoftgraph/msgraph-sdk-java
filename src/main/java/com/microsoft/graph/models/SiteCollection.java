@@ -61,12 +61,12 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SiteCollection currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("dataLocationCode", (n) -> { currentObject.setDataLocationCode(n.getStringValue()); });
-            this.put("hostname", (n) -> { currentObject.setHostname(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("root", (n) -> { currentObject.setRoot(n.getObjectValue(Root::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("dataLocationCode", (n) -> { currentObject.setDataLocationCode(n.getStringValue()); });
+        deserializerMap.put("hostname", (n) -> { currentObject.setHostname(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("root", (n) -> { currentObject.setRoot(n.getObjectValue(Root::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the hostname property value. The hostname for the site collection. Read-only.

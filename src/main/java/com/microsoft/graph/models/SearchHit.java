@@ -67,15 +67,15 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchHit currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("contentSource", (n) -> { currentObject.setContentSource(n.getStringValue()); });
-            this.put("hitId", (n) -> { currentObject.setHitId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("rank", (n) -> { currentObject.setRank(n.getIntegerValue()); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
-            this.put("resultTemplateId", (n) -> { currentObject.setResultTemplateId(n.getStringValue()); });
-            this.put("summary", (n) -> { currentObject.setSummary(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("contentSource", (n) -> { currentObject.setContentSource(n.getStringValue()); });
+        deserializerMap.put("hitId", (n) -> { currentObject.setHitId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("rank", (n) -> { currentObject.setRank(n.getIntegerValue()); });
+        deserializerMap.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
+        deserializerMap.put("resultTemplateId", (n) -> { currentObject.setResultTemplateId(n.getStringValue()); });
+        deserializerMap.put("summary", (n) -> { currentObject.setSummary(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the hitId property value. The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format.

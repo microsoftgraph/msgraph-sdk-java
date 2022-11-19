@@ -73,14 +73,14 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TextColumn currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("allowMultipleLines", (n) -> { currentObject.setAllowMultipleLines(n.getBooleanValue()); });
-            this.put("appendChangesToExistingText", (n) -> { currentObject.setAppendChangesToExistingText(n.getBooleanValue()); });
-            this.put("linesForEditing", (n) -> { currentObject.setLinesForEditing(n.getIntegerValue()); });
-            this.put("maxLength", (n) -> { currentObject.setMaxLength(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("textType", (n) -> { currentObject.setTextType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("allowMultipleLines", (n) -> { currentObject.setAllowMultipleLines(n.getBooleanValue()); });
+        deserializerMap.put("appendChangesToExistingText", (n) -> { currentObject.setAppendChangesToExistingText(n.getBooleanValue()); });
+        deserializerMap.put("linesForEditing", (n) -> { currentObject.setLinesForEditing(n.getIntegerValue()); });
+        deserializerMap.put("maxLength", (n) -> { currentObject.setMaxLength(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("textType", (n) -> { currentObject.setTextType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the linesForEditing property value. The size of the text box.

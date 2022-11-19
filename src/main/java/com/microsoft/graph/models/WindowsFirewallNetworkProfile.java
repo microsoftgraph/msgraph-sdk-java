@@ -88,21 +88,21 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsFirewallNetworkProfile currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(13) {{
-            this.put("authorizedApplicationRulesFromGroupPolicyMerged", (n) -> { currentObject.setAuthorizedApplicationRulesFromGroupPolicyMerged(n.getBooleanValue()); });
-            this.put("connectionSecurityRulesFromGroupPolicyMerged", (n) -> { currentObject.setConnectionSecurityRulesFromGroupPolicyMerged(n.getBooleanValue()); });
-            this.put("firewallEnabled", (n) -> { currentObject.setFirewallEnabled(n.getEnumValue(StateManagementSetting.class)); });
-            this.put("globalPortRulesFromGroupPolicyMerged", (n) -> { currentObject.setGlobalPortRulesFromGroupPolicyMerged(n.getBooleanValue()); });
-            this.put("inboundConnectionsBlocked", (n) -> { currentObject.setInboundConnectionsBlocked(n.getBooleanValue()); });
-            this.put("inboundNotificationsBlocked", (n) -> { currentObject.setInboundNotificationsBlocked(n.getBooleanValue()); });
-            this.put("incomingTrafficBlocked", (n) -> { currentObject.setIncomingTrafficBlocked(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("outboundConnectionsBlocked", (n) -> { currentObject.setOutboundConnectionsBlocked(n.getBooleanValue()); });
-            this.put("policyRulesFromGroupPolicyMerged", (n) -> { currentObject.setPolicyRulesFromGroupPolicyMerged(n.getBooleanValue()); });
-            this.put("securedPacketExemptionAllowed", (n) -> { currentObject.setSecuredPacketExemptionAllowed(n.getBooleanValue()); });
-            this.put("stealthModeBlocked", (n) -> { currentObject.setStealthModeBlocked(n.getBooleanValue()); });
-            this.put("unicastResponsesToMulticastBroadcastsBlocked", (n) -> { currentObject.setUnicastResponsesToMulticastBroadcastsBlocked(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(13);
+        deserializerMap.put("authorizedApplicationRulesFromGroupPolicyMerged", (n) -> { currentObject.setAuthorizedApplicationRulesFromGroupPolicyMerged(n.getBooleanValue()); });
+        deserializerMap.put("connectionSecurityRulesFromGroupPolicyMerged", (n) -> { currentObject.setConnectionSecurityRulesFromGroupPolicyMerged(n.getBooleanValue()); });
+        deserializerMap.put("firewallEnabled", (n) -> { currentObject.setFirewallEnabled(n.getEnumValue(StateManagementSetting.class)); });
+        deserializerMap.put("globalPortRulesFromGroupPolicyMerged", (n) -> { currentObject.setGlobalPortRulesFromGroupPolicyMerged(n.getBooleanValue()); });
+        deserializerMap.put("inboundConnectionsBlocked", (n) -> { currentObject.setInboundConnectionsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("inboundNotificationsBlocked", (n) -> { currentObject.setInboundNotificationsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("incomingTrafficBlocked", (n) -> { currentObject.setIncomingTrafficBlocked(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("outboundConnectionsBlocked", (n) -> { currentObject.setOutboundConnectionsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("policyRulesFromGroupPolicyMerged", (n) -> { currentObject.setPolicyRulesFromGroupPolicyMerged(n.getBooleanValue()); });
+        deserializerMap.put("securedPacketExemptionAllowed", (n) -> { currentObject.setSecuredPacketExemptionAllowed(n.getBooleanValue()); });
+        deserializerMap.put("stealthModeBlocked", (n) -> { currentObject.setStealthModeBlocked(n.getBooleanValue()); });
+        deserializerMap.put("unicastResponsesToMulticastBroadcastsBlocked", (n) -> { currentObject.setUnicastResponsesToMulticastBroadcastsBlocked(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the firewallEnabled property value. State Management Setting.

@@ -58,12 +58,12 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationTeamsAppResource currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("appIconWebUrl", (n) -> { currentObject.setAppIconWebUrl(n.getStringValue()); });
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("teamsEmbeddedContentUrl", (n) -> { currentObject.setTeamsEmbeddedContentUrl(n.getStringValue()); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appIconWebUrl", (n) -> { currentObject.setAppIconWebUrl(n.getStringValue()); });
+        deserializerMap.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
+        deserializerMap.put("teamsEmbeddedContentUrl", (n) -> { currentObject.setTeamsEmbeddedContentUrl(n.getStringValue()); });
+        deserializerMap.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the teamsEmbeddedContentUrl property value. The teamsEmbeddedContentUrl property

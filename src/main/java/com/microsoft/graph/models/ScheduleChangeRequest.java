@@ -73,16 +73,16 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ScheduleChangeRequest currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getEnumValue(ScheduleChangeRequestActor.class)); });
-            this.put("managerActionDateTime", (n) -> { currentObject.setManagerActionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("managerActionMessage", (n) -> { currentObject.setManagerActionMessage(n.getStringValue()); });
-            this.put("managerUserId", (n) -> { currentObject.setManagerUserId(n.getStringValue()); });
-            this.put("senderDateTime", (n) -> { currentObject.setSenderDateTime(n.getOffsetDateTimeValue()); });
-            this.put("senderMessage", (n) -> { currentObject.setSenderMessage(n.getStringValue()); });
-            this.put("senderUserId", (n) -> { currentObject.setSenderUserId(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ScheduleChangeState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getEnumValue(ScheduleChangeRequestActor.class)); });
+        deserializerMap.put("managerActionDateTime", (n) -> { currentObject.setManagerActionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managerActionMessage", (n) -> { currentObject.setManagerActionMessage(n.getStringValue()); });
+        deserializerMap.put("managerUserId", (n) -> { currentObject.setManagerUserId(n.getStringValue()); });
+        deserializerMap.put("senderDateTime", (n) -> { currentObject.setSenderDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("senderMessage", (n) -> { currentObject.setSenderMessage(n.getStringValue()); });
+        deserializerMap.put("senderUserId", (n) -> { currentObject.setSenderUserId(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(ScheduleChangeState.class)); });
+        return deserializerMap
     }
     /**
      * Gets the managerActionDateTime property value. The managerActionDateTime property

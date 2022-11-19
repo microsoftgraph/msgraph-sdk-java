@@ -47,10 +47,10 @@ public class Schema extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Schema currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("baseType", (n) -> { currentObject.setBaseType(n.getStringValue()); });
-            this.put("properties", (n) -> { currentObject.setProperties(n.getCollectionOfObjectValues(Property::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("baseType", (n) -> { currentObject.setBaseType(n.getStringValue()); });
+        deserializerMap.put("properties", (n) -> { currentObject.setProperties(n.getCollectionOfObjectValues(Property::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the properties property value. The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.

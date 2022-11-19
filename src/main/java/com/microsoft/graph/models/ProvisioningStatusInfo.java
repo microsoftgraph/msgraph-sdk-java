@@ -59,11 +59,11 @@ public class ProvisioningStatusInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProvisioningStatusInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("errorInformation", (n) -> { currentObject.setErrorInformation(n.getObjectValue(ProvisioningErrorInfo::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ProvisioningResult.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("errorInformation", (n) -> { currentObject.setErrorInformation(n.getObjectValue(ProvisioningErrorInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ProvisioningResult.class)); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property

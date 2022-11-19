@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class Participant extends Entity implements Parsable {
     /** The info property */
     private ParticipantInfo _info;
@@ -47,14 +47,14 @@ public class Participant extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Participant currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("info", (n) -> { currentObject.setInfo(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
-            this.put("isInLobby", (n) -> { currentObject.setIsInLobby(n.getBooleanValue()); });
-            this.put("isMuted", (n) -> { currentObject.setIsMuted(n.getBooleanValue()); });
-            this.put("mediaStreams", (n) -> { currentObject.setMediaStreams(n.getCollectionOfObjectValues(MediaStream::createFromDiscriminatorValue)); });
-            this.put("metadata", (n) -> { currentObject.setMetadata(n.getStringValue()); });
-            this.put("recordingInfo", (n) -> { currentObject.setRecordingInfo(n.getObjectValue(RecordingInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("info", (n) -> { currentObject.setInfo(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("isInLobby", (n) -> { currentObject.setIsInLobby(n.getBooleanValue()); });
+        deserializerMap.put("isMuted", (n) -> { currentObject.setIsMuted(n.getBooleanValue()); });
+        deserializerMap.put("mediaStreams", (n) -> { currentObject.setMediaStreams(n.getCollectionOfObjectValues(MediaStream::createFromDiscriminatorValue)); });
+        deserializerMap.put("metadata", (n) -> { currentObject.setMetadata(n.getStringValue()); });
+        deserializerMap.put("recordingInfo", (n) -> { currentObject.setRecordingInfo(n.getObjectValue(RecordingInfo::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the info property value. The info property

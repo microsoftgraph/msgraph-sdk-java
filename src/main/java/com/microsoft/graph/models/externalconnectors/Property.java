@@ -71,17 +71,17 @@ public class Property implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Property currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(9) {{
-            this.put("aliases", (n) -> { currentObject.setAliases(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isQueryable", (n) -> { currentObject.setIsQueryable(n.getBooleanValue()); });
-            this.put("isRefinable", (n) -> { currentObject.setIsRefinable(n.getBooleanValue()); });
-            this.put("isRetrievable", (n) -> { currentObject.setIsRetrievable(n.getBooleanValue()); });
-            this.put("isSearchable", (n) -> { currentObject.setIsSearchable(n.getBooleanValue()); });
-            this.put("labels", (n) -> { currentObject.setLabels(n.getCollectionOfEnumValues(Label.class)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(PropertyType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("aliases", (n) -> { currentObject.setAliases(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isQueryable", (n) -> { currentObject.setIsQueryable(n.getBooleanValue()); });
+        deserializerMap.put("isRefinable", (n) -> { currentObject.setIsRefinable(n.getBooleanValue()); });
+        deserializerMap.put("isRetrievable", (n) -> { currentObject.setIsRetrievable(n.getBooleanValue()); });
+        deserializerMap.put("isSearchable", (n) -> { currentObject.setIsSearchable(n.getBooleanValue()); });
+        deserializerMap.put("labels", (n) -> { currentObject.setLabels(n.getCollectionOfEnumValues(Label.class)); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getEnumValue(PropertyType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the isQueryable property value. Specifies if the property is queryable. Queryable properties can be used in Keyword Query Language (KQL) queries. Optional.
