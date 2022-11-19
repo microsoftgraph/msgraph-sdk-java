@@ -74,16 +74,16 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingCustomerInformation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("customerId", (n) -> { currentObject.setCustomerId(n.getStringValue()); });
-            this.put("customQuestionAnswers", (n) -> { currentObject.setCustomQuestionAnswers(n.getCollectionOfObjectValues(BookingQuestionAnswer::createFromDiscriminatorValue)); });
-            this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
-            this.put("phone", (n) -> { currentObject.setPhone(n.getStringValue()); });
-            this.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("customerId", (n) -> { currentObject.setCustomerId(n.getStringValue()); });
+        deserializerMap.put("customQuestionAnswers", (n) -> { currentObject.setCustomQuestionAnswers(n.getCollectionOfObjectValues(BookingQuestionAnswer::createFromDiscriminatorValue)); });
+        deserializerMap.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
+        deserializerMap.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
+        deserializerMap.put("phone", (n) -> { currentObject.setPhone(n.getStringValue()); });
+        deserializerMap.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the location property value. Represents location information for thebookingCustomerwho is booking the appointment.

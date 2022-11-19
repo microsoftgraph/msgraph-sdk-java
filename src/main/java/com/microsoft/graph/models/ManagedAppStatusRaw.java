@@ -44,9 +44,9 @@ public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAppStatusRaw currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("content", (n) -> { currentObject.setContent(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

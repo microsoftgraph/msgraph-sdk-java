@@ -36,9 +36,9 @@ public class AgreementFileLocalizationCollectionResponse extends BaseCollectionP
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AgreementFileLocalizationCollectionResponse currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(AgreementFileLocalization::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(AgreementFileLocalization::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The value property

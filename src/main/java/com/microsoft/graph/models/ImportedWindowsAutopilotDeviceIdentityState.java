@@ -87,13 +87,13 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImportedWindowsAutopilotDeviceIdentityState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("deviceErrorCode", (n) -> { currentObject.setDeviceErrorCode(n.getIntegerValue()); });
-            this.put("deviceErrorName", (n) -> { currentObject.setDeviceErrorName(n.getStringValue()); });
-            this.put("deviceImportStatus", (n) -> { currentObject.setDeviceImportStatus(n.getEnumValue(ImportedWindowsAutopilotDeviceIdentityImportStatus.class)); });
-            this.put("deviceRegistrationId", (n) -> { currentObject.setDeviceRegistrationId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("deviceErrorCode", (n) -> { currentObject.setDeviceErrorCode(n.getIntegerValue()); });
+        deserializerMap.put("deviceErrorName", (n) -> { currentObject.setDeviceErrorName(n.getStringValue()); });
+        deserializerMap.put("deviceImportStatus", (n) -> { currentObject.setDeviceImportStatus(n.getEnumValue(ImportedWindowsAutopilotDeviceIdentityImportStatus.class)); });
+        deserializerMap.put("deviceRegistrationId", (n) -> { currentObject.setDeviceRegistrationId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

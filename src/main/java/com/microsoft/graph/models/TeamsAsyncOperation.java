@@ -76,16 +76,16 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamsAsyncOperation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("attemptsCount", (n) -> { currentObject.setAttemptsCount(n.getIntegerValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("error", (n) -> { currentObject.setError(n.getObjectValue(OperationError::createFromDiscriminatorValue)); });
-            this.put("lastActionDateTime", (n) -> { currentObject.setLastActionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("operationType", (n) -> { currentObject.setOperationType(n.getEnumValue(TeamsAsyncOperationType.class)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(TeamsAsyncOperationStatus.class)); });
-            this.put("targetResourceId", (n) -> { currentObject.setTargetResourceId(n.getStringValue()); });
-            this.put("targetResourceLocation", (n) -> { currentObject.setTargetResourceLocation(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("attemptsCount", (n) -> { currentObject.setAttemptsCount(n.getIntegerValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("error", (n) -> { currentObject.setError(n.getObjectValue(OperationError::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastActionDateTime", (n) -> { currentObject.setLastActionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("operationType", (n) -> { currentObject.setOperationType(n.getEnumValue(TeamsAsyncOperationType.class)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(TeamsAsyncOperationStatus.class)); });
+        deserializerMap.put("targetResourceId", (n) -> { currentObject.setTargetResourceId(n.getStringValue()); });
+        deserializerMap.put("targetResourceLocation", (n) -> { currentObject.setTargetResourceLocation(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastActionDateTime property value. Time when the async operation was last updated.

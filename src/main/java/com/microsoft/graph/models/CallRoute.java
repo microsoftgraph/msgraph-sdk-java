@@ -53,12 +53,12 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CallRoute currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("final", (n) -> { currentObject.setFinal(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("original", (n) -> { currentObject.setOriginal(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("routingType", (n) -> { currentObject.setRoutingType(n.getEnumValue(RoutingType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("final", (n) -> { currentObject.setFinal(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("original", (n) -> { currentObject.setOriginal(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("routingType", (n) -> { currentObject.setRoutingType(n.getEnumValue(RoutingType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the final property value. The final property

@@ -36,9 +36,9 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerProgressTaskBoardTaskFormat currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("orderHint", (n) -> { currentObject.setOrderHint(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("orderHint", (n) -> { currentObject.setOrderHint(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the orderHint property value. Hint value used to order the task on the Progress view of the Task Board. The format is defined as outlined here.

@@ -67,15 +67,15 @@ public class Quota implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Quota currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("deleted", (n) -> { currentObject.setDeleted(n.getLongValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("remaining", (n) -> { currentObject.setRemaining(n.getLongValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
-            this.put("storagePlanInformation", (n) -> { currentObject.setStoragePlanInformation(n.getObjectValue(StoragePlanInformation::createFromDiscriminatorValue)); });
-            this.put("total", (n) -> { currentObject.setTotal(n.getLongValue()); });
-            this.put("used", (n) -> { currentObject.setUsed(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("deleted", (n) -> { currentObject.setDeleted(n.getLongValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("remaining", (n) -> { currentObject.setRemaining(n.getLongValue()); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
+        deserializerMap.put("storagePlanInformation", (n) -> { currentObject.setStoragePlanInformation(n.getObjectValue(StoragePlanInformation::createFromDiscriminatorValue)); });
+        deserializerMap.put("total", (n) -> { currentObject.setTotal(n.getLongValue()); });
+        deserializerMap.put("used", (n) -> { currentObject.setUsed(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

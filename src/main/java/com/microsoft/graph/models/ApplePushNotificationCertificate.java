@@ -99,16 +99,16 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApplePushNotificationCertificate currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("appleIdentifier", (n) -> { currentObject.setAppleIdentifier(n.getStringValue()); });
-            this.put("certificate", (n) -> { currentObject.setCertificate(n.getStringValue()); });
-            this.put("certificateSerialNumber", (n) -> { currentObject.setCertificateSerialNumber(n.getStringValue()); });
-            this.put("certificateUploadFailureReason", (n) -> { currentObject.setCertificateUploadFailureReason(n.getStringValue()); });
-            this.put("certificateUploadStatus", (n) -> { currentObject.setCertificateUploadStatus(n.getStringValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("topicIdentifier", (n) -> { currentObject.setTopicIdentifier(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appleIdentifier", (n) -> { currentObject.setAppleIdentifier(n.getStringValue()); });
+        deserializerMap.put("certificate", (n) -> { currentObject.setCertificate(n.getStringValue()); });
+        deserializerMap.put("certificateSerialNumber", (n) -> { currentObject.setCertificateSerialNumber(n.getStringValue()); });
+        deserializerMap.put("certificateUploadFailureReason", (n) -> { currentObject.setCertificateUploadFailureReason(n.getStringValue()); });
+        deserializerMap.put("certificateUploadStatus", (n) -> { currentObject.setCertificateUploadStatus(n.getStringValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("topicIdentifier", (n) -> { currentObject.setTopicIdentifier(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. Last modified date and time for Apple push notification certificate.

@@ -66,12 +66,12 @@ public class IosStoreApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosStoreApp currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("applicableDeviceType", (n) -> { currentObject.setApplicableDeviceType(n.getObjectValue(IosDeviceType::createFromDiscriminatorValue)); });
-            this.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
-            this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
-            this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(IosMinimumOperatingSystem::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicableDeviceType", (n) -> { currentObject.setApplicableDeviceType(n.getObjectValue(IosDeviceType::createFromDiscriminatorValue)); });
+        deserializerMap.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
+        deserializerMap.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
+        deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(IosMinimumOperatingSystem::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.

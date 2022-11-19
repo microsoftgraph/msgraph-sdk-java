@@ -67,11 +67,11 @@ public class ItemBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getStringValue()); });
-            this.put("contentType", (n) -> { currentObject.setContentType(n.getEnumValue(BodyType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("content", (n) -> { currentObject.setContent(n.getStringValue()); });
+        deserializerMap.put("contentType", (n) -> { currentObject.setContentType(n.getEnumValue(BodyType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

@@ -268,41 +268,41 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows81GeneralConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("accountsBlockAddingNonMicrosoftAccountEmail", (n) -> { currentObject.setAccountsBlockAddingNonMicrosoftAccountEmail(n.getBooleanValue()); });
-            this.put("applyOnlyToWindows81", (n) -> { currentObject.setApplyOnlyToWindows81(n.getBooleanValue()); });
-            this.put("browserBlockAutofill", (n) -> { currentObject.setBrowserBlockAutofill(n.getBooleanValue()); });
-            this.put("browserBlockAutomaticDetectionOfIntranetSites", (n) -> { currentObject.setBrowserBlockAutomaticDetectionOfIntranetSites(n.getBooleanValue()); });
-            this.put("browserBlockEnterpriseModeAccess", (n) -> { currentObject.setBrowserBlockEnterpriseModeAccess(n.getBooleanValue()); });
-            this.put("browserBlockJavaScript", (n) -> { currentObject.setBrowserBlockJavaScript(n.getBooleanValue()); });
-            this.put("browserBlockPlugins", (n) -> { currentObject.setBrowserBlockPlugins(n.getBooleanValue()); });
-            this.put("browserBlockPopups", (n) -> { currentObject.setBrowserBlockPopups(n.getBooleanValue()); });
-            this.put("browserBlockSendingDoNotTrackHeader", (n) -> { currentObject.setBrowserBlockSendingDoNotTrackHeader(n.getBooleanValue()); });
-            this.put("browserBlockSingleWordEntryOnIntranetSites", (n) -> { currentObject.setBrowserBlockSingleWordEntryOnIntranetSites(n.getBooleanValue()); });
-            this.put("browserEnterpriseModeSiteListLocation", (n) -> { currentObject.setBrowserEnterpriseModeSiteListLocation(n.getStringValue()); });
-            this.put("browserInternetSecurityLevel", (n) -> { currentObject.setBrowserInternetSecurityLevel(n.getEnumValue(InternetSiteSecurityLevel.class)); });
-            this.put("browserIntranetSecurityLevel", (n) -> { currentObject.setBrowserIntranetSecurityLevel(n.getEnumValue(SiteSecurityLevel.class)); });
-            this.put("browserLoggingReportLocation", (n) -> { currentObject.setBrowserLoggingReportLocation(n.getStringValue()); });
-            this.put("browserRequireFirewall", (n) -> { currentObject.setBrowserRequireFirewall(n.getBooleanValue()); });
-            this.put("browserRequireFraudWarning", (n) -> { currentObject.setBrowserRequireFraudWarning(n.getBooleanValue()); });
-            this.put("browserRequireHighSecurityForRestrictedSites", (n) -> { currentObject.setBrowserRequireHighSecurityForRestrictedSites(n.getBooleanValue()); });
-            this.put("browserRequireSmartScreen", (n) -> { currentObject.setBrowserRequireSmartScreen(n.getBooleanValue()); });
-            this.put("browserTrustedSitesSecurityLevel", (n) -> { currentObject.setBrowserTrustedSitesSecurityLevel(n.getEnumValue(SiteSecurityLevel.class)); });
-            this.put("cellularBlockDataRoaming", (n) -> { currentObject.setCellularBlockDataRoaming(n.getBooleanValue()); });
-            this.put("diagnosticsBlockDataSubmission", (n) -> { currentObject.setDiagnosticsBlockDataSubmission(n.getBooleanValue()); });
-            this.put("passwordBlockPicturePasswordAndPin", (n) -> { currentObject.setPasswordBlockPicturePasswordAndPin(n.getBooleanValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumCharacterSetCount", (n) -> { currentObject.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
-            this.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
-            this.put("storageRequireDeviceEncryption", (n) -> { currentObject.setStorageRequireDeviceEncryption(n.getBooleanValue()); });
-            this.put("updatesRequireAutomaticUpdates", (n) -> { currentObject.setUpdatesRequireAutomaticUpdates(n.getBooleanValue()); });
-            this.put("userAccountControlSettings", (n) -> { currentObject.setUserAccountControlSettings(n.getEnumValue(WindowsUserAccountControlSettings.class)); });
-            this.put("workFoldersUrl", (n) -> { currentObject.setWorkFoldersUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountsBlockAddingNonMicrosoftAccountEmail", (n) -> { currentObject.setAccountsBlockAddingNonMicrosoftAccountEmail(n.getBooleanValue()); });
+        deserializerMap.put("applyOnlyToWindows81", (n) -> { currentObject.setApplyOnlyToWindows81(n.getBooleanValue()); });
+        deserializerMap.put("browserBlockAutofill", (n) -> { currentObject.setBrowserBlockAutofill(n.getBooleanValue()); });
+        deserializerMap.put("browserBlockAutomaticDetectionOfIntranetSites", (n) -> { currentObject.setBrowserBlockAutomaticDetectionOfIntranetSites(n.getBooleanValue()); });
+        deserializerMap.put("browserBlockEnterpriseModeAccess", (n) -> { currentObject.setBrowserBlockEnterpriseModeAccess(n.getBooleanValue()); });
+        deserializerMap.put("browserBlockJavaScript", (n) -> { currentObject.setBrowserBlockJavaScript(n.getBooleanValue()); });
+        deserializerMap.put("browserBlockPlugins", (n) -> { currentObject.setBrowserBlockPlugins(n.getBooleanValue()); });
+        deserializerMap.put("browserBlockPopups", (n) -> { currentObject.setBrowserBlockPopups(n.getBooleanValue()); });
+        deserializerMap.put("browserBlockSendingDoNotTrackHeader", (n) -> { currentObject.setBrowserBlockSendingDoNotTrackHeader(n.getBooleanValue()); });
+        deserializerMap.put("browserBlockSingleWordEntryOnIntranetSites", (n) -> { currentObject.setBrowserBlockSingleWordEntryOnIntranetSites(n.getBooleanValue()); });
+        deserializerMap.put("browserEnterpriseModeSiteListLocation", (n) -> { currentObject.setBrowserEnterpriseModeSiteListLocation(n.getStringValue()); });
+        deserializerMap.put("browserInternetSecurityLevel", (n) -> { currentObject.setBrowserInternetSecurityLevel(n.getEnumValue(InternetSiteSecurityLevel.class)); });
+        deserializerMap.put("browserIntranetSecurityLevel", (n) -> { currentObject.setBrowserIntranetSecurityLevel(n.getEnumValue(SiteSecurityLevel.class)); });
+        deserializerMap.put("browserLoggingReportLocation", (n) -> { currentObject.setBrowserLoggingReportLocation(n.getStringValue()); });
+        deserializerMap.put("browserRequireFirewall", (n) -> { currentObject.setBrowserRequireFirewall(n.getBooleanValue()); });
+        deserializerMap.put("browserRequireFraudWarning", (n) -> { currentObject.setBrowserRequireFraudWarning(n.getBooleanValue()); });
+        deserializerMap.put("browserRequireHighSecurityForRestrictedSites", (n) -> { currentObject.setBrowserRequireHighSecurityForRestrictedSites(n.getBooleanValue()); });
+        deserializerMap.put("browserRequireSmartScreen", (n) -> { currentObject.setBrowserRequireSmartScreen(n.getBooleanValue()); });
+        deserializerMap.put("browserTrustedSitesSecurityLevel", (n) -> { currentObject.setBrowserTrustedSitesSecurityLevel(n.getEnumValue(SiteSecurityLevel.class)); });
+        deserializerMap.put("cellularBlockDataRoaming", (n) -> { currentObject.setCellularBlockDataRoaming(n.getBooleanValue()); });
+        deserializerMap.put("diagnosticsBlockDataSubmission", (n) -> { currentObject.setDiagnosticsBlockDataSubmission(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockPicturePasswordAndPin", (n) -> { currentObject.setPasswordBlockPicturePasswordAndPin(n.getBooleanValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumCharacterSetCount", (n) -> { currentObject.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
+        deserializerMap.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
+        deserializerMap.put("storageRequireDeviceEncryption", (n) -> { currentObject.setStorageRequireDeviceEncryption(n.getBooleanValue()); });
+        deserializerMap.put("updatesRequireAutomaticUpdates", (n) -> { currentObject.setUpdatesRequireAutomaticUpdates(n.getBooleanValue()); });
+        deserializerMap.put("userAccountControlSettings", (n) -> { currentObject.setUserAccountControlSettings(n.getEnumValue(WindowsUserAccountControlSettings.class)); });
+        deserializerMap.put("workFoldersUrl", (n) -> { currentObject.setWorkFoldersUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the passwordBlockPicturePasswordAndPin property value. Indicates whether or not to Block the user from using a pictures password and pin.

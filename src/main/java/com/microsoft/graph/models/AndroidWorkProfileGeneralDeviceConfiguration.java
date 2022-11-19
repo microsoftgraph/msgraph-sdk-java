@@ -102,42 +102,42 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidWorkProfileGeneralDeviceConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("passwordBlockFingerprintUnlock", (n) -> { currentObject.setPasswordBlockFingerprintUnlock(n.getBooleanValue()); });
-            this.put("passwordBlockTrustAgents", (n) -> { currentObject.setPasswordBlockTrustAgents(n.getBooleanValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(AndroidWorkProfileRequiredPasswordType.class)); });
-            this.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
-            this.put("securityRequireVerifyApps", (n) -> { currentObject.setSecurityRequireVerifyApps(n.getBooleanValue()); });
-            this.put("workProfileBlockAddingAccounts", (n) -> { currentObject.setWorkProfileBlockAddingAccounts(n.getBooleanValue()); });
-            this.put("workProfileBlockCamera", (n) -> { currentObject.setWorkProfileBlockCamera(n.getBooleanValue()); });
-            this.put("workProfileBlockCrossProfileCallerId", (n) -> { currentObject.setWorkProfileBlockCrossProfileCallerId(n.getBooleanValue()); });
-            this.put("workProfileBlockCrossProfileContactsSearch", (n) -> { currentObject.setWorkProfileBlockCrossProfileContactsSearch(n.getBooleanValue()); });
-            this.put("workProfileBlockCrossProfileCopyPaste", (n) -> { currentObject.setWorkProfileBlockCrossProfileCopyPaste(n.getBooleanValue()); });
-            this.put("workProfileBlockNotificationsWhileDeviceLocked", (n) -> { currentObject.setWorkProfileBlockNotificationsWhileDeviceLocked(n.getBooleanValue()); });
-            this.put("workProfileBlockScreenCapture", (n) -> { currentObject.setWorkProfileBlockScreenCapture(n.getBooleanValue()); });
-            this.put("workProfileBluetoothEnableContactSharing", (n) -> { currentObject.setWorkProfileBluetoothEnableContactSharing(n.getBooleanValue()); });
-            this.put("workProfileDataSharingType", (n) -> { currentObject.setWorkProfileDataSharingType(n.getEnumValue(AndroidWorkProfileCrossProfileDataSharingType.class)); });
-            this.put("workProfileDefaultAppPermissionPolicy", (n) -> { currentObject.setWorkProfileDefaultAppPermissionPolicy(n.getEnumValue(AndroidWorkProfileDefaultAppPermissionPolicyType.class)); });
-            this.put("workProfilePasswordBlockFingerprintUnlock", (n) -> { currentObject.setWorkProfilePasswordBlockFingerprintUnlock(n.getBooleanValue()); });
-            this.put("workProfilePasswordBlockTrustAgents", (n) -> { currentObject.setWorkProfilePasswordBlockTrustAgents(n.getBooleanValue()); });
-            this.put("workProfilePasswordExpirationDays", (n) -> { currentObject.setWorkProfilePasswordExpirationDays(n.getIntegerValue()); });
-            this.put("workProfilePasswordMinimumLength", (n) -> { currentObject.setWorkProfilePasswordMinimumLength(n.getIntegerValue()); });
-            this.put("workProfilePasswordMinLetterCharacters", (n) -> { currentObject.setWorkProfilePasswordMinLetterCharacters(n.getIntegerValue()); });
-            this.put("workProfilePasswordMinLowerCaseCharacters", (n) -> { currentObject.setWorkProfilePasswordMinLowerCaseCharacters(n.getIntegerValue()); });
-            this.put("workProfilePasswordMinNonLetterCharacters", (n) -> { currentObject.setWorkProfilePasswordMinNonLetterCharacters(n.getIntegerValue()); });
-            this.put("workProfilePasswordMinNumericCharacters", (n) -> { currentObject.setWorkProfilePasswordMinNumericCharacters(n.getIntegerValue()); });
-            this.put("workProfilePasswordMinSymbolCharacters", (n) -> { currentObject.setWorkProfilePasswordMinSymbolCharacters(n.getIntegerValue()); });
-            this.put("workProfilePasswordMinUpperCaseCharacters", (n) -> { currentObject.setWorkProfilePasswordMinUpperCaseCharacters(n.getIntegerValue()); });
-            this.put("workProfilePasswordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setWorkProfilePasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
-            this.put("workProfilePasswordPreviousPasswordBlockCount", (n) -> { currentObject.setWorkProfilePasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("workProfilePasswordRequiredType", (n) -> { currentObject.setWorkProfilePasswordRequiredType(n.getEnumValue(AndroidWorkProfileRequiredPasswordType.class)); });
-            this.put("workProfilePasswordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setWorkProfilePasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
-            this.put("workProfileRequirePassword", (n) -> { currentObject.setWorkProfileRequirePassword(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("passwordBlockFingerprintUnlock", (n) -> { currentObject.setPasswordBlockFingerprintUnlock(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockTrustAgents", (n) -> { currentObject.setPasswordBlockTrustAgents(n.getBooleanValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(AndroidWorkProfileRequiredPasswordType.class)); });
+        deserializerMap.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
+        deserializerMap.put("securityRequireVerifyApps", (n) -> { currentObject.setSecurityRequireVerifyApps(n.getBooleanValue()); });
+        deserializerMap.put("workProfileBlockAddingAccounts", (n) -> { currentObject.setWorkProfileBlockAddingAccounts(n.getBooleanValue()); });
+        deserializerMap.put("workProfileBlockCamera", (n) -> { currentObject.setWorkProfileBlockCamera(n.getBooleanValue()); });
+        deserializerMap.put("workProfileBlockCrossProfileCallerId", (n) -> { currentObject.setWorkProfileBlockCrossProfileCallerId(n.getBooleanValue()); });
+        deserializerMap.put("workProfileBlockCrossProfileContactsSearch", (n) -> { currentObject.setWorkProfileBlockCrossProfileContactsSearch(n.getBooleanValue()); });
+        deserializerMap.put("workProfileBlockCrossProfileCopyPaste", (n) -> { currentObject.setWorkProfileBlockCrossProfileCopyPaste(n.getBooleanValue()); });
+        deserializerMap.put("workProfileBlockNotificationsWhileDeviceLocked", (n) -> { currentObject.setWorkProfileBlockNotificationsWhileDeviceLocked(n.getBooleanValue()); });
+        deserializerMap.put("workProfileBlockScreenCapture", (n) -> { currentObject.setWorkProfileBlockScreenCapture(n.getBooleanValue()); });
+        deserializerMap.put("workProfileBluetoothEnableContactSharing", (n) -> { currentObject.setWorkProfileBluetoothEnableContactSharing(n.getBooleanValue()); });
+        deserializerMap.put("workProfileDataSharingType", (n) -> { currentObject.setWorkProfileDataSharingType(n.getEnumValue(AndroidWorkProfileCrossProfileDataSharingType.class)); });
+        deserializerMap.put("workProfileDefaultAppPermissionPolicy", (n) -> { currentObject.setWorkProfileDefaultAppPermissionPolicy(n.getEnumValue(AndroidWorkProfileDefaultAppPermissionPolicyType.class)); });
+        deserializerMap.put("workProfilePasswordBlockFingerprintUnlock", (n) -> { currentObject.setWorkProfilePasswordBlockFingerprintUnlock(n.getBooleanValue()); });
+        deserializerMap.put("workProfilePasswordBlockTrustAgents", (n) -> { currentObject.setWorkProfilePasswordBlockTrustAgents(n.getBooleanValue()); });
+        deserializerMap.put("workProfilePasswordExpirationDays", (n) -> { currentObject.setWorkProfilePasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordMinimumLength", (n) -> { currentObject.setWorkProfilePasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordMinLetterCharacters", (n) -> { currentObject.setWorkProfilePasswordMinLetterCharacters(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordMinLowerCaseCharacters", (n) -> { currentObject.setWorkProfilePasswordMinLowerCaseCharacters(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordMinNonLetterCharacters", (n) -> { currentObject.setWorkProfilePasswordMinNonLetterCharacters(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordMinNumericCharacters", (n) -> { currentObject.setWorkProfilePasswordMinNumericCharacters(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordMinSymbolCharacters", (n) -> { currentObject.setWorkProfilePasswordMinSymbolCharacters(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordMinUpperCaseCharacters", (n) -> { currentObject.setWorkProfilePasswordMinUpperCaseCharacters(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setWorkProfilePasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordPreviousPasswordBlockCount", (n) -> { currentObject.setWorkProfilePasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordRequiredType", (n) -> { currentObject.setWorkProfilePasswordRequiredType(n.getEnumValue(AndroidWorkProfileRequiredPasswordType.class)); });
+        deserializerMap.put("workProfilePasswordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setWorkProfilePasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
+        deserializerMap.put("workProfileRequirePassword", (n) -> { currentObject.setWorkProfileRequirePassword(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the passwordBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.

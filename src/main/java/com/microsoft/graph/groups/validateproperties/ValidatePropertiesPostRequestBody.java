@@ -69,12 +69,12 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ValidatePropertiesPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("entityType", (n) -> { currentObject.setEntityType(n.getStringValue()); });
-            this.put("mailNickname", (n) -> { currentObject.setMailNickname(n.getStringValue()); });
-            this.put("onBehalfOfUserId", (n) -> { currentObject.setOnBehalfOfUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("entityType", (n) -> { currentObject.setEntityType(n.getStringValue()); });
+        deserializerMap.put("mailNickname", (n) -> { currentObject.setMailNickname(n.getStringValue()); });
+        deserializerMap.put("onBehalfOfUserId", (n) -> { currentObject.setOnBehalfOfUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mailNickname property value. The mailNickname property

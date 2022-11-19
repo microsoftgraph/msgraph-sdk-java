@@ -53,12 +53,12 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AlertTrigger currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-            this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
+        deserializerMap.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. Name of the property serving as a detection trigger.

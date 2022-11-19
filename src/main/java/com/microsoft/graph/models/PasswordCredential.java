@@ -86,16 +86,16 @@ public class PasswordCredential implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PasswordCredential currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("customKeyIdentifier", (n) -> { currentObject.setCustomKeyIdentifier(n.getByteArrayValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("hint", (n) -> { currentObject.setHint(n.getStringValue()); });
-            this.put("keyId", (n) -> { currentObject.setKeyId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("secretText", (n) -> { currentObject.setSecretText(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("customKeyIdentifier", (n) -> { currentObject.setCustomKeyIdentifier(n.getByteArrayValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("hint", (n) -> { currentObject.setHint(n.getStringValue()); });
+        deserializerMap.put("keyId", (n) -> { currentObject.setKeyId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("secretText", (n) -> { currentObject.setSecretText(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hint property value. Contains the first three characters of the password. Read-only.

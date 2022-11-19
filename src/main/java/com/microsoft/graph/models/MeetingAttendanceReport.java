@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class MeetingAttendanceReport extends Entity implements Parsable {
     /** List of attendance records of an attendance report. Read-only. */
     private java.util.List<AttendanceRecord> _attendanceRecords;
@@ -52,12 +52,12 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingAttendanceReport currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("attendanceRecords", (n) -> { currentObject.setAttendanceRecords(n.getCollectionOfObjectValues(AttendanceRecord::createFromDiscriminatorValue)); });
-            this.put("meetingEndDateTime", (n) -> { currentObject.setMeetingEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("meetingStartDateTime", (n) -> { currentObject.setMeetingStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("totalParticipantCount", (n) -> { currentObject.setTotalParticipantCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("attendanceRecords", (n) -> { currentObject.setAttendanceRecords(n.getCollectionOfObjectValues(AttendanceRecord::createFromDiscriminatorValue)); });
+        deserializerMap.put("meetingEndDateTime", (n) -> { currentObject.setMeetingEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("meetingStartDateTime", (n) -> { currentObject.setMeetingStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("totalParticipantCount", (n) -> { currentObject.setTotalParticipantCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the meetingEndDateTime property value. UTC time when the meeting ended. Read-only.

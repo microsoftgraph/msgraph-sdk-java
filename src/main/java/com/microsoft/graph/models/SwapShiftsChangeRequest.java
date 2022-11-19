@@ -36,9 +36,9 @@ public class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SwapShiftsChangeRequest currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("recipientShiftId", (n) -> { currentObject.setRecipientShiftId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("recipientShiftId", (n) -> { currentObject.setRecipientShiftId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the recipientShiftId property value. ShiftId for the recipient user with whom the request is to swap.

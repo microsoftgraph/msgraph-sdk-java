@@ -79,17 +79,17 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemReference currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(9) {{
-            this.put("driveId", (n) -> { currentObject.setDriveId(n.getStringValue()); });
-            this.put("driveType", (n) -> { currentObject.setDriveType(n.getStringValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("path", (n) -> { currentObject.setPath(n.getStringValue()); });
-            this.put("shareId", (n) -> { currentObject.setShareId(n.getStringValue()); });
-            this.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
-            this.put("siteId", (n) -> { currentObject.setSiteId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("driveId", (n) -> { currentObject.setDriveId(n.getStringValue()); });
+        deserializerMap.put("driveType", (n) -> { currentObject.setDriveType(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("path", (n) -> { currentObject.setPath(n.getStringValue()); });
+        deserializerMap.put("shareId", (n) -> { currentObject.setShareId(n.getStringValue()); });
+        deserializerMap.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
+        deserializerMap.put("siteId", (n) -> { currentObject.setSiteId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. Unique identifier of the item in the drive. Read-only.

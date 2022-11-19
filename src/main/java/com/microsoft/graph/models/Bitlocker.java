@@ -36,9 +36,9 @@ public class Bitlocker extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Bitlocker currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("recoveryKeys", (n) -> { currentObject.setRecoveryKeys(n.getCollectionOfObjectValues(BitlockerRecoveryKey::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("recoveryKeys", (n) -> { currentObject.setRecoveryKeys(n.getCollectionOfObjectValues(BitlockerRecoveryKey::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the recoveryKeys property value. The recovery keys associated with the bitlocker entity.

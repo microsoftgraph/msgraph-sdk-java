@@ -61,13 +61,13 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResourceSpecificPermissionGrant currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("clientAppId", (n) -> { currentObject.setClientAppId(n.getStringValue()); });
-            this.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
-            this.put("permission", (n) -> { currentObject.setPermission(n.getStringValue()); });
-            this.put("permissionType", (n) -> { currentObject.setPermissionType(n.getStringValue()); });
-            this.put("resourceAppId", (n) -> { currentObject.setResourceAppId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("clientAppId", (n) -> { currentObject.setClientAppId(n.getStringValue()); });
+        deserializerMap.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
+        deserializerMap.put("permission", (n) -> { currentObject.setPermission(n.getStringValue()); });
+        deserializerMap.put("permissionType", (n) -> { currentObject.setPermissionType(n.getStringValue()); });
+        deserializerMap.put("resourceAppId", (n) -> { currentObject.setResourceAppId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the permission property value. The name of the resource-specific permission. Read-only.

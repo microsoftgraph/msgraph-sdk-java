@@ -93,20 +93,20 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MessageRuleActions currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(12) {{
-            this.put("assignCategories", (n) -> { currentObject.setAssignCategories(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("copyToFolder", (n) -> { currentObject.setCopyToFolder(n.getStringValue()); });
-            this.put("delete", (n) -> { currentObject.setDelete(n.getBooleanValue()); });
-            this.put("forwardAsAttachmentTo", (n) -> { currentObject.setForwardAsAttachmentTo(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("forwardTo", (n) -> { currentObject.setForwardTo(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("markAsRead", (n) -> { currentObject.setMarkAsRead(n.getBooleanValue()); });
-            this.put("markImportance", (n) -> { currentObject.setMarkImportance(n.getEnumValue(Importance.class)); });
-            this.put("moveToFolder", (n) -> { currentObject.setMoveToFolder(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("permanentDelete", (n) -> { currentObject.setPermanentDelete(n.getBooleanValue()); });
-            this.put("redirectTo", (n) -> { currentObject.setRedirectTo(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("stopProcessingRules", (n) -> { currentObject.setStopProcessingRules(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(12);
+        deserializerMap.put("assignCategories", (n) -> { currentObject.setAssignCategories(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("copyToFolder", (n) -> { currentObject.setCopyToFolder(n.getStringValue()); });
+        deserializerMap.put("delete", (n) -> { currentObject.setDelete(n.getBooleanValue()); });
+        deserializerMap.put("forwardAsAttachmentTo", (n) -> { currentObject.setForwardAsAttachmentTo(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("forwardTo", (n) -> { currentObject.setForwardTo(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("markAsRead", (n) -> { currentObject.setMarkAsRead(n.getBooleanValue()); });
+        deserializerMap.put("markImportance", (n) -> { currentObject.setMarkImportance(n.getEnumValue(Importance.class)); });
+        deserializerMap.put("moveToFolder", (n) -> { currentObject.setMoveToFolder(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("permanentDelete", (n) -> { currentObject.setPermanentDelete(n.getBooleanValue()); });
+        deserializerMap.put("redirectTo", (n) -> { currentObject.setRedirectTo(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("stopProcessingRules", (n) -> { currentObject.setStopProcessingRules(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the forwardAsAttachmentTo property value. The email addresses of the recipients to which a message should be forwarded as an attachment.

@@ -44,9 +44,9 @@ public class WorkbookRangeFill extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookRangeFill currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

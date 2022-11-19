@@ -44,9 +44,9 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdgeSearchEngine currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("edgeSearchEngineType", (n) -> { currentObject.setEdgeSearchEngineType(n.getEnumValue(EdgeSearchEngineType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("edgeSearchEngineType", (n) -> { currentObject.setEdgeSearchEngineType(n.getEnumValue(EdgeSearchEngineType.class)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

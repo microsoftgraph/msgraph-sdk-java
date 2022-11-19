@@ -84,15 +84,15 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CreatePostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("certificateSigningRequest", (n) -> { currentObject.setCertificateSigningRequest(n.getObjectValue(PrintCertificateSigningRequest::createFromDiscriminatorValue)); });
-            this.put("connectorId", (n) -> { currentObject.setConnectorId(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("hasPhysicalDevice", (n) -> { currentObject.setHasPhysicalDevice(n.getBooleanValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("physicalDeviceId", (n) -> { currentObject.setPhysicalDeviceId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("certificateSigningRequest", (n) -> { currentObject.setCertificateSigningRequest(n.getObjectValue(PrintCertificateSigningRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("connectorId", (n) -> { currentObject.setConnectorId(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("hasPhysicalDevice", (n) -> { currentObject.setHasPhysicalDevice(n.getBooleanValue()); });
+        deserializerMap.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
+        deserializerMap.put("physicalDeviceId", (n) -> { currentObject.setPhysicalDeviceId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hasPhysicalDevice property value. The hasPhysicalDevice property

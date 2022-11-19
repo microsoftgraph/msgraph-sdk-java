@@ -83,15 +83,15 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessUsers currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("excludeGroups", (n) -> { currentObject.setExcludeGroups(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("excludeRoles", (n) -> { currentObject.setExcludeRoles(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("excludeUsers", (n) -> { currentObject.setExcludeUsers(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("includeGroups", (n) -> { currentObject.setIncludeGroups(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("includeRoles", (n) -> { currentObject.setIncludeRoles(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("includeUsers", (n) -> { currentObject.setIncludeUsers(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("excludeGroups", (n) -> { currentObject.setExcludeGroups(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("excludeRoles", (n) -> { currentObject.setExcludeRoles(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("excludeUsers", (n) -> { currentObject.setExcludeUsers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("includeGroups", (n) -> { currentObject.setIncludeGroups(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("includeRoles", (n) -> { currentObject.setIncludeRoles(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("includeUsers", (n) -> { currentObject.setIncludeUsers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the includeGroups property value. Group IDs in scope of policy unless explicitly excluded, or All.

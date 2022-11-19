@@ -71,13 +71,13 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessGrantControls currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("builtInControls", (n) -> { currentObject.setBuiltInControls(n.getCollectionOfEnumValues(ConditionalAccessGrantControl.class)); });
-            this.put("customAuthenticationFactors", (n) -> { currentObject.setCustomAuthenticationFactors(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operator", (n) -> { currentObject.setOperator(n.getStringValue()); });
-            this.put("termsOfUse", (n) -> { currentObject.setTermsOfUse(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("builtInControls", (n) -> { currentObject.setBuiltInControls(n.getCollectionOfEnumValues(ConditionalAccessGrantControl.class)); });
+        deserializerMap.put("customAuthenticationFactors", (n) -> { currentObject.setCustomAuthenticationFactors(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operator", (n) -> { currentObject.setOperator(n.getStringValue()); });
+        deserializerMap.put("termsOfUse", (n) -> { currentObject.setTermsOfUse(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

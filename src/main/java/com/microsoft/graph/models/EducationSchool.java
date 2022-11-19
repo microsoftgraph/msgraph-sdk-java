@@ -118,22 +118,22 @@ public class EducationSchool extends EducationOrganization implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSchool currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
-            this.put("administrativeUnit", (n) -> { currentObject.setAdministrativeUnit(n.getObjectValue(AdministrativeUnit::createFromDiscriminatorValue)); });
-            this.put("classes", (n) -> { currentObject.setClasses(n.getCollectionOfObjectValues(EducationClass::createFromDiscriminatorValue)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
-            this.put("externalPrincipalId", (n) -> { currentObject.setExternalPrincipalId(n.getStringValue()); });
-            this.put("fax", (n) -> { currentObject.setFax(n.getStringValue()); });
-            this.put("highestGrade", (n) -> { currentObject.setHighestGrade(n.getStringValue()); });
-            this.put("lowestGrade", (n) -> { currentObject.setLowestGrade(n.getStringValue()); });
-            this.put("phone", (n) -> { currentObject.setPhone(n.getStringValue()); });
-            this.put("principalEmail", (n) -> { currentObject.setPrincipalEmail(n.getStringValue()); });
-            this.put("principalName", (n) -> { currentObject.setPrincipalName(n.getStringValue()); });
-            this.put("schoolNumber", (n) -> { currentObject.setSchoolNumber(n.getStringValue()); });
-            this.put("users", (n) -> { currentObject.setUsers(n.getCollectionOfObjectValues(EducationUser::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("administrativeUnit", (n) -> { currentObject.setAdministrativeUnit(n.getObjectValue(AdministrativeUnit::createFromDiscriminatorValue)); });
+        deserializerMap.put("classes", (n) -> { currentObject.setClasses(n.getCollectionOfObjectValues(EducationClass::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
+        deserializerMap.put("externalPrincipalId", (n) -> { currentObject.setExternalPrincipalId(n.getStringValue()); });
+        deserializerMap.put("fax", (n) -> { currentObject.setFax(n.getStringValue()); });
+        deserializerMap.put("highestGrade", (n) -> { currentObject.setHighestGrade(n.getStringValue()); });
+        deserializerMap.put("lowestGrade", (n) -> { currentObject.setLowestGrade(n.getStringValue()); });
+        deserializerMap.put("phone", (n) -> { currentObject.setPhone(n.getStringValue()); });
+        deserializerMap.put("principalEmail", (n) -> { currentObject.setPrincipalEmail(n.getStringValue()); });
+        deserializerMap.put("principalName", (n) -> { currentObject.setPrincipalName(n.getStringValue()); });
+        deserializerMap.put("schoolNumber", (n) -> { currentObject.setSchoolNumber(n.getStringValue()); });
+        deserializerMap.put("users", (n) -> { currentObject.setUsers(n.getCollectionOfObjectValues(EducationUser::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the highestGrade property value. Highest grade taught.

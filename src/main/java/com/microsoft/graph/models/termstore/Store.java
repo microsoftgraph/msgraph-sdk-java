@@ -51,12 +51,12 @@ public class Store extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Store currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("defaultLanguageTag", (n) -> { currentObject.setDefaultLanguageTag(n.getStringValue()); });
-            this.put("groups", (n) -> { currentObject.setGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
-            this.put("languageTags", (n) -> { currentObject.setLanguageTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("sets", (n) -> { currentObject.setSets(n.getCollectionOfObjectValues(Set::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultLanguageTag", (n) -> { currentObject.setDefaultLanguageTag(n.getStringValue()); });
+        deserializerMap.put("groups", (n) -> { currentObject.setGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
+        deserializerMap.put("languageTags", (n) -> { currentObject.setLanguageTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("sets", (n) -> { currentObject.setSets(n.getCollectionOfObjectValues(Set::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the groups property value. Collection of all groups available in the term store.

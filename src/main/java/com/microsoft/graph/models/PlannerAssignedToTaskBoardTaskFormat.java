@@ -38,10 +38,10 @@ public class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerAssignedToTaskBoardTaskFormat currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("orderHintsByAssignee", (n) -> { currentObject.setOrderHintsByAssignee(n.getObjectValue(PlannerOrderHintsByAssignee::createFromDiscriminatorValue)); });
-            this.put("unassignedOrderHint", (n) -> { currentObject.setUnassignedOrderHint(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("orderHintsByAssignee", (n) -> { currentObject.setOrderHintsByAssignee(n.getObjectValue(PlannerOrderHintsByAssignee::createFromDiscriminatorValue)); });
+        deserializerMap.put("unassignedOrderHint", (n) -> { currentObject.setUnassignedOrderHint(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the orderHintsByAssignee property value. Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here.

@@ -51,11 +51,11 @@ public class SortProperty implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SortProperty currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("isDescending", (n) -> { currentObject.setIsDescending(n.getBooleanValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("isDescending", (n) -> { currentObject.setIsDescending(n.getBooleanValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isDescending property value. True if the sort order is descending. Default is false, with the sort order as ascending. Optional.

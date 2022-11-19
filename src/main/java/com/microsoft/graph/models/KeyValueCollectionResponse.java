@@ -35,9 +35,9 @@ public class KeyValueCollectionResponse extends BaseCollectionPaginationCountRes
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final KeyValueCollectionResponse currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The value property

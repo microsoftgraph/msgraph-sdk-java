@@ -46,10 +46,10 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftAuthenticatorAuthenticationMethodConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("featureSettings", (n) -> { currentObject.setFeatureSettings(n.getObjectValue(MicrosoftAuthenticatorFeatureSettings::createFromDiscriminatorValue)); });
-            this.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(MicrosoftAuthenticatorAuthenticationMethodTarget::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("featureSettings", (n) -> { currentObject.setFeatureSettings(n.getObjectValue(MicrosoftAuthenticatorFeatureSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(MicrosoftAuthenticatorAuthenticationMethodTarget::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method. Expanded by default.

@@ -55,14 +55,14 @@ public class DataPolicyOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DataPolicyOperation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("progress", (n) -> { currentObject.setProgress(n.getDoubleValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DataPolicyOperationStatus.class)); });
-            this.put("storageLocation", (n) -> { currentObject.setStorageLocation(n.getStringValue()); });
-            this.put("submittedDateTime", (n) -> { currentObject.setSubmittedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("progress", (n) -> { currentObject.setProgress(n.getDoubleValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DataPolicyOperationStatus.class)); });
+        deserializerMap.put("storageLocation", (n) -> { currentObject.setStorageLocation(n.getStringValue()); });
+        deserializerMap.put("submittedDateTime", (n) -> { currentObject.setSubmittedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the progress property value. Specifies the progress of an operation.

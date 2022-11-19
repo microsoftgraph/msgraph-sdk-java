@@ -51,11 +51,11 @@ public class FailureInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FailureInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
-            this.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(FailureStage.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
+        deserializerMap.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(FailureStage.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

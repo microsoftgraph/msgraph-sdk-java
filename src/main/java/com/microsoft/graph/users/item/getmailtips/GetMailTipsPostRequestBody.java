@@ -58,10 +58,10 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetMailTipsPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("emailAddresses", (n) -> { currentObject.setEmailAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("mailTipsOptions", (n) -> { currentObject.setMailTipsOptions(n.getEnumValue(MailTipsType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("emailAddresses", (n) -> { currentObject.setEmailAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("mailTipsOptions", (n) -> { currentObject.setMailTipsOptions(n.getEnumValue(MailTipsType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the mailTipsOptions property value. The MailTipsOptions property

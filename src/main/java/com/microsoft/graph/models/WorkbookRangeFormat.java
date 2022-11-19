@@ -68,17 +68,17 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookRangeFormat currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("borders", (n) -> { currentObject.setBorders(n.getCollectionOfObjectValues(WorkbookRangeBorder::createFromDiscriminatorValue)); });
-            this.put("columnWidth", (n) -> { currentObject.setColumnWidth(n.getDoubleValue()); });
-            this.put("fill", (n) -> { currentObject.setFill(n.getObjectValue(WorkbookRangeFill::createFromDiscriminatorValue)); });
-            this.put("font", (n) -> { currentObject.setFont(n.getObjectValue(WorkbookRangeFont::createFromDiscriminatorValue)); });
-            this.put("horizontalAlignment", (n) -> { currentObject.setHorizontalAlignment(n.getStringValue()); });
-            this.put("protection", (n) -> { currentObject.setProtection(n.getObjectValue(WorkbookFormatProtection::createFromDiscriminatorValue)); });
-            this.put("rowHeight", (n) -> { currentObject.setRowHeight(n.getDoubleValue()); });
-            this.put("verticalAlignment", (n) -> { currentObject.setVerticalAlignment(n.getStringValue()); });
-            this.put("wrapText", (n) -> { currentObject.setWrapText(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("borders", (n) -> { currentObject.setBorders(n.getCollectionOfObjectValues(WorkbookRangeBorder::createFromDiscriminatorValue)); });
+        deserializerMap.put("columnWidth", (n) -> { currentObject.setColumnWidth(n.getDoubleValue()); });
+        deserializerMap.put("fill", (n) -> { currentObject.setFill(n.getObjectValue(WorkbookRangeFill::createFromDiscriminatorValue)); });
+        deserializerMap.put("font", (n) -> { currentObject.setFont(n.getObjectValue(WorkbookRangeFont::createFromDiscriminatorValue)); });
+        deserializerMap.put("horizontalAlignment", (n) -> { currentObject.setHorizontalAlignment(n.getStringValue()); });
+        deserializerMap.put("protection", (n) -> { currentObject.setProtection(n.getObjectValue(WorkbookFormatProtection::createFromDiscriminatorValue)); });
+        deserializerMap.put("rowHeight", (n) -> { currentObject.setRowHeight(n.getDoubleValue()); });
+        deserializerMap.put("verticalAlignment", (n) -> { currentObject.setVerticalAlignment(n.getStringValue()); });
+        deserializerMap.put("wrapText", (n) -> { currentObject.setWrapText(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fill property value. Returns the fill object defined on the overall range. Read-only.

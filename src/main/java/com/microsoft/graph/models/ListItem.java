@@ -80,15 +80,15 @@ public class ListItem extends BaseItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ListItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("analytics", (n) -> { currentObject.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
-            this.put("contentType", (n) -> { currentObject.setContentType(n.getObjectValue(ContentTypeInfo::createFromDiscriminatorValue)); });
-            this.put("documentSetVersions", (n) -> { currentObject.setDocumentSetVersions(n.getCollectionOfObjectValues(DocumentSetVersion::createFromDiscriminatorValue)); });
-            this.put("driveItem", (n) -> { currentObject.setDriveItem(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
-            this.put("fields", (n) -> { currentObject.setFields(n.getObjectValue(FieldValueSet::createFromDiscriminatorValue)); });
-            this.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
-            this.put("versions", (n) -> { currentObject.setVersions(n.getCollectionOfObjectValues(ListItemVersion::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("analytics", (n) -> { currentObject.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentType", (n) -> { currentObject.setContentType(n.getObjectValue(ContentTypeInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("documentSetVersions", (n) -> { currentObject.setDocumentSetVersions(n.getCollectionOfObjectValues(DocumentSetVersion::createFromDiscriminatorValue)); });
+        deserializerMap.put("driveItem", (n) -> { currentObject.setDriveItem(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("fields", (n) -> { currentObject.setFields(n.getObjectValue(FieldValueSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
+        deserializerMap.put("versions", (n) -> { currentObject.setVersions(n.getCollectionOfObjectValues(ListItemVersion::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the fields property value. The values of the columns set on this list item.

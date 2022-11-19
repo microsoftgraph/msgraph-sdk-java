@@ -124,23 +124,23 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IntuneBrand currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(15) {{
-            this.put("contactITEmailAddress", (n) -> { currentObject.setContactITEmailAddress(n.getStringValue()); });
-            this.put("contactITName", (n) -> { currentObject.setContactITName(n.getStringValue()); });
-            this.put("contactITNotes", (n) -> { currentObject.setContactITNotes(n.getStringValue()); });
-            this.put("contactITPhoneNumber", (n) -> { currentObject.setContactITPhoneNumber(n.getStringValue()); });
-            this.put("darkBackgroundLogo", (n) -> { currentObject.setDarkBackgroundLogo(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lightBackgroundLogo", (n) -> { currentObject.setLightBackgroundLogo(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("onlineSupportSiteName", (n) -> { currentObject.setOnlineSupportSiteName(n.getStringValue()); });
-            this.put("onlineSupportSiteUrl", (n) -> { currentObject.setOnlineSupportSiteUrl(n.getStringValue()); });
-            this.put("privacyUrl", (n) -> { currentObject.setPrivacyUrl(n.getStringValue()); });
-            this.put("showDisplayNameNextToLogo", (n) -> { currentObject.setShowDisplayNameNextToLogo(n.getBooleanValue()); });
-            this.put("showLogo", (n) -> { currentObject.setShowLogo(n.getBooleanValue()); });
-            this.put("showNameNextToLogo", (n) -> { currentObject.setShowNameNextToLogo(n.getBooleanValue()); });
-            this.put("themeColor", (n) -> { currentObject.setThemeColor(n.getObjectValue(RgbColor::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(15);
+        deserializerMap.put("contactITEmailAddress", (n) -> { currentObject.setContactITEmailAddress(n.getStringValue()); });
+        deserializerMap.put("contactITName", (n) -> { currentObject.setContactITName(n.getStringValue()); });
+        deserializerMap.put("contactITNotes", (n) -> { currentObject.setContactITNotes(n.getStringValue()); });
+        deserializerMap.put("contactITPhoneNumber", (n) -> { currentObject.setContactITPhoneNumber(n.getStringValue()); });
+        deserializerMap.put("darkBackgroundLogo", (n) -> { currentObject.setDarkBackgroundLogo(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lightBackgroundLogo", (n) -> { currentObject.setLightBackgroundLogo(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("onlineSupportSiteName", (n) -> { currentObject.setOnlineSupportSiteName(n.getStringValue()); });
+        deserializerMap.put("onlineSupportSiteUrl", (n) -> { currentObject.setOnlineSupportSiteUrl(n.getStringValue()); });
+        deserializerMap.put("privacyUrl", (n) -> { currentObject.setPrivacyUrl(n.getStringValue()); });
+        deserializerMap.put("showDisplayNameNextToLogo", (n) -> { currentObject.setShowDisplayNameNextToLogo(n.getBooleanValue()); });
+        deserializerMap.put("showLogo", (n) -> { currentObject.setShowLogo(n.getBooleanValue()); });
+        deserializerMap.put("showNameNextToLogo", (n) -> { currentObject.setShowNameNextToLogo(n.getBooleanValue()); });
+        deserializerMap.put("themeColor", (n) -> { currentObject.setThemeColor(n.getObjectValue(RgbColor::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lightBackgroundLogo property value. Logo image displayed in Company Portal apps which have a light background behind the logo.

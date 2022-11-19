@@ -40,11 +40,11 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PhoneAuthenticationMethod currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("phoneNumber", (n) -> { currentObject.setPhoneNumber(n.getStringValue()); });
-            this.put("phoneType", (n) -> { currentObject.setPhoneType(n.getEnumValue(AuthenticationPhoneType.class)); });
-            this.put("smsSignInState", (n) -> { currentObject.setSmsSignInState(n.getEnumValue(AuthenticationMethodSignInState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("phoneNumber", (n) -> { currentObject.setPhoneNumber(n.getStringValue()); });
+        deserializerMap.put("phoneType", (n) -> { currentObject.setPhoneType(n.getEnumValue(AuthenticationPhoneType.class)); });
+        deserializerMap.put("smsSignInState", (n) -> { currentObject.setSmsSignInState(n.getEnumValue(AuthenticationMethodSignInState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the phoneNumber property value. The phone number to text or call for authentication. Phone numbers use the format +{country code} {number}x{extension}, with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating or updating if they do not match the required format.

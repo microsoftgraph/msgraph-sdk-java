@@ -165,33 +165,33 @@ public class Organization extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Organization currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("assignedPlans", (n) -> { currentObject.setAssignedPlans(n.getCollectionOfObjectValues(AssignedPlan::createFromDiscriminatorValue)); });
-            this.put("branding", (n) -> { currentObject.setBranding(n.getObjectValue(OrganizationalBranding::createFromDiscriminatorValue)); });
-            this.put("businessPhones", (n) -> { currentObject.setBusinessPhones(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("certificateBasedAuthConfiguration", (n) -> { currentObject.setCertificateBasedAuthConfiguration(n.getCollectionOfObjectValues(CertificateBasedAuthConfiguration::createFromDiscriminatorValue)); });
-            this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
-            this.put("country", (n) -> { currentObject.setCountry(n.getStringValue()); });
-            this.put("countryLetterCode", (n) -> { currentObject.setCountryLetterCode(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("marketingNotificationEmails", (n) -> { currentObject.setMarketingNotificationEmails(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("mobileDeviceManagementAuthority", (n) -> { currentObject.setMobileDeviceManagementAuthority(n.getEnumValue(MdmAuthority.class)); });
-            this.put("onPremisesLastSyncDateTime", (n) -> { currentObject.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("onPremisesSyncEnabled", (n) -> { currentObject.setOnPremisesSyncEnabled(n.getBooleanValue()); });
-            this.put("postalCode", (n) -> { currentObject.setPostalCode(n.getStringValue()); });
-            this.put("preferredLanguage", (n) -> { currentObject.setPreferredLanguage(n.getStringValue()); });
-            this.put("privacyProfile", (n) -> { currentObject.setPrivacyProfile(n.getObjectValue(PrivacyProfile::createFromDiscriminatorValue)); });
-            this.put("provisionedPlans", (n) -> { currentObject.setProvisionedPlans(n.getCollectionOfObjectValues(ProvisionedPlan::createFromDiscriminatorValue)); });
-            this.put("securityComplianceNotificationMails", (n) -> { currentObject.setSecurityComplianceNotificationMails(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("securityComplianceNotificationPhones", (n) -> { currentObject.setSecurityComplianceNotificationPhones(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
-            this.put("street", (n) -> { currentObject.setStreet(n.getStringValue()); });
-            this.put("technicalNotificationMails", (n) -> { currentObject.setTechnicalNotificationMails(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("tenantType", (n) -> { currentObject.setTenantType(n.getStringValue()); });
-            this.put("verifiedDomains", (n) -> { currentObject.setVerifiedDomains(n.getCollectionOfObjectValues(VerifiedDomain::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignedPlans", (n) -> { currentObject.setAssignedPlans(n.getCollectionOfObjectValues(AssignedPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("branding", (n) -> { currentObject.setBranding(n.getObjectValue(OrganizationalBranding::createFromDiscriminatorValue)); });
+        deserializerMap.put("businessPhones", (n) -> { currentObject.setBusinessPhones(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("certificateBasedAuthConfiguration", (n) -> { currentObject.setCertificateBasedAuthConfiguration(n.getCollectionOfObjectValues(CertificateBasedAuthConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
+        deserializerMap.put("country", (n) -> { currentObject.setCountry(n.getStringValue()); });
+        deserializerMap.put("countryLetterCode", (n) -> { currentObject.setCountryLetterCode(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("marketingNotificationEmails", (n) -> { currentObject.setMarketingNotificationEmails(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("mobileDeviceManagementAuthority", (n) -> { currentObject.setMobileDeviceManagementAuthority(n.getEnumValue(MdmAuthority.class)); });
+        deserializerMap.put("onPremisesLastSyncDateTime", (n) -> { currentObject.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("onPremisesSyncEnabled", (n) -> { currentObject.setOnPremisesSyncEnabled(n.getBooleanValue()); });
+        deserializerMap.put("postalCode", (n) -> { currentObject.setPostalCode(n.getStringValue()); });
+        deserializerMap.put("preferredLanguage", (n) -> { currentObject.setPreferredLanguage(n.getStringValue()); });
+        deserializerMap.put("privacyProfile", (n) -> { currentObject.setPrivacyProfile(n.getObjectValue(PrivacyProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("provisionedPlans", (n) -> { currentObject.setProvisionedPlans(n.getCollectionOfObjectValues(ProvisionedPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("securityComplianceNotificationMails", (n) -> { currentObject.setSecurityComplianceNotificationMails(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("securityComplianceNotificationPhones", (n) -> { currentObject.setSecurityComplianceNotificationPhones(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
+        deserializerMap.put("street", (n) -> { currentObject.setStreet(n.getStringValue()); });
+        deserializerMap.put("technicalNotificationMails", (n) -> { currentObject.setTechnicalNotificationMails(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("tenantType", (n) -> { currentObject.setTenantType(n.getStringValue()); });
+        deserializerMap.put("verifiedDomains", (n) -> { currentObject.setVerifiedDomains(n.getCollectionOfObjectValues(VerifiedDomain::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the marketingNotificationEmails property value. Not nullable.

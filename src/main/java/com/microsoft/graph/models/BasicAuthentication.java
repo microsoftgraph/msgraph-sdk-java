@@ -38,10 +38,10 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BasicAuthentication currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
-            this.put("username", (n) -> { currentObject.setUsername(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
+        deserializerMap.put("username", (n) -> { currentObject.setUsername(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the password property value. The password. It is not returned in the responses.

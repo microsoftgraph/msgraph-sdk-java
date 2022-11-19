@@ -120,22 +120,22 @@ public class Subscription extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Subscription currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
-            this.put("changeType", (n) -> { currentObject.setChangeType(n.getStringValue()); });
-            this.put("clientState", (n) -> { currentObject.setClientState(n.getStringValue()); });
-            this.put("creatorId", (n) -> { currentObject.setCreatorId(n.getStringValue()); });
-            this.put("encryptionCertificate", (n) -> { currentObject.setEncryptionCertificate(n.getStringValue()); });
-            this.put("encryptionCertificateId", (n) -> { currentObject.setEncryptionCertificateId(n.getStringValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("includeResourceData", (n) -> { currentObject.setIncludeResourceData(n.getBooleanValue()); });
-            this.put("latestSupportedTlsVersion", (n) -> { currentObject.setLatestSupportedTlsVersion(n.getStringValue()); });
-            this.put("lifecycleNotificationUrl", (n) -> { currentObject.setLifecycleNotificationUrl(n.getStringValue()); });
-            this.put("notificationQueryOptions", (n) -> { currentObject.setNotificationQueryOptions(n.getStringValue()); });
-            this.put("notificationUrl", (n) -> { currentObject.setNotificationUrl(n.getStringValue()); });
-            this.put("notificationUrlAppId", (n) -> { currentObject.setNotificationUrlAppId(n.getStringValue()); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
+        deserializerMap.put("changeType", (n) -> { currentObject.setChangeType(n.getStringValue()); });
+        deserializerMap.put("clientState", (n) -> { currentObject.setClientState(n.getStringValue()); });
+        deserializerMap.put("creatorId", (n) -> { currentObject.setCreatorId(n.getStringValue()); });
+        deserializerMap.put("encryptionCertificate", (n) -> { currentObject.setEncryptionCertificate(n.getStringValue()); });
+        deserializerMap.put("encryptionCertificateId", (n) -> { currentObject.setEncryptionCertificateId(n.getStringValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("includeResourceData", (n) -> { currentObject.setIncludeResourceData(n.getBooleanValue()); });
+        deserializerMap.put("latestSupportedTlsVersion", (n) -> { currentObject.setLatestSupportedTlsVersion(n.getStringValue()); });
+        deserializerMap.put("lifecycleNotificationUrl", (n) -> { currentObject.setLifecycleNotificationUrl(n.getStringValue()); });
+        deserializerMap.put("notificationQueryOptions", (n) -> { currentObject.setNotificationQueryOptions(n.getStringValue()); });
+        deserializerMap.put("notificationUrl", (n) -> { currentObject.setNotificationUrl(n.getStringValue()); });
+        deserializerMap.put("notificationUrlAppId", (n) -> { currentObject.setNotificationUrlAppId(n.getStringValue()); });
+        deserializerMap.put("resource", (n) -> { currentObject.setResource(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the includeResourceData property value. Optional. When set to true, change notifications include resource data (such as content of a chat message).

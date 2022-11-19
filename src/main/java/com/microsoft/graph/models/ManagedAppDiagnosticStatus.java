@@ -54,12 +54,12 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAppDiagnosticStatus currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("mitigationInstruction", (n) -> { currentObject.setMitigationInstruction(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
-            this.put("validationName", (n) -> { currentObject.setValidationName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("mitigationInstruction", (n) -> { currentObject.setMitigationInstruction(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
+        deserializerMap.put("validationName", (n) -> { currentObject.setValidationName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mitigationInstruction property value. Instruction on how to mitigate a failed validation

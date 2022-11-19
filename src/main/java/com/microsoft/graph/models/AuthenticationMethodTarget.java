@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of authenticationMethodConfiguration entities. */
+/** Provides operations to manage the admin singleton. */
 public class AuthenticationMethodTarget extends Entity implements Parsable {
     /** Determines if the user is enforced to register the authentication method. */
     private Boolean _isRegistrationRequired;
@@ -47,10 +47,10 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationMethodTarget currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("isRegistrationRequired", (n) -> { currentObject.setIsRegistrationRequired(n.getBooleanValue()); });
-            this.put("targetType", (n) -> { currentObject.setTargetType(n.getEnumValue(AuthenticationMethodTargetType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isRegistrationRequired", (n) -> { currentObject.setIsRegistrationRequired(n.getBooleanValue()); });
+        deserializerMap.put("targetType", (n) -> { currentObject.setTargetType(n.getEnumValue(AuthenticationMethodTargetType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isRegistrationRequired property value. Determines if the user is enforced to register the authentication method.

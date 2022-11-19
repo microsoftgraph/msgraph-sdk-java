@@ -93,16 +93,16 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewStageSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("decisionsThatWillMoveToNextStage", (n) -> { currentObject.setDecisionsThatWillMoveToNextStage(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("dependsOn", (n) -> { currentObject.setDependsOn(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("durationInDays", (n) -> { currentObject.setDurationInDays(n.getIntegerValue()); });
-            this.put("fallbackReviewers", (n) -> { currentObject.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recommendationsEnabled", (n) -> { currentObject.setRecommendationsEnabled(n.getBooleanValue()); });
-            this.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
-            this.put("stageId", (n) -> { currentObject.setStageId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("decisionsThatWillMoveToNextStage", (n) -> { currentObject.setDecisionsThatWillMoveToNextStage(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("dependsOn", (n) -> { currentObject.setDependsOn(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("durationInDays", (n) -> { currentObject.setDurationInDays(n.getIntegerValue()); });
+        deserializerMap.put("fallbackReviewers", (n) -> { currentObject.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recommendationsEnabled", (n) -> { currentObject.setRecommendationsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("stageId", (n) -> { currentObject.setStageId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

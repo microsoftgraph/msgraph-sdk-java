@@ -48,9 +48,9 @@ public class SyncPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SyncPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("syncType", (n) -> { currentObject.setSyncType(n.getEnumValue(DeviceManagementExchangeConnectorSyncType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("syncType", (n) -> { currentObject.setSyncType(n.getEnumValue(DeviceManagementExchangeConnectorSyncType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the syncType property value. The type of Exchange Connector sync requested.

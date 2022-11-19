@@ -3,7 +3,7 @@ package com.microsoft.graph.models.externalconnectors;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of externalConnection entities. */
+/** Provides operations to manage the admin singleton. */
 public enum ExternalItemContentType implements ValuedEnum {
     Text("text"),
     Html("html"),

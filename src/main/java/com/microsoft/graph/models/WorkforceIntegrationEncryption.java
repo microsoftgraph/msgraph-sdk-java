@@ -51,11 +51,11 @@ public class WorkforceIntegrationEncryption implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkforceIntegrationEncryption currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("protocol", (n) -> { currentObject.setProtocol(n.getEnumValue(WorkforceIntegrationEncryptionProtocol.class)); });
-            this.put("secret", (n) -> { currentObject.setSecret(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("protocol", (n) -> { currentObject.setProtocol(n.getEnumValue(WorkforceIntegrationEncryptionProtocol.class)); });
+        deserializerMap.put("secret", (n) -> { currentObject.setSecret(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

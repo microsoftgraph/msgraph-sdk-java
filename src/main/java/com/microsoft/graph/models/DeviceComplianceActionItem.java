@@ -51,12 +51,12 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComplianceActionItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("actionType", (n) -> { currentObject.setActionType(n.getEnumValue(DeviceComplianceActionType.class)); });
-            this.put("gracePeriodHours", (n) -> { currentObject.setGracePeriodHours(n.getIntegerValue()); });
-            this.put("notificationMessageCCList", (n) -> { currentObject.setNotificationMessageCCList(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("notificationTemplateId", (n) -> { currentObject.setNotificationTemplateId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("actionType", (n) -> { currentObject.setActionType(n.getEnumValue(DeviceComplianceActionType.class)); });
+        deserializerMap.put("gracePeriodHours", (n) -> { currentObject.setGracePeriodHours(n.getIntegerValue()); });
+        deserializerMap.put("notificationMessageCCList", (n) -> { currentObject.setNotificationMessageCCList(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("notificationTemplateId", (n) -> { currentObject.setNotificationTemplateId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the gracePeriodHours property value. Number of hours to wait till the action will be enforced. Valid values 0 to 8760

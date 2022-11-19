@@ -36,9 +36,9 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationAssignmentIndividualRecipient currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("recipients", (n) -> { currentObject.setRecipients(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("recipients", (n) -> { currentObject.setRecipients(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the recipients property value. A collection of IDs of the recipients.

@@ -16,6 +16,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class CaseOperation extends Entity implements Parsable {
     /** The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData */
     private CaseAction _action;
@@ -100,15 +101,15 @@ public class CaseOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CaseOperation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(CaseAction.class)); });
-            this.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("percentProgress", (n) -> { currentObject.setPercentProgress(n.getIntegerValue()); });
-            this.put("resultInfo", (n) -> { currentObject.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(CaseOperationStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("action", (n) -> { currentObject.setAction(n.getEnumValue(CaseAction.class)); });
+        deserializerMap.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("percentProgress", (n) -> { currentObject.setPercentProgress(n.getIntegerValue()); });
+        deserializerMap.put("resultInfo", (n) -> { currentObject.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(CaseOperationStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the percentProgress property value. The progress of the operation.

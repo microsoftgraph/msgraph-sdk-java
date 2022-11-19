@@ -35,9 +35,9 @@ public class GroupLifecyclePolicyCollectionResponse extends BaseCollectionPagina
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupLifecyclePolicyCollectionResponse currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(GroupLifecyclePolicy::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(GroupLifecyclePolicy::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The value property

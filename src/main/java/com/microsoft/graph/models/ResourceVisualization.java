@@ -87,17 +87,17 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResourceVisualization currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(9) {{
-            this.put("containerDisplayName", (n) -> { currentObject.setContainerDisplayName(n.getStringValue()); });
-            this.put("containerType", (n) -> { currentObject.setContainerType(n.getStringValue()); });
-            this.put("containerWebUrl", (n) -> { currentObject.setContainerWebUrl(n.getStringValue()); });
-            this.put("mediaType", (n) -> { currentObject.setMediaType(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("previewImageUrl", (n) -> { currentObject.setPreviewImageUrl(n.getStringValue()); });
-            this.put("previewText", (n) -> { currentObject.setPreviewText(n.getStringValue()); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("containerDisplayName", (n) -> { currentObject.setContainerDisplayName(n.getStringValue()); });
+        deserializerMap.put("containerType", (n) -> { currentObject.setContainerType(n.getStringValue()); });
+        deserializerMap.put("containerWebUrl", (n) -> { currentObject.setContainerWebUrl(n.getStringValue()); });
+        deserializerMap.put("mediaType", (n) -> { currentObject.setMediaType(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("previewImageUrl", (n) -> { currentObject.setPreviewImageUrl(n.getStringValue()); });
+        deserializerMap.put("previewText", (n) -> { currentObject.setPreviewText(n.getStringValue()); });
+        deserializerMap.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.

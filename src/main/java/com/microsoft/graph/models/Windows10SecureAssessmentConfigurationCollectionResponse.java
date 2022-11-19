@@ -35,9 +35,9 @@ public class Windows10SecureAssessmentConfigurationCollectionResponse extends Ba
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10SecureAssessmentConfigurationCollectionResponse currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(Windows10SecureAssessmentConfiguration::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(Windows10SecureAssessmentConfiguration::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The value property

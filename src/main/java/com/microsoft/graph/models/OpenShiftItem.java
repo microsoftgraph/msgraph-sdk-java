@@ -36,9 +36,9 @@ public class OpenShiftItem extends ShiftItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OpenShiftItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("openSlotCount", (n) -> { currentObject.setOpenSlotCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("openSlotCount", (n) -> { currentObject.setOpenSlotCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the openSlotCount property value. Count of the number of slots for the given open shift.

@@ -84,25 +84,25 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSCompliancePolicy currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("deviceThreatProtectionEnabled", (n) -> { currentObject.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
-            this.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
-            this.put("firewallBlockAllIncoming", (n) -> { currentObject.setFirewallBlockAllIncoming(n.getBooleanValue()); });
-            this.put("firewallEnabled", (n) -> { currentObject.setFirewallEnabled(n.getBooleanValue()); });
-            this.put("firewallEnableStealthMode", (n) -> { currentObject.setFirewallEnableStealthMode(n.getBooleanValue()); });
-            this.put("osMaximumVersion", (n) -> { currentObject.setOsMaximumVersion(n.getStringValue()); });
-            this.put("osMinimumVersion", (n) -> { currentObject.setOsMinimumVersion(n.getStringValue()); });
-            this.put("passwordBlockSimple", (n) -> { currentObject.setPasswordBlockSimple(n.getBooleanValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumCharacterSetCount", (n) -> { currentObject.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeLock", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
-            this.put("storageRequireEncryption", (n) -> { currentObject.setStorageRequireEncryption(n.getBooleanValue()); });
-            this.put("systemIntegrityProtectionEnabled", (n) -> { currentObject.setSystemIntegrityProtectionEnabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceThreatProtectionEnabled", (n) -> { currentObject.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
+        deserializerMap.put("firewallBlockAllIncoming", (n) -> { currentObject.setFirewallBlockAllIncoming(n.getBooleanValue()); });
+        deserializerMap.put("firewallEnabled", (n) -> { currentObject.setFirewallEnabled(n.getBooleanValue()); });
+        deserializerMap.put("firewallEnableStealthMode", (n) -> { currentObject.setFirewallEnableStealthMode(n.getBooleanValue()); });
+        deserializerMap.put("osMaximumVersion", (n) -> { currentObject.setOsMaximumVersion(n.getStringValue()); });
+        deserializerMap.put("osMinimumVersion", (n) -> { currentObject.setOsMinimumVersion(n.getStringValue()); });
+        deserializerMap.put("passwordBlockSimple", (n) -> { currentObject.setPasswordBlockSimple(n.getBooleanValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumCharacterSetCount", (n) -> { currentObject.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeLock", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
+        deserializerMap.put("storageRequireEncryption", (n) -> { currentObject.setStorageRequireEncryption(n.getBooleanValue()); });
+        deserializerMap.put("systemIntegrityProtectionEnabled", (n) -> { currentObject.setSystemIntegrityProtectionEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the firewallBlockAllIncoming property value. Corresponds to the 'Block all incoming connections' option.

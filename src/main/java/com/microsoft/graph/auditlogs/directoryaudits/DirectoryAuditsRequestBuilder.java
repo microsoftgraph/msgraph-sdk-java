@@ -74,9 +74,8 @@ public class DirectoryAuditsRequestBuilder {
      */
     @javax.annotation.Nonnull
     public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
@@ -107,9 +106,8 @@ public class DirectoryAuditsRequestBuilder {
     @javax.annotation.Nonnull
     public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final DirectoryAudit body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.POST;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
@@ -130,15 +128,14 @@ public class DirectoryAuditsRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryAuditCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, DirectoryAuditCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<DirectoryAuditCollectionResponse>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<DirectoryAuditCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<DirectoryAuditCollectionResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -150,15 +147,14 @@ public class DirectoryAuditsRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryAuditCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, DirectoryAuditCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<DirectoryAuditCollectionResponse>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<DirectoryAuditCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<DirectoryAuditCollectionResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -170,15 +166,14 @@ public class DirectoryAuditsRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryAudit> post(@javax.annotation.Nonnull final DirectoryAudit body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, DirectoryAudit::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<DirectoryAudit>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<DirectoryAudit> executionException = new java.util.concurrent.CompletableFuture<DirectoryAudit>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -192,15 +187,14 @@ public class DirectoryAuditsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, DirectoryAudit::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<DirectoryAudit>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<DirectoryAudit> executionException = new java.util.concurrent.CompletableFuture<DirectoryAudit>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /** Get the list of audit logs generated by Azure Active Directory. This includes audit logs generated by various services within Azure AD, including user, app, device and group Management, privileged identity management (PIM), access reviews, terms of use, identity protection, password management (self-service and admin password resets), and self- service group management, and so on. */

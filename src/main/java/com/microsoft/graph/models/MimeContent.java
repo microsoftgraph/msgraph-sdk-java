@@ -52,11 +52,11 @@ public class MimeContent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MimeContent currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-            this.put("value", (n) -> { currentObject.setValue(n.getByteArrayValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
+        deserializerMap.put("value", (n) -> { currentObject.setValue(n.getByteArrayValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

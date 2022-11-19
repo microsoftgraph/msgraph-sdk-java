@@ -63,13 +63,13 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DataSubject currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("firstName", (n) -> { currentObject.setFirstName(n.getStringValue()); });
-            this.put("lastName", (n) -> { currentObject.setLastName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("residency", (n) -> { currentObject.setResidency(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
+        deserializerMap.put("firstName", (n) -> { currentObject.setFirstName(n.getStringValue()); });
+        deserializerMap.put("lastName", (n) -> { currentObject.setLastName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("residency", (n) -> { currentObject.setResidency(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the firstName property value. First name of the data subject.

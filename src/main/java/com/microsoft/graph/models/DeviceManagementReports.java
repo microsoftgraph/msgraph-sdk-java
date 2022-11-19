@@ -44,9 +44,9 @@ public class DeviceManagementReports extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementReports currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("exportJobs", (n) -> { currentObject.setExportJobs(n.getCollectionOfObjectValues(DeviceManagementExportJob::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("exportJobs", (n) -> { currentObject.setExportJobs(n.getCollectionOfObjectValues(DeviceManagementExportJob::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

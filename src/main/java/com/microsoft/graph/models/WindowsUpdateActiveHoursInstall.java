@@ -55,10 +55,10 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsUpdateActiveHoursInstall currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("activeHoursEnd", (n) -> { currentObject.setActiveHoursEnd(n.getLocalTimeValue()); });
-            this.put("activeHoursStart", (n) -> { currentObject.setActiveHoursStart(n.getLocalTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeHoursEnd", (n) -> { currentObject.setActiveHoursEnd(n.getLocalTimeValue()); });
+        deserializerMap.put("activeHoursStart", (n) -> { currentObject.setActiveHoursStart(n.getLocalTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

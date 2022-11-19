@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
 public class Application extends DirectoryObject implements Parsable {
     /** Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Office 365 call the application in the context of a document the user is working on. */
     private java.util.List<AddIn> _addIns;
@@ -93,7 +92,7 @@ public class Application extends DirectoryObject implements Parsable {
     /** Specifies settings for a web application. */
     private WebApplication _web;
     /**
-     * Instantiates a new application and sets the default values.
+     * Instantiates a new Application and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -104,7 +103,7 @@ public class Application extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a application
+     * @return a Application
      */
     @javax.annotation.Nonnull
     public static Application createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -230,49 +229,49 @@ public class Application extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Application currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("addIns", (n) -> { currentObject.setAddIns(n.getCollectionOfObjectValues(AddIn::createFromDiscriminatorValue)); });
-            this.put("api", (n) -> { currentObject.setApi(n.getObjectValue(ApiApplication::createFromDiscriminatorValue)); });
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("applicationTemplateId", (n) -> { currentObject.setApplicationTemplateId(n.getStringValue()); });
-            this.put("appRoles", (n) -> { currentObject.setAppRoles(n.getCollectionOfObjectValues(AppRole::createFromDiscriminatorValue)); });
-            this.put("certification", (n) -> { currentObject.setCertification(n.getObjectValue(Certification::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("createdOnBehalfOf", (n) -> { currentObject.setCreatedOnBehalfOf(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("defaultRedirectUri", (n) -> { currentObject.setDefaultRedirectUri(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("disabledByMicrosoftStatus", (n) -> { currentObject.setDisabledByMicrosoftStatus(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("extensionProperties", (n) -> { currentObject.setExtensionProperties(n.getCollectionOfObjectValues(ExtensionProperty::createFromDiscriminatorValue)); });
-            this.put("federatedIdentityCredentials", (n) -> { currentObject.setFederatedIdentityCredentials(n.getCollectionOfObjectValues(FederatedIdentityCredential::createFromDiscriminatorValue)); });
-            this.put("groupMembershipClaims", (n) -> { currentObject.setGroupMembershipClaims(n.getStringValue()); });
-            this.put("homeRealmDiscoveryPolicies", (n) -> { currentObject.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
-            this.put("identifierUris", (n) -> { currentObject.setIdentifierUris(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("info", (n) -> { currentObject.setInfo(n.getObjectValue(InformationalUrl::createFromDiscriminatorValue)); });
-            this.put("isDeviceOnlyAuthSupported", (n) -> { currentObject.setIsDeviceOnlyAuthSupported(n.getBooleanValue()); });
-            this.put("isFallbackPublicClient", (n) -> { currentObject.setIsFallbackPublicClient(n.getBooleanValue()); });
-            this.put("keyCredentials", (n) -> { currentObject.setKeyCredentials(n.getCollectionOfObjectValues(KeyCredential::createFromDiscriminatorValue)); });
-            this.put("logo", (n) -> { currentObject.setLogo(n.getByteArrayValue()); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
-            this.put("oauth2RequirePostResponse", (n) -> { currentObject.setOauth2RequirePostResponse(n.getBooleanValue()); });
-            this.put("optionalClaims", (n) -> { currentObject.setOptionalClaims(n.getObjectValue(OptionalClaims::createFromDiscriminatorValue)); });
-            this.put("owners", (n) -> { currentObject.setOwners(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("parentalControlSettings", (n) -> { currentObject.setParentalControlSettings(n.getObjectValue(ParentalControlSettings::createFromDiscriminatorValue)); });
-            this.put("passwordCredentials", (n) -> { currentObject.setPasswordCredentials(n.getCollectionOfObjectValues(PasswordCredential::createFromDiscriminatorValue)); });
-            this.put("publicClient", (n) -> { currentObject.setPublicClient(n.getObjectValue(PublicClientApplication::createFromDiscriminatorValue)); });
-            this.put("publisherDomain", (n) -> { currentObject.setPublisherDomain(n.getStringValue()); });
-            this.put("requiredResourceAccess", (n) -> { currentObject.setRequiredResourceAccess(n.getCollectionOfObjectValues(RequiredResourceAccess::createFromDiscriminatorValue)); });
-            this.put("samlMetadataUrl", (n) -> { currentObject.setSamlMetadataUrl(n.getStringValue()); });
-            this.put("serviceManagementReference", (n) -> { currentObject.setServiceManagementReference(n.getStringValue()); });
-            this.put("signInAudience", (n) -> { currentObject.setSignInAudience(n.getStringValue()); });
-            this.put("spa", (n) -> { currentObject.setSpa(n.getObjectValue(SpaApplication::createFromDiscriminatorValue)); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("tokenEncryptionKeyId", (n) -> { currentObject.setTokenEncryptionKeyId(n.getStringValue()); });
-            this.put("tokenIssuancePolicies", (n) -> { currentObject.setTokenIssuancePolicies(n.getCollectionOfObjectValues(TokenIssuancePolicy::createFromDiscriminatorValue)); });
-            this.put("tokenLifetimePolicies", (n) -> { currentObject.setTokenLifetimePolicies(n.getCollectionOfObjectValues(TokenLifetimePolicy::createFromDiscriminatorValue)); });
-            this.put("verifiedPublisher", (n) -> { currentObject.setVerifiedPublisher(n.getObjectValue(VerifiedPublisher::createFromDiscriminatorValue)); });
-            this.put("web", (n) -> { currentObject.setWeb(n.getObjectValue(WebApplication::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("addIns", (n) -> { currentObject.setAddIns(n.getCollectionOfObjectValues(AddIn::createFromDiscriminatorValue)); });
+        deserializerMap.put("api", (n) -> { currentObject.setApi(n.getObjectValue(ApiApplication::createFromDiscriminatorValue)); });
+        deserializerMap.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
+        deserializerMap.put("applicationTemplateId", (n) -> { currentObject.setApplicationTemplateId(n.getStringValue()); });
+        deserializerMap.put("appRoles", (n) -> { currentObject.setAppRoles(n.getCollectionOfObjectValues(AppRole::createFromDiscriminatorValue)); });
+        deserializerMap.put("certification", (n) -> { currentObject.setCertification(n.getObjectValue(Certification::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdOnBehalfOf", (n) -> { currentObject.setCreatedOnBehalfOf(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultRedirectUri", (n) -> { currentObject.setDefaultRedirectUri(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("disabledByMicrosoftStatus", (n) -> { currentObject.setDisabledByMicrosoftStatus(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("extensionProperties", (n) -> { currentObject.setExtensionProperties(n.getCollectionOfObjectValues(ExtensionProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("federatedIdentityCredentials", (n) -> { currentObject.setFederatedIdentityCredentials(n.getCollectionOfObjectValues(FederatedIdentityCredential::createFromDiscriminatorValue)); });
+        deserializerMap.put("groupMembershipClaims", (n) -> { currentObject.setGroupMembershipClaims(n.getStringValue()); });
+        deserializerMap.put("homeRealmDiscoveryPolicies", (n) -> { currentObject.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("identifierUris", (n) -> { currentObject.setIdentifierUris(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("info", (n) -> { currentObject.setInfo(n.getObjectValue(InformationalUrl::createFromDiscriminatorValue)); });
+        deserializerMap.put("isDeviceOnlyAuthSupported", (n) -> { currentObject.setIsDeviceOnlyAuthSupported(n.getBooleanValue()); });
+        deserializerMap.put("isFallbackPublicClient", (n) -> { currentObject.setIsFallbackPublicClient(n.getBooleanValue()); });
+        deserializerMap.put("keyCredentials", (n) -> { currentObject.setKeyCredentials(n.getCollectionOfObjectValues(KeyCredential::createFromDiscriminatorValue)); });
+        deserializerMap.put("logo", (n) -> { currentObject.setLogo(n.getByteArrayValue()); });
+        deserializerMap.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
+        deserializerMap.put("oauth2RequirePostResponse", (n) -> { currentObject.setOauth2RequirePostResponse(n.getBooleanValue()); });
+        deserializerMap.put("optionalClaims", (n) -> { currentObject.setOptionalClaims(n.getObjectValue(OptionalClaims::createFromDiscriminatorValue)); });
+        deserializerMap.put("owners", (n) -> { currentObject.setOwners(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentalControlSettings", (n) -> { currentObject.setParentalControlSettings(n.getObjectValue(ParentalControlSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("passwordCredentials", (n) -> { currentObject.setPasswordCredentials(n.getCollectionOfObjectValues(PasswordCredential::createFromDiscriminatorValue)); });
+        deserializerMap.put("publicClient", (n) -> { currentObject.setPublicClient(n.getObjectValue(PublicClientApplication::createFromDiscriminatorValue)); });
+        deserializerMap.put("publisherDomain", (n) -> { currentObject.setPublisherDomain(n.getStringValue()); });
+        deserializerMap.put("requiredResourceAccess", (n) -> { currentObject.setRequiredResourceAccess(n.getCollectionOfObjectValues(RequiredResourceAccess::createFromDiscriminatorValue)); });
+        deserializerMap.put("samlMetadataUrl", (n) -> { currentObject.setSamlMetadataUrl(n.getStringValue()); });
+        deserializerMap.put("serviceManagementReference", (n) -> { currentObject.setServiceManagementReference(n.getStringValue()); });
+        deserializerMap.put("signInAudience", (n) -> { currentObject.setSignInAudience(n.getStringValue()); });
+        deserializerMap.put("spa", (n) -> { currentObject.setSpa(n.getObjectValue(SpaApplication::createFromDiscriminatorValue)); });
+        deserializerMap.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("tokenEncryptionKeyId", (n) -> { currentObject.setTokenEncryptionKeyId(n.getStringValue()); });
+        deserializerMap.put("tokenIssuancePolicies", (n) -> { currentObject.setTokenIssuancePolicies(n.getCollectionOfObjectValues(TokenIssuancePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("tokenLifetimePolicies", (n) -> { currentObject.setTokenLifetimePolicies(n.getCollectionOfObjectValues(TokenLifetimePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("verifiedPublisher", (n) -> { currentObject.setVerifiedPublisher(n.getObjectValue(VerifiedPublisher::createFromDiscriminatorValue)); });
+        deserializerMap.put("web", (n) -> { currentObject.setWeb(n.getObjectValue(WebApplication::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).

@@ -151,25 +151,25 @@ public class Audio implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Audio currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(17) {{
-            this.put("album", (n) -> { currentObject.setAlbum(n.getStringValue()); });
-            this.put("albumArtist", (n) -> { currentObject.setAlbumArtist(n.getStringValue()); });
-            this.put("artist", (n) -> { currentObject.setArtist(n.getStringValue()); });
-            this.put("bitrate", (n) -> { currentObject.setBitrate(n.getLongValue()); });
-            this.put("composers", (n) -> { currentObject.setComposers(n.getStringValue()); });
-            this.put("copyright", (n) -> { currentObject.setCopyright(n.getStringValue()); });
-            this.put("disc", (n) -> { currentObject.setDisc(n.getIntegerValue()); });
-            this.put("discCount", (n) -> { currentObject.setDiscCount(n.getIntegerValue()); });
-            this.put("duration", (n) -> { currentObject.setDuration(n.getLongValue()); });
-            this.put("genre", (n) -> { currentObject.setGenre(n.getStringValue()); });
-            this.put("hasDrm", (n) -> { currentObject.setHasDrm(n.getBooleanValue()); });
-            this.put("isVariableBitrate", (n) -> { currentObject.setIsVariableBitrate(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-            this.put("track", (n) -> { currentObject.setTrack(n.getIntegerValue()); });
-            this.put("trackCount", (n) -> { currentObject.setTrackCount(n.getIntegerValue()); });
-            this.put("year", (n) -> { currentObject.setYear(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(17);
+        deserializerMap.put("album", (n) -> { currentObject.setAlbum(n.getStringValue()); });
+        deserializerMap.put("albumArtist", (n) -> { currentObject.setAlbumArtist(n.getStringValue()); });
+        deserializerMap.put("artist", (n) -> { currentObject.setArtist(n.getStringValue()); });
+        deserializerMap.put("bitrate", (n) -> { currentObject.setBitrate(n.getLongValue()); });
+        deserializerMap.put("composers", (n) -> { currentObject.setComposers(n.getStringValue()); });
+        deserializerMap.put("copyright", (n) -> { currentObject.setCopyright(n.getStringValue()); });
+        deserializerMap.put("disc", (n) -> { currentObject.setDisc(n.getIntegerValue()); });
+        deserializerMap.put("discCount", (n) -> { currentObject.setDiscCount(n.getIntegerValue()); });
+        deserializerMap.put("duration", (n) -> { currentObject.setDuration(n.getLongValue()); });
+        deserializerMap.put("genre", (n) -> { currentObject.setGenre(n.getStringValue()); });
+        deserializerMap.put("hasDrm", (n) -> { currentObject.setHasDrm(n.getBooleanValue()); });
+        deserializerMap.put("isVariableBitrate", (n) -> { currentObject.setIsVariableBitrate(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
+        deserializerMap.put("track", (n) -> { currentObject.setTrack(n.getIntegerValue()); });
+        deserializerMap.put("trackCount", (n) -> { currentObject.setTrackCount(n.getIntegerValue()); });
+        deserializerMap.put("year", (n) -> { currentObject.setYear(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the genre property value. The genre of this audio file.

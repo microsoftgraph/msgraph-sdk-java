@@ -55,13 +55,13 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AutomaticRepliesMailTips currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("messageLanguage", (n) -> { currentObject.setMessageLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("scheduledEndTime", (n) -> { currentObject.setScheduledEndTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("scheduledStartTime", (n) -> { currentObject.setScheduledStartTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
+        deserializerMap.put("messageLanguage", (n) -> { currentObject.setMessageLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("scheduledEndTime", (n) -> { currentObject.setScheduledEndTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("scheduledStartTime", (n) -> { currentObject.setScheduledStartTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the message property value. The automatic reply message.

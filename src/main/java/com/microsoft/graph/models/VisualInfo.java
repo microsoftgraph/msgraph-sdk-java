@@ -97,14 +97,14 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VisualInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("attribution", (n) -> { currentObject.setAttribution(n.getObjectValue(ImageInfo::createFromDiscriminatorValue)); });
-            this.put("backgroundColor", (n) -> { currentObject.setBackgroundColor(n.getStringValue()); });
-            this.put("content", (n) -> { currentObject.setContent(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayText", (n) -> { currentObject.setDisplayText(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("attribution", (n) -> { currentObject.setAttribution(n.getObjectValue(ImageInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("backgroundColor", (n) -> { currentObject.setBackgroundColor(n.getStringValue()); });
+        deserializerMap.put("content", (n) -> { currentObject.setContent(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayText", (n) -> { currentObject.setDisplayText(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

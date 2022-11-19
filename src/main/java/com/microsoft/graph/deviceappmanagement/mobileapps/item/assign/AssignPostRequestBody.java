@@ -48,9 +48,9 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("mobileAppAssignments", (n) -> { currentObject.setMobileAppAssignments(n.getCollectionOfObjectValues(MobileAppAssignment::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("mobileAppAssignments", (n) -> { currentObject.setMobileAppAssignments(n.getCollectionOfObjectValues(MobileAppAssignment::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the mobileAppAssignments property value. The mobileAppAssignments property

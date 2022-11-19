@@ -67,11 +67,11 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RoleManagement currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("directory", (n) -> { currentObject.setDirectory(n.getObjectValue(RbacApplication::createFromDiscriminatorValue)); });
-            this.put("entitlementManagement", (n) -> { currentObject.setEntitlementManagement(n.getObjectValue(RbacApplication::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("directory", (n) -> { currentObject.setDirectory(n.getObjectValue(RbacApplication::createFromDiscriminatorValue)); });
+        deserializerMap.put("entitlementManagement", (n) -> { currentObject.setEntitlementManagement(n.getObjectValue(RbacApplication::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

@@ -108,21 +108,21 @@ public class Room extends Place implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Room currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("audioDeviceName", (n) -> { currentObject.setAudioDeviceName(n.getStringValue()); });
-            this.put("bookingType", (n) -> { currentObject.setBookingType(n.getEnumValue(BookingType.class)); });
-            this.put("building", (n) -> { currentObject.setBuilding(n.getStringValue()); });
-            this.put("capacity", (n) -> { currentObject.setCapacity(n.getIntegerValue()); });
-            this.put("displayDeviceName", (n) -> { currentObject.setDisplayDeviceName(n.getStringValue()); });
-            this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
-            this.put("floorLabel", (n) -> { currentObject.setFloorLabel(n.getStringValue()); });
-            this.put("floorNumber", (n) -> { currentObject.setFloorNumber(n.getIntegerValue()); });
-            this.put("isWheelChairAccessible", (n) -> { currentObject.setIsWheelChairAccessible(n.getBooleanValue()); });
-            this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
-            this.put("nickname", (n) -> { currentObject.setNickname(n.getStringValue()); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("videoDeviceName", (n) -> { currentObject.setVideoDeviceName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("audioDeviceName", (n) -> { currentObject.setAudioDeviceName(n.getStringValue()); });
+        deserializerMap.put("bookingType", (n) -> { currentObject.setBookingType(n.getEnumValue(BookingType.class)); });
+        deserializerMap.put("building", (n) -> { currentObject.setBuilding(n.getStringValue()); });
+        deserializerMap.put("capacity", (n) -> { currentObject.setCapacity(n.getIntegerValue()); });
+        deserializerMap.put("displayDeviceName", (n) -> { currentObject.setDisplayDeviceName(n.getStringValue()); });
+        deserializerMap.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
+        deserializerMap.put("floorLabel", (n) -> { currentObject.setFloorLabel(n.getStringValue()); });
+        deserializerMap.put("floorNumber", (n) -> { currentObject.setFloorNumber(n.getIntegerValue()); });
+        deserializerMap.put("isWheelChairAccessible", (n) -> { currentObject.setIsWheelChairAccessible(n.getBooleanValue()); });
+        deserializerMap.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
+        deserializerMap.put("nickname", (n) -> { currentObject.setNickname(n.getStringValue()); });
+        deserializerMap.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("videoDeviceName", (n) -> { currentObject.setVideoDeviceName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the floorLabel property value. Specifies a descriptive label for the floor, for example, P.

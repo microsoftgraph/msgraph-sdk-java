@@ -114,18 +114,18 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ArchivedPrintJob currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(10) {{
-            this.put("acquiredByPrinter", (n) -> { currentObject.setAcquiredByPrinter(n.getBooleanValue()); });
-            this.put("acquiredDateTime", (n) -> { currentObject.setAcquiredDateTime(n.getOffsetDateTimeValue()); });
-            this.put("completionDateTime", (n) -> { currentObject.setCompletionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("copiesPrinted", (n) -> { currentObject.setCopiesPrinted(n.getIntegerValue()); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("printerId", (n) -> { currentObject.setPrinterId(n.getStringValue()); });
-            this.put("processingState", (n) -> { currentObject.setProcessingState(n.getEnumValue(PrintJobProcessingState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("acquiredByPrinter", (n) -> { currentObject.setAcquiredByPrinter(n.getBooleanValue()); });
+        deserializerMap.put("acquiredDateTime", (n) -> { currentObject.setAcquiredDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("completionDateTime", (n) -> { currentObject.setCompletionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("copiesPrinted", (n) -> { currentObject.setCopiesPrinted(n.getIntegerValue()); });
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("printerId", (n) -> { currentObject.setPrinterId(n.getStringValue()); });
+        deserializerMap.put("processingState", (n) -> { currentObject.setProcessingState(n.getEnumValue(PrintJobProcessingState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. The archived print job's GUID. Read-only.

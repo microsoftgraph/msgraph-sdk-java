@@ -59,11 +59,11 @@ public class DateTimeColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DateTimeColumn currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("displayAs", (n) -> { currentObject.setDisplayAs(n.getStringValue()); });
-            this.put("format", (n) -> { currentObject.setFormat(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("displayAs", (n) -> { currentObject.setDisplayAs(n.getStringValue()); });
+        deserializerMap.put("format", (n) -> { currentObject.setFormat(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the format property value. Indicates whether the value should be presented as a date only or a date and time. Must be one of dateOnly or dateTime

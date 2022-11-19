@@ -41,11 +41,11 @@ public class ServiceHealth extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServiceHealth currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("issues", (n) -> { currentObject.setIssues(n.getCollectionOfObjectValues(ServiceHealthIssue::createFromDiscriminatorValue)); });
-            this.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ServiceHealthStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("issues", (n) -> { currentObject.setIssues(n.getCollectionOfObjectValues(ServiceHealthIssue::createFromDiscriminatorValue)); });
+        deserializerMap.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ServiceHealthStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the issues property value. A collection of issues that happened on the service, with detailed information for each issue.

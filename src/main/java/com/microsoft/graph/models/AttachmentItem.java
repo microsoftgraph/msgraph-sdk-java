@@ -83,15 +83,15 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttachmentItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("attachmentType", (n) -> { currentObject.setAttachmentType(n.getEnumValue(AttachmentType.class)); });
-            this.put("contentId", (n) -> { currentObject.setContentId(n.getStringValue()); });
-            this.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
-            this.put("isInline", (n) -> { currentObject.setIsInline(n.getBooleanValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("attachmentType", (n) -> { currentObject.setAttachmentType(n.getEnumValue(AttachmentType.class)); });
+        deserializerMap.put("contentId", (n) -> { currentObject.setContentId(n.getStringValue()); });
+        deserializerMap.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
+        deserializerMap.put("isInline", (n) -> { currentObject.setIsInline(n.getBooleanValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isInline property value. true if the attachment is an inline attachment; otherwise, false. Optional.

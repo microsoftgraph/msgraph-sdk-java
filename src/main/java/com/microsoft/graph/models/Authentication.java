@@ -70,18 +70,18 @@ public class Authentication extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Authentication currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("emailMethods", (n) -> { currentObject.setEmailMethods(n.getCollectionOfObjectValues(EmailAuthenticationMethod::createFromDiscriminatorValue)); });
-            this.put("fido2Methods", (n) -> { currentObject.setFido2Methods(n.getCollectionOfObjectValues(Fido2AuthenticationMethod::createFromDiscriminatorValue)); });
-            this.put("methods", (n) -> { currentObject.setMethods(n.getCollectionOfObjectValues(AuthenticationMethod::createFromDiscriminatorValue)); });
-            this.put("microsoftAuthenticatorMethods", (n) -> { currentObject.setMicrosoftAuthenticatorMethods(n.getCollectionOfObjectValues(MicrosoftAuthenticatorAuthenticationMethod::createFromDiscriminatorValue)); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(LongRunningOperation::createFromDiscriminatorValue)); });
-            this.put("passwordMethods", (n) -> { currentObject.setPasswordMethods(n.getCollectionOfObjectValues(PasswordAuthenticationMethod::createFromDiscriminatorValue)); });
-            this.put("phoneMethods", (n) -> { currentObject.setPhoneMethods(n.getCollectionOfObjectValues(PhoneAuthenticationMethod::createFromDiscriminatorValue)); });
-            this.put("softwareOathMethods", (n) -> { currentObject.setSoftwareOathMethods(n.getCollectionOfObjectValues(SoftwareOathAuthenticationMethod::createFromDiscriminatorValue)); });
-            this.put("temporaryAccessPassMethods", (n) -> { currentObject.setTemporaryAccessPassMethods(n.getCollectionOfObjectValues(TemporaryAccessPassAuthenticationMethod::createFromDiscriminatorValue)); });
-            this.put("windowsHelloForBusinessMethods", (n) -> { currentObject.setWindowsHelloForBusinessMethods(n.getCollectionOfObjectValues(WindowsHelloForBusinessAuthenticationMethod::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("emailMethods", (n) -> { currentObject.setEmailMethods(n.getCollectionOfObjectValues(EmailAuthenticationMethod::createFromDiscriminatorValue)); });
+        deserializerMap.put("fido2Methods", (n) -> { currentObject.setFido2Methods(n.getCollectionOfObjectValues(Fido2AuthenticationMethod::createFromDiscriminatorValue)); });
+        deserializerMap.put("methods", (n) -> { currentObject.setMethods(n.getCollectionOfObjectValues(AuthenticationMethod::createFromDiscriminatorValue)); });
+        deserializerMap.put("microsoftAuthenticatorMethods", (n) -> { currentObject.setMicrosoftAuthenticatorMethods(n.getCollectionOfObjectValues(MicrosoftAuthenticatorAuthenticationMethod::createFromDiscriminatorValue)); });
+        deserializerMap.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(LongRunningOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("passwordMethods", (n) -> { currentObject.setPasswordMethods(n.getCollectionOfObjectValues(PasswordAuthenticationMethod::createFromDiscriminatorValue)); });
+        deserializerMap.put("phoneMethods", (n) -> { currentObject.setPhoneMethods(n.getCollectionOfObjectValues(PhoneAuthenticationMethod::createFromDiscriminatorValue)); });
+        deserializerMap.put("softwareOathMethods", (n) -> { currentObject.setSoftwareOathMethods(n.getCollectionOfObjectValues(SoftwareOathAuthenticationMethod::createFromDiscriminatorValue)); });
+        deserializerMap.put("temporaryAccessPassMethods", (n) -> { currentObject.setTemporaryAccessPassMethods(n.getCollectionOfObjectValues(TemporaryAccessPassAuthenticationMethod::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsHelloForBusinessMethods", (n) -> { currentObject.setWindowsHelloForBusinessMethods(n.getCollectionOfObjectValues(WindowsHelloForBusinessAuthenticationMethod::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the methods property value. Represents all authentication methods registered to a user.

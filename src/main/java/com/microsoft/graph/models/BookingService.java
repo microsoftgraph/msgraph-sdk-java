@@ -150,29 +150,29 @@ public class BookingService extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingService currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getStringValue()); });
-            this.put("customQuestions", (n) -> { currentObject.setCustomQuestions(n.getCollectionOfObjectValues(BookingQuestionAssignment::createFromDiscriminatorValue)); });
-            this.put("defaultDuration", (n) -> { currentObject.setDefaultDuration(n.getPeriodValue()); });
-            this.put("defaultLocation", (n) -> { currentObject.setDefaultLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
-            this.put("defaultPrice", (n) -> { currentObject.setDefaultPrice(n.getDoubleValue()); });
-            this.put("defaultPriceType", (n) -> { currentObject.setDefaultPriceType(n.getEnumValue(BookingPriceType.class)); });
-            this.put("defaultReminders", (n) -> { currentObject.setDefaultReminders(n.getCollectionOfObjectValues(BookingReminder::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isAnonymousJoinEnabled", (n) -> { currentObject.setIsAnonymousJoinEnabled(n.getBooleanValue()); });
-            this.put("isHiddenFromCustomers", (n) -> { currentObject.setIsHiddenFromCustomers(n.getBooleanValue()); });
-            this.put("isLocationOnline", (n) -> { currentObject.setIsLocationOnline(n.getBooleanValue()); });
-            this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
-            this.put("maximumAttendeesCount", (n) -> { currentObject.setMaximumAttendeesCount(n.getIntegerValue()); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
-            this.put("postBuffer", (n) -> { currentObject.setPostBuffer(n.getPeriodValue()); });
-            this.put("preBuffer", (n) -> { currentObject.setPreBuffer(n.getPeriodValue()); });
-            this.put("schedulingPolicy", (n) -> { currentObject.setSchedulingPolicy(n.getObjectValue(BookingSchedulingPolicy::createFromDiscriminatorValue)); });
-            this.put("smsNotificationsEnabled", (n) -> { currentObject.setSmsNotificationsEnabled(n.getBooleanValue()); });
-            this.put("staffMemberIds", (n) -> { currentObject.setStaffMemberIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getStringValue()); });
+        deserializerMap.put("customQuestions", (n) -> { currentObject.setCustomQuestions(n.getCollectionOfObjectValues(BookingQuestionAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultDuration", (n) -> { currentObject.setDefaultDuration(n.getPeriodValue()); });
+        deserializerMap.put("defaultLocation", (n) -> { currentObject.setDefaultLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultPrice", (n) -> { currentObject.setDefaultPrice(n.getDoubleValue()); });
+        deserializerMap.put("defaultPriceType", (n) -> { currentObject.setDefaultPriceType(n.getEnumValue(BookingPriceType.class)); });
+        deserializerMap.put("defaultReminders", (n) -> { currentObject.setDefaultReminders(n.getCollectionOfObjectValues(BookingReminder::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isAnonymousJoinEnabled", (n) -> { currentObject.setIsAnonymousJoinEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isHiddenFromCustomers", (n) -> { currentObject.setIsHiddenFromCustomers(n.getBooleanValue()); });
+        deserializerMap.put("isLocationOnline", (n) -> { currentObject.setIsLocationOnline(n.getBooleanValue()); });
+        deserializerMap.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
+        deserializerMap.put("maximumAttendeesCount", (n) -> { currentObject.setMaximumAttendeesCount(n.getIntegerValue()); });
+        deserializerMap.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
+        deserializerMap.put("postBuffer", (n) -> { currentObject.setPostBuffer(n.getPeriodValue()); });
+        deserializerMap.put("preBuffer", (n) -> { currentObject.setPreBuffer(n.getPeriodValue()); });
+        deserializerMap.put("schedulingPolicy", (n) -> { currentObject.setSchedulingPolicy(n.getObjectValue(BookingSchedulingPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("smsNotificationsEnabled", (n) -> { currentObject.setSmsNotificationsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("staffMemberIds", (n) -> { currentObject.setStaffMemberIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isAnonymousJoinEnabled property value. The isAnonymousJoinEnabled property

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class AppConsentRequest extends Entity implements Parsable {
     /** The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby. */
     private String _appDisplayName;
@@ -59,12 +59,12 @@ public class AppConsentRequest extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppConsentRequest currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("pendingScopes", (n) -> { currentObject.setPendingScopes(n.getCollectionOfObjectValues(AppConsentRequestScope::createFromDiscriminatorValue)); });
-            this.put("userConsentRequests", (n) -> { currentObject.setUserConsentRequests(n.getCollectionOfObjectValues(UserConsentRequest::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
+        deserializerMap.put("pendingScopes", (n) -> { currentObject.setPendingScopes(n.getCollectionOfObjectValues(AppConsentRequestScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("userConsentRequests", (n) -> { currentObject.setUserConsentRequests(n.getCollectionOfObjectValues(UserConsentRequest::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the pendingScopes property value. A list of pending scopes waiting for approval. Required.

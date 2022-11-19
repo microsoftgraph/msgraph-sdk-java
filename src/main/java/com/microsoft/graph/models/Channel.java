@@ -94,21 +94,21 @@ public class Channel extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Channel currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("filesFolder", (n) -> { currentObject.setFilesFolder(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
-            this.put("isFavoriteByDefault", (n) -> { currentObject.setIsFavoriteByDefault(n.getBooleanValue()); });
-            this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
-            this.put("membershipType", (n) -> { currentObject.setMembershipType(n.getEnumValue(ChannelMembershipType.class)); });
-            this.put("messages", (n) -> { currentObject.setMessages(n.getCollectionOfObjectValues(ChatMessage::createFromDiscriminatorValue)); });
-            this.put("sharedWithTeams", (n) -> { currentObject.setSharedWithTeams(n.getCollectionOfObjectValues(SharedWithChannelTeamInfo::createFromDiscriminatorValue)); });
-            this.put("tabs", (n) -> { currentObject.setTabs(n.getCollectionOfObjectValues(TeamsTab::createFromDiscriminatorValue)); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
+        deserializerMap.put("filesFolder", (n) -> { currentObject.setFilesFolder(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("isFavoriteByDefault", (n) -> { currentObject.setIsFavoriteByDefault(n.getBooleanValue()); });
+        deserializerMap.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
+        deserializerMap.put("membershipType", (n) -> { currentObject.setMembershipType(n.getEnumValue(ChannelMembershipType.class)); });
+        deserializerMap.put("messages", (n) -> { currentObject.setMessages(n.getCollectionOfObjectValues(ChatMessage::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharedWithTeams", (n) -> { currentObject.setSharedWithTeams(n.getCollectionOfObjectValues(SharedWithChannelTeamInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("tabs", (n) -> { currentObject.setTabs(n.getCollectionOfObjectValues(TeamsTab::createFromDiscriminatorValue)); });
+        deserializerMap.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
+        deserializerMap.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the filesFolder property value. Metadata for the location where the channel's files are stored.

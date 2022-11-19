@@ -42,12 +42,12 @@ public class MailSearchFolder extends MailFolder implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MailSearchFolder currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("filterQuery", (n) -> { currentObject.setFilterQuery(n.getStringValue()); });
-            this.put("includeNestedFolders", (n) -> { currentObject.setIncludeNestedFolders(n.getBooleanValue()); });
-            this.put("isSupported", (n) -> { currentObject.setIsSupported(n.getBooleanValue()); });
-            this.put("sourceFolderIds", (n) -> { currentObject.setSourceFolderIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("filterQuery", (n) -> { currentObject.setFilterQuery(n.getStringValue()); });
+        deserializerMap.put("includeNestedFolders", (n) -> { currentObject.setIncludeNestedFolders(n.getBooleanValue()); });
+        deserializerMap.put("isSupported", (n) -> { currentObject.setIsSupported(n.getBooleanValue()); });
+        deserializerMap.put("sourceFolderIds", (n) -> { currentObject.setSourceFolderIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the filterQuery property value. The OData query to filter the messages.

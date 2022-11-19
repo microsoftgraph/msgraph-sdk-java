@@ -57,11 +57,11 @@ public class ResourceOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResourceOperation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("resourceName", (n) -> { currentObject.setResourceName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("resourceName", (n) -> { currentObject.setResourceName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the resourceName property value. Name of the Resource this operation is performed on.

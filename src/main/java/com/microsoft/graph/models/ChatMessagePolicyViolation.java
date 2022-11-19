@@ -65,14 +65,14 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessagePolicyViolation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("dlpAction", (n) -> { currentObject.setDlpAction(n.getEnumValue(ChatMessagePolicyViolationDlpActionTypes.class)); });
-            this.put("justificationText", (n) -> { currentObject.setJustificationText(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("policyTip", (n) -> { currentObject.setPolicyTip(n.getObjectValue(ChatMessagePolicyViolationPolicyTip::createFromDiscriminatorValue)); });
-            this.put("userAction", (n) -> { currentObject.setUserAction(n.getEnumValue(ChatMessagePolicyViolationUserActionTypes.class)); });
-            this.put("verdictDetails", (n) -> { currentObject.setVerdictDetails(n.getEnumValue(ChatMessagePolicyViolationVerdictDetailsTypes.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("dlpAction", (n) -> { currentObject.setDlpAction(n.getEnumValue(ChatMessagePolicyViolationDlpActionTypes.class)); });
+        deserializerMap.put("justificationText", (n) -> { currentObject.setJustificationText(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("policyTip", (n) -> { currentObject.setPolicyTip(n.getObjectValue(ChatMessagePolicyViolationPolicyTip::createFromDiscriminatorValue)); });
+        deserializerMap.put("userAction", (n) -> { currentObject.setUserAction(n.getEnumValue(ChatMessagePolicyViolationUserActionTypes.class)); });
+        deserializerMap.put("verdictDetails", (n) -> { currentObject.setVerdictDetails(n.getEnumValue(ChatMessagePolicyViolationVerdictDetailsTypes.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the justificationText property value. Justification text provided by the sender of the message when overriding a policy violation.

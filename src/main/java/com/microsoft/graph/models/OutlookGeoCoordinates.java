@@ -81,14 +81,14 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OutlookGeoCoordinates currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("accuracy", (n) -> { currentObject.setAccuracy(n.getDoubleValue()); });
-            this.put("altitude", (n) -> { currentObject.setAltitude(n.getDoubleValue()); });
-            this.put("altitudeAccuracy", (n) -> { currentObject.setAltitudeAccuracy(n.getDoubleValue()); });
-            this.put("latitude", (n) -> { currentObject.setLatitude(n.getDoubleValue()); });
-            this.put("longitude", (n) -> { currentObject.setLongitude(n.getDoubleValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("accuracy", (n) -> { currentObject.setAccuracy(n.getDoubleValue()); });
+        deserializerMap.put("altitude", (n) -> { currentObject.setAltitude(n.getDoubleValue()); });
+        deserializerMap.put("altitudeAccuracy", (n) -> { currentObject.setAltitudeAccuracy(n.getDoubleValue()); });
+        deserializerMap.put("latitude", (n) -> { currentObject.setLatitude(n.getDoubleValue()); });
+        deserializerMap.put("longitude", (n) -> { currentObject.setLongitude(n.getDoubleValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the latitude property value. The latitude of the location.

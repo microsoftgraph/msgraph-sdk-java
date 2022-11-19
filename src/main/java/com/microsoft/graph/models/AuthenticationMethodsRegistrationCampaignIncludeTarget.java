@@ -53,12 +53,12 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationMethodsRegistrationCampaignIncludeTarget currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("targetedAuthenticationMethod", (n) -> { currentObject.setTargetedAuthenticationMethod(n.getStringValue()); });
-            this.put("targetType", (n) -> { currentObject.setTargetType(n.getEnumValue(AuthenticationMethodTargetType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("targetedAuthenticationMethod", (n) -> { currentObject.setTargetedAuthenticationMethod(n.getStringValue()); });
+        deserializerMap.put("targetType", (n) -> { currentObject.setTargetType(n.getEnumValue(AuthenticationMethodTargetType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. The object identifier of an Azure Active Directory user or group.

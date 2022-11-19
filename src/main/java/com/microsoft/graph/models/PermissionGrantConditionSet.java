@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class PermissionGrantConditionSet extends Entity implements Parsable {
     /** A list of appId values for the client applications to match with, or a list with the single value all to match any client application. Default is the single value all. */
     private java.util.List<String> _clientApplicationIds;
@@ -83,16 +83,16 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PermissionGrantConditionSet currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("clientApplicationIds", (n) -> { currentObject.setClientApplicationIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("clientApplicationPublisherIds", (n) -> { currentObject.setClientApplicationPublisherIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("clientApplicationsFromVerifiedPublisherOnly", (n) -> { currentObject.setClientApplicationsFromVerifiedPublisherOnly(n.getBooleanValue()); });
-            this.put("clientApplicationTenantIds", (n) -> { currentObject.setClientApplicationTenantIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("permissionClassification", (n) -> { currentObject.setPermissionClassification(n.getStringValue()); });
-            this.put("permissions", (n) -> { currentObject.setPermissions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("permissionType", (n) -> { currentObject.setPermissionType(n.getEnumValue(PermissionType.class)); });
-            this.put("resourceApplication", (n) -> { currentObject.setResourceApplication(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("clientApplicationIds", (n) -> { currentObject.setClientApplicationIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("clientApplicationPublisherIds", (n) -> { currentObject.setClientApplicationPublisherIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("clientApplicationsFromVerifiedPublisherOnly", (n) -> { currentObject.setClientApplicationsFromVerifiedPublisherOnly(n.getBooleanValue()); });
+        deserializerMap.put("clientApplicationTenantIds", (n) -> { currentObject.setClientApplicationTenantIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("permissionClassification", (n) -> { currentObject.setPermissionClassification(n.getStringValue()); });
+        deserializerMap.put("permissions", (n) -> { currentObject.setPermissions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("permissionType", (n) -> { currentObject.setPermissionType(n.getEnumValue(PermissionType.class)); });
+        deserializerMap.put("resourceApplication", (n) -> { currentObject.setResourceApplication(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the permissionClassification property value. The permission classification for the permission being granted, or all to match with any permission classification (including permissions which are not classified). Default is all.

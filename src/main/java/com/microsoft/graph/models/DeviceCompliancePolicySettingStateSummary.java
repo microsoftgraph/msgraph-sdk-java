@@ -89,19 +89,19 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceCompliancePolicySettingStateSummary currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("compliantDeviceCount", (n) -> { currentObject.setCompliantDeviceCount(n.getIntegerValue()); });
-            this.put("conflictDeviceCount", (n) -> { currentObject.setConflictDeviceCount(n.getIntegerValue()); });
-            this.put("deviceComplianceSettingStates", (n) -> { currentObject.setDeviceComplianceSettingStates(n.getCollectionOfObjectValues(DeviceComplianceSettingState::createFromDiscriminatorValue)); });
-            this.put("errorDeviceCount", (n) -> { currentObject.setErrorDeviceCount(n.getIntegerValue()); });
-            this.put("nonCompliantDeviceCount", (n) -> { currentObject.setNonCompliantDeviceCount(n.getIntegerValue()); });
-            this.put("notApplicableDeviceCount", (n) -> { currentObject.setNotApplicableDeviceCount(n.getIntegerValue()); });
-            this.put("platformType", (n) -> { currentObject.setPlatformType(n.getEnumValue(PolicyPlatformType.class)); });
-            this.put("remediatedDeviceCount", (n) -> { currentObject.setRemediatedDeviceCount(n.getIntegerValue()); });
-            this.put("setting", (n) -> { currentObject.setSetting(n.getStringValue()); });
-            this.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
-            this.put("unknownDeviceCount", (n) -> { currentObject.setUnknownDeviceCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("compliantDeviceCount", (n) -> { currentObject.setCompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("conflictDeviceCount", (n) -> { currentObject.setConflictDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("deviceComplianceSettingStates", (n) -> { currentObject.setDeviceComplianceSettingStates(n.getCollectionOfObjectValues(DeviceComplianceSettingState::createFromDiscriminatorValue)); });
+        deserializerMap.put("errorDeviceCount", (n) -> { currentObject.setErrorDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("nonCompliantDeviceCount", (n) -> { currentObject.setNonCompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("notApplicableDeviceCount", (n) -> { currentObject.setNotApplicableDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("platformType", (n) -> { currentObject.setPlatformType(n.getEnumValue(PolicyPlatformType.class)); });
+        deserializerMap.put("remediatedDeviceCount", (n) -> { currentObject.setRemediatedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("setting", (n) -> { currentObject.setSetting(n.getStringValue()); });
+        deserializerMap.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
+        deserializerMap.put("unknownDeviceCount", (n) -> { currentObject.setUnknownDeviceCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the nonCompliantDeviceCount property value. Number of NonCompliant devices

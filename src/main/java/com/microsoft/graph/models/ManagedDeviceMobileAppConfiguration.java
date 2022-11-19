@@ -114,19 +114,19 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceMobileAppConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfigurationAssignment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("deviceStatuses", (n) -> { currentObject.setDeviceStatuses(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfigurationDeviceStatus::createFromDiscriminatorValue)); });
-            this.put("deviceStatusSummary", (n) -> { currentObject.setDeviceStatusSummary(n.getObjectValue(ManagedDeviceMobileAppConfigurationDeviceSummary::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("targetedMobileApps", (n) -> { currentObject.setTargetedMobileApps(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("userStatuses", (n) -> { currentObject.setUserStatuses(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfigurationUserStatus::createFromDiscriminatorValue)); });
-            this.put("userStatusSummary", (n) -> { currentObject.setUserStatusSummary(n.getObjectValue(ManagedDeviceMobileAppConfigurationUserSummary::createFromDiscriminatorValue)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfigurationAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("deviceStatuses", (n) -> { currentObject.setDeviceStatuses(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfigurationDeviceStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceStatusSummary", (n) -> { currentObject.setDeviceStatusSummary(n.getObjectValue(ManagedDeviceMobileAppConfigurationDeviceSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("targetedMobileApps", (n) -> { currentObject.setTargetedMobileApps(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("userStatuses", (n) -> { currentObject.setUserStatuses(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfigurationUserStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("userStatusSummary", (n) -> { currentObject.setUserStatusSummary(n.getObjectValue(ManagedDeviceMobileAppConfigurationUserSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.

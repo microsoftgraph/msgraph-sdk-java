@@ -36,9 +36,9 @@ public class RemoteLockActionResult extends DeviceActionResult implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemoteLockActionResult currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("unlockPin", (n) -> { currentObject.setUnlockPin(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("unlockPin", (n) -> { currentObject.setUnlockPin(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the unlockPin property value. Pin to unlock the client

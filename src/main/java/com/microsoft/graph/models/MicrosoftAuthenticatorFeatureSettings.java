@@ -67,11 +67,11 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftAuthenticatorFeatureSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("displayAppInformationRequiredState", (n) -> { currentObject.setDisplayAppInformationRequiredState(n.getObjectValue(AuthenticationMethodFeatureConfiguration::createFromDiscriminatorValue)); });
-            this.put("displayLocationInformationRequiredState", (n) -> { currentObject.setDisplayLocationInformationRequiredState(n.getObjectValue(AuthenticationMethodFeatureConfiguration::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("displayAppInformationRequiredState", (n) -> { currentObject.setDisplayAppInformationRequiredState(n.getObjectValue(AuthenticationMethodFeatureConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayLocationInformationRequiredState", (n) -> { currentObject.setDisplayLocationInformationRequiredState(n.getObjectValue(AuthenticationMethodFeatureConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

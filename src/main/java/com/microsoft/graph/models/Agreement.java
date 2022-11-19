@@ -68,16 +68,16 @@ public class Agreement extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Agreement currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("acceptances", (n) -> { currentObject.setAcceptances(n.getCollectionOfObjectValues(AgreementAcceptance::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("file", (n) -> { currentObject.setFile(n.getObjectValue(AgreementFile::createFromDiscriminatorValue)); });
-            this.put("files", (n) -> { currentObject.setFiles(n.getCollectionOfObjectValues(AgreementFileLocalization::createFromDiscriminatorValue)); });
-            this.put("isPerDeviceAcceptanceRequired", (n) -> { currentObject.setIsPerDeviceAcceptanceRequired(n.getBooleanValue()); });
-            this.put("isViewingBeforeAcceptanceRequired", (n) -> { currentObject.setIsViewingBeforeAcceptanceRequired(n.getBooleanValue()); });
-            this.put("termsExpiration", (n) -> { currentObject.setTermsExpiration(n.getObjectValue(TermsExpiration::createFromDiscriminatorValue)); });
-            this.put("userReacceptRequiredFrequency", (n) -> { currentObject.setUserReacceptRequiredFrequency(n.getPeriodValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("acceptances", (n) -> { currentObject.setAcceptances(n.getCollectionOfObjectValues(AgreementAcceptance::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("file", (n) -> { currentObject.setFile(n.getObjectValue(AgreementFile::createFromDiscriminatorValue)); });
+        deserializerMap.put("files", (n) -> { currentObject.setFiles(n.getCollectionOfObjectValues(AgreementFileLocalization::createFromDiscriminatorValue)); });
+        deserializerMap.put("isPerDeviceAcceptanceRequired", (n) -> { currentObject.setIsPerDeviceAcceptanceRequired(n.getBooleanValue()); });
+        deserializerMap.put("isViewingBeforeAcceptanceRequired", (n) -> { currentObject.setIsViewingBeforeAcceptanceRequired(n.getBooleanValue()); });
+        deserializerMap.put("termsExpiration", (n) -> { currentObject.setTermsExpiration(n.getObjectValue(TermsExpiration::createFromDiscriminatorValue)); });
+        deserializerMap.put("userReacceptRequiredFrequency", (n) -> { currentObject.setUserReacceptRequiredFrequency(n.getPeriodValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the file property value. Default PDF linked to this agreement.

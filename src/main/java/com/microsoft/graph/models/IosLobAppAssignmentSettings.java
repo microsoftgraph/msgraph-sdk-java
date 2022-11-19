@@ -40,11 +40,11 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosLobAppAssignmentSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("isRemovable", (n) -> { currentObject.setIsRemovable(n.getBooleanValue()); });
-            this.put("uninstallOnDeviceRemoval", (n) -> { currentObject.setUninstallOnDeviceRemoval(n.getBooleanValue()); });
-            this.put("vpnConfigurationId", (n) -> { currentObject.setVpnConfigurationId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isRemovable", (n) -> { currentObject.setIsRemovable(n.getBooleanValue()); });
+        deserializerMap.put("uninstallOnDeviceRemoval", (n) -> { currentObject.setUninstallOnDeviceRemoval(n.getBooleanValue()); });
+        deserializerMap.put("vpnConfigurationId", (n) -> { currentObject.setVpnConfigurationId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isRemovable property value. When TRUE, indicates that the app can be uninstalled by the user. When FALSE, indicates that the app cannot be uninstalled by the user. By default, this property is set to null which internally is treated as TRUE.

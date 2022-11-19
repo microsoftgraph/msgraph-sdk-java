@@ -119,17 +119,17 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentRequestorSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(9) {{
-            this.put("allowCustomAssignmentSchedule", (n) -> { currentObject.setAllowCustomAssignmentSchedule(n.getBooleanValue()); });
-            this.put("enableOnBehalfRequestorsToAddAccess", (n) -> { currentObject.setEnableOnBehalfRequestorsToAddAccess(n.getBooleanValue()); });
-            this.put("enableOnBehalfRequestorsToRemoveAccess", (n) -> { currentObject.setEnableOnBehalfRequestorsToRemoveAccess(n.getBooleanValue()); });
-            this.put("enableOnBehalfRequestorsToUpdateAccess", (n) -> { currentObject.setEnableOnBehalfRequestorsToUpdateAccess(n.getBooleanValue()); });
-            this.put("enableTargetsToSelfAddAccess", (n) -> { currentObject.setEnableTargetsToSelfAddAccess(n.getBooleanValue()); });
-            this.put("enableTargetsToSelfRemoveAccess", (n) -> { currentObject.setEnableTargetsToSelfRemoveAccess(n.getBooleanValue()); });
-            this.put("enableTargetsToSelfUpdateAccess", (n) -> { currentObject.setEnableTargetsToSelfUpdateAccess(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("onBehalfRequestors", (n) -> { currentObject.setOnBehalfRequestors(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("allowCustomAssignmentSchedule", (n) -> { currentObject.setAllowCustomAssignmentSchedule(n.getBooleanValue()); });
+        deserializerMap.put("enableOnBehalfRequestorsToAddAccess", (n) -> { currentObject.setEnableOnBehalfRequestorsToAddAccess(n.getBooleanValue()); });
+        deserializerMap.put("enableOnBehalfRequestorsToRemoveAccess", (n) -> { currentObject.setEnableOnBehalfRequestorsToRemoveAccess(n.getBooleanValue()); });
+        deserializerMap.put("enableOnBehalfRequestorsToUpdateAccess", (n) -> { currentObject.setEnableOnBehalfRequestorsToUpdateAccess(n.getBooleanValue()); });
+        deserializerMap.put("enableTargetsToSelfAddAccess", (n) -> { currentObject.setEnableTargetsToSelfAddAccess(n.getBooleanValue()); });
+        deserializerMap.put("enableTargetsToSelfRemoveAccess", (n) -> { currentObject.setEnableTargetsToSelfRemoveAccess(n.getBooleanValue()); });
+        deserializerMap.put("enableTargetsToSelfUpdateAccess", (n) -> { currentObject.setEnableTargetsToSelfUpdateAccess(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("onBehalfRequestors", (n) -> { currentObject.setOnBehalfRequestors(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

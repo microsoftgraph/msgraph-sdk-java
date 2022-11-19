@@ -121,27 +121,27 @@ public class RiskDetection extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RiskDetection currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getEnumValue(ActivityType.class)); });
-            this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
-            this.put("additionalInfo", (n) -> { currentObject.setAdditionalInfo(n.getStringValue()); });
-            this.put("correlationId", (n) -> { currentObject.setCorrelationId(n.getStringValue()); });
-            this.put("detectedDateTime", (n) -> { currentObject.setDetectedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("detectionTimingType", (n) -> { currentObject.setDetectionTimingType(n.getEnumValue(RiskDetectionTimingType.class)); });
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(SignInLocation::createFromDiscriminatorValue)); });
-            this.put("requestId", (n) -> { currentObject.setRequestId(n.getStringValue()); });
-            this.put("riskDetail", (n) -> { currentObject.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
-            this.put("riskEventType", (n) -> { currentObject.setRiskEventType(n.getStringValue()); });
-            this.put("riskLevel", (n) -> { currentObject.setRiskLevel(n.getEnumValue(RiskLevel.class)); });
-            this.put("riskState", (n) -> { currentObject.setRiskState(n.getEnumValue(RiskState.class)); });
-            this.put("source", (n) -> { currentObject.setSource(n.getStringValue()); });
-            this.put("tokenIssuerType", (n) -> { currentObject.setTokenIssuerType(n.getEnumValue(TokenIssuerType.class)); });
-            this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activity", (n) -> { currentObject.setActivity(n.getEnumValue(ActivityType.class)); });
+        deserializerMap.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("additionalInfo", (n) -> { currentObject.setAdditionalInfo(n.getStringValue()); });
+        deserializerMap.put("correlationId", (n) -> { currentObject.setCorrelationId(n.getStringValue()); });
+        deserializerMap.put("detectedDateTime", (n) -> { currentObject.setDetectedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("detectionTimingType", (n) -> { currentObject.setDetectionTimingType(n.getEnumValue(RiskDetectionTimingType.class)); });
+        deserializerMap.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(SignInLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("requestId", (n) -> { currentObject.setRequestId(n.getStringValue()); });
+        deserializerMap.put("riskDetail", (n) -> { currentObject.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
+        deserializerMap.put("riskEventType", (n) -> { currentObject.setRiskEventType(n.getStringValue()); });
+        deserializerMap.put("riskLevel", (n) -> { currentObject.setRiskLevel(n.getEnumValue(RiskLevel.class)); });
+        deserializerMap.put("riskState", (n) -> { currentObject.setRiskState(n.getEnumValue(RiskState.class)); });
+        deserializerMap.put("source", (n) -> { currentObject.setSource(n.getStringValue()); });
+        deserializerMap.put("tokenIssuerType", (n) -> { currentObject.setTokenIssuerType(n.getEnumValue(TokenIssuerType.class)); });
+        deserializerMap.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the ipAddress property value. Provides the IP address of the client from where the risk occurred.

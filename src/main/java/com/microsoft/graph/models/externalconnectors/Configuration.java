@@ -57,10 +57,10 @@ public class Configuration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Configuration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("authorizedAppIds", (n) -> { currentObject.setAuthorizedAppIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("authorizedAppIds", (n) -> { currentObject.setAuthorizedAppIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

@@ -72,11 +72,11 @@ public class StsPolicy extends PolicyBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final StsPolicy currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("definition", (n) -> { currentObject.setDefinition(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isOrganizationDefault", (n) -> { currentObject.setIsOrganizationDefault(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("definition", (n) -> { currentObject.setDefinition(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isOrganizationDefault", (n) -> { currentObject.setIsOrganizationDefault(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isOrganizationDefault property value. If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.

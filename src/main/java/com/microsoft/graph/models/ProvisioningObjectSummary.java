@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class ProvisioningObjectSummary extends Entity implements Parsable {
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _activityDateTime;
@@ -100,24 +100,24 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProvisioningObjectSummary currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
-            this.put("changeId", (n) -> { currentObject.setChangeId(n.getStringValue()); });
-            this.put("cycleId", (n) -> { currentObject.setCycleId(n.getStringValue()); });
-            this.put("durationInMilliseconds", (n) -> { currentObject.setDurationInMilliseconds(n.getIntegerValue()); });
-            this.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getObjectValue(Initiator::createFromDiscriminatorValue)); });
-            this.put("jobId", (n) -> { currentObject.setJobId(n.getStringValue()); });
-            this.put("modifiedProperties", (n) -> { currentObject.setModifiedProperties(n.getCollectionOfObjectValues(ModifiedProperty::createFromDiscriminatorValue)); });
-            this.put("provisioningAction", (n) -> { currentObject.setProvisioningAction(n.getEnumValue(ProvisioningAction.class)); });
-            this.put("provisioningStatusInfo", (n) -> { currentObject.setProvisioningStatusInfo(n.getObjectValue(ProvisioningStatusInfo::createFromDiscriminatorValue)); });
-            this.put("provisioningSteps", (n) -> { currentObject.setProvisioningSteps(n.getCollectionOfObjectValues(ProvisioningStep::createFromDiscriminatorValue)); });
-            this.put("servicePrincipal", (n) -> { currentObject.setServicePrincipal(n.getObjectValue(ProvisioningServicePrincipal::createFromDiscriminatorValue)); });
-            this.put("sourceIdentity", (n) -> { currentObject.setSourceIdentity(n.getObjectValue(ProvisionedIdentity::createFromDiscriminatorValue)); });
-            this.put("sourceSystem", (n) -> { currentObject.setSourceSystem(n.getObjectValue(ProvisioningSystem::createFromDiscriminatorValue)); });
-            this.put("targetIdentity", (n) -> { currentObject.setTargetIdentity(n.getObjectValue(ProvisionedIdentity::createFromDiscriminatorValue)); });
-            this.put("targetSystem", (n) -> { currentObject.setTargetSystem(n.getObjectValue(ProvisioningSystem::createFromDiscriminatorValue)); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("changeId", (n) -> { currentObject.setChangeId(n.getStringValue()); });
+        deserializerMap.put("cycleId", (n) -> { currentObject.setCycleId(n.getStringValue()); });
+        deserializerMap.put("durationInMilliseconds", (n) -> { currentObject.setDurationInMilliseconds(n.getIntegerValue()); });
+        deserializerMap.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getObjectValue(Initiator::createFromDiscriminatorValue)); });
+        deserializerMap.put("jobId", (n) -> { currentObject.setJobId(n.getStringValue()); });
+        deserializerMap.put("modifiedProperties", (n) -> { currentObject.setModifiedProperties(n.getCollectionOfObjectValues(ModifiedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("provisioningAction", (n) -> { currentObject.setProvisioningAction(n.getEnumValue(ProvisioningAction.class)); });
+        deserializerMap.put("provisioningStatusInfo", (n) -> { currentObject.setProvisioningStatusInfo(n.getObjectValue(ProvisioningStatusInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("provisioningSteps", (n) -> { currentObject.setProvisioningSteps(n.getCollectionOfObjectValues(ProvisioningStep::createFromDiscriminatorValue)); });
+        deserializerMap.put("servicePrincipal", (n) -> { currentObject.setServicePrincipal(n.getObjectValue(ProvisioningServicePrincipal::createFromDiscriminatorValue)); });
+        deserializerMap.put("sourceIdentity", (n) -> { currentObject.setSourceIdentity(n.getObjectValue(ProvisionedIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("sourceSystem", (n) -> { currentObject.setSourceSystem(n.getObjectValue(ProvisioningSystem::createFromDiscriminatorValue)); });
+        deserializerMap.put("targetIdentity", (n) -> { currentObject.setTargetIdentity(n.getObjectValue(ProvisionedIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("targetSystem", (n) -> { currentObject.setTargetSystem(n.getObjectValue(ProvisioningSystem::createFromDiscriminatorValue)); });
+        deserializerMap.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the initiatedBy property value. Details of who initiated this provisioning.

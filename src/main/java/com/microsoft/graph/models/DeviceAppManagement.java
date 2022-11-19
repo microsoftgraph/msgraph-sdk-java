@@ -87,26 +87,26 @@ public class DeviceAppManagement extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceAppManagement currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("androidManagedAppProtections", (n) -> { currentObject.setAndroidManagedAppProtections(n.getCollectionOfObjectValues(AndroidManagedAppProtection::createFromDiscriminatorValue)); });
-            this.put("defaultManagedAppProtections", (n) -> { currentObject.setDefaultManagedAppProtections(n.getCollectionOfObjectValues(DefaultManagedAppProtection::createFromDiscriminatorValue)); });
-            this.put("iosManagedAppProtections", (n) -> { currentObject.setIosManagedAppProtections(n.getCollectionOfObjectValues(IosManagedAppProtection::createFromDiscriminatorValue)); });
-            this.put("isEnabledForMicrosoftStoreForBusiness", (n) -> { currentObject.setIsEnabledForMicrosoftStoreForBusiness(n.getBooleanValue()); });
-            this.put("managedAppPolicies", (n) -> { currentObject.setManagedAppPolicies(n.getCollectionOfObjectValues(ManagedAppPolicy::createFromDiscriminatorValue)); });
-            this.put("managedAppRegistrations", (n) -> { currentObject.setManagedAppRegistrations(n.getCollectionOfObjectValues(ManagedAppRegistration::createFromDiscriminatorValue)); });
-            this.put("managedAppStatuses", (n) -> { currentObject.setManagedAppStatuses(n.getCollectionOfObjectValues(ManagedAppStatus::createFromDiscriminatorValue)); });
-            this.put("managedEBooks", (n) -> { currentObject.setManagedEBooks(n.getCollectionOfObjectValues(ManagedEBook::createFromDiscriminatorValue)); });
-            this.put("mdmWindowsInformationProtectionPolicies", (n) -> { currentObject.setMdmWindowsInformationProtectionPolicies(n.getCollectionOfObjectValues(MdmWindowsInformationProtectionPolicy::createFromDiscriminatorValue)); });
-            this.put("microsoftStoreForBusinessLanguage", (n) -> { currentObject.setMicrosoftStoreForBusinessLanguage(n.getStringValue()); });
-            this.put("microsoftStoreForBusinessLastCompletedApplicationSyncTime", (n) -> { currentObject.setMicrosoftStoreForBusinessLastCompletedApplicationSyncTime(n.getOffsetDateTimeValue()); });
-            this.put("microsoftStoreForBusinessLastSuccessfulSyncDateTime", (n) -> { currentObject.setMicrosoftStoreForBusinessLastSuccessfulSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("mobileAppCategories", (n) -> { currentObject.setMobileAppCategories(n.getCollectionOfObjectValues(MobileAppCategory::createFromDiscriminatorValue)); });
-            this.put("mobileAppConfigurations", (n) -> { currentObject.setMobileAppConfigurations(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue)); });
-            this.put("mobileApps", (n) -> { currentObject.setMobileApps(n.getCollectionOfObjectValues(MobileApp::createFromDiscriminatorValue)); });
-            this.put("targetedManagedAppConfigurations", (n) -> { currentObject.setTargetedManagedAppConfigurations(n.getCollectionOfObjectValues(TargetedManagedAppConfiguration::createFromDiscriminatorValue)); });
-            this.put("vppTokens", (n) -> { currentObject.setVppTokens(n.getCollectionOfObjectValues(VppToken::createFromDiscriminatorValue)); });
-            this.put("windowsInformationProtectionPolicies", (n) -> { currentObject.setWindowsInformationProtectionPolicies(n.getCollectionOfObjectValues(WindowsInformationProtectionPolicy::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("androidManagedAppProtections", (n) -> { currentObject.setAndroidManagedAppProtections(n.getCollectionOfObjectValues(AndroidManagedAppProtection::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultManagedAppProtections", (n) -> { currentObject.setDefaultManagedAppProtections(n.getCollectionOfObjectValues(DefaultManagedAppProtection::createFromDiscriminatorValue)); });
+        deserializerMap.put("iosManagedAppProtections", (n) -> { currentObject.setIosManagedAppProtections(n.getCollectionOfObjectValues(IosManagedAppProtection::createFromDiscriminatorValue)); });
+        deserializerMap.put("isEnabledForMicrosoftStoreForBusiness", (n) -> { currentObject.setIsEnabledForMicrosoftStoreForBusiness(n.getBooleanValue()); });
+        deserializerMap.put("managedAppPolicies", (n) -> { currentObject.setManagedAppPolicies(n.getCollectionOfObjectValues(ManagedAppPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedAppRegistrations", (n) -> { currentObject.setManagedAppRegistrations(n.getCollectionOfObjectValues(ManagedAppRegistration::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedAppStatuses", (n) -> { currentObject.setManagedAppStatuses(n.getCollectionOfObjectValues(ManagedAppStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedEBooks", (n) -> { currentObject.setManagedEBooks(n.getCollectionOfObjectValues(ManagedEBook::createFromDiscriminatorValue)); });
+        deserializerMap.put("mdmWindowsInformationProtectionPolicies", (n) -> { currentObject.setMdmWindowsInformationProtectionPolicies(n.getCollectionOfObjectValues(MdmWindowsInformationProtectionPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("microsoftStoreForBusinessLanguage", (n) -> { currentObject.setMicrosoftStoreForBusinessLanguage(n.getStringValue()); });
+        deserializerMap.put("microsoftStoreForBusinessLastCompletedApplicationSyncTime", (n) -> { currentObject.setMicrosoftStoreForBusinessLastCompletedApplicationSyncTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("microsoftStoreForBusinessLastSuccessfulSyncDateTime", (n) -> { currentObject.setMicrosoftStoreForBusinessLastSuccessfulSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("mobileAppCategories", (n) -> { currentObject.setMobileAppCategories(n.getCollectionOfObjectValues(MobileAppCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobileAppConfigurations", (n) -> { currentObject.setMobileAppConfigurations(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobileApps", (n) -> { currentObject.setMobileApps(n.getCollectionOfObjectValues(MobileApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("targetedManagedAppConfigurations", (n) -> { currentObject.setTargetedManagedAppConfigurations(n.getCollectionOfObjectValues(TargetedManagedAppConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("vppTokens", (n) -> { currentObject.setVppTokens(n.getCollectionOfObjectValues(VppToken::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsInformationProtectionPolicies", (n) -> { currentObject.setWindowsInformationProtectionPolicies(n.getCollectionOfObjectValues(WindowsInformationProtectionPolicy::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the iosManagedAppProtections property value. iOS managed app policies.

@@ -49,10 +49,10 @@ public class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemoveKeyPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("keyId", (n) -> { currentObject.setKeyId(n.getStringValue()); });
-            this.put("proof", (n) -> { currentObject.setProof(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("keyId", (n) -> { currentObject.setKeyId(n.getStringValue()); });
+        deserializerMap.put("proof", (n) -> { currentObject.setProof(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the keyId property value. The keyId property

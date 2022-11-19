@@ -51,11 +51,11 @@ public class SecurityResource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityResource currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getStringValue()); });
-            this.put("resourceType", (n) -> { currentObject.setResourceType(n.getEnumValue(SecurityResourceType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("resource", (n) -> { currentObject.setResource(n.getStringValue()); });
+        deserializerMap.put("resourceType", (n) -> { currentObject.setResourceType(n.getEnumValue(SecurityResourceType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

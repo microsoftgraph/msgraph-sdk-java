@@ -70,12 +70,12 @@ public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSLobChildApp currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("buildNumber", (n) -> { currentObject.setBuildNumber(n.getStringValue()); });
-            this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("versionNumber", (n) -> { currentObject.setVersionNumber(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("buildNumber", (n) -> { currentObject.setBuildNumber(n.getStringValue()); });
+        deserializerMap.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("versionNumber", (n) -> { currentObject.setVersionNumber(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

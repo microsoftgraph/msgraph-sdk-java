@@ -67,15 +67,15 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TargetResource currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("groupType", (n) -> { currentObject.setGroupType(n.getEnumValue(GroupType.class)); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("modifiedProperties", (n) -> { currentObject.setModifiedProperties(n.getCollectionOfObjectValues(ModifiedProperty::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("groupType", (n) -> { currentObject.setGroupType(n.getEnumValue(GroupType.class)); });
+        deserializerMap.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+        deserializerMap.put("modifiedProperties", (n) -> { currentObject.setModifiedProperties(n.getCollectionOfObjectValues(ModifiedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue

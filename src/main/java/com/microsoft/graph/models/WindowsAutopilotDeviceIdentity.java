@@ -100,24 +100,24 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsAutopilotDeviceIdentity currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("addressableUserName", (n) -> { currentObject.setAddressableUserName(n.getStringValue()); });
-            this.put("azureActiveDirectoryDeviceId", (n) -> { currentObject.setAzureActiveDirectoryDeviceId(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("enrollmentState", (n) -> { currentObject.setEnrollmentState(n.getEnumValue(EnrollmentState.class)); });
-            this.put("groupTag", (n) -> { currentObject.setGroupTag(n.getStringValue()); });
-            this.put("lastContactedDateTime", (n) -> { currentObject.setLastContactedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("productKey", (n) -> { currentObject.setProductKey(n.getStringValue()); });
-            this.put("purchaseOrderIdentifier", (n) -> { currentObject.setPurchaseOrderIdentifier(n.getStringValue()); });
-            this.put("resourceName", (n) -> { currentObject.setResourceName(n.getStringValue()); });
-            this.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
-            this.put("skuNumber", (n) -> { currentObject.setSkuNumber(n.getStringValue()); });
-            this.put("systemFamily", (n) -> { currentObject.setSystemFamily(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("addressableUserName", (n) -> { currentObject.setAddressableUserName(n.getStringValue()); });
+        deserializerMap.put("azureActiveDirectoryDeviceId", (n) -> { currentObject.setAzureActiveDirectoryDeviceId(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("enrollmentState", (n) -> { currentObject.setEnrollmentState(n.getEnumValue(EnrollmentState.class)); });
+        deserializerMap.put("groupTag", (n) -> { currentObject.setGroupTag(n.getStringValue()); });
+        deserializerMap.put("lastContactedDateTime", (n) -> { currentObject.setLastContactedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
+        deserializerMap.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
+        deserializerMap.put("productKey", (n) -> { currentObject.setProductKey(n.getStringValue()); });
+        deserializerMap.put("purchaseOrderIdentifier", (n) -> { currentObject.setPurchaseOrderIdentifier(n.getStringValue()); });
+        deserializerMap.put("resourceName", (n) -> { currentObject.setResourceName(n.getStringValue()); });
+        deserializerMap.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
+        deserializerMap.put("skuNumber", (n) -> { currentObject.setSkuNumber(n.getStringValue()); });
+        deserializerMap.put("systemFamily", (n) -> { currentObject.setSystemFamily(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupTag property value. Group Tag of the Windows autopilot device.

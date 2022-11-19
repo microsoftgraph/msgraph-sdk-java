@@ -69,12 +69,12 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterStatus currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfEnumValues(PrinterProcessingStateDetail.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(PrinterProcessingState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfEnumValues(PrinterProcessingStateDetail.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(PrinterProcessingState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

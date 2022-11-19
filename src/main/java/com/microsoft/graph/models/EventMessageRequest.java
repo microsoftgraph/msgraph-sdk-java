@@ -54,14 +54,14 @@ public class EventMessageRequest extends EventMessage implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EventMessageRequest currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("allowNewTimeProposals", (n) -> { currentObject.setAllowNewTimeProposals(n.getBooleanValue()); });
-            this.put("meetingRequestType", (n) -> { currentObject.setMeetingRequestType(n.getEnumValue(MeetingRequestType.class)); });
-            this.put("previousEndDateTime", (n) -> { currentObject.setPreviousEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("previousLocation", (n) -> { currentObject.setPreviousLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
-            this.put("previousStartDateTime", (n) -> { currentObject.setPreviousStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("responseRequested", (n) -> { currentObject.setResponseRequested(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowNewTimeProposals", (n) -> { currentObject.setAllowNewTimeProposals(n.getBooleanValue()); });
+        deserializerMap.put("meetingRequestType", (n) -> { currentObject.setMeetingRequestType(n.getEnumValue(MeetingRequestType.class)); });
+        deserializerMap.put("previousEndDateTime", (n) -> { currentObject.setPreviousEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("previousLocation", (n) -> { currentObject.setPreviousLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
+        deserializerMap.put("previousStartDateTime", (n) -> { currentObject.setPreviousStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("responseRequested", (n) -> { currentObject.setResponseRequested(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the meetingRequestType property value. The meetingRequestType property

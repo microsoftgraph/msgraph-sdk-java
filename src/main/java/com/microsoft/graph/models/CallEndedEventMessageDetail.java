@@ -77,13 +77,13 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CallEndedEventMessageDetail currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("callDuration", (n) -> { currentObject.setCallDuration(n.getPeriodValue()); });
-            this.put("callEventType", (n) -> { currentObject.setCallEventType(n.getEnumValue(TeamworkCallEventType.class)); });
-            this.put("callId", (n) -> { currentObject.setCallId(n.getStringValue()); });
-            this.put("callParticipants", (n) -> { currentObject.setCallParticipants(n.getCollectionOfObjectValues(CallParticipantInfo::createFromDiscriminatorValue)); });
-            this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("callDuration", (n) -> { currentObject.setCallDuration(n.getPeriodValue()); });
+        deserializerMap.put("callEventType", (n) -> { currentObject.setCallEventType(n.getEnumValue(TeamworkCallEventType.class)); });
+        deserializerMap.put("callId", (n) -> { currentObject.setCallId(n.getStringValue()); });
+        deserializerMap.put("callParticipants", (n) -> { currentObject.setCallParticipants(n.getCollectionOfObjectValues(CallParticipantInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the initiator property value. Initiator of the event.

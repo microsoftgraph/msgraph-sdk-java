@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
     /** The name of the timeOffReason. Required. */
     private String _displayName;
@@ -15,7 +16,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
     /** Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required. */
     private Boolean _isActive;
     /**
-     * Instantiates a new TimeOffReason and sets the default values.
+     * Instantiates a new timeOffReason and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -26,7 +27,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TimeOffReason
+     * @return a timeOffReason
      */
     @javax.annotation.Nonnull
     public static TimeOffReason createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -48,11 +49,11 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TimeOffReason currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("iconType", (n) -> { currentObject.setIconType(n.getEnumValue(TimeOffReasonIconType.class)); });
-            this.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("iconType", (n) -> { currentObject.setIconType(n.getEnumValue(TimeOffReasonIconType.class)); });
+        deserializerMap.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the iconType property value. Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required.

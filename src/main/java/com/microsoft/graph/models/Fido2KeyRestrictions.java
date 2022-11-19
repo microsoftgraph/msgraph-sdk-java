@@ -69,12 +69,12 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Fido2KeyRestrictions currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("aaGuids", (n) -> { currentObject.setAaGuids(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("enforcementType", (n) -> { currentObject.setEnforcementType(n.getEnumValue(Fido2RestrictionEnforcementType.class)); });
-            this.put("isEnforced", (n) -> { currentObject.setIsEnforced(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("aaGuids", (n) -> { currentObject.setAaGuids(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("enforcementType", (n) -> { currentObject.setEnforcementType(n.getEnumValue(Fido2RestrictionEnforcementType.class)); });
+        deserializerMap.put("isEnforced", (n) -> { currentObject.setIsEnforced(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnforced property value. Determines if the configured key enforcement is enabled.

@@ -46,10 +46,10 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PermissionGrantPolicy currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("excludes", (n) -> { currentObject.setExcludes(n.getCollectionOfObjectValues(PermissionGrantConditionSet::createFromDiscriminatorValue)); });
-            this.put("includes", (n) -> { currentObject.setIncludes(n.getCollectionOfObjectValues(PermissionGrantConditionSet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("excludes", (n) -> { currentObject.setExcludes(n.getCollectionOfObjectValues(PermissionGrantConditionSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("includes", (n) -> { currentObject.setIncludes(n.getCollectionOfObjectValues(PermissionGrantConditionSet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the includes property value. Condition sets which are included in this permission grant policy. Automatically expanded on GET.

@@ -61,12 +61,12 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResultInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("code", (n) -> { currentObject.setCode(n.getIntegerValue()); });
-            this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("subcode", (n) -> { currentObject.setSubcode(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("code", (n) -> { currentObject.setCode(n.getIntegerValue()); });
+        deserializerMap.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("subcode", (n) -> { currentObject.setSubcode(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the message property value. The message.

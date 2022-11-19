@@ -49,11 +49,11 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupLifecyclePolicy currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("alternateNotificationEmails", (n) -> { currentObject.setAlternateNotificationEmails(n.getStringValue()); });
-            this.put("groupLifetimeInDays", (n) -> { currentObject.setGroupLifetimeInDays(n.getIntegerValue()); });
-            this.put("managedGroupTypes", (n) -> { currentObject.setManagedGroupTypes(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("alternateNotificationEmails", (n) -> { currentObject.setAlternateNotificationEmails(n.getStringValue()); });
+        deserializerMap.put("groupLifetimeInDays", (n) -> { currentObject.setGroupLifetimeInDays(n.getIntegerValue()); });
+        deserializerMap.put("managedGroupTypes", (n) -> { currentObject.setManagedGroupTypes(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupLifetimeInDays property value. Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.

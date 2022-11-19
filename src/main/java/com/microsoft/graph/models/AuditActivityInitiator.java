@@ -59,11 +59,11 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuditActivityInitiator currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("app", (n) -> { currentObject.setApp(n.getObjectValue(AppIdentity::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("user", (n) -> { currentObject.setUser(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("app", (n) -> { currentObject.setApp(n.getObjectValue(AppIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("user", (n) -> { currentObject.setUser(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

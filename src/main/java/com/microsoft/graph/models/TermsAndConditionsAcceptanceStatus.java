@@ -62,13 +62,13 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TermsAndConditionsAcceptanceStatus currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("acceptedDateTime", (n) -> { currentObject.setAcceptedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("acceptedVersion", (n) -> { currentObject.setAcceptedVersion(n.getIntegerValue()); });
-            this.put("termsAndConditions", (n) -> { currentObject.setTermsAndConditions(n.getObjectValue(TermsAndConditions::createFromDiscriminatorValue)); });
-            this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("acceptedDateTime", (n) -> { currentObject.setAcceptedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("acceptedVersion", (n) -> { currentObject.setAcceptedVersion(n.getIntegerValue()); });
+        deserializerMap.put("termsAndConditions", (n) -> { currentObject.setTermsAndConditions(n.getObjectValue(TermsAndConditions::createFromDiscriminatorValue)); });
+        deserializerMap.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the termsAndConditions property value. Navigation link to the terms and conditions that are assigned.

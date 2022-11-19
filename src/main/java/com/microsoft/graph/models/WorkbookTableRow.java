@@ -39,10 +39,10 @@ public class WorkbookTableRow extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookTableRow currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("index", (n) -> { currentObject.setIndex(n.getIntegerValue()); });
-            this.put("values", (n) -> { currentObject.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("index", (n) -> { currentObject.setIndex(n.getIntegerValue()); });
+        deserializerMap.put("values", (n) -> { currentObject.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the index property value. Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only.

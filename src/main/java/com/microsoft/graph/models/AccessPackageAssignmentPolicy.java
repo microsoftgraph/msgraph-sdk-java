@@ -126,21 +126,21 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentPolicy currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("accessPackage", (n) -> { currentObject.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
-            this.put("allowedTargetScope", (n) -> { currentObject.setAllowedTargetScope(n.getEnumValue(AllowedTargetScope.class)); });
-            this.put("automaticRequestSettings", (n) -> { currentObject.setAutomaticRequestSettings(n.getObjectValue(AccessPackageAutomaticRequestSettings::createFromDiscriminatorValue)); });
-            this.put("catalog", (n) -> { currentObject.setCatalog(n.getObjectValue(AccessPackageCatalog::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("expiration", (n) -> { currentObject.setExpiration(n.getObjectValue(ExpirationPattern::createFromDiscriminatorValue)); });
-            this.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("requestApprovalSettings", (n) -> { currentObject.setRequestApprovalSettings(n.getObjectValue(AccessPackageAssignmentApprovalSettings::createFromDiscriminatorValue)); });
-            this.put("requestorSettings", (n) -> { currentObject.setRequestorSettings(n.getObjectValue(AccessPackageAssignmentRequestorSettings::createFromDiscriminatorValue)); });
-            this.put("reviewSettings", (n) -> { currentObject.setReviewSettings(n.getObjectValue(AccessPackageAssignmentReviewSettings::createFromDiscriminatorValue)); });
-            this.put("specificAllowedTargets", (n) -> { currentObject.setSpecificAllowedTargets(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessPackage", (n) -> { currentObject.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
+        deserializerMap.put("allowedTargetScope", (n) -> { currentObject.setAllowedTargetScope(n.getEnumValue(AllowedTargetScope.class)); });
+        deserializerMap.put("automaticRequestSettings", (n) -> { currentObject.setAutomaticRequestSettings(n.getObjectValue(AccessPackageAutomaticRequestSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("catalog", (n) -> { currentObject.setCatalog(n.getObjectValue(AccessPackageCatalog::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("expiration", (n) -> { currentObject.setExpiration(n.getObjectValue(ExpirationPattern::createFromDiscriminatorValue)); });
+        deserializerMap.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("requestApprovalSettings", (n) -> { currentObject.setRequestApprovalSettings(n.getObjectValue(AccessPackageAssignmentApprovalSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("requestorSettings", (n) -> { currentObject.setRequestorSettings(n.getObjectValue(AccessPackageAssignmentRequestorSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("reviewSettings", (n) -> { currentObject.setReviewSettings(n.getObjectValue(AccessPackageAssignmentReviewSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("specificAllowedTargets", (n) -> { currentObject.setSpecificAllowedTargets(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.

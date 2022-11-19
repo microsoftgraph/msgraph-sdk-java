@@ -93,9 +93,8 @@ public class DirectoryRolesRequestBuilder {
      */
     @javax.annotation.Nonnull
     public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
@@ -126,9 +125,8 @@ public class DirectoryRolesRequestBuilder {
     @javax.annotation.Nonnull
     public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final DirectoryRole body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.POST;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
@@ -157,15 +155,14 @@ public class DirectoryRolesRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryRoleCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, DirectoryRoleCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<DirectoryRoleCollectionResponse>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<DirectoryRoleCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<DirectoryRoleCollectionResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -177,15 +174,14 @@ public class DirectoryRolesRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryRoleCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, DirectoryRoleCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<DirectoryRoleCollectionResponse>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<DirectoryRoleCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<DirectoryRoleCollectionResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -197,15 +193,14 @@ public class DirectoryRolesRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryRole> post(@javax.annotation.Nonnull final DirectoryRole body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, DirectoryRole::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<DirectoryRole>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<DirectoryRole> executionException = new java.util.concurrent.CompletableFuture<DirectoryRole>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -219,15 +214,14 @@ public class DirectoryRolesRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, DirectoryRole::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<DirectoryRole>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<DirectoryRole> executionException = new java.util.concurrent.CompletableFuture<DirectoryRole>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /** List the directory roles that are activated in the tenant. This operation only returns roles that have been activated. A role becomes activated when an admin activates the role using the Activate directoryRole API. Not all built-in roles are initially activated.  When assigning a role using the Azure portal, the role activation step is implicitly done on the admin's behalf. To get the full list of roles that are available in Azure AD, use List directoryRoleTemplates. */

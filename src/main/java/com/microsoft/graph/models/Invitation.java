@@ -54,18 +54,18 @@ public class Invitation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Invitation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("invitedUser", (n) -> { currentObject.setInvitedUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
-            this.put("invitedUserDisplayName", (n) -> { currentObject.setInvitedUserDisplayName(n.getStringValue()); });
-            this.put("invitedUserEmailAddress", (n) -> { currentObject.setInvitedUserEmailAddress(n.getStringValue()); });
-            this.put("invitedUserMessageInfo", (n) -> { currentObject.setInvitedUserMessageInfo(n.getObjectValue(InvitedUserMessageInfo::createFromDiscriminatorValue)); });
-            this.put("invitedUserType", (n) -> { currentObject.setInvitedUserType(n.getStringValue()); });
-            this.put("inviteRedeemUrl", (n) -> { currentObject.setInviteRedeemUrl(n.getStringValue()); });
-            this.put("inviteRedirectUrl", (n) -> { currentObject.setInviteRedirectUrl(n.getStringValue()); });
-            this.put("resetRedemption", (n) -> { currentObject.setResetRedemption(n.getBooleanValue()); });
-            this.put("sendInvitationMessage", (n) -> { currentObject.setSendInvitationMessage(n.getBooleanValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("invitedUser", (n) -> { currentObject.setInvitedUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("invitedUserDisplayName", (n) -> { currentObject.setInvitedUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("invitedUserEmailAddress", (n) -> { currentObject.setInvitedUserEmailAddress(n.getStringValue()); });
+        deserializerMap.put("invitedUserMessageInfo", (n) -> { currentObject.setInvitedUserMessageInfo(n.getObjectValue(InvitedUserMessageInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("invitedUserType", (n) -> { currentObject.setInvitedUserType(n.getStringValue()); });
+        deserializerMap.put("inviteRedeemUrl", (n) -> { currentObject.setInviteRedeemUrl(n.getStringValue()); });
+        deserializerMap.put("inviteRedirectUrl", (n) -> { currentObject.setInviteRedirectUrl(n.getStringValue()); });
+        deserializerMap.put("resetRedemption", (n) -> { currentObject.setResetRedemption(n.getBooleanValue()); });
+        deserializerMap.put("sendInvitationMessage", (n) -> { currentObject.setSendInvitationMessage(n.getBooleanValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the invitedUser property value. The user created as part of the invitation creation. Read-Only

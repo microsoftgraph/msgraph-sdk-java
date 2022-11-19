@@ -55,13 +55,13 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchResponse currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("hitsContainers", (n) -> { currentObject.setHitsContainers(n.getCollectionOfObjectValues(SearchHitsContainer::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("queryAlterationResponse", (n) -> { currentObject.setQueryAlterationResponse(n.getObjectValue(AlterationResponse::createFromDiscriminatorValue)); });
-            this.put("resultTemplates", (n) -> { currentObject.setResultTemplates(n.getObjectValue(ResultTemplateDictionary::createFromDiscriminatorValue)); });
-            this.put("searchTerms", (n) -> { currentObject.setSearchTerms(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("hitsContainers", (n) -> { currentObject.setHitsContainers(n.getCollectionOfObjectValues(SearchHitsContainer::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("queryAlterationResponse", (n) -> { currentObject.setQueryAlterationResponse(n.getObjectValue(AlterationResponse::createFromDiscriminatorValue)); });
+        deserializerMap.put("resultTemplates", (n) -> { currentObject.setResultTemplates(n.getObjectValue(ResultTemplateDictionary::createFromDiscriminatorValue)); });
+        deserializerMap.put("searchTerms", (n) -> { currentObject.setSearchTerms(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the hitsContainers property value. A collection of search results.

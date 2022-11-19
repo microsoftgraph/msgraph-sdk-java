@@ -75,9 +75,8 @@ public class AccessPackagesRequestBuilder {
      */
     @javax.annotation.Nonnull
     public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
@@ -108,9 +107,8 @@ public class AccessPackagesRequestBuilder {
     @javax.annotation.Nonnull
     public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final AccessPackage body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.POST;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
@@ -141,15 +139,14 @@ public class AccessPackagesRequestBuilder {
     public java.util.concurrent.CompletableFuture<AccessPackageCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, AccessPackageCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<AccessPackageCollectionResponse>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<AccessPackageCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<AccessPackageCollectionResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -161,15 +158,14 @@ public class AccessPackagesRequestBuilder {
     public java.util.concurrent.CompletableFuture<AccessPackageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, AccessPackageCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<AccessPackageCollectionResponse>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<AccessPackageCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<AccessPackageCollectionResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -181,15 +177,14 @@ public class AccessPackagesRequestBuilder {
     public java.util.concurrent.CompletableFuture<AccessPackage> post(@javax.annotation.Nonnull final AccessPackage body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, AccessPackage::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<AccessPackage>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<AccessPackage> executionException = new java.util.concurrent.CompletableFuture<AccessPackage>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -203,15 +198,14 @@ public class AccessPackagesRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, AccessPackage::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<AccessPackage>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<AccessPackage> executionException = new java.util.concurrent.CompletableFuture<AccessPackage>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /** Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs. */

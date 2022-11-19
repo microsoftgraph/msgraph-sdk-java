@@ -61,12 +61,12 @@ public class ModifiedProperty implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ModifiedProperty currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("newValue", (n) -> { currentObject.setNewValue(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("oldValue", (n) -> { currentObject.setOldValue(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("newValue", (n) -> { currentObject.setNewValue(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("oldValue", (n) -> { currentObject.setOldValue(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the newValue property value. Indicates the updated value for the propery.

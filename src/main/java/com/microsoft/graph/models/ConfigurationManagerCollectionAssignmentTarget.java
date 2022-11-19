@@ -44,9 +44,9 @@ public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndApp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConfigurationManagerCollectionAssignmentTarget currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("collectionId", (n) -> { currentObject.setCollectionId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("collectionId", (n) -> { currentObject.setCollectionId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

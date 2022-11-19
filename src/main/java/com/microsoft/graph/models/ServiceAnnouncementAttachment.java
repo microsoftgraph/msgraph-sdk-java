@@ -62,13 +62,13 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServiceAnnouncementAttachment currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
-            this.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("size", (n) -> { currentObject.setSize(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("size", (n) -> { currentObject.setSize(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property

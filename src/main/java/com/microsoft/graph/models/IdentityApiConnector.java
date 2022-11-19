@@ -56,11 +56,11 @@ public class IdentityApiConnector extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentityApiConnector currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("authenticationConfiguration", (n) -> { currentObject.setAuthenticationConfiguration(n.getObjectValue(ApiAuthenticationConfigurationBase::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("targetUrl", (n) -> { currentObject.setTargetUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationConfiguration", (n) -> { currentObject.setAuthenticationConfiguration(n.getObjectValue(ApiAuthenticationConfigurationBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("targetUrl", (n) -> { currentObject.setTargetUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the targetUrl property value. The URL of the API endpoint to call.

@@ -60,11 +60,11 @@ public class SigningCertificateUpdateStatus implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SigningCertificateUpdateStatus currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("certificateUpdateResult", (n) -> { currentObject.setCertificateUpdateResult(n.getStringValue()); });
-            this.put("lastRunDateTime", (n) -> { currentObject.setLastRunDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("certificateUpdateResult", (n) -> { currentObject.setCertificateUpdateResult(n.getStringValue()); });
+        deserializerMap.put("lastRunDateTime", (n) -> { currentObject.setLastRunDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastRunDateTime property value. Date and time in ISO 8601 format and in UTC time when the certificate was last updated. Read-only.

@@ -44,9 +44,9 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMembersNotificationRecipient currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("chatId", (n) -> { currentObject.setChatId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("chatId", (n) -> { currentObject.setChatId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

@@ -69,12 +69,12 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InvitedUserMessageInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("ccRecipients", (n) -> { currentObject.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("customizedMessageBody", (n) -> { currentObject.setCustomizedMessageBody(n.getStringValue()); });
-            this.put("messageLanguage", (n) -> { currentObject.setMessageLanguage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("ccRecipients", (n) -> { currentObject.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("customizedMessageBody", (n) -> { currentObject.setCustomizedMessageBody(n.getStringValue()); });
+        deserializerMap.put("messageLanguage", (n) -> { currentObject.setMessageLanguage(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the messageLanguage property value. The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.

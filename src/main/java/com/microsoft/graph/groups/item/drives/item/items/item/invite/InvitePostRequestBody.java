@@ -70,16 +70,16 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InvitePostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getStringValue()); });
-            this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
-            this.put("recipients", (n) -> { currentObject.setRecipients(n.getCollectionOfObjectValues(DriveRecipient::createFromDiscriminatorValue)); });
-            this.put("requireSignIn", (n) -> { currentObject.setRequireSignIn(n.getBooleanValue()); });
-            this.put("retainInheritedPermissions", (n) -> { currentObject.setRetainInheritedPermissions(n.getBooleanValue()); });
-            this.put("roles", (n) -> { currentObject.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("sendInvitation", (n) -> { currentObject.setSendInvitation(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getStringValue()); });
+        deserializerMap.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
+        deserializerMap.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
+        deserializerMap.put("recipients", (n) -> { currentObject.setRecipients(n.getCollectionOfObjectValues(DriveRecipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("requireSignIn", (n) -> { currentObject.setRequireSignIn(n.getBooleanValue()); });
+        deserializerMap.put("retainInheritedPermissions", (n) -> { currentObject.setRetainInheritedPermissions(n.getBooleanValue()); });
+        deserializerMap.put("roles", (n) -> { currentObject.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("sendInvitation", (n) -> { currentObject.setSendInvitation(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the message property value. The message property

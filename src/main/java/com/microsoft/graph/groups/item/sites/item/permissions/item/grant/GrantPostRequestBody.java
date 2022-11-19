@@ -50,10 +50,10 @@ public class GrantPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GrantPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("recipients", (n) -> { currentObject.setRecipients(n.getCollectionOfObjectValues(DriveRecipient::createFromDiscriminatorValue)); });
-            this.put("roles", (n) -> { currentObject.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("recipients", (n) -> { currentObject.setRecipients(n.getCollectionOfObjectValues(DriveRecipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("roles", (n) -> { currentObject.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the recipients property value. The recipients property

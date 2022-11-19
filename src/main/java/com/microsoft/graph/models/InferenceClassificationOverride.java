@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class InferenceClassificationOverride extends Entity implements Parsable {
     /** Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other. */
     private InferenceClassificationType _classifyAs;
@@ -47,10 +47,10 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InferenceClassificationOverride currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("classifyAs", (n) -> { currentObject.setClassifyAs(n.getEnumValue(InferenceClassificationType.class)); });
-            this.put("senderEmailAddress", (n) -> { currentObject.setSenderEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("classifyAs", (n) -> { currentObject.setClassifyAs(n.getEnumValue(InferenceClassificationType.class)); });
+        deserializerMap.put("senderEmailAddress", (n) -> { currentObject.setSenderEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the senderEmailAddress property value. The email address information of the sender for whom the override is created.

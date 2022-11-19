@@ -71,13 +71,13 @@ public class PublicInnerError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PublicInnerError currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
-            this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfObjectValues(PublicErrorDetail::createFromDiscriminatorValue)); });
-            this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
+        deserializerMap.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfObjectValues(PublicErrorDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("target", (n) -> { currentObject.setTarget(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the message property value. The error message.

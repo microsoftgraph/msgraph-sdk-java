@@ -59,11 +59,11 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TrainingEventsContent currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("assignedTrainingsInfos", (n) -> { currentObject.setAssignedTrainingsInfos(n.getCollectionOfObjectValues(AssignedTrainingInfo::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("trainingsAssignedUserCount", (n) -> { currentObject.setTrainingsAssignedUserCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("assignedTrainingsInfos", (n) -> { currentObject.setAssignedTrainingsInfos(n.getCollectionOfObjectValues(AssignedTrainingInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("trainingsAssignedUserCount", (n) -> { currentObject.setTrainingsAssignedUserCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

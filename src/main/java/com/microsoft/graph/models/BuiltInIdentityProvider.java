@@ -36,9 +36,9 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BuiltInIdentityProvider currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("identityProviderType", (n) -> { currentObject.setIdentityProviderType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("identityProviderType", (n) -> { currentObject.setIdentityProviderType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the identityProviderType property value. The identity provider type. For a B2B scenario, possible values: AADSignup, MicrosoftAccount, EmailOTP. Required.

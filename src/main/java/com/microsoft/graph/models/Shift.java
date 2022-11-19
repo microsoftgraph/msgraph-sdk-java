@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class Shift extends ChangeTrackedEntity implements Parsable {
     /** The draft version of this shift that is viewable by managers. Required. */
     private ShiftItem _draftShift;
@@ -17,7 +18,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     /** ID of the user assigned to the shift. Required. */
     private String _userId;
     /**
-     * Instantiates a new Shift and sets the default values.
+     * Instantiates a new shift and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -28,7 +29,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Shift
+     * @return a shift
      */
     @javax.annotation.Nonnull
     public static Shift createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -50,12 +51,12 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Shift currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("draftShift", (n) -> { currentObject.setDraftShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
-            this.put("schedulingGroupId", (n) -> { currentObject.setSchedulingGroupId(n.getStringValue()); });
-            this.put("sharedShift", (n) -> { currentObject.setSharedShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("draftShift", (n) -> { currentObject.setDraftShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("schedulingGroupId", (n) -> { currentObject.setSchedulingGroupId(n.getStringValue()); });
+        deserializerMap.put("sharedShift", (n) -> { currentObject.setSharedShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the schedulingGroupId property value. ID of the scheduling group the shift is part of. Required.

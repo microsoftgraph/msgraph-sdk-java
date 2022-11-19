@@ -120,23 +120,23 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SoftwareUpdateStatusSummary currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("compliantDeviceCount", (n) -> { currentObject.setCompliantDeviceCount(n.getIntegerValue()); });
-            this.put("compliantUserCount", (n) -> { currentObject.setCompliantUserCount(n.getIntegerValue()); });
-            this.put("conflictDeviceCount", (n) -> { currentObject.setConflictDeviceCount(n.getIntegerValue()); });
-            this.put("conflictUserCount", (n) -> { currentObject.setConflictUserCount(n.getIntegerValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("errorDeviceCount", (n) -> { currentObject.setErrorDeviceCount(n.getIntegerValue()); });
-            this.put("errorUserCount", (n) -> { currentObject.setErrorUserCount(n.getIntegerValue()); });
-            this.put("nonCompliantDeviceCount", (n) -> { currentObject.setNonCompliantDeviceCount(n.getIntegerValue()); });
-            this.put("nonCompliantUserCount", (n) -> { currentObject.setNonCompliantUserCount(n.getIntegerValue()); });
-            this.put("notApplicableDeviceCount", (n) -> { currentObject.setNotApplicableDeviceCount(n.getIntegerValue()); });
-            this.put("notApplicableUserCount", (n) -> { currentObject.setNotApplicableUserCount(n.getIntegerValue()); });
-            this.put("remediatedDeviceCount", (n) -> { currentObject.setRemediatedDeviceCount(n.getIntegerValue()); });
-            this.put("remediatedUserCount", (n) -> { currentObject.setRemediatedUserCount(n.getIntegerValue()); });
-            this.put("unknownDeviceCount", (n) -> { currentObject.setUnknownDeviceCount(n.getIntegerValue()); });
-            this.put("unknownUserCount", (n) -> { currentObject.setUnknownUserCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("compliantDeviceCount", (n) -> { currentObject.setCompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("compliantUserCount", (n) -> { currentObject.setCompliantUserCount(n.getIntegerValue()); });
+        deserializerMap.put("conflictDeviceCount", (n) -> { currentObject.setConflictDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("conflictUserCount", (n) -> { currentObject.setConflictUserCount(n.getIntegerValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("errorDeviceCount", (n) -> { currentObject.setErrorDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("errorUserCount", (n) -> { currentObject.setErrorUserCount(n.getIntegerValue()); });
+        deserializerMap.put("nonCompliantDeviceCount", (n) -> { currentObject.setNonCompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("nonCompliantUserCount", (n) -> { currentObject.setNonCompliantUserCount(n.getIntegerValue()); });
+        deserializerMap.put("notApplicableDeviceCount", (n) -> { currentObject.setNotApplicableDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("notApplicableUserCount", (n) -> { currentObject.setNotApplicableUserCount(n.getIntegerValue()); });
+        deserializerMap.put("remediatedDeviceCount", (n) -> { currentObject.setRemediatedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("remediatedUserCount", (n) -> { currentObject.setRemediatedUserCount(n.getIntegerValue()); });
+        deserializerMap.put("unknownDeviceCount", (n) -> { currentObject.setUnknownDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("unknownUserCount", (n) -> { currentObject.setUnknownUserCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the nonCompliantDeviceCount property value. Number of non compliant devices.

@@ -122,28 +122,28 @@ public class WorkbookRange extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookRange currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
-            this.put("addressLocal", (n) -> { currentObject.setAddressLocal(n.getStringValue()); });
-            this.put("cellCount", (n) -> { currentObject.setCellCount(n.getIntegerValue()); });
-            this.put("columnCount", (n) -> { currentObject.setColumnCount(n.getIntegerValue()); });
-            this.put("columnHidden", (n) -> { currentObject.setColumnHidden(n.getBooleanValue()); });
-            this.put("columnIndex", (n) -> { currentObject.setColumnIndex(n.getIntegerValue()); });
-            this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookRangeFormat::createFromDiscriminatorValue)); });
-            this.put("formulas", (n) -> { currentObject.setFormulas(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("formulasLocal", (n) -> { currentObject.setFormulasLocal(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("formulasR1C1", (n) -> { currentObject.setFormulasR1C1(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("hidden", (n) -> { currentObject.setHidden(n.getBooleanValue()); });
-            this.put("numberFormat", (n) -> { currentObject.setNumberFormat(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("rowCount", (n) -> { currentObject.setRowCount(n.getIntegerValue()); });
-            this.put("rowHidden", (n) -> { currentObject.setRowHidden(n.getBooleanValue()); });
-            this.put("rowIndex", (n) -> { currentObject.setRowIndex(n.getIntegerValue()); });
-            this.put("sort", (n) -> { currentObject.setSort(n.getObjectValue(WorkbookRangeSort::createFromDiscriminatorValue)); });
-            this.put("text", (n) -> { currentObject.setText(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("values", (n) -> { currentObject.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("valueTypes", (n) -> { currentObject.setValueTypes(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("worksheet", (n) -> { currentObject.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
+        deserializerMap.put("addressLocal", (n) -> { currentObject.setAddressLocal(n.getStringValue()); });
+        deserializerMap.put("cellCount", (n) -> { currentObject.setCellCount(n.getIntegerValue()); });
+        deserializerMap.put("columnCount", (n) -> { currentObject.setColumnCount(n.getIntegerValue()); });
+        deserializerMap.put("columnHidden", (n) -> { currentObject.setColumnHidden(n.getBooleanValue()); });
+        deserializerMap.put("columnIndex", (n) -> { currentObject.setColumnIndex(n.getIntegerValue()); });
+        deserializerMap.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookRangeFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("formulas", (n) -> { currentObject.setFormulas(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("formulasLocal", (n) -> { currentObject.setFormulasLocal(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("formulasR1C1", (n) -> { currentObject.setFormulasR1C1(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("hidden", (n) -> { currentObject.setHidden(n.getBooleanValue()); });
+        deserializerMap.put("numberFormat", (n) -> { currentObject.setNumberFormat(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("rowCount", (n) -> { currentObject.setRowCount(n.getIntegerValue()); });
+        deserializerMap.put("rowHidden", (n) -> { currentObject.setRowHidden(n.getBooleanValue()); });
+        deserializerMap.put("rowIndex", (n) -> { currentObject.setRowIndex(n.getIntegerValue()); });
+        deserializerMap.put("sort", (n) -> { currentObject.setSort(n.getObjectValue(WorkbookRangeSort::createFromDiscriminatorValue)); });
+        deserializerMap.put("text", (n) -> { currentObject.setText(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("values", (n) -> { currentObject.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("valueTypes", (n) -> { currentObject.setValueTypes(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("worksheet", (n) -> { currentObject.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the format property value. Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.

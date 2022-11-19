@@ -67,12 +67,12 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsHelloForBusinessAuthenticationMethod currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("device", (n) -> { currentObject.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("keyStrength", (n) -> { currentObject.setKeyStrength(n.getEnumValue(AuthenticationMethodKeyStrength.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("device", (n) -> { currentObject.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("keyStrength", (n) -> { currentObject.setKeyStrength(n.getEnumValue(AuthenticationMethodKeyStrength.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.

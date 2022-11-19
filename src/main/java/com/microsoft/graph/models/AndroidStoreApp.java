@@ -48,11 +48,11 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidStoreApp currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
-            this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
-            this.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
+        deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
+        deserializerMap.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.

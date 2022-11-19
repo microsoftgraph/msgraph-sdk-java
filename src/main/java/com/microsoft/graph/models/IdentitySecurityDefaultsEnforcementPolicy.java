@@ -36,9 +36,9 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentitySecurityDefaultsEnforcementPolicy currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnabled property value. If set to true, Azure Active Directory security defaults is enabled for the tenant.

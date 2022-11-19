@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class AccessReviewHistoryInstance extends Entity implements Parsable {
     /** Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required. */
     private String _downloadUri;
@@ -66,15 +66,15 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewHistoryInstance currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("downloadUri", (n) -> { currentObject.setDownloadUri(n.getStringValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("fulfilledDateTime", (n) -> { currentObject.setFulfilledDateTime(n.getOffsetDateTimeValue()); });
-            this.put("reviewHistoryPeriodEndDateTime", (n) -> { currentObject.setReviewHistoryPeriodEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("reviewHistoryPeriodStartDateTime", (n) -> { currentObject.setReviewHistoryPeriodStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("runDateTime", (n) -> { currentObject.setRunDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AccessReviewHistoryStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("downloadUri", (n) -> { currentObject.setDownloadUri(n.getStringValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("fulfilledDateTime", (n) -> { currentObject.setFulfilledDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("reviewHistoryPeriodEndDateTime", (n) -> { currentObject.setReviewHistoryPeriodEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("reviewHistoryPeriodStartDateTime", (n) -> { currentObject.setReviewHistoryPeriodStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("runDateTime", (n) -> { currentObject.setRunDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AccessReviewHistoryStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the fulfilledDateTime property value. Timestamp when all of the available data for this instance was collected. This will be set after this instance's status is set to done. Required.

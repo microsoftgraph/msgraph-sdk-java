@@ -81,18 +81,18 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PermissionScope currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(10) {{
-            this.put("adminConsentDescription", (n) -> { currentObject.setAdminConsentDescription(n.getStringValue()); });
-            this.put("adminConsentDisplayName", (n) -> { currentObject.setAdminConsentDisplayName(n.getStringValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("origin", (n) -> { currentObject.setOrigin(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-            this.put("userConsentDescription", (n) -> { currentObject.setUserConsentDescription(n.getStringValue()); });
-            this.put("userConsentDisplayName", (n) -> { currentObject.setUserConsentDisplayName(n.getStringValue()); });
-            this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("adminConsentDescription", (n) -> { currentObject.setAdminConsentDescription(n.getStringValue()); });
+        deserializerMap.put("adminConsentDisplayName", (n) -> { currentObject.setAdminConsentDisplayName(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+        deserializerMap.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("origin", (n) -> { currentObject.setOrigin(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
+        deserializerMap.put("userConsentDescription", (n) -> { currentObject.setUserConsentDescription(n.getStringValue()); });
+        deserializerMap.put("userConsentDisplayName", (n) -> { currentObject.setUserConsentDisplayName(n.getStringValue()); });
+        deserializerMap.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. Unique delegated permission identifier inside the collection of delegated permissions defined for a resource application.

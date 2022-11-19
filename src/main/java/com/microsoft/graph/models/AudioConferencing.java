@@ -75,15 +75,15 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AudioConferencing currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("conferenceId", (n) -> { currentObject.setConferenceId(n.getStringValue()); });
-            this.put("dialinUrl", (n) -> { currentObject.setDialinUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("tollFreeNumber", (n) -> { currentObject.setTollFreeNumber(n.getStringValue()); });
-            this.put("tollFreeNumbers", (n) -> { currentObject.setTollFreeNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("tollNumber", (n) -> { currentObject.setTollNumber(n.getStringValue()); });
-            this.put("tollNumbers", (n) -> { currentObject.setTollNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("conferenceId", (n) -> { currentObject.setConferenceId(n.getStringValue()); });
+        deserializerMap.put("dialinUrl", (n) -> { currentObject.setDialinUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("tollFreeNumber", (n) -> { currentObject.setTollFreeNumber(n.getStringValue()); });
+        deserializerMap.put("tollFreeNumbers", (n) -> { currentObject.setTollFreeNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("tollNumber", (n) -> { currentObject.setTollNumber(n.getStringValue()); });
+        deserializerMap.put("tollNumbers", (n) -> { currentObject.setTollNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

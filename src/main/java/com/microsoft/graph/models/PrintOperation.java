@@ -55,10 +55,10 @@ public class PrintOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintOperation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(PrintOperationStatus::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(PrintOperationStatus::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the status property value. The status property

@@ -72,13 +72,13 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppListItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
+        deserializerMap.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. The application name

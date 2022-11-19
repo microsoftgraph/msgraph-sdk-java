@@ -60,11 +60,11 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetStaffAvailabilityPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("staffIds", (n) -> { currentObject.setStaffIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("staffIds", (n) -> { currentObject.setStaffIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the staffIds property value. The staffIds property

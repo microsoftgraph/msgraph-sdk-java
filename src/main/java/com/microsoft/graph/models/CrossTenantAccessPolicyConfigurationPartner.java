@@ -93,16 +93,16 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CrossTenantAccessPolicyConfigurationPartner currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("b2bCollaborationInbound", (n) -> { currentObject.setB2bCollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
-            this.put("b2bCollaborationOutbound", (n) -> { currentObject.setB2bCollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
-            this.put("b2bDirectConnectInbound", (n) -> { currentObject.setB2bDirectConnectInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
-            this.put("b2bDirectConnectOutbound", (n) -> { currentObject.setB2bDirectConnectOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
-            this.put("inboundTrust", (n) -> { currentObject.setInboundTrust(n.getObjectValue(CrossTenantAccessPolicyInboundTrust::createFromDiscriminatorValue)); });
-            this.put("isServiceProvider", (n) -> { currentObject.setIsServiceProvider(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("b2bCollaborationInbound", (n) -> { currentObject.setB2bCollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("b2bCollaborationOutbound", (n) -> { currentObject.setB2bCollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("b2bDirectConnectInbound", (n) -> { currentObject.setB2bDirectConnectInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("b2bDirectConnectOutbound", (n) -> { currentObject.setB2bDirectConnectOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("inboundTrust", (n) -> { currentObject.setInboundTrust(n.getObjectValue(CrossTenantAccessPolicyInboundTrust::createFromDiscriminatorValue)); });
+        deserializerMap.put("isServiceProvider", (n) -> { currentObject.setIsServiceProvider(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.

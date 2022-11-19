@@ -15,7 +15,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class AuthenticationMethod extends Entity implements Parsable {
     /**
      * Instantiates a new authenticationMethod and sets the default values.
@@ -57,8 +57,8 @@ public class AuthenticationMethod extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationMethod currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

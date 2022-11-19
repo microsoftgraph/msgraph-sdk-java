@@ -56,11 +56,11 @@ public class SocialIdentityProvider extends IdentityProviderBase implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SocialIdentityProvider currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
-            this.put("clientSecret", (n) -> { currentObject.setClientSecret(n.getStringValue()); });
-            this.put("identityProviderType", (n) -> { currentObject.setIdentityProviderType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
+        deserializerMap.put("clientSecret", (n) -> { currentObject.setClientSecret(n.getStringValue()); });
+        deserializerMap.put("identityProviderType", (n) -> { currentObject.setIdentityProviderType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the identityProviderType property value. For a B2B scenario, possible values: Google, Facebook. For a B2C scenario, possible values: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat. Required.

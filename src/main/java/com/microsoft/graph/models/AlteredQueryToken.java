@@ -53,12 +53,12 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AlteredQueryToken currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("length", (n) -> { currentObject.setLength(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("offset", (n) -> { currentObject.setOffset(n.getIntegerValue()); });
-            this.put("suggestion", (n) -> { currentObject.setSuggestion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("length", (n) -> { currentObject.setLength(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("offset", (n) -> { currentObject.setOffset(n.getIntegerValue()); });
+        deserializerMap.put("suggestion", (n) -> { currentObject.setSuggestion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the length property value. Defines the length of a changed segment.

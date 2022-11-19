@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of externalConnection entities. */
+/** Provides operations to manage the admin singleton. */
 public class ExternalGroup extends Entity implements Parsable {
     /** The description of the external group. Optional. */
     private String _description;
@@ -58,11 +58,11 @@ public class ExternalGroup extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExternalGroup currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(Identity::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(Identity::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the members property value. A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.

@@ -36,9 +36,9 @@ public class EducationExcelResource extends EducationResource implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationExcelResource currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("fileUrl", (n) -> { currentObject.setFileUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fileUrl", (n) -> { currentObject.setFileUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileUrl property value. Pointer to the Excel file object.

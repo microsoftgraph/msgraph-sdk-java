@@ -44,9 +44,9 @@ public class OpenTypeExtension extends Extension implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OpenTypeExtension currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("extensionName", (n) -> { currentObject.setExtensionName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("extensionName", (n) -> { currentObject.setExtensionName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

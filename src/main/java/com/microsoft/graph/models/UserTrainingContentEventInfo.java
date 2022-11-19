@@ -74,14 +74,14 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserTrainingContentEventInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("browser", (n) -> { currentObject.setBrowser(n.getStringValue()); });
-            this.put("contentDateTime", (n) -> { currentObject.setContentDateTime(n.getOffsetDateTimeValue()); });
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("osPlatformDeviceDetails", (n) -> { currentObject.setOsPlatformDeviceDetails(n.getStringValue()); });
-            this.put("potentialScoreImpact", (n) -> { currentObject.setPotentialScoreImpact(n.getDoubleValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("browser", (n) -> { currentObject.setBrowser(n.getStringValue()); });
+        deserializerMap.put("contentDateTime", (n) -> { currentObject.setContentDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("osPlatformDeviceDetails", (n) -> { currentObject.setOsPlatformDeviceDetails(n.getStringValue()); });
+        deserializerMap.put("potentialScoreImpact", (n) -> { currentObject.setPotentialScoreImpact(n.getDoubleValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the ipAddress property value. IP address of the user for the training event.

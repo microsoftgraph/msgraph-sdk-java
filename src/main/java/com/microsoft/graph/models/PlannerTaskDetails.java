@@ -58,12 +58,12 @@ public class PlannerTaskDetails extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerTaskDetails currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("checklist", (n) -> { currentObject.setChecklist(n.getObjectValue(PlannerChecklistItems::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("previewType", (n) -> { currentObject.setPreviewType(n.getEnumValue(PlannerPreviewType.class)); });
-            this.put("references", (n) -> { currentObject.setReferences(n.getObjectValue(PlannerExternalReferences::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("checklist", (n) -> { currentObject.setChecklist(n.getObjectValue(PlannerChecklistItems::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("previewType", (n) -> { currentObject.setPreviewType(n.getEnumValue(PlannerPreviewType.class)); });
+        deserializerMap.put("references", (n) -> { currentObject.setReferences(n.getObjectValue(PlannerExternalReferences::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.

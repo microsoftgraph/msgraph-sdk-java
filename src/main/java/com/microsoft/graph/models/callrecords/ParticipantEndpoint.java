@@ -47,10 +47,10 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ParticipantEndpoint currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("feedback", (n) -> { currentObject.setFeedback(n.getObjectValue(UserFeedback::createFromDiscriminatorValue)); });
-            this.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("feedback", (n) -> { currentObject.setFeedback(n.getObjectValue(UserFeedback::createFromDiscriminatorValue)); });
+        deserializerMap.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the identity property value. Identity associated with the endpoint.

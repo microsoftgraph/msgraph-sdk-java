@@ -57,15 +57,15 @@ public class WorkbookNamedItem extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookNamedItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-            this.put("value", (n) -> { currentObject.setValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("visible", (n) -> { currentObject.setVisible(n.getBooleanValue()); });
-            this.put("worksheet", (n) -> { currentObject.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
+        deserializerMap.put("value", (n) -> { currentObject.setValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("visible", (n) -> { currentObject.setVisible(n.getBooleanValue()); });
+        deserializerMap.put("worksheet", (n) -> { currentObject.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. The name of the object. Read-only.

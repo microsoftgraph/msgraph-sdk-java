@@ -48,9 +48,9 @@ public class RemovePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemovePostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(Site::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(Site::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The value property

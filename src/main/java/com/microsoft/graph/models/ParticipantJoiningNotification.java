@@ -44,9 +44,9 @@ public class ParticipantJoiningNotification extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ParticipantJoiningNotification currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("call", (n) -> { currentObject.setCall(n.getObjectValue(Call::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("call", (n) -> { currentObject.setCall(n.getObjectValue(Call::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

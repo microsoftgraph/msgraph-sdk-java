@@ -67,11 +67,11 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AverageComparativeScore currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("averageScore", (n) -> { currentObject.setAverageScore(n.getDoubleValue()); });
-            this.put("basis", (n) -> { currentObject.setBasis(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("averageScore", (n) -> { currentObject.setAverageScore(n.getDoubleValue()); });
+        deserializerMap.put("basis", (n) -> { currentObject.setBasis(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

@@ -55,13 +55,13 @@ public class Phone implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Phone currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("language", (n) -> { currentObject.setLanguage(n.getStringValue()); });
-            this.put("number", (n) -> { currentObject.setNumber(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("region", (n) -> { currentObject.setRegion(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(PhoneType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("language", (n) -> { currentObject.setLanguage(n.getStringValue()); });
+        deserializerMap.put("number", (n) -> { currentObject.setNumber(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("region", (n) -> { currentObject.setRegion(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getEnumValue(PhoneType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the language property value. The language property

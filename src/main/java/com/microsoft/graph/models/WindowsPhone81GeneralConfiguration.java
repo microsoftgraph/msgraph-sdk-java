@@ -164,37 +164,37 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPhone81GeneralConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("applyOnlyToWindowsPhone81", (n) -> { currentObject.setApplyOnlyToWindowsPhone81(n.getBooleanValue()); });
-            this.put("appsBlockCopyPaste", (n) -> { currentObject.setAppsBlockCopyPaste(n.getBooleanValue()); });
-            this.put("bluetoothBlocked", (n) -> { currentObject.setBluetoothBlocked(n.getBooleanValue()); });
-            this.put("cameraBlocked", (n) -> { currentObject.setCameraBlocked(n.getBooleanValue()); });
-            this.put("cellularBlockWifiTethering", (n) -> { currentObject.setCellularBlockWifiTethering(n.getBooleanValue()); });
-            this.put("compliantAppListType", (n) -> { currentObject.setCompliantAppListType(n.getEnumValue(AppListType.class)); });
-            this.put("compliantAppsList", (n) -> { currentObject.setCompliantAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("diagnosticDataBlockSubmission", (n) -> { currentObject.setDiagnosticDataBlockSubmission(n.getBooleanValue()); });
-            this.put("emailBlockAddingAccounts", (n) -> { currentObject.setEmailBlockAddingAccounts(n.getBooleanValue()); });
-            this.put("locationServicesBlocked", (n) -> { currentObject.setLocationServicesBlocked(n.getBooleanValue()); });
-            this.put("microsoftAccountBlocked", (n) -> { currentObject.setMicrosoftAccountBlocked(n.getBooleanValue()); });
-            this.put("nfcBlocked", (n) -> { currentObject.setNfcBlocked(n.getBooleanValue()); });
-            this.put("passwordBlockSimple", (n) -> { currentObject.setPasswordBlockSimple(n.getBooleanValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumCharacterSetCount", (n) -> { currentObject.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
-            this.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
-            this.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
-            this.put("storageBlockRemovableStorage", (n) -> { currentObject.setStorageBlockRemovableStorage(n.getBooleanValue()); });
-            this.put("storageRequireEncryption", (n) -> { currentObject.setStorageRequireEncryption(n.getBooleanValue()); });
-            this.put("webBrowserBlocked", (n) -> { currentObject.setWebBrowserBlocked(n.getBooleanValue()); });
-            this.put("wifiBlockAutomaticConnectHotspots", (n) -> { currentObject.setWifiBlockAutomaticConnectHotspots(n.getBooleanValue()); });
-            this.put("wifiBlocked", (n) -> { currentObject.setWifiBlocked(n.getBooleanValue()); });
-            this.put("wifiBlockHotspotReporting", (n) -> { currentObject.setWifiBlockHotspotReporting(n.getBooleanValue()); });
-            this.put("windowsStoreBlocked", (n) -> { currentObject.setWindowsStoreBlocked(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applyOnlyToWindowsPhone81", (n) -> { currentObject.setApplyOnlyToWindowsPhone81(n.getBooleanValue()); });
+        deserializerMap.put("appsBlockCopyPaste", (n) -> { currentObject.setAppsBlockCopyPaste(n.getBooleanValue()); });
+        deserializerMap.put("bluetoothBlocked", (n) -> { currentObject.setBluetoothBlocked(n.getBooleanValue()); });
+        deserializerMap.put("cameraBlocked", (n) -> { currentObject.setCameraBlocked(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockWifiTethering", (n) -> { currentObject.setCellularBlockWifiTethering(n.getBooleanValue()); });
+        deserializerMap.put("compliantAppListType", (n) -> { currentObject.setCompliantAppListType(n.getEnumValue(AppListType.class)); });
+        deserializerMap.put("compliantAppsList", (n) -> { currentObject.setCompliantAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("diagnosticDataBlockSubmission", (n) -> { currentObject.setDiagnosticDataBlockSubmission(n.getBooleanValue()); });
+        deserializerMap.put("emailBlockAddingAccounts", (n) -> { currentObject.setEmailBlockAddingAccounts(n.getBooleanValue()); });
+        deserializerMap.put("locationServicesBlocked", (n) -> { currentObject.setLocationServicesBlocked(n.getBooleanValue()); });
+        deserializerMap.put("microsoftAccountBlocked", (n) -> { currentObject.setMicrosoftAccountBlocked(n.getBooleanValue()); });
+        deserializerMap.put("nfcBlocked", (n) -> { currentObject.setNfcBlocked(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockSimple", (n) -> { currentObject.setPasswordBlockSimple(n.getBooleanValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumCharacterSetCount", (n) -> { currentObject.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
+        deserializerMap.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
+        deserializerMap.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
+        deserializerMap.put("storageBlockRemovableStorage", (n) -> { currentObject.setStorageBlockRemovableStorage(n.getBooleanValue()); });
+        deserializerMap.put("storageRequireEncryption", (n) -> { currentObject.setStorageRequireEncryption(n.getBooleanValue()); });
+        deserializerMap.put("webBrowserBlocked", (n) -> { currentObject.setWebBrowserBlocked(n.getBooleanValue()); });
+        deserializerMap.put("wifiBlockAutomaticConnectHotspots", (n) -> { currentObject.setWifiBlockAutomaticConnectHotspots(n.getBooleanValue()); });
+        deserializerMap.put("wifiBlocked", (n) -> { currentObject.setWifiBlocked(n.getBooleanValue()); });
+        deserializerMap.put("wifiBlockHotspotReporting", (n) -> { currentObject.setWifiBlockHotspotReporting(n.getBooleanValue()); });
+        deserializerMap.put("windowsStoreBlocked", (n) -> { currentObject.setWindowsStoreBlocked(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the locationServicesBlocked property value. Indicates whether or not to block location services.

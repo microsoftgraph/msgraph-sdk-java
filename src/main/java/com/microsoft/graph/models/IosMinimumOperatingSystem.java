@@ -62,16 +62,16 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosMinimumOperatingSystem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("v10_0", (n) -> { currentObject.setV10_0(n.getBooleanValue()); });
-            this.put("v11_0", (n) -> { currentObject.setV11_0(n.getBooleanValue()); });
-            this.put("v12_0", (n) -> { currentObject.setV12_0(n.getBooleanValue()); });
-            this.put("v13_0", (n) -> { currentObject.setV13_0(n.getBooleanValue()); });
-            this.put("v14_0", (n) -> { currentObject.setV14_0(n.getBooleanValue()); });
-            this.put("v8_0", (n) -> { currentObject.setV8_0(n.getBooleanValue()); });
-            this.put("v9_0", (n) -> { currentObject.setV9_0(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("v10_0", (n) -> { currentObject.setV10_0(n.getBooleanValue()); });
+        deserializerMap.put("v11_0", (n) -> { currentObject.setV11_0(n.getBooleanValue()); });
+        deserializerMap.put("v12_0", (n) -> { currentObject.setV12_0(n.getBooleanValue()); });
+        deserializerMap.put("v13_0", (n) -> { currentObject.setV13_0(n.getBooleanValue()); });
+        deserializerMap.put("v14_0", (n) -> { currentObject.setV14_0(n.getBooleanValue()); });
+        deserializerMap.put("v8_0", (n) -> { currentObject.setV8_0(n.getBooleanValue()); });
+        deserializerMap.put("v9_0", (n) -> { currentObject.setV9_0(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

@@ -64,18 +64,18 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementExportJob currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("filter", (n) -> { currentObject.setFilter(n.getStringValue()); });
-            this.put("format", (n) -> { currentObject.setFormat(n.getEnumValue(DeviceManagementReportFileFormat.class)); });
-            this.put("localizationType", (n) -> { currentObject.setLocalizationType(n.getEnumValue(DeviceManagementExportJobLocalizationType.class)); });
-            this.put("reportName", (n) -> { currentObject.setReportName(n.getStringValue()); });
-            this.put("requestDateTime", (n) -> { currentObject.setRequestDateTime(n.getOffsetDateTimeValue()); });
-            this.put("select", (n) -> { currentObject.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("snapshotId", (n) -> { currentObject.setSnapshotId(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DeviceManagementReportStatus.class)); });
-            this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("filter", (n) -> { currentObject.setFilter(n.getStringValue()); });
+        deserializerMap.put("format", (n) -> { currentObject.setFormat(n.getEnumValue(DeviceManagementReportFileFormat.class)); });
+        deserializerMap.put("localizationType", (n) -> { currentObject.setLocalizationType(n.getEnumValue(DeviceManagementExportJobLocalizationType.class)); });
+        deserializerMap.put("reportName", (n) -> { currentObject.setReportName(n.getStringValue()); });
+        deserializerMap.put("requestDateTime", (n) -> { currentObject.setRequestDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("select", (n) -> { currentObject.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("snapshotId", (n) -> { currentObject.setSnapshotId(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DeviceManagementReportStatus.class)); });
+        deserializerMap.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the filter property value. Filters applied on the report

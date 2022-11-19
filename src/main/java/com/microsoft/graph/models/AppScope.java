@@ -13,7 +13,7 @@ public class AppScope extends Entity implements Parsable {
     /** Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. Read-only. */
     private String _type;
     /**
-     * Instantiates a new AppScope and sets the default values.
+     * Instantiates a new appScope and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -24,7 +24,7 @@ public class AppScope extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppScope
+     * @return a appScope
      */
     @javax.annotation.Nonnull
     public static AppScope createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -46,10 +46,10 @@ public class AppScope extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppScope currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the type property value. Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. Read-only.

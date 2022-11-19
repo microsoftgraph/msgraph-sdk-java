@@ -77,16 +77,16 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DocumentSet currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("allowedContentTypes", (n) -> { currentObject.setAllowedContentTypes(n.getCollectionOfObjectValues(ContentTypeInfo::createFromDiscriminatorValue)); });
-            this.put("defaultContents", (n) -> { currentObject.setDefaultContents(n.getCollectionOfObjectValues(DocumentSetContent::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("propagateWelcomePageChanges", (n) -> { currentObject.setPropagateWelcomePageChanges(n.getBooleanValue()); });
-            this.put("sharedColumns", (n) -> { currentObject.setSharedColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
-            this.put("shouldPrefixNameToFile", (n) -> { currentObject.setShouldPrefixNameToFile(n.getBooleanValue()); });
-            this.put("welcomePageColumns", (n) -> { currentObject.setWelcomePageColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
-            this.put("welcomePageUrl", (n) -> { currentObject.setWelcomePageUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("allowedContentTypes", (n) -> { currentObject.setAllowedContentTypes(n.getCollectionOfObjectValues(ContentTypeInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultContents", (n) -> { currentObject.setDefaultContents(n.getCollectionOfObjectValues(DocumentSetContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("propagateWelcomePageChanges", (n) -> { currentObject.setPropagateWelcomePageChanges(n.getBooleanValue()); });
+        deserializerMap.put("sharedColumns", (n) -> { currentObject.setSharedColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("shouldPrefixNameToFile", (n) -> { currentObject.setShouldPrefixNameToFile(n.getBooleanValue()); });
+        deserializerMap.put("welcomePageColumns", (n) -> { currentObject.setWelcomePageColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("welcomePageUrl", (n) -> { currentObject.setWelcomePageUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

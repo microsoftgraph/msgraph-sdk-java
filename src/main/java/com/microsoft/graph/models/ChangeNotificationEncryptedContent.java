@@ -97,14 +97,14 @@ public class ChangeNotificationEncryptedContent implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChangeNotificationEncryptedContent currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("data", (n) -> { currentObject.setData(n.getStringValue()); });
-            this.put("dataKey", (n) -> { currentObject.setDataKey(n.getStringValue()); });
-            this.put("dataSignature", (n) -> { currentObject.setDataSignature(n.getStringValue()); });
-            this.put("encryptionCertificateId", (n) -> { currentObject.setEncryptionCertificateId(n.getStringValue()); });
-            this.put("encryptionCertificateThumbprint", (n) -> { currentObject.setEncryptionCertificateThumbprint(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("data", (n) -> { currentObject.setData(n.getStringValue()); });
+        deserializerMap.put("dataKey", (n) -> { currentObject.setDataKey(n.getStringValue()); });
+        deserializerMap.put("dataSignature", (n) -> { currentObject.setDataSignature(n.getStringValue()); });
+        deserializerMap.put("encryptionCertificateId", (n) -> { currentObject.setEncryptionCertificateId(n.getStringValue()); });
+        deserializerMap.put("encryptionCertificateThumbprint", (n) -> { currentObject.setEncryptionCertificateThumbprint(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

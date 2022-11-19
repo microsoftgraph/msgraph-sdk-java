@@ -38,10 +38,10 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttackSimulationRoot currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("simulationAutomations", (n) -> { currentObject.setSimulationAutomations(n.getCollectionOfObjectValues(SimulationAutomation::createFromDiscriminatorValue)); });
-            this.put("simulations", (n) -> { currentObject.setSimulations(n.getCollectionOfObjectValues(Simulation::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("simulationAutomations", (n) -> { currentObject.setSimulationAutomations(n.getCollectionOfObjectValues(SimulationAutomation::createFromDiscriminatorValue)); });
+        deserializerMap.put("simulations", (n) -> { currentObject.setSimulations(n.getCollectionOfObjectValues(Simulation::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the simulationAutomations property value. Represents simulation automation created to run on a tenant.

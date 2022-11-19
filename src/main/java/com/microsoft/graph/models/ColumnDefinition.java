@@ -187,40 +187,40 @@ public class ColumnDefinition extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ColumnDefinition currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("boolean", (n) -> { currentObject.setBoolean(n.getObjectValue(BooleanColumn::createFromDiscriminatorValue)); });
-            this.put("calculated", (n) -> { currentObject.setCalculated(n.getObjectValue(CalculatedColumn::createFromDiscriminatorValue)); });
-            this.put("choice", (n) -> { currentObject.setChoice(n.getObjectValue(ChoiceColumn::createFromDiscriminatorValue)); });
-            this.put("columnGroup", (n) -> { currentObject.setColumnGroup(n.getStringValue()); });
-            this.put("contentApprovalStatus", (n) -> { currentObject.setContentApprovalStatus(n.getObjectValue(ContentApprovalStatusColumn::createFromDiscriminatorValue)); });
-            this.put("currency", (n) -> { currentObject.setCurrency(n.getObjectValue(CurrencyColumn::createFromDiscriminatorValue)); });
-            this.put("dateTime", (n) -> { currentObject.setDateTime(n.getObjectValue(DateTimeColumn::createFromDiscriminatorValue)); });
-            this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getObjectValue(DefaultColumnValue::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("enforceUniqueValues", (n) -> { currentObject.setEnforceUniqueValues(n.getBooleanValue()); });
-            this.put("geolocation", (n) -> { currentObject.setGeolocation(n.getObjectValue(GeolocationColumn::createFromDiscriminatorValue)); });
-            this.put("hidden", (n) -> { currentObject.setHidden(n.getBooleanValue()); });
-            this.put("hyperlinkOrPicture", (n) -> { currentObject.setHyperlinkOrPicture(n.getObjectValue(HyperlinkOrPictureColumn::createFromDiscriminatorValue)); });
-            this.put("indexed", (n) -> { currentObject.setIndexed(n.getBooleanValue()); });
-            this.put("isDeletable", (n) -> { currentObject.setIsDeletable(n.getBooleanValue()); });
-            this.put("isReorderable", (n) -> { currentObject.setIsReorderable(n.getBooleanValue()); });
-            this.put("isSealed", (n) -> { currentObject.setIsSealed(n.getBooleanValue()); });
-            this.put("lookup", (n) -> { currentObject.setLookup(n.getObjectValue(LookupColumn::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("number", (n) -> { currentObject.setNumber(n.getObjectValue(NumberColumn::createFromDiscriminatorValue)); });
-            this.put("personOrGroup", (n) -> { currentObject.setPersonOrGroup(n.getObjectValue(PersonOrGroupColumn::createFromDiscriminatorValue)); });
-            this.put("propagateChanges", (n) -> { currentObject.setPropagateChanges(n.getBooleanValue()); });
-            this.put("readOnly", (n) -> { currentObject.setReadOnly(n.getBooleanValue()); });
-            this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
-            this.put("sourceColumn", (n) -> { currentObject.setSourceColumn(n.getObjectValue(ColumnDefinition::createFromDiscriminatorValue)); });
-            this.put("sourceContentType", (n) -> { currentObject.setSourceContentType(n.getObjectValue(ContentTypeInfo::createFromDiscriminatorValue)); });
-            this.put("term", (n) -> { currentObject.setTerm(n.getObjectValue(TermColumn::createFromDiscriminatorValue)); });
-            this.put("text", (n) -> { currentObject.setText(n.getObjectValue(TextColumn::createFromDiscriminatorValue)); });
-            this.put("thumbnail", (n) -> { currentObject.setThumbnail(n.getObjectValue(ThumbnailColumn::createFromDiscriminatorValue)); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(ColumnTypes.class)); });
-            this.put("validation", (n) -> { currentObject.setValidation(n.getObjectValue(ColumnValidation::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("boolean", (n) -> { currentObject.setBoolean(n.getObjectValue(BooleanColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("calculated", (n) -> { currentObject.setCalculated(n.getObjectValue(CalculatedColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("choice", (n) -> { currentObject.setChoice(n.getObjectValue(ChoiceColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("columnGroup", (n) -> { currentObject.setColumnGroup(n.getStringValue()); });
+        deserializerMap.put("contentApprovalStatus", (n) -> { currentObject.setContentApprovalStatus(n.getObjectValue(ContentApprovalStatusColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("currency", (n) -> { currentObject.setCurrency(n.getObjectValue(CurrencyColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("dateTime", (n) -> { currentObject.setDateTime(n.getObjectValue(DateTimeColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getObjectValue(DefaultColumnValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("enforceUniqueValues", (n) -> { currentObject.setEnforceUniqueValues(n.getBooleanValue()); });
+        deserializerMap.put("geolocation", (n) -> { currentObject.setGeolocation(n.getObjectValue(GeolocationColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("hidden", (n) -> { currentObject.setHidden(n.getBooleanValue()); });
+        deserializerMap.put("hyperlinkOrPicture", (n) -> { currentObject.setHyperlinkOrPicture(n.getObjectValue(HyperlinkOrPictureColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("indexed", (n) -> { currentObject.setIndexed(n.getBooleanValue()); });
+        deserializerMap.put("isDeletable", (n) -> { currentObject.setIsDeletable(n.getBooleanValue()); });
+        deserializerMap.put("isReorderable", (n) -> { currentObject.setIsReorderable(n.getBooleanValue()); });
+        deserializerMap.put("isSealed", (n) -> { currentObject.setIsSealed(n.getBooleanValue()); });
+        deserializerMap.put("lookup", (n) -> { currentObject.setLookup(n.getObjectValue(LookupColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("number", (n) -> { currentObject.setNumber(n.getObjectValue(NumberColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("personOrGroup", (n) -> { currentObject.setPersonOrGroup(n.getObjectValue(PersonOrGroupColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("propagateChanges", (n) -> { currentObject.setPropagateChanges(n.getBooleanValue()); });
+        deserializerMap.put("readOnly", (n) -> { currentObject.setReadOnly(n.getBooleanValue()); });
+        deserializerMap.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
+        deserializerMap.put("sourceColumn", (n) -> { currentObject.setSourceColumn(n.getObjectValue(ColumnDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("sourceContentType", (n) -> { currentObject.setSourceContentType(n.getObjectValue(ContentTypeInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("term", (n) -> { currentObject.setTerm(n.getObjectValue(TermColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("text", (n) -> { currentObject.setText(n.getObjectValue(TextColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("thumbnail", (n) -> { currentObject.setThumbnail(n.getObjectValue(ThumbnailColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getEnumValue(ColumnTypes.class)); });
+        deserializerMap.put("validation", (n) -> { currentObject.setValidation(n.getObjectValue(ColumnValidation::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the geolocation property value. This column stores a geolocation.

@@ -52,11 +52,11 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IncompleteData currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("missingDataBeforeDateTime", (n) -> { currentObject.setMissingDataBeforeDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("wasThrottled", (n) -> { currentObject.setWasThrottled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("missingDataBeforeDateTime", (n) -> { currentObject.setMissingDataBeforeDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("wasThrottled", (n) -> { currentObject.setWasThrottled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the missingDataBeforeDateTime property value. The service does not have source data before the specified time.

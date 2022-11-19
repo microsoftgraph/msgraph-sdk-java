@@ -106,18 +106,18 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosNotificationSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(10) {{
-            this.put("alertType", (n) -> { currentObject.setAlertType(n.getEnumValue(IosNotificationAlertType.class)); });
-            this.put("appName", (n) -> { currentObject.setAppName(n.getStringValue()); });
-            this.put("badgesEnabled", (n) -> { currentObject.setBadgesEnabled(n.getBooleanValue()); });
-            this.put("bundleID", (n) -> { currentObject.setBundleID(n.getStringValue()); });
-            this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
-            this.put("showInNotificationCenter", (n) -> { currentObject.setShowInNotificationCenter(n.getBooleanValue()); });
-            this.put("showOnLockScreen", (n) -> { currentObject.setShowOnLockScreen(n.getBooleanValue()); });
-            this.put("soundsEnabled", (n) -> { currentObject.setSoundsEnabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("alertType", (n) -> { currentObject.setAlertType(n.getEnumValue(IosNotificationAlertType.class)); });
+        deserializerMap.put("appName", (n) -> { currentObject.setAppName(n.getStringValue()); });
+        deserializerMap.put("badgesEnabled", (n) -> { currentObject.setBadgesEnabled(n.getBooleanValue()); });
+        deserializerMap.put("bundleID", (n) -> { currentObject.setBundleID(n.getStringValue()); });
+        deserializerMap.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
+        deserializerMap.put("showInNotificationCenter", (n) -> { currentObject.setShowInNotificationCenter(n.getBooleanValue()); });
+        deserializerMap.put("showOnLockScreen", (n) -> { currentObject.setShowOnLockScreen(n.getBooleanValue()); });
+        deserializerMap.put("soundsEnabled", (n) -> { currentObject.setSoundsEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

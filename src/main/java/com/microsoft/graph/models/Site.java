@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the admin singleton. */
 public class Site extends BaseItem implements Parsable {
     /** Analytics about the view activities that took place in this site. */
     private ItemAnalytics _analytics;
@@ -48,7 +49,7 @@ public class Site extends BaseItem implements Parsable {
     /** The collection of termStores under this site. */
     private java.util.List<Store> _termStores;
     /**
-     * Instantiates a new Site and sets the default values.
+     * Instantiates a new site and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -59,7 +60,7 @@ public class Site extends BaseItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Site
+     * @return a site
      */
     @javax.annotation.Nonnull
     public static Site createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -137,27 +138,27 @@ public class Site extends BaseItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Site currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("analytics", (n) -> { currentObject.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
-            this.put("columns", (n) -> { currentObject.setColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
-            this.put("contentTypes", (n) -> { currentObject.setContentTypes(n.getCollectionOfObjectValues(ContentType::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("drive", (n) -> { currentObject.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
-            this.put("drives", (n) -> { currentObject.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
-            this.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
-            this.put("externalColumns", (n) -> { currentObject.setExternalColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
-            this.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(BaseItem::createFromDiscriminatorValue)); });
-            this.put("lists", (n) -> { currentObject.setLists(n.getCollectionOfObjectValues(List::createFromDiscriminatorValue)); });
-            this.put("onenote", (n) -> { currentObject.setOnenote(n.getObjectValue(Onenote::createFromDiscriminatorValue)); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(RichLongRunningOperation::createFromDiscriminatorValue)); });
-            this.put("permissions", (n) -> { currentObject.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
-            this.put("root", (n) -> { currentObject.setRoot(n.getObjectValue(Root::createFromDiscriminatorValue)); });
-            this.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
-            this.put("siteCollection", (n) -> { currentObject.setSiteCollection(n.getObjectValue(SiteCollection::createFromDiscriminatorValue)); });
-            this.put("sites", (n) -> { currentObject.setSites(n.getCollectionOfObjectValues(Site::createFromDiscriminatorValue)); });
-            this.put("termStore", (n) -> { currentObject.setTermStore(n.getObjectValue(Store::createFromDiscriminatorValue)); });
-            this.put("termStores", (n) -> { currentObject.setTermStores(n.getCollectionOfObjectValues(Store::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("analytics", (n) -> { currentObject.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
+        deserializerMap.put("columns", (n) -> { currentObject.setColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentTypes", (n) -> { currentObject.setContentTypes(n.getCollectionOfObjectValues(ContentType::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("drive", (n) -> { currentObject.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
+        deserializerMap.put("drives", (n) -> { currentObject.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
+        deserializerMap.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalColumns", (n) -> { currentObject.setExternalColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(BaseItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("lists", (n) -> { currentObject.setLists(n.getCollectionOfObjectValues(List::createFromDiscriminatorValue)); });
+        deserializerMap.put("onenote", (n) -> { currentObject.setOnenote(n.getObjectValue(Onenote::createFromDiscriminatorValue)); });
+        deserializerMap.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(RichLongRunningOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("permissions", (n) -> { currentObject.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
+        deserializerMap.put("root", (n) -> { currentObject.setRoot(n.getObjectValue(Root::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
+        deserializerMap.put("siteCollection", (n) -> { currentObject.setSiteCollection(n.getObjectValue(SiteCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("sites", (n) -> { currentObject.setSites(n.getCollectionOfObjectValues(Site::createFromDiscriminatorValue)); });
+        deserializerMap.put("termStore", (n) -> { currentObject.setTermStore(n.getObjectValue(Store::createFromDiscriminatorValue)); });
+        deserializerMap.put("termStores", (n) -> { currentObject.setTermStores(n.getCollectionOfObjectValues(Store::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the items property value. Used to address any item contained in this site. This collection can't be enumerated.

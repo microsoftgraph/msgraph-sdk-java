@@ -46,10 +46,10 @@ public class WorkbookFunctionResult extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookFunctionResult currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("error", (n) -> { currentObject.setError(n.getStringValue()); });
-            this.put("value", (n) -> { currentObject.setValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("error", (n) -> { currentObject.setError(n.getStringValue()); });
+        deserializerMap.put("value", (n) -> { currentObject.setValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The value property

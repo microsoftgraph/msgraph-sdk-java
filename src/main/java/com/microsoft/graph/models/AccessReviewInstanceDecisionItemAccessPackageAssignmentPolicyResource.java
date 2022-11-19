@@ -54,10 +54,10 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("accessPackageDisplayName", (n) -> { currentObject.setAccessPackageDisplayName(n.getStringValue()); });
-            this.put("accessPackageId", (n) -> { currentObject.setAccessPackageId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessPackageDisplayName", (n) -> { currentObject.setAccessPackageDisplayName(n.getStringValue()); });
+        deserializerMap.put("accessPackageId", (n) -> { currentObject.setAccessPackageId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

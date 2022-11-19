@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class TodoTaskList extends Entity implements Parsable {
     /** The name of the task list. */
     private String _displayName;
@@ -63,14 +63,14 @@ public class TodoTaskList extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TodoTaskList currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("isOwner", (n) -> { currentObject.setIsOwner(n.getBooleanValue()); });
-            this.put("isShared", (n) -> { currentObject.setIsShared(n.getBooleanValue()); });
-            this.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(TodoTask::createFromDiscriminatorValue)); });
-            this.put("wellknownListName", (n) -> { currentObject.setWellknownListName(n.getEnumValue(WellknownListName.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("isOwner", (n) -> { currentObject.setIsOwner(n.getBooleanValue()); });
+        deserializerMap.put("isShared", (n) -> { currentObject.setIsShared(n.getBooleanValue()); });
+        deserializerMap.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(TodoTask::createFromDiscriminatorValue)); });
+        deserializerMap.put("wellknownListName", (n) -> { currentObject.setWellknownListName(n.getEnumValue(WellknownListName.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isOwner property value. True if the user is owner of the given task list.

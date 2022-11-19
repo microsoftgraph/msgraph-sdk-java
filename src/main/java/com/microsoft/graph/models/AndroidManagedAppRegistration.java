@@ -34,8 +34,8 @@ public class AndroidManagedAppRegistration extends ManagedAppRegistration implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidManagedAppRegistration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class CalendarPermission extends Entity implements Parsable {
     /** List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom. */
     private java.util.List<CalendarRoleType> _allowedRoles;
@@ -61,13 +61,13 @@ public class CalendarPermission extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CalendarPermission currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("allowedRoles", (n) -> { currentObject.setAllowedRoles(n.getCollectionOfEnumValues(CalendarRoleType.class)); });
-            this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
-            this.put("isInsideOrganization", (n) -> { currentObject.setIsInsideOrganization(n.getBooleanValue()); });
-            this.put("isRemovable", (n) -> { currentObject.setIsRemovable(n.getBooleanValue()); });
-            this.put("role", (n) -> { currentObject.setRole(n.getEnumValue(CalendarRoleType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedRoles", (n) -> { currentObject.setAllowedRoles(n.getCollectionOfEnumValues(CalendarRoleType.class)); });
+        deserializerMap.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("isInsideOrganization", (n) -> { currentObject.setIsInsideOrganization(n.getBooleanValue()); });
+        deserializerMap.put("isRemovable", (n) -> { currentObject.setIsRemovable(n.getBooleanValue()); });
+        deserializerMap.put("role", (n) -> { currentObject.setRole(n.getEnumValue(CalendarRoleType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isInsideOrganization property value. True if the user in context (sharee or delegate) is inside the same organization as the calendar owner.

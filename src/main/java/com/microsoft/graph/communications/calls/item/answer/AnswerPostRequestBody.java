@@ -82,13 +82,13 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AnswerPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("acceptedModalities", (n) -> { currentObject.setAcceptedModalities(n.getCollectionOfEnumValues(Modality.class)); });
-            this.put("callbackUri", (n) -> { currentObject.setCallbackUri(n.getStringValue()); });
-            this.put("callOptions", (n) -> { currentObject.setCallOptions(n.getObjectValue(IncomingCallOptions::createFromDiscriminatorValue)); });
-            this.put("mediaConfig", (n) -> { currentObject.setMediaConfig(n.getObjectValue(MediaConfig::createFromDiscriminatorValue)); });
-            this.put("participantCapacity", (n) -> { currentObject.setParticipantCapacity(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("acceptedModalities", (n) -> { currentObject.setAcceptedModalities(n.getCollectionOfEnumValues(Modality.class)); });
+        deserializerMap.put("callbackUri", (n) -> { currentObject.setCallbackUri(n.getStringValue()); });
+        deserializerMap.put("callOptions", (n) -> { currentObject.setCallOptions(n.getObjectValue(IncomingCallOptions::createFromDiscriminatorValue)); });
+        deserializerMap.put("mediaConfig", (n) -> { currentObject.setMediaConfig(n.getObjectValue(MediaConfig::createFromDiscriminatorValue)); });
+        deserializerMap.put("participantCapacity", (n) -> { currentObject.setParticipantCapacity(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mediaConfig property value. The mediaConfig property

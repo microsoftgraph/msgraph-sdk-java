@@ -44,9 +44,9 @@ public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarge
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupAssignmentTarget currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupId property value. The group Id that is the target of the assignment.

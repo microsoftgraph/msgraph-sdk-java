@@ -133,28 +133,28 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintJobConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(20) {{
-            this.put("collate", (n) -> { currentObject.setCollate(n.getBooleanValue()); });
-            this.put("colorMode", (n) -> { currentObject.setColorMode(n.getEnumValue(PrintColorMode.class)); });
-            this.put("copies", (n) -> { currentObject.setCopies(n.getIntegerValue()); });
-            this.put("dpi", (n) -> { currentObject.setDpi(n.getIntegerValue()); });
-            this.put("duplexMode", (n) -> { currentObject.setDuplexMode(n.getEnumValue(PrintDuplexMode.class)); });
-            this.put("feedOrientation", (n) -> { currentObject.setFeedOrientation(n.getEnumValue(PrinterFeedOrientation.class)); });
-            this.put("finishings", (n) -> { currentObject.setFinishings(n.getCollectionOfEnumValues(PrintFinishing.class)); });
-            this.put("fitPdfToPage", (n) -> { currentObject.setFitPdfToPage(n.getBooleanValue()); });
-            this.put("inputBin", (n) -> { currentObject.setInputBin(n.getStringValue()); });
-            this.put("margin", (n) -> { currentObject.setMargin(n.getObjectValue(PrintMargin::createFromDiscriminatorValue)); });
-            this.put("mediaSize", (n) -> { currentObject.setMediaSize(n.getStringValue()); });
-            this.put("mediaType", (n) -> { currentObject.setMediaType(n.getStringValue()); });
-            this.put("multipageLayout", (n) -> { currentObject.setMultipageLayout(n.getEnumValue(PrintMultipageLayout.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("orientation", (n) -> { currentObject.setOrientation(n.getEnumValue(PrintOrientation.class)); });
-            this.put("outputBin", (n) -> { currentObject.setOutputBin(n.getStringValue()); });
-            this.put("pageRanges", (n) -> { currentObject.setPageRanges(n.getCollectionOfObjectValues(IntegerRange::createFromDiscriminatorValue)); });
-            this.put("pagesPerSheet", (n) -> { currentObject.setPagesPerSheet(n.getIntegerValue()); });
-            this.put("quality", (n) -> { currentObject.setQuality(n.getEnumValue(PrintQuality.class)); });
-            this.put("scaling", (n) -> { currentObject.setScaling(n.getEnumValue(PrintScaling.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(20);
+        deserializerMap.put("collate", (n) -> { currentObject.setCollate(n.getBooleanValue()); });
+        deserializerMap.put("colorMode", (n) -> { currentObject.setColorMode(n.getEnumValue(PrintColorMode.class)); });
+        deserializerMap.put("copies", (n) -> { currentObject.setCopies(n.getIntegerValue()); });
+        deserializerMap.put("dpi", (n) -> { currentObject.setDpi(n.getIntegerValue()); });
+        deserializerMap.put("duplexMode", (n) -> { currentObject.setDuplexMode(n.getEnumValue(PrintDuplexMode.class)); });
+        deserializerMap.put("feedOrientation", (n) -> { currentObject.setFeedOrientation(n.getEnumValue(PrinterFeedOrientation.class)); });
+        deserializerMap.put("finishings", (n) -> { currentObject.setFinishings(n.getCollectionOfEnumValues(PrintFinishing.class)); });
+        deserializerMap.put("fitPdfToPage", (n) -> { currentObject.setFitPdfToPage(n.getBooleanValue()); });
+        deserializerMap.put("inputBin", (n) -> { currentObject.setInputBin(n.getStringValue()); });
+        deserializerMap.put("margin", (n) -> { currentObject.setMargin(n.getObjectValue(PrintMargin::createFromDiscriminatorValue)); });
+        deserializerMap.put("mediaSize", (n) -> { currentObject.setMediaSize(n.getStringValue()); });
+        deserializerMap.put("mediaType", (n) -> { currentObject.setMediaType(n.getStringValue()); });
+        deserializerMap.put("multipageLayout", (n) -> { currentObject.setMultipageLayout(n.getEnumValue(PrintMultipageLayout.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("orientation", (n) -> { currentObject.setOrientation(n.getEnumValue(PrintOrientation.class)); });
+        deserializerMap.put("outputBin", (n) -> { currentObject.setOutputBin(n.getStringValue()); });
+        deserializerMap.put("pageRanges", (n) -> { currentObject.setPageRanges(n.getCollectionOfObjectValues(IntegerRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("pagesPerSheet", (n) -> { currentObject.setPagesPerSheet(n.getIntegerValue()); });
+        deserializerMap.put("quality", (n) -> { currentObject.setQuality(n.getEnumValue(PrintQuality.class)); });
+        deserializerMap.put("scaling", (n) -> { currentObject.setScaling(n.getEnumValue(PrintScaling.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the finishings property value. Finishing processes to use when printing.

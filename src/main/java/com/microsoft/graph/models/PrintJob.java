@@ -86,17 +86,17 @@ public class PrintJob extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintJob currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("configuration", (n) -> { currentObject.setConfiguration(n.getObjectValue(PrintJobConfiguration::createFromDiscriminatorValue)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("documents", (n) -> { currentObject.setDocuments(n.getCollectionOfObjectValues(PrintDocument::createFromDiscriminatorValue)); });
-            this.put("isFetchable", (n) -> { currentObject.setIsFetchable(n.getBooleanValue()); });
-            this.put("redirectedFrom", (n) -> { currentObject.setRedirectedFrom(n.getStringValue()); });
-            this.put("redirectedTo", (n) -> { currentObject.setRedirectedTo(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(PrintJobStatus::createFromDiscriminatorValue)); });
-            this.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(PrintTask::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("configuration", (n) -> { currentObject.setConfiguration(n.getObjectValue(PrintJobConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("documents", (n) -> { currentObject.setDocuments(n.getCollectionOfObjectValues(PrintDocument::createFromDiscriminatorValue)); });
+        deserializerMap.put("isFetchable", (n) -> { currentObject.setIsFetchable(n.getBooleanValue()); });
+        deserializerMap.put("redirectedFrom", (n) -> { currentObject.setRedirectedFrom(n.getStringValue()); });
+        deserializerMap.put("redirectedTo", (n) -> { currentObject.setRedirectedTo(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(PrintJobStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(PrintTask::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isFetchable property value. If true, document can be fetched by printer.

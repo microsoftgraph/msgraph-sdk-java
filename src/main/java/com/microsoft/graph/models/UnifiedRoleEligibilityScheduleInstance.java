@@ -51,12 +51,12 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleEligibilityScheduleInstance currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("memberType", (n) -> { currentObject.setMemberType(n.getStringValue()); });
-            this.put("roleEligibilityScheduleId", (n) -> { currentObject.setRoleEligibilityScheduleId(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("memberType", (n) -> { currentObject.setMemberType(n.getStringValue()); });
+        deserializerMap.put("roleEligibilityScheduleId", (n) -> { currentObject.setRoleEligibilityScheduleId(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).

@@ -51,12 +51,12 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OfferShiftRequest currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("recipientActionDateTime", (n) -> { currentObject.setRecipientActionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("recipientActionMessage", (n) -> { currentObject.setRecipientActionMessage(n.getStringValue()); });
-            this.put("recipientUserId", (n) -> { currentObject.setRecipientUserId(n.getStringValue()); });
-            this.put("senderShiftId", (n) -> { currentObject.setSenderShiftId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("recipientActionDateTime", (n) -> { currentObject.setRecipientActionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("recipientActionMessage", (n) -> { currentObject.setRecipientActionMessage(n.getStringValue()); });
+        deserializerMap.put("recipientUserId", (n) -> { currentObject.setRecipientUserId(n.getStringValue()); });
+        deserializerMap.put("senderShiftId", (n) -> { currentObject.setSenderShiftId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the recipientActionDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z

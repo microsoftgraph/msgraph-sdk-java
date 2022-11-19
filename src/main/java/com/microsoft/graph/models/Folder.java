@@ -59,11 +59,11 @@ public class Folder implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Folder currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("childCount", (n) -> { currentObject.setChildCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("view", (n) -> { currentObject.setView(n.getObjectValue(FolderView::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("childCount", (n) -> { currentObject.setChildCount(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("view", (n) -> { currentObject.setView(n.getObjectValue(FolderView::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

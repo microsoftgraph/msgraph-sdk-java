@@ -37,9 +37,9 @@ public class AppCatalogs extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppCatalogs currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("teamsApps", (n) -> { currentObject.setTeamsApps(n.getCollectionOfObjectValues(TeamsApp::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("teamsApps", (n) -> { currentObject.setTeamsApps(n.getCollectionOfObjectValues(TeamsApp::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the teamsApps property value. The teamsApps property

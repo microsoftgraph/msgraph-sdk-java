@@ -64,13 +64,13 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RecentNotebook currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastAccessedTime", (n) -> { currentObject.setLastAccessedTime(n.getOffsetDateTimeValue()); });
-            this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(RecentNotebookLinks::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sourceService", (n) -> { currentObject.setSourceService(n.getEnumValue(OnenoteSourceService.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastAccessedTime", (n) -> { currentObject.setLastAccessedTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(RecentNotebookLinks::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sourceService", (n) -> { currentObject.setSourceService(n.getEnumValue(OnenoteSourceService.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastAccessedTime property value. The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.

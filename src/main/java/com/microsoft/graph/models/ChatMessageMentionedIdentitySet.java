@@ -44,9 +44,9 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessageMentionedIdentitySet currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("conversation", (n) -> { currentObject.setConversation(n.getObjectValue(TeamworkConversationIdentity::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("conversation", (n) -> { currentObject.setConversation(n.getObjectValue(TeamworkConversationIdentity::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

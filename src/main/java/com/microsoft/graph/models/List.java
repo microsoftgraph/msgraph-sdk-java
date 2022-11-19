@@ -86,18 +86,18 @@ public class List extends BaseItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final List currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("columns", (n) -> { currentObject.setColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
-            this.put("contentTypes", (n) -> { currentObject.setContentTypes(n.getCollectionOfObjectValues(ContentType::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("drive", (n) -> { currentObject.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
-            this.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(ListItem::createFromDiscriminatorValue)); });
-            this.put("list", (n) -> { currentObject.setList(n.getObjectValue(ListInfo::createFromDiscriminatorValue)); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(RichLongRunningOperation::createFromDiscriminatorValue)); });
-            this.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
-            this.put("subscriptions", (n) -> { currentObject.setSubscriptions(n.getCollectionOfObjectValues(Subscription::createFromDiscriminatorValue)); });
-            this.put("system", (n) -> { currentObject.setSystem(n.getObjectValue(SystemFacet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("columns", (n) -> { currentObject.setColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentTypes", (n) -> { currentObject.setContentTypes(n.getCollectionOfObjectValues(ContentType::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("drive", (n) -> { currentObject.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
+        deserializerMap.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(ListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("list", (n) -> { currentObject.setList(n.getObjectValue(ListInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(RichLongRunningOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
+        deserializerMap.put("subscriptions", (n) -> { currentObject.setSubscriptions(n.getCollectionOfObjectValues(Subscription::createFromDiscriminatorValue)); });
+        deserializerMap.put("system", (n) -> { currentObject.setSystem(n.getObjectValue(SystemFacet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the items property value. All items contained in the list.

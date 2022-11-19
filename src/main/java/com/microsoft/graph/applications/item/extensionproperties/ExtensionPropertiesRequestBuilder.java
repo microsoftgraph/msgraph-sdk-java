@@ -74,9 +74,8 @@ public class ExtensionPropertiesRequestBuilder {
      */
     @javax.annotation.Nonnull
     public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
@@ -107,9 +106,8 @@ public class ExtensionPropertiesRequestBuilder {
     @javax.annotation.Nonnull
     public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ExtensionProperty body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.POST;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
@@ -130,15 +128,14 @@ public class ExtensionPropertiesRequestBuilder {
     public java.util.concurrent.CompletableFuture<ExtensionPropertyCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, ExtensionPropertyCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<ExtensionPropertyCollectionResponse>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<ExtensionPropertyCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<ExtensionPropertyCollectionResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -150,15 +147,14 @@ public class ExtensionPropertiesRequestBuilder {
     public java.util.concurrent.CompletableFuture<ExtensionPropertyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, ExtensionPropertyCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<ExtensionPropertyCollectionResponse>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<ExtensionPropertyCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<ExtensionPropertyCollectionResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -170,15 +166,14 @@ public class ExtensionPropertiesRequestBuilder {
     public java.util.concurrent.CompletableFuture<ExtensionProperty> post(@javax.annotation.Nonnull final ExtensionProperty body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, ExtensionProperty::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<ExtensionProperty>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<ExtensionProperty> executionException = new java.util.concurrent.CompletableFuture<ExtensionProperty>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -192,15 +187,14 @@ public class ExtensionPropertiesRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, ExtensionProperty::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<ExtensionProperty>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<ExtensionProperty> executionException = new java.util.concurrent.CompletableFuture<ExtensionProperty>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /** Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application. */

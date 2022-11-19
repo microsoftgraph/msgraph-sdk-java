@@ -14,7 +14,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class OnenoteEntityBaseModel extends Entity implements Parsable {
     /** The endpoint where you can get details about the page. Read-only. */
     private String _self;
@@ -57,9 +57,9 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnenoteEntityBaseModel currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("self", (n) -> { currentObject.setSelf(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("self", (n) -> { currentObject.setSelf(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the self property value. The endpoint where you can get details about the page. Read-only.

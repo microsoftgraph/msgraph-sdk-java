@@ -50,12 +50,12 @@ public class AadUserConversationMember extends ConversationMember implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AadUserConversationMember currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("user", (n) -> { currentObject.setUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
+        deserializerMap.put("user", (n) -> { currentObject.setUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the tenantId property value. TenantId which the Azure AD user belongs to.

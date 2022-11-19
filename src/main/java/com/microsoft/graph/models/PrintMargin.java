@@ -63,13 +63,13 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintMargin currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("bottom", (n) -> { currentObject.setBottom(n.getIntegerValue()); });
-            this.put("left", (n) -> { currentObject.setLeft(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("right", (n) -> { currentObject.setRight(n.getIntegerValue()); });
-            this.put("top", (n) -> { currentObject.setTop(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("bottom", (n) -> { currentObject.setBottom(n.getIntegerValue()); });
+        deserializerMap.put("left", (n) -> { currentObject.setLeft(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("right", (n) -> { currentObject.setRight(n.getIntegerValue()); });
+        deserializerMap.put("top", (n) -> { currentObject.setTop(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the left property value. The margin in microns from the left edge.

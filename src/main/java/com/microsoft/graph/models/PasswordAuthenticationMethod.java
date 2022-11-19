@@ -47,10 +47,10 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PasswordAuthenticationMethod currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the password property value. For security, the password is always returned as null from a LIST or GET operation.

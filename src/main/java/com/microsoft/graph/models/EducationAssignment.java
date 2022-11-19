@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class EducationAssignment extends Entity implements Parsable {
     /** Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none value. Currently supports only two values: none or assignIfOpen. */
     private EducationAddedStudentAction _addedStudentAction;
@@ -62,7 +63,7 @@ public class EducationAssignment extends Entity implements Parsable {
     /** The deep link URL for the given assignment. */
     private String _webUrl;
     /**
-     * Instantiates a new EducationAssignment and sets the default values.
+     * Instantiates a new educationAssignment and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -73,7 +74,7 @@ public class EducationAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationAssignment
+     * @return a educationAssignment
      */
     @javax.annotation.Nonnull
     public static EducationAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -207,34 +208,34 @@ public class EducationAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationAssignment currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("addedStudentAction", (n) -> { currentObject.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction.class)); });
-            this.put("addToCalendarAction", (n) -> { currentObject.setAddToCalendarAction(n.getEnumValue(EducationAddToCalendarOptions.class)); });
-            this.put("allowLateSubmissions", (n) -> { currentObject.setAllowLateSubmissions(n.getBooleanValue()); });
-            this.put("allowStudentsToAddResourcesToSubmission", (n) -> { currentObject.setAllowStudentsToAddResourcesToSubmission(n.getBooleanValue()); });
-            this.put("assignDateTime", (n) -> { currentObject.setAssignDateTime(n.getOffsetDateTimeValue()); });
-            this.put("assignedDateTime", (n) -> { currentObject.setAssignedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("assignTo", (n) -> { currentObject.setAssignTo(n.getObjectValue(EducationAssignmentRecipient::createFromDiscriminatorValue)); });
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfObjectValues(EducationCategory::createFromDiscriminatorValue)); });
-            this.put("classId", (n) -> { currentObject.setClassId(n.getStringValue()); });
-            this.put("closeDateTime", (n) -> { currentObject.setCloseDateTime(n.getOffsetDateTimeValue()); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getOffsetDateTimeValue()); });
-            this.put("feedbackResourcesFolderUrl", (n) -> { currentObject.setFeedbackResourcesFolderUrl(n.getStringValue()); });
-            this.put("grading", (n) -> { currentObject.setGrading(n.getObjectValue(EducationAssignmentGradeType::createFromDiscriminatorValue)); });
-            this.put("instructions", (n) -> { currentObject.setInstructions(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("notificationChannelUrl", (n) -> { currentObject.setNotificationChannelUrl(n.getStringValue()); });
-            this.put("resources", (n) -> { currentObject.setResources(n.getCollectionOfObjectValues(EducationAssignmentResource::createFromDiscriminatorValue)); });
-            this.put("resourcesFolderUrl", (n) -> { currentObject.setResourcesFolderUrl(n.getStringValue()); });
-            this.put("rubric", (n) -> { currentObject.setRubric(n.getObjectValue(EducationRubric::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(EducationAssignmentStatus.class)); });
-            this.put("submissions", (n) -> { currentObject.setSubmissions(n.getCollectionOfObjectValues(EducationSubmission::createFromDiscriminatorValue)); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("addedStudentAction", (n) -> { currentObject.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction.class)); });
+        deserializerMap.put("addToCalendarAction", (n) -> { currentObject.setAddToCalendarAction(n.getEnumValue(EducationAddToCalendarOptions.class)); });
+        deserializerMap.put("allowLateSubmissions", (n) -> { currentObject.setAllowLateSubmissions(n.getBooleanValue()); });
+        deserializerMap.put("allowStudentsToAddResourcesToSubmission", (n) -> { currentObject.setAllowStudentsToAddResourcesToSubmission(n.getBooleanValue()); });
+        deserializerMap.put("assignDateTime", (n) -> { currentObject.setAssignDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("assignedDateTime", (n) -> { currentObject.setAssignedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("assignTo", (n) -> { currentObject.setAssignTo(n.getObjectValue(EducationAssignmentRecipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfObjectValues(EducationCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("classId", (n) -> { currentObject.setClassId(n.getStringValue()); });
+        deserializerMap.put("closeDateTime", (n) -> { currentObject.setCloseDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("feedbackResourcesFolderUrl", (n) -> { currentObject.setFeedbackResourcesFolderUrl(n.getStringValue()); });
+        deserializerMap.put("grading", (n) -> { currentObject.setGrading(n.getObjectValue(EducationAssignmentGradeType::createFromDiscriminatorValue)); });
+        deserializerMap.put("instructions", (n) -> { currentObject.setInstructions(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("notificationChannelUrl", (n) -> { currentObject.setNotificationChannelUrl(n.getStringValue()); });
+        deserializerMap.put("resources", (n) -> { currentObject.setResources(n.getCollectionOfObjectValues(EducationAssignmentResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourcesFolderUrl", (n) -> { currentObject.setResourcesFolderUrl(n.getStringValue()); });
+        deserializerMap.put("rubric", (n) -> { currentObject.setRubric(n.getObjectValue(EducationRubric::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(EducationAssignmentStatus.class)); });
+        deserializerMap.put("submissions", (n) -> { currentObject.setSubmissions(n.getCollectionOfObjectValues(EducationSubmission::createFromDiscriminatorValue)); });
+        deserializerMap.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the grading property value. How the assignment will be graded.

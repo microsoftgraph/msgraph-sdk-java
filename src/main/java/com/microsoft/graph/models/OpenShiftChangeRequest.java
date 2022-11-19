@@ -36,9 +36,9 @@ public class OpenShiftChangeRequest extends ScheduleChangeRequest implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OpenShiftChangeRequest currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("openShiftId", (n) -> { currentObject.setOpenShiftId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("openShiftId", (n) -> { currentObject.setOpenShiftId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the openShiftId property value. ID for the open shift.

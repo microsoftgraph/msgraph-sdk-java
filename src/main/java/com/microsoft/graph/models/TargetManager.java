@@ -36,9 +36,9 @@ public class TargetManager extends SubjectSet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TargetManager currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("managerLevel", (n) -> { currentObject.setManagerLevel(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("managerLevel", (n) -> { currentObject.setManagerLevel(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managerLevel property value. Manager level, between 1 and 4. The direct manager is 1.

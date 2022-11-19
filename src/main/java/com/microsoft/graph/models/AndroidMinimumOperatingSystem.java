@@ -80,25 +80,25 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidMinimumOperatingSystem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(17) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("v10_0", (n) -> { currentObject.setV10_0(n.getBooleanValue()); });
-            this.put("v11_0", (n) -> { currentObject.setV11_0(n.getBooleanValue()); });
-            this.put("v4_0", (n) -> { currentObject.setV4_0(n.getBooleanValue()); });
-            this.put("v4_0_3", (n) -> { currentObject.setV4_0_3(n.getBooleanValue()); });
-            this.put("v4_1", (n) -> { currentObject.setV4_1(n.getBooleanValue()); });
-            this.put("v4_2", (n) -> { currentObject.setV4_2(n.getBooleanValue()); });
-            this.put("v4_3", (n) -> { currentObject.setV4_3(n.getBooleanValue()); });
-            this.put("v4_4", (n) -> { currentObject.setV4_4(n.getBooleanValue()); });
-            this.put("v5_0", (n) -> { currentObject.setV5_0(n.getBooleanValue()); });
-            this.put("v5_1", (n) -> { currentObject.setV5_1(n.getBooleanValue()); });
-            this.put("v6_0", (n) -> { currentObject.setV6_0(n.getBooleanValue()); });
-            this.put("v7_0", (n) -> { currentObject.setV7_0(n.getBooleanValue()); });
-            this.put("v7_1", (n) -> { currentObject.setV7_1(n.getBooleanValue()); });
-            this.put("v8_0", (n) -> { currentObject.setV8_0(n.getBooleanValue()); });
-            this.put("v8_1", (n) -> { currentObject.setV8_1(n.getBooleanValue()); });
-            this.put("v9_0", (n) -> { currentObject.setV9_0(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(17);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("v10_0", (n) -> { currentObject.setV10_0(n.getBooleanValue()); });
+        deserializerMap.put("v11_0", (n) -> { currentObject.setV11_0(n.getBooleanValue()); });
+        deserializerMap.put("v4_0", (n) -> { currentObject.setV4_0(n.getBooleanValue()); });
+        deserializerMap.put("v4_0_3", (n) -> { currentObject.setV4_0_3(n.getBooleanValue()); });
+        deserializerMap.put("v4_1", (n) -> { currentObject.setV4_1(n.getBooleanValue()); });
+        deserializerMap.put("v4_2", (n) -> { currentObject.setV4_2(n.getBooleanValue()); });
+        deserializerMap.put("v4_3", (n) -> { currentObject.setV4_3(n.getBooleanValue()); });
+        deserializerMap.put("v4_4", (n) -> { currentObject.setV4_4(n.getBooleanValue()); });
+        deserializerMap.put("v5_0", (n) -> { currentObject.setV5_0(n.getBooleanValue()); });
+        deserializerMap.put("v5_1", (n) -> { currentObject.setV5_1(n.getBooleanValue()); });
+        deserializerMap.put("v6_0", (n) -> { currentObject.setV6_0(n.getBooleanValue()); });
+        deserializerMap.put("v7_0", (n) -> { currentObject.setV7_0(n.getBooleanValue()); });
+        deserializerMap.put("v7_1", (n) -> { currentObject.setV7_1(n.getBooleanValue()); });
+        deserializerMap.put("v8_0", (n) -> { currentObject.setV8_0(n.getBooleanValue()); });
+        deserializerMap.put("v8_1", (n) -> { currentObject.setV8_1(n.getBooleanValue()); });
+        deserializerMap.put("v9_0", (n) -> { currentObject.setV9_0(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

@@ -36,9 +36,9 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SoftwareOathAuthenticationMethod currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("secretKey", (n) -> { currentObject.setSecretKey(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("secretKey", (n) -> { currentObject.setSecretKey(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the secretKey property value. The secret key of the method. Always returns null.

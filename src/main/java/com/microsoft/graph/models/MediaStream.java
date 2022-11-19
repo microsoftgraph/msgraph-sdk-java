@@ -65,14 +65,14 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MediaStream currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("direction", (n) -> { currentObject.setDirection(n.getEnumValue(MediaDirection.class)); });
-            this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
-            this.put("mediaType", (n) -> { currentObject.setMediaType(n.getEnumValue(Modality.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("serverMuted", (n) -> { currentObject.setServerMuted(n.getBooleanValue()); });
-            this.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("direction", (n) -> { currentObject.setDirection(n.getEnumValue(MediaDirection.class)); });
+        deserializerMap.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
+        deserializerMap.put("mediaType", (n) -> { currentObject.setMediaType(n.getEnumValue(Modality.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("serverMuted", (n) -> { currentObject.setServerMuted(n.getBooleanValue()); });
+        deserializerMap.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the label property value. The media stream label.

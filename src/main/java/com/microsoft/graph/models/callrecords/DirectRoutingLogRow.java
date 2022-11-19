@@ -154,30 +154,30 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DirectRoutingLogRow currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(22) {{
-            this.put("calleeNumber", (n) -> { currentObject.setCalleeNumber(n.getStringValue()); });
-            this.put("callEndSubReason", (n) -> { currentObject.setCallEndSubReason(n.getIntegerValue()); });
-            this.put("callerNumber", (n) -> { currentObject.setCallerNumber(n.getStringValue()); });
-            this.put("callType", (n) -> { currentObject.setCallType(n.getStringValue()); });
-            this.put("correlationId", (n) -> { currentObject.setCorrelationId(n.getStringValue()); });
-            this.put("duration", (n) -> { currentObject.setDuration(n.getIntegerValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("failureDateTime", (n) -> { currentObject.setFailureDateTime(n.getOffsetDateTimeValue()); });
-            this.put("finalSipCode", (n) -> { currentObject.setFinalSipCode(n.getIntegerValue()); });
-            this.put("finalSipCodePhrase", (n) -> { currentObject.setFinalSipCodePhrase(n.getStringValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("inviteDateTime", (n) -> { currentObject.setInviteDateTime(n.getOffsetDateTimeValue()); });
-            this.put("mediaBypassEnabled", (n) -> { currentObject.setMediaBypassEnabled(n.getBooleanValue()); });
-            this.put("mediaPathLocation", (n) -> { currentObject.setMediaPathLocation(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("signalingLocation", (n) -> { currentObject.setSignalingLocation(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("successfulCall", (n) -> { currentObject.setSuccessfulCall(n.getBooleanValue()); });
-            this.put("trunkFullyQualifiedDomainName", (n) -> { currentObject.setTrunkFullyQualifiedDomainName(n.getStringValue()); });
-            this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(22);
+        deserializerMap.put("calleeNumber", (n) -> { currentObject.setCalleeNumber(n.getStringValue()); });
+        deserializerMap.put("callEndSubReason", (n) -> { currentObject.setCallEndSubReason(n.getIntegerValue()); });
+        deserializerMap.put("callerNumber", (n) -> { currentObject.setCallerNumber(n.getStringValue()); });
+        deserializerMap.put("callType", (n) -> { currentObject.setCallType(n.getStringValue()); });
+        deserializerMap.put("correlationId", (n) -> { currentObject.setCorrelationId(n.getStringValue()); });
+        deserializerMap.put("duration", (n) -> { currentObject.setDuration(n.getIntegerValue()); });
+        deserializerMap.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("failureDateTime", (n) -> { currentObject.setFailureDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("finalSipCode", (n) -> { currentObject.setFinalSipCode(n.getIntegerValue()); });
+        deserializerMap.put("finalSipCodePhrase", (n) -> { currentObject.setFinalSipCodePhrase(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+        deserializerMap.put("inviteDateTime", (n) -> { currentObject.setInviteDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("mediaBypassEnabled", (n) -> { currentObject.setMediaBypassEnabled(n.getBooleanValue()); });
+        deserializerMap.put("mediaPathLocation", (n) -> { currentObject.setMediaPathLocation(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("signalingLocation", (n) -> { currentObject.setSignalingLocation(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("successfulCall", (n) -> { currentObject.setSuccessfulCall(n.getBooleanValue()); });
+        deserializerMap.put("trunkFullyQualifiedDomainName", (n) -> { currentObject.setTrunkFullyQualifiedDomainName(n.getStringValue()); });
+        deserializerMap.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the finalSipCode property value. The code with which the call ended, RFC 3261.

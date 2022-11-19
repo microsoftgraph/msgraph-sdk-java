@@ -74,9 +74,8 @@ public class TasksRequestBuilder {
      */
     @javax.annotation.Nonnull
     public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
@@ -107,9 +106,8 @@ public class TasksRequestBuilder {
     @javax.annotation.Nonnull
     public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final PrintTask body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.POST;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
@@ -130,15 +128,14 @@ public class TasksRequestBuilder {
     public java.util.concurrent.CompletableFuture<PrintTaskCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, PrintTaskCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<PrintTaskCollectionResponse>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<PrintTaskCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<PrintTaskCollectionResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -150,15 +147,14 @@ public class TasksRequestBuilder {
     public java.util.concurrent.CompletableFuture<PrintTaskCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, PrintTaskCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<PrintTaskCollectionResponse>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<PrintTaskCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<PrintTaskCollectionResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -170,15 +166,14 @@ public class TasksRequestBuilder {
     public java.util.concurrent.CompletableFuture<PrintTask> post(@javax.annotation.Nonnull final PrintTask body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, PrintTask::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<PrintTask>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<PrintTask> executionException = new java.util.concurrent.CompletableFuture<PrintTask>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -192,15 +187,14 @@ public class TasksRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, PrintTask::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<PrintTask>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<PrintTask> executionException = new java.util.concurrent.CompletableFuture<PrintTask>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /** Retrieve a list of tasks associated with a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing. */

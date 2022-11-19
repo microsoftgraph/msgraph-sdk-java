@@ -48,14 +48,14 @@ public class Conversation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Conversation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
-            this.put("lastDeliveredDateTime", (n) -> { currentObject.setLastDeliveredDateTime(n.getOffsetDateTimeValue()); });
-            this.put("preview", (n) -> { currentObject.setPreview(n.getStringValue()); });
-            this.put("threads", (n) -> { currentObject.setThreads(n.getCollectionOfObjectValues(ConversationThread::createFromDiscriminatorValue)); });
-            this.put("topic", (n) -> { currentObject.setTopic(n.getStringValue()); });
-            this.put("uniqueSenders", (n) -> { currentObject.setUniqueSenders(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
+        deserializerMap.put("lastDeliveredDateTime", (n) -> { currentObject.setLastDeliveredDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("preview", (n) -> { currentObject.setPreview(n.getStringValue()); });
+        deserializerMap.put("threads", (n) -> { currentObject.setThreads(n.getCollectionOfObjectValues(ConversationThread::createFromDiscriminatorValue)); });
+        deserializerMap.put("topic", (n) -> { currentObject.setTopic(n.getStringValue()); });
+        deserializerMap.put("uniqueSenders", (n) -> { currentObject.setUniqueSenders(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the hasAttachments property value. Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search.

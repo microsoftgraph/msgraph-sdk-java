@@ -85,17 +85,17 @@ public class EducationRubric extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationRubric currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("grading", (n) -> { currentObject.setGrading(n.getObjectValue(EducationAssignmentGradeType::createFromDiscriminatorValue)); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("levels", (n) -> { currentObject.setLevels(n.getCollectionOfObjectValues(RubricLevel::createFromDiscriminatorValue)); });
-            this.put("qualities", (n) -> { currentObject.setQualities(n.getCollectionOfObjectValues(RubricQuality::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("grading", (n) -> { currentObject.setGrading(n.getObjectValue(EducationAssignmentGradeType::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("levels", (n) -> { currentObject.setLevels(n.getCollectionOfObjectValues(RubricLevel::createFromDiscriminatorValue)); });
+        deserializerMap.put("qualities", (n) -> { currentObject.setQualities(n.getCollectionOfObjectValues(RubricQuality::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the grading property value. The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.

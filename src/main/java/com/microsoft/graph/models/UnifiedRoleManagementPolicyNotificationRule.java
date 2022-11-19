@@ -44,13 +44,13 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleManagementPolicyNotificationRule currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("isDefaultRecipientsEnabled", (n) -> { currentObject.setIsDefaultRecipientsEnabled(n.getBooleanValue()); });
-            this.put("notificationLevel", (n) -> { currentObject.setNotificationLevel(n.getStringValue()); });
-            this.put("notificationRecipients", (n) -> { currentObject.setNotificationRecipients(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("notificationType", (n) -> { currentObject.setNotificationType(n.getStringValue()); });
-            this.put("recipientType", (n) -> { currentObject.setRecipientType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isDefaultRecipientsEnabled", (n) -> { currentObject.setIsDefaultRecipientsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("notificationLevel", (n) -> { currentObject.setNotificationLevel(n.getStringValue()); });
+        deserializerMap.put("notificationRecipients", (n) -> { currentObject.setNotificationRecipients(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("notificationType", (n) -> { currentObject.setNotificationType(n.getStringValue()); });
+        deserializerMap.put("recipientType", (n) -> { currentObject.setRecipientType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isDefaultRecipientsEnabled property value. Indicates whether a default recipient will receive the notification email.

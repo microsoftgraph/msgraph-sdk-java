@@ -98,18 +98,18 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MessageSecurityState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(10) {{
-            this.put("connectingIP", (n) -> { currentObject.setConnectingIP(n.getStringValue()); });
-            this.put("deliveryAction", (n) -> { currentObject.setDeliveryAction(n.getStringValue()); });
-            this.put("deliveryLocation", (n) -> { currentObject.setDeliveryLocation(n.getStringValue()); });
-            this.put("directionality", (n) -> { currentObject.setDirectionality(n.getStringValue()); });
-            this.put("internetMessageId", (n) -> { currentObject.setInternetMessageId(n.getStringValue()); });
-            this.put("messageFingerprint", (n) -> { currentObject.setMessageFingerprint(n.getStringValue()); });
-            this.put("messageReceivedDateTime", (n) -> { currentObject.setMessageReceivedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("messageSubject", (n) -> { currentObject.setMessageSubject(n.getStringValue()); });
-            this.put("networkMessageId", (n) -> { currentObject.setNetworkMessageId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("connectingIP", (n) -> { currentObject.setConnectingIP(n.getStringValue()); });
+        deserializerMap.put("deliveryAction", (n) -> { currentObject.setDeliveryAction(n.getStringValue()); });
+        deserializerMap.put("deliveryLocation", (n) -> { currentObject.setDeliveryLocation(n.getStringValue()); });
+        deserializerMap.put("directionality", (n) -> { currentObject.setDirectionality(n.getStringValue()); });
+        deserializerMap.put("internetMessageId", (n) -> { currentObject.setInternetMessageId(n.getStringValue()); });
+        deserializerMap.put("messageFingerprint", (n) -> { currentObject.setMessageFingerprint(n.getStringValue()); });
+        deserializerMap.put("messageReceivedDateTime", (n) -> { currentObject.setMessageReceivedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("messageSubject", (n) -> { currentObject.setMessageSubject(n.getStringValue()); });
+        deserializerMap.put("networkMessageId", (n) -> { currentObject.setNetworkMessageId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the internetMessageId property value. The internetMessageId property

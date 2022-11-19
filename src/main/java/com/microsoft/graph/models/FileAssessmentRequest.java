@@ -46,10 +46,10 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FileAssessmentRequest currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("contentData", (n) -> { currentObject.setContentData(n.getStringValue()); });
-            this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contentData", (n) -> { currentObject.setContentData(n.getStringValue()); });
+        deserializerMap.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileName property value. The file name.

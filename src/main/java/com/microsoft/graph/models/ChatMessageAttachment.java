@@ -83,15 +83,15 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessageAttachment currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getStringValue()); });
-            this.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
-            this.put("contentUrl", (n) -> { currentObject.setContentUrl(n.getStringValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("thumbnailUrl", (n) -> { currentObject.setThumbnailUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("content", (n) -> { currentObject.setContent(n.getStringValue()); });
+        deserializerMap.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
+        deserializerMap.put("contentUrl", (n) -> { currentObject.setContentUrl(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("thumbnailUrl", (n) -> { currentObject.setThumbnailUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. Read-only. Unique id of the attachment.

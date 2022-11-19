@@ -58,10 +58,10 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ForwardPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
-            this.put("toRecipients", (n) -> { currentObject.setToRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
+        deserializerMap.put("toRecipients", (n) -> { currentObject.setToRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the toRecipients property value. The ToRecipients property

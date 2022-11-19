@@ -82,14 +82,14 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserSimulationEventInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("browser", (n) -> { currentObject.setBrowser(n.getStringValue()); });
-            this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
-            this.put("eventName", (n) -> { currentObject.setEventName(n.getStringValue()); });
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("osPlatformDeviceDetails", (n) -> { currentObject.setOsPlatformDeviceDetails(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("browser", (n) -> { currentObject.setBrowser(n.getStringValue()); });
+        deserializerMap.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("eventName", (n) -> { currentObject.setEventName(n.getStringValue()); });
+        deserializerMap.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("osPlatformDeviceDetails", (n) -> { currentObject.setOsPlatformDeviceDetails(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the ipAddress property value. IP address from where the simulation event was initiated by a user in an attack simulation and training campaign.

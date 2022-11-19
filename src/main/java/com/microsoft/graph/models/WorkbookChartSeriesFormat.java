@@ -38,10 +38,10 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChartSeriesFormat currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("fill", (n) -> { currentObject.setFill(n.getObjectValue(WorkbookChartFill::createFromDiscriminatorValue)); });
-            this.put("line", (n) -> { currentObject.setLine(n.getObjectValue(WorkbookChartLineFormat::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fill", (n) -> { currentObject.setFill(n.getObjectValue(WorkbookChartFill::createFromDiscriminatorValue)); });
+        deserializerMap.put("line", (n) -> { currentObject.setLine(n.getObjectValue(WorkbookChartLineFormat::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the fill property value. Represents the fill format of a chart series, which includes background formating information. Read-only.

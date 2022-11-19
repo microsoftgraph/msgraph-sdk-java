@@ -3,7 +3,7 @@ package com.microsoft.graph.models.callrecords;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public enum CallType implements ValuedEnum {
     Unknown("unknown"),
     GroupCall("groupCall"),

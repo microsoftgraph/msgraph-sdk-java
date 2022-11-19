@@ -66,20 +66,20 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionPolicy currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("daysWithoutContactBeforeUnenroll", (n) -> { currentObject.setDaysWithoutContactBeforeUnenroll(n.getIntegerValue()); });
-            this.put("mdmEnrollmentUrl", (n) -> { currentObject.setMdmEnrollmentUrl(n.getStringValue()); });
-            this.put("minutesOfInactivityBeforeDeviceLock", (n) -> { currentObject.setMinutesOfInactivityBeforeDeviceLock(n.getIntegerValue()); });
-            this.put("numberOfPastPinsRemembered", (n) -> { currentObject.setNumberOfPastPinsRemembered(n.getIntegerValue()); });
-            this.put("passwordMaximumAttemptCount", (n) -> { currentObject.setPasswordMaximumAttemptCount(n.getIntegerValue()); });
-            this.put("pinExpirationDays", (n) -> { currentObject.setPinExpirationDays(n.getIntegerValue()); });
-            this.put("pinLowercaseLetters", (n) -> { currentObject.setPinLowercaseLetters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements.class)); });
-            this.put("pinMinimumLength", (n) -> { currentObject.setPinMinimumLength(n.getIntegerValue()); });
-            this.put("pinSpecialCharacters", (n) -> { currentObject.setPinSpecialCharacters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements.class)); });
-            this.put("pinUppercaseLetters", (n) -> { currentObject.setPinUppercaseLetters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements.class)); });
-            this.put("revokeOnMdmHandoffDisabled", (n) -> { currentObject.setRevokeOnMdmHandoffDisabled(n.getBooleanValue()); });
-            this.put("windowsHelloForBusinessBlocked", (n) -> { currentObject.setWindowsHelloForBusinessBlocked(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("daysWithoutContactBeforeUnenroll", (n) -> { currentObject.setDaysWithoutContactBeforeUnenroll(n.getIntegerValue()); });
+        deserializerMap.put("mdmEnrollmentUrl", (n) -> { currentObject.setMdmEnrollmentUrl(n.getStringValue()); });
+        deserializerMap.put("minutesOfInactivityBeforeDeviceLock", (n) -> { currentObject.setMinutesOfInactivityBeforeDeviceLock(n.getIntegerValue()); });
+        deserializerMap.put("numberOfPastPinsRemembered", (n) -> { currentObject.setNumberOfPastPinsRemembered(n.getIntegerValue()); });
+        deserializerMap.put("passwordMaximumAttemptCount", (n) -> { currentObject.setPasswordMaximumAttemptCount(n.getIntegerValue()); });
+        deserializerMap.put("pinExpirationDays", (n) -> { currentObject.setPinExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("pinLowercaseLetters", (n) -> { currentObject.setPinLowercaseLetters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements.class)); });
+        deserializerMap.put("pinMinimumLength", (n) -> { currentObject.setPinMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("pinSpecialCharacters", (n) -> { currentObject.setPinSpecialCharacters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements.class)); });
+        deserializerMap.put("pinUppercaseLetters", (n) -> { currentObject.setPinUppercaseLetters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements.class)); });
+        deserializerMap.put("revokeOnMdmHandoffDisabled", (n) -> { currentObject.setRevokeOnMdmHandoffDisabled(n.getBooleanValue()); });
+        deserializerMap.put("windowsHelloForBusinessBlocked", (n) -> { currentObject.setWindowsHelloForBusinessBlocked(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mdmEnrollmentUrl property value. Enrollment url for the MDM

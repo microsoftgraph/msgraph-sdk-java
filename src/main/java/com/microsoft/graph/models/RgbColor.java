@@ -62,12 +62,12 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RgbColor currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("b", (n) -> { currentObject.setB(n.getByteValue()); });
-            this.put("g", (n) -> { currentObject.setG(n.getByteValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("r", (n) -> { currentObject.setR(n.getByteValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("b", (n) -> { currentObject.setB(n.getByteValue()); });
+        deserializerMap.put("g", (n) -> { currentObject.setG(n.getByteValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("r", (n) -> { currentObject.setR(n.getByteValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the g property value. Green value

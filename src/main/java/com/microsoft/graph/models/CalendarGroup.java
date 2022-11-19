@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class CalendarGroup extends Entity implements Parsable {
     /** The calendars in the calendar group. Navigation property. Read-only. Nullable. */
     private java.util.List<Calendar> _calendars;
@@ -67,12 +67,12 @@ public class CalendarGroup extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CalendarGroup currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("calendars", (n) -> { currentObject.setCalendars(n.getCollectionOfObjectValues(Calendar::createFromDiscriminatorValue)); });
-            this.put("changeKey", (n) -> { currentObject.setChangeKey(n.getStringValue()); });
-            this.put("classId", (n) -> { currentObject.setClassId(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("calendars", (n) -> { currentObject.setCalendars(n.getCollectionOfObjectValues(Calendar::createFromDiscriminatorValue)); });
+        deserializerMap.put("changeKey", (n) -> { currentObject.setChangeKey(n.getStringValue()); });
+        deserializerMap.put("classId", (n) -> { currentObject.setClassId(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. The group name.

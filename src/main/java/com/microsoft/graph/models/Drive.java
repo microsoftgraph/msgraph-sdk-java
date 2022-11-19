@@ -72,19 +72,19 @@ public class Drive extends BaseItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Drive currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("bundles", (n) -> { currentObject.setBundles(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
-            this.put("driveType", (n) -> { currentObject.setDriveType(n.getStringValue()); });
-            this.put("following", (n) -> { currentObject.setFollowing(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
-            this.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
-            this.put("list", (n) -> { currentObject.setList(n.getObjectValue(List::createFromDiscriminatorValue)); });
-            this.put("owner", (n) -> { currentObject.setOwner(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("quota", (n) -> { currentObject.setQuota(n.getObjectValue(Quota::createFromDiscriminatorValue)); });
-            this.put("root", (n) -> { currentObject.setRoot(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
-            this.put("sharePointIds", (n) -> { currentObject.setSharePointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
-            this.put("special", (n) -> { currentObject.setSpecial(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
-            this.put("system", (n) -> { currentObject.setSystem(n.getObjectValue(SystemFacet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("bundles", (n) -> { currentObject.setBundles(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("driveType", (n) -> { currentObject.setDriveType(n.getStringValue()); });
+        deserializerMap.put("following", (n) -> { currentObject.setFollowing(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("list", (n) -> { currentObject.setList(n.getObjectValue(List::createFromDiscriminatorValue)); });
+        deserializerMap.put("owner", (n) -> { currentObject.setOwner(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("quota", (n) -> { currentObject.setQuota(n.getObjectValue(Quota::createFromDiscriminatorValue)); });
+        deserializerMap.put("root", (n) -> { currentObject.setRoot(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharePointIds", (n) -> { currentObject.setSharePointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
+        deserializerMap.put("special", (n) -> { currentObject.setSpecial(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("system", (n) -> { currentObject.setSystem(n.getObjectValue(SystemFacet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the following property value. The list of items the user is following. Only in OneDrive for Business.

@@ -89,13 +89,13 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceActionResult currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
-            this.put("actionState", (n) -> { currentObject.setActionState(n.getEnumValue(ActionState.class)); });
-            this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
+        deserializerMap.put("actionState", (n) -> { currentObject.setActionState(n.getEnumValue(ActionState.class)); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastUpdatedDateTime property value. Time the action state was last updated

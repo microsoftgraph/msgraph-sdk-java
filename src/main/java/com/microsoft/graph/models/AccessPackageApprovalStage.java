@@ -104,17 +104,17 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageApprovalStage currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(9) {{
-            this.put("durationBeforeAutomaticDenial", (n) -> { currentObject.setDurationBeforeAutomaticDenial(n.getPeriodValue()); });
-            this.put("durationBeforeEscalation", (n) -> { currentObject.setDurationBeforeEscalation(n.getPeriodValue()); });
-            this.put("escalationApprovers", (n) -> { currentObject.setEscalationApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
-            this.put("fallbackEscalationApprovers", (n) -> { currentObject.setFallbackEscalationApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
-            this.put("fallbackPrimaryApprovers", (n) -> { currentObject.setFallbackPrimaryApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
-            this.put("isApproverJustificationRequired", (n) -> { currentObject.setIsApproverJustificationRequired(n.getBooleanValue()); });
-            this.put("isEscalationEnabled", (n) -> { currentObject.setIsEscalationEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("primaryApprovers", (n) -> { currentObject.setPrimaryApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("durationBeforeAutomaticDenial", (n) -> { currentObject.setDurationBeforeAutomaticDenial(n.getPeriodValue()); });
+        deserializerMap.put("durationBeforeEscalation", (n) -> { currentObject.setDurationBeforeEscalation(n.getPeriodValue()); });
+        deserializerMap.put("escalationApprovers", (n) -> { currentObject.setEscalationApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("fallbackEscalationApprovers", (n) -> { currentObject.setFallbackEscalationApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("fallbackPrimaryApprovers", (n) -> { currentObject.setFallbackPrimaryApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("isApproverJustificationRequired", (n) -> { currentObject.setIsApproverJustificationRequired(n.getBooleanValue()); });
+        deserializerMap.put("isEscalationEnabled", (n) -> { currentObject.setIsEscalationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("primaryApprovers", (n) -> { currentObject.setPrimaryApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isApproverJustificationRequired property value. Indicates whether the approver is required to provide a justification for approving a request.

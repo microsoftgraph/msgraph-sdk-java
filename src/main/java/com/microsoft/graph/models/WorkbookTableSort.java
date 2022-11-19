@@ -40,11 +40,11 @@ public class WorkbookTableSort extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookTableSort currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("fields", (n) -> { currentObject.setFields(n.getCollectionOfObjectValues(WorkbookSortField::createFromDiscriminatorValue)); });
-            this.put("matchCase", (n) -> { currentObject.setMatchCase(n.getBooleanValue()); });
-            this.put("method", (n) -> { currentObject.setMethod(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fields", (n) -> { currentObject.setFields(n.getCollectionOfObjectValues(WorkbookSortField::createFromDiscriminatorValue)); });
+        deserializerMap.put("matchCase", (n) -> { currentObject.setMatchCase(n.getBooleanValue()); });
+        deserializerMap.put("method", (n) -> { currentObject.setMethod(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fields property value. Represents the current conditions used to last sort the table. Read-only.

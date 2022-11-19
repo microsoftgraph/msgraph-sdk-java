@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class MailFolder extends Entity implements Parsable {
     /** The number of immediate child mailFolders in the current mailFolder. */
     private Integer _childFolderCount;
@@ -89,19 +89,19 @@ public class MailFolder extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MailFolder currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("childFolderCount", (n) -> { currentObject.setChildFolderCount(n.getIntegerValue()); });
-            this.put("childFolders", (n) -> { currentObject.setChildFolders(n.getCollectionOfObjectValues(MailFolder::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isHidden", (n) -> { currentObject.setIsHidden(n.getBooleanValue()); });
-            this.put("messageRules", (n) -> { currentObject.setMessageRules(n.getCollectionOfObjectValues(MessageRule::createFromDiscriminatorValue)); });
-            this.put("messages", (n) -> { currentObject.setMessages(n.getCollectionOfObjectValues(Message::createFromDiscriminatorValue)); });
-            this.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("parentFolderId", (n) -> { currentObject.setParentFolderId(n.getStringValue()); });
-            this.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("totalItemCount", (n) -> { currentObject.setTotalItemCount(n.getIntegerValue()); });
-            this.put("unreadItemCount", (n) -> { currentObject.setUnreadItemCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("childFolderCount", (n) -> { currentObject.setChildFolderCount(n.getIntegerValue()); });
+        deserializerMap.put("childFolders", (n) -> { currentObject.setChildFolders(n.getCollectionOfObjectValues(MailFolder::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isHidden", (n) -> { currentObject.setIsHidden(n.getBooleanValue()); });
+        deserializerMap.put("messageRules", (n) -> { currentObject.setMessageRules(n.getCollectionOfObjectValues(MessageRule::createFromDiscriminatorValue)); });
+        deserializerMap.put("messages", (n) -> { currentObject.setMessages(n.getCollectionOfObjectValues(Message::createFromDiscriminatorValue)); });
+        deserializerMap.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentFolderId", (n) -> { currentObject.setParentFolderId(n.getStringValue()); });
+        deserializerMap.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("totalItemCount", (n) -> { currentObject.setTotalItemCount(n.getIntegerValue()); });
+        deserializerMap.put("unreadItemCount", (n) -> { currentObject.setUnreadItemCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isHidden property value. Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.

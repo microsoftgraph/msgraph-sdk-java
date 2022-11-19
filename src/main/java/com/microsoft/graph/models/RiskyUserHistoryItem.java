@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     /** The activity related to user risk level change. */
     private RiskUserActivity _activity;
@@ -49,11 +49,11 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RiskyUserHistoryItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getObjectValue(RiskUserActivity::createFromDiscriminatorValue)); });
-            this.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activity", (n) -> { currentObject.setActivity(n.getObjectValue(RiskUserActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the initiatedBy property value. The ID of actor that does the operation.

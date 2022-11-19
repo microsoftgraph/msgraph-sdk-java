@@ -39,10 +39,10 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleManagementPolicyExpirationRule currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("isExpirationRequired", (n) -> { currentObject.setIsExpirationRequired(n.getBooleanValue()); });
-            this.put("maximumDuration", (n) -> { currentObject.setMaximumDuration(n.getPeriodValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isExpirationRequired", (n) -> { currentObject.setIsExpirationRequired(n.getBooleanValue()); });
+        deserializerMap.put("maximumDuration", (n) -> { currentObject.setMaximumDuration(n.getPeriodValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isExpirationRequired property value. Indicates whether expiration is required or if it's a permanently active assignment or eligibility.

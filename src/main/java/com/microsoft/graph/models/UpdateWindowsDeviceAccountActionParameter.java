@@ -91,15 +91,15 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateWindowsDeviceAccountActionParameter currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("calendarSyncEnabled", (n) -> { currentObject.setCalendarSyncEnabled(n.getBooleanValue()); });
-            this.put("deviceAccount", (n) -> { currentObject.setDeviceAccount(n.getObjectValue(WindowsDeviceAccount::createFromDiscriminatorValue)); });
-            this.put("deviceAccountEmail", (n) -> { currentObject.setDeviceAccountEmail(n.getStringValue()); });
-            this.put("exchangeServer", (n) -> { currentObject.setExchangeServer(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("passwordRotationEnabled", (n) -> { currentObject.setPasswordRotationEnabled(n.getBooleanValue()); });
-            this.put("sessionInitiationProtocalAddress", (n) -> { currentObject.setSessionInitiationProtocalAddress(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("calendarSyncEnabled", (n) -> { currentObject.setCalendarSyncEnabled(n.getBooleanValue()); });
+        deserializerMap.put("deviceAccount", (n) -> { currentObject.setDeviceAccount(n.getObjectValue(WindowsDeviceAccount::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceAccountEmail", (n) -> { currentObject.setDeviceAccountEmail(n.getStringValue()); });
+        deserializerMap.put("exchangeServer", (n) -> { currentObject.setExchangeServer(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("passwordRotationEnabled", (n) -> { currentObject.setPasswordRotationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("sessionInitiationProtocalAddress", (n) -> { currentObject.setSessionInitiationProtocalAddress(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

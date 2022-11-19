@@ -90,19 +90,19 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComplianceSettingState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("complianceGracePeriodExpirationDateTime", (n) -> { currentObject.setComplianceGracePeriodExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("deviceModel", (n) -> { currentObject.setDeviceModel(n.getStringValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("setting", (n) -> { currentObject.setSetting(n.getStringValue()); });
-            this.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ComplianceStatus.class)); });
-            this.put("userEmail", (n) -> { currentObject.setUserEmail(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("complianceGracePeriodExpirationDateTime", (n) -> { currentObject.setComplianceGracePeriodExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("deviceModel", (n) -> { currentObject.setDeviceModel(n.getStringValue()); });
+        deserializerMap.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("setting", (n) -> { currentObject.setSetting(n.getStringValue()); });
+        deserializerMap.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(ComplianceStatus.class)); });
+        deserializerMap.put("userEmail", (n) -> { currentObject.setUserEmail(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        deserializerMap.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the setting property value. The setting class name and property name.

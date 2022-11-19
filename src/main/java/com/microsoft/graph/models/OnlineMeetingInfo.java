@@ -67,15 +67,15 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnlineMeetingInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("conferenceId", (n) -> { currentObject.setConferenceId(n.getStringValue()); });
-            this.put("joinUrl", (n) -> { currentObject.setJoinUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("phones", (n) -> { currentObject.setPhones(n.getCollectionOfObjectValues(Phone::createFromDiscriminatorValue)); });
-            this.put("quickDial", (n) -> { currentObject.setQuickDial(n.getStringValue()); });
-            this.put("tollFreeNumbers", (n) -> { currentObject.setTollFreeNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("tollNumber", (n) -> { currentObject.setTollNumber(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("conferenceId", (n) -> { currentObject.setConferenceId(n.getStringValue()); });
+        deserializerMap.put("joinUrl", (n) -> { currentObject.setJoinUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("phones", (n) -> { currentObject.setPhones(n.getCollectionOfObjectValues(Phone::createFromDiscriminatorValue)); });
+        deserializerMap.put("quickDial", (n) -> { currentObject.setQuickDial(n.getStringValue()); });
+        deserializerMap.put("tollFreeNumbers", (n) -> { currentObject.setTollFreeNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("tollNumber", (n) -> { currentObject.setTollNumber(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.

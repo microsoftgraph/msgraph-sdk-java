@@ -74,14 +74,14 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubjectRightsRequestHistory currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("changedBy", (n) -> { currentObject.setChangedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(SubjectRightsRequestStage.class)); });
-            this.put("stageStatus", (n) -> { currentObject.setStageStatus(n.getEnumValue(SubjectRightsRequestStageStatus.class)); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("changedBy", (n) -> { currentObject.setChangedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(SubjectRightsRequestStage.class)); });
+        deserializerMap.put("stageStatus", (n) -> { currentObject.setStageStatus(n.getEnumValue(SubjectRightsRequestStageStatus.class)); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

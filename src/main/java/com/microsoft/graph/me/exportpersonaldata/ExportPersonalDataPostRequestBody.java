@@ -47,9 +47,9 @@ public class ExportPersonalDataPostRequestBody implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExportPersonalDataPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("storageLocation", (n) -> { currentObject.setStorageLocation(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("storageLocation", (n) -> { currentObject.setStorageLocation(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the storageLocation property value. The storageLocation property

@@ -49,11 +49,11 @@ public class TeamworkTagMember extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkTagMember currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the tenantId property value. The ID of the tenant that the tag member is a part of.

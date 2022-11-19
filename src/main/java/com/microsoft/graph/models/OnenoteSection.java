@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable {
     /** Indicates whether this is the user's default section. Read-only. */
     private Boolean _isDefault;
@@ -47,14 +47,14 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnenoteSection currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
-            this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(SectionLinks::createFromDiscriminatorValue)); });
-            this.put("pages", (n) -> { currentObject.setPages(n.getCollectionOfObjectValues(OnenotePage::createFromDiscriminatorValue)); });
-            this.put("pagesUrl", (n) -> { currentObject.setPagesUrl(n.getStringValue()); });
-            this.put("parentNotebook", (n) -> { currentObject.setParentNotebook(n.getObjectValue(Notebook::createFromDiscriminatorValue)); });
-            this.put("parentSectionGroup", (n) -> { currentObject.setParentSectionGroup(n.getObjectValue(SectionGroup::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
+        deserializerMap.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(SectionLinks::createFromDiscriminatorValue)); });
+        deserializerMap.put("pages", (n) -> { currentObject.setPages(n.getCollectionOfObjectValues(OnenotePage::createFromDiscriminatorValue)); });
+        deserializerMap.put("pagesUrl", (n) -> { currentObject.setPagesUrl(n.getStringValue()); });
+        deserializerMap.put("parentNotebook", (n) -> { currentObject.setParentNotebook(n.getObjectValue(Notebook::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentSectionGroup", (n) -> { currentObject.setParentSectionGroup(n.getObjectValue(SectionGroup::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isDefault property value. Indicates whether this is the user's default section. Read-only.

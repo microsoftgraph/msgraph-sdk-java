@@ -69,12 +69,12 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ColumnValidation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("defaultLanguage", (n) -> { currentObject.setDefaultLanguage(n.getStringValue()); });
-            this.put("descriptions", (n) -> { currentObject.setDescriptions(n.getCollectionOfObjectValues(DisplayNameLocalization::createFromDiscriminatorValue)); });
-            this.put("formula", (n) -> { currentObject.setFormula(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("defaultLanguage", (n) -> { currentObject.setDefaultLanguage(n.getStringValue()); });
+        deserializerMap.put("descriptions", (n) -> { currentObject.setDescriptions(n.getCollectionOfObjectValues(DisplayNameLocalization::createFromDiscriminatorValue)); });
+        deserializerMap.put("formula", (n) -> { currentObject.setFormula(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists.

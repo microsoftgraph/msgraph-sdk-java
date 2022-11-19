@@ -72,13 +72,13 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuditResource currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("auditResourceType", (n) -> { currentObject.setAuditResourceType(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("modifiedProperties", (n) -> { currentObject.setModifiedProperties(n.getCollectionOfObjectValues(AuditProperty::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("auditResourceType", (n) -> { currentObject.setAuditResourceType(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("modifiedProperties", (n) -> { currentObject.setModifiedProperties(n.getCollectionOfObjectValues(AuditProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the modifiedProperties property value. List of modified properties.

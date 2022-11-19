@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class AttendanceRecord extends Entity implements Parsable {
     /** List of time periods between joining and leaving a meeting. */
     private java.util.List<AttendanceInterval> _attendanceIntervals;
@@ -61,13 +61,13 @@ public class AttendanceRecord extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttendanceRecord currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("attendanceIntervals", (n) -> { currentObject.setAttendanceIntervals(n.getCollectionOfObjectValues(AttendanceInterval::createFromDiscriminatorValue)); });
-            this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
-            this.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("role", (n) -> { currentObject.setRole(n.getStringValue()); });
-            this.put("totalAttendanceInSeconds", (n) -> { currentObject.setTotalAttendanceInSeconds(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("attendanceIntervals", (n) -> { currentObject.setAttendanceIntervals(n.getCollectionOfObjectValues(AttendanceInterval::createFromDiscriminatorValue)); });
+        deserializerMap.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
+        deserializerMap.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("role", (n) -> { currentObject.setRole(n.getStringValue()); });
+        deserializerMap.put("totalAttendanceInSeconds", (n) -> { currentObject.setTotalAttendanceInSeconds(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the identity property value. Identity of the user associated with this atttendance record.

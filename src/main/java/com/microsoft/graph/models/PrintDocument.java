@@ -57,11 +57,11 @@ public class PrintDocument extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintDocument currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the size property value. The document's size in bytes. Read-only.

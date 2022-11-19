@@ -48,11 +48,11 @@ public class WorkbookChartAxes extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChartAxes currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("categoryAxis", (n) -> { currentObject.setCategoryAxis(n.getObjectValue(WorkbookChartAxis::createFromDiscriminatorValue)); });
-            this.put("seriesAxis", (n) -> { currentObject.setSeriesAxis(n.getObjectValue(WorkbookChartAxis::createFromDiscriminatorValue)); });
-            this.put("valueAxis", (n) -> { currentObject.setValueAxis(n.getObjectValue(WorkbookChartAxis::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("categoryAxis", (n) -> { currentObject.setCategoryAxis(n.getObjectValue(WorkbookChartAxis::createFromDiscriminatorValue)); });
+        deserializerMap.put("seriesAxis", (n) -> { currentObject.setSeriesAxis(n.getObjectValue(WorkbookChartAxis::createFromDiscriminatorValue)); });
+        deserializerMap.put("valueAxis", (n) -> { currentObject.setValueAxis(n.getObjectValue(WorkbookChartAxis::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the seriesAxis property value. Represents the series axis of a 3-dimensional chart. Read-only.

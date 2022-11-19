@@ -75,14 +75,14 @@ public class DataSourceContainer extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DataSourceContainer currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("holdStatus", (n) -> { currentObject.setHoldStatus(n.getEnumValue(DataSourceHoldStatus.class)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("releasedDateTime", (n) -> { currentObject.setReleasedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DataSourceContainerStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("holdStatus", (n) -> { currentObject.setHoldStatus(n.getEnumValue(DataSourceHoldStatus.class)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("releasedDateTime", (n) -> { currentObject.setReleasedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DataSourceContainerStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the holdStatus property value. The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial

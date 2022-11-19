@@ -71,13 +71,13 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintJobStatus currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfEnumValues(PrintJobStateDetail.class)); });
-            this.put("isAcquiredByPrinter", (n) -> { currentObject.setIsAcquiredByPrinter(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(PrintJobProcessingState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfEnumValues(PrintJobStateDetail.class)); });
+        deserializerMap.put("isAcquiredByPrinter", (n) -> { currentObject.setIsAcquiredByPrinter(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(PrintJobProcessingState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isAcquiredByPrinter property value. True if the job was acknowledged by a printer; false otherwise. Read-only.

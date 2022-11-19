@@ -46,14 +46,14 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AdminConsentRequestPolicy currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("notifyReviewers", (n) -> { currentObject.setNotifyReviewers(n.getBooleanValue()); });
-            this.put("remindersEnabled", (n) -> { currentObject.setRemindersEnabled(n.getBooleanValue()); });
-            this.put("requestDurationInDays", (n) -> { currentObject.setRequestDurationInDays(n.getIntegerValue()); });
-            this.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("notifyReviewers", (n) -> { currentObject.setNotifyReviewers(n.getBooleanValue()); });
+        deserializerMap.put("remindersEnabled", (n) -> { currentObject.setRemindersEnabled(n.getBooleanValue()); });
+        deserializerMap.put("requestDurationInDays", (n) -> { currentObject.setRequestDurationInDays(n.getIntegerValue()); });
+        deserializerMap.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnabled property value. Specifies whether the admin consent request feature is enabled or disabled. Required.

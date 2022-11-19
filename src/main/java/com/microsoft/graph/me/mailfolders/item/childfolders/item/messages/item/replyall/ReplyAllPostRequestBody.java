@@ -58,10 +58,10 @@ public class ReplyAllPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ReplyAllPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
-            this.put("message", (n) -> { currentObject.setMessage(n.getObjectValue(Message::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
+        deserializerMap.put("message", (n) -> { currentObject.setMessage(n.getObjectValue(Message::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the message property value. The Message property

@@ -76,12 +76,12 @@ public class ItemActivity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemActivity currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("access", (n) -> { currentObject.setAccess(n.getObjectValue(AccessAction::createFromDiscriminatorValue)); });
-            this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
-            this.put("actor", (n) -> { currentObject.setActor(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("driveItem", (n) -> { currentObject.setDriveItem(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("access", (n) -> { currentObject.setAccess(n.getObjectValue(AccessAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("actor", (n) -> { currentObject.setActor(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("driveItem", (n) -> { currentObject.setDriveItem(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

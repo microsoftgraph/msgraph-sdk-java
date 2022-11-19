@@ -37,9 +37,9 @@ public class SiteSource extends DataSource implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SiteSource currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("site", (n) -> { currentObject.setSite(n.getObjectValue(Site::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("site", (n) -> { currentObject.setSite(n.getObjectValue(Site::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the site property value. The site property

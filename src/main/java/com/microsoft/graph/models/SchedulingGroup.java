@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
     /** The display name for the schedulingGroup. Required. */
     private String _displayName;
@@ -15,7 +16,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
     /** The list of user IDs that are a member of the schedulingGroup. Required. */
     private java.util.List<String> _userIds;
     /**
-     * Instantiates a new SchedulingGroup and sets the default values.
+     * Instantiates a new schedulingGroup and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -26,7 +27,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SchedulingGroup
+     * @return a schedulingGroup
      */
     @javax.annotation.Nonnull
     public static SchedulingGroup createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -48,11 +49,11 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SchedulingGroup currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
-            this.put("userIds", (n) -> { currentObject.setUserIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
+        deserializerMap.put("userIds", (n) -> { currentObject.setUserIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isActive property value. Indicates whether the schedulingGroup can be used when creating new entities or updating existing ones. Required.

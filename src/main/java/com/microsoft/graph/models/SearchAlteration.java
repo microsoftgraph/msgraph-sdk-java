@@ -77,12 +77,12 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchAlteration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("alteredHighlightedQueryString", (n) -> { currentObject.setAlteredHighlightedQueryString(n.getStringValue()); });
-            this.put("alteredQueryString", (n) -> { currentObject.setAlteredQueryString(n.getStringValue()); });
-            this.put("alteredQueryTokens", (n) -> { currentObject.setAlteredQueryTokens(n.getCollectionOfObjectValues(AlteredQueryToken::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("alteredHighlightedQueryString", (n) -> { currentObject.setAlteredHighlightedQueryString(n.getStringValue()); });
+        deserializerMap.put("alteredQueryString", (n) -> { currentObject.setAlteredQueryString(n.getStringValue()); });
+        deserializerMap.put("alteredQueryTokens", (n) -> { currentObject.setAlteredQueryTokens(n.getCollectionOfObjectValues(AlteredQueryToken::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

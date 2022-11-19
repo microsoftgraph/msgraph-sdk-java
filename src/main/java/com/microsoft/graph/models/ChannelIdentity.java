@@ -59,11 +59,11 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChannelIdentity currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("channelId", (n) -> { currentObject.setChannelId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("channelId", (n) -> { currentObject.setChannelId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

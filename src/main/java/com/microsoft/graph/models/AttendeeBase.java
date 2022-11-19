@@ -44,9 +44,9 @@ public class AttendeeBase extends Recipient implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttendeeBase currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(AttendeeType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getEnumValue(AttendeeType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the type property value. The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.

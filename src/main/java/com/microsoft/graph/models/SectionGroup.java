@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable {
     /** The notebook that contains the section group. Read-only. */
     private Notebook _parentNotebook;
@@ -47,14 +47,14 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SectionGroup currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("parentNotebook", (n) -> { currentObject.setParentNotebook(n.getObjectValue(Notebook::createFromDiscriminatorValue)); });
-            this.put("parentSectionGroup", (n) -> { currentObject.setParentSectionGroup(n.getObjectValue(SectionGroup::createFromDiscriminatorValue)); });
-            this.put("sectionGroups", (n) -> { currentObject.setSectionGroups(n.getCollectionOfObjectValues(SectionGroup::createFromDiscriminatorValue)); });
-            this.put("sectionGroupsUrl", (n) -> { currentObject.setSectionGroupsUrl(n.getStringValue()); });
-            this.put("sections", (n) -> { currentObject.setSections(n.getCollectionOfObjectValues(OnenoteSection::createFromDiscriminatorValue)); });
-            this.put("sectionsUrl", (n) -> { currentObject.setSectionsUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("parentNotebook", (n) -> { currentObject.setParentNotebook(n.getObjectValue(Notebook::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentSectionGroup", (n) -> { currentObject.setParentSectionGroup(n.getObjectValue(SectionGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("sectionGroups", (n) -> { currentObject.setSectionGroups(n.getCollectionOfObjectValues(SectionGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("sectionGroupsUrl", (n) -> { currentObject.setSectionGroupsUrl(n.getStringValue()); });
+        deserializerMap.put("sections", (n) -> { currentObject.setSections(n.getCollectionOfObjectValues(OnenoteSection::createFromDiscriminatorValue)); });
+        deserializerMap.put("sectionsUrl", (n) -> { currentObject.setSectionsUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the parentNotebook property value. The notebook that contains the section group. Read-only.

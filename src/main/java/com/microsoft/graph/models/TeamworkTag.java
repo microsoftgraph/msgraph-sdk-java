@@ -63,14 +63,14 @@ public class TeamworkTag extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkTag currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("memberCount", (n) -> { currentObject.setMemberCount(n.getIntegerValue()); });
-            this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(TeamworkTagMember::createFromDiscriminatorValue)); });
-            this.put("tagType", (n) -> { currentObject.setTagType(n.getEnumValue(TeamworkTagType.class)); });
-            this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("memberCount", (n) -> { currentObject.setMemberCount(n.getIntegerValue()); });
+        deserializerMap.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(TeamworkTagMember::createFromDiscriminatorValue)); });
+        deserializerMap.put("tagType", (n) -> { currentObject.setTagType(n.getEnumValue(TeamworkTagType.class)); });
+        deserializerMap.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the memberCount property value. The number of users assigned to the tag.

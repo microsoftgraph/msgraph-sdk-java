@@ -121,23 +121,23 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewScheduleDefinition currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("additionalNotificationRecipients", (n) -> { currentObject.setAdditionalNotificationRecipients(n.getCollectionOfObjectValues(AccessReviewNotificationRecipientItem::createFromDiscriminatorValue)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("descriptionForAdmins", (n) -> { currentObject.setDescriptionForAdmins(n.getStringValue()); });
-            this.put("descriptionForReviewers", (n) -> { currentObject.setDescriptionForReviewers(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("fallbackReviewers", (n) -> { currentObject.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
-            this.put("instanceEnumerationScope", (n) -> { currentObject.setInstanceEnumerationScope(n.getObjectValue(AccessReviewScope::createFromDiscriminatorValue)); });
-            this.put("instances", (n) -> { currentObject.setInstances(n.getCollectionOfObjectValues(AccessReviewInstance::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
-            this.put("scope", (n) -> { currentObject.setScope(n.getObjectValue(AccessReviewScope::createFromDiscriminatorValue)); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(AccessReviewScheduleSettings::createFromDiscriminatorValue)); });
-            this.put("stageSettings", (n) -> { currentObject.setStageSettings(n.getCollectionOfObjectValues(AccessReviewStageSettings::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("additionalNotificationRecipients", (n) -> { currentObject.setAdditionalNotificationRecipients(n.getCollectionOfObjectValues(AccessReviewNotificationRecipientItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("descriptionForAdmins", (n) -> { currentObject.setDescriptionForAdmins(n.getStringValue()); });
+        deserializerMap.put("descriptionForReviewers", (n) -> { currentObject.setDescriptionForReviewers(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("fallbackReviewers", (n) -> { currentObject.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("instanceEnumerationScope", (n) -> { currentObject.setInstanceEnumerationScope(n.getObjectValue(AccessReviewScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("instances", (n) -> { currentObject.setInstances(n.getCollectionOfObjectValues(AccessReviewInstance::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("scope", (n) -> { currentObject.setScope(n.getObjectValue(AccessReviewScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(AccessReviewScheduleSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("stageSettings", (n) -> { currentObject.setStageSettings(n.getCollectionOfObjectValues(AccessReviewStageSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the instanceEnumerationScope property value. This property is required when scoping a review to guest users' access across all Microsoft 365 groups and determines which Microsoft 365 groups are reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope. Supports $select. For examples of options for configuring instanceEnumerationScope, see Configure the scope of your access review definition using the Microsoft Graph API.

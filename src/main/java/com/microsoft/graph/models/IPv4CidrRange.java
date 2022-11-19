@@ -44,9 +44,9 @@ public class IPv4CidrRange extends IpRange implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IPv4CidrRange currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("cidrAddress", (n) -> { currentObject.setCidrAddress(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("cidrAddress", (n) -> { currentObject.setCidrAddress(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

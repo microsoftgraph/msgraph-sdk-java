@@ -132,23 +132,23 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAppRegistration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("appIdentifier", (n) -> { currentObject.setAppIdentifier(n.getObjectValue(MobileAppIdentifier::createFromDiscriminatorValue)); });
-            this.put("applicationVersion", (n) -> { currentObject.setApplicationVersion(n.getStringValue()); });
-            this.put("appliedPolicies", (n) -> { currentObject.setAppliedPolicies(n.getCollectionOfObjectValues(ManagedAppPolicy::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("deviceTag", (n) -> { currentObject.setDeviceTag(n.getStringValue()); });
-            this.put("deviceType", (n) -> { currentObject.setDeviceType(n.getStringValue()); });
-            this.put("flaggedReasons", (n) -> { currentObject.setFlaggedReasons(n.getCollectionOfEnumValues(ManagedAppFlaggedReason.class)); });
-            this.put("intendedPolicies", (n) -> { currentObject.setIntendedPolicies(n.getCollectionOfObjectValues(ManagedAppPolicy::createFromDiscriminatorValue)); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("managementSdkVersion", (n) -> { currentObject.setManagementSdkVersion(n.getStringValue()); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(ManagedAppOperation::createFromDiscriminatorValue)); });
-            this.put("platformVersion", (n) -> { currentObject.setPlatformVersion(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appIdentifier", (n) -> { currentObject.setAppIdentifier(n.getObjectValue(MobileAppIdentifier::createFromDiscriminatorValue)); });
+        deserializerMap.put("applicationVersion", (n) -> { currentObject.setApplicationVersion(n.getStringValue()); });
+        deserializerMap.put("appliedPolicies", (n) -> { currentObject.setAppliedPolicies(n.getCollectionOfObjectValues(ManagedAppPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("deviceTag", (n) -> { currentObject.setDeviceTag(n.getStringValue()); });
+        deserializerMap.put("deviceType", (n) -> { currentObject.setDeviceType(n.getStringValue()); });
+        deserializerMap.put("flaggedReasons", (n) -> { currentObject.setFlaggedReasons(n.getCollectionOfEnumValues(ManagedAppFlaggedReason.class)); });
+        deserializerMap.put("intendedPolicies", (n) -> { currentObject.setIntendedPolicies(n.getCollectionOfObjectValues(ManagedAppPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managementSdkVersion", (n) -> { currentObject.setManagementSdkVersion(n.getStringValue()); });
+        deserializerMap.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(ManagedAppOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("platformVersion", (n) -> { currentObject.setPlatformVersion(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        deserializerMap.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the flaggedReasons property value. Zero or more reasons an app registration is flagged. E.g. app running on rooted device

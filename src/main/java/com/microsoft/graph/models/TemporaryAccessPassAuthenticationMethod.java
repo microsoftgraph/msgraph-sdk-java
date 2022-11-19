@@ -57,15 +57,15 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TemporaryAccessPassAuthenticationMethod currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("isUsable", (n) -> { currentObject.setIsUsable(n.getBooleanValue()); });
-            this.put("isUsableOnce", (n) -> { currentObject.setIsUsableOnce(n.getBooleanValue()); });
-            this.put("lifetimeInMinutes", (n) -> { currentObject.setLifetimeInMinutes(n.getIntegerValue()); });
-            this.put("methodUsabilityReason", (n) -> { currentObject.setMethodUsabilityReason(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("temporaryAccessPass", (n) -> { currentObject.setTemporaryAccessPass(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("isUsable", (n) -> { currentObject.setIsUsable(n.getBooleanValue()); });
+        deserializerMap.put("isUsableOnce", (n) -> { currentObject.setIsUsableOnce(n.getBooleanValue()); });
+        deserializerMap.put("lifetimeInMinutes", (n) -> { currentObject.setLifetimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("methodUsabilityReason", (n) -> { currentObject.setMethodUsabilityReason(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("temporaryAccessPass", (n) -> { currentObject.setTemporaryAccessPass(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isUsable property value. The state of the authentication method that indicates whether it's currently usable by the user.

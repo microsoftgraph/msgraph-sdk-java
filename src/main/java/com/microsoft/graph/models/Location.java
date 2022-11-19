@@ -95,17 +95,17 @@ public class Location implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Location currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(9) {{
-            this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
-            this.put("coordinates", (n) -> { currentObject.setCoordinates(n.getObjectValue(OutlookGeoCoordinates::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("locationEmailAddress", (n) -> { currentObject.setLocationEmailAddress(n.getStringValue()); });
-            this.put("locationType", (n) -> { currentObject.setLocationType(n.getEnumValue(LocationType.class)); });
-            this.put("locationUri", (n) -> { currentObject.setLocationUri(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("uniqueId", (n) -> { currentObject.setUniqueId(n.getStringValue()); });
-            this.put("uniqueIdType", (n) -> { currentObject.setUniqueIdType(n.getEnumValue(LocationUniqueIdType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("coordinates", (n) -> { currentObject.setCoordinates(n.getObjectValue(OutlookGeoCoordinates::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("locationEmailAddress", (n) -> { currentObject.setLocationEmailAddress(n.getStringValue()); });
+        deserializerMap.put("locationType", (n) -> { currentObject.setLocationType(n.getEnumValue(LocationType.class)); });
+        deserializerMap.put("locationUri", (n) -> { currentObject.setLocationUri(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("uniqueId", (n) -> { currentObject.setUniqueId(n.getStringValue()); });
+        deserializerMap.put("uniqueIdType", (n) -> { currentObject.setUniqueIdType(n.getEnumValue(LocationUniqueIdType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the locationEmailAddress property value. Optional email address of the location.

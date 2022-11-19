@@ -207,36 +207,36 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MediaStream currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(28) {{
-            this.put("audioCodec", (n) -> { currentObject.setAudioCodec(n.getEnumValue(AudioCodec.class)); });
-            this.put("averageAudioDegradation", (n) -> { currentObject.setAverageAudioDegradation(n.getFloatValue()); });
-            this.put("averageAudioNetworkJitter", (n) -> { currentObject.setAverageAudioNetworkJitter(n.getPeriodValue()); });
-            this.put("averageBandwidthEstimate", (n) -> { currentObject.setAverageBandwidthEstimate(n.getLongValue()); });
-            this.put("averageJitter", (n) -> { currentObject.setAverageJitter(n.getPeriodValue()); });
-            this.put("averagePacketLossRate", (n) -> { currentObject.setAveragePacketLossRate(n.getFloatValue()); });
-            this.put("averageRatioOfConcealedSamples", (n) -> { currentObject.setAverageRatioOfConcealedSamples(n.getFloatValue()); });
-            this.put("averageReceivedFrameRate", (n) -> { currentObject.setAverageReceivedFrameRate(n.getFloatValue()); });
-            this.put("averageRoundTripTime", (n) -> { currentObject.setAverageRoundTripTime(n.getPeriodValue()); });
-            this.put("averageVideoFrameLossPercentage", (n) -> { currentObject.setAverageVideoFrameLossPercentage(n.getFloatValue()); });
-            this.put("averageVideoFrameRate", (n) -> { currentObject.setAverageVideoFrameRate(n.getFloatValue()); });
-            this.put("averageVideoPacketLossRate", (n) -> { currentObject.setAverageVideoPacketLossRate(n.getFloatValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lowFrameRateRatio", (n) -> { currentObject.setLowFrameRateRatio(n.getFloatValue()); });
-            this.put("lowVideoProcessingCapabilityRatio", (n) -> { currentObject.setLowVideoProcessingCapabilityRatio(n.getFloatValue()); });
-            this.put("maxAudioNetworkJitter", (n) -> { currentObject.setMaxAudioNetworkJitter(n.getPeriodValue()); });
-            this.put("maxJitter", (n) -> { currentObject.setMaxJitter(n.getPeriodValue()); });
-            this.put("maxPacketLossRate", (n) -> { currentObject.setMaxPacketLossRate(n.getFloatValue()); });
-            this.put("maxRatioOfConcealedSamples", (n) -> { currentObject.setMaxRatioOfConcealedSamples(n.getFloatValue()); });
-            this.put("maxRoundTripTime", (n) -> { currentObject.setMaxRoundTripTime(n.getPeriodValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("packetUtilization", (n) -> { currentObject.setPacketUtilization(n.getLongValue()); });
-            this.put("postForwardErrorCorrectionPacketLossRate", (n) -> { currentObject.setPostForwardErrorCorrectionPacketLossRate(n.getFloatValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("streamDirection", (n) -> { currentObject.setStreamDirection(n.getEnumValue(MediaStreamDirection.class)); });
-            this.put("streamId", (n) -> { currentObject.setStreamId(n.getStringValue()); });
-            this.put("videoCodec", (n) -> { currentObject.setVideoCodec(n.getEnumValue(VideoCodec.class)); });
-            this.put("wasMediaBypassed", (n) -> { currentObject.setWasMediaBypassed(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(28);
+        deserializerMap.put("audioCodec", (n) -> { currentObject.setAudioCodec(n.getEnumValue(AudioCodec.class)); });
+        deserializerMap.put("averageAudioDegradation", (n) -> { currentObject.setAverageAudioDegradation(n.getFloatValue()); });
+        deserializerMap.put("averageAudioNetworkJitter", (n) -> { currentObject.setAverageAudioNetworkJitter(n.getPeriodValue()); });
+        deserializerMap.put("averageBandwidthEstimate", (n) -> { currentObject.setAverageBandwidthEstimate(n.getLongValue()); });
+        deserializerMap.put("averageJitter", (n) -> { currentObject.setAverageJitter(n.getPeriodValue()); });
+        deserializerMap.put("averagePacketLossRate", (n) -> { currentObject.setAveragePacketLossRate(n.getFloatValue()); });
+        deserializerMap.put("averageRatioOfConcealedSamples", (n) -> { currentObject.setAverageRatioOfConcealedSamples(n.getFloatValue()); });
+        deserializerMap.put("averageReceivedFrameRate", (n) -> { currentObject.setAverageReceivedFrameRate(n.getFloatValue()); });
+        deserializerMap.put("averageRoundTripTime", (n) -> { currentObject.setAverageRoundTripTime(n.getPeriodValue()); });
+        deserializerMap.put("averageVideoFrameLossPercentage", (n) -> { currentObject.setAverageVideoFrameLossPercentage(n.getFloatValue()); });
+        deserializerMap.put("averageVideoFrameRate", (n) -> { currentObject.setAverageVideoFrameRate(n.getFloatValue()); });
+        deserializerMap.put("averageVideoPacketLossRate", (n) -> { currentObject.setAverageVideoPacketLossRate(n.getFloatValue()); });
+        deserializerMap.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lowFrameRateRatio", (n) -> { currentObject.setLowFrameRateRatio(n.getFloatValue()); });
+        deserializerMap.put("lowVideoProcessingCapabilityRatio", (n) -> { currentObject.setLowVideoProcessingCapabilityRatio(n.getFloatValue()); });
+        deserializerMap.put("maxAudioNetworkJitter", (n) -> { currentObject.setMaxAudioNetworkJitter(n.getPeriodValue()); });
+        deserializerMap.put("maxJitter", (n) -> { currentObject.setMaxJitter(n.getPeriodValue()); });
+        deserializerMap.put("maxPacketLossRate", (n) -> { currentObject.setMaxPacketLossRate(n.getFloatValue()); });
+        deserializerMap.put("maxRatioOfConcealedSamples", (n) -> { currentObject.setMaxRatioOfConcealedSamples(n.getFloatValue()); });
+        deserializerMap.put("maxRoundTripTime", (n) -> { currentObject.setMaxRoundTripTime(n.getPeriodValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("packetUtilization", (n) -> { currentObject.setPacketUtilization(n.getLongValue()); });
+        deserializerMap.put("postForwardErrorCorrectionPacketLossRate", (n) -> { currentObject.setPostForwardErrorCorrectionPacketLossRate(n.getFloatValue()); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("streamDirection", (n) -> { currentObject.setStreamDirection(n.getEnumValue(MediaStreamDirection.class)); });
+        deserializerMap.put("streamId", (n) -> { currentObject.setStreamId(n.getStringValue()); });
+        deserializerMap.put("videoCodec", (n) -> { currentObject.setVideoCodec(n.getEnumValue(VideoCodec.class)); });
+        deserializerMap.put("wasMediaBypassed", (n) -> { currentObject.setWasMediaBypassed(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lowFrameRateRatio property value. Fraction of the call where frame rate is less than 7.5 frames per second.

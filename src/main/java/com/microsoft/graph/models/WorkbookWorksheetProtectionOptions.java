@@ -157,20 +157,20 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookWorksheetProtectionOptions currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(12) {{
-            this.put("allowAutoFilter", (n) -> { currentObject.setAllowAutoFilter(n.getBooleanValue()); });
-            this.put("allowDeleteColumns", (n) -> { currentObject.setAllowDeleteColumns(n.getBooleanValue()); });
-            this.put("allowDeleteRows", (n) -> { currentObject.setAllowDeleteRows(n.getBooleanValue()); });
-            this.put("allowFormatCells", (n) -> { currentObject.setAllowFormatCells(n.getBooleanValue()); });
-            this.put("allowFormatColumns", (n) -> { currentObject.setAllowFormatColumns(n.getBooleanValue()); });
-            this.put("allowFormatRows", (n) -> { currentObject.setAllowFormatRows(n.getBooleanValue()); });
-            this.put("allowInsertColumns", (n) -> { currentObject.setAllowInsertColumns(n.getBooleanValue()); });
-            this.put("allowInsertHyperlinks", (n) -> { currentObject.setAllowInsertHyperlinks(n.getBooleanValue()); });
-            this.put("allowInsertRows", (n) -> { currentObject.setAllowInsertRows(n.getBooleanValue()); });
-            this.put("allowPivotTables", (n) -> { currentObject.setAllowPivotTables(n.getBooleanValue()); });
-            this.put("allowSort", (n) -> { currentObject.setAllowSort(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(12);
+        deserializerMap.put("allowAutoFilter", (n) -> { currentObject.setAllowAutoFilter(n.getBooleanValue()); });
+        deserializerMap.put("allowDeleteColumns", (n) -> { currentObject.setAllowDeleteColumns(n.getBooleanValue()); });
+        deserializerMap.put("allowDeleteRows", (n) -> { currentObject.setAllowDeleteRows(n.getBooleanValue()); });
+        deserializerMap.put("allowFormatCells", (n) -> { currentObject.setAllowFormatCells(n.getBooleanValue()); });
+        deserializerMap.put("allowFormatColumns", (n) -> { currentObject.setAllowFormatColumns(n.getBooleanValue()); });
+        deserializerMap.put("allowFormatRows", (n) -> { currentObject.setAllowFormatRows(n.getBooleanValue()); });
+        deserializerMap.put("allowInsertColumns", (n) -> { currentObject.setAllowInsertColumns(n.getBooleanValue()); });
+        deserializerMap.put("allowInsertHyperlinks", (n) -> { currentObject.setAllowInsertHyperlinks(n.getBooleanValue()); });
+        deserializerMap.put("allowInsertRows", (n) -> { currentObject.setAllowInsertRows(n.getBooleanValue()); });
+        deserializerMap.put("allowPivotTables", (n) -> { currentObject.setAllowPivotTables(n.getBooleanValue()); });
+        deserializerMap.put("allowSort", (n) -> { currentObject.setAllowSort(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

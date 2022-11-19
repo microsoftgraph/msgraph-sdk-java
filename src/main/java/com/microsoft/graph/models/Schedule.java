@@ -80,27 +80,27 @@ public class Schedule extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Schedule currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
-            this.put("offerShiftRequests", (n) -> { currentObject.setOfferShiftRequests(n.getCollectionOfObjectValues(OfferShiftRequest::createFromDiscriminatorValue)); });
-            this.put("offerShiftRequestsEnabled", (n) -> { currentObject.setOfferShiftRequestsEnabled(n.getBooleanValue()); });
-            this.put("openShiftChangeRequests", (n) -> { currentObject.setOpenShiftChangeRequests(n.getCollectionOfObjectValues(OpenShiftChangeRequest::createFromDiscriminatorValue)); });
-            this.put("openShifts", (n) -> { currentObject.setOpenShifts(n.getCollectionOfObjectValues(OpenShift::createFromDiscriminatorValue)); });
-            this.put("openShiftsEnabled", (n) -> { currentObject.setOpenShiftsEnabled(n.getBooleanValue()); });
-            this.put("provisionStatus", (n) -> { currentObject.setProvisionStatus(n.getEnumValue(OperationStatus.class)); });
-            this.put("provisionStatusCode", (n) -> { currentObject.setProvisionStatusCode(n.getStringValue()); });
-            this.put("schedulingGroups", (n) -> { currentObject.setSchedulingGroups(n.getCollectionOfObjectValues(SchedulingGroup::createFromDiscriminatorValue)); });
-            this.put("shifts", (n) -> { currentObject.setShifts(n.getCollectionOfObjectValues(Shift::createFromDiscriminatorValue)); });
-            this.put("swapShiftsChangeRequests", (n) -> { currentObject.setSwapShiftsChangeRequests(n.getCollectionOfObjectValues(SwapShiftsChangeRequest::createFromDiscriminatorValue)); });
-            this.put("swapShiftsRequestsEnabled", (n) -> { currentObject.setSwapShiftsRequestsEnabled(n.getBooleanValue()); });
-            this.put("timeClockEnabled", (n) -> { currentObject.setTimeClockEnabled(n.getBooleanValue()); });
-            this.put("timeOffReasons", (n) -> { currentObject.setTimeOffReasons(n.getCollectionOfObjectValues(TimeOffReason::createFromDiscriminatorValue)); });
-            this.put("timeOffRequests", (n) -> { currentObject.setTimeOffRequests(n.getCollectionOfObjectValues(TimeOffRequest::createFromDiscriminatorValue)); });
-            this.put("timeOffRequestsEnabled", (n) -> { currentObject.setTimeOffRequestsEnabled(n.getBooleanValue()); });
-            this.put("timesOff", (n) -> { currentObject.setTimesOff(n.getCollectionOfObjectValues(TimeOff::createFromDiscriminatorValue)); });
-            this.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });
-            this.put("workforceIntegrationIds", (n) -> { currentObject.setWorkforceIntegrationIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
+        deserializerMap.put("offerShiftRequests", (n) -> { currentObject.setOfferShiftRequests(n.getCollectionOfObjectValues(OfferShiftRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("offerShiftRequestsEnabled", (n) -> { currentObject.setOfferShiftRequestsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("openShiftChangeRequests", (n) -> { currentObject.setOpenShiftChangeRequests(n.getCollectionOfObjectValues(OpenShiftChangeRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("openShifts", (n) -> { currentObject.setOpenShifts(n.getCollectionOfObjectValues(OpenShift::createFromDiscriminatorValue)); });
+        deserializerMap.put("openShiftsEnabled", (n) -> { currentObject.setOpenShiftsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("provisionStatus", (n) -> { currentObject.setProvisionStatus(n.getEnumValue(OperationStatus.class)); });
+        deserializerMap.put("provisionStatusCode", (n) -> { currentObject.setProvisionStatusCode(n.getStringValue()); });
+        deserializerMap.put("schedulingGroups", (n) -> { currentObject.setSchedulingGroups(n.getCollectionOfObjectValues(SchedulingGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("shifts", (n) -> { currentObject.setShifts(n.getCollectionOfObjectValues(Shift::createFromDiscriminatorValue)); });
+        deserializerMap.put("swapShiftsChangeRequests", (n) -> { currentObject.setSwapShiftsChangeRequests(n.getCollectionOfObjectValues(SwapShiftsChangeRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("swapShiftsRequestsEnabled", (n) -> { currentObject.setSwapShiftsRequestsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("timeClockEnabled", (n) -> { currentObject.setTimeClockEnabled(n.getBooleanValue()); });
+        deserializerMap.put("timeOffReasons", (n) -> { currentObject.setTimeOffReasons(n.getCollectionOfObjectValues(TimeOffReason::createFromDiscriminatorValue)); });
+        deserializerMap.put("timeOffRequests", (n) -> { currentObject.setTimeOffRequests(n.getCollectionOfObjectValues(TimeOffRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("timeOffRequestsEnabled", (n) -> { currentObject.setTimeOffRequestsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("timesOff", (n) -> { currentObject.setTimesOff(n.getCollectionOfObjectValues(TimeOff::createFromDiscriminatorValue)); });
+        deserializerMap.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });
+        deserializerMap.put("workforceIntegrationIds", (n) -> { currentObject.setWorkforceIntegrationIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the offerShiftRequests property value. The offerShiftRequests property

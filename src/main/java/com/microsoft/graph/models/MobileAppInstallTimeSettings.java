@@ -63,12 +63,12 @@ public class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppInstallTimeSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("deadlineDateTime", (n) -> { currentObject.setDeadlineDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("useLocalTime", (n) -> { currentObject.setUseLocalTime(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("deadlineDateTime", (n) -> { currentObject.setDeadlineDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("useLocalTime", (n) -> { currentObject.setUseLocalTime(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

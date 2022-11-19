@@ -48,15 +48,15 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoveryEstimateOperation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("indexedItemCount", (n) -> { currentObject.setIndexedItemCount(n.getLongValue()); });
-            this.put("indexedItemsSize", (n) -> { currentObject.setIndexedItemsSize(n.getLongValue()); });
-            this.put("mailboxCount", (n) -> { currentObject.setMailboxCount(n.getIntegerValue()); });
-            this.put("search", (n) -> { currentObject.setSearch(n.getObjectValue(EdiscoverySearch::createFromDiscriminatorValue)); });
-            this.put("siteCount", (n) -> { currentObject.setSiteCount(n.getIntegerValue()); });
-            this.put("unindexedItemCount", (n) -> { currentObject.setUnindexedItemCount(n.getLongValue()); });
-            this.put("unindexedItemsSize", (n) -> { currentObject.setUnindexedItemsSize(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("indexedItemCount", (n) -> { currentObject.setIndexedItemCount(n.getLongValue()); });
+        deserializerMap.put("indexedItemsSize", (n) -> { currentObject.setIndexedItemsSize(n.getLongValue()); });
+        deserializerMap.put("mailboxCount", (n) -> { currentObject.setMailboxCount(n.getIntegerValue()); });
+        deserializerMap.put("search", (n) -> { currentObject.setSearch(n.getObjectValue(EdiscoverySearch::createFromDiscriminatorValue)); });
+        deserializerMap.put("siteCount", (n) -> { currentObject.setSiteCount(n.getIntegerValue()); });
+        deserializerMap.put("unindexedItemCount", (n) -> { currentObject.setUnindexedItemCount(n.getLongValue()); });
+        deserializerMap.put("unindexedItemsSize", (n) -> { currentObject.setUnindexedItemsSize(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the indexedItemCount property value. The estimated count of items for the search that matched the content query.

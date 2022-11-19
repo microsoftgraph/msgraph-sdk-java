@@ -128,21 +128,21 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceOperatingSystemSummary currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(13) {{
-            this.put("androidCorporateWorkProfileCount", (n) -> { currentObject.setAndroidCorporateWorkProfileCount(n.getIntegerValue()); });
-            this.put("androidCount", (n) -> { currentObject.setAndroidCount(n.getIntegerValue()); });
-            this.put("androidDedicatedCount", (n) -> { currentObject.setAndroidDedicatedCount(n.getIntegerValue()); });
-            this.put("androidDeviceAdminCount", (n) -> { currentObject.setAndroidDeviceAdminCount(n.getIntegerValue()); });
-            this.put("androidFullyManagedCount", (n) -> { currentObject.setAndroidFullyManagedCount(n.getIntegerValue()); });
-            this.put("androidWorkProfileCount", (n) -> { currentObject.setAndroidWorkProfileCount(n.getIntegerValue()); });
-            this.put("configMgrDeviceCount", (n) -> { currentObject.setConfigMgrDeviceCount(n.getIntegerValue()); });
-            this.put("iosCount", (n) -> { currentObject.setIosCount(n.getIntegerValue()); });
-            this.put("macOSCount", (n) -> { currentObject.setMacOSCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("unknownCount", (n) -> { currentObject.setUnknownCount(n.getIntegerValue()); });
-            this.put("windowsCount", (n) -> { currentObject.setWindowsCount(n.getIntegerValue()); });
-            this.put("windowsMobileCount", (n) -> { currentObject.setWindowsMobileCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(13);
+        deserializerMap.put("androidCorporateWorkProfileCount", (n) -> { currentObject.setAndroidCorporateWorkProfileCount(n.getIntegerValue()); });
+        deserializerMap.put("androidCount", (n) -> { currentObject.setAndroidCount(n.getIntegerValue()); });
+        deserializerMap.put("androidDedicatedCount", (n) -> { currentObject.setAndroidDedicatedCount(n.getIntegerValue()); });
+        deserializerMap.put("androidDeviceAdminCount", (n) -> { currentObject.setAndroidDeviceAdminCount(n.getIntegerValue()); });
+        deserializerMap.put("androidFullyManagedCount", (n) -> { currentObject.setAndroidFullyManagedCount(n.getIntegerValue()); });
+        deserializerMap.put("androidWorkProfileCount", (n) -> { currentObject.setAndroidWorkProfileCount(n.getIntegerValue()); });
+        deserializerMap.put("configMgrDeviceCount", (n) -> { currentObject.setConfigMgrDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("iosCount", (n) -> { currentObject.setIosCount(n.getIntegerValue()); });
+        deserializerMap.put("macOSCount", (n) -> { currentObject.setMacOSCount(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("unknownCount", (n) -> { currentObject.setUnknownCount(n.getIntegerValue()); });
+        deserializerMap.put("windowsCount", (n) -> { currentObject.setWindowsCount(n.getIntegerValue()); });
+        deserializerMap.put("windowsMobileCount", (n) -> { currentObject.setWindowsMobileCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the iosCount property value. Number of iOS device count.

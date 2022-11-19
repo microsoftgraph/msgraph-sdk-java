@@ -69,12 +69,12 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AggregationOption currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("bucketDefinition", (n) -> { currentObject.setBucketDefinition(n.getObjectValue(BucketAggregationDefinition::createFromDiscriminatorValue)); });
-            this.put("field", (n) -> { currentObject.setField(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("size", (n) -> { currentObject.setSize(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("bucketDefinition", (n) -> { currentObject.setBucketDefinition(n.getObjectValue(BucketAggregationDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("field", (n) -> { currentObject.setField(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("size", (n) -> { currentObject.setSize(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

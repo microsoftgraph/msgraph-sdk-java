@@ -67,11 +67,11 @@ public class PreAuthorizedApplication implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PreAuthorizedApplication currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("delegatedPermissionIds", (n) -> { currentObject.setDelegatedPermissionIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
+        deserializerMap.put("delegatedPermissionIds", (n) -> { currentObject.setDelegatedPermissionIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

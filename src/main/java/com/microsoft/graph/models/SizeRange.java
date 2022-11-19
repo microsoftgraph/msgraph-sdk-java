@@ -51,11 +51,11 @@ public class SizeRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SizeRange currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("maximumSize", (n) -> { currentObject.setMaximumSize(n.getIntegerValue()); });
-            this.put("minimumSize", (n) -> { currentObject.setMinimumSize(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("maximumSize", (n) -> { currentObject.setMaximumSize(n.getIntegerValue()); });
+        deserializerMap.put("minimumSize", (n) -> { currentObject.setMinimumSize(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the maximumSize property value. The maximum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.

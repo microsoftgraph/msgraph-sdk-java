@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class TodoTask extends Entity implements Parsable {
     /** The attachments property */
     private java.util.List<AttachmentBase> _attachments;
@@ -156,28 +156,28 @@ public class TodoTask extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TodoTask currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(AttachmentBase::createFromDiscriminatorValue)); });
-            this.put("attachmentSessions", (n) -> { currentObject.setAttachmentSessions(n.getCollectionOfObjectValues(AttachmentSession::createFromDiscriminatorValue)); });
-            this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("bodyLastModifiedDateTime", (n) -> { currentObject.setBodyLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("checklistItems", (n) -> { currentObject.setChecklistItems(n.getCollectionOfObjectValues(ChecklistItem::createFromDiscriminatorValue)); });
-            this.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
-            this.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(Importance.class)); });
-            this.put("isReminderOn", (n) -> { currentObject.setIsReminderOn(n.getBooleanValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("linkedResources", (n) -> { currentObject.setLinkedResources(n.getCollectionOfObjectValues(LinkedResource::createFromDiscriminatorValue)); });
-            this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
-            this.put("reminderDateTime", (n) -> { currentObject.setReminderDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(TaskStatus.class)); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(AttachmentBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("attachmentSessions", (n) -> { currentObject.setAttachmentSessions(n.getCollectionOfObjectValues(AttachmentSession::createFromDiscriminatorValue)); });
+        deserializerMap.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("bodyLastModifiedDateTime", (n) -> { currentObject.setBodyLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("checklistItems", (n) -> { currentObject.setChecklistItems(n.getCollectionOfObjectValues(ChecklistItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
+        deserializerMap.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(Importance.class)); });
+        deserializerMap.put("isReminderOn", (n) -> { currentObject.setIsReminderOn(n.getBooleanValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("linkedResources", (n) -> { currentObject.setLinkedResources(n.getCollectionOfObjectValues(LinkedResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
+        deserializerMap.put("reminderDateTime", (n) -> { currentObject.setReminderDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(TaskStatus.class)); });
+        deserializerMap.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hasAttachments property value. The hasAttachments property

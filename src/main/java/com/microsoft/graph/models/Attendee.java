@@ -38,10 +38,10 @@ public class Attendee extends AttendeeBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Attendee currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("proposedNewTime", (n) -> { currentObject.setProposedNewTime(n.getObjectValue(TimeSlot::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(ResponseStatus::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("proposedNewTime", (n) -> { currentObject.setProposedNewTime(n.getObjectValue(TimeSlot::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(ResponseStatus::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the proposedNewTime property value. An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.

@@ -76,16 +76,16 @@ public class DeviceInstallState extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceInstallState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
-            this.put("installState", (n) -> { currentObject.setInstallState(n.getEnumValue(InstallState.class)); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("osDescription", (n) -> { currentObject.setOsDescription(n.getStringValue()); });
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
-            this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
+        deserializerMap.put("installState", (n) -> { currentObject.setInstallState(n.getEnumValue(InstallState.class)); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("osDescription", (n) -> { currentObject.setOsDescription(n.getStringValue()); });
+        deserializerMap.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
+        deserializerMap.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the installState property value. Possible values for install state.

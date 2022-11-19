@@ -53,12 +53,12 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CrossTenantAccessPolicyInboundTrust currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("isCompliantDeviceAccepted", (n) -> { currentObject.setIsCompliantDeviceAccepted(n.getBooleanValue()); });
-            this.put("isHybridAzureADJoinedDeviceAccepted", (n) -> { currentObject.setIsHybridAzureADJoinedDeviceAccepted(n.getBooleanValue()); });
-            this.put("isMfaAccepted", (n) -> { currentObject.setIsMfaAccepted(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("isCompliantDeviceAccepted", (n) -> { currentObject.setIsCompliantDeviceAccepted(n.getBooleanValue()); });
+        deserializerMap.put("isHybridAzureADJoinedDeviceAccepted", (n) -> { currentObject.setIsHybridAzureADJoinedDeviceAccepted(n.getBooleanValue()); });
+        deserializerMap.put("isMfaAccepted", (n) -> { currentObject.setIsMfaAccepted(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isCompliantDeviceAccepted property value. Specifies whether compliant devices from external Azure AD organizations are trusted.

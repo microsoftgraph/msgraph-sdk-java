@@ -57,14 +57,14 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WebApplication currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("homePageUrl", (n) -> { currentObject.setHomePageUrl(n.getStringValue()); });
-            this.put("implicitGrantSettings", (n) -> { currentObject.setImplicitGrantSettings(n.getObjectValue(ImplicitGrantSettings::createFromDiscriminatorValue)); });
-            this.put("logoutUrl", (n) -> { currentObject.setLogoutUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("redirectUris", (n) -> { currentObject.setRedirectUris(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("redirectUriSettings", (n) -> { currentObject.setRedirectUriSettings(n.getCollectionOfObjectValues(RedirectUriSettings::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("homePageUrl", (n) -> { currentObject.setHomePageUrl(n.getStringValue()); });
+        deserializerMap.put("implicitGrantSettings", (n) -> { currentObject.setImplicitGrantSettings(n.getObjectValue(ImplicitGrantSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("logoutUrl", (n) -> { currentObject.setLogoutUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("redirectUris", (n) -> { currentObject.setRedirectUris(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("redirectUriSettings", (n) -> { currentObject.setRedirectUriSettings(n.getCollectionOfObjectValues(RedirectUriSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the homePageUrl property value. Home page or landing page of the application.

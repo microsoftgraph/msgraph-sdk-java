@@ -123,19 +123,19 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeleconferenceDeviceQuality currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(11) {{
-            this.put("callChainId", (n) -> { currentObject.setCallChainId(n.getStringValue()); });
-            this.put("cloudServiceDeploymentEnvironment", (n) -> { currentObject.setCloudServiceDeploymentEnvironment(n.getStringValue()); });
-            this.put("cloudServiceDeploymentId", (n) -> { currentObject.setCloudServiceDeploymentId(n.getStringValue()); });
-            this.put("cloudServiceInstanceName", (n) -> { currentObject.setCloudServiceInstanceName(n.getStringValue()); });
-            this.put("cloudServiceName", (n) -> { currentObject.setCloudServiceName(n.getStringValue()); });
-            this.put("deviceDescription", (n) -> { currentObject.setDeviceDescription(n.getStringValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("mediaLegId", (n) -> { currentObject.setMediaLegId(n.getStringValue()); });
-            this.put("mediaQualityList", (n) -> { currentObject.setMediaQualityList(n.getCollectionOfObjectValues(TeleconferenceDeviceMediaQuality::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("participantId", (n) -> { currentObject.setParticipantId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(11);
+        deserializerMap.put("callChainId", (n) -> { currentObject.setCallChainId(n.getStringValue()); });
+        deserializerMap.put("cloudServiceDeploymentEnvironment", (n) -> { currentObject.setCloudServiceDeploymentEnvironment(n.getStringValue()); });
+        deserializerMap.put("cloudServiceDeploymentId", (n) -> { currentObject.setCloudServiceDeploymentId(n.getStringValue()); });
+        deserializerMap.put("cloudServiceInstanceName", (n) -> { currentObject.setCloudServiceInstanceName(n.getStringValue()); });
+        deserializerMap.put("cloudServiceName", (n) -> { currentObject.setCloudServiceName(n.getStringValue()); });
+        deserializerMap.put("deviceDescription", (n) -> { currentObject.setDeviceDescription(n.getStringValue()); });
+        deserializerMap.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("mediaLegId", (n) -> { currentObject.setMediaLegId(n.getStringValue()); });
+        deserializerMap.put("mediaQualityList", (n) -> { currentObject.setMediaQualityList(n.getCollectionOfObjectValues(TeleconferenceDeviceMediaQuality::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("participantId", (n) -> { currentObject.setParticipantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mediaLegId property value. A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.

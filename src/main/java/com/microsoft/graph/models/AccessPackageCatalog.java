@@ -91,16 +91,16 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageCatalog currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("accessPackages", (n) -> { currentObject.setAccessPackages(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
-            this.put("catalogType", (n) -> { currentObject.setCatalogType(n.getEnumValue(AccessPackageCatalogType.class)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isExternallyVisible", (n) -> { currentObject.setIsExternallyVisible(n.getBooleanValue()); });
-            this.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(AccessPackageCatalogState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessPackages", (n) -> { currentObject.setAccessPackages(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
+        deserializerMap.put("catalogType", (n) -> { currentObject.setCatalogType(n.getEnumValue(AccessPackageCatalogType.class)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isExternallyVisible", (n) -> { currentObject.setIsExternallyVisible(n.getBooleanValue()); });
+        deserializerMap.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(AccessPackageCatalogState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isExternallyVisible property value. Whether the access packages in this catalog can be requested by users outside of the tenant.

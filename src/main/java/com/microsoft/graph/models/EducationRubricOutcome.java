@@ -42,12 +42,12 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationRubricOutcome currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("publishedRubricQualityFeedback", (n) -> { currentObject.setPublishedRubricQualityFeedback(n.getCollectionOfObjectValues(RubricQualityFeedbackModel::createFromDiscriminatorValue)); });
-            this.put("publishedRubricQualitySelectedLevels", (n) -> { currentObject.setPublishedRubricQualitySelectedLevels(n.getCollectionOfObjectValues(RubricQualitySelectedColumnModel::createFromDiscriminatorValue)); });
-            this.put("rubricQualityFeedback", (n) -> { currentObject.setRubricQualityFeedback(n.getCollectionOfObjectValues(RubricQualityFeedbackModel::createFromDiscriminatorValue)); });
-            this.put("rubricQualitySelectedLevels", (n) -> { currentObject.setRubricQualitySelectedLevels(n.getCollectionOfObjectValues(RubricQualitySelectedColumnModel::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("publishedRubricQualityFeedback", (n) -> { currentObject.setPublishedRubricQualityFeedback(n.getCollectionOfObjectValues(RubricQualityFeedbackModel::createFromDiscriminatorValue)); });
+        deserializerMap.put("publishedRubricQualitySelectedLevels", (n) -> { currentObject.setPublishedRubricQualitySelectedLevels(n.getCollectionOfObjectValues(RubricQualitySelectedColumnModel::createFromDiscriminatorValue)); });
+        deserializerMap.put("rubricQualityFeedback", (n) -> { currentObject.setRubricQualityFeedback(n.getCollectionOfObjectValues(RubricQualityFeedbackModel::createFromDiscriminatorValue)); });
+        deserializerMap.put("rubricQualitySelectedLevels", (n) -> { currentObject.setRubricQualitySelectedLevels(n.getCollectionOfObjectValues(RubricQualitySelectedColumnModel::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the publishedRubricQualityFeedback property value. A copy of the rubricQualityFeedback property that is made when the grade is released to the student.

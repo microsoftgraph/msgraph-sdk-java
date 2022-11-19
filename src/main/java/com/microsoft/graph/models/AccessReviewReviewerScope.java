@@ -53,12 +53,12 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewReviewerScope currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("query", (n) -> { currentObject.setQuery(n.getStringValue()); });
-            this.put("queryRoot", (n) -> { currentObject.setQueryRoot(n.getStringValue()); });
-            this.put("queryType", (n) -> { currentObject.setQueryType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("query", (n) -> { currentObject.setQuery(n.getStringValue()); });
+        deserializerMap.put("queryRoot", (n) -> { currentObject.setQueryRoot(n.getStringValue()); });
+        deserializerMap.put("queryType", (n) -> { currentObject.setQueryType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

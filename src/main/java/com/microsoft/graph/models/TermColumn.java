@@ -65,13 +65,13 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TermColumn currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("allowMultipleValues", (n) -> { currentObject.setAllowMultipleValues(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("parentTerm", (n) -> { currentObject.setParentTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
-            this.put("showFullyQualifiedName", (n) -> { currentObject.setShowFullyQualifiedName(n.getBooleanValue()); });
-            this.put("termSet", (n) -> { currentObject.setTermSet(n.getObjectValue(Set::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("allowMultipleValues", (n) -> { currentObject.setAllowMultipleValues(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("parentTerm", (n) -> { currentObject.setParentTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
+        deserializerMap.put("showFullyQualifiedName", (n) -> { currentObject.setShowFullyQualifiedName(n.getBooleanValue()); });
+        deserializerMap.put("termSet", (n) -> { currentObject.setTermSet(n.getObjectValue(Set::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

@@ -61,12 +61,12 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("deviceComplianceCheckinThresholdDays", (n) -> { currentObject.setDeviceComplianceCheckinThresholdDays(n.getIntegerValue()); });
-            this.put("isScheduledActionEnabled", (n) -> { currentObject.setIsScheduledActionEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("secureByDefault", (n) -> { currentObject.setSecureByDefault(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("deviceComplianceCheckinThresholdDays", (n) -> { currentObject.setDeviceComplianceCheckinThresholdDays(n.getIntegerValue()); });
+        deserializerMap.put("isScheduledActionEnabled", (n) -> { currentObject.setIsScheduledActionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("secureByDefault", (n) -> { currentObject.setSecureByDefault(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isScheduledActionEnabled property value. Is feature enabled or not for scheduled action for rule.

@@ -57,15 +57,15 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImportedWindowsAutopilotDeviceIdentity currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("assignedUserPrincipalName", (n) -> { currentObject.setAssignedUserPrincipalName(n.getStringValue()); });
-            this.put("groupTag", (n) -> { currentObject.setGroupTag(n.getStringValue()); });
-            this.put("hardwareIdentifier", (n) -> { currentObject.setHardwareIdentifier(n.getByteArrayValue()); });
-            this.put("importId", (n) -> { currentObject.setImportId(n.getStringValue()); });
-            this.put("productKey", (n) -> { currentObject.setProductKey(n.getStringValue()); });
-            this.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getObjectValue(ImportedWindowsAutopilotDeviceIdentityState::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignedUserPrincipalName", (n) -> { currentObject.setAssignedUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("groupTag", (n) -> { currentObject.setGroupTag(n.getStringValue()); });
+        deserializerMap.put("hardwareIdentifier", (n) -> { currentObject.setHardwareIdentifier(n.getByteArrayValue()); });
+        deserializerMap.put("importId", (n) -> { currentObject.setImportId(n.getStringValue()); });
+        deserializerMap.put("productKey", (n) -> { currentObject.setProductKey(n.getStringValue()); });
+        deserializerMap.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getObjectValue(ImportedWindowsAutopilotDeviceIdentityState::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the groupTag property value. Group Tag of the Windows autopilot device.

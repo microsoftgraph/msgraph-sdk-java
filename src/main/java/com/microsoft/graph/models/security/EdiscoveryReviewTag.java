@@ -56,11 +56,11 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoveryReviewTag currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("childSelectability", (n) -> { currentObject.setChildSelectability(n.getEnumValue(ChildSelectability.class)); });
-            this.put("childTags", (n) -> { currentObject.setChildTags(n.getCollectionOfObjectValues(EdiscoveryReviewTag::createFromDiscriminatorValue)); });
-            this.put("parent", (n) -> { currentObject.setParent(n.getObjectValue(EdiscoveryReviewTag::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("childSelectability", (n) -> { currentObject.setChildSelectability(n.getEnumValue(ChildSelectability.class)); });
+        deserializerMap.put("childTags", (n) -> { currentObject.setChildTags(n.getCollectionOfObjectValues(EdiscoveryReviewTag::createFromDiscriminatorValue)); });
+        deserializerMap.put("parent", (n) -> { currentObject.setParent(n.getObjectValue(EdiscoveryReviewTag::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the parent property value. Returns the parent tag of the specified tag.

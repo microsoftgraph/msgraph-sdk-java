@@ -83,15 +83,15 @@ public class Session extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Session currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("callee", (n) -> { currentObject.setCallee(n.getObjectValue(Endpoint::createFromDiscriminatorValue)); });
-            this.put("caller", (n) -> { currentObject.setCaller(n.getObjectValue(Endpoint::createFromDiscriminatorValue)); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("failureInfo", (n) -> { currentObject.setFailureInfo(n.getObjectValue(FailureInfo::createFromDiscriminatorValue)); });
-            this.put("modalities", (n) -> { currentObject.setModalities(n.getCollectionOfEnumValues(Modality.class)); });
-            this.put("segments", (n) -> { currentObject.setSegments(n.getCollectionOfObjectValues(Segment::createFromDiscriminatorValue)); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("callee", (n) -> { currentObject.setCallee(n.getObjectValue(Endpoint::createFromDiscriminatorValue)); });
+        deserializerMap.put("caller", (n) -> { currentObject.setCaller(n.getObjectValue(Endpoint::createFromDiscriminatorValue)); });
+        deserializerMap.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("failureInfo", (n) -> { currentObject.setFailureInfo(n.getObjectValue(FailureInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("modalities", (n) -> { currentObject.setModalities(n.getCollectionOfEnumValues(Modality.class)); });
+        deserializerMap.put("segments", (n) -> { currentObject.setSegments(n.getCollectionOfObjectValues(Segment::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the modalities property value. List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.

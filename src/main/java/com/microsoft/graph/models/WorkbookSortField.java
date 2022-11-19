@@ -83,15 +83,15 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookSortField currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("ascending", (n) -> { currentObject.setAscending(n.getBooleanValue()); });
-            this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
-            this.put("dataOption", (n) -> { currentObject.setDataOption(n.getStringValue()); });
-            this.put("icon", (n) -> { currentObject.setIcon(n.getObjectValue(WorkbookIcon::createFromDiscriminatorValue)); });
-            this.put("key", (n) -> { currentObject.setKey(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sortOn", (n) -> { currentObject.setSortOn(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("ascending", (n) -> { currentObject.setAscending(n.getBooleanValue()); });
+        deserializerMap.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
+        deserializerMap.put("dataOption", (n) -> { currentObject.setDataOption(n.getStringValue()); });
+        deserializerMap.put("icon", (n) -> { currentObject.setIcon(n.getObjectValue(WorkbookIcon::createFromDiscriminatorValue)); });
+        deserializerMap.put("key", (n) -> { currentObject.setKey(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sortOn", (n) -> { currentObject.setSortOn(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the icon property value. Represents the icon that is the target of the condition if the sorting is on the cell's icon.

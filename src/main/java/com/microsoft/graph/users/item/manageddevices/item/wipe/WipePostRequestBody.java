@@ -53,12 +53,12 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WipePostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("keepEnrollmentData", (n) -> { currentObject.setKeepEnrollmentData(n.getBooleanValue()); });
-            this.put("keepUserData", (n) -> { currentObject.setKeepUserData(n.getBooleanValue()); });
-            this.put("macOsUnlockCode", (n) -> { currentObject.setMacOsUnlockCode(n.getStringValue()); });
-            this.put("persistEsimDataPlan", (n) -> { currentObject.setPersistEsimDataPlan(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("keepEnrollmentData", (n) -> { currentObject.setKeepEnrollmentData(n.getBooleanValue()); });
+        deserializerMap.put("keepUserData", (n) -> { currentObject.setKeepUserData(n.getBooleanValue()); });
+        deserializerMap.put("macOsUnlockCode", (n) -> { currentObject.setMacOsUnlockCode(n.getStringValue()); });
+        deserializerMap.put("persistEsimDataPlan", (n) -> { currentObject.setPersistEsimDataPlan(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the keepEnrollmentData property value. The keepEnrollmentData property

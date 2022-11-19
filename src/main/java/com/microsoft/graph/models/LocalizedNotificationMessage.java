@@ -46,13 +46,13 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LocalizedNotificationMessage currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("locale", (n) -> { currentObject.setLocale(n.getStringValue()); });
-            this.put("messageTemplate", (n) -> { currentObject.setMessageTemplate(n.getStringValue()); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("locale", (n) -> { currentObject.setLocale(n.getStringValue()); });
+        deserializerMap.put("messageTemplate", (n) -> { currentObject.setMessageTemplate(n.getStringValue()); });
+        deserializerMap.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isDefault property value. Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.

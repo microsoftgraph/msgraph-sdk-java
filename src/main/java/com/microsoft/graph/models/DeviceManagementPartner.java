@@ -60,16 +60,16 @@ public class DeviceManagementPartner extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementPartner currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isConfigured", (n) -> { currentObject.setIsConfigured(n.getBooleanValue()); });
-            this.put("lastHeartbeatDateTime", (n) -> { currentObject.setLastHeartbeatDateTime(n.getOffsetDateTimeValue()); });
-            this.put("partnerAppType", (n) -> { currentObject.setPartnerAppType(n.getEnumValue(DeviceManagementPartnerAppType.class)); });
-            this.put("partnerState", (n) -> { currentObject.setPartnerState(n.getEnumValue(DeviceManagementPartnerTenantState.class)); });
-            this.put("singleTenantAppId", (n) -> { currentObject.setSingleTenantAppId(n.getStringValue()); });
-            this.put("whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime", (n) -> { currentObject.setWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime(n.getOffsetDateTimeValue()); });
-            this.put("whenPartnerDevicesWillBeRemovedDateTime", (n) -> { currentObject.setWhenPartnerDevicesWillBeRemovedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isConfigured", (n) -> { currentObject.setIsConfigured(n.getBooleanValue()); });
+        deserializerMap.put("lastHeartbeatDateTime", (n) -> { currentObject.setLastHeartbeatDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("partnerAppType", (n) -> { currentObject.setPartnerAppType(n.getEnumValue(DeviceManagementPartnerAppType.class)); });
+        deserializerMap.put("partnerState", (n) -> { currentObject.setPartnerState(n.getEnumValue(DeviceManagementPartnerTenantState.class)); });
+        deserializerMap.put("singleTenantAppId", (n) -> { currentObject.setSingleTenantAppId(n.getStringValue()); });
+        deserializerMap.put("whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime", (n) -> { currentObject.setWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("whenPartnerDevicesWillBeRemovedDateTime", (n) -> { currentObject.setWhenPartnerDevicesWillBeRemovedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isConfigured property value. Whether device management partner is configured or not

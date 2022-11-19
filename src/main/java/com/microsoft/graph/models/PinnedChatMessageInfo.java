@@ -37,9 +37,9 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PinnedChatMessageInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("message", (n) -> { currentObject.setMessage(n.getObjectValue(ChatMessage::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("message", (n) -> { currentObject.setMessage(n.getObjectValue(ChatMessage::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the message property value. Represents details about the chat message that is pinned.

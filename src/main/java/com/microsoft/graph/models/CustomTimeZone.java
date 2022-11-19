@@ -56,11 +56,11 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomTimeZone currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("bias", (n) -> { currentObject.setBias(n.getIntegerValue()); });
-            this.put("daylightOffset", (n) -> { currentObject.setDaylightOffset(n.getObjectValue(DaylightTimeZoneOffset::createFromDiscriminatorValue)); });
-            this.put("standardOffset", (n) -> { currentObject.setStandardOffset(n.getObjectValue(StandardTimeZoneOffset::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("bias", (n) -> { currentObject.setBias(n.getIntegerValue()); });
+        deserializerMap.put("daylightOffset", (n) -> { currentObject.setDaylightOffset(n.getObjectValue(DaylightTimeZoneOffset::createFromDiscriminatorValue)); });
+        deserializerMap.put("standardOffset", (n) -> { currentObject.setStandardOffset(n.getObjectValue(StandardTimeZoneOffset::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the standardOffset property value. Specifies when the time zone switches from daylight saving time to standard time.

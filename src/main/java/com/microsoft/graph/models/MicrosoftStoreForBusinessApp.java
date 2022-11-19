@@ -44,13 +44,13 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftStoreForBusinessApp currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("licenseType", (n) -> { currentObject.setLicenseType(n.getEnumValue(MicrosoftStoreForBusinessLicenseType.class)); });
-            this.put("packageIdentityName", (n) -> { currentObject.setPackageIdentityName(n.getStringValue()); });
-            this.put("productKey", (n) -> { currentObject.setProductKey(n.getStringValue()); });
-            this.put("totalLicenseCount", (n) -> { currentObject.setTotalLicenseCount(n.getIntegerValue()); });
-            this.put("usedLicenseCount", (n) -> { currentObject.setUsedLicenseCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("licenseType", (n) -> { currentObject.setLicenseType(n.getEnumValue(MicrosoftStoreForBusinessLicenseType.class)); });
+        deserializerMap.put("packageIdentityName", (n) -> { currentObject.setPackageIdentityName(n.getStringValue()); });
+        deserializerMap.put("productKey", (n) -> { currentObject.setProductKey(n.getStringValue()); });
+        deserializerMap.put("totalLicenseCount", (n) -> { currentObject.setTotalLicenseCount(n.getIntegerValue()); });
+        deserializerMap.put("usedLicenseCount", (n) -> { currentObject.setUsedLicenseCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the licenseType property value. The licenseType property

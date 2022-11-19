@@ -47,9 +47,9 @@ public class ArchivePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ArchivePostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("shouldSetSpoSiteReadOnlyForMembers", (n) -> { currentObject.setShouldSetSpoSiteReadOnlyForMembers(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("shouldSetSpoSiteReadOnlyForMembers", (n) -> { currentObject.setShouldSetSpoSiteReadOnlyForMembers(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the shouldSetSpoSiteReadOnlyForMembers property value. The shouldSetSpoSiteReadOnlyForMembers property

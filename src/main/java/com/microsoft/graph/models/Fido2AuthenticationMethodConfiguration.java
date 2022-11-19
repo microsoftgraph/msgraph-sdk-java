@@ -42,12 +42,12 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Fido2AuthenticationMethodConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
-            this.put("isAttestationEnforced", (n) -> { currentObject.setIsAttestationEnforced(n.getBooleanValue()); });
-            this.put("isSelfServiceRegistrationAllowed", (n) -> { currentObject.setIsSelfServiceRegistrationAllowed(n.getBooleanValue()); });
-            this.put("keyRestrictions", (n) -> { currentObject.setKeyRestrictions(n.getObjectValue(Fido2KeyRestrictions::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
+        deserializerMap.put("isAttestationEnforced", (n) -> { currentObject.setIsAttestationEnforced(n.getBooleanValue()); });
+        deserializerMap.put("isSelfServiceRegistrationAllowed", (n) -> { currentObject.setIsSelfServiceRegistrationAllowed(n.getBooleanValue()); });
+        deserializerMap.put("keyRestrictions", (n) -> { currentObject.setKeyRestrictions(n.getObjectValue(Fido2KeyRestrictions::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method.

@@ -43,12 +43,12 @@ public class WorkbookTableColumn extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookTableColumn currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("filter", (n) -> { currentObject.setFilter(n.getObjectValue(WorkbookFilter::createFromDiscriminatorValue)); });
-            this.put("index", (n) -> { currentObject.setIndex(n.getIntegerValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("values", (n) -> { currentObject.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("filter", (n) -> { currentObject.setFilter(n.getObjectValue(WorkbookFilter::createFromDiscriminatorValue)); });
+        deserializerMap.put("index", (n) -> { currentObject.setIndex(n.getIntegerValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("values", (n) -> { currentObject.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the filter property value. Retrieve the filter applied to the column. Read-only.

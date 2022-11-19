@@ -67,12 +67,12 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationAssignmentDefaults currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("addedStudentAction", (n) -> { currentObject.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction.class)); });
-            this.put("addToCalendarAction", (n) -> { currentObject.setAddToCalendarAction(n.getEnumValue(EducationAddToCalendarOptions.class)); });
-            this.put("dueTime", (n) -> { currentObject.setDueTime(n.getLocalTimeValue()); });
-            this.put("notificationChannelUrl", (n) -> { currentObject.setNotificationChannelUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("addedStudentAction", (n) -> { currentObject.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction.class)); });
+        deserializerMap.put("addToCalendarAction", (n) -> { currentObject.setAddToCalendarAction(n.getEnumValue(EducationAddToCalendarOptions.class)); });
+        deserializerMap.put("dueTime", (n) -> { currentObject.setDueTime(n.getLocalTimeValue()); });
+        deserializerMap.put("notificationChannelUrl", (n) -> { currentObject.setNotificationChannelUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the notificationChannelUrl property value. Default Teams channel to which notifications will be sent. Default value is null.

@@ -79,13 +79,13 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentityGovernance currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("accessReviews", (n) -> { currentObject.setAccessReviews(n.getObjectValue(AccessReviewSet::createFromDiscriminatorValue)); });
-            this.put("appConsent", (n) -> { currentObject.setAppConsent(n.getObjectValue(AppConsentApprovalRoute::createFromDiscriminatorValue)); });
-            this.put("entitlementManagement", (n) -> { currentObject.setEntitlementManagement(n.getObjectValue(EntitlementManagement::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("termsOfUse", (n) -> { currentObject.setTermsOfUse(n.getObjectValue(TermsOfUseContainer::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("accessReviews", (n) -> { currentObject.setAccessReviews(n.getObjectValue(AccessReviewSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("appConsent", (n) -> { currentObject.setAppConsent(n.getObjectValue(AppConsentApprovalRoute::createFromDiscriminatorValue)); });
+        deserializerMap.put("entitlementManagement", (n) -> { currentObject.setEntitlementManagement(n.getObjectValue(EntitlementManagement::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("termsOfUse", (n) -> { currentObject.setTermsOfUse(n.getObjectValue(TermsOfUseContainer::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

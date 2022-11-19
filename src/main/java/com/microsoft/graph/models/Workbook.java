@@ -64,15 +64,15 @@ public class Workbook extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Workbook currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("application", (n) -> { currentObject.setApplication(n.getObjectValue(WorkbookApplication::createFromDiscriminatorValue)); });
-            this.put("comments", (n) -> { currentObject.setComments(n.getCollectionOfObjectValues(WorkbookComment::createFromDiscriminatorValue)); });
-            this.put("functions", (n) -> { currentObject.setFunctions(n.getObjectValue(WorkbookFunctions::createFromDiscriminatorValue)); });
-            this.put("names", (n) -> { currentObject.setNames(n.getCollectionOfObjectValues(WorkbookNamedItem::createFromDiscriminatorValue)); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(WorkbookOperation::createFromDiscriminatorValue)); });
-            this.put("tables", (n) -> { currentObject.setTables(n.getCollectionOfObjectValues(WorkbookTable::createFromDiscriminatorValue)); });
-            this.put("worksheets", (n) -> { currentObject.setWorksheets(n.getCollectionOfObjectValues(WorkbookWorksheet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("application", (n) -> { currentObject.setApplication(n.getObjectValue(WorkbookApplication::createFromDiscriminatorValue)); });
+        deserializerMap.put("comments", (n) -> { currentObject.setComments(n.getCollectionOfObjectValues(WorkbookComment::createFromDiscriminatorValue)); });
+        deserializerMap.put("functions", (n) -> { currentObject.setFunctions(n.getObjectValue(WorkbookFunctions::createFromDiscriminatorValue)); });
+        deserializerMap.put("names", (n) -> { currentObject.setNames(n.getCollectionOfObjectValues(WorkbookNamedItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(WorkbookOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("tables", (n) -> { currentObject.setTables(n.getCollectionOfObjectValues(WorkbookTable::createFromDiscriminatorValue)); });
+        deserializerMap.put("worksheets", (n) -> { currentObject.setWorksheets(n.getCollectionOfObjectValues(WorkbookWorksheet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the functions property value. The functions property

@@ -39,10 +39,10 @@ public class ManagedMobileApp extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedMobileApp currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("mobileAppIdentifier", (n) -> { currentObject.setMobileAppIdentifier(n.getObjectValue(MobileAppIdentifier::createFromDiscriminatorValue)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("mobileAppIdentifier", (n) -> { currentObject.setMobileAppIdentifier(n.getObjectValue(MobileAppIdentifier::createFromDiscriminatorValue)); });
+        deserializerMap.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mobileAppIdentifier property value. The identifier for an app with it's operating system type.

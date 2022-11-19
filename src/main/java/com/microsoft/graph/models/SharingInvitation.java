@@ -63,13 +63,13 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharingInvitation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("invitedBy", (n) -> { currentObject.setInvitedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("redeemedBy", (n) -> { currentObject.setRedeemedBy(n.getStringValue()); });
-            this.put("signInRequired", (n) -> { currentObject.setSignInRequired(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
+        deserializerMap.put("invitedBy", (n) -> { currentObject.setInvitedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("redeemedBy", (n) -> { currentObject.setRedeemedBy(n.getStringValue()); });
+        deserializerMap.put("signInRequired", (n) -> { currentObject.setSignInRequired(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the invitedBy property value. Provides information about who sent the invitation that created this permission, if that information is available. Read-only.

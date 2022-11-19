@@ -44,9 +44,9 @@ public class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSMicrosoftEdgeApp currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("channel", (n) -> { currentObject.setChannel(n.getEnumValue(MicrosoftEdgeChannel.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("channel", (n) -> { currentObject.setChannel(n.getEnumValue(MicrosoftEdgeChannel.class)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

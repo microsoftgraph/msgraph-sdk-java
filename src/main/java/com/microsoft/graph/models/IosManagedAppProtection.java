@@ -96,15 +96,15 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosManagedAppProtection currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("appDataEncryptionType", (n) -> { currentObject.setAppDataEncryptionType(n.getEnumValue(ManagedAppDataEncryptionType.class)); });
-            this.put("apps", (n) -> { currentObject.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
-            this.put("customBrowserProtocol", (n) -> { currentObject.setCustomBrowserProtocol(n.getStringValue()); });
-            this.put("deployedAppCount", (n) -> { currentObject.setDeployedAppCount(n.getIntegerValue()); });
-            this.put("deploymentSummary", (n) -> { currentObject.setDeploymentSummary(n.getObjectValue(ManagedAppPolicyDeploymentSummary::createFromDiscriminatorValue)); });
-            this.put("faceIdBlocked", (n) -> { currentObject.setFaceIdBlocked(n.getBooleanValue()); });
-            this.put("minimumRequiredSdkVersion", (n) -> { currentObject.setMinimumRequiredSdkVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appDataEncryptionType", (n) -> { currentObject.setAppDataEncryptionType(n.getEnumValue(ManagedAppDataEncryptionType.class)); });
+        deserializerMap.put("apps", (n) -> { currentObject.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("customBrowserProtocol", (n) -> { currentObject.setCustomBrowserProtocol(n.getStringValue()); });
+        deserializerMap.put("deployedAppCount", (n) -> { currentObject.setDeployedAppCount(n.getIntegerValue()); });
+        deserializerMap.put("deploymentSummary", (n) -> { currentObject.setDeploymentSummary(n.getObjectValue(ManagedAppPolicyDeploymentSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("faceIdBlocked", (n) -> { currentObject.setFaceIdBlocked(n.getBooleanValue()); });
+        deserializerMap.put("minimumRequiredSdkVersion", (n) -> { currentObject.setMinimumRequiredSdkVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data.

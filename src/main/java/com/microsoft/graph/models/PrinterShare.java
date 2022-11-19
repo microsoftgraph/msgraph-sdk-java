@@ -78,13 +78,13 @@ public class PrinterShare extends PrinterBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterShare currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("allowAllUsers", (n) -> { currentObject.setAllowAllUsers(n.getBooleanValue()); });
-            this.put("allowedGroups", (n) -> { currentObject.setAllowedGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
-            this.put("allowedUsers", (n) -> { currentObject.setAllowedUsers(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("printer", (n) -> { currentObject.setPrinter(n.getObjectValue(Printer::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowAllUsers", (n) -> { currentObject.setAllowAllUsers(n.getBooleanValue()); });
+        deserializerMap.put("allowedGroups", (n) -> { currentObject.setAllowedGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
+        deserializerMap.put("allowedUsers", (n) -> { currentObject.setAllowedUsers(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("printer", (n) -> { currentObject.setPrinter(n.getObjectValue(Printer::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the printer property value. The printer that this printer share is related to.

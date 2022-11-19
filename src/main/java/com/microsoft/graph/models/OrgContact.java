@@ -111,26 +111,26 @@ public class OrgContact extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrgContact currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("addresses", (n) -> { currentObject.setAddresses(n.getCollectionOfObjectValues(PhysicalOfficeAddress::createFromDiscriminatorValue)); });
-            this.put("companyName", (n) -> { currentObject.setCompanyName(n.getStringValue()); });
-            this.put("department", (n) -> { currentObject.setDepartment(n.getStringValue()); });
-            this.put("directReports", (n) -> { currentObject.setDirectReports(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("givenName", (n) -> { currentObject.setGivenName(n.getStringValue()); });
-            this.put("jobTitle", (n) -> { currentObject.setJobTitle(n.getStringValue()); });
-            this.put("mail", (n) -> { currentObject.setMail(n.getStringValue()); });
-            this.put("mailNickname", (n) -> { currentObject.setMailNickname(n.getStringValue()); });
-            this.put("manager", (n) -> { currentObject.setManager(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("memberOf", (n) -> { currentObject.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("onPremisesLastSyncDateTime", (n) -> { currentObject.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("onPremisesProvisioningErrors", (n) -> { currentObject.setOnPremisesProvisioningErrors(n.getCollectionOfObjectValues(OnPremisesProvisioningError::createFromDiscriminatorValue)); });
-            this.put("onPremisesSyncEnabled", (n) -> { currentObject.setOnPremisesSyncEnabled(n.getBooleanValue()); });
-            this.put("phones", (n) -> { currentObject.setPhones(n.getCollectionOfObjectValues(Phone::createFromDiscriminatorValue)); });
-            this.put("proxyAddresses", (n) -> { currentObject.setProxyAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("surname", (n) -> { currentObject.setSurname(n.getStringValue()); });
-            this.put("transitiveMemberOf", (n) -> { currentObject.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("addresses", (n) -> { currentObject.setAddresses(n.getCollectionOfObjectValues(PhysicalOfficeAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("companyName", (n) -> { currentObject.setCompanyName(n.getStringValue()); });
+        deserializerMap.put("department", (n) -> { currentObject.setDepartment(n.getStringValue()); });
+        deserializerMap.put("directReports", (n) -> { currentObject.setDirectReports(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("givenName", (n) -> { currentObject.setGivenName(n.getStringValue()); });
+        deserializerMap.put("jobTitle", (n) -> { currentObject.setJobTitle(n.getStringValue()); });
+        deserializerMap.put("mail", (n) -> { currentObject.setMail(n.getStringValue()); });
+        deserializerMap.put("mailNickname", (n) -> { currentObject.setMailNickname(n.getStringValue()); });
+        deserializerMap.put("manager", (n) -> { currentObject.setManager(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("memberOf", (n) -> { currentObject.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremisesLastSyncDateTime", (n) -> { currentObject.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("onPremisesProvisioningErrors", (n) -> { currentObject.setOnPremisesProvisioningErrors(n.getCollectionOfObjectValues(OnPremisesProvisioningError::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremisesSyncEnabled", (n) -> { currentObject.setOnPremisesSyncEnabled(n.getBooleanValue()); });
+        deserializerMap.put("phones", (n) -> { currentObject.setPhones(n.getCollectionOfObjectValues(Phone::createFromDiscriminatorValue)); });
+        deserializerMap.put("proxyAddresses", (n) -> { currentObject.setProxyAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("surname", (n) -> { currentObject.setSurname(n.getStringValue()); });
+        deserializerMap.put("transitiveMemberOf", (n) -> { currentObject.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the givenName property value. The givenName property

@@ -89,15 +89,15 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CallRecordingEventMessageDetail currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("callId", (n) -> { currentObject.setCallId(n.getStringValue()); });
-            this.put("callRecordingDisplayName", (n) -> { currentObject.setCallRecordingDisplayName(n.getStringValue()); });
-            this.put("callRecordingDuration", (n) -> { currentObject.setCallRecordingDuration(n.getPeriodValue()); });
-            this.put("callRecordingStatus", (n) -> { currentObject.setCallRecordingStatus(n.getEnumValue(CallRecordingStatus.class)); });
-            this.put("callRecordingUrl", (n) -> { currentObject.setCallRecordingUrl(n.getStringValue()); });
-            this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("meetingOrganizer", (n) -> { currentObject.setMeetingOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("callId", (n) -> { currentObject.setCallId(n.getStringValue()); });
+        deserializerMap.put("callRecordingDisplayName", (n) -> { currentObject.setCallRecordingDisplayName(n.getStringValue()); });
+        deserializerMap.put("callRecordingDuration", (n) -> { currentObject.setCallRecordingDuration(n.getPeriodValue()); });
+        deserializerMap.put("callRecordingStatus", (n) -> { currentObject.setCallRecordingStatus(n.getEnumValue(CallRecordingStatus.class)); });
+        deserializerMap.put("callRecordingUrl", (n) -> { currentObject.setCallRecordingUrl(n.getStringValue()); });
+        deserializerMap.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("meetingOrganizer", (n) -> { currentObject.setMeetingOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the initiator property value. Initiator of the event.

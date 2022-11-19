@@ -53,12 +53,12 @@ public class ItemPreviewInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemPreviewInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("getUrl", (n) -> { currentObject.setGetUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("postParameters", (n) -> { currentObject.setPostParameters(n.getStringValue()); });
-            this.put("postUrl", (n) -> { currentObject.setPostUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("getUrl", (n) -> { currentObject.setGetUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("postParameters", (n) -> { currentObject.setPostParameters(n.getStringValue()); });
+        deserializerMap.put("postUrl", (n) -> { currentObject.setPostUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the getUrl property value. The getUrl property

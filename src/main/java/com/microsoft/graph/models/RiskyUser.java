@@ -61,17 +61,17 @@ public class RiskyUser extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RiskyUser currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("history", (n) -> { currentObject.setHistory(n.getCollectionOfObjectValues(RiskyUserHistoryItem::createFromDiscriminatorValue)); });
-            this.put("isDeleted", (n) -> { currentObject.setIsDeleted(n.getBooleanValue()); });
-            this.put("isProcessing", (n) -> { currentObject.setIsProcessing(n.getBooleanValue()); });
-            this.put("riskDetail", (n) -> { currentObject.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
-            this.put("riskLastUpdatedDateTime", (n) -> { currentObject.setRiskLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("riskLevel", (n) -> { currentObject.setRiskLevel(n.getEnumValue(RiskLevel.class)); });
-            this.put("riskState", (n) -> { currentObject.setRiskState(n.getEnumValue(RiskState.class)); });
-            this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("history", (n) -> { currentObject.setHistory(n.getCollectionOfObjectValues(RiskyUserHistoryItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("isDeleted", (n) -> { currentObject.setIsDeleted(n.getBooleanValue()); });
+        deserializerMap.put("isProcessing", (n) -> { currentObject.setIsProcessing(n.getBooleanValue()); });
+        deserializerMap.put("riskDetail", (n) -> { currentObject.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
+        deserializerMap.put("riskLastUpdatedDateTime", (n) -> { currentObject.setRiskLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("riskLevel", (n) -> { currentObject.setRiskLevel(n.getEnumValue(RiskLevel.class)); });
+        deserializerMap.put("riskState", (n) -> { currentObject.setRiskState(n.getEnumValue(RiskState.class)); });
+        deserializerMap.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the history property value. The activity related to user risk level change

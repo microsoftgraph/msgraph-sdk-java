@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class AccessReviewInstanceDecisionItem extends Entity implements Parsable {
     /** The identifier of the accessReviewInstance parent. Supports $select. Read-only. */
     private String _accessReviewId;
@@ -102,21 +102,21 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewInstanceDecisionItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("accessReviewId", (n) -> { currentObject.setAccessReviewId(n.getStringValue()); });
-            this.put("appliedBy", (n) -> { currentObject.setAppliedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
-            this.put("appliedDateTime", (n) -> { currentObject.setAppliedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("applyResult", (n) -> { currentObject.setApplyResult(n.getStringValue()); });
-            this.put("decision", (n) -> { currentObject.setDecision(n.getStringValue()); });
-            this.put("justification", (n) -> { currentObject.setJustification(n.getStringValue()); });
-            this.put("principal", (n) -> { currentObject.setPrincipal(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("principalLink", (n) -> { currentObject.setPrincipalLink(n.getStringValue()); });
-            this.put("recommendation", (n) -> { currentObject.setRecommendation(n.getStringValue()); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(AccessReviewInstanceDecisionItemResource::createFromDiscriminatorValue)); });
-            this.put("resourceLink", (n) -> { currentObject.setResourceLink(n.getStringValue()); });
-            this.put("reviewedBy", (n) -> { currentObject.setReviewedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
-            this.put("reviewedDateTime", (n) -> { currentObject.setReviewedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessReviewId", (n) -> { currentObject.setAccessReviewId(n.getStringValue()); });
+        deserializerMap.put("appliedBy", (n) -> { currentObject.setAppliedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("appliedDateTime", (n) -> { currentObject.setAppliedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("applyResult", (n) -> { currentObject.setApplyResult(n.getStringValue()); });
+        deserializerMap.put("decision", (n) -> { currentObject.setDecision(n.getStringValue()); });
+        deserializerMap.put("justification", (n) -> { currentObject.setJustification(n.getStringValue()); });
+        deserializerMap.put("principal", (n) -> { currentObject.setPrincipal(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("principalLink", (n) -> { currentObject.setPrincipalLink(n.getStringValue()); });
+        deserializerMap.put("recommendation", (n) -> { currentObject.setRecommendation(n.getStringValue()); });
+        deserializerMap.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(AccessReviewInstanceDecisionItemResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceLink", (n) -> { currentObject.setResourceLink(n.getStringValue()); });
+        deserializerMap.put("reviewedBy", (n) -> { currentObject.setReviewedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("reviewedDateTime", (n) -> { currentObject.setReviewedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the justification property value. Justification left by the reviewer when they made the decision.

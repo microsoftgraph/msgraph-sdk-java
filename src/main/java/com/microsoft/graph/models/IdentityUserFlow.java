@@ -46,10 +46,10 @@ public class IdentityUserFlow extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentityUserFlow currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("userFlowType", (n) -> { currentObject.setUserFlowType(n.getEnumValue(UserFlowType.class)); });
-            this.put("userFlowTypeVersion", (n) -> { currentObject.setUserFlowTypeVersion(n.getFloatValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("userFlowType", (n) -> { currentObject.setUserFlowType(n.getEnumValue(UserFlowType.class)); });
+        deserializerMap.put("userFlowTypeVersion", (n) -> { currentObject.setUserFlowTypeVersion(n.getFloatValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the userFlowType property value. The userFlowType property

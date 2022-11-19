@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class ContentType extends Entity implements Parsable {
     /** List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites. */
     private java.util.List<String> _associatedHubsUrls;
@@ -145,27 +145,27 @@ public class ContentType extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ContentType currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("associatedHubsUrls", (n) -> { currentObject.setAssociatedHubsUrls(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("base", (n) -> { currentObject.setBase(n.getObjectValue(ContentType::createFromDiscriminatorValue)); });
-            this.put("baseTypes", (n) -> { currentObject.setBaseTypes(n.getCollectionOfObjectValues(ContentType::createFromDiscriminatorValue)); });
-            this.put("columnLinks", (n) -> { currentObject.setColumnLinks(n.getCollectionOfObjectValues(ColumnLink::createFromDiscriminatorValue)); });
-            this.put("columnPositions", (n) -> { currentObject.setColumnPositions(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
-            this.put("columns", (n) -> { currentObject.setColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("documentSet", (n) -> { currentObject.setDocumentSet(n.getObjectValue(DocumentSet::createFromDiscriminatorValue)); });
-            this.put("documentTemplate", (n) -> { currentObject.setDocumentTemplate(n.getObjectValue(DocumentSetContent::createFromDiscriminatorValue)); });
-            this.put("group", (n) -> { currentObject.setGroup(n.getStringValue()); });
-            this.put("hidden", (n) -> { currentObject.setHidden(n.getBooleanValue()); });
-            this.put("inheritedFrom", (n) -> { currentObject.setInheritedFrom(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
-            this.put("isBuiltIn", (n) -> { currentObject.setIsBuiltIn(n.getBooleanValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("order", (n) -> { currentObject.setOrder(n.getObjectValue(ContentTypeOrder::createFromDiscriminatorValue)); });
-            this.put("parentId", (n) -> { currentObject.setParentId(n.getStringValue()); });
-            this.put("propagateChanges", (n) -> { currentObject.setPropagateChanges(n.getBooleanValue()); });
-            this.put("readOnly", (n) -> { currentObject.setReadOnly(n.getBooleanValue()); });
-            this.put("sealed", (n) -> { currentObject.setSealed(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("associatedHubsUrls", (n) -> { currentObject.setAssociatedHubsUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("base", (n) -> { currentObject.setBase(n.getObjectValue(ContentType::createFromDiscriminatorValue)); });
+        deserializerMap.put("baseTypes", (n) -> { currentObject.setBaseTypes(n.getCollectionOfObjectValues(ContentType::createFromDiscriminatorValue)); });
+        deserializerMap.put("columnLinks", (n) -> { currentObject.setColumnLinks(n.getCollectionOfObjectValues(ColumnLink::createFromDiscriminatorValue)); });
+        deserializerMap.put("columnPositions", (n) -> { currentObject.setColumnPositions(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("columns", (n) -> { currentObject.setColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("documentSet", (n) -> { currentObject.setDocumentSet(n.getObjectValue(DocumentSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("documentTemplate", (n) -> { currentObject.setDocumentTemplate(n.getObjectValue(DocumentSetContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("group", (n) -> { currentObject.setGroup(n.getStringValue()); });
+        deserializerMap.put("hidden", (n) -> { currentObject.setHidden(n.getBooleanValue()); });
+        deserializerMap.put("inheritedFrom", (n) -> { currentObject.setInheritedFrom(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
+        deserializerMap.put("isBuiltIn", (n) -> { currentObject.setIsBuiltIn(n.getBooleanValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("order", (n) -> { currentObject.setOrder(n.getObjectValue(ContentTypeOrder::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentId", (n) -> { currentObject.setParentId(n.getStringValue()); });
+        deserializerMap.put("propagateChanges", (n) -> { currentObject.setPropagateChanges(n.getBooleanValue()); });
+        deserializerMap.put("readOnly", (n) -> { currentObject.setReadOnly(n.getBooleanValue()); });
+        deserializerMap.put("sealed", (n) -> { currentObject.setSealed(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the group property value. The name of the group this content type belongs to. Helps organize related content types.

@@ -59,11 +59,11 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TimeConstraint currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("activityDomain", (n) -> { currentObject.setActivityDomain(n.getEnumValue(ActivityDomain.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("timeSlots", (n) -> { currentObject.setTimeSlots(n.getCollectionOfObjectValues(TimeSlot::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("activityDomain", (n) -> { currentObject.setActivityDomain(n.getEnumValue(ActivityDomain.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("timeSlots", (n) -> { currentObject.setTimeSlots(n.getCollectionOfObjectValues(TimeSlot::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

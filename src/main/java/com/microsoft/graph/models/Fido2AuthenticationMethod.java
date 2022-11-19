@@ -87,14 +87,14 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Fido2AuthenticationMethod currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("aaGuid", (n) -> { currentObject.setAaGuid(n.getStringValue()); });
-            this.put("attestationCertificates", (n) -> { currentObject.setAttestationCertificates(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("attestationLevel", (n) -> { currentObject.setAttestationLevel(n.getEnumValue(AttestationLevel.class)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("aaGuid", (n) -> { currentObject.setAaGuid(n.getStringValue()); });
+        deserializerMap.put("attestationCertificates", (n) -> { currentObject.setAttestationCertificates(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("attestationLevel", (n) -> { currentObject.setAttestationLevel(n.getEnumValue(AttestationLevel.class)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the model property value. The manufacturer-assigned model of the FIDO2 security key.

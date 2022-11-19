@@ -47,10 +47,10 @@ public class EducationSubmissionResource extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSubmissionResource currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("assignmentResourceUrl", (n) -> { currentObject.setAssignmentResourceUrl(n.getStringValue()); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignmentResourceUrl", (n) -> { currentObject.setAssignmentResourceUrl(n.getStringValue()); });
+        deserializerMap.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the resource property value. Resource object.

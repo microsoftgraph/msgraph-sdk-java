@@ -51,11 +51,11 @@ public class CertificationControl implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CertificationControl currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. Certification control name

@@ -55,9 +55,9 @@ public class AddLargeGalleryViewPostRequestBody implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AddLargeGalleryViewPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

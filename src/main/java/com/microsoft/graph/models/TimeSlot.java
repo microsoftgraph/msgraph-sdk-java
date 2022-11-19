@@ -59,11 +59,11 @@ public class TimeSlot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TimeSlot currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("end", (n) -> { currentObject.setEnd(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("start", (n) -> { currentObject.setStart(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("end", (n) -> { currentObject.setEnd(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("start", (n) -> { currentObject.setStart(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
