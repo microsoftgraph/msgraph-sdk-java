@@ -7,48 +7,24 @@ package com.microsoft.graph.security.models;
 
 
 /**
- * The Enum Case Action.
+ * The Enum Purge Areas.
 */
-public enum CaseAction
+public enum PurgeAreas
 {
     /**
-    * content Export
+    * mailboxes
     */
-    CONTENT_EXPORT,
+    MAILBOXES,
     /**
-    * apply Tags
+    * teams Messages
     */
-    APPLY_TAGS,
-    /**
-    * convert To Pdf
-    */
-    CONVERT_TO_PDF,
-    /**
-    * index
-    */
-    INDEX,
-    /**
-    * estimate Statistics
-    */
-    ESTIMATE_STATISTICS,
-    /**
-    * add To Review Set
-    */
-    ADD_TO_REVIEW_SET,
-    /**
-    * hold Update
-    */
-    HOLD_UPDATE,
+    TEAMS_MESSAGES,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * purge Data
-    */
-    PURGE_DATA,
-    /**
-    * For CaseAction values that were not expected from the service
+    * For PurgeAreas values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }
