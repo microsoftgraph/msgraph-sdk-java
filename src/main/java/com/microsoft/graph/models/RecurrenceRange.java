@@ -31,7 +31,6 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RecurrenceRange() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.recurrenceRange");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,15 +64,14 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RecurrenceRange currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("endDate", (n) -> { currentObject.setEndDate(n.getLocalDateValue()); });
-            this.put("numberOfOccurrences", (n) -> { currentObject.setNumberOfOccurrences(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recurrenceTimeZone", (n) -> { currentObject.setRecurrenceTimeZone(n.getStringValue()); });
-            this.put("startDate", (n) -> { currentObject.setStartDate(n.getLocalDateValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(RecurrenceRangeType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("endDate", (n) -> { this.setEndDate(n.getLocalDateValue()); });
+        deserializerMap.put("numberOfOccurrences", (n) -> { this.setNumberOfOccurrences(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recurrenceTimeZone", (n) -> { this.setRecurrenceTimeZone(n.getStringValue()); });
+        deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getLocalDateValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(RecurrenceRangeType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the numberOfOccurrences property value. The number of times to repeat the event. Required and must be positive if type is numbered.

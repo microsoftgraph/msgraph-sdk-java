@@ -51,7 +51,6 @@ public class Calendar extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Calendar() {
         super();
-        this.setOdataType("#microsoft.graph.calendar");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -149,27 +148,26 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Calendar currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("allowedOnlineMeetingProviders", (n) -> { currentObject.setAllowedOnlineMeetingProviders(n.getCollectionOfEnumValues(OnlineMeetingProviderType.class)); });
-            this.put("calendarPermissions", (n) -> { currentObject.setCalendarPermissions(n.getCollectionOfObjectValues(CalendarPermission::createFromDiscriminatorValue)); });
-            this.put("calendarView", (n) -> { currentObject.setCalendarView(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
-            this.put("canEdit", (n) -> { currentObject.setCanEdit(n.getBooleanValue()); });
-            this.put("canShare", (n) -> { currentObject.setCanShare(n.getBooleanValue()); });
-            this.put("canViewPrivateItems", (n) -> { currentObject.setCanViewPrivateItems(n.getBooleanValue()); });
-            this.put("changeKey", (n) -> { currentObject.setChangeKey(n.getStringValue()); });
-            this.put("color", (n) -> { currentObject.setColor(n.getEnumValue(CalendarColor.class)); });
-            this.put("defaultOnlineMeetingProvider", (n) -> { currentObject.setDefaultOnlineMeetingProvider(n.getEnumValue(OnlineMeetingProviderType.class)); });
-            this.put("events", (n) -> { currentObject.setEvents(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
-            this.put("hexColor", (n) -> { currentObject.setHexColor(n.getStringValue()); });
-            this.put("isDefaultCalendar", (n) -> { currentObject.setIsDefaultCalendar(n.getBooleanValue()); });
-            this.put("isRemovable", (n) -> { currentObject.setIsRemovable(n.getBooleanValue()); });
-            this.put("isTallyingResponses", (n) -> { currentObject.setIsTallyingResponses(n.getBooleanValue()); });
-            this.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("owner", (n) -> { currentObject.setOwner(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
-            this.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedOnlineMeetingProviders", (n) -> { this.setAllowedOnlineMeetingProviders(n.getCollectionOfEnumValues(OnlineMeetingProviderType.class)); });
+        deserializerMap.put("calendarPermissions", (n) -> { this.setCalendarPermissions(n.getCollectionOfObjectValues(CalendarPermission::createFromDiscriminatorValue)); });
+        deserializerMap.put("calendarView", (n) -> { this.setCalendarView(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
+        deserializerMap.put("canEdit", (n) -> { this.setCanEdit(n.getBooleanValue()); });
+        deserializerMap.put("canShare", (n) -> { this.setCanShare(n.getBooleanValue()); });
+        deserializerMap.put("canViewPrivateItems", (n) -> { this.setCanViewPrivateItems(n.getBooleanValue()); });
+        deserializerMap.put("changeKey", (n) -> { this.setChangeKey(n.getStringValue()); });
+        deserializerMap.put("color", (n) -> { this.setColor(n.getEnumValue(CalendarColor.class)); });
+        deserializerMap.put("defaultOnlineMeetingProvider", (n) -> { this.setDefaultOnlineMeetingProvider(n.getEnumValue(OnlineMeetingProviderType.class)); });
+        deserializerMap.put("events", (n) -> { this.setEvents(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
+        deserializerMap.put("hexColor", (n) -> { this.setHexColor(n.getStringValue()); });
+        deserializerMap.put("isDefaultCalendar", (n) -> { this.setIsDefaultCalendar(n.getBooleanValue()); });
+        deserializerMap.put("isRemovable", (n) -> { this.setIsRemovable(n.getBooleanValue()); });
+        deserializerMap.put("isTallyingResponses", (n) -> { this.setIsTallyingResponses(n.getBooleanValue()); });
+        deserializerMap.put("multiValueExtendedProperties", (n) -> { this.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("owner", (n) -> { this.setOwner(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("singleValueExtendedProperties", (n) -> { this.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the hexColor property value. The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is empty. Read-only.

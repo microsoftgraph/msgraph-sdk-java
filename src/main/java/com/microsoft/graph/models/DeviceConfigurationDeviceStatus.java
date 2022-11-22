@@ -31,7 +31,6 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
     @javax.annotation.Nullable
     public DeviceConfigurationDeviceStatus() {
         super();
-        this.setOdataType("#microsoft.graph.deviceConfigurationDeviceStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,16 +72,15 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceConfigurationDeviceStatus currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("complianceGracePeriodExpirationDateTime", (n) -> { currentObject.setComplianceGracePeriodExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });
-            this.put("deviceModel", (n) -> { currentObject.setDeviceModel(n.getStringValue()); });
-            this.put("lastReportedDateTime", (n) -> { currentObject.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ComplianceStatus.class)); });
-            this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("complianceGracePeriodExpirationDateTime", (n) -> { this.setComplianceGracePeriodExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceDisplayName", (n) -> { this.setDeviceDisplayName(n.getStringValue()); });
+        deserializerMap.put("deviceModel", (n) -> { this.setDeviceModel(n.getStringValue()); });
+        deserializerMap.put("lastReportedDateTime", (n) -> { this.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ComplianceStatus.class)); });
+        deserializerMap.put("userName", (n) -> { this.setUserName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastReportedDateTime property value. Last modified date time of the policy report.

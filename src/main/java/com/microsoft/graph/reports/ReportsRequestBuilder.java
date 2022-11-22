@@ -3,7 +3,9 @@ package com.microsoft.graph.reports;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ReportRoot;
 import com.microsoft.graph.reports.dailyprintusagebyprinter.DailyPrintUsageByPrinterRequestBuilder;
+import com.microsoft.graph.reports.dailyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder;
 import com.microsoft.graph.reports.dailyprintusagebyuser.DailyPrintUsageByUserRequestBuilder;
+import com.microsoft.graph.reports.dailyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder;
 import com.microsoft.graph.reports.deviceconfigurationdeviceactivity.DeviceConfigurationDeviceActivityRequestBuilder;
 import com.microsoft.graph.reports.deviceconfigurationuseractivity.DeviceConfigurationUserActivityRequestBuilder;
 import com.microsoft.graph.reports.getemailactivitycountswithperiod.GetEmailActivityCountsWithPeriodRequestBuilder;
@@ -100,9 +102,7 @@ import com.microsoft.graph.reports.manageddeviceenrollmentfailuredetails.Managed
 import com.microsoft.graph.reports.manageddeviceenrollmentfailuredetailswithskipwithtopwithfilterwithskiptoken.ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder;
 import com.microsoft.graph.reports.manageddeviceenrollmenttopfailures.ManagedDeviceEnrollmentTopFailuresRequestBuilder;
 import com.microsoft.graph.reports.manageddeviceenrollmenttopfailureswithperiod.ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder;
-import com.microsoft.graph.reports.monthlyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder;
 import com.microsoft.graph.reports.monthlyprintusagebyprinter.MonthlyPrintUsageByPrinterRequestBuilder;
-import com.microsoft.graph.reports.monthlyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder;
 import com.microsoft.graph.reports.monthlyprintusagebyuser.MonthlyPrintUsageByUserRequestBuilder;
 import com.microsoft.graph.reports.security.SecurityRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
@@ -197,9 +197,8 @@ public class ReportsRequestBuilder {
      */
     @javax.annotation.Nonnull
     public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
@@ -230,9 +229,8 @@ public class ReportsRequestBuilder {
     @javax.annotation.Nonnull
     public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final ReportRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.PATCH;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
@@ -293,15 +291,14 @@ public class ReportsRequestBuilder {
     public java.util.concurrent.CompletableFuture<ReportRoot> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, ReportRoot::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<ReportRoot>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<ReportRoot> executionException = new java.util.concurrent.CompletableFuture<ReportRoot>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -313,15 +310,14 @@ public class ReportsRequestBuilder {
     public java.util.concurrent.CompletableFuture<ReportRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, ReportRoot::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<ReportRoot>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<ReportRoot> executionException = new java.util.concurrent.CompletableFuture<ReportRoot>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -1305,15 +1301,14 @@ public class ReportsRequestBuilder {
     public java.util.concurrent.CompletableFuture<ReportRoot> patch(@javax.annotation.Nonnull final ReportRoot body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, ReportRoot::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<ReportRoot>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<ReportRoot> executionException = new java.util.concurrent.CompletableFuture<ReportRoot>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -1327,15 +1322,14 @@ public class ReportsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, ReportRoot::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<ReportRoot>() {{
-                this.completeExceptionally(ex);
-            }};
+            java.util.concurrent.CompletableFuture<ReportRoot> executionException = new java.util.concurrent.CompletableFuture<ReportRoot>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /** Get reports */

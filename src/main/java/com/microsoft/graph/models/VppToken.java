@@ -39,7 +39,6 @@ public class VppToken extends Entity implements Parsable {
     @javax.annotation.Nullable
     public VppToken() {
         super();
-        this.setOdataType("#microsoft.graph.vppToken");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -89,20 +88,19 @@ public class VppToken extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final VppToken currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("appleId", (n) -> { currentObject.setAppleId(n.getStringValue()); });
-            this.put("automaticallyUpdateApps", (n) -> { currentObject.setAutomaticallyUpdateApps(n.getBooleanValue()); });
-            this.put("countryOrRegion", (n) -> { currentObject.setCountryOrRegion(n.getStringValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastSyncStatus", (n) -> { currentObject.setLastSyncStatus(n.getEnumValue(VppTokenSyncStatus.class)); });
-            this.put("organizationName", (n) -> { currentObject.setOrganizationName(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(VppTokenState.class)); });
-            this.put("token", (n) -> { currentObject.setToken(n.getStringValue()); });
-            this.put("vppTokenAccountType", (n) -> { currentObject.setVppTokenAccountType(n.getEnumValue(VppTokenAccountType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appleId", (n) -> { this.setAppleId(n.getStringValue()); });
+        deserializerMap.put("automaticallyUpdateApps", (n) -> { this.setAutomaticallyUpdateApps(n.getBooleanValue()); });
+        deserializerMap.put("countryOrRegion", (n) -> { this.setCountryOrRegion(n.getStringValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastSyncStatus", (n) -> { this.setLastSyncStatus(n.getEnumValue(VppTokenSyncStatus.class)); });
+        deserializerMap.put("organizationName", (n) -> { this.setOrganizationName(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(VppTokenState.class)); });
+        deserializerMap.put("token", (n) -> { this.setToken(n.getStringValue()); });
+        deserializerMap.put("vppTokenAccountType", (n) -> { this.setVppTokenAccountType(n.getEnumValue(VppTokenAccountType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. Last modification date time associated with the Apple Volume Purchase Program Token.

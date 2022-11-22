@@ -24,7 +24,6 @@ public class ApplicationServicePrincipal implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public ApplicationServicePrincipal() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.applicationServicePrincipal");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,12 +57,11 @@ public class ApplicationServicePrincipal implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ApplicationServicePrincipal currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("application", (n) -> { currentObject.setApplication(n.getObjectValue(Application::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("servicePrincipal", (n) -> { currentObject.setServicePrincipal(n.getObjectValue(ServicePrincipal::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("application", (n) -> { this.setApplication(n.getObjectValue(Application::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("servicePrincipal", (n) -> { this.setServicePrincipal(n.getObjectValue(ServicePrincipal::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

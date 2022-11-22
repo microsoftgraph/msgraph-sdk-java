@@ -27,7 +27,6 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IosNetworkUsageRule() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.iosNetworkUsageRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,13 +68,12 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosNetworkUsageRule currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("cellularDataBlocked", (n) -> { currentObject.setCellularDataBlocked(n.getBooleanValue()); });
-            this.put("cellularDataBlockWhenRoaming", (n) -> { currentObject.setCellularDataBlockWhenRoaming(n.getBooleanValue()); });
-            this.put("managedApps", (n) -> { currentObject.setManagedApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("cellularDataBlocked", (n) -> { this.setCellularDataBlocked(n.getBooleanValue()); });
+        deserializerMap.put("cellularDataBlockWhenRoaming", (n) -> { this.setCellularDataBlockWhenRoaming(n.getBooleanValue()); });
+        deserializerMap.put("managedApps", (n) -> { this.setManagedApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedApps property value. Information about the managed apps that this rule is going to apply to. This collection can contain a maximum of 500 elements.

@@ -14,6 +14,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class BaseItem extends Entity implements Parsable {
     /** Identity of the user, device, or application which created the item. Read-only. */
     private IdentitySet _createdBy;
@@ -44,7 +45,6 @@ public class BaseItem extends Entity implements Parsable {
     @javax.annotation.Nullable
     public BaseItem() {
         super();
-        this.setOdataType("#microsoft.graph.baseItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -114,20 +114,19 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BaseItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdByUser", (n) -> { currentObject.setCreatedByUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("eTag", (n) -> { currentObject.setETag(n.getStringValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedByUser", (n) -> { currentObject.setLastModifiedByUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("parentReference", (n) -> { currentObject.setParentReference(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdByUser", (n) -> { this.setCreatedByUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("eTag", (n) -> { this.setETag(n.getStringValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedByUser", (n) -> { this.setLastModifiedByUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("parentReference", (n) -> { this.setParentReference(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.

@@ -26,7 +26,6 @@ public class RecommendedAction implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RecommendedAction() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.recommendedAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,13 +59,12 @@ public class RecommendedAction implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RecommendedAction currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("actionWebUrl", (n) -> { currentObject.setActionWebUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("potentialScoreImpact", (n) -> { currentObject.setPotentialScoreImpact(n.getDoubleValue()); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("actionWebUrl", (n) -> { this.setActionWebUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("potentialScoreImpact", (n) -> { this.setPotentialScoreImpact(n.getDoubleValue()); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

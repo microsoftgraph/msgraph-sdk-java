@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** This topic provides descriptions of the declared methods, properties and relationships exposed by the secureAssessment resource. */
 public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration implements Parsable {
     /** Indicates whether or not to allow the app from printing during the test. */
     private Boolean _allowPrinting;
@@ -19,7 +20,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     /** Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/). */
     private String _launchUri;
     /**
-     * Instantiates a new Windows10SecureAssessmentConfiguration and sets the default values.
+     * Instantiates a new windows10SecureAssessmentConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -30,7 +31,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10SecureAssessmentConfiguration
+     * @return a windows10SecureAssessmentConfiguration
      */
     @javax.annotation.Nonnull
     public static Windows10SecureAssessmentConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -75,14 +76,13 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10SecureAssessmentConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("allowPrinting", (n) -> { currentObject.setAllowPrinting(n.getBooleanValue()); });
-            this.put("allowScreenCapture", (n) -> { currentObject.setAllowScreenCapture(n.getBooleanValue()); });
-            this.put("allowTextSuggestion", (n) -> { currentObject.setAllowTextSuggestion(n.getBooleanValue()); });
-            this.put("configurationAccount", (n) -> { currentObject.setConfigurationAccount(n.getStringValue()); });
-            this.put("launchUri", (n) -> { currentObject.setLaunchUri(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowPrinting", (n) -> { this.setAllowPrinting(n.getBooleanValue()); });
+        deserializerMap.put("allowScreenCapture", (n) -> { this.setAllowScreenCapture(n.getBooleanValue()); });
+        deserializerMap.put("allowTextSuggestion", (n) -> { this.setAllowTextSuggestion(n.getBooleanValue()); });
+        deserializerMap.put("configurationAccount", (n) -> { this.setConfigurationAccount(n.getStringValue()); });
+        deserializerMap.put("launchUri", (n) -> { this.setLaunchUri(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the launchUri property value. Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).

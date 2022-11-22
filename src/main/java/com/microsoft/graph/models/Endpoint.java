@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the instantiate method. */
+/** Provides operations to manage the admin singleton. */
 public class Endpoint extends DirectoryObject implements Parsable {
     /** The capability property */
     private String _capability;
@@ -52,14 +52,13 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Endpoint currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("capability", (n) -> { currentObject.setCapability(n.getStringValue()); });
-            this.put("providerId", (n) -> { currentObject.setProviderId(n.getStringValue()); });
-            this.put("providerName", (n) -> { currentObject.setProviderName(n.getStringValue()); });
-            this.put("providerResourceId", (n) -> { currentObject.setProviderResourceId(n.getStringValue()); });
-            this.put("uri", (n) -> { currentObject.setUri(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("capability", (n) -> { this.setCapability(n.getStringValue()); });
+        deserializerMap.put("providerId", (n) -> { this.setProviderId(n.getStringValue()); });
+        deserializerMap.put("providerName", (n) -> { this.setProviderName(n.getStringValue()); });
+        deserializerMap.put("providerResourceId", (n) -> { this.setProviderResourceId(n.getStringValue()); });
+        deserializerMap.put("uri", (n) -> { this.setUri(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the providerId property value. The providerId property

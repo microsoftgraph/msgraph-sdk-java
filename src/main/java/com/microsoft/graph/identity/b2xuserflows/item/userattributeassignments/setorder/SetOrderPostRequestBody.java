@@ -47,10 +47,9 @@ public class SetOrderPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SetOrderPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("newAssignmentOrder", (n) -> { currentObject.setNewAssignmentOrder(n.getObjectValue(AssignmentOrder::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("newAssignmentOrder", (n) -> { this.setNewAssignmentOrder(n.getObjectValue(AssignmentOrder::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the newAssignmentOrder property value. The newAssignmentOrder property

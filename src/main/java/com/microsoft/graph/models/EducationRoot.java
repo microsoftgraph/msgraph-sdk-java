@@ -28,7 +28,6 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public EducationRoot() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.educationRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,14 +61,13 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationRoot currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("classes", (n) -> { currentObject.setClasses(n.getCollectionOfObjectValues(EducationClass::createFromDiscriminatorValue)); });
-            this.put("me", (n) -> { currentObject.setMe(n.getObjectValue(EducationUser::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("schools", (n) -> { currentObject.setSchools(n.getCollectionOfObjectValues(EducationSchool::createFromDiscriminatorValue)); });
-            this.put("users", (n) -> { currentObject.setUsers(n.getCollectionOfObjectValues(EducationUser::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("classes", (n) -> { this.setClasses(n.getCollectionOfObjectValues(EducationClass::createFromDiscriminatorValue)); });
+        deserializerMap.put("me", (n) -> { this.setMe(n.getObjectValue(EducationUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("schools", (n) -> { this.setSchools(n.getCollectionOfObjectValues(EducationSchool::createFromDiscriminatorValue)); });
+        deserializerMap.put("users", (n) -> { this.setUsers(n.getCollectionOfObjectValues(EducationUser::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the me property value. The me property

@@ -32,7 +32,6 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public BookingSchedulingPolicy() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bookingSchedulingPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,15 +65,14 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BookingSchedulingPolicy currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("allowStaffSelection", (n) -> { currentObject.setAllowStaffSelection(n.getBooleanValue()); });
-            this.put("maximumAdvance", (n) -> { currentObject.setMaximumAdvance(n.getPeriodValue()); });
-            this.put("minimumLeadTime", (n) -> { currentObject.setMinimumLeadTime(n.getPeriodValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sendConfirmationsToOwner", (n) -> { currentObject.setSendConfirmationsToOwner(n.getBooleanValue()); });
-            this.put("timeSlotInterval", (n) -> { currentObject.setTimeSlotInterval(n.getPeriodValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("allowStaffSelection", (n) -> { this.setAllowStaffSelection(n.getBooleanValue()); });
+        deserializerMap.put("maximumAdvance", (n) -> { this.setMaximumAdvance(n.getPeriodValue()); });
+        deserializerMap.put("minimumLeadTime", (n) -> { this.setMinimumLeadTime(n.getPeriodValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sendConfirmationsToOwner", (n) -> { this.setSendConfirmationsToOwner(n.getBooleanValue()); });
+        deserializerMap.put("timeSlotInterval", (n) -> { this.setTimeSlotInterval(n.getPeriodValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the maximumAdvance property value. Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.

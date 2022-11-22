@@ -20,7 +20,6 @@ public class WorkbookChartPoint extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartPoint() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartPoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -38,11 +37,10 @@ public class WorkbookChartPoint extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookChartPoint currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartPointFormat::createFromDiscriminatorValue)); });
-            this.put("value", (n) -> { currentObject.setValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartPointFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the format property value. Encapsulates the format properties chart point. Read-only.

@@ -27,7 +27,6 @@ public class FileSystemInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public FileSystemInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.fileSystemInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,13 +60,12 @@ public class FileSystemInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final FileSystemInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastAccessedDateTime", (n) -> { currentObject.setLastAccessedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastAccessedDateTime", (n) -> { this.setLastAccessedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastAccessedDateTime property value. The UTC date and time the file was last accessed. Available for the recent file list only.

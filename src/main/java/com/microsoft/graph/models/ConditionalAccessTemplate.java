@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class ConditionalAccessTemplate extends Entity implements Parsable {
     /** The user-friendly name of the template. */
     private String _description;
@@ -24,7 +24,6 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ConditionalAccessTemplate() {
         super();
-        this.setOdataType("#microsoft.graph.conditionalAccessTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,13 +57,12 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConditionalAccessTemplate currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("details", (n) -> { currentObject.setDetails(n.getObjectValue(ConditionalAccessPolicyDetail::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("scenarios", (n) -> { currentObject.setScenarios(n.getEnumValue(TemplateScenarios.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("details", (n) -> { this.setDetails(n.getObjectValue(ConditionalAccessPolicyDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("scenarios", (n) -> { this.setScenarios(n.getEnumValue(TemplateScenarios.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. The user-friendly name of the template.

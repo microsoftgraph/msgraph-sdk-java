@@ -59,7 +59,6 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RemoteItem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.remoteItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -101,29 +100,28 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RemoteItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(20) {{
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("file", (n) -> { currentObject.setFile(n.getObjectValue(File::createFromDiscriminatorValue)); });
-            this.put("fileSystemInfo", (n) -> { currentObject.setFileSystemInfo(n.getObjectValue(FileSystemInfo::createFromDiscriminatorValue)); });
-            this.put("folder", (n) -> { currentObject.setFolder(n.getObjectValue(Folder::createFromDiscriminatorValue)); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("image", (n) -> { currentObject.setImage(n.getObjectValue(Image::createFromDiscriminatorValue)); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("package", (n) -> { currentObject.setPackage(n.getObjectValue(Package_escaped::createFromDiscriminatorValue)); });
-            this.put("parentReference", (n) -> { currentObject.setParentReference(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
-            this.put("shared", (n) -> { currentObject.setShared(n.getObjectValue(Shared::createFromDiscriminatorValue)); });
-            this.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
-            this.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
-            this.put("specialFolder", (n) -> { currentObject.setSpecialFolder(n.getObjectValue(SpecialFolder::createFromDiscriminatorValue)); });
-            this.put("video", (n) -> { currentObject.setVideo(n.getObjectValue(Video::createFromDiscriminatorValue)); });
-            this.put("webDavUrl", (n) -> { currentObject.setWebDavUrl(n.getStringValue()); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(20);
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("file", (n) -> { this.setFile(n.getObjectValue(File::createFromDiscriminatorValue)); });
+        deserializerMap.put("fileSystemInfo", (n) -> { this.setFileSystemInfo(n.getObjectValue(FileSystemInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("folder", (n) -> { this.setFolder(n.getObjectValue(Folder::createFromDiscriminatorValue)); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("image", (n) -> { this.setImage(n.getObjectValue(Image::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("package", (n) -> { this.setPackage(n.getObjectValue(Package_escaped::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentReference", (n) -> { this.setParentReference(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
+        deserializerMap.put("shared", (n) -> { this.setShared(n.getObjectValue(Shared::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharepointIds", (n) -> { this.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
+        deserializerMap.put("size", (n) -> { this.setSize(n.getLongValue()); });
+        deserializerMap.put("specialFolder", (n) -> { this.setSpecialFolder(n.getObjectValue(SpecialFolder::createFromDiscriminatorValue)); });
+        deserializerMap.put("video", (n) -> { this.setVideo(n.getObjectValue(Video::createFromDiscriminatorValue)); });
+        deserializerMap.put("webDavUrl", (n) -> { this.setWebDavUrl(n.getStringValue()); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the file property value. Indicates that the remote item is a file. Read-only.

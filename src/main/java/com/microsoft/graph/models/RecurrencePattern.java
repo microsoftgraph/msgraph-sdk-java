@@ -34,7 +34,6 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RecurrencePattern() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.recurrencePattern");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -76,17 +75,16 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RecurrencePattern currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("dayOfMonth", (n) -> { currentObject.setDayOfMonth(n.getIntegerValue()); });
-            this.put("daysOfWeek", (n) -> { currentObject.setDaysOfWeek(n.getCollectionOfEnumValues(DayOfWeek.class)); });
-            this.put("firstDayOfWeek", (n) -> { currentObject.setFirstDayOfWeek(n.getEnumValue(DayOfWeek.class)); });
-            this.put("index", (n) -> { currentObject.setIndex(n.getEnumValue(WeekIndex.class)); });
-            this.put("interval", (n) -> { currentObject.setInterval(n.getIntegerValue()); });
-            this.put("month", (n) -> { currentObject.setMonth(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(RecurrencePatternType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("dayOfMonth", (n) -> { this.setDayOfMonth(n.getIntegerValue()); });
+        deserializerMap.put("daysOfWeek", (n) -> { this.setDaysOfWeek(n.getCollectionOfEnumValues(DayOfWeek.class)); });
+        deserializerMap.put("firstDayOfWeek", (n) -> { this.setFirstDayOfWeek(n.getEnumValue(DayOfWeek.class)); });
+        deserializerMap.put("index", (n) -> { this.setIndex(n.getEnumValue(WeekIndex.class)); });
+        deserializerMap.put("interval", (n) -> { this.setInterval(n.getIntegerValue()); });
+        deserializerMap.put("month", (n) -> { this.setMonth(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(RecurrencePatternType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the firstDayOfWeek property value. The first day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly.

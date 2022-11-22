@@ -20,7 +20,6 @@ public class PlannerAppliedCategories implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public PlannerAppliedCategories() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.plannerAppliedCategories");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,10 +45,9 @@ public class PlannerAppliedCategories implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerAppliedCategories currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

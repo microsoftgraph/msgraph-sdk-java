@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the members property of the microsoft.graph.externalConnectors.externalGroup entity. */
 public class IdentityCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<Identity> _value;
@@ -36,10 +35,9 @@ public class IdentityCollectionResponse extends BaseCollectionPaginationCountRes
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IdentityCollectionResponse currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(Identity::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(Identity::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The value property

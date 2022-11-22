@@ -30,7 +30,6 @@ public class WorkbookNamedItem extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookNamedItem() {
         super();
-        this.setOdataType("#microsoft.graph.workbookNamedItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,16 +55,15 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookNamedItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-            this.put("value", (n) -> { currentObject.setValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("visible", (n) -> { currentObject.setVisible(n.getBooleanValue()); });
-            this.put("worksheet", (n) -> { currentObject.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("visible", (n) -> { this.setVisible(n.getBooleanValue()); });
+        deserializerMap.put("worksheet", (n) -> { this.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. The name of the object. Read-only.

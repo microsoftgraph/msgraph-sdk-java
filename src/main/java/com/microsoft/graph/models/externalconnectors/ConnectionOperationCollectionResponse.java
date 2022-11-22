@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the operations property of the microsoft.graph.externalConnectors.externalConnection entity. */
 public class ConnectionOperationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<ConnectionOperation> _value;
@@ -36,10 +35,9 @@ public class ConnectionOperationCollectionResponse extends BaseCollectionPaginat
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConnectionOperationCollectionResponse currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(ConnectionOperation::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(ConnectionOperation::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The value property

@@ -27,7 +27,6 @@ public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public Win32LobAppRestartSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.win32LobAppRestartSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,13 +60,12 @@ public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Win32LobAppRestartSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("countdownDisplayBeforeRestartInMinutes", (n) -> { currentObject.setCountdownDisplayBeforeRestartInMinutes(n.getIntegerValue()); });
-            this.put("gracePeriodInMinutes", (n) -> { currentObject.setGracePeriodInMinutes(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("restartNotificationSnoozeDurationInMinutes", (n) -> { currentObject.setRestartNotificationSnoozeDurationInMinutes(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("countdownDisplayBeforeRestartInMinutes", (n) -> { this.setCountdownDisplayBeforeRestartInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("gracePeriodInMinutes", (n) -> { this.setGracePeriodInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("restartNotificationSnoozeDurationInMinutes", (n) -> { this.setRestartNotificationSnoozeDurationInMinutes(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the gracePeriodInMinutes property value. The number of minutes to wait before restarting the device after an app installation.

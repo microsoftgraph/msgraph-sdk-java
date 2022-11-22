@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class TeamsTab extends Entity implements Parsable {
     /** Container for custom settings applied to a tab. The tab is considered configured only once this property is set. */
     private TeamsTabConfiguration _configuration;
@@ -24,7 +24,6 @@ public class TeamsTab extends Entity implements Parsable {
     @javax.annotation.Nullable
     public TeamsTab() {
         super();
-        this.setOdataType("#microsoft.graph.teamsTab");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,13 +57,12 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamsTab currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("configuration", (n) -> { currentObject.setConfiguration(n.getObjectValue(TeamsTabConfiguration::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("teamsApp", (n) -> { currentObject.setTeamsApp(n.getObjectValue(TeamsApp::createFromDiscriminatorValue)); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("configuration", (n) -> { this.setConfiguration(n.getObjectValue(TeamsTabConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("teamsApp", (n) -> { this.setTeamsApp(n.getObjectValue(TeamsApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the teamsApp property value. The application that is linked to the tab. This cannot be changed after tab creation.

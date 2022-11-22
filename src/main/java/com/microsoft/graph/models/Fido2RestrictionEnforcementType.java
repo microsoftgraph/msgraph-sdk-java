@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of authenticationMethodConfiguration entities. */
+/** Provides operations to manage the admin singleton. */
 public enum Fido2RestrictionEnforcementType implements ValuedEnum {
     Allow("allow"),
     Block("block"),

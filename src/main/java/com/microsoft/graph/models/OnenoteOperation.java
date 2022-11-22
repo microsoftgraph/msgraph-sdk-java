@@ -23,7 +23,6 @@ public class OnenoteOperation extends Operation implements Parsable {
     @javax.annotation.Nullable
     public OnenoteOperation() {
         super();
-        this.setOdataType("#microsoft.graph.onenoteOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,13 +48,12 @@ public class OnenoteOperation extends Operation implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OnenoteOperation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("error", (n) -> { currentObject.setError(n.getObjectValue(OnenoteOperationError::createFromDiscriminatorValue)); });
-            this.put("percentComplete", (n) -> { currentObject.setPercentComplete(n.getStringValue()); });
-            this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
-            this.put("resourceLocation", (n) -> { currentObject.setResourceLocation(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(OnenoteOperationError::createFromDiscriminatorValue)); });
+        deserializerMap.put("percentComplete", (n) -> { this.setPercentComplete(n.getStringValue()); });
+        deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
+        deserializerMap.put("resourceLocation", (n) -> { this.setResourceLocation(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the percentComplete property value. The operation percent complete if the operation is still in running status.

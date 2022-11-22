@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class UserFlowLanguagePage extends Entity implements Parsable {
     /**
      * Instantiates a new userFlowLanguagePage and sets the default values.
@@ -16,7 +16,6 @@ public class UserFlowLanguagePage extends Entity implements Parsable {
     @javax.annotation.Nullable
     public UserFlowLanguagePage() {
         super();
-        this.setOdataType("#microsoft.graph.userFlowLanguagePage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,9 +33,8 @@ public class UserFlowLanguagePage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserFlowLanguagePage currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

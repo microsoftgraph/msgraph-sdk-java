@@ -34,7 +34,6 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public DeviceDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -84,17 +83,16 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceDetail currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("browser", (n) -> { currentObject.setBrowser(n.getStringValue()); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isCompliant", (n) -> { currentObject.setIsCompliant(n.getBooleanValue()); });
-            this.put("isManaged", (n) -> { currentObject.setIsManaged(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operatingSystem", (n) -> { currentObject.setOperatingSystem(n.getStringValue()); });
-            this.put("trustType", (n) -> { currentObject.setTrustType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("browser", (n) -> { this.setBrowser(n.getStringValue()); });
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isCompliant", (n) -> { this.setIsCompliant(n.getBooleanValue()); });
+        deserializerMap.put("isManaged", (n) -> { this.setIsManaged(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operatingSystem", (n) -> { this.setOperatingSystem(n.getStringValue()); });
+        deserializerMap.put("trustType", (n) -> { this.setTrustType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isCompliant property value. Indicates whether the device is compliant.

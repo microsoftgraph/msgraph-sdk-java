@@ -17,7 +17,6 @@ public class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable {
     @javax.annotation.Nullable
     public DomainDnsTxtRecord() {
         super();
-        this.setOdataType("#microsoft.graph.domainDnsTxtRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,10 +34,9 @@ public class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DomainDnsTxtRecord currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("text", (n) -> { this.setText(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the text property value. Value used when configuring the text property at the DNS host.

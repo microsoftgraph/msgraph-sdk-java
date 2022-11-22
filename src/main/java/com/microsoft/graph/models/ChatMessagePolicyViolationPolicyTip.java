@@ -26,7 +26,6 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
     @javax.annotation.Nullable
     public ChatMessagePolicyViolationPolicyTip() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.chatMessagePolicyViolationPolicyTip");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,13 +59,12 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ChatMessagePolicyViolationPolicyTip currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("complianceUrl", (n) -> { currentObject.setComplianceUrl(n.getStringValue()); });
-            this.put("generalText", (n) -> { currentObject.setGeneralText(n.getStringValue()); });
-            this.put("matchedConditionDescriptions", (n) -> { currentObject.setMatchedConditionDescriptions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("complianceUrl", (n) -> { this.setComplianceUrl(n.getStringValue()); });
+        deserializerMap.put("generalText", (n) -> { this.setGeneralText(n.getStringValue()); });
+        deserializerMap.put("matchedConditionDescriptions", (n) -> { this.setMatchedConditionDescriptions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the generalText property value. Explanatory text shown to the sender of the message.

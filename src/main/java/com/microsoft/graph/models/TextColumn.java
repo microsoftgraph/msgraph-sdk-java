@@ -30,7 +30,6 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TextColumn() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.textColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,15 +71,14 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TextColumn currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("allowMultipleLines", (n) -> { currentObject.setAllowMultipleLines(n.getBooleanValue()); });
-            this.put("appendChangesToExistingText", (n) -> { currentObject.setAppendChangesToExistingText(n.getBooleanValue()); });
-            this.put("linesForEditing", (n) -> { currentObject.setLinesForEditing(n.getIntegerValue()); });
-            this.put("maxLength", (n) -> { currentObject.setMaxLength(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("textType", (n) -> { currentObject.setTextType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("allowMultipleLines", (n) -> { this.setAllowMultipleLines(n.getBooleanValue()); });
+        deserializerMap.put("appendChangesToExistingText", (n) -> { this.setAppendChangesToExistingText(n.getBooleanValue()); });
+        deserializerMap.put("linesForEditing", (n) -> { this.setLinesForEditing(n.getIntegerValue()); });
+        deserializerMap.put("maxLength", (n) -> { this.setMaxLength(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("textType", (n) -> { this.setTextType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the linesForEditing property value. The size of the text box.

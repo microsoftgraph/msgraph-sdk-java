@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class DataSourceContainer extends Entity implements Parsable {
     /** Created date and time of the dataSourceContainer entity. */
     private OffsetDateTime _createdDateTime;
@@ -32,7 +32,6 @@ public class DataSourceContainer extends Entity implements Parsable {
     @javax.annotation.Nullable
     public DataSourceContainer() {
         super();
-        this.setOdataType("#microsoft.graph.security.dataSourceContainer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -74,15 +73,14 @@ public class DataSourceContainer extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DataSourceContainer currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("holdStatus", (n) -> { currentObject.setHoldStatus(n.getEnumValue(DataSourceHoldStatus.class)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("releasedDateTime", (n) -> { currentObject.setReleasedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DataSourceContainerStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("holdStatus", (n) -> { this.setHoldStatus(n.getEnumValue(DataSourceHoldStatus.class)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("releasedDateTime", (n) -> { this.setReleasedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DataSourceContainerStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the holdStatus property value. The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial

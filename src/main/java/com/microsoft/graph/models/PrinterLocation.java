@@ -54,7 +54,6 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PrinterLocation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.printerLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -112,27 +111,26 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrinterLocation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(18) {{
-            this.put("altitudeInMeters", (n) -> { currentObject.setAltitudeInMeters(n.getIntegerValue()); });
-            this.put("building", (n) -> { currentObject.setBuilding(n.getStringValue()); });
-            this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
-            this.put("countryOrRegion", (n) -> { currentObject.setCountryOrRegion(n.getStringValue()); });
-            this.put("floor", (n) -> { currentObject.setFloor(n.getStringValue()); });
-            this.put("floorDescription", (n) -> { currentObject.setFloorDescription(n.getStringValue()); });
-            this.put("latitude", (n) -> { currentObject.setLatitude(n.getDoubleValue()); });
-            this.put("longitude", (n) -> { currentObject.setLongitude(n.getDoubleValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("organization", (n) -> { currentObject.setOrganization(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("postalCode", (n) -> { currentObject.setPostalCode(n.getStringValue()); });
-            this.put("roomDescription", (n) -> { currentObject.setRoomDescription(n.getStringValue()); });
-            this.put("roomName", (n) -> { currentObject.setRoomName(n.getStringValue()); });
-            this.put("site", (n) -> { currentObject.setSite(n.getStringValue()); });
-            this.put("stateOrProvince", (n) -> { currentObject.setStateOrProvince(n.getStringValue()); });
-            this.put("streetAddress", (n) -> { currentObject.setStreetAddress(n.getStringValue()); });
-            this.put("subdivision", (n) -> { currentObject.setSubdivision(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("subunit", (n) -> { currentObject.setSubunit(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(18);
+        deserializerMap.put("altitudeInMeters", (n) -> { this.setAltitudeInMeters(n.getIntegerValue()); });
+        deserializerMap.put("building", (n) -> { this.setBuilding(n.getStringValue()); });
+        deserializerMap.put("city", (n) -> { this.setCity(n.getStringValue()); });
+        deserializerMap.put("countryOrRegion", (n) -> { this.setCountryOrRegion(n.getStringValue()); });
+        deserializerMap.put("floor", (n) -> { this.setFloor(n.getStringValue()); });
+        deserializerMap.put("floorDescription", (n) -> { this.setFloorDescription(n.getStringValue()); });
+        deserializerMap.put("latitude", (n) -> { this.setLatitude(n.getDoubleValue()); });
+        deserializerMap.put("longitude", (n) -> { this.setLongitude(n.getDoubleValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("organization", (n) -> { this.setOrganization(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("postalCode", (n) -> { this.setPostalCode(n.getStringValue()); });
+        deserializerMap.put("roomDescription", (n) -> { this.setRoomDescription(n.getStringValue()); });
+        deserializerMap.put("roomName", (n) -> { this.setRoomName(n.getStringValue()); });
+        deserializerMap.put("site", (n) -> { this.setSite(n.getStringValue()); });
+        deserializerMap.put("stateOrProvince", (n) -> { this.setStateOrProvince(n.getStringValue()); });
+        deserializerMap.put("streetAddress", (n) -> { this.setStreetAddress(n.getStringValue()); });
+        deserializerMap.put("subdivision", (n) -> { this.setSubdivision(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("subunit", (n) -> { this.setSubunit(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the floor property value. The floor that the printer is located on. Only numerical values are supported right now.

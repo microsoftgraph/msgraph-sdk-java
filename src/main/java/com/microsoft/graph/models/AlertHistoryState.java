@@ -35,7 +35,6 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AlertHistoryState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.alertHistoryState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -93,17 +92,16 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AlertHistoryState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });
-            this.put("comments", (n) -> { currentObject.setComments(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("feedback", (n) -> { currentObject.setFeedback(n.getEnumValue(AlertFeedback.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AlertStatus.class)); });
-            this.put("updatedDateTime", (n) -> { currentObject.setUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("user", (n) -> { currentObject.setUser(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
+        deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getStringValue()); });
+        deserializerMap.put("comments", (n) -> { this.setComments(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("feedback", (n) -> { this.setFeedback(n.getEnumValue(AlertFeedback.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AlertStatus.class)); });
+        deserializerMap.put("updatedDateTime", (n) -> { this.setUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("user", (n) -> { this.setUser(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

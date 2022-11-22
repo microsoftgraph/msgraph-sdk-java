@@ -37,6 +37,7 @@ import com.microsoft.graph.models.AndroidStoreApp;
 import com.microsoft.graph.models.AndroidWorkProfileCompliancePolicy;
 import com.microsoft.graph.models.AndroidWorkProfileCustomConfiguration;
 import com.microsoft.graph.models.AndroidWorkProfileGeneralDeviceConfiguration;
+import com.microsoft.graph.models.AnonymousGuestConversationMember;
 import com.microsoft.graph.models.AppCatalogs;
 import com.microsoft.graph.models.AppConsentApprovalRoute;
 import com.microsoft.graph.models.AppConsentRequest;
@@ -224,7 +225,6 @@ import com.microsoft.graph.models.Fido2AuthenticationMethodConfiguration;
 import com.microsoft.graph.models.FieldValueSet;
 import com.microsoft.graph.models.FileAssessmentRequest;
 import com.microsoft.graph.models.FileAttachment;
-import com.microsoft.graph.models.Group;
 import com.microsoft.graph.models.GroupLifecyclePolicy;
 import com.microsoft.graph.models.GroupSetting;
 import com.microsoft.graph.models.GroupSettingTemplate;
@@ -313,6 +313,7 @@ import com.microsoft.graph.models.MdmWindowsInformationProtectionPolicy;
 import com.microsoft.graph.models.MeetingAttendanceReport;
 import com.microsoft.graph.models.Message;
 import com.microsoft.graph.models.MessageRule;
+import com.microsoft.graph.models.MicrosoftAccountUserConversationMember;
 import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethod;
 import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethodConfiguration;
 import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethodTarget;
@@ -441,6 +442,7 @@ import com.microsoft.graph.models.security.EdiscoveryEstimateOperation;
 import com.microsoft.graph.models.security.EdiscoveryHoldOperation;
 import com.microsoft.graph.models.security.EdiscoveryIndexOperation;
 import com.microsoft.graph.models.security.EdiscoveryNoncustodialDataSource;
+import com.microsoft.graph.models.security.EdiscoveryPurgeDataOperation;
 import com.microsoft.graph.models.security.EdiscoveryReviewSet;
 import com.microsoft.graph.models.security.EdiscoveryReviewSetQuery;
 import com.microsoft.graph.models.security.EdiscoveryReviewTag;
@@ -472,6 +474,8 @@ import com.microsoft.graph.models.SimulationAutomation;
 import com.microsoft.graph.models.SimulationAutomationRun;
 import com.microsoft.graph.models.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.Site;
+import com.microsoft.graph.models.SkypeForBusinessUserConversationMember;
+import com.microsoft.graph.models.SkypeUserConversationMember;
 import com.microsoft.graph.models.SocialIdentityProvider;
 import com.microsoft.graph.models.SoftwareOathAuthenticationMethod;
 import com.microsoft.graph.models.SoftwareUpdateStatusSummary;
@@ -507,6 +511,7 @@ import com.microsoft.graph.models.TermsAndConditions;
 import com.microsoft.graph.models.TermsAndConditionsAcceptanceStatus;
 import com.microsoft.graph.models.TermsAndConditionsAssignment;
 import com.microsoft.graph.models.TermsOfUseContainer;
+import com.microsoft.graph.models.termstore.Group;
 import com.microsoft.graph.models.termstore.Relation;
 import com.microsoft.graph.models.termstore.Set;
 import com.microsoft.graph.models.termstore.Store;
@@ -652,7 +657,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Entity() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.entity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -721,6 +725,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.androidWorkProfileCompliancePolicy": return new AndroidWorkProfileCompliancePolicy();
             case "#microsoft.graph.androidWorkProfileCustomConfiguration": return new AndroidWorkProfileCustomConfiguration();
             case "#microsoft.graph.androidWorkProfileGeneralDeviceConfiguration": return new AndroidWorkProfileGeneralDeviceConfiguration();
+            case "#microsoft.graph.anonymousGuestConversationMember": return new AnonymousGuestConversationMember();
             case "#microsoft.graph.appCatalogs": return new AppCatalogs();
             case "#microsoft.graph.appConsentApprovalRoute": return new AppConsentApprovalRoute();
             case "#microsoft.graph.appConsentRequest": return new AppConsentRequest();
@@ -997,6 +1002,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.meetingAttendanceReport": return new MeetingAttendanceReport();
             case "#microsoft.graph.message": return new Message();
             case "#microsoft.graph.messageRule": return new MessageRule();
+            case "#microsoft.graph.microsoftAccountUserConversationMember": return new MicrosoftAccountUserConversationMember();
             case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethod": return new MicrosoftAuthenticatorAuthenticationMethod();
             case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration": return new MicrosoftAuthenticatorAuthenticationMethodConfiguration();
             case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethodTarget": return new MicrosoftAuthenticatorAuthenticationMethodTarget();
@@ -1125,6 +1131,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.security.ediscoveryHoldOperation": return new EdiscoveryHoldOperation();
             case "#microsoft.graph.security.ediscoveryIndexOperation": return new EdiscoveryIndexOperation();
             case "#microsoft.graph.security.ediscoveryNoncustodialDataSource": return new EdiscoveryNoncustodialDataSource();
+            case "#microsoft.graph.security.ediscoveryPurgeDataOperation": return new EdiscoveryPurgeDataOperation();
             case "#microsoft.graph.security.ediscoveryReviewSet": return new EdiscoveryReviewSet();
             case "#microsoft.graph.security.ediscoveryReviewSetQuery": return new EdiscoveryReviewSetQuery();
             case "#microsoft.graph.security.ediscoveryReviewTag": return new EdiscoveryReviewTag();
@@ -1156,6 +1163,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.simulationAutomationRun": return new SimulationAutomationRun();
             case "#microsoft.graph.singleValueLegacyExtendedProperty": return new SingleValueLegacyExtendedProperty();
             case "#microsoft.graph.site": return new Site();
+            case "#microsoft.graph.skypeForBusinessUserConversationMember": return new SkypeForBusinessUserConversationMember();
+            case "#microsoft.graph.skypeUserConversationMember": return new SkypeUserConversationMember();
             case "#microsoft.graph.socialIdentityProvider": return new SocialIdentityProvider();
             case "#microsoft.graph.softwareOathAuthenticationMethod": return new SoftwareOathAuthenticationMethod();
             case "#microsoft.graph.softwareUpdateStatusSummary": return new SoftwareUpdateStatusSummary();
@@ -1179,11 +1188,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.teamsAsyncOperation": return new TeamsAsyncOperation();
             case "#microsoft.graph.teamsTab": return new TeamsTab();
             case "#microsoft.graph.teamsTemplate": return new TeamsTemplate();
-            case "#microsoft.graph.teamwork": return new Teamwork();
-            case "#microsoft.graph.teamworkBot": return new TeamworkBot();
-            case "#microsoft.graph.teamworkHostedContent": return new TeamworkHostedContent();
-            case "#microsoft.graph.teamworkTag": return new TeamworkTag();
-            case "#microsoft.graph.teamworkTagMember": return new TeamworkTagMember();
         }
         return null;
     }
@@ -1195,6 +1199,11 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@javax.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.teamwork": return new Teamwork();
+            case "#microsoft.graph.teamworkBot": return new TeamworkBot();
+            case "#microsoft.graph.teamworkHostedContent": return new TeamworkHostedContent();
+            case "#microsoft.graph.teamworkTag": return new TeamworkTag();
+            case "#microsoft.graph.teamworkTagMember": return new TeamworkTagMember();
             case "#microsoft.graph.telecomExpenseManagementPartner": return new TelecomExpenseManagementPartner();
             case "#microsoft.graph.temporaryAccessPassAuthenticationMethod": return new TemporaryAccessPassAuthenticationMethod();
             case "#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration": return new TemporaryAccessPassAuthenticationMethodConfiguration();
@@ -1343,11 +1352,10 @@ public class Entity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Entity currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. The unique idenfier for an entity. Read-only.

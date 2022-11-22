@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class CallRecord extends Entity implements Parsable {
     /** UTC time when the last user left the call. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _endDateTime;
@@ -39,7 +39,6 @@ public class CallRecord extends Entity implements Parsable {
     @javax.annotation.Nullable
     public CallRecord() {
         super();
-        this.setOdataType("#microsoft.graph.callRecords.callRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,19 +64,18 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CallRecord currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("joinWebUrl", (n) -> { currentObject.setJoinWebUrl(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("modalities", (n) -> { currentObject.setModalities(n.getCollectionOfEnumValues(Modality.class)); });
-            this.put("organizer", (n) -> { currentObject.setOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("participants", (n) -> { currentObject.setParticipants(n.getCollectionOfObjectValues(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("sessions", (n) -> { currentObject.setSessions(n.getCollectionOfObjectValues(Session::createFromDiscriminatorValue)); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(CallType.class)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("joinWebUrl", (n) -> { this.setJoinWebUrl(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("modalities", (n) -> { this.setModalities(n.getCollectionOfEnumValues(Modality.class)); });
+        deserializerMap.put("organizer", (n) -> { this.setOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("participants", (n) -> { this.setParticipants(n.getCollectionOfObjectValues(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("sessions", (n) -> { this.setSessions(n.getCollectionOfObjectValues(Session::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(CallType.class)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the joinWebUrl property value. Meeting URL associated to the call. May not be available for a peerToPeer call record type.

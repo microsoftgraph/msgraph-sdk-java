@@ -20,7 +20,6 @@ public class PrintTaskTrigger extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PrintTaskTrigger() {
         super();
-        this.setOdataType("#microsoft.graph.printTaskTrigger");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,11 +53,10 @@ public class PrintTaskTrigger extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrintTaskTrigger currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("definition", (n) -> { currentObject.setDefinition(n.getObjectValue(PrintTaskDefinition::createFromDiscriminatorValue)); });
-            this.put("event", (n) -> { currentObject.setEvent(n.getEnumValue(PrintEvent.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("definition", (n) -> { this.setDefinition(n.getObjectValue(PrintTaskDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("event", (n) -> { this.setEvent(n.getEnumValue(PrintEvent.class)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

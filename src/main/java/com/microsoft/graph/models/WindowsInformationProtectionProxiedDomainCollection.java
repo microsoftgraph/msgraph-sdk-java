@@ -25,7 +25,6 @@ public class WindowsInformationProtectionProxiedDomainCollection implements Addi
     @javax.annotation.Nullable
     public WindowsInformationProtectionProxiedDomainCollection() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsInformationProtectionProxiedDomainCollection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,12 +58,11 @@ public class WindowsInformationProtectionProxiedDomainCollection implements Addi
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsInformationProtectionProxiedDomainCollection currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("proxiedDomains", (n) -> { currentObject.setProxiedDomains(n.getCollectionOfObjectValues(ProxiedDomain::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("proxiedDomains", (n) -> { this.setProxiedDomains(n.getCollectionOfObjectValues(ProxiedDomain::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

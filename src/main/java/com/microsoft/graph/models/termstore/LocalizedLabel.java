@@ -26,7 +26,6 @@ public class LocalizedLabel implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public LocalizedLabel() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.termStore.localizedLabel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,13 +51,12 @@ public class LocalizedLabel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final LocalizedLabel currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
-            this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("isDefault", (n) -> { this.setIsDefault(n.getBooleanValue()); });
+        deserializerMap.put("languageTag", (n) -> { this.setLanguageTag(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isDefault property value. Indicates whether the label is the default label.

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to servicePrincipal. */
 public class ServicePrincipalCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<ServicePrincipal> _value;
@@ -35,10 +34,9 @@ public class ServicePrincipalCollectionResponse extends BaseCollectionPagination
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ServicePrincipalCollectionResponse currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(ServicePrincipal::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(ServicePrincipal::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The value property

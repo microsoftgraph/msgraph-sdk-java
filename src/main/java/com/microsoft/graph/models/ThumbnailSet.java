@@ -24,7 +24,6 @@ public class ThumbnailSet extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ThumbnailSet() {
         super();
-        this.setOdataType("#microsoft.graph.thumbnailSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,13 +41,12 @@ public class ThumbnailSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ThumbnailSet currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("large", (n) -> { currentObject.setLarge(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
-            this.put("medium", (n) -> { currentObject.setMedium(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
-            this.put("small", (n) -> { currentObject.setSmall(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
-            this.put("source", (n) -> { currentObject.setSource(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("large", (n) -> { this.setLarge(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
+        deserializerMap.put("medium", (n) -> { this.setMedium(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
+        deserializerMap.put("small", (n) -> { this.setSmall(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the large property value. A 1920x1920 scaled thumbnail.

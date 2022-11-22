@@ -30,7 +30,6 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RelatedContact() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.relatedContact");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -80,15 +79,14 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RelatedContact currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("accessConsent", (n) -> { currentObject.setAccessConsent(n.getBooleanValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
-            this.put("mobilePhone", (n) -> { currentObject.setMobilePhone(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("relationship", (n) -> { currentObject.setRelationship(n.getEnumValue(ContactRelationship.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("accessConsent", (n) -> { this.setAccessConsent(n.getBooleanValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
+        deserializerMap.put("mobilePhone", (n) -> { this.setMobilePhone(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("relationship", (n) -> { this.setRelationship(n.getEnumValue(ContactRelationship.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the mobilePhone property value. Mobile phone number of the contact.

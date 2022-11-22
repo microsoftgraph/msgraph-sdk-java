@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class Call extends Entity implements Parsable {
     /** The audioRoutingGroups property */
     private java.util.List<AudioRoutingGroup> _audioRoutingGroups;
@@ -64,7 +64,6 @@ public class Call extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Call() {
         super();
-        this.setOdataType("#microsoft.graph.call");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -146,33 +145,32 @@ public class Call extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Call currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("audioRoutingGroups", (n) -> { currentObject.setAudioRoutingGroups(n.getCollectionOfObjectValues(AudioRoutingGroup::createFromDiscriminatorValue)); });
-            this.put("callbackUri", (n) -> { currentObject.setCallbackUri(n.getStringValue()); });
-            this.put("callChainId", (n) -> { currentObject.setCallChainId(n.getStringValue()); });
-            this.put("callOptions", (n) -> { currentObject.setCallOptions(n.getObjectValue(CallOptions::createFromDiscriminatorValue)); });
-            this.put("callRoutes", (n) -> { currentObject.setCallRoutes(n.getCollectionOfObjectValues(CallRoute::createFromDiscriminatorValue)); });
-            this.put("chatInfo", (n) -> { currentObject.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
-            this.put("contentSharingSessions", (n) -> { currentObject.setContentSharingSessions(n.getCollectionOfObjectValues(ContentSharingSession::createFromDiscriminatorValue)); });
-            this.put("direction", (n) -> { currentObject.setDirection(n.getEnumValue(CallDirection.class)); });
-            this.put("incomingContext", (n) -> { currentObject.setIncomingContext(n.getObjectValue(IncomingContext::createFromDiscriminatorValue)); });
-            this.put("mediaConfig", (n) -> { currentObject.setMediaConfig(n.getObjectValue(MediaConfig::createFromDiscriminatorValue)); });
-            this.put("mediaState", (n) -> { currentObject.setMediaState(n.getObjectValue(CallMediaState::createFromDiscriminatorValue)); });
-            this.put("meetingInfo", (n) -> { currentObject.setMeetingInfo(n.getObjectValue(MeetingInfo::createFromDiscriminatorValue)); });
-            this.put("myParticipantId", (n) -> { currentObject.setMyParticipantId(n.getStringValue()); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(CommsOperation::createFromDiscriminatorValue)); });
-            this.put("participants", (n) -> { currentObject.setParticipants(n.getCollectionOfObjectValues(Participant::createFromDiscriminatorValue)); });
-            this.put("requestedModalities", (n) -> { currentObject.setRequestedModalities(n.getCollectionOfEnumValues(Modality.class)); });
-            this.put("resultInfo", (n) -> { currentObject.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
-            this.put("source", (n) -> { currentObject.setSource(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(CallState.class)); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
-            this.put("targets", (n) -> { currentObject.setTargets(n.getCollectionOfObjectValues(InvitationParticipantInfo::createFromDiscriminatorValue)); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("toneInfo", (n) -> { currentObject.setToneInfo(n.getObjectValue(ToneInfo::createFromDiscriminatorValue)); });
-            this.put("transcription", (n) -> { currentObject.setTranscription(n.getObjectValue(CallTranscriptionInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("audioRoutingGroups", (n) -> { this.setAudioRoutingGroups(n.getCollectionOfObjectValues(AudioRoutingGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("callbackUri", (n) -> { this.setCallbackUri(n.getStringValue()); });
+        deserializerMap.put("callChainId", (n) -> { this.setCallChainId(n.getStringValue()); });
+        deserializerMap.put("callOptions", (n) -> { this.setCallOptions(n.getObjectValue(CallOptions::createFromDiscriminatorValue)); });
+        deserializerMap.put("callRoutes", (n) -> { this.setCallRoutes(n.getCollectionOfObjectValues(CallRoute::createFromDiscriminatorValue)); });
+        deserializerMap.put("chatInfo", (n) -> { this.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentSharingSessions", (n) -> { this.setContentSharingSessions(n.getCollectionOfObjectValues(ContentSharingSession::createFromDiscriminatorValue)); });
+        deserializerMap.put("direction", (n) -> { this.setDirection(n.getEnumValue(CallDirection.class)); });
+        deserializerMap.put("incomingContext", (n) -> { this.setIncomingContext(n.getObjectValue(IncomingContext::createFromDiscriminatorValue)); });
+        deserializerMap.put("mediaConfig", (n) -> { this.setMediaConfig(n.getObjectValue(MediaConfig::createFromDiscriminatorValue)); });
+        deserializerMap.put("mediaState", (n) -> { this.setMediaState(n.getObjectValue(CallMediaState::createFromDiscriminatorValue)); });
+        deserializerMap.put("meetingInfo", (n) -> { this.setMeetingInfo(n.getObjectValue(MeetingInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("myParticipantId", (n) -> { this.setMyParticipantId(n.getStringValue()); });
+        deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(CommsOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("participants", (n) -> { this.setParticipants(n.getCollectionOfObjectValues(Participant::createFromDiscriminatorValue)); });
+        deserializerMap.put("requestedModalities", (n) -> { this.setRequestedModalities(n.getCollectionOfEnumValues(Modality.class)); });
+        deserializerMap.put("resultInfo", (n) -> { this.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(CallState.class)); });
+        deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
+        deserializerMap.put("targets", (n) -> { this.setTargets(n.getCollectionOfObjectValues(InvitationParticipantInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("toneInfo", (n) -> { this.setToneInfo(n.getObjectValue(ToneInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("transcription", (n) -> { this.setTranscription(n.getObjectValue(CallTranscriptionInfo::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the incomingContext property value. Call context associated with an incoming call.

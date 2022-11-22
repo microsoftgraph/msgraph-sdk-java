@@ -33,7 +33,6 @@ public class CommsOperation extends Entity implements Parsable {
     @javax.annotation.Nullable
     public CommsOperation() {
         super();
-        this.setOdataType("#microsoft.graph.commsOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -76,12 +75,11 @@ public class CommsOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CommsOperation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
-            this.put("resultInfo", (n) -> { currentObject.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(OperationStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("clientContext", (n) -> { this.setClientContext(n.getStringValue()); });
+        deserializerMap.put("resultInfo", (n) -> { this.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(OperationStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the resultInfo property value. The result information. Read-only.

@@ -47,12 +47,11 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TimeOff currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("draftTimeOff", (n) -> { currentObject.setDraftTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
-            this.put("sharedTimeOff", (n) -> { currentObject.setSharedTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("draftTimeOff", (n) -> { this.setDraftTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharedTimeOff", (n) -> { this.setSharedTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Required.

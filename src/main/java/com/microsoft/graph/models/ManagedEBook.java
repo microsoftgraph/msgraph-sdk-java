@@ -44,7 +44,6 @@ public class ManagedEBook extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ManagedEBook() {
         super();
-        this.setOdataType("#microsoft.graph.managedEBook");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -109,22 +108,21 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedEBook currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(ManagedEBookAssignment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("deviceStates", (n) -> { currentObject.setDeviceStates(n.getCollectionOfObjectValues(DeviceInstallState::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("informationUrl", (n) -> { currentObject.setInformationUrl(n.getStringValue()); });
-            this.put("installSummary", (n) -> { currentObject.setInstallSummary(n.getObjectValue(EBookInstallSummary::createFromDiscriminatorValue)); });
-            this.put("largeCover", (n) -> { currentObject.setLargeCover(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("privacyInformationUrl", (n) -> { currentObject.setPrivacyInformationUrl(n.getStringValue()); });
-            this.put("publishedDateTime", (n) -> { currentObject.setPublishedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
-            this.put("userStateSummary", (n) -> { currentObject.setUserStateSummary(n.getCollectionOfObjectValues(UserInstallStateSummary::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(ManagedEBookAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("deviceStates", (n) -> { this.setDeviceStates(n.getCollectionOfObjectValues(DeviceInstallState::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("informationUrl", (n) -> { this.setInformationUrl(n.getStringValue()); });
+        deserializerMap.put("installSummary", (n) -> { this.setInstallSummary(n.getObjectValue(EBookInstallSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("largeCover", (n) -> { this.setLargeCover(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("privacyInformationUrl", (n) -> { this.setPrivacyInformationUrl(n.getStringValue()); });
+        deserializerMap.put("publishedDateTime", (n) -> { this.setPublishedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
+        deserializerMap.put("userStateSummary", (n) -> { this.setUserStateSummary(n.getCollectionOfObjectValues(UserInstallStateSummary::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the informationUrl property value. The more information Url.

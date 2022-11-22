@@ -19,7 +19,6 @@ public class ProfilePhoto extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ProfilePhoto() {
         super();
-        this.setOdataType("#microsoft.graph.profilePhoto");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,11 +36,10 @@ public class ProfilePhoto extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ProfilePhoto currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("height", (n) -> { currentObject.setHeight(n.getIntegerValue()); });
-            this.put("width", (n) -> { currentObject.setWidth(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("height", (n) -> { this.setHeight(n.getIntegerValue()); });
+        deserializerMap.put("width", (n) -> { this.setWidth(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the height property value. The height of the photo. Read-only.

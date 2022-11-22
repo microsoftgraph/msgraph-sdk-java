@@ -22,7 +22,6 @@ public class SelfServiceSignUpAuthenticationFlowConfiguration implements Additio
     @javax.annotation.Nullable
     public SelfServiceSignUpAuthenticationFlowConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.selfServiceSignUpAuthenticationFlowConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,11 +47,10 @@ public class SelfServiceSignUpAuthenticationFlowConfiguration implements Additio
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SelfServiceSignUpAuthenticationFlowConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnabled property value. Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property is not a key. Required.

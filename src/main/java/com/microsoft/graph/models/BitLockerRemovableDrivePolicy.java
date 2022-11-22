@@ -27,7 +27,6 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public BitLockerRemovableDrivePolicy() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bitLockerRemovableDrivePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,13 +68,12 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BitLockerRemovableDrivePolicy currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("blockCrossOrganizationWriteAccess", (n) -> { currentObject.setBlockCrossOrganizationWriteAccess(n.getBooleanValue()); });
-            this.put("encryptionMethod", (n) -> { currentObject.setEncryptionMethod(n.getEnumValue(BitLockerEncryptionMethod.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("requireEncryptionForWriteAccess", (n) -> { currentObject.setRequireEncryptionForWriteAccess(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("blockCrossOrganizationWriteAccess", (n) -> { this.setBlockCrossOrganizationWriteAccess(n.getBooleanValue()); });
+        deserializerMap.put("encryptionMethod", (n) -> { this.setEncryptionMethod(n.getEnumValue(BitLockerEncryptionMethod.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("requireEncryptionForWriteAccess", (n) -> { this.setRequireEncryptionForWriteAccess(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

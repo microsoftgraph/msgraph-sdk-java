@@ -19,7 +19,6 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ParticipantLeftNotification() {
         super();
-        this.setOdataType("#microsoft.graph.participantLeftNotification");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,11 +44,10 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ParticipantLeftNotification currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("call", (n) -> { currentObject.setCall(n.getObjectValue(Call::createFromDiscriminatorValue)); });
-            this.put("participantId", (n) -> { currentObject.setParticipantId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("call", (n) -> { this.setCall(n.getObjectValue(Call::createFromDiscriminatorValue)); });
+        deserializerMap.put("participantId", (n) -> { this.setParticipantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the participantId property value. ID of the participant under the policy who has left the meeting.

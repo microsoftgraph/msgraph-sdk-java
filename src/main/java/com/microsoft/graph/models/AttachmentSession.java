@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class AttachmentSession extends Entity implements Parsable {
     /** The content property */
     private byte[] _content;
@@ -23,7 +23,6 @@ public class AttachmentSession extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AttachmentSession() {
         super();
-        this.setOdataType("#microsoft.graph.attachmentSession");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,12 +56,11 @@ public class AttachmentSession extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AttachmentSession currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("nextExpectedRanges", (n) -> { currentObject.setNextExpectedRanges(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("nextExpectedRanges", (n) -> { this.setNextExpectedRanges(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the nextExpectedRanges property value. The nextExpectedRanges property

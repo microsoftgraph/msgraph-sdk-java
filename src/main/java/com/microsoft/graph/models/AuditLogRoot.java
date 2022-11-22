@@ -21,7 +21,6 @@ public class AuditLogRoot extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AuditLogRoot() {
         super();
-        this.setOdataType("#microsoft.graph.auditLogRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,12 +46,11 @@ public class AuditLogRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuditLogRoot currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("directoryAudits", (n) -> { currentObject.setDirectoryAudits(n.getCollectionOfObjectValues(DirectoryAudit::createFromDiscriminatorValue)); });
-            this.put("provisioning", (n) -> { currentObject.setProvisioning(n.getCollectionOfObjectValues(ProvisioningObjectSummary::createFromDiscriminatorValue)); });
-            this.put("signIns", (n) -> { currentObject.setSignIns(n.getCollectionOfObjectValues(SignIn::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("directoryAudits", (n) -> { this.setDirectoryAudits(n.getCollectionOfObjectValues(DirectoryAudit::createFromDiscriminatorValue)); });
+        deserializerMap.put("provisioning", (n) -> { this.setProvisioning(n.getCollectionOfObjectValues(ProvisioningObjectSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("signIns", (n) -> { this.setSignIns(n.getCollectionOfObjectValues(SignIn::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the provisioning property value. The provisioning property

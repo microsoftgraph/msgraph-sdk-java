@@ -35,7 +35,6 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public Win32LobAppMsiInformation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.win32LobAppMsiInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,17 +60,16 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Win32LobAppMsiInformation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("packageType", (n) -> { currentObject.setPackageType(n.getEnumValue(Win32LobAppMsiPackageType.class)); });
-            this.put("productCode", (n) -> { currentObject.setProductCode(n.getStringValue()); });
-            this.put("productName", (n) -> { currentObject.setProductName(n.getStringValue()); });
-            this.put("productVersion", (n) -> { currentObject.setProductVersion(n.getStringValue()); });
-            this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
-            this.put("requiresReboot", (n) -> { currentObject.setRequiresReboot(n.getBooleanValue()); });
-            this.put("upgradeCode", (n) -> { currentObject.setUpgradeCode(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("packageType", (n) -> { this.setPackageType(n.getEnumValue(Win32LobAppMsiPackageType.class)); });
+        deserializerMap.put("productCode", (n) -> { this.setProductCode(n.getStringValue()); });
+        deserializerMap.put("productName", (n) -> { this.setProductName(n.getStringValue()); });
+        deserializerMap.put("productVersion", (n) -> { this.setProductVersion(n.getStringValue()); });
+        deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
+        deserializerMap.put("requiresReboot", (n) -> { this.setRequiresReboot(n.getBooleanValue()); });
+        deserializerMap.put("upgradeCode", (n) -> { this.setUpgradeCode(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

@@ -57,11 +57,10 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CopyToDefaultContentLocationPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("destinationFileName", (n) -> { currentObject.setDestinationFileName(n.getStringValue()); });
-            this.put("sourceFile", (n) -> { currentObject.setSourceFile(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("destinationFileName", (n) -> { this.setDestinationFileName(n.getStringValue()); });
+        deserializerMap.put("sourceFile", (n) -> { this.setSourceFile(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the sourceFile property value. The sourceFile property

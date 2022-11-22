@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class AuthenticationContextClassReference extends Entity implements Parsable {
     /** A short explanation of the policies that are enforced by authenticationContextClassReference. This value should be used to provide secondary text to describe the authentication context class reference when building user-facing admin experiences. For example, a selection UX. */
     private String _description;
@@ -22,7 +22,6 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
     @javax.annotation.Nullable
     public AuthenticationContextClassReference() {
         super();
-        this.setOdataType("#microsoft.graph.authenticationContextClassReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,12 +55,11 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuthenticationContextClassReference currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isAvailable", (n) -> { currentObject.setIsAvailable(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isAvailable", (n) -> { this.setIsAvailable(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isAvailable property value. Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it is set to false, it should not be shown in authentication context selection UX, or used to protect app resources. It will be shown and available for Conditional Access policy authoring. The default value is false.  Supports $filter (eq).

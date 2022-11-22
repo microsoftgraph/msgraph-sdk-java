@@ -24,7 +24,6 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MeetingParticipants() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.meetingParticipants");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,12 +57,11 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MeetingParticipants currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("attendees", (n) -> { currentObject.setAttendees(n.getCollectionOfObjectValues(MeetingParticipantInfo::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("organizer", (n) -> { currentObject.setOrganizer(n.getObjectValue(MeetingParticipantInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("attendees", (n) -> { this.setAttendees(n.getCollectionOfObjectValues(MeetingParticipantInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("organizer", (n) -> { this.setOrganizer(n.getObjectValue(MeetingParticipantInfo::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

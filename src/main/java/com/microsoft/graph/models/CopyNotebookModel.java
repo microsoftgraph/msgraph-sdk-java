@@ -51,7 +51,6 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public CopyNotebookModel() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.CopyNotebookModel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -101,25 +100,24 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CopyNotebookModel currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(16) {{
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getStringValue()); });
-            this.put("createdByIdentity", (n) -> { currentObject.setCreatedByIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdTime", (n) -> { currentObject.setCreatedTime(n.getOffsetDateTimeValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
-            this.put("isShared", (n) -> { currentObject.setIsShared(n.getBooleanValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getStringValue()); });
-            this.put("lastModifiedByIdentity", (n) -> { currentObject.setLastModifiedByIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedTime", (n) -> { currentObject.setLastModifiedTime(n.getOffsetDateTimeValue()); });
-            this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(NotebookLinks::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sectionGroupsUrl", (n) -> { currentObject.setSectionGroupsUrl(n.getStringValue()); });
-            this.put("sectionsUrl", (n) -> { currentObject.setSectionsUrl(n.getStringValue()); });
-            this.put("self", (n) -> { currentObject.setSelf(n.getStringValue()); });
-            this.put("userRole", (n) -> { currentObject.setUserRole(n.getEnumValue(OnenoteUserRole.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(16);
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getStringValue()); });
+        deserializerMap.put("createdByIdentity", (n) -> { this.setCreatedByIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdTime", (n) -> { this.setCreatedTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("isDefault", (n) -> { this.setIsDefault(n.getBooleanValue()); });
+        deserializerMap.put("isShared", (n) -> { this.setIsShared(n.getBooleanValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getStringValue()); });
+        deserializerMap.put("lastModifiedByIdentity", (n) -> { this.setLastModifiedByIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedTime", (n) -> { this.setLastModifiedTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("links", (n) -> { this.setLinks(n.getObjectValue(NotebookLinks::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sectionGroupsUrl", (n) -> { this.setSectionGroupsUrl(n.getStringValue()); });
+        deserializerMap.put("sectionsUrl", (n) -> { this.setSectionsUrl(n.getStringValue()); });
+        deserializerMap.put("self", (n) -> { this.setSelf(n.getStringValue()); });
+        deserializerMap.put("userRole", (n) -> { this.setUserRole(n.getEnumValue(OnenoteUserRole.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. The id property

@@ -22,7 +22,6 @@ public class HyperlinkOrPictureColumn implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public HyperlinkOrPictureColumn() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.hyperlinkOrPictureColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,11 +47,10 @@ public class HyperlinkOrPictureColumn implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HyperlinkOrPictureColumn currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("isPicture", (n) -> { currentObject.setIsPicture(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("isPicture", (n) -> { this.setIsPicture(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isPicture property value. Specifies whether the display format used for URL columns is an image or a hyperlink.

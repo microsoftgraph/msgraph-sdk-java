@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of externalConnection entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class ConnectionOperation extends Entity implements Parsable {
     /** If status is failed, provides more information about the error that caused the failure. */
     private PublicError _error;
@@ -22,7 +22,6 @@ public class ConnectionOperation extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ConnectionOperation() {
         super();
-        this.setOdataType("#microsoft.graph.externalConnectors.connectionOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,11 +47,10 @@ public class ConnectionOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConnectionOperation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ConnectionOperationStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ConnectionOperationStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the status property value. Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.

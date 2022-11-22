@@ -46,10 +46,9 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RemovePasswordPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("keyId", (n) -> { currentObject.setKeyId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("keyId", (n) -> { this.setKeyId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the keyId property value. The keyId property

@@ -26,7 +26,6 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
     @javax.annotation.Nullable
     public AuthenticationMethodFeatureConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.authenticationMethodFeatureConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,13 +59,12 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuthenticationMethodFeatureConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("excludeTarget", (n) -> { currentObject.setExcludeTarget(n.getObjectValue(FeatureTarget::createFromDiscriminatorValue)); });
-            this.put("includeTarget", (n) -> { currentObject.setIncludeTarget(n.getObjectValue(FeatureTarget::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(AdvancedConfigState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("excludeTarget", (n) -> { this.setExcludeTarget(n.getObjectValue(FeatureTarget::createFromDiscriminatorValue)); });
+        deserializerMap.put("includeTarget", (n) -> { this.setIncludeTarget(n.getObjectValue(FeatureTarget::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AdvancedConfigState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the includeTarget property value. A single entity that is included in this feature.

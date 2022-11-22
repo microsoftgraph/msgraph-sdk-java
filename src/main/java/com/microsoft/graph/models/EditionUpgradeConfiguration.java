@@ -41,13 +41,12 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EditionUpgradeConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("license", (n) -> { currentObject.setLicense(n.getStringValue()); });
-            this.put("licenseType", (n) -> { currentObject.setLicenseType(n.getEnumValue(EditionUpgradeLicenseType.class)); });
-            this.put("productKey", (n) -> { currentObject.setProductKey(n.getStringValue()); });
-            this.put("targetEdition", (n) -> { currentObject.setTargetEdition(n.getEnumValue(Windows10EditionType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("license", (n) -> { this.setLicense(n.getStringValue()); });
+        deserializerMap.put("licenseType", (n) -> { this.setLicenseType(n.getEnumValue(EditionUpgradeLicenseType.class)); });
+        deserializerMap.put("productKey", (n) -> { this.setProductKey(n.getStringValue()); });
+        deserializerMap.put("targetEdition", (n) -> { this.setTargetEdition(n.getEnumValue(Windows10EditionType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the license property value. Edition Upgrade License File Content.

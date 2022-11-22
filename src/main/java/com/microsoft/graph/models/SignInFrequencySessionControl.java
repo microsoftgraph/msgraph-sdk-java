@@ -49,13 +49,12 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SignInFrequencySessionControl currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("authenticationType", (n) -> { currentObject.setAuthenticationType(n.getEnumValue(SignInFrequencyAuthenticationType.class)); });
-            this.put("frequencyInterval", (n) -> { currentObject.setFrequencyInterval(n.getEnumValue(SignInFrequencyInterval.class)); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(SigninFrequencyType.class)); });
-            this.put("value", (n) -> { currentObject.setValue(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationType", (n) -> { this.setAuthenticationType(n.getEnumValue(SignInFrequencyAuthenticationType.class)); });
+        deserializerMap.put("frequencyInterval", (n) -> { this.setFrequencyInterval(n.getEnumValue(SignInFrequencyInterval.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(SigninFrequencyType.class)); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue.

@@ -37,11 +37,10 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Pkcs12Certificate currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
-            this.put("pkcs12Value", (n) -> { currentObject.setPkcs12Value(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("password", (n) -> { this.setPassword(n.getStringValue()); });
+        deserializerMap.put("pkcs12Value", (n) -> { this.setPkcs12Value(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the password property value. The password for the pfx file. Required. If no password is used, you must still provide a value of ''.

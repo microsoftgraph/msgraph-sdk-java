@@ -27,7 +27,6 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
     @javax.annotation.Nullable
     public NotificationMessageTemplate() {
         super();
-        this.setOdataType("#microsoft.graph.notificationMessageTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,14 +68,13 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final NotificationMessageTemplate currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("brandingOptions", (n) -> { currentObject.setBrandingOptions(n.getEnumValue(NotificationTemplateBrandingOptions.class)); });
-            this.put("defaultLocale", (n) -> { currentObject.setDefaultLocale(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("localizedNotificationMessages", (n) -> { currentObject.setLocalizedNotificationMessages(n.getCollectionOfObjectValues(LocalizedNotificationMessage::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("brandingOptions", (n) -> { this.setBrandingOptions(n.getEnumValue(NotificationTemplateBrandingOptions.class)); });
+        deserializerMap.put("defaultLocale", (n) -> { this.setDefaultLocale(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("localizedNotificationMessages", (n) -> { this.setLocalizedNotificationMessages(n.getCollectionOfObjectValues(LocalizedNotificationMessage::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.

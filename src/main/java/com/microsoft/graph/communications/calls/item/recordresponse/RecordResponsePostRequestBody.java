@@ -77,17 +77,16 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RecordResponsePostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("bargeInAllowed", (n) -> { currentObject.setBargeInAllowed(n.getBooleanValue()); });
-            this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
-            this.put("initialSilenceTimeoutInSeconds", (n) -> { currentObject.setInitialSilenceTimeoutInSeconds(n.getIntegerValue()); });
-            this.put("maxRecordDurationInSeconds", (n) -> { currentObject.setMaxRecordDurationInSeconds(n.getIntegerValue()); });
-            this.put("maxSilenceTimeoutInSeconds", (n) -> { currentObject.setMaxSilenceTimeoutInSeconds(n.getIntegerValue()); });
-            this.put("playBeep", (n) -> { currentObject.setPlayBeep(n.getBooleanValue()); });
-            this.put("prompts", (n) -> { currentObject.setPrompts(n.getCollectionOfObjectValues(Prompt::createFromDiscriminatorValue)); });
-            this.put("stopTones", (n) -> { currentObject.setStopTones(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("bargeInAllowed", (n) -> { this.setBargeInAllowed(n.getBooleanValue()); });
+        deserializerMap.put("clientContext", (n) -> { this.setClientContext(n.getStringValue()); });
+        deserializerMap.put("initialSilenceTimeoutInSeconds", (n) -> { this.setInitialSilenceTimeoutInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("maxRecordDurationInSeconds", (n) -> { this.setMaxRecordDurationInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("maxSilenceTimeoutInSeconds", (n) -> { this.setMaxSilenceTimeoutInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("playBeep", (n) -> { this.setPlayBeep(n.getBooleanValue()); });
+        deserializerMap.put("prompts", (n) -> { this.setPrompts(n.getCollectionOfObjectValues(Prompt::createFromDiscriminatorValue)); });
+        deserializerMap.put("stopTones", (n) -> { this.setStopTones(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the initialSilenceTimeoutInSeconds property value. The initialSilenceTimeoutInSeconds property

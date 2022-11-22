@@ -21,7 +21,6 @@ public class ItemAnalytics extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ItemAnalytics() {
         super();
-        this.setOdataType("#microsoft.graph.itemAnalytics");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,12 +46,11 @@ public class ItemAnalytics extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ItemAnalytics currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("allTime", (n) -> { currentObject.setAllTime(n.getObjectValue(ItemActivityStat::createFromDiscriminatorValue)); });
-            this.put("itemActivityStats", (n) -> { currentObject.setItemActivityStats(n.getCollectionOfObjectValues(ItemActivityStat::createFromDiscriminatorValue)); });
-            this.put("lastSevenDays", (n) -> { currentObject.setLastSevenDays(n.getObjectValue(ItemActivityStat::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allTime", (n) -> { this.setAllTime(n.getObjectValue(ItemActivityStat::createFromDiscriminatorValue)); });
+        deserializerMap.put("itemActivityStats", (n) -> { this.setItemActivityStats(n.getCollectionOfObjectValues(ItemActivityStat::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastSevenDays", (n) -> { this.setLastSevenDays(n.getObjectValue(ItemActivityStat::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the itemActivityStats property value. The itemActivityStats property

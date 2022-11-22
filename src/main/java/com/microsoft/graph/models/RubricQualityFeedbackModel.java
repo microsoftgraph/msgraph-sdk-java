@@ -24,7 +24,6 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public RubricQualityFeedbackModel() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.rubricQualityFeedbackModel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,12 +57,11 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RubricQualityFeedbackModel currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("feedback", (n) -> { currentObject.setFeedback(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("qualityId", (n) -> { currentObject.setQualityId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("feedback", (n) -> { this.setFeedback(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("qualityId", (n) -> { this.setQualityId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

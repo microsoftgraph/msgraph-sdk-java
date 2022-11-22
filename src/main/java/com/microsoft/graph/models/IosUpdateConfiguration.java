@@ -58,13 +58,12 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosUpdateConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("activeHoursEnd", (n) -> { currentObject.setActiveHoursEnd(n.getLocalTimeValue()); });
-            this.put("activeHoursStart", (n) -> { currentObject.setActiveHoursStart(n.getLocalTimeValue()); });
-            this.put("scheduledInstallDays", (n) -> { currentObject.setScheduledInstallDays(n.getCollectionOfEnumValues(DayOfWeek.class)); });
-            this.put("utcTimeOffsetInMinutes", (n) -> { currentObject.setUtcTimeOffsetInMinutes(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeHoursEnd", (n) -> { this.setActiveHoursEnd(n.getLocalTimeValue()); });
+        deserializerMap.put("activeHoursStart", (n) -> { this.setActiveHoursStart(n.getLocalTimeValue()); });
+        deserializerMap.put("scheduledInstallDays", (n) -> { this.setScheduledInstallDays(n.getCollectionOfEnumValues(DayOfWeek.class)); });
+        deserializerMap.put("utcTimeOffsetInMinutes", (n) -> { this.setUtcTimeOffsetInMinutes(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the scheduledInstallDays property value. Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.

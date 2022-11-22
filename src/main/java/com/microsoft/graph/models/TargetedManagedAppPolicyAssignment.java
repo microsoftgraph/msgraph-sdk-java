@@ -18,7 +18,6 @@ public class TargetedManagedAppPolicyAssignment extends Entity implements Parsab
     @javax.annotation.Nullable
     public TargetedManagedAppPolicyAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.targetedManagedAppPolicyAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,10 +35,9 @@ public class TargetedManagedAppPolicyAssignment extends Entity implements Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TargetedManagedAppPolicyAssignment currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the target property value. Identifier for deployment to a group or app

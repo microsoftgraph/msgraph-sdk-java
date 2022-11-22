@@ -24,7 +24,6 @@ public class ExcludeTarget implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ExcludeTarget() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.excludeTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class ExcludeTarget implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExcludeTarget currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("targetType", (n) -> { currentObject.setTargetType(n.getEnumValue(AuthenticationMethodTargetType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("targetType", (n) -> { this.setTargetType(n.getEnumValue(AuthenticationMethodTargetType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. The object identifier of an Azure Active Directory user or group.

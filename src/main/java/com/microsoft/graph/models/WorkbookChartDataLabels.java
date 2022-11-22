@@ -33,7 +33,6 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartDataLabels() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartDataLabels");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,18 +50,17 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookChartDataLabels currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartDataLabelFormat::createFromDiscriminatorValue)); });
-            this.put("position", (n) -> { currentObject.setPosition(n.getStringValue()); });
-            this.put("separator", (n) -> { currentObject.setSeparator(n.getStringValue()); });
-            this.put("showBubbleSize", (n) -> { currentObject.setShowBubbleSize(n.getBooleanValue()); });
-            this.put("showCategoryName", (n) -> { currentObject.setShowCategoryName(n.getBooleanValue()); });
-            this.put("showLegendKey", (n) -> { currentObject.setShowLegendKey(n.getBooleanValue()); });
-            this.put("showPercentage", (n) -> { currentObject.setShowPercentage(n.getBooleanValue()); });
-            this.put("showSeriesName", (n) -> { currentObject.setShowSeriesName(n.getBooleanValue()); });
-            this.put("showValue", (n) -> { currentObject.setShowValue(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartDataLabelFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("position", (n) -> { this.setPosition(n.getStringValue()); });
+        deserializerMap.put("separator", (n) -> { this.setSeparator(n.getStringValue()); });
+        deserializerMap.put("showBubbleSize", (n) -> { this.setShowBubbleSize(n.getBooleanValue()); });
+        deserializerMap.put("showCategoryName", (n) -> { this.setShowCategoryName(n.getBooleanValue()); });
+        deserializerMap.put("showLegendKey", (n) -> { this.setShowLegendKey(n.getBooleanValue()); });
+        deserializerMap.put("showPercentage", (n) -> { this.setShowPercentage(n.getBooleanValue()); });
+        deserializerMap.put("showSeriesName", (n) -> { this.setShowSeriesName(n.getBooleanValue()); });
+        deserializerMap.put("showValue", (n) -> { this.setShowValue(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the format property value. Represents the format of chart data labels, which includes fill and font formatting. Read-only.

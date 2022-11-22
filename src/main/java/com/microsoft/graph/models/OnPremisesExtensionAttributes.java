@@ -50,7 +50,6 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public OnPremisesExtensionAttributes() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.onPremisesExtensionAttributes");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -196,25 +195,24 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OnPremisesExtensionAttributes currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(16) {{
-            this.put("extensionAttribute1", (n) -> { currentObject.setExtensionAttribute1(n.getStringValue()); });
-            this.put("extensionAttribute10", (n) -> { currentObject.setExtensionAttribute10(n.getStringValue()); });
-            this.put("extensionAttribute11", (n) -> { currentObject.setExtensionAttribute11(n.getStringValue()); });
-            this.put("extensionAttribute12", (n) -> { currentObject.setExtensionAttribute12(n.getStringValue()); });
-            this.put("extensionAttribute13", (n) -> { currentObject.setExtensionAttribute13(n.getStringValue()); });
-            this.put("extensionAttribute14", (n) -> { currentObject.setExtensionAttribute14(n.getStringValue()); });
-            this.put("extensionAttribute15", (n) -> { currentObject.setExtensionAttribute15(n.getStringValue()); });
-            this.put("extensionAttribute2", (n) -> { currentObject.setExtensionAttribute2(n.getStringValue()); });
-            this.put("extensionAttribute3", (n) -> { currentObject.setExtensionAttribute3(n.getStringValue()); });
-            this.put("extensionAttribute4", (n) -> { currentObject.setExtensionAttribute4(n.getStringValue()); });
-            this.put("extensionAttribute5", (n) -> { currentObject.setExtensionAttribute5(n.getStringValue()); });
-            this.put("extensionAttribute6", (n) -> { currentObject.setExtensionAttribute6(n.getStringValue()); });
-            this.put("extensionAttribute7", (n) -> { currentObject.setExtensionAttribute7(n.getStringValue()); });
-            this.put("extensionAttribute8", (n) -> { currentObject.setExtensionAttribute8(n.getStringValue()); });
-            this.put("extensionAttribute9", (n) -> { currentObject.setExtensionAttribute9(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(16);
+        deserializerMap.put("extensionAttribute1", (n) -> { this.setExtensionAttribute1(n.getStringValue()); });
+        deserializerMap.put("extensionAttribute10", (n) -> { this.setExtensionAttribute10(n.getStringValue()); });
+        deserializerMap.put("extensionAttribute11", (n) -> { this.setExtensionAttribute11(n.getStringValue()); });
+        deserializerMap.put("extensionAttribute12", (n) -> { this.setExtensionAttribute12(n.getStringValue()); });
+        deserializerMap.put("extensionAttribute13", (n) -> { this.setExtensionAttribute13(n.getStringValue()); });
+        deserializerMap.put("extensionAttribute14", (n) -> { this.setExtensionAttribute14(n.getStringValue()); });
+        deserializerMap.put("extensionAttribute15", (n) -> { this.setExtensionAttribute15(n.getStringValue()); });
+        deserializerMap.put("extensionAttribute2", (n) -> { this.setExtensionAttribute2(n.getStringValue()); });
+        deserializerMap.put("extensionAttribute3", (n) -> { this.setExtensionAttribute3(n.getStringValue()); });
+        deserializerMap.put("extensionAttribute4", (n) -> { this.setExtensionAttribute4(n.getStringValue()); });
+        deserializerMap.put("extensionAttribute5", (n) -> { this.setExtensionAttribute5(n.getStringValue()); });
+        deserializerMap.put("extensionAttribute6", (n) -> { this.setExtensionAttribute6(n.getStringValue()); });
+        deserializerMap.put("extensionAttribute7", (n) -> { this.setExtensionAttribute7(n.getStringValue()); });
+        deserializerMap.put("extensionAttribute8", (n) -> { this.setExtensionAttribute8(n.getStringValue()); });
+        deserializerMap.put("extensionAttribute9", (n) -> { this.setExtensionAttribute9(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

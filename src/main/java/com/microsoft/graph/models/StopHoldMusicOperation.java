@@ -15,7 +15,6 @@ public class StopHoldMusicOperation extends CommsOperation implements Parsable {
     @javax.annotation.Nullable
     public StopHoldMusicOperation() {
         super();
-        this.setOdataType("#microsoft.graph.stopHoldMusicOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,9 +32,8 @@ public class StopHoldMusicOperation extends CommsOperation implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final StopHoldMusicOperation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

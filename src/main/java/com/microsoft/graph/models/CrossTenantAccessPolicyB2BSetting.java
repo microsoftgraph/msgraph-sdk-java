@@ -24,7 +24,6 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     @javax.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.crossTenantAccessPolicyB2BSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,12 +57,11 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CrossTenantAccessPolicyB2BSetting currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("applications", (n) -> { currentObject.setApplications(n.getObjectValue(CrossTenantAccessPolicyTargetConfiguration::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("usersAndGroups", (n) -> { currentObject.setUsersAndGroups(n.getObjectValue(CrossTenantAccessPolicyTargetConfiguration::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("applications", (n) -> { this.setApplications(n.getObjectValue(CrossTenantAccessPolicyTargetConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("usersAndGroups", (n) -> { this.setUsersAndGroups(n.getObjectValue(CrossTenantAccessPolicyTargetConfiguration::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

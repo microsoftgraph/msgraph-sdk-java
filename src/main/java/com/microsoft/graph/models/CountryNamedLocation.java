@@ -21,7 +21,6 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
     @javax.annotation.Nullable
     public CountryNamedLocation() {
         super();
-        this.setOdataType("#microsoft.graph.countryNamedLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,12 +54,11 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CountryNamedLocation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("countriesAndRegions", (n) -> { currentObject.setCountriesAndRegions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("countryLookupMethod", (n) -> { currentObject.setCountryLookupMethod(n.getEnumValue(CountryLookupMethodType.class)); });
-            this.put("includeUnknownCountriesAndRegions", (n) -> { currentObject.setIncludeUnknownCountriesAndRegions(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("countriesAndRegions", (n) -> { this.setCountriesAndRegions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("countryLookupMethod", (n) -> { this.setCountryLookupMethod(n.getEnumValue(CountryLookupMethodType.class)); });
+        deserializerMap.put("includeUnknownCountriesAndRegions", (n) -> { this.setIncludeUnknownCountriesAndRegions(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the includeUnknownCountriesAndRegions property value. true if IP addresses that don't map to a country or region should be included in the named location. Optional. Default value is false.

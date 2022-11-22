@@ -24,7 +24,6 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
     @javax.annotation.Nullable
     public AttackSimulationRepeatOffender() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.attackSimulationRepeatOffender");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,12 +57,11 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AttackSimulationRepeatOffender currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("attackSimulationUser", (n) -> { currentObject.setAttackSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("repeatOffenceCount", (n) -> { currentObject.setRepeatOffenceCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("attackSimulationUser", (n) -> { this.setAttackSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("repeatOffenceCount", (n) -> { this.setRepeatOffenceCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

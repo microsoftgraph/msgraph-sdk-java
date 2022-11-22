@@ -24,7 +24,6 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
     @javax.annotation.Nullable
     public AccessReviewHistoryScheduleSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessReviewHistoryScheduleSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReviewHistoryScheduleSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
-            this.put("reportRange", (n) -> { currentObject.setReportRange(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recurrence", (n) -> { this.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
+        deserializerMap.put("reportRange", (n) -> { this.setReportRange(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

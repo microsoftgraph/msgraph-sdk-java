@@ -24,7 +24,6 @@ public class PersonType implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PersonType() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.personType");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,12 +57,11 @@ public class PersonType implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PersonType currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("class", (n) -> { currentObject.setClass(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("subclass", (n) -> { currentObject.setSubclass(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("class", (n) -> { this.setClass(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("subclass", (n) -> { this.setSubclass(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

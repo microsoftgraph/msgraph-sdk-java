@@ -24,7 +24,6 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public ConditionalAccessLocations() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessLocations");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,12 +57,11 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConditionalAccessLocations currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("excludeLocations", (n) -> { currentObject.setExcludeLocations(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("includeLocations", (n) -> { currentObject.setIncludeLocations(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("excludeLocations", (n) -> { this.setExcludeLocations(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("includeLocations", (n) -> { this.setIncludeLocations(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the includeLocations property value. Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted.

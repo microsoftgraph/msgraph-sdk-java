@@ -67,7 +67,6 @@ public class PlannerTask extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PlannerTask() {
         super();
-        this.setOdataType("#microsoft.graph.plannerTask");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -205,34 +204,33 @@ public class PlannerTask extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerTask currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("activeChecklistItemCount", (n) -> { currentObject.setActiveChecklistItemCount(n.getIntegerValue()); });
-            this.put("appliedCategories", (n) -> { currentObject.setAppliedCategories(n.getObjectValue(PlannerAppliedCategories::createFromDiscriminatorValue)); });
-            this.put("assignedToTaskBoardFormat", (n) -> { currentObject.setAssignedToTaskBoardFormat(n.getObjectValue(PlannerAssignedToTaskBoardTaskFormat::createFromDiscriminatorValue)); });
-            this.put("assigneePriority", (n) -> { currentObject.setAssigneePriority(n.getStringValue()); });
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getObjectValue(PlannerAssignments::createFromDiscriminatorValue)); });
-            this.put("bucketId", (n) -> { currentObject.setBucketId(n.getStringValue()); });
-            this.put("bucketTaskBoardFormat", (n) -> { currentObject.setBucketTaskBoardFormat(n.getObjectValue(PlannerBucketTaskBoardTaskFormat::createFromDiscriminatorValue)); });
-            this.put("checklistItemCount", (n) -> { currentObject.setChecklistItemCount(n.getIntegerValue()); });
-            this.put("completedBy", (n) -> { currentObject.setCompletedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("conversationThreadId", (n) -> { currentObject.setConversationThreadId(n.getStringValue()); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("details", (n) -> { currentObject.setDetails(n.getObjectValue(PlannerTaskDetails::createFromDiscriminatorValue)); });
-            this.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getOffsetDateTimeValue()); });
-            this.put("hasDescription", (n) -> { currentObject.setHasDescription(n.getBooleanValue()); });
-            this.put("orderHint", (n) -> { currentObject.setOrderHint(n.getStringValue()); });
-            this.put("percentComplete", (n) -> { currentObject.setPercentComplete(n.getIntegerValue()); });
-            this.put("planId", (n) -> { currentObject.setPlanId(n.getStringValue()); });
-            this.put("previewType", (n) -> { currentObject.setPreviewType(n.getEnumValue(PlannerPreviewType.class)); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("progressTaskBoardFormat", (n) -> { currentObject.setProgressTaskBoardFormat(n.getObjectValue(PlannerProgressTaskBoardTaskFormat::createFromDiscriminatorValue)); });
-            this.put("referenceCount", (n) -> { currentObject.setReferenceCount(n.getIntegerValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeChecklistItemCount", (n) -> { this.setActiveChecklistItemCount(n.getIntegerValue()); });
+        deserializerMap.put("appliedCategories", (n) -> { this.setAppliedCategories(n.getObjectValue(PlannerAppliedCategories::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignedToTaskBoardFormat", (n) -> { this.setAssignedToTaskBoardFormat(n.getObjectValue(PlannerAssignedToTaskBoardTaskFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("assigneePriority", (n) -> { this.setAssigneePriority(n.getStringValue()); });
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getObjectValue(PlannerAssignments::createFromDiscriminatorValue)); });
+        deserializerMap.put("bucketId", (n) -> { this.setBucketId(n.getStringValue()); });
+        deserializerMap.put("bucketTaskBoardFormat", (n) -> { this.setBucketTaskBoardFormat(n.getObjectValue(PlannerBucketTaskBoardTaskFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("checklistItemCount", (n) -> { this.setChecklistItemCount(n.getIntegerValue()); });
+        deserializerMap.put("completedBy", (n) -> { this.setCompletedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("conversationThreadId", (n) -> { this.setConversationThreadId(n.getStringValue()); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("details", (n) -> { this.setDetails(n.getObjectValue(PlannerTaskDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("dueDateTime", (n) -> { this.setDueDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("hasDescription", (n) -> { this.setHasDescription(n.getBooleanValue()); });
+        deserializerMap.put("orderHint", (n) -> { this.setOrderHint(n.getStringValue()); });
+        deserializerMap.put("percentComplete", (n) -> { this.setPercentComplete(n.getIntegerValue()); });
+        deserializerMap.put("planId", (n) -> { this.setPlanId(n.getStringValue()); });
+        deserializerMap.put("previewType", (n) -> { this.setPreviewType(n.getEnumValue(PlannerPreviewType.class)); });
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("progressTaskBoardFormat", (n) -> { this.setProgressTaskBoardFormat(n.getObjectValue(PlannerProgressTaskBoardTaskFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("referenceCount", (n) -> { this.setReferenceCount(n.getIntegerValue()); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hasDescription property value. Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.

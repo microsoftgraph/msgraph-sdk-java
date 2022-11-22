@@ -34,7 +34,6 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OmaSetting() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.omaSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -89,13 +88,12 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OmaSetting currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("omaUri", (n) -> { currentObject.setOmaUri(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("omaUri", (n) -> { this.setOmaUri(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

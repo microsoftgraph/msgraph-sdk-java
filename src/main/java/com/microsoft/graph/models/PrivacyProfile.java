@@ -24,7 +24,6 @@ public class PrivacyProfile implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PrivacyProfile() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.privacyProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,12 +57,11 @@ public class PrivacyProfile implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrivacyProfile currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("contactEmail", (n) -> { currentObject.setContactEmail(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("statementUrl", (n) -> { currentObject.setStatementUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("contactEmail", (n) -> { this.setContactEmail(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("statementUrl", (n) -> { this.setStatementUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

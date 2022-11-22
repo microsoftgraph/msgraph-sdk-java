@@ -32,7 +32,6 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AudioConferencing() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.audioConferencing");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -74,16 +73,15 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AudioConferencing currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("conferenceId", (n) -> { currentObject.setConferenceId(n.getStringValue()); });
-            this.put("dialinUrl", (n) -> { currentObject.setDialinUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("tollFreeNumber", (n) -> { currentObject.setTollFreeNumber(n.getStringValue()); });
-            this.put("tollFreeNumbers", (n) -> { currentObject.setTollFreeNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("tollNumber", (n) -> { currentObject.setTollNumber(n.getStringValue()); });
-            this.put("tollNumbers", (n) -> { currentObject.setTollNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("conferenceId", (n) -> { this.setConferenceId(n.getStringValue()); });
+        deserializerMap.put("dialinUrl", (n) -> { this.setDialinUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("tollFreeNumber", (n) -> { this.setTollFreeNumber(n.getStringValue()); });
+        deserializerMap.put("tollFreeNumbers", (n) -> { this.setTollFreeNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("tollNumber", (n) -> { this.setTollNumber(n.getStringValue()); });
+        deserializerMap.put("tollNumbers", (n) -> { this.setTollNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

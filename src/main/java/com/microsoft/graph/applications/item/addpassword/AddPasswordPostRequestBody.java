@@ -47,10 +47,9 @@ public class AddPasswordPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AddPasswordPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("passwordCredential", (n) -> { currentObject.setPasswordCredential(n.getObjectValue(PasswordCredential::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("passwordCredential", (n) -> { this.setPasswordCredential(n.getObjectValue(PasswordCredential::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the passwordCredential property value. The passwordCredential property

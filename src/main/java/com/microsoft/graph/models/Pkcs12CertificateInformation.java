@@ -28,7 +28,6 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public Pkcs12CertificateInformation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.pkcs12CertificateInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,14 +53,13 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Pkcs12CertificateInformation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
-            this.put("notAfter", (n) -> { currentObject.setNotAfter(n.getLongValue()); });
-            this.put("notBefore", (n) -> { currentObject.setNotBefore(n.getLongValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("thumbprint", (n) -> { currentObject.setThumbprint(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("isActive", (n) -> { this.setIsActive(n.getBooleanValue()); });
+        deserializerMap.put("notAfter", (n) -> { this.setNotAfter(n.getLongValue()); });
+        deserializerMap.put("notBefore", (n) -> { this.setNotBefore(n.getLongValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("thumbprint", (n) -> { this.setThumbprint(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate which is not yet expired but whose notBefore time is in the past.

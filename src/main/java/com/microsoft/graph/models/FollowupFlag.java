@@ -28,7 +28,6 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public FollowupFlag() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.followupFlag");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,14 +69,13 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final FollowupFlag currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("flagStatus", (n) -> { currentObject.setFlagStatus(n.getEnumValue(FollowupFlagStatus.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("dueDateTime", (n) -> { this.setDueDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("flagStatus", (n) -> { this.setFlagStatus(n.getEnumValue(FollowupFlagStatus.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the flagStatus property value. The status for follow-up for an item. Possible values are notFlagged, complete, and flagged.

@@ -13,22 +13,22 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreement entities. */
 public class IdentityProviderBase extends Entity implements Parsable {
     /** The display name of the identity provider. */
     private String _displayName;
     /**
-     * Instantiates a new IdentityProviderBase and sets the default values.
+     * Instantiates a new identityProviderBase and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public IdentityProviderBase() {
         super();
-        this.setOdataType("#microsoft.graph.identityProviderBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IdentityProviderBase
+     * @return a identityProviderBase
      */
     @javax.annotation.Nonnull
     public static IdentityProviderBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -61,10 +61,9 @@ public class IdentityProviderBase extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IdentityProviderBase currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

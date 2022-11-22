@@ -24,7 +24,6 @@ public class DefaultColumnValue implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public DefaultColumnValue() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.defaultColumnValue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class DefaultColumnValue implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DefaultColumnValue currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("formula", (n) -> { currentObject.setFormula(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("formula", (n) -> { this.setFormula(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the formula property value. The formula used to compute the default value for this column.

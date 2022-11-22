@@ -27,7 +27,6 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OcrSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.security.ocrSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,13 +52,12 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OcrSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("maxImageSize", (n) -> { currentObject.setMaxImageSize(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("timeout", (n) -> { currentObject.setTimeout(n.getPeriodValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("maxImageSize", (n) -> { this.setMaxImageSize(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("timeout", (n) -> { this.setTimeout(n.getPeriodValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnabled property value. Indicates whether or not OCR is enabled for the case.

@@ -26,7 +26,6 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public UnifiedRolePermission() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.unifiedRolePermission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -76,13 +75,12 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UnifiedRolePermission currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("allowedResourceActions", (n) -> { currentObject.setAllowedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("condition", (n) -> { currentObject.setCondition(n.getStringValue()); });
-            this.put("excludedResourceActions", (n) -> { currentObject.setExcludedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("allowedResourceActions", (n) -> { this.setAllowedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("condition", (n) -> { this.setCondition(n.getStringValue()); });
+        deserializerMap.put("excludedResourceActions", (n) -> { this.setExcludedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

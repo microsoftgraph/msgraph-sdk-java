@@ -28,7 +28,6 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     @javax.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.importedWindowsAutopilotDeviceIdentityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -86,14 +85,13 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ImportedWindowsAutopilotDeviceIdentityState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("deviceErrorCode", (n) -> { currentObject.setDeviceErrorCode(n.getIntegerValue()); });
-            this.put("deviceErrorName", (n) -> { currentObject.setDeviceErrorName(n.getStringValue()); });
-            this.put("deviceImportStatus", (n) -> { currentObject.setDeviceImportStatus(n.getEnumValue(ImportedWindowsAutopilotDeviceIdentityImportStatus.class)); });
-            this.put("deviceRegistrationId", (n) -> { currentObject.setDeviceRegistrationId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("deviceErrorCode", (n) -> { this.setDeviceErrorCode(n.getIntegerValue()); });
+        deserializerMap.put("deviceErrorName", (n) -> { this.setDeviceErrorName(n.getStringValue()); });
+        deserializerMap.put("deviceImportStatus", (n) -> { this.setDeviceImportStatus(n.getEnumValue(ImportedWindowsAutopilotDeviceIdentityImportStatus.class)); });
+        deserializerMap.put("deviceRegistrationId", (n) -> { this.setDeviceRegistrationId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

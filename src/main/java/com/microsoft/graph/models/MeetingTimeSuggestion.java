@@ -34,7 +34,6 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MeetingTimeSuggestion() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.meetingTimeSuggestion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -76,17 +75,16 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MeetingTimeSuggestion currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("attendeeAvailability", (n) -> { currentObject.setAttendeeAvailability(n.getCollectionOfObjectValues(AttendeeAvailability::createFromDiscriminatorValue)); });
-            this.put("confidence", (n) -> { currentObject.setConfidence(n.getDoubleValue()); });
-            this.put("locations", (n) -> { currentObject.setLocations(n.getCollectionOfObjectValues(Location::createFromDiscriminatorValue)); });
-            this.put("meetingTimeSlot", (n) -> { currentObject.setMeetingTimeSlot(n.getObjectValue(TimeSlot::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("order", (n) -> { currentObject.setOrder(n.getIntegerValue()); });
-            this.put("organizerAvailability", (n) -> { currentObject.setOrganizerAvailability(n.getEnumValue(FreeBusyStatus.class)); });
-            this.put("suggestionReason", (n) -> { currentObject.setSuggestionReason(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("attendeeAvailability", (n) -> { this.setAttendeeAvailability(n.getCollectionOfObjectValues(AttendeeAvailability::createFromDiscriminatorValue)); });
+        deserializerMap.put("confidence", (n) -> { this.setConfidence(n.getDoubleValue()); });
+        deserializerMap.put("locations", (n) -> { this.setLocations(n.getCollectionOfObjectValues(Location::createFromDiscriminatorValue)); });
+        deserializerMap.put("meetingTimeSlot", (n) -> { this.setMeetingTimeSlot(n.getObjectValue(TimeSlot::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("order", (n) -> { this.setOrder(n.getIntegerValue()); });
+        deserializerMap.put("organizerAvailability", (n) -> { this.setOrganizerAvailability(n.getEnumValue(FreeBusyStatus.class)); });
+        deserializerMap.put("suggestionReason", (n) -> { this.setSuggestionReason(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the locations property value. An array that specifies the name and geographic location of each meeting location for this meeting suggestion.

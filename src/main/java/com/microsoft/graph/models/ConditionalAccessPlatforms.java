@@ -24,7 +24,6 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public ConditionalAccessPlatforms() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessPlatforms");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,12 +57,11 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConditionalAccessPlatforms currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("excludePlatforms", (n) -> { currentObject.setExcludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform.class)); });
-            this.put("includePlatforms", (n) -> { currentObject.setIncludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("excludePlatforms", (n) -> { this.setExcludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform.class)); });
+        deserializerMap.put("includePlatforms", (n) -> { this.setIncludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.

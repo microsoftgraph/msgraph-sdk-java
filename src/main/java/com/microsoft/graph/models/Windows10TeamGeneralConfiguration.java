@@ -106,29 +106,28 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10TeamGeneralConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("azureOperationalInsightsBlockTelemetry", (n) -> { currentObject.setAzureOperationalInsightsBlockTelemetry(n.getBooleanValue()); });
-            this.put("azureOperationalInsightsWorkspaceId", (n) -> { currentObject.setAzureOperationalInsightsWorkspaceId(n.getStringValue()); });
-            this.put("azureOperationalInsightsWorkspaceKey", (n) -> { currentObject.setAzureOperationalInsightsWorkspaceKey(n.getStringValue()); });
-            this.put("connectAppBlockAutoLaunch", (n) -> { currentObject.setConnectAppBlockAutoLaunch(n.getBooleanValue()); });
-            this.put("maintenanceWindowBlocked", (n) -> { currentObject.setMaintenanceWindowBlocked(n.getBooleanValue()); });
-            this.put("maintenanceWindowDurationInHours", (n) -> { currentObject.setMaintenanceWindowDurationInHours(n.getIntegerValue()); });
-            this.put("maintenanceWindowStartTime", (n) -> { currentObject.setMaintenanceWindowStartTime(n.getLocalTimeValue()); });
-            this.put("miracastBlocked", (n) -> { currentObject.setMiracastBlocked(n.getBooleanValue()); });
-            this.put("miracastChannel", (n) -> { currentObject.setMiracastChannel(n.getEnumValue(MiracastChannel.class)); });
-            this.put("miracastRequirePin", (n) -> { currentObject.setMiracastRequirePin(n.getBooleanValue()); });
-            this.put("settingsBlockMyMeetingsAndFiles", (n) -> { currentObject.setSettingsBlockMyMeetingsAndFiles(n.getBooleanValue()); });
-            this.put("settingsBlockSessionResume", (n) -> { currentObject.setSettingsBlockSessionResume(n.getBooleanValue()); });
-            this.put("settingsBlockSigninSuggestions", (n) -> { currentObject.setSettingsBlockSigninSuggestions(n.getBooleanValue()); });
-            this.put("settingsDefaultVolume", (n) -> { currentObject.setSettingsDefaultVolume(n.getIntegerValue()); });
-            this.put("settingsScreenTimeoutInMinutes", (n) -> { currentObject.setSettingsScreenTimeoutInMinutes(n.getIntegerValue()); });
-            this.put("settingsSessionTimeoutInMinutes", (n) -> { currentObject.setSettingsSessionTimeoutInMinutes(n.getIntegerValue()); });
-            this.put("settingsSleepTimeoutInMinutes", (n) -> { currentObject.setSettingsSleepTimeoutInMinutes(n.getIntegerValue()); });
-            this.put("welcomeScreenBackgroundImageUrl", (n) -> { currentObject.setWelcomeScreenBackgroundImageUrl(n.getStringValue()); });
-            this.put("welcomeScreenBlockAutomaticWakeUp", (n) -> { currentObject.setWelcomeScreenBlockAutomaticWakeUp(n.getBooleanValue()); });
-            this.put("welcomeScreenMeetingInformation", (n) -> { currentObject.setWelcomeScreenMeetingInformation(n.getEnumValue(WelcomeScreenMeetingInformation.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("azureOperationalInsightsBlockTelemetry", (n) -> { this.setAzureOperationalInsightsBlockTelemetry(n.getBooleanValue()); });
+        deserializerMap.put("azureOperationalInsightsWorkspaceId", (n) -> { this.setAzureOperationalInsightsWorkspaceId(n.getStringValue()); });
+        deserializerMap.put("azureOperationalInsightsWorkspaceKey", (n) -> { this.setAzureOperationalInsightsWorkspaceKey(n.getStringValue()); });
+        deserializerMap.put("connectAppBlockAutoLaunch", (n) -> { this.setConnectAppBlockAutoLaunch(n.getBooleanValue()); });
+        deserializerMap.put("maintenanceWindowBlocked", (n) -> { this.setMaintenanceWindowBlocked(n.getBooleanValue()); });
+        deserializerMap.put("maintenanceWindowDurationInHours", (n) -> { this.setMaintenanceWindowDurationInHours(n.getIntegerValue()); });
+        deserializerMap.put("maintenanceWindowStartTime", (n) -> { this.setMaintenanceWindowStartTime(n.getLocalTimeValue()); });
+        deserializerMap.put("miracastBlocked", (n) -> { this.setMiracastBlocked(n.getBooleanValue()); });
+        deserializerMap.put("miracastChannel", (n) -> { this.setMiracastChannel(n.getEnumValue(MiracastChannel.class)); });
+        deserializerMap.put("miracastRequirePin", (n) -> { this.setMiracastRequirePin(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockMyMeetingsAndFiles", (n) -> { this.setSettingsBlockMyMeetingsAndFiles(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockSessionResume", (n) -> { this.setSettingsBlockSessionResume(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockSigninSuggestions", (n) -> { this.setSettingsBlockSigninSuggestions(n.getBooleanValue()); });
+        deserializerMap.put("settingsDefaultVolume", (n) -> { this.setSettingsDefaultVolume(n.getIntegerValue()); });
+        deserializerMap.put("settingsScreenTimeoutInMinutes", (n) -> { this.setSettingsScreenTimeoutInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("settingsSessionTimeoutInMinutes", (n) -> { this.setSettingsSessionTimeoutInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("settingsSleepTimeoutInMinutes", (n) -> { this.setSettingsSleepTimeoutInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("welcomeScreenBackgroundImageUrl", (n) -> { this.setWelcomeScreenBackgroundImageUrl(n.getStringValue()); });
+        deserializerMap.put("welcomeScreenBlockAutomaticWakeUp", (n) -> { this.setWelcomeScreenBlockAutomaticWakeUp(n.getBooleanValue()); });
+        deserializerMap.put("welcomeScreenMeetingInformation", (n) -> { this.setWelcomeScreenMeetingInformation(n.getEnumValue(WelcomeScreenMeetingInformation.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the maintenanceWindowBlocked property value. Indicates whether or not to Block setting a maintenance window for device updates.

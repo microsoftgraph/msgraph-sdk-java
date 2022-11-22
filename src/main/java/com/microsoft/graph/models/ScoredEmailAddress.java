@@ -28,7 +28,6 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ScoredEmailAddress() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.scoredEmailAddress");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,14 +61,13 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ScoredEmailAddress currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
-            this.put("itemId", (n) -> { currentObject.setItemId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("relevanceScore", (n) -> { currentObject.setRelevanceScore(n.getDoubleValue()); });
-            this.put("selectionLikelihood", (n) -> { currentObject.setSelectionLikelihood(n.getEnumValue(SelectionLikelihoodInfo.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("address", (n) -> { this.setAddress(n.getStringValue()); });
+        deserializerMap.put("itemId", (n) -> { this.setItemId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("relevanceScore", (n) -> { this.setRelevanceScore(n.getDoubleValue()); });
+        deserializerMap.put("selectionLikelihood", (n) -> { this.setSelectionLikelihood(n.getEnumValue(SelectionLikelihoodInfo.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the itemId property value. The itemId property

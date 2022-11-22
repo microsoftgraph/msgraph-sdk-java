@@ -26,7 +26,6 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public UserAgent() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.userAgent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,12 +67,11 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserAgent currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("applicationVersion", (n) -> { currentObject.setApplicationVersion(n.getStringValue()); });
-            this.put("headerValue", (n) -> { currentObject.setHeaderValue(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("applicationVersion", (n) -> { this.setApplicationVersion(n.getStringValue()); });
+        deserializerMap.put("headerValue", (n) -> { this.setHeaderValue(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the headerValue property value. User-agent header value reported by this endpoint.

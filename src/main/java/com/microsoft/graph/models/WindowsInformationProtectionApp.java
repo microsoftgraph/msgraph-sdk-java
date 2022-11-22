@@ -33,7 +33,6 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
     @javax.annotation.Nullable
     public WindowsInformationProtectionApp() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsInformationProtectionApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -91,15 +90,14 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsInformationProtectionApp currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("denied", (n) -> { currentObject.setDenied(n.getBooleanValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("productName", (n) -> { currentObject.setProductName(n.getStringValue()); });
-            this.put("publisherName", (n) -> { currentObject.setPublisherName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("denied", (n) -> { this.setDenied(n.getBooleanValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("productName", (n) -> { this.setProductName(n.getStringValue()); });
+        deserializerMap.put("publisherName", (n) -> { this.setPublisherName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

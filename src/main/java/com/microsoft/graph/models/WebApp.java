@@ -45,11 +45,10 @@ public class WebApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WebApp currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("appUrl", (n) -> { currentObject.setAppUrl(n.getStringValue()); });
-            this.put("useManagedBrowser", (n) -> { currentObject.setUseManagedBrowser(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appUrl", (n) -> { this.setAppUrl(n.getStringValue()); });
+        deserializerMap.put("useManagedBrowser", (n) -> { this.setUseManagedBrowser(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the useManagedBrowser property value. Whether or not to use managed browser. This property is only applicable for Android and IOS.

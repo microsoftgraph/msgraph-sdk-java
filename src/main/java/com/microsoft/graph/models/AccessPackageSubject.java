@@ -29,7 +29,6 @@ public class AccessPackageSubject extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AccessPackageSubject() {
         super();
-        this.setOdataType("#microsoft.graph.accessPackageSubject");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -71,16 +70,15 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessPackageSubject currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("connectedOrganization", (n) -> { currentObject.setConnectedOrganization(n.getObjectValue(ConnectedOrganization::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("objectId", (n) -> { currentObject.setObjectId(n.getStringValue()); });
-            this.put("onPremisesSecurityIdentifier", (n) -> { currentObject.setOnPremisesSecurityIdentifier(n.getStringValue()); });
-            this.put("principalName", (n) -> { currentObject.setPrincipalName(n.getStringValue()); });
-            this.put("subjectType", (n) -> { currentObject.setSubjectType(n.getEnumValue(AccessPackageSubjectType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("connectedOrganization", (n) -> { this.setConnectedOrganization(n.getObjectValue(ConnectedOrganization::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("objectId", (n) -> { this.setObjectId(n.getStringValue()); });
+        deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { this.setOnPremisesSecurityIdentifier(n.getStringValue()); });
+        deserializerMap.put("principalName", (n) -> { this.setPrincipalName(n.getStringValue()); });
+        deserializerMap.put("subjectType", (n) -> { this.setSubjectType(n.getEnumValue(AccessPackageSubjectType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the objectId property value. The object identifier of the subject. null if the subject is not yet a user in the tenant.

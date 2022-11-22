@@ -32,7 +32,6 @@ public class Media implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Media() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.media");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -90,16 +89,15 @@ public class Media implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Media currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("calleeDevice", (n) -> { currentObject.setCalleeDevice(n.getObjectValue(DeviceInfo::createFromDiscriminatorValue)); });
-            this.put("calleeNetwork", (n) -> { currentObject.setCalleeNetwork(n.getObjectValue(NetworkInfo::createFromDiscriminatorValue)); });
-            this.put("callerDevice", (n) -> { currentObject.setCallerDevice(n.getObjectValue(DeviceInfo::createFromDiscriminatorValue)); });
-            this.put("callerNetwork", (n) -> { currentObject.setCallerNetwork(n.getObjectValue(NetworkInfo::createFromDiscriminatorValue)); });
-            this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("streams", (n) -> { currentObject.setStreams(n.getCollectionOfObjectValues(MediaStream::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("calleeDevice", (n) -> { this.setCalleeDevice(n.getObjectValue(DeviceInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("calleeNetwork", (n) -> { this.setCalleeNetwork(n.getObjectValue(NetworkInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("callerDevice", (n) -> { this.setCallerDevice(n.getObjectValue(DeviceInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("callerNetwork", (n) -> { this.setCallerNetwork(n.getObjectValue(NetworkInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("label", (n) -> { this.setLabel(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("streams", (n) -> { this.setStreams(n.getCollectionOfObjectValues(MediaStream::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the label property value. How the media was identified during media negotiation stage.

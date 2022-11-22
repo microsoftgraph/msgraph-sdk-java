@@ -55,10 +55,9 @@ public class OnenotePatchContentPostRequestBody implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OnenotePatchContentPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("commands", (n) -> { currentObject.setCommands(n.getCollectionOfObjectValues(OnenotePatchContentCommand::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("commands", (n) -> { this.setCommands(n.getCollectionOfObjectValues(OnenotePatchContentCommand::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

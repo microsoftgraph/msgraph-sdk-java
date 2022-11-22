@@ -122,21 +122,20 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SharedPCConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("accountManagerPolicy", (n) -> { currentObject.setAccountManagerPolicy(n.getObjectValue(SharedPCAccountManagerPolicy::createFromDiscriminatorValue)); });
-            this.put("allowedAccounts", (n) -> { currentObject.setAllowedAccounts(n.getEnumValue(SharedPCAllowedAccountType.class)); });
-            this.put("allowLocalStorage", (n) -> { currentObject.setAllowLocalStorage(n.getBooleanValue()); });
-            this.put("disableAccountManager", (n) -> { currentObject.setDisableAccountManager(n.getBooleanValue()); });
-            this.put("disableEduPolicies", (n) -> { currentObject.setDisableEduPolicies(n.getBooleanValue()); });
-            this.put("disablePowerPolicies", (n) -> { currentObject.setDisablePowerPolicies(n.getBooleanValue()); });
-            this.put("disableSignInOnResume", (n) -> { currentObject.setDisableSignInOnResume(n.getBooleanValue()); });
-            this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
-            this.put("idleTimeBeforeSleepInSeconds", (n) -> { currentObject.setIdleTimeBeforeSleepInSeconds(n.getIntegerValue()); });
-            this.put("kioskAppDisplayName", (n) -> { currentObject.setKioskAppDisplayName(n.getStringValue()); });
-            this.put("kioskAppUserModelId", (n) -> { currentObject.setKioskAppUserModelId(n.getStringValue()); });
-            this.put("maintenanceStartTime", (n) -> { currentObject.setMaintenanceStartTime(n.getLocalTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountManagerPolicy", (n) -> { this.setAccountManagerPolicy(n.getObjectValue(SharedPCAccountManagerPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("allowedAccounts", (n) -> { this.setAllowedAccounts(n.getEnumValue(SharedPCAllowedAccountType.class)); });
+        deserializerMap.put("allowLocalStorage", (n) -> { this.setAllowLocalStorage(n.getBooleanValue()); });
+        deserializerMap.put("disableAccountManager", (n) -> { this.setDisableAccountManager(n.getBooleanValue()); });
+        deserializerMap.put("disableEduPolicies", (n) -> { this.setDisableEduPolicies(n.getBooleanValue()); });
+        deserializerMap.put("disablePowerPolicies", (n) -> { this.setDisablePowerPolicies(n.getBooleanValue()); });
+        deserializerMap.put("disableSignInOnResume", (n) -> { this.setDisableSignInOnResume(n.getBooleanValue()); });
+        deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
+        deserializerMap.put("idleTimeBeforeSleepInSeconds", (n) -> { this.setIdleTimeBeforeSleepInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("kioskAppDisplayName", (n) -> { this.setKioskAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("kioskAppUserModelId", (n) -> { this.setKioskAppUserModelId(n.getStringValue()); });
+        deserializerMap.put("maintenanceStartTime", (n) -> { this.setMaintenanceStartTime(n.getLocalTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the idleTimeBeforeSleepInSeconds property value. Specifies the time in seconds that a device must sit idle before the PC goes to sleep. Setting this value to 0 prevents the sleep timeout from occurring.

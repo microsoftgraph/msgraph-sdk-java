@@ -27,7 +27,6 @@ public class ChatMessageReaction implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ChatMessageReaction() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.chatMessageReaction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,13 +60,12 @@ public class ChatMessageReaction implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ChatMessageReaction currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("reactionType", (n) -> { currentObject.setReactionType(n.getStringValue()); });
-            this.put("user", (n) -> { currentObject.setUser(n.getObjectValue(ChatMessageReactionIdentitySet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("reactionType", (n) -> { this.setReactionType(n.getStringValue()); });
+        deserializerMap.put("user", (n) -> { this.setUser(n.getObjectValue(ChatMessageReactionIdentitySet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

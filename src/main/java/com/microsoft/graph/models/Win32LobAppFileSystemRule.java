@@ -61,15 +61,14 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Win32LobAppFileSystemRule currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("check32BitOn64System", (n) -> { currentObject.setCheck32BitOn64System(n.getBooleanValue()); });
-            this.put("comparisonValue", (n) -> { currentObject.setComparisonValue(n.getStringValue()); });
-            this.put("fileOrFolderName", (n) -> { currentObject.setFileOrFolderName(n.getStringValue()); });
-            this.put("operationType", (n) -> { currentObject.setOperationType(n.getEnumValue(Win32LobAppFileSystemOperationType.class)); });
-            this.put("operator", (n) -> { currentObject.setOperator(n.getEnumValue(Win32LobAppRuleOperator.class)); });
-            this.put("path", (n) -> { currentObject.setPath(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("check32BitOn64System", (n) -> { this.setCheck32BitOn64System(n.getBooleanValue()); });
+        deserializerMap.put("comparisonValue", (n) -> { this.setComparisonValue(n.getStringValue()); });
+        deserializerMap.put("fileOrFolderName", (n) -> { this.setFileOrFolderName(n.getStringValue()); });
+        deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getEnumValue(Win32LobAppFileSystemOperationType.class)); });
+        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumValue(Win32LobAppRuleOperator.class)); });
+        deserializerMap.put("path", (n) -> { this.setPath(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileOrFolderName property value. The file or folder name to look up.

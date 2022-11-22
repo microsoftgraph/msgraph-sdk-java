@@ -22,7 +22,6 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     @javax.annotation.Nullable
     public RiskyUserHistoryItem() {
         super();
-        this.setOdataType("#microsoft.graph.riskyUserHistoryItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,12 +47,11 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RiskyUserHistoryItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getObjectValue(RiskUserActivity::createFromDiscriminatorValue)); });
-            this.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getObjectValue(RiskUserActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("initiatedBy", (n) -> { this.setInitiatedBy(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the initiatedBy property value. The ID of actor that does the operation.

@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class PrinterBase extends Entity implements Parsable {
     /** The capabilities of the printer/printerShare. */
     private PrinterCapabilities _capabilities;
@@ -35,7 +36,6 @@ public class PrinterBase extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PrinterBase() {
         super();
-        this.setOdataType("#microsoft.graph.printerBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -85,18 +85,17 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrinterBase currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("capabilities", (n) -> { currentObject.setCapabilities(n.getObjectValue(PrinterCapabilities::createFromDiscriminatorValue)); });
-            this.put("defaults", (n) -> { currentObject.setDefaults(n.getObjectValue(PrinterDefaults::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isAcceptingJobs", (n) -> { currentObject.setIsAcceptingJobs(n.getBooleanValue()); });
-            this.put("jobs", (n) -> { currentObject.setJobs(n.getCollectionOfObjectValues(PrintJob::createFromDiscriminatorValue)); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(PrinterLocation::createFromDiscriminatorValue)); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(PrinterStatus::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("capabilities", (n) -> { this.setCapabilities(n.getObjectValue(PrinterCapabilities::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaults", (n) -> { this.setDefaults(n.getObjectValue(PrinterDefaults::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isAcceptingJobs", (n) -> { this.setIsAcceptingJobs(n.getBooleanValue()); });
+        deserializerMap.put("jobs", (n) -> { this.setJobs(n.getCollectionOfObjectValues(PrintJob::createFromDiscriminatorValue)); });
+        deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(PrinterLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getObjectValue(PrinterStatus::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isAcceptingJobs property value. Whether the printer/printerShare is currently accepting new print jobs.

@@ -259,45 +259,44 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsUpdateForBusinessConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("allowWindows11Upgrade", (n) -> { currentObject.setAllowWindows11Upgrade(n.getBooleanValue()); });
-            this.put("automaticUpdateMode", (n) -> { currentObject.setAutomaticUpdateMode(n.getEnumValue(AutomaticUpdateMode.class)); });
-            this.put("autoRestartNotificationDismissal", (n) -> { currentObject.setAutoRestartNotificationDismissal(n.getEnumValue(AutoRestartNotificationDismissalMethod.class)); });
-            this.put("businessReadyUpdatesOnly", (n) -> { currentObject.setBusinessReadyUpdatesOnly(n.getEnumValue(WindowsUpdateType.class)); });
-            this.put("deadlineForFeatureUpdatesInDays", (n) -> { currentObject.setDeadlineForFeatureUpdatesInDays(n.getIntegerValue()); });
-            this.put("deadlineForQualityUpdatesInDays", (n) -> { currentObject.setDeadlineForQualityUpdatesInDays(n.getIntegerValue()); });
-            this.put("deadlineGracePeriodInDays", (n) -> { currentObject.setDeadlineGracePeriodInDays(n.getIntegerValue()); });
-            this.put("deliveryOptimizationMode", (n) -> { currentObject.setDeliveryOptimizationMode(n.getEnumValue(WindowsDeliveryOptimizationMode.class)); });
-            this.put("driversExcluded", (n) -> { currentObject.setDriversExcluded(n.getBooleanValue()); });
-            this.put("engagedRestartDeadlineInDays", (n) -> { currentObject.setEngagedRestartDeadlineInDays(n.getIntegerValue()); });
-            this.put("engagedRestartSnoozeScheduleInDays", (n) -> { currentObject.setEngagedRestartSnoozeScheduleInDays(n.getIntegerValue()); });
-            this.put("engagedRestartTransitionScheduleInDays", (n) -> { currentObject.setEngagedRestartTransitionScheduleInDays(n.getIntegerValue()); });
-            this.put("featureUpdatesDeferralPeriodInDays", (n) -> { currentObject.setFeatureUpdatesDeferralPeriodInDays(n.getIntegerValue()); });
-            this.put("featureUpdatesPaused", (n) -> { currentObject.setFeatureUpdatesPaused(n.getBooleanValue()); });
-            this.put("featureUpdatesPauseExpiryDateTime", (n) -> { currentObject.setFeatureUpdatesPauseExpiryDateTime(n.getOffsetDateTimeValue()); });
-            this.put("featureUpdatesPauseStartDate", (n) -> { currentObject.setFeatureUpdatesPauseStartDate(n.getLocalDateValue()); });
-            this.put("featureUpdatesRollbackStartDateTime", (n) -> { currentObject.setFeatureUpdatesRollbackStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("featureUpdatesRollbackWindowInDays", (n) -> { currentObject.setFeatureUpdatesRollbackWindowInDays(n.getIntegerValue()); });
-            this.put("featureUpdatesWillBeRolledBack", (n) -> { currentObject.setFeatureUpdatesWillBeRolledBack(n.getBooleanValue()); });
-            this.put("installationSchedule", (n) -> { currentObject.setInstallationSchedule(n.getObjectValue(WindowsUpdateInstallScheduleType::createFromDiscriminatorValue)); });
-            this.put("microsoftUpdateServiceAllowed", (n) -> { currentObject.setMicrosoftUpdateServiceAllowed(n.getBooleanValue()); });
-            this.put("postponeRebootUntilAfterDeadline", (n) -> { currentObject.setPostponeRebootUntilAfterDeadline(n.getBooleanValue()); });
-            this.put("prereleaseFeatures", (n) -> { currentObject.setPrereleaseFeatures(n.getEnumValue(PrereleaseFeatures.class)); });
-            this.put("qualityUpdatesDeferralPeriodInDays", (n) -> { currentObject.setQualityUpdatesDeferralPeriodInDays(n.getIntegerValue()); });
-            this.put("qualityUpdatesPaused", (n) -> { currentObject.setQualityUpdatesPaused(n.getBooleanValue()); });
-            this.put("qualityUpdatesPauseExpiryDateTime", (n) -> { currentObject.setQualityUpdatesPauseExpiryDateTime(n.getOffsetDateTimeValue()); });
-            this.put("qualityUpdatesPauseStartDate", (n) -> { currentObject.setQualityUpdatesPauseStartDate(n.getLocalDateValue()); });
-            this.put("qualityUpdatesRollbackStartDateTime", (n) -> { currentObject.setQualityUpdatesRollbackStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("qualityUpdatesWillBeRolledBack", (n) -> { currentObject.setQualityUpdatesWillBeRolledBack(n.getBooleanValue()); });
-            this.put("scheduleImminentRestartWarningInMinutes", (n) -> { currentObject.setScheduleImminentRestartWarningInMinutes(n.getIntegerValue()); });
-            this.put("scheduleRestartWarningInHours", (n) -> { currentObject.setScheduleRestartWarningInHours(n.getIntegerValue()); });
-            this.put("skipChecksBeforeRestart", (n) -> { currentObject.setSkipChecksBeforeRestart(n.getBooleanValue()); });
-            this.put("updateNotificationLevel", (n) -> { currentObject.setUpdateNotificationLevel(n.getEnumValue(WindowsUpdateNotificationDisplayOption.class)); });
-            this.put("updateWeeks", (n) -> { currentObject.setUpdateWeeks(n.getEnumValue(WindowsUpdateForBusinessUpdateWeeks.class)); });
-            this.put("userPauseAccess", (n) -> { currentObject.setUserPauseAccess(n.getEnumValue(Enablement.class)); });
-            this.put("userWindowsUpdateScanAccess", (n) -> { currentObject.setUserWindowsUpdateScanAccess(n.getEnumValue(Enablement.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowWindows11Upgrade", (n) -> { this.setAllowWindows11Upgrade(n.getBooleanValue()); });
+        deserializerMap.put("automaticUpdateMode", (n) -> { this.setAutomaticUpdateMode(n.getEnumValue(AutomaticUpdateMode.class)); });
+        deserializerMap.put("autoRestartNotificationDismissal", (n) -> { this.setAutoRestartNotificationDismissal(n.getEnumValue(AutoRestartNotificationDismissalMethod.class)); });
+        deserializerMap.put("businessReadyUpdatesOnly", (n) -> { this.setBusinessReadyUpdatesOnly(n.getEnumValue(WindowsUpdateType.class)); });
+        deserializerMap.put("deadlineForFeatureUpdatesInDays", (n) -> { this.setDeadlineForFeatureUpdatesInDays(n.getIntegerValue()); });
+        deserializerMap.put("deadlineForQualityUpdatesInDays", (n) -> { this.setDeadlineForQualityUpdatesInDays(n.getIntegerValue()); });
+        deserializerMap.put("deadlineGracePeriodInDays", (n) -> { this.setDeadlineGracePeriodInDays(n.getIntegerValue()); });
+        deserializerMap.put("deliveryOptimizationMode", (n) -> { this.setDeliveryOptimizationMode(n.getEnumValue(WindowsDeliveryOptimizationMode.class)); });
+        deserializerMap.put("driversExcluded", (n) -> { this.setDriversExcluded(n.getBooleanValue()); });
+        deserializerMap.put("engagedRestartDeadlineInDays", (n) -> { this.setEngagedRestartDeadlineInDays(n.getIntegerValue()); });
+        deserializerMap.put("engagedRestartSnoozeScheduleInDays", (n) -> { this.setEngagedRestartSnoozeScheduleInDays(n.getIntegerValue()); });
+        deserializerMap.put("engagedRestartTransitionScheduleInDays", (n) -> { this.setEngagedRestartTransitionScheduleInDays(n.getIntegerValue()); });
+        deserializerMap.put("featureUpdatesDeferralPeriodInDays", (n) -> { this.setFeatureUpdatesDeferralPeriodInDays(n.getIntegerValue()); });
+        deserializerMap.put("featureUpdatesPaused", (n) -> { this.setFeatureUpdatesPaused(n.getBooleanValue()); });
+        deserializerMap.put("featureUpdatesPauseExpiryDateTime", (n) -> { this.setFeatureUpdatesPauseExpiryDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("featureUpdatesPauseStartDate", (n) -> { this.setFeatureUpdatesPauseStartDate(n.getLocalDateValue()); });
+        deserializerMap.put("featureUpdatesRollbackStartDateTime", (n) -> { this.setFeatureUpdatesRollbackStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("featureUpdatesRollbackWindowInDays", (n) -> { this.setFeatureUpdatesRollbackWindowInDays(n.getIntegerValue()); });
+        deserializerMap.put("featureUpdatesWillBeRolledBack", (n) -> { this.setFeatureUpdatesWillBeRolledBack(n.getBooleanValue()); });
+        deserializerMap.put("installationSchedule", (n) -> { this.setInstallationSchedule(n.getObjectValue(WindowsUpdateInstallScheduleType::createFromDiscriminatorValue)); });
+        deserializerMap.put("microsoftUpdateServiceAllowed", (n) -> { this.setMicrosoftUpdateServiceAllowed(n.getBooleanValue()); });
+        deserializerMap.put("postponeRebootUntilAfterDeadline", (n) -> { this.setPostponeRebootUntilAfterDeadline(n.getBooleanValue()); });
+        deserializerMap.put("prereleaseFeatures", (n) -> { this.setPrereleaseFeatures(n.getEnumValue(PrereleaseFeatures.class)); });
+        deserializerMap.put("qualityUpdatesDeferralPeriodInDays", (n) -> { this.setQualityUpdatesDeferralPeriodInDays(n.getIntegerValue()); });
+        deserializerMap.put("qualityUpdatesPaused", (n) -> { this.setQualityUpdatesPaused(n.getBooleanValue()); });
+        deserializerMap.put("qualityUpdatesPauseExpiryDateTime", (n) -> { this.setQualityUpdatesPauseExpiryDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("qualityUpdatesPauseStartDate", (n) -> { this.setQualityUpdatesPauseStartDate(n.getLocalDateValue()); });
+        deserializerMap.put("qualityUpdatesRollbackStartDateTime", (n) -> { this.setQualityUpdatesRollbackStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("qualityUpdatesWillBeRolledBack", (n) -> { this.setQualityUpdatesWillBeRolledBack(n.getBooleanValue()); });
+        deserializerMap.put("scheduleImminentRestartWarningInMinutes", (n) -> { this.setScheduleImminentRestartWarningInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("scheduleRestartWarningInHours", (n) -> { this.setScheduleRestartWarningInHours(n.getIntegerValue()); });
+        deserializerMap.put("skipChecksBeforeRestart", (n) -> { this.setSkipChecksBeforeRestart(n.getBooleanValue()); });
+        deserializerMap.put("updateNotificationLevel", (n) -> { this.setUpdateNotificationLevel(n.getEnumValue(WindowsUpdateNotificationDisplayOption.class)); });
+        deserializerMap.put("updateWeeks", (n) -> { this.setUpdateWeeks(n.getEnumValue(WindowsUpdateForBusinessUpdateWeeks.class)); });
+        deserializerMap.put("userPauseAccess", (n) -> { this.setUserPauseAccess(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("userWindowsUpdateScanAccess", (n) -> { this.setUserWindowsUpdateScanAccess(n.getEnumValue(Enablement.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the installationSchedule property value. The Installation Schedule. Possible values are: ActiveHoursStart, ActiveHoursEnd, ScheduledInstallDay, ScheduledInstallTime. Returned by default. Query parameters are not supported.

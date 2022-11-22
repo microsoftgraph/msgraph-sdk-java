@@ -15,7 +15,6 @@ public class IosVppEBookAssignment extends ManagedEBookAssignment implements Par
     @javax.annotation.Nullable
     public IosVppEBookAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.iosVppEBookAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,9 +32,8 @@ public class IosVppEBookAssignment extends ManagedEBookAssignment implements Par
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosVppEBookAssignment currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

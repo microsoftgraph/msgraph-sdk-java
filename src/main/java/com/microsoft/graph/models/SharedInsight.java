@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class SharedInsight extends Entity implements Parsable {
     /** Details about the shared item. Read only. */
     private SharingDetail _lastShared;
@@ -28,7 +28,6 @@ public class SharedInsight extends Entity implements Parsable {
     @javax.annotation.Nullable
     public SharedInsight() {
         super();
-        this.setOdataType("#microsoft.graph.sharedInsight");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,15 +45,14 @@ public class SharedInsight extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SharedInsight currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("lastShared", (n) -> { currentObject.setLastShared(n.getObjectValue(SharingDetail::createFromDiscriminatorValue)); });
-            this.put("lastSharedMethod", (n) -> { currentObject.setLastSharedMethod(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
-            this.put("resourceReference", (n) -> { currentObject.setResourceReference(n.getObjectValue(ResourceReference::createFromDiscriminatorValue)); });
-            this.put("resourceVisualization", (n) -> { currentObject.setResourceVisualization(n.getObjectValue(ResourceVisualization::createFromDiscriminatorValue)); });
-            this.put("sharingHistory", (n) -> { currentObject.setSharingHistory(n.getCollectionOfObjectValues(SharingDetail::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("lastShared", (n) -> { this.setLastShared(n.getObjectValue(SharingDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastSharedMethod", (n) -> { this.setLastSharedMethod(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
+        deserializerMap.put("resource", (n) -> { this.setResource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceReference", (n) -> { this.setResourceReference(n.getObjectValue(ResourceReference::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceVisualization", (n) -> { this.setResourceVisualization(n.getObjectValue(ResourceVisualization::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharingHistory", (n) -> { this.setSharingHistory(n.getCollectionOfObjectValues(SharingDetail::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastShared property value. Details about the shared item. Read only.

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class Subscription extends Entity implements Parsable {
     /** Optional. Identifier of the application used to create the subscription. Read-only. */
     private String _applicationId;
@@ -45,7 +45,6 @@ public class Subscription extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Subscription() {
         super();
-        this.setOdataType("#microsoft.graph.subscription");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -119,23 +118,22 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Subscription currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
-            this.put("changeType", (n) -> { currentObject.setChangeType(n.getStringValue()); });
-            this.put("clientState", (n) -> { currentObject.setClientState(n.getStringValue()); });
-            this.put("creatorId", (n) -> { currentObject.setCreatorId(n.getStringValue()); });
-            this.put("encryptionCertificate", (n) -> { currentObject.setEncryptionCertificate(n.getStringValue()); });
-            this.put("encryptionCertificateId", (n) -> { currentObject.setEncryptionCertificateId(n.getStringValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("includeResourceData", (n) -> { currentObject.setIncludeResourceData(n.getBooleanValue()); });
-            this.put("latestSupportedTlsVersion", (n) -> { currentObject.setLatestSupportedTlsVersion(n.getStringValue()); });
-            this.put("lifecycleNotificationUrl", (n) -> { currentObject.setLifecycleNotificationUrl(n.getStringValue()); });
-            this.put("notificationQueryOptions", (n) -> { currentObject.setNotificationQueryOptions(n.getStringValue()); });
-            this.put("notificationUrl", (n) -> { currentObject.setNotificationUrl(n.getStringValue()); });
-            this.put("notificationUrlAppId", (n) -> { currentObject.setNotificationUrlAppId(n.getStringValue()); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationId", (n) -> { this.setApplicationId(n.getStringValue()); });
+        deserializerMap.put("changeType", (n) -> { this.setChangeType(n.getStringValue()); });
+        deserializerMap.put("clientState", (n) -> { this.setClientState(n.getStringValue()); });
+        deserializerMap.put("creatorId", (n) -> { this.setCreatorId(n.getStringValue()); });
+        deserializerMap.put("encryptionCertificate", (n) -> { this.setEncryptionCertificate(n.getStringValue()); });
+        deserializerMap.put("encryptionCertificateId", (n) -> { this.setEncryptionCertificateId(n.getStringValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("includeResourceData", (n) -> { this.setIncludeResourceData(n.getBooleanValue()); });
+        deserializerMap.put("latestSupportedTlsVersion", (n) -> { this.setLatestSupportedTlsVersion(n.getStringValue()); });
+        deserializerMap.put("lifecycleNotificationUrl", (n) -> { this.setLifecycleNotificationUrl(n.getStringValue()); });
+        deserializerMap.put("notificationQueryOptions", (n) -> { this.setNotificationQueryOptions(n.getStringValue()); });
+        deserializerMap.put("notificationUrl", (n) -> { this.setNotificationUrl(n.getStringValue()); });
+        deserializerMap.put("notificationUrlAppId", (n) -> { this.setNotificationUrlAppId(n.getStringValue()); });
+        deserializerMap.put("resource", (n) -> { this.setResource(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the includeResourceData property value. Optional. When set to true, change notifications include resource data (such as content of a chat message).

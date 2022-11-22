@@ -25,7 +25,6 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     @javax.annotation.Nullable
     public B2xIdentityUserFlow() {
         super();
-        this.setOdataType("#microsoft.graph.b2xIdentityUserFlow");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,14 +50,13 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final B2xIdentityUserFlow currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("apiConnectorConfiguration", (n) -> { currentObject.setApiConnectorConfiguration(n.getObjectValue(UserFlowApiConnectorConfiguration::createFromDiscriminatorValue)); });
-            this.put("identityProviders", (n) -> { currentObject.setIdentityProviders(n.getCollectionOfObjectValues(IdentityProvider::createFromDiscriminatorValue)); });
-            this.put("languages", (n) -> { currentObject.setLanguages(n.getCollectionOfObjectValues(UserFlowLanguageConfiguration::createFromDiscriminatorValue)); });
-            this.put("userAttributeAssignments", (n) -> { currentObject.setUserAttributeAssignments(n.getCollectionOfObjectValues(IdentityUserFlowAttributeAssignment::createFromDiscriminatorValue)); });
-            this.put("userFlowIdentityProviders", (n) -> { currentObject.setUserFlowIdentityProviders(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("apiConnectorConfiguration", (n) -> { this.setApiConnectorConfiguration(n.getObjectValue(UserFlowApiConnectorConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("identityProviders", (n) -> { this.setIdentityProviders(n.getCollectionOfObjectValues(IdentityProvider::createFromDiscriminatorValue)); });
+        deserializerMap.put("languages", (n) -> { this.setLanguages(n.getCollectionOfObjectValues(UserFlowLanguageConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("userAttributeAssignments", (n) -> { this.setUserAttributeAssignments(n.getCollectionOfObjectValues(IdentityUserFlowAttributeAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("userFlowIdentityProviders", (n) -> { this.setUserFlowIdentityProviders(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the identityProviders property value. The identity providers included in the user flow.

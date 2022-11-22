@@ -34,7 +34,6 @@ public class AppRole implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AppRole() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.appRole");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -84,17 +83,16 @@ public class AppRole implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AppRole currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("allowedMemberTypes", (n) -> { currentObject.setAllowedMemberTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("origin", (n) -> { currentObject.setOrigin(n.getStringValue()); });
-            this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("allowedMemberTypes", (n) -> { this.setAllowedMemberTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("origin", (n) -> { this.setOrigin(n.getStringValue()); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. Unique role identifier inside the appRoles collection. When creating a new app role, a new GUID identifier must be provided.

@@ -28,7 +28,6 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public DriveItemUploadableProperties() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.driveItemUploadableProperties");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,14 +61,13 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DriveItemUploadableProperties currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("fileSize", (n) -> { currentObject.setFileSize(n.getLongValue()); });
-            this.put("fileSystemInfo", (n) -> { currentObject.setFileSystemInfo(n.getObjectValue(FileSystemInfo::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("fileSize", (n) -> { this.setFileSize(n.getLongValue()); });
+        deserializerMap.put("fileSystemInfo", (n) -> { this.setFileSystemInfo(n.getObjectValue(FileSystemInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileSize property value. Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal.

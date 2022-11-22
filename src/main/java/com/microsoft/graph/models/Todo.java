@@ -11,18 +11,17 @@ public class Todo extends Entity implements Parsable {
     /** The task lists in the users mailbox. */
     private java.util.List<TodoTaskList> _lists;
     /**
-     * Instantiates a new todo and sets the default values.
+     * Instantiates a new Todo and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public Todo() {
         super();
-        this.setOdataType("#microsoft.graph.todo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a todo
+     * @return a Todo
      */
     @javax.annotation.Nonnull
     public static Todo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -35,10 +34,9 @@ public class Todo extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Todo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("lists", (n) -> { currentObject.setLists(n.getCollectionOfObjectValues(TodoTaskList::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("lists", (n) -> { this.setLists(n.getCollectionOfObjectValues(TodoTaskList::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lists property value. The task lists in the users mailbox.

@@ -24,7 +24,6 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
     @javax.annotation.Nullable
     public X509CertificateAuthenticationModeConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.x509CertificateAuthenticationModeConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final X509CertificateAuthenticationModeConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("rules", (n) -> { currentObject.setRules(n.getCollectionOfObjectValues(X509CertificateRule::createFromDiscriminatorValue)); });
-            this.put("x509CertificateAuthenticationDefaultMode", (n) -> { currentObject.setX509CertificateAuthenticationDefaultMode(n.getEnumValue(X509CertificateAuthenticationMode.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("rules", (n) -> { this.setRules(n.getCollectionOfObjectValues(X509CertificateRule::createFromDiscriminatorValue)); });
+        deserializerMap.put("x509CertificateAuthenticationDefaultMode", (n) -> { this.setX509CertificateAuthenticationDefaultMode(n.getEnumValue(X509CertificateAuthenticationMode.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

@@ -39,7 +39,6 @@ public class Permission extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Permission() {
         super();
-        this.setOdataType("#microsoft.graph.permission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,20 +64,19 @@ public class Permission extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Permission currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("grantedTo", (n) -> { currentObject.setGrantedTo(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("grantedToIdentities", (n) -> { currentObject.setGrantedToIdentities(n.getCollectionOfObjectValues(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("grantedToIdentitiesV2", (n) -> { currentObject.setGrantedToIdentitiesV2(n.getCollectionOfObjectValues(SharePointIdentitySet::createFromDiscriminatorValue)); });
-            this.put("grantedToV2", (n) -> { currentObject.setGrantedToV2(n.getObjectValue(SharePointIdentitySet::createFromDiscriminatorValue)); });
-            this.put("hasPassword", (n) -> { currentObject.setHasPassword(n.getBooleanValue()); });
-            this.put("inheritedFrom", (n) -> { currentObject.setInheritedFrom(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
-            this.put("invitation", (n) -> { currentObject.setInvitation(n.getObjectValue(SharingInvitation::createFromDiscriminatorValue)); });
-            this.put("link", (n) -> { currentObject.setLink(n.getObjectValue(SharingLink::createFromDiscriminatorValue)); });
-            this.put("roles", (n) -> { currentObject.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("shareId", (n) -> { currentObject.setShareId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("grantedTo", (n) -> { this.setGrantedTo(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("grantedToIdentities", (n) -> { this.setGrantedToIdentities(n.getCollectionOfObjectValues(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("grantedToIdentitiesV2", (n) -> { this.setGrantedToIdentitiesV2(n.getCollectionOfObjectValues(SharePointIdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("grantedToV2", (n) -> { this.setGrantedToV2(n.getObjectValue(SharePointIdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("hasPassword", (n) -> { this.setHasPassword(n.getBooleanValue()); });
+        deserializerMap.put("inheritedFrom", (n) -> { this.setInheritedFrom(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
+        deserializerMap.put("invitation", (n) -> { this.setInvitation(n.getObjectValue(SharingInvitation::createFromDiscriminatorValue)); });
+        deserializerMap.put("link", (n) -> { this.setLink(n.getObjectValue(SharingLink::createFromDiscriminatorValue)); });
+        deserializerMap.put("roles", (n) -> { this.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("shareId", (n) -> { this.setShareId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the grantedTo property value. The grantedTo property

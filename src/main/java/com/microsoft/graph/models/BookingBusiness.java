@@ -51,7 +51,6 @@ public class BookingBusiness extends Entity implements Parsable {
     @javax.annotation.Nullable
     public BookingBusiness() {
         super();
-        this.setOdataType("#microsoft.graph.bookingBusiness");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -149,27 +148,26 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BookingBusiness currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
-            this.put("appointments", (n) -> { currentObject.setAppointments(n.getCollectionOfObjectValues(BookingAppointment::createFromDiscriminatorValue)); });
-            this.put("businessHours", (n) -> { currentObject.setBusinessHours(n.getCollectionOfObjectValues(BookingWorkHours::createFromDiscriminatorValue)); });
-            this.put("businessType", (n) -> { currentObject.setBusinessType(n.getStringValue()); });
-            this.put("calendarView", (n) -> { currentObject.setCalendarView(n.getCollectionOfObjectValues(BookingAppointment::createFromDiscriminatorValue)); });
-            this.put("customers", (n) -> { currentObject.setCustomers(n.getCollectionOfObjectValues(BookingCustomerBase::createFromDiscriminatorValue)); });
-            this.put("customQuestions", (n) -> { currentObject.setCustomQuestions(n.getCollectionOfObjectValues(BookingCustomQuestion::createFromDiscriminatorValue)); });
-            this.put("defaultCurrencyIso", (n) -> { currentObject.setDefaultCurrencyIso(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("isPublished", (n) -> { currentObject.setIsPublished(n.getBooleanValue()); });
-            this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
-            this.put("phone", (n) -> { currentObject.setPhone(n.getStringValue()); });
-            this.put("publicUrl", (n) -> { currentObject.setPublicUrl(n.getStringValue()); });
-            this.put("schedulingPolicy", (n) -> { currentObject.setSchedulingPolicy(n.getObjectValue(BookingSchedulingPolicy::createFromDiscriminatorValue)); });
-            this.put("services", (n) -> { currentObject.setServices(n.getCollectionOfObjectValues(BookingService::createFromDiscriminatorValue)); });
-            this.put("staffMembers", (n) -> { currentObject.setStaffMembers(n.getCollectionOfObjectValues(BookingStaffMemberBase::createFromDiscriminatorValue)); });
-            this.put("webSiteUrl", (n) -> { currentObject.setWebSiteUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("appointments", (n) -> { this.setAppointments(n.getCollectionOfObjectValues(BookingAppointment::createFromDiscriminatorValue)); });
+        deserializerMap.put("businessHours", (n) -> { this.setBusinessHours(n.getCollectionOfObjectValues(BookingWorkHours::createFromDiscriminatorValue)); });
+        deserializerMap.put("businessType", (n) -> { this.setBusinessType(n.getStringValue()); });
+        deserializerMap.put("calendarView", (n) -> { this.setCalendarView(n.getCollectionOfObjectValues(BookingAppointment::createFromDiscriminatorValue)); });
+        deserializerMap.put("customers", (n) -> { this.setCustomers(n.getCollectionOfObjectValues(BookingCustomerBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("customQuestions", (n) -> { this.setCustomQuestions(n.getCollectionOfObjectValues(BookingCustomQuestion::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultCurrencyIso", (n) -> { this.setDefaultCurrencyIso(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("isPublished", (n) -> { this.setIsPublished(n.getBooleanValue()); });
+        deserializerMap.put("languageTag", (n) -> { this.setLanguageTag(n.getStringValue()); });
+        deserializerMap.put("phone", (n) -> { this.setPhone(n.getStringValue()); });
+        deserializerMap.put("publicUrl", (n) -> { this.setPublicUrl(n.getStringValue()); });
+        deserializerMap.put("schedulingPolicy", (n) -> { this.setSchedulingPolicy(n.getObjectValue(BookingSchedulingPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("services", (n) -> { this.setServices(n.getCollectionOfObjectValues(BookingService::createFromDiscriminatorValue)); });
+        deserializerMap.put("staffMembers", (n) -> { this.setStaffMembers(n.getCollectionOfObjectValues(BookingStaffMemberBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("webSiteUrl", (n) -> { this.setWebSiteUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isPublished property value. The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.

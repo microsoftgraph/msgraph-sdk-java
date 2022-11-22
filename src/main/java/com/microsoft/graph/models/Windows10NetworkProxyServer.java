@@ -27,7 +27,6 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public Windows10NetworkProxyServer() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windows10NetworkProxyServer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,13 +68,12 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10NetworkProxyServer currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
-            this.put("exceptions", (n) -> { currentObject.setExceptions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("useForLocalAddresses", (n) -> { currentObject.setUseForLocalAddresses(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("address", (n) -> { this.setAddress(n.getStringValue()); });
+        deserializerMap.put("exceptions", (n) -> { this.setExceptions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("useForLocalAddresses", (n) -> { this.setUseForLocalAddresses(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

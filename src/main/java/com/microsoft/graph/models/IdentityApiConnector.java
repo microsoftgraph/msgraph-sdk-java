@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreement entities. */
 public class IdentityApiConnector extends Entity implements Parsable {
     /** The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported. */
     private ApiAuthenticationConfigurationBase _authenticationConfiguration;
@@ -15,18 +16,17 @@ public class IdentityApiConnector extends Entity implements Parsable {
     /** The URL of the API endpoint to call. */
     private String _targetUrl;
     /**
-     * Instantiates a new IdentityApiConnector and sets the default values.
+     * Instantiates a new identityApiConnector and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public IdentityApiConnector() {
         super();
-        this.setOdataType("#microsoft.graph.identityApiConnector");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IdentityApiConnector
+     * @return a identityApiConnector
      */
     @javax.annotation.Nonnull
     public static IdentityApiConnector createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -55,12 +55,11 @@ public class IdentityApiConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IdentityApiConnector currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("authenticationConfiguration", (n) -> { currentObject.setAuthenticationConfiguration(n.getObjectValue(ApiAuthenticationConfigurationBase::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("targetUrl", (n) -> { currentObject.setTargetUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationConfiguration", (n) -> { this.setAuthenticationConfiguration(n.getObjectValue(ApiAuthenticationConfigurationBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("targetUrl", (n) -> { this.setTargetUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the targetUrl property value. The URL of the API endpoint to call.

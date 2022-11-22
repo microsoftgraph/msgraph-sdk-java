@@ -35,7 +35,6 @@ public class MobileAppContentFile extends Entity implements Parsable {
     @javax.annotation.Nullable
     public MobileAppContentFile() {
         super();
-        this.setOdataType("#microsoft.graph.mobileAppContentFile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,18 +76,17 @@ public class MobileAppContentFile extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MobileAppContentFile currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("azureStorageUri", (n) -> { currentObject.setAzureStorageUri(n.getStringValue()); });
-            this.put("azureStorageUriExpirationDateTime", (n) -> { currentObject.setAzureStorageUriExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("isCommitted", (n) -> { currentObject.setIsCommitted(n.getBooleanValue()); });
-            this.put("manifest", (n) -> { currentObject.setManifest(n.getByteArrayValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
-            this.put("sizeEncrypted", (n) -> { currentObject.setSizeEncrypted(n.getLongValue()); });
-            this.put("uploadState", (n) -> { currentObject.setUploadState(n.getEnumValue(MobileAppContentFileUploadState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("azureStorageUri", (n) -> { this.setAzureStorageUri(n.getStringValue()); });
+        deserializerMap.put("azureStorageUriExpirationDateTime", (n) -> { this.setAzureStorageUriExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("isCommitted", (n) -> { this.setIsCommitted(n.getBooleanValue()); });
+        deserializerMap.put("manifest", (n) -> { this.setManifest(n.getByteArrayValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("size", (n) -> { this.setSize(n.getLongValue()); });
+        deserializerMap.put("sizeEncrypted", (n) -> { this.setSizeEncrypted(n.getLongValue()); });
+        deserializerMap.put("uploadState", (n) -> { this.setUploadState(n.getEnumValue(MobileAppContentFileUploadState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isCommitted property value. A value indicating whether the file is committed.

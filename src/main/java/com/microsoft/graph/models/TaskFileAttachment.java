@@ -43,10 +43,9 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TaskFileAttachment currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("contentBytes", (n) -> { currentObject.setContentBytes(n.getByteArrayValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contentBytes", (n) -> { this.setContentBytes(n.getByteArrayValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

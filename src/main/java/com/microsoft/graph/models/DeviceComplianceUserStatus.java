@@ -27,7 +27,6 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
     @javax.annotation.Nullable
     public DeviceComplianceUserStatus() {
         super();
-        this.setOdataType("#microsoft.graph.deviceComplianceUserStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,14 +52,13 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceComplianceUserStatus currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("devicesCount", (n) -> { currentObject.setDevicesCount(n.getIntegerValue()); });
-            this.put("lastReportedDateTime", (n) -> { currentObject.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ComplianceStatus.class)); });
-            this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("devicesCount", (n) -> { this.setDevicesCount(n.getIntegerValue()); });
+        deserializerMap.put("lastReportedDateTime", (n) -> { this.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ComplianceStatus.class)); });
+        deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastReportedDateTime property value. Last modified date time of the policy report.

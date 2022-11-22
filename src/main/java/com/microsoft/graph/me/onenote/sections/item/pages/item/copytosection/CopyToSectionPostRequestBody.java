@@ -52,13 +52,12 @@ public class CopyToSectionPostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CopyToSectionPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("siteCollectionId", (n) -> { currentObject.setSiteCollectionId(n.getStringValue()); });
-            this.put("siteId", (n) -> { currentObject.setSiteId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("groupId", (n) -> { this.setGroupId(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("siteCollectionId", (n) -> { this.setSiteCollectionId(n.getStringValue()); });
+        deserializerMap.put("siteId", (n) -> { this.setSiteId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupId property value. The groupId property

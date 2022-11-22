@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class IdentityUserFlowAttributeAssignment extends Entity implements Parsable {
     /** The display name of the identityUserFlowAttribute within a user flow. */
     private String _displayName;
@@ -28,7 +28,6 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
     @javax.annotation.Nullable
     public IdentityUserFlowAttributeAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.identityUserFlowAttributeAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,15 +53,14 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IdentityUserFlowAttributeAssignment currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isOptional", (n) -> { currentObject.setIsOptional(n.getBooleanValue()); });
-            this.put("requiresVerification", (n) -> { currentObject.setRequiresVerification(n.getBooleanValue()); });
-            this.put("userAttribute", (n) -> { currentObject.setUserAttribute(n.getObjectValue(IdentityUserFlowAttribute::createFromDiscriminatorValue)); });
-            this.put("userAttributeValues", (n) -> { currentObject.setUserAttributeValues(n.getCollectionOfObjectValues(UserAttributeValuesItem::createFromDiscriminatorValue)); });
-            this.put("userInputType", (n) -> { currentObject.setUserInputType(n.getEnumValue(IdentityUserFlowAttributeInputType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isOptional", (n) -> { this.setIsOptional(n.getBooleanValue()); });
+        deserializerMap.put("requiresVerification", (n) -> { this.setRequiresVerification(n.getBooleanValue()); });
+        deserializerMap.put("userAttribute", (n) -> { this.setUserAttribute(n.getObjectValue(IdentityUserFlowAttribute::createFromDiscriminatorValue)); });
+        deserializerMap.put("userAttributeValues", (n) -> { this.setUserAttributeValues(n.getCollectionOfObjectValues(UserAttributeValuesItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("userInputType", (n) -> { this.setUserInputType(n.getEnumValue(IdentityUserFlowAttributeInputType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isOptional property value. Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.

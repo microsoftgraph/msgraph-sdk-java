@@ -24,7 +24,6 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ConditionalAccessFilter() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessFilter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConditionalAccessFilter currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("mode", (n) -> { currentObject.setMode(n.getEnumValue(FilterMode.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("rule", (n) -> { currentObject.setRule(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("mode", (n) -> { this.setMode(n.getEnumValue(FilterMode.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("rule", (n) -> { this.setRule(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mode property value. The mode property

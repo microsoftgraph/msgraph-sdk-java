@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public class AgreementFileVersion extends AgreementFileProperties implements Parsable {
     /**
      * Instantiates a new agreementFileVersion and sets the default values.
@@ -16,7 +16,6 @@ public class AgreementFileVersion extends AgreementFileProperties implements Par
     @javax.annotation.Nullable
     public AgreementFileVersion() {
         super();
-        this.setOdataType("#microsoft.graph.agreementFileVersion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,9 +33,8 @@ public class AgreementFileVersion extends AgreementFileProperties implements Par
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AgreementFileVersion currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

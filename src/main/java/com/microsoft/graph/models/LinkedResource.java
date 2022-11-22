@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class LinkedResource extends Entity implements Parsable {
     /** Field indicating the app name of the source that is sending the linkedResource. */
     private String _applicationName;
@@ -24,7 +24,6 @@ public class LinkedResource extends Entity implements Parsable {
     @javax.annotation.Nullable
     public LinkedResource() {
         super();
-        this.setOdataType("#microsoft.graph.linkedResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,13 +65,12 @@ public class LinkedResource extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final LinkedResource currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("applicationName", (n) -> { currentObject.setApplicationName(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationName", (n) -> { this.setApplicationName(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the webUrl property value. Deep link to the linkedResource.

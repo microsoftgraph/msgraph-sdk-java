@@ -17,7 +17,6 @@ public class PlannerBucketTaskBoardTaskFormat extends Entity implements Parsable
     @javax.annotation.Nullable
     public PlannerBucketTaskBoardTaskFormat() {
         super();
-        this.setOdataType("#microsoft.graph.plannerBucketTaskBoardTaskFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,10 +34,9 @@ public class PlannerBucketTaskBoardTaskFormat extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerBucketTaskBoardTaskFormat currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("orderHint", (n) -> { currentObject.setOrderHint(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("orderHint", (n) -> { this.setOrderHint(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the orderHint property value. Hint used to order tasks in the Bucket view of the Task Board. The format is defined as outlined here.

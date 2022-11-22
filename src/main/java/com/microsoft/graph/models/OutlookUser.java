@@ -17,7 +17,6 @@ public class OutlookUser extends Entity implements Parsable {
     @javax.annotation.Nullable
     public OutlookUser() {
         super();
-        this.setOdataType("#microsoft.graph.outlookUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,10 +34,9 @@ public class OutlookUser extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OutlookUser currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("masterCategories", (n) -> { currentObject.setMasterCategories(n.getCollectionOfObjectValues(OutlookCategory::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("masterCategories", (n) -> { this.setMasterCategories(n.getCollectionOfObjectValues(OutlookCategory::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the masterCategories property value. A list of categories defined for the user.

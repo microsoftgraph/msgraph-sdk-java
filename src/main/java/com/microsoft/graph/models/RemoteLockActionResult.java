@@ -17,7 +17,6 @@ public class RemoteLockActionResult extends DeviceActionResult implements Parsab
     @javax.annotation.Nullable
     public RemoteLockActionResult() {
         super();
-        this.setOdataType("#microsoft.graph.remoteLockActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,10 +34,9 @@ public class RemoteLockActionResult extends DeviceActionResult implements Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RemoteLockActionResult currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("unlockPin", (n) -> { currentObject.setUnlockPin(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("unlockPin", (n) -> { this.setUnlockPin(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the unlockPin property value. Pin to unlock the client

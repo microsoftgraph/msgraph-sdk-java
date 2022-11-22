@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     /** The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand. */
     private AccessPackage _accessPackage;
@@ -35,7 +35,6 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AccessPackageAssignmentRequest() {
         super();
-        this.setOdataType("#microsoft.graph.accessPackageAssignmentRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -85,18 +84,17 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessPackageAssignmentRequest currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("accessPackage", (n) -> { currentObject.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
-            this.put("assignment", (n) -> { currentObject.setAssignment(n.getObjectValue(AccessPackageAssignment::createFromDiscriminatorValue)); });
-            this.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("requestor", (n) -> { currentObject.setRequestor(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
-            this.put("requestType", (n) -> { currentObject.setRequestType(n.getEnumValue(AccessPackageRequestType.class)); });
-            this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(EntitlementManagementSchedule::createFromDiscriminatorValue)); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(AccessPackageRequestState.class)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessPackage", (n) -> { this.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignment", (n) -> { this.setAssignment(n.getObjectValue(AccessPackageAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("requestor", (n) -> { this.setRequestor(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
+        deserializerMap.put("requestType", (n) -> { this.setRequestType(n.getEnumValue(AccessPackageRequestType.class)); });
+        deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(EntitlementManagementSchedule::createFromDiscriminatorValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AccessPackageRequestState.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the requestor property value. The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.

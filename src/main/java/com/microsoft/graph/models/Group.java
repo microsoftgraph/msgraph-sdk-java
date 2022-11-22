@@ -140,7 +140,7 @@ public class Group extends DirectoryObject implements Parsable {
     /** Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable. */
     private String _visibility;
     /**
-     * Instantiates a new group and sets the default values.
+     * Instantiates a new Group and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -151,7 +151,7 @@ public class Group extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a group
+     * @return a Group
      */
     @javax.annotation.Nonnull
     public static Group createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -316,74 +316,73 @@ public class Group extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Group currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("acceptedSenders", (n) -> { currentObject.setAcceptedSenders(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("allowExternalSenders", (n) -> { currentObject.setAllowExternalSenders(n.getBooleanValue()); });
-            this.put("appRoleAssignments", (n) -> { currentObject.setAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
-            this.put("assignedLabels", (n) -> { currentObject.setAssignedLabels(n.getCollectionOfObjectValues(AssignedLabel::createFromDiscriminatorValue)); });
-            this.put("assignedLicenses", (n) -> { currentObject.setAssignedLicenses(n.getCollectionOfObjectValues(AssignedLicense::createFromDiscriminatorValue)); });
-            this.put("autoSubscribeNewMembers", (n) -> { currentObject.setAutoSubscribeNewMembers(n.getBooleanValue()); });
-            this.put("calendar", (n) -> { currentObject.setCalendar(n.getObjectValue(Calendar::createFromDiscriminatorValue)); });
-            this.put("calendarView", (n) -> { currentObject.setCalendarView(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
-            this.put("classification", (n) -> { currentObject.setClassification(n.getStringValue()); });
-            this.put("conversations", (n) -> { currentObject.setConversations(n.getCollectionOfObjectValues(Conversation::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("createdOnBehalfOf", (n) -> { currentObject.setCreatedOnBehalfOf(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("drive", (n) -> { currentObject.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
-            this.put("drives", (n) -> { currentObject.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
-            this.put("events", (n) -> { currentObject.setEvents(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("groupLifecyclePolicies", (n) -> { currentObject.setGroupLifecyclePolicies(n.getCollectionOfObjectValues(GroupLifecyclePolicy::createFromDiscriminatorValue)); });
-            this.put("groupTypes", (n) -> { currentObject.setGroupTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("hasMembersWithLicenseErrors", (n) -> { currentObject.setHasMembersWithLicenseErrors(n.getBooleanValue()); });
-            this.put("hideFromAddressLists", (n) -> { currentObject.setHideFromAddressLists(n.getBooleanValue()); });
-            this.put("hideFromOutlookClients", (n) -> { currentObject.setHideFromOutlookClients(n.getBooleanValue()); });
-            this.put("isArchived", (n) -> { currentObject.setIsArchived(n.getBooleanValue()); });
-            this.put("isAssignableToRole", (n) -> { currentObject.setIsAssignableToRole(n.getBooleanValue()); });
-            this.put("isSubscribedByMail", (n) -> { currentObject.setIsSubscribedByMail(n.getBooleanValue()); });
-            this.put("licenseProcessingState", (n) -> { currentObject.setLicenseProcessingState(n.getObjectValue(LicenseProcessingState::createFromDiscriminatorValue)); });
-            this.put("mail", (n) -> { currentObject.setMail(n.getStringValue()); });
-            this.put("mailEnabled", (n) -> { currentObject.setMailEnabled(n.getBooleanValue()); });
-            this.put("mailNickname", (n) -> { currentObject.setMailNickname(n.getStringValue()); });
-            this.put("memberOf", (n) -> { currentObject.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("membershipRule", (n) -> { currentObject.setMembershipRule(n.getStringValue()); });
-            this.put("membershipRuleProcessingState", (n) -> { currentObject.setMembershipRuleProcessingState(n.getStringValue()); });
-            this.put("membersWithLicenseErrors", (n) -> { currentObject.setMembersWithLicenseErrors(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("onenote", (n) -> { currentObject.setOnenote(n.getObjectValue(Onenote::createFromDiscriminatorValue)); });
-            this.put("onPremisesDomainName", (n) -> { currentObject.setOnPremisesDomainName(n.getStringValue()); });
-            this.put("onPremisesLastSyncDateTime", (n) -> { currentObject.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("onPremisesNetBiosName", (n) -> { currentObject.setOnPremisesNetBiosName(n.getStringValue()); });
-            this.put("onPremisesProvisioningErrors", (n) -> { currentObject.setOnPremisesProvisioningErrors(n.getCollectionOfObjectValues(OnPremisesProvisioningError::createFromDiscriminatorValue)); });
-            this.put("onPremisesSamAccountName", (n) -> { currentObject.setOnPremisesSamAccountName(n.getStringValue()); });
-            this.put("onPremisesSecurityIdentifier", (n) -> { currentObject.setOnPremisesSecurityIdentifier(n.getStringValue()); });
-            this.put("onPremisesSyncEnabled", (n) -> { currentObject.setOnPremisesSyncEnabled(n.getBooleanValue()); });
-            this.put("owners", (n) -> { currentObject.setOwners(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("permissionGrants", (n) -> { currentObject.setPermissionGrants(n.getCollectionOfObjectValues(ResourceSpecificPermissionGrant::createFromDiscriminatorValue)); });
-            this.put("photo", (n) -> { currentObject.setPhoto(n.getObjectValue(ProfilePhoto::createFromDiscriminatorValue)); });
-            this.put("photos", (n) -> { currentObject.setPhotos(n.getCollectionOfObjectValues(ProfilePhoto::createFromDiscriminatorValue)); });
-            this.put("planner", (n) -> { currentObject.setPlanner(n.getObjectValue(PlannerGroup::createFromDiscriminatorValue)); });
-            this.put("preferredDataLocation", (n) -> { currentObject.setPreferredDataLocation(n.getStringValue()); });
-            this.put("preferredLanguage", (n) -> { currentObject.setPreferredLanguage(n.getStringValue()); });
-            this.put("proxyAddresses", (n) -> { currentObject.setProxyAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("rejectedSenders", (n) -> { currentObject.setRejectedSenders(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("renewedDateTime", (n) -> { currentObject.setRenewedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("securityEnabled", (n) -> { currentObject.setSecurityEnabled(n.getBooleanValue()); });
-            this.put("securityIdentifier", (n) -> { currentObject.setSecurityIdentifier(n.getStringValue()); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getCollectionOfObjectValues(GroupSetting::createFromDiscriminatorValue)); });
-            this.put("sites", (n) -> { currentObject.setSites(n.getCollectionOfObjectValues(Site::createFromDiscriminatorValue)); });
-            this.put("team", (n) -> { currentObject.setTeam(n.getObjectValue(Team::createFromDiscriminatorValue)); });
-            this.put("theme", (n) -> { currentObject.setTheme(n.getStringValue()); });
-            this.put("threads", (n) -> { currentObject.setThreads(n.getCollectionOfObjectValues(ConversationThread::createFromDiscriminatorValue)); });
-            this.put("transitiveMemberOf", (n) -> { currentObject.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("transitiveMembers", (n) -> { currentObject.setTransitiveMembers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("unseenCount", (n) -> { currentObject.setUnseenCount(n.getIntegerValue()); });
-            this.put("visibility", (n) -> { currentObject.setVisibility(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("acceptedSenders", (n) -> { this.setAcceptedSenders(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("allowExternalSenders", (n) -> { this.setAllowExternalSenders(n.getBooleanValue()); });
+        deserializerMap.put("appRoleAssignments", (n) -> { this.setAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignedLabels", (n) -> { this.setAssignedLabels(n.getCollectionOfObjectValues(AssignedLabel::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignedLicenses", (n) -> { this.setAssignedLicenses(n.getCollectionOfObjectValues(AssignedLicense::createFromDiscriminatorValue)); });
+        deserializerMap.put("autoSubscribeNewMembers", (n) -> { this.setAutoSubscribeNewMembers(n.getBooleanValue()); });
+        deserializerMap.put("calendar", (n) -> { this.setCalendar(n.getObjectValue(Calendar::createFromDiscriminatorValue)); });
+        deserializerMap.put("calendarView", (n) -> { this.setCalendarView(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
+        deserializerMap.put("classification", (n) -> { this.setClassification(n.getStringValue()); });
+        deserializerMap.put("conversations", (n) -> { this.setConversations(n.getCollectionOfObjectValues(Conversation::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdOnBehalfOf", (n) -> { this.setCreatedOnBehalfOf(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("drive", (n) -> { this.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
+        deserializerMap.put("drives", (n) -> { this.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
+        deserializerMap.put("events", (n) -> { this.setEvents(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("groupLifecyclePolicies", (n) -> { this.setGroupLifecyclePolicies(n.getCollectionOfObjectValues(GroupLifecyclePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("groupTypes", (n) -> { this.setGroupTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("hasMembersWithLicenseErrors", (n) -> { this.setHasMembersWithLicenseErrors(n.getBooleanValue()); });
+        deserializerMap.put("hideFromAddressLists", (n) -> { this.setHideFromAddressLists(n.getBooleanValue()); });
+        deserializerMap.put("hideFromOutlookClients", (n) -> { this.setHideFromOutlookClients(n.getBooleanValue()); });
+        deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
+        deserializerMap.put("isAssignableToRole", (n) -> { this.setIsAssignableToRole(n.getBooleanValue()); });
+        deserializerMap.put("isSubscribedByMail", (n) -> { this.setIsSubscribedByMail(n.getBooleanValue()); });
+        deserializerMap.put("licenseProcessingState", (n) -> { this.setLicenseProcessingState(n.getObjectValue(LicenseProcessingState::createFromDiscriminatorValue)); });
+        deserializerMap.put("mail", (n) -> { this.setMail(n.getStringValue()); });
+        deserializerMap.put("mailEnabled", (n) -> { this.setMailEnabled(n.getBooleanValue()); });
+        deserializerMap.put("mailNickname", (n) -> { this.setMailNickname(n.getStringValue()); });
+        deserializerMap.put("memberOf", (n) -> { this.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("membershipRule", (n) -> { this.setMembershipRule(n.getStringValue()); });
+        deserializerMap.put("membershipRuleProcessingState", (n) -> { this.setMembershipRuleProcessingState(n.getStringValue()); });
+        deserializerMap.put("membersWithLicenseErrors", (n) -> { this.setMembersWithLicenseErrors(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("onenote", (n) -> { this.setOnenote(n.getObjectValue(Onenote::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremisesDomainName", (n) -> { this.setOnPremisesDomainName(n.getStringValue()); });
+        deserializerMap.put("onPremisesLastSyncDateTime", (n) -> { this.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("onPremisesNetBiosName", (n) -> { this.setOnPremisesNetBiosName(n.getStringValue()); });
+        deserializerMap.put("onPremisesProvisioningErrors", (n) -> { this.setOnPremisesProvisioningErrors(n.getCollectionOfObjectValues(OnPremisesProvisioningError::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremisesSamAccountName", (n) -> { this.setOnPremisesSamAccountName(n.getStringValue()); });
+        deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { this.setOnPremisesSecurityIdentifier(n.getStringValue()); });
+        deserializerMap.put("onPremisesSyncEnabled", (n) -> { this.setOnPremisesSyncEnabled(n.getBooleanValue()); });
+        deserializerMap.put("owners", (n) -> { this.setOwners(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("permissionGrants", (n) -> { this.setPermissionGrants(n.getCollectionOfObjectValues(ResourceSpecificPermissionGrant::createFromDiscriminatorValue)); });
+        deserializerMap.put("photo", (n) -> { this.setPhoto(n.getObjectValue(ProfilePhoto::createFromDiscriminatorValue)); });
+        deserializerMap.put("photos", (n) -> { this.setPhotos(n.getCollectionOfObjectValues(ProfilePhoto::createFromDiscriminatorValue)); });
+        deserializerMap.put("planner", (n) -> { this.setPlanner(n.getObjectValue(PlannerGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("preferredDataLocation", (n) -> { this.setPreferredDataLocation(n.getStringValue()); });
+        deserializerMap.put("preferredLanguage", (n) -> { this.setPreferredLanguage(n.getStringValue()); });
+        deserializerMap.put("proxyAddresses", (n) -> { this.setProxyAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("rejectedSenders", (n) -> { this.setRejectedSenders(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("renewedDateTime", (n) -> { this.setRenewedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("securityEnabled", (n) -> { this.setSecurityEnabled(n.getBooleanValue()); });
+        deserializerMap.put("securityIdentifier", (n) -> { this.setSecurityIdentifier(n.getStringValue()); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getCollectionOfObjectValues(GroupSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("sites", (n) -> { this.setSites(n.getCollectionOfObjectValues(Site::createFromDiscriminatorValue)); });
+        deserializerMap.put("team", (n) -> { this.setTeam(n.getObjectValue(Team::createFromDiscriminatorValue)); });
+        deserializerMap.put("theme", (n) -> { this.setTheme(n.getStringValue()); });
+        deserializerMap.put("threads", (n) -> { this.setThreads(n.getCollectionOfObjectValues(ConversationThread::createFromDiscriminatorValue)); });
+        deserializerMap.put("transitiveMemberOf", (n) -> { this.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("transitiveMembers", (n) -> { this.setTransitiveMembers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("unseenCount", (n) -> { this.setUnseenCount(n.getIntegerValue()); });
+        deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupLifecyclePolicies property value. The collection of lifecycle policies for this group. Read-only. Nullable.

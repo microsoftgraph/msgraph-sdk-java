@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public class Agreement extends Entity implements Parsable {
     /** Read-only. Information about acceptances of this agreement. */
     private java.util.List<AgreementAcceptance> _acceptances;
@@ -33,7 +33,6 @@ public class Agreement extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Agreement() {
         super();
-        this.setOdataType("#microsoft.graph.agreement");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,17 +66,16 @@ public class Agreement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Agreement currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("acceptances", (n) -> { currentObject.setAcceptances(n.getCollectionOfObjectValues(AgreementAcceptance::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("file", (n) -> { currentObject.setFile(n.getObjectValue(AgreementFile::createFromDiscriminatorValue)); });
-            this.put("files", (n) -> { currentObject.setFiles(n.getCollectionOfObjectValues(AgreementFileLocalization::createFromDiscriminatorValue)); });
-            this.put("isPerDeviceAcceptanceRequired", (n) -> { currentObject.setIsPerDeviceAcceptanceRequired(n.getBooleanValue()); });
-            this.put("isViewingBeforeAcceptanceRequired", (n) -> { currentObject.setIsViewingBeforeAcceptanceRequired(n.getBooleanValue()); });
-            this.put("termsExpiration", (n) -> { currentObject.setTermsExpiration(n.getObjectValue(TermsExpiration::createFromDiscriminatorValue)); });
-            this.put("userReacceptRequiredFrequency", (n) -> { currentObject.setUserReacceptRequiredFrequency(n.getPeriodValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("acceptances", (n) -> { this.setAcceptances(n.getCollectionOfObjectValues(AgreementAcceptance::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("file", (n) -> { this.setFile(n.getObjectValue(AgreementFile::createFromDiscriminatorValue)); });
+        deserializerMap.put("files", (n) -> { this.setFiles(n.getCollectionOfObjectValues(AgreementFileLocalization::createFromDiscriminatorValue)); });
+        deserializerMap.put("isPerDeviceAcceptanceRequired", (n) -> { this.setIsPerDeviceAcceptanceRequired(n.getBooleanValue()); });
+        deserializerMap.put("isViewingBeforeAcceptanceRequired", (n) -> { this.setIsViewingBeforeAcceptanceRequired(n.getBooleanValue()); });
+        deserializerMap.put("termsExpiration", (n) -> { this.setTermsExpiration(n.getObjectValue(TermsExpiration::createFromDiscriminatorValue)); });
+        deserializerMap.put("userReacceptRequiredFrequency", (n) -> { this.setUserReacceptRequiredFrequency(n.getPeriodValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the file property value. Default PDF linked to this agreement.

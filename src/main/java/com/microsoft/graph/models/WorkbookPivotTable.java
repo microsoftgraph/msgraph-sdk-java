@@ -20,7 +20,6 @@ public class WorkbookPivotTable extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookPivotTable() {
         super();
-        this.setOdataType("#microsoft.graph.workbookPivotTable");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -38,11 +37,10 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookPivotTable currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("worksheet", (n) -> { currentObject.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("worksheet", (n) -> { this.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. Name of the PivotTable.

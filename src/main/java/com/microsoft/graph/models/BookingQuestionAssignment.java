@@ -24,7 +24,6 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public BookingQuestionAssignment() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bookingQuestionAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BookingQuestionAssignment currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("isRequired", (n) -> { currentObject.setIsRequired(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("questionId", (n) -> { currentObject.setQuestionId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("isRequired", (n) -> { this.setIsRequired(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("questionId", (n) -> { this.setQuestionId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isRequired property value. The ID of the custom question.

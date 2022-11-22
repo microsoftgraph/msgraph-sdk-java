@@ -32,7 +32,6 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TeamMemberSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamMemberSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -106,16 +105,15 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamMemberSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("allowAddRemoveApps", (n) -> { currentObject.setAllowAddRemoveApps(n.getBooleanValue()); });
-            this.put("allowCreatePrivateChannels", (n) -> { currentObject.setAllowCreatePrivateChannels(n.getBooleanValue()); });
-            this.put("allowCreateUpdateChannels", (n) -> { currentObject.setAllowCreateUpdateChannels(n.getBooleanValue()); });
-            this.put("allowCreateUpdateRemoveConnectors", (n) -> { currentObject.setAllowCreateUpdateRemoveConnectors(n.getBooleanValue()); });
-            this.put("allowCreateUpdateRemoveTabs", (n) -> { currentObject.setAllowCreateUpdateRemoveTabs(n.getBooleanValue()); });
-            this.put("allowDeleteChannels", (n) -> { currentObject.setAllowDeleteChannels(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("allowAddRemoveApps", (n) -> { this.setAllowAddRemoveApps(n.getBooleanValue()); });
+        deserializerMap.put("allowCreatePrivateChannels", (n) -> { this.setAllowCreatePrivateChannels(n.getBooleanValue()); });
+        deserializerMap.put("allowCreateUpdateChannels", (n) -> { this.setAllowCreateUpdateChannels(n.getBooleanValue()); });
+        deserializerMap.put("allowCreateUpdateRemoveConnectors", (n) -> { this.setAllowCreateUpdateRemoveConnectors(n.getBooleanValue()); });
+        deserializerMap.put("allowCreateUpdateRemoveTabs", (n) -> { this.setAllowCreateUpdateRemoveTabs(n.getBooleanValue()); });
+        deserializerMap.put("allowDeleteChannels", (n) -> { this.setAllowDeleteChannels(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

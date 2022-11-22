@@ -27,7 +27,6 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public UploadSession() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.uploadSession");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,13 +60,12 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UploadSession currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("nextExpectedRanges", (n) -> { currentObject.setNextExpectedRanges(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("uploadUrl", (n) -> { currentObject.setUploadUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("nextExpectedRanges", (n) -> { this.setNextExpectedRanges(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("uploadUrl", (n) -> { this.setUploadUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the nextExpectedRanges property value. A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format 'start-end' (e.g. '0-26' to indicate the first 27 bytes of the file). When uploading files as Outlook attachments, instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file where the next upload should begin.

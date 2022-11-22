@@ -26,7 +26,6 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ResultInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.resultInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,13 +59,12 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ResultInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("code", (n) -> { currentObject.setCode(n.getIntegerValue()); });
-            this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("subcode", (n) -> { currentObject.setSubcode(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("code", (n) -> { this.setCode(n.getIntegerValue()); });
+        deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("subcode", (n) -> { this.setSubcode(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the message property value. The message.

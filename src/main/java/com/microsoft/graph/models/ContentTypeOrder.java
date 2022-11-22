@@ -24,7 +24,6 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ContentTypeOrder() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.contentTypeOrder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,12 +57,11 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ContentTypeOrder currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("default", (n) -> { currentObject.setDefault(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("position", (n) -> { currentObject.setPosition(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("default", (n) -> { this.setDefault(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("position", (n) -> { this.setPosition(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

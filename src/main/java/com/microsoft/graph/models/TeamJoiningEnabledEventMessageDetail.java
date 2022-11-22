@@ -37,11 +37,10 @@ public class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail imp
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamJoiningEnabledEventMessageDetail currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("teamId", (n) -> { this.setTeamId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the initiator property value. Initiator of the event.

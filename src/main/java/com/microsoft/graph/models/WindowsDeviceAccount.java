@@ -24,7 +24,6 @@ public class WindowsDeviceAccount implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public WindowsDeviceAccount() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsDeviceAccount");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,11 +57,10 @@ public class WindowsDeviceAccount implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsDeviceAccount currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("password", (n) -> { this.setPassword(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

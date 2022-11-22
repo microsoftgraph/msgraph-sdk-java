@@ -27,7 +27,6 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TraceRouteHop() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.traceRouteHop");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,13 +52,12 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TraceRouteHop currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("hopCount", (n) -> { currentObject.setHopCount(n.getIntegerValue()); });
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("roundTripTime", (n) -> { currentObject.setRoundTripTime(n.getPeriodValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("hopCount", (n) -> { this.setHopCount(n.getIntegerValue()); });
+        deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("roundTripTime", (n) -> { this.setRoundTripTime(n.getPeriodValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hopCount property value. The network path count of this hop that was used to compute the RTT.

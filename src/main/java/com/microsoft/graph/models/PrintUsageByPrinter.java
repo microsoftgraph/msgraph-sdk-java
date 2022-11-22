@@ -35,10 +35,9 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrintUsageByPrinter currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("printerId", (n) -> { currentObject.setPrinterId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("printerId", (n) -> { this.setPrinterId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the printerId property value. The printerId property

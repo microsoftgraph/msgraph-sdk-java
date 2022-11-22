@@ -46,10 +46,9 @@ public class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUser
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameResponse currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("value", (n) -> { this.setValue(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The value property

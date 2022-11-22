@@ -28,7 +28,6 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TeamsTabConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamsTabConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,14 +69,13 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamsTabConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("contentUrl", (n) -> { currentObject.setContentUrl(n.getStringValue()); });
-            this.put("entityId", (n) -> { currentObject.setEntityId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("removeUrl", (n) -> { currentObject.setRemoveUrl(n.getStringValue()); });
-            this.put("websiteUrl", (n) -> { currentObject.setWebsiteUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("contentUrl", (n) -> { this.setContentUrl(n.getStringValue()); });
+        deserializerMap.put("entityId", (n) -> { this.setEntityId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("removeUrl", (n) -> { this.setRemoveUrl(n.getStringValue()); });
+        deserializerMap.put("websiteUrl", (n) -> { this.setWebsiteUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

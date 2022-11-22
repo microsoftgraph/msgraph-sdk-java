@@ -154,33 +154,32 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Device currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("accountEnabled", (n) -> { currentObject.setAccountEnabled(n.getBooleanValue()); });
-            this.put("alternativeSecurityIds", (n) -> { currentObject.setAlternativeSecurityIds(n.getCollectionOfObjectValues(AlternativeSecurityId::createFromDiscriminatorValue)); });
-            this.put("approximateLastSignInDateTime", (n) -> { currentObject.setApproximateLastSignInDateTime(n.getOffsetDateTimeValue()); });
-            this.put("complianceExpirationDateTime", (n) -> { currentObject.setComplianceExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("deviceMetadata", (n) -> { currentObject.setDeviceMetadata(n.getStringValue()); });
-            this.put("deviceVersion", (n) -> { currentObject.setDeviceVersion(n.getIntegerValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("isCompliant", (n) -> { currentObject.setIsCompliant(n.getBooleanValue()); });
-            this.put("isManaged", (n) -> { currentObject.setIsManaged(n.getBooleanValue()); });
-            this.put("mdmAppId", (n) -> { currentObject.setMdmAppId(n.getStringValue()); });
-            this.put("memberOf", (n) -> { currentObject.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("onPremisesLastSyncDateTime", (n) -> { currentObject.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("onPremisesSyncEnabled", (n) -> { currentObject.setOnPremisesSyncEnabled(n.getBooleanValue()); });
-            this.put("operatingSystem", (n) -> { currentObject.setOperatingSystem(n.getStringValue()); });
-            this.put("operatingSystemVersion", (n) -> { currentObject.setOperatingSystemVersion(n.getStringValue()); });
-            this.put("physicalIds", (n) -> { currentObject.setPhysicalIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("profileType", (n) -> { currentObject.setProfileType(n.getStringValue()); });
-            this.put("registeredOwners", (n) -> { currentObject.setRegisteredOwners(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("registeredUsers", (n) -> { currentObject.setRegisteredUsers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("systemLabels", (n) -> { currentObject.setSystemLabels(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("transitiveMemberOf", (n) -> { currentObject.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("trustType", (n) -> { currentObject.setTrustType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountEnabled", (n) -> { this.setAccountEnabled(n.getBooleanValue()); });
+        deserializerMap.put("alternativeSecurityIds", (n) -> { this.setAlternativeSecurityIds(n.getCollectionOfObjectValues(AlternativeSecurityId::createFromDiscriminatorValue)); });
+        deserializerMap.put("approximateLastSignInDateTime", (n) -> { this.setApproximateLastSignInDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("complianceExpirationDateTime", (n) -> { this.setComplianceExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("deviceMetadata", (n) -> { this.setDeviceMetadata(n.getStringValue()); });
+        deserializerMap.put("deviceVersion", (n) -> { this.setDeviceVersion(n.getIntegerValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("isCompliant", (n) -> { this.setIsCompliant(n.getBooleanValue()); });
+        deserializerMap.put("isManaged", (n) -> { this.setIsManaged(n.getBooleanValue()); });
+        deserializerMap.put("mdmAppId", (n) -> { this.setMdmAppId(n.getStringValue()); });
+        deserializerMap.put("memberOf", (n) -> { this.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremisesLastSyncDateTime", (n) -> { this.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("onPremisesSyncEnabled", (n) -> { this.setOnPremisesSyncEnabled(n.getBooleanValue()); });
+        deserializerMap.put("operatingSystem", (n) -> { this.setOperatingSystem(n.getStringValue()); });
+        deserializerMap.put("operatingSystemVersion", (n) -> { this.setOperatingSystemVersion(n.getStringValue()); });
+        deserializerMap.put("physicalIds", (n) -> { this.setPhysicalIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("profileType", (n) -> { this.setProfileType(n.getStringValue()); });
+        deserializerMap.put("registeredOwners", (n) -> { this.setRegisteredOwners(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("registeredUsers", (n) -> { this.setRegisteredUsers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("systemLabels", (n) -> { this.setSystemLabels(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("transitiveMemberOf", (n) -> { this.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("trustType", (n) -> { this.setTrustType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isCompliant property value. true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not).

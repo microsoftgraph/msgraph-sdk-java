@@ -12,7 +12,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class DomainDnsRecord extends Entity implements Parsable {
     /** If false, this record must be configured by the customer at the DNS host for Microsoft Online Services to operate correctly with the domain. */
     private Boolean _isOptional;
@@ -31,7 +31,6 @@ public class DomainDnsRecord extends Entity implements Parsable {
     @javax.annotation.Nullable
     public DomainDnsRecord() {
         super();
-        this.setOdataType("#microsoft.graph.domainDnsRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,14 +59,13 @@ public class DomainDnsRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DomainDnsRecord currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("isOptional", (n) -> { currentObject.setIsOptional(n.getBooleanValue()); });
-            this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
-            this.put("recordType", (n) -> { currentObject.setRecordType(n.getStringValue()); });
-            this.put("supportedService", (n) -> { currentObject.setSupportedService(n.getStringValue()); });
-            this.put("ttl", (n) -> { currentObject.setTtl(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isOptional", (n) -> { this.setIsOptional(n.getBooleanValue()); });
+        deserializerMap.put("label", (n) -> { this.setLabel(n.getStringValue()); });
+        deserializerMap.put("recordType", (n) -> { this.setRecordType(n.getStringValue()); });
+        deserializerMap.put("supportedService", (n) -> { this.setSupportedService(n.getStringValue()); });
+        deserializerMap.put("ttl", (n) -> { this.setTtl(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isOptional property value. If false, this record must be configured by the customer at the DNS host for Microsoft Online Services to operate correctly with the domain.

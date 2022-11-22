@@ -26,7 +26,6 @@ public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public CloudAppSecurityState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.cloudAppSecurityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,13 +67,12 @@ public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudAppSecurityState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("destinationServiceIp", (n) -> { currentObject.setDestinationServiceIp(n.getStringValue()); });
-            this.put("destinationServiceName", (n) -> { currentObject.setDestinationServiceName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("destinationServiceIp", (n) -> { this.setDestinationServiceIp(n.getStringValue()); });
+        deserializerMap.put("destinationServiceName", (n) -> { this.setDestinationServiceName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("riskScore", (n) -> { this.setRiskScore(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

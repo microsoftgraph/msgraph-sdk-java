@@ -33,7 +33,6 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookRangeFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookRangeFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,18 +66,17 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookRangeFormat currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("borders", (n) -> { currentObject.setBorders(n.getCollectionOfObjectValues(WorkbookRangeBorder::createFromDiscriminatorValue)); });
-            this.put("columnWidth", (n) -> { currentObject.setColumnWidth(n.getDoubleValue()); });
-            this.put("fill", (n) -> { currentObject.setFill(n.getObjectValue(WorkbookRangeFill::createFromDiscriminatorValue)); });
-            this.put("font", (n) -> { currentObject.setFont(n.getObjectValue(WorkbookRangeFont::createFromDiscriminatorValue)); });
-            this.put("horizontalAlignment", (n) -> { currentObject.setHorizontalAlignment(n.getStringValue()); });
-            this.put("protection", (n) -> { currentObject.setProtection(n.getObjectValue(WorkbookFormatProtection::createFromDiscriminatorValue)); });
-            this.put("rowHeight", (n) -> { currentObject.setRowHeight(n.getDoubleValue()); });
-            this.put("verticalAlignment", (n) -> { currentObject.setVerticalAlignment(n.getStringValue()); });
-            this.put("wrapText", (n) -> { currentObject.setWrapText(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("borders", (n) -> { this.setBorders(n.getCollectionOfObjectValues(WorkbookRangeBorder::createFromDiscriminatorValue)); });
+        deserializerMap.put("columnWidth", (n) -> { this.setColumnWidth(n.getDoubleValue()); });
+        deserializerMap.put("fill", (n) -> { this.setFill(n.getObjectValue(WorkbookRangeFill::createFromDiscriminatorValue)); });
+        deserializerMap.put("font", (n) -> { this.setFont(n.getObjectValue(WorkbookRangeFont::createFromDiscriminatorValue)); });
+        deserializerMap.put("horizontalAlignment", (n) -> { this.setHorizontalAlignment(n.getStringValue()); });
+        deserializerMap.put("protection", (n) -> { this.setProtection(n.getObjectValue(WorkbookFormatProtection::createFromDiscriminatorValue)); });
+        deserializerMap.put("rowHeight", (n) -> { this.setRowHeight(n.getDoubleValue()); });
+        deserializerMap.put("verticalAlignment", (n) -> { this.setVerticalAlignment(n.getStringValue()); });
+        deserializerMap.put("wrapText", (n) -> { this.setWrapText(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fill property value. Returns the fill object defined on the overall range. Read-only.

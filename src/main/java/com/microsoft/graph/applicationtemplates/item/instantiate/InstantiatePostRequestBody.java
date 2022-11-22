@@ -54,10 +54,9 @@ public class InstantiatePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final InstantiatePostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

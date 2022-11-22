@@ -24,7 +24,6 @@ public class FailureInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public FailureInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.failureInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class FailureInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final FailureInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
-            this.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(FailureStage.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("reason", (n) -> { this.setReason(n.getStringValue()); });
+        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(FailureStage.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

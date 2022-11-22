@@ -22,7 +22,6 @@ public class PrintTaskDefinition extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PrintTaskDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.printTaskDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,12 +55,11 @@ public class PrintTaskDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrintTaskDefinition currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(AppIdentity::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(PrintTask::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(AppIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(PrintTask::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the tasks property value. A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.

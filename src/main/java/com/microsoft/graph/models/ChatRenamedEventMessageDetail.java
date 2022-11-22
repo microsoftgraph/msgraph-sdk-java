@@ -55,12 +55,11 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ChatRenamedEventMessageDetail currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("chatDisplayName", (n) -> { currentObject.setChatDisplayName(n.getStringValue()); });
-            this.put("chatId", (n) -> { currentObject.setChatId(n.getStringValue()); });
-            this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("chatDisplayName", (n) -> { this.setChatDisplayName(n.getStringValue()); });
+        deserializerMap.put("chatId", (n) -> { this.setChatId(n.getStringValue()); });
+        deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the initiator property value. Initiator of the event.

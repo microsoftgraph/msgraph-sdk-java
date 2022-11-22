@@ -15,7 +15,7 @@ public class PlannerPlanContainer implements AdditionalDataHolder, Parsable {
     private String _containerId;
     /** The OdataType property */
     private String _odataType;
-    /** The type property */
+    /** The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. */
     private PlannerContainerType _type;
     /** The full canonical URL of the container. */
     private String _url;
@@ -26,7 +26,6 @@ public class PlannerPlanContainer implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PlannerPlanContainer() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.plannerPlanContainer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,13 +59,12 @@ public class PlannerPlanContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerPlanContainer currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("containerId", (n) -> { currentObject.setContainerId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(PlannerContainerType.class)); });
-            this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("containerId", (n) -> { this.setContainerId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PlannerContainerType.class)); });
+        deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -77,7 +75,7 @@ public class PlannerPlanContainer implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster.
      * @return a plannerContainerType
      */
     @javax.annotation.Nullable
@@ -134,7 +132,7 @@ public class PlannerPlanContainer implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster.
      * @param value Value to set for the type property.
      * @return a void
      */

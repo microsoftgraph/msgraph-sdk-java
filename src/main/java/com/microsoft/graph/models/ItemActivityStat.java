@@ -36,7 +36,6 @@ public class ItemActivityStat extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ItemActivityStat() {
         super();
-        this.setOdataType("#microsoft.graph.itemActivityStat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -102,19 +101,18 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ItemActivityStat currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("access", (n) -> { currentObject.setAccess(n.getObjectValue(ItemActionStat::createFromDiscriminatorValue)); });
-            this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfObjectValues(ItemActivity::createFromDiscriminatorValue)); });
-            this.put("create", (n) -> { currentObject.setCreate(n.getObjectValue(ItemActionStat::createFromDiscriminatorValue)); });
-            this.put("delete", (n) -> { currentObject.setDelete(n.getObjectValue(ItemActionStat::createFromDiscriminatorValue)); });
-            this.put("edit", (n) -> { currentObject.setEdit(n.getObjectValue(ItemActionStat::createFromDiscriminatorValue)); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("incompleteData", (n) -> { currentObject.setIncompleteData(n.getObjectValue(IncompleteData::createFromDiscriminatorValue)); });
-            this.put("isTrending", (n) -> { currentObject.setIsTrending(n.getBooleanValue()); });
-            this.put("move", (n) -> { currentObject.setMove(n.getObjectValue(ItemActionStat::createFromDiscriminatorValue)); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("access", (n) -> { this.setAccess(n.getObjectValue(ItemActionStat::createFromDiscriminatorValue)); });
+        deserializerMap.put("activities", (n) -> { this.setActivities(n.getCollectionOfObjectValues(ItemActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("create", (n) -> { this.setCreate(n.getObjectValue(ItemActionStat::createFromDiscriminatorValue)); });
+        deserializerMap.put("delete", (n) -> { this.setDelete(n.getObjectValue(ItemActionStat::createFromDiscriminatorValue)); });
+        deserializerMap.put("edit", (n) -> { this.setEdit(n.getObjectValue(ItemActionStat::createFromDiscriminatorValue)); });
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("incompleteData", (n) -> { this.setIncompleteData(n.getObjectValue(IncompleteData::createFromDiscriminatorValue)); });
+        deserializerMap.put("isTrending", (n) -> { this.setIsTrending(n.getBooleanValue()); });
+        deserializerMap.put("move", (n) -> { this.setMove(n.getObjectValue(ItemActionStat::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the incompleteData property value. Indicates that the statistics in this interval are based on incomplete data. Read-only.

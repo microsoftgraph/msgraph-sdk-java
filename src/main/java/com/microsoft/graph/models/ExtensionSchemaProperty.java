@@ -24,7 +24,6 @@ public class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ExtensionSchemaProperty() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.extensionSchemaProperty");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExtensionSchemaProperty currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. The name of the strongly-typed property defined as part of a schema extension.

@@ -50,11 +50,10 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TransferPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("transferee", (n) -> { currentObject.setTransferee(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
-            this.put("transferTarget", (n) -> { currentObject.setTransferTarget(n.getObjectValue(InvitationParticipantInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("transferee", (n) -> { this.setTransferee(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("transferTarget", (n) -> { this.setTransferTarget(n.getObjectValue(InvitationParticipantInfo::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the transferee property value. The transferee property

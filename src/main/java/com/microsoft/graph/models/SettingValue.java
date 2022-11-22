@@ -24,7 +24,6 @@ public class SettingValue implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SettingValue() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.settingValue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class SettingValue implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SettingValue currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. Name of the setting (as defined by the groupSettingTemplate).

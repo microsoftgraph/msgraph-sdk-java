@@ -25,7 +25,6 @@ public class BookingWorkHours implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public BookingWorkHours() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bookingWorkHours");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,12 +58,11 @@ public class BookingWorkHours implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BookingWorkHours currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("day", (n) -> { currentObject.setDay(n.getEnumValue(DayOfWeek.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("timeSlots", (n) -> { currentObject.setTimeSlots(n.getCollectionOfObjectValues(BookingWorkTimeSlot::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("day", (n) -> { this.setDay(n.getEnumValue(DayOfWeek.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("timeSlots", (n) -> { this.setTimeSlots(n.getCollectionOfObjectValues(BookingWorkTimeSlot::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

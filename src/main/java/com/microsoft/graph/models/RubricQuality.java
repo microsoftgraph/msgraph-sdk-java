@@ -30,7 +30,6 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RubricQuality() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.rubricQuality");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -80,15 +79,14 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RubricQuality currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("criteria", (n) -> { currentObject.setCriteria(n.getCollectionOfObjectValues(RubricCriterion::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("qualityId", (n) -> { currentObject.setQualityId(n.getStringValue()); });
-            this.put("weight", (n) -> { currentObject.setWeight(n.getFloatValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("criteria", (n) -> { this.setCriteria(n.getCollectionOfObjectValues(RubricCriterion::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("qualityId", (n) -> { this.setQualityId(n.getStringValue()); });
+        deserializerMap.put("weight", (n) -> { this.setWeight(n.getFloatValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

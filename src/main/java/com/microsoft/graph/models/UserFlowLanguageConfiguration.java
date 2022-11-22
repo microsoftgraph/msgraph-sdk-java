@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class UserFlowLanguageConfiguration extends Entity implements Parsable {
     /** Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification. */
     private java.util.List<UserFlowLanguagePage> _defaultPages;
@@ -24,7 +24,6 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
     @javax.annotation.Nullable
     public UserFlowLanguageConfiguration() {
         super();
-        this.setOdataType("#microsoft.graph.userFlowLanguageConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,13 +57,12 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserFlowLanguageConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("defaultPages", (n) -> { currentObject.setDefaultPages(n.getCollectionOfObjectValues(UserFlowLanguagePage::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("overridesPages", (n) -> { currentObject.setOverridesPages(n.getCollectionOfObjectValues(UserFlowLanguagePage::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultPages", (n) -> { this.setDefaultPages(n.getCollectionOfObjectValues(UserFlowLanguagePage::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("overridesPages", (n) -> { this.setOverridesPages(n.getCollectionOfObjectValues(UserFlowLanguagePage::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnabled property value. Indicates whether the language is enabled within the user flow.

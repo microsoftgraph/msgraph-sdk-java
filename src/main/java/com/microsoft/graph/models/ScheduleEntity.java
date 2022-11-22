@@ -30,7 +30,6 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ScheduleEntity() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.scheduleEntity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,13 +72,12 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ScheduleEntity currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("theme", (n) -> { currentObject.setTheme(n.getEnumValue(ScheduleEntityTheme.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("theme", (n) -> { this.setTheme(n.getEnumValue(ScheduleEntityTheme.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

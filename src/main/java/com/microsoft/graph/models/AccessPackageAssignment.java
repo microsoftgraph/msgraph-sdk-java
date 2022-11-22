@@ -30,7 +30,6 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AccessPackageAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.accessPackageAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,16 +71,15 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessPackageAssignment currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("accessPackage", (n) -> { currentObject.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
-            this.put("assignmentPolicy", (n) -> { currentObject.setAssignmentPolicy(n.getObjectValue(AccessPackageAssignmentPolicy::createFromDiscriminatorValue)); });
-            this.put("expiredDateTime", (n) -> { currentObject.setExpiredDateTime(n.getOffsetDateTimeValue()); });
-            this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(EntitlementManagementSchedule::createFromDiscriminatorValue)); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(AccessPackageAssignmentState.class)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessPackage", (n) -> { this.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignmentPolicy", (n) -> { this.setAssignmentPolicy(n.getObjectValue(AccessPackageAssignmentPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("expiredDateTime", (n) -> { this.setExpiredDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(EntitlementManagementSchedule::createFromDiscriminatorValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AccessPackageAssignmentState.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
+        deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the schedule property value. When the access assignment is to be in place. Read-only.

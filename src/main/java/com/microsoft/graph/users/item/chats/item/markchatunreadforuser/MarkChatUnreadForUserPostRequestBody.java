@@ -50,11 +50,10 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MarkChatUnreadForUserPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("lastMessageReadDateTime", (n) -> { currentObject.setLastMessageReadDateTime(n.getOffsetDateTimeValue()); });
-            this.put("user", (n) -> { currentObject.setUser(n.getObjectValue(TeamworkUserIdentity::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("lastMessageReadDateTime", (n) -> { this.setLastMessageReadDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("user", (n) -> { this.setUser(n.getObjectValue(TeamworkUserIdentity::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastMessageReadDateTime property value. The lastMessageReadDateTime property

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class SecureScoreControlProfile extends Entity implements Parsable {
     /** Control action type (Config, Review, Behavior). */
     private String _actionType;
@@ -55,7 +55,6 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     @javax.annotation.Nullable
     public SecureScoreControlProfile() {
         super();
-        this.setOdataType("#microsoft.graph.secureScoreControlProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -129,28 +128,27 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SecureScoreControlProfile currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("actionType", (n) -> { currentObject.setActionType(n.getStringValue()); });
-            this.put("actionUrl", (n) -> { currentObject.setActionUrl(n.getStringValue()); });
-            this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
-            this.put("complianceInformation", (n) -> { currentObject.setComplianceInformation(n.getCollectionOfObjectValues(ComplianceInformation::createFromDiscriminatorValue)); });
-            this.put("controlCategory", (n) -> { currentObject.setControlCategory(n.getStringValue()); });
-            this.put("controlStateUpdates", (n) -> { currentObject.setControlStateUpdates(n.getCollectionOfObjectValues(SecureScoreControlStateUpdate::createFromDiscriminatorValue)); });
-            this.put("deprecated", (n) -> { currentObject.setDeprecated(n.getBooleanValue()); });
-            this.put("implementationCost", (n) -> { currentObject.setImplementationCost(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("maxScore", (n) -> { currentObject.setMaxScore(n.getDoubleValue()); });
-            this.put("rank", (n) -> { currentObject.setRank(n.getIntegerValue()); });
-            this.put("remediation", (n) -> { currentObject.setRemediation(n.getStringValue()); });
-            this.put("remediationImpact", (n) -> { currentObject.setRemediationImpact(n.getStringValue()); });
-            this.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
-            this.put("threats", (n) -> { currentObject.setThreats(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("tier", (n) -> { currentObject.setTier(n.getStringValue()); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-            this.put("userImpact", (n) -> { currentObject.setUserImpact(n.getStringValue()); });
-            this.put("vendorInformation", (n) -> { currentObject.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("actionType", (n) -> { this.setActionType(n.getStringValue()); });
+        deserializerMap.put("actionUrl", (n) -> { this.setActionUrl(n.getStringValue()); });
+        deserializerMap.put("azureTenantId", (n) -> { this.setAzureTenantId(n.getStringValue()); });
+        deserializerMap.put("complianceInformation", (n) -> { this.setComplianceInformation(n.getCollectionOfObjectValues(ComplianceInformation::createFromDiscriminatorValue)); });
+        deserializerMap.put("controlCategory", (n) -> { this.setControlCategory(n.getStringValue()); });
+        deserializerMap.put("controlStateUpdates", (n) -> { this.setControlStateUpdates(n.getCollectionOfObjectValues(SecureScoreControlStateUpdate::createFromDiscriminatorValue)); });
+        deserializerMap.put("deprecated", (n) -> { this.setDeprecated(n.getBooleanValue()); });
+        deserializerMap.put("implementationCost", (n) -> { this.setImplementationCost(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("maxScore", (n) -> { this.setMaxScore(n.getDoubleValue()); });
+        deserializerMap.put("rank", (n) -> { this.setRank(n.getIntegerValue()); });
+        deserializerMap.put("remediation", (n) -> { this.setRemediation(n.getStringValue()); });
+        deserializerMap.put("remediationImpact", (n) -> { this.setRemediationImpact(n.getStringValue()); });
+        deserializerMap.put("service", (n) -> { this.setService(n.getStringValue()); });
+        deserializerMap.put("threats", (n) -> { this.setThreats(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("tier", (n) -> { this.setTier(n.getStringValue()); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
+        deserializerMap.put("userImpact", (n) -> { this.setUserImpact(n.getStringValue()); });
+        deserializerMap.put("vendorInformation", (n) -> { this.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the implementationCost property value. Resource cost of implemmentating control (low, moderate, high).

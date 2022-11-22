@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class OnlineMeeting extends Entity implements Parsable {
     /** Indicates whether attendees can turn on their camera. */
     private Boolean _allowAttendeeToEnableCamera;
@@ -63,7 +63,6 @@ public class OnlineMeeting extends Entity implements Parsable {
     @javax.annotation.Nullable
     public OnlineMeeting() {
         super();
-        this.setOdataType("#microsoft.graph.onlineMeeting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -185,32 +184,31 @@ public class OnlineMeeting extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OnlineMeeting currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("allowAttendeeToEnableCamera", (n) -> { currentObject.setAllowAttendeeToEnableCamera(n.getBooleanValue()); });
-            this.put("allowAttendeeToEnableMic", (n) -> { currentObject.setAllowAttendeeToEnableMic(n.getBooleanValue()); });
-            this.put("allowedPresenters", (n) -> { currentObject.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters.class)); });
-            this.put("allowMeetingChat", (n) -> { currentObject.setAllowMeetingChat(n.getEnumValue(MeetingChatMode.class)); });
-            this.put("allowTeamworkReactions", (n) -> { currentObject.setAllowTeamworkReactions(n.getBooleanValue()); });
-            this.put("attendanceReports", (n) -> { currentObject.setAttendanceReports(n.getCollectionOfObjectValues(MeetingAttendanceReport::createFromDiscriminatorValue)); });
-            this.put("attendeeReport", (n) -> { currentObject.setAttendeeReport(n.getByteArrayValue()); });
-            this.put("audioConferencing", (n) -> { currentObject.setAudioConferencing(n.getObjectValue(AudioConferencing::createFromDiscriminatorValue)); });
-            this.put("broadcastSettings", (n) -> { currentObject.setBroadcastSettings(n.getObjectValue(BroadcastMeetingSettings::createFromDiscriminatorValue)); });
-            this.put("chatInfo", (n) -> { currentObject.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
-            this.put("creationDateTime", (n) -> { currentObject.setCreationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
-            this.put("isBroadcast", (n) -> { currentObject.setIsBroadcast(n.getBooleanValue()); });
-            this.put("isEntryExitAnnounced", (n) -> { currentObject.setIsEntryExitAnnounced(n.getBooleanValue()); });
-            this.put("joinInformation", (n) -> { currentObject.setJoinInformation(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("joinWebUrl", (n) -> { currentObject.setJoinWebUrl(n.getStringValue()); });
-            this.put("lobbyBypassSettings", (n) -> { currentObject.setLobbyBypassSettings(n.getObjectValue(LobbyBypassSettings::createFromDiscriminatorValue)); });
-            this.put("participants", (n) -> { currentObject.setParticipants(n.getObjectValue(MeetingParticipants::createFromDiscriminatorValue)); });
-            this.put("recordAutomatically", (n) -> { currentObject.setRecordAutomatically(n.getBooleanValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
-            this.put("videoTeleconferenceId", (n) -> { currentObject.setVideoTeleconferenceId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowAttendeeToEnableCamera", (n) -> { this.setAllowAttendeeToEnableCamera(n.getBooleanValue()); });
+        deserializerMap.put("allowAttendeeToEnableMic", (n) -> { this.setAllowAttendeeToEnableMic(n.getBooleanValue()); });
+        deserializerMap.put("allowedPresenters", (n) -> { this.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters.class)); });
+        deserializerMap.put("allowMeetingChat", (n) -> { this.setAllowMeetingChat(n.getEnumValue(MeetingChatMode.class)); });
+        deserializerMap.put("allowTeamworkReactions", (n) -> { this.setAllowTeamworkReactions(n.getBooleanValue()); });
+        deserializerMap.put("attendanceReports", (n) -> { this.setAttendanceReports(n.getCollectionOfObjectValues(MeetingAttendanceReport::createFromDiscriminatorValue)); });
+        deserializerMap.put("attendeeReport", (n) -> { this.setAttendeeReport(n.getByteArrayValue()); });
+        deserializerMap.put("audioConferencing", (n) -> { this.setAudioConferencing(n.getObjectValue(AudioConferencing::createFromDiscriminatorValue)); });
+        deserializerMap.put("broadcastSettings", (n) -> { this.setBroadcastSettings(n.getObjectValue(BroadcastMeetingSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("chatInfo", (n) -> { this.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("creationDateTime", (n) -> { this.setCreationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
+        deserializerMap.put("isBroadcast", (n) -> { this.setIsBroadcast(n.getBooleanValue()); });
+        deserializerMap.put("isEntryExitAnnounced", (n) -> { this.setIsEntryExitAnnounced(n.getBooleanValue()); });
+        deserializerMap.put("joinInformation", (n) -> { this.setJoinInformation(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("joinWebUrl", (n) -> { this.setJoinWebUrl(n.getStringValue()); });
+        deserializerMap.put("lobbyBypassSettings", (n) -> { this.setLobbyBypassSettings(n.getObjectValue(LobbyBypassSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("participants", (n) -> { this.setParticipants(n.getObjectValue(MeetingParticipants::createFromDiscriminatorValue)); });
+        deserializerMap.put("recordAutomatically", (n) -> { this.setRecordAutomatically(n.getBooleanValue()); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
+        deserializerMap.put("videoTeleconferenceId", (n) -> { this.setVideoTeleconferenceId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isBroadcast property value. Indicates if this is a Teams live event.

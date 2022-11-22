@@ -26,7 +26,6 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public UserFeedback() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.userFeedback");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,13 +51,12 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserFeedback currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("rating", (n) -> { currentObject.setRating(n.getEnumValue(UserFeedbackRating.class)); });
-            this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
-            this.put("tokens", (n) -> { currentObject.setTokens(n.getObjectValue(FeedbackTokenSet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("rating", (n) -> { this.setRating(n.getEnumValue(UserFeedbackRating.class)); });
+        deserializerMap.put("text", (n) -> { this.setText(n.getStringValue()); });
+        deserializerMap.put("tokens", (n) -> { this.setTokens(n.getObjectValue(FeedbackTokenSet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

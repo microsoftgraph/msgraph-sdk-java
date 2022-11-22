@@ -26,7 +26,6 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AlternativeSecurityId() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.alternativeSecurityId");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,13 +51,12 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AlternativeSecurityId currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("identityProvider", (n) -> { currentObject.setIdentityProvider(n.getStringValue()); });
-            this.put("key", (n) -> { currentObject.setKey(n.getByteArrayValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("identityProvider", (n) -> { this.setIdentityProvider(n.getStringValue()); });
+        deserializerMap.put("key", (n) -> { this.setKey(n.getByteArrayValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the identityProvider property value. For internal use only

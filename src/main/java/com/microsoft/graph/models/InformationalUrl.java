@@ -30,7 +30,6 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public InformationalUrl() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.informationalUrl");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,15 +55,14 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final InformationalUrl currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("logoUrl", (n) -> { currentObject.setLogoUrl(n.getStringValue()); });
-            this.put("marketingUrl", (n) -> { currentObject.setMarketingUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("privacyStatementUrl", (n) -> { currentObject.setPrivacyStatementUrl(n.getStringValue()); });
-            this.put("supportUrl", (n) -> { currentObject.setSupportUrl(n.getStringValue()); });
-            this.put("termsOfServiceUrl", (n) -> { currentObject.setTermsOfServiceUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("logoUrl", (n) -> { this.setLogoUrl(n.getStringValue()); });
+        deserializerMap.put("marketingUrl", (n) -> { this.setMarketingUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("privacyStatementUrl", (n) -> { this.setPrivacyStatementUrl(n.getStringValue()); });
+        deserializerMap.put("supportUrl", (n) -> { this.setSupportUrl(n.getStringValue()); });
+        deserializerMap.put("termsOfServiceUrl", (n) -> { this.setTermsOfServiceUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the logoUrl property value. CDN URL to the application's logo, Read-only.

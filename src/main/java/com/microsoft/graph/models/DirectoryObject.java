@@ -36,6 +36,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreement entities. */
 public class DirectoryObject extends Entity implements Parsable {
     /** Date and time when this object was deleted. Always null when the object hasn't been deleted. */
     private OffsetDateTime _deletedDateTime;
@@ -46,7 +47,6 @@ public class DirectoryObject extends Entity implements Parsable {
     @javax.annotation.Nullable
     public DirectoryObject() {
         super();
-        this.setOdataType("#microsoft.graph.directoryObject");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -106,10 +106,9 @@ public class DirectoryObject extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DirectoryObject currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("deletedDateTime", (n) -> { currentObject.setDeletedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deletedDateTime", (n) -> { this.setDeletedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

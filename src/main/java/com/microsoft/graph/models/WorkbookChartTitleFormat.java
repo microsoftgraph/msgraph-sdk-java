@@ -19,7 +19,6 @@ public class WorkbookChartTitleFormat extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartTitleFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartTitleFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,11 +36,10 @@ public class WorkbookChartTitleFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookChartTitleFormat currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("fill", (n) -> { currentObject.setFill(n.getObjectValue(WorkbookChartFill::createFromDiscriminatorValue)); });
-            this.put("font", (n) -> { currentObject.setFont(n.getObjectValue(WorkbookChartFont::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fill", (n) -> { this.setFill(n.getObjectValue(WorkbookChartFill::createFromDiscriminatorValue)); });
+        deserializerMap.put("font", (n) -> { this.setFont(n.getObjectValue(WorkbookChartFont::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the fill property value. Represents the fill format of an object, which includes background formatting information. Read-only.

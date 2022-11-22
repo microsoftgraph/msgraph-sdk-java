@@ -27,7 +27,6 @@ public class PrintUsage extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PrintUsage() {
         super();
-        this.setOdataType("#microsoft.graph.printUsage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,13 +68,12 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrintUsage currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("completedBlackAndWhiteJobCount", (n) -> { currentObject.setCompletedBlackAndWhiteJobCount(n.getLongValue()); });
-            this.put("completedColorJobCount", (n) -> { currentObject.setCompletedColorJobCount(n.getLongValue()); });
-            this.put("incompleteJobCount", (n) -> { currentObject.setIncompleteJobCount(n.getLongValue()); });
-            this.put("usageDate", (n) -> { currentObject.setUsageDate(n.getLocalDateValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("completedBlackAndWhiteJobCount", (n) -> { this.setCompletedBlackAndWhiteJobCount(n.getLongValue()); });
+        deserializerMap.put("completedColorJobCount", (n) -> { this.setCompletedColorJobCount(n.getLongValue()); });
+        deserializerMap.put("incompleteJobCount", (n) -> { this.setIncompleteJobCount(n.getLongValue()); });
+        deserializerMap.put("usageDate", (n) -> { this.setUsageDate(n.getLocalDateValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the incompleteJobCount property value. The incompleteJobCount property

@@ -19,7 +19,6 @@ public class DeviceCategory extends Entity implements Parsable {
     @javax.annotation.Nullable
     public DeviceCategory() {
         super();
-        this.setOdataType("#microsoft.graph.deviceCategory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,11 +52,10 @@ public class DeviceCategory extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceCategory currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

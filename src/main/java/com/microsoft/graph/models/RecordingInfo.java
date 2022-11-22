@@ -24,7 +24,6 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RecordingInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.recordingInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RecordingInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recordingStatus", (n) -> { currentObject.setRecordingStatus(n.getEnumValue(RecordingStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recordingStatus", (n) -> { this.setRecordingStatus(n.getEnumValue(RecordingStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the initiator property value. The identities of the recording initiator.

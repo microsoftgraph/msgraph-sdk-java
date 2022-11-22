@@ -27,7 +27,6 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public WindowsMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsMinimumOperatingSystem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,13 +52,12 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsMinimumOperatingSystem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("v10_0", (n) -> { currentObject.setV10_0(n.getBooleanValue()); });
-            this.put("v8_0", (n) -> { currentObject.setV8_0(n.getBooleanValue()); });
-            this.put("v8_1", (n) -> { currentObject.setV8_1(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("v10_0", (n) -> { this.setV10_0(n.getBooleanValue()); });
+        deserializerMap.put("v8_0", (n) -> { this.setV8_0(n.getBooleanValue()); });
+        deserializerMap.put("v8_1", (n) -> { this.setV8_1(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

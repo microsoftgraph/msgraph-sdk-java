@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreement entities. */
 public class SubscribedSku extends Entity implements Parsable {
     /** For example, 'User' or 'Company'. */
     private String _appliesTo;
@@ -23,18 +24,17 @@ public class SubscribedSku extends Entity implements Parsable {
     /** The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus. */
     private String _skuPartNumber;
     /**
-     * Instantiates a new SubscribedSku and sets the default values.
+     * Instantiates a new subscribedSku and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public SubscribedSku() {
         super();
-        this.setOdataType("#microsoft.graph.subscribedSku");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SubscribedSku
+     * @return a subscribedSku
      */
     @javax.annotation.Nonnull
     public static SubscribedSku createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -71,16 +71,15 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SubscribedSku currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getStringValue()); });
-            this.put("capabilityStatus", (n) -> { currentObject.setCapabilityStatus(n.getStringValue()); });
-            this.put("consumedUnits", (n) -> { currentObject.setConsumedUnits(n.getIntegerValue()); });
-            this.put("prepaidUnits", (n) -> { currentObject.setPrepaidUnits(n.getObjectValue(LicenseUnitsDetail::createFromDiscriminatorValue)); });
-            this.put("servicePlans", (n) -> { currentObject.setServicePlans(n.getCollectionOfObjectValues(ServicePlanInfo::createFromDiscriminatorValue)); });
-            this.put("skuId", (n) -> { currentObject.setSkuId(n.getStringValue()); });
-            this.put("skuPartNumber", (n) -> { currentObject.setSkuPartNumber(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getStringValue()); });
+        deserializerMap.put("capabilityStatus", (n) -> { this.setCapabilityStatus(n.getStringValue()); });
+        deserializerMap.put("consumedUnits", (n) -> { this.setConsumedUnits(n.getIntegerValue()); });
+        deserializerMap.put("prepaidUnits", (n) -> { this.setPrepaidUnits(n.getObjectValue(LicenseUnitsDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("servicePlans", (n) -> { this.setServicePlans(n.getCollectionOfObjectValues(ServicePlanInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("skuId", (n) -> { this.setSkuId(n.getStringValue()); });
+        deserializerMap.put("skuPartNumber", (n) -> { this.setSkuPartNumber(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the prepaidUnits property value. Information about the number and status of prepaid licenses.
