@@ -32,7 +32,6 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AudioConferencing() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.audioConferencing");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

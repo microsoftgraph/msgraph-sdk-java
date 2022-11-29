@@ -70,7 +70,6 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public PlannerCategoryDescriptions() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.plannerCategoryDescriptions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

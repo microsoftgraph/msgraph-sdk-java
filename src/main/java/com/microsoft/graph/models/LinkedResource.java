@@ -24,7 +24,6 @@ public class LinkedResource extends Entity implements Parsable {
     @javax.annotation.Nullable
     public LinkedResource() {
         super();
-        this.setOdataType("#microsoft.graph.linkedResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

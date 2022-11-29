@@ -37,7 +37,6 @@ public class Location implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Location() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.location");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

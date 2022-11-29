@@ -24,7 +24,6 @@ public class SolutionsRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SolutionsRoot() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.solutionsRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

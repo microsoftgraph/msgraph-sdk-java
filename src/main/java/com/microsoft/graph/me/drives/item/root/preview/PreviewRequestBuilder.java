@@ -67,7 +67,7 @@ public class PreviewRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final PreviewPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final PreviewPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PreviewRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -77,7 +77,7 @@ public class PreviewRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
+            final PreviewRequestBuilderPostRequestConfiguration requestConfig = new PreviewRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -111,7 +111,7 @@ public class PreviewRequestBuilder {
      * @return a CompletableFuture of itemPreviewInfo
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ItemPreviewInfo> post(@javax.annotation.Nonnull final PreviewPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<ItemPreviewInfo> post(@javax.annotation.Nonnull final PreviewPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PreviewRequestBuilderPostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
@@ -127,7 +127,7 @@ public class PreviewRequestBuilder {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PostRequestConfiguration {
+    public class PreviewRequestBuilderPostRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -135,11 +135,11 @@ public class PreviewRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PostRequestConfiguration and sets the default values.
+         * Instantiates a new previewRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PostRequestConfiguration() {
+        public PreviewRequestBuilderPostRequestConfiguration() {
         }
     }
 }

@@ -32,7 +32,6 @@ public class Request extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Request() {
         super();
-        this.setOdataType("#microsoft.graph.request");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

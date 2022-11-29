@@ -25,7 +25,6 @@ public class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Win32LobAppReturnCode() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.win32LobAppReturnCode");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

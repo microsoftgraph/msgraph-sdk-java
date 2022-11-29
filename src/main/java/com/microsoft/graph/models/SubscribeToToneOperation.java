@@ -15,7 +15,6 @@ public class SubscribeToToneOperation extends CommsOperation implements Parsable
     @javax.annotation.Nullable
     public SubscribeToToneOperation() {
         super();
-        this.setOdataType("#microsoft.graph.subscribeToToneOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

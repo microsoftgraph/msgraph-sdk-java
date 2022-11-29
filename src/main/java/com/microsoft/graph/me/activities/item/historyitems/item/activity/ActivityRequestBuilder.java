@@ -66,7 +66,7 @@ public class ActivityRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<ActivityRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -74,7 +74,7 @@ public class ActivityRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final ActivityRequestBuilderGetRequestConfiguration requestConfig = new ActivityRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -107,7 +107,7 @@ public class ActivityRequestBuilder {
      * @return a CompletableFuture of userActivity
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserActivity> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<UserActivity> get(@javax.annotation.Nullable final java.util.function.Consumer<ActivityRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -122,7 +122,7 @@ public class ActivityRequestBuilder {
         }
     }
     /** Optional. NavigationProperty/Containment; navigation property to the associated activity. */
-    public class GetQueryParameters {
+    public class ActivityRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -133,7 +133,7 @@ public class ActivityRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class ActivityRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -142,13 +142,13 @@ public class ActivityRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public ActivityRequestBuilderGetQueryParameters queryParameters = new ActivityRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new activityRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public ActivityRequestBuilderGetRequestConfiguration() {
         }
     }
 }

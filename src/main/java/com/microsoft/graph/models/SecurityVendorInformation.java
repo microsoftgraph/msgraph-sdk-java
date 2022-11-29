@@ -28,7 +28,6 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public SecurityVendorInformation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.securityVendorInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

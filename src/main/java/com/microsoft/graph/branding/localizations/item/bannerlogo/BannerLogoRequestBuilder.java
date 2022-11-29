@@ -65,14 +65,14 @@ public class BannerLogoRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<BannerLogoRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final BannerLogoRequestBuilderGetRequestConfiguration requestConfig = new BannerLogoRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -95,7 +95,7 @@ public class BannerLogoRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPutRequestInformation(@javax.annotation.Nonnull final InputStream body, @javax.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPutRequestInformation(@javax.annotation.Nonnull final InputStream body, @javax.annotation.Nullable final java.util.function.Consumer<BannerLogoRequestBuilderPutRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.PUT;
@@ -104,7 +104,7 @@ public class BannerLogoRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.setStreamContent(body);
         if (requestConfiguration != null) {
-            final PutRequestConfiguration requestConfig = new PutRequestConfiguration();
+            final BannerLogoRequestBuilderPutRequestConfiguration requestConfig = new BannerLogoRequestBuilderPutRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -136,7 +136,7 @@ public class BannerLogoRequestBuilder {
      * @return a CompletableFuture of InputStream
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<BannerLogoRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -177,7 +177,7 @@ public class BannerLogoRequestBuilder {
      * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> put(@javax.annotation.Nonnull final InputStream body, @javax.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> put(@javax.annotation.Nonnull final InputStream body, @javax.annotation.Nullable final java.util.function.Consumer<BannerLogoRequestBuilderPutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPutRequestInformation(body, requestConfiguration);
@@ -193,7 +193,7 @@ public class BannerLogoRequestBuilder {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class BannerLogoRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -201,15 +201,15 @@ public class BannerLogoRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new bannerLogoRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public BannerLogoRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PutRequestConfiguration {
+    public class BannerLogoRequestBuilderPutRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -217,11 +217,11 @@ public class BannerLogoRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PutRequestConfiguration and sets the default values.
+         * Instantiates a new bannerLogoRequestBuilderPutRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PutRequestConfiguration() {
+        public BannerLogoRequestBuilderPutRequestConfiguration() {
         }
     }
 }

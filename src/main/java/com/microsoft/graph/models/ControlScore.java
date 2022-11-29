@@ -28,7 +28,6 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ControlScore() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.controlScore");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -2,7 +2,7 @@ package com.microsoft.graph.drive;
 
 import com.microsoft.graph.drive.bundles.BundlesRequestBuilder;
 import com.microsoft.graph.drive.following.FollowingRequestBuilder;
-import com.microsoft.graph.drive.items.item.DriveItemItemRequestBuilder;
+import com.microsoft.graph.drive.following.item.DriveItemItemRequestBuilder;
 import com.microsoft.graph.drive.items.ItemsRequestBuilder;
 import com.microsoft.graph.drive.list.ListRequestBuilder;
 import com.microsoft.graph.drive.recent.RecentRequestBuilder;
@@ -118,7 +118,7 @@ public class DriveRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DriveRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -126,7 +126,7 @@ public class DriveRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final DriveRequestBuilderGetRequestConfiguration requestConfig = new DriveRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -150,7 +150,7 @@ public class DriveRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final Drive body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final Drive body, @javax.annotation.Nullable final java.util.function.Consumer<DriveRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.PATCH;
@@ -160,7 +160,7 @@ public class DriveRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            final DriveRequestBuilderPatchRequestConfiguration requestConfig = new DriveRequestBuilderPatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -204,7 +204,7 @@ public class DriveRequestBuilder {
      * @return a CompletableFuture of drive
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Drive> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Drive> get(@javax.annotation.Nullable final java.util.function.Consumer<DriveRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -257,7 +257,7 @@ public class DriveRequestBuilder {
      * @return a CompletableFuture of drive
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Drive> patch(@javax.annotation.Nonnull final Drive body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Drive> patch(@javax.annotation.Nonnull final Drive body, @javax.annotation.Nullable final java.util.function.Consumer<DriveRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
@@ -311,7 +311,7 @@ public class DriveRequestBuilder {
         return new com.microsoft.graph.drive.special.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Get drive */
-    public class GetQueryParameters {
+    public class DriveRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -322,7 +322,7 @@ public class DriveRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class DriveRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -331,17 +331,17 @@ public class DriveRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public DriveRequestBuilderGetQueryParameters queryParameters = new DriveRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new driveRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public DriveRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PatchRequestConfiguration {
+    public class DriveRequestBuilderPatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -349,11 +349,11 @@ public class DriveRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PatchRequestConfiguration and sets the default values.
+         * Instantiates a new driveRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PatchRequestConfiguration() {
+        public DriveRequestBuilderPatchRequestConfiguration() {
         }
     }
 }

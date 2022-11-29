@@ -27,7 +27,6 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public BitLockerRemovableDrivePolicy() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bitLockerRemovableDrivePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

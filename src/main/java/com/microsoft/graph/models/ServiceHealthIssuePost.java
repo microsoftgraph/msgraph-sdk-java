@@ -27,7 +27,6 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ServiceHealthIssuePost() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.serviceHealthIssuePost");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

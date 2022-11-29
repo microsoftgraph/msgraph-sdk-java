@@ -24,7 +24,6 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IdentityProtectionRoot() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.identityProtectionRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

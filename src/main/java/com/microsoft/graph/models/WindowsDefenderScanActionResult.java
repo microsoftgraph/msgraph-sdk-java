@@ -17,7 +17,6 @@ public class WindowsDefenderScanActionResult extends DeviceActionResult implemen
     @javax.annotation.Nullable
     public WindowsDefenderScanActionResult() {
         super();
-        this.setOdataType("#microsoft.graph.windowsDefenderScanActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -208,7 +208,7 @@ public class PoliciesRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<PoliciesRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -216,7 +216,7 @@ public class PoliciesRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final PoliciesRequestBuilderGetRequestConfiguration requestConfig = new PoliciesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -240,7 +240,7 @@ public class PoliciesRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final PolicyRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final PolicyRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PoliciesRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.PATCH;
@@ -250,7 +250,7 @@ public class PoliciesRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            final PoliciesRequestBuilderPatchRequestConfiguration requestConfig = new PoliciesRequestBuilderPatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -294,7 +294,7 @@ public class PoliciesRequestBuilder {
      * @return a CompletableFuture of policyRoot
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PolicyRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<PolicyRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<PoliciesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -347,7 +347,7 @@ public class PoliciesRequestBuilder {
      * @return a CompletableFuture of policyRoot
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PolicyRoot> patch(@javax.annotation.Nonnull final PolicyRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<PolicyRoot> patch(@javax.annotation.Nonnull final PolicyRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PoliciesRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
@@ -423,7 +423,7 @@ public class PoliciesRequestBuilder {
         return new TokenLifetimePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Get policies */
-    public class GetQueryParameters {
+    public class PoliciesRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -434,7 +434,7 @@ public class PoliciesRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class PoliciesRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -443,17 +443,17 @@ public class PoliciesRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public PoliciesRequestBuilderGetQueryParameters queryParameters = new PoliciesRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new policiesRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public PoliciesRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PatchRequestConfiguration {
+    public class PoliciesRequestBuilderPatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -461,11 +461,11 @@ public class PoliciesRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PatchRequestConfiguration and sets the default values.
+         * Instantiates a new policiesRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PatchRequestConfiguration() {
+        public PoliciesRequestBuilderPatchRequestConfiguration() {
         }
     }
 }

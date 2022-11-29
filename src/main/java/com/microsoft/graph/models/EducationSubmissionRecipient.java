@@ -21,7 +21,6 @@ public class EducationSubmissionRecipient implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public EducationSubmissionRecipient() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.educationSubmissionRecipient");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

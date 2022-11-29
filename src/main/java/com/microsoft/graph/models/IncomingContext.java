@@ -28,7 +28,6 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IncomingContext() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.incomingContext");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

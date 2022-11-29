@@ -36,7 +36,6 @@ public class ItemActivityStat extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ItemActivityStat() {
         super();
-        this.setOdataType("#microsoft.graph.itemActivityStat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -26,7 +26,6 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
     @javax.annotation.Nullable
     public UnifiedRoleManagementPolicyAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

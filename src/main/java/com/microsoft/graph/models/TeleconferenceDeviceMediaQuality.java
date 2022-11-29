@@ -66,7 +66,6 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     @javax.annotation.Nullable
     public TeleconferenceDeviceMediaQuality() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teleconferenceDeviceMediaQuality");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

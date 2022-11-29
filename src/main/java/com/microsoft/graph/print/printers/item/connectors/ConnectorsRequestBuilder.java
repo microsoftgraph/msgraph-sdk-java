@@ -72,7 +72,7 @@ public class ConnectorsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<ConnectorsRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -80,7 +80,7 @@ public class ConnectorsRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final ConnectorsRequestBuilderGetRequestConfiguration requestConfig = new ConnectorsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -113,7 +113,7 @@ public class ConnectorsRequestBuilder {
      * @return a CompletableFuture of PrintConnectorCollectionResponse
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintConnectorCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<PrintConnectorCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<ConnectorsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -128,7 +128,7 @@ public class ConnectorsRequestBuilder {
         }
     }
     /** Retrieve a list of printConnectors associated with the printer. */
-    public class GetQueryParameters {
+    public class ConnectorsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
@@ -163,7 +163,7 @@ public class ConnectorsRequestBuilder {
         public Integer top;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class ConnectorsRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -172,13 +172,13 @@ public class ConnectorsRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public ConnectorsRequestBuilderGetQueryParameters queryParameters = new ConnectorsRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new connectorsRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public ConnectorsRequestBuilderGetRequestConfiguration() {
         }
     }
 }

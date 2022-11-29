@@ -73,14 +73,14 @@ public class AppConsentRequestItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<AppConsentRequestItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.DELETE;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
+            final AppConsentRequestItemRequestBuilderDeleteRequestConfiguration requestConfig = new AppConsentRequestItemRequestBuilderDeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -101,7 +101,7 @@ public class AppConsentRequestItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<AppConsentRequestItemRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -109,7 +109,7 @@ public class AppConsentRequestItemRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final AppConsentRequestItemRequestBuilderGetRequestConfiguration requestConfig = new AppConsentRequestItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -133,7 +133,7 @@ public class AppConsentRequestItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final AppConsentRequest body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final AppConsentRequest body, @javax.annotation.Nullable final java.util.function.Consumer<AppConsentRequestItemRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.PATCH;
@@ -143,7 +143,7 @@ public class AppConsentRequestItemRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            final AppConsentRequestItemRequestBuilderPatchRequestConfiguration requestConfig = new AppConsentRequestItemRequestBuilderPatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -175,7 +175,7 @@ public class AppConsentRequestItemRequestBuilder {
      * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<AppConsentRequestItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -214,7 +214,7 @@ public class AppConsentRequestItemRequestBuilder {
      * @return a CompletableFuture of appConsentRequest
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AppConsentRequest> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<AppConsentRequest> get(@javax.annotation.Nullable final java.util.function.Consumer<AppConsentRequestItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -255,7 +255,7 @@ public class AppConsentRequestItemRequestBuilder {
      * @return a CompletableFuture of appConsentRequest
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AppConsentRequest> patch(@javax.annotation.Nonnull final AppConsentRequest body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<AppConsentRequest> patch(@javax.annotation.Nonnull final AppConsentRequest body, @javax.annotation.Nullable final java.util.function.Consumer<AppConsentRequestItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
@@ -283,7 +283,7 @@ public class AppConsentRequestItemRequestBuilder {
         return new UserConsentRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class DeleteRequestConfiguration {
+    public class AppConsentRequestItemRequestBuilderDeleteRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -291,15 +291,15 @@ public class AppConsentRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new DeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AppConsentRequestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public DeleteRequestConfiguration() {
+        public AppConsentRequestItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
     /** A collection of userConsentRequest objects for a specific application. */
-    public class GetQueryParameters {
+    public class AppConsentRequestItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -310,7 +310,7 @@ public class AppConsentRequestItemRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class AppConsentRequestItemRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -319,17 +319,17 @@ public class AppConsentRequestItemRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public AppConsentRequestItemRequestBuilderGetQueryParameters queryParameters = new AppConsentRequestItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new AppConsentRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public AppConsentRequestItemRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PatchRequestConfiguration {
+    public class AppConsentRequestItemRequestBuilderPatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -337,11 +337,11 @@ public class AppConsentRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PatchRequestConfiguration and sets the default values.
+         * Instantiates a new AppConsentRequestItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PatchRequestConfiguration() {
+        public AppConsentRequestItemRequestBuilderPatchRequestConfiguration() {
         }
     }
 }

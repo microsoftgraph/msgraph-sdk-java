@@ -27,7 +27,6 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RequestSchedule() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.requestSchedule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

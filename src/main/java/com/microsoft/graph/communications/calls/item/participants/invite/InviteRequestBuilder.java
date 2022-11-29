@@ -52,7 +52,7 @@ public class InviteRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled. 
+     * Invite participants to the active call. For more information about how to handle operations, see commsOperation.
      * @param body 
      * @return a RequestInformation
      */
@@ -61,13 +61,13 @@ public class InviteRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled. 
+     * Invite participants to the active call. For more information about how to handle operations, see commsOperation.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final InvitePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final InvitePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<InviteRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -77,7 +77,7 @@ public class InviteRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
+            final InviteRequestBuilderPostRequestConfiguration requestConfig = new InviteRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -85,7 +85,7 @@ public class InviteRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled. 
+     * Invite participants to the active call. For more information about how to handle operations, see commsOperation.
      * @param body 
      * @return a CompletableFuture of inviteParticipantsOperation
      */
@@ -105,13 +105,13 @@ public class InviteRequestBuilder {
         }
     }
     /**
-     * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled. 
+     * Invite participants to the active call. For more information about how to handle operations, see commsOperation.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of inviteParticipantsOperation
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InviteParticipantsOperation> post(@javax.annotation.Nonnull final InvitePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<InviteParticipantsOperation> post(@javax.annotation.Nonnull final InvitePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<InviteRequestBuilderPostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
@@ -127,7 +127,7 @@ public class InviteRequestBuilder {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PostRequestConfiguration {
+    public class InviteRequestBuilderPostRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -135,11 +135,11 @@ public class InviteRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PostRequestConfiguration and sets the default values.
+         * Instantiates a new inviteRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PostRequestConfiguration() {
+        public InviteRequestBuilderPostRequestConfiguration() {
         }
     }
 }

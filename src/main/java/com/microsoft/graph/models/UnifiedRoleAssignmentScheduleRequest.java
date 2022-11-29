@@ -47,7 +47,6 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     @javax.annotation.Nullable
     public UnifiedRoleAssignmentScheduleRequest() {
         super();
-        this.setOdataType("#microsoft.graph.unifiedRoleAssignmentScheduleRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

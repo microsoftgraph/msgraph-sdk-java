@@ -21,7 +21,6 @@ public class OfficeGraphInsights extends Entity implements Parsable {
     @javax.annotation.Nullable
     public OfficeGraphInsights() {
         super();
-        this.setOdataType("#microsoft.graph.officeGraphInsights");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

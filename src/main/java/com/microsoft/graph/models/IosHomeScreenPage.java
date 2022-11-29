@@ -25,7 +25,6 @@ public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IosHomeScreenPage() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.iosHomeScreenPage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

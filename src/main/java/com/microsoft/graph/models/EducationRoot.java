@@ -28,7 +28,6 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public EducationRoot() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.educationRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,7 +24,6 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TrainingEventsContent() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.trainingEventsContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

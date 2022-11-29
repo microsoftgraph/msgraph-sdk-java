@@ -24,7 +24,6 @@ public class CalendarGroup extends Entity implements Parsable {
     @javax.annotation.Nullable
     public CalendarGroup() {
         super();
-        this.setOdataType("#microsoft.graph.calendarGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -64,7 +64,6 @@ public class BookingAppointment extends Entity implements Parsable {
     @javax.annotation.Nullable
     public BookingAppointment() {
         super();
-        this.setOdataType("#microsoft.graph.bookingAppointment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -73,7 +73,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<MdmWindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -81,7 +81,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final MdmWindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration requestConfig = new MdmWindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -105,7 +105,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -115,7 +115,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
+            final MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration requestConfig = new MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -147,7 +147,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder {
      * @return a CompletableFuture of MdmWindowsInformationProtectionPolicyCollectionResponse
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<MdmWindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -188,7 +188,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder {
      * @return a CompletableFuture of mdmWindowsInformationProtectionPolicy
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> post(@javax.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> post(@javax.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
@@ -204,7 +204,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder {
         }
     }
     /** Windows information protection for apps running on devices which are MDM enrolled. */
-    public class GetQueryParameters {
+    public class MdmWindowsInformationProtectionPoliciesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
@@ -239,7 +239,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder {
         public Integer top;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class MdmWindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -248,17 +248,17 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public MdmWindowsInformationProtectionPoliciesRequestBuilderGetQueryParameters queryParameters = new MdmWindowsInformationProtectionPoliciesRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new mdmWindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public MdmWindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PostRequestConfiguration {
+    public class MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -266,11 +266,11 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PostRequestConfiguration and sets the default values.
+         * Instantiates a new mdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PostRequestConfiguration() {
+        public MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration() {
         }
     }
 }

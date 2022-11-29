@@ -33,7 +33,6 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public LicenseAssignmentState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.licenseAssignmentState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

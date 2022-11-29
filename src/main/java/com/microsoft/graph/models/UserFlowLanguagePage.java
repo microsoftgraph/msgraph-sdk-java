@@ -16,7 +16,6 @@ public class UserFlowLanguagePage extends Entity implements Parsable {
     @javax.annotation.Nullable
     public UserFlowLanguagePage() {
         super();
-        this.setOdataType("#microsoft.graph.userFlowLanguagePage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

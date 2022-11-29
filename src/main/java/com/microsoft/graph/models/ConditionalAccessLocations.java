@@ -24,7 +24,6 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public ConditionalAccessLocations() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessLocations");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

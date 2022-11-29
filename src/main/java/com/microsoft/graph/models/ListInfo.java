@@ -26,7 +26,6 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ListInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.listInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

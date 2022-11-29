@@ -27,7 +27,6 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
     @javax.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationUserStatus() {
         super();
-        this.setOdataType("#microsoft.graph.managedDeviceMobileAppConfigurationUserStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -26,7 +26,6 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AggregationOption() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.aggregationOption");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

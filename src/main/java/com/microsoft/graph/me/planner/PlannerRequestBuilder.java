@@ -80,14 +80,14 @@ public class PlannerRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<PlannerRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.DELETE;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
+            final PlannerRequestBuilderDeleteRequestConfiguration requestConfig = new PlannerRequestBuilderDeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -108,7 +108,7 @@ public class PlannerRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<PlannerRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -116,7 +116,7 @@ public class PlannerRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final PlannerRequestBuilderGetRequestConfiguration requestConfig = new PlannerRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -140,7 +140,7 @@ public class PlannerRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final PlannerUser body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final PlannerUser body, @javax.annotation.Nullable final java.util.function.Consumer<PlannerRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.PATCH;
@@ -150,7 +150,7 @@ public class PlannerRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            final PlannerRequestBuilderPatchRequestConfiguration requestConfig = new PlannerRequestBuilderPatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -182,7 +182,7 @@ public class PlannerRequestBuilder {
      * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<PlannerRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -221,7 +221,7 @@ public class PlannerRequestBuilder {
      * @return a CompletableFuture of plannerUser
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerUser> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<PlannerUser> get(@javax.annotation.Nullable final java.util.function.Consumer<PlannerRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -262,7 +262,7 @@ public class PlannerRequestBuilder {
      * @return a CompletableFuture of plannerUser
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerUser> patch(@javax.annotation.Nonnull final PlannerUser body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<PlannerUser> patch(@javax.annotation.Nonnull final PlannerUser body, @javax.annotation.Nullable final java.util.function.Consumer<PlannerRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
@@ -302,7 +302,7 @@ public class PlannerRequestBuilder {
         return new PlannerTaskItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class DeleteRequestConfiguration {
+    public class PlannerRequestBuilderDeleteRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -310,15 +310,15 @@ public class PlannerRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new DeleteRequestConfiguration and sets the default values.
+         * Instantiates a new plannerRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public DeleteRequestConfiguration() {
+        public PlannerRequestBuilderDeleteRequestConfiguration() {
         }
     }
     /** Entry-point to the Planner resource that might exist for a user. Read-only. */
-    public class GetQueryParameters {
+    public class PlannerRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -329,7 +329,7 @@ public class PlannerRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class PlannerRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -338,17 +338,17 @@ public class PlannerRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public PlannerRequestBuilderGetQueryParameters queryParameters = new PlannerRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new plannerRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public PlannerRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PatchRequestConfiguration {
+    public class PlannerRequestBuilderPatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -356,11 +356,11 @@ public class PlannerRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PatchRequestConfiguration and sets the default values.
+         * Instantiates a new plannerRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PatchRequestConfiguration() {
+        public PlannerRequestBuilderPatchRequestConfiguration() {
         }
     }
 }

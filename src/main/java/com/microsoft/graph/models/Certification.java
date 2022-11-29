@@ -31,7 +31,6 @@ public class Certification implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Certification() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.certification");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

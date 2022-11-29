@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the cloudCommunications singleton. */
 public class Call extends Entity implements Parsable {
     /** The audioRoutingGroups property */
     private java.util.List<AudioRoutingGroup> _audioRoutingGroups;
@@ -64,7 +64,6 @@ public class Call extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Call() {
         super();
-        this.setOdataType("#microsoft.graph.call");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -23,7 +23,6 @@ public class AccessReviewReviewer extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AccessReviewReviewer() {
         super();
-        this.setOdataType("#microsoft.graph.accessReviewReviewer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

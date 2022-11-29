@@ -66,14 +66,14 @@ public class TokenLifetimePolicyItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<TokenLifetimePolicyItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.DELETE;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
+            final TokenLifetimePolicyItemRequestBuilderDeleteRequestConfiguration requestConfig = new TokenLifetimePolicyItemRequestBuilderDeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -94,7 +94,7 @@ public class TokenLifetimePolicyItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<TokenLifetimePolicyItemRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -102,7 +102,7 @@ public class TokenLifetimePolicyItemRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final TokenLifetimePolicyItemRequestBuilderGetRequestConfiguration requestConfig = new TokenLifetimePolicyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -126,7 +126,7 @@ public class TokenLifetimePolicyItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final TokenLifetimePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final TokenLifetimePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.PATCH;
@@ -136,7 +136,7 @@ public class TokenLifetimePolicyItemRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            final TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration requestConfig = new TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -168,7 +168,7 @@ public class TokenLifetimePolicyItemRequestBuilder {
      * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<TokenLifetimePolicyItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -207,7 +207,7 @@ public class TokenLifetimePolicyItemRequestBuilder {
      * @return a CompletableFuture of tokenLifetimePolicy
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<TokenLifetimePolicyItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -248,7 +248,7 @@ public class TokenLifetimePolicyItemRequestBuilder {
      * @return a CompletableFuture of tokenLifetimePolicy
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> patch(@javax.annotation.Nonnull final TokenLifetimePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> patch(@javax.annotation.Nonnull final TokenLifetimePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
@@ -264,7 +264,7 @@ public class TokenLifetimePolicyItemRequestBuilder {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class DeleteRequestConfiguration {
+    public class TokenLifetimePolicyItemRequestBuilderDeleteRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -272,15 +272,15 @@ public class TokenLifetimePolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new DeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TokenLifetimePolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public DeleteRequestConfiguration() {
+        public TokenLifetimePolicyItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
     /** The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD. */
-    public class GetQueryParameters {
+    public class TokenLifetimePolicyItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -291,7 +291,7 @@ public class TokenLifetimePolicyItemRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class TokenLifetimePolicyItemRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -300,17 +300,17 @@ public class TokenLifetimePolicyItemRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public TokenLifetimePolicyItemRequestBuilderGetQueryParameters queryParameters = new TokenLifetimePolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new TokenLifetimePolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public TokenLifetimePolicyItemRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PatchRequestConfiguration {
+    public class TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -318,11 +318,11 @@ public class TokenLifetimePolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PatchRequestConfiguration and sets the default values.
+         * Instantiates a new TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PatchRequestConfiguration() {
+        public TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration() {
         }
     }
 }

@@ -65,7 +65,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetAttackSimulationTrainingUserCoverageRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -73,7 +73,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final GetAttackSimulationTrainingUserCoverageRequestBuilderGetRequestConfiguration requestConfig = new GetAttackSimulationTrainingUserCoverageRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -106,7 +106,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder {
      * @return a CompletableFuture of getAttackSimulationTrainingUserCoverageResponse
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetAttackSimulationTrainingUserCoverageResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetAttackSimulationTrainingUserCoverageResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetAttackSimulationTrainingUserCoverageRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -121,7 +121,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder {
         }
     }
     /** Invoke function getAttackSimulationTrainingUserCoverage */
-    public class GetQueryParameters {
+    public class GetAttackSimulationTrainingUserCoverageRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
@@ -144,7 +144,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder {
         public Integer top;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class GetAttackSimulationTrainingUserCoverageRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -153,13 +153,13 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public GetAttackSimulationTrainingUserCoverageRequestBuilderGetQueryParameters queryParameters = new GetAttackSimulationTrainingUserCoverageRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new getAttackSimulationTrainingUserCoverageRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public GetAttackSimulationTrainingUserCoverageRequestBuilderGetRequestConfiguration() {
         }
     }
 }

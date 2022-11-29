@@ -36,7 +36,6 @@ public class Identity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Identity() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.identity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

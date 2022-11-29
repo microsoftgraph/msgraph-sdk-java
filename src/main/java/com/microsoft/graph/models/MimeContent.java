@@ -25,7 +25,6 @@ public class MimeContent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MimeContent() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.mimeContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

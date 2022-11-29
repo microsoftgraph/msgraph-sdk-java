@@ -66,14 +66,14 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.DELETE;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
+            final UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderDeleteRequestConfiguration requestConfig = new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderDeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -94,7 +94,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -102,7 +102,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration requestConfig = new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -126,7 +126,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final UnifiedRoleEligibilityScheduleInstance body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final UnifiedRoleEligibilityScheduleInstance body, @javax.annotation.Nullable final java.util.function.Consumer<UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.PATCH;
@@ -136,7 +136,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            final UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderPatchRequestConfiguration requestConfig = new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderPatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -168,7 +168,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {
      * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -207,7 +207,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {
      * @return a CompletableFuture of unifiedRoleEligibilityScheduleInstance
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstance> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstance> get(@javax.annotation.Nullable final java.util.function.Consumer<UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -248,7 +248,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {
      * @return a CompletableFuture of unifiedRoleEligibilityScheduleInstance
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstance> patch(@javax.annotation.Nonnull final UnifiedRoleEligibilityScheduleInstance body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstance> patch(@javax.annotation.Nonnull final UnifiedRoleEligibilityScheduleInstance body, @javax.annotation.Nullable final java.util.function.Consumer<UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
@@ -264,7 +264,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class DeleteRequestConfiguration {
+    public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderDeleteRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -272,15 +272,15 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new DeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public DeleteRequestConfiguration() {
+        public UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
     /** Instances for role eligibility requests. */
-    public class GetQueryParameters {
+    public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -291,7 +291,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -300,17 +300,17 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetQueryParameters queryParameters = new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PatchRequestConfiguration {
+    public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderPatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -318,11 +318,11 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PatchRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PatchRequestConfiguration() {
+        public UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderPatchRequestConfiguration() {
         }
     }
 }

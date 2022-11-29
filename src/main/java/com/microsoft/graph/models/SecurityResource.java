@@ -24,7 +24,6 @@ public class SecurityResource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SecurityResource() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.securityResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

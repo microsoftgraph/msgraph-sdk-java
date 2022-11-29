@@ -26,7 +26,6 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OptionalClaims() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.optionalClaims");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

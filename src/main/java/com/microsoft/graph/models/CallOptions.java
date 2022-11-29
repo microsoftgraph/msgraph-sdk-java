@@ -26,7 +26,6 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public CallOptions() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callOptions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

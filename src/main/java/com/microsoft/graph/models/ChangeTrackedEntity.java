@@ -34,7 +34,6 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ChangeTrackedEntity() {
         super();
-        this.setOdataType("#microsoft.graph.changeTrackedEntity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

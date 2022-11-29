@@ -25,7 +25,6 @@ public class ChecklistItem extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ChecklistItem() {
         super();
-        this.setOdataType("#microsoft.graph.checklistItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

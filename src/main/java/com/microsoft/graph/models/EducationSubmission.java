@@ -45,7 +45,6 @@ public class EducationSubmission extends Entity implements Parsable {
     @javax.annotation.Nullable
     public EducationSubmission() {
         super();
-        this.setOdataType("#microsoft.graph.educationSubmission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

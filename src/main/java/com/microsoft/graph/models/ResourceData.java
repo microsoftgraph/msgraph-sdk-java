@@ -20,7 +20,6 @@ public class ResourceData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ResourceData() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.resourceData");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

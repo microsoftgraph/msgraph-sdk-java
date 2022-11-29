@@ -25,7 +25,6 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
     @javax.annotation.Nullable
     public BitlockerRecoveryKey() {
         super();
-        this.setOdataType("#microsoft.graph.bitlockerRecoveryKey");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

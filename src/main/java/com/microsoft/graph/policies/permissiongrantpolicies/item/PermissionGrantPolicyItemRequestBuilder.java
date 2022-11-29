@@ -3,8 +3,8 @@ package com.microsoft.graph.policies.permissiongrantpolicies.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PermissionGrantPolicy;
 import com.microsoft.graph.policies.permissiongrantpolicies.item.excludes.ExcludesRequestBuilder;
+import com.microsoft.graph.policies.permissiongrantpolicies.item.excludes.item.PermissionGrantConditionSetItemRequestBuilder;
 import com.microsoft.graph.policies.permissiongrantpolicies.item.includes.IncludesRequestBuilder;
-import com.microsoft.graph.policies.permissiongrantpolicies.item.includes.item.PermissionGrantConditionSetItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -79,14 +79,14 @@ public class PermissionGrantPolicyItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.DELETE;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
+            final PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration requestConfig = new PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -107,7 +107,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<PermissionGrantPolicyItemRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -115,7 +115,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final PermissionGrantPolicyItemRequestBuilderGetRequestConfiguration requestConfig = new PermissionGrantPolicyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -139,7 +139,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final PermissionGrantPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final PermissionGrantPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.PATCH;
@@ -149,7 +149,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            final PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration requestConfig = new PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -181,7 +181,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
      * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -232,7 +232,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
      * @return a CompletableFuture of permissionGrantPolicy
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<PermissionGrantPolicyItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -285,7 +285,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
      * @return a CompletableFuture of permissionGrantPolicy
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> patch(@javax.annotation.Nonnull final PermissionGrantPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> patch(@javax.annotation.Nonnull final PermissionGrantPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
@@ -301,7 +301,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class DeleteRequestConfiguration {
+    public class PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -309,15 +309,15 @@ public class PermissionGrantPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new DeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public DeleteRequestConfiguration() {
+        public PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
     /** The policy that specifies the conditions under which consent can be granted. */
-    public class GetQueryParameters {
+    public class PermissionGrantPolicyItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -328,7 +328,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class PermissionGrantPolicyItemRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -337,17 +337,17 @@ public class PermissionGrantPolicyItemRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public PermissionGrantPolicyItemRequestBuilderGetQueryParameters queryParameters = new PermissionGrantPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new PermissionGrantPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public PermissionGrantPolicyItemRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PatchRequestConfiguration {
+    public class PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -355,11 +355,11 @@ public class PermissionGrantPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PatchRequestConfiguration and sets the default values.
+         * Instantiates a new PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PatchRequestConfiguration() {
+        public PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration() {
         }
     }
 }

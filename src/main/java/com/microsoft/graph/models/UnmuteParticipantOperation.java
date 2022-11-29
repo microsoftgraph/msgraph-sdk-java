@@ -15,7 +15,6 @@ public class UnmuteParticipantOperation extends CommsOperation implements Parsab
     @javax.annotation.Nullable
     public UnmuteParticipantOperation() {
         super();
-        this.setOdataType("#microsoft.graph.unmuteParticipantOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

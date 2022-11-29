@@ -22,7 +22,6 @@ public class Package_escaped implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Package_escaped() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.package");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

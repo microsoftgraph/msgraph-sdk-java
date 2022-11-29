@@ -23,7 +23,6 @@ public class EdgeSearchEngineBase implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public EdgeSearchEngineBase() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.edgeSearchEngineBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

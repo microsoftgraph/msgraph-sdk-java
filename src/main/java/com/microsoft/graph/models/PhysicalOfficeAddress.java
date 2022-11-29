@@ -32,7 +32,6 @@ public class PhysicalOfficeAddress implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PhysicalOfficeAddress() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.physicalOfficeAddress");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,7 +24,6 @@ public class AssignedLabel implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AssignedLabel() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.assignedLabel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

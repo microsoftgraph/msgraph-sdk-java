@@ -24,7 +24,6 @@ public class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ExtensionSchemaProperty() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.extensionSchemaProperty");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

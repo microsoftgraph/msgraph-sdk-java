@@ -24,7 +24,6 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
     @javax.annotation.Nullable
     public AccessReviewNotificationRecipientItem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessReviewNotificationRecipientItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

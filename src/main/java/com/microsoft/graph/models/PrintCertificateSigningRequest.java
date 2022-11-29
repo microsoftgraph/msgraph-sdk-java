@@ -24,7 +24,6 @@ public class PrintCertificateSigningRequest implements AdditionalDataHolder, Par
     @javax.annotation.Nullable
     public PrintCertificateSigningRequest() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.printCertificateSigningRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

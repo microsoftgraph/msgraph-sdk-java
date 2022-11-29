@@ -24,7 +24,6 @@ public class AttendeeAvailability implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AttendeeAvailability() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.attendeeAvailability");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

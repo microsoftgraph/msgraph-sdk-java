@@ -73,7 +73,7 @@ public class AppDefinitionsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<AppDefinitionsRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -81,7 +81,7 @@ public class AppDefinitionsRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final AppDefinitionsRequestBuilderGetRequestConfiguration requestConfig = new AppDefinitionsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -105,7 +105,7 @@ public class AppDefinitionsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final TeamsAppDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final TeamsAppDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<AppDefinitionsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -115,7 +115,7 @@ public class AppDefinitionsRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
+            final AppDefinitionsRequestBuilderPostRequestConfiguration requestConfig = new AppDefinitionsRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -147,7 +147,7 @@ public class AppDefinitionsRequestBuilder {
      * @return a CompletableFuture of TeamsAppDefinitionCollectionResponse
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<TeamsAppDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AppDefinitionsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -188,7 +188,7 @@ public class AppDefinitionsRequestBuilder {
      * @return a CompletableFuture of teamsAppDefinition
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> post(@javax.annotation.Nonnull final TeamsAppDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> post(@javax.annotation.Nonnull final TeamsAppDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<AppDefinitionsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
@@ -204,7 +204,7 @@ public class AppDefinitionsRequestBuilder {
         }
     }
     /** The details for each version of the app. */
-    public class GetQueryParameters {
+    public class AppDefinitionsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
@@ -239,7 +239,7 @@ public class AppDefinitionsRequestBuilder {
         public Integer top;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class AppDefinitionsRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -248,17 +248,17 @@ public class AppDefinitionsRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public AppDefinitionsRequestBuilderGetQueryParameters queryParameters = new AppDefinitionsRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new appDefinitionsRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public AppDefinitionsRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PostRequestConfiguration {
+    public class AppDefinitionsRequestBuilderPostRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -266,11 +266,11 @@ public class AppDefinitionsRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PostRequestConfiguration and sets the default values.
+         * Instantiates a new appDefinitionsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PostRequestConfiguration() {
+        public AppDefinitionsRequestBuilderPostRequestConfiguration() {
         }
     }
 }

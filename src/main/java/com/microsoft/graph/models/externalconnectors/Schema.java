@@ -20,7 +20,6 @@ public class Schema extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Schema() {
         super();
-        this.setOdataType("#microsoft.graph.externalConnectors.schema");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

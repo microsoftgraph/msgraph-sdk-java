@@ -85,14 +85,14 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.DELETE;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
+            final SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration requestConfig = new SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -113,7 +113,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -121,7 +121,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration requestConfig = new SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -145,7 +145,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final SharedWithChannelTeamInfo body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final SharedWithChannelTeamInfo body, @javax.annotation.Nullable final java.util.function.Consumer<SharedWithChannelTeamInfoItemRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.PATCH;
@@ -155,7 +155,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            final SharedWithChannelTeamInfoItemRequestBuilderPatchRequestConfiguration requestConfig = new SharedWithChannelTeamInfoItemRequestBuilderPatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -187,7 +187,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
      * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -226,7 +226,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
      * @return a CompletableFuture of sharedWithChannelTeamInfo
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SharedWithChannelTeamInfo> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<SharedWithChannelTeamInfo> get(@javax.annotation.Nullable final java.util.function.Consumer<SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -267,7 +267,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
      * @return a CompletableFuture of sharedWithChannelTeamInfo
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SharedWithChannelTeamInfo> patch(@javax.annotation.Nonnull final SharedWithChannelTeamInfo body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<SharedWithChannelTeamInfo> patch(@javax.annotation.Nonnull final SharedWithChannelTeamInfo body, @javax.annotation.Nullable final java.util.function.Consumer<SharedWithChannelTeamInfoItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
@@ -283,7 +283,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class DeleteRequestConfiguration {
+    public class SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -291,15 +291,15 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new DeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public DeleteRequestConfiguration() {
+        public SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
     /** A collection of teams with which a channel is shared. */
-    public class GetQueryParameters {
+    public class SharedWithChannelTeamInfoItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -310,7 +310,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -319,17 +319,17 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public SharedWithChannelTeamInfoItemRequestBuilderGetQueryParameters queryParameters = new SharedWithChannelTeamInfoItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PatchRequestConfiguration {
+    public class SharedWithChannelTeamInfoItemRequestBuilderPatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -337,11 +337,11 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PatchRequestConfiguration and sets the default values.
+         * Instantiates a new SharedWithChannelTeamInfoItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PatchRequestConfiguration() {
+        public SharedWithChannelTeamInfoItemRequestBuilderPatchRequestConfiguration() {
         }
     }
 }

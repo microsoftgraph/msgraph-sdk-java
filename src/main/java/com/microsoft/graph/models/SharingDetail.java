@@ -31,7 +31,6 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SharingDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.sharingDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

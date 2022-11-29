@@ -26,7 +26,6 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AlertTrigger() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.alertTrigger");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

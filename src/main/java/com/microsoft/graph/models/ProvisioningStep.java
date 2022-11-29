@@ -30,7 +30,6 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ProvisioningStep() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.provisioningStep");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

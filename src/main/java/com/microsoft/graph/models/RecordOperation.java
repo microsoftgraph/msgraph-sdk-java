@@ -19,7 +19,6 @@ public class RecordOperation extends CommsOperation implements Parsable {
     @javax.annotation.Nullable
     public RecordOperation() {
         super();
-        this.setOdataType("#microsoft.graph.recordOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

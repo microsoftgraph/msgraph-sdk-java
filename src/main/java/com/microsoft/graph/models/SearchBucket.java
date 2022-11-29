@@ -26,7 +26,6 @@ public class SearchBucket implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SearchBucket() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.searchBucket");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

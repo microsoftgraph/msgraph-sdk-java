@@ -24,7 +24,6 @@ public class TeamGuestSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TeamGuestSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamGuestSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

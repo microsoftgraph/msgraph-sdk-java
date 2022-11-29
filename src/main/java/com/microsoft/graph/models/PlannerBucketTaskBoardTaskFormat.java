@@ -17,7 +17,6 @@ public class PlannerBucketTaskBoardTaskFormat extends Entity implements Parsable
     @javax.annotation.Nullable
     public PlannerBucketTaskBoardTaskFormat() {
         super();
-        this.setOdataType("#microsoft.graph.plannerBucketTaskBoardTaskFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

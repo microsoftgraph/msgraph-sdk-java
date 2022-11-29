@@ -22,7 +22,6 @@ public class WorkbookComment extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookComment() {
         super();
-        this.setOdataType("#microsoft.graph.workbookComment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

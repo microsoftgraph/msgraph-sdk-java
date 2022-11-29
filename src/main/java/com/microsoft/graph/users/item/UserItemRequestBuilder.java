@@ -16,7 +16,6 @@ import com.microsoft.graph.users.item.calendargroups.item.CalendarGroupItemReque
 import com.microsoft.graph.users.item.calendars.CalendarsRequestBuilder;
 import com.microsoft.graph.users.item.calendars.item.CalendarItemRequestBuilder;
 import com.microsoft.graph.users.item.calendarview.CalendarViewRequestBuilder;
-import com.microsoft.graph.users.item.calendarview.item.EventItemRequestBuilder;
 import com.microsoft.graph.users.item.changepassword.ChangePasswordRequestBuilder;
 import com.microsoft.graph.users.item.chats.ChatsRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.ChatItemRequestBuilder;
@@ -27,6 +26,7 @@ import com.microsoft.graph.users.item.contactfolders.item.ContactFolderItemReque
 import com.microsoft.graph.users.item.contacts.ContactsRequestBuilder;
 import com.microsoft.graph.users.item.contacts.item.ContactItemRequestBuilder;
 import com.microsoft.graph.users.item.createdobjects.CreatedObjectsRequestBuilder;
+import com.microsoft.graph.users.item.createdobjects.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.users.item.devicemanagementtroubleshootingevents.DeviceManagementTroubleshootingEventsRequestBuilder;
 import com.microsoft.graph.users.item.devicemanagementtroubleshootingevents.item.DeviceManagementTroubleshootingEventItemRequestBuilder;
 import com.microsoft.graph.users.item.directreports.DirectReportsRequestBuilder;
@@ -34,6 +34,7 @@ import com.microsoft.graph.users.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.users.item.drives.DrivesRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.DriveItemRequestBuilder;
 import com.microsoft.graph.users.item.events.EventsRequestBuilder;
+import com.microsoft.graph.users.item.events.item.EventItemRequestBuilder;
 import com.microsoft.graph.users.item.exportpersonaldata.ExportPersonalDataRequestBuilder;
 import com.microsoft.graph.users.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.users.item.extensions.item.ExtensionItemRequestBuilder;
@@ -76,7 +77,6 @@ import com.microsoft.graph.users.item.photos.item.ProfilePhotoItemRequestBuilder
 import com.microsoft.graph.users.item.photos.PhotosRequestBuilder;
 import com.microsoft.graph.users.item.planner.PlannerRequestBuilder;
 import com.microsoft.graph.users.item.presence.PresenceRequestBuilder;
-import com.microsoft.graph.users.item.registereddevices.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.users.item.registereddevices.RegisteredDevicesRequestBuilder;
 import com.microsoft.graph.users.item.reminderviewwithstartdatetimewithenddatetime.ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.users.item.removealldevicesfrommanagement.RemoveAllDevicesFromManagementRequestBuilder;
@@ -574,14 +574,14 @@ public class UserItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<UserItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.DELETE;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
+            final UserItemRequestBuilderDeleteRequestConfiguration requestConfig = new UserItemRequestBuilderDeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -614,7 +614,7 @@ public class UserItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<UserItemRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -622,7 +622,7 @@ public class UserItemRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final UserItemRequestBuilderGetRequestConfiguration requestConfig = new UserItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -646,7 +646,7 @@ public class UserItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final User body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final User body, @javax.annotation.Nullable final java.util.function.Consumer<UserItemRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.PATCH;
@@ -656,7 +656,7 @@ public class UserItemRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            final UserItemRequestBuilderPatchRequestConfiguration requestConfig = new UserItemRequestBuilderPatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -688,7 +688,7 @@ public class UserItemRequestBuilder {
      * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<UserItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -799,7 +799,7 @@ public class UserItemRequestBuilder {
      * @return a CompletableFuture of user
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<User> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<User> get(@javax.annotation.Nullable final java.util.function.Consumer<UserItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -988,7 +988,7 @@ public class UserItemRequestBuilder {
      * @return a CompletableFuture of user
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<User> patch(@javax.annotation.Nonnull final User body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<User> patch(@javax.annotation.Nonnull final User body, @javax.annotation.Nullable final java.util.function.Consumer<UserItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
@@ -1076,7 +1076,7 @@ public class UserItemRequestBuilder {
         return new com.microsoft.graph.users.item.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class DeleteRequestConfiguration {
+    public class UserItemRequestBuilderDeleteRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -1084,15 +1084,15 @@ public class UserItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new DeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public DeleteRequestConfiguration() {
+        public UserItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
     /** Retrieve the properties and relationships of user object. */
-    public class GetQueryParameters {
+    public class UserItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -1103,7 +1103,7 @@ public class UserItemRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class UserItemRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -1112,17 +1112,17 @@ public class UserItemRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public UserItemRequestBuilderGetQueryParameters queryParameters = new UserItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new UserItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public UserItemRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PatchRequestConfiguration {
+    public class UserItemRequestBuilderPatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -1130,11 +1130,11 @@ public class UserItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PatchRequestConfiguration() {
+        public UserItemRequestBuilderPatchRequestConfiguration() {
         }
     }
 }

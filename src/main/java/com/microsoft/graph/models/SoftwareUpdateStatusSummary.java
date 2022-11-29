@@ -45,7 +45,6 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     @javax.annotation.Nullable
     public SoftwareUpdateStatusSummary() {
         super();
-        this.setOdataType("#microsoft.graph.softwareUpdateStatusSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,7 +24,6 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
     @javax.annotation.Nullable
     public ConditionalAccessClientApplications() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessClientApplications");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -12,7 +12,8 @@ public enum CaseAction implements ValuedEnum {
     EstimateStatistics("estimateStatistics"),
     AddToReviewSet("addToReviewSet"),
     HoldUpdate("holdUpdate"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    PurgeData("purgeData");
     public final String value;
     CaseAction(final String value) {
         this.value = value;
@@ -31,6 +32,7 @@ public enum CaseAction implements ValuedEnum {
             case "addToReviewSet": return AddToReviewSet;
             case "holdUpdate": return HoldUpdate;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "purgeData": return PurgeData;
             default: return null;
         }
     }

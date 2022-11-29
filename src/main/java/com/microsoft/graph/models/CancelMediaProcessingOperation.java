@@ -15,7 +15,6 @@ public class CancelMediaProcessingOperation extends CommsOperation implements Pa
     @javax.annotation.Nullable
     public CancelMediaProcessingOperation() {
         super();
-        this.setOdataType("#microsoft.graph.cancelMediaProcessingOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

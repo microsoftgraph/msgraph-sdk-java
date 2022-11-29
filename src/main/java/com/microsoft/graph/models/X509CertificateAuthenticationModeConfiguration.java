@@ -24,7 +24,6 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
     @javax.annotation.Nullable
     public X509CertificateAuthenticationModeConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.x509CertificateAuthenticationModeConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

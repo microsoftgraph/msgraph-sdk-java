@@ -44,7 +44,6 @@ public class BaseItem extends Entity implements Parsable {
     @javax.annotation.Nullable
     public BaseItem() {
         super();
-        this.setOdataType("#microsoft.graph.baseItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

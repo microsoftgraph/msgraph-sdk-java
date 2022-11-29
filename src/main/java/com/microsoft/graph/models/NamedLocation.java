@@ -25,7 +25,6 @@ public class NamedLocation extends Entity implements Parsable {
     @javax.annotation.Nullable
     public NamedLocation() {
         super();
-        this.setOdataType("#microsoft.graph.namedLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

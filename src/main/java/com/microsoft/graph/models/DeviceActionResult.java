@@ -35,7 +35,6 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public DeviceActionResult() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

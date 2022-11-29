@@ -21,7 +21,6 @@ public class Directory extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Directory() {
         super();
-        this.setOdataType("#microsoft.graph.directory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

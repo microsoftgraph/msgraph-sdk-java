@@ -67,7 +67,7 @@ public class AllowedCalendarSharingRolesWithUserRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -75,7 +75,7 @@ public class AllowedCalendarSharingRolesWithUserRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration requestConfig = new AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -108,7 +108,7 @@ public class AllowedCalendarSharingRolesWithUserRequestBuilder {
      * @return a CompletableFuture of allowedCalendarSharingRolesWithUserResponse
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AllowedCalendarSharingRolesWithUserResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<AllowedCalendarSharingRolesWithUserResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -123,7 +123,7 @@ public class AllowedCalendarSharingRolesWithUserRequestBuilder {
         }
     }
     /** Invoke function allowedCalendarSharingRoles */
-    public class GetQueryParameters {
+    public class AllowedCalendarSharingRolesWithUserRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
@@ -146,7 +146,7 @@ public class AllowedCalendarSharingRolesWithUserRequestBuilder {
         public Integer top;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -155,13 +155,13 @@ public class AllowedCalendarSharingRolesWithUserRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public AllowedCalendarSharingRolesWithUserRequestBuilderGetQueryParameters queryParameters = new AllowedCalendarSharingRolesWithUserRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new allowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration() {
         }
     }
 }

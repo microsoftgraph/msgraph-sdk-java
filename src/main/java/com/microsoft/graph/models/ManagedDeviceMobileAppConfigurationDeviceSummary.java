@@ -30,7 +30,6 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     @javax.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationDeviceSummary() {
         super();
-        this.setOdataType("#microsoft.graph.managedDeviceMobileAppConfigurationDeviceSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

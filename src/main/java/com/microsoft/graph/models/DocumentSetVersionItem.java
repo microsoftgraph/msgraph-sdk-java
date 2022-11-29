@@ -26,7 +26,6 @@ public class DocumentSetVersionItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public DocumentSetVersionItem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.documentSetVersionItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

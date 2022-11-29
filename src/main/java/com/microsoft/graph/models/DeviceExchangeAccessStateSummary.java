@@ -31,7 +31,6 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
     @javax.annotation.Nullable
     public DeviceExchangeAccessStateSummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceExchangeAccessStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

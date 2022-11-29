@@ -32,7 +32,6 @@ public class ConnectedOrganization extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ConnectedOrganization() {
         super();
-        this.setOdataType("#microsoft.graph.connectedOrganization");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

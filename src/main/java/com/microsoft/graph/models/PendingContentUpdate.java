@@ -23,7 +23,6 @@ public class PendingContentUpdate implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PendingContentUpdate() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.pendingContentUpdate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

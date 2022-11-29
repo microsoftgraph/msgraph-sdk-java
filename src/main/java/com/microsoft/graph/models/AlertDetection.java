@@ -26,7 +26,6 @@ public class AlertDetection implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AlertDetection() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.alertDetection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -21,7 +21,6 @@ public class WorkbookChartAxes extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartAxes() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartAxes");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

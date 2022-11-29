@@ -24,7 +24,6 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public StaffAvailabilityItem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.staffAvailabilityItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

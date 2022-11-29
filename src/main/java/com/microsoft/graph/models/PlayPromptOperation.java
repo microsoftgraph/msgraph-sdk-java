@@ -15,7 +15,6 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
     @javax.annotation.Nullable
     public PlayPromptOperation() {
         super();
-        this.setOdataType("#microsoft.graph.playPromptOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

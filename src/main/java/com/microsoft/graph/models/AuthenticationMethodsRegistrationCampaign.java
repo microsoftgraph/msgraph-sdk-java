@@ -28,7 +28,6 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     @javax.annotation.Nullable
     public AuthenticationMethodsRegistrationCampaign() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.authenticationMethodsRegistrationCampaign");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

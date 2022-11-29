@@ -22,7 +22,6 @@ public class Deleted implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Deleted() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deleted");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

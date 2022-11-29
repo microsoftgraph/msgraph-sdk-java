@@ -21,7 +21,6 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AuthenticationFlowsPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.authenticationFlowsPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

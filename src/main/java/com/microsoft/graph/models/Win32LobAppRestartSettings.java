@@ -27,7 +27,6 @@ public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public Win32LobAppRestartSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.win32LobAppRestartSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

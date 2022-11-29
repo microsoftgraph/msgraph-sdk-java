@@ -26,7 +26,6 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public DocumentSetContent() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.documentSetContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -28,7 +28,6 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public FileSecurityState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.fileSecurityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

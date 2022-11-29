@@ -42,7 +42,6 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
     @javax.annotation.Nullable
     public UnifiedRoleScheduleBase() {
         super();
-        this.setOdataType("#microsoft.graph.unifiedRoleScheduleBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -28,7 +28,6 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AttachmentInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.attachmentInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

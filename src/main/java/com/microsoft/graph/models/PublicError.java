@@ -30,7 +30,6 @@ public class PublicError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PublicError() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.publicError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

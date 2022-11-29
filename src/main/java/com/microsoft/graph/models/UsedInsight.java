@@ -24,7 +24,6 @@ public class UsedInsight extends Entity implements Parsable {
     @javax.annotation.Nullable
     public UsedInsight() {
         super();
-        this.setOdataType("#microsoft.graph.usedInsight");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

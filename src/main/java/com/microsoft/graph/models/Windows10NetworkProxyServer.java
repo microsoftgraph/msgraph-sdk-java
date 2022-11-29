@@ -27,7 +27,6 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public Windows10NetworkProxyServer() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windows10NetworkProxyServer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -34,7 +34,6 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SharepointIds() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.sharepointIds");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -27,7 +27,6 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     @javax.annotation.Nullable
     public AccessPackageAutomaticRequestSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessPackageAutomaticRequestSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

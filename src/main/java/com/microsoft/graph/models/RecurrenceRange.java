@@ -31,7 +31,6 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RecurrenceRange() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.recurrenceRange");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

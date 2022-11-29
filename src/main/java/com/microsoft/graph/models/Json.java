@@ -20,7 +20,6 @@ public class Json implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Json() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.Json");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

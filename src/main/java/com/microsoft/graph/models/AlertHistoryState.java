@@ -35,7 +35,6 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AlertHistoryState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.alertHistoryState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

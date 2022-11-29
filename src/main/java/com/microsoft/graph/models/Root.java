@@ -20,7 +20,6 @@ public class Root implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Root() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.root");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -20,7 +20,6 @@ public class ThumbnailColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ThumbnailColumn() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.thumbnailColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

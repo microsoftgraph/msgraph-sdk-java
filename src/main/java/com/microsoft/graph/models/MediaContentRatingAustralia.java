@@ -24,7 +24,6 @@ public class MediaContentRatingAustralia implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public MediaContentRatingAustralia() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.mediaContentRatingAustralia");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

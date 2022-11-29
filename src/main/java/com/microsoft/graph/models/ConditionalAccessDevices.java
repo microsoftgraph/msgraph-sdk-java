@@ -22,7 +22,6 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public ConditionalAccessDevices() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessDevices");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

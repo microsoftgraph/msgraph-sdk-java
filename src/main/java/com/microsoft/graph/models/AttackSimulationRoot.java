@@ -19,7 +19,6 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AttackSimulationRoot() {
         super();
-        this.setOdataType("#microsoft.graph.attackSimulationRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

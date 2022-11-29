@@ -85,7 +85,6 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public DeviceHealthAttestationState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceHealthAttestationState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

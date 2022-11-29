@@ -32,7 +32,6 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public BroadcastMeetingSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.broadcastMeetingSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

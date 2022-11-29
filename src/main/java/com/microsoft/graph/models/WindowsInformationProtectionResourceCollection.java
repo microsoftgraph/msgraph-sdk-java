@@ -25,7 +25,6 @@ public class WindowsInformationProtectionResourceCollection implements Additiona
     @javax.annotation.Nullable
     public WindowsInformationProtectionResourceCollection() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsInformationProtectionResourceCollection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

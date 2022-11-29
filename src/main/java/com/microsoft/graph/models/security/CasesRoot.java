@@ -18,7 +18,6 @@ public class CasesRoot extends Entity implements Parsable {
     @javax.annotation.Nullable
     public CasesRoot() {
         super();
-        this.setOdataType("#microsoft.graph.security.casesRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

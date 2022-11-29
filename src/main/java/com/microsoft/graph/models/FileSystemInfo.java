@@ -27,7 +27,6 @@ public class FileSystemInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public FileSystemInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.fileSystemInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

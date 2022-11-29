@@ -24,7 +24,6 @@ public class OnenotePagePreview implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OnenotePagePreview() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.onenotePagePreview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

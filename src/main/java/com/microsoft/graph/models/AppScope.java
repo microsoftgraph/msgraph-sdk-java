@@ -19,7 +19,6 @@ public class AppScope extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AppScope() {
         super();
-        this.setOdataType("#microsoft.graph.appScope");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

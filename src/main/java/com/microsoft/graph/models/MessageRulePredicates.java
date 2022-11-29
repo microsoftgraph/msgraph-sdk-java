@@ -80,7 +80,6 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MessageRulePredicates() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.messageRulePredicates");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

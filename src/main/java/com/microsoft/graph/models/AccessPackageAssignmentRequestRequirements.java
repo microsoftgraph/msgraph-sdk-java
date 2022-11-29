@@ -34,7 +34,6 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     @javax.annotation.Nullable
     public AccessPackageAssignmentRequestRequirements() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessPackageAssignmentRequestRequirements");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

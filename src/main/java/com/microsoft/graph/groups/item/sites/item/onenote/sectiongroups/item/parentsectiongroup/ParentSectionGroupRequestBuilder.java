@@ -66,7 +66,7 @@ public class ParentSectionGroupRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<ParentSectionGroupRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -74,7 +74,7 @@ public class ParentSectionGroupRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final ParentSectionGroupRequestBuilderGetRequestConfiguration requestConfig = new ParentSectionGroupRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -107,7 +107,7 @@ public class ParentSectionGroupRequestBuilder {
      * @return a CompletableFuture of sectionGroup
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SectionGroup> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<SectionGroup> get(@javax.annotation.Nullable final java.util.function.Consumer<ParentSectionGroupRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -122,7 +122,7 @@ public class ParentSectionGroupRequestBuilder {
         }
     }
     /** The section group that contains the section group. Read-only. */
-    public class GetQueryParameters {
+    public class ParentSectionGroupRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -133,7 +133,7 @@ public class ParentSectionGroupRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class ParentSectionGroupRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -142,13 +142,13 @@ public class ParentSectionGroupRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public ParentSectionGroupRequestBuilderGetQueryParameters queryParameters = new ParentSectionGroupRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new parentSectionGroupRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public ParentSectionGroupRequestBuilderGetRequestConfiguration() {
         }
     }
 }

@@ -30,7 +30,6 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     @javax.annotation.Nullable
     public WindowsInformationProtectionDataRecoveryCertificate() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsInformationProtectionDataRecoveryCertificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

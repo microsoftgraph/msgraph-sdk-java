@@ -22,7 +22,6 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
     @javax.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityUpload() {
         super();
-        this.setOdataType("#microsoft.graph.importedWindowsAutopilotDeviceIdentityUpload");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

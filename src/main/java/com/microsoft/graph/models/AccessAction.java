@@ -20,7 +20,6 @@ public class AccessAction implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AccessAction() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

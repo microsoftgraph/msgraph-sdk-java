@@ -22,7 +22,6 @@ public class SearchResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SearchResult() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.searchResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

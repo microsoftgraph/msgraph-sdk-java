@@ -45,7 +45,6 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public WindowsFirewallNetworkProfile() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsFirewallNetworkProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

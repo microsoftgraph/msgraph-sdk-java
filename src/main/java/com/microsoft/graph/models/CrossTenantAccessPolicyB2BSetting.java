@@ -24,7 +24,6 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     @javax.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.crossTenantAccessPolicyB2BSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

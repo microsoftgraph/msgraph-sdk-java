@@ -28,7 +28,6 @@ public class ExpirationPattern implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ExpirationPattern() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.expirationPattern");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

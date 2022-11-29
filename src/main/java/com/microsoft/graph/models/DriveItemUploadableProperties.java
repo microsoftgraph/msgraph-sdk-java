@@ -28,7 +28,6 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public DriveItemUploadableProperties() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.driveItemUploadableProperties");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

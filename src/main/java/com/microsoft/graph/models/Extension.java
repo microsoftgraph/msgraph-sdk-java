@@ -17,7 +17,6 @@ public class Extension extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Extension() {
         super();
-        this.setOdataType("#microsoft.graph.extension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

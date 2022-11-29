@@ -28,7 +28,6 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public SimulationReportOverview() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.simulationReportOverview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -25,7 +25,6 @@ public class SigningCertificateUpdateStatus implements AdditionalDataHolder, Par
     @javax.annotation.Nullable
     public SigningCertificateUpdateStatus() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.signingCertificateUpdateStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

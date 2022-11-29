@@ -26,7 +26,6 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
     @javax.annotation.Nullable
     public SubjectRightsRequestStageDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.subjectRightsRequestStageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

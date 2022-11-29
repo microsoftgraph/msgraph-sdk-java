@@ -32,7 +32,6 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ScheduleItem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.scheduleItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

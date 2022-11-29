@@ -1,0 +1,92 @@
+package com.microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class SkypeForBusinessUserConversationMember extends ConversationMember implements Parsable {
+    /** The tenantId property */
+    private String _tenantId;
+    /** The userId property */
+    private String _userId;
+    /**
+     * Instantiates a new SkypeForBusinessUserConversationMember and sets the default values.
+     * @return a void
+     */
+    @javax.annotation.Nullable
+    public SkypeForBusinessUserConversationMember() {
+        super();
+        this.setOdataType("#microsoft.graph.skypeForBusinessUserConversationMember");
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a SkypeForBusinessUserConversationMember
+     */
+    @javax.annotation.Nonnull
+    public static SkypeForBusinessUserConversationMember createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new SkypeForBusinessUserConversationMember();
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final SkypeForBusinessUserConversationMember currentObject = this;
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
+            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
+            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        }};
+    }
+    /**
+     * Gets the tenantId property value. The tenantId property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getTenantId() {
+        return this._tenantId;
+    }
+    /**
+     * Gets the userId property value. The userId property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getUserId() {
+        return this._userId;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeStringValue("tenantId", this.getTenantId());
+        writer.writeStringValue("userId", this.getUserId());
+    }
+    /**
+     * Sets the tenantId property value. The tenantId property
+     * @param value Value to set for the tenantId property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setTenantId(@javax.annotation.Nullable final String value) {
+        this._tenantId = value;
+    }
+    /**
+     * Sets the userId property value. The userId property
+     * @param value Value to set for the userId property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserId(@javax.annotation.Nullable final String value) {
+        this._userId = value;
+    }
+}

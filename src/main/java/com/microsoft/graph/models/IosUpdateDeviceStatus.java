@@ -39,7 +39,6 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     @javax.annotation.Nullable
     public IosUpdateDeviceStatus() {
         super();
-        this.setOdataType("#microsoft.graph.iosUpdateDeviceStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -14,7 +14,7 @@ public class Channel extends Entity implements Parsable {
     private OffsetDateTime _createdDateTime;
     /** Optional textual description for the channel. */
     private String _description;
-    /** Channel name as it will appear to the user in Microsoft Teams. */
+    /** Channel name as it will appear to the user in Microsoft Teams. The maximum length is 50 characters. */
     private String _displayName;
     /** The email address for sending messages to the channel. Read-only. */
     private String _email;
@@ -43,7 +43,6 @@ public class Channel extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Channel() {
         super();
-        this.setOdataType("#microsoft.graph.channel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,7 +71,7 @@ public class Channel extends Entity implements Parsable {
         return this._description;
     }
     /**
-     * Gets the displayName property value. Channel name as it will appear to the user in Microsoft Teams.
+     * Gets the displayName property value. Channel name as it will appear to the user in Microsoft Teams. The maximum length is 50 characters.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -224,7 +223,7 @@ public class Channel extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the displayName property value. Channel name as it will appear to the user in Microsoft Teams.
+     * Sets the displayName property value. Channel name as it will appear to the user in Microsoft Teams. The maximum length is 50 characters.
      * @param value Value to set for the displayName property.
      * @return a void
      */

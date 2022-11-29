@@ -25,7 +25,6 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public BookingWorkTimeSlot() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bookingWorkTimeSlot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

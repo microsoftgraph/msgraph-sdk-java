@@ -23,7 +23,6 @@ public class WorkbookChartLegend extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartLegend() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartLegend");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -15,7 +15,6 @@ public class TeamsTemplate extends Entity implements Parsable {
     @javax.annotation.Nullable
     public TeamsTemplate() {
         super();
-        this.setOdataType("#microsoft.graph.teamsTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

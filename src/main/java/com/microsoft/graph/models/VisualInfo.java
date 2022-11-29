@@ -30,7 +30,6 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public VisualInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.visualInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

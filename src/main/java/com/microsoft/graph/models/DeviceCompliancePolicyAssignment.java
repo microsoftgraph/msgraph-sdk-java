@@ -18,7 +18,6 @@ public class DeviceCompliancePolicyAssignment extends Entity implements Parsable
     @javax.annotation.Nullable
     public DeviceCompliancePolicyAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.deviceCompliancePolicyAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

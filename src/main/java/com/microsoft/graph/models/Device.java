@@ -43,7 +43,7 @@ public class Device extends DirectoryObject implements Parsable {
     private String _operatingSystem;
     /** The version of the operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values). */
     private String _operatingSystemVersion;
-    /** For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections). */
+    /** For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith,/$count eq 0, /$count ne 0). */
     private java.util.List<String> _physicalIds;
     /** The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT. */
     private String _profileType;
@@ -51,7 +51,7 @@ public class Device extends DirectoryObject implements Parsable {
     private java.util.List<DirectoryObject> _registeredOwners;
     /** Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand. */
     private java.util.List<DirectoryObject> _registeredUsers;
-    /** List of labels applied to the device by the system. Supports $filter (eq when counting empty collections). */
+    /** List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0). */
     private java.util.List<String> _systemLabels;
     /** Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand. */
     private java.util.List<DirectoryObject> _transitiveMemberOf;
@@ -247,7 +247,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this._operatingSystemVersion;
     }
     /**
-     * Gets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
+     * Gets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith,/$count eq 0, /$count ne 0).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -279,7 +279,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this._registeredUsers;
     }
     /**
-     * Gets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (eq when counting empty collections).
+     * Gets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -490,7 +490,7 @@ public class Device extends DirectoryObject implements Parsable {
         this._operatingSystemVersion = value;
     }
     /**
-     * Sets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
+     * Sets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith,/$count eq 0, /$count ne 0).
      * @param value Value to set for the physicalIds property.
      * @return a void
      */
@@ -526,7 +526,7 @@ public class Device extends DirectoryObject implements Parsable {
         this._registeredUsers = value;
     }
     /**
-     * Sets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (eq when counting empty collections).
+     * Sets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0).
      * @param value Value to set for the systemLabels property.
      * @return a void
      */

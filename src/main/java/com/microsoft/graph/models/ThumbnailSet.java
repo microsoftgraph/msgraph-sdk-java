@@ -24,7 +24,6 @@ public class ThumbnailSet extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ThumbnailSet() {
         super();
-        this.setOdataType("#microsoft.graph.thumbnailSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

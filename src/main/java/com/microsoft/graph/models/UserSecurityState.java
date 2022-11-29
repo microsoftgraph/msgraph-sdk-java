@@ -49,7 +49,6 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public UserSecurityState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.userSecurityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

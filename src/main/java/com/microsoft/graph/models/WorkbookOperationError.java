@@ -26,7 +26,6 @@ public class WorkbookOperationError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public WorkbookOperationError() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.workbookOperationError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

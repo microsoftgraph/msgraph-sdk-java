@@ -15,7 +15,6 @@ public class IosVppEBookAssignment extends ManagedEBookAssignment implements Par
     @javax.annotation.Nullable
     public IosVppEBookAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.iosVppEBookAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

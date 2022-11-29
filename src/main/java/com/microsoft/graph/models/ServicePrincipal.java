@@ -46,7 +46,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private String _displayName;
     /** The endpoints property */
     private java.util.List<Endpoint> _endpoints;
-    /** Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections). */
+    /** Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0). */
     private java.util.List<FederatedIdentityCredential> _federatedIdentityCredentials;
     /** Home page or landing page of the application. */
     private String _homepage;
@@ -70,9 +70,9 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private java.util.List<OAuth2PermissionGrant> _oauth2PermissionGrants;
     /** The delegated permissions exposed by the application. For more information see the oauth2PermissionScopes property on the application entity's api property. Not nullable. */
     private java.util.List<PermissionScope> _oauth2PermissionScopes;
-    /** Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand. */
+    /** Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). */
     private java.util.List<DirectoryObject> _ownedObjects;
-    /** Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand. */
+    /** Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.  Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). */
     private java.util.List<DirectoryObject> _owners;
     /** The collection of password credentials associated with the application. Not nullable. */
     private java.util.List<PasswordCredential> _passwordCredentials;
@@ -276,7 +276,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._endpoints;
     }
     /**
-     * Gets the federatedIdentityCredentials property value. Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
+     * Gets the federatedIdentityCredentials property value. Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      * @return a federatedIdentityCredential
      */
     @javax.annotation.Nullable
@@ -430,7 +430,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._oauth2PermissionScopes;
     }
     /**
-     * Gets the ownedObjects property value. Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
+     * Gets the ownedObjects property value. Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -438,7 +438,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._ownedObjects;
     }
     /**
-     * Gets the owners property value. Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand.
+     * Gets the owners property value. Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.  Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -795,7 +795,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this._endpoints = value;
     }
     /**
-     * Sets the federatedIdentityCredentials property value. Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
+     * Sets the federatedIdentityCredentials property value. Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      * @param value Value to set for the federatedIdentityCredentials property.
      * @return a void
      */
@@ -903,7 +903,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this._oauth2PermissionScopes = value;
     }
     /**
-     * Sets the ownedObjects property value. Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
+     * Sets the ownedObjects property value. Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @param value Value to set for the ownedObjects property.
      * @return a void
      */
@@ -912,7 +912,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this._ownedObjects = value;
     }
     /**
-     * Sets the owners property value. Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand.
+     * Sets the owners property value. Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.  Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @param value Value to set for the owners property.
      * @return a void
      */

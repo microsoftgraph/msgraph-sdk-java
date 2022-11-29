@@ -21,7 +21,6 @@ public class Dictionary implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Dictionary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.Dictionary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

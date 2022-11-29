@@ -17,7 +17,6 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
     @javax.annotation.Nullable
     public ResetPasscodeActionResult() {
         super();
-        this.setOdataType("#microsoft.graph.resetPasscodeActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -20,7 +20,6 @@ public class PlannerOrderHintsByAssignee implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public PlannerOrderHintsByAssignee() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.plannerOrderHintsByAssignee");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

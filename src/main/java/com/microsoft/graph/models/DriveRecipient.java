@@ -26,7 +26,6 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public DriveRecipient() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.driveRecipient");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

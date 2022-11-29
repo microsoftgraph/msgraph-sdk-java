@@ -15,7 +15,6 @@ public class WorkbookRangeSort extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookRangeSort() {
         super();
-        this.setOdataType("#microsoft.graph.workbookRangeSort");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,7 +24,6 @@ public class CommsNotification implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public CommsNotification() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.commsNotification");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

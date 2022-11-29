@@ -42,7 +42,6 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MessageRuleActions() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.messageRuleActions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

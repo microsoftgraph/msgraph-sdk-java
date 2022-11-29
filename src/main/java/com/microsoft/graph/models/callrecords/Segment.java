@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the cloudCommunications singleton. */
 public class Segment extends Entity implements Parsable {
     /** Endpoint that answered this segment. */
     private Endpoint _callee;
@@ -30,7 +30,6 @@ public class Segment extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Segment() {
         super();
-        this.setOdataType("#microsoft.graph.callRecords.segment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

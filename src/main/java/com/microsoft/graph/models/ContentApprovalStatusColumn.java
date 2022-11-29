@@ -20,7 +20,6 @@ public class ContentApprovalStatusColumn implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public ContentApprovalStatusColumn() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.contentApprovalStatusColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

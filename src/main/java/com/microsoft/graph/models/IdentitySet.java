@@ -30,7 +30,6 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IdentitySet() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.identitySet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

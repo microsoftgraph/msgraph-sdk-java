@@ -45,7 +45,6 @@ public class UserActivity extends Entity implements Parsable {
     @javax.annotation.Nullable
     public UserActivity() {
         super();
-        this.setOdataType("#microsoft.graph.userActivity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -49,7 +49,6 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ProvisioningObjectSummary() {
         super();
-        this.setOdataType("#microsoft.graph.provisioningObjectSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

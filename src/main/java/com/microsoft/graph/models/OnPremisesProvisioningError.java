@@ -29,7 +29,6 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public OnPremisesProvisioningError() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.onPremisesProvisioningError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

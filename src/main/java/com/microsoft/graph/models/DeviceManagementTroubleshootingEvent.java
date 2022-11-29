@@ -22,7 +22,6 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     @javax.annotation.Nullable
     public DeviceManagementTroubleshootingEvent() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementTroubleshootingEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

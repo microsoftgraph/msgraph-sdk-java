@@ -24,7 +24,6 @@ public class ApplicationServicePrincipal implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public ApplicationServicePrincipal() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.applicationServicePrincipal");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

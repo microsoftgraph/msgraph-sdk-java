@@ -27,7 +27,6 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ServiceAnnouncementAttachment() {
         super();
-        this.setOdataType("#microsoft.graph.serviceAnnouncementAttachment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

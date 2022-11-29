@@ -24,7 +24,6 @@ public class TimeSlot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TimeSlot() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.timeSlot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

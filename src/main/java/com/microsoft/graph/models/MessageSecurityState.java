@@ -39,7 +39,6 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MessageSecurityState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.messageSecurityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

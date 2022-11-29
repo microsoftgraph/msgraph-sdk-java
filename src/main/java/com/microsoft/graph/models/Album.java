@@ -22,7 +22,6 @@ public class Album implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Album() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.album");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

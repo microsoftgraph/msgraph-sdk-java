@@ -24,7 +24,6 @@ public class SectionLinks implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SectionLinks() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.sectionLinks");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

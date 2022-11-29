@@ -34,7 +34,6 @@ public class EducationRubric extends Entity implements Parsable {
     @javax.annotation.Nullable
     public EducationRubric() {
         super();
-        this.setOdataType("#microsoft.graph.educationRubric");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

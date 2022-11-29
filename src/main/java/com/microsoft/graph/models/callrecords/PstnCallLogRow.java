@@ -68,7 +68,6 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PstnCallLogRow() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.pstnCallLogRow");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

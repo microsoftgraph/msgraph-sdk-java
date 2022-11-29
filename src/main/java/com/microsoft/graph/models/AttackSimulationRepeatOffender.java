@@ -24,7 +24,6 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
     @javax.annotation.Nullable
     public AttackSimulationRepeatOffender() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.attackSimulationRepeatOffender");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

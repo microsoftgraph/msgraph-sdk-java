@@ -22,7 +22,6 @@ public class PrintTaskDefinition extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PrintTaskDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.printTaskDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

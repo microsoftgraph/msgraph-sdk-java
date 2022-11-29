@@ -91,7 +91,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DirectoryRoleTemplatesRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -99,7 +99,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final DirectoryRoleTemplatesRequestBuilderGetRequestConfiguration requestConfig = new DirectoryRoleTemplatesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -123,7 +123,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final DirectoryRoleTemplate body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final DirectoryRoleTemplate body, @javax.annotation.Nullable final java.util.function.Consumer<DirectoryRoleTemplatesRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -133,7 +133,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
+            final DirectoryRoleTemplatesRequestBuilderPostRequestConfiguration requestConfig = new DirectoryRoleTemplatesRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -165,7 +165,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
      * @return a CompletableFuture of DirectoryRoleTemplateCollectionResponse
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryRoleTemplateCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<DirectoryRoleTemplateCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<DirectoryRoleTemplatesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -206,7 +206,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
      * @return a CompletableFuture of directoryRoleTemplate
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryRoleTemplate> post(@javax.annotation.Nonnull final DirectoryRoleTemplate body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<DirectoryRoleTemplate> post(@javax.annotation.Nonnull final DirectoryRoleTemplate body, @javax.annotation.Nullable final java.util.function.Consumer<DirectoryRoleTemplatesRequestBuilderPostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
@@ -222,7 +222,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
         }
     }
     /** Retrieve a list of directoryRoleTemplate objects. */
-    public class GetQueryParameters {
+    public class DirectoryRoleTemplatesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
@@ -253,7 +253,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
         public Integer skip;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class DirectoryRoleTemplatesRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -262,17 +262,17 @@ public class DirectoryRoleTemplatesRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public DirectoryRoleTemplatesRequestBuilderGetQueryParameters queryParameters = new DirectoryRoleTemplatesRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new directoryRoleTemplatesRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public DirectoryRoleTemplatesRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PostRequestConfiguration {
+    public class DirectoryRoleTemplatesRequestBuilderPostRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -280,11 +280,11 @@ public class DirectoryRoleTemplatesRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PostRequestConfiguration and sets the default values.
+         * Instantiates a new directoryRoleTemplatesRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PostRequestConfiguration() {
+        public DirectoryRoleTemplatesRequestBuilderPostRequestConfiguration() {
         }
     }
 }

@@ -24,7 +24,6 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ItemActionStat() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.itemActionStat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -27,7 +27,6 @@ public class Win32LobAppRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Win32LobAppRule() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.win32LobAppRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

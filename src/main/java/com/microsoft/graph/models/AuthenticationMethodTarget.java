@@ -21,7 +21,6 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AuthenticationMethodTarget() {
         super();
-        this.setOdataType("#microsoft.graph.authenticationMethodTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

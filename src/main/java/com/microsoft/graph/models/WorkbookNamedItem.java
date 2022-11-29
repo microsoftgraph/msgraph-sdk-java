@@ -30,7 +30,6 @@ public class WorkbookNamedItem extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookNamedItem() {
         super();
-        this.setOdataType("#microsoft.graph.workbookNamedItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -35,7 +35,6 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public IosMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.iosMinimumOperatingSystem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

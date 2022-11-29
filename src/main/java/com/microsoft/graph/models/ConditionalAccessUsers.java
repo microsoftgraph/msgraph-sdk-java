@@ -32,7 +32,6 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ConditionalAccessUsers() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessUsers");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

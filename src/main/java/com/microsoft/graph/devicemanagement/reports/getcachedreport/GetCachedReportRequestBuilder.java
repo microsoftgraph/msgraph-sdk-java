@@ -67,7 +67,7 @@ public class GetCachedReportRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetCachedReportPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetCachedReportPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetCachedReportRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -76,7 +76,7 @@ public class GetCachedReportRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
+            final GetCachedReportRequestBuilderPostRequestConfiguration requestConfig = new GetCachedReportRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -110,7 +110,7 @@ public class GetCachedReportRequestBuilder {
      * @return a CompletableFuture of InputStream
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetCachedReportPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetCachedReportPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetCachedReportRequestBuilderPostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
@@ -126,7 +126,7 @@ public class GetCachedReportRequestBuilder {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PostRequestConfiguration {
+    public class GetCachedReportRequestBuilderPostRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -134,11 +134,11 @@ public class GetCachedReportRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PostRequestConfiguration and sets the default values.
+         * Instantiates a new getCachedReportRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PostRequestConfiguration() {
+        public GetCachedReportRequestBuilderPostRequestConfiguration() {
         }
     }
 }

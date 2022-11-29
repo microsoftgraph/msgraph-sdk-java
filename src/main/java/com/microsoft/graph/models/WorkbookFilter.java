@@ -17,7 +17,6 @@ public class WorkbookFilter extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookFilter() {
         super();
-        this.setOdataType("#microsoft.graph.workbookFilter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

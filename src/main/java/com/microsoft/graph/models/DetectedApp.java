@@ -30,7 +30,6 @@ public class DetectedApp extends Entity implements Parsable {
     @javax.annotation.Nullable
     public DetectedApp() {
         super();
-        this.setOdataType("#microsoft.graph.detectedApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

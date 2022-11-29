@@ -28,7 +28,6 @@ public class SharedInsight extends Entity implements Parsable {
     @javax.annotation.Nullable
     public SharedInsight() {
         super();
-        this.setOdataType("#microsoft.graph.sharedInsight");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

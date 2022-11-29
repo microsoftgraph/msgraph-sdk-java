@@ -30,7 +30,6 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ApprovalSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.approvalSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

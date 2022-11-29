@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
+    /** The allowedCloudEndpoints property */
+    private java.util.List<String> _allowedCloudEndpoints;
     /** Defines the default configuration for how your organization interacts with external Azure Active Directory organizations. */
     private CrossTenantAccessPolicyConfigurationDefault _default_escaped;
     /** Defines partner-specific configurations for external Azure Active Directory organizations. */
@@ -32,6 +34,14 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
         return new CrossTenantAccessPolicy();
     }
     /**
+     * Gets the allowedCloudEndpoints property value. The allowedCloudEndpoints property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getAllowedCloudEndpoints() {
+        return this._allowedCloudEndpoints;
+    }
+    /**
      * Gets the default property value. Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
      * @return a crossTenantAccessPolicyConfigurationDefault
      */
@@ -47,6 +57,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CrossTenantAccessPolicy currentObject = this;
         return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
+            this.put("allowedCloudEndpoints", (n) -> { currentObject.setAllowedCloudEndpoints(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("default", (n) -> { currentObject.setDefault(n.getObjectValue(CrossTenantAccessPolicyConfigurationDefault::createFromDiscriminatorValue)); });
             this.put("partners", (n) -> { currentObject.setPartners(n.getCollectionOfObjectValues(CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue)); });
         }};
@@ -68,8 +79,18 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfPrimitiveValues("allowedCloudEndpoints", this.getAllowedCloudEndpoints());
         writer.writeObjectValue("default", this.getDefault());
         writer.writeCollectionOfObjectValues("partners", this.getPartners());
+    }
+    /**
+     * Sets the allowedCloudEndpoints property value. The allowedCloudEndpoints property
+     * @param value Value to set for the allowedCloudEndpoints property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAllowedCloudEndpoints(@javax.annotation.Nullable final java.util.List<String> value) {
+        this._allowedCloudEndpoints = value;
     }
     /**
      * Sets the default property value. Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.

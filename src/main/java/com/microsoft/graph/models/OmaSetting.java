@@ -34,7 +34,6 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OmaSetting() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.omaSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -25,7 +25,6 @@ public class IosDeviceType implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IosDeviceType() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.iosDeviceType");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

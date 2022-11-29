@@ -35,7 +35,6 @@ public class PasswordCredential implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PasswordCredential() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.passwordCredential");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

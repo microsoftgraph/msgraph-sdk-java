@@ -31,7 +31,6 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public SubjectRightsRequestHistory() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.subjectRightsRequestHistory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

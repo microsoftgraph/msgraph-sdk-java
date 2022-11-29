@@ -24,7 +24,6 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public MeetingTimeSuggestionsResult() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.meetingTimeSuggestionsResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

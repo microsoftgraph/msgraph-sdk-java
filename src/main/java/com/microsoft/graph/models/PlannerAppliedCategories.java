@@ -20,7 +20,6 @@ public class PlannerAppliedCategories implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public PlannerAppliedCategories() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.plannerAppliedCategories");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

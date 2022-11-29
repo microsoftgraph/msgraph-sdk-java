@@ -20,7 +20,6 @@ public class GeolocationColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public GeolocationColumn() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.geolocationColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

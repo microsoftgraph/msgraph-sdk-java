@@ -29,7 +29,6 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
     @javax.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceEnrollmentPlatformRestriction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

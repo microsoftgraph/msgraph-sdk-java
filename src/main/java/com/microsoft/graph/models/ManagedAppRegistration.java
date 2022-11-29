@@ -49,7 +49,6 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ManagedAppRegistration() {
         super();
-        this.setOdataType("#microsoft.graph.managedAppRegistration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,7 +24,6 @@ public class EmployeeOrgData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public EmployeeOrgData() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.employeeOrgData");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

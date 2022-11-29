@@ -26,7 +26,6 @@ public class Website implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Website() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.website");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

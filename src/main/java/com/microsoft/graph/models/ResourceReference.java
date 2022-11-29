@@ -26,7 +26,6 @@ public class ResourceReference implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ResourceReference() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.resourceReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

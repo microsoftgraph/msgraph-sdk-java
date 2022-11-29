@@ -28,7 +28,6 @@ public class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public MobileAppInstallTimeSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.mobileAppInstallTimeSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

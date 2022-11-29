@@ -4,8 +4,8 @@ import com.microsoft.graph.groups.item.calendar.allowedcalendarsharingroleswithu
 import com.microsoft.graph.groups.item.calendar.calendarpermissions.CalendarPermissionsRequestBuilder;
 import com.microsoft.graph.groups.item.calendar.calendarpermissions.item.CalendarPermissionItemRequestBuilder;
 import com.microsoft.graph.groups.item.calendar.calendarview.CalendarViewRequestBuilder;
-import com.microsoft.graph.groups.item.calendar.calendarview.item.EventItemRequestBuilder;
 import com.microsoft.graph.groups.item.calendar.events.EventsRequestBuilder;
+import com.microsoft.graph.groups.item.calendar.events.item.EventItemRequestBuilder;
 import com.microsoft.graph.groups.item.calendar.getschedule.GetScheduleRequestBuilder;
 import com.microsoft.graph.groups.item.calendar.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.groups.item.calendar.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
@@ -141,7 +141,7 @@ public class CalendarRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<CalendarRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -149,7 +149,7 @@ public class CalendarRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final CalendarRequestBuilderGetRequestConfiguration requestConfig = new CalendarRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -194,7 +194,7 @@ public class CalendarRequestBuilder {
      * @return a CompletableFuture of calendar
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Calendar> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Calendar> get(@javax.annotation.Nullable final java.util.function.Consumer<CalendarRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -233,14 +233,14 @@ public class CalendarRequestBuilder {
         return new SingleValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** The group's calendar. Read-only. */
-    public class GetQueryParameters {
+    public class CalendarRequestBuilderGetQueryParameters {
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class CalendarRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -249,13 +249,13 @@ public class CalendarRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public CalendarRequestBuilderGetQueryParameters queryParameters = new CalendarRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new calendarRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public CalendarRequestBuilderGetRequestConfiguration() {
         }
     }
 }

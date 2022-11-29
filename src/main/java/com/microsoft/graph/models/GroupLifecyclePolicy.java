@@ -22,7 +22,6 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
     @javax.annotation.Nullable
     public GroupLifecyclePolicy() {
         super();
-        this.setOdataType("#microsoft.graph.groupLifecyclePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

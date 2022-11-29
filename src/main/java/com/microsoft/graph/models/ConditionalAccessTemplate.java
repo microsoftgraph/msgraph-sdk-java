@@ -24,7 +24,6 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ConditionalAccessTemplate() {
         super();
-        this.setOdataType("#microsoft.graph.conditionalAccessTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

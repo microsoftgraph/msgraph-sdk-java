@@ -26,7 +26,6 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Fido2KeyRestrictions() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.fido2KeyRestrictions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

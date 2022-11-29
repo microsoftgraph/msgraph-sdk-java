@@ -22,7 +22,6 @@ public class SpaApplication implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SpaApplication() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.spaApplication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -30,7 +30,6 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ProvisioningErrorInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.provisioningErrorInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

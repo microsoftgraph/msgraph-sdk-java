@@ -30,7 +30,6 @@ public class SubjectSet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SubjectSet() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.subjectSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

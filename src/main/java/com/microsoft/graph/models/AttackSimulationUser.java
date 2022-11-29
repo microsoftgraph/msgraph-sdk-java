@@ -26,7 +26,6 @@ public class AttackSimulationUser implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AttackSimulationUser() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.attackSimulationUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

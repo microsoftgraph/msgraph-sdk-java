@@ -24,7 +24,6 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public KeyValuePair() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.keyValuePair");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

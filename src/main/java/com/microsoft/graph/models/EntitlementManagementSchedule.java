@@ -27,7 +27,6 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public EntitlementManagementSchedule() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.entitlementManagementSchedule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

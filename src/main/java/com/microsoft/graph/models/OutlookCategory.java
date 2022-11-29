@@ -20,7 +20,6 @@ public class OutlookCategory extends Entity implements Parsable {
     @javax.annotation.Nullable
     public OutlookCategory() {
         super();
-        this.setOdataType("#microsoft.graph.outlookCategory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -28,7 +28,6 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public RedundancyDetectionSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.security.redundancyDetectionSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

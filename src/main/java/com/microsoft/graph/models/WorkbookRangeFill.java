@@ -17,7 +17,6 @@ public class WorkbookRangeFill extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookRangeFill() {
         super();
-        this.setOdataType("#microsoft.graph.workbookRangeFill");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

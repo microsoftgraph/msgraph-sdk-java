@@ -25,7 +25,6 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IncompleteData() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.incompleteData");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

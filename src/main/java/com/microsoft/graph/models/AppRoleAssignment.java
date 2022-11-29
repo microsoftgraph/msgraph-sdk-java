@@ -16,7 +16,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
     private OffsetDateTime _createdDateTime;
     /** The display name of the user, group, or service principal that was granted the app role assignment. Read-only. Supports $filter (eq and startswith). */
     private String _principalDisplayName;
-    /** The unique identifier (id) for the user, group, or service principal being granted the app role. Required on create. */
+    /** The unique identifier (id) for the user, security group, or service principal being granted the app role. Security groups with dynamic memberships are supported. Required on create. */
     private String _principalId;
     /** The type of the assigned principal. This can either be User, Group, or ServicePrincipal. Read-only. */
     private String _principalType;
@@ -85,7 +85,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
         return this._principalDisplayName;
     }
     /**
-     * Gets the principalId property value. The unique identifier (id) for the user, group, or service principal being granted the app role. Required on create.
+     * Gets the principalId property value. The unique identifier (id) for the user, security group, or service principal being granted the app role. Security groups with dynamic memberships are supported. Required on create.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -161,7 +161,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
         this._principalDisplayName = value;
     }
     /**
-     * Sets the principalId property value. The unique identifier (id) for the user, group, or service principal being granted the app role. Required on create.
+     * Sets the principalId property value. The unique identifier (id) for the user, security group, or service principal being granted the app role. Security groups with dynamic memberships are supported. Required on create.
      * @param value Value to set for the principalId property.
      * @return a void
      */

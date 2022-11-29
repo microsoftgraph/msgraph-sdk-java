@@ -3,11 +3,11 @@ package com.microsoft.graph.education.users.item;
 import com.microsoft.graph.education.users.item.assignments.AssignmentsRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.EducationAssignmentItemRequestBuilder;
 import com.microsoft.graph.education.users.item.classes.ClassesRequestBuilder;
-import com.microsoft.graph.education.users.item.classes.item.EducationClassItemRequestBuilder;
 import com.microsoft.graph.education.users.item.rubrics.item.EducationRubricItemRequestBuilder;
 import com.microsoft.graph.education.users.item.rubrics.RubricsRequestBuilder;
 import com.microsoft.graph.education.users.item.schools.item.EducationSchoolItemRequestBuilder;
 import com.microsoft.graph.education.users.item.schools.SchoolsRequestBuilder;
+import com.microsoft.graph.education.users.item.taughtclasses.item.EducationClassItemRequestBuilder;
 import com.microsoft.graph.education.users.item.taughtclasses.TaughtClassesRequestBuilder;
 import com.microsoft.graph.education.users.item.user.UserRequestBuilder;
 import com.microsoft.graph.models.EducationUser;
@@ -130,14 +130,14 @@ public class EducationUserItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<EducationUserItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.DELETE;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
+            final EducationUserItemRequestBuilderDeleteRequestConfiguration requestConfig = new EducationUserItemRequestBuilderDeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -158,7 +158,7 @@ public class EducationUserItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<EducationUserItemRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -166,7 +166,7 @@ public class EducationUserItemRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final EducationUserItemRequestBuilderGetRequestConfiguration requestConfig = new EducationUserItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -190,7 +190,7 @@ public class EducationUserItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final EducationUser body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final EducationUser body, @javax.annotation.Nullable final java.util.function.Consumer<EducationUserItemRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.PATCH;
@@ -200,7 +200,7 @@ public class EducationUserItemRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            final EducationUserItemRequestBuilderPatchRequestConfiguration requestConfig = new EducationUserItemRequestBuilderPatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -232,7 +232,7 @@ public class EducationUserItemRequestBuilder {
      * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<EducationUserItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -271,7 +271,7 @@ public class EducationUserItemRequestBuilder {
      * @return a CompletableFuture of educationUser
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationUser> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<EducationUser> get(@javax.annotation.Nullable final java.util.function.Consumer<EducationUserItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -312,7 +312,7 @@ public class EducationUserItemRequestBuilder {
      * @return a CompletableFuture of educationUser
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationUser> patch(@javax.annotation.Nonnull final EducationUser body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<EducationUser> patch(@javax.annotation.Nonnull final EducationUser body, @javax.annotation.Nullable final java.util.function.Consumer<EducationUserItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
@@ -364,7 +364,7 @@ public class EducationUserItemRequestBuilder {
         return new com.microsoft.graph.education.users.item.taughtclasses.item.EducationClassItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class DeleteRequestConfiguration {
+    public class EducationUserItemRequestBuilderDeleteRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -372,15 +372,15 @@ public class EducationUserItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new DeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EducationUserItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public DeleteRequestConfiguration() {
+        public EducationUserItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
     /** Get users from education */
-    public class GetQueryParameters {
+    public class EducationUserItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -391,7 +391,7 @@ public class EducationUserItemRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class EducationUserItemRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -400,17 +400,17 @@ public class EducationUserItemRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public EducationUserItemRequestBuilderGetQueryParameters queryParameters = new EducationUserItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new EducationUserItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public EducationUserItemRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PatchRequestConfiguration {
+    public class EducationUserItemRequestBuilderPatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -418,11 +418,11 @@ public class EducationUserItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PatchRequestConfiguration and sets the default values.
+         * Instantiates a new EducationUserItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PatchRequestConfiguration() {
+        public EducationUserItemRequestBuilderPatchRequestConfiguration() {
         }
     }
 }

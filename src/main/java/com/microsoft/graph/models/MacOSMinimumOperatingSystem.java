@@ -45,7 +45,6 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public MacOSMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.macOSMinimumOperatingSystem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

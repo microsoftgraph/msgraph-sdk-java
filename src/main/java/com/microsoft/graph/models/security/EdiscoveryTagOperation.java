@@ -15,7 +15,6 @@ public class EdiscoveryTagOperation extends CaseOperation implements Parsable {
     @javax.annotation.Nullable
     public EdiscoveryTagOperation() {
         super();
-        this.setOdataType("#microsoft.graph.security.ediscoveryTagOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

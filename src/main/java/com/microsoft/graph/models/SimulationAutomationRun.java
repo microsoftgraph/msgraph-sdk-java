@@ -25,7 +25,6 @@ public class SimulationAutomationRun extends Entity implements Parsable {
     @javax.annotation.Nullable
     public SimulationAutomationRun() {
         super();
-        this.setOdataType("#microsoft.graph.simulationAutomationRun");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -36,7 +36,6 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ItemReference() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.itemReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

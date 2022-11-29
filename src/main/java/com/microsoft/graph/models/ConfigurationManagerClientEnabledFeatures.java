@@ -33,7 +33,6 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
     @javax.annotation.Nullable
     public ConfigurationManagerClientEnabledFeatures() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.configurationManagerClientEnabledFeatures");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

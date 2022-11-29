@@ -37,7 +37,6 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     @javax.annotation.Nullable
     public DeviceManagementExportJob() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementExportJob");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

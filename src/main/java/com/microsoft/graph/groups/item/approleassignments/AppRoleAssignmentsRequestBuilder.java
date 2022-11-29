@@ -73,7 +73,7 @@ public class AppRoleAssignmentsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<AppRoleAssignmentsRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -81,7 +81,7 @@ public class AppRoleAssignmentsRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final AppRoleAssignmentsRequestBuilderGetRequestConfiguration requestConfig = new AppRoleAssignmentsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -90,7 +90,7 @@ public class AppRoleAssignmentsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to assign an app role to a group. All direct members of the group will be considered assigned. To grant an app role assignment to a group, you need three identifiers: Additional licenses might be required to use a group to manage access to applications.
+     * Use this API to assign an app role to a security group. All direct members of the group will be considered assigned. Security groups with dynamic memberships are supported. To grant an app role assignment to a group, you need three identifiers: Additional licenses might be required to use a group to manage access to applications.
      * @param body 
      * @return a RequestInformation
      */
@@ -99,13 +99,13 @@ public class AppRoleAssignmentsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Use this API to assign an app role to a group. All direct members of the group will be considered assigned. To grant an app role assignment to a group, you need three identifiers: Additional licenses might be required to use a group to manage access to applications.
+     * Use this API to assign an app role to a security group. All direct members of the group will be considered assigned. Security groups with dynamic memberships are supported. To grant an app role assignment to a group, you need three identifiers: Additional licenses might be required to use a group to manage access to applications.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final AppRoleAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final AppRoleAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<AppRoleAssignmentsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -115,7 +115,7 @@ public class AppRoleAssignmentsRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
+            final AppRoleAssignmentsRequestBuilderPostRequestConfiguration requestConfig = new AppRoleAssignmentsRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -147,7 +147,7 @@ public class AppRoleAssignmentsRequestBuilder {
      * @return a CompletableFuture of AppRoleAssignmentCollectionResponse
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AppRoleAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<AppRoleAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AppRoleAssignmentsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -162,7 +162,7 @@ public class AppRoleAssignmentsRequestBuilder {
         }
     }
     /**
-     * Use this API to assign an app role to a group. All direct members of the group will be considered assigned. To grant an app role assignment to a group, you need three identifiers: Additional licenses might be required to use a group to manage access to applications.
+     * Use this API to assign an app role to a security group. All direct members of the group will be considered assigned. Security groups with dynamic memberships are supported. To grant an app role assignment to a group, you need three identifiers: Additional licenses might be required to use a group to manage access to applications.
      * @param body 
      * @return a CompletableFuture of appRoleAssignment
      */
@@ -182,13 +182,13 @@ public class AppRoleAssignmentsRequestBuilder {
         }
     }
     /**
-     * Use this API to assign an app role to a group. All direct members of the group will be considered assigned. To grant an app role assignment to a group, you need three identifiers: Additional licenses might be required to use a group to manage access to applications.
+     * Use this API to assign an app role to a security group. All direct members of the group will be considered assigned. Security groups with dynamic memberships are supported. To grant an app role assignment to a group, you need three identifiers: Additional licenses might be required to use a group to manage access to applications.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of appRoleAssignment
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AppRoleAssignment> post(@javax.annotation.Nonnull final AppRoleAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<AppRoleAssignment> post(@javax.annotation.Nonnull final AppRoleAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<AppRoleAssignmentsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
@@ -204,7 +204,7 @@ public class AppRoleAssignmentsRequestBuilder {
         }
     }
     /** Represents the app roles a group has been granted for an application. Supports $expand. */
-    public class GetQueryParameters {
+    public class AppRoleAssignmentsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
@@ -239,7 +239,7 @@ public class AppRoleAssignmentsRequestBuilder {
         public Integer top;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class AppRoleAssignmentsRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -248,17 +248,17 @@ public class AppRoleAssignmentsRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public AppRoleAssignmentsRequestBuilderGetQueryParameters queryParameters = new AppRoleAssignmentsRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new appRoleAssignmentsRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public AppRoleAssignmentsRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PostRequestConfiguration {
+    public class AppRoleAssignmentsRequestBuilderPostRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -266,11 +266,11 @@ public class AppRoleAssignmentsRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PostRequestConfiguration and sets the default values.
+         * Instantiates a new appRoleAssignmentsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PostRequestConfiguration() {
+        public AppRoleAssignmentsRequestBuilderPostRequestConfiguration() {
         }
     }
 }

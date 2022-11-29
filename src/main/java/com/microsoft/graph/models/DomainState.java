@@ -27,7 +27,6 @@ public class DomainState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public DomainState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.domainState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

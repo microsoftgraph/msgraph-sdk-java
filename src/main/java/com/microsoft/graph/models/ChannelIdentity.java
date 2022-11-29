@@ -24,7 +24,6 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ChannelIdentity() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.channelIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

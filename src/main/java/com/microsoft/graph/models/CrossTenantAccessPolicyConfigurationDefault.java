@@ -27,7 +27,6 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
     @javax.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationDefault() {
         super();
-        this.setOdataType("#microsoft.graph.crossTenantAccessPolicyConfigurationDefault");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,7 +24,6 @@ public class SizeRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SizeRange() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.sizeRange");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

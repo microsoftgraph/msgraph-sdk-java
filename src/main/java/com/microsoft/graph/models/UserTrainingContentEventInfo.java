@@ -31,7 +31,6 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public UserTrainingContentEventInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.userTrainingContentEventInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

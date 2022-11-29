@@ -24,7 +24,6 @@ public class SearchAlterationOptions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SearchAlterationOptions() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.searchAlterationOptions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

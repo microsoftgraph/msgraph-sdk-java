@@ -26,7 +26,6 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PasswordProfile() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.passwordProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

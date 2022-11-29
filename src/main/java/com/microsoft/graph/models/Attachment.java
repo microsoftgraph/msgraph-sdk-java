@@ -30,7 +30,6 @@ public class Attachment extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Attachment() {
         super();
-        this.setOdataType("#microsoft.graph.attachment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

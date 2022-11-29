@@ -23,7 +23,6 @@ public class ExternalGroup extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ExternalGroup() {
         super();
-        this.setOdataType("#microsoft.graph.externalConnectors.externalGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -23,7 +23,6 @@ public class EducationAssignmentRecipient implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public EducationAssignmentRecipient() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.educationAssignmentRecipient");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

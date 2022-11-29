@@ -24,7 +24,6 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AssignedLicense() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.assignedLicense");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

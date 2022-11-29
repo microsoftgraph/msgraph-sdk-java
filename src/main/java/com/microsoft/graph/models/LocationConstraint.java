@@ -26,7 +26,6 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public LocationConstraint() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.locationConstraint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

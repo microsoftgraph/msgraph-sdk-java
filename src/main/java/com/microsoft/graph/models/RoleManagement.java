@@ -24,7 +24,6 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RoleManagement() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.roleManagement");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -28,7 +28,6 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public OnenotePatchContentCommand() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.onenotePatchContentCommand");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,7 +24,6 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public RubricQualityFeedbackModel() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.rubricQualityFeedbackModel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

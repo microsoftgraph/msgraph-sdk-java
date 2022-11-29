@@ -34,7 +34,6 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public DeviceDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

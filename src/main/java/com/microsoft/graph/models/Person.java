@@ -54,7 +54,6 @@ public class Person extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Person() {
         super();
-        this.setOdataType("#microsoft.graph.person");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -25,7 +25,6 @@ public class WindowsInformationProtectionIPRangeCollection implements Additional
     @javax.annotation.Nullable
     public WindowsInformationProtectionIPRangeCollection() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsInformationProtectionIPRangeCollection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

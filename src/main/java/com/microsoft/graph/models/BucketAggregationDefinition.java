@@ -30,7 +30,6 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public BucketAggregationDefinition() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bucketAggregationDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

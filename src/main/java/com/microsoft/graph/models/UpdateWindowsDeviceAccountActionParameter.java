@@ -32,7 +32,6 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
     @javax.annotation.Nullable
     public UpdateWindowsDeviceAccountActionParameter() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.updateWindowsDeviceAccountActionParameter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

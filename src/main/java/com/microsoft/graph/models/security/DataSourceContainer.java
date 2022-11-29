@@ -32,7 +32,6 @@ public class DataSourceContainer extends Entity implements Parsable {
     @javax.annotation.Nullable
     public DataSourceContainer() {
         super();
-        this.setOdataType("#microsoft.graph.security.dataSourceContainer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

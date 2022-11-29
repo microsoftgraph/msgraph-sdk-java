@@ -45,7 +45,6 @@ public class DeviceConfigurationSettingState implements AdditionalDataHolder, Pa
     @javax.annotation.Nullable
     public DeviceConfigurationSettingState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceConfigurationSettingState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

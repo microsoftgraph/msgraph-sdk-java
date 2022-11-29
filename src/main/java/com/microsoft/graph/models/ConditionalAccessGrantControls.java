@@ -28,7 +28,6 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     @javax.annotation.Nullable
     public ConditionalAccessGrantControls() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessGrantControls");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

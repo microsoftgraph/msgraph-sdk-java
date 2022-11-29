@@ -17,7 +17,6 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
     @javax.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMethodTarget() {
         super();
-        this.setOdataType("#microsoft.graph.microsoftAuthenticatorAuthenticationMethodTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

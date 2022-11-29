@@ -33,7 +33,6 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
     @javax.annotation.Nullable
     public DeviceCompliancePolicyDeviceStateSummary() {
         super();
-        this.setOdataType("#microsoft.graph.deviceCompliancePolicyDeviceStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

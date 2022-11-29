@@ -26,7 +26,6 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public LicenseUnitsDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.licenseUnitsDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

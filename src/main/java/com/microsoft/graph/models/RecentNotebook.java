@@ -29,7 +29,6 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RecentNotebook() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.recentNotebook");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

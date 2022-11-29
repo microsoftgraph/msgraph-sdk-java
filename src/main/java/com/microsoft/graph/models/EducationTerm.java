@@ -29,7 +29,6 @@ public class EducationTerm implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public EducationTerm() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.educationTerm");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

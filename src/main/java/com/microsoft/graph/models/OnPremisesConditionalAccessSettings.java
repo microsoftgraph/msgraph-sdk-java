@@ -23,7 +23,6 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     @javax.annotation.Nullable
     public OnPremisesConditionalAccessSettings() {
         super();
-        this.setOdataType("#microsoft.graph.onPremisesConditionalAccessSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

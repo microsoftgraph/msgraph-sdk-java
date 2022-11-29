@@ -28,7 +28,6 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     @javax.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.importedWindowsAutopilotDeviceIdentityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -17,7 +17,6 @@ public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartGridlinesFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartGridlinesFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

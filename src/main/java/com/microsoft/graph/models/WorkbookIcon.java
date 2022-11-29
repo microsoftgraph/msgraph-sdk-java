@@ -24,7 +24,6 @@ public class WorkbookIcon implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public WorkbookIcon() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.workbookIcon");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

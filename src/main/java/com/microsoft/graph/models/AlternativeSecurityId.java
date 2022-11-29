@@ -26,7 +26,6 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AlternativeSecurityId() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.alternativeSecurityId");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

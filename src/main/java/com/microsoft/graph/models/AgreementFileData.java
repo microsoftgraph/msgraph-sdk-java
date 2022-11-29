@@ -22,7 +22,6 @@ public class AgreementFileData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AgreementFileData() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.agreementFileData");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

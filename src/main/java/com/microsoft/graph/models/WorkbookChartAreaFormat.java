@@ -19,7 +19,6 @@ public class WorkbookChartAreaFormat extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartAreaFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartAreaFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

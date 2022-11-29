@@ -20,7 +20,6 @@ public class Properties implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Properties() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.externalConnectors.properties");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

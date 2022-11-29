@@ -26,7 +26,6 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SiteCollection() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.siteCollection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

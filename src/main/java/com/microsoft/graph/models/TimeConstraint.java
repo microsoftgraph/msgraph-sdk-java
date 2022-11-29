@@ -24,7 +24,6 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TimeConstraint() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.timeConstraint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

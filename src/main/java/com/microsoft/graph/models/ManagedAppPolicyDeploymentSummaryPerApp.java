@@ -25,7 +25,6 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
     @javax.annotation.Nullable
     public ManagedAppPolicyDeploymentSummaryPerApp() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.managedAppPolicyDeploymentSummaryPerApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

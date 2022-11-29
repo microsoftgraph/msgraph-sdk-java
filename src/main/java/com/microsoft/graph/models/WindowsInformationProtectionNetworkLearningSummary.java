@@ -20,7 +20,6 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
     @javax.annotation.Nullable
     public WindowsInformationProtectionNetworkLearningSummary() {
         super();
-        this.setOdataType("#microsoft.graph.windowsInformationProtectionNetworkLearningSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

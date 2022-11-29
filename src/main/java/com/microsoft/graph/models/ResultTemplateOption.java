@@ -22,7 +22,6 @@ public class ResultTemplateOption implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ResultTemplateOption() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.resultTemplateOption");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

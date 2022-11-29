@@ -3,12 +3,12 @@ package com.microsoft.graph.contacts.item;
 import com.microsoft.graph.contacts.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
 import com.microsoft.graph.contacts.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import com.microsoft.graph.contacts.item.directreports.DirectReportsRequestBuilder;
-import com.microsoft.graph.contacts.item.directreports.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.contacts.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.contacts.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.contacts.item.manager.ManagerRequestBuilder;
 import com.microsoft.graph.contacts.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.contacts.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.contacts.item.transitivememberof.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.contacts.item.transitivememberof.TransitiveMemberOfRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OrgContact;
@@ -121,14 +121,14 @@ public class OrgContactItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<OrgContactItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.DELETE;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
+            final OrgContactItemRequestBuilderDeleteRequestConfiguration requestConfig = new OrgContactItemRequestBuilderDeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -149,7 +149,7 @@ public class OrgContactItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<OrgContactItemRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -157,7 +157,7 @@ public class OrgContactItemRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final OrgContactItemRequestBuilderGetRequestConfiguration requestConfig = new OrgContactItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -181,7 +181,7 @@ public class OrgContactItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final OrgContact body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final OrgContact body, @javax.annotation.Nullable final java.util.function.Consumer<OrgContactItemRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.PATCH;
@@ -191,7 +191,7 @@ public class OrgContactItemRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            final OrgContactItemRequestBuilderPatchRequestConfiguration requestConfig = new OrgContactItemRequestBuilderPatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -223,7 +223,7 @@ public class OrgContactItemRequestBuilder {
      * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<OrgContactItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -274,7 +274,7 @@ public class OrgContactItemRequestBuilder {
      * @return a CompletableFuture of orgContact
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OrgContact> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<OrgContact> get(@javax.annotation.Nullable final java.util.function.Consumer<OrgContactItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -327,7 +327,7 @@ public class OrgContactItemRequestBuilder {
      * @return a CompletableFuture of orgContact
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OrgContact> patch(@javax.annotation.Nonnull final OrgContact body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<OrgContact> patch(@javax.annotation.Nonnull final OrgContact body, @javax.annotation.Nullable final java.util.function.Consumer<OrgContactItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
@@ -355,7 +355,7 @@ public class OrgContactItemRequestBuilder {
         return new com.microsoft.graph.contacts.item.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class DeleteRequestConfiguration {
+    public class OrgContactItemRequestBuilderDeleteRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -363,15 +363,15 @@ public class OrgContactItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new DeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OrgContactItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public DeleteRequestConfiguration() {
+        public OrgContactItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
     /** Get the properties and relationships of an organizational contact. */
-    public class GetQueryParameters {
+    public class OrgContactItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -382,7 +382,7 @@ public class OrgContactItemRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class OrgContactItemRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -391,17 +391,17 @@ public class OrgContactItemRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public OrgContactItemRequestBuilderGetQueryParameters queryParameters = new OrgContactItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new OrgContactItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public OrgContactItemRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PatchRequestConfiguration {
+    public class OrgContactItemRequestBuilderPatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -409,11 +409,11 @@ public class OrgContactItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PatchRequestConfiguration and sets the default values.
+         * Instantiates a new OrgContactItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PatchRequestConfiguration() {
+        public OrgContactItemRequestBuilderPatchRequestConfiguration() {
         }
     }
 }

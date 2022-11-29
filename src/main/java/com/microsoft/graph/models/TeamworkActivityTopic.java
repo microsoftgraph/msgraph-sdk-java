@@ -26,7 +26,6 @@ public class TeamworkActivityTopic implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TeamworkActivityTopic() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamworkActivityTopic");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

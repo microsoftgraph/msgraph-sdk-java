@@ -23,7 +23,6 @@ public class ActionResultPart implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ActionResultPart() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.actionResultPart");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

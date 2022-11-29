@@ -54,7 +54,6 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PrinterDefaults() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.printerDefaults");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

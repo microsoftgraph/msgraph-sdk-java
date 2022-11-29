@@ -32,7 +32,6 @@ public class MessageRule extends Entity implements Parsable {
     @javax.annotation.Nullable
     public MessageRule() {
         super();
-        this.setOdataType("#microsoft.graph.messageRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

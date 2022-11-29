@@ -28,7 +28,6 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TeamsTabConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamsTabConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

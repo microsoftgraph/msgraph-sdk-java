@@ -25,7 +25,6 @@ public class ProxiedDomain implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ProxiedDomain() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.proxiedDomain");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

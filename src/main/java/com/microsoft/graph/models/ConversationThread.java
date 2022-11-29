@@ -35,7 +35,6 @@ public class ConversationThread extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ConversationThread() {
         super();
-        this.setOdataType("#microsoft.graph.conversationThread");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

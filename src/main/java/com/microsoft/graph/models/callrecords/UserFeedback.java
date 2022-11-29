@@ -26,7 +26,6 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public UserFeedback() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.userFeedback");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

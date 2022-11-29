@@ -31,7 +31,6 @@ public class RbacApplication extends Entity implements Parsable {
     @javax.annotation.Nullable
     public RbacApplication() {
         super();
-        this.setOdataType("#microsoft.graph.rbacApplication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

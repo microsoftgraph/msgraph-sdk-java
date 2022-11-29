@@ -26,7 +26,6 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PersonOrGroupColumn() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.personOrGroupColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

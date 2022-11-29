@@ -25,7 +25,6 @@ public class ChatViewpoint implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ChatViewpoint() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.chatViewpoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

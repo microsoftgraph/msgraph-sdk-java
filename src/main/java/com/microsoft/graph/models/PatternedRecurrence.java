@@ -24,7 +24,6 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PatternedRecurrence() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.patternedRecurrence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

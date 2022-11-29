@@ -24,7 +24,6 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ConditionalAccessFilter() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessFilter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

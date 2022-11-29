@@ -24,7 +24,6 @@ public class AppConsentRequest extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AppConsentRequest() {
         super();
-        this.setOdataType("#microsoft.graph.appConsentRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

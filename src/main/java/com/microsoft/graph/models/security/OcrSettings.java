@@ -27,7 +27,6 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OcrSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.security.ocrSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

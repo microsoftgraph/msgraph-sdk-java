@@ -35,7 +35,6 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     @javax.annotation.Nullable
     public DeviceManagementExchangeConnector() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementExchangeConnector");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

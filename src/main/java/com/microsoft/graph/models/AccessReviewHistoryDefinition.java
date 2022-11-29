@@ -36,7 +36,6 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AccessReviewHistoryDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.accessReviewHistoryDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

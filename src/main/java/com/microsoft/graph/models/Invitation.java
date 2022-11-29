@@ -35,7 +35,6 @@ public class Invitation extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Invitation() {
         super();
-        this.setOdataType("#microsoft.graph.invitation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

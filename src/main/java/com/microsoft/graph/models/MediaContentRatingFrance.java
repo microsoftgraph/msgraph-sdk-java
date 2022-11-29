@@ -24,7 +24,6 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public MediaContentRatingFrance() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.mediaContentRatingFrance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

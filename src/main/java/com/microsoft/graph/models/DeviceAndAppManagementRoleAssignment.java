@@ -17,7 +17,6 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
     @javax.annotation.Nullable
     public DeviceAndAppManagementRoleAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.deviceAndAppManagementRoleAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

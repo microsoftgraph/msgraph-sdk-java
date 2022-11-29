@@ -24,7 +24,6 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TicketInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.ticketInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

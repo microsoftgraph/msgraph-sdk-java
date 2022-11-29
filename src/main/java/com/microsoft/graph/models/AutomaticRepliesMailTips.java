@@ -28,7 +28,6 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public AutomaticRepliesMailTips() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.automaticRepliesMailTips");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -67,14 +67,14 @@ public class GetOffice365GroupsActivityCountsWithPeriodRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetOffice365GroupsActivityCountsWithPeriodRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final GetOffice365GroupsActivityCountsWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetOffice365GroupsActivityCountsWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -106,7 +106,7 @@ public class GetOffice365GroupsActivityCountsWithPeriodRequestBuilder {
      * @return a CompletableFuture of InputStream
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<GetOffice365GroupsActivityCountsWithPeriodRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -121,7 +121,7 @@ public class GetOffice365GroupsActivityCountsWithPeriodRequestBuilder {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class GetOffice365GroupsActivityCountsWithPeriodRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -129,11 +129,11 @@ public class GetOffice365GroupsActivityCountsWithPeriodRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new getOffice365GroupsActivityCountsWithPeriodRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public GetOffice365GroupsActivityCountsWithPeriodRequestBuilderGetRequestConfiguration() {
         }
     }
 }

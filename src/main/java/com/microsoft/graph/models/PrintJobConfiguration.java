@@ -58,7 +58,6 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PrintJobConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.printJobConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

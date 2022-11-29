@@ -24,7 +24,6 @@ public class OperationError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OperationError() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.operationError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,7 +24,6 @@ public class PrivacyProfile implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PrivacyProfile() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.privacyProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

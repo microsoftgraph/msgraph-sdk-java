@@ -22,7 +22,6 @@ public class AssignmentOrder implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AssignmentOrder() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.assignmentOrder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

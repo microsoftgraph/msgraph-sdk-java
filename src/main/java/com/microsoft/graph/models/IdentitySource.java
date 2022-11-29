@@ -23,7 +23,6 @@ public class IdentitySource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IdentitySource() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.identitySource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

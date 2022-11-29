@@ -15,7 +15,6 @@ public class MuteParticipantOperation extends CommsOperation implements Parsable
     @javax.annotation.Nullable
     public MuteParticipantOperation() {
         super();
-        this.setOdataType("#microsoft.graph.muteParticipantOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

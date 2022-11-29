@@ -26,7 +26,6 @@ public class BaseItemVersion extends Entity implements Parsable {
     @javax.annotation.Nullable
     public BaseItemVersion() {
         super();
-        this.setOdataType("#microsoft.graph.baseItemVersion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

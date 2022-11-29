@@ -32,7 +32,6 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TargetResource() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.targetResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

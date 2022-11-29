@@ -24,7 +24,7 @@ public class Application extends DirectoryObject implements Parsable {
     private Certification _certification;
     /** The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy. */
     private OffsetDateTime _createdDateTime;
-    /** Supports $filter (eq when counting empty collections). Read-only. */
+    /** Supports $filter (/$count eq 0, /$count ne 0). Read-only. */
     private DirectoryObject _createdOnBehalfOf;
     /** The defaultRedirectUri property */
     private String _defaultRedirectUri;
@@ -34,9 +34,9 @@ public class Application extends DirectoryObject implements Parsable {
     private String _disabledByMicrosoftStatus;
     /** The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
     private String _displayName;
-    /** Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters). */
+    /** Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0). */
     private java.util.List<ExtensionProperty> _extensionProperties;
-    /** Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters). */
+    /** Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0). */
     private java.util.List<FederatedIdentityCredential> _federatedIdentityCredentials;
     /** Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of). */
     private String _groupMembershipClaims;
@@ -60,7 +60,7 @@ public class Application extends DirectoryObject implements Parsable {
     private Boolean _oauth2RequirePostResponse;
     /** Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app. */
     private OptionalClaims _optionalClaims;
-    /** Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections). */
+    /** Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). */
     private java.util.List<DirectoryObject> _owners;
     /** Specifies parental control settings for an application. */
     private ParentalControlSettings _parentalControlSettings;
@@ -70,13 +70,13 @@ public class Application extends DirectoryObject implements Parsable {
     private PublicClientApplication _publicClient;
     /** The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain. Supports $filter (eq, ne, ge, le, startsWith). */
     private String _publisherDomain;
-    /** Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le). */
+    /** Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. For more information, see Limits on requested permissions per app. Not nullable. Supports $filter (eq, not, ge, le). */
     private java.util.List<RequiredResourceAccess> _requiredResourceAccess;
     /** The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable. */
     private String _samlMetadataUrl;
     /** References application or service contact information from a Service or Asset Management database. Nullable. */
     private String _serviceManagementReference;
-    /** Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, not). */
+    /** Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. Supports $filter (eq, ne, not). */
     private String _signInAudience;
     /** Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens. */
     private SpaApplication _spa;
@@ -168,7 +168,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the createdOnBehalfOf property value. Supports $filter (eq when counting empty collections). Read-only.
+     * Gets the createdOnBehalfOf property value. Supports $filter (/$count eq 0, /$count ne 0). Read-only.
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -208,7 +208,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
+     * Gets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      * @return a extensionProperty
      */
     @javax.annotation.Nullable
@@ -216,7 +216,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._extensionProperties;
     }
     /**
-     * Gets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
+     * Gets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      * @return a federatedIdentityCredential
      */
     @javax.annotation.Nullable
@@ -363,7 +363,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._optionalClaims;
     }
     /**
-     * Gets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Gets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -403,7 +403,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._publisherDomain;
     }
     /**
-     * Gets the requiredResourceAccess property value. Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le).
+     * Gets the requiredResourceAccess property value. Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. For more information, see Limits on requested permissions per app. Not nullable. Supports $filter (eq, not, ge, le).
      * @return a requiredResourceAccess
      */
     @javax.annotation.Nullable
@@ -427,7 +427,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._serviceManagementReference;
     }
     /**
-     * Gets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, not).
+     * Gets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. Supports $filter (eq, ne, not).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -605,7 +605,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the createdOnBehalfOf property value. Supports $filter (eq when counting empty collections). Read-only.
+     * Sets the createdOnBehalfOf property value. Supports $filter (/$count eq 0, /$count ne 0). Read-only.
      * @param value Value to set for the createdOnBehalfOf property.
      * @return a void
      */
@@ -650,7 +650,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
+     * Sets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      * @param value Value to set for the extensionProperties property.
      * @return a void
      */
@@ -659,7 +659,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._extensionProperties = value;
     }
     /**
-     * Sets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
+     * Sets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      * @param value Value to set for the federatedIdentityCredentials property.
      * @return a void
      */
@@ -767,7 +767,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._optionalClaims = value;
     }
     /**
-     * Sets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Sets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @param value Value to set for the owners property.
      * @return a void
      */
@@ -812,7 +812,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._publisherDomain = value;
     }
     /**
-     * Sets the requiredResourceAccess property value. Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le).
+     * Sets the requiredResourceAccess property value. Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. For more information, see Limits on requested permissions per app. Not nullable. Supports $filter (eq, not, ge, le).
      * @param value Value to set for the requiredResourceAccess property.
      * @return a void
      */
@@ -839,7 +839,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._serviceManagementReference = value;
     }
     /**
-     * Sets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, not).
+     * Sets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. Supports $filter (eq, ne, not).
      * @param value Value to set for the signInAudience property.
      * @return a void
      */

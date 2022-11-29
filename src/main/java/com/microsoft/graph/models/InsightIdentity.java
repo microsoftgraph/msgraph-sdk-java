@@ -26,7 +26,6 @@ public class InsightIdentity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public InsightIdentity() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.insightIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

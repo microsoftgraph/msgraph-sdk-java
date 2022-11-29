@@ -53,7 +53,6 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public AndroidMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.androidMinimumOperatingSystem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

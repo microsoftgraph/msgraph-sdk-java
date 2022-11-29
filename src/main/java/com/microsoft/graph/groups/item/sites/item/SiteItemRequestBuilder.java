@@ -2,13 +2,13 @@ package com.microsoft.graph.groups.item.sites.item;
 
 import com.microsoft.graph.groups.item.sites.item.analytics.AnalyticsRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.columns.ColumnsRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.columns.item.ColumnDefinitionItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.contenttypes.ContentTypesRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.contenttypes.item.ContentTypeItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.drives.DrivesRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.drives.item.DriveItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.externalcolumns.ExternalColumnsRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.externalcolumns.item.ColumnDefinitionItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.getapplicablecontenttypesforlistwithlistid.GetApplicableContentTypesForListWithListIdRequestBuilder;
@@ -186,7 +186,7 @@ public class SiteItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<SiteItemRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -194,7 +194,7 @@ public class SiteItemRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final SiteItemRequestBuilderGetRequestConfiguration requestConfig = new SiteItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -218,7 +218,7 @@ public class SiteItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final Site body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final Site body, @javax.annotation.Nullable final java.util.function.Consumer<SiteItemRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.PATCH;
@@ -228,7 +228,7 @@ public class SiteItemRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            final SiteItemRequestBuilderPatchRequestConfiguration requestConfig = new SiteItemRequestBuilderPatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -284,7 +284,7 @@ public class SiteItemRequestBuilder {
      * @return a CompletableFuture of site
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Site> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Site> get(@javax.annotation.Nullable final java.util.function.Consumer<SiteItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -403,7 +403,7 @@ public class SiteItemRequestBuilder {
      * @return a CompletableFuture of site
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Site> patch(@javax.annotation.Nonnull final Site body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Site> patch(@javax.annotation.Nonnull final Site body, @javax.annotation.Nullable final java.util.function.Consumer<SiteItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
@@ -455,7 +455,7 @@ public class SiteItemRequestBuilder {
         return new StoreItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** The list of SharePoint sites in this group. Access the default site with /sites/root. */
-    public class GetQueryParameters {
+    public class SiteItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -466,7 +466,7 @@ public class SiteItemRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class SiteItemRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -475,17 +475,17 @@ public class SiteItemRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public SiteItemRequestBuilderGetQueryParameters queryParameters = new SiteItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new SiteItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public SiteItemRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PatchRequestConfiguration {
+    public class SiteItemRequestBuilderPatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -493,11 +493,11 @@ public class SiteItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PatchRequestConfiguration and sets the default values.
+         * Instantiates a new SiteItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PatchRequestConfiguration() {
+        public SiteItemRequestBuilderPatchRequestConfiguration() {
         }
     }
 }

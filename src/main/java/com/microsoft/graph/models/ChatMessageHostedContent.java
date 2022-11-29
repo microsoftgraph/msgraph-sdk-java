@@ -15,7 +15,6 @@ public class ChatMessageHostedContent extends TeamworkHostedContent implements P
     @javax.annotation.Nullable
     public ChatMessageHostedContent() {
         super();
-        this.setOdataType("#microsoft.graph.chatMessageHostedContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

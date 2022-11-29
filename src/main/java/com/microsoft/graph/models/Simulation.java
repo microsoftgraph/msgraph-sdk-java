@@ -47,7 +47,6 @@ public class Simulation extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Simulation() {
         super();
-        this.setOdataType("#microsoft.graph.simulation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

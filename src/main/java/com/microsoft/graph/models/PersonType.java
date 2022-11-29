@@ -24,7 +24,6 @@ public class PersonType implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PersonType() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.personType");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

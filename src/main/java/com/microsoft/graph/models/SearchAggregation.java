@@ -24,7 +24,6 @@ public class SearchAggregation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SearchAggregation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.searchAggregation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -35,7 +35,6 @@ public class PrintJob extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PrintJob() {
         super();
-        this.setOdataType("#microsoft.graph.printJob");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

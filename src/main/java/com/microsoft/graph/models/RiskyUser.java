@@ -35,7 +35,6 @@ public class RiskyUser extends Entity implements Parsable {
     @javax.annotation.Nullable
     public RiskyUser() {
         super();
-        this.setOdataType("#microsoft.graph.riskyUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

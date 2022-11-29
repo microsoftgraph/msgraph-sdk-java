@@ -33,7 +33,6 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     @javax.annotation.Nullable
     public UnifiedRoleDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.unifiedRoleDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

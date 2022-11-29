@@ -25,7 +25,6 @@ public class RoleAssignment extends Entity implements Parsable {
     @javax.annotation.Nullable
     public RoleAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.roleAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

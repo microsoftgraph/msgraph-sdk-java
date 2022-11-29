@@ -28,7 +28,6 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public BookingReminder() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bookingReminder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -17,7 +17,6 @@ public class RemoteLockActionResult extends DeviceActionResult implements Parsab
     @javax.annotation.Nullable
     public RemoteLockActionResult() {
         super();
-        this.setOdataType("#microsoft.graph.remoteLockActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

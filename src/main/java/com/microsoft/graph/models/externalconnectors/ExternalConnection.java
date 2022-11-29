@@ -33,7 +33,6 @@ public class ExternalConnection extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ExternalConnection() {
         super();
-        this.setOdataType("#microsoft.graph.externalConnectors.externalConnection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

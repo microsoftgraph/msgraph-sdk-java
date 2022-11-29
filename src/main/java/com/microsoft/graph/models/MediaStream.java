@@ -30,7 +30,6 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MediaStream() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.mediaStream");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

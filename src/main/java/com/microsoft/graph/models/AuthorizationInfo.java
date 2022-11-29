@@ -22,7 +22,6 @@ public class AuthorizationInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AuthorizationInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.authorizationInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

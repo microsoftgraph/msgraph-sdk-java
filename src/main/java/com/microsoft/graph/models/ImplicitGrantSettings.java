@@ -24,7 +24,6 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ImplicitGrantSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.implicitGrantSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

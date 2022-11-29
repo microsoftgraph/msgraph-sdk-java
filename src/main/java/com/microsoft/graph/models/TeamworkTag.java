@@ -28,7 +28,6 @@ public class TeamworkTag extends Entity implements Parsable {
     @javax.annotation.Nullable
     public TeamworkTag() {
         super();
-        this.setOdataType("#microsoft.graph.teamworkTag");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

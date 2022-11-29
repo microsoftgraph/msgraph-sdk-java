@@ -30,7 +30,6 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     @javax.annotation.Nullable
     public DeviceConfigurationUserOverview() {
         super();
-        this.setOdataType("#microsoft.graph.deviceConfigurationUserOverview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

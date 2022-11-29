@@ -24,7 +24,6 @@ public class ToneInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ToneInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.toneInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

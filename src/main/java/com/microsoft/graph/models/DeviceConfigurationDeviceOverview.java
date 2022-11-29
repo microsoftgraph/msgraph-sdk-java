@@ -30,7 +30,6 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
     @javax.annotation.Nullable
     public DeviceConfigurationDeviceOverview() {
         super();
-        this.setOdataType("#microsoft.graph.deviceConfigurationDeviceOverview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

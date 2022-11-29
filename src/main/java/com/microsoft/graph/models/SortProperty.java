@@ -24,7 +24,6 @@ public class SortProperty implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SortProperty() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.sortProperty");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

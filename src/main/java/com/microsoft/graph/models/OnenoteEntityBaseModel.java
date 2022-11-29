@@ -25,7 +25,6 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
     @javax.annotation.Nullable
     public OnenoteEntityBaseModel() {
         super();
-        this.setOdataType("#microsoft.graph.onenoteEntityBaseModel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

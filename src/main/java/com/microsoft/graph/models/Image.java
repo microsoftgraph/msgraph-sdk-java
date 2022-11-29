@@ -24,7 +24,6 @@ public class Image implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Image() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.image");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

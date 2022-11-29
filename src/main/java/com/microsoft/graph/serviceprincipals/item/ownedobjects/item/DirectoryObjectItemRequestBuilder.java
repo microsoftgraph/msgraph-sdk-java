@@ -83,7 +83,7 @@ public class DirectoryObjectItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
+     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -91,12 +91,12 @@ public class DirectoryObjectItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
+     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DirectoryObjectItemRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -104,7 +104,7 @@ public class DirectoryObjectItemRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final DirectoryObjectItemRequestBuilderGetRequestConfiguration requestConfig = new DirectoryObjectItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -113,7 +113,7 @@ public class DirectoryObjectItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
+     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @return a CompletableFuture of directoryObject
      */
     @javax.annotation.Nonnull
@@ -132,12 +132,12 @@ public class DirectoryObjectItemRequestBuilder {
         }
     }
     /**
-     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
+     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryObject
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObject> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<DirectoryObject> get(@javax.annotation.Nullable final java.util.function.Consumer<DirectoryObjectItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -151,8 +151,8 @@ public class DirectoryObjectItemRequestBuilder {
             }};
         }
     }
-    /** Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand. */
-    public class GetQueryParameters {
+    /** Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). */
+    public class DirectoryObjectItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -163,7 +163,7 @@ public class DirectoryObjectItemRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class DirectoryObjectItemRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -172,13 +172,13 @@ public class DirectoryObjectItemRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public DirectoryObjectItemRequestBuilderGetQueryParameters queryParameters = new DirectoryObjectItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new DirectoryObjectItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public DirectoryObjectItemRequestBuilderGetRequestConfiguration() {
         }
     }
 }

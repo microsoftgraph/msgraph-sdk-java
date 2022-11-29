@@ -24,7 +24,6 @@ public class MediaInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MediaInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.mediaInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

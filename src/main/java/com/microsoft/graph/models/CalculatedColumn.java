@@ -26,7 +26,6 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public CalculatedColumn() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.calculatedColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

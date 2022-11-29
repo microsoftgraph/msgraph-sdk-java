@@ -31,7 +31,6 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     @javax.annotation.Nullable
     public EnrollmentTroubleshootingEvent() {
         super();
-        this.setOdataType("#microsoft.graph.enrollmentTroubleshootingEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

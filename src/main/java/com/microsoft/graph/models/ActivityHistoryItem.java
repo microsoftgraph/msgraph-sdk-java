@@ -35,7 +35,6 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ActivityHistoryItem() {
         super();
-        this.setOdataType("#microsoft.graph.activityHistoryItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

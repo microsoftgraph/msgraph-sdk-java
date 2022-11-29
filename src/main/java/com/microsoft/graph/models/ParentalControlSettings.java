@@ -24,7 +24,6 @@ public class ParentalControlSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ParentalControlSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.parentalControlSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

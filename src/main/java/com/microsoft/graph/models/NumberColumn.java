@@ -28,7 +28,6 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public NumberColumn() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.numberColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

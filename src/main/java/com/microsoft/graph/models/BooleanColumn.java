@@ -20,7 +20,6 @@ public class BooleanColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public BooleanColumn() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.booleanColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

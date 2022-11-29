@@ -27,7 +27,6 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public WindowsMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsMinimumOperatingSystem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

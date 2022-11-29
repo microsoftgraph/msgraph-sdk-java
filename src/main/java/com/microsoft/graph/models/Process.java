@@ -45,7 +45,6 @@ public class Process implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Process() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.process");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

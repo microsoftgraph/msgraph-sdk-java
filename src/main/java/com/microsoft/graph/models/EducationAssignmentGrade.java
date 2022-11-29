@@ -26,7 +26,6 @@ public class EducationAssignmentGrade implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public EducationAssignmentGrade() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.educationAssignmentGrade");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

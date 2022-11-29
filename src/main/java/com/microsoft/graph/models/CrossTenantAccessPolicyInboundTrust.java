@@ -26,7 +26,6 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
     @javax.annotation.Nullable
     public CrossTenantAccessPolicyInboundTrust() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.crossTenantAccessPolicyInboundTrust");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -39,7 +39,6 @@ public class Photo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Photo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.photo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

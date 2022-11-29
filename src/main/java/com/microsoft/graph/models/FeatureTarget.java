@@ -24,7 +24,6 @@ public class FeatureTarget implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public FeatureTarget() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.featureTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

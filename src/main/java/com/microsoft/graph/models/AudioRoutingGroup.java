@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the cloudCommunications singleton. */
 public class AudioRoutingGroup extends Entity implements Parsable {
     /** The receivers property */
     private java.util.List<String> _receivers;
@@ -22,7 +22,6 @@ public class AudioRoutingGroup extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AudioRoutingGroup() {
         super();
-        this.setOdataType("#microsoft.graph.audioRoutingGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

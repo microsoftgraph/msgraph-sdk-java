@@ -25,7 +25,6 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public Win32LobAppInstallExperience() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.win32LobAppInstallExperience");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

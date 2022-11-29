@@ -27,7 +27,6 @@ public class WorkbookRangeFont extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookRangeFont() {
         super();
-        this.setOdataType("#microsoft.graph.workbookRangeFont");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

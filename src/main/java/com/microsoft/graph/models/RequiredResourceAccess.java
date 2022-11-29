@@ -24,7 +24,6 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RequiredResourceAccess() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.requiredResourceAccess");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

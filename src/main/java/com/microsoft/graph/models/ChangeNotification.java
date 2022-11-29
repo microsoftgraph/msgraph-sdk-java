@@ -41,7 +41,6 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ChangeNotification() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.changeNotification");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

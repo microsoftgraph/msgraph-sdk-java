@@ -18,7 +18,6 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
     @javax.annotation.Nullable
     public AgreementFileLocalization() {
         super();
-        this.setOdataType("#microsoft.graph.agreementFileLocalization");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

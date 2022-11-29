@@ -21,7 +21,6 @@ public class BookingCustomerInformationBase implements AdditionalDataHolder, Par
     @javax.annotation.Nullable
     public BookingCustomerInformationBase() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bookingCustomerInformationBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

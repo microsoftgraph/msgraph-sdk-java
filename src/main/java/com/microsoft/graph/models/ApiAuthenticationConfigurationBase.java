@@ -23,7 +23,6 @@ public class ApiAuthenticationConfigurationBase implements AdditionalDataHolder,
     @javax.annotation.Nullable
     public ApiAuthenticationConfigurationBase() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.apiAuthenticationConfigurationBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

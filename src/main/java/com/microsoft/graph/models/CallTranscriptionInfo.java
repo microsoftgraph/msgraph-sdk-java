@@ -25,7 +25,6 @@ public class CallTranscriptionInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public CallTranscriptionInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callTranscriptionInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -26,7 +26,6 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ChoiceColumn() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.choiceColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

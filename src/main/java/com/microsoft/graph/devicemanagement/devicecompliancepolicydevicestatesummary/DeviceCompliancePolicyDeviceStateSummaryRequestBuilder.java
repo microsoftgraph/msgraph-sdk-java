@@ -66,14 +66,14 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeviceCompliancePolicyDeviceStateSummaryRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.DELETE;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
+            final DeviceCompliancePolicyDeviceStateSummaryRequestBuilderDeleteRequestConfiguration requestConfig = new DeviceCompliancePolicyDeviceStateSummaryRequestBuilderDeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -94,7 +94,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -102,7 +102,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            final DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfiguration requestConfig = new DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -126,7 +126,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final DeviceCompliancePolicyDeviceStateSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final DeviceCompliancePolicyDeviceStateSummary body, @javax.annotation.Nullable final java.util.function.Consumer<DeviceCompliancePolicyDeviceStateSummaryRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.PATCH;
@@ -136,7 +136,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            final DeviceCompliancePolicyDeviceStateSummaryRequestBuilderPatchRequestConfiguration requestConfig = new DeviceCompliancePolicyDeviceStateSummaryRequestBuilderPatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -168,7 +168,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder {
      * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeviceCompliancePolicyDeviceStateSummaryRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -207,7 +207,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder {
      * @return a CompletableFuture of deviceCompliancePolicyDeviceStateSummary
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -248,7 +248,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder {
      * @return a CompletableFuture of deviceCompliancePolicyDeviceStateSummary
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> patch(@javax.annotation.Nonnull final DeviceCompliancePolicyDeviceStateSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> patch(@javax.annotation.Nonnull final DeviceCompliancePolicyDeviceStateSummary body, @javax.annotation.Nullable final java.util.function.Consumer<DeviceCompliancePolicyDeviceStateSummaryRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
@@ -264,7 +264,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class DeleteRequestConfiguration {
+    public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilderDeleteRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -272,15 +272,15 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new DeleteRequestConfiguration and sets the default values.
+         * Instantiates a new deviceCompliancePolicyDeviceStateSummaryRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public DeleteRequestConfiguration() {
+        public DeviceCompliancePolicyDeviceStateSummaryRequestBuilderDeleteRequestConfiguration() {
         }
     }
     /** The device compliance state summary for this account. */
-    public class GetQueryParameters {
+    public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -291,7 +291,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
+    public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -300,17 +300,17 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
+        public DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetQueryParameters queryParameters = new DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * Instantiates a new deviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetRequestConfiguration() {
+        public DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PatchRequestConfiguration {
+    public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilderPatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -318,11 +318,11 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PatchRequestConfiguration and sets the default values.
+         * Instantiates a new deviceCompliancePolicyDeviceStateSummaryRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PatchRequestConfiguration() {
+        public DeviceCompliancePolicyDeviceStateSummaryRequestBuilderPatchRequestConfiguration() {
         }
     }
 }

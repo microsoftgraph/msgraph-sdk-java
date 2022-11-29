@@ -24,7 +24,6 @@ public class TimeZoneInformation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TimeZoneInformation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.timeZoneInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

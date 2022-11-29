@@ -24,7 +24,6 @@ public class Bundle implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Bundle() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bundle");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,7 +24,6 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AuditActivityInitiator() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.auditActivityInitiator");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -20,7 +20,6 @@ public class SystemFacet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SystemFacet() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.systemFacet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

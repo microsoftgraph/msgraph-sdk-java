@@ -30,7 +30,6 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public VerifiedDomain() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.verifiedDomain");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

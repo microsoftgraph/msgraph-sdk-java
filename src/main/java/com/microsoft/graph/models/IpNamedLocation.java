@@ -19,7 +19,6 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
     @javax.annotation.Nullable
     public IpNamedLocation() {
         super();
-        this.setOdataType("#microsoft.graph.ipNamedLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

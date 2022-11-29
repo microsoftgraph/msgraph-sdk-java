@@ -20,7 +20,6 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     @javax.annotation.Nullable
     public EducationAssignmentResource() {
         super();
-        this.setOdataType("#microsoft.graph.educationAssignmentResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

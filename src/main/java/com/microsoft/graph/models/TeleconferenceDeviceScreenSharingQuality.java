@@ -15,7 +15,6 @@ public class TeleconferenceDeviceScreenSharingQuality extends TeleconferenceDevi
     @javax.annotation.Nullable
     public TeleconferenceDeviceScreenSharingQuality() {
         super();
-        this.setOdataType("#microsoft.graph.teleconferenceDeviceScreenSharingQuality");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

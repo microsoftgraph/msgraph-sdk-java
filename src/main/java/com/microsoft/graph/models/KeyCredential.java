@@ -37,7 +37,6 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public KeyCredential() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.keyCredential");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

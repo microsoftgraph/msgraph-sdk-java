@@ -22,7 +22,6 @@ public class WindowsUpdateInstallScheduleType implements AdditionalDataHolder, P
     @javax.annotation.Nullable
     public WindowsUpdateInstallScheduleType() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsUpdateInstallScheduleType");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -22,7 +22,6 @@ public class ResourceOperation extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ResourceOperation() {
         super();
-        this.setOdataType("#microsoft.graph.resourceOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

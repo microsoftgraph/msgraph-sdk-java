@@ -51,7 +51,6 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public CopyNotebookModel() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.CopyNotebookModel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

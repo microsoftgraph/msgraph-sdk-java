@@ -42,7 +42,6 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     @javax.annotation.Nullable
     public WorkbookWorksheetProtectionOptions() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.workbookWorksheetProtectionOptions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

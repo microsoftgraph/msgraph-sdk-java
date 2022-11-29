@@ -24,7 +24,6 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
     @javax.annotation.Nullable
     public EducationAssignmentDefaults() {
         super();
-        this.setOdataType("#microsoft.graph.educationAssignmentDefaults");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

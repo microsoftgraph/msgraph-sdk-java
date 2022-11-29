@@ -24,7 +24,6 @@ public class DateTimeTimeZone implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public DateTimeTimeZone() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.dateTimeTimeZone");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

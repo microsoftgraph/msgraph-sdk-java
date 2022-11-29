@@ -36,7 +36,6 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     @javax.annotation.Nullable
     public AccessPackageAssignmentRequestorSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessPackageAssignmentRequestorSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -30,7 +30,6 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TeamMessagingSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamMessagingSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

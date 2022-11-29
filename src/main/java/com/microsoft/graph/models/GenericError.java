@@ -24,7 +24,6 @@ public class GenericError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public GenericError() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.genericError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

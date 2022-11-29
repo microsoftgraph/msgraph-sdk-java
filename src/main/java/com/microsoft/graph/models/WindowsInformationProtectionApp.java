@@ -33,7 +33,6 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
     @javax.annotation.Nullable
     public WindowsInformationProtectionApp() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsInformationProtectionApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

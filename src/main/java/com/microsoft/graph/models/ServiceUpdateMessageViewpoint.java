@@ -26,7 +26,6 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public ServiceUpdateMessageViewpoint() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.serviceUpdateMessageViewpoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

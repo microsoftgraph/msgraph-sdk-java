@@ -40,7 +40,6 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     @javax.annotation.Nullable
     public ManagedDeviceMobileAppConfiguration() {
         super();
-        this.setOdataType("#microsoft.graph.managedDeviceMobileAppConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

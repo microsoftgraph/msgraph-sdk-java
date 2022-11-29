@@ -24,7 +24,6 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
     @javax.annotation.Nullable
     public AttackSimulationTrainingUserCoverage() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.attackSimulationTrainingUserCoverage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

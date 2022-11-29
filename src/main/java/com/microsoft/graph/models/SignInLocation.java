@@ -28,7 +28,6 @@ public class SignInLocation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SignInLocation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.signInLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

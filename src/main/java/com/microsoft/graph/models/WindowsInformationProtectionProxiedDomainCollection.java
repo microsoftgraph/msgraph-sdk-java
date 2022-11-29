@@ -25,7 +25,6 @@ public class WindowsInformationProtectionProxiedDomainCollection implements Addi
     @javax.annotation.Nullable
     public WindowsInformationProtectionProxiedDomainCollection() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsInformationProtectionProxiedDomainCollection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

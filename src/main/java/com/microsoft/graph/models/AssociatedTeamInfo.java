@@ -15,7 +15,6 @@ public class AssociatedTeamInfo extends TeamInfo implements Parsable {
     @javax.annotation.Nullable
     public AssociatedTeamInfo() {
         super();
-        this.setOdataType("#microsoft.graph.associatedTeamInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

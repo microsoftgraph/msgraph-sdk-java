@@ -24,7 +24,6 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RecordingInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.recordingInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

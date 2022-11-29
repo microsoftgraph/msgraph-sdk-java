@@ -25,7 +25,6 @@ public class VppLicensingType implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public VppLicensingType() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.vppLicensingType");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

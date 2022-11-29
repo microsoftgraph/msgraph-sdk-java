@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of certificateBasedAuthConfiguration entities. */
 public class CertificateBasedAuthConfiguration extends Entity implements Parsable {
     /** Collection of certificate authorities which creates a trusted certificate chain. */
     private java.util.List<CertificateAuthority> _certificateAuthorities;
@@ -18,7 +18,6 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
     @javax.annotation.Nullable
     public CertificateBasedAuthConfiguration() {
         super();
-        this.setOdataType("#microsoft.graph.certificateBasedAuthConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

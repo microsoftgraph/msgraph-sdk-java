@@ -29,7 +29,6 @@ public class SubscribedSku extends Entity implements Parsable {
     @javax.annotation.Nullable
     public SubscribedSku() {
         super();
-        this.setOdataType("#microsoft.graph.subscribedSku");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

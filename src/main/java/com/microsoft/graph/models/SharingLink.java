@@ -32,7 +32,6 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SharingLink() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.sharingLink");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

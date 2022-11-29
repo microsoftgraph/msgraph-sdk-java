@@ -30,7 +30,6 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RelatedContact() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.relatedContact");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

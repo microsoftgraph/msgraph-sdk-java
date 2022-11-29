@@ -27,7 +27,6 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public MobileAppAssignmentSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.mobileAppAssignmentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

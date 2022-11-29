@@ -33,7 +33,6 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public UriClickSecurityState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.uriClickSecurityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

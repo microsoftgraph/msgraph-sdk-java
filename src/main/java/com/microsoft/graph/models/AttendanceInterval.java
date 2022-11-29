@@ -27,7 +27,6 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AttendanceInterval() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.attendanceInterval");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

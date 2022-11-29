@@ -17,7 +17,6 @@ public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartAxisTitleFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartAxisTitleFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

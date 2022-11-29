@@ -55,7 +55,6 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     @javax.annotation.Nullable
     public SecureScoreControlProfile() {
         super();
-        this.setOdataType("#microsoft.graph.secureScoreControlProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

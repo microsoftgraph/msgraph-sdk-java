@@ -34,7 +34,6 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public SubjectRightsRequestDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.subjectRightsRequestDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

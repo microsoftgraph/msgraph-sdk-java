@@ -26,7 +26,6 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PrinterStatus() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.printerStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

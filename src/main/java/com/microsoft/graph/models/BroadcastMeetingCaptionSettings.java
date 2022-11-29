@@ -26,7 +26,6 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
     @javax.annotation.Nullable
     public BroadcastMeetingCaptionSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.broadcastMeetingCaptionSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

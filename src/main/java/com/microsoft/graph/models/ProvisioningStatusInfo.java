@@ -24,7 +24,6 @@ public class ProvisioningStatusInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ProvisioningStatusInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.provisioningStatusInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

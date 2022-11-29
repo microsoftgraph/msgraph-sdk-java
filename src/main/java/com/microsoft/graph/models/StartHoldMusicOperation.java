@@ -15,7 +15,6 @@ public class StartHoldMusicOperation extends CommsOperation implements Parsable 
     @javax.annotation.Nullable
     public StartHoldMusicOperation() {
         super();
-        this.setOdataType("#microsoft.graph.startHoldMusicOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

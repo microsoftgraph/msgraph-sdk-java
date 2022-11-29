@@ -54,7 +54,6 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     @javax.annotation.Nullable
     public SubjectRightsRequest() {
         super();
-        this.setOdataType("#microsoft.graph.subjectRightsRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

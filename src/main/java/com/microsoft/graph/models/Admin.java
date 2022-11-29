@@ -22,7 +22,6 @@ public class Admin implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Admin() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.admin");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

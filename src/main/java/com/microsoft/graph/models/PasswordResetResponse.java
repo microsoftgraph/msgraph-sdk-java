@@ -22,7 +22,6 @@ public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PasswordResetResponse() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.passwordResetResponse");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

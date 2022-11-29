@@ -31,7 +31,6 @@ public class DomainDnsRecord extends Entity implements Parsable {
     @javax.annotation.Nullable
     public DomainDnsRecord() {
         super();
-        this.setOdataType("#microsoft.graph.domainDnsRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

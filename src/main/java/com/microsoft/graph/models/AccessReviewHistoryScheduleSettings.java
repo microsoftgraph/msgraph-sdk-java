@@ -24,7 +24,6 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
     @javax.annotation.Nullable
     public AccessReviewHistoryScheduleSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessReviewHistoryScheduleSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

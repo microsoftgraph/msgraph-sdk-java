@@ -29,7 +29,6 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public SharedPCAccountManagerPolicy() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.sharedPCAccountManagerPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -26,7 +26,6 @@ public class LocalizedLabel implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public LocalizedLabel() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.termStore.localizedLabel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

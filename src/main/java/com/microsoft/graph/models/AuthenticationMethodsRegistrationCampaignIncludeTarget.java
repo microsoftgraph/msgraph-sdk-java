@@ -26,7 +26,6 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
     @javax.annotation.Nullable
     public AuthenticationMethodsRegistrationCampaignIncludeTarget() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.authenticationMethodsRegistrationCampaignIncludeTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

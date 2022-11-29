@@ -29,7 +29,6 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AppListItem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.appListItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

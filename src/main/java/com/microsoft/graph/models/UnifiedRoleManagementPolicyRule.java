@@ -23,7 +23,6 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
     @javax.annotation.Nullable
     public UnifiedRoleManagementPolicyRule() {
         super();
-        this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

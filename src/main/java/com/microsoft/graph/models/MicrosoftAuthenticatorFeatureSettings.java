@@ -24,7 +24,6 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
     @javax.annotation.Nullable
     public MicrosoftAuthenticatorFeatureSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.microsoftAuthenticatorFeatureSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

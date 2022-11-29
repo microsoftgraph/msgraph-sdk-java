@@ -28,7 +28,6 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IdentityGovernance() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.identityGovernance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

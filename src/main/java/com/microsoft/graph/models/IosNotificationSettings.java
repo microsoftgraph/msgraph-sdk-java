@@ -39,7 +39,6 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IosNotificationSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.iosNotificationSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

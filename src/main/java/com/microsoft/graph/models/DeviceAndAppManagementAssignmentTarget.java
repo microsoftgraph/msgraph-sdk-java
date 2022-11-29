@@ -26,7 +26,6 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
     @javax.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceAndAppManagementAssignmentTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

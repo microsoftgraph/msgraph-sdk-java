@@ -24,7 +24,6 @@ public class EmailAddress implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public EmailAddress() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.emailAddress");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

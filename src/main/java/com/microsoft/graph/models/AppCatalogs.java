@@ -18,7 +18,6 @@ public class AppCatalogs extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AppCatalogs() {
         super();
-        this.setOdataType("#microsoft.graph.appCatalogs");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

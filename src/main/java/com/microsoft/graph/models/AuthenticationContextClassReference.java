@@ -22,7 +22,6 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
     @javax.annotation.Nullable
     public AuthenticationContextClassReference() {
         super();
-        this.setOdataType("#microsoft.graph.authenticationContextClassReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,7 +24,6 @@ public class IpRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IpRange() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.ipRange");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

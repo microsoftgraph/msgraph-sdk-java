@@ -35,7 +35,6 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public Win32LobAppMsiInformation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.win32LobAppMsiInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

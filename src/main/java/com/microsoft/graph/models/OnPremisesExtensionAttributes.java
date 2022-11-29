@@ -50,7 +50,6 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public OnPremisesExtensionAttributes() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.onPremisesExtensionAttributes");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

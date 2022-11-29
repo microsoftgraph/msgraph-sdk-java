@@ -24,7 +24,6 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public ConditionalAccessPlatforms() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessPlatforms");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

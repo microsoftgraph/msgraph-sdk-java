@@ -45,7 +45,6 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public DeviceOperatingSystemSummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceOperatingSystemSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -28,7 +28,6 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TopicModelingSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.security.topicModelingSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

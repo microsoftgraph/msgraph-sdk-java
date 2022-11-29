@@ -30,7 +30,6 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public WebApplication() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.webApplication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

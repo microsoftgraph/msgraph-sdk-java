@@ -32,7 +32,6 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public WorkbookSortField() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.workbookSortField");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

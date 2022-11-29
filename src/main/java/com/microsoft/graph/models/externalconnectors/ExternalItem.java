@@ -23,7 +23,6 @@ public class ExternalItem extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ExternalItem() {
         super();
-        this.setOdataType("#microsoft.graph.externalConnectors.externalItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

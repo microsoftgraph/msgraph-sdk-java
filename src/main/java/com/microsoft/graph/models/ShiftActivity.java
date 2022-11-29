@@ -33,7 +33,6 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ShiftActivity() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.shiftActivity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

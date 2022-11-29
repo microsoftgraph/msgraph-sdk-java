@@ -18,7 +18,6 @@ public class EnrollmentConfigurationAssignment extends Entity implements Parsabl
     @javax.annotation.Nullable
     public EnrollmentConfigurationAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.enrollmentConfigurationAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

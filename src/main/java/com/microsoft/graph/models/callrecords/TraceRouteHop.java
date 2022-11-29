@@ -27,7 +27,6 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TraceRouteHop() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.traceRouteHop");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -1,6 +1,10 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.AadUserConversationMember;
+import com.microsoft.graph.models.AnonymousGuestConversationMember;
+import com.microsoft.graph.models.MicrosoftAccountUserConversationMember;
+import com.microsoft.graph.models.SkypeForBusinessUserConversationMember;
+import com.microsoft.graph.models.SkypeUserConversationMember;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -9,7 +13,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of chat entities. */
 public class ConversationMember extends Entity implements Parsable {
     /** The display name of the user. */
     private String _displayName;
@@ -24,7 +28,6 @@ public class ConversationMember extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ConversationMember() {
         super();
-        this.setOdataType("#microsoft.graph.conversationMember");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,6 +42,10 @@ public class ConversationMember extends Entity implements Parsable {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.aadUserConversationMember": return new AadUserConversationMember();
+                case "#microsoft.graph.anonymousGuestConversationMember": return new AnonymousGuestConversationMember();
+                case "#microsoft.graph.microsoftAccountUserConversationMember": return new MicrosoftAccountUserConversationMember();
+                case "#microsoft.graph.skypeForBusinessUserConversationMember": return new SkypeForBusinessUserConversationMember();
+                case "#microsoft.graph.skypeUserConversationMember": return new SkypeUserConversationMember();
             }
         }
         return new ConversationMember();

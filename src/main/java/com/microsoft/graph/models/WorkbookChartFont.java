@@ -27,7 +27,6 @@ public class WorkbookChartFont extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartFont() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartFont");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

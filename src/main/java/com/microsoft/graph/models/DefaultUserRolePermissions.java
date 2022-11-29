@@ -28,7 +28,6 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public DefaultUserRolePermissions() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.defaultUserRolePermissions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

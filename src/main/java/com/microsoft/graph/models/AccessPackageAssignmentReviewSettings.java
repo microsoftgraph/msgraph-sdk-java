@@ -36,7 +36,6 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     @javax.annotation.Nullable
     public AccessPackageAssignmentReviewSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessPackageAssignmentReviewSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

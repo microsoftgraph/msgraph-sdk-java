@@ -32,7 +32,6 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OnlineMeetingInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.onlineMeetingInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

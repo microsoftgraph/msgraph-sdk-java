@@ -26,7 +26,6 @@ public class AttachmentBase extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AttachmentBase() {
         super();
-        this.setOdataType("#microsoft.graph.attachmentBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

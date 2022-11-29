@@ -32,7 +32,6 @@ public class ApplicationTemplate extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ApplicationTemplate() {
         super();
-        this.setOdataType("#microsoft.graph.applicationTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -29,7 +29,6 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public UserTrainingStatusInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.userTrainingStatusInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

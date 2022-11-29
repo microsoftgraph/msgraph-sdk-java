@@ -42,7 +42,6 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public AccessReviewScheduleSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessReviewScheduleSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

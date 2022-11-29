@@ -24,7 +24,6 @@ public class WindowsDeviceAccount implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public WindowsDeviceAccount() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsDeviceAccount");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

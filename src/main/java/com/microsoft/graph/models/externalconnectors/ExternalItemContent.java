@@ -24,7 +24,6 @@ public class ExternalItemContent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ExternalItemContent() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.externalConnectors.externalItemContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

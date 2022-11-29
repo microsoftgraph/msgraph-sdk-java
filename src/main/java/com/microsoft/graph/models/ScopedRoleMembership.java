@@ -22,7 +22,6 @@ public class ScopedRoleMembership extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ScopedRoleMembership() {
         super();
-        this.setOdataType("#microsoft.graph.scopedRoleMembership");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

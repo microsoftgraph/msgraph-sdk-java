@@ -72,7 +72,6 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public NetworkInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.networkInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

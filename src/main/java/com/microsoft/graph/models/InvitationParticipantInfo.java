@@ -30,7 +30,6 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public InvitationParticipantInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.invitationParticipantInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

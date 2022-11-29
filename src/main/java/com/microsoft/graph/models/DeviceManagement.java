@@ -87,7 +87,6 @@ public class DeviceManagement extends Entity implements Parsable {
     @javax.annotation.Nullable
     public DeviceManagement() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagement");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

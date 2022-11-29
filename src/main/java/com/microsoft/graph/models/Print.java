@@ -34,7 +34,6 @@ public class Print implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Print() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.print");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

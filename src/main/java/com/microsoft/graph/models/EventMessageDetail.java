@@ -50,7 +50,6 @@ public class EventMessageDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public EventMessageDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.eventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

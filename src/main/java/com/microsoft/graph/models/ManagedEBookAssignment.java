@@ -21,7 +21,6 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ManagedEBookAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.managedEBookAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

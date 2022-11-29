@@ -28,7 +28,6 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AvailabilityItem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.availabilityItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

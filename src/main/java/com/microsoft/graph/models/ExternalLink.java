@@ -22,7 +22,6 @@ public class ExternalLink implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ExternalLink() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.externalLink");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

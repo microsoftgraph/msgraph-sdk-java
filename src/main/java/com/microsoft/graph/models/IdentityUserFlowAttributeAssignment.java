@@ -28,7 +28,6 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
     @javax.annotation.Nullable
     public IdentityUserFlowAttributeAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.identityUserFlowAttributeAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

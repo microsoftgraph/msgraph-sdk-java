@@ -24,7 +24,6 @@ public class ResourcePermission implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ResourcePermission() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.resourcePermission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

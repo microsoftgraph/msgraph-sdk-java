@@ -20,7 +20,6 @@ public class PlannerChecklistItems implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PlannerChecklistItems() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.plannerChecklistItems");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

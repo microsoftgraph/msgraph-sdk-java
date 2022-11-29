@@ -30,7 +30,6 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
     @javax.annotation.Nullable
     public ConditionalAccessSessionControls() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessSessionControls");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -23,7 +23,6 @@ public class Report implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Report() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.report");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

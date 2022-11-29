@@ -31,7 +31,6 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public SecureScoreControlStateUpdate() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.secureScoreControlStateUpdate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

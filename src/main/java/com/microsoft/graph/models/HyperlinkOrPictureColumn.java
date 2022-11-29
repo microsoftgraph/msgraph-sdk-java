@@ -22,7 +22,6 @@ public class HyperlinkOrPictureColumn implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public HyperlinkOrPictureColumn() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.hyperlinkOrPictureColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

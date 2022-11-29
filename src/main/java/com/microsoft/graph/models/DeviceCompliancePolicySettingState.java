@@ -45,7 +45,6 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     @javax.annotation.Nullable
     public DeviceCompliancePolicySettingState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceCompliancePolicySettingState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

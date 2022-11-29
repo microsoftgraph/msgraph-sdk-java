@@ -26,7 +26,6 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public ConditionalAccessPolicyDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessPolicyDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

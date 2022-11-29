@@ -24,7 +24,6 @@ public class Folder implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Folder() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.folder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

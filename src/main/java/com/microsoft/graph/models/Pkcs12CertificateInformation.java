@@ -28,7 +28,6 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public Pkcs12CertificateInformation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.pkcs12CertificateInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

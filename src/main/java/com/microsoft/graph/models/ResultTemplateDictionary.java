@@ -15,7 +15,6 @@ public class ResultTemplateDictionary extends Dictionary implements Parsable {
     @javax.annotation.Nullable
     public ResultTemplateDictionary() {
         super();
-        this.setOdataType("#microsoft.graph.resultTemplateDictionary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

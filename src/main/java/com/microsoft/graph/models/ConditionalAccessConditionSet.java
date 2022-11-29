@@ -40,7 +40,6 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public ConditionalAccessConditionSet() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessConditionSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

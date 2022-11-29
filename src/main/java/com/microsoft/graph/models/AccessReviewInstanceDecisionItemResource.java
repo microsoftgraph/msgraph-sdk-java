@@ -29,7 +29,6 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
     @javax.annotation.Nullable
     public AccessReviewInstanceDecisionItemResource() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItemResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

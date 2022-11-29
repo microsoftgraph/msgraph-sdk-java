@@ -30,7 +30,6 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public ChatMessagePolicyViolation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.chatMessagePolicyViolation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

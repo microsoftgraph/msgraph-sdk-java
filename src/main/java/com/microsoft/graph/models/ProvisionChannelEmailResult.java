@@ -22,7 +22,6 @@ public class ProvisionChannelEmailResult implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public ProvisionChannelEmailResult() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.provisionChannelEmailResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -22,7 +22,6 @@ public class PrintDocument extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PrintDocument() {
         super();
-        this.setOdataType("#microsoft.graph.printDocument");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

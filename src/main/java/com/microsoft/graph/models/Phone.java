@@ -28,7 +28,6 @@ public class Phone implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Phone() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.phone");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

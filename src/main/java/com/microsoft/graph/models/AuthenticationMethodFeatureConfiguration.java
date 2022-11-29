@@ -26,7 +26,6 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
     @javax.annotation.Nullable
     public AuthenticationMethodFeatureConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.authenticationMethodFeatureConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

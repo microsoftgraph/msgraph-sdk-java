@@ -23,7 +23,6 @@ public class RolePermission implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RolePermission() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.rolePermission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -22,7 +22,6 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     @javax.annotation.Nullable
     public RiskyUserHistoryItem() {
         super();
-        this.setOdataType("#microsoft.graph.riskyUserHistoryItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

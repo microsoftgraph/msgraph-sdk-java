@@ -24,7 +24,6 @@ public class PlannerBucket extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PlannerBucket() {
         super();
-        this.setOdataType("#microsoft.graph.plannerBucket");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

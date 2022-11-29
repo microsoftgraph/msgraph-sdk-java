@@ -27,7 +27,6 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IosNetworkUsageRule() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.iosNetworkUsageRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

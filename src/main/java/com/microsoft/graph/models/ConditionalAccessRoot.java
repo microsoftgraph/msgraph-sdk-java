@@ -23,7 +23,6 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ConditionalAccessRoot() {
         super();
-        this.setOdataType("#microsoft.graph.conditionalAccessRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

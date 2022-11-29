@@ -24,7 +24,6 @@ public class SettingValue implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SettingValue() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.settingValue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

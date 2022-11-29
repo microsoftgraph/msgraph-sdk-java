@@ -25,7 +25,6 @@ public class UsageDetails implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public UsageDetails() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.usageDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

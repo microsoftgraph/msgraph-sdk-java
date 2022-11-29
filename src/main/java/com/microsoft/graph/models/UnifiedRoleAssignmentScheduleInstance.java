@@ -30,7 +30,6 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
     @javax.annotation.Nullable
     public UnifiedRoleAssignmentScheduleInstance() {
         super();
-        this.setOdataType("#microsoft.graph.unifiedRoleAssignmentScheduleInstance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

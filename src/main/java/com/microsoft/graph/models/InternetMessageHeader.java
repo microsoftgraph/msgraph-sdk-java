@@ -24,7 +24,6 @@ public class InternetMessageHeader implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public InternetMessageHeader() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.internetMessageHeader");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

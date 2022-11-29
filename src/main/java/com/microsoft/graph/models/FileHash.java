@@ -24,7 +24,6 @@ public class FileHash implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public FileHash() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.fileHash");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

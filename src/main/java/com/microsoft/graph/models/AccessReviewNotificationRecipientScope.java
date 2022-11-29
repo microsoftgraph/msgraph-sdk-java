@@ -21,7 +21,6 @@ public class AccessReviewNotificationRecipientScope implements AdditionalDataHol
     @javax.annotation.Nullable
     public AccessReviewNotificationRecipientScope() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessReviewNotificationRecipientScope");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,7 +24,6 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Endpoint() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.endpoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

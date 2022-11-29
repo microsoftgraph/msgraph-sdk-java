@@ -32,7 +32,6 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public StandardTimeZoneOffset() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.standardTimeZoneOffset");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

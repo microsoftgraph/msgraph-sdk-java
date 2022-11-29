@@ -80,7 +80,6 @@ public class ColumnDefinition extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ColumnDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.columnDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

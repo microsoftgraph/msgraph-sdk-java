@@ -30,7 +30,6 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RubricQuality() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.rubricQuality");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

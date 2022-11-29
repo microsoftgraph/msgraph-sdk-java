@@ -39,7 +39,6 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SelfSignedCertificate() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.selfSignedCertificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

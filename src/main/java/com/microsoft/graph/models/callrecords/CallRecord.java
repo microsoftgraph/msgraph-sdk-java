@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the cloudCommunications singleton. */
 public class CallRecord extends Entity implements Parsable {
     /** UTC time when the last user left the call. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _endDateTime;
@@ -39,7 +39,6 @@ public class CallRecord extends Entity implements Parsable {
     @javax.annotation.Nullable
     public CallRecord() {
         super();
-        this.setOdataType("#microsoft.graph.callRecords.callRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

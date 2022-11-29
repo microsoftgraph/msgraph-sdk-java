@@ -24,7 +24,6 @@ public class FailureInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public FailureInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.failureInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,7 +24,6 @@ public class WorkbookTableColumn extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookTableColumn() {
         super();
-        this.setOdataType("#microsoft.graph.workbookTableColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

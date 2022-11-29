@@ -28,7 +28,6 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RubricLevel() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.rubricLevel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

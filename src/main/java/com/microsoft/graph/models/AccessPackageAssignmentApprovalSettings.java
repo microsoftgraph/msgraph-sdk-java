@@ -26,7 +26,6 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     @javax.annotation.Nullable
     public AccessPackageAssignmentApprovalSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessPackageAssignmentApprovalSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

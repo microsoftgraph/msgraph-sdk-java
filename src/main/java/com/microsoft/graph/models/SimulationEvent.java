@@ -24,7 +24,6 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SimulationEvent() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.simulationEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

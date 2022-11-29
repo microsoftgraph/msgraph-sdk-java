@@ -25,7 +25,6 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
     @javax.annotation.Nullable
     public IdentityUserFlowAttribute() {
         super();
-        this.setOdataType("#microsoft.graph.identityUserFlowAttribute");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -15,7 +15,6 @@ public class SecurityReportsRoot extends Entity implements Parsable {
     @javax.annotation.Nullable
     public SecurityReportsRoot() {
         super();
-        this.setOdataType("#microsoft.graph.securityReportsRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

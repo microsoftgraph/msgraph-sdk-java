@@ -27,7 +27,6 @@ public class VerifiedPublisher implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public VerifiedPublisher() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.verifiedPublisher");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

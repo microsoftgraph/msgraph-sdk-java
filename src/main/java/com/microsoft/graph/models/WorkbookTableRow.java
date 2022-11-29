@@ -20,7 +20,6 @@ public class WorkbookTableRow extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookTableRow() {
         super();
-        this.setOdataType("#microsoft.graph.workbookTableRow");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

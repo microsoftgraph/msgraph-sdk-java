@@ -27,7 +27,6 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
     @javax.annotation.Nullable
     public DeviceConfigurationUserStatus() {
         super();
-        this.setOdataType("#microsoft.graph.deviceConfigurationUserStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

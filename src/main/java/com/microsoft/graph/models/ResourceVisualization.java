@@ -36,7 +36,6 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ResourceVisualization() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.resourceVisualization");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

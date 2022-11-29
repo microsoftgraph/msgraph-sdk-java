@@ -24,7 +24,6 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
     @javax.annotation.Nullable
     public UserFlowApiConnectorConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.userFlowApiConnectorConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -28,7 +28,6 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public DataSubject() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.dataSubject");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -66,7 +66,7 @@ public class GetStaffAvailabilityRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetStaffAvailabilityPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetStaffAvailabilityPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetStaffAvailabilityRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -76,7 +76,7 @@ public class GetStaffAvailabilityRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
+            final GetStaffAvailabilityRequestBuilderPostRequestConfiguration requestConfig = new GetStaffAvailabilityRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -110,7 +110,7 @@ public class GetStaffAvailabilityRequestBuilder {
      * @return a CompletableFuture of getStaffAvailabilityResponse
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetStaffAvailabilityResponse> post(@javax.annotation.Nonnull final GetStaffAvailabilityPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetStaffAvailabilityResponse> post(@javax.annotation.Nonnull final GetStaffAvailabilityPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetStaffAvailabilityRequestBuilderPostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
@@ -126,7 +126,7 @@ public class GetStaffAvailabilityRequestBuilder {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PostRequestConfiguration {
+    public class GetStaffAvailabilityRequestBuilderPostRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -134,11 +134,11 @@ public class GetStaffAvailabilityRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new PostRequestConfiguration and sets the default values.
+         * Instantiates a new getStaffAvailabilityRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public PostRequestConfiguration() {
+        public GetStaffAvailabilityRequestBuilderPostRequestConfiguration() {
         }
     }
 }

@@ -22,7 +22,6 @@ public class ServiceHealth extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ServiceHealth() {
         super();
-        this.setOdataType("#microsoft.graph.serviceHealth");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

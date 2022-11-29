@@ -26,7 +26,6 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public TeamworkOnlineMeetingInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamworkOnlineMeetingInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -37,7 +37,6 @@ public class TermsAndConditions extends Entity implements Parsable {
     @javax.annotation.Nullable
     public TermsAndConditions() {
         super();
-        this.setOdataType("#microsoft.graph.termsAndConditions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

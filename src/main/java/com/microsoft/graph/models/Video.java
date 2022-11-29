@@ -40,7 +40,6 @@ public class Video implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Video() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.video");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -23,7 +23,6 @@ public class ComplianceManagementPartnerAssignment implements AdditionalDataHold
     @javax.annotation.Nullable
     public ComplianceManagementPartnerAssignment() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.complianceManagementPartnerAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

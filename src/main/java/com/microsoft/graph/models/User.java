@@ -21,7 +21,7 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<AgreementAcceptance> _agreementAcceptances;
     /** Represents the app roles a user has been granted for an application. Supports $expand. */
     private java.util.List<AppRoleAssignment> _appRoleAssignments;
-    /** The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, and counting empty collections). */
+    /** The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, /$count eq 0, /$count ne 0). */
     private java.util.List<AssignedLicense> _assignedLicenses;
     /** The plans that are assigned to the user. Read-only. Not nullable. Returned only on $select. Supports $filter (eq and not). */
     private java.util.List<AssignedPlan> _assignedPlans;
@@ -173,11 +173,11 @@ public class User extends DirectoryObject implements Parsable {
     private Boolean _onPremisesSyncEnabled;
     /** Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith). */
     private String _onPremisesUserPrincipalName;
-    /** A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. NOTE: This property cannot contain accent characters. Returned only on $select. Supports $filter (eq, not, ge, le, in, startsWith, endsWith, and counting empty collections). */
+    /** A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. NOTE: This property cannot contain accent characters. Returned only on $select. Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0). */
     private java.util.List<String> _otherMails;
     /** The outlook property */
     private OutlookUser _outlook;
-    /** Devices that are owned by the user. Read-only. Nullable. Supports $expand. */
+    /** Devices that are owned by the user. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). */
     private java.util.List<DirectoryObject> _ownedDevices;
     /** Directory objects that are owned by the user. Read-only. Nullable. Supports $expand. */
     private java.util.List<DirectoryObject> _ownedObjects;
@@ -207,7 +207,7 @@ public class User extends DirectoryObject implements Parsable {
     private Presence _presence;
     /** The plans that are provisioned for the user. Read-only. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le). */
     private java.util.List<ProvisionedPlan> _provisionedPlans;
-    /** For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith, endsWith, and counting empty collections). */
+    /** For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0). */
     private java.util.List<String> _proxyAddresses;
     /** Devices that are registered for the user. Read-only. Nullable. Supports $expand. */
     private java.util.List<DirectoryObject> _registeredDevices;
@@ -313,7 +313,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._appRoleAssignments;
     }
     /**
-     * Gets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, and counting empty collections).
+     * Gets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
      * @return a assignedLicense
      */
     @javax.annotation.Nullable
@@ -1049,7 +1049,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._onPremisesUserPrincipalName;
     }
     /**
-     * Gets the otherMails property value. A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. NOTE: This property cannot contain accent characters. Returned only on $select. Supports $filter (eq, not, ge, le, in, startsWith, endsWith, and counting empty collections).
+     * Gets the otherMails property value. A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. NOTE: This property cannot contain accent characters. Returned only on $select. Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -1065,7 +1065,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._outlook;
     }
     /**
-     * Gets the ownedDevices property value. Devices that are owned by the user. Read-only. Nullable. Supports $expand.
+     * Gets the ownedDevices property value. Devices that are owned by the user. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -1185,7 +1185,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._provisionedPlans;
     }
     /**
-     * Gets the proxyAddresses property value. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith, endsWith, and counting empty collections).
+     * Gets the proxyAddresses property value. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -1519,7 +1519,7 @@ public class User extends DirectoryObject implements Parsable {
         this._appRoleAssignments = value;
     }
     /**
-     * Sets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, and counting empty collections).
+     * Sets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
      * @param value Value to set for the assignedLicenses property.
      * @return a void
      */
@@ -2203,7 +2203,7 @@ public class User extends DirectoryObject implements Parsable {
         this._onPremisesUserPrincipalName = value;
     }
     /**
-     * Sets the otherMails property value. A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. NOTE: This property cannot contain accent characters. Returned only on $select. Supports $filter (eq, not, ge, le, in, startsWith, endsWith, and counting empty collections).
+     * Sets the otherMails property value. A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. NOTE: This property cannot contain accent characters. Returned only on $select. Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0).
      * @param value Value to set for the otherMails property.
      * @return a void
      */
@@ -2221,7 +2221,7 @@ public class User extends DirectoryObject implements Parsable {
         this._outlook = value;
     }
     /**
-     * Sets the ownedDevices property value. Devices that are owned by the user. Read-only. Nullable. Supports $expand.
+     * Sets the ownedDevices property value. Devices that are owned by the user. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @param value Value to set for the ownedDevices property.
      * @return a void
      */
@@ -2356,7 +2356,7 @@ public class User extends DirectoryObject implements Parsable {
         this._provisionedPlans = value;
     }
     /**
-     * Sets the proxyAddresses property value. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith, endsWith, and counting empty collections).
+     * Sets the proxyAddresses property value. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0).
      * @param value Value to set for the proxyAddresses property.
      * @return a void
      */

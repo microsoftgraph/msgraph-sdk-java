@@ -24,7 +24,6 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AverageComparativeScore() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.averageComparativeScore");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

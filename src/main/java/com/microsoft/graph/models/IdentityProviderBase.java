@@ -23,7 +23,6 @@ public class IdentityProviderBase extends Entity implements Parsable {
     @javax.annotation.Nullable
     public IdentityProviderBase() {
         super();
-        this.setOdataType("#microsoft.graph.identityProviderBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

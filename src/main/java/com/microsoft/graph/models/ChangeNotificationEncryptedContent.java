@@ -30,7 +30,6 @@ public class ChangeNotificationEncryptedContent implements AdditionalDataHolder,
     @javax.annotation.Nullable
     public ChangeNotificationEncryptedContent() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.changeNotificationEncryptedContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

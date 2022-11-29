@@ -24,7 +24,6 @@ public class EducationItemBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public EducationItemBody() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.educationItemBody");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

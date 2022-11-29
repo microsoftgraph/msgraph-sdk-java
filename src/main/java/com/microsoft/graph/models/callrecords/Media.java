@@ -32,7 +32,6 @@ public class Media implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Media() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.media");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

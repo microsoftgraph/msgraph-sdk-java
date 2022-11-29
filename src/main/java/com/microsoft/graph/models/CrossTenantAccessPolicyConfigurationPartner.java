@@ -34,7 +34,6 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
     @javax.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationPartner() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.crossTenantAccessPolicyConfigurationPartner");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

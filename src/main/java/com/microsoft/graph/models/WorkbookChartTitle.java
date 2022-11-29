@@ -23,7 +23,6 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartTitle() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartTitle");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

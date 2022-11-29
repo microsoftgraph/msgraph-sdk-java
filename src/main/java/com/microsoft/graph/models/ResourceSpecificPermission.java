@@ -30,7 +30,6 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public ResourceSpecificPermission() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.resourceSpecificPermission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -43,7 +43,6 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     @javax.annotation.Nullable
     public AccessReviewInstanceDecisionItem() {
         super();
-        this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

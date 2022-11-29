@@ -26,7 +26,6 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
     @javax.annotation.Nullable
     public FederatedIdentityCredential() {
         super();
-        this.setOdataType("#microsoft.graph.federatedIdentityCredential");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

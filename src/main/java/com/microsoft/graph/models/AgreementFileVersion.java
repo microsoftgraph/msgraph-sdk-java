@@ -16,7 +16,6 @@ public class AgreementFileVersion extends AgreementFileProperties implements Par
     @javax.annotation.Nullable
     public AgreementFileVersion() {
         super();
-        this.setOdataType("#microsoft.graph.agreementFileVersion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

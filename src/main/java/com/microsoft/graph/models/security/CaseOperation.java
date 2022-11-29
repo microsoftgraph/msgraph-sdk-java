@@ -7,6 +7,7 @@ import com.microsoft.graph.models.security.EdiscoveryAddToReviewSetOperation;
 import com.microsoft.graph.models.security.EdiscoveryEstimateOperation;
 import com.microsoft.graph.models.security.EdiscoveryHoldOperation;
 import com.microsoft.graph.models.security.EdiscoveryIndexOperation;
+import com.microsoft.graph.models.security.EdiscoveryPurgeDataOperation;
 import com.microsoft.graph.models.security.EdiscoveryTagOperation;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -38,7 +39,6 @@ public class CaseOperation extends Entity implements Parsable {
     @javax.annotation.Nullable
     public CaseOperation() {
         super();
-        this.setOdataType("#microsoft.graph.security.caseOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,6 +56,7 @@ public class CaseOperation extends Entity implements Parsable {
                 case "#microsoft.graph.security.ediscoveryEstimateOperation": return new EdiscoveryEstimateOperation();
                 case "#microsoft.graph.security.ediscoveryHoldOperation": return new EdiscoveryHoldOperation();
                 case "#microsoft.graph.security.ediscoveryIndexOperation": return new EdiscoveryIndexOperation();
+                case "#microsoft.graph.security.ediscoveryPurgeDataOperation": return new EdiscoveryPurgeDataOperation();
                 case "#microsoft.graph.security.ediscoveryTagOperation": return new EdiscoveryTagOperation();
             }
         }

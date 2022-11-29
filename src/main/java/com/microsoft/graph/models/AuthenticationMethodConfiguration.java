@@ -23,7 +23,6 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     @javax.annotation.Nullable
     public AuthenticationMethodConfiguration() {
         super();
-        this.setOdataType("#microsoft.graph.authenticationMethodConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

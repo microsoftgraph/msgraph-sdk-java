@@ -26,7 +26,6 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public UserAgent() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.userAgent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

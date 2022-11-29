@@ -26,7 +26,6 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ProvisionedPlan() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.provisionedPlan");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

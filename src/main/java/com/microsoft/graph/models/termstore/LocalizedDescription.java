@@ -24,7 +24,6 @@ public class LocalizedDescription implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public LocalizedDescription() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.termStore.localizedDescription");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

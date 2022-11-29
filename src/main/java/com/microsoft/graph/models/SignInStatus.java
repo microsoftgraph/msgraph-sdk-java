@@ -26,7 +26,6 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SignInStatus() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.signInStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

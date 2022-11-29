@@ -54,7 +54,6 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PrinterLocation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.printerLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

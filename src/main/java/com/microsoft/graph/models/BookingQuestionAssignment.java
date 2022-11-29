@@ -24,7 +24,6 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public BookingQuestionAssignment() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bookingQuestionAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

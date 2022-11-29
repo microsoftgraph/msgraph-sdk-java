@@ -29,7 +29,6 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AssignedPlan() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.assignedPlan");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
