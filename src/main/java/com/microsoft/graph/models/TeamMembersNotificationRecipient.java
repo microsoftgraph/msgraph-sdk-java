@@ -27,7 +27,7 @@ public class TeamMembersNotificationRecipient extends TeamworkNotificationRecipi
 
     /**
      * The Team Id.
-     * 
+     * The unique identifier for the team whose members should receive the notification.
      */
     @SerializedName(value = "teamId", alternate = {"TeamId"})
     @Expose

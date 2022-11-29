@@ -49,7 +49,7 @@ public class UnifiedRolePermission implements IJsonBackedObject {
 
     /**
      * The Condition.
-     * Optional constraints that must be met for the permission to be effective.
+     * Optional constraints that must be met for the permission to be effective. Not supported for custom roles.
      */
     @SerializedName(value = "condition", alternate = {"Condition"})
     @Expose

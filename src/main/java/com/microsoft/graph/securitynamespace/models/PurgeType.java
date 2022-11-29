@@ -7,48 +7,24 @@ package com.microsoft.graph.security.models;
 
 
 /**
- * The Enum Case Action.
+ * The Enum Purge Type.
 */
-public enum CaseAction
+public enum PurgeType
 {
     /**
-    * content Export
+    * recoverable
     */
-    CONTENT_EXPORT,
+    RECOVERABLE,
     /**
-    * apply Tags
+    * permanently Deleted
     */
-    APPLY_TAGS,
-    /**
-    * convert To Pdf
-    */
-    CONVERT_TO_PDF,
-    /**
-    * index
-    */
-    INDEX,
-    /**
-    * estimate Statistics
-    */
-    ESTIMATE_STATISTICS,
-    /**
-    * add To Review Set
-    */
-    ADD_TO_REVIEW_SET,
-    /**
-    * hold Update
-    */
-    HOLD_UPDATE,
+    PERMANENTLY_DELETED,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * purge Data
-    */
-    PURGE_DATA,
-    /**
-    * For CaseAction values that were not expected from the service
+    * For PurgeType values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

@@ -27,7 +27,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
 
     /**
      * The Channel Id.
-     * 
+     * The unique identifier for the channel whose members should receive the notification.
      */
     @SerializedName(value = "channelId", alternate = {"ChannelId"})
     @Expose
@@ -36,7 +36,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
 
     /**
      * The Team Id.
-     * 
+     * The unique identifier for the team under which the channel resides.
      */
     @SerializedName(value = "teamId", alternate = {"TeamId"})
     @Expose
