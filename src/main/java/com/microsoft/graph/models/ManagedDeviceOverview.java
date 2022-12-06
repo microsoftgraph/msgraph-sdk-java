@@ -25,7 +25,6 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ManagedDeviceOverview() {
         super();
-        this.setOdataType("#microsoft.graph.managedDeviceOverview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,14 +74,13 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedDeviceOverview currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("deviceExchangeAccessStateSummary", (n) -> { currentObject.setDeviceExchangeAccessStateSummary(n.getObjectValue(DeviceExchangeAccessStateSummary::createFromDiscriminatorValue)); });
-            this.put("deviceOperatingSystemSummary", (n) -> { currentObject.setDeviceOperatingSystemSummary(n.getObjectValue(DeviceOperatingSystemSummary::createFromDiscriminatorValue)); });
-            this.put("dualEnrolledDeviceCount", (n) -> { currentObject.setDualEnrolledDeviceCount(n.getIntegerValue()); });
-            this.put("enrolledDeviceCount", (n) -> { currentObject.setEnrolledDeviceCount(n.getIntegerValue()); });
-            this.put("mdmEnrolledCount", (n) -> { currentObject.setMdmEnrolledCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceExchangeAccessStateSummary", (n) -> { this.setDeviceExchangeAccessStateSummary(n.getObjectValue(DeviceExchangeAccessStateSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceOperatingSystemSummary", (n) -> { this.setDeviceOperatingSystemSummary(n.getObjectValue(DeviceOperatingSystemSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("dualEnrolledDeviceCount", (n) -> { this.setDualEnrolledDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("enrolledDeviceCount", (n) -> { this.setEnrolledDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("mdmEnrolledCount", (n) -> { this.setMdmEnrolledCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mdmEnrolledCount property value. The number of devices enrolled in MDM

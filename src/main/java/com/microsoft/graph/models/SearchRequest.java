@@ -44,7 +44,6 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SearchRequest() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.searchRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -110,22 +109,21 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SearchRequest currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(13) {{
-            this.put("aggregationFilters", (n) -> { currentObject.setAggregationFilters(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("aggregations", (n) -> { currentObject.setAggregations(n.getCollectionOfObjectValues(AggregationOption::createFromDiscriminatorValue)); });
-            this.put("contentSources", (n) -> { currentObject.setContentSources(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("enableTopResults", (n) -> { currentObject.setEnableTopResults(n.getBooleanValue()); });
-            this.put("entityTypes", (n) -> { currentObject.setEntityTypes(n.getCollectionOfEnumValues(EntityType.class)); });
-            this.put("fields", (n) -> { currentObject.setFields(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("from", (n) -> { currentObject.setFrom(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("query", (n) -> { currentObject.setQuery(n.getObjectValue(SearchQuery::createFromDiscriminatorValue)); });
-            this.put("queryAlterationOptions", (n) -> { currentObject.setQueryAlterationOptions(n.getObjectValue(SearchAlterationOptions::createFromDiscriminatorValue)); });
-            this.put("resultTemplateOptions", (n) -> { currentObject.setResultTemplateOptions(n.getObjectValue(ResultTemplateOption::createFromDiscriminatorValue)); });
-            this.put("size", (n) -> { currentObject.setSize(n.getIntegerValue()); });
-            this.put("sortProperties", (n) -> { currentObject.setSortProperties(n.getCollectionOfObjectValues(SortProperty::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(13);
+        deserializerMap.put("aggregationFilters", (n) -> { this.setAggregationFilters(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("aggregations", (n) -> { this.setAggregations(n.getCollectionOfObjectValues(AggregationOption::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentSources", (n) -> { this.setContentSources(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("enableTopResults", (n) -> { this.setEnableTopResults(n.getBooleanValue()); });
+        deserializerMap.put("entityTypes", (n) -> { this.setEntityTypes(n.getCollectionOfEnumValues(EntityType.class)); });
+        deserializerMap.put("fields", (n) -> { this.setFields(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("from", (n) -> { this.setFrom(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("query", (n) -> { this.setQuery(n.getObjectValue(SearchQuery::createFromDiscriminatorValue)); });
+        deserializerMap.put("queryAlterationOptions", (n) -> { this.setQueryAlterationOptions(n.getObjectValue(SearchAlterationOptions::createFromDiscriminatorValue)); });
+        deserializerMap.put("resultTemplateOptions", (n) -> { this.setResultTemplateOptions(n.getObjectValue(ResultTemplateOption::createFromDiscriminatorValue)); });
+        deserializerMap.put("size", (n) -> { this.setSize(n.getIntegerValue()); });
+        deserializerMap.put("sortProperties", (n) -> { this.setSortProperties(n.getCollectionOfObjectValues(SortProperty::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the fields property value. The fields property

@@ -17,7 +17,6 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
     @javax.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMethodTarget() {
         super();
-        this.setOdataType("#microsoft.graph.microsoftAuthenticatorAuthenticationMethodTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,10 +42,9 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MicrosoftAuthenticatorAuthenticationMethodTarget currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("authenticationMode", (n) -> { currentObject.setAuthenticationMode(n.getEnumValue(MicrosoftAuthenticatorAuthenticationMode.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationMode", (n) -> { this.setAuthenticationMode(n.getEnumValue(MicrosoftAuthenticatorAuthenticationMode.class)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

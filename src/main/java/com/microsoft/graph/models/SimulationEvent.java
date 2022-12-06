@@ -24,7 +24,6 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SimulationEvent() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.simulationEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,12 +65,11 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SimulationEvent currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("count", (n) -> { currentObject.setCount(n.getIntegerValue()); });
-            this.put("eventName", (n) -> { currentObject.setEventName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("count", (n) -> { this.setCount(n.getIntegerValue()); });
+        deserializerMap.put("eventName", (n) -> { this.setEventName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

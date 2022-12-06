@@ -25,13 +25,13 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     private String _odataType;
     /** Platforms included in and excluded from the policy. */
     private ConditionalAccessPlatforms _platforms;
-    /** The servicePrincipalRiskLevels property */
+    /** Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue. */
     private java.util.List<RiskLevel> _servicePrincipalRiskLevels;
     /** Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required. */
     private java.util.List<RiskLevel> _signInRiskLevels;
     /** User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required. */
     private java.util.List<RiskLevel> _userRiskLevels;
-    /** Users, groups, and roles included in and excluded from the policy. Required. */
+    /** Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required. */
     private ConditionalAccessUsers _users;
     /**
      * Instantiates a new conditionalAccessConditionSet and sets the default values.
@@ -40,7 +40,6 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public ConditionalAccessConditionSet() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessConditionSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -98,20 +97,19 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConditionalAccessConditionSet currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(11) {{
-            this.put("applications", (n) -> { currentObject.setApplications(n.getObjectValue(ConditionalAccessApplications::createFromDiscriminatorValue)); });
-            this.put("clientApplications", (n) -> { currentObject.setClientApplications(n.getObjectValue(ConditionalAccessClientApplications::createFromDiscriminatorValue)); });
-            this.put("clientAppTypes", (n) -> { currentObject.setClientAppTypes(n.getCollectionOfEnumValues(ConditionalAccessClientApp.class)); });
-            this.put("devices", (n) -> { currentObject.setDevices(n.getObjectValue(ConditionalAccessDevices::createFromDiscriminatorValue)); });
-            this.put("locations", (n) -> { currentObject.setLocations(n.getObjectValue(ConditionalAccessLocations::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("platforms", (n) -> { currentObject.setPlatforms(n.getObjectValue(ConditionalAccessPlatforms::createFromDiscriminatorValue)); });
-            this.put("servicePrincipalRiskLevels", (n) -> { currentObject.setServicePrincipalRiskLevels(n.getCollectionOfEnumValues(RiskLevel.class)); });
-            this.put("signInRiskLevels", (n) -> { currentObject.setSignInRiskLevels(n.getCollectionOfEnumValues(RiskLevel.class)); });
-            this.put("userRiskLevels", (n) -> { currentObject.setUserRiskLevels(n.getCollectionOfEnumValues(RiskLevel.class)); });
-            this.put("users", (n) -> { currentObject.setUsers(n.getObjectValue(ConditionalAccessUsers::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(11);
+        deserializerMap.put("applications", (n) -> { this.setApplications(n.getObjectValue(ConditionalAccessApplications::createFromDiscriminatorValue)); });
+        deserializerMap.put("clientApplications", (n) -> { this.setClientApplications(n.getObjectValue(ConditionalAccessClientApplications::createFromDiscriminatorValue)); });
+        deserializerMap.put("clientAppTypes", (n) -> { this.setClientAppTypes(n.getCollectionOfEnumValues(ConditionalAccessClientApp.class)); });
+        deserializerMap.put("devices", (n) -> { this.setDevices(n.getObjectValue(ConditionalAccessDevices::createFromDiscriminatorValue)); });
+        deserializerMap.put("locations", (n) -> { this.setLocations(n.getObjectValue(ConditionalAccessLocations::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("platforms", (n) -> { this.setPlatforms(n.getObjectValue(ConditionalAccessPlatforms::createFromDiscriminatorValue)); });
+        deserializerMap.put("servicePrincipalRiskLevels", (n) -> { this.setServicePrincipalRiskLevels(n.getCollectionOfEnumValues(RiskLevel.class)); });
+        deserializerMap.put("signInRiskLevels", (n) -> { this.setSignInRiskLevels(n.getCollectionOfEnumValues(RiskLevel.class)); });
+        deserializerMap.put("userRiskLevels", (n) -> { this.setUserRiskLevels(n.getCollectionOfEnumValues(RiskLevel.class)); });
+        deserializerMap.put("users", (n) -> { this.setUsers(n.getObjectValue(ConditionalAccessUsers::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the locations property value. Locations included in and excluded from the policy.
@@ -138,7 +136,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
         return this._platforms;
     }
     /**
-     * Gets the servicePrincipalRiskLevels property value. The servicePrincipalRiskLevels property
+     * Gets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
      * @return a riskLevel
      */
     @javax.annotation.Nullable
@@ -162,7 +160,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
         return this._userRiskLevels;
     }
     /**
-     * Gets the users property value. Users, groups, and roles included in and excluded from the policy. Required.
+     * Gets the users property value. Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
      * @return a conditionalAccessUsers
      */
     @javax.annotation.Nullable
@@ -263,7 +261,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
         this._platforms = value;
     }
     /**
-     * Sets the servicePrincipalRiskLevels property value. The servicePrincipalRiskLevels property
+     * Sets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
      * @param value Value to set for the servicePrincipalRiskLevels property.
      * @return a void
      */
@@ -290,7 +288,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
         this._userRiskLevels = value;
     }
     /**
-     * Sets the users property value. Users, groups, and roles included in and excluded from the policy. Required.
+     * Sets the users property value. Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
      * @param value Value to set for the users property.
      * @return a void
      */

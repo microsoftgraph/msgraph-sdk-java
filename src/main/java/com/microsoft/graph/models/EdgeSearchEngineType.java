@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public enum EdgeSearchEngineType implements ValuedEnum {
     /** Uses factory settings of Edge to assign the default search engine as per the user market */
     Default_escaped("default_escaped"),

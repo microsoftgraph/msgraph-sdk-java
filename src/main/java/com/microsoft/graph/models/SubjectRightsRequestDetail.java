@@ -34,7 +34,6 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public SubjectRightsRequestDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.subjectRightsRequestDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,17 +67,16 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SubjectRightsRequestDetail currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("excludedItemCount", (n) -> { currentObject.setExcludedItemCount(n.getLongValue()); });
-            this.put("insightCounts", (n) -> { currentObject.setInsightCounts(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("itemCount", (n) -> { currentObject.setItemCount(n.getLongValue()); });
-            this.put("itemNeedReview", (n) -> { currentObject.setItemNeedReview(n.getLongValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("productItemCounts", (n) -> { currentObject.setProductItemCounts(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("signedOffItemCount", (n) -> { currentObject.setSignedOffItemCount(n.getLongValue()); });
-            this.put("totalItemSize", (n) -> { currentObject.setTotalItemSize(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("excludedItemCount", (n) -> { this.setExcludedItemCount(n.getLongValue()); });
+        deserializerMap.put("insightCounts", (n) -> { this.setInsightCounts(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("itemCount", (n) -> { this.setItemCount(n.getLongValue()); });
+        deserializerMap.put("itemNeedReview", (n) -> { this.setItemNeedReview(n.getLongValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("productItemCounts", (n) -> { this.setProductItemCounts(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("signedOffItemCount", (n) -> { this.setSignedOffItemCount(n.getLongValue()); });
+        deserializerMap.put("totalItemSize", (n) -> { this.setTotalItemSize(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the insightCounts property value. Count of items per insight.

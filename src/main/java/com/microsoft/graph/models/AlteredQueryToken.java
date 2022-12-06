@@ -26,7 +26,6 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AlteredQueryToken() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.alteredQueryToken");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,13 +51,12 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AlteredQueryToken currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("length", (n) -> { currentObject.setLength(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("offset", (n) -> { currentObject.setOffset(n.getIntegerValue()); });
-            this.put("suggestion", (n) -> { currentObject.setSuggestion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("length", (n) -> { this.setLength(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("offset", (n) -> { this.setOffset(n.getIntegerValue()); });
+        deserializerMap.put("suggestion", (n) -> { this.setSuggestion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the length property value. Defines the length of a changed segment.

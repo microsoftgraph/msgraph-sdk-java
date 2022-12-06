@@ -24,7 +24,6 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RequiredResourceAccess() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.requiredResourceAccess");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RequiredResourceAccess currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("resourceAccess", (n) -> { currentObject.setResourceAccess(n.getCollectionOfObjectValues(ResourceAccess::createFromDiscriminatorValue)); });
-            this.put("resourceAppId", (n) -> { currentObject.setResourceAppId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("resourceAccess", (n) -> { this.setResourceAccess(n.getCollectionOfObjectValues(ResourceAccess::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceAppId", (n) -> { this.setResourceAppId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

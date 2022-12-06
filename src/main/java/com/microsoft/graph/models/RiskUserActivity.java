@@ -24,7 +24,6 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RiskUserActivity() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.riskUserActivity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,12 +57,11 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RiskUserActivity currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("detail", (n) -> { currentObject.setDetail(n.getEnumValue(RiskDetail.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("riskEventTypes", (n) -> { currentObject.setRiskEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("detail", (n) -> { this.setDetail(n.getEnumValue(RiskDetail.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("riskEventTypes", (n) -> { this.setRiskEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

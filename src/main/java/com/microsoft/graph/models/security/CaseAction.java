@@ -3,7 +3,7 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public enum CaseAction implements ValuedEnum {
     ContentExport("contentExport"),
     ApplyTags("applyTags"),
@@ -12,7 +12,8 @@ public enum CaseAction implements ValuedEnum {
     EstimateStatistics("estimateStatistics"),
     AddToReviewSet("addToReviewSet"),
     HoldUpdate("holdUpdate"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    PurgeData("purgeData");
     public final String value;
     CaseAction(final String value) {
         this.value = value;
@@ -31,6 +32,7 @@ public enum CaseAction implements ValuedEnum {
             case "addToReviewSet": return AddToReviewSet;
             case "holdUpdate": return HoldUpdate;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "purgeData": return PurgeData;
             default: return null;
         }
     }

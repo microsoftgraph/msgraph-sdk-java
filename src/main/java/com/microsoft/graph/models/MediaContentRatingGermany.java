@@ -24,7 +24,6 @@ public class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public MediaContentRatingGermany() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.mediaContentRatingGermany");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MediaContentRatingGermany currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("movieRating", (n) -> { currentObject.setMovieRating(n.getEnumValue(RatingGermanyMoviesType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("tvRating", (n) -> { currentObject.setTvRating(n.getEnumValue(RatingGermanyTelevisionType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("movieRating", (n) -> { this.setMovieRating(n.getEnumValue(RatingGermanyMoviesType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("tvRating", (n) -> { this.setTvRating(n.getEnumValue(RatingGermanyTelevisionType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the movieRating property value. Movies rating labels in Germany

@@ -36,10 +36,9 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReviewInactiveUsersQueryScope currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("inactiveDuration", (n) -> { currentObject.setInactiveDuration(n.getPeriodValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("inactiveDuration", (n) -> { this.setInactiveDuration(n.getPeriodValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the inactiveDuration property value. Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance's start date. If this property is not specified, it's assigned the default value PT0S.

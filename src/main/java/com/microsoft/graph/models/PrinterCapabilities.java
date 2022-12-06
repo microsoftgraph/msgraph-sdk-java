@@ -70,7 +70,6 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PrinterCapabilities() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.printerCapabilities");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -160,35 +159,34 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrinterCapabilities currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(26) {{
-            this.put("bottomMargins", (n) -> { currentObject.setBottomMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
-            this.put("collation", (n) -> { currentObject.setCollation(n.getBooleanValue()); });
-            this.put("colorModes", (n) -> { currentObject.setColorModes(n.getCollectionOfEnumValues(PrintColorMode.class)); });
-            this.put("contentTypes", (n) -> { currentObject.setContentTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("copiesPerJob", (n) -> { currentObject.setCopiesPerJob(n.getObjectValue(IntegerRange::createFromDiscriminatorValue)); });
-            this.put("dpis", (n) -> { currentObject.setDpis(n.getCollectionOfPrimitiveValues(Integer.class)); });
-            this.put("duplexModes", (n) -> { currentObject.setDuplexModes(n.getCollectionOfEnumValues(PrintDuplexMode.class)); });
-            this.put("feedOrientations", (n) -> { currentObject.setFeedOrientations(n.getCollectionOfEnumValues(PrinterFeedOrientation.class)); });
-            this.put("finishings", (n) -> { currentObject.setFinishings(n.getCollectionOfEnumValues(PrintFinishing.class)); });
-            this.put("inputBins", (n) -> { currentObject.setInputBins(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isColorPrintingSupported", (n) -> { currentObject.setIsColorPrintingSupported(n.getBooleanValue()); });
-            this.put("isPageRangeSupported", (n) -> { currentObject.setIsPageRangeSupported(n.getBooleanValue()); });
-            this.put("leftMargins", (n) -> { currentObject.setLeftMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
-            this.put("mediaColors", (n) -> { currentObject.setMediaColors(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("mediaSizes", (n) -> { currentObject.setMediaSizes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("mediaTypes", (n) -> { currentObject.setMediaTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("multipageLayouts", (n) -> { currentObject.setMultipageLayouts(n.getCollectionOfEnumValues(PrintMultipageLayout.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("orientations", (n) -> { currentObject.setOrientations(n.getCollectionOfEnumValues(PrintOrientation.class)); });
-            this.put("outputBins", (n) -> { currentObject.setOutputBins(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("pagesPerSheet", (n) -> { currentObject.setPagesPerSheet(n.getCollectionOfPrimitiveValues(Integer.class)); });
-            this.put("qualities", (n) -> { currentObject.setQualities(n.getCollectionOfEnumValues(PrintQuality.class)); });
-            this.put("rightMargins", (n) -> { currentObject.setRightMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
-            this.put("scalings", (n) -> { currentObject.setScalings(n.getCollectionOfEnumValues(PrintScaling.class)); });
-            this.put("supportsFitPdfToPage", (n) -> { currentObject.setSupportsFitPdfToPage(n.getBooleanValue()); });
-            this.put("topMargins", (n) -> { currentObject.setTopMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(26);
+        deserializerMap.put("bottomMargins", (n) -> { this.setBottomMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
+        deserializerMap.put("collation", (n) -> { this.setCollation(n.getBooleanValue()); });
+        deserializerMap.put("colorModes", (n) -> { this.setColorModes(n.getCollectionOfEnumValues(PrintColorMode.class)); });
+        deserializerMap.put("contentTypes", (n) -> { this.setContentTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("copiesPerJob", (n) -> { this.setCopiesPerJob(n.getObjectValue(IntegerRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("dpis", (n) -> { this.setDpis(n.getCollectionOfPrimitiveValues(Integer.class)); });
+        deserializerMap.put("duplexModes", (n) -> { this.setDuplexModes(n.getCollectionOfEnumValues(PrintDuplexMode.class)); });
+        deserializerMap.put("feedOrientations", (n) -> { this.setFeedOrientations(n.getCollectionOfEnumValues(PrinterFeedOrientation.class)); });
+        deserializerMap.put("finishings", (n) -> { this.setFinishings(n.getCollectionOfEnumValues(PrintFinishing.class)); });
+        deserializerMap.put("inputBins", (n) -> { this.setInputBins(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isColorPrintingSupported", (n) -> { this.setIsColorPrintingSupported(n.getBooleanValue()); });
+        deserializerMap.put("isPageRangeSupported", (n) -> { this.setIsPageRangeSupported(n.getBooleanValue()); });
+        deserializerMap.put("leftMargins", (n) -> { this.setLeftMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
+        deserializerMap.put("mediaColors", (n) -> { this.setMediaColors(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("mediaSizes", (n) -> { this.setMediaSizes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("mediaTypes", (n) -> { this.setMediaTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("multipageLayouts", (n) -> { this.setMultipageLayouts(n.getCollectionOfEnumValues(PrintMultipageLayout.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("orientations", (n) -> { this.setOrientations(n.getCollectionOfEnumValues(PrintOrientation.class)); });
+        deserializerMap.put("outputBins", (n) -> { this.setOutputBins(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("pagesPerSheet", (n) -> { this.setPagesPerSheet(n.getCollectionOfPrimitiveValues(Integer.class)); });
+        deserializerMap.put("qualities", (n) -> { this.setQualities(n.getCollectionOfEnumValues(PrintQuality.class)); });
+        deserializerMap.put("rightMargins", (n) -> { this.setRightMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
+        deserializerMap.put("scalings", (n) -> { this.setScalings(n.getCollectionOfEnumValues(PrintScaling.class)); });
+        deserializerMap.put("supportsFitPdfToPage", (n) -> { this.setSupportsFitPdfToPage(n.getBooleanValue()); });
+        deserializerMap.put("topMargins", (n) -> { this.setTopMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the finishings property value. Finishing processes the printer supports for a printed document.

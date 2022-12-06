@@ -26,7 +26,6 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public DriveRecipient() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.driveRecipient");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,13 +67,12 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DriveRecipient currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("alias", (n) -> { currentObject.setAlias(n.getStringValue()); });
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("objectId", (n) -> { currentObject.setObjectId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("alias", (n) -> { this.setAlias(n.getStringValue()); });
+        deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("objectId", (n) -> { this.setObjectId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the objectId property value. The unique identifier for the recipient in the directory.

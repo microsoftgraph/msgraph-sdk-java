@@ -24,7 +24,6 @@ public class TeamsApp extends Entity implements Parsable {
     @javax.annotation.Nullable
     public TeamsApp() {
         super();
-        this.setOdataType("#microsoft.graph.teamsApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -74,13 +73,12 @@ public class TeamsApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamsApp currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("appDefinitions", (n) -> { currentObject.setAppDefinitions(n.getCollectionOfObjectValues(TeamsAppDefinition::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("distributionMethod", (n) -> { currentObject.setDistributionMethod(n.getEnumValue(TeamsAppDistributionMethod.class)); });
-            this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appDefinitions", (n) -> { this.setAppDefinitions(n.getCollectionOfObjectValues(TeamsAppDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("distributionMethod", (n) -> { this.setDistributionMethod(n.getEnumValue(TeamsAppDistributionMethod.class)); });
+        deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

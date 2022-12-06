@@ -30,7 +30,6 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public LookupColumn() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.lookupColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -80,15 +79,14 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final LookupColumn currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("allowMultipleValues", (n) -> { currentObject.setAllowMultipleValues(n.getBooleanValue()); });
-            this.put("allowUnlimitedLength", (n) -> { currentObject.setAllowUnlimitedLength(n.getBooleanValue()); });
-            this.put("columnName", (n) -> { currentObject.setColumnName(n.getStringValue()); });
-            this.put("listId", (n) -> { currentObject.setListId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("primaryLookupColumnId", (n) -> { currentObject.setPrimaryLookupColumnId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("allowMultipleValues", (n) -> { this.setAllowMultipleValues(n.getBooleanValue()); });
+        deserializerMap.put("allowUnlimitedLength", (n) -> { this.setAllowUnlimitedLength(n.getBooleanValue()); });
+        deserializerMap.put("columnName", (n) -> { this.setColumnName(n.getStringValue()); });
+        deserializerMap.put("listId", (n) -> { this.setListId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("primaryLookupColumnId", (n) -> { this.setPrimaryLookupColumnId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the listId property value. The unique identifier of the lookup source list.

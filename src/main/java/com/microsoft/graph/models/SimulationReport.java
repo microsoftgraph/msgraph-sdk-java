@@ -24,7 +24,6 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SimulationReport() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.simulationReport");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SimulationReport currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("overview", (n) -> { currentObject.setOverview(n.getObjectValue(SimulationReportOverview::createFromDiscriminatorValue)); });
-            this.put("simulationUsers", (n) -> { currentObject.setSimulationUsers(n.getCollectionOfObjectValues(UserSimulationDetails::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("overview", (n) -> { this.setOverview(n.getObjectValue(SimulationReportOverview::createFromDiscriminatorValue)); });
+        deserializerMap.put("simulationUsers", (n) -> { this.setSimulationUsers(n.getCollectionOfObjectValues(UserSimulationDetails::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

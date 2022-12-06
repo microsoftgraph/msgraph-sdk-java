@@ -31,7 +31,6 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
     @javax.annotation.Nullable
     public DeviceExchangeAccessStateSummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceExchangeAccessStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,15 +72,14 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceExchangeAccessStateSummary currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("allowedDeviceCount", (n) -> { currentObject.setAllowedDeviceCount(n.getIntegerValue()); });
-            this.put("blockedDeviceCount", (n) -> { currentObject.setBlockedDeviceCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("quarantinedDeviceCount", (n) -> { currentObject.setQuarantinedDeviceCount(n.getIntegerValue()); });
-            this.put("unavailableDeviceCount", (n) -> { currentObject.setUnavailableDeviceCount(n.getIntegerValue()); });
-            this.put("unknownDeviceCount", (n) -> { currentObject.setUnknownDeviceCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("allowedDeviceCount", (n) -> { this.setAllowedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("blockedDeviceCount", (n) -> { this.setBlockedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("quarantinedDeviceCount", (n) -> { this.setQuarantinedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("unavailableDeviceCount", (n) -> { this.setUnavailableDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("unknownDeviceCount", (n) -> { this.setUnknownDeviceCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

@@ -36,7 +36,6 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public WorkbookFilterCriteria() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.workbookFilterCriteria");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -94,18 +93,17 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookFilterCriteria currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(9) {{
-            this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
-            this.put("criterion1", (n) -> { currentObject.setCriterion1(n.getStringValue()); });
-            this.put("criterion2", (n) -> { currentObject.setCriterion2(n.getStringValue()); });
-            this.put("dynamicCriteria", (n) -> { currentObject.setDynamicCriteria(n.getStringValue()); });
-            this.put("filterOn", (n) -> { currentObject.setFilterOn(n.getStringValue()); });
-            this.put("icon", (n) -> { currentObject.setIcon(n.getObjectValue(WorkbookIcon::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operator", (n) -> { currentObject.setOperator(n.getStringValue()); });
-            this.put("values", (n) -> { currentObject.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("color", (n) -> { this.setColor(n.getStringValue()); });
+        deserializerMap.put("criterion1", (n) -> { this.setCriterion1(n.getStringValue()); });
+        deserializerMap.put("criterion2", (n) -> { this.setCriterion2(n.getStringValue()); });
+        deserializerMap.put("dynamicCriteria", (n) -> { this.setDynamicCriteria(n.getStringValue()); });
+        deserializerMap.put("filterOn", (n) -> { this.setFilterOn(n.getStringValue()); });
+        deserializerMap.put("icon", (n) -> { this.setIcon(n.getObjectValue(WorkbookIcon::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operator", (n) -> { this.setOperator(n.getStringValue()); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the filterOn property value. The filterOn property

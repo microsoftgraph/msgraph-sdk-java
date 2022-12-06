@@ -39,7 +39,6 @@ public class WorkbookRangeView extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookRangeView() {
         super();
-        this.setOdataType("#microsoft.graph.workbookRangeView");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,21 +72,20 @@ public class WorkbookRangeView extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookRangeView currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("cellAddresses", (n) -> { currentObject.setCellAddresses(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("columnCount", (n) -> { currentObject.setColumnCount(n.getIntegerValue()); });
-            this.put("formulas", (n) -> { currentObject.setFormulas(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("formulasLocal", (n) -> { currentObject.setFormulasLocal(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("formulasR1C1", (n) -> { currentObject.setFormulasR1C1(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("index", (n) -> { currentObject.setIndex(n.getIntegerValue()); });
-            this.put("numberFormat", (n) -> { currentObject.setNumberFormat(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("rowCount", (n) -> { currentObject.setRowCount(n.getIntegerValue()); });
-            this.put("rows", (n) -> { currentObject.setRows(n.getCollectionOfObjectValues(WorkbookRangeView::createFromDiscriminatorValue)); });
-            this.put("text", (n) -> { currentObject.setText(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("values", (n) -> { currentObject.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("valueTypes", (n) -> { currentObject.setValueTypes(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("cellAddresses", (n) -> { this.setCellAddresses(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("columnCount", (n) -> { this.setColumnCount(n.getIntegerValue()); });
+        deserializerMap.put("formulas", (n) -> { this.setFormulas(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("formulasLocal", (n) -> { this.setFormulasLocal(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("formulasR1C1", (n) -> { this.setFormulasR1C1(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("index", (n) -> { this.setIndex(n.getIntegerValue()); });
+        deserializerMap.put("numberFormat", (n) -> { this.setNumberFormat(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("rowCount", (n) -> { this.setRowCount(n.getIntegerValue()); });
+        deserializerMap.put("rows", (n) -> { this.setRows(n.getCollectionOfObjectValues(WorkbookRangeView::createFromDiscriminatorValue)); });
+        deserializerMap.put("text", (n) -> { this.setText(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("valueTypes", (n) -> { this.setValueTypes(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the formulas property value. Represents the formula in A1-style notation.

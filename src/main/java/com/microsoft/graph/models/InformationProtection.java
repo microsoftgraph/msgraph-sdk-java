@@ -19,7 +19,6 @@ public class InformationProtection extends Entity implements Parsable {
     @javax.annotation.Nullable
     public InformationProtection() {
         super();
-        this.setOdataType("#microsoft.graph.informationProtection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,11 +44,10 @@ public class InformationProtection extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final InformationProtection currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("bitlocker", (n) -> { currentObject.setBitlocker(n.getObjectValue(Bitlocker::createFromDiscriminatorValue)); });
-            this.put("threatAssessmentRequests", (n) -> { currentObject.setThreatAssessmentRequests(n.getCollectionOfObjectValues(ThreatAssessmentRequest::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("bitlocker", (n) -> { this.setBitlocker(n.getObjectValue(Bitlocker::createFromDiscriminatorValue)); });
+        deserializerMap.put("threatAssessmentRequests", (n) -> { this.setThreatAssessmentRequests(n.getCollectionOfObjectValues(ThreatAssessmentRequest::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the threatAssessmentRequests property value. The threatAssessmentRequests property

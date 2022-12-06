@@ -24,7 +24,6 @@ public class FileHash implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public FileHash() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.fileHash");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class FileHash implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final FileHash currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("hashType", (n) -> { currentObject.setHashType(n.getEnumValue(FileHashType.class)); });
-            this.put("hashValue", (n) -> { currentObject.setHashValue(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("hashType", (n) -> { this.setHashType(n.getEnumValue(FileHashType.class)); });
+        deserializerMap.put("hashValue", (n) -> { this.setHashValue(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hashType property value. File hash type. Possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.

@@ -25,7 +25,6 @@ public class ProxiedDomain implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ProxiedDomain() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.proxiedDomain");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,12 +50,11 @@ public class ProxiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ProxiedDomain currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("ipAddressOrFQDN", (n) -> { currentObject.setIpAddressOrFQDN(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("proxy", (n) -> { currentObject.setProxy(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("ipAddressOrFQDN", (n) -> { this.setIpAddressOrFQDN(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("proxy", (n) -> { this.setProxy(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the ipAddressOrFQDN property value. The IP address or FQDN

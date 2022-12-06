@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class TeamworkTag extends Entity implements Parsable {
     /** The description of the tag as it will appear to the user in Microsoft Teams. */
     private String _description;
@@ -28,7 +28,6 @@ public class TeamworkTag extends Entity implements Parsable {
     @javax.annotation.Nullable
     public TeamworkTag() {
         super();
-        this.setOdataType("#microsoft.graph.teamworkTag");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,15 +61,14 @@ public class TeamworkTag extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamworkTag currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("memberCount", (n) -> { currentObject.setMemberCount(n.getIntegerValue()); });
-            this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(TeamworkTagMember::createFromDiscriminatorValue)); });
-            this.put("tagType", (n) -> { currentObject.setTagType(n.getEnumValue(TeamworkTagType.class)); });
-            this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("memberCount", (n) -> { this.setMemberCount(n.getIntegerValue()); });
+        deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(TeamworkTagMember::createFromDiscriminatorValue)); });
+        deserializerMap.put("tagType", (n) -> { this.setTagType(n.getEnumValue(TeamworkTagType.class)); });
+        deserializerMap.put("teamId", (n) -> { this.setTeamId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the memberCount property value. The number of users assigned to the tag.

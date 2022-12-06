@@ -47,11 +47,10 @@ public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BaseDeltaFunctionResponse currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("@odata.deltaLink", (n) -> { currentObject.setOdataDeltaLink(n.getStringValue()); });
-            this.put("@odata.nextLink", (n) -> { currentObject.setOdataNextLink(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("@odata.deltaLink", (n) -> { this.setOdataDeltaLink(n.getStringValue()); });
+        deserializerMap.put("@odata.nextLink", (n) -> { this.setOdataNextLink(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.deltaLink property value. The OdataDeltaLink property

@@ -19,7 +19,6 @@ public class PlannerUser extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PlannerUser() {
         super();
-        this.setOdataType("#microsoft.graph.plannerUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,11 +36,10 @@ public class PlannerUser extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerUser currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("plans", (n) -> { currentObject.setPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
-            this.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("plans", (n) -> { this.setPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the plans property value. Read-only. Nullable. Returns the plannerTasks assigned to the user.

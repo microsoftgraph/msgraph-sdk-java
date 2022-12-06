@@ -26,7 +26,6 @@ public class FolderView implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public FolderView() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.folderView");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,13 +51,12 @@ public class FolderView implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final FolderView currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sortBy", (n) -> { currentObject.setSortBy(n.getStringValue()); });
-            this.put("sortOrder", (n) -> { currentObject.setSortOrder(n.getStringValue()); });
-            this.put("viewType", (n) -> { currentObject.setViewType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sortBy", (n) -> { this.setSortBy(n.getStringValue()); });
+        deserializerMap.put("sortOrder", (n) -> { this.setSortOrder(n.getStringValue()); });
+        deserializerMap.put("viewType", (n) -> { this.setViewType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

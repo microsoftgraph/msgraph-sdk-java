@@ -17,7 +17,6 @@ public class WorkbookApplication extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookApplication() {
         super();
-        this.setOdataType("#microsoft.graph.workbookApplication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,10 +42,9 @@ public class WorkbookApplication extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookApplication currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("calculationMode", (n) -> { currentObject.setCalculationMode(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("calculationMode", (n) -> { this.setCalculationMode(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

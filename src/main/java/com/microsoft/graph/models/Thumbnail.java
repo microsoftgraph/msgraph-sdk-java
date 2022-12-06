@@ -30,7 +30,6 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Thumbnail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.thumbnail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,15 +63,14 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Thumbnail currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
-            this.put("height", (n) -> { currentObject.setHeight(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sourceItemId", (n) -> { currentObject.setSourceItemId(n.getStringValue()); });
-            this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
-            this.put("width", (n) -> { currentObject.setWidth(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("height", (n) -> { this.setHeight(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sourceItemId", (n) -> { this.setSourceItemId(n.getStringValue()); });
+        deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
+        deserializerMap.put("width", (n) -> { this.setWidth(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the height property value. The height of the thumbnail, in pixels.

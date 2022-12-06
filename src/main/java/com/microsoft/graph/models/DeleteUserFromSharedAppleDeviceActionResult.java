@@ -17,7 +17,6 @@ public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionRes
     @javax.annotation.Nullable
     public DeleteUserFromSharedAppleDeviceActionResult() {
         super();
-        this.setOdataType("#microsoft.graph.deleteUserFromSharedAppleDeviceActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,10 +34,9 @@ public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionRes
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeleteUserFromSharedAppleDeviceActionResult currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the userPrincipalName property value. User principal name of the user to be deleted

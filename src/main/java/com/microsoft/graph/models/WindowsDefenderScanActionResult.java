@@ -17,7 +17,6 @@ public class WindowsDefenderScanActionResult extends DeviceActionResult implemen
     @javax.annotation.Nullable
     public WindowsDefenderScanActionResult() {
         super();
-        this.setOdataType("#microsoft.graph.windowsDefenderScanActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,10 +34,9 @@ public class WindowsDefenderScanActionResult extends DeviceActionResult implemen
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsDefenderScanActionResult currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("scanType", (n) -> { currentObject.setScanType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("scanType", (n) -> { this.setScanType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the scanType property value. Scan type either full scan or quick scan

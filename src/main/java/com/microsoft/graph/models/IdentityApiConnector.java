@@ -21,7 +21,6 @@ public class IdentityApiConnector extends Entity implements Parsable {
     @javax.annotation.Nullable
     public IdentityApiConnector() {
         super();
-        this.setOdataType("#microsoft.graph.identityApiConnector");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,12 +54,11 @@ public class IdentityApiConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IdentityApiConnector currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("authenticationConfiguration", (n) -> { currentObject.setAuthenticationConfiguration(n.getObjectValue(ApiAuthenticationConfigurationBase::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("targetUrl", (n) -> { currentObject.setTargetUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationConfiguration", (n) -> { this.setAuthenticationConfiguration(n.getObjectValue(ApiAuthenticationConfigurationBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("targetUrl", (n) -> { this.setTargetUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the targetUrl property value. The URL of the API endpoint to call.

@@ -25,7 +25,6 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
     @javax.annotation.Nullable
     public ManagedAppPolicyDeploymentSummaryPerApp() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.managedAppPolicyDeploymentSummaryPerApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,12 +58,11 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedAppPolicyDeploymentSummaryPerApp currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("configurationAppliedUserCount", (n) -> { currentObject.setConfigurationAppliedUserCount(n.getIntegerValue()); });
-            this.put("mobileAppIdentifier", (n) -> { currentObject.setMobileAppIdentifier(n.getObjectValue(MobileAppIdentifier::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("configurationAppliedUserCount", (n) -> { this.setConfigurationAppliedUserCount(n.getIntegerValue()); });
+        deserializerMap.put("mobileAppIdentifier", (n) -> { this.setMobileAppIdentifier(n.getObjectValue(MobileAppIdentifier::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mobileAppIdentifier property value. Deployment of an app.

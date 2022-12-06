@@ -24,7 +24,6 @@ public class Folder implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Folder() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.folder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,12 +57,11 @@ public class Folder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Folder currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("childCount", (n) -> { currentObject.setChildCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("view", (n) -> { currentObject.setView(n.getObjectValue(FolderView::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("childCount", (n) -> { this.setChildCount(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("view", (n) -> { this.setView(n.getObjectValue(FolderView::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

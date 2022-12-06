@@ -38,7 +38,6 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public HostSecurityState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.hostSecurityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,19 +63,18 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HostSecurityState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(10) {{
-            this.put("fqdn", (n) -> { currentObject.setFqdn(n.getStringValue()); });
-            this.put("isAzureAdJoined", (n) -> { currentObject.setIsAzureAdJoined(n.getBooleanValue()); });
-            this.put("isAzureAdRegistered", (n) -> { currentObject.setIsAzureAdRegistered(n.getBooleanValue()); });
-            this.put("isHybridAzureDomainJoined", (n) -> { currentObject.setIsHybridAzureDomainJoined(n.getBooleanValue()); });
-            this.put("netBiosName", (n) -> { currentObject.setNetBiosName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("os", (n) -> { currentObject.setOs(n.getStringValue()); });
-            this.put("privateIpAddress", (n) -> { currentObject.setPrivateIpAddress(n.getStringValue()); });
-            this.put("publicIpAddress", (n) -> { currentObject.setPublicIpAddress(n.getStringValue()); });
-            this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("fqdn", (n) -> { this.setFqdn(n.getStringValue()); });
+        deserializerMap.put("isAzureAdJoined", (n) -> { this.setIsAzureAdJoined(n.getBooleanValue()); });
+        deserializerMap.put("isAzureAdRegistered", (n) -> { this.setIsAzureAdRegistered(n.getBooleanValue()); });
+        deserializerMap.put("isHybridAzureDomainJoined", (n) -> { this.setIsHybridAzureDomainJoined(n.getBooleanValue()); });
+        deserializerMap.put("netBiosName", (n) -> { this.setNetBiosName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("os", (n) -> { this.setOs(n.getStringValue()); });
+        deserializerMap.put("privateIpAddress", (n) -> { this.setPrivateIpAddress(n.getStringValue()); });
+        deserializerMap.put("publicIpAddress", (n) -> { this.setPublicIpAddress(n.getStringValue()); });
+        deserializerMap.put("riskScore", (n) -> { this.setRiskScore(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fqdn property value. Host FQDN (Fully Qualified Domain Name) (for example, machine.company.com).

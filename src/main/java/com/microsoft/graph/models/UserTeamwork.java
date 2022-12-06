@@ -19,7 +19,6 @@ public class UserTeamwork extends Entity implements Parsable {
     @javax.annotation.Nullable
     public UserTeamwork() {
         super();
-        this.setOdataType("#microsoft.graph.userTeamwork");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,11 +44,10 @@ public class UserTeamwork extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserTeamwork currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("associatedTeams", (n) -> { currentObject.setAssociatedTeams(n.getCollectionOfObjectValues(AssociatedTeamInfo::createFromDiscriminatorValue)); });
-            this.put("installedApps", (n) -> { currentObject.setInstalledApps(n.getCollectionOfObjectValues(UserScopeTeamsAppInstallation::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("associatedTeams", (n) -> { this.setAssociatedTeams(n.getCollectionOfObjectValues(AssociatedTeamInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("installedApps", (n) -> { this.setInstalledApps(n.getCollectionOfObjectValues(UserScopeTeamsAppInstallation::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the installedApps property value. The apps installed in the personal scope of this user.

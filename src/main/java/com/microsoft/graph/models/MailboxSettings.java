@@ -38,7 +38,6 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MailboxSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.mailboxSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -96,19 +95,18 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MailboxSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(10) {{
-            this.put("archiveFolder", (n) -> { currentObject.setArchiveFolder(n.getStringValue()); });
-            this.put("automaticRepliesSetting", (n) -> { currentObject.setAutomaticRepliesSetting(n.getObjectValue(AutomaticRepliesSetting::createFromDiscriminatorValue)); });
-            this.put("dateFormat", (n) -> { currentObject.setDateFormat(n.getStringValue()); });
-            this.put("delegateMeetingMessageDeliveryOptions", (n) -> { currentObject.setDelegateMeetingMessageDeliveryOptions(n.getEnumValue(DelegateMeetingMessageDeliveryOptions.class)); });
-            this.put("language", (n) -> { currentObject.setLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("timeFormat", (n) -> { currentObject.setTimeFormat(n.getStringValue()); });
-            this.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });
-            this.put("userPurpose", (n) -> { currentObject.setUserPurpose(n.getEnumValue(UserPurpose.class)); });
-            this.put("workingHours", (n) -> { currentObject.setWorkingHours(n.getObjectValue(WorkingHours::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("archiveFolder", (n) -> { this.setArchiveFolder(n.getStringValue()); });
+        deserializerMap.put("automaticRepliesSetting", (n) -> { this.setAutomaticRepliesSetting(n.getObjectValue(AutomaticRepliesSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("dateFormat", (n) -> { this.setDateFormat(n.getStringValue()); });
+        deserializerMap.put("delegateMeetingMessageDeliveryOptions", (n) -> { this.setDelegateMeetingMessageDeliveryOptions(n.getEnumValue(DelegateMeetingMessageDeliveryOptions.class)); });
+        deserializerMap.put("language", (n) -> { this.setLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("timeFormat", (n) -> { this.setTimeFormat(n.getStringValue()); });
+        deserializerMap.put("timeZone", (n) -> { this.setTimeZone(n.getStringValue()); });
+        deserializerMap.put("userPurpose", (n) -> { this.setUserPurpose(n.getEnumValue(UserPurpose.class)); });
+        deserializerMap.put("workingHours", (n) -> { this.setWorkingHours(n.getObjectValue(WorkingHours::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the language property value. The locale information for the user, including the preferred language and country/region.

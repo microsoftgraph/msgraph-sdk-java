@@ -28,7 +28,6 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IncomingContext() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.incomingContext");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,14 +53,13 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IncomingContext currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("observedParticipantId", (n) -> { currentObject.setObservedParticipantId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("onBehalfOf", (n) -> { currentObject.setOnBehalfOf(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("sourceParticipantId", (n) -> { currentObject.setSourceParticipantId(n.getStringValue()); });
-            this.put("transferor", (n) -> { currentObject.setTransferor(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("observedParticipantId", (n) -> { this.setObservedParticipantId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("onBehalfOf", (n) -> { this.setOnBehalfOf(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("sourceParticipantId", (n) -> { this.setSourceParticipantId(n.getStringValue()); });
+        deserializerMap.put("transferor", (n) -> { this.setTransferor(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the observedParticipantId property value. The ID of the participant that is under observation. Read-only.

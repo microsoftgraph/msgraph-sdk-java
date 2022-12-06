@@ -34,7 +34,6 @@ public class Print implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Print() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.print");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,17 +67,16 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Print currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("connectors", (n) -> { currentObject.setConnectors(n.getCollectionOfObjectValues(PrintConnector::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(PrintOperation::createFromDiscriminatorValue)); });
-            this.put("printers", (n) -> { currentObject.setPrinters(n.getCollectionOfObjectValues(Printer::createFromDiscriminatorValue)); });
-            this.put("services", (n) -> { currentObject.setServices(n.getCollectionOfObjectValues(PrintService::createFromDiscriminatorValue)); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(PrintSettings::createFromDiscriminatorValue)); });
-            this.put("shares", (n) -> { currentObject.setShares(n.getCollectionOfObjectValues(PrinterShare::createFromDiscriminatorValue)); });
-            this.put("taskDefinitions", (n) -> { currentObject.setTaskDefinitions(n.getCollectionOfObjectValues(PrintTaskDefinition::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("connectors", (n) -> { this.setConnectors(n.getCollectionOfObjectValues(PrintConnector::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(PrintOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("printers", (n) -> { this.setPrinters(n.getCollectionOfObjectValues(Printer::createFromDiscriminatorValue)); });
+        deserializerMap.put("services", (n) -> { this.setServices(n.getCollectionOfObjectValues(PrintService::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(PrintSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("shares", (n) -> { this.setShares(n.getCollectionOfObjectValues(PrinterShare::createFromDiscriminatorValue)); });
+        deserializerMap.put("taskDefinitions", (n) -> { this.setTaskDefinitions(n.getCollectionOfObjectValues(PrintTaskDefinition::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

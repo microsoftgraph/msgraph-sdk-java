@@ -19,7 +19,6 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookWorksheetProtection() {
         super();
-        this.setOdataType("#microsoft.graph.workbookWorksheetProtection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,11 +36,10 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookWorksheetProtection currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("options", (n) -> { currentObject.setOptions(n.getObjectValue(WorkbookWorksheetProtectionOptions::createFromDiscriminatorValue)); });
-            this.put("protected", (n) -> { currentObject.setProtected(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("options", (n) -> { this.setOptions(n.getObjectValue(WorkbookWorksheetProtectionOptions::createFromDiscriminatorValue)); });
+        deserializerMap.put("protected", (n) -> { this.setProtected(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the options property value. Sheet protection options. Read-only.

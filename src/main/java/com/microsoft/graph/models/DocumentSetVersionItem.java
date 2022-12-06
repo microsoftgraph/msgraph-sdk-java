@@ -26,7 +26,6 @@ public class DocumentSetVersionItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public DocumentSetVersionItem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.documentSetVersionItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,13 +51,12 @@ public class DocumentSetVersionItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DocumentSetVersionItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("itemId", (n) -> { currentObject.setItemId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-            this.put("versionId", (n) -> { currentObject.setVersionId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("itemId", (n) -> { this.setItemId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
+        deserializerMap.put("versionId", (n) -> { this.setVersionId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the itemId property value. The unique identifier for the item.

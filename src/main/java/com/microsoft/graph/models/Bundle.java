@@ -24,7 +24,6 @@ public class Bundle implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Bundle() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bundle");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,12 +65,11 @@ public class Bundle implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Bundle currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("album", (n) -> { currentObject.setAlbum(n.getObjectValue(Album::createFromDiscriminatorValue)); });
-            this.put("childCount", (n) -> { currentObject.setChildCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("album", (n) -> { this.setAlbum(n.getObjectValue(Album::createFromDiscriminatorValue)); });
+        deserializerMap.put("childCount", (n) -> { this.setChildCount(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

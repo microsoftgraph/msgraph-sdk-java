@@ -30,7 +30,6 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TeamMessagingSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamMessagingSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -96,15 +95,14 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamMessagingSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("allowChannelMentions", (n) -> { currentObject.setAllowChannelMentions(n.getBooleanValue()); });
-            this.put("allowOwnerDeleteMessages", (n) -> { currentObject.setAllowOwnerDeleteMessages(n.getBooleanValue()); });
-            this.put("allowTeamMentions", (n) -> { currentObject.setAllowTeamMentions(n.getBooleanValue()); });
-            this.put("allowUserDeleteMessages", (n) -> { currentObject.setAllowUserDeleteMessages(n.getBooleanValue()); });
-            this.put("allowUserEditMessages", (n) -> { currentObject.setAllowUserEditMessages(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("allowChannelMentions", (n) -> { this.setAllowChannelMentions(n.getBooleanValue()); });
+        deserializerMap.put("allowOwnerDeleteMessages", (n) -> { this.setAllowOwnerDeleteMessages(n.getBooleanValue()); });
+        deserializerMap.put("allowTeamMentions", (n) -> { this.setAllowTeamMentions(n.getBooleanValue()); });
+        deserializerMap.put("allowUserDeleteMessages", (n) -> { this.setAllowUserDeleteMessages(n.getBooleanValue()); });
+        deserializerMap.put("allowUserEditMessages", (n) -> { this.setAllowUserEditMessages(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

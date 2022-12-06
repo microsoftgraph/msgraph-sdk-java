@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class ChecklistItem extends Entity implements Parsable {
     /** The date and time when the checklistItem was finished. */
     private OffsetDateTime _checkedDateTime;
@@ -25,7 +25,6 @@ public class ChecklistItem extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ChecklistItem() {
         super();
-        this.setOdataType("#microsoft.graph.checklistItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,13 +66,12 @@ public class ChecklistItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ChecklistItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("checkedDateTime", (n) -> { currentObject.setCheckedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isChecked", (n) -> { currentObject.setIsChecked(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("checkedDateTime", (n) -> { this.setCheckedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isChecked", (n) -> { this.setIsChecked(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isChecked property value. State indicating whether the item is checked off or not.

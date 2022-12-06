@@ -69,13 +69,12 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GetSchedulePostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("availabilityViewInterval", (n) -> { currentObject.setAvailabilityViewInterval(n.getIntegerValue()); });
-            this.put("endTime", (n) -> { currentObject.setEndTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("schedules", (n) -> { currentObject.setSchedules(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("startTime", (n) -> { currentObject.setStartTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("availabilityViewInterval", (n) -> { this.setAvailabilityViewInterval(n.getIntegerValue()); });
+        deserializerMap.put("endTime", (n) -> { this.setEndTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("schedules", (n) -> { this.setSchedules(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("startTime", (n) -> { this.setStartTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the schedules property value. The Schedules property

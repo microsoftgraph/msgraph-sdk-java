@@ -24,7 +24,6 @@ public class MediaContentRatingNewZealand implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public MediaContentRatingNewZealand() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.mediaContentRatingNewZealand");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class MediaContentRatingNewZealand implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MediaContentRatingNewZealand currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("movieRating", (n) -> { currentObject.setMovieRating(n.getEnumValue(RatingNewZealandMoviesType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("tvRating", (n) -> { currentObject.setTvRating(n.getEnumValue(RatingNewZealandTelevisionType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("movieRating", (n) -> { this.setMovieRating(n.getEnumValue(RatingNewZealandMoviesType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("tvRating", (n) -> { this.setTvRating(n.getEnumValue(RatingNewZealandTelevisionType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the movieRating property value. Movies rating labels in New Zealand

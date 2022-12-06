@@ -54,10 +54,9 @@ public class MovePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MovePostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("destinationId", (n) -> { currentObject.setDestinationId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("destinationId", (n) -> { this.setDestinationId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable {
     /** The page's HTML content. */
     private byte[] _content;
@@ -81,20 +81,19 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OnenotePage currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
-            this.put("contentUrl", (n) -> { currentObject.setContentUrl(n.getStringValue()); });
-            this.put("createdByAppId", (n) -> { currentObject.setCreatedByAppId(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("level", (n) -> { currentObject.setLevel(n.getIntegerValue()); });
-            this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(PageLinks::createFromDiscriminatorValue)); });
-            this.put("order", (n) -> { currentObject.setOrder(n.getIntegerValue()); });
-            this.put("parentNotebook", (n) -> { currentObject.setParentNotebook(n.getObjectValue(Notebook::createFromDiscriminatorValue)); });
-            this.put("parentSection", (n) -> { currentObject.setParentSection(n.getObjectValue(OnenoteSection::createFromDiscriminatorValue)); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-            this.put("userTags", (n) -> { currentObject.setUserTags(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("contentUrl", (n) -> { this.setContentUrl(n.getStringValue()); });
+        deserializerMap.put("createdByAppId", (n) -> { this.setCreatedByAppId(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("level", (n) -> { this.setLevel(n.getIntegerValue()); });
+        deserializerMap.put("links", (n) -> { this.setLinks(n.getObjectValue(PageLinks::createFromDiscriminatorValue)); });
+        deserializerMap.put("order", (n) -> { this.setOrder(n.getIntegerValue()); });
+        deserializerMap.put("parentNotebook", (n) -> { this.setParentNotebook(n.getObjectValue(Notebook::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentSection", (n) -> { this.setParentSection(n.getObjectValue(OnenoteSection::createFromDiscriminatorValue)); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
+        deserializerMap.put("userTags", (n) -> { this.setUserTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.

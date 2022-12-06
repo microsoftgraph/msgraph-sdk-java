@@ -25,7 +25,6 @@ public class ResourceAction implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ResourceAction() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.resourceAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,12 +58,11 @@ public class ResourceAction implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ResourceAction currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("allowedResourceActions", (n) -> { currentObject.setAllowedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("notAllowedResourceActions", (n) -> { currentObject.setNotAllowedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("allowedResourceActions", (n) -> { this.setAllowedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("notAllowedResourceActions", (n) -> { this.setNotAllowedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the notAllowedResourceActions property value. Not Allowed Actions.

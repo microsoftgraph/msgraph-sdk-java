@@ -72,17 +72,16 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final FindMeetingTimesPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("attendees", (n) -> { currentObject.setAttendees(n.getCollectionOfObjectValues(AttendeeBase::createFromDiscriminatorValue)); });
-            this.put("isOrganizerOptional", (n) -> { currentObject.setIsOrganizerOptional(n.getBooleanValue()); });
-            this.put("locationConstraint", (n) -> { currentObject.setLocationConstraint(n.getObjectValue(LocationConstraint::createFromDiscriminatorValue)); });
-            this.put("maxCandidates", (n) -> { currentObject.setMaxCandidates(n.getIntegerValue()); });
-            this.put("meetingDuration", (n) -> { currentObject.setMeetingDuration(n.getPeriodValue()); });
-            this.put("minimumAttendeePercentage", (n) -> { currentObject.setMinimumAttendeePercentage(n.getDoubleValue()); });
-            this.put("returnSuggestionReasons", (n) -> { currentObject.setReturnSuggestionReasons(n.getBooleanValue()); });
-            this.put("timeConstraint", (n) -> { currentObject.setTimeConstraint(n.getObjectValue(TimeConstraint::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("attendees", (n) -> { this.setAttendees(n.getCollectionOfObjectValues(AttendeeBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("isOrganizerOptional", (n) -> { this.setIsOrganizerOptional(n.getBooleanValue()); });
+        deserializerMap.put("locationConstraint", (n) -> { this.setLocationConstraint(n.getObjectValue(LocationConstraint::createFromDiscriminatorValue)); });
+        deserializerMap.put("maxCandidates", (n) -> { this.setMaxCandidates(n.getIntegerValue()); });
+        deserializerMap.put("meetingDuration", (n) -> { this.setMeetingDuration(n.getPeriodValue()); });
+        deserializerMap.put("minimumAttendeePercentage", (n) -> { this.setMinimumAttendeePercentage(n.getDoubleValue()); });
+        deserializerMap.put("returnSuggestionReasons", (n) -> { this.setReturnSuggestionReasons(n.getBooleanValue()); });
+        deserializerMap.put("timeConstraint", (n) -> { this.setTimeConstraint(n.getObjectValue(TimeConstraint::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isOrganizerOptional property value. The isOrganizerOptional property

@@ -27,7 +27,6 @@ public class InnerError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public InnerError() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.InnerError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,13 +68,12 @@ public class InnerError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final InnerError currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("client-request-id", (n) -> { currentObject.setClientRequestId(n.getStringValue()); });
-            this.put("date", (n) -> { currentObject.setDate(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("request-id", (n) -> { currentObject.setRequestId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("client-request-id", (n) -> { this.setClientRequestId(n.getStringValue()); });
+        deserializerMap.put("date", (n) -> { this.setDate(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("request-id", (n) -> { this.setRequestId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookTableColumn extends Entity implements Parsable {
     /** Retrieve the filter applied to the column. Read-only. */
     private WorkbookFilter _filter;
@@ -24,7 +24,6 @@ public class WorkbookTableColumn extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookTableColumn() {
         super();
-        this.setOdataType("#microsoft.graph.workbookTableColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,13 +41,12 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookTableColumn currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("filter", (n) -> { currentObject.setFilter(n.getObjectValue(WorkbookFilter::createFromDiscriminatorValue)); });
-            this.put("index", (n) -> { currentObject.setIndex(n.getIntegerValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("values", (n) -> { currentObject.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("filter", (n) -> { this.setFilter(n.getObjectValue(WorkbookFilter::createFromDiscriminatorValue)); });
+        deserializerMap.put("index", (n) -> { this.setIndex(n.getIntegerValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the filter property value. Retrieve the filter applied to the column. Read-only.

@@ -32,7 +32,6 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ParticipantInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.participantInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -74,16 +73,15 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ParticipantInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("countryCode", (n) -> { currentObject.setCountryCode(n.getStringValue()); });
-            this.put("endpointType", (n) -> { currentObject.setEndpointType(n.getEnumValue(EndpointType.class)); });
-            this.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("languageId", (n) -> { currentObject.setLanguageId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("participantId", (n) -> { currentObject.setParticipantId(n.getStringValue()); });
-            this.put("region", (n) -> { currentObject.setRegion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("countryCode", (n) -> { this.setCountryCode(n.getStringValue()); });
+        deserializerMap.put("endpointType", (n) -> { this.setEndpointType(n.getEnumValue(EndpointType.class)); });
+        deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("languageId", (n) -> { this.setLanguageId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("participantId", (n) -> { this.setParticipantId(n.getStringValue()); });
+        deserializerMap.put("region", (n) -> { this.setRegion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the identity property value. The identity property

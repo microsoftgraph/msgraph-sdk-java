@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class PinnedChatMessageInfo extends Entity implements Parsable {
     /** Represents details about the chat message that is pinned. */
     private ChatMessage _message;
@@ -18,7 +18,6 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PinnedChatMessageInfo() {
         super();
-        this.setOdataType("#microsoft.graph.pinnedChatMessageInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,10 +35,9 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PinnedChatMessageInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("message", (n) -> { currentObject.setMessage(n.getObjectValue(ChatMessage::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("message", (n) -> { this.setMessage(n.getObjectValue(ChatMessage::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the message property value. Represents details about the chat message that is pinned.

@@ -27,7 +27,6 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public AppConfigurationSettingItem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.appConfigurationSettingItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,13 +76,12 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AppConfigurationSettingItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("appConfigKey", (n) -> { currentObject.setAppConfigKey(n.getStringValue()); });
-            this.put("appConfigKeyType", (n) -> { currentObject.setAppConfigKeyType(n.getEnumValue(MdmAppConfigKeyType.class)); });
-            this.put("appConfigKeyValue", (n) -> { currentObject.setAppConfigKeyValue(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("appConfigKey", (n) -> { this.setAppConfigKey(n.getStringValue()); });
+        deserializerMap.put("appConfigKeyType", (n) -> { this.setAppConfigKeyType(n.getEnumValue(MdmAppConfigKeyType.class)); });
+        deserializerMap.put("appConfigKeyValue", (n) -> { this.setAppConfigKeyValue(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

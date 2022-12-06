@@ -26,7 +26,6 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public X509CertificateUserBinding() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.x509CertificateUserBinding");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,13 +51,12 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final X509CertificateUserBinding currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("userProperty", (n) -> { currentObject.setUserProperty(n.getStringValue()); });
-            this.put("x509CertificateField", (n) -> { currentObject.setX509CertificateField(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("userProperty", (n) -> { this.setUserProperty(n.getStringValue()); });
+        deserializerMap.put("x509CertificateField", (n) -> { this.setX509CertificateField(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

@@ -35,10 +35,9 @@ public class TokenMeetingInfo extends MeetingInfo implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TokenMeetingInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("token", (n) -> { currentObject.setToken(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("token", (n) -> { this.setToken(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the token property value. The token used to join the call.

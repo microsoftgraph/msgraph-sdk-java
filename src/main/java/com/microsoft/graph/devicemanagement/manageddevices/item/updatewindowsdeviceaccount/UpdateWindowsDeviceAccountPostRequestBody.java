@@ -47,10 +47,9 @@ public class UpdateWindowsDeviceAccountPostRequestBody implements AdditionalData
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UpdateWindowsDeviceAccountPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("updateWindowsDeviceAccountActionParameter", (n) -> { currentObject.setUpdateWindowsDeviceAccountActionParameter(n.getObjectValue(UpdateWindowsDeviceAccountActionParameter::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("updateWindowsDeviceAccountActionParameter", (n) -> { this.setUpdateWindowsDeviceAccountActionParameter(n.getObjectValue(UpdateWindowsDeviceAccountActionParameter::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the updateWindowsDeviceAccountActionParameter property value. The updateWindowsDeviceAccountActionParameter property

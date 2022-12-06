@@ -15,7 +15,6 @@ public class WorkbookRangeSort extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookRangeSort() {
         super();
-        this.setOdataType("#microsoft.graph.workbookRangeSort");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,9 +32,8 @@ public class WorkbookRangeSort extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookRangeSort currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

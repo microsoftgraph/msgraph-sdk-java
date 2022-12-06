@@ -45,7 +45,6 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public MacOSMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.macOSMinimumOperatingSystem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -71,22 +70,21 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOSMinimumOperatingSystem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(13) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("v10_10", (n) -> { currentObject.setV10_10(n.getBooleanValue()); });
-            this.put("v10_11", (n) -> { currentObject.setV10_11(n.getBooleanValue()); });
-            this.put("v10_12", (n) -> { currentObject.setV10_12(n.getBooleanValue()); });
-            this.put("v10_13", (n) -> { currentObject.setV10_13(n.getBooleanValue()); });
-            this.put("v10_14", (n) -> { currentObject.setV10_14(n.getBooleanValue()); });
-            this.put("v10_15", (n) -> { currentObject.setV10_15(n.getBooleanValue()); });
-            this.put("v10_7", (n) -> { currentObject.setV10_7(n.getBooleanValue()); });
-            this.put("v10_8", (n) -> { currentObject.setV10_8(n.getBooleanValue()); });
-            this.put("v10_9", (n) -> { currentObject.setV10_9(n.getBooleanValue()); });
-            this.put("v11_0", (n) -> { currentObject.setV11_0(n.getBooleanValue()); });
-            this.put("v12_0", (n) -> { currentObject.setV12_0(n.getBooleanValue()); });
-            this.put("v13_0", (n) -> { currentObject.setV13_0(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(13);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("v10_10", (n) -> { this.setV10_10(n.getBooleanValue()); });
+        deserializerMap.put("v10_11", (n) -> { this.setV10_11(n.getBooleanValue()); });
+        deserializerMap.put("v10_12", (n) -> { this.setV10_12(n.getBooleanValue()); });
+        deserializerMap.put("v10_13", (n) -> { this.setV10_13(n.getBooleanValue()); });
+        deserializerMap.put("v10_14", (n) -> { this.setV10_14(n.getBooleanValue()); });
+        deserializerMap.put("v10_15", (n) -> { this.setV10_15(n.getBooleanValue()); });
+        deserializerMap.put("v10_7", (n) -> { this.setV10_7(n.getBooleanValue()); });
+        deserializerMap.put("v10_8", (n) -> { this.setV10_8(n.getBooleanValue()); });
+        deserializerMap.put("v10_9", (n) -> { this.setV10_9(n.getBooleanValue()); });
+        deserializerMap.put("v11_0", (n) -> { this.setV11_0(n.getBooleanValue()); });
+        deserializerMap.put("v12_0", (n) -> { this.setV12_0(n.getBooleanValue()); });
+        deserializerMap.put("v13_0", (n) -> { this.setV13_0(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

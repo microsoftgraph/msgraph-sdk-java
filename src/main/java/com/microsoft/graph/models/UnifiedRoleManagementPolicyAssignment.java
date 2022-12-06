@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable {
     /** The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy. */
     private UnifiedRoleManagementPolicy _policy;
@@ -26,7 +26,6 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
     @javax.annotation.Nullable
     public UnifiedRoleManagementPolicyAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,14 +43,13 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UnifiedRoleManagementPolicyAssignment currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("policy", (n) -> { currentObject.setPolicy(n.getObjectValue(UnifiedRoleManagementPolicy::createFromDiscriminatorValue)); });
-            this.put("policyId", (n) -> { currentObject.setPolicyId(n.getStringValue()); });
-            this.put("roleDefinitionId", (n) -> { currentObject.setRoleDefinitionId(n.getStringValue()); });
-            this.put("scopeId", (n) -> { currentObject.setScopeId(n.getStringValue()); });
-            this.put("scopeType", (n) -> { currentObject.setScopeType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("policy", (n) -> { this.setPolicy(n.getObjectValue(UnifiedRoleManagementPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("policyId", (n) -> { this.setPolicyId(n.getStringValue()); });
+        deserializerMap.put("roleDefinitionId", (n) -> { this.setRoleDefinitionId(n.getStringValue()); });
+        deserializerMap.put("scopeId", (n) -> { this.setScopeId(n.getStringValue()); });
+        deserializerMap.put("scopeType", (n) -> { this.setScopeType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the policy property value. The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.

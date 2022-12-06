@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class SecureScore extends Entity implements Parsable {
     /** Active user count of the given tenant. */
     private Integer _activeUserCount;
@@ -37,7 +37,6 @@ public class SecureScore extends Entity implements Parsable {
     @javax.annotation.Nullable
     public SecureScore() {
         super();
-        this.setOdataType("#microsoft.graph.secureScore");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -111,19 +110,18 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SecureScore currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("activeUserCount", (n) -> { currentObject.setActiveUserCount(n.getIntegerValue()); });
-            this.put("averageComparativeScores", (n) -> { currentObject.setAverageComparativeScores(n.getCollectionOfObjectValues(AverageComparativeScore::createFromDiscriminatorValue)); });
-            this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
-            this.put("controlScores", (n) -> { currentObject.setControlScores(n.getCollectionOfObjectValues(ControlScore::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("currentScore", (n) -> { currentObject.setCurrentScore(n.getDoubleValue()); });
-            this.put("enabledServices", (n) -> { currentObject.setEnabledServices(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("licensedUserCount", (n) -> { currentObject.setLicensedUserCount(n.getIntegerValue()); });
-            this.put("maxScore", (n) -> { currentObject.setMaxScore(n.getDoubleValue()); });
-            this.put("vendorInformation", (n) -> { currentObject.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeUserCount", (n) -> { this.setActiveUserCount(n.getIntegerValue()); });
+        deserializerMap.put("averageComparativeScores", (n) -> { this.setAverageComparativeScores(n.getCollectionOfObjectValues(AverageComparativeScore::createFromDiscriminatorValue)); });
+        deserializerMap.put("azureTenantId", (n) -> { this.setAzureTenantId(n.getStringValue()); });
+        deserializerMap.put("controlScores", (n) -> { this.setControlScores(n.getCollectionOfObjectValues(ControlScore::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("currentScore", (n) -> { this.setCurrentScore(n.getDoubleValue()); });
+        deserializerMap.put("enabledServices", (n) -> { this.setEnabledServices(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("licensedUserCount", (n) -> { this.setLicensedUserCount(n.getIntegerValue()); });
+        deserializerMap.put("maxScore", (n) -> { this.setMaxScore(n.getDoubleValue()); });
+        deserializerMap.put("vendorInformation", (n) -> { this.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the licensedUserCount property value. Licensed user count of the given tenant.

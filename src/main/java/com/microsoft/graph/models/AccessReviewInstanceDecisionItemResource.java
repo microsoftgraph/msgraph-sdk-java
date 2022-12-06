@@ -29,7 +29,6 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
     @javax.annotation.Nullable
     public AccessReviewInstanceDecisionItemResource() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItemResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,13 +71,12 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReviewInstanceDecisionItemResource currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. Identifier of the resource

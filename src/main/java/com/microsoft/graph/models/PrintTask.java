@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class PrintTask extends Entity implements Parsable {
     /** The definition property */
     private PrintTaskDefinition _definition;
@@ -24,7 +24,6 @@ public class PrintTask extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PrintTask() {
         super();
-        this.setOdataType("#microsoft.graph.printTask");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,13 +49,12 @@ public class PrintTask extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrintTask currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("definition", (n) -> { currentObject.setDefinition(n.getObjectValue(PrintTaskDefinition::createFromDiscriminatorValue)); });
-            this.put("parentUrl", (n) -> { currentObject.setParentUrl(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(PrintTaskStatus::createFromDiscriminatorValue)); });
-            this.put("trigger", (n) -> { currentObject.setTrigger(n.getObjectValue(PrintTaskTrigger::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("definition", (n) -> { this.setDefinition(n.getObjectValue(PrintTaskDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentUrl", (n) -> { this.setParentUrl(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getObjectValue(PrintTaskStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("trigger", (n) -> { this.setTrigger(n.getObjectValue(PrintTaskTrigger::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.

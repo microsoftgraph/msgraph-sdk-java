@@ -28,7 +28,6 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public RedundancyDetectionSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.security.redundancyDetectionSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,14 +53,13 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RedundancyDetectionSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("maxWords", (n) -> { currentObject.setMaxWords(n.getIntegerValue()); });
-            this.put("minWords", (n) -> { currentObject.setMinWords(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("similarityThreshold", (n) -> { currentObject.setSimilarityThreshold(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("maxWords", (n) -> { this.setMaxWords(n.getIntegerValue()); });
+        deserializerMap.put("minWords", (n) -> { this.setMinWords(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("similarityThreshold", (n) -> { this.setSimilarityThreshold(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnabled property value. Indicates whether email threading and near duplicate detection are enabled.

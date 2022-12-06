@@ -11,6 +11,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreement entities. */
 public class AgreementFileProperties extends Entity implements Parsable {
     /** The date time representing when the file was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _createdDateTime;
@@ -33,7 +34,6 @@ public class AgreementFileProperties extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AgreementFileProperties() {
         super();
-        this.setOdataType("#microsoft.graph.agreementFileProperties");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -76,16 +76,15 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AgreementFileProperties currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("fileData", (n) -> { currentObject.setFileData(n.getObjectValue(AgreementFileData::createFromDiscriminatorValue)); });
-            this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
-            this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
-            this.put("isMajorVersion", (n) -> { currentObject.setIsMajorVersion(n.getBooleanValue()); });
-            this.put("language", (n) -> { currentObject.setLanguage(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("fileData", (n) -> { this.setFileData(n.getObjectValue(AgreementFileData::createFromDiscriminatorValue)); });
+        deserializerMap.put("fileName", (n) -> { this.setFileName(n.getStringValue()); });
+        deserializerMap.put("isDefault", (n) -> { this.setIsDefault(n.getBooleanValue()); });
+        deserializerMap.put("isMajorVersion", (n) -> { this.setIsMajorVersion(n.getBooleanValue()); });
+        deserializerMap.put("language", (n) -> { this.setLanguage(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileData property value. Data that represents the terms of use PDF document. Read-only.

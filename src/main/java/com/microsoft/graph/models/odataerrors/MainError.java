@@ -69,14 +69,13 @@ public class MainError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MainError currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
-            this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfObjectValues(ErrorDetails::createFromDiscriminatorValue)); });
-            this.put("innererror", (n) -> { currentObject.setInnererror(n.getObjectValue(InnerError::createFromDiscriminatorValue)); });
-            this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
+        deserializerMap.put("details", (n) -> { this.setDetails(n.getCollectionOfObjectValues(ErrorDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("innererror", (n) -> { this.setInnererror(n.getObjectValue(InnerError::createFromDiscriminatorValue)); });
+        deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
+        deserializerMap.put("target", (n) -> { this.setTarget(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the innererror property value. The innererror property

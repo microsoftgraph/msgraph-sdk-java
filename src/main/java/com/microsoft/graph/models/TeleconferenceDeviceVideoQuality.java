@@ -81,13 +81,12 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeleconferenceDeviceVideoQuality currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("averageInboundBitRate", (n) -> { currentObject.setAverageInboundBitRate(n.getDoubleValue()); });
-            this.put("averageInboundFrameRate", (n) -> { currentObject.setAverageInboundFrameRate(n.getDoubleValue()); });
-            this.put("averageOutboundBitRate", (n) -> { currentObject.setAverageOutboundBitRate(n.getDoubleValue()); });
-            this.put("averageOutboundFrameRate", (n) -> { currentObject.setAverageOutboundFrameRate(n.getDoubleValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("averageInboundBitRate", (n) -> { this.setAverageInboundBitRate(n.getDoubleValue()); });
+        deserializerMap.put("averageInboundFrameRate", (n) -> { this.setAverageInboundFrameRate(n.getDoubleValue()); });
+        deserializerMap.put("averageOutboundBitRate", (n) -> { this.setAverageOutboundBitRate(n.getDoubleValue()); });
+        deserializerMap.put("averageOutboundFrameRate", (n) -> { this.setAverageOutboundFrameRate(n.getDoubleValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

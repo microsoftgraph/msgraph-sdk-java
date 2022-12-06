@@ -17,7 +17,6 @@ public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
     @javax.annotation.Nullable
     public DomainDnsCnameRecord() {
         super();
-        this.setOdataType("#microsoft.graph.domainDnsCnameRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,10 +42,9 @@ public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DomainDnsCnameRecord currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("canonicalName", (n) -> { currentObject.setCanonicalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("canonicalName", (n) -> { this.setCanonicalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

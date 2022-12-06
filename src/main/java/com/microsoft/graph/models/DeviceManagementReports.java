@@ -17,7 +17,6 @@ public class DeviceManagementReports extends Entity implements Parsable {
     @javax.annotation.Nullable
     public DeviceManagementReports() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementReports");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,10 +42,9 @@ public class DeviceManagementReports extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementReports currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("exportJobs", (n) -> { currentObject.setExportJobs(n.getCollectionOfObjectValues(DeviceManagementExportJob::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("exportJobs", (n) -> { this.setExportJobs(n.getCollectionOfObjectValues(DeviceManagementExportJob::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

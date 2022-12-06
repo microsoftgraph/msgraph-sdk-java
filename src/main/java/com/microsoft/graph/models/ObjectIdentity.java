@@ -26,7 +26,6 @@ public class ObjectIdentity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ObjectIdentity() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.objectIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,13 +51,12 @@ public class ObjectIdentity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ObjectIdentity currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("issuer", (n) -> { currentObject.setIssuer(n.getStringValue()); });
-            this.put("issuerAssignedId", (n) -> { currentObject.setIssuerAssignedId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("signInType", (n) -> { currentObject.setSignInType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("issuer", (n) -> { this.setIssuer(n.getStringValue()); });
+        deserializerMap.put("issuerAssignedId", (n) -> { this.setIssuerAssignedId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("signInType", (n) -> { this.setSignInType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the issuer property value. Specifies the issuer of the identity, for example facebook.com.For local accounts (where signInType is not federated), this property is the local B2C tenant default domain name, for example contoso.onmicrosoft.com.For external users from other Azure AD organization, this will be the domain of the federated organization, for example contoso.com.Supports $filter. 512 character limit.

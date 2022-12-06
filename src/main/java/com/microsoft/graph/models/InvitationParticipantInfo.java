@@ -30,7 +30,6 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public InvitationParticipantInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.invitationParticipantInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,15 +55,14 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final InvitationParticipantInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("hidden", (n) -> { currentObject.setHidden(n.getBooleanValue()); });
-            this.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("participantId", (n) -> { currentObject.setParticipantId(n.getStringValue()); });
-            this.put("removeFromDefaultAudioRoutingGroup", (n) -> { currentObject.setRemoveFromDefaultAudioRoutingGroup(n.getBooleanValue()); });
-            this.put("replacesCallId", (n) -> { currentObject.setReplacesCallId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("hidden", (n) -> { this.setHidden(n.getBooleanValue()); });
+        deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("participantId", (n) -> { this.setParticipantId(n.getStringValue()); });
+        deserializerMap.put("removeFromDefaultAudioRoutingGroup", (n) -> { this.setRemoveFromDefaultAudioRoutingGroup(n.getBooleanValue()); });
+        deserializerMap.put("replacesCallId", (n) -> { this.setReplacesCallId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hidden property value. Optional. Whether to hide the participant from the roster.

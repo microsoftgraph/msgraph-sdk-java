@@ -56,11 +56,10 @@ public class AcceptPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AcceptPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
-            this.put("sendResponse", (n) -> { currentObject.setSendResponse(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
+        deserializerMap.put("sendResponse", (n) -> { this.setSendResponse(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the sendResponse property value. The SendResponse property

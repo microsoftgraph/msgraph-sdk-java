@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class Alert extends Entity implements Parsable {
     /** Name or alias of the activity group (attacker) this alert is attributed to. */
     private String _activityGroupName;
@@ -95,7 +95,6 @@ public class Alert extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Alert() {
         super();
-        this.setOdataType("#microsoft.graph.alert");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -233,48 +232,47 @@ public class Alert extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Alert currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("activityGroupName", (n) -> { currentObject.setActivityGroupName(n.getStringValue()); });
-            this.put("alertDetections", (n) -> { currentObject.setAlertDetections(n.getCollectionOfObjectValues(AlertDetection::createFromDiscriminatorValue)); });
-            this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });
-            this.put("azureSubscriptionId", (n) -> { currentObject.setAzureSubscriptionId(n.getStringValue()); });
-            this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
-            this.put("category", (n) -> { currentObject.setCategory(n.getStringValue()); });
-            this.put("closedDateTime", (n) -> { currentObject.setClosedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("cloudAppStates", (n) -> { currentObject.setCloudAppStates(n.getCollectionOfObjectValues(CloudAppSecurityState::createFromDiscriminatorValue)); });
-            this.put("comments", (n) -> { currentObject.setComments(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("confidence", (n) -> { currentObject.setConfidence(n.getIntegerValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("detectionIds", (n) -> { currentObject.setDetectionIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
-            this.put("feedback", (n) -> { currentObject.setFeedback(n.getEnumValue(AlertFeedback.class)); });
-            this.put("fileStates", (n) -> { currentObject.setFileStates(n.getCollectionOfObjectValues(FileSecurityState::createFromDiscriminatorValue)); });
-            this.put("historyStates", (n) -> { currentObject.setHistoryStates(n.getCollectionOfObjectValues(AlertHistoryState::createFromDiscriminatorValue)); });
-            this.put("hostStates", (n) -> { currentObject.setHostStates(n.getCollectionOfObjectValues(HostSecurityState::createFromDiscriminatorValue)); });
-            this.put("incidentIds", (n) -> { currentObject.setIncidentIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("investigationSecurityStates", (n) -> { currentObject.setInvestigationSecurityStates(n.getCollectionOfObjectValues(InvestigationSecurityState::createFromDiscriminatorValue)); });
-            this.put("lastEventDateTime", (n) -> { currentObject.setLastEventDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("malwareStates", (n) -> { currentObject.setMalwareStates(n.getCollectionOfObjectValues(MalwareState::createFromDiscriminatorValue)); });
-            this.put("messageSecurityStates", (n) -> { currentObject.setMessageSecurityStates(n.getCollectionOfObjectValues(MessageSecurityState::createFromDiscriminatorValue)); });
-            this.put("networkConnections", (n) -> { currentObject.setNetworkConnections(n.getCollectionOfObjectValues(NetworkConnection::createFromDiscriminatorValue)); });
-            this.put("processes", (n) -> { currentObject.setProcesses(n.getCollectionOfObjectValues(Process::createFromDiscriminatorValue)); });
-            this.put("recommendedActions", (n) -> { currentObject.setRecommendedActions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("registryKeyStates", (n) -> { currentObject.setRegistryKeyStates(n.getCollectionOfObjectValues(RegistryKeyState::createFromDiscriminatorValue)); });
-            this.put("securityResources", (n) -> { currentObject.setSecurityResources(n.getCollectionOfObjectValues(SecurityResource::createFromDiscriminatorValue)); });
-            this.put("severity", (n) -> { currentObject.setSeverity(n.getEnumValue(AlertSeverity.class)); });
-            this.put("sourceMaterials", (n) -> { currentObject.setSourceMaterials(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AlertStatus.class)); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-            this.put("triggers", (n) -> { currentObject.setTriggers(n.getCollectionOfObjectValues(AlertTrigger::createFromDiscriminatorValue)); });
-            this.put("uriClickSecurityStates", (n) -> { currentObject.setUriClickSecurityStates(n.getCollectionOfObjectValues(UriClickSecurityState::createFromDiscriminatorValue)); });
-            this.put("userStates", (n) -> { currentObject.setUserStates(n.getCollectionOfObjectValues(UserSecurityState::createFromDiscriminatorValue)); });
-            this.put("vendorInformation", (n) -> { currentObject.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
-            this.put("vulnerabilityStates", (n) -> { currentObject.setVulnerabilityStates(n.getCollectionOfObjectValues(VulnerabilityState::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activityGroupName", (n) -> { this.setActivityGroupName(n.getStringValue()); });
+        deserializerMap.put("alertDetections", (n) -> { this.setAlertDetections(n.getCollectionOfObjectValues(AlertDetection::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getStringValue()); });
+        deserializerMap.put("azureSubscriptionId", (n) -> { this.setAzureSubscriptionId(n.getStringValue()); });
+        deserializerMap.put("azureTenantId", (n) -> { this.setAzureTenantId(n.getStringValue()); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getStringValue()); });
+        deserializerMap.put("closedDateTime", (n) -> { this.setClosedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("cloudAppStates", (n) -> { this.setCloudAppStates(n.getCollectionOfObjectValues(CloudAppSecurityState::createFromDiscriminatorValue)); });
+        deserializerMap.put("comments", (n) -> { this.setComments(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("confidence", (n) -> { this.setConfidence(n.getIntegerValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("detectionIds", (n) -> { this.setDetectionIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("feedback", (n) -> { this.setFeedback(n.getEnumValue(AlertFeedback.class)); });
+        deserializerMap.put("fileStates", (n) -> { this.setFileStates(n.getCollectionOfObjectValues(FileSecurityState::createFromDiscriminatorValue)); });
+        deserializerMap.put("historyStates", (n) -> { this.setHistoryStates(n.getCollectionOfObjectValues(AlertHistoryState::createFromDiscriminatorValue)); });
+        deserializerMap.put("hostStates", (n) -> { this.setHostStates(n.getCollectionOfObjectValues(HostSecurityState::createFromDiscriminatorValue)); });
+        deserializerMap.put("incidentIds", (n) -> { this.setIncidentIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("investigationSecurityStates", (n) -> { this.setInvestigationSecurityStates(n.getCollectionOfObjectValues(InvestigationSecurityState::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastEventDateTime", (n) -> { this.setLastEventDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("malwareStates", (n) -> { this.setMalwareStates(n.getCollectionOfObjectValues(MalwareState::createFromDiscriminatorValue)); });
+        deserializerMap.put("messageSecurityStates", (n) -> { this.setMessageSecurityStates(n.getCollectionOfObjectValues(MessageSecurityState::createFromDiscriminatorValue)); });
+        deserializerMap.put("networkConnections", (n) -> { this.setNetworkConnections(n.getCollectionOfObjectValues(NetworkConnection::createFromDiscriminatorValue)); });
+        deserializerMap.put("processes", (n) -> { this.setProcesses(n.getCollectionOfObjectValues(Process::createFromDiscriminatorValue)); });
+        deserializerMap.put("recommendedActions", (n) -> { this.setRecommendedActions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("registryKeyStates", (n) -> { this.setRegistryKeyStates(n.getCollectionOfObjectValues(RegistryKeyState::createFromDiscriminatorValue)); });
+        deserializerMap.put("securityResources", (n) -> { this.setSecurityResources(n.getCollectionOfObjectValues(SecurityResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertSeverity.class)); });
+        deserializerMap.put("sourceMaterials", (n) -> { this.setSourceMaterials(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AlertStatus.class)); });
+        deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
+        deserializerMap.put("triggers", (n) -> { this.setTriggers(n.getCollectionOfObjectValues(AlertTrigger::createFromDiscriminatorValue)); });
+        deserializerMap.put("uriClickSecurityStates", (n) -> { this.setUriClickSecurityStates(n.getCollectionOfObjectValues(UriClickSecurityState::createFromDiscriminatorValue)); });
+        deserializerMap.put("userStates", (n) -> { this.setUserStates(n.getCollectionOfObjectValues(UserSecurityState::createFromDiscriminatorValue)); });
+        deserializerMap.put("vendorInformation", (n) -> { this.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
+        deserializerMap.put("vulnerabilityStates", (n) -> { this.setVulnerabilityStates(n.getCollectionOfObjectValues(VulnerabilityState::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the fileStates property value. Security-related stateful information generated by the provider about the file(s) related to this alert.

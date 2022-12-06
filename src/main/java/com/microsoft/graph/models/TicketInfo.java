@@ -24,7 +24,6 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TicketInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.ticketInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TicketInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("ticketNumber", (n) -> { currentObject.setTicketNumber(n.getStringValue()); });
-            this.put("ticketSystem", (n) -> { currentObject.setTicketSystem(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("ticketNumber", (n) -> { this.setTicketNumber(n.getStringValue()); });
+        deserializerMap.put("ticketSystem", (n) -> { this.setTicketSystem(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

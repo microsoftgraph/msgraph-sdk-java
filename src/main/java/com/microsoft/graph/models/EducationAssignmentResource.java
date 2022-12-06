@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class EducationAssignmentResource extends Entity implements Parsable {
     /** Indicates whether this resource should be copied to each student submission for modification and submission. Required */
     private Boolean _distributeForStudentWork;
@@ -20,7 +20,6 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     @javax.annotation.Nullable
     public EducationAssignmentResource() {
         super();
-        this.setOdataType("#microsoft.graph.educationAssignmentResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,11 +45,10 @@ public class EducationAssignmentResource extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationAssignmentResource currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("distributeForStudentWork", (n) -> { currentObject.setDistributeForStudentWork(n.getBooleanValue()); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("distributeForStudentWork", (n) -> { this.setDistributeForStudentWork(n.getBooleanValue()); });
+        deserializerMap.put("resource", (n) -> { this.setResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the resource property value. Resource object that has been associated with this assignment.

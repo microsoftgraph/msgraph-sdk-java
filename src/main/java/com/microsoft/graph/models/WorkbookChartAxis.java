@@ -31,7 +31,6 @@ public class WorkbookChartAxis extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartAxis() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartAxis");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,17 +48,16 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookChartAxis currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartAxisFormat::createFromDiscriminatorValue)); });
-            this.put("majorGridlines", (n) -> { currentObject.setMajorGridlines(n.getObjectValue(WorkbookChartGridlines::createFromDiscriminatorValue)); });
-            this.put("majorUnit", (n) -> { currentObject.setMajorUnit(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("maximum", (n) -> { currentObject.setMaximum(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("minimum", (n) -> { currentObject.setMinimum(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("minorGridlines", (n) -> { currentObject.setMinorGridlines(n.getObjectValue(WorkbookChartGridlines::createFromDiscriminatorValue)); });
-            this.put("minorUnit", (n) -> { currentObject.setMinorUnit(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getObjectValue(WorkbookChartAxisTitle::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartAxisFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("majorGridlines", (n) -> { this.setMajorGridlines(n.getObjectValue(WorkbookChartGridlines::createFromDiscriminatorValue)); });
+        deserializerMap.put("majorUnit", (n) -> { this.setMajorUnit(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("maximum", (n) -> { this.setMaximum(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("minimum", (n) -> { this.setMinimum(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("minorGridlines", (n) -> { this.setMinorGridlines(n.getObjectValue(WorkbookChartGridlines::createFromDiscriminatorValue)); });
+        deserializerMap.put("minorUnit", (n) -> { this.setMinorUnit(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getObjectValue(WorkbookChartAxisTitle::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the format property value. Represents the formatting of a chart object, which includes line and font formatting. Read-only.

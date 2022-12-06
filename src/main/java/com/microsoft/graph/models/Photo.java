@@ -39,7 +39,6 @@ public class Photo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Photo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.photo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -97,19 +96,18 @@ public class Photo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Photo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(10) {{
-            this.put("cameraMake", (n) -> { currentObject.setCameraMake(n.getStringValue()); });
-            this.put("cameraModel", (n) -> { currentObject.setCameraModel(n.getStringValue()); });
-            this.put("exposureDenominator", (n) -> { currentObject.setExposureDenominator(n.getDoubleValue()); });
-            this.put("exposureNumerator", (n) -> { currentObject.setExposureNumerator(n.getDoubleValue()); });
-            this.put("fNumber", (n) -> { currentObject.setFNumber(n.getDoubleValue()); });
-            this.put("focalLength", (n) -> { currentObject.setFocalLength(n.getDoubleValue()); });
-            this.put("iso", (n) -> { currentObject.setIso(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("orientation", (n) -> { currentObject.setOrientation(n.getIntegerValue()); });
-            this.put("takenDateTime", (n) -> { currentObject.setTakenDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("cameraMake", (n) -> { this.setCameraMake(n.getStringValue()); });
+        deserializerMap.put("cameraModel", (n) -> { this.setCameraModel(n.getStringValue()); });
+        deserializerMap.put("exposureDenominator", (n) -> { this.setExposureDenominator(n.getDoubleValue()); });
+        deserializerMap.put("exposureNumerator", (n) -> { this.setExposureNumerator(n.getDoubleValue()); });
+        deserializerMap.put("fNumber", (n) -> { this.setFNumber(n.getDoubleValue()); });
+        deserializerMap.put("focalLength", (n) -> { this.setFocalLength(n.getDoubleValue()); });
+        deserializerMap.put("iso", (n) -> { this.setIso(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("orientation", (n) -> { this.setOrientation(n.getIntegerValue()); });
+        deserializerMap.put("takenDateTime", (n) -> { this.setTakenDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fNumber property value. The F-stop value from the camera. Read-only.

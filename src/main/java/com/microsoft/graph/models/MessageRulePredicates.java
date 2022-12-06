@@ -80,7 +80,6 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MessageRulePredicates() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.messageRulePredicates");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -130,40 +129,39 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MessageRulePredicates currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(31) {{
-            this.put("bodyContains", (n) -> { currentObject.setBodyContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("bodyOrSubjectContains", (n) -> { currentObject.setBodyOrSubjectContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("fromAddresses", (n) -> { currentObject.setFromAddresses(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
-            this.put("headerContains", (n) -> { currentObject.setHeaderContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(Importance.class)); });
-            this.put("isApprovalRequest", (n) -> { currentObject.setIsApprovalRequest(n.getBooleanValue()); });
-            this.put("isAutomaticForward", (n) -> { currentObject.setIsAutomaticForward(n.getBooleanValue()); });
-            this.put("isAutomaticReply", (n) -> { currentObject.setIsAutomaticReply(n.getBooleanValue()); });
-            this.put("isEncrypted", (n) -> { currentObject.setIsEncrypted(n.getBooleanValue()); });
-            this.put("isMeetingRequest", (n) -> { currentObject.setIsMeetingRequest(n.getBooleanValue()); });
-            this.put("isMeetingResponse", (n) -> { currentObject.setIsMeetingResponse(n.getBooleanValue()); });
-            this.put("isNonDeliveryReport", (n) -> { currentObject.setIsNonDeliveryReport(n.getBooleanValue()); });
-            this.put("isPermissionControlled", (n) -> { currentObject.setIsPermissionControlled(n.getBooleanValue()); });
-            this.put("isReadReceipt", (n) -> { currentObject.setIsReadReceipt(n.getBooleanValue()); });
-            this.put("isSigned", (n) -> { currentObject.setIsSigned(n.getBooleanValue()); });
-            this.put("isVoicemail", (n) -> { currentObject.setIsVoicemail(n.getBooleanValue()); });
-            this.put("messageActionFlag", (n) -> { currentObject.setMessageActionFlag(n.getEnumValue(MessageActionFlag.class)); });
-            this.put("notSentToMe", (n) -> { currentObject.setNotSentToMe(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recipientContains", (n) -> { currentObject.setRecipientContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("senderContains", (n) -> { currentObject.setSenderContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("sensitivity", (n) -> { currentObject.setSensitivity(n.getEnumValue(Sensitivity.class)); });
-            this.put("sentCcMe", (n) -> { currentObject.setSentCcMe(n.getBooleanValue()); });
-            this.put("sentOnlyToMe", (n) -> { currentObject.setSentOnlyToMe(n.getBooleanValue()); });
-            this.put("sentToAddresses", (n) -> { currentObject.setSentToAddresses(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("sentToMe", (n) -> { currentObject.setSentToMe(n.getBooleanValue()); });
-            this.put("sentToOrCcMe", (n) -> { currentObject.setSentToOrCcMe(n.getBooleanValue()); });
-            this.put("subjectContains", (n) -> { currentObject.setSubjectContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("withinSizeRange", (n) -> { currentObject.setWithinSizeRange(n.getObjectValue(SizeRange::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(31);
+        deserializerMap.put("bodyContains", (n) -> { this.setBodyContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("bodyOrSubjectContains", (n) -> { this.setBodyOrSubjectContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("fromAddresses", (n) -> { this.setFromAddresses(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
+        deserializerMap.put("headerContains", (n) -> { this.setHeaderContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(Importance.class)); });
+        deserializerMap.put("isApprovalRequest", (n) -> { this.setIsApprovalRequest(n.getBooleanValue()); });
+        deserializerMap.put("isAutomaticForward", (n) -> { this.setIsAutomaticForward(n.getBooleanValue()); });
+        deserializerMap.put("isAutomaticReply", (n) -> { this.setIsAutomaticReply(n.getBooleanValue()); });
+        deserializerMap.put("isEncrypted", (n) -> { this.setIsEncrypted(n.getBooleanValue()); });
+        deserializerMap.put("isMeetingRequest", (n) -> { this.setIsMeetingRequest(n.getBooleanValue()); });
+        deserializerMap.put("isMeetingResponse", (n) -> { this.setIsMeetingResponse(n.getBooleanValue()); });
+        deserializerMap.put("isNonDeliveryReport", (n) -> { this.setIsNonDeliveryReport(n.getBooleanValue()); });
+        deserializerMap.put("isPermissionControlled", (n) -> { this.setIsPermissionControlled(n.getBooleanValue()); });
+        deserializerMap.put("isReadReceipt", (n) -> { this.setIsReadReceipt(n.getBooleanValue()); });
+        deserializerMap.put("isSigned", (n) -> { this.setIsSigned(n.getBooleanValue()); });
+        deserializerMap.put("isVoicemail", (n) -> { this.setIsVoicemail(n.getBooleanValue()); });
+        deserializerMap.put("messageActionFlag", (n) -> { this.setMessageActionFlag(n.getEnumValue(MessageActionFlag.class)); });
+        deserializerMap.put("notSentToMe", (n) -> { this.setNotSentToMe(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recipientContains", (n) -> { this.setRecipientContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("senderContains", (n) -> { this.setSenderContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("sensitivity", (n) -> { this.setSensitivity(n.getEnumValue(Sensitivity.class)); });
+        deserializerMap.put("sentCcMe", (n) -> { this.setSentCcMe(n.getBooleanValue()); });
+        deserializerMap.put("sentOnlyToMe", (n) -> { this.setSentOnlyToMe(n.getBooleanValue()); });
+        deserializerMap.put("sentToAddresses", (n) -> { this.setSentToAddresses(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("sentToMe", (n) -> { this.setSentToMe(n.getBooleanValue()); });
+        deserializerMap.put("sentToOrCcMe", (n) -> { this.setSentToOrCcMe(n.getBooleanValue()); });
+        deserializerMap.put("subjectContains", (n) -> { this.setSubjectContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("withinSizeRange", (n) -> { this.setWithinSizeRange(n.getObjectValue(SizeRange::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the fromAddresses property value. Represents the specific sender email addresses of an incoming message in order for the condition or exception to apply.

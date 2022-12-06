@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookTable extends Entity implements Parsable {
     /** Represents a collection of all the columns in the table. Read-only. */
     private java.util.List<WorkbookTableColumn> _columns;
@@ -44,7 +44,6 @@ public class WorkbookTable extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookTable() {
         super();
-        this.setOdataType("#microsoft.graph.workbookTable");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,23 +69,22 @@ public class WorkbookTable extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookTable currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("columns", (n) -> { currentObject.setColumns(n.getCollectionOfObjectValues(WorkbookTableColumn::createFromDiscriminatorValue)); });
-            this.put("highlightFirstColumn", (n) -> { currentObject.setHighlightFirstColumn(n.getBooleanValue()); });
-            this.put("highlightLastColumn", (n) -> { currentObject.setHighlightLastColumn(n.getBooleanValue()); });
-            this.put("legacyId", (n) -> { currentObject.setLegacyId(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("rows", (n) -> { currentObject.setRows(n.getCollectionOfObjectValues(WorkbookTableRow::createFromDiscriminatorValue)); });
-            this.put("showBandedColumns", (n) -> { currentObject.setShowBandedColumns(n.getBooleanValue()); });
-            this.put("showBandedRows", (n) -> { currentObject.setShowBandedRows(n.getBooleanValue()); });
-            this.put("showFilterButton", (n) -> { currentObject.setShowFilterButton(n.getBooleanValue()); });
-            this.put("showHeaders", (n) -> { currentObject.setShowHeaders(n.getBooleanValue()); });
-            this.put("showTotals", (n) -> { currentObject.setShowTotals(n.getBooleanValue()); });
-            this.put("sort", (n) -> { currentObject.setSort(n.getObjectValue(WorkbookTableSort::createFromDiscriminatorValue)); });
-            this.put("style", (n) -> { currentObject.setStyle(n.getStringValue()); });
-            this.put("worksheet", (n) -> { currentObject.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("columns", (n) -> { this.setColumns(n.getCollectionOfObjectValues(WorkbookTableColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("highlightFirstColumn", (n) -> { this.setHighlightFirstColumn(n.getBooleanValue()); });
+        deserializerMap.put("highlightLastColumn", (n) -> { this.setHighlightLastColumn(n.getBooleanValue()); });
+        deserializerMap.put("legacyId", (n) -> { this.setLegacyId(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("rows", (n) -> { this.setRows(n.getCollectionOfObjectValues(WorkbookTableRow::createFromDiscriminatorValue)); });
+        deserializerMap.put("showBandedColumns", (n) -> { this.setShowBandedColumns(n.getBooleanValue()); });
+        deserializerMap.put("showBandedRows", (n) -> { this.setShowBandedRows(n.getBooleanValue()); });
+        deserializerMap.put("showFilterButton", (n) -> { this.setShowFilterButton(n.getBooleanValue()); });
+        deserializerMap.put("showHeaders", (n) -> { this.setShowHeaders(n.getBooleanValue()); });
+        deserializerMap.put("showTotals", (n) -> { this.setShowTotals(n.getBooleanValue()); });
+        deserializerMap.put("sort", (n) -> { this.setSort(n.getObjectValue(WorkbookTableSort::createFromDiscriminatorValue)); });
+        deserializerMap.put("style", (n) -> { this.setStyle(n.getStringValue()); });
+        deserializerMap.put("worksheet", (n) -> { this.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the highlightFirstColumn property value. Indicates whether the first column contains special formatting.

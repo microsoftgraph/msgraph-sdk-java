@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreement entities. */
 public class IdentityUserFlowAttribute extends Entity implements Parsable {
     /** The dataType property */
     private IdentityUserFlowAttributeDataType _dataType;
@@ -25,7 +26,6 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
     @javax.annotation.Nullable
     public IdentityUserFlowAttribute() {
         super();
-        this.setOdataType("#microsoft.graph.identityUserFlowAttribute");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,13 +75,12 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IdentityUserFlowAttribute currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("dataType", (n) -> { currentObject.setDataType(n.getEnumValue(IdentityUserFlowAttributeDataType.class)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("userFlowAttributeType", (n) -> { currentObject.setUserFlowAttributeType(n.getEnumValue(IdentityUserFlowAttributeType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("dataType", (n) -> { this.setDataType(n.getEnumValue(IdentityUserFlowAttributeDataType.class)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("userFlowAttributeType", (n) -> { this.setUserFlowAttributeType(n.getEnumValue(IdentityUserFlowAttributeType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the userFlowAttributeType property value. The userFlowAttributeType property

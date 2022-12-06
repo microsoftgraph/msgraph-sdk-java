@@ -26,7 +26,6 @@ public class SearchBucket implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SearchBucket() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.searchBucket");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,13 +67,12 @@ public class SearchBucket implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SearchBucket currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("aggregationFilterToken", (n) -> { currentObject.setAggregationFilterToken(n.getStringValue()); });
-            this.put("count", (n) -> { currentObject.setCount(n.getIntegerValue()); });
-            this.put("key", (n) -> { currentObject.setKey(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("aggregationFilterToken", (n) -> { this.setAggregationFilterToken(n.getStringValue()); });
+        deserializerMap.put("count", (n) -> { this.setCount(n.getIntegerValue()); });
+        deserializerMap.put("key", (n) -> { this.setKey(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the key property value. The discrete value of the field that an aggregation was computed on.

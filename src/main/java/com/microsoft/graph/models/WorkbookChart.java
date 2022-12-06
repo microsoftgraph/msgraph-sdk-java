@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookChart extends Entity implements Parsable {
     /** Represents chart axes. Read-only. */
     private WorkbookChartAxes _axes;
@@ -40,7 +40,6 @@ public class WorkbookChart extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChart() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChart");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -74,21 +73,20 @@ public class WorkbookChart extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookChart currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("axes", (n) -> { currentObject.setAxes(n.getObjectValue(WorkbookChartAxes::createFromDiscriminatorValue)); });
-            this.put("dataLabels", (n) -> { currentObject.setDataLabels(n.getObjectValue(WorkbookChartDataLabels::createFromDiscriminatorValue)); });
-            this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartAreaFormat::createFromDiscriminatorValue)); });
-            this.put("height", (n) -> { currentObject.setHeight(n.getDoubleValue()); });
-            this.put("left", (n) -> { currentObject.setLeft(n.getDoubleValue()); });
-            this.put("legend", (n) -> { currentObject.setLegend(n.getObjectValue(WorkbookChartLegend::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("series", (n) -> { currentObject.setSeries(n.getCollectionOfObjectValues(WorkbookChartSeries::createFromDiscriminatorValue)); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getObjectValue(WorkbookChartTitle::createFromDiscriminatorValue)); });
-            this.put("top", (n) -> { currentObject.setTop(n.getDoubleValue()); });
-            this.put("width", (n) -> { currentObject.setWidth(n.getDoubleValue()); });
-            this.put("worksheet", (n) -> { currentObject.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("axes", (n) -> { this.setAxes(n.getObjectValue(WorkbookChartAxes::createFromDiscriminatorValue)); });
+        deserializerMap.put("dataLabels", (n) -> { this.setDataLabels(n.getObjectValue(WorkbookChartDataLabels::createFromDiscriminatorValue)); });
+        deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartAreaFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("height", (n) -> { this.setHeight(n.getDoubleValue()); });
+        deserializerMap.put("left", (n) -> { this.setLeft(n.getDoubleValue()); });
+        deserializerMap.put("legend", (n) -> { this.setLegend(n.getObjectValue(WorkbookChartLegend::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("series", (n) -> { this.setSeries(n.getCollectionOfObjectValues(WorkbookChartSeries::createFromDiscriminatorValue)); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getObjectValue(WorkbookChartTitle::createFromDiscriminatorValue)); });
+        deserializerMap.put("top", (n) -> { this.setTop(n.getDoubleValue()); });
+        deserializerMap.put("width", (n) -> { this.setWidth(n.getDoubleValue()); });
+        deserializerMap.put("worksheet", (n) -> { this.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the format property value. Encapsulates the format properties for the chart area. Read-only.

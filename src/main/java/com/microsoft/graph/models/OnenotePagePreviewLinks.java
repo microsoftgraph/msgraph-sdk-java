@@ -22,7 +22,6 @@ public class OnenotePagePreviewLinks implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OnenotePagePreviewLinks() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.onenotePagePreviewLinks");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,11 +47,10 @@ public class OnenotePagePreviewLinks implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OnenotePagePreviewLinks currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("previewImageUrl", (n) -> { currentObject.setPreviewImageUrl(n.getObjectValue(ExternalLink::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("previewImageUrl", (n) -> { this.setPreviewImageUrl(n.getObjectValue(ExternalLink::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

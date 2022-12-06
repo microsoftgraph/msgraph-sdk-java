@@ -30,7 +30,6 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
     @javax.annotation.Nullable
     public DeviceConfigurationDeviceOverview() {
         super();
-        this.setOdataType("#microsoft.graph.deviceConfigurationDeviceOverview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,16 +71,15 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceConfigurationDeviceOverview currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("configurationVersion", (n) -> { currentObject.setConfigurationVersion(n.getIntegerValue()); });
-            this.put("errorCount", (n) -> { currentObject.setErrorCount(n.getIntegerValue()); });
-            this.put("failedCount", (n) -> { currentObject.setFailedCount(n.getIntegerValue()); });
-            this.put("lastUpdateDateTime", (n) -> { currentObject.setLastUpdateDateTime(n.getOffsetDateTimeValue()); });
-            this.put("notApplicableCount", (n) -> { currentObject.setNotApplicableCount(n.getIntegerValue()); });
-            this.put("pendingCount", (n) -> { currentObject.setPendingCount(n.getIntegerValue()); });
-            this.put("successCount", (n) -> { currentObject.setSuccessCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("configurationVersion", (n) -> { this.setConfigurationVersion(n.getIntegerValue()); });
+        deserializerMap.put("errorCount", (n) -> { this.setErrorCount(n.getIntegerValue()); });
+        deserializerMap.put("failedCount", (n) -> { this.setFailedCount(n.getIntegerValue()); });
+        deserializerMap.put("lastUpdateDateTime", (n) -> { this.setLastUpdateDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("notApplicableCount", (n) -> { this.setNotApplicableCount(n.getIntegerValue()); });
+        deserializerMap.put("pendingCount", (n) -> { this.setPendingCount(n.getIntegerValue()); });
+        deserializerMap.put("successCount", (n) -> { this.setSuccessCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastUpdateDateTime property value. Last update time

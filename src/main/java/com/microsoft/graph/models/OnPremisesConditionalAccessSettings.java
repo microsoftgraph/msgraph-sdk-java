@@ -23,7 +23,6 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     @javax.annotation.Nullable
     public OnPremisesConditionalAccessSettings() {
         super();
-        this.setOdataType("#microsoft.graph.onPremisesConditionalAccessSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,13 +56,12 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OnPremisesConditionalAccessSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
-            this.put("excludedGroups", (n) -> { currentObject.setExcludedGroups(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("includedGroups", (n) -> { currentObject.setIncludedGroups(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("overrideDefaultRule", (n) -> { currentObject.setOverrideDefaultRule(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
+        deserializerMap.put("excludedGroups", (n) -> { this.setExcludedGroups(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("includedGroups", (n) -> { this.setIncludedGroups(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("overrideDefaultRule", (n) -> { this.setOverrideDefaultRule(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the includedGroups property value. User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.

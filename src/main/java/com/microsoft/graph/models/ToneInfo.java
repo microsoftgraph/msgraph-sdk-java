@@ -24,7 +24,6 @@ public class ToneInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ToneInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.toneInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class ToneInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ToneInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sequenceId", (n) -> { currentObject.setSequenceId(n.getLongValue()); });
-            this.put("tone", (n) -> { currentObject.setTone(n.getEnumValue(Tone.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sequenceId", (n) -> { this.setSequenceId(n.getLongValue()); });
+        deserializerMap.put("tone", (n) -> { this.setTone(n.getEnumValue(Tone.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

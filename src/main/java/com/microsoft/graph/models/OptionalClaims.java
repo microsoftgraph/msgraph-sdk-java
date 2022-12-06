@@ -26,7 +26,6 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OptionalClaims() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.optionalClaims");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,13 +59,12 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OptionalClaims currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("accessToken", (n) -> { currentObject.setAccessToken(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
-            this.put("idToken", (n) -> { currentObject.setIdToken(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("saml2Token", (n) -> { currentObject.setSaml2Token(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("accessToken", (n) -> { this.setAccessToken(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
+        deserializerMap.put("idToken", (n) -> { this.setIdToken(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("saml2Token", (n) -> { this.setSaml2Token(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the idToken property value. The optional claims returned in the JWT ID token.

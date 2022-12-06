@@ -25,7 +25,6 @@ public class MimeContent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MimeContent() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.mimeContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,12 +50,11 @@ public class MimeContent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MimeContent currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-            this.put("value", (n) -> { currentObject.setValue(n.getByteArrayValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getByteArrayValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

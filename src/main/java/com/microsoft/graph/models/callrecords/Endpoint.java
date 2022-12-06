@@ -24,7 +24,6 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Endpoint() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.endpoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,11 +57,10 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Endpoint currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("userAgent", (n) -> { currentObject.setUserAgent(n.getObjectValue(UserAgent::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("userAgent", (n) -> { this.setUserAgent(n.getObjectValue(UserAgent::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

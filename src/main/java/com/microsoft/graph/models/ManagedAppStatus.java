@@ -21,7 +21,6 @@ public class ManagedAppStatus extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ManagedAppStatus() {
         super();
-        this.setOdataType("#microsoft.graph.managedAppStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,11 +53,10 @@ public class ManagedAppStatus extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedAppStatus currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the version property value. Version of the entity.

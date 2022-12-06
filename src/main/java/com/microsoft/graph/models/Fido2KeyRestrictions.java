@@ -26,7 +26,6 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Fido2KeyRestrictions() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.fido2KeyRestrictions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,13 +67,12 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Fido2KeyRestrictions currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("aaGuids", (n) -> { currentObject.setAaGuids(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("enforcementType", (n) -> { currentObject.setEnforcementType(n.getEnumValue(Fido2RestrictionEnforcementType.class)); });
-            this.put("isEnforced", (n) -> { currentObject.setIsEnforced(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("aaGuids", (n) -> { this.setAaGuids(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("enforcementType", (n) -> { this.setEnforcementType(n.getEnumValue(Fido2RestrictionEnforcementType.class)); });
+        deserializerMap.put("isEnforced", (n) -> { this.setIsEnforced(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnforced property value. Determines if the configured key enforcement is enabled.

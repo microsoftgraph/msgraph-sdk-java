@@ -26,7 +26,6 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public CallRoute() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRoute");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,13 +51,12 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CallRoute currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("final", (n) -> { currentObject.setFinal(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("original", (n) -> { currentObject.setOriginal(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("routingType", (n) -> { currentObject.setRoutingType(n.getEnumValue(RoutingType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("final", (n) -> { this.setFinal(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("original", (n) -> { this.setOriginal(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("routingType", (n) -> { this.setRoutingType(n.getEnumValue(RoutingType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the final property value. The final property

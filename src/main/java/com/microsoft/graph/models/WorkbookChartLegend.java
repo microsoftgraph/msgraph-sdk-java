@@ -23,7 +23,6 @@ public class WorkbookChartLegend extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartLegend() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartLegend");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,13 +40,12 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookChartLegend currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartLegendFormat::createFromDiscriminatorValue)); });
-            this.put("overlay", (n) -> { currentObject.setOverlay(n.getBooleanValue()); });
-            this.put("position", (n) -> { currentObject.setPosition(n.getStringValue()); });
-            this.put("visible", (n) -> { currentObject.setVisible(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartLegendFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("overlay", (n) -> { this.setOverlay(n.getBooleanValue()); });
+        deserializerMap.put("position", (n) -> { this.setPosition(n.getStringValue()); });
+        deserializerMap.put("visible", (n) -> { this.setVisible(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the format property value. Represents the formatting of a chart legend, which includes fill and font formatting. Read-only.

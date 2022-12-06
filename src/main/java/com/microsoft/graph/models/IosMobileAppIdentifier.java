@@ -43,10 +43,9 @@ public class IosMobileAppIdentifier extends MobileAppIdentifier implements Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosMobileAppIdentifier currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("bundleId", (n) -> { this.setBundleId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

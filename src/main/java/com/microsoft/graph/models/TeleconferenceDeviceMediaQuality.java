@@ -66,7 +66,6 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     @javax.annotation.Nullable
     public TeleconferenceDeviceMediaQuality() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teleconferenceDeviceMediaQuality");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -157,31 +156,30 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeleconferenceDeviceMediaQuality currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(22) {{
-            this.put("averageInboundJitter", (n) -> { currentObject.setAverageInboundJitter(n.getPeriodValue()); });
-            this.put("averageInboundPacketLossRateInPercentage", (n) -> { currentObject.setAverageInboundPacketLossRateInPercentage(n.getDoubleValue()); });
-            this.put("averageInboundRoundTripDelay", (n) -> { currentObject.setAverageInboundRoundTripDelay(n.getPeriodValue()); });
-            this.put("averageOutboundJitter", (n) -> { currentObject.setAverageOutboundJitter(n.getPeriodValue()); });
-            this.put("averageOutboundPacketLossRateInPercentage", (n) -> { currentObject.setAverageOutboundPacketLossRateInPercentage(n.getDoubleValue()); });
-            this.put("averageOutboundRoundTripDelay", (n) -> { currentObject.setAverageOutboundRoundTripDelay(n.getPeriodValue()); });
-            this.put("channelIndex", (n) -> { currentObject.setChannelIndex(n.getIntegerValue()); });
-            this.put("inboundPackets", (n) -> { currentObject.setInboundPackets(n.getLongValue()); });
-            this.put("localIPAddress", (n) -> { currentObject.setLocalIPAddress(n.getStringValue()); });
-            this.put("localPort", (n) -> { currentObject.setLocalPort(n.getIntegerValue()); });
-            this.put("maximumInboundJitter", (n) -> { currentObject.setMaximumInboundJitter(n.getPeriodValue()); });
-            this.put("maximumInboundPacketLossRateInPercentage", (n) -> { currentObject.setMaximumInboundPacketLossRateInPercentage(n.getDoubleValue()); });
-            this.put("maximumInboundRoundTripDelay", (n) -> { currentObject.setMaximumInboundRoundTripDelay(n.getPeriodValue()); });
-            this.put("maximumOutboundJitter", (n) -> { currentObject.setMaximumOutboundJitter(n.getPeriodValue()); });
-            this.put("maximumOutboundPacketLossRateInPercentage", (n) -> { currentObject.setMaximumOutboundPacketLossRateInPercentage(n.getDoubleValue()); });
-            this.put("maximumOutboundRoundTripDelay", (n) -> { currentObject.setMaximumOutboundRoundTripDelay(n.getPeriodValue()); });
-            this.put("mediaDuration", (n) -> { currentObject.setMediaDuration(n.getPeriodValue()); });
-            this.put("networkLinkSpeedInBytes", (n) -> { currentObject.setNetworkLinkSpeedInBytes(n.getLongValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("outboundPackets", (n) -> { currentObject.setOutboundPackets(n.getLongValue()); });
-            this.put("remoteIPAddress", (n) -> { currentObject.setRemoteIPAddress(n.getStringValue()); });
-            this.put("remotePort", (n) -> { currentObject.setRemotePort(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(22);
+        deserializerMap.put("averageInboundJitter", (n) -> { this.setAverageInboundJitter(n.getPeriodValue()); });
+        deserializerMap.put("averageInboundPacketLossRateInPercentage", (n) -> { this.setAverageInboundPacketLossRateInPercentage(n.getDoubleValue()); });
+        deserializerMap.put("averageInboundRoundTripDelay", (n) -> { this.setAverageInboundRoundTripDelay(n.getPeriodValue()); });
+        deserializerMap.put("averageOutboundJitter", (n) -> { this.setAverageOutboundJitter(n.getPeriodValue()); });
+        deserializerMap.put("averageOutboundPacketLossRateInPercentage", (n) -> { this.setAverageOutboundPacketLossRateInPercentage(n.getDoubleValue()); });
+        deserializerMap.put("averageOutboundRoundTripDelay", (n) -> { this.setAverageOutboundRoundTripDelay(n.getPeriodValue()); });
+        deserializerMap.put("channelIndex", (n) -> { this.setChannelIndex(n.getIntegerValue()); });
+        deserializerMap.put("inboundPackets", (n) -> { this.setInboundPackets(n.getLongValue()); });
+        deserializerMap.put("localIPAddress", (n) -> { this.setLocalIPAddress(n.getStringValue()); });
+        deserializerMap.put("localPort", (n) -> { this.setLocalPort(n.getIntegerValue()); });
+        deserializerMap.put("maximumInboundJitter", (n) -> { this.setMaximumInboundJitter(n.getPeriodValue()); });
+        deserializerMap.put("maximumInboundPacketLossRateInPercentage", (n) -> { this.setMaximumInboundPacketLossRateInPercentage(n.getDoubleValue()); });
+        deserializerMap.put("maximumInboundRoundTripDelay", (n) -> { this.setMaximumInboundRoundTripDelay(n.getPeriodValue()); });
+        deserializerMap.put("maximumOutboundJitter", (n) -> { this.setMaximumOutboundJitter(n.getPeriodValue()); });
+        deserializerMap.put("maximumOutboundPacketLossRateInPercentage", (n) -> { this.setMaximumOutboundPacketLossRateInPercentage(n.getDoubleValue()); });
+        deserializerMap.put("maximumOutboundRoundTripDelay", (n) -> { this.setMaximumOutboundRoundTripDelay(n.getPeriodValue()); });
+        deserializerMap.put("mediaDuration", (n) -> { this.setMediaDuration(n.getPeriodValue()); });
+        deserializerMap.put("networkLinkSpeedInBytes", (n) -> { this.setNetworkLinkSpeedInBytes(n.getLongValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("outboundPackets", (n) -> { this.setOutboundPackets(n.getLongValue()); });
+        deserializerMap.put("remoteIPAddress", (n) -> { this.setRemoteIPAddress(n.getStringValue()); });
+        deserializerMap.put("remotePort", (n) -> { this.setRemotePort(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the inboundPackets property value. The total number of the inbound packets.

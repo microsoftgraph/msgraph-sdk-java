@@ -54,10 +54,9 @@ public class WipeManagedAppRegistrationsByDeviceTagPostRequestBody implements Ad
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WipeManagedAppRegistrationsByDeviceTagPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("deviceTag", (n) -> { currentObject.setDeviceTag(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("deviceTag", (n) -> { this.setDeviceTag(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

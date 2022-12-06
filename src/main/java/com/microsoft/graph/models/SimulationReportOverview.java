@@ -28,7 +28,6 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public SimulationReportOverview() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.simulationReportOverview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,14 +53,13 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SimulationReportOverview currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recommendedActions", (n) -> { currentObject.setRecommendedActions(n.getCollectionOfObjectValues(RecommendedAction::createFromDiscriminatorValue)); });
-            this.put("resolvedTargetsCount", (n) -> { currentObject.setResolvedTargetsCount(n.getIntegerValue()); });
-            this.put("simulationEventsContent", (n) -> { currentObject.setSimulationEventsContent(n.getObjectValue(SimulationEventsContent::createFromDiscriminatorValue)); });
-            this.put("trainingEventsContent", (n) -> { currentObject.setTrainingEventsContent(n.getObjectValue(TrainingEventsContent::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recommendedActions", (n) -> { this.setRecommendedActions(n.getCollectionOfObjectValues(RecommendedAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("resolvedTargetsCount", (n) -> { this.setResolvedTargetsCount(n.getIntegerValue()); });
+        deserializerMap.put("simulationEventsContent", (n) -> { this.setSimulationEventsContent(n.getObjectValue(SimulationEventsContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("trainingEventsContent", (n) -> { this.setTrainingEventsContent(n.getObjectValue(TrainingEventsContent::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

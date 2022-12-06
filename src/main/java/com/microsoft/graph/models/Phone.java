@@ -28,7 +28,6 @@ public class Phone implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Phone() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.phone");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,14 +53,13 @@ public class Phone implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Phone currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("language", (n) -> { currentObject.setLanguage(n.getStringValue()); });
-            this.put("number", (n) -> { currentObject.setNumber(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("region", (n) -> { currentObject.setRegion(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(PhoneType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("language", (n) -> { this.setLanguage(n.getStringValue()); });
+        deserializerMap.put("number", (n) -> { this.setNumber(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("region", (n) -> { this.setRegion(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PhoneType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the language property value. The language property

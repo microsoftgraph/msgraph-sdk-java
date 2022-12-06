@@ -30,7 +30,6 @@ public class EducationCourse implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public EducationCourse() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.educationCourse");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -88,15 +87,14 @@ public class EducationCourse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationCourse currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("courseNumber", (n) -> { currentObject.setCourseNumber(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("courseNumber", (n) -> { this.setCourseNumber(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

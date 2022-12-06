@@ -25,7 +25,6 @@ public class VppLicensingType implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public VppLicensingType() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.vppLicensingType");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,12 +50,11 @@ public class VppLicensingType implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final VppLicensingType currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("supportsDeviceLicensing", (n) -> { currentObject.setSupportsDeviceLicensing(n.getBooleanValue()); });
-            this.put("supportsUserLicensing", (n) -> { currentObject.setSupportsUserLicensing(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("supportsDeviceLicensing", (n) -> { this.setSupportsDeviceLicensing(n.getBooleanValue()); });
+        deserializerMap.put("supportsUserLicensing", (n) -> { this.setSupportsUserLicensing(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

@@ -32,7 +32,6 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ScheduleItem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.scheduleItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,16 +65,15 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ScheduleItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("end", (n) -> { currentObject.setEnd(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("isPrivate", (n) -> { currentObject.setIsPrivate(n.getBooleanValue()); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("start", (n) -> { currentObject.setStart(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(FreeBusyStatus.class)); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("end", (n) -> { this.setEnd(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("isPrivate", (n) -> { this.setIsPrivate(n.getBooleanValue()); });
+        deserializerMap.put("location", (n) -> { this.setLocation(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("start", (n) -> { this.setStart(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(FreeBusyStatus.class)); });
+        deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isPrivate property value. The sensitivity of the corresponding event. True if the event is marked private, false otherwise. Optional.

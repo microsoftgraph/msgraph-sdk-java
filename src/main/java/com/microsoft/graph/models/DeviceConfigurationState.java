@@ -28,7 +28,6 @@ public class DeviceConfigurationState extends Entity implements Parsable {
     @javax.annotation.Nullable
     public DeviceConfigurationState() {
         super();
-        this.setOdataType("#microsoft.graph.deviceConfigurationState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,15 +53,14 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceConfigurationState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("platformType", (n) -> { currentObject.setPlatformType(n.getEnumValue(PolicyPlatformType.class)); });
-            this.put("settingCount", (n) -> { currentObject.setSettingCount(n.getIntegerValue()); });
-            this.put("settingStates", (n) -> { currentObject.setSettingStates(n.getCollectionOfObjectValues(DeviceConfigurationSettingState::createFromDiscriminatorValue)); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ComplianceStatus.class)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("platformType", (n) -> { this.setPlatformType(n.getEnumValue(PolicyPlatformType.class)); });
+        deserializerMap.put("settingCount", (n) -> { this.setSettingCount(n.getIntegerValue()); });
+        deserializerMap.put("settingStates", (n) -> { this.setSettingStates(n.getCollectionOfObjectValues(DeviceConfigurationSettingState::createFromDiscriminatorValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ComplianceStatus.class)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the platformType property value. Supported platform types for policies.

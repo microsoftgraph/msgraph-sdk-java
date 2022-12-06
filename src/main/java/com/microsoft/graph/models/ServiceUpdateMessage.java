@@ -96,20 +96,19 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ServiceUpdateMessage currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("actionRequiredByDateTime", (n) -> { currentObject.setActionRequiredByDateTime(n.getOffsetDateTimeValue()); });
-            this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(ServiceAnnouncementAttachment::createFromDiscriminatorValue)); });
-            this.put("attachmentsArchive", (n) -> { currentObject.setAttachmentsArchive(n.getByteArrayValue()); });
-            this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(ServiceUpdateCategory.class)); });
-            this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
-            this.put("isMajorChange", (n) -> { currentObject.setIsMajorChange(n.getBooleanValue()); });
-            this.put("services", (n) -> { currentObject.setServices(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("severity", (n) -> { currentObject.setSeverity(n.getEnumValue(ServiceUpdateSeverity.class)); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("viewPoint", (n) -> { currentObject.setViewPoint(n.getObjectValue(ServiceUpdateMessageViewpoint::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("actionRequiredByDateTime", (n) -> { this.setActionRequiredByDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("attachments", (n) -> { this.setAttachments(n.getCollectionOfObjectValues(ServiceAnnouncementAttachment::createFromDiscriminatorValue)); });
+        deserializerMap.put("attachmentsArchive", (n) -> { this.setAttachmentsArchive(n.getByteArrayValue()); });
+        deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(ServiceUpdateCategory.class)); });
+        deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
+        deserializerMap.put("isMajorChange", (n) -> { this.setIsMajorChange(n.getBooleanValue()); });
+        deserializerMap.put("services", (n) -> { this.setServices(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(ServiceUpdateSeverity.class)); });
+        deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("viewPoint", (n) -> { this.setViewPoint(n.getObjectValue(ServiceUpdateMessageViewpoint::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the hasAttachments property value. Indicates whether the message has any attachment.

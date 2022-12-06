@@ -24,7 +24,6 @@ public class RubricQualitySelectedColumnModel implements AdditionalDataHolder, P
     @javax.annotation.Nullable
     public RubricQualitySelectedColumnModel() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.rubricQualitySelectedColumnModel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,12 +57,11 @@ public class RubricQualitySelectedColumnModel implements AdditionalDataHolder, P
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RubricQualitySelectedColumnModel currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("columnId", (n) -> { currentObject.setColumnId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("qualityId", (n) -> { currentObject.setQualityId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("columnId", (n) -> { this.setColumnId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("qualityId", (n) -> { this.setQualityId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

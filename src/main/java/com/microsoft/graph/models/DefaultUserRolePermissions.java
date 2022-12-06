@@ -28,7 +28,6 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public DefaultUserRolePermissions() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.defaultUserRolePermissions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -78,14 +77,13 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DefaultUserRolePermissions currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("allowedToCreateApps", (n) -> { currentObject.setAllowedToCreateApps(n.getBooleanValue()); });
-            this.put("allowedToCreateSecurityGroups", (n) -> { currentObject.setAllowedToCreateSecurityGroups(n.getBooleanValue()); });
-            this.put("allowedToReadOtherUsers", (n) -> { currentObject.setAllowedToReadOtherUsers(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("permissionGrantPoliciesAssigned", (n) -> { currentObject.setPermissionGrantPoliciesAssigned(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("allowedToCreateApps", (n) -> { this.setAllowedToCreateApps(n.getBooleanValue()); });
+        deserializerMap.put("allowedToCreateSecurityGroups", (n) -> { this.setAllowedToCreateSecurityGroups(n.getBooleanValue()); });
+        deserializerMap.put("allowedToReadOtherUsers", (n) -> { this.setAllowedToReadOtherUsers(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("permissionGrantPoliciesAssigned", (n) -> { this.setPermissionGrantPoliciesAssigned(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

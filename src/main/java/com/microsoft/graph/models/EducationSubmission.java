@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class EducationSubmission extends Entity implements Parsable {
     /** The outcomes property */
     private java.util.List<EducationOutcome> _outcomes;
@@ -45,7 +45,6 @@ public class EducationSubmission extends Entity implements Parsable {
     @javax.annotation.Nullable
     public EducationSubmission() {
         super();
-        this.setOdataType("#microsoft.graph.educationSubmission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,23 +62,22 @@ public class EducationSubmission extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationSubmission currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("outcomes", (n) -> { currentObject.setOutcomes(n.getCollectionOfObjectValues(EducationOutcome::createFromDiscriminatorValue)); });
-            this.put("reassignedBy", (n) -> { currentObject.setReassignedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("reassignedDateTime", (n) -> { currentObject.setReassignedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("recipient", (n) -> { currentObject.setRecipient(n.getObjectValue(EducationSubmissionRecipient::createFromDiscriminatorValue)); });
-            this.put("resources", (n) -> { currentObject.setResources(n.getCollectionOfObjectValues(EducationSubmissionResource::createFromDiscriminatorValue)); });
-            this.put("resourcesFolderUrl", (n) -> { currentObject.setResourcesFolderUrl(n.getStringValue()); });
-            this.put("returnedBy", (n) -> { currentObject.setReturnedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("returnedDateTime", (n) -> { currentObject.setReturnedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(EducationSubmissionStatus.class)); });
-            this.put("submittedBy", (n) -> { currentObject.setSubmittedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("submittedDateTime", (n) -> { currentObject.setSubmittedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("submittedResources", (n) -> { currentObject.setSubmittedResources(n.getCollectionOfObjectValues(EducationSubmissionResource::createFromDiscriminatorValue)); });
-            this.put("unsubmittedBy", (n) -> { currentObject.setUnsubmittedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("unsubmittedDateTime", (n) -> { currentObject.setUnsubmittedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("outcomes", (n) -> { this.setOutcomes(n.getCollectionOfObjectValues(EducationOutcome::createFromDiscriminatorValue)); });
+        deserializerMap.put("reassignedBy", (n) -> { this.setReassignedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("reassignedDateTime", (n) -> { this.setReassignedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("recipient", (n) -> { this.setRecipient(n.getObjectValue(EducationSubmissionRecipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("resources", (n) -> { this.setResources(n.getCollectionOfObjectValues(EducationSubmissionResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourcesFolderUrl", (n) -> { this.setResourcesFolderUrl(n.getStringValue()); });
+        deserializerMap.put("returnedBy", (n) -> { this.setReturnedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("returnedDateTime", (n) -> { this.setReturnedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(EducationSubmissionStatus.class)); });
+        deserializerMap.put("submittedBy", (n) -> { this.setSubmittedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("submittedDateTime", (n) -> { this.setSubmittedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("submittedResources", (n) -> { this.setSubmittedResources(n.getCollectionOfObjectValues(EducationSubmissionResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("unsubmittedBy", (n) -> { this.setUnsubmittedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("unsubmittedDateTime", (n) -> { this.setUnsubmittedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the outcomes property value. The outcomes property

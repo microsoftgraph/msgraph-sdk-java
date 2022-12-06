@@ -30,7 +30,6 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OutlookGeoCoordinates() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.outlookGeoCoordinates");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -80,15 +79,14 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OutlookGeoCoordinates currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("accuracy", (n) -> { currentObject.setAccuracy(n.getDoubleValue()); });
-            this.put("altitude", (n) -> { currentObject.setAltitude(n.getDoubleValue()); });
-            this.put("altitudeAccuracy", (n) -> { currentObject.setAltitudeAccuracy(n.getDoubleValue()); });
-            this.put("latitude", (n) -> { currentObject.setLatitude(n.getDoubleValue()); });
-            this.put("longitude", (n) -> { currentObject.setLongitude(n.getDoubleValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("accuracy", (n) -> { this.setAccuracy(n.getDoubleValue()); });
+        deserializerMap.put("altitude", (n) -> { this.setAltitude(n.getDoubleValue()); });
+        deserializerMap.put("altitudeAccuracy", (n) -> { this.setAltitudeAccuracy(n.getDoubleValue()); });
+        deserializerMap.put("latitude", (n) -> { this.setLatitude(n.getDoubleValue()); });
+        deserializerMap.put("longitude", (n) -> { this.setLongitude(n.getDoubleValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the latitude property value. The latitude of the location.
