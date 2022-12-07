@@ -52,7 +52,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Channel name as it will appear to the user in Microsoft Teams.
+     * Channel name as it will appear to the user in Microsoft Teams. The maximum length is 50 characters.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

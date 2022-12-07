@@ -44,7 +44,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Account Enabled.
-     * true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, not, in).
+     * true if the service principal account is enabled; otherwise, false. If set to false, then no users will be able to sign in to this app, even if they are assigned to it. Supports $filter (eq, ne, not, in).
      */
     @SerializedName(value = "accountEnabled", alternate = {"AccountEnabled"})
     @Expose
@@ -391,7 +391,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Federated Identity Credentials.
-     * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
+     * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      */
     @SerializedName(value = "federatedIdentityCredentials", alternate = {"FederatedIdentityCredentials"})
     @Expose
@@ -421,14 +421,14 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Owned Objects.
-     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
+     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage ownedObjects;
 
     /**
      * The Owners.
-     * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand.
+     * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.  Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage owners;

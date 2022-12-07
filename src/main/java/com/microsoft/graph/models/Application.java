@@ -263,7 +263,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Required Resource Access.
-     * Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le).
+     * Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. For more information, see Limits on requested permissions per app. Not nullable. Supports $filter (eq, not, ge, le).
      */
     @SerializedName(value = "requiredResourceAccess", alternate = {"RequiredResourceAccess"})
     @Expose
@@ -290,7 +290,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Sign In Audience.
-     * Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, not).
+     * Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. The value for this property has implications on other app object properties. As a result, if you change this property, you may need to change other properties first. For more information, see Validation differences for signInAudience.Supports $filter (eq, ne, not).
      */
     @SerializedName(value = "signInAudience", alternate = {"SignInAudience"})
     @Expose
@@ -344,7 +344,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Created On Behalf Of.
-     * Supports $filter (eq when counting empty collections). Read-only.
+     * Supports $filter (/$count eq 0, /$count ne 0). Read-only.
      */
     @SerializedName(value = "createdOnBehalfOf", alternate = {"CreatedOnBehalfOf"})
     @Expose
@@ -353,7 +353,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Extension Properties.
-     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
+     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      */
     @SerializedName(value = "extensionProperties", alternate = {"ExtensionProperties"})
     @Expose
@@ -362,7 +362,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Federated Identity Credentials.
-     * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      */
     @SerializedName(value = "federatedIdentityCredentials", alternate = {"FederatedIdentityCredentials"})
     @Expose
@@ -378,7 +378,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Owners.
-     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage owners;

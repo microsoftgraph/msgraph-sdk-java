@@ -54,7 +54,7 @@ public class AppRoleAssignment extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Principal Id.
-     * The unique identifier (id) for the user, group, or service principal being granted the app role. Required on create.
+     * The unique identifier (id) for the user, security group, or service principal being granted the app role. Security groups with dynamic memberships are supported. Required on create.
      */
     @SerializedName(value = "principalId", alternate = {"PrincipalId"})
     @Expose

@@ -29,6 +29,15 @@ public class CrossTenantAccessPolicy extends PolicyBase implements IJsonBackedOb
 
 
     /**
+     * The Allowed Cloud Endpoints.
+     * 
+     */
+    @SerializedName(value = "allowedCloudEndpoints", alternate = {"AllowedCloudEndpoints"})
+    @Expose
+	@Nullable
+    public java.util.List<String> allowedCloudEndpoints;
+
+    /**
      * The Default.
      * Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
      */
