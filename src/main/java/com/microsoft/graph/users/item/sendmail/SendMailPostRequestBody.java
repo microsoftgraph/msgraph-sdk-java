@@ -49,11 +49,10 @@ public class SendMailPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SendMailPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("message", (n) -> { currentObject.setMessage(n.getObjectValue(Message::createFromDiscriminatorValue)); });
-            this.put("saveToSentItems", (n) -> { currentObject.setSaveToSentItems(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("message", (n) -> { this.setMessage(n.getObjectValue(Message::createFromDiscriminatorValue)); });
+        deserializerMap.put("saveToSentItems", (n) -> { this.setSaveToSentItems(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the message property value. The Message property

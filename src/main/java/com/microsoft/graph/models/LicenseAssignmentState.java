@@ -33,7 +33,6 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public LicenseAssignmentState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.licenseAssignmentState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -83,16 +82,15 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final LicenseAssignmentState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("assignedByGroup", (n) -> { currentObject.setAssignedByGroup(n.getStringValue()); });
-            this.put("disabledPlans", (n) -> { currentObject.setDisabledPlans(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("error", (n) -> { currentObject.setError(n.getStringValue()); });
-            this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("skuId", (n) -> { currentObject.setSkuId(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("assignedByGroup", (n) -> { this.setAssignedByGroup(n.getStringValue()); });
+        deserializerMap.put("disabledPlans", (n) -> { this.setDisabledPlans(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("error", (n) -> { this.setError(n.getStringValue()); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("skuId", (n) -> { this.setSkuId(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property

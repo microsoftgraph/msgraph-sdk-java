@@ -42,7 +42,6 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public AccessReviewScheduleSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessReviewScheduleSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -108,21 +107,20 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReviewScheduleSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(12) {{
-            this.put("applyActions", (n) -> { currentObject.setApplyActions(n.getCollectionOfObjectValues(AccessReviewApplyAction::createFromDiscriminatorValue)); });
-            this.put("autoApplyDecisionsEnabled", (n) -> { currentObject.setAutoApplyDecisionsEnabled(n.getBooleanValue()); });
-            this.put("decisionHistoriesForReviewersEnabled", (n) -> { currentObject.setDecisionHistoriesForReviewersEnabled(n.getBooleanValue()); });
-            this.put("defaultDecision", (n) -> { currentObject.setDefaultDecision(n.getStringValue()); });
-            this.put("defaultDecisionEnabled", (n) -> { currentObject.setDefaultDecisionEnabled(n.getBooleanValue()); });
-            this.put("instanceDurationInDays", (n) -> { currentObject.setInstanceDurationInDays(n.getIntegerValue()); });
-            this.put("justificationRequiredOnApproval", (n) -> { currentObject.setJustificationRequiredOnApproval(n.getBooleanValue()); });
-            this.put("mailNotificationsEnabled", (n) -> { currentObject.setMailNotificationsEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recommendationsEnabled", (n) -> { currentObject.setRecommendationsEnabled(n.getBooleanValue()); });
-            this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
-            this.put("reminderNotificationsEnabled", (n) -> { currentObject.setReminderNotificationsEnabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(12);
+        deserializerMap.put("applyActions", (n) -> { this.setApplyActions(n.getCollectionOfObjectValues(AccessReviewApplyAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("autoApplyDecisionsEnabled", (n) -> { this.setAutoApplyDecisionsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("decisionHistoriesForReviewersEnabled", (n) -> { this.setDecisionHistoriesForReviewersEnabled(n.getBooleanValue()); });
+        deserializerMap.put("defaultDecision", (n) -> { this.setDefaultDecision(n.getStringValue()); });
+        deserializerMap.put("defaultDecisionEnabled", (n) -> { this.setDefaultDecisionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("instanceDurationInDays", (n) -> { this.setInstanceDurationInDays(n.getIntegerValue()); });
+        deserializerMap.put("justificationRequiredOnApproval", (n) -> { this.setJustificationRequiredOnApproval(n.getBooleanValue()); });
+        deserializerMap.put("mailNotificationsEnabled", (n) -> { this.setMailNotificationsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recommendationsEnabled", (n) -> { this.setRecommendationsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("recurrence", (n) -> { this.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
+        deserializerMap.put("reminderNotificationsEnabled", (n) -> { this.setReminderNotificationsEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the instanceDurationInDays property value. Duration of an access review instance in days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.

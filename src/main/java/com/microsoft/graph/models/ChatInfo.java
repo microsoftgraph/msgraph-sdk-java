@@ -26,7 +26,6 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ChatInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.chatInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,13 +51,12 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ChatInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("messageId", (n) -> { currentObject.setMessageId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("replyChainMessageId", (n) -> { currentObject.setReplyChainMessageId(n.getStringValue()); });
-            this.put("threadId", (n) -> { currentObject.setThreadId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("messageId", (n) -> { this.setMessageId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("replyChainMessageId", (n) -> { this.setReplyChainMessageId(n.getStringValue()); });
+        deserializerMap.put("threadId", (n) -> { this.setThreadId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the messageId property value. The unique identifier of a message in a Microsoft Teams channel.

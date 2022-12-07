@@ -24,7 +24,6 @@ public class Image implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Image() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.image");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class Image implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Image currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("height", (n) -> { currentObject.setHeight(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("width", (n) -> { currentObject.setWidth(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("height", (n) -> { this.setHeight(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("width", (n) -> { this.setWidth(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the height property value. Optional. Height of the image, in pixels. Read-only.

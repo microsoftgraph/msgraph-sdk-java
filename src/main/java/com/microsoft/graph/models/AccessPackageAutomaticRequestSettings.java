@@ -27,7 +27,6 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     @javax.annotation.Nullable
     public AccessPackageAutomaticRequestSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessPackageAutomaticRequestSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,13 +52,12 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessPackageAutomaticRequestSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("gracePeriodBeforeAccessRemoval", (n) -> { currentObject.setGracePeriodBeforeAccessRemoval(n.getPeriodValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("removeAccessWhenTargetLeavesAllowedTargets", (n) -> { currentObject.setRemoveAccessWhenTargetLeavesAllowedTargets(n.getBooleanValue()); });
-            this.put("requestAccessForAllowedTargets", (n) -> { currentObject.setRequestAccessForAllowedTargets(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("gracePeriodBeforeAccessRemoval", (n) -> { this.setGracePeriodBeforeAccessRemoval(n.getPeriodValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("removeAccessWhenTargetLeavesAllowedTargets", (n) -> { this.setRemoveAccessWhenTargetLeavesAllowedTargets(n.getBooleanValue()); });
+        deserializerMap.put("requestAccessForAllowedTargets", (n) -> { this.setRequestAccessForAllowedTargets(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the gracePeriodBeforeAccessRemoval property value. The gracePeriodBeforeAccessRemoval property

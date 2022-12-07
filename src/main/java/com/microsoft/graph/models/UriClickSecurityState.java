@@ -33,7 +33,6 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public UriClickSecurityState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.uriClickSecurityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,16 +74,15 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UriClickSecurityState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("clickAction", (n) -> { currentObject.setClickAction(n.getStringValue()); });
-            this.put("clickDateTime", (n) -> { currentObject.setClickDateTime(n.getOffsetDateTimeValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
-            this.put("uriDomain", (n) -> { currentObject.setUriDomain(n.getStringValue()); });
-            this.put("verdict", (n) -> { currentObject.setVerdict(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("clickAction", (n) -> { this.setClickAction(n.getStringValue()); });
+        deserializerMap.put("clickDateTime", (n) -> { this.setClickDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sourceId", (n) -> { this.setSourceId(n.getStringValue()); });
+        deserializerMap.put("uriDomain", (n) -> { this.setUriDomain(n.getStringValue()); });
+        deserializerMap.put("verdict", (n) -> { this.setVerdict(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. The id property

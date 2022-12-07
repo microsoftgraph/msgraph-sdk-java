@@ -28,7 +28,6 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ControlScore() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.controlScore");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -78,14 +77,13 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ControlScore currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("controlCategory", (n) -> { currentObject.setControlCategory(n.getStringValue()); });
-            this.put("controlName", (n) -> { currentObject.setControlName(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("score", (n) -> { currentObject.setScore(n.getDoubleValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("controlCategory", (n) -> { this.setControlCategory(n.getStringValue()); });
+        deserializerMap.put("controlName", (n) -> { this.setControlName(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("score", (n) -> { this.setScore(n.getDoubleValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

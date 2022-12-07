@@ -26,7 +26,6 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public CalculatedColumn() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.calculatedColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,13 +51,12 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CalculatedColumn currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("format", (n) -> { currentObject.setFormat(n.getStringValue()); });
-            this.put("formula", (n) -> { currentObject.setFormula(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("outputType", (n) -> { currentObject.setOutputType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("format", (n) -> { this.setFormat(n.getStringValue()); });
+        deserializerMap.put("formula", (n) -> { this.setFormula(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("outputType", (n) -> { this.setOutputType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the format property value. For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.

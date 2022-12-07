@@ -37,7 +37,6 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AuditActor() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.auditActor");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -87,18 +86,17 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuditActor currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(9) {{
-            this.put("applicationDisplayName", (n) -> { currentObject.setApplicationDisplayName(n.getStringValue()); });
-            this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
-            this.put("auditActorType", (n) -> { currentObject.setAuditActorType(n.getStringValue()); });
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("servicePrincipalName", (n) -> { currentObject.setServicePrincipalName(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userPermissions", (n) -> { currentObject.setUserPermissions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("applicationDisplayName", (n) -> { this.setApplicationDisplayName(n.getStringValue()); });
+        deserializerMap.put("applicationId", (n) -> { this.setApplicationId(n.getStringValue()); });
+        deserializerMap.put("auditActorType", (n) -> { this.setAuditActorType(n.getStringValue()); });
+        deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("servicePrincipalName", (n) -> { this.setServicePrincipalName(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        deserializerMap.put("userPermissions", (n) -> { this.setUserPermissions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the ipAddress property value. IPAddress.

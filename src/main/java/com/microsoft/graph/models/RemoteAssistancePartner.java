@@ -25,7 +25,6 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
     @javax.annotation.Nullable
     public RemoteAssistancePartner() {
         super();
-        this.setOdataType("#microsoft.graph.remoteAssistancePartner");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,13 +50,12 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RemoteAssistancePartner currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastConnectionDateTime", (n) -> { currentObject.setLastConnectionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("onboardingStatus", (n) -> { currentObject.setOnboardingStatus(n.getEnumValue(RemoteAssistanceOnboardingStatus.class)); });
-            this.put("onboardingUrl", (n) -> { currentObject.setOnboardingUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastConnectionDateTime", (n) -> { this.setLastConnectionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("onboardingStatus", (n) -> { this.setOnboardingStatus(n.getEnumValue(RemoteAssistanceOnboardingStatus.class)); });
+        deserializerMap.put("onboardingUrl", (n) -> { this.setOnboardingUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastConnectionDateTime property value. Timestamp of the last request sent to Intune by the TEM partner.

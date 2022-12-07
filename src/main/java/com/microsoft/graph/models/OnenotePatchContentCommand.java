@@ -28,7 +28,6 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public OnenotePatchContentCommand() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.onenotePatchContentCommand");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,14 +69,13 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OnenotePatchContentCommand currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(OnenotePatchActionType.class)); });
-            this.put("content", (n) -> { currentObject.setContent(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("position", (n) -> { currentObject.setPosition(n.getEnumValue(OnenotePatchInsertPosition.class)); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(OnenotePatchActionType.class)); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("position", (n) -> { this.setPosition(n.getEnumValue(OnenotePatchInsertPosition.class)); });
+        deserializerMap.put("target", (n) -> { this.setTarget(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

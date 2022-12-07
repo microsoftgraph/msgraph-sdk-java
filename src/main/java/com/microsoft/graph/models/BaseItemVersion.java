@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class BaseItemVersion extends Entity implements Parsable {
     /** Identity of the user which last modified the version. Read-only. */
     private IdentitySet _lastModifiedBy;
@@ -26,7 +26,6 @@ public class BaseItemVersion extends Entity implements Parsable {
     @javax.annotation.Nullable
     public BaseItemVersion() {
         super();
-        this.setOdataType("#microsoft.graph.baseItemVersion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,12 +52,11 @@ public class BaseItemVersion extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BaseItemVersion currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("publication", (n) -> { currentObject.setPublication(n.getObjectValue(PublicationFacet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("publication", (n) -> { this.setPublication(n.getObjectValue(PublicationFacet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user which last modified the version. Read-only.

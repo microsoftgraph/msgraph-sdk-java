@@ -25,7 +25,6 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public BookingWorkTimeSlot() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bookingWorkTimeSlot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,12 +58,11 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BookingWorkTimeSlot currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("endTime", (n) -> { currentObject.setEndTime(n.getLocalTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("startTime", (n) -> { currentObject.setStartTime(n.getLocalTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("endTime", (n) -> { this.setEndTime(n.getLocalTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("startTime", (n) -> { this.setStartTime(n.getLocalTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

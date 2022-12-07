@@ -29,7 +29,6 @@ public class Shared implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Shared() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.shared");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,14 +54,13 @@ public class Shared implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Shared currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("owner", (n) -> { currentObject.setOwner(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
-            this.put("sharedBy", (n) -> { currentObject.setSharedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("sharedDateTime", (n) -> { currentObject.setSharedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("owner", (n) -> { this.setOwner(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getStringValue()); });
+        deserializerMap.put("sharedBy", (n) -> { this.setSharedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharedDateTime", (n) -> { this.setSharedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

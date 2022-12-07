@@ -20,7 +20,6 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
     @javax.annotation.Nullable
     public WindowsInformationProtectionNetworkLearningSummary() {
         super();
-        this.setOdataType("#microsoft.graph.windowsInformationProtectionNetworkLearningSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,11 +45,10 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsInformationProtectionNetworkLearningSummary currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getIntegerValue()); });
-            this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the url property value. Website url

@@ -28,7 +28,6 @@ public class ExpirationPattern implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ExpirationPattern() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.expirationPattern");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,13 +69,12 @@ public class ExpirationPattern implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExpirationPattern currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("duration", (n) -> { currentObject.setDuration(n.getPeriodValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(ExpirationPatternType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodValue()); });
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(ExpirationPatternType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

@@ -45,11 +45,10 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ChannelMembersNotificationRecipient currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("channelId", (n) -> { currentObject.setChannelId(n.getStringValue()); });
-            this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("channelId", (n) -> { this.setChannelId(n.getStringValue()); });
+        deserializerMap.put("teamId", (n) -> { this.setTeamId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the teamId property value. The unique identifier for the team under which the channel resides.

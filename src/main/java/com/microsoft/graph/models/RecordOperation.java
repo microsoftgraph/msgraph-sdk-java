@@ -19,7 +19,6 @@ public class RecordOperation extends CommsOperation implements Parsable {
     @javax.annotation.Nullable
     public RecordOperation() {
         super();
-        this.setOdataType("#microsoft.graph.recordOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,11 +36,10 @@ public class RecordOperation extends CommsOperation implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RecordOperation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("recordingAccessToken", (n) -> { currentObject.setRecordingAccessToken(n.getStringValue()); });
-            this.put("recordingLocation", (n) -> { currentObject.setRecordingLocation(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("recordingAccessToken", (n) -> { this.setRecordingAccessToken(n.getStringValue()); });
+        deserializerMap.put("recordingLocation", (n) -> { this.setRecordingLocation(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the recordingAccessToken property value. The access token required to retrieve the recording.

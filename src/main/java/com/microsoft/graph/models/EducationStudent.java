@@ -33,7 +33,6 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public EducationStudent() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.educationStudent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,16 +74,15 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationStudent currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("birthDate", (n) -> { currentObject.setBirthDate(n.getLocalDateValue()); });
-            this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
-            this.put("gender", (n) -> { currentObject.setGender(n.getEnumValue(EducationGender.class)); });
-            this.put("grade", (n) -> { currentObject.setGrade(n.getStringValue()); });
-            this.put("graduationYear", (n) -> { currentObject.setGraduationYear(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("studentNumber", (n) -> { currentObject.setStudentNumber(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("birthDate", (n) -> { this.setBirthDate(n.getLocalDateValue()); });
+        deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
+        deserializerMap.put("gender", (n) -> { this.setGender(n.getEnumValue(EducationGender.class)); });
+        deserializerMap.put("grade", (n) -> { this.setGrade(n.getStringValue()); });
+        deserializerMap.put("graduationYear", (n) -> { this.setGraduationYear(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("studentNumber", (n) -> { this.setStudentNumber(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the gender property value. The possible values are: female, male, other, unknownFutureValue.

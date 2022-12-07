@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookCommentReply extends Entity implements Parsable {
     /** The content of a comment reply. */
     private String _content;
@@ -20,7 +20,6 @@ public class WorkbookCommentReply extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookCommentReply() {
         super();
-        this.setOdataType("#microsoft.graph.workbookCommentReply");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,11 +53,10 @@ public class WorkbookCommentReply extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookCommentReply currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getStringValue()); });
-            this.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
+        deserializerMap.put("contentType", (n) -> { this.setContentType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

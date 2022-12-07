@@ -37,7 +37,6 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     @javax.annotation.Nullable
     public DeviceManagementExportJob() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementExportJob");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,19 +62,18 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementExportJob currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("filter", (n) -> { currentObject.setFilter(n.getStringValue()); });
-            this.put("format", (n) -> { currentObject.setFormat(n.getEnumValue(DeviceManagementReportFileFormat.class)); });
-            this.put("localizationType", (n) -> { currentObject.setLocalizationType(n.getEnumValue(DeviceManagementExportJobLocalizationType.class)); });
-            this.put("reportName", (n) -> { currentObject.setReportName(n.getStringValue()); });
-            this.put("requestDateTime", (n) -> { currentObject.setRequestDateTime(n.getOffsetDateTimeValue()); });
-            this.put("select", (n) -> { currentObject.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("snapshotId", (n) -> { currentObject.setSnapshotId(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DeviceManagementReportStatus.class)); });
-            this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("filter", (n) -> { this.setFilter(n.getStringValue()); });
+        deserializerMap.put("format", (n) -> { this.setFormat(n.getEnumValue(DeviceManagementReportFileFormat.class)); });
+        deserializerMap.put("localizationType", (n) -> { this.setLocalizationType(n.getEnumValue(DeviceManagementExportJobLocalizationType.class)); });
+        deserializerMap.put("reportName", (n) -> { this.setReportName(n.getStringValue()); });
+        deserializerMap.put("requestDateTime", (n) -> { this.setRequestDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("select", (n) -> { this.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("snapshotId", (n) -> { this.setSnapshotId(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DeviceManagementReportStatus.class)); });
+        deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the filter property value. Filters applied on the report

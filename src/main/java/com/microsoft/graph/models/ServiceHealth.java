@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of agreement entities. */
 public class ServiceHealth extends Entity implements Parsable {
     /** A collection of issues that happened on the service, with detailed information for each issue. */
     private java.util.List<ServiceHealthIssue> _issues;
@@ -22,7 +22,6 @@ public class ServiceHealth extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ServiceHealth() {
         super();
-        this.setOdataType("#microsoft.graph.serviceHealth");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -40,12 +39,11 @@ public class ServiceHealth extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ServiceHealth currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("issues", (n) -> { currentObject.setIssues(n.getCollectionOfObjectValues(ServiceHealthIssue::createFromDiscriminatorValue)); });
-            this.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ServiceHealthStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("issues", (n) -> { this.setIssues(n.getCollectionOfObjectValues(ServiceHealthIssue::createFromDiscriminatorValue)); });
+        deserializerMap.put("service", (n) -> { this.setService(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ServiceHealthStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the issues property value. A collection of issues that happened on the service, with detailed information for each issue.

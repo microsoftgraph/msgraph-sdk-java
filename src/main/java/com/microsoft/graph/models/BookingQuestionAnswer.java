@@ -34,7 +34,6 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public BookingQuestionAnswer() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bookingQuestionAnswer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -84,17 +83,16 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BookingQuestionAnswer currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("answer", (n) -> { currentObject.setAnswer(n.getStringValue()); });
-            this.put("answerInputType", (n) -> { currentObject.setAnswerInputType(n.getEnumValue(AnswerInputType.class)); });
-            this.put("answerOptions", (n) -> { currentObject.setAnswerOptions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isRequired", (n) -> { currentObject.setIsRequired(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("question", (n) -> { currentObject.setQuestion(n.getStringValue()); });
-            this.put("questionId", (n) -> { currentObject.setQuestionId(n.getStringValue()); });
-            this.put("selectedOptions", (n) -> { currentObject.setSelectedOptions(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("answer", (n) -> { this.setAnswer(n.getStringValue()); });
+        deserializerMap.put("answerInputType", (n) -> { this.setAnswerInputType(n.getEnumValue(AnswerInputType.class)); });
+        deserializerMap.put("answerOptions", (n) -> { this.setAnswerOptions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isRequired", (n) -> { this.setIsRequired(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("question", (n) -> { this.setQuestion(n.getStringValue()); });
+        deserializerMap.put("questionId", (n) -> { this.setQuestionId(n.getStringValue()); });
+        deserializerMap.put("selectedOptions", (n) -> { this.setSelectedOptions(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isRequired property value. Indicates whether it is mandatory to answer the custom question.

@@ -1,8 +1,8 @@
 package com.microsoft.graph.drive;
 
 import com.microsoft.graph.drive.bundles.BundlesRequestBuilder;
+import com.microsoft.graph.drive.bundles.item.DriveItemItemRequestBuilder;
 import com.microsoft.graph.drive.following.FollowingRequestBuilder;
-import com.microsoft.graph.drive.items.item.DriveItemItemRequestBuilder;
 import com.microsoft.graph.drive.items.ItemsRequestBuilder;
 import com.microsoft.graph.drive.list.ListRequestBuilder;
 import com.microsoft.graph.drive.recent.RecentRequestBuilder;
@@ -119,9 +119,8 @@ public class DriveRequestBuilder {
      */
     @javax.annotation.Nonnull
     public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
@@ -152,9 +151,8 @@ public class DriveRequestBuilder {
     @javax.annotation.Nonnull
     public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final Drive body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.PATCH;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
@@ -187,15 +185,14 @@ public class DriveRequestBuilder {
     public java.util.concurrent.CompletableFuture<Drive> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, Drive::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<Drive>() {{
-                this.completeExceptionally(ex);
-            }};
+            final java.util.concurrent.CompletableFuture<Drive> executionException = new java.util.concurrent.CompletableFuture<Drive>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -207,15 +204,14 @@ public class DriveRequestBuilder {
     public java.util.concurrent.CompletableFuture<Drive> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, Drive::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<Drive>() {{
-                this.completeExceptionally(ex);
-            }};
+            final java.util.concurrent.CompletableFuture<Drive> executionException = new java.util.concurrent.CompletableFuture<Drive>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -239,15 +235,14 @@ public class DriveRequestBuilder {
     public java.util.concurrent.CompletableFuture<Drive> patch(@javax.annotation.Nonnull final Drive body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, Drive::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<Drive>() {{
-                this.completeExceptionally(ex);
-            }};
+            final java.util.concurrent.CompletableFuture<Drive> executionException = new java.util.concurrent.CompletableFuture<Drive>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -261,15 +256,14 @@ public class DriveRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
             return this.requestAdapter.sendAsync(requestInfo, Drive::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<Drive>() {{
-                this.completeExceptionally(ex);
-            }};
+            final java.util.concurrent.CompletableFuture<Drive> executionException = new java.util.concurrent.CompletableFuture<Drive>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**

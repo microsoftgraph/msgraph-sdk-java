@@ -30,7 +30,6 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MediaStream() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.mediaStream");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,15 +63,14 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MediaStream currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("direction", (n) -> { currentObject.setDirection(n.getEnumValue(MediaDirection.class)); });
-            this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
-            this.put("mediaType", (n) -> { currentObject.setMediaType(n.getEnumValue(Modality.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("serverMuted", (n) -> { currentObject.setServerMuted(n.getBooleanValue()); });
-            this.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("direction", (n) -> { this.setDirection(n.getEnumValue(MediaDirection.class)); });
+        deserializerMap.put("label", (n) -> { this.setLabel(n.getStringValue()); });
+        deserializerMap.put("mediaType", (n) -> { this.setMediaType(n.getEnumValue(Modality.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("serverMuted", (n) -> { this.setServerMuted(n.getBooleanValue()); });
+        deserializerMap.put("sourceId", (n) -> { this.setSourceId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the label property value. The media stream label.

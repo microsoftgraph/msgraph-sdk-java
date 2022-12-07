@@ -24,7 +24,6 @@ public class MediaContentRatingAustralia implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public MediaContentRatingAustralia() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.mediaContentRatingAustralia");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class MediaContentRatingAustralia implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MediaContentRatingAustralia currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("movieRating", (n) -> { currentObject.setMovieRating(n.getEnumValue(RatingAustraliaMoviesType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("tvRating", (n) -> { currentObject.setTvRating(n.getEnumValue(RatingAustraliaTelevisionType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("movieRating", (n) -> { this.setMovieRating(n.getEnumValue(RatingAustraliaMoviesType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("tvRating", (n) -> { this.setTvRating(n.getEnumValue(RatingAustraliaTelevisionType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the movieRating property value. Movies rating labels in Australia

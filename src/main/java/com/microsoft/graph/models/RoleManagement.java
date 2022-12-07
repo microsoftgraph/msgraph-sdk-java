@@ -24,7 +24,6 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RoleManagement() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.roleManagement");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,12 +65,11 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RoleManagement currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("directory", (n) -> { currentObject.setDirectory(n.getObjectValue(RbacApplication::createFromDiscriminatorValue)); });
-            this.put("entitlementManagement", (n) -> { currentObject.setEntitlementManagement(n.getObjectValue(RbacApplication::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("directory", (n) -> { this.setDirectory(n.getObjectValue(RbacApplication::createFromDiscriminatorValue)); });
+        deserializerMap.put("entitlementManagement", (n) -> { this.setEntitlementManagement(n.getObjectValue(RbacApplication::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

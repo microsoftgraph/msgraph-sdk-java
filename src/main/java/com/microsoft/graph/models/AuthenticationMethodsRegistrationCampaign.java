@@ -28,7 +28,6 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     @javax.annotation.Nullable
     public AuthenticationMethodsRegistrationCampaign() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.authenticationMethodsRegistrationCampaign");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,14 +61,13 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuthenticationMethodsRegistrationCampaign currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("excludeTargets", (n) -> { currentObject.setExcludeTargets(n.getCollectionOfObjectValues(ExcludeTarget::createFromDiscriminatorValue)); });
-            this.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodsRegistrationCampaignIncludeTarget::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("snoozeDurationInDays", (n) -> { currentObject.setSnoozeDurationInDays(n.getIntegerValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(AdvancedConfigState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("excludeTargets", (n) -> { this.setExcludeTargets(n.getCollectionOfObjectValues(ExcludeTarget::createFromDiscriminatorValue)); });
+        deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodsRegistrationCampaignIncludeTarget::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("snoozeDurationInDays", (n) -> { this.setSnoozeDurationInDays(n.getIntegerValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AdvancedConfigState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the includeTargets property value. Users and groups of users that are prompted to set up the authentication method.

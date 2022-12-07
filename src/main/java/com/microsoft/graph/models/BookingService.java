@@ -59,7 +59,6 @@ public class BookingService extends Entity implements Parsable {
     @javax.annotation.Nullable
     public BookingService() {
         super();
-        this.setOdataType("#microsoft.graph.bookingService");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -149,30 +148,29 @@ public class BookingService extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BookingService currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getStringValue()); });
-            this.put("customQuestions", (n) -> { currentObject.setCustomQuestions(n.getCollectionOfObjectValues(BookingQuestionAssignment::createFromDiscriminatorValue)); });
-            this.put("defaultDuration", (n) -> { currentObject.setDefaultDuration(n.getPeriodValue()); });
-            this.put("defaultLocation", (n) -> { currentObject.setDefaultLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
-            this.put("defaultPrice", (n) -> { currentObject.setDefaultPrice(n.getDoubleValue()); });
-            this.put("defaultPriceType", (n) -> { currentObject.setDefaultPriceType(n.getEnumValue(BookingPriceType.class)); });
-            this.put("defaultReminders", (n) -> { currentObject.setDefaultReminders(n.getCollectionOfObjectValues(BookingReminder::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isAnonymousJoinEnabled", (n) -> { currentObject.setIsAnonymousJoinEnabled(n.getBooleanValue()); });
-            this.put("isHiddenFromCustomers", (n) -> { currentObject.setIsHiddenFromCustomers(n.getBooleanValue()); });
-            this.put("isLocationOnline", (n) -> { currentObject.setIsLocationOnline(n.getBooleanValue()); });
-            this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
-            this.put("maximumAttendeesCount", (n) -> { currentObject.setMaximumAttendeesCount(n.getIntegerValue()); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
-            this.put("postBuffer", (n) -> { currentObject.setPostBuffer(n.getPeriodValue()); });
-            this.put("preBuffer", (n) -> { currentObject.setPreBuffer(n.getPeriodValue()); });
-            this.put("schedulingPolicy", (n) -> { currentObject.setSchedulingPolicy(n.getObjectValue(BookingSchedulingPolicy::createFromDiscriminatorValue)); });
-            this.put("smsNotificationsEnabled", (n) -> { currentObject.setSmsNotificationsEnabled(n.getBooleanValue()); });
-            this.put("staffMemberIds", (n) -> { currentObject.setStaffMemberIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("additionalInformation", (n) -> { this.setAdditionalInformation(n.getStringValue()); });
+        deserializerMap.put("customQuestions", (n) -> { this.setCustomQuestions(n.getCollectionOfObjectValues(BookingQuestionAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultDuration", (n) -> { this.setDefaultDuration(n.getPeriodValue()); });
+        deserializerMap.put("defaultLocation", (n) -> { this.setDefaultLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultPrice", (n) -> { this.setDefaultPrice(n.getDoubleValue()); });
+        deserializerMap.put("defaultPriceType", (n) -> { this.setDefaultPriceType(n.getEnumValue(BookingPriceType.class)); });
+        deserializerMap.put("defaultReminders", (n) -> { this.setDefaultReminders(n.getCollectionOfObjectValues(BookingReminder::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isAnonymousJoinEnabled", (n) -> { this.setIsAnonymousJoinEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isHiddenFromCustomers", (n) -> { this.setIsHiddenFromCustomers(n.getBooleanValue()); });
+        deserializerMap.put("isLocationOnline", (n) -> { this.setIsLocationOnline(n.getBooleanValue()); });
+        deserializerMap.put("languageTag", (n) -> { this.setLanguageTag(n.getStringValue()); });
+        deserializerMap.put("maximumAttendeesCount", (n) -> { this.setMaximumAttendeesCount(n.getIntegerValue()); });
+        deserializerMap.put("notes", (n) -> { this.setNotes(n.getStringValue()); });
+        deserializerMap.put("postBuffer", (n) -> { this.setPostBuffer(n.getPeriodValue()); });
+        deserializerMap.put("preBuffer", (n) -> { this.setPreBuffer(n.getPeriodValue()); });
+        deserializerMap.put("schedulingPolicy", (n) -> { this.setSchedulingPolicy(n.getObjectValue(BookingSchedulingPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("smsNotificationsEnabled", (n) -> { this.setSmsNotificationsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("staffMemberIds", (n) -> { this.setStaffMemberIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isAnonymousJoinEnabled property value. The isAnonymousJoinEnabled property

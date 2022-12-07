@@ -26,7 +26,6 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ChoiceColumn() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.choiceColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -76,13 +75,12 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ChoiceColumn currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("allowTextEntry", (n) -> { currentObject.setAllowTextEntry(n.getBooleanValue()); });
-            this.put("choices", (n) -> { currentObject.setChoices(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("displayAs", (n) -> { currentObject.setDisplayAs(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("allowTextEntry", (n) -> { this.setAllowTextEntry(n.getBooleanValue()); });
+        deserializerMap.put("choices", (n) -> { this.setChoices(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("displayAs", (n) -> { this.setDisplayAs(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

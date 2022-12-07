@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class PrintServiceEndpoint extends Entity implements Parsable {
     /** A human-readable display name for the endpoint. */
     private String _displayName;
@@ -20,7 +20,6 @@ public class PrintServiceEndpoint extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PrintServiceEndpoint() {
         super();
-        this.setOdataType("#microsoft.graph.printServiceEndpoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,11 +45,10 @@ public class PrintServiceEndpoint extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrintServiceEndpoint currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("uri", (n) -> { currentObject.setUri(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("uri", (n) -> { this.setUri(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the uri property value. The URI that can be used to access the service.

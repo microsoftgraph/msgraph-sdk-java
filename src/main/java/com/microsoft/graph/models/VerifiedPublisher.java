@@ -27,7 +27,6 @@ public class VerifiedPublisher implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public VerifiedPublisher() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.verifiedPublisher");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,13 +68,12 @@ public class VerifiedPublisher implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final VerifiedPublisher currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("addedDateTime", (n) -> { currentObject.setAddedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("verifiedPublisherId", (n) -> { currentObject.setVerifiedPublisherId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("addedDateTime", (n) -> { this.setAddedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("verifiedPublisherId", (n) -> { this.setVerifiedPublisherId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

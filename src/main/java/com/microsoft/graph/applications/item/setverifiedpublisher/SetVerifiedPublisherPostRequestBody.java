@@ -46,10 +46,9 @@ public class SetVerifiedPublisherPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SetVerifiedPublisherPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("verifiedPublisherId", (n) -> { currentObject.setVerifiedPublisherId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("verifiedPublisherId", (n) -> { this.setVerifiedPublisherId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the verifiedPublisherId property value. The verifiedPublisherId property

@@ -30,7 +30,6 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public BucketAggregationDefinition() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bucketAggregationDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,15 +55,14 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BucketAggregationDefinition currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("isDescending", (n) -> { currentObject.setIsDescending(n.getBooleanValue()); });
-            this.put("minimumCount", (n) -> { currentObject.setMinimumCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("prefixFilter", (n) -> { currentObject.setPrefixFilter(n.getStringValue()); });
-            this.put("ranges", (n) -> { currentObject.setRanges(n.getCollectionOfObjectValues(BucketAggregationRange::createFromDiscriminatorValue)); });
-            this.put("sortBy", (n) -> { currentObject.setSortBy(n.getEnumValue(BucketAggregationSortProperty.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("isDescending", (n) -> { this.setIsDescending(n.getBooleanValue()); });
+        deserializerMap.put("minimumCount", (n) -> { this.setMinimumCount(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("prefixFilter", (n) -> { this.setPrefixFilter(n.getStringValue()); });
+        deserializerMap.put("ranges", (n) -> { this.setRanges(n.getCollectionOfObjectValues(BucketAggregationRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("sortBy", (n) -> { this.setSortBy(n.getEnumValue(BucketAggregationSortProperty.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isDescending property value. True to specify the sort order as descending. The default is false, with the sort order as ascending. Optional.

@@ -22,7 +22,6 @@ public class AuthoredNote extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AuthoredNote() {
         super();
-        this.setOdataType("#microsoft.graph.authoredNote");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,12 +63,11 @@ public class AuthoredNote extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuthoredNote currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("author", (n) -> { currentObject.setAuthor(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("content", (n) -> { currentObject.setContent(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("author", (n) -> { this.setAuthor(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

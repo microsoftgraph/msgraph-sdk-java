@@ -40,7 +40,6 @@ public class Video implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Video() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.video");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -114,20 +113,19 @@ public class Video implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Video currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(11) {{
-            this.put("audioBitsPerSample", (n) -> { currentObject.setAudioBitsPerSample(n.getIntegerValue()); });
-            this.put("audioChannels", (n) -> { currentObject.setAudioChannels(n.getIntegerValue()); });
-            this.put("audioFormat", (n) -> { currentObject.setAudioFormat(n.getStringValue()); });
-            this.put("audioSamplesPerSecond", (n) -> { currentObject.setAudioSamplesPerSecond(n.getIntegerValue()); });
-            this.put("bitrate", (n) -> { currentObject.setBitrate(n.getIntegerValue()); });
-            this.put("duration", (n) -> { currentObject.setDuration(n.getLongValue()); });
-            this.put("fourCC", (n) -> { currentObject.setFourCC(n.getStringValue()); });
-            this.put("frameRate", (n) -> { currentObject.setFrameRate(n.getDoubleValue()); });
-            this.put("height", (n) -> { currentObject.setHeight(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("width", (n) -> { currentObject.setWidth(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(11);
+        deserializerMap.put("audioBitsPerSample", (n) -> { this.setAudioBitsPerSample(n.getIntegerValue()); });
+        deserializerMap.put("audioChannels", (n) -> { this.setAudioChannels(n.getIntegerValue()); });
+        deserializerMap.put("audioFormat", (n) -> { this.setAudioFormat(n.getStringValue()); });
+        deserializerMap.put("audioSamplesPerSecond", (n) -> { this.setAudioSamplesPerSecond(n.getIntegerValue()); });
+        deserializerMap.put("bitrate", (n) -> { this.setBitrate(n.getIntegerValue()); });
+        deserializerMap.put("duration", (n) -> { this.setDuration(n.getLongValue()); });
+        deserializerMap.put("fourCC", (n) -> { this.setFourCC(n.getStringValue()); });
+        deserializerMap.put("frameRate", (n) -> { this.setFrameRate(n.getDoubleValue()); });
+        deserializerMap.put("height", (n) -> { this.setHeight(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("width", (n) -> { this.setWidth(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fourCC property value. 'Four character code' name of the video format.

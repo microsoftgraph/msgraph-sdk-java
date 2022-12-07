@@ -67,22 +67,21 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Win32LobApp currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("applicableArchitectures", (n) -> { currentObject.setApplicableArchitectures(n.getEnumValue(WindowsArchitecture.class)); });
-            this.put("installCommandLine", (n) -> { currentObject.setInstallCommandLine(n.getStringValue()); });
-            this.put("installExperience", (n) -> { currentObject.setInstallExperience(n.getObjectValue(Win32LobAppInstallExperience::createFromDiscriminatorValue)); });
-            this.put("minimumCpuSpeedInMHz", (n) -> { currentObject.setMinimumCpuSpeedInMHz(n.getIntegerValue()); });
-            this.put("minimumFreeDiskSpaceInMB", (n) -> { currentObject.setMinimumFreeDiskSpaceInMB(n.getIntegerValue()); });
-            this.put("minimumMemoryInMB", (n) -> { currentObject.setMinimumMemoryInMB(n.getIntegerValue()); });
-            this.put("minimumNumberOfProcessors", (n) -> { currentObject.setMinimumNumberOfProcessors(n.getIntegerValue()); });
-            this.put("minimumSupportedWindowsRelease", (n) -> { currentObject.setMinimumSupportedWindowsRelease(n.getStringValue()); });
-            this.put("msiInformation", (n) -> { currentObject.setMsiInformation(n.getObjectValue(Win32LobAppMsiInformation::createFromDiscriminatorValue)); });
-            this.put("returnCodes", (n) -> { currentObject.setReturnCodes(n.getCollectionOfObjectValues(Win32LobAppReturnCode::createFromDiscriminatorValue)); });
-            this.put("rules", (n) -> { currentObject.setRules(n.getCollectionOfObjectValues(Win32LobAppRule::createFromDiscriminatorValue)); });
-            this.put("setupFilePath", (n) -> { currentObject.setSetupFilePath(n.getStringValue()); });
-            this.put("uninstallCommandLine", (n) -> { currentObject.setUninstallCommandLine(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumValue(WindowsArchitecture.class)); });
+        deserializerMap.put("installCommandLine", (n) -> { this.setInstallCommandLine(n.getStringValue()); });
+        deserializerMap.put("installExperience", (n) -> { this.setInstallExperience(n.getObjectValue(Win32LobAppInstallExperience::createFromDiscriminatorValue)); });
+        deserializerMap.put("minimumCpuSpeedInMHz", (n) -> { this.setMinimumCpuSpeedInMHz(n.getIntegerValue()); });
+        deserializerMap.put("minimumFreeDiskSpaceInMB", (n) -> { this.setMinimumFreeDiskSpaceInMB(n.getIntegerValue()); });
+        deserializerMap.put("minimumMemoryInMB", (n) -> { this.setMinimumMemoryInMB(n.getIntegerValue()); });
+        deserializerMap.put("minimumNumberOfProcessors", (n) -> { this.setMinimumNumberOfProcessors(n.getIntegerValue()); });
+        deserializerMap.put("minimumSupportedWindowsRelease", (n) -> { this.setMinimumSupportedWindowsRelease(n.getStringValue()); });
+        deserializerMap.put("msiInformation", (n) -> { this.setMsiInformation(n.getObjectValue(Win32LobAppMsiInformation::createFromDiscriminatorValue)); });
+        deserializerMap.put("returnCodes", (n) -> { this.setReturnCodes(n.getCollectionOfObjectValues(Win32LobAppReturnCode::createFromDiscriminatorValue)); });
+        deserializerMap.put("rules", (n) -> { this.setRules(n.getCollectionOfObjectValues(Win32LobAppRule::createFromDiscriminatorValue)); });
+        deserializerMap.put("setupFilePath", (n) -> { this.setSetupFilePath(n.getStringValue()); });
+        deserializerMap.put("uninstallCommandLine", (n) -> { this.setUninstallCommandLine(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the installCommandLine property value. The command line to install this app

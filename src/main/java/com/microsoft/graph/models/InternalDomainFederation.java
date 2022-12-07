@@ -63,16 +63,15 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final InternalDomainFederation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("activeSignInUri", (n) -> { currentObject.setActiveSignInUri(n.getStringValue()); });
-            this.put("federatedIdpMfaBehavior", (n) -> { currentObject.setFederatedIdpMfaBehavior(n.getEnumValue(FederatedIdpMfaBehavior.class)); });
-            this.put("isSignedAuthenticationRequestRequired", (n) -> { currentObject.setIsSignedAuthenticationRequestRequired(n.getBooleanValue()); });
-            this.put("nextSigningCertificate", (n) -> { currentObject.setNextSigningCertificate(n.getStringValue()); });
-            this.put("promptLoginBehavior", (n) -> { currentObject.setPromptLoginBehavior(n.getEnumValue(PromptLoginBehavior.class)); });
-            this.put("signingCertificateUpdateStatus", (n) -> { currentObject.setSigningCertificateUpdateStatus(n.getObjectValue(SigningCertificateUpdateStatus::createFromDiscriminatorValue)); });
-            this.put("signOutUri", (n) -> { currentObject.setSignOutUri(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeSignInUri", (n) -> { this.setActiveSignInUri(n.getStringValue()); });
+        deserializerMap.put("federatedIdpMfaBehavior", (n) -> { this.setFederatedIdpMfaBehavior(n.getEnumValue(FederatedIdpMfaBehavior.class)); });
+        deserializerMap.put("isSignedAuthenticationRequestRequired", (n) -> { this.setIsSignedAuthenticationRequestRequired(n.getBooleanValue()); });
+        deserializerMap.put("nextSigningCertificate", (n) -> { this.setNextSigningCertificate(n.getStringValue()); });
+        deserializerMap.put("promptLoginBehavior", (n) -> { this.setPromptLoginBehavior(n.getEnumValue(PromptLoginBehavior.class)); });
+        deserializerMap.put("signingCertificateUpdateStatus", (n) -> { this.setSigningCertificateUpdateStatus(n.getObjectValue(SigningCertificateUpdateStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("signOutUri", (n) -> { this.setSignOutUri(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isSignedAuthenticationRequestRequired property value. If true, when SAML authentication requests are sent to the federated SAML IdP, Azure AD will sign those requests using the OrgID signing key. If false (default), the SAML authentication requests sent to the federated IdP are not signed.

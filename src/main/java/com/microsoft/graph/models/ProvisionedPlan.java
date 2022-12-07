@@ -26,7 +26,6 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ProvisionedPlan() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.provisionedPlan");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,13 +59,12 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ProvisionedPlan currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("capabilityStatus", (n) -> { currentObject.setCapabilityStatus(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("provisioningStatus", (n) -> { currentObject.setProvisioningStatus(n.getStringValue()); });
-            this.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("capabilityStatus", (n) -> { this.setCapabilityStatus(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("provisioningStatus", (n) -> { this.setProvisioningStatus(n.getStringValue()); });
+        deserializerMap.put("service", (n) -> { this.setService(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

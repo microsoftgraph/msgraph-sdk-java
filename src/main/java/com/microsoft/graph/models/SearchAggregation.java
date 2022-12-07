@@ -24,7 +24,6 @@ public class SearchAggregation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SearchAggregation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.searchAggregation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,12 +65,11 @@ public class SearchAggregation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SearchAggregation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("buckets", (n) -> { currentObject.setBuckets(n.getCollectionOfObjectValues(SearchBucket::createFromDiscriminatorValue)); });
-            this.put("field", (n) -> { currentObject.setField(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("buckets", (n) -> { this.setBuckets(n.getCollectionOfObjectValues(SearchBucket::createFromDiscriminatorValue)); });
+        deserializerMap.put("field", (n) -> { this.setField(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

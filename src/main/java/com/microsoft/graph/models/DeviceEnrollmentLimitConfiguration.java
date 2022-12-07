@@ -35,10 +35,9 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceEnrollmentLimitConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("limit", (n) -> { currentObject.setLimit(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("limit", (n) -> { this.setLimit(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the limit property value. The maximum number of devices that a user can enroll

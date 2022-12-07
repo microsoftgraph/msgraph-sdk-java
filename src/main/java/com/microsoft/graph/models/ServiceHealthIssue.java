@@ -75,18 +75,17 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ServiceHealthIssue currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("classification", (n) -> { currentObject.setClassification(n.getEnumValue(ServiceHealthClassificationType.class)); });
-            this.put("feature", (n) -> { currentObject.setFeature(n.getStringValue()); });
-            this.put("featureGroup", (n) -> { currentObject.setFeatureGroup(n.getStringValue()); });
-            this.put("impactDescription", (n) -> { currentObject.setImpactDescription(n.getStringValue()); });
-            this.put("isResolved", (n) -> { currentObject.setIsResolved(n.getBooleanValue()); });
-            this.put("origin", (n) -> { currentObject.setOrigin(n.getEnumValue(ServiceHealthOrigin.class)); });
-            this.put("posts", (n) -> { currentObject.setPosts(n.getCollectionOfObjectValues(ServiceHealthIssuePost::createFromDiscriminatorValue)); });
-            this.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ServiceHealthStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(ServiceHealthClassificationType.class)); });
+        deserializerMap.put("feature", (n) -> { this.setFeature(n.getStringValue()); });
+        deserializerMap.put("featureGroup", (n) -> { this.setFeatureGroup(n.getStringValue()); });
+        deserializerMap.put("impactDescription", (n) -> { this.setImpactDescription(n.getStringValue()); });
+        deserializerMap.put("isResolved", (n) -> { this.setIsResolved(n.getBooleanValue()); });
+        deserializerMap.put("origin", (n) -> { this.setOrigin(n.getEnumValue(ServiceHealthOrigin.class)); });
+        deserializerMap.put("posts", (n) -> { this.setPosts(n.getCollectionOfObjectValues(ServiceHealthIssuePost::createFromDiscriminatorValue)); });
+        deserializerMap.put("service", (n) -> { this.setService(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ServiceHealthStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the impactDescription property value. The description of the service issue impact.

@@ -18,7 +18,6 @@ public class MobileAppContent extends Entity implements Parsable {
     @javax.annotation.Nullable
     public MobileAppContent() {
         super();
-        this.setOdataType("#microsoft.graph.mobileAppContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,10 +35,9 @@ public class MobileAppContent extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MobileAppContent currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("files", (n) -> { currentObject.setFiles(n.getCollectionOfObjectValues(MobileAppContentFile::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("files", (n) -> { this.setFiles(n.getCollectionOfObjectValues(MobileAppContentFile::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the files property value. The list of files for this app content version.

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class WorkbookRangeBorder extends Entity implements Parsable {
     /** HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange'). */
     private String _color;
@@ -24,7 +24,6 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookRangeBorder() {
         super();
-        this.setOdataType("#microsoft.graph.workbookRangeBorder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,13 +49,12 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookRangeBorder currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
-            this.put("sideIndex", (n) -> { currentObject.setSideIndex(n.getStringValue()); });
-            this.put("style", (n) -> { currentObject.setStyle(n.getStringValue()); });
-            this.put("weight", (n) -> { currentObject.setWeight(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("color", (n) -> { this.setColor(n.getStringValue()); });
+        deserializerMap.put("sideIndex", (n) -> { this.setSideIndex(n.getStringValue()); });
+        deserializerMap.put("style", (n) -> { this.setStyle(n.getStringValue()); });
+        deserializerMap.put("weight", (n) -> { this.setWeight(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the sideIndex property value. Constant value that indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.

@@ -7,6 +7,7 @@ import com.microsoft.graph.models.security.EdiscoveryAddToReviewSetOperation;
 import com.microsoft.graph.models.security.EdiscoveryEstimateOperation;
 import com.microsoft.graph.models.security.EdiscoveryHoldOperation;
 import com.microsoft.graph.models.security.EdiscoveryIndexOperation;
+import com.microsoft.graph.models.security.EdiscoveryPurgeDataOperation;
 import com.microsoft.graph.models.security.EdiscoveryTagOperation;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -38,7 +39,6 @@ public class CaseOperation extends Entity implements Parsable {
     @javax.annotation.Nullable
     public CaseOperation() {
         super();
-        this.setOdataType("#microsoft.graph.security.caseOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,6 +56,7 @@ public class CaseOperation extends Entity implements Parsable {
                 case "#microsoft.graph.security.ediscoveryEstimateOperation": return new EdiscoveryEstimateOperation();
                 case "#microsoft.graph.security.ediscoveryHoldOperation": return new EdiscoveryHoldOperation();
                 case "#microsoft.graph.security.ediscoveryIndexOperation": return new EdiscoveryIndexOperation();
+                case "#microsoft.graph.security.ediscoveryPurgeDataOperation": return new EdiscoveryPurgeDataOperation();
                 case "#microsoft.graph.security.ediscoveryTagOperation": return new EdiscoveryTagOperation();
             }
         }
@@ -99,16 +100,15 @@ public class CaseOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CaseOperation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(CaseAction.class)); });
-            this.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("percentProgress", (n) -> { currentObject.setPercentProgress(n.getIntegerValue()); });
-            this.put("resultInfo", (n) -> { currentObject.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(CaseOperationStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(CaseAction.class)); });
+        deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("percentProgress", (n) -> { this.setPercentProgress(n.getIntegerValue()); });
+        deserializerMap.put("resultInfo", (n) -> { this.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CaseOperationStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the percentProgress property value. The progress of the operation.

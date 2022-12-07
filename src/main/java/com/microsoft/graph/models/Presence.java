@@ -19,7 +19,6 @@ public class Presence extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Presence() {
         super();
-        this.setOdataType("#microsoft.graph.presence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,11 +52,10 @@ public class Presence extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Presence currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getStringValue()); });
-            this.put("availability", (n) -> { currentObject.setAvailability(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getStringValue()); });
+        deserializerMap.put("availability", (n) -> { this.setAvailability(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

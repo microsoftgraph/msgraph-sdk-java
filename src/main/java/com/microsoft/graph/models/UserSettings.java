@@ -21,7 +21,6 @@ public class UserSettings extends Entity implements Parsable {
     @javax.annotation.Nullable
     public UserSettings() {
         super();
-        this.setOdataType("#microsoft.graph.userSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,12 +54,11 @@ public class UserSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("contributionToContentDiscoveryAsOrganizationDisabled", (n) -> { currentObject.setContributionToContentDiscoveryAsOrganizationDisabled(n.getBooleanValue()); });
-            this.put("contributionToContentDiscoveryDisabled", (n) -> { currentObject.setContributionToContentDiscoveryDisabled(n.getBooleanValue()); });
-            this.put("shiftPreferences", (n) -> { currentObject.setShiftPreferences(n.getObjectValue(ShiftPreferences::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contributionToContentDiscoveryAsOrganizationDisabled", (n) -> { this.setContributionToContentDiscoveryAsOrganizationDisabled(n.getBooleanValue()); });
+        deserializerMap.put("contributionToContentDiscoveryDisabled", (n) -> { this.setContributionToContentDiscoveryDisabled(n.getBooleanValue()); });
+        deserializerMap.put("shiftPreferences", (n) -> { this.setShiftPreferences(n.getObjectValue(ShiftPreferences::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the shiftPreferences property value. The shiftPreferences property

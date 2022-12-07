@@ -85,7 +85,6 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public DeviceHealthAttestationState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceHealthAttestationState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -231,42 +230,41 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceHealthAttestationState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(33) {{
-            this.put("attestationIdentityKey", (n) -> { currentObject.setAttestationIdentityKey(n.getStringValue()); });
-            this.put("bitLockerStatus", (n) -> { currentObject.setBitLockerStatus(n.getStringValue()); });
-            this.put("bootAppSecurityVersion", (n) -> { currentObject.setBootAppSecurityVersion(n.getStringValue()); });
-            this.put("bootDebugging", (n) -> { currentObject.setBootDebugging(n.getStringValue()); });
-            this.put("bootManagerSecurityVersion", (n) -> { currentObject.setBootManagerSecurityVersion(n.getStringValue()); });
-            this.put("bootManagerVersion", (n) -> { currentObject.setBootManagerVersion(n.getStringValue()); });
-            this.put("bootRevisionListInfo", (n) -> { currentObject.setBootRevisionListInfo(n.getStringValue()); });
-            this.put("codeIntegrity", (n) -> { currentObject.setCodeIntegrity(n.getStringValue()); });
-            this.put("codeIntegrityCheckVersion", (n) -> { currentObject.setCodeIntegrityCheckVersion(n.getStringValue()); });
-            this.put("codeIntegrityPolicy", (n) -> { currentObject.setCodeIntegrityPolicy(n.getStringValue()); });
-            this.put("contentNamespaceUrl", (n) -> { currentObject.setContentNamespaceUrl(n.getStringValue()); });
-            this.put("contentVersion", (n) -> { currentObject.setContentVersion(n.getStringValue()); });
-            this.put("dataExcutionPolicy", (n) -> { currentObject.setDataExcutionPolicy(n.getStringValue()); });
-            this.put("deviceHealthAttestationStatus", (n) -> { currentObject.setDeviceHealthAttestationStatus(n.getStringValue()); });
-            this.put("earlyLaunchAntiMalwareDriverProtection", (n) -> { currentObject.setEarlyLaunchAntiMalwareDriverProtection(n.getStringValue()); });
-            this.put("healthAttestationSupportedStatus", (n) -> { currentObject.setHealthAttestationSupportedStatus(n.getStringValue()); });
-            this.put("healthStatusMismatchInfo", (n) -> { currentObject.setHealthStatusMismatchInfo(n.getStringValue()); });
-            this.put("issuedDateTime", (n) -> { currentObject.setIssuedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastUpdateDateTime", (n) -> { currentObject.setLastUpdateDateTime(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operatingSystemKernelDebugging", (n) -> { currentObject.setOperatingSystemKernelDebugging(n.getStringValue()); });
-            this.put("operatingSystemRevListInfo", (n) -> { currentObject.setOperatingSystemRevListInfo(n.getStringValue()); });
-            this.put("pcr0", (n) -> { currentObject.setPcr0(n.getStringValue()); });
-            this.put("pcrHashAlgorithm", (n) -> { currentObject.setPcrHashAlgorithm(n.getStringValue()); });
-            this.put("resetCount", (n) -> { currentObject.setResetCount(n.getLongValue()); });
-            this.put("restartCount", (n) -> { currentObject.setRestartCount(n.getLongValue()); });
-            this.put("safeMode", (n) -> { currentObject.setSafeMode(n.getStringValue()); });
-            this.put("secureBoot", (n) -> { currentObject.setSecureBoot(n.getStringValue()); });
-            this.put("secureBootConfigurationPolicyFingerPrint", (n) -> { currentObject.setSecureBootConfigurationPolicyFingerPrint(n.getStringValue()); });
-            this.put("testSigning", (n) -> { currentObject.setTestSigning(n.getStringValue()); });
-            this.put("tpmVersion", (n) -> { currentObject.setTpmVersion(n.getStringValue()); });
-            this.put("virtualSecureMode", (n) -> { currentObject.setVirtualSecureMode(n.getStringValue()); });
-            this.put("windowsPE", (n) -> { currentObject.setWindowsPE(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(33);
+        deserializerMap.put("attestationIdentityKey", (n) -> { this.setAttestationIdentityKey(n.getStringValue()); });
+        deserializerMap.put("bitLockerStatus", (n) -> { this.setBitLockerStatus(n.getStringValue()); });
+        deserializerMap.put("bootAppSecurityVersion", (n) -> { this.setBootAppSecurityVersion(n.getStringValue()); });
+        deserializerMap.put("bootDebugging", (n) -> { this.setBootDebugging(n.getStringValue()); });
+        deserializerMap.put("bootManagerSecurityVersion", (n) -> { this.setBootManagerSecurityVersion(n.getStringValue()); });
+        deserializerMap.put("bootManagerVersion", (n) -> { this.setBootManagerVersion(n.getStringValue()); });
+        deserializerMap.put("bootRevisionListInfo", (n) -> { this.setBootRevisionListInfo(n.getStringValue()); });
+        deserializerMap.put("codeIntegrity", (n) -> { this.setCodeIntegrity(n.getStringValue()); });
+        deserializerMap.put("codeIntegrityCheckVersion", (n) -> { this.setCodeIntegrityCheckVersion(n.getStringValue()); });
+        deserializerMap.put("codeIntegrityPolicy", (n) -> { this.setCodeIntegrityPolicy(n.getStringValue()); });
+        deserializerMap.put("contentNamespaceUrl", (n) -> { this.setContentNamespaceUrl(n.getStringValue()); });
+        deserializerMap.put("contentVersion", (n) -> { this.setContentVersion(n.getStringValue()); });
+        deserializerMap.put("dataExcutionPolicy", (n) -> { this.setDataExcutionPolicy(n.getStringValue()); });
+        deserializerMap.put("deviceHealthAttestationStatus", (n) -> { this.setDeviceHealthAttestationStatus(n.getStringValue()); });
+        deserializerMap.put("earlyLaunchAntiMalwareDriverProtection", (n) -> { this.setEarlyLaunchAntiMalwareDriverProtection(n.getStringValue()); });
+        deserializerMap.put("healthAttestationSupportedStatus", (n) -> { this.setHealthAttestationSupportedStatus(n.getStringValue()); });
+        deserializerMap.put("healthStatusMismatchInfo", (n) -> { this.setHealthStatusMismatchInfo(n.getStringValue()); });
+        deserializerMap.put("issuedDateTime", (n) -> { this.setIssuedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastUpdateDateTime", (n) -> { this.setLastUpdateDateTime(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operatingSystemKernelDebugging", (n) -> { this.setOperatingSystemKernelDebugging(n.getStringValue()); });
+        deserializerMap.put("operatingSystemRevListInfo", (n) -> { this.setOperatingSystemRevListInfo(n.getStringValue()); });
+        deserializerMap.put("pcr0", (n) -> { this.setPcr0(n.getStringValue()); });
+        deserializerMap.put("pcrHashAlgorithm", (n) -> { this.setPcrHashAlgorithm(n.getStringValue()); });
+        deserializerMap.put("resetCount", (n) -> { this.setResetCount(n.getLongValue()); });
+        deserializerMap.put("restartCount", (n) -> { this.setRestartCount(n.getLongValue()); });
+        deserializerMap.put("safeMode", (n) -> { this.setSafeMode(n.getStringValue()); });
+        deserializerMap.put("secureBoot", (n) -> { this.setSecureBoot(n.getStringValue()); });
+        deserializerMap.put("secureBootConfigurationPolicyFingerPrint", (n) -> { this.setSecureBootConfigurationPolicyFingerPrint(n.getStringValue()); });
+        deserializerMap.put("testSigning", (n) -> { this.setTestSigning(n.getStringValue()); });
+        deserializerMap.put("tpmVersion", (n) -> { this.setTpmVersion(n.getStringValue()); });
+        deserializerMap.put("virtualSecureMode", (n) -> { this.setVirtualSecureMode(n.getStringValue()); });
+        deserializerMap.put("windowsPE", (n) -> { this.setWindowsPE(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the healthAttestationSupportedStatus property value. This attribute indicates if DHA is supported for the device

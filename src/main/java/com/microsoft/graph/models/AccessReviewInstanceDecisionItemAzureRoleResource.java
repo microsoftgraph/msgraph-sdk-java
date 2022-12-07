@@ -35,10 +35,9 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReviewInstanceDecisionItemAzureRoleResource currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("scope", (n) -> { currentObject.setScope(n.getObjectValue(AccessReviewInstanceDecisionItemResource::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getObjectValue(AccessReviewInstanceDecisionItemResource::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the scope property value. Details of the scope this role is associated with.

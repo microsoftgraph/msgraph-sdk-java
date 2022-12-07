@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class DirectoryAudit extends Entity implements Parsable {
     /** Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _activityDateTime;
@@ -39,7 +39,6 @@ public class DirectoryAudit extends Entity implements Parsable {
     @javax.annotation.Nullable
     public DirectoryAudit() {
         super();
-        this.setOdataType("#microsoft.graph.directoryAudit");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -97,20 +96,19 @@ public class DirectoryAudit extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DirectoryAudit currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
-            this.put("activityDisplayName", (n) -> { currentObject.setActivityDisplayName(n.getStringValue()); });
-            this.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
-            this.put("category", (n) -> { currentObject.setCategory(n.getStringValue()); });
-            this.put("correlationId", (n) -> { currentObject.setCorrelationId(n.getStringValue()); });
-            this.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getObjectValue(AuditActivityInitiator::createFromDiscriminatorValue)); });
-            this.put("loggedByService", (n) -> { currentObject.setLoggedByService(n.getStringValue()); });
-            this.put("operationType", (n) -> { currentObject.setOperationType(n.getStringValue()); });
-            this.put("result", (n) -> { currentObject.setResult(n.getEnumValue(OperationResult.class)); });
-            this.put("resultReason", (n) -> { currentObject.setResultReason(n.getStringValue()); });
-            this.put("targetResources", (n) -> { currentObject.setTargetResources(n.getCollectionOfObjectValues(TargetResource::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activityDateTime", (n) -> { this.setActivityDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("activityDisplayName", (n) -> { this.setActivityDisplayName(n.getStringValue()); });
+        deserializerMap.put("additionalDetails", (n) -> { this.setAdditionalDetails(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getStringValue()); });
+        deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
+        deserializerMap.put("initiatedBy", (n) -> { this.setInitiatedBy(n.getObjectValue(AuditActivityInitiator::createFromDiscriminatorValue)); });
+        deserializerMap.put("loggedByService", (n) -> { this.setLoggedByService(n.getStringValue()); });
+        deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getStringValue()); });
+        deserializerMap.put("result", (n) -> { this.setResult(n.getEnumValue(OperationResult.class)); });
+        deserializerMap.put("resultReason", (n) -> { this.setResultReason(n.getStringValue()); });
+        deserializerMap.put("targetResources", (n) -> { this.setTargetResources(n.getCollectionOfObjectValues(TargetResource::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the initiatedBy property value. The initiatedBy property

@@ -36,7 +36,6 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     @javax.annotation.Nullable
     public AccessPackageAssignmentReviewSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessPackageAssignmentReviewSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -78,18 +77,17 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessPackageAssignmentReviewSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(9) {{
-            this.put("expirationBehavior", (n) -> { currentObject.setExpirationBehavior(n.getEnumValue(AccessReviewExpirationBehavior.class)); });
-            this.put("fallbackReviewers", (n) -> { currentObject.setFallbackReviewers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("isRecommendationEnabled", (n) -> { currentObject.setIsRecommendationEnabled(n.getBooleanValue()); });
-            this.put("isReviewerJustificationRequired", (n) -> { currentObject.setIsReviewerJustificationRequired(n.getBooleanValue()); });
-            this.put("isSelfReview", (n) -> { currentObject.setIsSelfReview(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("primaryReviewers", (n) -> { currentObject.setPrimaryReviewers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
-            this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(EntitlementManagementSchedule::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("expirationBehavior", (n) -> { this.setExpirationBehavior(n.getEnumValue(AccessReviewExpirationBehavior.class)); });
+        deserializerMap.put("fallbackReviewers", (n) -> { this.setFallbackReviewers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isRecommendationEnabled", (n) -> { this.setIsRecommendationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isReviewerJustificationRequired", (n) -> { this.setIsReviewerJustificationRequired(n.getBooleanValue()); });
+        deserializerMap.put("isSelfReview", (n) -> { this.setIsSelfReview(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("primaryReviewers", (n) -> { this.setPrimaryReviewers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(EntitlementManagementSchedule::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnabled property value. If true, access reviews are required for assignments through this policy.

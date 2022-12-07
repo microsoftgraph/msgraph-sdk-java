@@ -28,7 +28,6 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SearchHitsContainer() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.searchHitsContainer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,14 +61,13 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SearchHitsContainer currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("aggregations", (n) -> { currentObject.setAggregations(n.getCollectionOfObjectValues(SearchAggregation::createFromDiscriminatorValue)); });
-            this.put("hits", (n) -> { currentObject.setHits(n.getCollectionOfObjectValues(SearchHit::createFromDiscriminatorValue)); });
-            this.put("moreResultsAvailable", (n) -> { currentObject.setMoreResultsAvailable(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("total", (n) -> { currentObject.setTotal(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("aggregations", (n) -> { this.setAggregations(n.getCollectionOfObjectValues(SearchAggregation::createFromDiscriminatorValue)); });
+        deserializerMap.put("hits", (n) -> { this.setHits(n.getCollectionOfObjectValues(SearchHit::createFromDiscriminatorValue)); });
+        deserializerMap.put("moreResultsAvailable", (n) -> { this.setMoreResultsAvailable(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("total", (n) -> { this.setTotal(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hits property value. A collection of the search results.

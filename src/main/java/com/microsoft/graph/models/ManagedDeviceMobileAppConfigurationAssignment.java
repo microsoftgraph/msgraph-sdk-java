@@ -18,7 +18,6 @@ public class ManagedDeviceMobileAppConfigurationAssignment extends Entity implem
     @javax.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.managedDeviceMobileAppConfigurationAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,10 +35,9 @@ public class ManagedDeviceMobileAppConfigurationAssignment extends Entity implem
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedDeviceMobileAppConfigurationAssignment currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the target property value. Assignment target that the T&C policy is assigned to.

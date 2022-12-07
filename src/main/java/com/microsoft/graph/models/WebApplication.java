@@ -30,7 +30,6 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public WebApplication() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.webApplication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,15 +55,14 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WebApplication currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("homePageUrl", (n) -> { currentObject.setHomePageUrl(n.getStringValue()); });
-            this.put("implicitGrantSettings", (n) -> { currentObject.setImplicitGrantSettings(n.getObjectValue(ImplicitGrantSettings::createFromDiscriminatorValue)); });
-            this.put("logoutUrl", (n) -> { currentObject.setLogoutUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("redirectUris", (n) -> { currentObject.setRedirectUris(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("redirectUriSettings", (n) -> { currentObject.setRedirectUriSettings(n.getCollectionOfObjectValues(RedirectUriSettings::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("homePageUrl", (n) -> { this.setHomePageUrl(n.getStringValue()); });
+        deserializerMap.put("implicitGrantSettings", (n) -> { this.setImplicitGrantSettings(n.getObjectValue(ImplicitGrantSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("logoutUrl", (n) -> { this.setLogoutUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("redirectUris", (n) -> { this.setRedirectUris(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("redirectUriSettings", (n) -> { this.setRedirectUriSettings(n.getCollectionOfObjectValues(RedirectUriSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the homePageUrl property value. Home page or landing page of the application.

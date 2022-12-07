@@ -28,7 +28,6 @@ public class SettingTemplateValue implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SettingTemplateValue() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.settingTemplateValue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,14 +69,13 @@ public class SettingTemplateValue implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SettingTemplateValue currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. Name of the setting.

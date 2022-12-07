@@ -46,10 +46,9 @@ public class ClearPresencePostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ClearPresencePostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(1) {{
-            this.put("sessionId", (n) -> { currentObject.setSessionId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("sessionId", (n) -> { this.setSessionId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the sessionId property value. The sessionId property

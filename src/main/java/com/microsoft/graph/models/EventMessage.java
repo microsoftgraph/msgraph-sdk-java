@@ -79,19 +79,18 @@ public class EventMessage extends Message implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EventMessage currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("event", (n) -> { currentObject.setEvent(n.getObjectValue(Event::createFromDiscriminatorValue)); });
-            this.put("isAllDay", (n) -> { currentObject.setIsAllDay(n.getBooleanValue()); });
-            this.put("isDelegated", (n) -> { currentObject.setIsDelegated(n.getBooleanValue()); });
-            this.put("isOutOfDate", (n) -> { currentObject.setIsOutOfDate(n.getBooleanValue()); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
-            this.put("meetingMessageType", (n) -> { currentObject.setMeetingMessageType(n.getEnumValue(MeetingMessageType.class)); });
-            this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(EventType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("event", (n) -> { this.setEvent(n.getObjectValue(Event::createFromDiscriminatorValue)); });
+        deserializerMap.put("isAllDay", (n) -> { this.setIsAllDay(n.getBooleanValue()); });
+        deserializerMap.put("isDelegated", (n) -> { this.setIsDelegated(n.getBooleanValue()); });
+        deserializerMap.put("isOutOfDate", (n) -> { this.setIsOutOfDate(n.getBooleanValue()); });
+        deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
+        deserializerMap.put("meetingMessageType", (n) -> { this.setMeetingMessageType(n.getEnumValue(MeetingMessageType.class)); });
+        deserializerMap.put("recurrence", (n) -> { this.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(EventType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isAllDay property value. The isAllDay property

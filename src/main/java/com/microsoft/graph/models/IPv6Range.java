@@ -37,11 +37,10 @@ public class IPv6Range extends IpRange implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IPv6Range currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("lowerAddress", (n) -> { currentObject.setLowerAddress(n.getStringValue()); });
-            this.put("upperAddress", (n) -> { currentObject.setUpperAddress(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("lowerAddress", (n) -> { this.setLowerAddress(n.getStringValue()); });
+        deserializerMap.put("upperAddress", (n) -> { this.setUpperAddress(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lowerAddress property value. Lower address.

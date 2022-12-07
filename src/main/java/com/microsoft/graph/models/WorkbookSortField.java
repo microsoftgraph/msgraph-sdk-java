@@ -32,7 +32,6 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public WorkbookSortField() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.workbookSortField");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -82,16 +81,15 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookSortField currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("ascending", (n) -> { currentObject.setAscending(n.getBooleanValue()); });
-            this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
-            this.put("dataOption", (n) -> { currentObject.setDataOption(n.getStringValue()); });
-            this.put("icon", (n) -> { currentObject.setIcon(n.getObjectValue(WorkbookIcon::createFromDiscriminatorValue)); });
-            this.put("key", (n) -> { currentObject.setKey(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sortOn", (n) -> { currentObject.setSortOn(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("ascending", (n) -> { this.setAscending(n.getBooleanValue()); });
+        deserializerMap.put("color", (n) -> { this.setColor(n.getStringValue()); });
+        deserializerMap.put("dataOption", (n) -> { this.setDataOption(n.getStringValue()); });
+        deserializerMap.put("icon", (n) -> { this.setIcon(n.getObjectValue(WorkbookIcon::createFromDiscriminatorValue)); });
+        deserializerMap.put("key", (n) -> { this.setKey(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sortOn", (n) -> { this.setSortOn(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the icon property value. Represents the icon that is the target of the condition if the sorting is on the cell's icon.

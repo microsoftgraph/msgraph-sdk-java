@@ -22,7 +22,6 @@ public class SearchResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SearchResult() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.searchResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,11 +47,10 @@ public class SearchResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SearchResult currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("onClickTelemetryUrl", (n) -> { currentObject.setOnClickTelemetryUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("onClickTelemetryUrl", (n) -> { this.setOnClickTelemetryUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

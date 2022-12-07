@@ -32,7 +32,6 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SharingLink() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.sharingLink");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,16 +65,15 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SharingLink currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("application", (n) -> { currentObject.setApplication(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("preventsDownload", (n) -> { currentObject.setPreventsDownload(n.getBooleanValue()); });
-            this.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-            this.put("webHtml", (n) -> { currentObject.setWebHtml(n.getStringValue()); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("application", (n) -> { this.setApplication(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("preventsDownload", (n) -> { this.setPreventsDownload(n.getBooleanValue()); });
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
+        deserializerMap.put("webHtml", (n) -> { this.setWebHtml(n.getStringValue()); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

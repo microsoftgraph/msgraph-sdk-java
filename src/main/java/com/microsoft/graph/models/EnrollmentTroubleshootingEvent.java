@@ -31,7 +31,6 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     @javax.annotation.Nullable
     public EnrollmentTroubleshootingEvent() {
         super();
-        this.setOdataType("#microsoft.graph.enrollmentTroubleshootingEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -81,17 +80,16 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EnrollmentTroubleshootingEvent currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("enrollmentType", (n) -> { currentObject.setEnrollmentType(n.getEnumValue(DeviceEnrollmentType.class)); });
-            this.put("failureCategory", (n) -> { currentObject.setFailureCategory(n.getEnumValue(DeviceEnrollmentFailureReason.class)); });
-            this.put("failureReason", (n) -> { currentObject.setFailureReason(n.getStringValue()); });
-            this.put("managedDeviceIdentifier", (n) -> { currentObject.setManagedDeviceIdentifier(n.getStringValue()); });
-            this.put("operatingSystem", (n) -> { currentObject.setOperatingSystem(n.getStringValue()); });
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("enrollmentType", (n) -> { this.setEnrollmentType(n.getEnumValue(DeviceEnrollmentType.class)); });
+        deserializerMap.put("failureCategory", (n) -> { this.setFailureCategory(n.getEnumValue(DeviceEnrollmentFailureReason.class)); });
+        deserializerMap.put("failureReason", (n) -> { this.setFailureReason(n.getStringValue()); });
+        deserializerMap.put("managedDeviceIdentifier", (n) -> { this.setManagedDeviceIdentifier(n.getStringValue()); });
+        deserializerMap.put("operatingSystem", (n) -> { this.setOperatingSystem(n.getStringValue()); });
+        deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedDeviceIdentifier property value. Device identifier created or collected by Intune.

@@ -30,7 +30,6 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     @javax.annotation.Nullable
     public WindowsInformationProtectionDataRecoveryCertificate() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsInformationProtectionDataRecoveryCertificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -80,14 +79,13 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsInformationProtectionDataRecoveryCertificate currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("certificate", (n) -> { currentObject.setCertificate(n.getByteArrayValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("subjectName", (n) -> { currentObject.setSubjectName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("certificate", (n) -> { this.setCertificate(n.getByteArrayValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("subjectName", (n) -> { this.setSubjectName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

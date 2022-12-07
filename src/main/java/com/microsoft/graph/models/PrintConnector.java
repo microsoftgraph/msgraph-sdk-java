@@ -28,7 +28,6 @@ public class PrintConnector extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PrintConnector() {
         super();
-        this.setOdataType("#microsoft.graph.printConnector");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,15 +61,14 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrintConnector currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("appVersion", (n) -> { currentObject.setAppVersion(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("fullyQualifiedDomainName", (n) -> { currentObject.setFullyQualifiedDomainName(n.getStringValue()); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(PrinterLocation::createFromDiscriminatorValue)); });
-            this.put("operatingSystem", (n) -> { currentObject.setOperatingSystem(n.getStringValue()); });
-            this.put("registeredDateTime", (n) -> { currentObject.setRegisteredDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appVersion", (n) -> { this.setAppVersion(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("fullyQualifiedDomainName", (n) -> { this.setFullyQualifiedDomainName(n.getStringValue()); });
+        deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(PrinterLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("operatingSystem", (n) -> { this.setOperatingSystem(n.getStringValue()); });
+        deserializerMap.put("registeredDateTime", (n) -> { this.setRegisteredDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fullyQualifiedDomainName property value. The connector machine's hostname.

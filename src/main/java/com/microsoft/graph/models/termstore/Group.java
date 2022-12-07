@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class Group extends Entity implements Parsable {
     /** Date and time of the group creation. Read-only. */
     private OffsetDateTime _createdDateTime;
@@ -30,7 +30,6 @@ public class Group extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Group() {
         super();
-        this.setOdataType("#microsoft.graph.termStore.group");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,15 +71,14 @@ public class Group extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Group currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("parentSiteId", (n) -> { currentObject.setParentSiteId(n.getStringValue()); });
-            this.put("scope", (n) -> { currentObject.setScope(n.getEnumValue(TermGroupScope.class)); });
-            this.put("sets", (n) -> { currentObject.setSets(n.getCollectionOfObjectValues(Set::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("parentSiteId", (n) -> { this.setParentSiteId(n.getStringValue()); });
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumValue(TermGroupScope.class)); });
+        deserializerMap.put("sets", (n) -> { this.setSets(n.getCollectionOfObjectValues(Set::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the parentSiteId property value. ID of the parent site of this group.

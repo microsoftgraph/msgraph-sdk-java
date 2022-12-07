@@ -24,7 +24,6 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
     @javax.annotation.Nullable
     public ConditionalAccessClientApplications() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessClientApplications");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,12 +57,11 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConditionalAccessClientApplications currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("excludeServicePrincipals", (n) -> { currentObject.setExcludeServicePrincipals(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("includeServicePrincipals", (n) -> { currentObject.setIncludeServicePrincipals(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("excludeServicePrincipals", (n) -> { this.setExcludeServicePrincipals(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("includeServicePrincipals", (n) -> { this.setIncludeServicePrincipals(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the includeServicePrincipals property value. Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant.

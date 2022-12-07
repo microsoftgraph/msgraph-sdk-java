@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsable {
     /** ID of the service principal of the Azure AD app that has been granted access. Read-only. */
     private String _clientAppId;
@@ -60,14 +60,13 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ResourceSpecificPermissionGrant currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("clientAppId", (n) -> { currentObject.setClientAppId(n.getStringValue()); });
-            this.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
-            this.put("permission", (n) -> { currentObject.setPermission(n.getStringValue()); });
-            this.put("permissionType", (n) -> { currentObject.setPermissionType(n.getStringValue()); });
-            this.put("resourceAppId", (n) -> { currentObject.setResourceAppId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("clientAppId", (n) -> { this.setClientAppId(n.getStringValue()); });
+        deserializerMap.put("clientId", (n) -> { this.setClientId(n.getStringValue()); });
+        deserializerMap.put("permission", (n) -> { this.setPermission(n.getStringValue()); });
+        deserializerMap.put("permissionType", (n) -> { this.setPermissionType(n.getStringValue()); });
+        deserializerMap.put("resourceAppId", (n) -> { this.setResourceAppId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the permission property value. The name of the resource-specific permission. Read-only.

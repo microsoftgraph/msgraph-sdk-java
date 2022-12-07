@@ -38,7 +38,6 @@ public class AuditEvent extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AuditEvent() {
         super();
-        this.setOdataType("#microsoft.graph.auditEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -136,20 +135,19 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuditEvent currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getStringValue()); });
-            this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
-            this.put("activityOperationType", (n) -> { currentObject.setActivityOperationType(n.getStringValue()); });
-            this.put("activityResult", (n) -> { currentObject.setActivityResult(n.getStringValue()); });
-            this.put("activityType", (n) -> { currentObject.setActivityType(n.getStringValue()); });
-            this.put("actor", (n) -> { currentObject.setActor(n.getObjectValue(AuditActor::createFromDiscriminatorValue)); });
-            this.put("category", (n) -> { currentObject.setCategory(n.getStringValue()); });
-            this.put("componentName", (n) -> { currentObject.setComponentName(n.getStringValue()); });
-            this.put("correlationId", (n) -> { currentObject.setCorrelationId(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("resources", (n) -> { currentObject.setResources(n.getCollectionOfObjectValues(AuditResource::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getStringValue()); });
+        deserializerMap.put("activityDateTime", (n) -> { this.setActivityDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("activityOperationType", (n) -> { this.setActivityOperationType(n.getStringValue()); });
+        deserializerMap.put("activityResult", (n) -> { this.setActivityResult(n.getStringValue()); });
+        deserializerMap.put("activityType", (n) -> { this.setActivityType(n.getStringValue()); });
+        deserializerMap.put("actor", (n) -> { this.setActor(n.getObjectValue(AuditActor::createFromDiscriminatorValue)); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getStringValue()); });
+        deserializerMap.put("componentName", (n) -> { this.setComponentName(n.getStringValue()); });
+        deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("resources", (n) -> { this.setResources(n.getCollectionOfObjectValues(AuditResource::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the resources property value. Resources being modified.

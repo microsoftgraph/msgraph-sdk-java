@@ -55,7 +55,6 @@ public class EducationClass extends Entity implements Parsable {
     @javax.annotation.Nullable
     public EducationClass() {
         super();
-        this.setOdataType("#microsoft.graph.educationClass");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -177,29 +176,28 @@ public class EducationClass extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationClass currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("assignmentCategories", (n) -> { currentObject.setAssignmentCategories(n.getCollectionOfObjectValues(EducationCategory::createFromDiscriminatorValue)); });
-            this.put("assignmentDefaults", (n) -> { currentObject.setAssignmentDefaults(n.getObjectValue(EducationAssignmentDefaults::createFromDiscriminatorValue)); });
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(EducationAssignment::createFromDiscriminatorValue)); });
-            this.put("assignmentSettings", (n) -> { currentObject.setAssignmentSettings(n.getObjectValue(EducationAssignmentSettings::createFromDiscriminatorValue)); });
-            this.put("classCode", (n) -> { currentObject.setClassCode(n.getStringValue()); });
-            this.put("course", (n) -> { currentObject.setCourse(n.getObjectValue(EducationCourse::createFromDiscriminatorValue)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
-            this.put("externalName", (n) -> { currentObject.setExternalName(n.getStringValue()); });
-            this.put("externalSource", (n) -> { currentObject.setExternalSource(n.getEnumValue(EducationExternalSource.class)); });
-            this.put("externalSourceDetail", (n) -> { currentObject.setExternalSourceDetail(n.getStringValue()); });
-            this.put("grade", (n) -> { currentObject.setGrade(n.getStringValue()); });
-            this.put("group", (n) -> { currentObject.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
-            this.put("mailNickname", (n) -> { currentObject.setMailNickname(n.getStringValue()); });
-            this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(EducationUser::createFromDiscriminatorValue)); });
-            this.put("schools", (n) -> { currentObject.setSchools(n.getCollectionOfObjectValues(EducationSchool::createFromDiscriminatorValue)); });
-            this.put("teachers", (n) -> { currentObject.setTeachers(n.getCollectionOfObjectValues(EducationUser::createFromDiscriminatorValue)); });
-            this.put("term", (n) -> { currentObject.setTerm(n.getObjectValue(EducationTerm::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignmentCategories", (n) -> { this.setAssignmentCategories(n.getCollectionOfObjectValues(EducationCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignmentDefaults", (n) -> { this.setAssignmentDefaults(n.getObjectValue(EducationAssignmentDefaults::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(EducationAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignmentSettings", (n) -> { this.setAssignmentSettings(n.getObjectValue(EducationAssignmentSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("classCode", (n) -> { this.setClassCode(n.getStringValue()); });
+        deserializerMap.put("course", (n) -> { this.setCourse(n.getObjectValue(EducationCourse::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
+        deserializerMap.put("externalName", (n) -> { this.setExternalName(n.getStringValue()); });
+        deserializerMap.put("externalSource", (n) -> { this.setExternalSource(n.getEnumValue(EducationExternalSource.class)); });
+        deserializerMap.put("externalSourceDetail", (n) -> { this.setExternalSourceDetail(n.getStringValue()); });
+        deserializerMap.put("grade", (n) -> { this.setGrade(n.getStringValue()); });
+        deserializerMap.put("group", (n) -> { this.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
+        deserializerMap.put("mailNickname", (n) -> { this.setMailNickname(n.getStringValue()); });
+        deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(EducationUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("schools", (n) -> { this.setSchools(n.getCollectionOfObjectValues(EducationSchool::createFromDiscriminatorValue)); });
+        deserializerMap.put("teachers", (n) -> { this.setTeachers(n.getCollectionOfObjectValues(EducationUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("term", (n) -> { this.setTerm(n.getObjectValue(EducationTerm::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the grade property value. Grade level of the class.

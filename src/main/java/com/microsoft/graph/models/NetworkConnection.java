@@ -61,7 +61,6 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public NetworkConnection() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.networkConnection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -151,30 +150,29 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final NetworkConnection currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(21) {{
-            this.put("applicationName", (n) -> { currentObject.setApplicationName(n.getStringValue()); });
-            this.put("destinationAddress", (n) -> { currentObject.setDestinationAddress(n.getStringValue()); });
-            this.put("destinationDomain", (n) -> { currentObject.setDestinationDomain(n.getStringValue()); });
-            this.put("destinationLocation", (n) -> { currentObject.setDestinationLocation(n.getStringValue()); });
-            this.put("destinationPort", (n) -> { currentObject.setDestinationPort(n.getStringValue()); });
-            this.put("destinationUrl", (n) -> { currentObject.setDestinationUrl(n.getStringValue()); });
-            this.put("direction", (n) -> { currentObject.setDirection(n.getEnumValue(ConnectionDirection.class)); });
-            this.put("domainRegisteredDateTime", (n) -> { currentObject.setDomainRegisteredDateTime(n.getOffsetDateTimeValue()); });
-            this.put("localDnsName", (n) -> { currentObject.setLocalDnsName(n.getStringValue()); });
-            this.put("natDestinationAddress", (n) -> { currentObject.setNatDestinationAddress(n.getStringValue()); });
-            this.put("natDestinationPort", (n) -> { currentObject.setNatDestinationPort(n.getStringValue()); });
-            this.put("natSourceAddress", (n) -> { currentObject.setNatSourceAddress(n.getStringValue()); });
-            this.put("natSourcePort", (n) -> { currentObject.setNatSourcePort(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("protocol", (n) -> { currentObject.setProtocol(n.getEnumValue(SecurityNetworkProtocol.class)); });
-            this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
-            this.put("sourceAddress", (n) -> { currentObject.setSourceAddress(n.getStringValue()); });
-            this.put("sourceLocation", (n) -> { currentObject.setSourceLocation(n.getStringValue()); });
-            this.put("sourcePort", (n) -> { currentObject.setSourcePort(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ConnectionStatus.class)); });
-            this.put("urlParameters", (n) -> { currentObject.setUrlParameters(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(21);
+        deserializerMap.put("applicationName", (n) -> { this.setApplicationName(n.getStringValue()); });
+        deserializerMap.put("destinationAddress", (n) -> { this.setDestinationAddress(n.getStringValue()); });
+        deserializerMap.put("destinationDomain", (n) -> { this.setDestinationDomain(n.getStringValue()); });
+        deserializerMap.put("destinationLocation", (n) -> { this.setDestinationLocation(n.getStringValue()); });
+        deserializerMap.put("destinationPort", (n) -> { this.setDestinationPort(n.getStringValue()); });
+        deserializerMap.put("destinationUrl", (n) -> { this.setDestinationUrl(n.getStringValue()); });
+        deserializerMap.put("direction", (n) -> { this.setDirection(n.getEnumValue(ConnectionDirection.class)); });
+        deserializerMap.put("domainRegisteredDateTime", (n) -> { this.setDomainRegisteredDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("localDnsName", (n) -> { this.setLocalDnsName(n.getStringValue()); });
+        deserializerMap.put("natDestinationAddress", (n) -> { this.setNatDestinationAddress(n.getStringValue()); });
+        deserializerMap.put("natDestinationPort", (n) -> { this.setNatDestinationPort(n.getStringValue()); });
+        deserializerMap.put("natSourceAddress", (n) -> { this.setNatSourceAddress(n.getStringValue()); });
+        deserializerMap.put("natSourcePort", (n) -> { this.setNatSourcePort(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getEnumValue(SecurityNetworkProtocol.class)); });
+        deserializerMap.put("riskScore", (n) -> { this.setRiskScore(n.getStringValue()); });
+        deserializerMap.put("sourceAddress", (n) -> { this.setSourceAddress(n.getStringValue()); });
+        deserializerMap.put("sourceLocation", (n) -> { this.setSourceLocation(n.getStringValue()); });
+        deserializerMap.put("sourcePort", (n) -> { this.setSourcePort(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ConnectionStatus.class)); });
+        deserializerMap.put("urlParameters", (n) -> { this.setUrlParameters(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the localDnsName property value. The local DNS name resolution as it appears in the host's local DNS cache (for example, in case the 'hosts' file was tampered with).

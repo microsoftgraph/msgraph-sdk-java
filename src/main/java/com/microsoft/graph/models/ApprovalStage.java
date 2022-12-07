@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class ApprovalStage extends Entity implements Parsable {
     /** Indicates whether the stage is assigned to the calling user to review. Read-only. */
     private Boolean _assignedToMe;
@@ -31,7 +31,6 @@ public class ApprovalStage extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ApprovalStage() {
         super();
-        this.setOdataType("#microsoft.graph.approvalStage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,16 +64,15 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ApprovalStage currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("assignedToMe", (n) -> { currentObject.setAssignedToMe(n.getBooleanValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("justification", (n) -> { currentObject.setJustification(n.getStringValue()); });
-            this.put("reviewedBy", (n) -> { currentObject.setReviewedBy(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("reviewedDateTime", (n) -> { currentObject.setReviewedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("reviewResult", (n) -> { currentObject.setReviewResult(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignedToMe", (n) -> { this.setAssignedToMe(n.getBooleanValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
+        deserializerMap.put("reviewedBy", (n) -> { this.setReviewedBy(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("reviewedDateTime", (n) -> { this.setReviewedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("reviewResult", (n) -> { this.setReviewResult(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the justification property value. The justification associated with the approval stage decision.

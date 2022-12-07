@@ -28,7 +28,6 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PrintJobStatus() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.printJobStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,14 +69,13 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrintJobStatus currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfEnumValues(PrintJobStateDetail.class)); });
-            this.put("isAcquiredByPrinter", (n) -> { currentObject.setIsAcquiredByPrinter(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(PrintJobProcessingState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("details", (n) -> { this.setDetails(n.getCollectionOfEnumValues(PrintJobStateDetail.class)); });
+        deserializerMap.put("isAcquiredByPrinter", (n) -> { this.setIsAcquiredByPrinter(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(PrintJobProcessingState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isAcquiredByPrinter property value. True if the job was acknowledged by a printer; false otherwise. Read-only.

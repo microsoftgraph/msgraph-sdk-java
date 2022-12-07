@@ -25,7 +25,6 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ResponseStatus() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.responseStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,12 +50,11 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ResponseStatus currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("response", (n) -> { currentObject.setResponse(n.getEnumValue(ResponseType.class)); });
-            this.put("time", (n) -> { currentObject.setTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("response", (n) -> { this.setResponse(n.getEnumValue(ResponseType.class)); });
+        deserializerMap.put("time", (n) -> { this.setTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

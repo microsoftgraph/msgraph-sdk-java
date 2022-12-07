@@ -18,7 +18,6 @@ public class AppCatalogs extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AppCatalogs() {
         super();
-        this.setOdataType("#microsoft.graph.appCatalogs");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,10 +35,9 @@ public class AppCatalogs extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AppCatalogs currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("teamsApps", (n) -> { currentObject.setTeamsApps(n.getCollectionOfObjectValues(TeamsApp::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("teamsApps", (n) -> { this.setTeamsApps(n.getCollectionOfObjectValues(TeamsApp::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the teamsApps property value. The teamsApps property

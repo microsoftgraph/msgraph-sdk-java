@@ -41,7 +41,6 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ChangeNotification() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.changeNotification");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -91,20 +90,19 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ChangeNotification currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(11) {{
-            this.put("changeType", (n) -> { currentObject.setChangeType(n.getEnumValue(ChangeType.class)); });
-            this.put("clientState", (n) -> { currentObject.setClientState(n.getStringValue()); });
-            this.put("encryptedContent", (n) -> { currentObject.setEncryptedContent(n.getObjectValue(ChangeNotificationEncryptedContent::createFromDiscriminatorValue)); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("lifecycleEvent", (n) -> { currentObject.setLifecycleEvent(n.getEnumValue(LifecycleEventType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getStringValue()); });
-            this.put("resourceData", (n) -> { currentObject.setResourceData(n.getObjectValue(ResourceData::createFromDiscriminatorValue)); });
-            this.put("subscriptionExpirationDateTime", (n) -> { currentObject.setSubscriptionExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("subscriptionId", (n) -> { currentObject.setSubscriptionId(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(11);
+        deserializerMap.put("changeType", (n) -> { this.setChangeType(n.getEnumValue(ChangeType.class)); });
+        deserializerMap.put("clientState", (n) -> { this.setClientState(n.getStringValue()); });
+        deserializerMap.put("encryptedContent", (n) -> { this.setEncryptedContent(n.getObjectValue(ChangeNotificationEncryptedContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("lifecycleEvent", (n) -> { this.setLifecycleEvent(n.getEnumValue(LifecycleEventType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("resource", (n) -> { this.setResource(n.getStringValue()); });
+        deserializerMap.put("resourceData", (n) -> { this.setResourceData(n.getObjectValue(ResourceData::createFromDiscriminatorValue)); });
+        deserializerMap.put("subscriptionExpirationDateTime", (n) -> { this.setSubscriptionExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("subscriptionId", (n) -> { this.setSubscriptionId(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. Unique ID for the notification. Optional.

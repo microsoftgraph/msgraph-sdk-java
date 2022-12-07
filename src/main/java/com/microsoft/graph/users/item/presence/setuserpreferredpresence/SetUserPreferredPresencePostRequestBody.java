@@ -75,12 +75,11 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SetUserPreferredPresencePostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getStringValue()); });
-            this.put("availability", (n) -> { currentObject.setAvailability(n.getStringValue()); });
-            this.put("expirationDuration", (n) -> { currentObject.setExpirationDuration(n.getPeriodValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getStringValue()); });
+        deserializerMap.put("availability", (n) -> { this.setAvailability(n.getStringValue()); });
+        deserializerMap.put("expirationDuration", (n) -> { this.setExpirationDuration(n.getPeriodValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

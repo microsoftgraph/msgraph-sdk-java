@@ -27,7 +27,6 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ServiceHealthIssuePost() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.serviceHealthIssuePost");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,13 +68,12 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ServiceHealthIssuePost currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("postType", (n) -> { currentObject.setPostType(n.getEnumValue(PostType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("postType", (n) -> { this.setPostType(n.getEnumValue(PostType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

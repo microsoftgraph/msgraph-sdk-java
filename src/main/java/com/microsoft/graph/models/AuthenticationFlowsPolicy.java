@@ -21,7 +21,6 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AuthenticationFlowsPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.authenticationFlowsPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,12 +54,11 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuthenticationFlowsPolicy currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("selfServiceSignUp", (n) -> { currentObject.setSelfServiceSignUp(n.getObjectValue(SelfServiceSignUpAuthenticationFlowConfiguration::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("selfServiceSignUp", (n) -> { this.setSelfServiceSignUp(n.getObjectValue(SelfServiceSignUpAuthenticationFlowConfiguration::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the selfServiceSignUp property value. Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. Optional. Read-only.

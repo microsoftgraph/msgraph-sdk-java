@@ -28,7 +28,6 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TopicModelingSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.security.topicModelingSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,14 +61,13 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TopicModelingSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("dynamicallyAdjustTopicCount", (n) -> { currentObject.setDynamicallyAdjustTopicCount(n.getBooleanValue()); });
-            this.put("ignoreNumbers", (n) -> { currentObject.setIgnoreNumbers(n.getBooleanValue()); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("topicCount", (n) -> { currentObject.setTopicCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("dynamicallyAdjustTopicCount", (n) -> { this.setDynamicallyAdjustTopicCount(n.getBooleanValue()); });
+        deserializerMap.put("ignoreNumbers", (n) -> { this.setIgnoreNumbers(n.getBooleanValue()); });
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("topicCount", (n) -> { this.setTopicCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the ignoreNumbers property value. Indicates whether the themes model should exclude numbers while parsing document texts. To learn more, see Include numbers in themes.

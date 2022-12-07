@@ -213,34 +213,33 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsInformationProtection currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue)); });
-            this.put("azureRightsManagementServicesAllowed", (n) -> { currentObject.setAzureRightsManagementServicesAllowed(n.getBooleanValue()); });
-            this.put("dataRecoveryCertificate", (n) -> { currentObject.setDataRecoveryCertificate(n.getObjectValue(WindowsInformationProtectionDataRecoveryCertificate::createFromDiscriminatorValue)); });
-            this.put("enforcementLevel", (n) -> { currentObject.setEnforcementLevel(n.getEnumValue(WindowsInformationProtectionEnforcementLevel.class)); });
-            this.put("enterpriseDomain", (n) -> { currentObject.setEnterpriseDomain(n.getStringValue()); });
-            this.put("enterpriseInternalProxyServers", (n) -> { currentObject.setEnterpriseInternalProxyServers(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
-            this.put("enterpriseIPRanges", (n) -> { currentObject.setEnterpriseIPRanges(n.getCollectionOfObjectValues(WindowsInformationProtectionIPRangeCollection::createFromDiscriminatorValue)); });
-            this.put("enterpriseIPRangesAreAuthoritative", (n) -> { currentObject.setEnterpriseIPRangesAreAuthoritative(n.getBooleanValue()); });
-            this.put("enterpriseNetworkDomainNames", (n) -> { currentObject.setEnterpriseNetworkDomainNames(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
-            this.put("enterpriseProtectedDomainNames", (n) -> { currentObject.setEnterpriseProtectedDomainNames(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
-            this.put("enterpriseProxiedDomains", (n) -> { currentObject.setEnterpriseProxiedDomains(n.getCollectionOfObjectValues(WindowsInformationProtectionProxiedDomainCollection::createFromDiscriminatorValue)); });
-            this.put("enterpriseProxyServers", (n) -> { currentObject.setEnterpriseProxyServers(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
-            this.put("enterpriseProxyServersAreAuthoritative", (n) -> { currentObject.setEnterpriseProxyServersAreAuthoritative(n.getBooleanValue()); });
-            this.put("exemptAppLockerFiles", (n) -> { currentObject.setExemptAppLockerFiles(n.getCollectionOfObjectValues(WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue)); });
-            this.put("exemptApps", (n) -> { currentObject.setExemptApps(n.getCollectionOfObjectValues(WindowsInformationProtectionApp::createFromDiscriminatorValue)); });
-            this.put("iconsVisible", (n) -> { currentObject.setIconsVisible(n.getBooleanValue()); });
-            this.put("indexingEncryptedStoresOrItemsBlocked", (n) -> { currentObject.setIndexingEncryptedStoresOrItemsBlocked(n.getBooleanValue()); });
-            this.put("isAssigned", (n) -> { currentObject.setIsAssigned(n.getBooleanValue()); });
-            this.put("neutralDomainResources", (n) -> { currentObject.setNeutralDomainResources(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
-            this.put("protectedAppLockerFiles", (n) -> { currentObject.setProtectedAppLockerFiles(n.getCollectionOfObjectValues(WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue)); });
-            this.put("protectedApps", (n) -> { currentObject.setProtectedApps(n.getCollectionOfObjectValues(WindowsInformationProtectionApp::createFromDiscriminatorValue)); });
-            this.put("protectionUnderLockConfigRequired", (n) -> { currentObject.setProtectionUnderLockConfigRequired(n.getBooleanValue()); });
-            this.put("revokeOnUnenrollDisabled", (n) -> { currentObject.setRevokeOnUnenrollDisabled(n.getBooleanValue()); });
-            this.put("rightsManagementServicesTemplateId", (n) -> { currentObject.setRightsManagementServicesTemplateId(n.getStringValue()); });
-            this.put("smbAutoEncryptedFileExtensions", (n) -> { currentObject.setSmbAutoEncryptedFileExtensions(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("azureRightsManagementServicesAllowed", (n) -> { this.setAzureRightsManagementServicesAllowed(n.getBooleanValue()); });
+        deserializerMap.put("dataRecoveryCertificate", (n) -> { this.setDataRecoveryCertificate(n.getObjectValue(WindowsInformationProtectionDataRecoveryCertificate::createFromDiscriminatorValue)); });
+        deserializerMap.put("enforcementLevel", (n) -> { this.setEnforcementLevel(n.getEnumValue(WindowsInformationProtectionEnforcementLevel.class)); });
+        deserializerMap.put("enterpriseDomain", (n) -> { this.setEnterpriseDomain(n.getStringValue()); });
+        deserializerMap.put("enterpriseInternalProxyServers", (n) -> { this.setEnterpriseInternalProxyServers(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("enterpriseIPRanges", (n) -> { this.setEnterpriseIPRanges(n.getCollectionOfObjectValues(WindowsInformationProtectionIPRangeCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("enterpriseIPRangesAreAuthoritative", (n) -> { this.setEnterpriseIPRangesAreAuthoritative(n.getBooleanValue()); });
+        deserializerMap.put("enterpriseNetworkDomainNames", (n) -> { this.setEnterpriseNetworkDomainNames(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("enterpriseProtectedDomainNames", (n) -> { this.setEnterpriseProtectedDomainNames(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("enterpriseProxiedDomains", (n) -> { this.setEnterpriseProxiedDomains(n.getCollectionOfObjectValues(WindowsInformationProtectionProxiedDomainCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("enterpriseProxyServers", (n) -> { this.setEnterpriseProxyServers(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("enterpriseProxyServersAreAuthoritative", (n) -> { this.setEnterpriseProxyServersAreAuthoritative(n.getBooleanValue()); });
+        deserializerMap.put("exemptAppLockerFiles", (n) -> { this.setExemptAppLockerFiles(n.getCollectionOfObjectValues(WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue)); });
+        deserializerMap.put("exemptApps", (n) -> { this.setExemptApps(n.getCollectionOfObjectValues(WindowsInformationProtectionApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("iconsVisible", (n) -> { this.setIconsVisible(n.getBooleanValue()); });
+        deserializerMap.put("indexingEncryptedStoresOrItemsBlocked", (n) -> { this.setIndexingEncryptedStoresOrItemsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("isAssigned", (n) -> { this.setIsAssigned(n.getBooleanValue()); });
+        deserializerMap.put("neutralDomainResources", (n) -> { this.setNeutralDomainResources(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("protectedAppLockerFiles", (n) -> { this.setProtectedAppLockerFiles(n.getCollectionOfObjectValues(WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue)); });
+        deserializerMap.put("protectedApps", (n) -> { this.setProtectedApps(n.getCollectionOfObjectValues(WindowsInformationProtectionApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("protectionUnderLockConfigRequired", (n) -> { this.setProtectionUnderLockConfigRequired(n.getBooleanValue()); });
+        deserializerMap.put("revokeOnUnenrollDisabled", (n) -> { this.setRevokeOnUnenrollDisabled(n.getBooleanValue()); });
+        deserializerMap.put("rightsManagementServicesTemplateId", (n) -> { this.setRightsManagementServicesTemplateId(n.getStringValue()); });
+        deserializerMap.put("smbAutoEncryptedFileExtensions", (n) -> { this.setSmbAutoEncryptedFileExtensions(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the iconsVisible property value. Determines whether overlays are added to icons for WIP protected files in Explorer and enterprise only app tiles in the Start menu. Starting in Windows 10, version 1703 this setting also configures the visibility of the WIP icon in the title bar of a WIP-protected app

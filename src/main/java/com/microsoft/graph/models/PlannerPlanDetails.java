@@ -19,7 +19,6 @@ public class PlannerPlanDetails extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PlannerPlanDetails() {
         super();
-        this.setOdataType("#microsoft.graph.plannerPlanDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,11 +44,10 @@ public class PlannerPlanDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerPlanDetails currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("categoryDescriptions", (n) -> { currentObject.setCategoryDescriptions(n.getObjectValue(PlannerCategoryDescriptions::createFromDiscriminatorValue)); });
-            this.put("sharedWith", (n) -> { currentObject.setSharedWith(n.getObjectValue(PlannerUserIds::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("categoryDescriptions", (n) -> { this.setCategoryDescriptions(n.getObjectValue(PlannerCategoryDescriptions::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharedWith", (n) -> { this.setSharedWith(n.getObjectValue(PlannerUserIds::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the sharedWith property value. Set of user IDs that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required for them to access the plan owned by the group.

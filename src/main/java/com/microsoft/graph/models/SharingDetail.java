@@ -31,7 +31,6 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SharingDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.sharingDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,15 +56,14 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SharingDetail currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sharedBy", (n) -> { currentObject.setSharedBy(n.getObjectValue(InsightIdentity::createFromDiscriminatorValue)); });
-            this.put("sharedDateTime", (n) -> { currentObject.setSharedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("sharingReference", (n) -> { currentObject.setSharingReference(n.getObjectValue(ResourceReference::createFromDiscriminatorValue)); });
-            this.put("sharingSubject", (n) -> { currentObject.setSharingSubject(n.getStringValue()); });
-            this.put("sharingType", (n) -> { currentObject.setSharingType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sharedBy", (n) -> { this.setSharedBy(n.getObjectValue(InsightIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharedDateTime", (n) -> { this.setSharedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("sharingReference", (n) -> { this.setSharingReference(n.getObjectValue(ResourceReference::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharingSubject", (n) -> { this.setSharingSubject(n.getStringValue()); });
+        deserializerMap.put("sharingType", (n) -> { this.setSharingType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

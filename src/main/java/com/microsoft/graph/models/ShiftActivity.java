@@ -33,7 +33,6 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ShiftActivity() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.shiftActivity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -83,16 +82,15 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ShiftActivity currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("isPaid", (n) -> { currentObject.setIsPaid(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("theme", (n) -> { currentObject.setTheme(n.getEnumValue(ScheduleEntityTheme.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("isPaid", (n) -> { this.setIsPaid(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("theme", (n) -> { this.setTheme(n.getEnumValue(ScheduleEntityTheme.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isPaid property value. Indicates whether the microsoft.graph.user should be paid for the activity during their shift. Required.

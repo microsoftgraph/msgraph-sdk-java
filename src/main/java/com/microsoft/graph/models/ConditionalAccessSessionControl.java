@@ -26,7 +26,6 @@ public class ConditionalAccessSessionControl implements AdditionalDataHolder, Pa
     @javax.annotation.Nullable
     public ConditionalAccessSessionControl() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessSessionControl");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,11 +61,10 @@ public class ConditionalAccessSessionControl implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConditionalAccessSessionControl currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnabled property value. Specifies whether the session control is enabled.

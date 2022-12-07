@@ -23,7 +23,6 @@ public class ComplianceManagementPartnerAssignment implements AdditionalDataHold
     @javax.annotation.Nullable
     public ComplianceManagementPartnerAssignment() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.complianceManagementPartnerAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,11 +48,10 @@ public class ComplianceManagementPartnerAssignment implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ComplianceManagementPartnerAssignment currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

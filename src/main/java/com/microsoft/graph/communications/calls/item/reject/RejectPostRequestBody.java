@@ -57,11 +57,10 @@ public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RejectPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("callbackUri", (n) -> { currentObject.setCallbackUri(n.getStringValue()); });
-            this.put("reason", (n) -> { currentObject.setReason(n.getEnumValue(RejectReason.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("callbackUri", (n) -> { this.setCallbackUri(n.getStringValue()); });
+        deserializerMap.put("reason", (n) -> { this.setReason(n.getEnumValue(RejectReason.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the reason property value. The reason property

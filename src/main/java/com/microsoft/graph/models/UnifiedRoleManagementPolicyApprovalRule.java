@@ -35,10 +35,9 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UnifiedRoleManagementPolicyApprovalRule currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("setting", (n) -> { currentObject.setSetting(n.getObjectValue(ApprovalSettings::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("setting", (n) -> { this.setSetting(n.getObjectValue(ApprovalSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the setting property value. The settings for approval of the role assignment.

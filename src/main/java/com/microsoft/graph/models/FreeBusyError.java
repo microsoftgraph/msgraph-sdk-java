@@ -24,7 +24,6 @@ public class FreeBusyError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public FreeBusyError() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.freeBusyError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class FreeBusyError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final FreeBusyError currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("responseCode", (n) -> { currentObject.setResponseCode(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("responseCode", (n) -> { this.setResponseCode(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the message property value. Describes the error.

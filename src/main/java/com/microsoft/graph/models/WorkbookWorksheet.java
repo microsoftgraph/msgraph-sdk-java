@@ -31,7 +31,6 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookWorksheet() {
         super();
-        this.setOdataType("#microsoft.graph.workbookWorksheet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,17 +56,16 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookWorksheet currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("charts", (n) -> { currentObject.setCharts(n.getCollectionOfObjectValues(WorkbookChart::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("names", (n) -> { currentObject.setNames(n.getCollectionOfObjectValues(WorkbookNamedItem::createFromDiscriminatorValue)); });
-            this.put("pivotTables", (n) -> { currentObject.setPivotTables(n.getCollectionOfObjectValues(WorkbookPivotTable::createFromDiscriminatorValue)); });
-            this.put("position", (n) -> { currentObject.setPosition(n.getIntegerValue()); });
-            this.put("protection", (n) -> { currentObject.setProtection(n.getObjectValue(WorkbookWorksheetProtection::createFromDiscriminatorValue)); });
-            this.put("tables", (n) -> { currentObject.setTables(n.getCollectionOfObjectValues(WorkbookTable::createFromDiscriminatorValue)); });
-            this.put("visibility", (n) -> { currentObject.setVisibility(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("charts", (n) -> { this.setCharts(n.getCollectionOfObjectValues(WorkbookChart::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("names", (n) -> { this.setNames(n.getCollectionOfObjectValues(WorkbookNamedItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("pivotTables", (n) -> { this.setPivotTables(n.getCollectionOfObjectValues(WorkbookPivotTable::createFromDiscriminatorValue)); });
+        deserializerMap.put("position", (n) -> { this.setPosition(n.getIntegerValue()); });
+        deserializerMap.put("protection", (n) -> { this.setProtection(n.getObjectValue(WorkbookWorksheetProtection::createFromDiscriminatorValue)); });
+        deserializerMap.put("tables", (n) -> { this.setTables(n.getCollectionOfObjectValues(WorkbookTable::createFromDiscriminatorValue)); });
+        deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. The display name of the worksheet.

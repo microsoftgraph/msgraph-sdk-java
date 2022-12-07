@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class Person extends Entity implements Parsable {
     /** The person's birthday. */
     private String _birthday;
@@ -54,7 +54,6 @@ public class Person extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Person() {
         super();
-        this.setOdataType("#microsoft.graph.person");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -104,28 +103,27 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Person currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("birthday", (n) -> { currentObject.setBirthday(n.getStringValue()); });
-            this.put("companyName", (n) -> { currentObject.setCompanyName(n.getStringValue()); });
-            this.put("department", (n) -> { currentObject.setDepartment(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("givenName", (n) -> { currentObject.setGivenName(n.getStringValue()); });
-            this.put("imAddress", (n) -> { currentObject.setImAddress(n.getStringValue()); });
-            this.put("isFavorite", (n) -> { currentObject.setIsFavorite(n.getBooleanValue()); });
-            this.put("jobTitle", (n) -> { currentObject.setJobTitle(n.getStringValue()); });
-            this.put("officeLocation", (n) -> { currentObject.setOfficeLocation(n.getStringValue()); });
-            this.put("personNotes", (n) -> { currentObject.setPersonNotes(n.getStringValue()); });
-            this.put("personType", (n) -> { currentObject.setPersonType(n.getObjectValue(PersonType::createFromDiscriminatorValue)); });
-            this.put("phones", (n) -> { currentObject.setPhones(n.getCollectionOfObjectValues(Phone::createFromDiscriminatorValue)); });
-            this.put("postalAddresses", (n) -> { currentObject.setPostalAddresses(n.getCollectionOfObjectValues(Location::createFromDiscriminatorValue)); });
-            this.put("profession", (n) -> { currentObject.setProfession(n.getStringValue()); });
-            this.put("scoredEmailAddresses", (n) -> { currentObject.setScoredEmailAddresses(n.getCollectionOfObjectValues(ScoredEmailAddress::createFromDiscriminatorValue)); });
-            this.put("surname", (n) -> { currentObject.setSurname(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("websites", (n) -> { currentObject.setWebsites(n.getCollectionOfObjectValues(Website::createFromDiscriminatorValue)); });
-            this.put("yomiCompany", (n) -> { currentObject.setYomiCompany(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("birthday", (n) -> { this.setBirthday(n.getStringValue()); });
+        deserializerMap.put("companyName", (n) -> { this.setCompanyName(n.getStringValue()); });
+        deserializerMap.put("department", (n) -> { this.setDepartment(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("givenName", (n) -> { this.setGivenName(n.getStringValue()); });
+        deserializerMap.put("imAddress", (n) -> { this.setImAddress(n.getStringValue()); });
+        deserializerMap.put("isFavorite", (n) -> { this.setIsFavorite(n.getBooleanValue()); });
+        deserializerMap.put("jobTitle", (n) -> { this.setJobTitle(n.getStringValue()); });
+        deserializerMap.put("officeLocation", (n) -> { this.setOfficeLocation(n.getStringValue()); });
+        deserializerMap.put("personNotes", (n) -> { this.setPersonNotes(n.getStringValue()); });
+        deserializerMap.put("personType", (n) -> { this.setPersonType(n.getObjectValue(PersonType::createFromDiscriminatorValue)); });
+        deserializerMap.put("phones", (n) -> { this.setPhones(n.getCollectionOfObjectValues(Phone::createFromDiscriminatorValue)); });
+        deserializerMap.put("postalAddresses", (n) -> { this.setPostalAddresses(n.getCollectionOfObjectValues(Location::createFromDiscriminatorValue)); });
+        deserializerMap.put("profession", (n) -> { this.setProfession(n.getStringValue()); });
+        deserializerMap.put("scoredEmailAddresses", (n) -> { this.setScoredEmailAddresses(n.getCollectionOfObjectValues(ScoredEmailAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("surname", (n) -> { this.setSurname(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("websites", (n) -> { this.setWebsites(n.getCollectionOfObjectValues(Website::createFromDiscriminatorValue)); });
+        deserializerMap.put("yomiCompany", (n) -> { this.setYomiCompany(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the givenName property value. The person's given name.

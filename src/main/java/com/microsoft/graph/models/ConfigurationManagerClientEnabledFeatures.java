@@ -33,7 +33,6 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
     @javax.annotation.Nullable
     public ConfigurationManagerClientEnabledFeatures() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.configurationManagerClientEnabledFeatures");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,16 +74,15 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConfigurationManagerClientEnabledFeatures currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("compliancePolicy", (n) -> { currentObject.setCompliancePolicy(n.getBooleanValue()); });
-            this.put("deviceConfiguration", (n) -> { currentObject.setDeviceConfiguration(n.getBooleanValue()); });
-            this.put("inventory", (n) -> { currentObject.setInventory(n.getBooleanValue()); });
-            this.put("modernApps", (n) -> { currentObject.setModernApps(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("resourceAccess", (n) -> { currentObject.setResourceAccess(n.getBooleanValue()); });
-            this.put("windowsUpdateForBusiness", (n) -> { currentObject.setWindowsUpdateForBusiness(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("compliancePolicy", (n) -> { this.setCompliancePolicy(n.getBooleanValue()); });
+        deserializerMap.put("deviceConfiguration", (n) -> { this.setDeviceConfiguration(n.getBooleanValue()); });
+        deserializerMap.put("inventory", (n) -> { this.setInventory(n.getBooleanValue()); });
+        deserializerMap.put("modernApps", (n) -> { this.setModernApps(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("resourceAccess", (n) -> { this.setResourceAccess(n.getBooleanValue()); });
+        deserializerMap.put("windowsUpdateForBusiness", (n) -> { this.setWindowsUpdateForBusiness(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the inventory property value. Whether inventory is managed by Intune

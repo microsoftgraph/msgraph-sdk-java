@@ -24,7 +24,6 @@ public class TimeZoneInformation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TimeZoneInformation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.timeZoneInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,12 +65,11 @@ public class TimeZoneInformation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TimeZoneInformation currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("alias", (n) -> { currentObject.setAlias(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("alias", (n) -> { this.setAlias(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

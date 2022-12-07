@@ -25,7 +25,6 @@ public class CallTranscriptionInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public CallTranscriptionInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callTranscriptionInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,12 +50,11 @@ public class CallTranscriptionInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CallTranscriptionInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(CallTranscriptionState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(CallTranscriptionState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The state modified time in UTC.

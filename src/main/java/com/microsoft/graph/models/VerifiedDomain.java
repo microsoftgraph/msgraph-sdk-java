@@ -30,7 +30,6 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public VerifiedDomain() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.verifiedDomain");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,15 +63,14 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final VerifiedDomain currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("capabilities", (n) -> { currentObject.setCapabilities(n.getStringValue()); });
-            this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
-            this.put("isInitial", (n) -> { currentObject.setIsInitial(n.getBooleanValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("capabilities", (n) -> { this.setCapabilities(n.getStringValue()); });
+        deserializerMap.put("isDefault", (n) -> { this.setIsDefault(n.getBooleanValue()); });
+        deserializerMap.put("isInitial", (n) -> { this.setIsInitial(n.getBooleanValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isDefault property value. true if this is the default domain associated with the tenant; otherwise, false.

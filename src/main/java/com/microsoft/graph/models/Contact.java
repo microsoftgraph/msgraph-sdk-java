@@ -196,46 +196,45 @@ public class Contact extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Contact currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("assistantName", (n) -> { currentObject.setAssistantName(n.getStringValue()); });
-            this.put("birthday", (n) -> { currentObject.setBirthday(n.getOffsetDateTimeValue()); });
-            this.put("businessAddress", (n) -> { currentObject.setBusinessAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
-            this.put("businessHomePage", (n) -> { currentObject.setBusinessHomePage(n.getStringValue()); });
-            this.put("businessPhones", (n) -> { currentObject.setBusinessPhones(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("companyName", (n) -> { currentObject.setCompanyName(n.getStringValue()); });
-            this.put("department", (n) -> { currentObject.setDepartment(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("emailAddresses", (n) -> { currentObject.setEmailAddresses(n.getCollectionOfObjectValues(EmailAddress::createFromDiscriminatorValue)); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("fileAs", (n) -> { currentObject.setFileAs(n.getStringValue()); });
-            this.put("generation", (n) -> { currentObject.setGeneration(n.getStringValue()); });
-            this.put("givenName", (n) -> { currentObject.setGivenName(n.getStringValue()); });
-            this.put("homeAddress", (n) -> { currentObject.setHomeAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
-            this.put("homePhones", (n) -> { currentObject.setHomePhones(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("imAddresses", (n) -> { currentObject.setImAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("initials", (n) -> { currentObject.setInitials(n.getStringValue()); });
-            this.put("jobTitle", (n) -> { currentObject.setJobTitle(n.getStringValue()); });
-            this.put("manager", (n) -> { currentObject.setManager(n.getStringValue()); });
-            this.put("middleName", (n) -> { currentObject.setMiddleName(n.getStringValue()); });
-            this.put("mobilePhone", (n) -> { currentObject.setMobilePhone(n.getStringValue()); });
-            this.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("nickName", (n) -> { currentObject.setNickName(n.getStringValue()); });
-            this.put("officeLocation", (n) -> { currentObject.setOfficeLocation(n.getStringValue()); });
-            this.put("otherAddress", (n) -> { currentObject.setOtherAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
-            this.put("parentFolderId", (n) -> { currentObject.setParentFolderId(n.getStringValue()); });
-            this.put("personalNotes", (n) -> { currentObject.setPersonalNotes(n.getStringValue()); });
-            this.put("photo", (n) -> { currentObject.setPhoto(n.getObjectValue(ProfilePhoto::createFromDiscriminatorValue)); });
-            this.put("profession", (n) -> { currentObject.setProfession(n.getStringValue()); });
-            this.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("spouseName", (n) -> { currentObject.setSpouseName(n.getStringValue()); });
-            this.put("surname", (n) -> { currentObject.setSurname(n.getStringValue()); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-            this.put("yomiCompanyName", (n) -> { currentObject.setYomiCompanyName(n.getStringValue()); });
-            this.put("yomiGivenName", (n) -> { currentObject.setYomiGivenName(n.getStringValue()); });
-            this.put("yomiSurname", (n) -> { currentObject.setYomiSurname(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assistantName", (n) -> { this.setAssistantName(n.getStringValue()); });
+        deserializerMap.put("birthday", (n) -> { this.setBirthday(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("businessAddress", (n) -> { this.setBusinessAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("businessHomePage", (n) -> { this.setBusinessHomePage(n.getStringValue()); });
+        deserializerMap.put("businessPhones", (n) -> { this.setBusinessPhones(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("children", (n) -> { this.setChildren(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("companyName", (n) -> { this.setCompanyName(n.getStringValue()); });
+        deserializerMap.put("department", (n) -> { this.setDepartment(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("emailAddresses", (n) -> { this.setEmailAddresses(n.getCollectionOfObjectValues(EmailAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("fileAs", (n) -> { this.setFileAs(n.getStringValue()); });
+        deserializerMap.put("generation", (n) -> { this.setGeneration(n.getStringValue()); });
+        deserializerMap.put("givenName", (n) -> { this.setGivenName(n.getStringValue()); });
+        deserializerMap.put("homeAddress", (n) -> { this.setHomeAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("homePhones", (n) -> { this.setHomePhones(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("imAddresses", (n) -> { this.setImAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("initials", (n) -> { this.setInitials(n.getStringValue()); });
+        deserializerMap.put("jobTitle", (n) -> { this.setJobTitle(n.getStringValue()); });
+        deserializerMap.put("manager", (n) -> { this.setManager(n.getStringValue()); });
+        deserializerMap.put("middleName", (n) -> { this.setMiddleName(n.getStringValue()); });
+        deserializerMap.put("mobilePhone", (n) -> { this.setMobilePhone(n.getStringValue()); });
+        deserializerMap.put("multiValueExtendedProperties", (n) -> { this.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("nickName", (n) -> { this.setNickName(n.getStringValue()); });
+        deserializerMap.put("officeLocation", (n) -> { this.setOfficeLocation(n.getStringValue()); });
+        deserializerMap.put("otherAddress", (n) -> { this.setOtherAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentFolderId", (n) -> { this.setParentFolderId(n.getStringValue()); });
+        deserializerMap.put("personalNotes", (n) -> { this.setPersonalNotes(n.getStringValue()); });
+        deserializerMap.put("photo", (n) -> { this.setPhoto(n.getObjectValue(ProfilePhoto::createFromDiscriminatorValue)); });
+        deserializerMap.put("profession", (n) -> { this.setProfession(n.getStringValue()); });
+        deserializerMap.put("singleValueExtendedProperties", (n) -> { this.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("spouseName", (n) -> { this.setSpouseName(n.getStringValue()); });
+        deserializerMap.put("surname", (n) -> { this.setSurname(n.getStringValue()); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
+        deserializerMap.put("yomiCompanyName", (n) -> { this.setYomiCompanyName(n.getStringValue()); });
+        deserializerMap.put("yomiGivenName", (n) -> { this.setYomiGivenName(n.getStringValue()); });
+        deserializerMap.put("yomiSurname", (n) -> { this.setYomiSurname(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileAs property value. The name the contact is filed under.

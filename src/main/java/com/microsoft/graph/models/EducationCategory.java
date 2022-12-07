@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class EducationCategory extends Entity implements Parsable {
     /** Unique identifier for the category. */
     private String _displayName;
@@ -18,7 +18,6 @@ public class EducationCategory extends Entity implements Parsable {
     @javax.annotation.Nullable
     public EducationCategory() {
         super();
-        this.setOdataType("#microsoft.graph.educationCategory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,10 +43,9 @@ public class EducationCategory extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationCategory currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object

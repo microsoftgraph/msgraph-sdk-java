@@ -95,16 +95,15 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuthorizationPolicy currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("allowedToSignUpEmailBasedSubscriptions", (n) -> { currentObject.setAllowedToSignUpEmailBasedSubscriptions(n.getBooleanValue()); });
-            this.put("allowedToUseSSPR", (n) -> { currentObject.setAllowedToUseSSPR(n.getBooleanValue()); });
-            this.put("allowEmailVerifiedUsersToJoinOrganization", (n) -> { currentObject.setAllowEmailVerifiedUsersToJoinOrganization(n.getBooleanValue()); });
-            this.put("allowInvitesFrom", (n) -> { currentObject.setAllowInvitesFrom(n.getEnumValue(AllowInvitesFrom.class)); });
-            this.put("blockMsolPowerShell", (n) -> { currentObject.setBlockMsolPowerShell(n.getBooleanValue()); });
-            this.put("defaultUserRolePermissions", (n) -> { currentObject.setDefaultUserRolePermissions(n.getObjectValue(DefaultUserRolePermissions::createFromDiscriminatorValue)); });
-            this.put("guestUserRoleId", (n) -> { currentObject.setGuestUserRoleId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedToSignUpEmailBasedSubscriptions", (n) -> { this.setAllowedToSignUpEmailBasedSubscriptions(n.getBooleanValue()); });
+        deserializerMap.put("allowedToUseSSPR", (n) -> { this.setAllowedToUseSSPR(n.getBooleanValue()); });
+        deserializerMap.put("allowEmailVerifiedUsersToJoinOrganization", (n) -> { this.setAllowEmailVerifiedUsersToJoinOrganization(n.getBooleanValue()); });
+        deserializerMap.put("allowInvitesFrom", (n) -> { this.setAllowInvitesFrom(n.getEnumValue(AllowInvitesFrom.class)); });
+        deserializerMap.put("blockMsolPowerShell", (n) -> { this.setBlockMsolPowerShell(n.getBooleanValue()); });
+        deserializerMap.put("defaultUserRolePermissions", (n) -> { this.setDefaultUserRolePermissions(n.getObjectValue(DefaultUserRolePermissions::createFromDiscriminatorValue)); });
+        deserializerMap.put("guestUserRoleId", (n) -> { this.setGuestUserRoleId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the guestUserRoleId property value. Represents role templateId for the role that should be granted to guest user. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).

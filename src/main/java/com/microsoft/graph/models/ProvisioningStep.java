@@ -30,7 +30,6 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ProvisioningStep() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.provisioningStep");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,15 +71,14 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ProvisioningStep currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("details", (n) -> { currentObject.setDetails(n.getObjectValue(DetailsInfo::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("provisioningStepType", (n) -> { currentObject.setProvisioningStepType(n.getEnumValue(ProvisioningStepType.class)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ProvisioningResult.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("details", (n) -> { this.setDetails(n.getObjectValue(DetailsInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("provisioningStepType", (n) -> { this.setProvisioningStepType(n.getEnumValue(ProvisioningStepType.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ProvisioningResult.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. Name of the step.

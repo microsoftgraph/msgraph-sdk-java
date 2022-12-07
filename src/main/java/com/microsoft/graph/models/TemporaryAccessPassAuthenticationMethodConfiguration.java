@@ -61,15 +61,14 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TemporaryAccessPassAuthenticationMethodConfiguration currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("defaultLength", (n) -> { currentObject.setDefaultLength(n.getIntegerValue()); });
-            this.put("defaultLifetimeInMinutes", (n) -> { currentObject.setDefaultLifetimeInMinutes(n.getIntegerValue()); });
-            this.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
-            this.put("isUsableOnce", (n) -> { currentObject.setIsUsableOnce(n.getBooleanValue()); });
-            this.put("maximumLifetimeInMinutes", (n) -> { currentObject.setMaximumLifetimeInMinutes(n.getIntegerValue()); });
-            this.put("minimumLifetimeInMinutes", (n) -> { currentObject.setMinimumLifetimeInMinutes(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultLength", (n) -> { this.setDefaultLength(n.getIntegerValue()); });
+        deserializerMap.put("defaultLifetimeInMinutes", (n) -> { this.setDefaultLifetimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
+        deserializerMap.put("isUsableOnce", (n) -> { this.setIsUsableOnce(n.getBooleanValue()); });
+        deserializerMap.put("maximumLifetimeInMinutes", (n) -> { this.setMaximumLifetimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("minimumLifetimeInMinutes", (n) -> { this.setMinimumLifetimeInMinutes(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method.

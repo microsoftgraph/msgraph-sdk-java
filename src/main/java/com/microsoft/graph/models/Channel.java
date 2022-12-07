@@ -8,13 +8,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class Channel extends Entity implements Parsable {
     /** Read only. Timestamp at which the channel was created. */
     private OffsetDateTime _createdDateTime;
     /** Optional textual description for the channel. */
     private String _description;
-    /** Channel name as it will appear to the user in Microsoft Teams. */
+    /** Channel name as it will appear to the user in Microsoft Teams. The maximum length is 50 characters. */
     private String _displayName;
     /** The email address for sending messages to the channel. Read-only. */
     private String _email;
@@ -43,7 +43,6 @@ public class Channel extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Channel() {
         super();
-        this.setOdataType("#microsoft.graph.channel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,7 +71,7 @@ public class Channel extends Entity implements Parsable {
         return this._description;
     }
     /**
-     * Gets the displayName property value. Channel name as it will appear to the user in Microsoft Teams.
+     * Gets the displayName property value. Channel name as it will appear to the user in Microsoft Teams. The maximum length is 50 characters.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -93,22 +92,21 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Channel currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("filesFolder", (n) -> { currentObject.setFilesFolder(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
-            this.put("isFavoriteByDefault", (n) -> { currentObject.setIsFavoriteByDefault(n.getBooleanValue()); });
-            this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
-            this.put("membershipType", (n) -> { currentObject.setMembershipType(n.getEnumValue(ChannelMembershipType.class)); });
-            this.put("messages", (n) -> { currentObject.setMessages(n.getCollectionOfObjectValues(ChatMessage::createFromDiscriminatorValue)); });
-            this.put("sharedWithTeams", (n) -> { currentObject.setSharedWithTeams(n.getCollectionOfObjectValues(SharedWithChannelTeamInfo::createFromDiscriminatorValue)); });
-            this.put("tabs", (n) -> { currentObject.setTabs(n.getCollectionOfObjectValues(TeamsTab::createFromDiscriminatorValue)); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("filesFolder", (n) -> { this.setFilesFolder(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("isFavoriteByDefault", (n) -> { this.setIsFavoriteByDefault(n.getBooleanValue()); });
+        deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
+        deserializerMap.put("membershipType", (n) -> { this.setMembershipType(n.getEnumValue(ChannelMembershipType.class)); });
+        deserializerMap.put("messages", (n) -> { this.setMessages(n.getCollectionOfObjectValues(ChatMessage::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharedWithTeams", (n) -> { this.setSharedWithTeams(n.getCollectionOfObjectValues(SharedWithChannelTeamInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("tabs", (n) -> { this.setTabs(n.getCollectionOfObjectValues(TeamsTab::createFromDiscriminatorValue)); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the filesFolder property value. Metadata for the location where the channel's files are stored.
@@ -224,7 +222,7 @@ public class Channel extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the displayName property value. Channel name as it will appear to the user in Microsoft Teams.
+     * Sets the displayName property value. Channel name as it will appear to the user in Microsoft Teams. The maximum length is 50 characters.
      * @param value Value to set for the displayName property.
      * @return a void
      */

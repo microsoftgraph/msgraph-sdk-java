@@ -45,11 +45,10 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationFeedbackResourceOutcome currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("feedbackResource", (n) -> { currentObject.setFeedbackResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
-            this.put("resourceStatus", (n) -> { currentObject.setResourceStatus(n.getEnumValue(EducationFeedbackResourceOutcomeStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("feedbackResource", (n) -> { this.setFeedbackResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceStatus", (n) -> { this.setResourceStatus(n.getEnumValue(EducationFeedbackResourceOutcomeStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.

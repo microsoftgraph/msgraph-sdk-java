@@ -24,7 +24,6 @@ public class FeatureTarget implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public FeatureTarget() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.featureTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +49,11 @@ public class FeatureTarget implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final FeatureTarget currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("targetType", (n) -> { currentObject.setTargetType(n.getEnumValue(FeatureTargetType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("targetType", (n) -> { this.setTargetType(n.getEnumValue(FeatureTargetType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. The ID of the entity that's targeted in the include or exclude rule, or all_users to target all users.

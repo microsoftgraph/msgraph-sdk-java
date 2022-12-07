@@ -34,7 +34,6 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SharepointIds() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.sharepointIds");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,17 +59,16 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SharepointIds currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
-            this.put("listId", (n) -> { currentObject.setListId(n.getStringValue()); });
-            this.put("listItemId", (n) -> { currentObject.setListItemId(n.getStringValue()); });
-            this.put("listItemUniqueId", (n) -> { currentObject.setListItemUniqueId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("siteId", (n) -> { currentObject.setSiteId(n.getStringValue()); });
-            this.put("siteUrl", (n) -> { currentObject.setSiteUrl(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("webId", (n) -> { currentObject.setWebId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("listId", (n) -> { this.setListId(n.getStringValue()); });
+        deserializerMap.put("listItemId", (n) -> { this.setListItemId(n.getStringValue()); });
+        deserializerMap.put("listItemUniqueId", (n) -> { this.setListItemUniqueId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("siteId", (n) -> { this.setSiteId(n.getStringValue()); });
+        deserializerMap.put("siteUrl", (n) -> { this.setSiteUrl(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("webId", (n) -> { this.setWebId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the listId property value. The unique identifier (guid) for the item's list in SharePoint.

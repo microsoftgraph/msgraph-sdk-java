@@ -33,7 +33,6 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     @javax.annotation.Nullable
     public MobileThreatDefenseConnector() {
         super();
-        this.setOdataType("#microsoft.graph.mobileThreatDefenseConnector");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,17 +66,16 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MobileThreatDefenseConnector currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("androidDeviceBlockedOnMissingPartnerData", (n) -> { currentObject.setAndroidDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
-            this.put("androidEnabled", (n) -> { currentObject.setAndroidEnabled(n.getBooleanValue()); });
-            this.put("iosDeviceBlockedOnMissingPartnerData", (n) -> { currentObject.setIosDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
-            this.put("iosEnabled", (n) -> { currentObject.setIosEnabled(n.getBooleanValue()); });
-            this.put("lastHeartbeatDateTime", (n) -> { currentObject.setLastHeartbeatDateTime(n.getOffsetDateTimeValue()); });
-            this.put("partnerState", (n) -> { currentObject.setPartnerState(n.getEnumValue(MobileThreatPartnerTenantState.class)); });
-            this.put("partnerUnresponsivenessThresholdInDays", (n) -> { currentObject.setPartnerUnresponsivenessThresholdInDays(n.getIntegerValue()); });
-            this.put("partnerUnsupportedOsVersionBlocked", (n) -> { currentObject.setPartnerUnsupportedOsVersionBlocked(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("androidDeviceBlockedOnMissingPartnerData", (n) -> { this.setAndroidDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
+        deserializerMap.put("androidEnabled", (n) -> { this.setAndroidEnabled(n.getBooleanValue()); });
+        deserializerMap.put("iosDeviceBlockedOnMissingPartnerData", (n) -> { this.setIosDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
+        deserializerMap.put("iosEnabled", (n) -> { this.setIosEnabled(n.getBooleanValue()); });
+        deserializerMap.put("lastHeartbeatDateTime", (n) -> { this.setLastHeartbeatDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("partnerState", (n) -> { this.setPartnerState(n.getEnumValue(MobileThreatPartnerTenantState.class)); });
+        deserializerMap.put("partnerUnresponsivenessThresholdInDays", (n) -> { this.setPartnerUnresponsivenessThresholdInDays(n.getIntegerValue()); });
+        deserializerMap.put("partnerUnsupportedOsVersionBlocked", (n) -> { this.setPartnerUnsupportedOsVersionBlocked(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the iosDeviceBlockedOnMissingPartnerData property value. For IOS, set whether Intune must receive data from the data sync partner prior to marking a device compliant

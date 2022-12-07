@@ -26,7 +26,6 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public CallOptions() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callOptions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,12 +59,11 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CallOptions currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("hideBotAfterEscalation", (n) -> { currentObject.setHideBotAfterEscalation(n.getBooleanValue()); });
-            this.put("isContentSharingNotificationEnabled", (n) -> { currentObject.setIsContentSharingNotificationEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("hideBotAfterEscalation", (n) -> { this.setHideBotAfterEscalation(n.getBooleanValue()); });
+        deserializerMap.put("isContentSharingNotificationEnabled", (n) -> { this.setIsContentSharingNotificationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hideBotAfterEscalation property value. Indicates whether to hide the app after the call is escalated.

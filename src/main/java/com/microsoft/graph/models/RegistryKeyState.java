@@ -40,7 +40,6 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RegistryKeyState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.registryKeyState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,20 +65,19 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RegistryKeyState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(11) {{
-            this.put("hive", (n) -> { currentObject.setHive(n.getEnumValue(RegistryHive.class)); });
-            this.put("key", (n) -> { currentObject.setKey(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("oldKey", (n) -> { currentObject.setOldKey(n.getStringValue()); });
-            this.put("oldValueData", (n) -> { currentObject.setOldValueData(n.getStringValue()); });
-            this.put("oldValueName", (n) -> { currentObject.setOldValueName(n.getStringValue()); });
-            this.put("operation", (n) -> { currentObject.setOperation(n.getEnumValue(RegistryOperation.class)); });
-            this.put("processId", (n) -> { currentObject.setProcessId(n.getIntegerValue()); });
-            this.put("valueData", (n) -> { currentObject.setValueData(n.getStringValue()); });
-            this.put("valueName", (n) -> { currentObject.setValueName(n.getStringValue()); });
-            this.put("valueType", (n) -> { currentObject.setValueType(n.getEnumValue(RegistryValueType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(11);
+        deserializerMap.put("hive", (n) -> { this.setHive(n.getEnumValue(RegistryHive.class)); });
+        deserializerMap.put("key", (n) -> { this.setKey(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("oldKey", (n) -> { this.setOldKey(n.getStringValue()); });
+        deserializerMap.put("oldValueData", (n) -> { this.setOldValueData(n.getStringValue()); });
+        deserializerMap.put("oldValueName", (n) -> { this.setOldValueName(n.getStringValue()); });
+        deserializerMap.put("operation", (n) -> { this.setOperation(n.getEnumValue(RegistryOperation.class)); });
+        deserializerMap.put("processId", (n) -> { this.setProcessId(n.getIntegerValue()); });
+        deserializerMap.put("valueData", (n) -> { this.setValueData(n.getStringValue()); });
+        deserializerMap.put("valueName", (n) -> { this.setValueName(n.getStringValue()); });
+        deserializerMap.put("valueType", (n) -> { this.setValueType(n.getEnumValue(RegistryValueType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the hive property value. A Windows registry hive : HKEY_CURRENT_CONFIG HKEY_CURRENT_USER HKEY_LOCAL_MACHINE/SAM HKEY_LOCAL_MACHINE/Security HKEY_LOCAL_MACHINE/Software HKEY_LOCAL_MACHINE/System HKEY_USERS/.Default. Possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault.

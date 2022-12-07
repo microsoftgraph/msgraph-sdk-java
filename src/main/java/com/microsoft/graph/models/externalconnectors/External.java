@@ -22,7 +22,6 @@ public class External implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public External() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.externalConnectors.external");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,11 +55,10 @@ public class External implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final External currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("connections", (n) -> { currentObject.setConnections(n.getCollectionOfObjectValues(ExternalConnection::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("connections", (n) -> { this.setConnections(n.getCollectionOfObjectValues(ExternalConnection::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

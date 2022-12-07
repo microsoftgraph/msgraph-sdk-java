@@ -26,7 +26,6 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TeamSummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,13 +51,12 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamSummary currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("guestsCount", (n) -> { currentObject.setGuestsCount(n.getIntegerValue()); });
-            this.put("membersCount", (n) -> { currentObject.setMembersCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("ownersCount", (n) -> { currentObject.setOwnersCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("guestsCount", (n) -> { this.setGuestsCount(n.getIntegerValue()); });
+        deserializerMap.put("membersCount", (n) -> { this.setMembersCount(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("ownersCount", (n) -> { this.setOwnersCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the guestsCount property value. The guestsCount property

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class FeatureRolloutPolicy extends Entity implements Parsable {
     /** Nullable. Specifies a list of directoryObjects that feature is enabled for. */
     private java.util.List<DirectoryObject> _appliesTo;
@@ -28,7 +28,6 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
     @javax.annotation.Nullable
     public FeatureRolloutPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.featureRolloutPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -78,15 +77,14 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final FeatureRolloutPolicy currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("feature", (n) -> { currentObject.setFeature(n.getEnumValue(StagedFeatureName.class)); });
-            this.put("isAppliedToOrganization", (n) -> { currentObject.setIsAppliedToOrganization(n.getBooleanValue()); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("feature", (n) -> { this.setFeature(n.getEnumValue(StagedFeatureName.class)); });
+        deserializerMap.put("isAppliedToOrganization", (n) -> { this.setIsAppliedToOrganization(n.getBooleanValue()); });
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isAppliedToOrganization property value. Indicates whether this feature rollout policy should be applied to the entire organization.

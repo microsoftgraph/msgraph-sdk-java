@@ -22,7 +22,6 @@ public class AuthorizationInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AuthorizationInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.authorizationInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,11 +55,10 @@ public class AuthorizationInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuthorizationInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("certificateUserIds", (n) -> { currentObject.setCertificateUserIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("certificateUserIds", (n) -> { this.setCertificateUserIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

@@ -26,7 +26,6 @@ public class AssignedTrainingInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AssignedTrainingInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.assignedTrainingInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -76,13 +75,12 @@ public class AssignedTrainingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AssignedTrainingInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("assignedUserCount", (n) -> { currentObject.setAssignedUserCount(n.getIntegerValue()); });
-            this.put("completedUserCount", (n) -> { currentObject.setCompletedUserCount(n.getIntegerValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("assignedUserCount", (n) -> { this.setAssignedUserCount(n.getIntegerValue()); });
+        deserializerMap.put("completedUserCount", (n) -> { this.setCompletedUserCount(n.getIntegerValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

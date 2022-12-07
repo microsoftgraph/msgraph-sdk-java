@@ -27,7 +27,6 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AttendanceInterval() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.attendanceInterval");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,13 +60,12 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AttendanceInterval currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("durationInSeconds", (n) -> { currentObject.setDurationInSeconds(n.getIntegerValue()); });
-            this.put("joinDateTime", (n) -> { currentObject.setJoinDateTime(n.getOffsetDateTimeValue()); });
-            this.put("leaveDateTime", (n) -> { currentObject.setLeaveDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("durationInSeconds", (n) -> { this.setDurationInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("joinDateTime", (n) -> { this.setJoinDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("leaveDateTime", (n) -> { this.setLeaveDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the joinDateTime property value. The time the attendee joined in UTC.

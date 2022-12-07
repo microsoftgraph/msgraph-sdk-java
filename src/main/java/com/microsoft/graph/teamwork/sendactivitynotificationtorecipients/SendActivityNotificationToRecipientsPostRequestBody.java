@@ -78,16 +78,15 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SendActivityNotificationToRecipientsPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
-            this.put("activityType", (n) -> { currentObject.setActivityType(n.getStringValue()); });
-            this.put("chainId", (n) -> { currentObject.setChainId(n.getLongValue()); });
-            this.put("previewText", (n) -> { currentObject.setPreviewText(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("recipients", (n) -> { currentObject.setRecipients(n.getCollectionOfObjectValues(TeamworkNotificationRecipient::createFromDiscriminatorValue)); });
-            this.put("teamsAppId", (n) -> { currentObject.setTeamsAppId(n.getStringValue()); });
-            this.put("templateParameters", (n) -> { currentObject.setTemplateParameters(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("topic", (n) -> { currentObject.setTopic(n.getObjectValue(TeamworkActivityTopic::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("activityType", (n) -> { this.setActivityType(n.getStringValue()); });
+        deserializerMap.put("chainId", (n) -> { this.setChainId(n.getLongValue()); });
+        deserializerMap.put("previewText", (n) -> { this.setPreviewText(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("recipients", (n) -> { this.setRecipients(n.getCollectionOfObjectValues(TeamworkNotificationRecipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("teamsAppId", (n) -> { this.setTeamsAppId(n.getStringValue()); });
+        deserializerMap.put("templateParameters", (n) -> { this.setTemplateParameters(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("topic", (n) -> { this.setTopic(n.getObjectValue(TeamworkActivityTopic::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the previewText property value. The previewText property

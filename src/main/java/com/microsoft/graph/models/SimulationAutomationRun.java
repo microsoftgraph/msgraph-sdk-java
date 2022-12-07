@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class SimulationAutomationRun extends Entity implements Parsable {
     /** Date and time when the run ends in an attack simulation automation. */
     private OffsetDateTime _endDateTime;
@@ -25,7 +25,6 @@ public class SimulationAutomationRun extends Entity implements Parsable {
     @javax.annotation.Nullable
     public SimulationAutomationRun() {
         super();
-        this.setOdataType("#microsoft.graph.simulationAutomationRun");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,13 +50,12 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SimulationAutomationRun currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("simulationId", (n) -> { currentObject.setSimulationId(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(SimulationAutomationRunStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("simulationId", (n) -> { this.setSimulationId(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationAutomationRunStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the simulationId property value. Unique identifier for the attack simulation campaign initiated in the attack simulation automation run.

@@ -28,7 +28,6 @@ public class ChatMessageInfo extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ChatMessageInfo() {
         super();
-        this.setOdataType("#microsoft.graph.chatMessageInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,15 +69,14 @@ public class ChatMessageInfo extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ChatMessageInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("eventDetail", (n) -> { currentObject.setEventDetail(n.getObjectValue(EventMessageDetail::createFromDiscriminatorValue)); });
-            this.put("from", (n) -> { currentObject.setFrom(n.getObjectValue(ChatMessageFromIdentitySet::createFromDiscriminatorValue)); });
-            this.put("isDeleted", (n) -> { currentObject.setIsDeleted(n.getBooleanValue()); });
-            this.put("messageType", (n) -> { currentObject.setMessageType(n.getEnumValue(ChatMessageType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("eventDetail", (n) -> { this.setEventDetail(n.getObjectValue(EventMessageDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("from", (n) -> { this.setFrom(n.getObjectValue(ChatMessageFromIdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("isDeleted", (n) -> { this.setIsDeleted(n.getBooleanValue()); });
+        deserializerMap.put("messageType", (n) -> { this.setMessageType(n.getEnumValue(ChatMessageType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the from property value. Information about the sender of the message.

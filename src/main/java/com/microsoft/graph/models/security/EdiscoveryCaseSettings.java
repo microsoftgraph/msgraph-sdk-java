@@ -22,7 +22,6 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
     @javax.annotation.Nullable
     public EdiscoveryCaseSettings() {
         super();
-        this.setOdataType("#microsoft.graph.security.ediscoveryCaseSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -40,12 +39,11 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EdiscoveryCaseSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("ocr", (n) -> { currentObject.setOcr(n.getObjectValue(OcrSettings::createFromDiscriminatorValue)); });
-            this.put("redundancyDetection", (n) -> { currentObject.setRedundancyDetection(n.getObjectValue(RedundancyDetectionSettings::createFromDiscriminatorValue)); });
-            this.put("topicModeling", (n) -> { currentObject.setTopicModeling(n.getObjectValue(TopicModelingSettings::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("ocr", (n) -> { this.setOcr(n.getObjectValue(OcrSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("redundancyDetection", (n) -> { this.setRedundancyDetection(n.getObjectValue(RedundancyDetectionSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("topicModeling", (n) -> { this.setTopicModeling(n.getObjectValue(TopicModelingSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the ocr property value. The OCR (Optical Character Recognition) settings for the case.

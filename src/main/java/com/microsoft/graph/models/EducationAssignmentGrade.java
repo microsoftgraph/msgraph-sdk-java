@@ -26,7 +26,6 @@ public class EducationAssignmentGrade implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public EducationAssignmentGrade() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.educationAssignmentGrade");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,12 +58,11 @@ public class EducationAssignmentGrade implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationAssignmentGrade currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("gradedBy", (n) -> { currentObject.setGradedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("gradedDateTime", (n) -> { currentObject.setGradedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("gradedBy", (n) -> { this.setGradedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("gradedDateTime", (n) -> { this.setGradedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the gradedBy property value. User who did the grading.

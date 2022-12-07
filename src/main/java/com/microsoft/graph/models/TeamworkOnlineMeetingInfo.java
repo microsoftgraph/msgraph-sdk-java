@@ -26,7 +26,6 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public TeamworkOnlineMeetingInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamworkOnlineMeetingInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,13 +59,12 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamworkOnlineMeetingInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("calendarEventId", (n) -> { currentObject.setCalendarEventId(n.getStringValue()); });
-            this.put("joinWebUrl", (n) -> { currentObject.setJoinWebUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("organizer", (n) -> { currentObject.setOrganizer(n.getObjectValue(TeamworkUserIdentity::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("calendarEventId", (n) -> { this.setCalendarEventId(n.getStringValue()); });
+        deserializerMap.put("joinWebUrl", (n) -> { this.setJoinWebUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("organizer", (n) -> { this.setOrganizer(n.getObjectValue(TeamworkUserIdentity::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the joinWebUrl property value. The URL that users click to join or uniquely identify the meeting.

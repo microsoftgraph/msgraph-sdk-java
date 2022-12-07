@@ -47,12 +47,11 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReviewQueryScope currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("query", (n) -> { currentObject.setQuery(n.getStringValue()); });
-            this.put("queryRoot", (n) -> { currentObject.setQueryRoot(n.getStringValue()); });
-            this.put("queryType", (n) -> { currentObject.setQueryType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("query", (n) -> { this.setQuery(n.getStringValue()); });
+        deserializerMap.put("queryRoot", (n) -> { this.setQueryRoot(n.getStringValue()); });
+        deserializerMap.put("queryType", (n) -> { this.setQueryType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the query property value. The query representing what will be reviewed in an access review.

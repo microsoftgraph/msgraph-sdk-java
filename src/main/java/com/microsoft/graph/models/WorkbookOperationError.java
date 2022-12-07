@@ -26,7 +26,6 @@ public class WorkbookOperationError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public WorkbookOperationError() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.workbookOperationError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,13 +59,12 @@ public class WorkbookOperationError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookOperationError currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
-            this.put("innerError", (n) -> { currentObject.setInnerError(n.getObjectValue(WorkbookOperationError::createFromDiscriminatorValue)); });
-            this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
+        deserializerMap.put("innerError", (n) -> { this.setInnerError(n.getObjectValue(WorkbookOperationError::createFromDiscriminatorValue)); });
+        deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the innerError property value. The innerError property

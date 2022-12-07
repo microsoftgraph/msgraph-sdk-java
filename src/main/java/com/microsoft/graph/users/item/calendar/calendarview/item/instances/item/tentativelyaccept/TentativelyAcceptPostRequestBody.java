@@ -59,12 +59,11 @@ public class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, P
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TentativelyAcceptPostRequestBody currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
-            this.put("proposedNewTime", (n) -> { currentObject.setProposedNewTime(n.getObjectValue(TimeSlot::createFromDiscriminatorValue)); });
-            this.put("sendResponse", (n) -> { currentObject.setSendResponse(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
+        deserializerMap.put("proposedNewTime", (n) -> { this.setProposedNewTime(n.getObjectValue(TimeSlot::createFromDiscriminatorValue)); });
+        deserializerMap.put("sendResponse", (n) -> { this.setSendResponse(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the proposedNewTime property value. The ProposedNewTime property

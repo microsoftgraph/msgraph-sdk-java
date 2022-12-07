@@ -28,7 +28,6 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ImageInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.imageInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -78,14 +77,13 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ImageInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("addImageQuery", (n) -> { currentObject.setAddImageQuery(n.getBooleanValue()); });
-            this.put("alternateText", (n) -> { currentObject.setAlternateText(n.getStringValue()); });
-            this.put("alternativeText", (n) -> { currentObject.setAlternativeText(n.getStringValue()); });
-            this.put("iconUrl", (n) -> { currentObject.setIconUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("addImageQuery", (n) -> { this.setAddImageQuery(n.getBooleanValue()); });
+        deserializerMap.put("alternateText", (n) -> { this.setAlternateText(n.getStringValue()); });
+        deserializerMap.put("alternativeText", (n) -> { this.setAlternativeText(n.getStringValue()); });
+        deserializerMap.put("iconUrl", (n) -> { this.setIconUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the iconUrl property value. Optional; URI that points to an icon which represents the application used to generate the activity

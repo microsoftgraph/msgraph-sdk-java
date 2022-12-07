@@ -31,7 +31,6 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public SecureScoreControlStateUpdate() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.secureScoreControlStateUpdate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,15 +72,14 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SecureScoreControlStateUpdate currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });
-            this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
-            this.put("updatedBy", (n) -> { currentObject.setUpdatedBy(n.getStringValue()); });
-            this.put("updatedDateTime", (n) -> { currentObject.setUpdatedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getStringValue()); });
+        deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getStringValue()); });
+        deserializerMap.put("updatedBy", (n) -> { this.setUpdatedBy(n.getStringValue()); });
+        deserializerMap.put("updatedDateTime", (n) -> { this.setUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property

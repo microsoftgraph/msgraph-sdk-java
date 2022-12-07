@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class GroupLifecyclePolicy extends Entity implements Parsable {
     /** List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon. */
     private String _alternateNotificationEmails;
@@ -22,7 +22,6 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
     @javax.annotation.Nullable
     public GroupLifecyclePolicy() {
         super();
-        this.setOdataType("#microsoft.graph.groupLifecyclePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,12 +47,11 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupLifecyclePolicy currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("alternateNotificationEmails", (n) -> { currentObject.setAlternateNotificationEmails(n.getStringValue()); });
-            this.put("groupLifetimeInDays", (n) -> { currentObject.setGroupLifetimeInDays(n.getIntegerValue()); });
-            this.put("managedGroupTypes", (n) -> { currentObject.setManagedGroupTypes(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("alternateNotificationEmails", (n) -> { this.setAlternateNotificationEmails(n.getStringValue()); });
+        deserializerMap.put("groupLifetimeInDays", (n) -> { this.setGroupLifetimeInDays(n.getIntegerValue()); });
+        deserializerMap.put("managedGroupTypes", (n) -> { this.setManagedGroupTypes(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupLifetimeInDays property value. Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.

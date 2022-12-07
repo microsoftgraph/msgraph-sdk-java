@@ -17,7 +17,6 @@ public class WorkbookChartPointFormat extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartPointFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartPointFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,10 +34,9 @@ public class WorkbookChartPointFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookChartPointFormat currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
-            this.put("fill", (n) -> { currentObject.setFill(n.getObjectValue(WorkbookChartFill::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fill", (n) -> { this.setFill(n.getObjectValue(WorkbookChartFill::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the fill property value. Represents the fill format of a chart, which includes background formating information. Read-only.

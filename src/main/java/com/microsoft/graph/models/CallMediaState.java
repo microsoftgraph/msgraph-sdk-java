@@ -22,7 +22,6 @@ public class CallMediaState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public CallMediaState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callMediaState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,11 +55,10 @@ public class CallMediaState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CallMediaState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("audio", (n) -> { currentObject.setAudio(n.getEnumValue(MediaState.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("audio", (n) -> { this.setAudio(n.getEnumValue(MediaState.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
