@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class AccessReviewScheduleDefinition extends Entity implements Parsable {
     /** Defines the list of additional users or group members to be notified of the access review progress. */
     private java.util.List<AccessReviewNotificationRecipientItem> _additionalNotificationRecipients;
@@ -41,7 +40,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
     /** This read-only field specifies the status of an access review. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.  Supports $select, $orderby, and $filter (eq only). Read-only. */
     private String _status;
     /**
-     * Instantiates a new accessReviewScheduleDefinition and sets the default values.
+     * Instantiates a new AccessReviewScheduleDefinition and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -51,7 +50,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewScheduleDefinition
+     * @return a AccessReviewScheduleDefinition
      */
     @javax.annotation.Nonnull
     public static AccessReviewScheduleDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

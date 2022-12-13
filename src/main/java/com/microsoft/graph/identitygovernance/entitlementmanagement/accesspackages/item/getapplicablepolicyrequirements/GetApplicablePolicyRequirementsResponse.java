@@ -9,7 +9,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getApplicablePolicyRequirements method. */
+/**
+ * Provides operations to call the getApplicablePolicyRequirements method.
+ */
 public class GetApplicablePolicyRequirementsResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<AccessPackageAssignmentRequestRequirements> _value;

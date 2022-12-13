@@ -28,7 +28,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** An abstract class containing the base properties for Intune mobile apps. */
+/**
+ * An abstract class containing the base properties for Intune mobile apps.
+ */
 public class MobileApp extends Entity implements Parsable {
     /** The list of group assignments for this mobile app. */
     private java.util.List<MobileAppAssignment> _assignments;

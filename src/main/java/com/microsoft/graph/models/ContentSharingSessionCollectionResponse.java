@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the contentSharingSessions property of the microsoft.graph.call entity. */
+/**
+ * Provides operations to manage the contentSharingSessions property of the microsoft.graph.call entity.
+ */
 public class ContentSharingSessionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<ContentSharingSession> _value;

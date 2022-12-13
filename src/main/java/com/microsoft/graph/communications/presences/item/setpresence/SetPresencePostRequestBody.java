@@ -9,7 +9,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the setPresence method. */
+/**
+ * Provides operations to call the setPresence method.
+ */
 public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsable {
     /** The activity property */
     private String _activity;

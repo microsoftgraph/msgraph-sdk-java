@@ -7,13 +7,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class OnPremisesConditionalAccessSettings extends Entity implements Parsable {
     /** Indicates if on premises conditional access is enabled for this organization */
     private Boolean _enabled;
     /** User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy. */
-    private java.util.List<String> _excludedGroups;
+    private java.util.List<UUID> _excludedGroups;
     /** User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access. */
-    private java.util.List<String> _includedGroups;
+    private java.util.List<UUID> _includedGroups;
     /** Override the default access rule when allowing a device to ensure access is granted. */
     private Boolean _overrideDefaultRule;
     /**
@@ -44,10 +45,10 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     }
     /**
      * Gets the excludedGroups property value. User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getExcludedGroups() {
+    public java.util.List<UUID> getExcludedGroups() {
         return this._excludedGroups;
     }
     /**
@@ -58,17 +59,17 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
-        deserializerMap.put("excludedGroups", (n) -> { this.setExcludedGroups(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("includedGroups", (n) -> { this.setIncludedGroups(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("excludedGroups", (n) -> { this.setExcludedGroups(n.getCollectionOfPrimitiveValues(UUID.class)); });
+        deserializerMap.put("includedGroups", (n) -> { this.setIncludedGroups(n.getCollectionOfPrimitiveValues(UUID.class)); });
         deserializerMap.put("overrideDefaultRule", (n) -> { this.setOverrideDefaultRule(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
      * Gets the includedGroups property value. User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getIncludedGroups() {
+    public java.util.List<UUID> getIncludedGroups() {
         return this._includedGroups;
     }
     /**
@@ -108,7 +109,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setExcludedGroups(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setExcludedGroups(@javax.annotation.Nullable final java.util.List<UUID> value) {
         this._excludedGroups = value;
     }
     /**
@@ -117,7 +118,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setIncludedGroups(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setIncludedGroups(@javax.annotation.Nullable final java.util.List<UUID> value) {
         this._includedGroups = value;
     }
     /**

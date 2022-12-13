@@ -9,7 +9,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/**
+ * Provides operations to manage the collection of agreement entities.
+ */
 public class ConnectionOperation extends Entity implements Parsable {
     /** If status is failed, provides more information about the error that caused the failure. */
     private PublicError _error;

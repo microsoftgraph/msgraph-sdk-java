@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties for the installation state summary for a user. */
+/**
+ * Contains properties for the installation state summary for a user.
+ */
 public class UserInstallStateSummary extends Entity implements Parsable {
     /** The install state of the eBook. */
     private java.util.List<DeviceInstallState> _deviceStates;

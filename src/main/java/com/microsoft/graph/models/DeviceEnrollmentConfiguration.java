@@ -11,7 +11,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The Base Class of Device Enrollment Configuration */
+/**
+ * The Base Class of Device Enrollment Configuration
+ */
 public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     /** The list of group assignments for the device configuration profile */
     private java.util.List<EnrollmentConfigurationAssignment> _assignments;

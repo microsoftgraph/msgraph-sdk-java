@@ -8,7 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the availableProviderTypes method. */
+/**
+ * Provides operations to call the availableProviderTypes method.
+ */
 public class AvailableProviderTypesResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<String> _value;

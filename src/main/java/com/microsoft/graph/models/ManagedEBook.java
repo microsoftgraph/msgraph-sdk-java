@@ -9,7 +9,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** An abstract class containing the base properties for Managed eBook. */
+/**
+ * An abstract class containing the base properties for Managed eBook.
+ */
 public class ManagedEBook extends Entity implements Parsable {
     /** The list of assignments for this eBook. */
     private java.util.List<ManagedEBookAssignment> _assignments;

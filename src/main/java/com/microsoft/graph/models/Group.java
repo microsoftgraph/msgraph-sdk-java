@@ -15,7 +15,7 @@ public class Group extends DirectoryObject implements Parsable {
     private Boolean _allowExternalSenders;
     /** Represents the app roles a group has been granted for an application. Supports $expand. */
     private java.util.List<AppRoleAssignment> _appRoleAssignments;
-    /** The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. Read-only. */
+    /** The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. */
     private java.util.List<AssignedLabel> _assignedLabels;
     /** The licenses that are assigned to the group. Returned only on $select. Supports $filter (eq).Read-only. */
     private java.util.List<AssignedLicense> _assignedLicenses;
@@ -183,7 +183,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this._appRoleAssignments;
     }
     /**
-     * Gets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. Read-only.
+     * Gets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select.
      * @return a assignedLabel
      */
     @javax.annotation.Nullable
@@ -855,7 +855,7 @@ public class Group extends DirectoryObject implements Parsable {
         this._appRoleAssignments = value;
     }
     /**
-     * Sets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. Read-only.
+     * Sets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select.
      * @param value Value to set for the assignedLabels property.
      * @return a void
      */

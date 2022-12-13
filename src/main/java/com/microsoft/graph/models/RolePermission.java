@@ -8,7 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains the set of ResourceActions determining the allowed and not allowed permissions for each role. */
+/**
+ * Contains the set of ResourceActions determining the allowed and not allowed permissions for each role.
+ */
 public class RolePermission implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;

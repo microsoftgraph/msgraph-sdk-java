@@ -8,7 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Booking entities that provide a display name. */
+/**
+ * Booking entities that provide a display name.
+ */
 public class BookingCustomerBase extends Entity implements Parsable {
     /**
      * Instantiates a new bookingCustomerBase and sets the default values.

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class ResourceSpecificPermission implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -16,7 +17,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
     /** The display name for the resource-specific permission. */
     private String _displayName;
     /** The unique identifier for the resource-specific application permission. */
-    private String _id;
+    private UUID _id;
     /** Indicates whether the permission is enabled. */
     private Boolean _isEnabled;
     /** The OdataType property */
@@ -74,7 +75,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
         final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getUUIDValue()); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
@@ -82,10 +83,10 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the id property value. The unique identifier for the resource-specific application permission.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getId() {
+    public UUID getId() {
         return this._id;
     }
     /**
@@ -122,7 +123,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeStringValue("id", this.getId());
+        writer.writeUUIDValue("id", this.getId());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("value", this.getValue());
@@ -161,7 +162,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    public void setId(@javax.annotation.Nullable final UUID value) {
         this._id = value;
     }
     /**

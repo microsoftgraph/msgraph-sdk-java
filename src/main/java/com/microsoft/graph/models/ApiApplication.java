@@ -8,13 +8,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class ApiApplication implements AdditionalDataHolder, Parsable {
     /** When true, allows an application to use claims mapping without specifying a custom signing key. */
     private Boolean _acceptMappedClaims;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Azure AD knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant. */
-    private java.util.List<String> _knownClientApplications;
+    private java.util.List<UUID> _knownClientApplications;
     /** The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes. */
     private java.util.List<PermissionScope> _oauth2PermissionScopes;
     /** The OdataType property */
@@ -65,7 +66,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
         deserializerMap.put("acceptMappedClaims", (n) -> { this.setAcceptMappedClaims(n.getBooleanValue()); });
-        deserializerMap.put("knownClientApplications", (n) -> { this.setKnownClientApplications(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("knownClientApplications", (n) -> { this.setKnownClientApplications(n.getCollectionOfPrimitiveValues(UUID.class)); });
         deserializerMap.put("oauth2PermissionScopes", (n) -> { this.setOauth2PermissionScopes(n.getCollectionOfObjectValues(PermissionScope::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("preAuthorizedApplications", (n) -> { this.setPreAuthorizedApplications(n.getCollectionOfObjectValues(PreAuthorizedApplication::createFromDiscriminatorValue)); });
@@ -74,10 +75,10 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the knownClientApplications property value. Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Azure AD knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getKnownClientApplications() {
+    public java.util.List<UUID> getKnownClientApplications() {
         return this._knownClientApplications;
     }
     /**
@@ -152,7 +153,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setKnownClientApplications(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setKnownClientApplications(@javax.annotation.Nullable final java.util.List<UUID> value) {
         this._knownClientApplications = value;
     }
     /**

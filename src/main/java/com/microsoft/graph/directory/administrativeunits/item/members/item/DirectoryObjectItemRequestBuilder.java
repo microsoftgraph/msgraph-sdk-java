@@ -10,7 +10,9 @@ import com.microsoft.graph.directory.administrativeunits.item.members.item.user.
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-/** Builds and executes requests for operations under /directory/administrativeUnits/{administrativeUnit-id}/members/{directoryObject-id} */
+/**
+ * Builds and executes requests for operations under /directory/administrativeUnits/{administrativeUnit-id}/members/{directoryObject-id}
+ */
 public class DirectoryObjectItemRequestBuilder {
     /** Casts the previous resource to application. */
     @javax.annotation.Nonnull

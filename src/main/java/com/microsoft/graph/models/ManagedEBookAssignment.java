@@ -8,7 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties used to assign a eBook to a group. */
+/**
+ * Contains properties used to assign a eBook to a group.
+ */
 public class ManagedEBookAssignment extends Entity implements Parsable {
     /** Possible values for the install intent chosen by the admin. */
     private InstallIntent _installIntent;

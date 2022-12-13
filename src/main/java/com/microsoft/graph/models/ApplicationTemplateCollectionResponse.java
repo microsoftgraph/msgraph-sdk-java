@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of applicationTemplate entities. */
+/**
+ * Provides operations to manage the collection of applicationTemplate entities.
+ */
 public class ApplicationTemplateCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<ApplicationTemplate> _value;

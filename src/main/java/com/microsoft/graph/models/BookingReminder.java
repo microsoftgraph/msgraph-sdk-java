@@ -9,7 +9,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** This type represents when and to whom to send an e-mail reminder. */
+/**
+ * This type represents when and to whom to send an e-mail reminder.
+ */
 public class BookingReminder implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;

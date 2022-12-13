@@ -9,7 +9,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** An abstract class for Mobile app configuration for enrolled devices. */
+/**
+ * An abstract class for Mobile app configuration for enrolled devices.
+ */
 public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable {
     /** The list of group assignemenets for app configration. */
     private java.util.List<ManagedDeviceMobileAppConfigurationAssignment> _assignments;

@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device Compilance Policy Setting State summary across the account. */
+/**
+ * Device Compilance Policy Setting State summary across the account.
+ */
 public class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsable {
     /** Number of compliant devices */
     private Integer _compliantDeviceCount;

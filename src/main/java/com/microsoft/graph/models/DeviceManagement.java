@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class DeviceManagement extends Entity implements Parsable {
     /** Apple push notification certificate. */
     private ApplePushNotificationCertificate _applePushNotificationCertificate;
@@ -39,7 +40,7 @@ public class DeviceManagement extends Entity implements Parsable {
     /** Collection of imported Windows autopilot devices. */
     private java.util.List<ImportedWindowsAutopilotDeviceIdentity> _importedWindowsAutopilotDeviceIdentities;
     /** Intune Account Id for given tenant */
-    private String _intuneAccountId;
+    private UUID _intuneAccountId;
     /** intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal. */
     private IntuneBrand _intuneBrand;
     /** The IOS software update installation statuses for this account. */
@@ -232,7 +233,7 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("deviceManagementPartners", (n) -> { this.setDeviceManagementPartners(n.getCollectionOfObjectValues(DeviceManagementPartner::createFromDiscriminatorValue)); });
         deserializerMap.put("exchangeConnectors", (n) -> { this.setExchangeConnectors(n.getCollectionOfObjectValues(DeviceManagementExchangeConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("importedWindowsAutopilotDeviceIdentities", (n) -> { this.setImportedWindowsAutopilotDeviceIdentities(n.getCollectionOfObjectValues(ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
-        deserializerMap.put("intuneAccountId", (n) -> { this.setIntuneAccountId(n.getStringValue()); });
+        deserializerMap.put("intuneAccountId", (n) -> { this.setIntuneAccountId(n.getUUIDValue()); });
         deserializerMap.put("intuneBrand", (n) -> { this.setIntuneBrand(n.getObjectValue(IntuneBrand::createFromDiscriminatorValue)); });
         deserializerMap.put("iosUpdateStatuses", (n) -> { this.setIosUpdateStatuses(n.getCollectionOfObjectValues(IosUpdateDeviceStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("managedDeviceOverview", (n) -> { this.setManagedDeviceOverview(n.getObjectValue(ManagedDeviceOverview::createFromDiscriminatorValue)); });
@@ -265,10 +266,10 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the intuneAccountId property value. Intune Account Id for given tenant
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getIntuneAccountId() {
+    public UUID getIntuneAccountId() {
         return this._intuneAccountId;
     }
     /**
@@ -455,7 +456,7 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("deviceManagementPartners", this.getDeviceManagementPartners());
         writer.writeCollectionOfObjectValues("exchangeConnectors", this.getExchangeConnectors());
         writer.writeCollectionOfObjectValues("importedWindowsAutopilotDeviceIdentities", this.getImportedWindowsAutopilotDeviceIdentities());
-        writer.writeStringValue("intuneAccountId", this.getIntuneAccountId());
+        writer.writeUUIDValue("intuneAccountId", this.getIntuneAccountId());
         writer.writeObjectValue("intuneBrand", this.getIntuneBrand());
         writer.writeCollectionOfObjectValues("iosUpdateStatuses", this.getIosUpdateStatuses());
         writer.writeObjectValue("managedDeviceOverview", this.getManagedDeviceOverview());
@@ -618,7 +619,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setIntuneAccountId(@javax.annotation.Nullable final String value) {
+    public void setIntuneAccountId(@javax.annotation.Nullable final UUID value) {
         this._intuneAccountId = value;
     }
     /**

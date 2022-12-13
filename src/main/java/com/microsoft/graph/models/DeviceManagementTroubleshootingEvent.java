@@ -9,7 +9,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Event representing an general failure. */
+/**
+ * Event representing an general failure.
+ */
 public class DeviceManagementTroubleshootingEvent extends Entity implements Parsable {
     /** Id used for tracing the failure in the service. */
     private String _correlationId;

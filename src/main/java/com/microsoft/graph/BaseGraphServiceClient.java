@@ -118,7 +118,9 @@ import com.microsoft.kiota.serialization.TextParseNodeFactory;
 import com.microsoft.kiota.serialization.TextSerializationWriterFactory;
 import java.util.HashMap;
 import java.util.Objects;
-/** The main entry point of the SDK, exposes the configuration and the fluent API. */
+/**
+ * The main entry point of the SDK, exposes the configuration and the fluent API.
+ */
 public class BaseGraphServiceClient {
     /** Provides operations to manage the admin singleton. */
     @javax.annotation.Nonnull

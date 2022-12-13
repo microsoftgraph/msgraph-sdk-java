@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public enum RemoteAssistanceOnboardingStatus implements ValuedEnum {
     /** The status reported when there is no active TeamViewer connector configured or active */
     NotOnboarded("notOnboarded"),

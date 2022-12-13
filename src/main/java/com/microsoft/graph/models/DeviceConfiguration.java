@@ -34,7 +34,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device Configuration. */
+/**
+ * Device Configuration.
+ */
 public class DeviceConfiguration extends Entity implements Parsable {
     /** The list of assignments for the device configuration profile. */
     private java.util.List<DeviceConfigurationAssignment> _assignments;

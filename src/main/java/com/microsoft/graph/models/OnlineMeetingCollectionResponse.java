@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the onlineMeetings property of the microsoft.graph.cloudCommunications entity. */
 public class OnlineMeetingCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<OnlineMeeting> _value;

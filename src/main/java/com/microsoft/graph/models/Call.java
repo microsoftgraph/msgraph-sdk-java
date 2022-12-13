@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the cloudCommunications singleton. */
+/**
+ * Provides operations to manage the cloudCommunications singleton.
+ */
 public class Call extends Entity implements Parsable {
     /** The audioRoutingGroups property */
     private java.util.List<AudioRoutingGroup> _audioRoutingGroups;

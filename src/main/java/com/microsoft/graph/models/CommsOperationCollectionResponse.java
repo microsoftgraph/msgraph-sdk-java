@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the operations property of the microsoft.graph.call entity. */
+/**
+ * Provides operations to manage the operations property of the microsoft.graph.call entity.
+ */
 public class CommsOperationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<CommsOperation> _value;

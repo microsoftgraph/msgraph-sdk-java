@@ -12,7 +12,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the sendActivityNotificationToRecipients method. */
+/**
+ * Provides operations to call the sendActivityNotificationToRecipients method.
+ */
 public class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalDataHolder, Parsable {
     /** The activityType property */
     private String _activityType;

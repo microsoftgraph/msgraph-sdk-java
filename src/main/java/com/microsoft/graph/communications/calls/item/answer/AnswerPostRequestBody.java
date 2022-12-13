@@ -11,7 +11,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the answer method. */
+/**
+ * Provides operations to call the answer method.
+ */
 public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
     /** The acceptedModalities property */
     private java.util.List<Modality> _acceptedModalities;

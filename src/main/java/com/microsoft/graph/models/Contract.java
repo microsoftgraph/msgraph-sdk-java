@@ -7,11 +7,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class Contract extends DirectoryObject implements Parsable {
     /** Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below. */
     private String _contractType;
     /** The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource. */
-    private String _customerId;
+    private UUID _customerId;
     /** A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes. */
     private String _defaultDomainName;
     /** A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes. */
@@ -45,10 +46,10 @@ public class Contract extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the customerId property value. The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getCustomerId() {
+    public UUID getCustomerId() {
         return this._customerId;
     }
     /**
@@ -75,7 +76,7 @@ public class Contract extends DirectoryObject implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contractType", (n) -> { this.setContractType(n.getStringValue()); });
-        deserializerMap.put("customerId", (n) -> { this.setCustomerId(n.getStringValue()); });
+        deserializerMap.put("customerId", (n) -> { this.setCustomerId(n.getUUIDValue()); });
         deserializerMap.put("defaultDomainName", (n) -> { this.setDefaultDomainName(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         return deserializerMap;
@@ -90,7 +91,7 @@ public class Contract extends DirectoryObject implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("contractType", this.getContractType());
-        writer.writeStringValue("customerId", this.getCustomerId());
+        writer.writeUUIDValue("customerId", this.getCustomerId());
         writer.writeStringValue("defaultDomainName", this.getDefaultDomainName());
         writer.writeStringValue("displayName", this.getDisplayName());
     }
@@ -109,7 +110,7 @@ public class Contract extends DirectoryObject implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setCustomerId(@javax.annotation.Nullable final String value) {
+    public void setCustomerId(@javax.annotation.Nullable final UUID value) {
         this._customerId = value;
     }
     /**

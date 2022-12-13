@@ -8,7 +8,9 @@ import com.microsoft.graph.users.item.authentication.microsoftauthenticatormetho
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-/** Builds and executes requests for operations under /users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id} */
+/**
+ * Builds and executes requests for operations under /users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}
+ */
 public class DirectoryObjectItemRequestBuilder {
     /** Casts the previous resource to appRoleAssignment. */
     @javax.annotation.Nonnull

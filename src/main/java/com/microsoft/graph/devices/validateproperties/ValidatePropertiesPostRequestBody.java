@@ -8,7 +8,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the validateProperties method. */
+import java.util.UUID;
+/**
+ * Provides operations to call the validateProperties method.
+ */
 public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -19,7 +22,7 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
     /** The mailNickname property */
     private String _mailNickname;
     /** The onBehalfOfUserId property */
-    private String _onBehalfOfUserId;
+    private UUID _onBehalfOfUserId;
     /**
      * Instantiates a new validatePropertiesPostRequestBody and sets the default values.
      * @return a void
@@ -72,7 +75,7 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("entityType", (n) -> { this.setEntityType(n.getStringValue()); });
         deserializerMap.put("mailNickname", (n) -> { this.setMailNickname(n.getStringValue()); });
-        deserializerMap.put("onBehalfOfUserId", (n) -> { this.setOnBehalfOfUserId(n.getStringValue()); });
+        deserializerMap.put("onBehalfOfUserId", (n) -> { this.setOnBehalfOfUserId(n.getUUIDValue()); });
         return deserializerMap;
     }
     /**
@@ -85,10 +88,10 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
     }
     /**
      * Gets the onBehalfOfUserId property value. The onBehalfOfUserId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getOnBehalfOfUserId() {
+    public UUID getOnBehalfOfUserId() {
         return this._onBehalfOfUserId;
     }
     /**
@@ -102,7 +105,7 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("entityType", this.getEntityType());
         writer.writeStringValue("mailNickname", this.getMailNickname());
-        writer.writeStringValue("onBehalfOfUserId", this.getOnBehalfOfUserId());
+        writer.writeUUIDValue("onBehalfOfUserId", this.getOnBehalfOfUserId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -147,7 +150,7 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setOnBehalfOfUserId(@javax.annotation.Nullable final String value) {
+    public void setOnBehalfOfUserId(@javax.annotation.Nullable final UUID value) {
         this._onBehalfOfUserId = value;
     }
 }

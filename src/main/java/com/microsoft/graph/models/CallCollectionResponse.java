@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity. */
+/**
+ * Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity.
+ */
 public class CallCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<Call> _value;

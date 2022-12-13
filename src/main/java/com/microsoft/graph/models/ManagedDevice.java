@@ -8,7 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Devices that are managed or pre-enrolled through Intune */
+/**
+ * Devices that are managed or pre-enrolled through Intune
+ */
 public class ManagedDevice extends Entity implements Parsable {
     /** Code that allows the Activation Lock on a device to be bypassed. This property is read-only. */
     private String _activationLockBypassCode;

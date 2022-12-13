@@ -8,11 +8,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class AddIn implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** The id property */
-    private String _id;
+    private UUID _id;
     /** The OdataType property */
     private String _odataType;
     /** The properties property */
@@ -52,7 +53,7 @@ public class AddIn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
-        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getUUIDValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("properties", (n) -> { this.setProperties(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
         deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
@@ -60,10 +61,10 @@ public class AddIn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. The id property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getId() {
+    public UUID getId() {
         return this._id;
     }
     /**
@@ -98,7 +99,7 @@ public class AddIn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("id", this.getId());
+        writer.writeUUIDValue("id", this.getId());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("properties", this.getProperties());
         writer.writeStringValue("type", this.getType());
@@ -119,7 +120,7 @@ public class AddIn implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    public void setId(@javax.annotation.Nullable final UUID value) {
         this._id = value;
     }
     /**

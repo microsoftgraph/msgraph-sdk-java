@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Represents a custom question of the business. */
+/**
+ * Represents a custom question of the business.
+ */
 public class BookingCustomQuestion extends Entity implements Parsable {
     /** The expected answer type. The possible values are: text, radioButton, unknownFutureValue. */
     private AnswerInputType _answerInputType;

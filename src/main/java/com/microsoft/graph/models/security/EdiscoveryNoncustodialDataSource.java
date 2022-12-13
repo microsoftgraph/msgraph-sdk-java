@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
+/**
+ * Provides operations to manage the admin singleton.
+ */
 public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Parsable {
     /** User source or SharePoint site data source as non-custodial data source. */
     private DataSource _dataSource;

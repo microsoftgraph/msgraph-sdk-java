@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the issues property of the microsoft.graph.serviceHealth entity. */
+/**
+ * Provides operations to manage the issues property of the microsoft.graph.serviceHealth entity.
+ */
 public class ServiceHealthIssueCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<ServiceHealthIssue> _value;

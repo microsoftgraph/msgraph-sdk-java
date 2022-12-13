@@ -8,12 +8,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the removePassword method. */
+import java.util.UUID;
+/**
+ * Provides operations to call the removePassword method.
+ */
 public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** The keyId property */
-    private String _keyId;
+    private UUID _keyId;
     /**
      * Instantiates a new removePasswordPostRequestBody and sets the default values.
      * @return a void
@@ -47,15 +50,15 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
-        deserializerMap.put("keyId", (n) -> { this.setKeyId(n.getStringValue()); });
+        deserializerMap.put("keyId", (n) -> { this.setKeyId(n.getUUIDValue()); });
         return deserializerMap;
     }
     /**
      * Gets the keyId property value. The keyId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getKeyId() {
+    public UUID getKeyId() {
         return this._keyId;
     }
     /**
@@ -66,7 +69,7 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("keyId", this.getKeyId());
+        writer.writeUUIDValue("keyId", this.getKeyId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -84,7 +87,7 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setKeyId(@javax.annotation.Nullable final String value) {
+    public void setKeyId(@javax.annotation.Nullable final UUID value) {
         this._keyId = value;
     }
 }

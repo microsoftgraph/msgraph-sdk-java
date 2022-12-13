@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class PermissionScope implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -16,7 +17,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
     /** The permission's title, intended to be read by an administrator granting the permission on behalf of all users. */
     private String _adminConsentDisplayName;
     /** Unique delegated permission identifier inside the collection of delegated permissions defined for a resource application. */
-    private String _id;
+    private UUID _id;
     /** When creating or updating a permission, this property must be set to true (which is the default). To delete a permission, this property must first be set to false.  At that point, in a subsequent call, the permission may be removed. */
     private Boolean _isEnabled;
     /** The OdataType property */
@@ -82,7 +83,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
         final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
         deserializerMap.put("adminConsentDescription", (n) -> { this.setAdminConsentDescription(n.getStringValue()); });
         deserializerMap.put("adminConsentDisplayName", (n) -> { this.setAdminConsentDisplayName(n.getStringValue()); });
-        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getUUIDValue()); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("origin", (n) -> { this.setOrigin(n.getStringValue()); });
@@ -94,10 +95,10 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. Unique delegated permission identifier inside the collection of delegated permissions defined for a resource application.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getId() {
+    public UUID getId() {
         return this._id;
     }
     /**
@@ -166,7 +167,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("adminConsentDescription", this.getAdminConsentDescription());
         writer.writeStringValue("adminConsentDisplayName", this.getAdminConsentDisplayName());
-        writer.writeStringValue("id", this.getId());
+        writer.writeUUIDValue("id", this.getId());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("origin", this.getOrigin());
@@ -209,7 +210,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    public void setId(@javax.annotation.Nullable final UUID value) {
         this._id = value;
     }
     /**

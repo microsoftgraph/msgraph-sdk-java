@@ -8,7 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties for a single installer file that is associated with a given mobileAppContent version. */
+/**
+ * Contains properties for a single installer file that is associated with a given mobileAppContent version.
+ */
 public class MobileAppContentFile extends Entity implements Parsable {
     /** The Azure Storage URI. */
     private String _azureStorageUri;

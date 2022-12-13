@@ -8,7 +8,9 @@ import com.microsoft.graph.devices.item.registeredowners.item.user.UserRequestBu
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-/** Builds and executes requests for operations under /devices/{device-id}/registeredOwners/{directoryObject-id} */
+/**
+ * Builds and executes requests for operations under /devices/{device-id}/registeredOwners/{directoryObject-id}
+ */
 public class DirectoryObjectItemRequestBuilder {
     /** Casts the previous resource to appRoleAssignment. */
     @javax.annotation.Nonnull

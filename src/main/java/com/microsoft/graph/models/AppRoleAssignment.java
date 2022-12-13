@@ -8,22 +8,25 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+import java.util.UUID;
+/**
+ * Provides operations to manage the collection of agreement entities.
+ */
 public class AppRoleAssignment extends DirectoryObject implements Parsable {
     /** The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create. */
-    private String _appRoleId;
+    private UUID _appRoleId;
     /** The time when the app role assignment was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
     private OffsetDateTime _createdDateTime;
     /** The display name of the user, group, or service principal that was granted the app role assignment. Read-only. Supports $filter (eq and startswith). */
     private String _principalDisplayName;
     /** The unique identifier (id) for the user, security group, or service principal being granted the app role. Security groups with dynamic memberships are supported. Required on create. */
-    private String _principalId;
+    private UUID _principalId;
     /** The type of the assigned principal. This can either be User, Group, or ServicePrincipal. Read-only. */
     private String _principalType;
     /** The display name of the resource app's service principal to which the assignment is made. */
     private String _resourceDisplayName;
     /** The unique identifier (id) for the resource service principal for which the assignment is made. Required on create. Supports $filter (eq only). */
-    private String _resourceId;
+    private UUID _resourceId;
     /**
      * Instantiates a new appRoleAssignment and sets the default values.
      * @return a void
@@ -45,10 +48,10 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appRoleId property value. The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getAppRoleId() {
+    public UUID getAppRoleId() {
         return this._appRoleId;
     }
     /**
@@ -66,13 +69,13 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("appRoleId", (n) -> { this.setAppRoleId(n.getStringValue()); });
+        deserializerMap.put("appRoleId", (n) -> { this.setAppRoleId(n.getUUIDValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("principalDisplayName", (n) -> { this.setPrincipalDisplayName(n.getStringValue()); });
-        deserializerMap.put("principalId", (n) -> { this.setPrincipalId(n.getStringValue()); });
+        deserializerMap.put("principalId", (n) -> { this.setPrincipalId(n.getUUIDValue()); });
         deserializerMap.put("principalType", (n) -> { this.setPrincipalType(n.getStringValue()); });
         deserializerMap.put("resourceDisplayName", (n) -> { this.setResourceDisplayName(n.getStringValue()); });
-        deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
+        deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getUUIDValue()); });
         return deserializerMap;
     }
     /**
@@ -85,10 +88,10 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the principalId property value. The unique identifier (id) for the user, security group, or service principal being granted the app role. Security groups with dynamic memberships are supported. Required on create.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getPrincipalId() {
+    public UUID getPrincipalId() {
         return this._principalId;
     }
     /**
@@ -109,10 +112,10 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the resourceId property value. The unique identifier (id) for the resource service principal for which the assignment is made. Required on create. Supports $filter (eq only).
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getResourceId() {
+    public UUID getResourceId() {
         return this._resourceId;
     }
     /**
@@ -124,13 +127,13 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("appRoleId", this.getAppRoleId());
+        writer.writeUUIDValue("appRoleId", this.getAppRoleId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("principalDisplayName", this.getPrincipalDisplayName());
-        writer.writeStringValue("principalId", this.getPrincipalId());
+        writer.writeUUIDValue("principalId", this.getPrincipalId());
         writer.writeStringValue("principalType", this.getPrincipalType());
         writer.writeStringValue("resourceDisplayName", this.getResourceDisplayName());
-        writer.writeStringValue("resourceId", this.getResourceId());
+        writer.writeUUIDValue("resourceId", this.getResourceId());
     }
     /**
      * Sets the appRoleId property value. The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
@@ -138,7 +141,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setAppRoleId(@javax.annotation.Nullable final String value) {
+    public void setAppRoleId(@javax.annotation.Nullable final UUID value) {
         this._appRoleId = value;
     }
     /**
@@ -165,7 +168,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setPrincipalId(@javax.annotation.Nullable final String value) {
+    public void setPrincipalId(@javax.annotation.Nullable final UUID value) {
         this._principalId = value;
     }
     /**
@@ -192,7 +195,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setResourceId(@javax.annotation.Nullable final String value) {
+    public void setResourceId(@javax.annotation.Nullable final UUID value) {
         this._resourceId = value;
     }
 }

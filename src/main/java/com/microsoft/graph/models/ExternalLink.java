@@ -11,7 +11,7 @@ import java.util.Objects;
 public class ExternalLink implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The url of the link. */
+    /** The URL of the link. */
     private String _href;
     /** The OdataType property */
     private String _odataType;
@@ -53,7 +53,7 @@ public class ExternalLink implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the href property value. The url of the link.
+     * Gets the href property value. The URL of the link.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class ExternalLink implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the href property value. The url of the link.
+     * Sets the href property value. The URL of the link.
      * @param value Value to set for the href property.
      * @return a void
      */

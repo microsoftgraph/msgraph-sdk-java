@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains content properties for a specific app version. Each mobileAppContent can have multiple mobileAppContentFile. */
+/**
+ * Contains content properties for a specific app version. Each mobileAppContent can have multiple mobileAppContentFile.
+ */
 public class MobileAppContent extends Entity implements Parsable {
     /** The list of files for this app content version. */
     private java.util.List<MobileAppContentFile> _files;

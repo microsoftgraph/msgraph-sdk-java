@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class AssignedPlan implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -21,7 +22,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
     /** The name of the service; for example, exchange. */
     private String _service;
     /** A GUID that identifies the service plan. For a complete list of GUIDs and their equivalent friendly service names, see Product names and service plan identifiers for licensing. */
-    private String _servicePlanId;
+    private UUID _servicePlanId;
     /**
      * Instantiates a new assignedPlan and sets the default values.
      * @return a void
@@ -75,7 +76,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
         deserializerMap.put("capabilityStatus", (n) -> { this.setCapabilityStatus(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("service", (n) -> { this.setService(n.getStringValue()); });
-        deserializerMap.put("servicePlanId", (n) -> { this.setServicePlanId(n.getStringValue()); });
+        deserializerMap.put("servicePlanId", (n) -> { this.setServicePlanId(n.getUUIDValue()); });
         return deserializerMap;
     }
     /**
@@ -96,10 +97,10 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the servicePlanId property value. A GUID that identifies the service plan. For a complete list of GUIDs and their equivalent friendly service names, see Product names and service plan identifiers for licensing.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getServicePlanId() {
+    public UUID getServicePlanId() {
         return this._servicePlanId;
     }
     /**
@@ -114,7 +115,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("capabilityStatus", this.getCapabilityStatus());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("service", this.getService());
-        writer.writeStringValue("servicePlanId", this.getServicePlanId());
+        writer.writeUUIDValue("servicePlanId", this.getServicePlanId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -168,7 +169,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setServicePlanId(@javax.annotation.Nullable final String value) {
+    public void setServicePlanId(@javax.annotation.Nullable final UUID value) {
         this._servicePlanId = value;
     }
 }

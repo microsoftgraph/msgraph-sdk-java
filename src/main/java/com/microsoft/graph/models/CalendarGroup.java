@@ -7,14 +7,17 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+import java.util.UUID;
+/**
+ * Provides operations to manage the collection of agreement entities.
+ */
 public class CalendarGroup extends Entity implements Parsable {
     /** The calendars in the calendar group. Navigation property. Read-only. Nullable. */
     private java.util.List<Calendar> _calendars;
     /** Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only. */
     private String _changeKey;
     /** The class identifier. Read-only. */
-    private String _classId;
+    private UUID _classId;
     /** The group name. */
     private String _name;
     /**
@@ -53,10 +56,10 @@ public class CalendarGroup extends Entity implements Parsable {
     }
     /**
      * Gets the classId property value. The class identifier. Read-only.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getClassId() {
+    public UUID getClassId() {
         return this._classId;
     }
     /**
@@ -68,7 +71,7 @@ public class CalendarGroup extends Entity implements Parsable {
         final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("calendars", (n) -> { this.setCalendars(n.getCollectionOfObjectValues(Calendar::createFromDiscriminatorValue)); });
         deserializerMap.put("changeKey", (n) -> { this.setChangeKey(n.getStringValue()); });
-        deserializerMap.put("classId", (n) -> { this.setClassId(n.getStringValue()); });
+        deserializerMap.put("classId", (n) -> { this.setClassId(n.getUUIDValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -91,7 +94,7 @@ public class CalendarGroup extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("calendars", this.getCalendars());
         writer.writeStringValue("changeKey", this.getChangeKey());
-        writer.writeStringValue("classId", this.getClassId());
+        writer.writeUUIDValue("classId", this.getClassId());
         writer.writeStringValue("name", this.getName());
     }
     /**
@@ -118,7 +121,7 @@ public class CalendarGroup extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setClassId(@javax.annotation.Nullable final String value) {
+    public void setClassId(@javax.annotation.Nullable final UUID value) {
         this._classId = value;
     }
     /**

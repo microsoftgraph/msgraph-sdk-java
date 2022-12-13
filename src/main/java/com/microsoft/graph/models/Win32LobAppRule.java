@@ -12,7 +12,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A base complex type to store the detection or requirement rule data for a Win32 LOB app. */
+/**
+ * A base complex type to store the detection or requirement rule data for a Win32 LOB app.
+ */
 public class Win32LobAppRule implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;

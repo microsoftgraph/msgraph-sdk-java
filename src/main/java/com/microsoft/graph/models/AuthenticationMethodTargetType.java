@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of authenticationMethodConfiguration entities. */
 public enum AuthenticationMethodTargetType implements ValuedEnum {
     User("user"),
     Group("group"),

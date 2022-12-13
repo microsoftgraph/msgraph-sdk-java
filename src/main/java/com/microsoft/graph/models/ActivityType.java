@@ -3,11 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of agreement entities. */
 public enum ActivityType implements ValuedEnum {
     Signin("signin"),
     User("user"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    ServicePrincipal("servicePrincipal");
     public final String value;
     ActivityType(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum ActivityType implements ValuedEnum {
             case "signin": return Signin;
             case "user": return User;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "servicePrincipal": return ServicePrincipal;
             default: return null;
         }
     }

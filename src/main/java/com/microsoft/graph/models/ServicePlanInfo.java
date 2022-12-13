@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -18,7 +19,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
     /** The provisioning status of the service plan. The possible values are:Success - Service is fully provisioned.Disabled - Service has been disabled.ErrorStatus - The service plan has not been provisioned and is in an error state.PendingInput - Service is not yet provisioned; awaiting service confirmation.PendingActivation - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet. */
     private String _provisioningStatus;
     /** The unique identifier of the service plan. */
-    private String _servicePlanId;
+    private UUID _servicePlanId;
     /** The name of the service plan. */
     private String _servicePlanName;
     /**
@@ -65,7 +66,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
         deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("provisioningStatus", (n) -> { this.setProvisioningStatus(n.getStringValue()); });
-        deserializerMap.put("servicePlanId", (n) -> { this.setServicePlanId(n.getStringValue()); });
+        deserializerMap.put("servicePlanId", (n) -> { this.setServicePlanId(n.getUUIDValue()); });
         deserializerMap.put("servicePlanName", (n) -> { this.setServicePlanName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -87,10 +88,10 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the servicePlanId property value. The unique identifier of the service plan.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getServicePlanId() {
+    public UUID getServicePlanId() {
         return this._servicePlanId;
     }
     /**
@@ -112,7 +113,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("appliesTo", this.getAppliesTo());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("provisioningStatus", this.getProvisioningStatus());
-        writer.writeStringValue("servicePlanId", this.getServicePlanId());
+        writer.writeUUIDValue("servicePlanId", this.getServicePlanId());
         writer.writeStringValue("servicePlanName", this.getServicePlanName());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -158,7 +159,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setServicePlanId(@javax.annotation.Nullable final String value) {
+    public void setServicePlanId(@javax.annotation.Nullable final UUID value) {
         this._servicePlanId = value;
     }
     /**

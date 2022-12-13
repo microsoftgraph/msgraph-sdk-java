@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class AuditEvent extends Entity implements Parsable {
     /** Friendly name of the activity. */
     private String _activity;
@@ -26,7 +27,7 @@ public class AuditEvent extends Entity implements Parsable {
     /** Component name. */
     private String _componentName;
     /** The client request Id that is used to correlate activity within the system. */
-    private String _correlationId;
+    private UUID _correlationId;
     /** Event display name. */
     private String _displayName;
     /** Resources being modified. */
@@ -115,10 +116,10 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the correlationId property value. The client request Id that is used to correlate activity within the system.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getCorrelationId() {
+    public UUID getCorrelationId() {
         return this._correlationId;
     }
     /**
@@ -144,7 +145,7 @@ public class AuditEvent extends Entity implements Parsable {
         deserializerMap.put("actor", (n) -> { this.setActor(n.getObjectValue(AuditActor::createFromDiscriminatorValue)); });
         deserializerMap.put("category", (n) -> { this.setCategory(n.getStringValue()); });
         deserializerMap.put("componentName", (n) -> { this.setComponentName(n.getStringValue()); });
-        deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
+        deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getUUIDValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("resources", (n) -> { this.setResources(n.getCollectionOfObjectValues(AuditResource::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -174,7 +175,7 @@ public class AuditEvent extends Entity implements Parsable {
         writer.writeObjectValue("actor", this.getActor());
         writer.writeStringValue("category", this.getCategory());
         writer.writeStringValue("componentName", this.getComponentName());
-        writer.writeStringValue("correlationId", this.getCorrelationId());
+        writer.writeUUIDValue("correlationId", this.getCorrelationId());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("resources", this.getResources());
     }
@@ -256,7 +257,7 @@ public class AuditEvent extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setCorrelationId(@javax.annotation.Nullable final String value) {
+    public void setCorrelationId(@javax.annotation.Nullable final UUID value) {
         this._correlationId = value;
     }
     /**

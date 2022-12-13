@@ -7,6 +7,7 @@ import com.microsoft.graph.policies.featurerolloutpolicies.count.CountRequestBui
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
+import com.microsoft.kiota.RequestHeaders;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
@@ -17,7 +18,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.policyRoot entity. */
+/**
+ * Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.policyRoot entity.
+ */
 public class FeatureRolloutPoliciesRequestBuilder {
     /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
@@ -78,19 +81,19 @@ public class FeatureRolloutPoliciesRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
+        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.addRequestHeaders(requestConfig.headers);
+            requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
     }
     /**
      * Create a new featureRolloutPolicy object.
-     * @param body 
+     * @param body The request body
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -99,7 +102,7 @@ public class FeatureRolloutPoliciesRequestBuilder {
     }
     /**
      * Create a new featureRolloutPolicy object.
-     * @param body 
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -110,12 +113,12 @@ public class FeatureRolloutPoliciesRequestBuilder {
         requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
+        requestInfo.headers.add("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
+            requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
@@ -123,6 +126,7 @@ public class FeatureRolloutPoliciesRequestBuilder {
     /**
      * Retrieve a list of featureRolloutPolicy objects.
      * @return a CompletableFuture of FeatureRolloutPolicyCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicies-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FeatureRolloutPolicyCollectionResponse> get() {
@@ -142,6 +146,7 @@ public class FeatureRolloutPoliciesRequestBuilder {
      * Retrieve a list of featureRolloutPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of FeatureRolloutPolicyCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicies-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FeatureRolloutPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -159,8 +164,9 @@ public class FeatureRolloutPoliciesRequestBuilder {
     }
     /**
      * Create a new featureRolloutPolicy object.
-     * @param body 
+     * @param body The request body
      * @return a CompletableFuture of featureRolloutPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicies-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FeatureRolloutPolicy> post(@javax.annotation.Nonnull final FeatureRolloutPolicy body) {
@@ -178,9 +184,10 @@ public class FeatureRolloutPoliciesRequestBuilder {
     }
     /**
      * Create a new featureRolloutPolicy object.
-     * @param body 
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of featureRolloutPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicies-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FeatureRolloutPolicy> post(@javax.annotation.Nonnull final FeatureRolloutPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -197,7 +204,9 @@ public class FeatureRolloutPoliciesRequestBuilder {
             return executionException;
         }
     }
-    /** Retrieve a list of featureRolloutPolicy objects. */
+    /**
+     * Retrieve a list of featureRolloutPolicy objects.
+     */
     public class GetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -232,11 +241,13 @@ public class FeatureRolloutPoliciesRequestBuilder {
         @javax.annotation.Nullable
         public Integer top;
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
     public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
+        public RequestHeaders headers = new RequestHeaders();
         /** Request options */
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
@@ -251,11 +262,13 @@ public class FeatureRolloutPoliciesRequestBuilder {
         public GetRequestConfiguration() {
         }
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
     public class PostRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
+        public RequestHeaders headers = new RequestHeaders();
         /** Request options */
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();

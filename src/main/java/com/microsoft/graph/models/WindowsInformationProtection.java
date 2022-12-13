@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class WindowsInformationProtection extends ManagedAppPolicy implements Parsable {
     /** Navigation property to list of security groups targeted for policy. */
     private java.util.List<TargetedManagedAppPolicyAssignment> _assignments;
@@ -57,7 +58,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     /** This policy controls whether to revoke the WIP keys when a device unenrolls from the management service. If set to 1 (Don't revoke keys), the keys will not be revoked and the user will continue to have access to protected files after unenrollment. If the keys are not revoked, there will be no revoked file cleanup subsequently. */
     private Boolean _revokeOnUnenrollDisabled;
     /** TemplateID GUID to use for RMS encryption. The RMS template allows the IT admin to configure the details about who has access to RMS-protected file and how long they have access */
-    private String _rightsManagementServicesTemplateId;
+    private UUID _rightsManagementServicesTemplateId;
     /** Specifies a list of file extensions, so that files with these extensions are encrypted when copying from an SMB share within the corporate boundary */
     private java.util.List<WindowsInformationProtectionResourceCollection> _smbAutoEncryptedFileExtensions;
     /**
@@ -237,7 +238,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
         deserializerMap.put("protectedApps", (n) -> { this.setProtectedApps(n.getCollectionOfObjectValues(WindowsInformationProtectionApp::createFromDiscriminatorValue)); });
         deserializerMap.put("protectionUnderLockConfigRequired", (n) -> { this.setProtectionUnderLockConfigRequired(n.getBooleanValue()); });
         deserializerMap.put("revokeOnUnenrollDisabled", (n) -> { this.setRevokeOnUnenrollDisabled(n.getBooleanValue()); });
-        deserializerMap.put("rightsManagementServicesTemplateId", (n) -> { this.setRightsManagementServicesTemplateId(n.getStringValue()); });
+        deserializerMap.put("rightsManagementServicesTemplateId", (n) -> { this.setRightsManagementServicesTemplateId(n.getUUIDValue()); });
         deserializerMap.put("smbAutoEncryptedFileExtensions", (n) -> { this.setSmbAutoEncryptedFileExtensions(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -307,10 +308,10 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the rightsManagementServicesTemplateId property value. TemplateID GUID to use for RMS encryption. The RMS template allows the IT admin to configure the details about who has access to RMS-protected file and how long they have access
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getRightsManagementServicesTemplateId() {
+    public UUID getRightsManagementServicesTemplateId() {
         return this._rightsManagementServicesTemplateId;
     }
     /**
@@ -353,7 +354,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
         writer.writeCollectionOfObjectValues("protectedApps", this.getProtectedApps());
         writer.writeBooleanValue("protectionUnderLockConfigRequired", this.getProtectionUnderLockConfigRequired());
         writer.writeBooleanValue("revokeOnUnenrollDisabled", this.getRevokeOnUnenrollDisabled());
-        writer.writeStringValue("rightsManagementServicesTemplateId", this.getRightsManagementServicesTemplateId());
+        writer.writeUUIDValue("rightsManagementServicesTemplateId", this.getRightsManagementServicesTemplateId());
         writer.writeCollectionOfObjectValues("smbAutoEncryptedFileExtensions", this.getSmbAutoEncryptedFileExtensions());
     }
     /**
@@ -569,7 +570,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setRightsManagementServicesTemplateId(@javax.annotation.Nullable final String value) {
+    public void setRightsManagementServicesTemplateId(@javax.annotation.Nullable final UUID value) {
         this._rightsManagementServicesTemplateId = value;
     }
     /**

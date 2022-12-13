@@ -1,6 +1,8 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.security.Alert;
 import com.microsoft.graph.models.security.CasesRoot;
+import com.microsoft.graph.models.security.Incident;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -11,10 +13,14 @@ import java.util.Objects;
 public class Security extends Entity implements Parsable {
     /** The alerts property */
     private java.util.List<Alert> _alerts;
+    /** The alerts_v2 property */
+    private java.util.List<Alert> _alerts_v2;
     /** The attackSimulation property */
     private AttackSimulationRoot _attackSimulation;
     /** The cases property */
     private CasesRoot _cases;
+    /** The incidents property */
+    private java.util.List<Incident> _incidents;
     /** The secureScoreControlProfiles property */
     private java.util.List<SecureScoreControlProfile> _secureScoreControlProfiles;
     /** The secureScores property */
@@ -46,6 +52,14 @@ public class Security extends Entity implements Parsable {
         return this._alerts;
     }
     /**
+     * Gets the alerts_v2 property value. The alerts_v2 property
+     * @return a alert
+     */
+    @javax.annotation.Nullable
+    public java.util.List<Alert> getAlerts_v2() {
+        return this._alerts_v2;
+    }
+    /**
      * Gets the attackSimulation property value. The attackSimulation property
      * @return a attackSimulationRoot
      */
@@ -69,11 +83,21 @@ public class Security extends Entity implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
+        deserializerMap.put("alerts_v2", (n) -> { this.setAlerts_v2(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("attackSimulation", (n) -> { this.setAttackSimulation(n.getObjectValue(AttackSimulationRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("cases", (n) -> { this.setCases(n.getObjectValue(CasesRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("incidents", (n) -> { this.setIncidents(n.getCollectionOfObjectValues(Incident::createFromDiscriminatorValue)); });
         deserializerMap.put("secureScoreControlProfiles", (n) -> { this.setSecureScoreControlProfiles(n.getCollectionOfObjectValues(SecureScoreControlProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("secureScores", (n) -> { this.setSecureScores(n.getCollectionOfObjectValues(SecureScore::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the incidents property value. The incidents property
+     * @return a incident
+     */
+    @javax.annotation.Nullable
+    public java.util.List<Incident> getIncidents() {
+        return this._incidents;
     }
     /**
      * Gets the secureScoreControlProfiles property value. The secureScoreControlProfiles property
@@ -101,8 +125,10 @@ public class Security extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("alerts", this.getAlerts());
+        writer.writeCollectionOfObjectValues("alerts_v2", this.getAlerts_v2());
         writer.writeObjectValue("attackSimulation", this.getAttackSimulation());
         writer.writeObjectValue("cases", this.getCases());
+        writer.writeCollectionOfObjectValues("incidents", this.getIncidents());
         writer.writeCollectionOfObjectValues("secureScoreControlProfiles", this.getSecureScoreControlProfiles());
         writer.writeCollectionOfObjectValues("secureScores", this.getSecureScores());
     }
@@ -114,6 +140,15 @@ public class Security extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setAlerts(@javax.annotation.Nullable final java.util.List<Alert> value) {
         this._alerts = value;
+    }
+    /**
+     * Sets the alerts_v2 property value. The alerts_v2 property
+     * @param value Value to set for the alerts_v2 property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAlerts_v2(@javax.annotation.Nullable final java.util.List<Alert> value) {
+        this._alerts_v2 = value;
     }
     /**
      * Sets the attackSimulation property value. The attackSimulation property
@@ -132,6 +167,15 @@ public class Security extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setCases(@javax.annotation.Nullable final CasesRoot value) {
         this._cases = value;
+    }
+    /**
+     * Sets the incidents property value. The incidents property
+     * @param value Value to set for the incidents property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIncidents(@javax.annotation.Nullable final java.util.List<Incident> value) {
+        this._incidents = value;
     }
     /**
      * Sets the secureScoreControlProfiles property value. The secureScoreControlProfiles property

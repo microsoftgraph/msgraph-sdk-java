@@ -8,7 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the cloudCommunications singleton. */
+/**
+ * Provides operations to manage the cloudCommunications singleton.
+ */
 public class CloudCommunications extends Entity implements Parsable {
     /** The callRecords property */
     private java.util.List<CallRecord> _callRecords;

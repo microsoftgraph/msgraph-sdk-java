@@ -8,7 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the segments property of the microsoft.graph.callRecords.session entity. */
+/**
+ * Provides operations to manage the segments property of the microsoft.graph.callRecords.session entity.
+ */
 public class SegmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<Segment> _value;

@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the signIns property of the microsoft.graph.auditLogRoot entity. */
+/**
+ * Provides operations to manage the signIns property of the microsoft.graph.auditLogRoot entity.
+ */
 public class SignInCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<SignIn> _value;

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class Application extends DirectoryObject implements Parsable {
     /** Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Office 365 call the application in the context of a document the user is working on. */
     private java.util.List<AddIn> _addIns;
@@ -82,7 +83,7 @@ public class Application extends DirectoryObject implements Parsable {
     /** Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith). */
     private java.util.List<String> _tags;
     /** Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user. */
-    private String _tokenEncryptionKeyId;
+    private UUID _tokenEncryptionKeyId;
     /** The tokenIssuancePolicies property */
     private java.util.List<TokenIssuancePolicy> _tokenIssuancePolicies;
     /** The tokenLifetimePolicies property */
@@ -265,7 +266,7 @@ public class Application extends DirectoryObject implements Parsable {
         deserializerMap.put("signInAudience", (n) -> { this.setSignInAudience(n.getStringValue()); });
         deserializerMap.put("spa", (n) -> { this.setSpa(n.getObjectValue(SpaApplication::createFromDiscriminatorValue)); });
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("tokenEncryptionKeyId", (n) -> { this.setTokenEncryptionKeyId(n.getStringValue()); });
+        deserializerMap.put("tokenEncryptionKeyId", (n) -> { this.setTokenEncryptionKeyId(n.getUUIDValue()); });
         deserializerMap.put("tokenIssuancePolicies", (n) -> { this.setTokenIssuancePolicies(n.getCollectionOfObjectValues(TokenIssuancePolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("tokenLifetimePolicies", (n) -> { this.setTokenLifetimePolicies(n.getCollectionOfObjectValues(TokenLifetimePolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("verifiedPublisher", (n) -> { this.setVerifiedPublisher(n.getObjectValue(VerifiedPublisher::createFromDiscriminatorValue)); });
@@ -450,10 +451,10 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getTokenEncryptionKeyId() {
+    public UUID getTokenEncryptionKeyId() {
         return this._tokenEncryptionKeyId;
     }
     /**
@@ -533,7 +534,7 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeStringValue("signInAudience", this.getSignInAudience());
         writer.writeObjectValue("spa", this.getSpa());
         writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
-        writer.writeStringValue("tokenEncryptionKeyId", this.getTokenEncryptionKeyId());
+        writer.writeUUIDValue("tokenEncryptionKeyId", this.getTokenEncryptionKeyId());
         writer.writeCollectionOfObjectValues("tokenIssuancePolicies", this.getTokenIssuancePolicies());
         writer.writeCollectionOfObjectValues("tokenLifetimePolicies", this.getTokenLifetimePolicies());
         writer.writeObjectValue("verifiedPublisher", this.getVerifiedPublisher());
@@ -869,7 +870,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setTokenEncryptionKeyId(@javax.annotation.Nullable final String value) {
+    public void setTokenEncryptionKeyId(@javax.annotation.Nullable final UUID value) {
         this._tokenEncryptionKeyId = value;
     }
     /**

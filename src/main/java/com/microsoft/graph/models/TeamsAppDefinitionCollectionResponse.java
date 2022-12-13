@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the appDefinitions property of the microsoft.graph.teamsApp entity. */
+/**
+ * Provides operations to manage the appDefinitions property of the microsoft.graph.teamsApp entity.
+ */
 public class TeamsAppDefinitionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<TeamsAppDefinition> _value;

@@ -8,12 +8,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the removeKey method. */
+import java.util.UUID;
+/**
+ * Provides operations to call the removeKey method.
+ */
 public class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** The keyId property */
-    private String _keyId;
+    private UUID _keyId;
     /** The proof property */
     private String _proof;
     /**
@@ -49,16 +52,16 @@ public class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
-        deserializerMap.put("keyId", (n) -> { this.setKeyId(n.getStringValue()); });
+        deserializerMap.put("keyId", (n) -> { this.setKeyId(n.getUUIDValue()); });
         deserializerMap.put("proof", (n) -> { this.setProof(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the keyId property value. The keyId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getKeyId() {
+    public UUID getKeyId() {
         return this._keyId;
     }
     /**
@@ -77,7 +80,7 @@ public class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("keyId", this.getKeyId());
+        writer.writeUUIDValue("keyId", this.getKeyId());
         writer.writeStringValue("proof", this.getProof());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -96,7 +99,7 @@ public class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable 
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setKeyId(@javax.annotation.Nullable final String value) {
+    public void setKeyId(@javax.annotation.Nullable final UUID value) {
         this._keyId = value;
     }
     /**

@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -21,7 +22,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     /** The key property */
     private byte[] _key;
     /** The keyId property */
-    private String _keyId;
+    private UUID _keyId;
     /** The OdataType property */
     private String _odataType;
     /** The startDateTime property */
@@ -93,7 +94,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("key", (n) -> { this.setKey(n.getByteArrayValue()); });
-        deserializerMap.put("keyId", (n) -> { this.setKeyId(n.getStringValue()); });
+        deserializerMap.put("keyId", (n) -> { this.setKeyId(n.getUUIDValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("thumbprint", (n) -> { this.setThumbprint(n.getStringValue()); });
@@ -111,10 +112,10 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the keyId property value. The keyId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getKeyId() {
+    public UUID getKeyId() {
         return this._keyId;
     }
     /**
@@ -169,7 +170,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeByteArrayValue("key", this.getKey());
-        writer.writeStringValue("keyId", this.getKeyId());
+        writer.writeUUIDValue("keyId", this.getKeyId());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeStringValue("thumbprint", this.getThumbprint());
@@ -228,7 +229,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setKeyId(@javax.annotation.Nullable final String value) {
+    public void setKeyId(@javax.annotation.Nullable final UUID value) {
         this._keyId = value;
     }
     /**

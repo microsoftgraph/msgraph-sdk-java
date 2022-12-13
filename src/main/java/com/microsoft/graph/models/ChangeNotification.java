@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class ChangeNotification implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -31,9 +32,9 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
     /** The expiration time for the subscription. Required. */
     private OffsetDateTime _subscriptionExpirationDateTime;
     /** The unique identifier of the subscription that generated the notification.Required. */
-    private String _subscriptionId;
+    private UUID _subscriptionId;
     /** The unique identifier of the tenant from which the change notification originated. Required. */
-    private String _tenantId;
+    private UUID _tenantId;
     /**
      * Instantiates a new changeNotification and sets the default values.
      * @return a void
@@ -100,8 +101,8 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
         deserializerMap.put("resource", (n) -> { this.setResource(n.getStringValue()); });
         deserializerMap.put("resourceData", (n) -> { this.setResourceData(n.getObjectValue(ResourceData::createFromDiscriminatorValue)); });
         deserializerMap.put("subscriptionExpirationDateTime", (n) -> { this.setSubscriptionExpirationDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("subscriptionId", (n) -> { this.setSubscriptionId(n.getStringValue()); });
-        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("subscriptionId", (n) -> { this.setSubscriptionId(n.getUUIDValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getUUIDValue()); });
         return deserializerMap;
     }
     /**
@@ -154,18 +155,18 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the subscriptionId property value. The unique identifier of the subscription that generated the notification.Required.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getSubscriptionId() {
+    public UUID getSubscriptionId() {
         return this._subscriptionId;
     }
     /**
      * Gets the tenantId property value. The unique identifier of the tenant from which the change notification originated. Required.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getTenantId() {
+    public UUID getTenantId() {
         return this._tenantId;
     }
     /**
@@ -185,8 +186,8 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("resource", this.getResource());
         writer.writeObjectValue("resourceData", this.getResourceData());
         writer.writeOffsetDateTimeValue("subscriptionExpirationDateTime", this.getSubscriptionExpirationDateTime());
-        writer.writeStringValue("subscriptionId", this.getSubscriptionId());
-        writer.writeStringValue("tenantId", this.getTenantId());
+        writer.writeUUIDValue("subscriptionId", this.getSubscriptionId());
+        writer.writeUUIDValue("tenantId", this.getTenantId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -285,7 +286,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setSubscriptionId(@javax.annotation.Nullable final String value) {
+    public void setSubscriptionId(@javax.annotation.Nullable final UUID value) {
         this._subscriptionId = value;
     }
     /**
@@ -294,7 +295,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    public void setTenantId(@javax.annotation.Nullable final UUID value) {
         this._tenantId = value;
     }
 }

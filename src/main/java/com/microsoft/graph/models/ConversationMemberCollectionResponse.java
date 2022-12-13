@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the members property of the microsoft.graph.chat entity. */
+/**
+ * Provides operations to manage the members property of the microsoft.graph.chat entity.
+ */
 public class ConversationMemberCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<ConversationMember> _value;

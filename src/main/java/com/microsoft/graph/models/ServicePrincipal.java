@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class ServicePrincipal extends DirectoryObject implements Parsable {
     /** true if the service principal account is enabled; otherwise, false. If set to false, then no users will be able to sign in to this app, even if they are assigned to it. Supports $filter (eq, ne, not, in). */
     private Boolean _accountEnabled;
@@ -23,7 +24,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     /** Unique identifier of the applicationTemplate that the servicePrincipal was created from. Read-only. Supports $filter (eq, ne, NOT, startsWith). */
     private String _applicationTemplateId;
     /** Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le). */
-    private String _appOwnerOrganizationId;
+    private UUID _appOwnerOrganizationId;
     /** App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand. */
     private java.util.List<AppRoleAssignment> _appRoleAssignedTo;
     /** Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens. The default value is false. Not nullable. Supports $filter (eq, ne, NOT). */
@@ -95,7 +96,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     /** Custom strings that can be used to categorize and identify the service principal. Not nullable. Supports $filter (eq, not, ge, le, startsWith). */
     private java.util.List<String> _tags;
     /** Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD issues tokens for this application encrypted using the key specified by this property. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user. */
-    private String _tokenEncryptionKeyId;
+    private UUID _tokenEncryptionKeyId;
     /** The tokenIssuancePolicies assigned to this service principal. */
     private java.util.List<TokenIssuancePolicy> _tokenIssuancePolicies;
     /** The tokenLifetimePolicies assigned to this service principal. */
@@ -105,7 +106,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     /** Specifies the verified publisher of the application which this service principal represents. */
     private VerifiedPublisher _verifiedPublisher;
     /**
-     * Instantiates a new ServicePrincipal and sets the default values.
+     * Instantiates a new servicePrincipal and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -116,7 +117,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServicePrincipal
+     * @return a servicePrincipal
      */
     @javax.annotation.Nonnull
     public static ServicePrincipal createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -181,10 +182,10 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getAppOwnerOrganizationId() {
+    public UUID getAppOwnerOrganizationId() {
         return this._appOwnerOrganizationId;
     }
     /**
@@ -297,7 +298,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         deserializerMap.put("appDisplayName", (n) -> { this.setAppDisplayName(n.getStringValue()); });
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("applicationTemplateId", (n) -> { this.setApplicationTemplateId(n.getStringValue()); });
-        deserializerMap.put("appOwnerOrganizationId", (n) -> { this.setAppOwnerOrganizationId(n.getStringValue()); });
+        deserializerMap.put("appOwnerOrganizationId", (n) -> { this.setAppOwnerOrganizationId(n.getUUIDValue()); });
         deserializerMap.put("appRoleAssignedTo", (n) -> { this.setAppRoleAssignedTo(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("appRoleAssignmentRequired", (n) -> { this.setAppRoleAssignmentRequired(n.getBooleanValue()); });
         deserializerMap.put("appRoleAssignments", (n) -> { this.setAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
@@ -333,7 +334,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         deserializerMap.put("servicePrincipalType", (n) -> { this.setServicePrincipalType(n.getStringValue()); });
         deserializerMap.put("signInAudience", (n) -> { this.setSignInAudience(n.getStringValue()); });
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("tokenEncryptionKeyId", (n) -> { this.setTokenEncryptionKeyId(n.getStringValue()); });
+        deserializerMap.put("tokenEncryptionKeyId", (n) -> { this.setTokenEncryptionKeyId(n.getUUIDValue()); });
         deserializerMap.put("tokenIssuancePolicies", (n) -> { this.setTokenIssuancePolicies(n.getCollectionOfObjectValues(TokenIssuancePolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("tokenLifetimePolicies", (n) -> { this.setTokenLifetimePolicies(n.getCollectionOfObjectValues(TokenLifetimePolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("transitiveMemberOf", (n) -> { this.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
@@ -526,10 +527,10 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD issues tokens for this application encrypted using the key specified by this property. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getTokenEncryptionKeyId() {
+    public UUID getTokenEncryptionKeyId() {
         return this._tokenEncryptionKeyId;
     }
     /**
@@ -580,7 +581,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeStringValue("appDisplayName", this.getAppDisplayName());
         writer.writeStringValue("appId", this.getAppId());
         writer.writeStringValue("applicationTemplateId", this.getApplicationTemplateId());
-        writer.writeStringValue("appOwnerOrganizationId", this.getAppOwnerOrganizationId());
+        writer.writeUUIDValue("appOwnerOrganizationId", this.getAppOwnerOrganizationId());
         writer.writeCollectionOfObjectValues("appRoleAssignedTo", this.getAppRoleAssignedTo());
         writer.writeBooleanValue("appRoleAssignmentRequired", this.getAppRoleAssignmentRequired());
         writer.writeCollectionOfObjectValues("appRoleAssignments", this.getAppRoleAssignments());
@@ -616,7 +617,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeStringValue("servicePrincipalType", this.getServicePrincipalType());
         writer.writeStringValue("signInAudience", this.getSignInAudience());
         writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
-        writer.writeStringValue("tokenEncryptionKeyId", this.getTokenEncryptionKeyId());
+        writer.writeUUIDValue("tokenEncryptionKeyId", this.getTokenEncryptionKeyId());
         writer.writeCollectionOfObjectValues("tokenIssuancePolicies", this.getTokenIssuancePolicies());
         writer.writeCollectionOfObjectValues("tokenLifetimePolicies", this.getTokenLifetimePolicies());
         writer.writeCollectionOfObjectValues("transitiveMemberOf", this.getTransitiveMemberOf());
@@ -691,7 +692,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setAppOwnerOrganizationId(@javax.annotation.Nullable final String value) {
+    public void setAppOwnerOrganizationId(@javax.annotation.Nullable final UUID value) {
         this._appOwnerOrganizationId = value;
     }
     /**
@@ -1015,7 +1016,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setTokenEncryptionKeyId(@javax.annotation.Nullable final String value) {
+    public void setTokenEncryptionKeyId(@javax.annotation.Nullable final UUID value) {
         this._tokenEncryptionKeyId = value;
     }
     /**

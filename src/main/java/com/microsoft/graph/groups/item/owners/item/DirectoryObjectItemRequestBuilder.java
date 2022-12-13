@@ -10,7 +10,9 @@ import com.microsoft.graph.groups.item.owners.item.user.UserRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-/** Builds and executes requests for operations under /groups/{group-id}/owners/{directoryObject-id} */
+/**
+ * Builds and executes requests for operations under /groups/{group-id}/owners/{directoryObject-id}
+ */
 public class DirectoryObjectItemRequestBuilder {
     /** Casts the previous resource to application. */
     @javax.annotation.Nonnull

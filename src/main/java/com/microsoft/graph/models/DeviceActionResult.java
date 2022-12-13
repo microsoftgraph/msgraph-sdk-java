@@ -14,7 +14,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device action result */
+/**
+ * Device action result
+ */
 public class DeviceActionResult implements AdditionalDataHolder, Parsable {
     /** Action name */
     private String _actionName;

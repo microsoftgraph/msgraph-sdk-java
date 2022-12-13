@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to appRoleAssignment. */
+/**
+ * Casts the previous resource to appRoleAssignment.
+ */
 public class AppRoleAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<AppRoleAssignment> _value;

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class AuthorizationPolicy extends PolicyBase implements Parsable {
     /** Indicates whether users can sign up for email based subscriptions. */
     private Boolean _allowedToSignUpEmailBasedSubscriptions;
@@ -21,7 +22,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     /** The defaultUserRolePermissions property */
     private DefaultUserRolePermissions _defaultUserRolePermissions;
     /** Represents role templateId for the role that should be granted to guest user. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b). */
-    private String _guestUserRoleId;
+    private UUID _guestUserRoleId;
     /**
      * Instantiates a new AuthorizationPolicy and sets the default values.
      * @return a void
@@ -102,15 +103,15 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         deserializerMap.put("allowInvitesFrom", (n) -> { this.setAllowInvitesFrom(n.getEnumValue(AllowInvitesFrom.class)); });
         deserializerMap.put("blockMsolPowerShell", (n) -> { this.setBlockMsolPowerShell(n.getBooleanValue()); });
         deserializerMap.put("defaultUserRolePermissions", (n) -> { this.setDefaultUserRolePermissions(n.getObjectValue(DefaultUserRolePermissions::createFromDiscriminatorValue)); });
-        deserializerMap.put("guestUserRoleId", (n) -> { this.setGuestUserRoleId(n.getStringValue()); });
+        deserializerMap.put("guestUserRoleId", (n) -> { this.setGuestUserRoleId(n.getUUIDValue()); });
         return deserializerMap;
     }
     /**
      * Gets the guestUserRoleId property value. Represents role templateId for the role that should be granted to guest user. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getGuestUserRoleId() {
+    public UUID getGuestUserRoleId() {
         return this._guestUserRoleId;
     }
     /**
@@ -128,7 +129,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         writer.writeEnumValue("allowInvitesFrom", this.getAllowInvitesFrom());
         writer.writeBooleanValue("blockMsolPowerShell", this.getBlockMsolPowerShell());
         writer.writeObjectValue("defaultUserRolePermissions", this.getDefaultUserRolePermissions());
-        writer.writeStringValue("guestUserRoleId", this.getGuestUserRoleId());
+        writer.writeUUIDValue("guestUserRoleId", this.getGuestUserRoleId());
     }
     /**
      * Sets the allowedToSignUpEmailBasedSubscriptions property value. Indicates whether users can sign up for email based subscriptions.
@@ -190,7 +191,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setGuestUserRoleId(@javax.annotation.Nullable final String value) {
+    public void setGuestUserRoleId(@javax.annotation.Nullable final UUID value) {
         this._guestUserRoleId = value;
     }
 }

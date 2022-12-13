@@ -8,11 +8,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId. */
-    private String _callChainId;
+    private UUID _callChainId;
     /** A geo-region where the service is deployed, such as ProdNoam. */
     private String _cloudServiceDeploymentEnvironment;
     /** A unique deployment identifier assigned by Azure. */
@@ -26,13 +27,13 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     /** The user media agent name, such as Cisco SX80. */
     private String _deviceName;
     /** A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value. */
-    private String _mediaLegId;
+    private UUID _mediaLegId;
     /** The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality. */
     private java.util.List<TeleconferenceDeviceMediaQuality> _mediaQualityList;
     /** The OdataType property */
     private String _odataType;
     /** A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property. */
-    private String _participantId;
+    private UUID _participantId;
     /**
      * Instantiates a new teleconferenceDeviceQuality and sets the default values.
      * @return a void
@@ -61,10 +62,10 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the callChainId property value. A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getCallChainId() {
+    public UUID getCallChainId() {
         return this._callChainId;
     }
     /**
@@ -122,25 +123,25 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(11);
-        deserializerMap.put("callChainId", (n) -> { this.setCallChainId(n.getStringValue()); });
+        deserializerMap.put("callChainId", (n) -> { this.setCallChainId(n.getUUIDValue()); });
         deserializerMap.put("cloudServiceDeploymentEnvironment", (n) -> { this.setCloudServiceDeploymentEnvironment(n.getStringValue()); });
         deserializerMap.put("cloudServiceDeploymentId", (n) -> { this.setCloudServiceDeploymentId(n.getStringValue()); });
         deserializerMap.put("cloudServiceInstanceName", (n) -> { this.setCloudServiceInstanceName(n.getStringValue()); });
         deserializerMap.put("cloudServiceName", (n) -> { this.setCloudServiceName(n.getStringValue()); });
         deserializerMap.put("deviceDescription", (n) -> { this.setDeviceDescription(n.getStringValue()); });
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
-        deserializerMap.put("mediaLegId", (n) -> { this.setMediaLegId(n.getStringValue()); });
+        deserializerMap.put("mediaLegId", (n) -> { this.setMediaLegId(n.getUUIDValue()); });
         deserializerMap.put("mediaQualityList", (n) -> { this.setMediaQualityList(n.getCollectionOfObjectValues(TeleconferenceDeviceMediaQuality::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("participantId", (n) -> { this.setParticipantId(n.getStringValue()); });
+        deserializerMap.put("participantId", (n) -> { this.setParticipantId(n.getUUIDValue()); });
         return deserializerMap;
     }
     /**
      * Gets the mediaLegId property value. A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getMediaLegId() {
+    public UUID getMediaLegId() {
         return this._mediaLegId;
     }
     /**
@@ -161,10 +162,10 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the participantId property value. A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getParticipantId() {
+    public UUID getParticipantId() {
         return this._participantId;
     }
     /**
@@ -175,17 +176,17 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("callChainId", this.getCallChainId());
+        writer.writeUUIDValue("callChainId", this.getCallChainId());
         writer.writeStringValue("cloudServiceDeploymentEnvironment", this.getCloudServiceDeploymentEnvironment());
         writer.writeStringValue("cloudServiceDeploymentId", this.getCloudServiceDeploymentId());
         writer.writeStringValue("cloudServiceInstanceName", this.getCloudServiceInstanceName());
         writer.writeStringValue("cloudServiceName", this.getCloudServiceName());
         writer.writeStringValue("deviceDescription", this.getDeviceDescription());
         writer.writeStringValue("deviceName", this.getDeviceName());
-        writer.writeStringValue("mediaLegId", this.getMediaLegId());
+        writer.writeUUIDValue("mediaLegId", this.getMediaLegId());
         writer.writeCollectionOfObjectValues("mediaQualityList", this.getMediaQualityList());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeStringValue("participantId", this.getParticipantId());
+        writer.writeUUIDValue("participantId", this.getParticipantId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -203,7 +204,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setCallChainId(@javax.annotation.Nullable final String value) {
+    public void setCallChainId(@javax.annotation.Nullable final UUID value) {
         this._callChainId = value;
     }
     /**
@@ -266,7 +267,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setMediaLegId(@javax.annotation.Nullable final String value) {
+    public void setMediaLegId(@javax.annotation.Nullable final UUID value) {
         this._mediaLegId = value;
     }
     /**
@@ -293,7 +294,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setParticipantId(@javax.annotation.Nullable final String value) {
+    public void setParticipantId(@javax.annotation.Nullable final UUID value) {
         this._participantId = value;
     }
 }

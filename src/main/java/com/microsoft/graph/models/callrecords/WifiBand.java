@@ -3,7 +3,7 @@ package com.microsoft.graph.models.callrecords;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the cloudCommunications singleton. */
 public enum WifiBand implements ValuedEnum {
     Unknown("unknown"),
     Frequency24GHz("frequency24GHz"),

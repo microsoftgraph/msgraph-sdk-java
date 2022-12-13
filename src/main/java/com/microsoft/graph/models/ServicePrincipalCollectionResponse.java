@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to servicePrincipal. */
+/**
+ * Casts the previous resource to servicePrincipal.
+ */
 public class ServicePrincipalCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<ServicePrincipal> _value;

@@ -26,7 +26,6 @@ import com.microsoft.graph.models.AgreementFile;
 import com.microsoft.graph.models.AgreementFileLocalization;
 import com.microsoft.graph.models.AgreementFileProperties;
 import com.microsoft.graph.models.AgreementFileVersion;
-import com.microsoft.graph.models.Alert;
 import com.microsoft.graph.models.AndroidCompliancePolicy;
 import com.microsoft.graph.models.AndroidCustomConfiguration;
 import com.microsoft.graph.models.AndroidGeneralDeviceConfiguration;
@@ -244,7 +243,6 @@ import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentity;
 import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentityUpload;
 import com.microsoft.graph.models.InferenceClassification;
 import com.microsoft.graph.models.InferenceClassificationOverride;
-import com.microsoft.graph.models.InformationProtection;
 import com.microsoft.graph.models.InternalDomainFederation;
 import com.microsoft.graph.models.Invitation;
 import com.microsoft.graph.models.InviteParticipantsOperation;
@@ -411,6 +409,8 @@ import com.microsoft.graph.models.ResourceOperation;
 import com.microsoft.graph.models.ResourceSpecificPermissionGrant;
 import com.microsoft.graph.models.RichLongRunningOperation;
 import com.microsoft.graph.models.RiskDetection;
+import com.microsoft.graph.models.RiskyServicePrincipal;
+import com.microsoft.graph.models.RiskyServicePrincipalHistoryItem;
 import com.microsoft.graph.models.RiskyUser;
 import com.microsoft.graph.models.RiskyUserHistoryItem;
 import com.microsoft.graph.models.RoleAssignment;
@@ -429,6 +429,7 @@ import com.microsoft.graph.models.SectionGroup;
 import com.microsoft.graph.models.SecureScore;
 import com.microsoft.graph.models.SecureScoreControlProfile;
 import com.microsoft.graph.models.Security;
+import com.microsoft.graph.models.security.Alert;
 import com.microsoft.graph.models.security.Case_escaped;
 import com.microsoft.graph.models.security.CaseOperation;
 import com.microsoft.graph.models.security.CasesRoot;
@@ -449,6 +450,7 @@ import com.microsoft.graph.models.security.EdiscoveryReviewSetQuery;
 import com.microsoft.graph.models.security.EdiscoveryReviewTag;
 import com.microsoft.graph.models.security.EdiscoverySearch;
 import com.microsoft.graph.models.security.EdiscoveryTagOperation;
+import com.microsoft.graph.models.security.Incident;
 import com.microsoft.graph.models.security.Search;
 import com.microsoft.graph.models.security.SiteSource;
 import com.microsoft.graph.models.security.Tag;
@@ -461,6 +463,7 @@ import com.microsoft.graph.models.ServiceAnnouncementBase;
 import com.microsoft.graph.models.ServiceHealth;
 import com.microsoft.graph.models.ServiceHealthIssue;
 import com.microsoft.graph.models.ServicePrincipal;
+import com.microsoft.graph.models.ServicePrincipalRiskDetection;
 import com.microsoft.graph.models.ServiceUpdateMessage;
 import com.microsoft.graph.models.SettingStateDeviceSummary;
 import com.microsoft.graph.models.SharedDriveItem;
@@ -932,7 +935,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.importedWindowsAutopilotDeviceIdentityUpload": return new ImportedWindowsAutopilotDeviceIdentityUpload();
             case "#microsoft.graph.inferenceClassification": return new InferenceClassification();
             case "#microsoft.graph.inferenceClassificationOverride": return new InferenceClassificationOverride();
-            case "#microsoft.graph.informationProtection": return new InformationProtection();
             case "#microsoft.graph.internalDomainFederation": return new InternalDomainFederation();
             case "#microsoft.graph.invitation": return new Invitation();
             case "#microsoft.graph.inviteParticipantsOperation": return new InviteParticipantsOperation();
@@ -1099,6 +1101,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.resourceSpecificPermissionGrant": return new ResourceSpecificPermissionGrant();
             case "#microsoft.graph.richLongRunningOperation": return new RichLongRunningOperation();
             case "#microsoft.graph.riskDetection": return new RiskDetection();
+            case "#microsoft.graph.riskyServicePrincipal": return new RiskyServicePrincipal();
+            case "#microsoft.graph.riskyServicePrincipalHistoryItem": return new RiskyServicePrincipalHistoryItem();
             case "#microsoft.graph.riskyUser": return new RiskyUser();
             case "#microsoft.graph.riskyUserHistoryItem": return new RiskyUserHistoryItem();
             case "#microsoft.graph.roleAssignment": return new RoleAssignment();
@@ -1117,6 +1121,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.secureScore": return new SecureScore();
             case "#microsoft.graph.secureScoreControlProfile": return new SecureScoreControlProfile();
             case "#microsoft.graph.security": return new Security();
+            case "#microsoft.graph.security.alert": return new Alert();
             case "#microsoft.graph.security.case": return new Case_escaped();
             case "#microsoft.graph.security.caseOperation": return new CaseOperation();
             case "#microsoft.graph.security.casesRoot": return new CasesRoot();
@@ -1137,6 +1142,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.security.ediscoveryReviewTag": return new EdiscoveryReviewTag();
             case "#microsoft.graph.security.ediscoverySearch": return new EdiscoverySearch();
             case "#microsoft.graph.security.ediscoveryTagOperation": return new EdiscoveryTagOperation();
+            case "#microsoft.graph.security.incident": return new Incident();
             case "#microsoft.graph.security.search": return new Search();
             case "#microsoft.graph.security.siteSource": return new SiteSource();
             case "#microsoft.graph.security.tag": return new Tag();
@@ -1149,6 +1155,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.serviceHealth": return new ServiceHealth();
             case "#microsoft.graph.serviceHealthIssue": return new ServiceHealthIssue();
             case "#microsoft.graph.servicePrincipal": return new ServicePrincipal();
+            case "#microsoft.graph.servicePrincipalRiskDetection": return new ServicePrincipalRiskDetection();
             case "#microsoft.graph.serviceUpdateMessage": return new ServiceUpdateMessage();
             case "#microsoft.graph.settingStateDeviceSummary": return new SettingStateDeviceSummary();
             case "#microsoft.graph.sharedDriveItem": return new SharedDriveItem();
@@ -1184,10 +1191,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.teamInfo": return new TeamInfo();
             case "#microsoft.graph.teamsApp": return new TeamsApp();
             case "#microsoft.graph.teamsAppDefinition": return new TeamsAppDefinition();
-            case "#microsoft.graph.teamsAppInstallation": return new TeamsAppInstallation();
-            case "#microsoft.graph.teamsAsyncOperation": return new TeamsAsyncOperation();
-            case "#microsoft.graph.teamsTab": return new TeamsTab();
-            case "#microsoft.graph.teamsTemplate": return new TeamsTemplate();
         }
         return null;
     }
@@ -1199,6 +1202,10 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@javax.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.teamsAppInstallation": return new TeamsAppInstallation();
+            case "#microsoft.graph.teamsAsyncOperation": return new TeamsAsyncOperation();
+            case "#microsoft.graph.teamsTab": return new TeamsTab();
+            case "#microsoft.graph.teamsTemplate": return new TeamsTemplate();
             case "#microsoft.graph.teamwork": return new Teamwork();
             case "#microsoft.graph.teamworkBot": return new TeamworkBot();
             case "#microsoft.graph.teamworkHostedContent": return new TeamworkHostedContent();

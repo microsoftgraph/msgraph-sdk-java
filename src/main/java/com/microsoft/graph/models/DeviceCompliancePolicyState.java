@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device Compliance Policy State for a given device. */
+/**
+ * Device Compliance Policy State for a given device.
+ */
 public class DeviceCompliancePolicyState extends Entity implements Parsable {
     /** The name of the policy for this policyBase */
     private String _displayName;

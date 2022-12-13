@@ -15,8 +15,12 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
     private String _odataType;
     /** Risk detection in Azure AD Identity Protection and the associated information about the detection. */
     private java.util.List<RiskDetection> _riskDetections;
+    /** Azure AD service principals that are at risk. */
+    private java.util.List<RiskyServicePrincipal> _riskyServicePrincipals;
     /** Users that are flagged as at-risk by Azure AD Identity Protection. */
     private java.util.List<RiskyUser> _riskyUsers;
+    /** Represents information about detected at-risk service principals in an Azure AD tenant. */
+    private java.util.List<ServicePrincipalRiskDetection> _servicePrincipalRiskDetections;
     /**
      * Instantiates a new IdentityProtectionRoot and sets the default values.
      * @return a void
@@ -49,10 +53,12 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("riskDetections", (n) -> { this.setRiskDetections(n.getCollectionOfObjectValues(RiskDetection::createFromDiscriminatorValue)); });
+        deserializerMap.put("riskyServicePrincipals", (n) -> { this.setRiskyServicePrincipals(n.getCollectionOfObjectValues(RiskyServicePrincipal::createFromDiscriminatorValue)); });
         deserializerMap.put("riskyUsers", (n) -> { this.setRiskyUsers(n.getCollectionOfObjectValues(RiskyUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("servicePrincipalRiskDetections", (n) -> { this.setServicePrincipalRiskDetections(n.getCollectionOfObjectValues(ServicePrincipalRiskDetection::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -72,12 +78,28 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
         return this._riskDetections;
     }
     /**
+     * Gets the riskyServicePrincipals property value. Azure AD service principals that are at risk.
+     * @return a riskyServicePrincipal
+     */
+    @javax.annotation.Nullable
+    public java.util.List<RiskyServicePrincipal> getRiskyServicePrincipals() {
+        return this._riskyServicePrincipals;
+    }
+    /**
      * Gets the riskyUsers property value. Users that are flagged as at-risk by Azure AD Identity Protection.
      * @return a riskyUser
      */
     @javax.annotation.Nullable
     public java.util.List<RiskyUser> getRiskyUsers() {
         return this._riskyUsers;
+    }
+    /**
+     * Gets the servicePrincipalRiskDetections property value. Represents information about detected at-risk service principals in an Azure AD tenant.
+     * @return a servicePrincipalRiskDetection
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ServicePrincipalRiskDetection> getServicePrincipalRiskDetections() {
+        return this._servicePrincipalRiskDetections;
     }
     /**
      * Serializes information the current object
@@ -89,7 +111,9 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("riskDetections", this.getRiskDetections());
+        writer.writeCollectionOfObjectValues("riskyServicePrincipals", this.getRiskyServicePrincipals());
         writer.writeCollectionOfObjectValues("riskyUsers", this.getRiskyUsers());
+        writer.writeCollectionOfObjectValues("servicePrincipalRiskDetections", this.getServicePrincipalRiskDetections());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -120,6 +144,15 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
         this._riskDetections = value;
     }
     /**
+     * Sets the riskyServicePrincipals property value. Azure AD service principals that are at risk.
+     * @param value Value to set for the riskyServicePrincipals property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRiskyServicePrincipals(@javax.annotation.Nullable final java.util.List<RiskyServicePrincipal> value) {
+        this._riskyServicePrincipals = value;
+    }
+    /**
      * Sets the riskyUsers property value. Users that are flagged as at-risk by Azure AD Identity Protection.
      * @param value Value to set for the riskyUsers property.
      * @return a void
@@ -127,5 +160,14 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setRiskyUsers(@javax.annotation.Nullable final java.util.List<RiskyUser> value) {
         this._riskyUsers = value;
+    }
+    /**
+     * Sets the servicePrincipalRiskDetections property value. Represents information about detected at-risk service principals in an Azure AD tenant.
+     * @param value Value to set for the servicePrincipalRiskDetections property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setServicePrincipalRiskDetections(@javax.annotation.Nullable final java.util.List<ServicePrincipalRiskDetection> value) {
+        this._servicePrincipalRiskDetections = value;
     }
 }

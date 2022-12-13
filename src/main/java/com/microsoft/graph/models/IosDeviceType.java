@@ -8,7 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties of the possible iOS device types the mobile app can run on. */
+/**
+ * Contains properties of the possible iOS device types the mobile app can run on.
+ */
 public class IosDeviceType implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;

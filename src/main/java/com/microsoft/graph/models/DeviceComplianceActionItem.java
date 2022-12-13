@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Scheduled Action Configuration */
+/**
+ * Scheduled Action Configuration
+ */
 public class DeviceComplianceActionItem extends Entity implements Parsable {
     /** Scheduled Action Type Enum */
     private DeviceComplianceActionType _actionType;

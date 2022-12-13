@@ -1,0 +1,35 @@
+package com.microsoft.graph.models.security;
+
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
+
+/** Provides operations to manage the admin singleton. */
+public enum DeviceHealthStatus implements ValuedEnum {
+    Active("active"),
+    Inactive("inactive"),
+    ImpairedCommunication("impairedCommunication"),
+    NoSensorData("noSensorData"),
+    NoSensorDataImpairedCommunication("noSensorDataImpairedCommunication"),
+    Unknown("unknown"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    DeviceHealthStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceHealthStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "active": return Active;
+            case "inactive": return Inactive;
+            case "impairedCommunication": return ImpairedCommunication;
+            case "noSensorData": return NoSensorData;
+            case "noSensorDataImpairedCommunication": return NoSensorDataImpairedCommunication;
+            case "unknown": return Unknown;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
+}

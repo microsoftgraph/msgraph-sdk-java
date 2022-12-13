@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
+/**
+ * Provides operations to manage the collection of certificateBasedAuthConfiguration entities.
+ */
 public class CertificateBasedAuthConfiguration extends Entity implements Parsable {
     /** Collection of certificate authorities which creates a trusted certificate chain. */
     private java.util.List<CertificateAuthority> _certificateAuthorities;

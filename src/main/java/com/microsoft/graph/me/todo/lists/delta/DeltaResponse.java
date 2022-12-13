@@ -9,7 +9,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the delta method. */
+/**
+ * Provides operations to call the delta method.
+ */
 public class DeltaResponse extends BaseDeltaFunctionResponse implements Parsable {
     /** The value property */
     private java.util.List<TodoTaskList> _value;

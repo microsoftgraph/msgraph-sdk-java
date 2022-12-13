@@ -17,7 +17,7 @@ public class Device extends DirectoryObject implements Parsable {
     private OffsetDateTime _approximateLastSignInDateTime;
     /** The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
     private OffsetDateTime _complianceExpirationDateTime;
-    /** Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith). */
+    /** Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith). */
     private String _deviceId;
     /** For internal use only. Set to null. */
     private String _deviceMetadata;
@@ -109,7 +109,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this._complianceExpirationDateTime;
     }
     /**
-     * Gets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
+     * Gets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -372,7 +372,7 @@ public class Device extends DirectoryObject implements Parsable {
         this._complianceExpirationDateTime = value;
     }
     /**
-     * Sets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
+     * Sets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
      * @param value Value to set for the deviceId property.
      * @return a void
      */

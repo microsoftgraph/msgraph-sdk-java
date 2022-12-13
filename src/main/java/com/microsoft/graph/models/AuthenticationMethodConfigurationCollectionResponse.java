@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of authenticationMethodConfiguration entities. */
+/**
+ * Provides operations to manage the collection of authenticationMethodConfiguration entities.
+ */
 public class AuthenticationMethodConfigurationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<AuthenticationMethodConfiguration> _value;

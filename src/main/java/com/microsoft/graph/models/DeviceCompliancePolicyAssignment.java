@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device compliance policy assignment. */
+/**
+ * Device compliance policy assignment.
+ */
 public class DeviceCompliancePolicyAssignment extends Entity implements Parsable {
     /** Target for the compliance policy assignment. */
     private DeviceAndAppManagementAssignmentTarget _target;

@@ -8,7 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties for a single Intune app category. */
+/**
+ * Contains properties for a single Intune app category.
+ */
 public class MobileAppCategory extends Entity implements Parsable {
     /** The name of the app category. */
     private String _displayName;

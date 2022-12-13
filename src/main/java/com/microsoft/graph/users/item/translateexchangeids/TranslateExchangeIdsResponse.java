@@ -9,7 +9,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the translateExchangeIds method. */
+/**
+ * Provides operations to call the translateExchangeIds method.
+ */
 public class TranslateExchangeIdsResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<ConvertIdResult> _value;

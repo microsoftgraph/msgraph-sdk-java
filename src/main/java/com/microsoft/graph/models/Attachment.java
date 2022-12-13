@@ -11,7 +11,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/**
+ * Provides operations to manage the collection of agreement entities.
+ */
 public class Attachment extends Entity implements Parsable {
     /** The MIME type. */
     private String _contentType;

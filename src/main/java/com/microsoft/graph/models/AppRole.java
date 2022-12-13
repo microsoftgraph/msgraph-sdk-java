@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class AppRole implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -18,7 +19,7 @@ public class AppRole implements AdditionalDataHolder, Parsable {
     /** Display name for the permission that appears in the app role assignment and consent experiences. */
     private String _displayName;
     /** Unique role identifier inside the appRoles collection. When creating a new app role, a new GUID identifier must be provided. */
-    private String _id;
+    private UUID _id;
     /** When creating or updating an app role, this must be set to true (which is the default). To delete a role, this must first be set to false.  At that point, in a subsequent call, this role may be removed. */
     private Boolean _isEnabled;
     /** The OdataType property */
@@ -87,7 +88,7 @@ public class AppRole implements AdditionalDataHolder, Parsable {
         deserializerMap.put("allowedMemberTypes", (n) -> { this.setAllowedMemberTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getUUIDValue()); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("origin", (n) -> { this.setOrigin(n.getStringValue()); });
@@ -96,10 +97,10 @@ public class AppRole implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. Unique role identifier inside the appRoles collection. When creating a new app role, a new GUID identifier must be provided.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getId() {
+    public UUID getId() {
         return this._id;
     }
     /**
@@ -145,7 +146,7 @@ public class AppRole implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfPrimitiveValues("allowedMemberTypes", this.getAllowedMemberTypes());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeStringValue("id", this.getId());
+        writer.writeUUIDValue("id", this.getId());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("origin", this.getOrigin());
@@ -194,7 +195,7 @@ public class AppRole implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    public void setId(@javax.annotation.Nullable final UUID value) {
         this._id = value;
     }
     /**

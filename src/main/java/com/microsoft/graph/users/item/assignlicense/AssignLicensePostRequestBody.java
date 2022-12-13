@@ -9,14 +9,17 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the assignLicense method. */
+import java.util.UUID;
+/**
+ * Provides operations to call the assignLicense method.
+ */
 public class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** The addLicenses property */
     private java.util.List<AssignedLicense> _addLicenses;
     /** The removeLicenses property */
-    private java.util.List<String> _removeLicenses;
+    private java.util.List<UUID> _removeLicenses;
     /**
      * Instantiates a new assignLicensePostRequestBody and sets the default values.
      * @return a void
@@ -59,15 +62,15 @@ public class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsa
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
         deserializerMap.put("addLicenses", (n) -> { this.setAddLicenses(n.getCollectionOfObjectValues(AssignedLicense::createFromDiscriminatorValue)); });
-        deserializerMap.put("removeLicenses", (n) -> { this.setRemoveLicenses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("removeLicenses", (n) -> { this.setRemoveLicenses(n.getCollectionOfPrimitiveValues(UUID.class)); });
         return deserializerMap;
     }
     /**
      * Gets the removeLicenses property value. The removeLicenses property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getRemoveLicenses() {
+    public java.util.List<UUID> getRemoveLicenses() {
         return this._removeLicenses;
     }
     /**
@@ -106,7 +109,7 @@ public class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsa
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setRemoveLicenses(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRemoveLicenses(@javax.annotation.Nullable final java.util.List<UUID> value) {
         this._removeLicenses = value;
     }
 }

@@ -1,6 +1,7 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.AzureActiveDirectoryTenant;
+import com.microsoft.graph.models.CrossCloudAzureActiveDirectoryTenant;
 import com.microsoft.graph.models.DomainIdentitySource;
 import com.microsoft.graph.models.ExternalDomainFederation;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
@@ -37,6 +38,7 @@ public class IdentitySource implements AdditionalDataHolder, Parsable {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.azureActiveDirectoryTenant": return new AzureActiveDirectoryTenant();
+                case "#microsoft.graph.crossCloudAzureActiveDirectoryTenant": return new CrossCloudAzureActiveDirectoryTenant();
                 case "#microsoft.graph.domainIdentitySource": return new DomainIdentitySource();
                 case "#microsoft.graph.externalDomainFederation": return new ExternalDomainFederation();
             }

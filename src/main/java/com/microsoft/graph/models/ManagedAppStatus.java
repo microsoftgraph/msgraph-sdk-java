@@ -8,7 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Represents app protection and configuration status for the organization. */
+/**
+ * Represents app protection and configuration status for the organization.
+ */
 public class ManagedAppStatus extends Entity implements Parsable {
     /** Friendly name of the status report. */
     private String _displayName;

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class SubscribedSku extends Entity implements Parsable {
     /** For example, 'User' or 'Company'. */
     private String _appliesTo;
@@ -19,7 +20,7 @@ public class SubscribedSku extends Entity implements Parsable {
     /** Information about the service plans that are available with the SKU. Not nullable */
     private java.util.List<ServicePlanInfo> _servicePlans;
     /** The unique identifier (GUID) for the service SKU. */
-    private String _skuId;
+    private UUID _skuId;
     /** The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus. */
     private String _skuPartNumber;
     /**
@@ -76,7 +77,7 @@ public class SubscribedSku extends Entity implements Parsable {
         deserializerMap.put("consumedUnits", (n) -> { this.setConsumedUnits(n.getIntegerValue()); });
         deserializerMap.put("prepaidUnits", (n) -> { this.setPrepaidUnits(n.getObjectValue(LicenseUnitsDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("servicePlans", (n) -> { this.setServicePlans(n.getCollectionOfObjectValues(ServicePlanInfo::createFromDiscriminatorValue)); });
-        deserializerMap.put("skuId", (n) -> { this.setSkuId(n.getStringValue()); });
+        deserializerMap.put("skuId", (n) -> { this.setSkuId(n.getUUIDValue()); });
         deserializerMap.put("skuPartNumber", (n) -> { this.setSkuPartNumber(n.getStringValue()); });
         return deserializerMap;
     }
@@ -98,10 +99,10 @@ public class SubscribedSku extends Entity implements Parsable {
     }
     /**
      * Gets the skuId property value. The unique identifier (GUID) for the service SKU.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getSkuId() {
+    public UUID getSkuId() {
         return this._skuId;
     }
     /**
@@ -126,7 +127,7 @@ public class SubscribedSku extends Entity implements Parsable {
         writer.writeIntegerValue("consumedUnits", this.getConsumedUnits());
         writer.writeObjectValue("prepaidUnits", this.getPrepaidUnits());
         writer.writeCollectionOfObjectValues("servicePlans", this.getServicePlans());
-        writer.writeStringValue("skuId", this.getSkuId());
+        writer.writeUUIDValue("skuId", this.getSkuId());
         writer.writeStringValue("skuPartNumber", this.getSkuPartNumber());
     }
     /**
@@ -180,7 +181,7 @@ public class SubscribedSku extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setSkuId(@javax.annotation.Nullable final String value) {
+    public void setSkuId(@javax.annotation.Nullable final UUID value) {
         this._skuId = value;
     }
     /**

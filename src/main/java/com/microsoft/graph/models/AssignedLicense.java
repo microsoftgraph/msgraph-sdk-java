@@ -8,15 +8,16 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class AssignedLicense implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** A collection of the unique identifiers for plans that have been disabled. */
-    private java.util.List<String> _disabledPlans;
+    private java.util.List<UUID> _disabledPlans;
     /** The OdataType property */
     private String _odataType;
     /** The unique identifier for the SKU. */
-    private String _skuId;
+    private UUID _skuId;
     /**
      * Instantiates a new assignedLicense and sets the default values.
      * @return a void
@@ -45,10 +46,10 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the disabledPlans property value. A collection of the unique identifiers for plans that have been disabled.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getDisabledPlans() {
+    public java.util.List<UUID> getDisabledPlans() {
         return this._disabledPlans;
     }
     /**
@@ -58,9 +59,9 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
-        deserializerMap.put("disabledPlans", (n) -> { this.setDisabledPlans(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("disabledPlans", (n) -> { this.setDisabledPlans(n.getCollectionOfPrimitiveValues(UUID.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("skuId", (n) -> { this.setSkuId(n.getStringValue()); });
+        deserializerMap.put("skuId", (n) -> { this.setSkuId(n.getUUIDValue()); });
         return deserializerMap;
     }
     /**
@@ -73,10 +74,10 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the skuId property value. The unique identifier for the SKU.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getSkuId() {
+    public UUID getSkuId() {
         return this._skuId;
     }
     /**
@@ -89,7 +90,7 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("disabledPlans", this.getDisabledPlans());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeStringValue("skuId", this.getSkuId());
+        writer.writeUUIDValue("skuId", this.getSkuId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -107,7 +108,7 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setDisabledPlans(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setDisabledPlans(@javax.annotation.Nullable final java.util.List<UUID> value) {
         this._disabledPlans = value;
     }
     /**
@@ -125,7 +126,7 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setSkuId(@javax.annotation.Nullable final String value) {
+    public void setSkuId(@javax.annotation.Nullable final UUID value) {
         this._skuId = value;
     }
 }

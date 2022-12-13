@@ -8,7 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the sessions property of the microsoft.graph.callRecords.callRecord entity. */
+/**
+ * Provides operations to manage the sessions property of the microsoft.graph.callRecords.callRecord entity.
+ */
 public class SessionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<Session> _value;

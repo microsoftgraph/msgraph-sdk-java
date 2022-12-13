@@ -7,13 +7,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class DirectoryObjectPartnerReference extends DirectoryObject implements Parsable {
     /** Description of the object returned. Read-only. */
     private String _description;
     /** Name of directory object being returned, like group or application. Read-only. */
     private String _displayName;
     /** The tenant identifier for the partner tenant. Read-only. */
-    private String _externalPartnerTenantId;
+    private UUID _externalPartnerTenantId;
     /** The type of the referenced object in the partner tenant. Read-only. */
     private String _objectType;
     /**
@@ -53,10 +54,10 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
     }
     /**
      * Gets the externalPartnerTenantId property value. The tenant identifier for the partner tenant. Read-only.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getExternalPartnerTenantId() {
+    public UUID getExternalPartnerTenantId() {
         return this._externalPartnerTenantId;
     }
     /**
@@ -68,7 +69,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
         final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("externalPartnerTenantId", (n) -> { this.setExternalPartnerTenantId(n.getStringValue()); });
+        deserializerMap.put("externalPartnerTenantId", (n) -> { this.setExternalPartnerTenantId(n.getUUIDValue()); });
         deserializerMap.put("objectType", (n) -> { this.setObjectType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -91,7 +92,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeStringValue("externalPartnerTenantId", this.getExternalPartnerTenantId());
+        writer.writeUUIDValue("externalPartnerTenantId", this.getExternalPartnerTenantId());
         writer.writeStringValue("objectType", this.getObjectType());
     }
     /**
@@ -118,7 +119,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setExternalPartnerTenantId(@javax.annotation.Nullable final String value) {
+    public void setExternalPartnerTenantId(@javax.annotation.Nullable final UUID value) {
         this._externalPartnerTenantId = value;
     }
     /**

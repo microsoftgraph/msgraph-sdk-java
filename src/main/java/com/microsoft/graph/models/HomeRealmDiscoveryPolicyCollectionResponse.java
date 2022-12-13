@@ -7,7 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.application entity. */
+/**
+ * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.application entity.
+ */
 public class HomeRealmDiscoveryPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<HomeRealmDiscoveryPolicy> _value;

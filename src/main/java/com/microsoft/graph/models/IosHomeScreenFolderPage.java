@@ -8,7 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A page for a folder containing apps and web clips on the Home Screen. */
+/**
+ * A page for a folder containing apps and web clips on the Home Screen.
+ */
 public class IosHomeScreenFolderPage implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;

@@ -8,7 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** SharedPC Account Manager Policy. Only applies when the account manager is enabled. */
+/**
+ * SharedPC Account Manager Policy. Only applies when the account manager is enabled.
+ */
 public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsable {
     /** Possible values for when accounts are deleted on a shared PC. */
     private SharedPCAccountDeletionPolicyType _accountDeletionPolicy;

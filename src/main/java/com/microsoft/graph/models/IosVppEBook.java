@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class IosVppEBook extends ManagedEBook implements Parsable {
     /** The Apple ID associated with Vpp token. */
     private String _appleId;
@@ -23,7 +24,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     /** The Vpp token's organization name. */
     private String _vppOrganizationName;
     /** The Vpp token ID. */
-    private String _vppTokenId;
+    private UUID _vppTokenId;
     /**
      * Instantiates a new IosVppEBook and sets the default values.
      * @return a void
@@ -65,7 +66,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
         deserializerMap.put("totalLicenseCount", (n) -> { this.setTotalLicenseCount(n.getIntegerValue()); });
         deserializerMap.put("usedLicenseCount", (n) -> { this.setUsedLicenseCount(n.getIntegerValue()); });
         deserializerMap.put("vppOrganizationName", (n) -> { this.setVppOrganizationName(n.getStringValue()); });
-        deserializerMap.put("vppTokenId", (n) -> { this.setVppTokenId(n.getStringValue()); });
+        deserializerMap.put("vppTokenId", (n) -> { this.setVppTokenId(n.getUUIDValue()); });
         return deserializerMap;
     }
     /**
@@ -118,10 +119,10 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     }
     /**
      * Gets the vppTokenId property value. The Vpp token ID.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getVppTokenId() {
+    public UUID getVppTokenId() {
         return this._vppTokenId;
     }
     /**
@@ -140,7 +141,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
         writer.writeIntegerValue("totalLicenseCount", this.getTotalLicenseCount());
         writer.writeIntegerValue("usedLicenseCount", this.getUsedLicenseCount());
         writer.writeStringValue("vppOrganizationName", this.getVppOrganizationName());
-        writer.writeStringValue("vppTokenId", this.getVppTokenId());
+        writer.writeUUIDValue("vppTokenId", this.getVppTokenId());
     }
     /**
      * Sets the appleId property value. The Apple ID associated with Vpp token.
@@ -211,7 +212,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setVppTokenId(@javax.annotation.Nullable final String value) {
+    public void setVppTokenId(@javax.annotation.Nullable final UUID value) {
         this._vppTokenId = value;
     }
 }

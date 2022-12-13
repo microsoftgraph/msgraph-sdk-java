@@ -4,7 +4,9 @@ import com.microsoft.graph.education.users.item.assignments.item.categories.item
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-/** Builds and executes requests for operations under /education/users/{educationUser-id}/assignments/{educationAssignment-id}/categories/{educationCategory-id} */
+/**
+ * Builds and executes requests for operations under /education/users/{educationUser-id}/assignments/{educationAssignment-id}/categories/{educationCategory-id}
+ */
 public class EducationCategoryItemRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;

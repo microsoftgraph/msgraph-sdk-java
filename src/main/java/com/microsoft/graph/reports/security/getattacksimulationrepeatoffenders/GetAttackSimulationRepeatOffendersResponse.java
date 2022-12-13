@@ -9,7 +9,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getAttackSimulationRepeatOffenders method. */
+/**
+ * Provides operations to call the getAttackSimulationRepeatOffenders method.
+ */
 public class GetAttackSimulationRepeatOffendersResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<AttackSimulationRepeatOffender> _value;

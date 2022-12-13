@@ -18,7 +18,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The ManagedAppPolicy resource represents a base type for platform specific policies. */
+/**
+ * The ManagedAppPolicy resource represents a base type for platform specific policies.
+ */
 public class ManagedAppPolicy extends Entity implements Parsable {
     /** The date and time the policy was created. */
     private OffsetDateTime _createdDateTime;

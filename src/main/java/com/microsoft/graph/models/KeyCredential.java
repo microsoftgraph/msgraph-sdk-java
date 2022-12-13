@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class KeyCredential implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -21,7 +22,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
     /** The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null. */
     private byte[] _key;
     /** The unique identifier (GUID) for the key. */
-    private String _keyId;
+    private UUID _keyId;
     /** The OdataType property */
     private String _odataType;
     /** The date and time at which the credential becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
@@ -91,7 +92,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("key", (n) -> { this.setKey(n.getByteArrayValue()); });
-        deserializerMap.put("keyId", (n) -> { this.setKeyId(n.getStringValue()); });
+        deserializerMap.put("keyId", (n) -> { this.setKeyId(n.getUUIDValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
@@ -108,10 +109,10 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the keyId property value. The unique identifier (GUID) for the key.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getKeyId() {
+    public UUID getKeyId() {
         return this._keyId;
     }
     /**
@@ -158,7 +159,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeByteArrayValue("key", this.getKey());
-        writer.writeStringValue("keyId", this.getKeyId());
+        writer.writeUUIDValue("keyId", this.getKeyId());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeStringValue("type", this.getType());
@@ -216,7 +217,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setKeyId(@javax.annotation.Nullable final String value) {
+    public void setKeyId(@javax.annotation.Nullable final UUID value) {
         this._keyId = value;
     }
     /**
