@@ -12,7 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.security.models.CasesRoot;
 import com.microsoft.graph.models.AttackSimulationRoot;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.AlertCollectionPage;
+import com.microsoft.graph.security.requests.IncidentCollectionPage;
 import com.microsoft.graph.requests.SecureScoreControlProfileCollectionPage;
 import com.microsoft.graph.requests.SecureScoreCollectionPage;
 
@@ -39,6 +39,24 @@ public class Security extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public CasesRoot cases;
+
+    /**
+     * The Alerts_v2.
+     * 
+     */
+    @SerializedName(value = "alerts_v2", alternate = {"Alerts_v2"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.security.requests.AlertCollectionPage alerts_v2;
+
+    /**
+     * The Incidents.
+     * 
+     */
+    @SerializedName(value = "incidents", alternate = {"Incidents"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.security.requests.IncidentCollectionPage incidents;
 
     /**
      * The Attack Simulation.
@@ -85,6 +103,14 @@ public class Security extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("alerts_v2")) {
+            alerts_v2 = serializer.deserializeObject(json.get("alerts_v2"), com.microsoft.graph.security.requests.AlertCollectionPage.class);
+        }
+
+        if (json.has("incidents")) {
+            incidents = serializer.deserializeObject(json.get("incidents"), com.microsoft.graph.security.requests.IncidentCollectionPage.class);
+        }
 
         if (json.has("alerts")) {
             alerts = serializer.deserializeObject(json.get("alerts"), com.microsoft.graph.requests.AlertCollectionPage.class);

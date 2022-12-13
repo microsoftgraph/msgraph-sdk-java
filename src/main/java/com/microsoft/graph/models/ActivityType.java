@@ -24,6 +24,10 @@ public enum ActivityType
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * service Principal
+    */
+    SERVICE_PRINCIPAL,
+    /**
     * For ActivityType values that were not expected from the service
     */
     UNEXPECTED_VALUE

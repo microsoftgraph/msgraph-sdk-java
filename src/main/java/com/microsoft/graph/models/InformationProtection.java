@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Bitlocker;
-import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ThreatAssessmentRequestCollectionPage;
 
 
@@ -25,8 +24,21 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Information Protection.
  */
-public class InformationProtection extends Entity implements IJsonBackedObject {
+public class InformationProtection implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
+    @SerializedName("@odata.type")
+    @Expose
+    @Nullable
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    @Nonnull
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Bitlocker.

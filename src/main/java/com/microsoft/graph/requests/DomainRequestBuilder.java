@@ -153,6 +153,15 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @return the request builder
      */
     @Nonnull
+    public DomainPromoteRequestBuilder promote() {
+        return new DomainPromoteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.promote"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
     public DomainVerifyRequestBuilder verify() {
         return new DomainVerifyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.verify"), getClient(), null);
     }

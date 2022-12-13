@@ -77,6 +77,26 @@ public class IdentityProtectionRootRequestBuilder extends BaseRequestBuilder<Ide
         return new com.microsoft.graph.requests.RiskDetectionRequestBuilder(getRequestUrlWithAdditionalSegment("riskDetections") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the RiskyServicePrincipal collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.RiskyServicePrincipalCollectionRequestBuilder riskyServicePrincipals() {
+        return new com.microsoft.graph.requests.RiskyServicePrincipalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("riskyServicePrincipals"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the RiskyServicePrincipal item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.RiskyServicePrincipalRequestBuilder riskyServicePrincipals(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.RiskyServicePrincipalRequestBuilder(getRequestUrlWithAdditionalSegment("riskyServicePrincipals") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the RiskyUser collection
      *
      * @return the collection request builder
@@ -95,5 +115,25 @@ public class IdentityProtectionRootRequestBuilder extends BaseRequestBuilder<Ide
     @Nonnull
     public com.microsoft.graph.requests.RiskyUserRequestBuilder riskyUsers(@Nonnull final String id) {
         return new com.microsoft.graph.requests.RiskyUserRequestBuilder(getRequestUrlWithAdditionalSegment("riskyUsers") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ServicePrincipalRiskDetection collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ServicePrincipalRiskDetectionCollectionRequestBuilder servicePrincipalRiskDetections() {
+        return new com.microsoft.graph.requests.ServicePrincipalRiskDetectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("servicePrincipalRiskDetections"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ServicePrincipalRiskDetection item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ServicePrincipalRiskDetectionRequestBuilder servicePrincipalRiskDetections(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ServicePrincipalRiskDetectionRequestBuilder(getRequestUrlWithAdditionalSegment("servicePrincipalRiskDetections") + "/" + id, getClient(), null);
     }
 }

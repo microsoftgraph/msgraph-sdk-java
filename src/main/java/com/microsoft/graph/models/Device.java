@@ -66,7 +66,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Id.
-     * Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
+     * Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
      */
     @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
