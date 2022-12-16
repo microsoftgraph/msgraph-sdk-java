@@ -46,7 +46,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Assigned Labels.
-     * The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. Read-only.
+     * The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select.
      */
     @SerializedName(value = "assignedLabels", alternate = {"AssignedLabels"})
     @Expose

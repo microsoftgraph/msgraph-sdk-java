@@ -10,7 +10,9 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.RiskDetectionCollectionPage;
+import com.microsoft.graph.requests.RiskyServicePrincipalCollectionPage;
 import com.microsoft.graph.requests.RiskyUserCollectionPage;
+import com.microsoft.graph.requests.ServicePrincipalRiskDetectionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -50,6 +52,15 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
     public com.microsoft.graph.requests.RiskDetectionCollectionPage riskDetections;
 
     /**
+     * The Risky Service Principals.
+     * Azure AD service principals that are at risk.
+     */
+    @SerializedName(value = "riskyServicePrincipals", alternate = {"RiskyServicePrincipals"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.RiskyServicePrincipalCollectionPage riskyServicePrincipals;
+
+    /**
      * The Risky Users.
      * Users that are flagged as at-risk by Azure AD Identity Protection.
      */
@@ -57,6 +68,15 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.RiskyUserCollectionPage riskyUsers;
+
+    /**
+     * The Service Principal Risk Detections.
+     * Represents information about detected at-risk service principals in an Azure AD tenant.
+     */
+    @SerializedName(value = "servicePrincipalRiskDetections", alternate = {"ServicePrincipalRiskDetections"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.ServicePrincipalRiskDetectionCollectionPage servicePrincipalRiskDetections;
 
 
     /**
@@ -72,8 +92,16 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
             riskDetections = serializer.deserializeObject(json.get("riskDetections"), com.microsoft.graph.requests.RiskDetectionCollectionPage.class);
         }
 
+        if (json.has("riskyServicePrincipals")) {
+            riskyServicePrincipals = serializer.deserializeObject(json.get("riskyServicePrincipals"), com.microsoft.graph.requests.RiskyServicePrincipalCollectionPage.class);
+        }
+
         if (json.has("riskyUsers")) {
             riskyUsers = serializer.deserializeObject(json.get("riskyUsers"), com.microsoft.graph.requests.RiskyUserCollectionPage.class);
+        }
+
+        if (json.has("servicePrincipalRiskDetections")) {
+            servicePrincipalRiskDetections = serializer.deserializeObject(json.get("servicePrincipalRiskDetections"), com.microsoft.graph.requests.ServicePrincipalRiskDetectionCollectionPage.class);
         }
     }
 }

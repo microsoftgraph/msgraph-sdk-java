@@ -11,6 +11,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.43.0] - 2022-12-16
+
+### Added
+
+- CrossCloudAzureActiveDirectoryTenant model. 
+- DomainPromote models and related requests.
+- RiskyServicePrincipal models and related requests. 
+- SecurityRunHunting models and related requests. 
+- ServicePrincipalRiskDetection model and related requests. 
+- Security Namespace Additions:  
+- DefenderAvStatus model. 
+- DetectionSource model. 
+- DetectionStatus model.  
+- DeviceHealthStatus model. 
+- DeviceRiskScore model. 
+- EmailSender model. 
+- EvidenceRemediationStatus model. 
+- EvidenceRole model. 
+- EvidenceVerdict model.
+- (Entity)Evidence models.
+- FileDetails model. 
+- HuntingQueryResults model. 
+- HuntingRowResult model. 
+- LoggedOnUser model. 
+- OnboardingStatus model.
+- ServiceSource model. 
+- SinglePropertySchema model. 
+- UserAccount model. 
+- VmCloudProvider model. 
+- VmMetadata model.
+- Alert models and related requests.
+- Incident models and related requests. 
+ 
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Classes related to the removed and added models/requests have been updated to reflect the addition and removal of these models/requests.
+
 ## [5.42.0] - 2022-12-07
 
 ### Added

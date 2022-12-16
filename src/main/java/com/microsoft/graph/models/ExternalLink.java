@@ -39,7 +39,7 @@ public class ExternalLink implements IJsonBackedObject {
 
     /**
      * The Href.
-     * The url of the link.
+     * The URL of the link.
      */
     @SerializedName(value = "href", alternate = {"Href"})
     @Expose

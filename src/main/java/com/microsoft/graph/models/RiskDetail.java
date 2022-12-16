@@ -60,6 +60,14 @@ public enum RiskDetail
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * admin Confirmed Service Principal Compromised
+    */
+    ADMIN_CONFIRMED_SERVICE_PRINCIPAL_COMPROMISED,
+    /**
+    * admin Dismissed All Risk For Service Principal
+    */
+    ADMIN_DISMISSED_ALL_RISK_FOR_SERVICE_PRINCIPAL,
+    /**
     * m365DAdmin Dismissed Detection
     */
     M365_D_ADMIN_DISMISSED_DETECTION,
