@@ -30,7 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - EvidenceRemediationStatus model. 
 - EvidenceRole model. 
 - EvidenceVerdict model.
-- <Entity>Evidence models.
+- (Entity)Evidence models.
 - FileDetails model. 
 - HuntingQueryResults model. 
 - HuntingRowResult model. 
