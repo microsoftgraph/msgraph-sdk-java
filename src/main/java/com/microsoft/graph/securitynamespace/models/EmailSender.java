@@ -39,7 +39,7 @@ public class EmailSender implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name of the sender.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class EmailSender implements IJsonBackedObject {
 
     /**
      * The Domain Name.
-     * 
+     * Sender domain.
      */
     @SerializedName(value = "domainName", alternate = {"DomainName"})
     @Expose
@@ -57,7 +57,7 @@ public class EmailSender implements IJsonBackedObject {
 
     /**
      * The Email Address.
-     * 
+     * Sender email address.
      */
     @SerializedName(value = "emailAddress", alternate = {"EmailAddress"})
     @Expose

@@ -114,7 +114,7 @@ public class BookingService extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Anonymous Join Enabled.
-     * 
+     * True if the URL to join the appointment anonymously (anonymousJoinWebUrl) will be generated for the appointment booked for this service.
      */
     @SerializedName(value = "isAnonymousJoinEnabled", alternate = {"IsAnonymousJoinEnabled"})
     @Expose
@@ -141,7 +141,7 @@ public class BookingService extends Entity implements IJsonBackedObject {
 
     /**
      * The Language Tag.
-     * 
+     * The language of the self-service booking page.
      */
     @SerializedName(value = "languageTag", alternate = {"LanguageTag"})
     @Expose

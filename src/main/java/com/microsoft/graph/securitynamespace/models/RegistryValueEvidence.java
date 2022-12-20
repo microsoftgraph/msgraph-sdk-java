@@ -27,7 +27,7 @@ public class RegistryValueEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Registry Hive.
-     * 
+     * Registry hive of the key that the recorded action was applied to.
      */
     @SerializedName(value = "registryHive", alternate = {"RegistryHive"})
     @Expose
@@ -36,7 +36,7 @@ public class RegistryValueEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Registry Key.
-     * 
+     * Registry key that the recorded action was applied to.
      */
     @SerializedName(value = "registryKey", alternate = {"RegistryKey"})
     @Expose
@@ -45,7 +45,7 @@ public class RegistryValueEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Registry Value.
-     * 
+     * Data of the registry value that the recorded action was applied to.
      */
     @SerializedName(value = "registryValue", alternate = {"RegistryValue"})
     @Expose
@@ -54,7 +54,7 @@ public class RegistryValueEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Registry Value Name.
-     * 
+     * Name of the registry value that the recorded action was applied to.
      */
     @SerializedName(value = "registryValueName", alternate = {"RegistryValueName"})
     @Expose
@@ -63,7 +63,7 @@ public class RegistryValueEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Registry Value Type.
-     * 
+     * Data type, such as binary or string, of the registry value that the recorded action was applied to.
      */
     @SerializedName(value = "registryValueType", alternate = {"RegistryValueType"})
     @Expose

@@ -42,7 +42,7 @@ public class HuntingQueryResults implements IJsonBackedObject {
 
     /**
      * The Results.
-     * 
+     * The results of the hunting query.
      */
     @SerializedName(value = "results", alternate = {"Results"})
     @Expose
@@ -51,7 +51,7 @@ public class HuntingQueryResults implements IJsonBackedObject {
 
     /**
      * The Schema.
-     * 
+     * The schema for the response.
      */
     @SerializedName(value = "schema", alternate = {"Schema"})
     @Expose
