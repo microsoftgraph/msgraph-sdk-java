@@ -42,7 +42,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Anonymous Join Web Url.
-     * 
+     * The URL of the meeting to join anonymously.
      */
     @SerializedName(value = "anonymousJoinWebUrl", alternate = {"AnonymousJoinWebUrl"})
     @Expose
@@ -51,7 +51,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Customers.
-     * It lists down the customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
+     * A collection of customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
      */
     @SerializedName(value = "customers", alternate = {"Customers"})
     @Expose

@@ -39,7 +39,7 @@ public class AlertComment implements IJsonBackedObject {
 
     /**
      * The Comment.
-     * 
+     * The comment text.
      */
     @SerializedName(value = "comment", alternate = {"Comment"})
     @Expose
@@ -48,7 +48,7 @@ public class AlertComment implements IJsonBackedObject {
 
     /**
      * The Created By Display Name.
-     * 
+     * The person or app name that submitted the comment.
      */
     @SerializedName(value = "createdByDisplayName", alternate = {"CreatedByDisplayName"})
     @Expose
@@ -57,7 +57,7 @@ public class AlertComment implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The time when the comment was submitted.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose

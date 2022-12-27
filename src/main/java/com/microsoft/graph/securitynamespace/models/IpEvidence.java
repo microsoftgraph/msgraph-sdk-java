@@ -27,7 +27,7 @@ public class IpEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Country Letter Code.
-     * 
+     * The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc..).
      */
     @SerializedName(value = "countryLetterCode", alternate = {"CountryLetterCode"})
     @Expose
@@ -36,7 +36,7 @@ public class IpEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Ip Address.
-     * 
+     * The value of the IP Address, can be either in V4 address or V6 address format.
      */
     @SerializedName(value = "ipAddress", alternate = {"IpAddress"})
     @Expose

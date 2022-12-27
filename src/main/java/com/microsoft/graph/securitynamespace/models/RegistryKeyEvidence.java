@@ -27,7 +27,7 @@ public class RegistryKeyEvidence extends AlertEvidence implements IJsonBackedObj
 
     /**
      * The Registry Hive.
-     * 
+     * Registry hive of the key that the recorded action was applied to.
      */
     @SerializedName(value = "registryHive", alternate = {"RegistryHive"})
     @Expose
@@ -36,7 +36,7 @@ public class RegistryKeyEvidence extends AlertEvidence implements IJsonBackedObj
 
     /**
      * The Registry Key.
-     * 
+     * Registry key that the recorded action was applied to.
      */
     @SerializedName(value = "registryKey", alternate = {"RegistryKey"})
     @Expose

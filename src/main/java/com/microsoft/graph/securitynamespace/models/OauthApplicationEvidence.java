@@ -27,7 +27,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements IJsonBack
 
     /**
      * The App Id.
-     * 
+     * Unique identifier of the application.
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -36,7 +36,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements IJsonBack
 
     /**
      * The Display Name.
-     * 
+     * Name of the application.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -45,7 +45,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements IJsonBack
 
     /**
      * The Object Id.
-     * 
+     * The unique identifier of the application object in Azure AD.
      */
     @SerializedName(value = "objectId", alternate = {"ObjectId"})
     @Expose
@@ -54,7 +54,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements IJsonBack
 
     /**
      * The Publisher.
-     * 
+     * The name of the application publisher.
      */
     @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose

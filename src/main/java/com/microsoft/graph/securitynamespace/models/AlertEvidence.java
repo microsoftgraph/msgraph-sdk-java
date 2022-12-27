@@ -43,7 +43,7 @@ public class AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The time the evidence was created and added to the alert.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -52,7 +52,7 @@ public class AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Remediation Status.
-     * 
+     * Status of the remediation action taken. The possible values are: none, remediated, prevented, blocked, notFound, unknownFutureValue.
      */
     @SerializedName(value = "remediationStatus", alternate = {"RemediationStatus"})
     @Expose
@@ -61,7 +61,7 @@ public class AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Remediation Status Details.
-     * 
+     * Details about the remediation status.
      */
     @SerializedName(value = "remediationStatusDetails", alternate = {"RemediationStatusDetails"})
     @Expose
@@ -70,7 +70,7 @@ public class AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Roles.
-     * 
+     * The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'.
      */
     @SerializedName(value = "roles", alternate = {"Roles"})
     @Expose
@@ -79,7 +79,7 @@ public class AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Tags.
-     * 
+     * Array of custom tags associated with an evidence instance, for example to denote a group of devices, high value assets, etc.
      */
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
@@ -88,7 +88,7 @@ public class AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Verdict.
-     * 
+     * The decision reached by automated investigation. The possible values are: unknown, suspicious, malicious, noThreatsFound, unknownFutureValue.
      */
     @SerializedName(value = "verdict", alternate = {"Verdict"})
     @Expose
