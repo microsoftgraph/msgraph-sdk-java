@@ -39,7 +39,7 @@ public class FileDetails implements IJsonBackedObject {
 
     /**
      * The File Name.
-     * 
+     * The name of the file.
      */
     @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose
@@ -48,7 +48,7 @@ public class FileDetails implements IJsonBackedObject {
 
     /**
      * The File Path.
-     * 
+     * The file path (location) of the file instance.
      */
     @SerializedName(value = "filePath", alternate = {"FilePath"})
     @Expose
@@ -57,7 +57,7 @@ public class FileDetails implements IJsonBackedObject {
 
     /**
      * The File Publisher.
-     * 
+     * The publisher of the file.
      */
     @SerializedName(value = "filePublisher", alternate = {"FilePublisher"})
     @Expose
@@ -66,7 +66,7 @@ public class FileDetails implements IJsonBackedObject {
 
     /**
      * The File Size.
-     * 
+     * The size of the file in bytes.
      */
     @SerializedName(value = "fileSize", alternate = {"FileSize"})
     @Expose
@@ -75,7 +75,7 @@ public class FileDetails implements IJsonBackedObject {
 
     /**
      * The Issuer.
-     * 
+     * The certificate authority (CA) that issued the certificate.
      */
     @SerializedName(value = "issuer", alternate = {"Issuer"})
     @Expose
@@ -84,7 +84,7 @@ public class FileDetails implements IJsonBackedObject {
 
     /**
      * The Sha1.
-     * 
+     * The Sha1 cryptographic hash of the file content.
      */
     @SerializedName(value = "sha1", alternate = {"Sha1"})
     @Expose
@@ -93,7 +93,7 @@ public class FileDetails implements IJsonBackedObject {
 
     /**
      * The Sha256.
-     * 
+     * The Sha256 cryptographic hash of the file content.
      */
     @SerializedName(value = "sha256", alternate = {"Sha256"})
     @Expose
@@ -102,7 +102,7 @@ public class FileDetails implements IJsonBackedObject {
 
     /**
      * The Signer.
-     * 
+     * The signer of the signed file.
      */
     @SerializedName(value = "signer", alternate = {"Signer"})
     @Expose

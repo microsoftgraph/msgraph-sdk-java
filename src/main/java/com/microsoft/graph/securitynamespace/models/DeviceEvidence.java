@@ -34,7 +34,7 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Azure Ad Device Id.
-     * 
+     * A unique identifier assigned to a device by Azure Active Directory (Azure AD) when device is Azure AD-joined.
      */
     @SerializedName(value = "azureAdDeviceId", alternate = {"AzureAdDeviceId"})
     @Expose
@@ -43,7 +43,7 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Defender Av Status.
-     * 
+     * State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
      */
     @SerializedName(value = "defenderAvStatus", alternate = {"DefenderAvStatus"})
     @Expose
@@ -52,7 +52,7 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Device Dns Name.
-     * 
+     * The fully qualified domain name (FQDN) for the device.
      */
     @SerializedName(value = "deviceDnsName", alternate = {"DeviceDnsName"})
     @Expose
@@ -61,7 +61,7 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The First Seen Date Time.
-     * 
+     * The date and time when the device was first seen.
      */
     @SerializedName(value = "firstSeenDateTime", alternate = {"FirstSeenDateTime"})
     @Expose
@@ -70,7 +70,7 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Health Status.
-     * 
+     * The health state of the device.The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose
@@ -79,7 +79,7 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Logged On Users.
-     * 
+     * Users that were logged on the machine during the time of the alert.
      */
     @SerializedName(value = "loggedOnUsers", alternate = {"LoggedOnUsers"})
     @Expose
@@ -88,7 +88,7 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Mde Device Id.
-     * 
+     * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      */
     @SerializedName(value = "mdeDeviceId", alternate = {"MdeDeviceId"})
     @Expose
@@ -97,7 +97,7 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Onboarding Status.
-     * 
+     * The status of the machine onboarding to Microsoft Defender for Endpoint.The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
      */
     @SerializedName(value = "onboardingStatus", alternate = {"OnboardingStatus"})
     @Expose
@@ -106,7 +106,7 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Os Build.
-     * 
+     * The build version for the operating system the device is running.
      */
     @SerializedName(value = "osBuild", alternate = {"OsBuild"})
     @Expose
@@ -115,7 +115,7 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Os Platform.
-     * 
+     * The operating system platform the device is running.
      */
     @SerializedName(value = "osPlatform", alternate = {"OsPlatform"})
     @Expose
@@ -124,7 +124,7 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Rbac Group Id.
-     * 
+     * The ID of the role-based access control (RBAC) device group.
      */
     @SerializedName(value = "rbacGroupId", alternate = {"RbacGroupId"})
     @Expose
@@ -133,7 +133,7 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Rbac Group Name.
-     * 
+     * The name of the RBAC device group.
      */
     @SerializedName(value = "rbacGroupName", alternate = {"RbacGroupName"})
     @Expose
@@ -142,7 +142,7 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Risk Score.
-     * 
+     * Risk score as evaluated by Microsoft Defender for Endpoint. The possible values are: none, informational, low, medium, high, unknownFutureValue.
      */
     @SerializedName(value = "riskScore", alternate = {"RiskScore"})
     @Expose
@@ -151,7 +151,7 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Version.
-     * 
+     * The version of the operating system platform.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
@@ -160,7 +160,7 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Vm Metadata.
-     * 
+     * Metadata of the virtual machine (VM) on which Microsoft Defender for Endpoint is running.
      */
     @SerializedName(value = "vmMetadata", alternate = {"VmMetadata"})
     @Expose

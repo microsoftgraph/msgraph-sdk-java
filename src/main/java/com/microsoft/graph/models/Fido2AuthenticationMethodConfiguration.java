@@ -57,7 +57,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
 
     /**
      * The Include Targets.
-     * A collection of users or groups who are enabled to use the authentication method.
+     * A collection of groups that are enabled to use the authentication method.
      */
     @SerializedName(value = "includeTargets", alternate = {"IncludeTargets"})
     @Expose

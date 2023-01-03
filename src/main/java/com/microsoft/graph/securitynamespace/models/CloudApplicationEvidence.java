@@ -27,7 +27,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements IJsonBack
 
     /**
      * The App Id.
-     * 
+     * Unique identifier of the application.
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -36,7 +36,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements IJsonBack
 
     /**
      * The Display Name.
-     * 
+     * Name of the application.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -45,7 +45,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements IJsonBack
 
     /**
      * The Instance Id.
-     * 
+     * Identifier of the instance of the Software as a Service (SaaS) application.
      */
     @SerializedName(value = "instanceId", alternate = {"InstanceId"})
     @Expose
@@ -54,7 +54,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements IJsonBack
 
     /**
      * The Instance Name.
-     * 
+     * Name of the instance of the SaaS application.
      */
     @SerializedName(value = "instanceName", alternate = {"InstanceName"})
     @Expose
@@ -63,7 +63,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements IJsonBack
 
     /**
      * The Saas App Id.
-     * 
+     * The identifier of the SaaS application.
      */
     @SerializedName(value = "saasAppId", alternate = {"SaasAppId"})
     @Expose

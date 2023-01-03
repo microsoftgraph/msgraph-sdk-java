@@ -28,7 +28,7 @@ public class MailboxEvidence extends AlertEvidence implements IJsonBackedObject 
 
     /**
      * The Display Name.
-     * 
+     * The name associated with the mailbox.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -37,7 +37,7 @@ public class MailboxEvidence extends AlertEvidence implements IJsonBackedObject 
 
     /**
      * The Primary Address.
-     * 
+     * The primary email address of the mailbox.
      */
     @SerializedName(value = "primaryAddress", alternate = {"PrimaryAddress"})
     @Expose
@@ -46,7 +46,7 @@ public class MailboxEvidence extends AlertEvidence implements IJsonBackedObject 
 
     /**
      * The User Account.
-     * 
+     * The user account of the mailbox.
      */
     @SerializedName(value = "userAccount", alternate = {"UserAccount"})
     @Expose
