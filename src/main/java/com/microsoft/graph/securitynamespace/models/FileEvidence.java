@@ -29,7 +29,7 @@ public class FileEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Detection Status.
-     * 
+     * The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
      */
     @SerializedName(value = "detectionStatus", alternate = {"DetectionStatus"})
     @Expose
@@ -38,7 +38,7 @@ public class FileEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The File Details.
-     * 
+     * The file details.
      */
     @SerializedName(value = "fileDetails", alternate = {"FileDetails"})
     @Expose
@@ -47,7 +47,7 @@ public class FileEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Mde Device Id.
-     * 
+     * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      */
     @SerializedName(value = "mdeDeviceId", alternate = {"MdeDeviceId"})
     @Expose

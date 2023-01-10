@@ -96,4 +96,22 @@ public class ChatMessageRequestBuilder extends BaseRequestBuilder<ChatMessage> {
     public com.microsoft.graph.requests.ChatMessageRequestBuilder replies(@Nonnull final String id) {
         return new com.microsoft.graph.requests.ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public ChatMessageSoftDeleteRequestBuilder softDelete() {
+        return new ChatMessageSoftDeleteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.softDelete"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public ChatMessageUndoSoftDeleteRequestBuilder undoSoftDelete() {
+        return new ChatMessageUndoSoftDeleteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.undoSoftDelete"), getClient(), null);
+    }
 }

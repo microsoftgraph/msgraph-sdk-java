@@ -27,7 +27,7 @@ public class SecurityGroupEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Display Name.
-     * 
+     * The name of the security group.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -36,7 +36,7 @@ public class SecurityGroupEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Security Group Id.
-     * 
+     * Unique identifier of the security group.
      */
     @SerializedName(value = "securityGroupId", alternate = {"SecurityGroupId"})
     @Expose

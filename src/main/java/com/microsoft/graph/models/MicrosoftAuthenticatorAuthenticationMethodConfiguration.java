@@ -39,7 +39,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
 
     /**
      * The Include Targets.
-     * A collection of users or groups who are enabled to use the authentication method. Expanded by default.
+     * A collection of groups that are enabled to use the authentication method. Expanded by default.
      */
     @SerializedName(value = "includeTargets", alternate = {"IncludeTargets"})
     @Expose

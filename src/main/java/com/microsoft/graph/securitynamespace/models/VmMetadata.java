@@ -40,7 +40,7 @@ public class VmMetadata implements IJsonBackedObject {
 
     /**
      * The Cloud Provider.
-     * 
+     * The cloud provider hosting the virtual machine. The possible values are: unknown, azure, unknownFutureValue.
      */
     @SerializedName(value = "cloudProvider", alternate = {"CloudProvider"})
     @Expose
@@ -49,7 +49,7 @@ public class VmMetadata implements IJsonBackedObject {
 
     /**
      * The Resource Id.
-     * 
+     * Unique identifier of the Azure resource.
      */
     @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose
@@ -58,7 +58,7 @@ public class VmMetadata implements IJsonBackedObject {
 
     /**
      * The Subscription Id.
-     * 
+     * Unique identifier of the Azure subscription the customer tenant belongs to.
      */
     @SerializedName(value = "subscriptionId", alternate = {"SubscriptionId"})
     @Expose
@@ -67,7 +67,7 @@ public class VmMetadata implements IJsonBackedObject {
 
     /**
      * The Vm Id.
-     * 
+     * Unique identifier of the virtual machine instance.
      */
     @SerializedName(value = "vmId", alternate = {"VmId"})
     @Expose
