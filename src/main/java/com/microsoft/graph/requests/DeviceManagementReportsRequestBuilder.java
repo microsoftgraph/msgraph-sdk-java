@@ -24,6 +24,7 @@ import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationSetting
 import com.microsoft.graph.models.DeviceManagementReportsGetDeviceManagementIntentPerSettingContributingProfilesParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetDeviceManagementIntentSettingsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetDeviceNonComplianceReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetDevicesWithoutCompliancePolicyReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetHistoricalReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetNoncompliantDevicesAndSettingsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetPolicyNonComplianceMetadataParameterSet;
@@ -192,6 +193,16 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
     @Nonnull
     public DeviceManagementReportsGetDeviceNonComplianceReportRequestBuilder getDeviceNonComplianceReport(@Nonnull final DeviceManagementReportsGetDeviceNonComplianceReportParameterSet parameters) {
         return new DeviceManagementReportsGetDeviceNonComplianceReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getDeviceNonComplianceReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceManagementReportsGetDevicesWithoutCompliancePolicyReportRequestBuilder getDevicesWithoutCompliancePolicyReport(@Nonnull final DeviceManagementReportsGetDevicesWithoutCompliancePolicyReportParameterSet parameters) {
+        return new DeviceManagementReportsGetDevicesWithoutCompliancePolicyReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getDevicesWithoutCompliancePolicyReport"), getClient(), null, parameters);
     }
 
     /**

@@ -58,7 +58,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
 
     /**
      * The Compliance Information.
-     * 
+     * The collection of compliance information associated with secure score control
      */
     @SerializedName(value = "complianceInformation", alternate = {"ComplianceInformation"})
     @Expose
@@ -76,7 +76,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
 
     /**
      * The Control State Updates.
-     * 
+     * Flag to indicate where the tenant has marked a control (ignored, thirdParty, reviewed) (supports update).
      */
     @SerializedName(value = "controlStateUpdates", alternate = {"ControlStateUpdates"})
     @Expose
@@ -175,7 +175,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
 
     /**
      * The Title.
-     * Title of the control.
+     * 
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose

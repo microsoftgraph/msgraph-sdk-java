@@ -34,7 +34,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Assigned To.
-     * 
+     * Owner of the incident, or null if no owner is assigned. Free editable text.
      */
     @SerializedName(value = "assignedTo", alternate = {"AssignedTo"})
     @Expose
@@ -43,7 +43,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Classification.
-     * 
+     * The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
      */
     @SerializedName(value = "classification", alternate = {"Classification"})
     @Expose
@@ -52,7 +52,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Comments.
-     * 
+     * Array of comments created by the Security Operations (SecOps) team when the incident is managed.
      */
     @SerializedName(value = "comments", alternate = {"Comments"})
     @Expose
@@ -61,7 +61,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Time when the incident was first created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -70,7 +70,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Custom Tags.
-     * 
+     * Array of custom tags associated with an incident.
      */
     @SerializedName(value = "customTags", alternate = {"CustomTags"})
     @Expose
@@ -79,7 +79,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Determination.
-     * 
+     * Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      */
     @SerializedName(value = "determination", alternate = {"Determination"})
     @Expose
@@ -88,7 +88,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The incident name.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -97,7 +97,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Incident Web Url.
-     * 
+     * The URL for the incident page in the Microsoft 365 Defender portal.
      */
     @SerializedName(value = "incidentWebUrl", alternate = {"IncidentWebUrl"})
     @Expose
@@ -106,7 +106,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Update Date Time.
-     * 
+     * Time when the incident was last updated.
      */
     @SerializedName(value = "lastUpdateDateTime", alternate = {"LastUpdateDateTime"})
     @Expose
@@ -115,7 +115,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Redirect Incident Id.
-     * 
+     * Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
      */
     @SerializedName(value = "redirectIncidentId", alternate = {"RedirectIncidentId"})
     @Expose
@@ -124,7 +124,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Severity.
-     * 
+     * Indicates the possible impact on assets. The higher the severity, the bigger the impact. Typically higher severity items require the most immediate attention. Possible values are: unknown, informational, low, medium, high, unknownFutureValue.
      */
     @SerializedName(value = "severity", alternate = {"Severity"})
     @Expose
@@ -133,7 +133,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The status of the incident. Possible values are: active, resolved, redirected, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -142,7 +142,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * 
+     * The Azure Active Directory tenant in which the alert was created.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -151,7 +151,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Alerts.
-     * 
+     * The list of related alerts. Supports $expand.
      */
 	@Nullable
     public com.microsoft.graph.security.requests.AlertCollectionPage alerts;

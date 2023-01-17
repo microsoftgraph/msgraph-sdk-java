@@ -30,7 +30,7 @@ public class ProcessEvidence extends AlertEvidence implements IJsonBackedObject 
 
     /**
      * The Detection Status.
-     * 
+     * The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
      */
     @SerializedName(value = "detectionStatus", alternate = {"DetectionStatus"})
     @Expose
@@ -39,7 +39,7 @@ public class ProcessEvidence extends AlertEvidence implements IJsonBackedObject 
 
     /**
      * The Image File.
-     * 
+     * Image file details.
      */
     @SerializedName(value = "imageFile", alternate = {"ImageFile"})
     @Expose
@@ -48,7 +48,7 @@ public class ProcessEvidence extends AlertEvidence implements IJsonBackedObject 
 
     /**
      * The Mde Device Id.
-     * 
+     * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      */
     @SerializedName(value = "mdeDeviceId", alternate = {"MdeDeviceId"})
     @Expose
@@ -57,7 +57,7 @@ public class ProcessEvidence extends AlertEvidence implements IJsonBackedObject 
 
     /**
      * The Parent Process Creation Date Time.
-     * 
+     * Date and time when the parent of the process was created.
      */
     @SerializedName(value = "parentProcessCreationDateTime", alternate = {"ParentProcessCreationDateTime"})
     @Expose
@@ -66,7 +66,7 @@ public class ProcessEvidence extends AlertEvidence implements IJsonBackedObject 
 
     /**
      * The Parent Process Id.
-     * 
+     * Process ID (PID) of the parent process that spawned the process.
      */
     @SerializedName(value = "parentProcessId", alternate = {"ParentProcessId"})
     @Expose
@@ -75,7 +75,7 @@ public class ProcessEvidence extends AlertEvidence implements IJsonBackedObject 
 
     /**
      * The Parent Process Image File.
-     * 
+     * Parent process image file details.
      */
     @SerializedName(value = "parentProcessImageFile", alternate = {"ParentProcessImageFile"})
     @Expose
@@ -84,7 +84,7 @@ public class ProcessEvidence extends AlertEvidence implements IJsonBackedObject 
 
     /**
      * The Process Command Line.
-     * 
+     * Command line used to create the new process.
      */
     @SerializedName(value = "processCommandLine", alternate = {"ProcessCommandLine"})
     @Expose
@@ -93,7 +93,7 @@ public class ProcessEvidence extends AlertEvidence implements IJsonBackedObject 
 
     /**
      * The Process Creation Date Time.
-     * 
+     * Date and time the process was created.
      */
     @SerializedName(value = "processCreationDateTime", alternate = {"ProcessCreationDateTime"})
     @Expose
@@ -102,7 +102,7 @@ public class ProcessEvidence extends AlertEvidence implements IJsonBackedObject 
 
     /**
      * The Process Id.
-     * 
+     * Process ID (PID) of the newly created process.
      */
     @SerializedName(value = "processId", alternate = {"ProcessId"})
     @Expose
@@ -111,7 +111,7 @@ public class ProcessEvidence extends AlertEvidence implements IJsonBackedObject 
 
     /**
      * The User Account.
-     * 
+     * User details of the user that ran the process.
      */
     @SerializedName(value = "userAccount", alternate = {"UserAccount"})
     @Expose

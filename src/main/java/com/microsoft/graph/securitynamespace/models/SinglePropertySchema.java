@@ -39,7 +39,7 @@ public class SinglePropertySchema implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The name of the property.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -48,7 +48,7 @@ public class SinglePropertySchema implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * The type of the property.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

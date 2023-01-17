@@ -8,10 +8,12 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.WindowsArchitecture;
 import com.microsoft.graph.models.WindowsDeviceType;
 import com.microsoft.graph.models.WindowsMinimumOperatingSystem;
 import com.microsoft.graph.models.MobileLobApp;
+import com.microsoft.graph.requests.MobileContainedAppCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -100,6 +102,15 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
 	@Nullable
     public WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
 
+    /**
+     * The Committed Contained Apps.
+     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     */
+    @SerializedName(value = "committedContainedApps", alternate = {"CommittedContainedApps"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.MobileContainedAppCollectionPage committedContainedApps;
+
 
     /**
      * Sets the raw JSON object
@@ -109,5 +120,9 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("committedContainedApps")) {
+            committedContainedApps = serializer.deserializeObject(json.get("committedContainedApps"), com.microsoft.graph.requests.MobileContainedAppCollectionPage.class);
+        }
     }
 }

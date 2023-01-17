@@ -140,7 +140,7 @@ public class PrintJobConfiguration implements IJsonBackedObject {
 
     /**
      * The Media Size.
-     * The media size to use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values listed in the printerCapabilities topic.
+     * The media size to use when printing. Supports standard size names for ISO and ANSI media sizes.
      */
     @SerializedName(value = "mediaSize", alternate = {"MediaSize"})
     @Expose
@@ -149,7 +149,7 @@ public class PrintJobConfiguration implements IJsonBackedObject {
 
     /**
      * The Media Type.
-     * The default media (such as paper) type to print the document on.
+     * 
      */
     @SerializedName(value = "mediaType", alternate = {"MediaType"})
     @Expose
@@ -158,7 +158,7 @@ public class PrintJobConfiguration implements IJsonBackedObject {
 
     /**
      * The Multipage Layout.
-     * The direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
+     * 
      */
     @SerializedName(value = "multipageLayout", alternate = {"MultipageLayout"})
     @Expose
@@ -167,7 +167,7 @@ public class PrintJobConfiguration implements IJsonBackedObject {
 
     /**
      * The Orientation.
-     * The orientation setting the printer should use when printing the job. Valid values are described in the following table.
+     * 
      */
     @SerializedName(value = "orientation", alternate = {"Orientation"})
     @Expose
@@ -176,7 +176,7 @@ public class PrintJobConfiguration implements IJsonBackedObject {
 
     /**
      * The Output Bin.
-     * The output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
+     * 
      */
     @SerializedName(value = "outputBin", alternate = {"OutputBin"})
     @Expose
@@ -185,7 +185,7 @@ public class PrintJobConfiguration implements IJsonBackedObject {
 
     /**
      * The Page Ranges.
-     * The page ranges to print. Read-only.
+     * 
      */
     @SerializedName(value = "pageRanges", alternate = {"PageRanges"})
     @Expose
@@ -194,7 +194,7 @@ public class PrintJobConfiguration implements IJsonBackedObject {
 
     /**
      * The Pages Per Sheet.
-     * The number of document pages to print on each sheet.
+     * 
      */
     @SerializedName(value = "pagesPerSheet", alternate = {"PagesPerSheet"})
     @Expose
@@ -203,7 +203,7 @@ public class PrintJobConfiguration implements IJsonBackedObject {
 
     /**
      * The Quality.
-     * The print quality to use when printing the job. Valid values are described in the table below. Read-only.
+     * 
      */
     @SerializedName(value = "quality", alternate = {"Quality"})
     @Expose
@@ -212,7 +212,7 @@ public class PrintJobConfiguration implements IJsonBackedObject {
 
     /**
      * The Scaling.
-     * Specifies how the printer should scale the document data to fit the requested media. Valid values are described in the following table.
+     * 
      */
     @SerializedName(value = "scaling", alternate = {"Scaling"})
     @Expose

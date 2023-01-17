@@ -39,7 +39,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V10_0.
-     * Version 10.0 or later.
+     * When TRUE, only Version 10.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v10_0", alternate = {"V10_0"})
     @Expose
@@ -48,7 +48,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V11_0.
-     * Version 11.0 or later.
+     * When TRUE, only Version 11.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v11_0", alternate = {"V11_0"})
     @Expose
@@ -57,7 +57,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V4_0.
-     * Version 4.0 or later.
+     * When TRUE, only Version 4.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v4_0", alternate = {"V4_0"})
     @Expose
@@ -66,7 +66,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V4_0_3.
-     * Version 4.0.3 or later.
+     * When TRUE, only Version 4.0.3 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v4_0_3", alternate = {"V4_0_3"})
     @Expose
@@ -75,7 +75,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V4_1.
-     * Version 4.1 or later.
+     * When TRUE, only Version 4.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v4_1", alternate = {"V4_1"})
     @Expose
@@ -84,7 +84,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V4_2.
-     * Version 4.2 or later.
+     * When TRUE, only Version 4.2 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v4_2", alternate = {"V4_2"})
     @Expose
@@ -93,7 +93,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V4_3.
-     * Version 4.3 or later.
+     * When TRUE, only Version 4.3 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v4_3", alternate = {"V4_3"})
     @Expose
@@ -102,7 +102,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V4_4.
-     * Version 4.4 or later.
+     * When TRUE, only Version 4.4 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v4_4", alternate = {"V4_4"})
     @Expose
@@ -111,7 +111,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V5_0.
-     * Version 5.0 or later.
+     * When TRUE, only Version 5.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v5_0", alternate = {"V5_0"})
     @Expose
@@ -120,7 +120,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V5_1.
-     * Version 5.1 or later.
+     * When TRUE, only Version 5.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v5_1", alternate = {"V5_1"})
     @Expose
@@ -129,7 +129,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V6_0.
-     * Version 6.0 or later.
+     * When TRUE, only Version 6.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v6_0", alternate = {"V6_0"})
     @Expose
@@ -138,7 +138,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V7_0.
-     * Version 7.0 or later.
+     * When TRUE, only Version 7.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v7_0", alternate = {"V7_0"})
     @Expose
@@ -147,7 +147,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V7_1.
-     * Version 7.1 or later.
+     * When TRUE, only Version 7.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v7_1", alternate = {"V7_1"})
     @Expose
@@ -156,7 +156,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V8_0.
-     * Version 8.0 or later.
+     * When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v8_0", alternate = {"V8_0"})
     @Expose
@@ -165,7 +165,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V8_1.
-     * Version 8.1 or later.
+     * When TRUE, only Version 8.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v8_1", alternate = {"V8_1"})
     @Expose
@@ -174,7 +174,7 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V9_0.
-     * Version 9.0 or later.
+     * When TRUE, only Version 9.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v9_0", alternate = {"V9_0"})
     @Expose

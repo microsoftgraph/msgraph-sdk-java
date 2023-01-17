@@ -40,7 +40,7 @@ public class PlannerPlanContainer implements IJsonBackedObject {
 
     /**
      * The Container Id.
-     * The identifier of the resource that contains the plan.
+     * The identifier of the resource that contains the plan. Optional.
      */
     @SerializedName(value = "containerId", alternate = {"ContainerId"})
     @Expose
@@ -49,7 +49,7 @@ public class PlannerPlanContainer implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster.
+     * The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. Optional.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -58,7 +58,7 @@ public class PlannerPlanContainer implements IJsonBackedObject {
 
     /**
      * The Url.
-     * The full canonical URL of the container.
+     * The full canonical URL of the container. Optional.
      */
     @SerializedName(value = "url", alternate = {"Url"})
     @Expose

@@ -128,7 +128,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Meeting Info.
-     * The meeting information that's required for joining a meeting.
+     * The meeting information. Required information for meeting scenarios.
      */
     @SerializedName(value = "meetingInfo", alternate = {"MeetingInfo"})
     @Expose

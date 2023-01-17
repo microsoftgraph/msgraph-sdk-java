@@ -42,7 +42,7 @@ public class Security extends Entity implements IJsonBackedObject {
 
     /**
      * The Alerts_v2.
-     * 
+     * A collection of alerts in Microsoft 365 Defender.
      */
     @SerializedName(value = "alerts_v2", alternate = {"Alerts_v2"})
     @Expose
@@ -51,7 +51,7 @@ public class Security extends Entity implements IJsonBackedObject {
 
     /**
      * The Incidents.
-     * 
+     * A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
      */
     @SerializedName(value = "incidents", alternate = {"Incidents"})
     @Expose

@@ -28,7 +28,7 @@ public class UserEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The User Account.
-     * 
+     * The user account details.
      */
     @SerializedName(value = "userAccount", alternate = {"UserAccount"})
     @Expose

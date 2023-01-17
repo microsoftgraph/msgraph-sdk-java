@@ -118,6 +118,26 @@ public class WindowsUniversalAppXRequestBuilder extends BaseRequestBuilder<Windo
     public com.microsoft.graph.requests.MobileAppContentRequestBuilder contentVersions(@Nonnull final String id) {
         return new com.microsoft.graph.requests.MobileAppContentRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the MobileContainedApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.MobileContainedAppCollectionRequestBuilder committedContainedApps() {
+        return new com.microsoft.graph.requests.MobileContainedAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("committedContainedApps"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the MobileContainedApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.MobileContainedAppRequestBuilder committedContainedApps(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileContainedAppRequestBuilder(getRequestUrlWithAdditionalSegment("committedContainedApps") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets a builder to execute the method

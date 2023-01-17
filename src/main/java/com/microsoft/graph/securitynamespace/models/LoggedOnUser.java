@@ -39,7 +39,7 @@ public class LoggedOnUser implements IJsonBackedObject {
 
     /**
      * The Account Name.
-     * 
+     * User account name of the logged-on user.
      */
     @SerializedName(value = "accountName", alternate = {"AccountName"})
     @Expose
@@ -48,7 +48,7 @@ public class LoggedOnUser implements IJsonBackedObject {
 
     /**
      * The Domain Name.
-     * 
+     * User account domain of the logged-on user.
      */
     @SerializedName(value = "domainName", alternate = {"DomainName"})
     @Expose

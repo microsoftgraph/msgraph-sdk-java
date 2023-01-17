@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.MobileContainedAppCollectionPage;
 import com.microsoft.graph.requests.MobileAppContentFileCollectionPage;
 
 
@@ -26,6 +27,15 @@ import javax.annotation.Nonnull;
  */
 public class MobileAppContent extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Contained Apps.
+     * The collection of contained apps in a MobileLobApp acting as a package.
+     */
+    @SerializedName(value = "containedApps", alternate = {"ContainedApps"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.MobileContainedAppCollectionPage containedApps;
 
     /**
      * The Files.
@@ -45,6 +55,10 @@ public class MobileAppContent extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("containedApps")) {
+            containedApps = serializer.deserializeObject(json.get("containedApps"), com.microsoft.graph.requests.MobileContainedAppCollectionPage.class);
+        }
 
         if (json.has("files")) {
             files = serializer.deserializeObject(json.get("files"), com.microsoft.graph.requests.MobileAppContentFileCollectionPage.class);

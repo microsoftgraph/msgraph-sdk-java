@@ -33,7 +33,7 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
 
     /**
      * The Container.
-     * Identifies the container of the plan. After it is set, this property can’t be updated. Required.
+     * Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property can’t be updated. Required.
      */
     @SerializedName(value = "container", alternate = {"Container"})
     @Expose
