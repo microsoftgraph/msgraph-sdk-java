@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.44.0] - 2023-01-17
+
+### Added
+
+- Ios minimum operating system version 15.
+- Contained apps on mobile app content.
+- Include company portal link on notification template branding options.
+- JoinMeetingIdSettings on OnlineMeeting.
+- PartnerTenantType on Organization.
+- CommitedContainedApp on WindowsUniveralAppX
+- DevicesWithoutCompliancePolicyReport
+
 ## [5.43.0] - 2022-12-16
 
 ### Added

@@ -15,6 +15,7 @@ import com.microsoft.graph.models.AudioConferencing;
 import com.microsoft.graph.models.BroadcastMeetingSettings;
 import com.microsoft.graph.models.ChatInfo;
 import com.microsoft.graph.models.ItemBody;
+import com.microsoft.graph.models.JoinMeetingIdSettings;
 import com.microsoft.graph.models.LobbyBypassSettings;
 import com.microsoft.graph.models.MeetingParticipants;
 import com.microsoft.graph.models.Entity;
@@ -160,6 +161,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ItemBody joinInformation;
+
+    /**
+     * The Join Meeting Id Settings.
+     * Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings cannot be modified. To make any changes to this property, the meeting needs to be canceled and a new one needs to be created.
+     */
+    @SerializedName(value = "joinMeetingIdSettings", alternate = {"JoinMeetingIdSettings"})
+    @Expose
+	@Nullable
+    public JoinMeetingIdSettings joinMeetingIdSettings;
 
     /**
      * The Join Web Url.

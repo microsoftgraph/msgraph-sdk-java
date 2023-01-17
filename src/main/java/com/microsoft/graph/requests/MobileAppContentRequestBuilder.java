@@ -57,6 +57,26 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder<MobileApp
 
 
     /**
+     *  Gets a request builder for the MobileContainedApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.MobileContainedAppCollectionRequestBuilder containedApps() {
+        return new com.microsoft.graph.requests.MobileContainedAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("containedApps"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the MobileContainedApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.MobileContainedAppRequestBuilder containedApps(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileContainedAppRequestBuilder(getRequestUrlWithAdditionalSegment("containedApps") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the MobileAppContentFile collection
      *
      * @return the collection request builder

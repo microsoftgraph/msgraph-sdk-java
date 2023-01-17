@@ -48,7 +48,7 @@ public class FileEncryptionInfo implements IJsonBackedObject {
 
     /**
      * The File Digest.
-     * The file digest prior to encryption.
+     * The file digest prior to encryption. ProfileVersion1 requires a non-null FileDigest.
      */
     @SerializedName(value = "fileDigest", alternate = {"FileDigest"})
     @Expose
@@ -57,7 +57,7 @@ public class FileEncryptionInfo implements IJsonBackedObject {
 
     /**
      * The File Digest Algorithm.
-     * The file digest algorithm.
+     * The file digest algorithm. ProfileVersion1 currently only supports SHA256 for the FileDigestAlgorithm.
      */
     @SerializedName(value = "fileDigestAlgorithm", alternate = {"FileDigestAlgorithm"})
     @Expose
@@ -66,7 +66,7 @@ public class FileEncryptionInfo implements IJsonBackedObject {
 
     /**
      * The Initialization Vector.
-     * The initialization vector used for the encryption algorithm.
+     * The initialization vector (IV) used for the encryption algorithm. Must be 16 bytes.
      */
     @SerializedName(value = "initializationVector", alternate = {"InitializationVector"})
     @Expose
@@ -75,7 +75,7 @@ public class FileEncryptionInfo implements IJsonBackedObject {
 
     /**
      * The Mac.
-     * The hash of the encrypted file content + IV (content hash).
+     * The hash of the concatenation of the IV and encrypted file content. Must be 32 bytes.
      */
     @SerializedName(value = "mac", alternate = {"Mac"})
     @Expose
@@ -84,7 +84,7 @@ public class FileEncryptionInfo implements IJsonBackedObject {
 
     /**
      * The Mac Key.
-     * The key used to get mac.
+     * The key used to compute the message authentication code of the concatenation of the IV and encrypted file content. Must be 32 bytes.
      */
     @SerializedName(value = "macKey", alternate = {"MacKey"})
     @Expose
@@ -93,7 +93,7 @@ public class FileEncryptionInfo implements IJsonBackedObject {
 
     /**
      * The Profile Identifier.
-     * The the profile identifier.
+     * The profile identifier. Maps to the strategy used to encrypt the file. Currently, only ProfileVersion1 is supported.
      */
     @SerializedName(value = "profileIdentifier", alternate = {"ProfileIdentifier"})
     @Expose

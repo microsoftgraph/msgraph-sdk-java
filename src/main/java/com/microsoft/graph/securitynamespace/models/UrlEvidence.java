@@ -27,7 +27,7 @@ public class UrlEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Url.
-     * 
+     * The Unique Resource Locator (URL).
      */
     @SerializedName(value = "url", alternate = {"Url"})
     @Expose

@@ -28,6 +28,10 @@ public enum NotificationTemplateBrandingOptions
     */
     INCLUDE_CONTACT_INFORMATION,
     /**
+    * include Company Portal Link
+    */
+    INCLUDE_COMPANY_PORTAL_LINK,
+    /**
     * include Device Details
     */
     INCLUDE_DEVICE_DETAILS,

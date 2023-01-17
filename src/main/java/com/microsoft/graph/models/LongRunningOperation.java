@@ -28,7 +28,7 @@ public class LongRunningOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The start time of the operation.
+     * The start time of the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class LongRunningOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Action Date Time.
-     * The time of the last action in the operation.
+     * The time of the last action in the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastActionDateTime", alternate = {"LastActionDateTime"})
     @Expose
