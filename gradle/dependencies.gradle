@@ -11,5 +11,5 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:4.10.0'
     
     // Core Http library 
-    api 'com.microsoft.graph:microsoft-graph-core:2.0.14'
+    api 'com.microsoft.graph:microsoft-graph-core:2.0.15'
 }
