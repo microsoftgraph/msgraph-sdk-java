@@ -155,27 +155,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     }
 
     /**
-     * Gets the collection of Workbooks objects
-     *
-     * @return the request builder for the collection of Workbooks objects
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.DriveItemCollectionRequestBuilder workbooks() {
-        return new com.microsoft.graph.requests.DriveItemCollectionRequestBuilder(getServiceRoot() + "/workbooks", this, null);
-    }
-
-    /**
-     * Gets a single Workbooks
-     *
-     * @param id the id of the Workbooks to retrieve
-     * @return the request builder for the Workbooks object
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.DriveItemRequestBuilder workbooks(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.DriveItemRequestBuilder(getServiceRoot() + "/workbooks/" + id, this, null);
-    }
-
-    /**
      * Gets the collection of Invitations objects
      *
      * @return the request builder for the collection of Invitations objects

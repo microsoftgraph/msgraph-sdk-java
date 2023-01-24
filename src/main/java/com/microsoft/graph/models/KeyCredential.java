@@ -39,7 +39,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The Custom Key Identifier.
-     * Custom key identifier
+     * A 40-character binary type that can be used to identify the credential. Optional. When not provided in the payload, defaults to the thumbprint of the certificate.
      */
     @SerializedName(value = "customKeyIdentifier", alternate = {"CustomKeyIdentifier"})
     @Expose

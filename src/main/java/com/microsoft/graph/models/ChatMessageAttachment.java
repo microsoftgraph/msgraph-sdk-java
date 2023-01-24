@@ -83,6 +83,15 @@ public class ChatMessageAttachment implements IJsonBackedObject {
     public String name;
 
     /**
+     * The Teams App Id.
+     * 
+     */
+    @SerializedName(value = "teamsAppId", alternate = {"TeamsAppId"})
+    @Expose
+	@Nullable
+    public String teamsAppId;
+
+    /**
      * The Thumbnail Url.
      * URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document.
      */

@@ -27,7 +27,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
 
     /**
      * The Cloud Instance.
-     * 
+     * The ID of the cloud where the tenant is located, one of microsoftonline.com, microsoftonline.us or partner.microsoftonline.cn. Read only.
      */
     @SerializedName(value = "cloudInstance", alternate = {"CloudInstance"})
     @Expose
@@ -36,7 +36,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
 
     /**
      * The Display Name.
-     * 
+     * The name of the Azure Active Directory tenant. Read only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -45,7 +45,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
 
     /**
      * The Tenant Id.
-     * 
+     * The ID of the Azure Active Directory tenant. Read only.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

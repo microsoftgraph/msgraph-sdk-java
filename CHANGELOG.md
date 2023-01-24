@@ -11,6 +11,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.45.0] - 2023-01-24
+
+### Added
+
+- defaultUsageLocation property in Organization.
+- teamsAppId in ChatMessageAttachment.
+
+### Changed
+
+- Removed workbook items at the root which was not supported by the service.
+
 ## [5.44.0] - 2023-01-17
 
 ### Added

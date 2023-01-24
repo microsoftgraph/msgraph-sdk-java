@@ -90,6 +90,15 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
     public java.time.OffsetDateTime createdDateTime;
 
     /**
+     * The Default Usage Location.
+     * Two-letter ISO 3166 country code indicating the default service usage location of an organization.
+     */
+    @SerializedName(value = "defaultUsageLocation", alternate = {"DefaultUsageLocation"})
+    @Expose
+	@Nullable
+    public String defaultUsageLocation;
+
+    /**
      * The Display Name.
      * The display name for the tenant.
      */
