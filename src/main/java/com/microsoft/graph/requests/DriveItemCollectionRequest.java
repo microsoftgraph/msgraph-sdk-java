@@ -7,6 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.models.SharedDriveItem;
 import com.microsoft.graph.models.DriveItem;
 import com.microsoft.graph.models.ItemReference;
 import com.microsoft.graph.models.DriveItemUploadableProperties;

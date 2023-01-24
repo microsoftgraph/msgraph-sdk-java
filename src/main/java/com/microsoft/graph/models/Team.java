@@ -143,7 +143,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Summary.
-     * 
+     * Contains summary information about the team, including number of owners, members, and guests.
      */
     @SerializedName(value = "summary", alternate = {"Summary"})
     @Expose

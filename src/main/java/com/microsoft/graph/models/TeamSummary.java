@@ -39,7 +39,7 @@ public class TeamSummary implements IJsonBackedObject {
 
     /**
      * The Guests Count.
-     * 
+     * Count of guests in a team.
      */
     @SerializedName(value = "guestsCount", alternate = {"GuestsCount"})
     @Expose
@@ -48,7 +48,7 @@ public class TeamSummary implements IJsonBackedObject {
 
     /**
      * The Members Count.
-     * 
+     * Count of members in a team.
      */
     @SerializedName(value = "membersCount", alternate = {"MembersCount"})
     @Expose
@@ -57,7 +57,7 @@ public class TeamSummary implements IJsonBackedObject {
 
     /**
      * The Owners Count.
-     * 
+     * Count of owners in a team.
      */
     @SerializedName(value = "ownersCount", alternate = {"OwnersCount"})
     @Expose

@@ -55,7 +55,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Applied Conditional Access Policies.
-     * 
+     * Provides a list of conditional access policies that are triggered by the corresponding sign-in activity.
      */
     @SerializedName(value = "appliedConditionalAccessPolicies", alternate = {"AppliedConditionalAccessPolicies"})
     @Expose
