@@ -80,10 +80,10 @@ public class WorkbookTableRowRangeRequestBuilder extends BaseFunctionRequestBuil
     /**
      * Gets the request builder for WorkbookWorksheet
      *
-     * @return the WorkbookWorksheetRequestBuilder instance
+     * @return the WorkbookWorksheetWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public WorkbookWorksheetRequestBuilder worksheet() {
-        return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
+    public WorkbookWorksheetWithReferenceRequestBuilder worksheet() {
+        return new WorkbookWorksheetWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 }

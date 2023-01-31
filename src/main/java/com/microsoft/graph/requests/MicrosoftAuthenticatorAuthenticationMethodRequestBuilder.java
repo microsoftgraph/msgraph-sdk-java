@@ -62,11 +62,11 @@ public class MicrosoftAuthenticatorAuthenticationMethodRequestBuilder extends Ba
     /**
      * Gets the request builder for Device
      *
-     * @return the DeviceRequestBuilder instance
+     * @return the DeviceWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public com.microsoft.graph.requests.DeviceRequestBuilder device() {
-        return new com.microsoft.graph.requests.DeviceRequestBuilder(getRequestUrlWithAdditionalSegment("device"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceWithReferenceRequestBuilder device() {
+        return new com.microsoft.graph.requests.DeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("device"), getClient(), null);
     }
 
     /**

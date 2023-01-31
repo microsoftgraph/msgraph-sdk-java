@@ -930,8 +930,6 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Drives.
      * A collection of drives available for this user. Read-only.
      */
-    @SerializedName(value = "drives", alternate = {"Drives"})
-    @Expose
 	@Nullable
     public com.microsoft.graph.requests.DriveCollectionPage drives;
 

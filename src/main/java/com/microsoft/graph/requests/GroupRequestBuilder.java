@@ -1122,8 +1122,8 @@ public class GroupRequestBuilder extends BaseRequestBuilder<Group> {
      * @return the collection request builder
      */
     @Nonnull
-    public com.microsoft.graph.requests.DriveCollectionRequestBuilder drives() {
-        return new com.microsoft.graph.requests.DriveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("drives"), getClient(), null);
+    public com.microsoft.graph.requests.DriveCollectionWithReferencesRequestBuilder drives() {
+        return new com.microsoft.graph.requests.DriveCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("drives"), getClient(), null);
     }
 
     /**
@@ -1133,8 +1133,8 @@ public class GroupRequestBuilder extends BaseRequestBuilder<Group> {
      * @param id the item identifier
      */
     @Nonnull
-    public com.microsoft.graph.requests.DriveRequestBuilder drives(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DriveWithReferenceRequestBuilder drives(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DriveWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Site collection

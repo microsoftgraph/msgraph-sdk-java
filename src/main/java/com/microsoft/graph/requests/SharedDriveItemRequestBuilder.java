@@ -120,11 +120,11 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
     /**
      * Gets the request builder for ListItem
      *
-     * @return the ListItemRequestBuilder instance
+     * @return the ListItemWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public com.microsoft.graph.requests.ListItemRequestBuilder listItem() {
-        return new com.microsoft.graph.requests.ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
+    public com.microsoft.graph.requests.ListItemWithReferenceRequestBuilder listItem() {
+        return new com.microsoft.graph.requests.ListItemWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
     }
 
     /**

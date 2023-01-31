@@ -97,11 +97,11 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
     /**
      * Gets the request builder for WorkbookWorksheet
      *
-     * @return the WorkbookWorksheetRequestBuilder instance
+     * @return the WorkbookWorksheetWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public com.microsoft.graph.requests.WorkbookWorksheetRequestBuilder worksheet() {
-        return new com.microsoft.graph.requests.WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookWorksheetWithReferenceRequestBuilder worksheet() {
+        return new com.microsoft.graph.requests.WorkbookWorksheetWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 
     /**

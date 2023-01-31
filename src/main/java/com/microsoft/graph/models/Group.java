@@ -536,8 +536,6 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      * The Drives.
      * The group's drives. Read-only.
      */
-    @SerializedName(value = "drives", alternate = {"Drives"})
-    @Expose
 	@Nullable
     public com.microsoft.graph.requests.DriveCollectionPage drives;
 

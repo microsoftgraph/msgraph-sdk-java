@@ -152,11 +152,11 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
     /**
      * Gets the request builder for DriveItem
      *
-     * @return the DriveItemRequestBuilder instance
+     * @return the DriveItemWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public com.microsoft.graph.requests.DriveItemRequestBuilder root() {
-        return new com.microsoft.graph.requests.DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("root"), getClient(), null);
+    public com.microsoft.graph.requests.DriveItemWithReferenceRequestBuilder root() {
+        return new com.microsoft.graph.requests.DriveItemWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("root"), getClient(), null);
     }
     /**
      *  Gets a request builder for the DriveItem collection
