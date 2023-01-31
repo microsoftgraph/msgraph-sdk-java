@@ -1,6 +1,6 @@
 package com.microsoft.graph.info;
 
-/** Multi-purpose constants holder used accross the SDK */
+/** Multi-purpose constants holder used across the SDK */
 public final class Constants {
 	private Constants() {
 	}
@@ -18,64 +18,5 @@ public final class Constants {
 	/** The client secret to use for unit testing */
 	public static final String CLIENTSECRET = "clientsecret";
 	/** The SDK version */
-	public static final String VERSION_NAME = "5.46.0";
+	public static final String VERSION_NAME = "6.0.0";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

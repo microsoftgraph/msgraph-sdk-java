@@ -11,6 +11,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [6.0.0] - 2023-01-31
+
+### Added
+
+- Added support for Excel API surface.
+
+### Changed
+
+- BREAKING: corrected drive and drive item so child API paths are available on the canonical path only (`client.drives("id").items("foo").itemsWithPath("path.txt")...`)
+
 ## [5.45.0] - 2023-01-24
 
 ### Added
