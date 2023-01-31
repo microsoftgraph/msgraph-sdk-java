@@ -42,14 +42,14 @@ public class OneDriveTests {
 		}
 	};
     /**
-     * Tests that paths are properly encoded acording to ODSP's expectations
+     * Tests that paths are properly encoded according to ODSP's expectations
      * - everything is encoded to the application/x-www-form-urlencoded MIME format
      * - spaces are encoded with %20
      */
     @Test
     public void itemWithPathEncodesSpecialCharacters() {
-        final URL requestURL = new TestBase(false).graphClient.me().drive().root().itemWithPath("some folder/some name with a + and a #777.docx").buildRequest().getRequestUrl();
-        assertEquals("/me/drive/root:/some%20folder%2Fsome%20name%20with%20a%20%2B%20and%20a%20%23777.docx:", requestURL.getPath().replace("/v1.0", "").replace("/beta", ""));
+        final URL requestURL = new TestBase(false).graphClient.drives("foo").items("bar").itemWithPath("some folder/some name with a + and a #777.docx").buildRequest().getRequestUrl();
+        assertEquals("/drives/foo/items/bar:/some%20folder%2Fsome%20name%20with%20a%20%2B%20and%20a%20%23777.docx:", requestURL.getPath().replace("/v1.0", "").replace("/beta", ""));
         // version replacement so the test is version agnostic
     }
 	/**
@@ -69,9 +69,8 @@ public class OneDriveTests {
 
 		UploadSession uploadSession = testBase
 				.graphClient
-				.me()
-				.drive()
-				.root()
+				.drives("foo")
+				.items("bar")
 				.itemWithPath("largefile10M.blob")
 				.createUploadSession(DriveItemCreateUploadSessionParameterSet.newBuilder().withItem(new DriveItemUploadableProperties()).build())
 				.buildRequest()
@@ -107,9 +106,9 @@ public class OneDriveTests {
 
 		final long fileSize = (long) uploadFile.available();
 
-		final UploadSession session = testBase.graphClient.me()
-			.drive()
-			.root()
+		final UploadSession session = testBase.graphClient
+			.drives("foo")
+			.items("bar")
 			.itemWithPath(item.name)
 			.createUploadSession(DriveItemCreateUploadSessionParameterSet.newBuilder().withItem(item).build())
 			.buildRequest()
@@ -125,9 +124,9 @@ public class OneDriveTests {
 		final LargeFileUploadResult<DriveItem> result = chunkedUploadProvider.upload(0, null, callback);
         assertNotNull(result);
 
-		final InputStream stream = testBase.graphClient.me()
-			.drive()
-			.root()
+		final InputStream stream = testBase.graphClient
+			.drives("foo")
+			.items("bar")
 			.itemWithPath(item.name)
 			.content()
 			.buildRequest()

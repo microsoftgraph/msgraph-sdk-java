@@ -76,13 +76,6 @@ public class UserTests {
 	}
 
     @Test
-	public void meDriveTest() {
-		//GET me/drive/root/children
-		final DriveItemCollectionPage driveItemCollectionPage = graphServiceClient.me().drive().root().children().buildRequest().get();
-		assertNotNull(driveItemCollectionPage);
-	}
-
-    @Test
 	public void userKeyTest() {
 		//GET users('<<key>>')
 		final UserCollectionPage userCollectionPage = graphServiceClient.users().buildRequest().get();

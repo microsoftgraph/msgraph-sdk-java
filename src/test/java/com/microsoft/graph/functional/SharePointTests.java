@@ -37,12 +37,6 @@ public class SharePointTests {
     }
 
     @Test
-    public void testAccessRootSite() {
-//        BaseCollectionPage<ISite> sites = testBase.graphClient.getSites().buildRequest().get();
-//        assertNotNull(sites);
-    }
-
-    @Test
     public void testSearch() {
         List<Option> requestOptions = new LinkedList<Option>();
         requestOptions.add(new QueryOption("search", "Contoso"));
@@ -55,20 +49,5 @@ public class SharePointTests {
     public void testDrives() {
         DriveCollectionPage drives = testBase.graphClient.sites(testSite.id).drives().buildRequest().get();
         assertNotNull(drives);
-    }
-
-    @Test
-    public void testNonDefaultLibrary() {
-        DriveCollectionPage drives = testBase.graphClient.sites(testSite.id).drives().buildRequest().get();
-        DriveItemCollectionPage driveItems = testBase.graphClient.sites(testSite.id).drives(drives.getCurrentPage().get(0).id).root().children().buildRequest().get();
-
-        assertNotNull(driveItems);
-    }
-
-    @Test
-    public void accessSiteViaUrl() {
-//        String url = "u!" + Base64.getUrlEncoder().encodeToString(testSite.webUrl.getBytes());
-//        url = url.replace("=", "").replace("\n", "");
-//        Site site = testBase.graphClient.getShares(url).getSite().buildRequest().get();
     }
 }
