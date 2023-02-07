@@ -20,6 +20,7 @@ import com.microsoft.graph.models.Message;
 import com.microsoft.graph.models.ExchangeIdFormat;
 import com.microsoft.graph.models.ConvertIdResult;
 import com.microsoft.graph.models.Reminder;
+import com.microsoft.graph.models.DeviceAndAppManagementData;
 import com.microsoft.graph.models.ManagedAppDiagnosticStatus;
 import com.microsoft.graph.models.ManagedAppPolicy;
 import com.microsoft.graph.models.DirectoryObject;
@@ -39,6 +40,7 @@ import com.microsoft.graph.models.UserTranslateExchangeIdsParameterSet;
 import com.microsoft.graph.models.UserWipeManagedAppRegistrationsByDeviceTagParameterSet;
 import com.microsoft.graph.models.UserExportPersonalDataParameterSet;
 import com.microsoft.graph.models.UserReminderViewParameterSet;
+import com.microsoft.graph.models.UserExportDeviceAndAppManagementDataParameterSet;
 import com.microsoft.graph.models.DirectoryObjectCheckMemberGroupsParameterSet;
 import com.microsoft.graph.models.DirectoryObjectCheckMemberObjectsParameterSet;
 import com.microsoft.graph.models.DirectoryObjectGetMemberGroupsParameterSet;
@@ -1464,6 +1466,25 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public UserExportDeviceAndAppManagementDataRequestBuilder exportDeviceAndAppManagementData() {
+        return new UserExportDeviceAndAppManagementDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exportDeviceAndAppManagementData"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public UserExportDeviceAndAppManagementDataRequestBuilder exportDeviceAndAppManagementData(@Nonnull final UserExportDeviceAndAppManagementDataParameterSet parameters) {
+        return new UserExportDeviceAndAppManagementDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exportDeviceAndAppManagementData"), getClient(), null, parameters);
+    }
+
+    /**
      * Gets diagnostics validation status for a given user.
      * @return the request builder collection
      */
@@ -1479,6 +1500,15 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     @Nonnull
     public UserGetManagedAppPoliciesCollectionRequestBuilder getManagedAppPolicies() {
         return new UserGetManagedAppPoliciesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getManagedAppPolicies"), getClient(), null);
+    }
+
+    /**
+     * Retrieves the list of devices with failed apps
+     * @return the request builder collection
+     */
+    @Nonnull
+    public UserGetManagedDevicesWithAppFailuresCollectionRequestBuilder getManagedDevicesWithAppFailures() {
+        return new UserGetManagedDevicesWithAppFailuresCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getManagedDevicesWithAppFailures"), getClient(), null);
     }
 
     /**

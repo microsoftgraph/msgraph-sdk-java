@@ -27,7 +27,7 @@ public class TaskFileAttachment extends AttachmentBase implements IJsonBackedObj
 
     /**
      * The Content Bytes.
-     * 
+     * The base64-encoded contents of the file.
      */
     @SerializedName(value = "contentBytes", alternate = {"ContentBytes"})
     @Expose

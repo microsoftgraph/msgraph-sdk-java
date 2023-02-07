@@ -20,6 +20,7 @@ import com.microsoft.graph.models.Message;
 import com.microsoft.graph.models.ExchangeIdFormat;
 import com.microsoft.graph.models.ConvertIdResult;
 import com.microsoft.graph.models.Reminder;
+import com.microsoft.graph.models.DeviceAndAppManagementData;
 import com.microsoft.graph.models.ManagedAppDiagnosticStatus;
 import com.microsoft.graph.models.ManagedAppPolicy;
 import com.microsoft.graph.models.DirectoryObject;

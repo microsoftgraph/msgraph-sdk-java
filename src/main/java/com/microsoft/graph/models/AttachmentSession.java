@@ -28,7 +28,7 @@ public class AttachmentSession extends Entity implements IJsonBackedObject {
 
     /**
      * The Expiration Date Time.
-     * 
+     * The date and time in UTC when the upload session will expire. The complete file must be uploaded before this expiration time is reached.
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class AttachmentSession extends Entity implements IJsonBackedObject {
 
     /**
      * The Next Expected Ranges.
-     * 
+     * Indicates a single value {start} that represents the location in the file where the next upload should begin.
      */
     @SerializedName(value = "nextExpectedRanges", alternate = {"NextExpectedRanges"})
     @Expose

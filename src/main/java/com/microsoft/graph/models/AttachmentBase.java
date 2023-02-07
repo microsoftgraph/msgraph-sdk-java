@@ -27,7 +27,7 @@ public class AttachmentBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Content Type.
-     * 
+     * The MIME type.
      */
     @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose
@@ -36,7 +36,7 @@ public class AttachmentBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -45,7 +45,7 @@ public class AttachmentBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The display name of the attachment. This does not need to be the actual file name.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -54,7 +54,7 @@ public class AttachmentBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Size.
-     * 
+     * The length of the attachment in bytes.
      */
     @SerializedName(value = "size", alternate = {"Size"})
     @Expose

@@ -84,7 +84,7 @@ public class ChatMessageAttachment implements IJsonBackedObject {
 
     /**
      * The Teams App Id.
-     * 
+     * The ID of the Teams app that is associated with the attachment. The property is specifically used to attribute a Teams message card to the specified app.
      */
     @SerializedName(value = "teamsAppId", alternate = {"TeamsAppId"})
     @Expose

@@ -133,7 +133,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The status of the incident. Possible values are: active, resolved, redirected, unknownFutureValue.
+     * The status of the incident. Possible values are: active, resolved, inProgress, redirected, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

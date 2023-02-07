@@ -47,7 +47,7 @@ public class DeviceManagementExchangeConnector extends Entity implements IJsonBa
 
     /**
      * The Exchange Connector Type.
-     * The type of Exchange Connector Configured. Possible values are: onPremises, hosted, serviceToService, dedicated.
+     * The type of Exchange Connector Configured. Possible values are: onPremises, hosted, serviceToService, dedicated, unknownFutureValue.
      */
     @SerializedName(value = "exchangeConnectorType", alternate = {"ExchangeConnectorType"})
     @Expose
@@ -92,7 +92,7 @@ public class DeviceManagementExchangeConnector extends Entity implements IJsonBa
 
     /**
      * The Status.
-     * Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected.
+     * Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

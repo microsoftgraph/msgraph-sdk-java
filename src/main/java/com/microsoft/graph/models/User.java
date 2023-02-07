@@ -214,6 +214,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public String employeeId;
 
     /**
+     * The Employee Leave Date Time.
+     * 
+     */
+    @SerializedName(value = "employeeLeaveDateTime", alternate = {"EmployeeLeaveDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime employeeLeaveDateTime;
+
+    /**
      * The Employee Org Data.
      * Represents organization data (e.g. division and costCenter) associated with a user. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
      */

@@ -40,7 +40,7 @@ public class AttachmentInfo implements IJsonBackedObject {
 
     /**
      * The Attachment Type.
-     * 
+     * The type of the attachment. The possible values are: file, item, reference. Required.
      */
     @SerializedName(value = "attachmentType", alternate = {"AttachmentType"})
     @Expose
@@ -49,7 +49,7 @@ public class AttachmentInfo implements IJsonBackedObject {
 
     /**
      * The Content Type.
-     * 
+     * The nature of the data in the attachment. Optional.
      */
     @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose
@@ -58,7 +58,7 @@ public class AttachmentInfo implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -67,7 +67,7 @@ public class AttachmentInfo implements IJsonBackedObject {
 
     /**
      * The Size.
-     * 
+     * The length of the attachment in bytes. Required.
      */
     @SerializedName(value = "size", alternate = {"Size"})
     @Expose

@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.46.0] - 2023-02-07
+
+### Added
+
+- Tenant relationship.
+- Delegated Admin Access Assignment.
+
 ## [5.45.0] - 2023-01-24
 
 ### Added

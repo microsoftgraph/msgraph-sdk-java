@@ -28,6 +28,10 @@ public enum DeviceManagementExchangeConnectorType
     */
     DEDICATED,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For DeviceManagementExchangeConnectorType values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -28,6 +28,10 @@ public enum OnlineMeetingRole
     */
     PRODUCER,
     /**
+    * coorganizer
+    */
+    COORGANIZER,
+    /**
     * For OnlineMeetingRole values that were not expected from the service
     */
     UNEXPECTED_VALUE

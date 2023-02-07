@@ -20,6 +20,10 @@ public enum IncidentStatus
     */
     RESOLVED,
     /**
+    * in Progress
+    */
+    IN_PROGRESS,
+    /**
     * redirected
     */
     REDIRECTED,
