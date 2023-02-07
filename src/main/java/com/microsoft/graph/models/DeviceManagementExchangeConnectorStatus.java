@@ -28,6 +28,10 @@ public enum DeviceManagementExchangeConnectorStatus
     */
     DISCONNECTED,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For DeviceManagementExchangeConnectorStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE

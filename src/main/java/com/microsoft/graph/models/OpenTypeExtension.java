@@ -27,7 +27,7 @@ public class OpenTypeExtension extends Extension implements IJsonBackedObject {
 
     /**
      * The Extension Name.
-     * A unique text identifier for an open type data extension. Required.
+     * A unique text identifier for an open type data extension. Optional.
      */
     @SerializedName(value = "extensionName", alternate = {"ExtensionName"})
     @Expose

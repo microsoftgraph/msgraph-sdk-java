@@ -136,7 +136,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Partner Tenant Type.
-     * 
+     * The type of partnership this tenant has with Microsoft. The possible values are: microsoftSupport, syndicatePartner, breadthPartner, breadthPartnerDelegatedAdmin, resellerPartnerDelegatedAdmin, valueAddedResellerPartnerDelegatedAdmin, unknownFutureValue. Nullable. For more information about the possible types, see partnerTenantType values.
      */
     @SerializedName(value = "partnerTenantType", alternate = {"PartnerTenantType"})
     @Expose
@@ -226,7 +226,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Tenant Type.
-     * 
+     * Not nullable. The tenant type option that was selected when the tenant was created. The possible values are:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C A customer identity access management (CIAM) service that serves business-to-consumer (B2C) scenarios.
      */
     @SerializedName(value = "tenantType", alternate = {"TenantType"})
     @Expose

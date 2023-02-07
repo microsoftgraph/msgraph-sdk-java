@@ -27,6 +27,24 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
 
 
     /**
+     * The Allow Partner To Collect IOSApplication Metadata.
+     * When TRUE, indicates the data sync partner may collect metadata about installed applications from Intune for IOS devices. When FALSE, indicates the data sync partner may not collect metadata about installed applications from Intune for IOS devices. Default value is FALSE.
+     */
+    @SerializedName(value = "allowPartnerToCollectIOSApplicationMetadata", alternate = {"AllowPartnerToCollectIOSApplicationMetadata"})
+    @Expose
+	@Nullable
+    public Boolean allowPartnerToCollectIOSApplicationMetadata;
+
+    /**
+     * The Allow Partner To Collect IOSPersonal Application Metadata.
+     * When TRUE, indicates the data sync partner may collect metadata about personally installed applications from Intune for IOS devices. When FALSE, indicates the data sync partner may not collect metadata about personally installed applications from Intune for IOS devices. Default value is FALSE.
+     */
+    @SerializedName(value = "allowPartnerToCollectIOSPersonalApplicationMetadata", alternate = {"AllowPartnerToCollectIOSPersonalApplicationMetadata"})
+    @Expose
+	@Nullable
+    public Boolean allowPartnerToCollectIOSPersonalApplicationMetadata;
+
+    /**
      * The Android Device Blocked On Missing Partner Data.
      * For Android, set whether Intune must receive data from the data sync partner prior to marking a device compliant
      */
@@ -43,6 +61,15 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
     @Expose
 	@Nullable
     public Boolean androidEnabled;
+
+    /**
+     * The Android Mobile Application Management Enabled.
+     * When TRUE, inidicates that data from the data sync partner can be used during Mobile Application Management (MAM) evaluations for Android devices. When FALSE, inidicates that data from the data sync partner should not be used during Mobile Application Management (MAM) evaluations for Android devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
+     */
+    @SerializedName(value = "androidMobileApplicationManagementEnabled", alternate = {"AndroidMobileApplicationManagementEnabled"})
+    @Expose
+	@Nullable
+    public Boolean androidMobileApplicationManagementEnabled;
 
     /**
      * The Ios Device Blocked On Missing Partner Data.
@@ -63,6 +90,15 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
     public Boolean iosEnabled;
 
     /**
+     * The Ios Mobile Application Management Enabled.
+     * When TRUE, inidicates that data from the data sync partner can be used during Mobile Application Management (MAM) evaluations for IOS devices. When FALSE, inidicates that data from the data sync partner should not be used during Mobile Application Management (MAM) evaluations for IOS devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
+     */
+    @SerializedName(value = "iosMobileApplicationManagementEnabled", alternate = {"IosMobileApplicationManagementEnabled"})
+    @Expose
+	@Nullable
+    public Boolean iosMobileApplicationManagementEnabled;
+
+    /**
      * The Last Heartbeat Date Time.
      * DateTime of last Heartbeat recieved from the Data Sync Partner
      */
@@ -70,6 +106,15 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
     @Expose
 	@Nullable
     public java.time.OffsetDateTime lastHeartbeatDateTime;
+
+    /**
+     * The Microsoft Defender For Endpoint Attach Enabled.
+     * When TRUE, inidicates that configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, inidicates that configuration profile management via Microsoft Defender for Endpoint is disabled. Default value is FALSE.
+     */
+    @SerializedName(value = "microsoftDefenderForEndpointAttachEnabled", alternate = {"MicrosoftDefenderForEndpointAttachEnabled"})
+    @Expose
+	@Nullable
+    public Boolean microsoftDefenderForEndpointAttachEnabled;
 
     /**
      * The Partner State.
@@ -97,6 +142,24 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
     @Expose
 	@Nullable
     public Boolean partnerUnsupportedOsVersionBlocked;
+
+    /**
+     * The Windows Device Blocked On Missing Partner Data.
+     * When TRUE, inidicates that Intune must receive data from the data sync partner prior to marking a device compliant for Windows. When FALSE, inidicates that Intune may make a device compliant without receiving data from the data sync partner for Windows. Default value is FALSE.
+     */
+    @SerializedName(value = "windowsDeviceBlockedOnMissingPartnerData", alternate = {"WindowsDeviceBlockedOnMissingPartnerData"})
+    @Expose
+	@Nullable
+    public Boolean windowsDeviceBlockedOnMissingPartnerData;
+
+    /**
+     * The Windows Enabled.
+     * When TRUE, inidicates that data from the data sync partner can be used during compliance evaluations for Windows. When FALSE, inidicates that data from the data sync partner should not be used during compliance evaluations for Windows. Default value is FALSE.
+     */
+    @SerializedName(value = "windowsEnabled", alternate = {"WindowsEnabled"})
+    @Expose
+	@Nullable
+    public Boolean windowsEnabled;
 
 
     /**

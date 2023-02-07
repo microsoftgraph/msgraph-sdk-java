@@ -92,7 +92,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
-     * 
+     * Indicates whether the task has attachments.
      */
     @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
     @Expose
@@ -146,7 +146,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * 
+     * The date and time in the specified time zone at which the task is scheduled to start.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -173,7 +173,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Attachments.
-     * 
+     * A collection of file attachments for the task.
      */
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose

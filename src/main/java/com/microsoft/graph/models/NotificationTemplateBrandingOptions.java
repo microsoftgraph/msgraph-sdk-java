@@ -36,6 +36,10 @@ public enum NotificationTemplateBrandingOptions
     */
     INCLUDE_DEVICE_DETAILS,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For NotificationTemplateBrandingOptions values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -8,6 +8,8 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.DeviceManagementPartnerAssignment;
 import com.microsoft.graph.models.DeviceManagementPartnerAppType;
 import com.microsoft.graph.models.DeviceManagementPartnerTenantState;
 import com.microsoft.graph.models.Entity;
@@ -35,6 +37,15 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
     @Expose
 	@Nullable
     public String displayName;
+
+    /**
+     * The Groups Requiring Partner Enrollment.
+     * User groups that specifies whether enrollment is through partner.
+     */
+    @SerializedName(value = "groupsRequiringPartnerEnrollment", alternate = {"GroupsRequiringPartnerEnrollment"})
+    @Expose
+	@Nullable
+    public java.util.List<DeviceManagementPartnerAssignment> groupsRequiringPartnerEnrollment;
 
     /**
      * The Is Configured.

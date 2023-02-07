@@ -19,6 +19,7 @@ import com.microsoft.graph.models.OptionalClaims;
 import com.microsoft.graph.models.ParentalControlSettings;
 import com.microsoft.graph.models.PasswordCredential;
 import com.microsoft.graph.models.PublicClientApplication;
+import com.microsoft.graph.models.RequestSignatureVerification;
 import com.microsoft.graph.models.RequiredResourceAccess;
 import com.microsoft.graph.models.SpaApplication;
 import com.microsoft.graph.models.VerifiedPublisher;
@@ -260,6 +261,15 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String publisherDomain;
+
+    /**
+     * The Request Signature Verification.
+     * 
+     */
+    @SerializedName(value = "requestSignatureVerification", alternate = {"RequestSignatureVerification"})
+    @Expose
+	@Nullable
+    public RequestSignatureVerification requestSignatureVerification;
 
     /**
      * The Required Resource Access.
