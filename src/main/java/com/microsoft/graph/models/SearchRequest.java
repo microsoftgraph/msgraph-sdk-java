@@ -14,6 +14,7 @@ import com.microsoft.graph.models.EntityType;
 import com.microsoft.graph.models.SearchQuery;
 import com.microsoft.graph.models.SearchAlterationOptions;
 import com.microsoft.graph.models.ResultTemplateOption;
+import com.microsoft.graph.models.SharePointOneDriveOptions;
 import com.microsoft.graph.models.SortProperty;
 
 
@@ -126,6 +127,15 @@ public class SearchRequest implements IJsonBackedObject {
     public SearchAlterationOptions queryAlterationOptions;
 
     /**
+     * The Region.
+     * 
+     */
+    @SerializedName(value = "region", alternate = {"Region"})
+    @Expose
+	@Nullable
+    public String region;
+
+    /**
      * The Result Template Options.
      * 
      */
@@ -133,6 +143,15 @@ public class SearchRequest implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ResultTemplateOption resultTemplateOptions;
+
+    /**
+     * The Share Point One Drive Options.
+     * 
+     */
+    @SerializedName(value = "sharePointOneDriveOptions", alternate = {"SharePointOneDriveOptions"})
+    @Expose
+	@Nullable
+    public SharePointOneDriveOptions sharePointOneDriveOptions;
 
     /**
      * The Size.

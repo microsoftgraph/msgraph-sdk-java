@@ -8,6 +8,8 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AccessPackageAnswer;
 import com.microsoft.graph.models.AccessPackageRequestType;
 import com.microsoft.graph.models.EntitlementManagementSchedule;
 import com.microsoft.graph.models.AccessPackageRequestState;
@@ -30,6 +32,15 @@ import javax.annotation.Nonnull;
  */
 public class AccessPackageAssignmentRequest extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Answers.
+     * Answers provided by the requestor to accessPackageQuestions asked of them at the time of request.
+     */
+    @SerializedName(value = "answers", alternate = {"Answers"})
+    @Expose
+	@Nullable
+    public java.util.List<AccessPackageAnswer> answers;
 
     /**
      * The Completed Date Time.

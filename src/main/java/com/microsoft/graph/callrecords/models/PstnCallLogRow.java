@@ -112,7 +112,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Currency.
-     * Type of currency used to calculate the cost of the call (ISO 4217).
+     * Type of currency used to calculate the cost of the call. For details, see (ISO 4217.
      */
     @SerializedName(value = "currency", alternate = {"Currency"})
     @Expose
@@ -202,7 +202,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Tenant Country Code.
-     * Country code of the tenant, ISO 3166-1 alpha-2.
+     * Country code of the tenant. For details, see ISO 3166-1 alpha-2.
      */
     @SerializedName(value = "tenantCountryCode", alternate = {"TenantCountryCode"})
     @Expose
@@ -211,7 +211,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Usage Country Code.
-     * Country code of the user, ISO 3166-1 alpha-2.
+     * Country code of the user. For details, see ISO 3166-1 alpha-2.
      */
     @SerializedName(value = "usageCountryCode", alternate = {"UsageCountryCode"})
     @Expose
@@ -238,7 +238,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
+     * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
