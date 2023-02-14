@@ -7,52 +7,24 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Entity Type.
+ * The Enum Search Content.
 */
-public enum EntityType
+public enum SearchContent
 {
     /**
-    * event
+    * shared Content
     */
-    EVENT,
+    SHARED_CONTENT,
     /**
-    * message
+    * private Content
     */
-    MESSAGE,
-    /**
-    * drive Item
-    */
-    DRIVE_ITEM,
-    /**
-    * external Item
-    */
-    EXTERNAL_ITEM,
-    /**
-    * site
-    */
-    SITE,
-    /**
-    * list
-    */
-    LIST,
-    /**
-    * list Item
-    */
-    LIST_ITEM,
-    /**
-    * drive
-    */
-    DRIVE,
+    PRIVATE_CONTENT,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * chat Message
-    */
-    CHAT_MESSAGE,
-    /**
-    * For EntityType values that were not expected from the service
+    * For SearchContent values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

@@ -19,6 +19,7 @@ import com.microsoft.graph.models.SubjectSet;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.AccessPackageCatalog;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.AccessPackageQuestionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -152,6 +153,15 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 	@Nullable
     public AccessPackageCatalog catalog;
 
+    /**
+     * The Questions.
+     * 
+     */
+    @SerializedName(value = "questions", alternate = {"Questions"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AccessPackageQuestionCollectionPage questions;
+
 
     /**
      * Sets the raw JSON object
@@ -161,5 +171,9 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("questions")) {
+            questions = serializer.deserializeObject(json.get("questions"), com.microsoft.graph.requests.AccessPackageQuestionCollectionPage.class);
+        }
     }
 }

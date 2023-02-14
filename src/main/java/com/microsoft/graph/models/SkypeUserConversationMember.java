@@ -27,7 +27,7 @@ public class SkypeUserConversationMember extends ConversationMember implements I
 
     /**
      * The Skype Id.
-     * 
+     * Skype ID of the user.
      */
     @SerializedName(value = "skypeId", alternate = {"SkypeId"})
     @Expose

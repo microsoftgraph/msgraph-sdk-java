@@ -27,7 +27,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
 
     /**
      * The Tenant Id.
-     * 
+     * ID of the tenant that the user belongs to.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -36,7 +36,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
 
     /**
      * The User Id.
-     * 
+     * Azure Active Directory ID of the user.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
