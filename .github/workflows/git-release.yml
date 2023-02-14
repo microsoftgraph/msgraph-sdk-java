@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Download Build Artifact
-        uses: dawidd6/action-download-artifact@v2.24.3
+        uses: dawidd6/action-download-artifact@v2.25.0
         with:
           workflow: preview-and-release.yml
           workflow_conclusion: success
