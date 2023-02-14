@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.47.0] - 2023-02-14
+
+### Added
+
+- Access package questions/management/collections/policy.
+- SharePoint/OneDrive options.
+
 ## [5.46.0] - 2023-02-07
 
 ### Added
