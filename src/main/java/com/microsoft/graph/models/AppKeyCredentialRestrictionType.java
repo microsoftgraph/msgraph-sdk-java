@@ -7,32 +7,20 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Online Meeting Presenters.
+ * The Enum App Key Credential Restriction Type.
 */
-public enum OnlineMeetingPresenters
+public enum AppKeyCredentialRestrictionType
 {
     /**
-    * everyone
+    * asymmetric Key Lifetime
     */
-    EVERYONE,
-    /**
-    * organization
-    */
-    ORGANIZATION,
-    /**
-    * role Is Presenter
-    */
-    ROLE_IS_PRESENTER,
-    /**
-    * organizer
-    */
-    ORGANIZER,
+    ASYMMETRIC_KEY_LIFETIME,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * For OnlineMeetingPresenters values that were not expected from the service
+    * For AppKeyCredentialRestrictionType values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

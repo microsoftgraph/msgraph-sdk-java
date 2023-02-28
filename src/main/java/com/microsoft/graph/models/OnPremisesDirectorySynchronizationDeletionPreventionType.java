@@ -7,40 +7,28 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Lobby Bypass Scope.
+ * The Enum On Premises Directory Synchronization Deletion Prevention Type.
 */
-public enum LobbyBypassScope
+public enum OnPremisesDirectorySynchronizationDeletionPreventionType
 {
     /**
-    * organizer
+    * disabled
     */
-    ORGANIZER,
+    DISABLED,
     /**
-    * organization
+    * enabled For Count
     */
-    ORGANIZATION,
+    ENABLED_FOR_COUNT,
     /**
-    * organization And Federated
+    * enabled For Percentage
     */
-    ORGANIZATION_AND_FEDERATED,
-    /**
-    * everyone
-    */
-    EVERYONE,
+    ENABLED_FOR_PERCENTAGE,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * invited
-    */
-    INVITED,
-    /**
-    * organization Excluding Guests
-    */
-    ORGANIZATION_EXCLUDING_GUESTS,
-    /**
-    * For LobbyBypassScope values that were not expected from the service
+    * For OnPremisesDirectorySynchronizationDeletionPreventionType values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

@@ -25,6 +25,7 @@ import com.microsoft.graph.models.SpaApplication;
 import com.microsoft.graph.models.VerifiedPublisher;
 import com.microsoft.graph.models.WebApplication;
 import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.requests.AppManagementPolicyCollectionPage;
 import com.microsoft.graph.requests.ExtensionPropertyCollectionPage;
 import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage;
@@ -353,6 +354,13 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public WebApplication web;
 
     /**
+     * The App Management Policies.
+     * 
+     */
+	@Nullable
+    public com.microsoft.graph.requests.AppManagementPolicyCollectionPage appManagementPolicies;
+
+    /**
      * The Created On Behalf Of.
      * Supports $filter (/$count eq 0, /$count ne 0). Read-only.
      */
@@ -416,6 +424,10 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("appManagementPolicies")) {
+            appManagementPolicies = serializer.deserializeObject(json.get("appManagementPolicies"), com.microsoft.graph.requests.AppManagementPolicyCollectionPage.class);
+        }
 
         if (json.has("extensionProperties")) {
             extensionProperties = serializer.deserializeObject(json.get("extensionProperties"), com.microsoft.graph.requests.ExtensionPropertyCollectionPage.class);

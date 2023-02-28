@@ -71,6 +71,26 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder<ServicePr
 
 
     /**
+     *  Gets a request builder for the AppManagementPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AppManagementPolicyCollectionWithReferencesRequestBuilder appManagementPolicies() {
+        return new com.microsoft.graph.requests.AppManagementPolicyCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("appManagementPolicies"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AppManagementPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AppManagementPolicyWithReferenceRequestBuilder appManagementPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AppManagementPolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appManagementPolicies") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the AppRoleAssignment collection
      *
      * @return the collection request builder

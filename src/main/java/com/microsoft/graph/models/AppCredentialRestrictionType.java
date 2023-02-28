@@ -7,28 +7,36 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Meeting Chat Mode.
+ * The Enum App Credential Restriction Type.
 */
-public enum MeetingChatMode
+public enum AppCredentialRestrictionType
 {
     /**
-    * enabled
+    * password Addition
     */
-    ENABLED,
+    PASSWORD_ADDITION,
     /**
-    * disabled
+    * password Lifetime
     */
-    DISABLED,
+    PASSWORD_LIFETIME,
     /**
-    * limited
+    * symmetric Key Addition
     */
-    LIMITED,
+    SYMMETRIC_KEY_ADDITION,
+    /**
+    * symmetric Key Lifetime
+    */
+    SYMMETRIC_KEY_LIFETIME,
+    /**
+    * custom Password Addition
+    */
+    CUSTOM_PASSWORD_ADDITION,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * For MeetingChatMode values that were not expected from the service
+    * For AppCredentialRestrictionType values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

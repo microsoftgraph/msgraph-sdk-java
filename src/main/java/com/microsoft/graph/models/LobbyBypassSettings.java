@@ -8,7 +8,6 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.LobbyBypassScope;
 
 
 import com.google.gson.JsonObject;
@@ -46,15 +45,6 @@ public class LobbyBypassSettings implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean isDialInBypassEnabled;
-
-    /**
-     * The Scope.
-     * Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
-     */
-    @SerializedName(value = "scope", alternate = {"Scope"})
-    @Expose
-	@Nullable
-    public LobbyBypassScope scope;
 
 
     /**
