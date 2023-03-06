@@ -90,14 +90,14 @@ public class DocumentSet implements IJsonBackedObject {
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.ColumnDefinitionCollectionPage sharedColumns;
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionWithReferencesPage sharedColumns;
 
     /**
      * The Welcome Page Columns.
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.ColumnDefinitionCollectionPage welcomePageColumns;
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionWithReferencesPage welcomePageColumns;
 
 
     /**

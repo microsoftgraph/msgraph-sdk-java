@@ -81,6 +81,26 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
     public com.microsoft.graph.requests.WorkforceIntegrationRequestBuilder workforceIntegrations(@Nonnull final String id) {
         return new com.microsoft.graph.requests.WorkforceIntegrationRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DeletedTeam collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeletedTeamCollectionRequestBuilder deletedTeams() {
+        return new com.microsoft.graph.requests.DeletedTeamCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedTeams"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeletedTeam item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeletedTeamRequestBuilder deletedTeams(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeletedTeamRequestBuilder(getRequestUrlWithAdditionalSegment("deletedTeams") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets a builder to execute the method

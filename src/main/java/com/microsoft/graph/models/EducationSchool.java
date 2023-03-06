@@ -13,8 +13,8 @@ import com.microsoft.graph.models.PhysicalAddress;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.AdministrativeUnit;
 import com.microsoft.graph.models.EducationOrganization;
-import com.microsoft.graph.requests.EducationClassCollectionPage;
-import com.microsoft.graph.requests.EducationUserCollectionPage;
+import com.microsoft.graph.requests.EducationClassCollectionWithReferencesPage;
+import com.microsoft.graph.requests.EducationUserCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -144,14 +144,14 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
      * Classes taught at the school. Nullable.
      */
 	@Nullable
-    public com.microsoft.graph.requests.EducationClassCollectionPage classes;
+    public com.microsoft.graph.requests.EducationClassCollectionWithReferencesPage classes;
 
     /**
      * The Users.
      * Users in the school. Nullable.
      */
 	@Nullable
-    public com.microsoft.graph.requests.EducationUserCollectionPage users;
+    public com.microsoft.graph.requests.EducationUserCollectionWithReferencesPage users;
 
 
     /**
@@ -164,11 +164,11 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
 
         if (json.has("classes")) {
-            classes = serializer.deserializeObject(json.get("classes"), com.microsoft.graph.requests.EducationClassCollectionPage.class);
+            classes = serializer.deserializeObject(json.get("classes"), com.microsoft.graph.requests.EducationClassCollectionWithReferencesPage.class);
         }
 
         if (json.has("users")) {
-            users = serializer.deserializeObject(json.get("users"), com.microsoft.graph.requests.EducationUserCollectionPage.class);
+            users = serializer.deserializeObject(json.get("users"), com.microsoft.graph.requests.EducationUserCollectionWithReferencesPage.class);
         }
     }
 }

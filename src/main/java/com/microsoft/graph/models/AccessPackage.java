@@ -79,7 +79,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      * The access packages that are incompatible with this package. Read-only.
      */
 	@Nullable
-    public com.microsoft.graph.requests.AccessPackageCollectionPage accessPackagesIncompatibleWith;
+    public com.microsoft.graph.requests.AccessPackageCollectionWithReferencesPage accessPackagesIncompatibleWith;
 
     /**
      * The Assignment Policies.
@@ -104,7 +104,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      * The access packages whose assigned users are ineligible to be assigned this access package.
      */
 	@Nullable
-    public com.microsoft.graph.requests.AccessPackageCollectionPage incompatibleAccessPackages;
+    public com.microsoft.graph.requests.AccessPackageCollectionWithReferencesPage incompatibleAccessPackages;
 
     /**
      * The Incompatible Groups.
@@ -126,7 +126,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
 
         if (json.has("accessPackagesIncompatibleWith")) {
-            accessPackagesIncompatibleWith = serializer.deserializeObject(json.get("accessPackagesIncompatibleWith"), com.microsoft.graph.requests.AccessPackageCollectionPage.class);
+            accessPackagesIncompatibleWith = serializer.deserializeObject(json.get("accessPackagesIncompatibleWith"), com.microsoft.graph.requests.AccessPackageCollectionWithReferencesPage.class);
         }
 
         if (json.has("assignmentPolicies")) {
@@ -134,7 +134,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
         }
 
         if (json.has("incompatibleAccessPackages")) {
-            incompatibleAccessPackages = serializer.deserializeObject(json.get("incompatibleAccessPackages"), com.microsoft.graph.requests.AccessPackageCollectionPage.class);
+            incompatibleAccessPackages = serializer.deserializeObject(json.get("incompatibleAccessPackages"), com.microsoft.graph.requests.AccessPackageCollectionWithReferencesPage.class);
         }
 
         if (json.has("incompatibleGroups")) {

@@ -42,7 +42,7 @@ public class EdiscoveryReviewTag extends Tag implements IJsonBackedObject {
      * Returns the tags that are a child of a tag.
      */
 	@Nullable
-    public com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionPage childTags;
+    public com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionWithReferencesPage childTags;
 
     /**
      * The Parent.
@@ -64,7 +64,7 @@ public class EdiscoveryReviewTag extends Tag implements IJsonBackedObject {
 
 
         if (json.has("childTags")) {
-            childTags = serializer.deserializeObject(json.get("childTags"), com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionPage.class);
+            childTags = serializer.deserializeObject(json.get("childTags"), com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionWithReferencesPage.class);
         }
     }
 }

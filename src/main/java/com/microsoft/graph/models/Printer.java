@@ -10,8 +10,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PrinterBase;
-import com.microsoft.graph.requests.PrintConnectorCollectionPage;
-import com.microsoft.graph.requests.PrinterShareCollectionPage;
+import com.microsoft.graph.requests.PrintConnectorCollectionWithReferencesPage;
+import com.microsoft.graph.requests.PrinterShareCollectionWithReferencesPage;
 import com.microsoft.graph.requests.PrintTaskTriggerCollectionPage;
 
 
@@ -70,14 +70,14 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
      * The connectors that are associated with the printer.
      */
 	@Nullable
-    public com.microsoft.graph.requests.PrintConnectorCollectionPage connectors;
+    public com.microsoft.graph.requests.PrintConnectorCollectionWithReferencesPage connectors;
 
     /**
      * The Shares.
      * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
      */
 	@Nullable
-    public com.microsoft.graph.requests.PrinterShareCollectionPage shares;
+    public com.microsoft.graph.requests.PrinterShareCollectionWithReferencesPage shares;
 
     /**
      * The Task Triggers.
@@ -99,11 +99,11 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
 
 
         if (json.has("connectors")) {
-            connectors = serializer.deserializeObject(json.get("connectors"), com.microsoft.graph.requests.PrintConnectorCollectionPage.class);
+            connectors = serializer.deserializeObject(json.get("connectors"), com.microsoft.graph.requests.PrintConnectorCollectionWithReferencesPage.class);
         }
 
         if (json.has("shares")) {
-            shares = serializer.deserializeObject(json.get("shares"), com.microsoft.graph.requests.PrinterShareCollectionPage.class);
+            shares = serializer.deserializeObject(json.get("shares"), com.microsoft.graph.requests.PrinterShareCollectionWithReferencesPage.class);
         }
 
         if (json.has("taskTriggers")) {

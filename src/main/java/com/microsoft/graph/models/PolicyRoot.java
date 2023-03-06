@@ -13,10 +13,12 @@ import com.microsoft.graph.models.AuthenticationMethodsPolicy;
 import com.microsoft.graph.models.AuthenticationFlowsPolicy;
 import com.microsoft.graph.models.AuthorizationPolicy;
 import com.microsoft.graph.models.CrossTenantAccessPolicy;
+import com.microsoft.graph.models.TenantAppManagementPolicy;
 import com.microsoft.graph.models.AdminConsentRequestPolicy;
 import com.microsoft.graph.models.IdentitySecurityDefaultsEnforcementPolicy;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionPage;
+import com.microsoft.graph.requests.AppManagementPolicyCollectionPage;
 import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage;
 import com.microsoft.graph.requests.PermissionGrantPolicyCollectionPage;
@@ -70,6 +72,15 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionPage activityBasedTimeoutPolicies;
 
     /**
+     * The App Management Policies.
+     * 
+     */
+    @SerializedName(value = "appManagementPolicies", alternate = {"AppManagementPolicies"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AppManagementPolicyCollectionPage appManagementPolicies;
+
+    /**
      * The Authorization Policy.
      * The policy that controls Azure AD authorization settings.
      */
@@ -95,6 +106,15 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public CrossTenantAccessPolicy crossTenantAccessPolicy;
+
+    /**
+     * The Default App Management Policy.
+     * 
+     */
+    @SerializedName(value = "defaultAppManagementPolicy", alternate = {"DefaultAppManagementPolicy"})
+    @Expose
+	@Nullable
+    public TenantAppManagementPolicy defaultAppManagementPolicy;
 
     /**
      * The Home Realm Discovery Policies.
@@ -198,6 +218,10 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
 
         if (json.has("activityBasedTimeoutPolicies")) {
             activityBasedTimeoutPolicies = serializer.deserializeObject(json.get("activityBasedTimeoutPolicies"), com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionPage.class);
+        }
+
+        if (json.has("appManagementPolicies")) {
+            appManagementPolicies = serializer.deserializeObject(json.get("appManagementPolicies"), com.microsoft.graph.requests.AppManagementPolicyCollectionPage.class);
         }
 
         if (json.has("claimsMappingPolicies")) {

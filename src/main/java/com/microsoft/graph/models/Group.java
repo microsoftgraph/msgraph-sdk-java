@@ -73,7 +73,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
+     * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -409,28 +409,28 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage memberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage memberOf;
 
     /**
      * The Members.
      * The members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=members($select=id,userPrincipalName,displayName).
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage members;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage members;
 
     /**
      * The Members With License Errors.
      * A list of group members with license errors from this group-based license assignment. Read-only.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage membersWithLicenseErrors;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage membersWithLicenseErrors;
 
     /**
      * The Owners.
      * The owners of the group. Limited to 100 owners. Nullable. If this property is not specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner.  Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=owners($select=id,userPrincipalName,displayName).
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage owners;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage owners;
 
     /**
      * The Permission Grants.
@@ -455,21 +455,21 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      * The groups that a group is a member of, either directly and through nested membership. Nullable.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveMemberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage transitiveMemberOf;
 
     /**
      * The Transitive Members.
      * The direct and transitive members of a group. Nullable.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveMembers;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage transitiveMembers;
 
     /**
      * The Accepted Senders.
      * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage acceptedSenders;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage acceptedSenders;
 
     /**
      * The Calendar.
@@ -512,7 +512,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage rejectedSenders;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage rejectedSenders;
 
     /**
      * The Threads.
@@ -628,19 +628,19 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("membersWithLicenseErrors")) {
-            membersWithLicenseErrors = serializer.deserializeObject(json.get("membersWithLicenseErrors"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            membersWithLicenseErrors = serializer.deserializeObject(json.get("membersWithLicenseErrors"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("owners")) {
-            owners = serializer.deserializeObject(json.get("owners"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            owners = serializer.deserializeObject(json.get("owners"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("permissionGrants")) {
@@ -652,15 +652,15 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("transitiveMembers")) {
-            transitiveMembers = serializer.deserializeObject(json.get("transitiveMembers"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            transitiveMembers = serializer.deserializeObject(json.get("transitiveMembers"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("acceptedSenders")) {
-            acceptedSenders = serializer.deserializeObject(json.get("acceptedSenders"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            acceptedSenders = serializer.deserializeObject(json.get("acceptedSenders"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("calendarView")) {
@@ -676,7 +676,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
         }
 
         if (json.has("rejectedSenders")) {
-            rejectedSenders = serializer.deserializeObject(json.get("rejectedSenders"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            rejectedSenders = serializer.deserializeObject(json.get("rejectedSenders"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("threads")) {

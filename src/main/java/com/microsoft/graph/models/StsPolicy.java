@@ -10,7 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PolicyBase;
-import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -50,7 +50,7 @@ public class StsPolicy extends PolicyBase implements IJsonBackedObject {
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage appliesTo;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage appliesTo;
 
 
     /**
@@ -63,7 +63,7 @@ public class StsPolicy extends PolicyBase implements IJsonBackedObject {
 
 
         if (json.has("appliesTo")) {
-            appliesTo = serializer.deserializeObject(json.get("appliesTo"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            appliesTo = serializer.deserializeObject(json.get("appliesTo"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
     }
 }

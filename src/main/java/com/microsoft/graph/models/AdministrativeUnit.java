@@ -10,7 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage;
 import com.microsoft.graph.requests.ScopedRoleMembershipCollectionPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
 
@@ -61,7 +61,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
      * Users and groups that are members of this administrative unit. Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage members;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage members;
 
     /**
      * The Scoped Role Members.
@@ -92,7 +92,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("scopedRoleMembers")) {

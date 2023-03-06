@@ -204,28 +204,28 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage memberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage memberOf;
 
     /**
      * The Registered Owners.
      * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage registeredOwners;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage registeredOwners;
 
     /**
      * The Registered Users.
      * Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage registeredUsers;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage registeredUsers;
 
     /**
      * The Transitive Member Of.
      * Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveMemberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage transitiveMemberOf;
 
     /**
      * The Extensions.
@@ -247,19 +247,19 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("registeredOwners")) {
-            registeredOwners = serializer.deserializeObject(json.get("registeredOwners"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            registeredOwners = serializer.deserializeObject(json.get("registeredOwners"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("registeredUsers")) {
-            registeredUsers = serializer.deserializeObject(json.get("registeredUsers"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            registeredUsers = serializer.deserializeObject(json.get("registeredUsers"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("extensions")) {

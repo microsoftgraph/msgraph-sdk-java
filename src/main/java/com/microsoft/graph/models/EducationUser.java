@@ -25,7 +25,7 @@ import com.microsoft.graph.models.User;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.EducationAssignmentCollectionPage;
 import com.microsoft.graph.requests.EducationRubricCollectionPage;
-import com.microsoft.graph.requests.EducationSchoolCollectionPage;
+import com.microsoft.graph.requests.EducationSchoolCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -353,21 +353,21 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      * Classes to which the user belongs. Nullable.
      */
 	@Nullable
-    public com.microsoft.graph.requests.EducationClassCollectionPage classes;
+    public com.microsoft.graph.requests.EducationClassCollectionWithReferencesPage classes;
 
     /**
      * The Schools.
      * Schools to which the user belongs. Nullable.
      */
 	@Nullable
-    public com.microsoft.graph.requests.EducationSchoolCollectionPage schools;
+    public com.microsoft.graph.requests.EducationSchoolCollectionWithReferencesPage schools;
 
     /**
      * The Taught Classes.
      * Classes for which the user is a teacher.
      */
 	@Nullable
-    public com.microsoft.graph.requests.EducationClassCollectionPage taughtClasses;
+    public com.microsoft.graph.requests.EducationClassCollectionWithReferencesPage taughtClasses;
 
     /**
      * The User.
@@ -397,15 +397,15 @@ public class EducationUser extends Entity implements IJsonBackedObject {
         }
 
         if (json.has("classes")) {
-            classes = serializer.deserializeObject(json.get("classes"), com.microsoft.graph.requests.EducationClassCollectionPage.class);
+            classes = serializer.deserializeObject(json.get("classes"), com.microsoft.graph.requests.EducationClassCollectionWithReferencesPage.class);
         }
 
         if (json.has("schools")) {
-            schools = serializer.deserializeObject(json.get("schools"), com.microsoft.graph.requests.EducationSchoolCollectionPage.class);
+            schools = serializer.deserializeObject(json.get("schools"), com.microsoft.graph.requests.EducationSchoolCollectionWithReferencesPage.class);
         }
 
         if (json.has("taughtClasses")) {
-            taughtClasses = serializer.deserializeObject(json.get("taughtClasses"), com.microsoft.graph.requests.EducationClassCollectionPage.class);
+            taughtClasses = serializer.deserializeObject(json.get("taughtClasses"), com.microsoft.graph.requests.EducationClassCollectionWithReferencesPage.class);
         }
     }
 }
