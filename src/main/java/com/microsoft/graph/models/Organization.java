@@ -17,7 +17,7 @@ import com.microsoft.graph.models.VerifiedDomain;
 import com.microsoft.graph.models.MdmAuthority;
 import com.microsoft.graph.models.OrganizationalBranding;
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionPage;
+import com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionWithReferencesPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
 
 
@@ -265,7 +265,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      */
 	@Nullable
-    public com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionPage certificateBasedAuthConfiguration;
+    public com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionWithReferencesPage certificateBasedAuthConfiguration;
 
     /**
      * The Extensions.
@@ -287,7 +287,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("certificateBasedAuthConfiguration")) {
-            certificateBasedAuthConfiguration = serializer.deserializeObject(json.get("certificateBasedAuthConfiguration"), com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionPage.class);
+            certificateBasedAuthConfiguration = serializer.deserializeObject(json.get("certificateBasedAuthConfiguration"), com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionWithReferencesPage.class);
         }
 
         if (json.has("extensions")) {

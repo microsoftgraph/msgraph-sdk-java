@@ -25,11 +25,12 @@ import com.microsoft.graph.models.SpaApplication;
 import com.microsoft.graph.models.VerifiedPublisher;
 import com.microsoft.graph.models.WebApplication;
 import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.requests.AppManagementPolicyCollectionWithReferencesPage;
 import com.microsoft.graph.requests.ExtensionPropertyCollectionPage;
 import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage;
-import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage;
-import com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage;
-import com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage;
+import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionWithReferencesPage;
+import com.microsoft.graph.requests.TokenIssuancePolicyCollectionWithReferencesPage;
+import com.microsoft.graph.requests.TokenLifetimePolicyCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -353,6 +354,13 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public WebApplication web;
 
     /**
+     * The App Management Policies.
+     * 
+     */
+	@Nullable
+    public com.microsoft.graph.requests.AppManagementPolicyCollectionWithReferencesPage appManagementPolicies;
+
+    /**
      * The Created On Behalf Of.
      * Supports $filter (/$count eq 0, /$count ne 0). Read-only.
      */
@@ -384,28 +392,28 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
+    public com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionWithReferencesPage homeRealmDiscoveryPolicies;
 
     /**
      * The Owners.
      * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage owners;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage owners;
 
     /**
      * The Token Issuance Policies.
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
+    public com.microsoft.graph.requests.TokenIssuancePolicyCollectionWithReferencesPage tokenIssuancePolicies;
 
     /**
      * The Token Lifetime Policies.
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
+    public com.microsoft.graph.requests.TokenLifetimePolicyCollectionWithReferencesPage tokenLifetimePolicies;
 
 
     /**
@@ -417,6 +425,10 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
 
+        if (json.has("appManagementPolicies")) {
+            appManagementPolicies = serializer.deserializeObject(json.get("appManagementPolicies"), com.microsoft.graph.requests.AppManagementPolicyCollectionWithReferencesPage.class);
+        }
+
         if (json.has("extensionProperties")) {
             extensionProperties = serializer.deserializeObject(json.get("extensionProperties"), com.microsoft.graph.requests.ExtensionPropertyCollectionPage.class);
         }
@@ -426,19 +438,19 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {
-            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies"), com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage.class);
+            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies"), com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionWithReferencesPage.class);
         }
 
         if (json.has("owners")) {
-            owners = serializer.deserializeObject(json.get("owners"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            owners = serializer.deserializeObject(json.get("owners"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("tokenIssuancePolicies")) {
-            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies"), com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage.class);
+            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies"), com.microsoft.graph.requests.TokenIssuancePolicyCollectionWithReferencesPage.class);
         }
 
         if (json.has("tokenLifetimePolicies")) {
-            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies"), com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage.class);
+            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies"), com.microsoft.graph.requests.TokenLifetimePolicyCollectionWithReferencesPage.class);
         }
     }
 }

@@ -13,7 +13,7 @@ import com.microsoft.graph.models.MimeContent;
 import com.microsoft.graph.models.MobileAppPublishingState;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MobileAppAssignmentCollectionPage;
-import com.microsoft.graph.requests.MobileAppCategoryCollectionPage;
+import com.microsoft.graph.requests.MobileAppCategoryCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -161,7 +161,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The list of categories for this app.
      */
 	@Nullable
-    public com.microsoft.graph.requests.MobileAppCategoryCollectionPage categories;
+    public com.microsoft.graph.requests.MobileAppCategoryCollectionWithReferencesPage categories;
 
 
     /**
@@ -178,7 +178,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
         }
 
         if (json.has("categories")) {
-            categories = serializer.deserializeObject(json.get("categories"), com.microsoft.graph.requests.MobileAppCategoryCollectionPage.class);
+            categories = serializer.deserializeObject(json.get("categories"), com.microsoft.graph.requests.MobileAppCategoryCollectionWithReferencesPage.class);
         }
     }
 }

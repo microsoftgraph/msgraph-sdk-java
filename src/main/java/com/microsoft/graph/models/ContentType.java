@@ -172,7 +172,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
      * The collection of content types that are ancestors of this content type.
      */
 	@Nullable
-    public com.microsoft.graph.requests.ContentTypeCollectionPage baseTypes;
+    public com.microsoft.graph.requests.ContentTypeCollectionWithReferencesPage baseTypes;
 
     /**
      * The Column Links.
@@ -188,7 +188,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
      * Column order information in a content type.
      */
 	@Nullable
-    public com.microsoft.graph.requests.ColumnDefinitionCollectionPage columnPositions;
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionWithReferencesPage columnPositions;
 
     /**
      * The Columns.
@@ -210,7 +210,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
 
         if (json.has("baseTypes")) {
-            baseTypes = serializer.deserializeObject(json.get("baseTypes"), com.microsoft.graph.requests.ContentTypeCollectionPage.class);
+            baseTypes = serializer.deserializeObject(json.get("baseTypes"), com.microsoft.graph.requests.ContentTypeCollectionWithReferencesPage.class);
         }
 
         if (json.has("columnLinks")) {
@@ -218,7 +218,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
         }
 
         if (json.has("columnPositions")) {
-            columnPositions = serializer.deserializeObject(json.get("columnPositions"), com.microsoft.graph.requests.ColumnDefinitionCollectionPage.class);
+            columnPositions = serializer.deserializeObject(json.get("columnPositions"), com.microsoft.graph.requests.ColumnDefinitionCollectionWithReferencesPage.class);
         }
 
         if (json.has("columns")) {

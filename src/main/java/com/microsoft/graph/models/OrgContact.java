@@ -160,7 +160,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage directReports;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage directReports;
 
     /**
      * The Manager.
@@ -176,14 +176,14 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage memberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage memberOf;
 
     /**
      * The Transitive Member Of.
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveMemberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage transitiveMemberOf;
 
 
     /**
@@ -196,15 +196,15 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("directReports")) {
-            directReports = serializer.deserializeObject(json.get("directReports"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            directReports = serializer.deserializeObject(json.get("directReports"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
     }
 }

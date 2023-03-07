@@ -11,10 +11,10 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.UserFlowApiConnectorConfiguration;
 import com.microsoft.graph.models.IdentityUserFlow;
-import com.microsoft.graph.requests.IdentityProviderCollectionPage;
+import com.microsoft.graph.requests.IdentityProviderCollectionWithReferencesPage;
 import com.microsoft.graph.requests.UserFlowLanguageConfigurationCollectionPage;
 import com.microsoft.graph.requests.IdentityUserFlowAttributeAssignmentCollectionPage;
-import com.microsoft.graph.requests.IdentityProviderBaseCollectionPage;
+import com.microsoft.graph.requests.IdentityProviderBaseCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -47,7 +47,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
      */
     @Deprecated
 	@Nullable
-    public com.microsoft.graph.requests.IdentityProviderCollectionPage identityProviders;
+    public com.microsoft.graph.requests.IdentityProviderCollectionWithReferencesPage identityProviders;
 
     /**
      * The Languages.
@@ -72,7 +72,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.IdentityProviderBaseCollectionPage userFlowIdentityProviders;
+    public com.microsoft.graph.requests.IdentityProviderBaseCollectionWithReferencesPage userFlowIdentityProviders;
 
 
     /**
@@ -85,7 +85,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
 
         if (json.has("identityProviders")) {
-            identityProviders = serializer.deserializeObject(json.get("identityProviders"), com.microsoft.graph.requests.IdentityProviderCollectionPage.class);
+            identityProviders = serializer.deserializeObject(json.get("identityProviders"), com.microsoft.graph.requests.IdentityProviderCollectionWithReferencesPage.class);
         }
 
         if (json.has("languages")) {
@@ -97,7 +97,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
         }
 
         if (json.has("userFlowIdentityProviders")) {
-            userFlowIdentityProviders = serializer.deserializeObject(json.get("userFlowIdentityProviders"), com.microsoft.graph.requests.IdentityProviderBaseCollectionPage.class);
+            userFlowIdentityProviders = serializer.deserializeObject(json.get("userFlowIdentityProviders"), com.microsoft.graph.requests.IdentityProviderBaseCollectionWithReferencesPage.class);
         }
     }
 }

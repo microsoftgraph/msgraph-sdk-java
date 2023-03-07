@@ -15,7 +15,7 @@ import com.microsoft.graph.security.models.AlertDetermination;
 import com.microsoft.graph.security.models.AlertSeverity;
 import com.microsoft.graph.security.models.IncidentStatus;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.security.requests.AlertCollectionPage;
+import com.microsoft.graph.security.requests.AlertCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -154,7 +154,7 @@ public class Incident extends Entity implements IJsonBackedObject {
      * The list of related alerts. Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.security.requests.AlertCollectionPage alerts;
+    public com.microsoft.graph.security.requests.AlertCollectionWithReferencesPage alerts;
 
 
     /**
@@ -167,7 +167,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
 
         if (json.has("alerts")) {
-            alerts = serializer.deserializeObject(json.get("alerts"), com.microsoft.graph.security.requests.AlertCollectionPage.class);
+            alerts = serializer.deserializeObject(json.get("alerts"), com.microsoft.graph.security.requests.AlertCollectionWithReferencesPage.class);
         }
     }
 }

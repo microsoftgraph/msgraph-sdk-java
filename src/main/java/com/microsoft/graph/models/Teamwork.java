@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WorkforceIntegrationCollectionPage;
+import com.microsoft.graph.requests.DeletedTeamCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -36,6 +37,15 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 	@Nullable
     public com.microsoft.graph.requests.WorkforceIntegrationCollectionPage workforceIntegrations;
 
+    /**
+     * The Deleted Teams.
+     * 
+     */
+    @SerializedName(value = "deletedTeams", alternate = {"DeletedTeams"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.DeletedTeamCollectionPage deletedTeams;
+
 
     /**
      * Sets the raw JSON object
@@ -48,6 +58,10 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
         if (json.has("workforceIntegrations")) {
             workforceIntegrations = serializer.deserializeObject(json.get("workforceIntegrations"), com.microsoft.graph.requests.WorkforceIntegrationCollectionPage.class);
+        }
+
+        if (json.has("deletedTeams")) {
+            deletedTeams = serializer.deserializeObject(json.get("deletedTeams"), com.microsoft.graph.requests.DeletedTeamCollectionPage.class);
         }
     }
 }

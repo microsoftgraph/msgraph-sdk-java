@@ -11,7 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DomainState;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage;
 import com.microsoft.graph.requests.InternalDomainFederationCollectionPage;
 
 
@@ -151,7 +151,7 @@ public class Domain extends Entity implements IJsonBackedObject {
      * The objects such as users and groups that reference the domain ID. Read-only, Nullable. Supports $expand and $filter by the OData type of objects returned. For example /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage domainNameReferences;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage domainNameReferences;
 
     /**
      * The Federation Configuration.
@@ -191,7 +191,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
 
         if (json.has("domainNameReferences")) {
-            domainNameReferences = serializer.deserializeObject(json.get("domainNameReferences"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            domainNameReferences = serializer.deserializeObject(json.get("domainNameReferences"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("federationConfiguration")) {

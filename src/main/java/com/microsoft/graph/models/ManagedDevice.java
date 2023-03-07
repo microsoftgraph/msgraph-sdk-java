@@ -24,7 +24,7 @@ import com.microsoft.graph.models.DeviceCategory;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionPage;
 import com.microsoft.graph.requests.DeviceConfigurationStateCollectionPage;
-import com.microsoft.graph.requests.UserCollectionPage;
+import com.microsoft.graph.requests.UserCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -550,7 +550,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The primary users associated with the managed device.
      */
 	@Nullable
-    public com.microsoft.graph.requests.UserCollectionPage users;
+    public com.microsoft.graph.requests.UserCollectionWithReferencesPage users;
 
 
     /**
@@ -571,7 +571,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
         }
 
         if (json.has("users")) {
-            users = serializer.deserializeObject(json.get("users"), com.microsoft.graph.requests.UserCollectionPage.class);
+            users = serializer.deserializeObject(json.get("users"), com.microsoft.graph.requests.UserCollectionWithReferencesPage.class);
         }
     }
 }

@@ -10,7 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.EntitlementManagementSchedule;
-import com.microsoft.graph.requests.AccessPackageQuestionCollectionPage;
+import com.microsoft.graph.requests.AccessPackageQuestionCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -108,7 +108,7 @@ public class AccessPackageAssignmentRequestRequirements implements IJsonBackedOb
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.AccessPackageQuestionCollectionPage questions;
+    public com.microsoft.graph.requests.AccessPackageQuestionCollectionWithReferencesPage questions;
 
 
     /**

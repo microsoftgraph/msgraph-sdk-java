@@ -135,7 +135,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.ColumnDefinitionCollectionPage externalColumns;
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionWithReferencesPage externalColumns;
 
     /**
      * The Items.
@@ -232,7 +232,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
         }
 
         if (json.has("externalColumns")) {
-            externalColumns = serializer.deserializeObject(json.get("externalColumns"), com.microsoft.graph.requests.ColumnDefinitionCollectionPage.class);
+            externalColumns = serializer.deserializeObject(json.get("externalColumns"), com.microsoft.graph.requests.ColumnDefinitionCollectionWithReferencesPage.class);
         }
 
         if (json.has("items")) {

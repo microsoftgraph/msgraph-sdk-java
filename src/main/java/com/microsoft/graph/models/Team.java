@@ -182,7 +182,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * List of channels either hosted in or shared with the team (incoming channels).
      */
 	@Nullable
-    public com.microsoft.graph.requests.ChannelCollectionPage allChannels;
+    public com.microsoft.graph.requests.ChannelCollectionWithReferencesPage allChannels;
 
     /**
      * The Channels.
@@ -207,7 +207,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * List of channels shared with the team.
      */
 	@Nullable
-    public com.microsoft.graph.requests.ChannelCollectionPage incomingChannels;
+    public com.microsoft.graph.requests.ChannelCollectionWithReferencesPage incomingChannels;
 
     /**
      * The Installed Apps.
@@ -292,7 +292,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
 
         if (json.has("allChannels")) {
-            allChannels = serializer.deserializeObject(json.get("allChannels"), com.microsoft.graph.requests.ChannelCollectionPage.class);
+            allChannels = serializer.deserializeObject(json.get("allChannels"), com.microsoft.graph.requests.ChannelCollectionWithReferencesPage.class);
         }
 
         if (json.has("channels")) {
@@ -300,7 +300,7 @@ public class Team extends Entity implements IJsonBackedObject {
         }
 
         if (json.has("incomingChannels")) {
-            incomingChannels = serializer.deserializeObject(json.get("incomingChannels"), com.microsoft.graph.requests.ChannelCollectionPage.class);
+            incomingChannels = serializer.deserializeObject(json.get("incomingChannels"), com.microsoft.graph.requests.ChannelCollectionWithReferencesPage.class);
         }
 
         if (json.has("installedApps")) {
