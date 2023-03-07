@@ -132,4 +132,14 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
     public TargetedManagedAppConfigurationTargetAppsRequestBuilder targetApps(@Nonnull final TargetedManagedAppConfigurationTargetAppsParameterSet parameters) {
         return new TargetedManagedAppConfigurationTargetAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetApps"), getClient(), null, parameters);
     }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ManagedAppPolicyTargetAppsRequestBuilder targetApps(@Nonnull final ManagedAppPolicyTargetAppsParameterSet parameters) {
+        return new ManagedAppPolicyTargetAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetApps"), getClient(), null, parameters);
+    }
 }

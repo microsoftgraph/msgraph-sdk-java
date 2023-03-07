@@ -13,6 +13,7 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AdministrativeUnitCollectionPage;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.IdentityProviderBaseCollectionPage;
+import com.microsoft.graph.requests.OnPremisesDirectorySynchronizationCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -56,6 +57,15 @@ public class Directory extends Entity implements IJsonBackedObject {
 	@Nullable
     public com.microsoft.graph.requests.IdentityProviderBaseCollectionPage federationConfigurations;
 
+    /**
+     * The On Premises Synchronization.
+     * A container for on-premises directory synchronization functionalities that are available for the organization.
+     */
+    @SerializedName(value = "onPremisesSynchronization", alternate = {"OnPremisesSynchronization"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.OnPremisesDirectorySynchronizationCollectionPage onPremisesSynchronization;
+
 
     /**
      * Sets the raw JSON object
@@ -76,6 +86,10 @@ public class Directory extends Entity implements IJsonBackedObject {
 
         if (json.has("federationConfigurations")) {
             federationConfigurations = serializer.deserializeObject(json.get("federationConfigurations"), com.microsoft.graph.requests.IdentityProviderBaseCollectionPage.class);
+        }
+
+        if (json.has("onPremisesSynchronization")) {
+            onPremisesSynchronization = serializer.deserializeObject(json.get("onPremisesSynchronization"), com.microsoft.graph.requests.OnPremisesDirectorySynchronizationCollectionPage.class);
         }
     }
 }

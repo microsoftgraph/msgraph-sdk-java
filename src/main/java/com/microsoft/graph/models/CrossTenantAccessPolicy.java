@@ -30,7 +30,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements IJsonBackedOb
 
     /**
      * The Allowed Cloud Endpoints.
-     * 
+     * Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn.
      */
     @SerializedName(value = "allowedCloudEndpoints", alternate = {"AllowedCloudEndpoints"})
     @Expose

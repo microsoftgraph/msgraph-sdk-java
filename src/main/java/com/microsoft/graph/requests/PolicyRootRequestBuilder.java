@@ -96,6 +96,26 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
     public com.microsoft.graph.requests.ActivityBasedTimeoutPolicyRequestBuilder activityBasedTimeoutPolicies(@Nonnull final String id) {
         return new com.microsoft.graph.requests.ActivityBasedTimeoutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("activityBasedTimeoutPolicies") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the AppManagementPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AppManagementPolicyCollectionRequestBuilder appManagementPolicies() {
+        return new com.microsoft.graph.requests.AppManagementPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appManagementPolicies"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AppManagementPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AppManagementPolicyRequestBuilder appManagementPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AppManagementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("appManagementPolicies") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for AuthorizationPolicy
@@ -135,6 +155,16 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
     @Nonnull
     public com.microsoft.graph.requests.CrossTenantAccessPolicyRequestBuilder crossTenantAccessPolicy() {
         return new com.microsoft.graph.requests.CrossTenantAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("crossTenantAccessPolicy"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for TenantAppManagementPolicy
+     *
+     * @return the TenantAppManagementPolicyRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.TenantAppManagementPolicyRequestBuilder defaultAppManagementPolicy() {
+        return new com.microsoft.graph.requests.TenantAppManagementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("defaultAppManagementPolicy"), getClient(), null);
     }
     /**
      *  Gets a request builder for the HomeRealmDiscoveryPolicy collection
