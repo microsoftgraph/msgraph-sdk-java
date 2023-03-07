@@ -155,7 +155,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Questions.
-     * 
+     * Questions that are posed to the  requestor.
      */
     @SerializedName(value = "questions", alternate = {"Questions"})
     @Expose

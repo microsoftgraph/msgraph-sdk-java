@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.Team;
+import com.microsoft.graph.models.DeletedTeam;
 import com.microsoft.graph.models.Channel;
 import com.microsoft.graph.models.ProvisionChannelEmailResult;
 import com.microsoft.graph.models.ChatMessage;
@@ -32,7 +32,7 @@ import com.microsoft.graph.models.ChannelDoesUserHaveAccessParameterSet;
 public class ChannelCollectionRequestBuilder extends BaseCollectionRequestBuilder<Channel, ChannelRequestBuilder, ChannelCollectionResponse, ChannelCollectionPage, ChannelCollectionRequest> {
 
     /**
-     * The request builder for this collection of Team
+     * The request builder for this collection of DeletedTeam
      *
      * @param requestUrl     the request URL
      * @param client         the service client

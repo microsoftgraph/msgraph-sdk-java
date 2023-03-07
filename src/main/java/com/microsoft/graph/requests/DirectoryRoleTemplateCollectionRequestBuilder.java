@@ -21,6 +21,7 @@ import com.microsoft.graph.requests.DirectoryRoleTemplateCollectionRequest;
 import com.microsoft.graph.requests.DirectoryObjectValidatePropertiesRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectGetByIdsCollectionRequestBuilder;
+import com.microsoft.graph.requests.DirectoryObjectDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
@@ -79,6 +80,15 @@ public class DirectoryRoleTemplateCollectionRequestBuilder extends BaseCollectio
     @Nonnull
     public DirectoryObjectGetByIdsCollectionRequestBuilder getByIds(@Nonnull final DirectoryObjectGetByIdsParameterSet parameters) {
         return new DirectoryObjectGetByIdsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getByIds"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public DirectoryObjectDeltaCollectionRequestBuilder delta() {
+        return new DirectoryObjectDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
     /**
