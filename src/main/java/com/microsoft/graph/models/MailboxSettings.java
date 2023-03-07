@@ -107,7 +107,7 @@ public class MailboxSettings implements IJsonBackedObject {
 
     /**
      * The User Purpose.
-     * 
+     * The purpose of the mailbox. Differentiates a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Possible values are: user, linked, shared, room, equipment, others, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "userPurpose", alternate = {"UserPurpose"})
     @Expose

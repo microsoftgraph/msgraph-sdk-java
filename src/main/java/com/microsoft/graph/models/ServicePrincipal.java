@@ -19,6 +19,7 @@ import com.microsoft.graph.models.ResourceSpecificPermission;
 import com.microsoft.graph.models.SamlSingleSignOnSettings;
 import com.microsoft.graph.models.VerifiedPublisher;
 import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.requests.AppManagementPolicyCollectionPage;
 import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage;
 import com.microsoft.graph.requests.DelegatedPermissionClassificationCollectionPage;
 import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage;
@@ -340,6 +341,13 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     public VerifiedPublisher verifiedPublisher;
 
     /**
+     * The App Management Policies.
+     * 
+     */
+	@Nullable
+    public com.microsoft.graph.requests.AppManagementPolicyCollectionPage appManagementPolicies;
+
+    /**
      * The App Role Assigned To.
      * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      */
@@ -463,6 +471,10 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("appManagementPolicies")) {
+            appManagementPolicies = serializer.deserializeObject(json.get("appManagementPolicies"), com.microsoft.graph.requests.AppManagementPolicyCollectionPage.class);
+        }
 
         if (json.has("appRoleAssignedTo")) {
             appRoleAssignedTo = serializer.deserializeObject(json.get("appRoleAssignedTo"), com.microsoft.graph.requests.AppRoleAssignmentCollectionPage.class);

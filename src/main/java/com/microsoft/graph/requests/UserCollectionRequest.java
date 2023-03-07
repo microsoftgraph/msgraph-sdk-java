@@ -162,18 +162,6 @@ public class UserCollectionRequest extends BaseEntityCollectionRequest<User, Use
         addCountOption(true);
         return this;
     }
-    /**
-     * Sets the skip value for the request
-     *
-     * @param value of the number of items to skip
-     * @return the updated request
-     */
-    @Nonnull
-    public UserCollectionRequest skip(final int value) {
-        addSkipOption(value);
-        return this;
-    }
-
 
     /**
      * Add Skip token for pagination

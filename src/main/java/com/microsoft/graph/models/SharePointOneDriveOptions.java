@@ -40,7 +40,7 @@ public class SharePointOneDriveOptions implements IJsonBackedObject {
 
     /**
      * The Include Content.
-     * 
+     * The type of search content. The possible values are: sharedContent, privateContent, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "includeContent", alternate = {"IncludeContent"})
     @Expose
