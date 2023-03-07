@@ -5,29 +5,28 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AlertHistoryState implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The appId property */
-    private String _appId;
+    private String appId;
     /** The assignedTo property */
-    private String _assignedTo;
+    private String assignedTo;
     /** The comments property */
-    private java.util.List<String> _comments;
+    private java.util.List<String> comments;
     /** The feedback property */
-    private AlertFeedback _feedback;
+    private AlertFeedback feedback;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The status property */
-    private AlertStatus _status;
+    private AlertStatus status;
     /** The updatedDateTime property */
-    private OffsetDateTime _updatedDateTime;
+    private OffsetDateTime updatedDateTime;
     /** The user property */
-    private String _user;
+    private String user;
     /**
      * Instantiates a new alertHistoryState and sets the default values.
      * @return a void
@@ -52,7 +51,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the appId property value. The appId property
@@ -60,7 +59,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAppId() {
-        return this._appId;
+        return this.appId;
     }
     /**
      * Gets the assignedTo property value. The assignedTo property
@@ -68,7 +67,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAssignedTo() {
-        return this._assignedTo;
+        return this.assignedTo;
     }
     /**
      * Gets the comments property value. The comments property
@@ -76,7 +75,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getComments() {
-        return this._comments;
+        return this.comments;
     }
     /**
      * Gets the feedback property value. The feedback property
@@ -84,15 +83,15 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public AlertFeedback getFeedback() {
-        return this._feedback;
+        return this.feedback;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getStringValue()); });
         deserializerMap.put("comments", (n) -> { this.setComments(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -109,7 +108,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the status property value. The status property
@@ -117,7 +116,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public AlertStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the updatedDateTime property value. The updatedDateTime property
@@ -125,7 +124,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getUpdatedDateTime() {
-        return this._updatedDateTime;
+        return this.updatedDateTime;
     }
     /**
      * Gets the user property value. The user property
@@ -133,7 +132,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getUser() {
-        return this._user;
+        return this.user;
     }
     /**
      * Serializes information the current object
@@ -160,7 +159,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the appId property value. The appId property
@@ -169,7 +168,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
-        this._appId = value;
+        this.appId = value;
     }
     /**
      * Sets the assignedTo property value. The assignedTo property
@@ -178,7 +177,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAssignedTo(@javax.annotation.Nullable final String value) {
-        this._assignedTo = value;
+        this.assignedTo = value;
     }
     /**
      * Sets the comments property value. The comments property
@@ -187,7 +186,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setComments(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._comments = value;
+        this.comments = value;
     }
     /**
      * Sets the feedback property value. The feedback property
@@ -196,7 +195,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFeedback(@javax.annotation.Nullable final AlertFeedback value) {
-        this._feedback = value;
+        this.feedback = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -205,7 +204,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the status property value. The status property
@@ -214,7 +213,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final AlertStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the updatedDateTime property value. The updatedDateTime property
@@ -223,7 +222,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._updatedDateTime = value;
+        this.updatedDateTime = value;
     }
     /**
      * Sets the user property value. The user property
@@ -232,6 +231,6 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUser(@javax.annotation.Nullable final String value) {
-        this._user = value;
+        this.user = value;
     }
 }

@@ -5,31 +5,30 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.Period;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The number of days that a request can be pending a response before it is automatically denied. */
-    private Period _durationBeforeAutomaticDenial;
+    private Period durationBeforeAutomaticDenial;
     /** If escalation is required, the time a request can be pending a response from a primary approver. */
-    private Period _durationBeforeEscalation;
+    private Period durationBeforeEscalation;
     /** If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests. */
-    private java.util.List<SubjectSet> _escalationApprovers;
+    private java.util.List<SubjectSet> escalationApprovers;
     /** The subjects, typically users, who are the fallback escalation approvers. */
-    private java.util.List<SubjectSet> _fallbackEscalationApprovers;
+    private java.util.List<SubjectSet> fallbackEscalationApprovers;
     /** The subjects, typically users, who are the fallback primary approvers. */
-    private java.util.List<SubjectSet> _fallbackPrimaryApprovers;
+    private java.util.List<SubjectSet> fallbackPrimaryApprovers;
     /** Indicates whether the approver is required to provide a justification for approving a request. */
-    private Boolean _isApproverJustificationRequired;
+    private Boolean isApproverJustificationRequired;
     /** If true, then one or more escalationApprovers are configured in this approval stage. */
-    private Boolean _isEscalationEnabled;
+    private Boolean isEscalationEnabled;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors. */
-    private java.util.List<SubjectSet> _primaryApprovers;
+    private java.util.List<SubjectSet> primaryApprovers;
     /**
      * Instantiates a new accessPackageApprovalStage and sets the default values.
      * @return a void
@@ -54,7 +53,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the durationBeforeAutomaticDenial property value. The number of days that a request can be pending a response before it is automatically denied.
@@ -62,7 +61,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Period getDurationBeforeAutomaticDenial() {
-        return this._durationBeforeAutomaticDenial;
+        return this.durationBeforeAutomaticDenial;
     }
     /**
      * Gets the durationBeforeEscalation property value. If escalation is required, the time a request can be pending a response from a primary approver.
@@ -70,7 +69,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Period getDurationBeforeEscalation() {
-        return this._durationBeforeEscalation;
+        return this.durationBeforeEscalation;
     }
     /**
      * Gets the escalationApprovers property value. If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
@@ -78,7 +77,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public java.util.List<SubjectSet> getEscalationApprovers() {
-        return this._escalationApprovers;
+        return this.escalationApprovers;
     }
     /**
      * Gets the fallbackEscalationApprovers property value. The subjects, typically users, who are the fallback escalation approvers.
@@ -86,7 +85,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public java.util.List<SubjectSet> getFallbackEscalationApprovers() {
-        return this._fallbackEscalationApprovers;
+        return this.fallbackEscalationApprovers;
     }
     /**
      * Gets the fallbackPrimaryApprovers property value. The subjects, typically users, who are the fallback primary approvers.
@@ -94,15 +93,15 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public java.util.List<SubjectSet> getFallbackPrimaryApprovers() {
-        return this._fallbackPrimaryApprovers;
+        return this.fallbackPrimaryApprovers;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("durationBeforeAutomaticDenial", (n) -> { this.setDurationBeforeAutomaticDenial(n.getPeriodValue()); });
         deserializerMap.put("durationBeforeEscalation", (n) -> { this.setDurationBeforeEscalation(n.getPeriodValue()); });
         deserializerMap.put("escalationApprovers", (n) -> { this.setEscalationApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
@@ -120,7 +119,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Boolean getIsApproverJustificationRequired() {
-        return this._isApproverJustificationRequired;
+        return this.isApproverJustificationRequired;
     }
     /**
      * Gets the isEscalationEnabled property value. If true, then one or more escalationApprovers are configured in this approval stage.
@@ -128,7 +127,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Boolean getIsEscalationEnabled() {
-        return this._isEscalationEnabled;
+        return this.isEscalationEnabled;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -136,7 +135,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors.
@@ -144,7 +143,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public java.util.List<SubjectSet> getPrimaryApprovers() {
-        return this._primaryApprovers;
+        return this.primaryApprovers;
     }
     /**
      * Serializes information the current object
@@ -172,7 +171,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the durationBeforeAutomaticDenial property value. The number of days that a request can be pending a response before it is automatically denied.
@@ -181,7 +180,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setDurationBeforeAutomaticDenial(@javax.annotation.Nullable final Period value) {
-        this._durationBeforeAutomaticDenial = value;
+        this.durationBeforeAutomaticDenial = value;
     }
     /**
      * Sets the durationBeforeEscalation property value. If escalation is required, the time a request can be pending a response from a primary approver.
@@ -190,7 +189,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setDurationBeforeEscalation(@javax.annotation.Nullable final Period value) {
-        this._durationBeforeEscalation = value;
+        this.durationBeforeEscalation = value;
     }
     /**
      * Sets the escalationApprovers property value. If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
@@ -199,7 +198,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setEscalationApprovers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
-        this._escalationApprovers = value;
+        this.escalationApprovers = value;
     }
     /**
      * Sets the fallbackEscalationApprovers property value. The subjects, typically users, who are the fallback escalation approvers.
@@ -208,7 +207,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setFallbackEscalationApprovers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
-        this._fallbackEscalationApprovers = value;
+        this.fallbackEscalationApprovers = value;
     }
     /**
      * Sets the fallbackPrimaryApprovers property value. The subjects, typically users, who are the fallback primary approvers.
@@ -217,7 +216,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setFallbackPrimaryApprovers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
-        this._fallbackPrimaryApprovers = value;
+        this.fallbackPrimaryApprovers = value;
     }
     /**
      * Sets the isApproverJustificationRequired property value. Indicates whether the approver is required to provide a justification for approving a request.
@@ -226,7 +225,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setIsApproverJustificationRequired(@javax.annotation.Nullable final Boolean value) {
-        this._isApproverJustificationRequired = value;
+        this.isApproverJustificationRequired = value;
     }
     /**
      * Sets the isEscalationEnabled property value. If true, then one or more escalationApprovers are configured in this approval stage.
@@ -235,7 +234,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setIsEscalationEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isEscalationEnabled = value;
+        this.isEscalationEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -244,7 +243,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors.
@@ -253,6 +252,6 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setPrimaryApprovers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
-        this._primaryApprovers = value;
+        this.primaryApprovers = value;
     }
 }

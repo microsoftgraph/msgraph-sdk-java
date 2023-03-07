@@ -1,65 +1,46 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AndroidLobApp;
-import com.microsoft.graph.models.AndroidStoreApp;
-import com.microsoft.graph.models.IosLobApp;
-import com.microsoft.graph.models.IosStoreApp;
-import com.microsoft.graph.models.IosVppApp;
-import com.microsoft.graph.models.MacOSLobApp;
-import com.microsoft.graph.models.MacOSMicrosoftEdgeApp;
-import com.microsoft.graph.models.MacOSOfficeSuiteApp;
-import com.microsoft.graph.models.ManagedAndroidLobApp;
-import com.microsoft.graph.models.ManagedAndroidStoreApp;
-import com.microsoft.graph.models.ManagedApp;
-import com.microsoft.graph.models.ManagedIOSLobApp;
-import com.microsoft.graph.models.ManagedIOSStoreApp;
-import com.microsoft.graph.models.ManagedMobileLobApp;
-import com.microsoft.graph.models.MicrosoftStoreForBusinessApp;
-import com.microsoft.graph.models.MobileLobApp;
-import com.microsoft.graph.models.WebApp;
-import com.microsoft.graph.models.Win32LobApp;
-import com.microsoft.graph.models.WindowsMobileMSI;
-import com.microsoft.graph.models.WindowsUniversalAppX;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** An abstract class containing the base properties for Intune mobile apps. */
+/**
+ * An abstract class containing the base properties for Intune mobile apps.
+ */
 public class MobileApp extends Entity implements Parsable {
     /** The list of group assignments for this mobile app. */
-    private java.util.List<MobileAppAssignment> _assignments;
+    private java.util.List<MobileAppAssignment> assignments;
     /** The list of categories for this app. */
-    private java.util.List<MobileAppCategory> _categories;
+    private java.util.List<MobileAppCategory> categories;
     /** The date and time the app was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The description of the app. */
-    private String _description;
+    private String description;
     /** The developer of the app. */
-    private String _developer;
+    private String developer;
     /** The admin provided or imported title of the app. */
-    private String _displayName;
+    private String displayName;
     /** The more information Url. */
-    private String _informationUrl;
+    private String informationUrl;
     /** The value indicating whether the app is marked as featured by the admin. */
-    private Boolean _isFeatured;
+    private Boolean isFeatured;
     /** The large icon, to be displayed in the app details and used for upload of the icon. */
-    private MimeContent _largeIcon;
+    private MimeContent largeIcon;
     /** The date and time the app was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** Notes for the app. */
-    private String _notes;
+    private String notes;
     /** The owner of the app. */
-    private String _owner;
+    private String owner;
     /** The privacy statement Url. */
-    private String _privacyInformationUrl;
+    private String privacyInformationUrl;
     /** The publisher of the app. */
-    private String _publisher;
+    private String publisher;
     /** Indicates the publishing state of an app. */
-    private MobileAppPublishingState _publishingState;
+    private MobileAppPublishingState publishingState;
     /**
      * Instantiates a new mobileApp and sets the default values.
      * @return a void
@@ -82,6 +63,7 @@ public class MobileApp extends Entity implements Parsable {
             switch (mappingValue) {
                 case "#microsoft.graph.androidLobApp": return new AndroidLobApp();
                 case "#microsoft.graph.androidStoreApp": return new AndroidStoreApp();
+                case "#microsoft.graph.iosiPadOSWebClip": return new IosiPadOSWebClip();
                 case "#microsoft.graph.iosLobApp": return new IosLobApp();
                 case "#microsoft.graph.iosStoreApp": return new IosStoreApp();
                 case "#microsoft.graph.iosVppApp": return new IosVppApp();
@@ -98,8 +80,10 @@ public class MobileApp extends Entity implements Parsable {
                 case "#microsoft.graph.mobileLobApp": return new MobileLobApp();
                 case "#microsoft.graph.webApp": return new WebApp();
                 case "#microsoft.graph.win32LobApp": return new Win32LobApp();
+                case "#microsoft.graph.windowsMicrosoftEdgeApp": return new WindowsMicrosoftEdgeApp();
                 case "#microsoft.graph.windowsMobileMSI": return new WindowsMobileMSI();
                 case "#microsoft.graph.windowsUniversalAppX": return new WindowsUniversalAppX();
+                case "#microsoft.graph.windowsWebApp": return new WindowsWebApp();
             }
         }
         return new MobileApp();
@@ -110,7 +94,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MobileAppAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * Gets the categories property value. The list of categories for this app.
@@ -118,7 +102,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MobileAppCategory> getCategories() {
-        return this._categories;
+        return this.categories;
     }
     /**
      * Gets the createdDateTime property value. The date and time the app was created.
@@ -126,7 +110,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. The description of the app.
@@ -134,7 +118,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the developer property value. The developer of the app.
@@ -142,7 +126,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeveloper() {
-        return this._developer;
+        return this.developer;
     }
     /**
      * Gets the displayName property value. The admin provided or imported title of the app.
@@ -150,15 +134,15 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(MobileAppAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfObjectValues(MobileAppCategory::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -182,7 +166,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInformationUrl() {
-        return this._informationUrl;
+        return this.informationUrl;
     }
     /**
      * Gets the isFeatured property value. The value indicating whether the app is marked as featured by the admin.
@@ -190,7 +174,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsFeatured() {
-        return this._isFeatured;
+        return this.isFeatured;
     }
     /**
      * Gets the largeIcon property value. The large icon, to be displayed in the app details and used for upload of the icon.
@@ -198,7 +182,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public MimeContent getLargeIcon() {
-        return this._largeIcon;
+        return this.largeIcon;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the app was last modified.
@@ -206,7 +190,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the notes property value. Notes for the app.
@@ -214,7 +198,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getNotes() {
-        return this._notes;
+        return this.notes;
     }
     /**
      * Gets the owner property value. The owner of the app.
@@ -222,7 +206,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOwner() {
-        return this._owner;
+        return this.owner;
     }
     /**
      * Gets the privacyInformationUrl property value. The privacy statement Url.
@@ -230,7 +214,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPrivacyInformationUrl() {
-        return this._privacyInformationUrl;
+        return this.privacyInformationUrl;
     }
     /**
      * Gets the publisher property value. The publisher of the app.
@@ -238,7 +222,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPublisher() {
-        return this._publisher;
+        return this.publisher;
     }
     /**
      * Gets the publishingState property value. Indicates the publishing state of an app.
@@ -246,7 +230,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public MobileAppPublishingState getPublishingState() {
-        return this._publishingState;
+        return this.publishingState;
     }
     /**
      * Serializes information the current object
@@ -280,7 +264,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<MobileAppAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the categories property value. The list of categories for this app.
@@ -289,7 +273,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<MobileAppCategory> value) {
-        this._categories = value;
+        this.categories = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time the app was created.
@@ -298,7 +282,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description of the app.
@@ -307,7 +291,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the developer property value. The developer of the app.
@@ -316,7 +300,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeveloper(@javax.annotation.Nullable final String value) {
-        this._developer = value;
+        this.developer = value;
     }
     /**
      * Sets the displayName property value. The admin provided or imported title of the app.
@@ -325,7 +309,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the informationUrl property value. The more information Url.
@@ -334,7 +318,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInformationUrl(@javax.annotation.Nullable final String value) {
-        this._informationUrl = value;
+        this.informationUrl = value;
     }
     /**
      * Sets the isFeatured property value. The value indicating whether the app is marked as featured by the admin.
@@ -343,7 +327,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsFeatured(@javax.annotation.Nullable final Boolean value) {
-        this._isFeatured = value;
+        this.isFeatured = value;
     }
     /**
      * Sets the largeIcon property value. The large icon, to be displayed in the app details and used for upload of the icon.
@@ -352,7 +336,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLargeIcon(@javax.annotation.Nullable final MimeContent value) {
-        this._largeIcon = value;
+        this.largeIcon = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the app was last modified.
@@ -361,7 +345,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the notes property value. Notes for the app.
@@ -370,7 +354,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final String value) {
-        this._notes = value;
+        this.notes = value;
     }
     /**
      * Sets the owner property value. The owner of the app.
@@ -379,7 +363,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOwner(@javax.annotation.Nullable final String value) {
-        this._owner = value;
+        this.owner = value;
     }
     /**
      * Sets the privacyInformationUrl property value. The privacy statement Url.
@@ -388,7 +372,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPrivacyInformationUrl(@javax.annotation.Nullable final String value) {
-        this._privacyInformationUrl = value;
+        this.privacyInformationUrl = value;
     }
     /**
      * Sets the publisher property value. The publisher of the app.
@@ -397,7 +381,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
-        this._publisher = value;
+        this.publisher = value;
     }
     /**
      * Sets the publishingState property value. Indicates the publishing state of an app.
@@ -406,6 +390,6 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPublishingState(@javax.annotation.Nullable final MobileAppPublishingState value) {
-        this._publishingState = value;
+        this.publishingState = value;
     }
 }

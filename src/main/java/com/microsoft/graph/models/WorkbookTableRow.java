@@ -3,16 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookTableRow extends Entity implements Parsable {
     /** Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only. */
-    private Integer _index;
+    private Integer index;
     /** Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string. */
-    private Json _values;
+    private Json values;
     /**
      * Instantiates a new workbookTableRow and sets the default values.
      * @return a void
@@ -33,11 +31,11 @@ public class WorkbookTableRow extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("index", (n) -> { this.setIndex(n.getIntegerValue()); });
         deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -48,7 +46,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getIndex() {
-        return this._index;
+        return this.index;
     }
     /**
      * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
@@ -56,7 +54,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Json getValues() {
-        return this._values;
+        return this.values;
     }
     /**
      * Serializes information the current object
@@ -77,7 +75,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIndex(@javax.annotation.Nullable final Integer value) {
-        this._index = value;
+        this.index = value;
     }
     /**
      * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
@@ -86,6 +84,6 @@ public class WorkbookTableRow extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setValues(@javax.annotation.Nullable final Json value) {
-        this._values = value;
+        this.values = value;
     }
 }

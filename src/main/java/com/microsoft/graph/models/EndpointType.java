@@ -3,9 +3,8 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the cloudCommunications singleton. */
 public enum EndpointType implements ValuedEnum {
-    Default_escaped("default_escaped"),
+    DefaultEscaped("defaultEscaped"),
     Voicemail("voicemail"),
     SkypeForBusiness("skypeForBusiness"),
     SkypeForBusinessVoipPhone("skypeForBusinessVoipPhone"),
@@ -20,7 +19,7 @@ public enum EndpointType implements ValuedEnum {
     public static EndpointType forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "default": return Default_escaped;
+            case "default": return DefaultEscaped;
             case "voicemail": return Voicemail;
             case "skypeForBusiness": return SkypeForBusiness;
             case "skypeForBusinessVoipPhone": return SkypeForBusinessVoipPhone;

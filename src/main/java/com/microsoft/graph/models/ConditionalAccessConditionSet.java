@@ -4,35 +4,34 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Applications and user actions included in and excluded from the policy. Required. */
-    private ConditionalAccessApplications _applications;
+    private ConditionalAccessApplications applications;
     /** Client applications (service principals and workload identities) included in and excluded from the policy. Either users or clientApplications is required. */
-    private ConditionalAccessClientApplications _clientApplications;
+    private ConditionalAccessClientApplications clientApplications;
     /** Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required. */
-    private java.util.List<ConditionalAccessClientApp> _clientAppTypes;
+    private java.util.List<ConditionalAccessClientApp> clientAppTypes;
     /** Devices in the policy. */
-    private ConditionalAccessDevices _devices;
+    private ConditionalAccessDevices devices;
     /** Locations included in and excluded from the policy. */
-    private ConditionalAccessLocations _locations;
+    private ConditionalAccessLocations locations;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Platforms included in and excluded from the policy. */
-    private ConditionalAccessPlatforms _platforms;
+    private ConditionalAccessPlatforms platforms;
     /** Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue. */
-    private java.util.List<RiskLevel> _servicePrincipalRiskLevels;
+    private java.util.List<RiskLevel> servicePrincipalRiskLevels;
     /** Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required. */
-    private java.util.List<RiskLevel> _signInRiskLevels;
+    private java.util.List<RiskLevel> signInRiskLevels;
     /** User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required. */
-    private java.util.List<RiskLevel> _userRiskLevels;
+    private java.util.List<RiskLevel> userRiskLevels;
     /** Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required. */
-    private ConditionalAccessUsers _users;
+    private ConditionalAccessUsers users;
     /**
      * Instantiates a new conditionalAccessConditionSet and sets the default values.
      * @return a void
@@ -57,7 +56,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the applications property value. Applications and user actions included in and excluded from the policy. Required.
@@ -65,7 +64,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public ConditionalAccessApplications getApplications() {
-        return this._applications;
+        return this.applications;
     }
     /**
      * Gets the clientApplications property value. Client applications (service principals and workload identities) included in and excluded from the policy. Either users or clientApplications is required.
@@ -73,7 +72,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public ConditionalAccessClientApplications getClientApplications() {
-        return this._clientApplications;
+        return this.clientApplications;
     }
     /**
      * Gets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
@@ -81,7 +80,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public java.util.List<ConditionalAccessClientApp> getClientAppTypes() {
-        return this._clientAppTypes;
+        return this.clientAppTypes;
     }
     /**
      * Gets the devices property value. Devices in the policy.
@@ -89,15 +88,15 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public ConditionalAccessDevices getDevices() {
-        return this._devices;
+        return this.devices;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(11);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("applications", (n) -> { this.setApplications(n.getObjectValue(ConditionalAccessApplications::createFromDiscriminatorValue)); });
         deserializerMap.put("clientApplications", (n) -> { this.setClientApplications(n.getObjectValue(ConditionalAccessClientApplications::createFromDiscriminatorValue)); });
         deserializerMap.put("clientAppTypes", (n) -> { this.setClientAppTypes(n.getCollectionOfEnumValues(ConditionalAccessClientApp.class)); });
@@ -117,7 +116,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public ConditionalAccessLocations getLocations() {
-        return this._locations;
+        return this.locations;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -125,7 +124,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the platforms property value. Platforms included in and excluded from the policy.
@@ -133,7 +132,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public ConditionalAccessPlatforms getPlatforms() {
-        return this._platforms;
+        return this.platforms;
     }
     /**
      * Gets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
@@ -141,7 +140,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public java.util.List<RiskLevel> getServicePrincipalRiskLevels() {
-        return this._servicePrincipalRiskLevels;
+        return this.servicePrincipalRiskLevels;
     }
     /**
      * Gets the signInRiskLevels property value. Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
@@ -149,7 +148,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public java.util.List<RiskLevel> getSignInRiskLevels() {
-        return this._signInRiskLevels;
+        return this.signInRiskLevels;
     }
     /**
      * Gets the userRiskLevels property value. User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
@@ -157,7 +156,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public java.util.List<RiskLevel> getUserRiskLevels() {
-        return this._userRiskLevels;
+        return this.userRiskLevels;
     }
     /**
      * Gets the users property value. Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
@@ -165,7 +164,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public ConditionalAccessUsers getUsers() {
-        return this._users;
+        return this.users;
     }
     /**
      * Serializes information the current object
@@ -195,7 +194,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the applications property value. Applications and user actions included in and excluded from the policy. Required.
@@ -204,7 +203,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setApplications(@javax.annotation.Nullable final ConditionalAccessApplications value) {
-        this._applications = value;
+        this.applications = value;
     }
     /**
      * Sets the clientApplications property value. Client applications (service principals and workload identities) included in and excluded from the policy. Either users or clientApplications is required.
@@ -213,7 +212,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setClientApplications(@javax.annotation.Nullable final ConditionalAccessClientApplications value) {
-        this._clientApplications = value;
+        this.clientApplications = value;
     }
     /**
      * Sets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
@@ -222,7 +221,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setClientAppTypes(@javax.annotation.Nullable final java.util.List<ConditionalAccessClientApp> value) {
-        this._clientAppTypes = value;
+        this.clientAppTypes = value;
     }
     /**
      * Sets the devices property value. Devices in the policy.
@@ -231,7 +230,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setDevices(@javax.annotation.Nullable final ConditionalAccessDevices value) {
-        this._devices = value;
+        this.devices = value;
     }
     /**
      * Sets the locations property value. Locations included in and excluded from the policy.
@@ -240,7 +239,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setLocations(@javax.annotation.Nullable final ConditionalAccessLocations value) {
-        this._locations = value;
+        this.locations = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -249,7 +248,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the platforms property value. Platforms included in and excluded from the policy.
@@ -258,7 +257,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setPlatforms(@javax.annotation.Nullable final ConditionalAccessPlatforms value) {
-        this._platforms = value;
+        this.platforms = value;
     }
     /**
      * Sets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
@@ -267,7 +266,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setServicePrincipalRiskLevels(@javax.annotation.Nullable final java.util.List<RiskLevel> value) {
-        this._servicePrincipalRiskLevels = value;
+        this.servicePrincipalRiskLevels = value;
     }
     /**
      * Sets the signInRiskLevels property value. Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
@@ -276,7 +275,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setSignInRiskLevels(@javax.annotation.Nullable final java.util.List<RiskLevel> value) {
-        this._signInRiskLevels = value;
+        this.signInRiskLevels = value;
     }
     /**
      * Sets the userRiskLevels property value. User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
@@ -285,7 +284,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setUserRiskLevels(@javax.annotation.Nullable final java.util.List<RiskLevel> value) {
-        this._userRiskLevels = value;
+        this.userRiskLevels = value;
     }
     /**
      * Sets the users property value. Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
@@ -294,6 +293,6 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setUsers(@javax.annotation.Nullable final ConditionalAccessUsers value) {
-        this._users = value;
+        this.users = value;
     }
 }

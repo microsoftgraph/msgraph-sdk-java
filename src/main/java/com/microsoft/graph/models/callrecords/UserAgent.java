@@ -1,24 +1,21 @@
 package com.microsoft.graph.models.callrecords;
 
-import com.microsoft.graph.models.callrecords.ClientUserAgent;
-import com.microsoft.graph.models.callrecords.ServiceUserAgent;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserAgent implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Identifies the version of application software used by this endpoint. */
-    private String _applicationVersion;
+    private String applicationVersion;
     /** User-agent header value reported by this endpoint. */
-    private String _headerValue;
+    private String headerValue;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new userAgent and sets the default values.
      * @return a void
@@ -51,7 +48,7 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the applicationVersion property value. Identifies the version of application software used by this endpoint.
@@ -59,15 +56,15 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getApplicationVersion() {
-        return this._applicationVersion;
+        return this.applicationVersion;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("applicationVersion", (n) -> { this.setApplicationVersion(n.getStringValue()); });
         deserializerMap.put("headerValue", (n) -> { this.setHeaderValue(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -79,7 +76,7 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getHeaderValue() {
-        return this._headerValue;
+        return this.headerValue;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -87,7 +84,7 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -109,7 +106,7 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the applicationVersion property value. Identifies the version of application software used by this endpoint.
@@ -118,7 +115,7 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setApplicationVersion(@javax.annotation.Nullable final String value) {
-        this._applicationVersion = value;
+        this.applicationVersion = value;
     }
     /**
      * Sets the headerValue property value. User-agent header value reported by this endpoint.
@@ -127,7 +124,7 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setHeaderValue(@javax.annotation.Nullable final String value) {
-        this._headerValue = value;
+        this.headerValue = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -136,6 +133,6 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

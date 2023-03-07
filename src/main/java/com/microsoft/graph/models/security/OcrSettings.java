@@ -5,21 +5,20 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.Period;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OcrSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Indicates whether or not OCR is enabled for the case. */
-    private Boolean _isEnabled;
+    private Boolean isEnabled;
     /** Maximum image size that will be processed in KB). */
-    private Integer _maxImageSize;
+    private Integer maxImageSize;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The timeout duration for the OCR engine. A longer timeout might increase success of OCR, but might add to the total processing time. */
-    private Period _timeout;
+    private Period timeout;
     /**
      * Instantiates a new ocrSettings and sets the default values.
      * @return a void
@@ -44,15 +43,15 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("maxImageSize", (n) -> { this.setMaxImageSize(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -65,7 +64,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this._isEnabled;
+        return this.isEnabled;
     }
     /**
      * Gets the maxImageSize property value. Maximum image size that will be processed in KB).
@@ -73,7 +72,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getMaxImageSize() {
-        return this._maxImageSize;
+        return this.maxImageSize;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -81,7 +80,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the timeout property value. The timeout duration for the OCR engine. A longer timeout might increase success of OCR, but might add to the total processing time.
@@ -89,7 +88,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Period getTimeout() {
-        return this._timeout;
+        return this.timeout;
     }
     /**
      * Serializes information the current object
@@ -112,7 +111,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the isEnabled property value. Indicates whether or not OCR is enabled for the case.
@@ -121,7 +120,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isEnabled = value;
+        this.isEnabled = value;
     }
     /**
      * Sets the maxImageSize property value. Maximum image size that will be processed in KB).
@@ -130,7 +129,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMaxImageSize(@javax.annotation.Nullable final Integer value) {
-        this._maxImageSize = value;
+        this.maxImageSize = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -139,7 +138,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the timeout property value. The timeout duration for the OCR engine. A longer timeout might increase success of OCR, but might add to the total processing time.
@@ -148,6 +147,6 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTimeout(@javax.annotation.Nullable final Period value) {
-        this._timeout = value;
+        this.timeout = value;
     }
 }

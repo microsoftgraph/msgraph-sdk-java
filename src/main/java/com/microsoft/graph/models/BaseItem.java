@@ -1,42 +1,35 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.Drive;
-import com.microsoft.graph.models.DriveItem;
-import com.microsoft.graph.models.List;
-import com.microsoft.graph.models.ListItem;
-import com.microsoft.graph.models.SharedDriveItem;
-import com.microsoft.graph.models.Site;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BaseItem extends Entity implements Parsable {
     /** Identity of the user, device, or application which created the item. Read-only. */
-    private IdentitySet _createdBy;
+    private IdentitySet createdBy;
     /** Identity of the user who created the item. Read-only. */
-    private User _createdByUser;
+    private User createdByUser;
     /** Date and time of item creation. Read-only. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Provides a user-visible description of the item. Optional. */
-    private String _description;
+    private String description;
     /** ETag for the item. Read-only. */
-    private String _eTag;
+    private String eTag;
     /** Identity of the user, device, and application which last modified the item. Read-only. */
-    private IdentitySet _lastModifiedBy;
+    private IdentitySet lastModifiedBy;
     /** Identity of the user who last modified the item. Read-only. */
-    private User _lastModifiedByUser;
+    private User lastModifiedByUser;
     /** Date and time the item was last modified. Read-only. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The name of the item. Read-write. */
-    private String _name;
+    private String name;
     /** Parent information, if the item has a parent. Read-write. */
-    private ItemReference _parentReference;
+    private ItemReference parentReference;
     /** URL that displays the resource in the browser. Read-only. */
-    private String _webUrl;
+    private String webUrl;
     /**
      * Instantiates a new baseItem and sets the default values.
      * @return a void
@@ -73,7 +66,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdByUser property value. Identity of the user who created the item. Read-only.
@@ -81,7 +74,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public User getCreatedByUser() {
-        return this._createdByUser;
+        return this.createdByUser;
     }
     /**
      * Gets the createdDateTime property value. Date and time of item creation. Read-only.
@@ -89,7 +82,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. Provides a user-visible description of the item. Optional.
@@ -97,7 +90,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the eTag property value. ETag for the item. Read-only.
@@ -105,15 +98,15 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getETag() {
-        return this._eTag;
+        return this.eTag;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdByUser", (n) -> { this.setCreatedByUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -133,7 +126,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this._lastModifiedBy;
+        return this.lastModifiedBy;
     }
     /**
      * Gets the lastModifiedByUser property value. Identity of the user who last modified the item. Read-only.
@@ -141,7 +134,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public User getLastModifiedByUser() {
-        return this._lastModifiedByUser;
+        return this.lastModifiedByUser;
     }
     /**
      * Gets the lastModifiedDateTime property value. Date and time the item was last modified. Read-only.
@@ -149,7 +142,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the name property value. The name of the item. Read-write.
@@ -157,7 +150,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the parentReference property value. Parent information, if the item has a parent. Read-write.
@@ -165,7 +158,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ItemReference getParentReference() {
-        return this._parentReference;
+        return this.parentReference;
     }
     /**
      * Gets the webUrl property value. URL that displays the resource in the browser. Read-only.
@@ -173,7 +166,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getWebUrl() {
-        return this._webUrl;
+        return this.webUrl;
     }
     /**
      * Serializes information the current object
@@ -203,7 +196,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdByUser property value. Identity of the user who created the item. Read-only.
@@ -212,7 +205,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedByUser(@javax.annotation.Nullable final User value) {
-        this._createdByUser = value;
+        this.createdByUser = value;
     }
     /**
      * Sets the createdDateTime property value. Date and time of item creation. Read-only.
@@ -221,7 +214,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Provides a user-visible description of the item. Optional.
@@ -230,7 +223,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the eTag property value. ETag for the item. Read-only.
@@ -239,7 +232,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setETag(@javax.annotation.Nullable final String value) {
-        this._eTag = value;
+        this.eTag = value;
     }
     /**
      * Sets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
@@ -248,7 +241,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._lastModifiedBy = value;
+        this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedByUser property value. Identity of the user who last modified the item. Read-only.
@@ -257,7 +250,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedByUser(@javax.annotation.Nullable final User value) {
-        this._lastModifiedByUser = value;
+        this.lastModifiedByUser = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Date and time the item was last modified. Read-only.
@@ -266,7 +259,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the name property value. The name of the item. Read-write.
@@ -275,7 +268,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the parentReference property value. Parent information, if the item has a parent. Read-write.
@@ -284,7 +277,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setParentReference(@javax.annotation.Nullable final ItemReference value) {
-        this._parentReference = value;
+        this.parentReference = value;
     }
     /**
      * Sets the webUrl property value. URL that displays the resource in the browser. Read-only.
@@ -293,6 +286,6 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
-        this._webUrl = value;
+        this.webUrl = value;
     }
 }

@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RelatedContact implements AdditionalDataHolder, Parsable {
     /** Indicates whether the user has been consented to access student data. */
-    private Boolean _accessConsent;
+    private Boolean accessConsent;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Name of the contact. Required. */
-    private String _displayName;
+    private String displayName;
     /** Primary email address of the contact. Required. */
-    private String _emailAddress;
+    private String emailAddress;
     /** Mobile phone number of the contact. */
-    private String _mobilePhone;
+    private String mobilePhone;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The relationship property */
-    private ContactRelationship _relationship;
+    private ContactRelationship relationship;
     /**
      * Instantiates a new relatedContact and sets the default values.
      * @return a void
@@ -47,7 +46,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAccessConsent() {
-        return this._accessConsent;
+        return this.accessConsent;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -55,7 +54,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the displayName property value. Name of the contact. Required.
@@ -63,7 +62,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the emailAddress property value. Primary email address of the contact. Required.
@@ -71,15 +70,15 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getEmailAddress() {
-        return this._emailAddress;
+        return this.emailAddress;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("accessConsent", (n) -> { this.setAccessConsent(n.getBooleanValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
@@ -94,7 +93,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getMobilePhone() {
-        return this._mobilePhone;
+        return this.mobilePhone;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -102,7 +101,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the relationship property value. The relationship property
@@ -110,7 +109,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ContactRelationship getRelationship() {
-        return this._relationship;
+        return this.relationship;
     }
     /**
      * Serializes information the current object
@@ -135,7 +134,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAccessConsent(@javax.annotation.Nullable final Boolean value) {
-        this._accessConsent = value;
+        this.accessConsent = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -144,7 +143,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the displayName property value. Name of the contact. Required.
@@ -153,7 +152,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the emailAddress property value. Primary email address of the contact. Required.
@@ -162,7 +161,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final String value) {
-        this._emailAddress = value;
+        this.emailAddress = value;
     }
     /**
      * Sets the mobilePhone property value. Mobile phone number of the contact.
@@ -171,7 +170,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMobilePhone(@javax.annotation.Nullable final String value) {
-        this._mobilePhone = value;
+        this.mobilePhone = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -180,7 +179,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the relationship property value. The relationship property
@@ -189,6 +188,6 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRelationship(@javax.annotation.Nullable final ContactRelationship value) {
-        this._relationship = value;
+        this.relationship = value;
     }
 }

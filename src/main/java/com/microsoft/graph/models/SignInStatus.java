@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SignInStatus implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Provides additional details on the sign-in activity */
-    private String _additionalDetails;
+    private String additionalDetails;
     /** Provides the 5-6 digit error code that's generated during a sign-in failure. Check out the list of error codes and messages. */
-    private Integer _errorCode;
+    private Integer errorCode;
     /** Provides the error message or the reason for failure for the corresponding sign-in activity. Check out the list of error codes and messages. */
-    private String _failureReason;
+    private String failureReason;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new signInStatus and sets the default values.
      * @return a void
@@ -43,7 +42,7 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the additionalDetails property value. Provides additional details on the sign-in activity
@@ -51,7 +50,7 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAdditionalDetails() {
-        return this._additionalDetails;
+        return this.additionalDetails;
     }
     /**
      * Gets the errorCode property value. Provides the 5-6 digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
@@ -59,7 +58,7 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getErrorCode() {
-        return this._errorCode;
+        return this.errorCode;
     }
     /**
      * Gets the failureReason property value. Provides the error message or the reason for failure for the corresponding sign-in activity. Check out the list of error codes and messages.
@@ -67,15 +66,15 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getFailureReason() {
-        return this._failureReason;
+        return this.failureReason;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("additionalDetails", (n) -> { this.setAdditionalDetails(n.getStringValue()); });
         deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getIntegerValue()); });
         deserializerMap.put("failureReason", (n) -> { this.setFailureReason(n.getStringValue()); });
@@ -88,7 +87,7 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the additionalDetails property value. Provides additional details on the sign-in activity
@@ -120,7 +119,7 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalDetails(@javax.annotation.Nullable final String value) {
-        this._additionalDetails = value;
+        this.additionalDetails = value;
     }
     /**
      * Sets the errorCode property value. Provides the 5-6 digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
@@ -129,7 +128,7 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final Integer value) {
-        this._errorCode = value;
+        this.errorCode = value;
     }
     /**
      * Sets the failureReason property value. Provides the error message or the reason for failure for the corresponding sign-in activity. Check out the list of error codes and messages.
@@ -138,7 +137,7 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFailureReason(@javax.annotation.Nullable final String value) {
-        this._failureReason = value;
+        this.failureReason = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -147,6 +146,6 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
     /** Initiator of the event. */
-    private IdentitySet _initiator;
+    private IdentitySet initiator;
     /** Represents whether the meeting chat is enabled or not. */
-    private Boolean _meetingChatEnabled;
+    private Boolean meetingChatEnabled;
     /** Unique identifier of the meeting chat. */
-    private String _meetingChatId;
+    private String meetingChatId;
     /**
      * Instantiates a new MeetingPolicyUpdatedEventMessageDetail and sets the default values.
      * @return a void
@@ -35,11 +34,11 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("meetingChatEnabled", (n) -> { this.setMeetingChatEnabled(n.getBooleanValue()); });
         deserializerMap.put("meetingChatId", (n) -> { this.setMeetingChatId(n.getStringValue()); });
@@ -51,7 +50,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      */
     @javax.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this._initiator;
+        return this.initiator;
     }
     /**
      * Gets the meetingChatEnabled property value. Represents whether the meeting chat is enabled or not.
@@ -59,7 +58,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      */
     @javax.annotation.Nullable
     public Boolean getMeetingChatEnabled() {
-        return this._meetingChatEnabled;
+        return this.meetingChatEnabled;
     }
     /**
      * Gets the meetingChatId property value. Unique identifier of the meeting chat.
@@ -67,7 +66,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      */
     @javax.annotation.Nullable
     public String getMeetingChatId() {
-        return this._meetingChatId;
+        return this.meetingChatId;
     }
     /**
      * Serializes information the current object
@@ -89,7 +88,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      */
     @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
-        this._initiator = value;
+        this.initiator = value;
     }
     /**
      * Sets the meetingChatEnabled property value. Represents whether the meeting chat is enabled or not.
@@ -98,7 +97,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      */
     @javax.annotation.Nonnull
     public void setMeetingChatEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._meetingChatEnabled = value;
+        this.meetingChatEnabled = value;
     }
     /**
      * Sets the meetingChatId property value. Unique identifier of the meeting chat.
@@ -107,6 +106,6 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      */
     @javax.annotation.Nonnull
     public void setMeetingChatId(@javax.annotation.Nullable final String value) {
-        this._meetingChatId = value;
+        this.meetingChatId = value;
     }
 }

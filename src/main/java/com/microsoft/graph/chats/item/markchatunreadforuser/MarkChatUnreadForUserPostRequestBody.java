@@ -6,18 +6,16 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the markChatUnreadForUser method. */
 public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The lastMessageReadDateTime property */
-    private OffsetDateTime _lastMessageReadDateTime;
+    private OffsetDateTime lastMessageReadDateTime;
     /** The user property */
-    private TeamworkUserIdentity _user;
+    private TeamworkUserIdentity user;
     /**
      * Instantiates a new markChatUnreadForUserPostRequestBody and sets the default values.
      * @return a void
@@ -42,15 +40,15 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("lastMessageReadDateTime", (n) -> { this.setLastMessageReadDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("user", (n) -> { this.setUser(n.getObjectValue(TeamworkUserIdentity::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -61,7 +59,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastMessageReadDateTime() {
-        return this._lastMessageReadDateTime;
+        return this.lastMessageReadDateTime;
     }
     /**
      * Gets the user property value. The user property
@@ -69,7 +67,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      */
     @javax.annotation.Nullable
     public TeamworkUserIdentity getUser() {
-        return this._user;
+        return this.user;
     }
     /**
      * Serializes information the current object
@@ -90,7 +88,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the lastMessageReadDateTime property value. The lastMessageReadDateTime property
@@ -99,7 +97,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      */
     @javax.annotation.Nonnull
     public void setLastMessageReadDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastMessageReadDateTime = value;
+        this.lastMessageReadDateTime = value;
     }
     /**
      * Sets the user property value. The user property
@@ -108,6 +106,6 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      */
     @javax.annotation.Nonnull
     public void setUser(@javax.annotation.Nullable final TeamworkUserIdentity value) {
-        this._user = value;
+        this.user = value;
     }
 }

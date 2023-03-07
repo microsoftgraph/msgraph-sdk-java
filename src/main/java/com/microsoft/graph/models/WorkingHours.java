@@ -5,23 +5,22 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkingHours implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The days of the week on which the user works. */
-    private java.util.List<DayOfWeek> _daysOfWeek;
+    private java.util.List<DayOfWeek> daysOfWeek;
     /** The time of the day that the user stops working. */
-    private LocalTime _endTime;
+    private LocalTime endTime;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The time of the day that the user starts working. */
-    private LocalTime _startTime;
+    private LocalTime startTime;
     /** The time zone to which the working hours apply. */
-    private TimeZoneBase _timeZone;
+    private TimeZoneBase timeZone;
     /**
      * Instantiates a new workingHours and sets the default values.
      * @return a void
@@ -46,7 +45,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the daysOfWeek property value. The days of the week on which the user works.
@@ -54,7 +53,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DayOfWeek> getDaysOfWeek() {
-        return this._daysOfWeek;
+        return this.daysOfWeek;
     }
     /**
      * Gets the endTime property value. The time of the day that the user stops working.
@@ -62,15 +61,15 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public LocalTime getEndTime() {
-        return this._endTime;
+        return this.endTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("daysOfWeek", (n) -> { this.setDaysOfWeek(n.getCollectionOfEnumValues(DayOfWeek.class)); });
         deserializerMap.put("endTime", (n) -> { this.setEndTime(n.getLocalTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -84,7 +83,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the startTime property value. The time of the day that the user starts working.
@@ -92,7 +91,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public LocalTime getStartTime() {
-        return this._startTime;
+        return this.startTime;
     }
     /**
      * Gets the timeZone property value. The time zone to which the working hours apply.
@@ -100,7 +99,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public TimeZoneBase getTimeZone() {
-        return this._timeZone;
+        return this.timeZone;
     }
     /**
      * Serializes information the current object
@@ -124,7 +123,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the daysOfWeek property value. The days of the week on which the user works.
@@ -133,7 +132,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDaysOfWeek(@javax.annotation.Nullable final java.util.List<DayOfWeek> value) {
-        this._daysOfWeek = value;
+        this.daysOfWeek = value;
     }
     /**
      * Sets the endTime property value. The time of the day that the user stops working.
@@ -142,7 +141,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEndTime(@javax.annotation.Nullable final LocalTime value) {
-        this._endTime = value;
+        this.endTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -151,7 +150,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the startTime property value. The time of the day that the user starts working.
@@ -160,7 +159,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setStartTime(@javax.annotation.Nullable final LocalTime value) {
-        this._startTime = value;
+        this.startTime = value;
     }
     /**
      * Sets the timeZone property value. The time zone to which the working hours apply.
@@ -169,6 +168,6 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTimeZone(@javax.annotation.Nullable final TimeZoneBase value) {
-        this._timeZone = value;
+        this.timeZone = value;
     }
 }

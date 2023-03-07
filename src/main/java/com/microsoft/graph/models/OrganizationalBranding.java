@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OrganizationalBranding extends OrganizationalBrandingProperties implements Parsable {
     /** Add different branding based on a locale. */
-    private java.util.List<OrganizationalBrandingLocalization> _localizations;
+    private java.util.List<OrganizationalBrandingLocalization> localizations;
     /**
      * Instantiates a new OrganizationalBranding and sets the default values.
      * @return a void
@@ -31,11 +30,11 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("localizations", (n) -> { this.setLocalizations(n.getCollectionOfObjectValues(OrganizationalBrandingLocalization::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -45,7 +44,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
      */
     @javax.annotation.Nullable
     public java.util.List<OrganizationalBrandingLocalization> getLocalizations() {
-        return this._localizations;
+        return this.localizations;
     }
     /**
      * Serializes information the current object
@@ -65,6 +64,6 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
      */
     @javax.annotation.Nonnull
     public void setLocalizations(@javax.annotation.Nullable final java.util.List<OrganizationalBrandingLocalization> value) {
-        this._localizations = value;
+        this.localizations = value;
     }
 }

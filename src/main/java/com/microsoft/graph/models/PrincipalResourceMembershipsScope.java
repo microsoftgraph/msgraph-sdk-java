@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrincipalResourceMembershipsScope extends AccessReviewScope implements Parsable {
     /** Defines the scopes of the principals whose access to resources are reviewed in the access review. */
-    private java.util.List<AccessReviewScope> _principalScopes;
+    private java.util.List<AccessReviewScope> principalScopes;
     /** Defines the scopes of the resources for which access is reviewed. */
-    private java.util.List<AccessReviewScope> _resourceScopes;
+    private java.util.List<AccessReviewScope> resourceScopes;
     /**
      * Instantiates a new PrincipalResourceMembershipsScope and sets the default values.
      * @return a void
@@ -33,11 +32,11 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("principalScopes", (n) -> { this.setPrincipalScopes(n.getCollectionOfObjectValues(AccessReviewScope::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceScopes", (n) -> { this.setResourceScopes(n.getCollectionOfObjectValues(AccessReviewScope::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -48,7 +47,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      */
     @javax.annotation.Nullable
     public java.util.List<AccessReviewScope> getPrincipalScopes() {
-        return this._principalScopes;
+        return this.principalScopes;
     }
     /**
      * Gets the resourceScopes property value. Defines the scopes of the resources for which access is reviewed.
@@ -56,7 +55,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      */
     @javax.annotation.Nullable
     public java.util.List<AccessReviewScope> getResourceScopes() {
-        return this._resourceScopes;
+        return this.resourceScopes;
     }
     /**
      * Serializes information the current object
@@ -77,7 +76,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      */
     @javax.annotation.Nonnull
     public void setPrincipalScopes(@javax.annotation.Nullable final java.util.List<AccessReviewScope> value) {
-        this._principalScopes = value;
+        this.principalScopes = value;
     }
     /**
      * Sets the resourceScopes property value. Defines the scopes of the resources for which access is reviewed.
@@ -86,6 +85,6 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      */
     @javax.annotation.Nonnull
     public void setResourceScopes(@javax.annotation.Nullable final java.util.List<AccessReviewScope> value) {
-        this._resourceScopes = value;
+        this.resourceScopes = value;
     }
 }

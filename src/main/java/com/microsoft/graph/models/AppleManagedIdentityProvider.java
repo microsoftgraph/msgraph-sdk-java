@@ -3,19 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsable {
     /** The certificate data, which is a long string of text from the certificate. Can be null. */
-    private String _certificateData;
+    private String certificateData;
     /** The Apple developer identifier. Required. */
-    private String _developerId;
+    private String developerId;
     /** The Apple key identifier. Required. */
-    private String _keyId;
+    private String keyId;
     /** The Apple service identifier. Required. */
-    private String _serviceId;
+    private String serviceId;
     /**
      * Instantiates a new AppleManagedIdentityProvider and sets the default values.
      * @return a void
@@ -41,7 +40,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
      */
     @javax.annotation.Nullable
     public String getCertificateData() {
-        return this._certificateData;
+        return this.certificateData;
     }
     /**
      * Gets the developerId property value. The Apple developer identifier. Required.
@@ -49,15 +48,15 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
      */
     @javax.annotation.Nullable
     public String getDeveloperId() {
-        return this._developerId;
+        return this.developerId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("certificateData", (n) -> { this.setCertificateData(n.getStringValue()); });
         deserializerMap.put("developerId", (n) -> { this.setDeveloperId(n.getStringValue()); });
         deserializerMap.put("keyId", (n) -> { this.setKeyId(n.getStringValue()); });
@@ -70,7 +69,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
      */
     @javax.annotation.Nullable
     public String getKeyId() {
-        return this._keyId;
+        return this.keyId;
     }
     /**
      * Gets the serviceId property value. The Apple service identifier. Required.
@@ -78,7 +77,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
      */
     @javax.annotation.Nullable
     public String getServiceId() {
-        return this._serviceId;
+        return this.serviceId;
     }
     /**
      * Serializes information the current object
@@ -101,7 +100,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
      */
     @javax.annotation.Nonnull
     public void setCertificateData(@javax.annotation.Nullable final String value) {
-        this._certificateData = value;
+        this.certificateData = value;
     }
     /**
      * Sets the developerId property value. The Apple developer identifier. Required.
@@ -110,7 +109,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
      */
     @javax.annotation.Nonnull
     public void setDeveloperId(@javax.annotation.Nullable final String value) {
-        this._developerId = value;
+        this.developerId = value;
     }
     /**
      * Sets the keyId property value. The Apple key identifier. Required.
@@ -119,7 +118,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
      */
     @javax.annotation.Nonnull
     public void setKeyId(@javax.annotation.Nullable final String value) {
-        this._keyId = value;
+        this.keyId = value;
     }
     /**
      * Sets the serviceId property value. The Apple service identifier. Required.
@@ -128,6 +127,6 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
      */
     @javax.annotation.Nonnull
     public void setServiceId(@javax.annotation.Nullable final String value) {
-        this._serviceId = value;
+        this.serviceId = value;
     }
 }

@@ -4,25 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class ApiApplication implements AdditionalDataHolder, Parsable {
     /** When true, allows an application to use claims mapping without specifying a custom signing key. */
-    private Boolean _acceptMappedClaims;
+    private Boolean acceptMappedClaims;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Azure AD knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant. */
-    private java.util.List<String> _knownClientApplications;
+    private java.util.List<UUID> knownClientApplications;
     /** The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes. */
-    private java.util.List<PermissionScope> _oauth2PermissionScopes;
+    private java.util.List<PermissionScope> oauth2PermissionScopes;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent. */
-    private java.util.List<PreAuthorizedApplication> _preAuthorizedApplications;
+    private java.util.List<PreAuthorizedApplication> preAuthorizedApplications;
     /** Specifies the access token version expected by this resource. This changes the version and format of the JWT produced independent of the endpoint or client used to request the access token.  The endpoint used, v1.0 or v2.0, is chosen by the client and only impacts the version of id_tokens. Resources need to explicitly configure requestedAccessTokenVersion to indicate the supported access token format.  Possible values for requestedAccessTokenVersion are 1, 2, or null. If the value is null, this defaults to 1, which corresponds to the v1.0 endpoint.  If signInAudience on the application is configured as AzureADandPersonalMicrosoftAccount, the value for this property must be 2 */
-    private Integer _requestedAccessTokenVersion;
+    private Integer requestedAccessTokenVersion;
     /**
      * Instantiates a new apiApplication and sets the default values.
      * @return a void
@@ -47,7 +47,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAcceptMappedClaims() {
-        return this._acceptMappedClaims;
+        return this.acceptMappedClaims;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -55,17 +55,17 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("acceptMappedClaims", (n) -> { this.setAcceptMappedClaims(n.getBooleanValue()); });
-        deserializerMap.put("knownClientApplications", (n) -> { this.setKnownClientApplications(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("knownClientApplications", (n) -> { this.setKnownClientApplications(n.getCollectionOfPrimitiveValues(UUID.class)); });
         deserializerMap.put("oauth2PermissionScopes", (n) -> { this.setOauth2PermissionScopes(n.getCollectionOfObjectValues(PermissionScope::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("preAuthorizedApplications", (n) -> { this.setPreAuthorizedApplications(n.getCollectionOfObjectValues(PreAuthorizedApplication::createFromDiscriminatorValue)); });
@@ -74,11 +74,11 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the knownClientApplications property value. Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Azure AD knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getKnownClientApplications() {
-        return this._knownClientApplications;
+    public java.util.List<UUID> getKnownClientApplications() {
+        return this.knownClientApplications;
     }
     /**
      * Gets the oauth2PermissionScopes property value. The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.
@@ -86,7 +86,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PermissionScope> getOauth2PermissionScopes() {
-        return this._oauth2PermissionScopes;
+        return this.oauth2PermissionScopes;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -94,7 +94,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the preAuthorizedApplications property value. Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
@@ -102,7 +102,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PreAuthorizedApplication> getPreAuthorizedApplications() {
-        return this._preAuthorizedApplications;
+        return this.preAuthorizedApplications;
     }
     /**
      * Gets the requestedAccessTokenVersion property value. Specifies the access token version expected by this resource. This changes the version and format of the JWT produced independent of the endpoint or client used to request the access token.  The endpoint used, v1.0 or v2.0, is chosen by the client and only impacts the version of id_tokens. Resources need to explicitly configure requestedAccessTokenVersion to indicate the supported access token format.  Possible values for requestedAccessTokenVersion are 1, 2, or null. If the value is null, this defaults to 1, which corresponds to the v1.0 endpoint.  If signInAudience on the application is configured as AzureADandPersonalMicrosoftAccount, the value for this property must be 2
@@ -110,7 +110,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getRequestedAccessTokenVersion() {
-        return this._requestedAccessTokenVersion;
+        return this.requestedAccessTokenVersion;
     }
     /**
      * Serializes information the current object
@@ -135,7 +135,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAcceptMappedClaims(@javax.annotation.Nullable final Boolean value) {
-        this._acceptMappedClaims = value;
+        this.acceptMappedClaims = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -144,7 +144,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the knownClientApplications property value. Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Azure AD knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant.
@@ -152,8 +152,8 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setKnownClientApplications(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._knownClientApplications = value;
+    public void setKnownClientApplications(@javax.annotation.Nullable final java.util.List<UUID> value) {
+        this.knownClientApplications = value;
     }
     /**
      * Sets the oauth2PermissionScopes property value. The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.
@@ -162,7 +162,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOauth2PermissionScopes(@javax.annotation.Nullable final java.util.List<PermissionScope> value) {
-        this._oauth2PermissionScopes = value;
+        this.oauth2PermissionScopes = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -171,7 +171,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the preAuthorizedApplications property value. Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
@@ -180,7 +180,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPreAuthorizedApplications(@javax.annotation.Nullable final java.util.List<PreAuthorizedApplication> value) {
-        this._preAuthorizedApplications = value;
+        this.preAuthorizedApplications = value;
     }
     /**
      * Sets the requestedAccessTokenVersion property value. Specifies the access token version expected by this resource. This changes the version and format of the JWT produced independent of the endpoint or client used to request the access token.  The endpoint used, v1.0 or v2.0, is chosen by the client and only impacts the version of id_tokens. Resources need to explicitly configure requestedAccessTokenVersion to indicate the supported access token format.  Possible values for requestedAccessTokenVersion are 1, 2, or null. If the value is null, this defaults to 1, which corresponds to the v1.0 endpoint.  If signInAudience on the application is configured as AzureADandPersonalMicrosoftAccount, the value for this property must be 2
@@ -189,6 +189,6 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRequestedAccessTokenVersion(@javax.annotation.Nullable final Integer value) {
-        this._requestedAccessTokenVersion = value;
+        this.requestedAccessTokenVersion = value;
     }
 }

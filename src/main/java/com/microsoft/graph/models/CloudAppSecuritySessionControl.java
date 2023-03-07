@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl implements Parsable {
     /** Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps. */
-    private CloudAppSecuritySessionControlType _cloudAppSecurityType;
+    private CloudAppSecuritySessionControlType cloudAppSecurityType;
     /**
      * Instantiates a new CloudAppSecuritySessionControl and sets the default values.
      * @return a void
@@ -35,15 +34,15 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
      */
     @javax.annotation.Nullable
     public CloudAppSecuritySessionControlType getCloudAppSecurityType() {
-        return this._cloudAppSecurityType;
+        return this.cloudAppSecurityType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("cloudAppSecurityType", (n) -> { this.setCloudAppSecurityType(n.getEnumValue(CloudAppSecuritySessionControlType.class)); });
         return deserializerMap;
     }
@@ -65,6 +64,6 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
      */
     @javax.annotation.Nonnull
     public void setCloudAppSecurityType(@javax.annotation.Nullable final CloudAppSecuritySessionControlType value) {
-        this._cloudAppSecurityType = value;
+        this.cloudAppSecurityType = value;
     }
 }

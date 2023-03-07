@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Which branch devices will receive their updates from */
 public enum WindowsUpdateType implements ValuedEnum {
     /** Allow the user to set. */
     UserDefined("userDefined"),

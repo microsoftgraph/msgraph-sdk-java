@@ -3,15 +3,14 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsable {
     /** eDiscovery review set to which items matching source collection query gets added. */
-    private EdiscoveryReviewSet _reviewSet;
+    private EdiscoveryReviewSet reviewSet;
     /** eDiscovery search that gets added to review set. */
-    private EdiscoverySearch _search;
+    private EdiscoverySearch search;
     /**
      * Instantiates a new EdiscoveryAddToReviewSetOperation and sets the default values.
      * @return a void
@@ -32,11 +31,11 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("reviewSet", (n) -> { this.setReviewSet(n.getObjectValue(EdiscoveryReviewSet::createFromDiscriminatorValue)); });
         deserializerMap.put("search", (n) -> { this.setSearch(n.getObjectValue(EdiscoverySearch::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -47,7 +46,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      */
     @javax.annotation.Nullable
     public EdiscoveryReviewSet getReviewSet() {
-        return this._reviewSet;
+        return this.reviewSet;
     }
     /**
      * Gets the search property value. eDiscovery search that gets added to review set.
@@ -55,7 +54,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      */
     @javax.annotation.Nullable
     public EdiscoverySearch getSearch() {
-        return this._search;
+        return this.search;
     }
     /**
      * Serializes information the current object
@@ -76,7 +75,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      */
     @javax.annotation.Nonnull
     public void setReviewSet(@javax.annotation.Nullable final EdiscoveryReviewSet value) {
-        this._reviewSet = value;
+        this.reviewSet = value;
     }
     /**
      * Sets the search property value. eDiscovery search that gets added to review set.
@@ -85,6 +84,6 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      */
     @javax.annotation.Nonnull
     public void setSearch(@javax.annotation.Nullable final EdiscoverySearch value) {
-        this._search = value;
+        this.search = value;
     }
 }

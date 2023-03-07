@@ -5,16 +5,14 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the addPassword method. */
 public class AddPasswordPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The passwordCredential property */
-    private PasswordCredential _passwordCredential;
+    private PasswordCredential passwordCredential;
     /**
      * Instantiates a new addPasswordPostRequestBody and sets the default values.
      * @return a void
@@ -39,15 +37,15 @@ public class AddPasswordPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
         deserializerMap.put("passwordCredential", (n) -> { this.setPasswordCredential(n.getObjectValue(PasswordCredential::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -57,7 +55,7 @@ public class AddPasswordPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public PasswordCredential getPasswordCredential() {
-        return this._passwordCredential;
+        return this.passwordCredential;
     }
     /**
      * Serializes information the current object
@@ -77,7 +75,7 @@ public class AddPasswordPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the passwordCredential property value. The passwordCredential property
@@ -86,6 +84,6 @@ public class AddPasswordPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setPasswordCredential(@javax.annotation.Nullable final PasswordCredential value) {
-        this._passwordCredential = value;
+        this.passwordCredential = value;
     }
 }

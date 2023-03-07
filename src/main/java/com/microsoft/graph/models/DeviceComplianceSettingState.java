@@ -4,34 +4,35 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device compliance setting State for a given device. */
+/**
+ * Device compliance setting State for a given device.
+ */
 public class DeviceComplianceSettingState extends Entity implements Parsable {
     /** The DateTime when device compliance grace period expires */
-    private OffsetDateTime _complianceGracePeriodExpirationDateTime;
+    private OffsetDateTime complianceGracePeriodExpirationDateTime;
     /** The Device Id that is being reported */
-    private String _deviceId;
+    private String deviceId;
     /** The device model that is being reported */
-    private String _deviceModel;
+    private String deviceModel;
     /** The Device Name that is being reported */
-    private String _deviceName;
+    private String deviceName;
     /** The setting class name and property name. */
-    private String _setting;
+    private String setting;
     /** The Setting Name that is being reported */
-    private String _settingName;
+    private String settingName;
     /** The state property */
-    private ComplianceStatus _state;
+    private ComplianceStatus state;
     /** The User email address that is being reported */
-    private String _userEmail;
+    private String userEmail;
     /** The user Id that is being reported */
-    private String _userId;
+    private String userId;
     /** The User Name that is being reported */
-    private String _userName;
+    private String userName;
     /** The User PrincipalName that is being reported */
-    private String _userPrincipalName;
+    private String userPrincipalName;
     /**
      * Instantiates a new deviceComplianceSettingState and sets the default values.
      * @return a void
@@ -56,7 +57,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getComplianceGracePeriodExpirationDateTime() {
-        return this._complianceGracePeriodExpirationDateTime;
+        return this.complianceGracePeriodExpirationDateTime;
     }
     /**
      * Gets the deviceId property value. The Device Id that is being reported
@@ -64,7 +65,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceId() {
-        return this._deviceId;
+        return this.deviceId;
     }
     /**
      * Gets the deviceModel property value. The device model that is being reported
@@ -72,7 +73,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceModel() {
-        return this._deviceModel;
+        return this.deviceModel;
     }
     /**
      * Gets the deviceName property value. The Device Name that is being reported
@@ -80,15 +81,15 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceName() {
-        return this._deviceName;
+        return this.deviceName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("complianceGracePeriodExpirationDateTime", (n) -> { this.setComplianceGracePeriodExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("deviceModel", (n) -> { this.setDeviceModel(n.getStringValue()); });
@@ -108,7 +109,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSetting() {
-        return this._setting;
+        return this.setting;
     }
     /**
      * Gets the settingName property value. The Setting Name that is being reported
@@ -116,7 +117,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSettingName() {
-        return this._settingName;
+        return this.settingName;
     }
     /**
      * Gets the state property value. The state property
@@ -124,7 +125,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ComplianceStatus getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Gets the userEmail property value. The User email address that is being reported
@@ -132,7 +133,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserEmail() {
-        return this._userEmail;
+        return this.userEmail;
     }
     /**
      * Gets the userId property value. The user Id that is being reported
@@ -140,7 +141,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Gets the userName property value. The User Name that is being reported
@@ -148,7 +149,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserName() {
-        return this._userName;
+        return this.userName;
     }
     /**
      * Gets the userPrincipalName property value. The User PrincipalName that is being reported
@@ -156,7 +157,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
@@ -186,7 +187,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setComplianceGracePeriodExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._complianceGracePeriodExpirationDateTime = value;
+        this.complianceGracePeriodExpirationDateTime = value;
     }
     /**
      * Sets the deviceId property value. The Device Id that is being reported
@@ -195,7 +196,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
-        this._deviceId = value;
+        this.deviceId = value;
     }
     /**
      * Sets the deviceModel property value. The device model that is being reported
@@ -204,7 +205,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceModel(@javax.annotation.Nullable final String value) {
-        this._deviceModel = value;
+        this.deviceModel = value;
     }
     /**
      * Sets the deviceName property value. The Device Name that is being reported
@@ -213,7 +214,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
-        this._deviceName = value;
+        this.deviceName = value;
     }
     /**
      * Sets the setting property value. The setting class name and property name.
@@ -222,7 +223,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSetting(@javax.annotation.Nullable final String value) {
-        this._setting = value;
+        this.setting = value;
     }
     /**
      * Sets the settingName property value. The Setting Name that is being reported
@@ -231,7 +232,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSettingName(@javax.annotation.Nullable final String value) {
-        this._settingName = value;
+        this.settingName = value;
     }
     /**
      * Sets the state property value. The state property
@@ -240,7 +241,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ComplianceStatus value) {
-        this._state = value;
+        this.state = value;
     }
     /**
      * Sets the userEmail property value. The User email address that is being reported
@@ -249,7 +250,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserEmail(@javax.annotation.Nullable final String value) {
-        this._userEmail = value;
+        this.userEmail = value;
     }
     /**
      * Sets the userId property value. The user Id that is being reported
@@ -258,7 +259,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
     /**
      * Sets the userName property value. The User Name that is being reported
@@ -267,7 +268,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
-        this._userName = value;
+        this.userName = value;
     }
     /**
      * Sets the userPrincipalName property value. The User PrincipalName that is being reported
@@ -276,6 +277,6 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

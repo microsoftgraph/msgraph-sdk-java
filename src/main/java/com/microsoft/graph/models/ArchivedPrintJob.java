@@ -5,33 +5,32 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     /** True if the job was acquired by a printer; false otherwise. Read-only. */
-    private Boolean _acquiredByPrinter;
+    private Boolean acquiredByPrinter;
     /** The dateTimeOffset when the job was acquired by the printer, if any. Read-only. */
-    private OffsetDateTime _acquiredDateTime;
+    private OffsetDateTime acquiredDateTime;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The dateTimeOffset when the job was completed, canceled or aborted. Read-only. */
-    private OffsetDateTime _completionDateTime;
+    private OffsetDateTime completionDateTime;
     /** The number of copies that were printed. Read-only. */
-    private Integer _copiesPrinted;
+    private Integer copiesPrinted;
     /** The user who created the print job. Read-only. */
-    private UserIdentity _createdBy;
+    private UserIdentity createdBy;
     /** The dateTimeOffset when the job was created. Read-only. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The archived print job's GUID. Read-only. */
-    private String _id;
+    private String id;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The printer ID that the job was queued for. Read-only. */
-    private String _printerId;
+    private String printerId;
     /** The processingState property */
-    private PrintJobProcessingState _processingState;
+    private PrintJobProcessingState processingState;
     /**
      * Instantiates a new archivedPrintJob and sets the default values.
      * @return a void
@@ -56,7 +55,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAcquiredByPrinter() {
-        return this._acquiredByPrinter;
+        return this.acquiredByPrinter;
     }
     /**
      * Gets the acquiredDateTime property value. The dateTimeOffset when the job was acquired by the printer, if any. Read-only.
@@ -64,7 +63,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getAcquiredDateTime() {
-        return this._acquiredDateTime;
+        return this.acquiredDateTime;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -72,7 +71,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the completionDateTime property value. The dateTimeOffset when the job was completed, canceled or aborted. Read-only.
@@ -80,7 +79,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCompletionDateTime() {
-        return this._completionDateTime;
+        return this.completionDateTime;
     }
     /**
      * Gets the copiesPrinted property value. The number of copies that were printed. Read-only.
@@ -88,7 +87,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getCopiesPrinted() {
-        return this._copiesPrinted;
+        return this.copiesPrinted;
     }
     /**
      * Gets the createdBy property value. The user who created the print job. Read-only.
@@ -96,7 +95,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public UserIdentity getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdDateTime property value. The dateTimeOffset when the job was created. Read-only.
@@ -104,15 +103,15 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("acquiredByPrinter", (n) -> { this.setAcquiredByPrinter(n.getBooleanValue()); });
         deserializerMap.put("acquiredDateTime", (n) -> { this.setAcquiredDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("completionDateTime", (n) -> { this.setCompletionDateTime(n.getOffsetDateTimeValue()); });
@@ -131,7 +130,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getId() {
-        return this._id;
+        return this.id;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -139,7 +138,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the printerId property value. The printer ID that the job was queued for. Read-only.
@@ -147,7 +146,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getPrinterId() {
-        return this._printerId;
+        return this.printerId;
     }
     /**
      * Gets the processingState property value. The processingState property
@@ -155,7 +154,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public PrintJobProcessingState getProcessingState() {
-        return this._processingState;
+        return this.processingState;
     }
     /**
      * Serializes information the current object
@@ -184,7 +183,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAcquiredByPrinter(@javax.annotation.Nullable final Boolean value) {
-        this._acquiredByPrinter = value;
+        this.acquiredByPrinter = value;
     }
     /**
      * Sets the acquiredDateTime property value. The dateTimeOffset when the job was acquired by the printer, if any. Read-only.
@@ -193,7 +192,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAcquiredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._acquiredDateTime = value;
+        this.acquiredDateTime = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -202,7 +201,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the completionDateTime property value. The dateTimeOffset when the job was completed, canceled or aborted. Read-only.
@@ -211,7 +210,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCompletionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._completionDateTime = value;
+        this.completionDateTime = value;
     }
     /**
      * Sets the copiesPrinted property value. The number of copies that were printed. Read-only.
@@ -220,7 +219,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCopiesPrinted(@javax.annotation.Nullable final Integer value) {
-        this._copiesPrinted = value;
+        this.copiesPrinted = value;
     }
     /**
      * Sets the createdBy property value. The user who created the print job. Read-only.
@@ -229,7 +228,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final UserIdentity value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The dateTimeOffset when the job was created. Read-only.
@@ -238,7 +237,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the id property value. The archived print job's GUID. Read-only.
@@ -247,7 +246,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+        this.id = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -256,7 +255,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the printerId property value. The printer ID that the job was queued for. Read-only.
@@ -265,7 +264,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPrinterId(@javax.annotation.Nullable final String value) {
-        this._printerId = value;
+        this.printerId = value;
     }
     /**
      * Sets the processingState property value. The processingState property
@@ -274,6 +273,6 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setProcessingState(@javax.annotation.Nullable final PrintJobProcessingState value) {
-        this._processingState = value;
+        this.processingState = value;
     }
 }

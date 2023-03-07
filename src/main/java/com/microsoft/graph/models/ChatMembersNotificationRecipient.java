@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipient implements Parsable {
     /** The unique identifier for the chat whose members should receive the notifications. */
-    private String _chatId;
+    private String chatId;
     /**
      * Instantiates a new ChatMembersNotificationRecipient and sets the default values.
      * @return a void
@@ -35,15 +34,15 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
      */
     @javax.annotation.Nullable
     public String getChatId() {
-        return this._chatId;
+        return this.chatId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("chatId", (n) -> { this.setChatId(n.getStringValue()); });
         return deserializerMap;
     }
@@ -65,6 +64,6 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
      */
     @javax.annotation.Nonnull
     public void setChatId(@javax.annotation.Nullable final String value) {
-        this._chatId = value;
+        this.chatId = value;
     }
 }

@@ -3,13 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Teamwork extends Entity implements Parsable {
+    /** The deletedTeams property */
+    private java.util.List<DeletedTeam> deletedTeams;
     /** The workforceIntegrations property */
-    private java.util.List<WorkforceIntegration> _workforceIntegrations;
+    private java.util.List<WorkforceIntegration> workforceIntegrations;
     /**
      * Instantiates a new Teamwork and sets the default values.
      * @return a void
@@ -29,12 +30,21 @@ public class Teamwork extends Entity implements Parsable {
         return new Teamwork();
     }
     /**
+     * Gets the deletedTeams property value. The deletedTeams property
+     * @return a deletedTeam
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeletedTeam> getDeletedTeams() {
+        return this.deletedTeams;
+    }
+    /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deletedTeams", (n) -> { this.setDeletedTeams(n.getCollectionOfObjectValues(DeletedTeam::createFromDiscriminatorValue)); });
         deserializerMap.put("workforceIntegrations", (n) -> { this.setWorkforceIntegrations(n.getCollectionOfObjectValues(WorkforceIntegration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -44,7 +54,7 @@ public class Teamwork extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WorkforceIntegration> getWorkforceIntegrations() {
-        return this._workforceIntegrations;
+        return this.workforceIntegrations;
     }
     /**
      * Serializes information the current object
@@ -55,7 +65,17 @@ public class Teamwork extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("deletedTeams", this.getDeletedTeams());
         writer.writeCollectionOfObjectValues("workforceIntegrations", this.getWorkforceIntegrations());
+    }
+    /**
+     * Sets the deletedTeams property value. The deletedTeams property
+     * @param value Value to set for the deletedTeams property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDeletedTeams(@javax.annotation.Nullable final java.util.List<DeletedTeam> value) {
+        this.deletedTeams = value;
     }
     /**
      * Sets the workforceIntegrations property value. The workforceIntegrations property
@@ -64,6 +84,6 @@ public class Teamwork extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWorkforceIntegrations(@javax.annotation.Nullable final java.util.List<WorkforceIntegration> value) {
-        this._workforceIntegrations = value;
+        this.workforceIntegrations = value;
     }
 }

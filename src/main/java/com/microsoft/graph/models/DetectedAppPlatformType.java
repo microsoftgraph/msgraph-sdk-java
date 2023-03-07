@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
+/** Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0). */
 public enum DetectedAppPlatformType implements ValuedEnum {
     /** Default. Set to unknown when platform cannot be determined. */
     Unknown("unknown"),

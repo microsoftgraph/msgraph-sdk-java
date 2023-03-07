@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsable {
     /** The actual feedback resource. */
-    private EducationResource _feedbackResource;
+    private EducationResource feedbackResource;
     /** The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue. */
-    private EducationFeedbackResourceOutcomeStatus _resourceStatus;
+    private EducationFeedbackResourceOutcomeStatus resourceStatus;
     /**
      * Instantiates a new EducationFeedbackResourceOutcome and sets the default values.
      * @return a void
@@ -37,15 +36,15 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      */
     @javax.annotation.Nullable
     public EducationResource getFeedbackResource() {
-        return this._feedbackResource;
+        return this.feedbackResource;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("feedbackResource", (n) -> { this.setFeedbackResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceStatus", (n) -> { this.setResourceStatus(n.getEnumValue(EducationFeedbackResourceOutcomeStatus.class)); });
         return deserializerMap;
@@ -56,7 +55,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      */
     @javax.annotation.Nullable
     public EducationFeedbackResourceOutcomeStatus getResourceStatus() {
-        return this._resourceStatus;
+        return this.resourceStatus;
     }
     /**
      * Serializes information the current object
@@ -77,7 +76,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      */
     @javax.annotation.Nonnull
     public void setFeedbackResource(@javax.annotation.Nullable final EducationResource value) {
-        this._feedbackResource = value;
+        this.feedbackResource = value;
     }
     /**
      * Sets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
@@ -86,6 +85,6 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      */
     @javax.annotation.Nonnull
     public void setResourceStatus(@javax.annotation.Nullable final EducationFeedbackResourceOutcomeStatus value) {
-        this._resourceStatus = value;
+        this.resourceStatus = value;
     }
 }

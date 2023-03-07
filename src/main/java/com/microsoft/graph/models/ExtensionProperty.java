@@ -3,22 +3,20 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class ExtensionProperty extends DirectoryObject implements Parsable {
     /** Display name of the application object on which this extension property is defined. Read-only. */
-    private String _appDisplayName;
+    private String appDisplayName;
     /** Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum */
-    private String _dataType;
+    private String dataType;
     /** Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only. */
-    private Boolean _isSyncedFromOnPremises;
+    private Boolean isSyncedFromOnPremises;
     /** Name of the extension property. Not nullable. Supports $filter (eq). */
-    private String _name;
+    private String name;
     /** Following values are supported. Not nullable. UserGroupAdministrativeUnitApplicationDeviceOrganization */
-    private java.util.List<String> _targetObjects;
+    private java.util.List<String> targetObjects;
     /**
      * Instantiates a new extensionProperty and sets the default values.
      * @return a void
@@ -44,7 +42,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppDisplayName() {
-        return this._appDisplayName;
+        return this.appDisplayName;
     }
     /**
      * Gets the dataType property value. Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum
@@ -52,15 +50,15 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDataType() {
-        return this._dataType;
+        return this.dataType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appDisplayName", (n) -> { this.setAppDisplayName(n.getStringValue()); });
         deserializerMap.put("dataType", (n) -> { this.setDataType(n.getStringValue()); });
         deserializerMap.put("isSyncedFromOnPremises", (n) -> { this.setIsSyncedFromOnPremises(n.getBooleanValue()); });
@@ -74,7 +72,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsSyncedFromOnPremises() {
-        return this._isSyncedFromOnPremises;
+        return this.isSyncedFromOnPremises;
     }
     /**
      * Gets the name property value. Name of the extension property. Not nullable. Supports $filter (eq).
@@ -82,7 +80,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the targetObjects property value. Following values are supported. Not nullable. UserGroupAdministrativeUnitApplicationDeviceOrganization
@@ -90,7 +88,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getTargetObjects() {
-        return this._targetObjects;
+        return this.targetObjects;
     }
     /**
      * Serializes information the current object
@@ -114,7 +112,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
-        this._appDisplayName = value;
+        this.appDisplayName = value;
     }
     /**
      * Sets the dataType property value. Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum
@@ -123,7 +121,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDataType(@javax.annotation.Nullable final String value) {
-        this._dataType = value;
+        this.dataType = value;
     }
     /**
      * Sets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
@@ -132,7 +130,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsSyncedFromOnPremises(@javax.annotation.Nullable final Boolean value) {
-        this._isSyncedFromOnPremises = value;
+        this.isSyncedFromOnPremises = value;
     }
     /**
      * Sets the name property value. Name of the extension property. Not nullable. Supports $filter (eq).
@@ -141,7 +139,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the targetObjects property value. Following values are supported. Not nullable. UserGroupAdministrativeUnitApplicationDeviceOrganization
@@ -150,6 +148,6 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTargetObjects(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._targetObjects = value;
+        this.targetObjects = value;
     }
 }

@@ -4,16 +4,14 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getAvailableExtensionProperties method. */
 public class GetAvailableExtensionPropertiesPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The isSyncedFromOnPremises property */
-    private Boolean _isSyncedFromOnPremises;
+    private Boolean isSyncedFromOnPremises;
     /**
      * Instantiates a new getAvailableExtensionPropertiesPostRequestBody and sets the default values.
      * @return a void
@@ -38,15 +36,15 @@ public class GetAvailableExtensionPropertiesPostRequestBody implements Additiona
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
         deserializerMap.put("isSyncedFromOnPremises", (n) -> { this.setIsSyncedFromOnPremises(n.getBooleanValue()); });
         return deserializerMap;
     }
@@ -56,7 +54,7 @@ public class GetAvailableExtensionPropertiesPostRequestBody implements Additiona
      */
     @javax.annotation.Nullable
     public Boolean getIsSyncedFromOnPremises() {
-        return this._isSyncedFromOnPremises;
+        return this.isSyncedFromOnPremises;
     }
     /**
      * Serializes information the current object
@@ -76,7 +74,7 @@ public class GetAvailableExtensionPropertiesPostRequestBody implements Additiona
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the isSyncedFromOnPremises property value. The isSyncedFromOnPremises property
@@ -85,6 +83,6 @@ public class GetAvailableExtensionPropertiesPostRequestBody implements Additiona
      */
     @javax.annotation.Nonnull
     public void setIsSyncedFromOnPremises(@javax.annotation.Nullable final Boolean value) {
-        this._isSyncedFromOnPremises = value;
+        this.isSyncedFromOnPremises = value;
     }
 }

@@ -3,47 +3,46 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingBusiness extends Entity implements Parsable {
     /** The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others. */
-    private PhysicalAddress _address;
+    private PhysicalAddress address;
     /** All the appointments of this business. Read-only. Nullable. */
-    private java.util.List<BookingAppointment> _appointments;
+    private java.util.List<BookingAppointment> appointments;
     /** The hours of operation for the business. */
-    private java.util.List<BookingWorkHours> _businessHours;
+    private java.util.List<BookingWorkHours> businessHours;
     /** The type of business. */
-    private String _businessType;
+    private String businessType;
     /** The set of appointments of this business in a specified date range. Read-only. Nullable. */
-    private java.util.List<BookingAppointment> _calendarView;
+    private java.util.List<BookingAppointment> calendarView;
     /** All the customers of this business. Read-only. Nullable. */
-    private java.util.List<BookingCustomerBase> _customers;
+    private java.util.List<BookingCustomerBase> customers;
     /** All the custom questions of this business. Read-only. Nullable. */
-    private java.util.List<BookingCustomQuestion> _customQuestions;
+    private java.util.List<BookingCustomQuestion> customQuestions;
     /** The code for the currency that the business operates in on Microsoft Bookings. */
-    private String _defaultCurrencyIso;
+    private String defaultCurrencyIso;
     /** The name of the business, which interfaces with customers. This name appears at the top of the business scheduling page. */
-    private String _displayName;
+    private String displayName;
     /** The email address for the business. */
-    private String _email;
+    private String email;
     /** The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only. */
-    private Boolean _isPublished;
-    /** The languageTag property */
-    private String _languageTag;
+    private Boolean isPublished;
+    /** The language of the self-service booking page. */
+    private String languageTag;
     /** The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page. */
-    private String _phone;
+    private String phone;
     /** The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only. */
-    private String _publicUrl;
+    private String publicUrl;
     /** Specifies how bookings can be created for this business. */
-    private BookingSchedulingPolicy _schedulingPolicy;
+    private BookingSchedulingPolicy schedulingPolicy;
     /** All the services offered by this business. Read-only. Nullable. */
-    private java.util.List<BookingService> _services;
+    private java.util.List<BookingService> services;
     /** All the staff members that provide services in this business. Read-only. Nullable. */
-    private java.util.List<BookingStaffMemberBase> _staffMembers;
+    private java.util.List<BookingStaffMemberBase> staffMembers;
     /** The URL of the business web site. The webSiteUrl property, together with address, phone, appear in the footer of a business scheduling page. */
-    private String _webSiteUrl;
+    private String webSiteUrl;
     /**
      * Instantiates a new BookingBusiness and sets the default values.
      * @return a void
@@ -68,7 +67,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PhysicalAddress getAddress() {
-        return this._address;
+        return this.address;
     }
     /**
      * Gets the appointments property value. All the appointments of this business. Read-only. Nullable.
@@ -76,7 +75,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BookingAppointment> getAppointments() {
-        return this._appointments;
+        return this.appointments;
     }
     /**
      * Gets the businessHours property value. The hours of operation for the business.
@@ -84,7 +83,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BookingWorkHours> getBusinessHours() {
-        return this._businessHours;
+        return this.businessHours;
     }
     /**
      * Gets the businessType property value. The type of business.
@@ -92,7 +91,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getBusinessType() {
-        return this._businessType;
+        return this.businessType;
     }
     /**
      * Gets the calendarView property value. The set of appointments of this business in a specified date range. Read-only. Nullable.
@@ -100,7 +99,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BookingAppointment> getCalendarView() {
-        return this._calendarView;
+        return this.calendarView;
     }
     /**
      * Gets the customers property value. All the customers of this business. Read-only. Nullable.
@@ -108,7 +107,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BookingCustomerBase> getCustomers() {
-        return this._customers;
+        return this.customers;
     }
     /**
      * Gets the customQuestions property value. All the custom questions of this business. Read-only. Nullable.
@@ -116,7 +115,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BookingCustomQuestion> getCustomQuestions() {
-        return this._customQuestions;
+        return this.customQuestions;
     }
     /**
      * Gets the defaultCurrencyIso property value. The code for the currency that the business operates in on Microsoft Bookings.
@@ -124,7 +123,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDefaultCurrencyIso() {
-        return this._defaultCurrencyIso;
+        return this.defaultCurrencyIso;
     }
     /**
      * Gets the displayName property value. The name of the business, which interfaces with customers. This name appears at the top of the business scheduling page.
@@ -132,7 +131,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the email property value. The email address for the business.
@@ -140,15 +139,15 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEmail() {
-        return this._email;
+        return this.email;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
         deserializerMap.put("appointments", (n) -> { this.setAppointments(n.getCollectionOfObjectValues(BookingAppointment::createFromDiscriminatorValue)); });
         deserializerMap.put("businessHours", (n) -> { this.setBusinessHours(n.getCollectionOfObjectValues(BookingWorkHours::createFromDiscriminatorValue)); });
@@ -175,15 +174,15 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsPublished() {
-        return this._isPublished;
+        return this.isPublished;
     }
     /**
-     * Gets the languageTag property value. The languageTag property
+     * Gets the languageTag property value. The language of the self-service booking page.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getLanguageTag() {
-        return this._languageTag;
+        return this.languageTag;
     }
     /**
      * Gets the phone property value. The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
@@ -191,7 +190,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPhone() {
-        return this._phone;
+        return this.phone;
     }
     /**
      * Gets the publicUrl property value. The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
@@ -199,7 +198,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPublicUrl() {
-        return this._publicUrl;
+        return this.publicUrl;
     }
     /**
      * Gets the schedulingPolicy property value. Specifies how bookings can be created for this business.
@@ -207,7 +206,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BookingSchedulingPolicy getSchedulingPolicy() {
-        return this._schedulingPolicy;
+        return this.schedulingPolicy;
     }
     /**
      * Gets the services property value. All the services offered by this business. Read-only. Nullable.
@@ -215,7 +214,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BookingService> getServices() {
-        return this._services;
+        return this.services;
     }
     /**
      * Gets the staffMembers property value. All the staff members that provide services in this business. Read-only. Nullable.
@@ -223,7 +222,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BookingStaffMemberBase> getStaffMembers() {
-        return this._staffMembers;
+        return this.staffMembers;
     }
     /**
      * Gets the webSiteUrl property value. The URL of the business web site. The webSiteUrl property, together with address, phone, appear in the footer of a business scheduling page.
@@ -231,7 +230,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getWebSiteUrl() {
-        return this._webSiteUrl;
+        return this.webSiteUrl;
     }
     /**
      * Serializes information the current object
@@ -266,7 +265,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAddress(@javax.annotation.Nullable final PhysicalAddress value) {
-        this._address = value;
+        this.address = value;
     }
     /**
      * Sets the appointments property value. All the appointments of this business. Read-only. Nullable.
@@ -275,7 +274,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppointments(@javax.annotation.Nullable final java.util.List<BookingAppointment> value) {
-        this._appointments = value;
+        this.appointments = value;
     }
     /**
      * Sets the businessHours property value. The hours of operation for the business.
@@ -284,7 +283,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setBusinessHours(@javax.annotation.Nullable final java.util.List<BookingWorkHours> value) {
-        this._businessHours = value;
+        this.businessHours = value;
     }
     /**
      * Sets the businessType property value. The type of business.
@@ -293,7 +292,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setBusinessType(@javax.annotation.Nullable final String value) {
-        this._businessType = value;
+        this.businessType = value;
     }
     /**
      * Sets the calendarView property value. The set of appointments of this business in a specified date range. Read-only. Nullable.
@@ -302,7 +301,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCalendarView(@javax.annotation.Nullable final java.util.List<BookingAppointment> value) {
-        this._calendarView = value;
+        this.calendarView = value;
     }
     /**
      * Sets the customers property value. All the customers of this business. Read-only. Nullable.
@@ -311,7 +310,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCustomers(@javax.annotation.Nullable final java.util.List<BookingCustomerBase> value) {
-        this._customers = value;
+        this.customers = value;
     }
     /**
      * Sets the customQuestions property value. All the custom questions of this business. Read-only. Nullable.
@@ -320,7 +319,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCustomQuestions(@javax.annotation.Nullable final java.util.List<BookingCustomQuestion> value) {
-        this._customQuestions = value;
+        this.customQuestions = value;
     }
     /**
      * Sets the defaultCurrencyIso property value. The code for the currency that the business operates in on Microsoft Bookings.
@@ -329,7 +328,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDefaultCurrencyIso(@javax.annotation.Nullable final String value) {
-        this._defaultCurrencyIso = value;
+        this.defaultCurrencyIso = value;
     }
     /**
      * Sets the displayName property value. The name of the business, which interfaces with customers. This name appears at the top of the business scheduling page.
@@ -338,7 +337,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the email property value. The email address for the business.
@@ -347,7 +346,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
-        this._email = value;
+        this.email = value;
     }
     /**
      * Sets the isPublished property value. The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.
@@ -356,16 +355,16 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsPublished(@javax.annotation.Nullable final Boolean value) {
-        this._isPublished = value;
+        this.isPublished = value;
     }
     /**
-     * Sets the languageTag property value. The languageTag property
+     * Sets the languageTag property value. The language of the self-service booking page.
      * @param value Value to set for the languageTag property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setLanguageTag(@javax.annotation.Nullable final String value) {
-        this._languageTag = value;
+        this.languageTag = value;
     }
     /**
      * Sets the phone property value. The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
@@ -374,7 +373,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPhone(@javax.annotation.Nullable final String value) {
-        this._phone = value;
+        this.phone = value;
     }
     /**
      * Sets the publicUrl property value. The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
@@ -383,7 +382,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPublicUrl(@javax.annotation.Nullable final String value) {
-        this._publicUrl = value;
+        this.publicUrl = value;
     }
     /**
      * Sets the schedulingPolicy property value. Specifies how bookings can be created for this business.
@@ -392,7 +391,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSchedulingPolicy(@javax.annotation.Nullable final BookingSchedulingPolicy value) {
-        this._schedulingPolicy = value;
+        this.schedulingPolicy = value;
     }
     /**
      * Sets the services property value. All the services offered by this business. Read-only. Nullable.
@@ -401,7 +400,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setServices(@javax.annotation.Nullable final java.util.List<BookingService> value) {
-        this._services = value;
+        this.services = value;
     }
     /**
      * Sets the staffMembers property value. All the staff members that provide services in this business. Read-only. Nullable.
@@ -410,7 +409,7 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStaffMembers(@javax.annotation.Nullable final java.util.List<BookingStaffMemberBase> value) {
-        this._staffMembers = value;
+        this.staffMembers = value;
     }
     /**
      * Sets the webSiteUrl property value. The URL of the business web site. The webSiteUrl property, together with address, phone, appear in the footer of a business scheduling page.
@@ -419,6 +418,6 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWebSiteUrl(@javax.annotation.Nullable final String value) {
-        this._webSiteUrl = value;
+        this.webSiteUrl = value;
     }
 }

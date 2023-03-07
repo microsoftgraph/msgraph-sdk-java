@@ -1,0 +1,111 @@
+package com.microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
+    /** The applicationRestrictions property */
+    private AppManagementConfiguration applicationRestrictions;
+    /** The isEnabled property */
+    private Boolean isEnabled;
+    /** The servicePrincipalRestrictions property */
+    private AppManagementConfiguration servicePrincipalRestrictions;
+    /**
+     * Instantiates a new TenantAppManagementPolicy and sets the default values.
+     * @return a void
+     */
+    @javax.annotation.Nullable
+    public TenantAppManagementPolicy() {
+        super();
+        this.setOdataType("#microsoft.graph.tenantAppManagementPolicy");
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a TenantAppManagementPolicy
+     */
+    @javax.annotation.Nonnull
+    public static TenantAppManagementPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new TenantAppManagementPolicy();
+    }
+    /**
+     * Gets the applicationRestrictions property value. The applicationRestrictions property
+     * @return a appManagementConfiguration
+     */
+    @javax.annotation.Nullable
+    public AppManagementConfiguration getApplicationRestrictions() {
+        return this.applicationRestrictions;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationRestrictions", (n) -> { this.setApplicationRestrictions(n.getObjectValue(AppManagementConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("servicePrincipalRestrictions", (n) -> { this.setServicePrincipalRestrictions(n.getObjectValue(AppManagementConfiguration::createFromDiscriminatorValue)); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the isEnabled property value. The isEnabled property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsEnabled() {
+        return this.isEnabled;
+    }
+    /**
+     * Gets the servicePrincipalRestrictions property value. The servicePrincipalRestrictions property
+     * @return a appManagementConfiguration
+     */
+    @javax.annotation.Nullable
+    public AppManagementConfiguration getServicePrincipalRestrictions() {
+        return this.servicePrincipalRestrictions;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeObjectValue("applicationRestrictions", this.getApplicationRestrictions());
+        writer.writeBooleanValue("isEnabled", this.getIsEnabled());
+        writer.writeObjectValue("servicePrincipalRestrictions", this.getServicePrincipalRestrictions());
+    }
+    /**
+     * Sets the applicationRestrictions property value. The applicationRestrictions property
+     * @param value Value to set for the applicationRestrictions property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setApplicationRestrictions(@javax.annotation.Nullable final AppManagementConfiguration value) {
+        this.applicationRestrictions = value;
+    }
+    /**
+     * Sets the isEnabled property value. The isEnabled property
+     * @param value Value to set for the isEnabled property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
+        this.isEnabled = value;
+    }
+    /**
+     * Sets the servicePrincipalRestrictions property value. The servicePrincipalRestrictions property
+     * @param value Value to set for the servicePrincipalRestrictions property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setServicePrincipalRestrictions(@javax.annotation.Nullable final AppManagementConfiguration value) {
+        this.servicePrincipalRestrictions = value;
+    }
+}

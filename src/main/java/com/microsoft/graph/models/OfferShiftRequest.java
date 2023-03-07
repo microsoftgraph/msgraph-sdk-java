@@ -1,23 +1,21 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.SwapShiftsChangeRequest;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable {
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _recipientActionDateTime;
+    private OffsetDateTime recipientActionDateTime;
     /** Custom message sent by recipient of the offer shift request. */
-    private String _recipientActionMessage;
+    private String recipientActionMessage;
     /** User ID of the recipient of the offer shift request. */
-    private String _recipientUserId;
+    private String recipientUserId;
     /** User ID of the sender of the offer shift request. */
-    private String _senderShiftId;
+    private String senderShiftId;
     /**
      * Instantiates a new OfferShiftRequest and sets the default values.
      * @return a void
@@ -46,11 +44,11 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("recipientActionDateTime", (n) -> { this.setRecipientActionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("recipientActionMessage", (n) -> { this.setRecipientActionMessage(n.getStringValue()); });
         deserializerMap.put("recipientUserId", (n) -> { this.setRecipientUserId(n.getStringValue()); });
@@ -63,7 +61,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      */
     @javax.annotation.Nullable
     public OffsetDateTime getRecipientActionDateTime() {
-        return this._recipientActionDateTime;
+        return this.recipientActionDateTime;
     }
     /**
      * Gets the recipientActionMessage property value. Custom message sent by recipient of the offer shift request.
@@ -71,7 +69,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      */
     @javax.annotation.Nullable
     public String getRecipientActionMessage() {
-        return this._recipientActionMessage;
+        return this.recipientActionMessage;
     }
     /**
      * Gets the recipientUserId property value. User ID of the recipient of the offer shift request.
@@ -79,7 +77,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      */
     @javax.annotation.Nullable
     public String getRecipientUserId() {
-        return this._recipientUserId;
+        return this.recipientUserId;
     }
     /**
      * Gets the senderShiftId property value. User ID of the sender of the offer shift request.
@@ -87,7 +85,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      */
     @javax.annotation.Nullable
     public String getSenderShiftId() {
-        return this._senderShiftId;
+        return this.senderShiftId;
     }
     /**
      * Serializes information the current object
@@ -109,7 +107,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      */
     @javax.annotation.Nonnull
     public void setRecipientActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._recipientActionDateTime = value;
+        this.recipientActionDateTime = value;
     }
     /**
      * Sets the recipientActionMessage property value. Custom message sent by recipient of the offer shift request.
@@ -118,7 +116,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      */
     @javax.annotation.Nonnull
     public void setRecipientActionMessage(@javax.annotation.Nullable final String value) {
-        this._recipientActionMessage = value;
+        this.recipientActionMessage = value;
     }
     /**
      * Sets the recipientUserId property value. User ID of the recipient of the offer shift request.
@@ -127,7 +125,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      */
     @javax.annotation.Nonnull
     public void setRecipientUserId(@javax.annotation.Nullable final String value) {
-        this._recipientUserId = value;
+        this.recipientUserId = value;
     }
     /**
      * Sets the senderShiftId property value. User ID of the sender of the offer shift request.
@@ -136,6 +134,6 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      */
     @javax.annotation.Nonnull
     public void setSenderShiftId(@javax.annotation.Nullable final String value) {
-        this._senderShiftId = value;
+        this.senderShiftId = value;
     }
 }

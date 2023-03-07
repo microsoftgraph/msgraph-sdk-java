@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** A managed (MAM) application's availability. */
 public enum ManagedAppAvailability implements ValuedEnum {
     /** A globally available app to all tenants. */
     Global("global"),

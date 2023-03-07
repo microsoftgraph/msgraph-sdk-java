@@ -1,14 +1,15 @@
 package com.microsoft.graph.communications.callrecords;
 
+import com.microsoft.graph.communications.callrecords.callrecordsgetdirectroutingcallswithfromdatetimewithtodatetime.CallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder;
+import com.microsoft.graph.communications.callrecords.callrecordsgetpstncallswithfromdatetimewithtodatetime.CallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder;
 import com.microsoft.graph.communications.callrecords.count.CountRequestBuilder;
-import com.microsoft.graph.communications.callrecords.getdirectroutingcallswithfromdatetimewithtodatetime.GetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder;
-import com.microsoft.graph.communications.callrecords.getpstncallswithfromdatetimewithtodatetime.GetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder;
 import com.microsoft.graph.models.callrecords.CallRecord;
 import com.microsoft.graph.models.callrecords.CallRecordCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
+import com.microsoft.kiota.RequestHeaders;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
@@ -20,7 +21,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the callRecords property of the microsoft.graph.cloudCommunications entity. */
+/**
+ * Provides operations to manage the callRecords property of the microsoft.graph.cloudCommunications entity.
+ */
 public class CallRecordsRequestBuilder {
     /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
@@ -33,6 +36,30 @@ public class CallRecordsRequestBuilder {
     private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
+    /**
+     * Provides operations to call the getDirectRoutingCalls method.
+     * @param fromDateTime Usage: fromDateTime={fromDateTime}
+     * @param toDateTime Usage: toDateTime={toDateTime}
+     * @return a callRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public CallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder callRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTime(@javax.annotation.Nonnull final OffsetDateTime fromDateTime, @javax.annotation.Nonnull final OffsetDateTime toDateTime) {
+        Objects.requireNonNull(fromDateTime);
+        Objects.requireNonNull(toDateTime);
+        return new CallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder(pathParameters, requestAdapter, fromDateTime, toDateTime);
+    }
+    /**
+     * Provides operations to call the getPstnCalls method.
+     * @param fromDateTime Usage: fromDateTime={fromDateTime}
+     * @param toDateTime Usage: toDateTime={toDateTime}
+     * @return a callRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public CallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder callRecordsGetPstnCallsWithFromDateTimeWithToDateTime(@javax.annotation.Nonnull final OffsetDateTime fromDateTime, @javax.annotation.Nonnull final OffsetDateTime toDateTime) {
+        Objects.requireNonNull(fromDateTime);
+        Objects.requireNonNull(toDateTime);
+        return new CallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder(pathParameters, requestAdapter, fromDateTime, toDateTime);
+    }
     /**
      * Instantiates a new CallRecordsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -64,73 +91,12 @@ public class CallRecordsRequestBuilder {
     }
     /**
      * Get callRecords from communications
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation() throws URISyntaxException {
-        return createGetRequestInformation(null);
-    }
-    /**
-     * Get callRecords from communications
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Create new navigation property to callRecords for communications
-     * @param body 
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CallRecord body) throws URISyntaxException {
-        return createPostRequestInformation(body, null);
-    }
-    /**
-     * Create new navigation property to callRecords for communications
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CallRecord body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Get callRecords from communications
      * @return a CompletableFuture of CallRecordCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CallRecordCollectionResponse> get() {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(null);
+            final RequestInformation requestInfo = toGetRequestInformation(null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -149,7 +115,7 @@ public class CallRecordsRequestBuilder {
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CallRecordCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
+            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -161,38 +127,14 @@ public class CallRecordsRequestBuilder {
         }
     }
     /**
-     * Provides operations to call the getDirectRoutingCalls method.
-     * @param fromDateTime Usage: fromDateTime={fromDateTime}
-     * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a getDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder getDirectRoutingCallsWithFromDateTimeWithToDateTime(@javax.annotation.Nonnull final OffsetDateTime fromDateTime, @javax.annotation.Nonnull final OffsetDateTime toDateTime) {
-        Objects.requireNonNull(fromDateTime);
-        Objects.requireNonNull(toDateTime);
-        return new GetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder(pathParameters, requestAdapter, fromDateTime, toDateTime);
-    }
-    /**
-     * Provides operations to call the getPstnCalls method.
-     * @param fromDateTime Usage: fromDateTime={fromDateTime}
-     * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a getPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder getPstnCallsWithFromDateTimeWithToDateTime(@javax.annotation.Nonnull final OffsetDateTime fromDateTime, @javax.annotation.Nonnull final OffsetDateTime toDateTime) {
-        Objects.requireNonNull(fromDateTime);
-        Objects.requireNonNull(toDateTime);
-        return new GetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder(pathParameters, requestAdapter, fromDateTime, toDateTime);
-    }
-    /**
      * Create new navigation property to callRecords for communications
-     * @param body 
+     * @param body The request body
      * @return a CompletableFuture of callRecord
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CallRecord> post(@javax.annotation.Nonnull final CallRecord body) {
         try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, null);
+            final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -205,7 +147,7 @@ public class CallRecordsRequestBuilder {
     }
     /**
      * Create new navigation property to callRecords for communications
-     * @param body 
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of callRecord
      */
@@ -213,7 +155,7 @@ public class CallRecordsRequestBuilder {
     public java.util.concurrent.CompletableFuture<CallRecord> post(@javax.annotation.Nonnull final CallRecord body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
+            final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -224,7 +166,70 @@ public class CallRecordsRequestBuilder {
             return executionException;
         }
     }
-    /** Get callRecords from communications */
+    /**
+     * Get callRecords from communications
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+        return toGetRequestInformation(null);
+    }
+    /**
+     * Get callRecords from communications
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        if (requestConfiguration != null) {
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Create new navigation property to callRecords for communications
+     * @param body The request body
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final CallRecord body) throws URISyntaxException {
+        return toPostRequestInformation(body, null);
+    }
+    /**
+     * Create new navigation property to callRecords for communications
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final CallRecord body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        if (requestConfiguration != null) {
+            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Get callRecords from communications
+     */
     public class GetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -259,11 +264,13 @@ public class CallRecordsRequestBuilder {
         @javax.annotation.Nullable
         public Integer top;
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
     public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
+        public RequestHeaders headers = new RequestHeaders();
         /** Request options */
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
@@ -278,11 +285,13 @@ public class CallRecordsRequestBuilder {
         public GetRequestConfiguration() {
         }
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
     public class PostRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
+        public RequestHeaders headers = new RequestHeaders();
         /** Request options */
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();

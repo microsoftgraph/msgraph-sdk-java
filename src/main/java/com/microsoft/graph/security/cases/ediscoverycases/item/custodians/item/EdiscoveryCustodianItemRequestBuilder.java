@@ -2,21 +2,22 @@ package com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryCustodian;
-import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.activate.ActivateRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.applyhold.ApplyHoldRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.lastindexoperation.LastIndexOperationRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.release.ReleaseRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.removehold.RemoveHoldRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.securityactivate.SecurityActivateRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.securityapplyhold.SecurityApplyHoldRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.securityrelease.SecurityReleaseRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.securityremovehold.SecurityRemoveHoldRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.securityupdateindex.SecurityUpdateIndexRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.sitesources.item.SiteSourceItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.sitesources.SiteSourcesRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.unifiedgroupsources.item.UnifiedGroupSourceItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.unifiedgroupsources.UnifiedGroupSourcesRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.updateindex.UpdateIndexRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.usersources.item.UserSourceItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.usersources.UserSourcesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
+import com.microsoft.kiota.RequestHeaders;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
@@ -27,18 +28,10 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity. */
+/**
+ * Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity.
+ */
 public class EdiscoveryCustodianItemRequestBuilder {
-    /** Provides operations to call the activate method. */
-    @javax.annotation.Nonnull
-    public ActivateRequestBuilder activate() {
-        return new ActivateRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to call the applyHold method. */
-    @javax.annotation.Nonnull
-    public ApplyHoldRequestBuilder applyHold() {
-        return new ApplyHoldRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Provides operations to manage the lastIndexOperation property of the microsoft.graph.security.ediscoveryCustodian entity. */
     @javax.annotation.Nonnull
     public LastIndexOperationRequestBuilder lastIndexOperation() {
@@ -46,18 +39,33 @@ public class EdiscoveryCustodianItemRequestBuilder {
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
+    /** The request adapter to use to execute the requests. */
+    private RequestAdapter requestAdapter;
+    /** Provides operations to call the activate method. */
+    @javax.annotation.Nonnull
+    public SecurityActivateRequestBuilder securityActivate() {
+        return new SecurityActivateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the applyHold method. */
+    @javax.annotation.Nonnull
+    public SecurityApplyHoldRequestBuilder securityApplyHold() {
+        return new SecurityApplyHoldRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Provides operations to call the release method. */
     @javax.annotation.Nonnull
-    public ReleaseRequestBuilder release() {
-        return new ReleaseRequestBuilder(pathParameters, requestAdapter);
+    public SecurityReleaseRequestBuilder securityRelease() {
+        return new SecurityReleaseRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to call the removeHold method. */
     @javax.annotation.Nonnull
-    public RemoveHoldRequestBuilder removeHold() {
-        return new RemoveHoldRequestBuilder(pathParameters, requestAdapter);
+    public SecurityRemoveHoldRequestBuilder securityRemoveHold() {
+        return new SecurityRemoveHoldRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The request adapter to use to execute the requests. */
-    private RequestAdapter requestAdapter;
+    /** Provides operations to call the updateIndex method. */
+    @javax.annotation.Nonnull
+    public SecurityUpdateIndexRequestBuilder securityUpdateIndex() {
+        return new SecurityUpdateIndexRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Provides operations to manage the siteSources property of the microsoft.graph.security.ediscoveryCustodian entity. */
     @javax.annotation.Nonnull
     public SiteSourcesRequestBuilder siteSources() {
@@ -67,11 +75,6 @@ public class EdiscoveryCustodianItemRequestBuilder {
     @javax.annotation.Nonnull
     public UnifiedGroupSourcesRequestBuilder unifiedGroupSources() {
         return new UnifiedGroupSourcesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to call the updateIndex method. */
-    @javax.annotation.Nonnull
-    public UpdateIndexRequestBuilder updateIndex() {
-        return new UpdateIndexRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
@@ -111,100 +114,12 @@ public class EdiscoveryCustodianItemRequestBuilder {
     }
     /**
      * Delete navigation property custodians for security
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation() throws URISyntaxException {
-        return createDeleteRequestInformation(null);
-    }
-    /**
-     * Delete navigation property custodians for security
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Returns a list of case ediscoveryCustodian objects for this case.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation() throws URISyntaxException {
-        return createGetRequestInformation(null);
-    }
-    /**
-     * Returns a list of case ediscoveryCustodian objects for this case.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Update the navigation property custodians in security
-     * @param body 
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final EdiscoveryCustodian body) throws URISyntaxException {
-        return createPatchRequestInformation(body, null);
-    }
-    /**
-     * Update the navigation property custodians in security
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final EdiscoveryCustodian body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Delete navigation property custodians for security
      * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(null);
+            final RequestInformation requestInfo = toDeleteRequestInformation(null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -223,7 +138,7 @@ public class EdiscoveryCustodianItemRequestBuilder {
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
+            final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -241,7 +156,7 @@ public class EdiscoveryCustodianItemRequestBuilder {
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCustodian> get() {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(null);
+            final RequestInformation requestInfo = toGetRequestInformation(null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -260,7 +175,7 @@ public class EdiscoveryCustodianItemRequestBuilder {
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCustodian> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
+            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -273,13 +188,13 @@ public class EdiscoveryCustodianItemRequestBuilder {
     }
     /**
      * Update the navigation property custodians in security
-     * @param body 
+     * @param body The request body
      * @return a CompletableFuture of ediscoveryCustodian
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCustodian> patch(@javax.annotation.Nonnull final EdiscoveryCustodian body) {
         try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, null);
+            final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -292,7 +207,7 @@ public class EdiscoveryCustodianItemRequestBuilder {
     }
     /**
      * Update the navigation property custodians in security
-     * @param body 
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryCustodian
      */
@@ -300,7 +215,7 @@ public class EdiscoveryCustodianItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<EdiscoveryCustodian> patch(@javax.annotation.Nonnull final EdiscoveryCustodian body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
+            final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -322,6 +237,94 @@ public class EdiscoveryCustodianItemRequestBuilder {
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("siteSource%2Did", id);
         return new SiteSourceItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Delete navigation property custodians for security
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
+        return toDeleteRequestInformation(null);
+    }
+    /**
+     * Delete navigation property custodians for security
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        if (requestConfiguration != null) {
+            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Returns a list of case ediscoveryCustodian objects for this case.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+        return toGetRequestInformation(null);
+    }
+    /**
+     * Returns a list of case ediscoveryCustodian objects for this case.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        if (requestConfiguration != null) {
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Update the navigation property custodians in security
+     * @param body The request body
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final EdiscoveryCustodian body) throws URISyntaxException {
+        return toPatchRequestInformation(body, null);
+    }
+    /**
+     * Update the navigation property custodians in security
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final EdiscoveryCustodian body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        if (requestConfiguration != null) {
+            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
     }
     /**
      * Provides operations to manage the unifiedGroupSources property of the microsoft.graph.security.ediscoveryCustodian entity.
@@ -347,11 +350,13 @@ public class EdiscoveryCustodianItemRequestBuilder {
         urlTplParams.put("userSource%2Did", id);
         return new UserSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
     public class DeleteRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
+        public RequestHeaders headers = new RequestHeaders();
         /** Request options */
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
@@ -363,7 +368,9 @@ public class EdiscoveryCustodianItemRequestBuilder {
         public DeleteRequestConfiguration() {
         }
     }
-    /** Returns a list of case ediscoveryCustodian objects for this case. */
+    /**
+     * Returns a list of case ediscoveryCustodian objects for this case.
+     */
     public class GetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -374,11 +381,13 @@ public class EdiscoveryCustodianItemRequestBuilder {
         @javax.annotation.Nullable
         public String[] select;
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
     public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
+        public RequestHeaders headers = new RequestHeaders();
         /** Request options */
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
@@ -393,11 +402,13 @@ public class EdiscoveryCustodianItemRequestBuilder {
         public GetRequestConfiguration() {
         }
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
     public class PatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
+        public RequestHeaders headers = new RequestHeaders();
         /** Request options */
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();

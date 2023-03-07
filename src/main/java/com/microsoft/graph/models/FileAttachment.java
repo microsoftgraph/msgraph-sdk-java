@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FileAttachment extends Attachment implements Parsable {
     /** The base64-encoded contents of the file. */
-    private byte[] _contentBytes;
+    private byte[] contentBytes;
     /** The ID of the attachment in the Exchange store. */
-    private String _contentId;
+    private String contentId;
     /** Do not use this property as it is not supported. */
-    private String _contentLocation;
+    private String contentLocation;
     /**
      * Instantiates a new FileAttachment and sets the default values.
      * @return a void
@@ -39,7 +38,7 @@ public class FileAttachment extends Attachment implements Parsable {
      */
     @javax.annotation.Nullable
     public byte[] getContentBytes() {
-        return this._contentBytes;
+        return this.contentBytes;
     }
     /**
      * Gets the contentId property value. The ID of the attachment in the Exchange store.
@@ -47,7 +46,7 @@ public class FileAttachment extends Attachment implements Parsable {
      */
     @javax.annotation.Nullable
     public String getContentId() {
-        return this._contentId;
+        return this.contentId;
     }
     /**
      * Gets the contentLocation property value. Do not use this property as it is not supported.
@@ -55,15 +54,15 @@ public class FileAttachment extends Attachment implements Parsable {
      */
     @javax.annotation.Nullable
     public String getContentLocation() {
-        return this._contentLocation;
+        return this.contentLocation;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contentBytes", (n) -> { this.setContentBytes(n.getByteArrayValue()); });
         deserializerMap.put("contentId", (n) -> { this.setContentId(n.getStringValue()); });
         deserializerMap.put("contentLocation", (n) -> { this.setContentLocation(n.getStringValue()); });
@@ -89,7 +88,7 @@ public class FileAttachment extends Attachment implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentBytes(@javax.annotation.Nullable final byte[] value) {
-        this._contentBytes = value;
+        this.contentBytes = value;
     }
     /**
      * Sets the contentId property value. The ID of the attachment in the Exchange store.
@@ -98,7 +97,7 @@ public class FileAttachment extends Attachment implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentId(@javax.annotation.Nullable final String value) {
-        this._contentId = value;
+        this.contentId = value;
     }
     /**
      * Sets the contentLocation property value. Do not use this property as it is not supported.
@@ -107,6 +106,6 @@ public class FileAttachment extends Attachment implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentLocation(@javax.annotation.Nullable final String value) {
-        this._contentLocation = value;
+        this.contentLocation = value;
     }
 }

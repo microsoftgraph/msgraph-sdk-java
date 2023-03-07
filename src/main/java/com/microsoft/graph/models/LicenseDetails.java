@@ -3,18 +3,17 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+import java.util.UUID;
 public class LicenseDetails extends Entity implements Parsable {
     /** Information about the service plans assigned with the license. Read-only, Not nullable */
-    private java.util.List<ServicePlanInfo> _servicePlans;
+    private java.util.List<ServicePlanInfo> servicePlans;
     /** Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only */
-    private String _skuId;
+    private UUID skuId;
     /** Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only */
-    private String _skuPartNumber;
+    private String skuPartNumber;
     /**
      * Instantiates a new licenseDetails and sets the default values.
      * @return a void
@@ -35,13 +34,13 @@ public class LicenseDetails extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("servicePlans", (n) -> { this.setServicePlans(n.getCollectionOfObjectValues(ServicePlanInfo::createFromDiscriminatorValue)); });
-        deserializerMap.put("skuId", (n) -> { this.setSkuId(n.getStringValue()); });
+        deserializerMap.put("skuId", (n) -> { this.setSkuId(n.getUUIDValue()); });
         deserializerMap.put("skuPartNumber", (n) -> { this.setSkuPartNumber(n.getStringValue()); });
         return deserializerMap;
     }
@@ -51,15 +50,15 @@ public class LicenseDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ServicePlanInfo> getServicePlans() {
-        return this._servicePlans;
+        return this.servicePlans;
     }
     /**
      * Gets the skuId property value. Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getSkuId() {
-        return this._skuId;
+    public UUID getSkuId() {
+        return this.skuId;
     }
     /**
      * Gets the skuPartNumber property value. Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
@@ -67,7 +66,7 @@ public class LicenseDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSkuPartNumber() {
-        return this._skuPartNumber;
+        return this.skuPartNumber;
     }
     /**
      * Serializes information the current object
@@ -79,7 +78,7 @@ public class LicenseDetails extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("servicePlans", this.getServicePlans());
-        writer.writeStringValue("skuId", this.getSkuId());
+        writer.writeUUIDValue("skuId", this.getSkuId());
         writer.writeStringValue("skuPartNumber", this.getSkuPartNumber());
     }
     /**
@@ -89,7 +88,7 @@ public class LicenseDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setServicePlans(@javax.annotation.Nullable final java.util.List<ServicePlanInfo> value) {
-        this._servicePlans = value;
+        this.servicePlans = value;
     }
     /**
      * Sets the skuId property value. Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
@@ -97,8 +96,8 @@ public class LicenseDetails extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setSkuId(@javax.annotation.Nullable final String value) {
-        this._skuId = value;
+    public void setSkuId(@javax.annotation.Nullable final UUID value) {
+        this.skuId = value;
     }
     /**
      * Sets the skuPartNumber property value. Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
@@ -107,6 +106,6 @@ public class LicenseDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSkuPartNumber(@javax.annotation.Nullable final String value) {
-        this._skuPartNumber = value;
+        this.skuPartNumber = value;
     }
 }

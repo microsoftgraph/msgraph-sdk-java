@@ -4,7 +4,9 @@ import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.ite
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-/** Builds and executes requests for operations under /identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/incompatibleAccessPackages/{accessPackage-id1} */
+/**
+ * Builds and executes requests for operations under /identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/incompatibleAccessPackages/{accessPackage-id1}
+ */
 public class AccessPackageItemRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;

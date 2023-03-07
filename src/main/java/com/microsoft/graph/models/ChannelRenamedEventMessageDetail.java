@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChannelRenamedEventMessageDetail extends EventMessageDetail implements Parsable {
     /** The updated name of the channel. */
-    private String _channelDisplayName;
+    private String channelDisplayName;
     /** Unique identifier of the channel. */
-    private String _channelId;
+    private String channelId;
     /** Initiator of the event. */
-    private IdentitySet _initiator;
+    private IdentitySet initiator;
     /**
      * Instantiates a new ChannelRenamedEventMessageDetail and sets the default values.
      * @return a void
@@ -39,7 +38,7 @@ public class ChannelRenamedEventMessageDetail extends EventMessageDetail impleme
      */
     @javax.annotation.Nullable
     public String getChannelDisplayName() {
-        return this._channelDisplayName;
+        return this.channelDisplayName;
     }
     /**
      * Gets the channelId property value. Unique identifier of the channel.
@@ -47,15 +46,15 @@ public class ChannelRenamedEventMessageDetail extends EventMessageDetail impleme
      */
     @javax.annotation.Nullable
     public String getChannelId() {
-        return this._channelId;
+        return this.channelId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("channelDisplayName", (n) -> { this.setChannelDisplayName(n.getStringValue()); });
         deserializerMap.put("channelId", (n) -> { this.setChannelId(n.getStringValue()); });
         deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -67,7 +66,7 @@ public class ChannelRenamedEventMessageDetail extends EventMessageDetail impleme
      */
     @javax.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this._initiator;
+        return this.initiator;
     }
     /**
      * Serializes information the current object
@@ -89,7 +88,7 @@ public class ChannelRenamedEventMessageDetail extends EventMessageDetail impleme
      */
     @javax.annotation.Nonnull
     public void setChannelDisplayName(@javax.annotation.Nullable final String value) {
-        this._channelDisplayName = value;
+        this.channelDisplayName = value;
     }
     /**
      * Sets the channelId property value. Unique identifier of the channel.
@@ -98,7 +97,7 @@ public class ChannelRenamedEventMessageDetail extends EventMessageDetail impleme
      */
     @javax.annotation.Nonnull
     public void setChannelId(@javax.annotation.Nullable final String value) {
-        this._channelId = value;
+        this.channelId = value;
     }
     /**
      * Sets the initiator property value. Initiator of the event.
@@ -107,6 +106,6 @@ public class ChannelRenamedEventMessageDetail extends EventMessageDetail impleme
      */
     @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
-        this._initiator = value;
+        this.initiator = value;
     }
 }

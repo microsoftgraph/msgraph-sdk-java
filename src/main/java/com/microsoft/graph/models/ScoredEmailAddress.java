@@ -4,23 +4,22 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The email address. */
-    private String _address;
+    private String address;
     /** The itemId property */
-    private String _itemId;
+    private String itemId;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships. */
-    private Double _relevanceScore;
+    private Double relevanceScore;
     /** The selectionLikelihood property */
-    private SelectionLikelihoodInfo _selectionLikelihood;
+    private SelectionLikelihoodInfo selectionLikelihood;
     /**
      * Instantiates a new scoredEmailAddress and sets the default values.
      * @return a void
@@ -45,7 +44,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the address property value. The email address.
@@ -53,15 +52,15 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAddress() {
-        return this._address;
+        return this.address;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("address", (n) -> { this.setAddress(n.getStringValue()); });
         deserializerMap.put("itemId", (n) -> { this.setItemId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -75,7 +74,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getItemId() {
-        return this._itemId;
+        return this.itemId;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -83,7 +82,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the relevanceScore property value. The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships.
@@ -91,7 +90,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Double getRelevanceScore() {
-        return this._relevanceScore;
+        return this.relevanceScore;
     }
     /**
      * Gets the selectionLikelihood property value. The selectionLikelihood property
@@ -99,7 +98,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public SelectionLikelihoodInfo getSelectionLikelihood() {
-        return this._selectionLikelihood;
+        return this.selectionLikelihood;
     }
     /**
      * Serializes information the current object
@@ -123,7 +122,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the address property value. The email address.
@@ -132,7 +131,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAddress(@javax.annotation.Nullable final String value) {
-        this._address = value;
+        this.address = value;
     }
     /**
      * Sets the itemId property value. The itemId property
@@ -141,7 +140,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setItemId(@javax.annotation.Nullable final String value) {
-        this._itemId = value;
+        this.itemId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -150,7 +149,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the relevanceScore property value. The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships.
@@ -159,7 +158,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRelevanceScore(@javax.annotation.Nullable final Double value) {
-        this._relevanceScore = value;
+        this.relevanceScore = value;
     }
     /**
      * Sets the selectionLikelihood property value. The selectionLikelihood property
@@ -168,6 +167,6 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSelectionLikelihood(@javax.annotation.Nullable final SelectionLikelihoodInfo value) {
-        this._selectionLikelihood = value;
+        this.selectionLikelihood = value;
     }
 }

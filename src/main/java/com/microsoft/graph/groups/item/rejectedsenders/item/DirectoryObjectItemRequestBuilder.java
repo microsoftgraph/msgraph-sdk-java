@@ -4,7 +4,9 @@ import com.microsoft.graph.groups.item.rejectedsenders.item.ref.RefRequestBuilde
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-/** Builds and executes requests for operations under /groups/{group-id}/rejectedSenders/{directoryObject-id} */
+/**
+ * Builds and executes requests for operations under /groups/{group-id}/rejectedSenders/{directoryObject-id}
+ */
 public class DirectoryObjectItemRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;

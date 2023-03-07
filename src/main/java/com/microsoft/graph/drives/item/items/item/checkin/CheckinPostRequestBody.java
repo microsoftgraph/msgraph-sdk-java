@@ -4,18 +4,16 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the checkin method. */
 public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The checkInAs property */
-    private String _checkInAs;
+    private String checkInAs;
     /** The comment property */
-    private String _comment;
+    private String comment;
     /**
      * Instantiates a new checkinPostRequestBody and sets the default values.
      * @return a void
@@ -40,7 +38,7 @@ public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the checkInAs property value. The checkInAs property
@@ -48,7 +46,7 @@ public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCheckInAs() {
-        return this._checkInAs;
+        return this.checkInAs;
     }
     /**
      * Gets the comment property value. The comment property
@@ -56,15 +54,15 @@ public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getComment() {
-        return this._comment;
+        return this.comment;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("checkInAs", (n) -> { this.setCheckInAs(n.getStringValue()); });
         deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
         return deserializerMap;
@@ -88,7 +86,7 @@ public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the checkInAs property value. The checkInAs property
@@ -97,7 +95,7 @@ public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCheckInAs(@javax.annotation.Nullable final String value) {
-        this._checkInAs = value;
+        this.checkInAs = value;
     }
     /**
      * Sets the comment property value. The comment property
@@ -106,6 +104,6 @@ public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setComment(@javax.annotation.Nullable final String value) {
-        this._comment = value;
+        this.comment = value;
     }
 }

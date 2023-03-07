@@ -3,18 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class GroupLifecyclePolicy extends Entity implements Parsable {
     /** List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon. */
-    private String _alternateNotificationEmails;
+    private String alternateNotificationEmails;
     /** Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined. */
-    private Integer _groupLifetimeInDays;
+    private Integer groupLifetimeInDays;
     /** The group type for which the expiration policy applies. Possible values are All, Selected or None. */
-    private String _managedGroupTypes;
+    private String managedGroupTypes;
     /**
      * Instantiates a new groupLifecyclePolicy and sets the default values.
      * @return a void
@@ -39,15 +37,15 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAlternateNotificationEmails() {
-        return this._alternateNotificationEmails;
+        return this.alternateNotificationEmails;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alternateNotificationEmails", (n) -> { this.setAlternateNotificationEmails(n.getStringValue()); });
         deserializerMap.put("groupLifetimeInDays", (n) -> { this.setGroupLifetimeInDays(n.getIntegerValue()); });
         deserializerMap.put("managedGroupTypes", (n) -> { this.setManagedGroupTypes(n.getStringValue()); });
@@ -59,7 +57,7 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getGroupLifetimeInDays() {
-        return this._groupLifetimeInDays;
+        return this.groupLifetimeInDays;
     }
     /**
      * Gets the managedGroupTypes property value. The group type for which the expiration policy applies. Possible values are All, Selected or None.
@@ -67,7 +65,7 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getManagedGroupTypes() {
-        return this._managedGroupTypes;
+        return this.managedGroupTypes;
     }
     /**
      * Serializes information the current object
@@ -89,7 +87,7 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAlternateNotificationEmails(@javax.annotation.Nullable final String value) {
-        this._alternateNotificationEmails = value;
+        this.alternateNotificationEmails = value;
     }
     /**
      * Sets the groupLifetimeInDays property value. Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.
@@ -98,7 +96,7 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setGroupLifetimeInDays(@javax.annotation.Nullable final Integer value) {
-        this._groupLifetimeInDays = value;
+        this.groupLifetimeInDays = value;
     }
     /**
      * Sets the managedGroupTypes property value. The group type for which the expiration policy applies. Possible values are All, Selected or None.
@@ -107,6 +105,6 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setManagedGroupTypes(@javax.annotation.Nullable final String value) {
-        this._managedGroupTypes = value;
+        this.managedGroupTypes = value;
     }
 }

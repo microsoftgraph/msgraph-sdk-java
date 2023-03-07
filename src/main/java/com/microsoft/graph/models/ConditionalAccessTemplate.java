@@ -3,20 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class ConditionalAccessTemplate extends Entity implements Parsable {
     /** The user-friendly name of the template. */
-    private String _description;
+    private String description;
     /** The details property */
-    private ConditionalAccessPolicyDetail _details;
+    private ConditionalAccessPolicyDetail details;
     /** The user-friendly name of the template. */
-    private String _name;
+    private String name;
     /** The scenarios property */
-    private TemplateScenarios _scenarios;
+    private TemplateScenarios scenarios;
     /**
      * Instantiates a new conditionalAccessTemplate and sets the default values.
      * @return a void
@@ -41,7 +39,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the details property value. The details property
@@ -49,15 +47,15 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ConditionalAccessPolicyDetail getDetails() {
-        return this._details;
+        return this.details;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("details", (n) -> { this.setDetails(n.getObjectValue(ConditionalAccessPolicyDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
@@ -70,7 +68,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the scenarios property value. The scenarios property
@@ -78,7 +76,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TemplateScenarios getScenarios() {
-        return this._scenarios;
+        return this.scenarios;
     }
     /**
      * Serializes information the current object
@@ -101,7 +99,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the details property value. The details property
@@ -110,7 +108,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDetails(@javax.annotation.Nullable final ConditionalAccessPolicyDetail value) {
-        this._details = value;
+        this.details = value;
     }
     /**
      * Sets the name property value. The user-friendly name of the template.
@@ -119,7 +117,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the scenarios property value. The scenarios property
@@ -128,6 +126,6 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setScenarios(@javax.annotation.Nullable final TemplateScenarios value) {
-        this._scenarios = value;
+        this.scenarios = value;
     }
 }

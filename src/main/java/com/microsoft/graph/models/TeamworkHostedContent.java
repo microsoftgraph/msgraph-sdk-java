@@ -1,19 +1,16 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.ChatMessageHostedContent;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class TeamworkHostedContent extends Entity implements Parsable {
     /** Write only. Bytes for the hosted content (such as images). */
-    private byte[] _contentBytes;
+    private byte[] contentBytes;
     /** Write only. Content type. sicj as image/png, image/jpg. */
-    private String _contentType;
+    private String contentType;
     /**
      * Instantiates a new teamworkHostedContent and sets the default values.
      * @return a void
@@ -45,7 +42,7 @@ public class TeamworkHostedContent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public byte[] getContentBytes() {
-        return this._contentBytes;
+        return this.contentBytes;
     }
     /**
      * Gets the contentType property value. Write only. Content type. sicj as image/png, image/jpg.
@@ -53,15 +50,15 @@ public class TeamworkHostedContent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getContentType() {
-        return this._contentType;
+        return this.contentType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contentBytes", (n) -> { this.setContentBytes(n.getByteArrayValue()); });
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getStringValue()); });
         return deserializerMap;
@@ -85,7 +82,7 @@ public class TeamworkHostedContent extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentBytes(@javax.annotation.Nullable final byte[] value) {
-        this._contentBytes = value;
+        this.contentBytes = value;
     }
     /**
      * Sets the contentType property value. Write only. Content type. sicj as image/png, image/jpg.
@@ -94,6 +91,6 @@ public class TeamworkHostedContent extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentType(@javax.annotation.Nullable final String value) {
-        this._contentType = value;
+        this.contentType = value;
     }
 }

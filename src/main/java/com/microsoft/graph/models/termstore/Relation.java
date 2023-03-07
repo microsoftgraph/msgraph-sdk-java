@@ -4,20 +4,18 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class Relation extends Entity implements Parsable {
     /** The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set]. */
-    private Term _fromTerm;
+    private Term fromTerm;
     /** The type of relation. Possible values are: pin, reuse. */
-    private RelationType _relationship;
+    private RelationType relationship;
     /** The [set] in which the relation is relevant. */
-    private Set _set;
+    private Set set;
     /** The to [term] of the relation. The term to which the relationship is defined. */
-    private Term _toTerm;
+    private Term toTerm;
     /**
      * Instantiates a new relation and sets the default values.
      * @return a void
@@ -38,11 +36,11 @@ public class Relation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("fromTerm", (n) -> { this.setFromTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
         deserializerMap.put("relationship", (n) -> { this.setRelationship(n.getEnumValue(RelationType.class)); });
         deserializerMap.put("set", (n) -> { this.setSet(n.getObjectValue(Set::createFromDiscriminatorValue)); });
@@ -55,7 +53,7 @@ public class Relation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Term getFromTerm() {
-        return this._fromTerm;
+        return this.fromTerm;
     }
     /**
      * Gets the relationship property value. The type of relation. Possible values are: pin, reuse.
@@ -63,7 +61,7 @@ public class Relation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RelationType getRelationship() {
-        return this._relationship;
+        return this.relationship;
     }
     /**
      * Gets the set property value. The [set] in which the relation is relevant.
@@ -71,7 +69,7 @@ public class Relation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Set getSet() {
-        return this._set;
+        return this.set;
     }
     /**
      * Gets the toTerm property value. The to [term] of the relation. The term to which the relationship is defined.
@@ -79,7 +77,7 @@ public class Relation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Term getToTerm() {
-        return this._toTerm;
+        return this.toTerm;
     }
     /**
      * Serializes information the current object
@@ -102,7 +100,7 @@ public class Relation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFromTerm(@javax.annotation.Nullable final Term value) {
-        this._fromTerm = value;
+        this.fromTerm = value;
     }
     /**
      * Sets the relationship property value. The type of relation. Possible values are: pin, reuse.
@@ -111,7 +109,7 @@ public class Relation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRelationship(@javax.annotation.Nullable final RelationType value) {
-        this._relationship = value;
+        this.relationship = value;
     }
     /**
      * Sets the set property value. The [set] in which the relation is relevant.
@@ -120,7 +118,7 @@ public class Relation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSet(@javax.annotation.Nullable final Set value) {
-        this._set = value;
+        this.set = value;
     }
     /**
      * Sets the toTerm property value. The to [term] of the relation. The term to which the relationship is defined.
@@ -129,6 +127,6 @@ public class Relation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setToTerm(@javax.annotation.Nullable final Term value) {
-        this._toTerm = value;
+        this.toTerm = value;
     }
 }

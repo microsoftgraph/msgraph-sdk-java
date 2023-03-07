@@ -4,40 +4,38 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class Subscription extends Entity implements Parsable {
     /** Optional. Identifier of the application used to create the subscription. Read-only. */
-    private String _applicationId;
-    /** Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Note:  Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType. */
-    private String _changeType;
-    /** Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification. */
-    private String _clientState;
+    private String applicationId;
+    /** Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Note:  Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType. Use updated to receive notifications when user or group is created, updated or soft deleted.  Use deleted to receive notifications when user or group is permanently deleted. */
+    private String changeType;
+    /** Required. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification. */
+    private String clientState;
     /** Optional. Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only. */
-    private String _creatorId;
+    private String creatorId;
     /** Optional. A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional but required when includeResourceData is true. */
-    private String _encryptionCertificate;
+    private String encryptionCertificate;
     /** Optional. A custom app-provided identifier to help identify the certificate needed to decrypt resource data. */
-    private String _encryptionCertificateId;
+    private String encryptionCertificateId;
     /** Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to. For the maximum supported subscription length of time, see the table below. */
-    private OffsetDateTime _expirationDateTime;
+    private OffsetDateTime expirationDateTime;
     /** Optional. When set to true, change notifications include resource data (such as content of a chat message). */
-    private Boolean _includeResourceData;
+    private Boolean includeResourceData;
     /** Optional. Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v1_0, v1_1, v1_2, v1_3. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2. */
-    private String _latestSupportedTlsVersion;
-    /** Optional. The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved and missed notifications. This URL must make use of the HTTPS protocol. */
-    private String _lifecycleNotificationUrl;
-    /** Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc. */
-    private String _notificationQueryOptions;
+    private String latestSupportedTlsVersion;
+    /** Optional. The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved, reauthorizationRequired, and missed notifications. This URL must make use of the HTTPS protocol. */
+    private String lifecycleNotificationUrl;
+    /** Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.  Supported only for Universal Print Service. For more information, see Subscribe to change notifications from cloud printing APIs using Microsoft Graph. */
+    private String notificationQueryOptions;
     /** Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol. */
-    private String _notificationUrl;
+    private String notificationUrl;
     /** Optional. The app ID that the subscription service can use to generate the validation token. This allows the client to validate the authenticity of the notification received. */
-    private String _notificationUrlAppId;
+    private String notificationUrlAppId;
     /** Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource. */
-    private String _resource;
+    private String resource;
     /**
      * Instantiates a new subscription and sets the default values.
      * @return a void
@@ -62,23 +60,23 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getApplicationId() {
-        return this._applicationId;
+        return this.applicationId;
     }
     /**
-     * Gets the changeType property value. Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Note:  Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.
+     * Gets the changeType property value. Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Note:  Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType. Use updated to receive notifications when user or group is created, updated or soft deleted.  Use deleted to receive notifications when user or group is permanently deleted.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getChangeType() {
-        return this._changeType;
+        return this.changeType;
     }
     /**
-     * Gets the clientState property value. Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
+     * Gets the clientState property value. Required. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getClientState() {
-        return this._clientState;
+        return this.clientState;
     }
     /**
      * Gets the creatorId property value. Optional. Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
@@ -86,7 +84,7 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCreatorId() {
-        return this._creatorId;
+        return this.creatorId;
     }
     /**
      * Gets the encryptionCertificate property value. Optional. A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional but required when includeResourceData is true.
@@ -94,7 +92,7 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEncryptionCertificate() {
-        return this._encryptionCertificate;
+        return this.encryptionCertificate;
     }
     /**
      * Gets the encryptionCertificateId property value. Optional. A custom app-provided identifier to help identify the certificate needed to decrypt resource data.
@@ -102,7 +100,7 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEncryptionCertificateId() {
-        return this._encryptionCertificateId;
+        return this.encryptionCertificateId;
     }
     /**
      * Gets the expirationDateTime property value. Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to. For the maximum supported subscription length of time, see the table below.
@@ -110,15 +108,15 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this._expirationDateTime;
+        return this.expirationDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicationId", (n) -> { this.setApplicationId(n.getStringValue()); });
         deserializerMap.put("changeType", (n) -> { this.setChangeType(n.getStringValue()); });
         deserializerMap.put("clientState", (n) -> { this.setClientState(n.getStringValue()); });
@@ -141,7 +139,7 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIncludeResourceData() {
-        return this._includeResourceData;
+        return this.includeResourceData;
     }
     /**
      * Gets the latestSupportedTlsVersion property value. Optional. Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v1_0, v1_1, v1_2, v1_3. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
@@ -149,23 +147,23 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLatestSupportedTlsVersion() {
-        return this._latestSupportedTlsVersion;
+        return this.latestSupportedTlsVersion;
     }
     /**
-     * Gets the lifecycleNotificationUrl property value. Optional. The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved and missed notifications. This URL must make use of the HTTPS protocol.
+     * Gets the lifecycleNotificationUrl property value. Optional. The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved, reauthorizationRequired, and missed notifications. This URL must make use of the HTTPS protocol.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getLifecycleNotificationUrl() {
-        return this._lifecycleNotificationUrl;
+        return this.lifecycleNotificationUrl;
     }
     /**
-     * Gets the notificationQueryOptions property value. Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.
+     * Gets the notificationQueryOptions property value. Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.  Supported only for Universal Print Service. For more information, see Subscribe to change notifications from cloud printing APIs using Microsoft Graph.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getNotificationQueryOptions() {
-        return this._notificationQueryOptions;
+        return this.notificationQueryOptions;
     }
     /**
      * Gets the notificationUrl property value. Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
@@ -173,7 +171,7 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getNotificationUrl() {
-        return this._notificationUrl;
+        return this.notificationUrl;
     }
     /**
      * Gets the notificationUrlAppId property value. Optional. The app ID that the subscription service can use to generate the validation token. This allows the client to validate the authenticity of the notification received.
@@ -181,7 +179,7 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getNotificationUrlAppId() {
-        return this._notificationUrlAppId;
+        return this.notificationUrlAppId;
     }
     /**
      * Gets the resource property value. Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
@@ -189,7 +187,7 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getResource() {
-        return this._resource;
+        return this.resource;
     }
     /**
      * Serializes information the current object
@@ -222,25 +220,25 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setApplicationId(@javax.annotation.Nullable final String value) {
-        this._applicationId = value;
+        this.applicationId = value;
     }
     /**
-     * Sets the changeType property value. Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Note:  Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.
+     * Sets the changeType property value. Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Note:  Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType. Use updated to receive notifications when user or group is created, updated or soft deleted.  Use deleted to receive notifications when user or group is permanently deleted.
      * @param value Value to set for the changeType property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setChangeType(@javax.annotation.Nullable final String value) {
-        this._changeType = value;
+        this.changeType = value;
     }
     /**
-     * Sets the clientState property value. Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
+     * Sets the clientState property value. Required. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
      * @param value Value to set for the clientState property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setClientState(@javax.annotation.Nullable final String value) {
-        this._clientState = value;
+        this.clientState = value;
     }
     /**
      * Sets the creatorId property value. Optional. Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
@@ -249,7 +247,7 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatorId(@javax.annotation.Nullable final String value) {
-        this._creatorId = value;
+        this.creatorId = value;
     }
     /**
      * Sets the encryptionCertificate property value. Optional. A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional but required when includeResourceData is true.
@@ -258,7 +256,7 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEncryptionCertificate(@javax.annotation.Nullable final String value) {
-        this._encryptionCertificate = value;
+        this.encryptionCertificate = value;
     }
     /**
      * Sets the encryptionCertificateId property value. Optional. A custom app-provided identifier to help identify the certificate needed to decrypt resource data.
@@ -267,7 +265,7 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEncryptionCertificateId(@javax.annotation.Nullable final String value) {
-        this._encryptionCertificateId = value;
+        this.encryptionCertificateId = value;
     }
     /**
      * Sets the expirationDateTime property value. Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to. For the maximum supported subscription length of time, see the table below.
@@ -276,7 +274,7 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._expirationDateTime = value;
+        this.expirationDateTime = value;
     }
     /**
      * Sets the includeResourceData property value. Optional. When set to true, change notifications include resource data (such as content of a chat message).
@@ -285,7 +283,7 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIncludeResourceData(@javax.annotation.Nullable final Boolean value) {
-        this._includeResourceData = value;
+        this.includeResourceData = value;
     }
     /**
      * Sets the latestSupportedTlsVersion property value. Optional. Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v1_0, v1_1, v1_2, v1_3. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
@@ -294,25 +292,25 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLatestSupportedTlsVersion(@javax.annotation.Nullable final String value) {
-        this._latestSupportedTlsVersion = value;
+        this.latestSupportedTlsVersion = value;
     }
     /**
-     * Sets the lifecycleNotificationUrl property value. Optional. The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved and missed notifications. This URL must make use of the HTTPS protocol.
+     * Sets the lifecycleNotificationUrl property value. Optional. The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved, reauthorizationRequired, and missed notifications. This URL must make use of the HTTPS protocol.
      * @param value Value to set for the lifecycleNotificationUrl property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setLifecycleNotificationUrl(@javax.annotation.Nullable final String value) {
-        this._lifecycleNotificationUrl = value;
+        this.lifecycleNotificationUrl = value;
     }
     /**
-     * Sets the notificationQueryOptions property value. Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.
+     * Sets the notificationQueryOptions property value. Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.  Supported only for Universal Print Service. For more information, see Subscribe to change notifications from cloud printing APIs using Microsoft Graph.
      * @param value Value to set for the notificationQueryOptions property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setNotificationQueryOptions(@javax.annotation.Nullable final String value) {
-        this._notificationQueryOptions = value;
+        this.notificationQueryOptions = value;
     }
     /**
      * Sets the notificationUrl property value. Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
@@ -321,7 +319,7 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setNotificationUrl(@javax.annotation.Nullable final String value) {
-        this._notificationUrl = value;
+        this.notificationUrl = value;
     }
     /**
      * Sets the notificationUrlAppId property value. Optional. The app ID that the subscription service can use to generate the validation token. This allows the client to validate the authenticity of the notification received.
@@ -330,7 +328,7 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setNotificationUrlAppId(@javax.annotation.Nullable final String value) {
-        this._notificationUrlAppId = value;
+        this.notificationUrlAppId = value;
     }
     /**
      * Sets the resource property value. Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
@@ -339,6 +337,6 @@ public class Subscription extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final String value) {
-        this._resource = value;
+        this.resource = value;
     }
 }

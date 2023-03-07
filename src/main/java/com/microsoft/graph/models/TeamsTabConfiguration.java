@@ -4,23 +4,22 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Url used for rendering tab contents in Teams. Required. */
-    private String _contentUrl;
+    private String contentUrl;
     /** Identifier for the entity hosted by the tab provider. */
-    private String _entityId;
+    private String entityId;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Url called by Teams client when a Tab is removed using the Teams Client. */
-    private String _removeUrl;
+    private String removeUrl;
     /** Url for showing tab contents outside of Teams. */
-    private String _websiteUrl;
+    private String websiteUrl;
     /**
      * Instantiates a new teamsTabConfiguration and sets the default values.
      * @return a void
@@ -45,7 +44,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the contentUrl property value. Url used for rendering tab contents in Teams. Required.
@@ -53,7 +52,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getContentUrl() {
-        return this._contentUrl;
+        return this.contentUrl;
     }
     /**
      * Gets the entityId property value. Identifier for the entity hosted by the tab provider.
@@ -61,15 +60,15 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getEntityId() {
-        return this._entityId;
+        return this.entityId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("contentUrl", (n) -> { this.setContentUrl(n.getStringValue()); });
         deserializerMap.put("entityId", (n) -> { this.setEntityId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -83,7 +82,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the removeUrl property value. Url called by Teams client when a Tab is removed using the Teams Client.
@@ -91,7 +90,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getRemoveUrl() {
-        return this._removeUrl;
+        return this.removeUrl;
     }
     /**
      * Gets the websiteUrl property value. Url for showing tab contents outside of Teams.
@@ -99,7 +98,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getWebsiteUrl() {
-        return this._websiteUrl;
+        return this.websiteUrl;
     }
     /**
      * Serializes information the current object
@@ -123,7 +122,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the contentUrl property value. Url used for rendering tab contents in Teams. Required.
@@ -132,7 +131,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentUrl(@javax.annotation.Nullable final String value) {
-        this._contentUrl = value;
+        this.contentUrl = value;
     }
     /**
      * Sets the entityId property value. Identifier for the entity hosted by the tab provider.
@@ -141,7 +140,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEntityId(@javax.annotation.Nullable final String value) {
-        this._entityId = value;
+        this.entityId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -150,7 +149,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the removeUrl property value. Url called by Teams client when a Tab is removed using the Teams Client.
@@ -159,7 +158,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRemoveUrl(@javax.annotation.Nullable final String value) {
-        this._removeUrl = value;
+        this.removeUrl = value;
     }
     /**
      * Sets the websiteUrl property value. Url for showing tab contents outside of Teams.
@@ -168,6 +167,6 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setWebsiteUrl(@javax.annotation.Nullable final String value) {
-        this._websiteUrl = value;
+        this.websiteUrl = value;
     }
 }

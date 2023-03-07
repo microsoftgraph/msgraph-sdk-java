@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintService extends Entity implements Parsable {
     /** Endpoints that can be used to access the service. Read-only. Nullable. */
-    private java.util.List<PrintServiceEndpoint> _endpoints;
+    private java.util.List<PrintServiceEndpoint> endpoints;
     /**
      * Instantiates a new PrintService and sets the default values.
      * @return a void
@@ -34,15 +33,15 @@ public class PrintService extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintServiceEndpoint> getEndpoints() {
-        return this._endpoints;
+        return this.endpoints;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("endpoints", (n) -> { this.setEndpoints(n.getCollectionOfObjectValues(PrintServiceEndpoint::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -64,6 +63,6 @@ public class PrintService extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEndpoints(@javax.annotation.Nullable final java.util.List<PrintServiceEndpoint> value) {
-        this._endpoints = value;
+        this.endpoints = value;
     }
 }

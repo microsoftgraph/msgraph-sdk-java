@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BasicAuthentication extends ApiAuthenticationConfigurationBase implements Parsable {
     /** The password. It is not returned in the responses. */
-    private String _password;
+    private String password;
     /** The username. */
-    private String _username;
+    private String username;
     /**
      * Instantiates a new BasicAuthentication and sets the default values.
      * @return a void
@@ -33,11 +32,11 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("password", (n) -> { this.setPassword(n.getStringValue()); });
         deserializerMap.put("username", (n) -> { this.setUsername(n.getStringValue()); });
         return deserializerMap;
@@ -48,7 +47,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
      */
     @javax.annotation.Nullable
     public String getPassword() {
-        return this._password;
+        return this.password;
     }
     /**
      * Gets the username property value. The username.
@@ -56,7 +55,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
      */
     @javax.annotation.Nullable
     public String getUsername() {
-        return this._username;
+        return this.username;
     }
     /**
      * Serializes information the current object
@@ -77,7 +76,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
      */
     @javax.annotation.Nonnull
     public void setPassword(@javax.annotation.Nullable final String value) {
-        this._password = value;
+        this.password = value;
     }
     /**
      * Sets the username property value. The username.
@@ -86,6 +85,6 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
      */
     @javax.annotation.Nonnull
     public void setUsername(@javax.annotation.Nullable final String value) {
-        this._username = value;
+        this.username = value;
     }
 }

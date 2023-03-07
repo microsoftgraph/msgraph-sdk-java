@@ -3,7 +3,6 @@ package com.microsoft.graph.models.callrecords;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the getPstnCalls method. */
 public enum PstnCallDurationSource implements ValuedEnum {
     Microsoft("microsoft"),
     Operator("operator");

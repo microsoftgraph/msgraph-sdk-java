@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the query method. */
 public enum EntityType implements ValuedEnum {
     Event("event"),
     Message("message"),
@@ -13,7 +12,9 @@ public enum EntityType implements ValuedEnum {
     List("list"),
     ListItem("listItem"),
     Drive("drive"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    ChatMessage("chatMessage"),
+    Person("person");
     public final String value;
     EntityType(final String value) {
         this.value = value;
@@ -33,6 +34,8 @@ public enum EntityType implements ValuedEnum {
             case "listItem": return ListItem;
             case "drive": return Drive;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "chatMessage": return ChatMessage;
+            case "person": return Person;
             default: return null;
         }
     }

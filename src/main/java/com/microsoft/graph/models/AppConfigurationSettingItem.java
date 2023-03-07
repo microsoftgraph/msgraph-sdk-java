@@ -4,22 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties for App configuration setting item. */
+/**
+ * Contains properties for App configuration setting item.
+ */
 public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** app configuration key. */
-    private String _appConfigKey;
+    private String appConfigKey;
     /** App configuration key types. */
-    private MdmAppConfigKeyType _appConfigKeyType;
+    private MdmAppConfigKeyType appConfigKeyType;
     /** app configuration key value. */
-    private String _appConfigKeyValue;
+    private String appConfigKeyValue;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new appConfigurationSettingItem and sets the default values.
      * @return a void
@@ -44,7 +45,7 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the appConfigKey property value. app configuration key.
@@ -52,7 +53,7 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getAppConfigKey() {
-        return this._appConfigKey;
+        return this.appConfigKey;
     }
     /**
      * Gets the appConfigKeyType property value. App configuration key types.
@@ -60,7 +61,7 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public MdmAppConfigKeyType getAppConfigKeyType() {
-        return this._appConfigKeyType;
+        return this.appConfigKeyType;
     }
     /**
      * Gets the appConfigKeyValue property value. app configuration key value.
@@ -68,15 +69,15 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getAppConfigKeyValue() {
-        return this._appConfigKeyValue;
+        return this.appConfigKeyValue;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("appConfigKey", (n) -> { this.setAppConfigKey(n.getStringValue()); });
         deserializerMap.put("appConfigKeyType", (n) -> { this.setAppConfigKeyType(n.getEnumValue(MdmAppConfigKeyType.class)); });
         deserializerMap.put("appConfigKeyValue", (n) -> { this.setAppConfigKeyValue(n.getStringValue()); });
@@ -89,7 +90,7 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -112,7 +113,7 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the appConfigKey property value. app configuration key.
@@ -121,7 +122,7 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setAppConfigKey(@javax.annotation.Nullable final String value) {
-        this._appConfigKey = value;
+        this.appConfigKey = value;
     }
     /**
      * Sets the appConfigKeyType property value. App configuration key types.
@@ -130,7 +131,7 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setAppConfigKeyType(@javax.annotation.Nullable final MdmAppConfigKeyType value) {
-        this._appConfigKeyType = value;
+        this.appConfigKeyType = value;
     }
     /**
      * Sets the appConfigKeyValue property value. app configuration key value.
@@ -139,7 +140,7 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setAppConfigKeyValue(@javax.annotation.Nullable final String value) {
-        this._appConfigKeyValue = value;
+        this.appConfigKeyValue = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -148,6 +149,6 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

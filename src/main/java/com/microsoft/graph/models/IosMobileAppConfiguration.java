@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration implements Parsable {
     /** mdm app configuration Base64 binary. */
-    private byte[] _encodedSettingXml;
+    private byte[] encodedSettingXml;
     /** app configuration setting items. */
-    private java.util.List<AppConfigurationSettingItem> _settings;
+    private java.util.List<AppConfigurationSettingItem> settings;
     /**
      * Instantiates a new IosMobileAppConfiguration and sets the default values.
      * @return a void
@@ -37,15 +36,15 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      */
     @javax.annotation.Nullable
     public byte[] getEncodedSettingXml() {
-        return this._encodedSettingXml;
+        return this.encodedSettingXml;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("encodedSettingXml", (n) -> { this.setEncodedSettingXml(n.getByteArrayValue()); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getCollectionOfObjectValues(AppConfigurationSettingItem::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -56,7 +55,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      */
     @javax.annotation.Nullable
     public java.util.List<AppConfigurationSettingItem> getSettings() {
-        return this._settings;
+        return this.settings;
     }
     /**
      * Serializes information the current object
@@ -77,7 +76,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      */
     @javax.annotation.Nonnull
     public void setEncodedSettingXml(@javax.annotation.Nullable final byte[] value) {
-        this._encodedSettingXml = value;
+        this.encodedSettingXml = value;
     }
     /**
      * Sets the settings property value. app configuration setting items.
@@ -86,6 +85,6 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      */
     @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final java.util.List<AppConfigurationSettingItem> value) {
-        this._settings = value;
+        this.settings = value;
     }
 }

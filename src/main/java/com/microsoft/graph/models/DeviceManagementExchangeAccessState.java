@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Device Exchange Access State. */
 public enum DeviceManagementExchangeAccessState implements ValuedEnum {
     /** No access state discovered from Exchange */
     None("none"),

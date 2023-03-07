@@ -4,31 +4,30 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosVppApp extends MobileApp implements Parsable {
     /** The applicable iOS Device Type. */
-    private IosDeviceType _applicableDeviceType;
+    private IosDeviceType applicableDeviceType;
     /** The store URL. */
-    private String _appStoreUrl;
+    private String appStoreUrl;
     /** The Identity Name. */
-    private String _bundleId;
+    private String bundleId;
     /** The supported License Type. */
-    private VppLicensingType _licensingType;
+    private VppLicensingType licensingType;
     /** The VPP application release date and time. */
-    private OffsetDateTime _releaseDateTime;
+    private OffsetDateTime releaseDateTime;
     /** The total number of VPP licenses. */
-    private Integer _totalLicenseCount;
+    private Integer totalLicenseCount;
     /** The number of VPP licenses in use. */
-    private Integer _usedLicenseCount;
+    private Integer usedLicenseCount;
     /** Possible types of an Apple Volume Purchase Program token. */
-    private VppTokenAccountType _vppTokenAccountType;
+    private VppTokenAccountType vppTokenAccountType;
     /** The Apple Id associated with the given Apple Volume Purchase Program Token. */
-    private String _vppTokenAppleId;
+    private String vppTokenAppleId;
     /** The organization associated with the Apple Volume Purchase Program Token */
-    private String _vppTokenOrganizationName;
+    private String vppTokenOrganizationName;
     /**
      * Instantiates a new IosVppApp and sets the default values.
      * @return a void
@@ -54,7 +53,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public IosDeviceType getApplicableDeviceType() {
-        return this._applicableDeviceType;
+        return this.applicableDeviceType;
     }
     /**
      * Gets the appStoreUrl property value. The store URL.
@@ -62,7 +61,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppStoreUrl() {
-        return this._appStoreUrl;
+        return this.appStoreUrl;
     }
     /**
      * Gets the bundleId property value. The Identity Name.
@@ -70,15 +69,15 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getBundleId() {
-        return this._bundleId;
+        return this.bundleId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicableDeviceType", (n) -> { this.setApplicableDeviceType(n.getObjectValue(IosDeviceType::createFromDiscriminatorValue)); });
         deserializerMap.put("appStoreUrl", (n) -> { this.setAppStoreUrl(n.getStringValue()); });
         deserializerMap.put("bundleId", (n) -> { this.setBundleId(n.getStringValue()); });
@@ -97,7 +96,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public VppLicensingType getLicensingType() {
-        return this._licensingType;
+        return this.licensingType;
     }
     /**
      * Gets the releaseDateTime property value. The VPP application release date and time.
@@ -105,7 +104,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getReleaseDateTime() {
-        return this._releaseDateTime;
+        return this.releaseDateTime;
     }
     /**
      * Gets the totalLicenseCount property value. The total number of VPP licenses.
@@ -113,7 +112,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getTotalLicenseCount() {
-        return this._totalLicenseCount;
+        return this.totalLicenseCount;
     }
     /**
      * Gets the usedLicenseCount property value. The number of VPP licenses in use.
@@ -121,7 +120,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getUsedLicenseCount() {
-        return this._usedLicenseCount;
+        return this.usedLicenseCount;
     }
     /**
      * Gets the vppTokenAccountType property value. Possible types of an Apple Volume Purchase Program token.
@@ -129,7 +128,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public VppTokenAccountType getVppTokenAccountType() {
-        return this._vppTokenAccountType;
+        return this.vppTokenAccountType;
     }
     /**
      * Gets the vppTokenAppleId property value. The Apple Id associated with the given Apple Volume Purchase Program Token.
@@ -137,7 +136,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVppTokenAppleId() {
-        return this._vppTokenAppleId;
+        return this.vppTokenAppleId;
     }
     /**
      * Gets the vppTokenOrganizationName property value. The organization associated with the Apple Volume Purchase Program Token
@@ -145,7 +144,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVppTokenOrganizationName() {
-        return this._vppTokenOrganizationName;
+        return this.vppTokenOrganizationName;
     }
     /**
      * Serializes information the current object
@@ -174,7 +173,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setApplicableDeviceType(@javax.annotation.Nullable final IosDeviceType value) {
-        this._applicableDeviceType = value;
+        this.applicableDeviceType = value;
     }
     /**
      * Sets the appStoreUrl property value. The store URL.
@@ -183,7 +182,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppStoreUrl(@javax.annotation.Nullable final String value) {
-        this._appStoreUrl = value;
+        this.appStoreUrl = value;
     }
     /**
      * Sets the bundleId property value. The Identity Name.
@@ -192,7 +191,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setBundleId(@javax.annotation.Nullable final String value) {
-        this._bundleId = value;
+        this.bundleId = value;
     }
     /**
      * Sets the licensingType property value. The supported License Type.
@@ -201,7 +200,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLicensingType(@javax.annotation.Nullable final VppLicensingType value) {
-        this._licensingType = value;
+        this.licensingType = value;
     }
     /**
      * Sets the releaseDateTime property value. The VPP application release date and time.
@@ -210,7 +209,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setReleaseDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._releaseDateTime = value;
+        this.releaseDateTime = value;
     }
     /**
      * Sets the totalLicenseCount property value. The total number of VPP licenses.
@@ -219,7 +218,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTotalLicenseCount(@javax.annotation.Nullable final Integer value) {
-        this._totalLicenseCount = value;
+        this.totalLicenseCount = value;
     }
     /**
      * Sets the usedLicenseCount property value. The number of VPP licenses in use.
@@ -228,7 +227,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUsedLicenseCount(@javax.annotation.Nullable final Integer value) {
-        this._usedLicenseCount = value;
+        this.usedLicenseCount = value;
     }
     /**
      * Sets the vppTokenAccountType property value. Possible types of an Apple Volume Purchase Program token.
@@ -237,7 +236,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVppTokenAccountType(@javax.annotation.Nullable final VppTokenAccountType value) {
-        this._vppTokenAccountType = value;
+        this.vppTokenAccountType = value;
     }
     /**
      * Sets the vppTokenAppleId property value. The Apple Id associated with the given Apple Volume Purchase Program Token.
@@ -246,7 +245,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVppTokenAppleId(@javax.annotation.Nullable final String value) {
-        this._vppTokenAppleId = value;
+        this.vppTokenAppleId = value;
     }
     /**
      * Sets the vppTokenOrganizationName property value. The organization associated with the Apple Volume Purchase Program Token
@@ -255,6 +254,6 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVppTokenOrganizationName(@javax.annotation.Nullable final String value) {
-        this._vppTokenOrganizationName = value;
+        this.vppTokenOrganizationName = value;
     }
 }

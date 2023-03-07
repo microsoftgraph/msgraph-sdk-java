@@ -5,24 +5,22 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class Segment extends Entity implements Parsable {
     /** Endpoint that answered this segment. */
-    private Endpoint _callee;
+    private Endpoint callee;
     /** Endpoint that initiated this segment. */
-    private Endpoint _caller;
+    private Endpoint caller;
     /** UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _endDateTime;
+    private OffsetDateTime endDateTime;
     /** Failure information associated with the segment if it failed. */
-    private FailureInfo _failureInfo;
+    private FailureInfo failureInfo;
     /** Media associated with this segment. */
-    private java.util.List<Media> _media;
+    private java.util.List<Media> media;
     /** UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _startDateTime;
+    private OffsetDateTime startDateTime;
     /**
      * Instantiates a new segment and sets the default values.
      * @return a void
@@ -47,7 +45,7 @@ public class Segment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Endpoint getCallee() {
-        return this._callee;
+        return this.callee;
     }
     /**
      * Gets the caller property value. Endpoint that initiated this segment.
@@ -55,7 +53,7 @@ public class Segment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Endpoint getCaller() {
-        return this._caller;
+        return this.caller;
     }
     /**
      * Gets the endDateTime property value. UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -63,7 +61,7 @@ public class Segment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * Gets the failureInfo property value. Failure information associated with the segment if it failed.
@@ -71,15 +69,15 @@ public class Segment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public FailureInfo getFailureInfo() {
-        return this._failureInfo;
+        return this.failureInfo;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("callee", (n) -> { this.setCallee(n.getObjectValue(Endpoint::createFromDiscriminatorValue)); });
         deserializerMap.put("caller", (n) -> { this.setCaller(n.getObjectValue(Endpoint::createFromDiscriminatorValue)); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
@@ -94,7 +92,7 @@ public class Segment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Media> getMedia() {
-        return this._media;
+        return this.media;
     }
     /**
      * Gets the startDateTime property value. UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -102,7 +100,7 @@ public class Segment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Serializes information the current object
@@ -127,7 +125,7 @@ public class Segment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCallee(@javax.annotation.Nullable final Endpoint value) {
-        this._callee = value;
+        this.callee = value;
     }
     /**
      * Sets the caller property value. Endpoint that initiated this segment.
@@ -136,7 +134,7 @@ public class Segment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCaller(@javax.annotation.Nullable final Endpoint value) {
-        this._caller = value;
+        this.caller = value;
     }
     /**
      * Sets the endDateTime property value. UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -145,7 +143,7 @@ public class Segment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
      * Sets the failureInfo property value. Failure information associated with the segment if it failed.
@@ -154,7 +152,7 @@ public class Segment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFailureInfo(@javax.annotation.Nullable final FailureInfo value) {
-        this._failureInfo = value;
+        this.failureInfo = value;
     }
     /**
      * Sets the media property value. Media associated with this segment.
@@ -163,7 +161,7 @@ public class Segment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMedia(@javax.annotation.Nullable final java.util.List<Media> value) {
-        this._media = value;
+        this.media = value;
     }
     /**
      * Sets the startDateTime property value. UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -172,6 +170,6 @@ public class Segment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
 }

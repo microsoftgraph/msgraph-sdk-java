@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Indicates whether the user archived the message. */
-    private Boolean _isArchived;
+    private Boolean isArchived;
     /** Indicates whether the user marked the message as favorite. */
-    private Boolean _isFavorited;
+    private Boolean isFavorited;
     /** Indicates whether the user read the message. */
-    private Boolean _isRead;
+    private Boolean isRead;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new serviceUpdateMessageViewpoint and sets the default values.
      * @return a void
@@ -43,15 +42,15 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("isFavorited", (n) -> { this.setIsFavorited(n.getBooleanValue()); });
         deserializerMap.put("isRead", (n) -> { this.setIsRead(n.getBooleanValue()); });
@@ -64,7 +63,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public Boolean getIsArchived() {
-        return this._isArchived;
+        return this.isArchived;
     }
     /**
      * Gets the isFavorited property value. Indicates whether the user marked the message as favorite.
@@ -72,7 +71,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public Boolean getIsFavorited() {
-        return this._isFavorited;
+        return this.isFavorited;
     }
     /**
      * Gets the isRead property value. Indicates whether the user read the message.
@@ -80,7 +79,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public Boolean getIsRead() {
-        return this._isRead;
+        return this.isRead;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +87,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the isArchived property value. Indicates whether the user archived the message.
@@ -120,7 +119,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setIsArchived(@javax.annotation.Nullable final Boolean value) {
-        this._isArchived = value;
+        this.isArchived = value;
     }
     /**
      * Sets the isFavorited property value. Indicates whether the user marked the message as favorite.
@@ -129,7 +128,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setIsFavorited(@javax.annotation.Nullable final Boolean value) {
-        this._isFavorited = value;
+        this.isFavorited = value;
     }
     /**
      * Sets the isRead property value. Indicates whether the user read the message.
@@ -138,7 +137,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setIsRead(@javax.annotation.Nullable final Boolean value) {
-        this._isRead = value;
+        this.isRead = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -147,6 +146,6 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

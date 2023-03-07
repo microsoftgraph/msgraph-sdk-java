@@ -3,26 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Imported windows autopilot devices. */
+/**
+ * Imported windows autopilot devices.
+ */
 public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     /** UPN of the user the device will be assigned */
-    private String _assignedUserPrincipalName;
+    private String assignedUserPrincipalName;
     /** Group Tag of the Windows autopilot device. */
-    private String _groupTag;
+    private String groupTag;
     /** Hardware Blob of the Windows autopilot device. */
-    private byte[] _hardwareIdentifier;
+    private byte[] hardwareIdentifier;
     /** The Import Id of the Windows autopilot device. */
-    private String _importId;
+    private String importId;
     /** Product Key of the Windows autopilot device. */
-    private String _productKey;
+    private String productKey;
     /** Serial number of the Windows autopilot device. */
-    private String _serialNumber;
+    private String serialNumber;
     /** Current state of the imported device. */
-    private ImportedWindowsAutopilotDeviceIdentityState _state;
+    private ImportedWindowsAutopilotDeviceIdentityState state;
     /**
      * Instantiates a new importedWindowsAutopilotDeviceIdentity and sets the default values.
      * @return a void
@@ -47,15 +48,15 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @javax.annotation.Nullable
     public String getAssignedUserPrincipalName() {
-        return this._assignedUserPrincipalName;
+        return this.assignedUserPrincipalName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignedUserPrincipalName", (n) -> { this.setAssignedUserPrincipalName(n.getStringValue()); });
         deserializerMap.put("groupTag", (n) -> { this.setGroupTag(n.getStringValue()); });
         deserializerMap.put("hardwareIdentifier", (n) -> { this.setHardwareIdentifier(n.getByteArrayValue()); });
@@ -71,7 +72,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @javax.annotation.Nullable
     public String getGroupTag() {
-        return this._groupTag;
+        return this.groupTag;
     }
     /**
      * Gets the hardwareIdentifier property value. Hardware Blob of the Windows autopilot device.
@@ -79,7 +80,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @javax.annotation.Nullable
     public byte[] getHardwareIdentifier() {
-        return this._hardwareIdentifier;
+        return this.hardwareIdentifier;
     }
     /**
      * Gets the importId property value. The Import Id of the Windows autopilot device.
@@ -87,7 +88,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @javax.annotation.Nullable
     public String getImportId() {
-        return this._importId;
+        return this.importId;
     }
     /**
      * Gets the productKey property value. Product Key of the Windows autopilot device.
@@ -95,7 +96,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @javax.annotation.Nullable
     public String getProductKey() {
-        return this._productKey;
+        return this.productKey;
     }
     /**
      * Gets the serialNumber property value. Serial number of the Windows autopilot device.
@@ -103,7 +104,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @javax.annotation.Nullable
     public String getSerialNumber() {
-        return this._serialNumber;
+        return this.serialNumber;
     }
     /**
      * Gets the state property value. Current state of the imported device.
@@ -111,7 +112,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @javax.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Serializes information the current object
@@ -137,7 +138,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @javax.annotation.Nonnull
     public void setAssignedUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._assignedUserPrincipalName = value;
+        this.assignedUserPrincipalName = value;
     }
     /**
      * Sets the groupTag property value. Group Tag of the Windows autopilot device.
@@ -146,7 +147,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @javax.annotation.Nonnull
     public void setGroupTag(@javax.annotation.Nullable final String value) {
-        this._groupTag = value;
+        this.groupTag = value;
     }
     /**
      * Sets the hardwareIdentifier property value. Hardware Blob of the Windows autopilot device.
@@ -155,7 +156,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @javax.annotation.Nonnull
     public void setHardwareIdentifier(@javax.annotation.Nullable final byte[] value) {
-        this._hardwareIdentifier = value;
+        this.hardwareIdentifier = value;
     }
     /**
      * Sets the importId property value. The Import Id of the Windows autopilot device.
@@ -164,7 +165,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @javax.annotation.Nonnull
     public void setImportId(@javax.annotation.Nullable final String value) {
-        this._importId = value;
+        this.importId = value;
     }
     /**
      * Sets the productKey property value. Product Key of the Windows autopilot device.
@@ -173,7 +174,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @javax.annotation.Nonnull
     public void setProductKey(@javax.annotation.Nullable final String value) {
-        this._productKey = value;
+        this.productKey = value;
     }
     /**
      * Sets the serialNumber property value. Serial number of the Windows autopilot device.
@@ -182,7 +183,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @javax.annotation.Nonnull
     public void setSerialNumber(@javax.annotation.Nullable final String value) {
-        this._serialNumber = value;
+        this.serialNumber = value;
     }
     /**
      * Sets the state property value. Current state of the imported device.
@@ -191,6 +192,6 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ImportedWindowsAutopilotDeviceIdentityState value) {
-        this._state = value;
+        this.state = value;
     }
 }

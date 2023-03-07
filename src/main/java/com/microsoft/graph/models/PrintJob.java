@@ -4,30 +4,28 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class PrintJob extends Entity implements Parsable {
     /** The configuration property */
-    private PrintJobConfiguration _configuration;
+    private PrintJobConfiguration configuration;
     /** The createdBy property */
-    private UserIdentity _createdBy;
+    private UserIdentity createdBy;
     /** The DateTimeOffset when the job was created. Read-only. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The documents property */
-    private java.util.List<PrintDocument> _documents;
+    private java.util.List<PrintDocument> documents;
     /** If true, document can be fetched by printer. */
-    private Boolean _isFetchable;
+    private Boolean isFetchable;
     /** Contains the source job URL, if the job has been redirected from another printer. */
-    private String _redirectedFrom;
+    private String redirectedFrom;
     /** Contains the destination job URL, if the job has been redirected to another printer. */
-    private String _redirectedTo;
+    private String redirectedTo;
     /** The status property */
-    private PrintJobStatus _status;
+    private PrintJobStatus status;
     /** A list of printTasks that were triggered by this print job. */
-    private java.util.List<PrintTask> _tasks;
+    private java.util.List<PrintTask> tasks;
     /**
      * Instantiates a new printJob and sets the default values.
      * @return a void
@@ -52,7 +50,7 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrintJobConfiguration getConfiguration() {
-        return this._configuration;
+        return this.configuration;
     }
     /**
      * Gets the createdBy property value. The createdBy property
@@ -60,7 +58,7 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public UserIdentity getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdDateTime property value. The DateTimeOffset when the job was created. Read-only.
@@ -68,7 +66,7 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the documents property value. The documents property
@@ -76,15 +74,15 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintDocument> getDocuments() {
-        return this._documents;
+        return this.documents;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("configuration", (n) -> { this.setConfiguration(n.getObjectValue(PrintJobConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -102,7 +100,7 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsFetchable() {
-        return this._isFetchable;
+        return this.isFetchable;
     }
     /**
      * Gets the redirectedFrom property value. Contains the source job URL, if the job has been redirected from another printer.
@@ -110,7 +108,7 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRedirectedFrom() {
-        return this._redirectedFrom;
+        return this.redirectedFrom;
     }
     /**
      * Gets the redirectedTo property value. Contains the destination job URL, if the job has been redirected to another printer.
@@ -118,7 +116,7 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRedirectedTo() {
-        return this._redirectedTo;
+        return this.redirectedTo;
     }
     /**
      * Gets the status property value. The status property
@@ -126,7 +124,7 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrintJobStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the tasks property value. A list of printTasks that were triggered by this print job.
@@ -134,7 +132,7 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintTask> getTasks() {
-        return this._tasks;
+        return this.tasks;
     }
     /**
      * Serializes information the current object
@@ -162,7 +160,7 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setConfiguration(@javax.annotation.Nullable final PrintJobConfiguration value) {
-        this._configuration = value;
+        this.configuration = value;
     }
     /**
      * Sets the createdBy property value. The createdBy property
@@ -171,7 +169,7 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final UserIdentity value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The DateTimeOffset when the job was created. Read-only.
@@ -180,7 +178,7 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the documents property value. The documents property
@@ -189,7 +187,7 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDocuments(@javax.annotation.Nullable final java.util.List<PrintDocument> value) {
-        this._documents = value;
+        this.documents = value;
     }
     /**
      * Sets the isFetchable property value. If true, document can be fetched by printer.
@@ -198,7 +196,7 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsFetchable(@javax.annotation.Nullable final Boolean value) {
-        this._isFetchable = value;
+        this.isFetchable = value;
     }
     /**
      * Sets the redirectedFrom property value. Contains the source job URL, if the job has been redirected from another printer.
@@ -207,7 +205,7 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRedirectedFrom(@javax.annotation.Nullable final String value) {
-        this._redirectedFrom = value;
+        this.redirectedFrom = value;
     }
     /**
      * Sets the redirectedTo property value. Contains the destination job URL, if the job has been redirected to another printer.
@@ -216,7 +214,7 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRedirectedTo(@javax.annotation.Nullable final String value) {
-        this._redirectedTo = value;
+        this.redirectedTo = value;
     }
     /**
      * Sets the status property value. The status property
@@ -225,7 +223,7 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final PrintJobStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the tasks property value. A list of printTasks that were triggered by this print job.
@@ -234,6 +232,6 @@ public class PrintJob extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTasks(@javax.annotation.Nullable final java.util.List<PrintTask> value) {
-        this._tasks = value;
+        this.tasks = value;
     }
 }

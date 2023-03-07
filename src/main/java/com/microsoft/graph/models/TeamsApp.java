@@ -3,20 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the appCatalogs singleton. */
 public class TeamsApp extends Entity implements Parsable {
     /** The details for each version of the app. */
-    private java.util.List<TeamsAppDefinition> _appDefinitions;
+    private java.util.List<TeamsAppDefinition> appDefinitions;
     /** The name of the catalog app provided by the app developer in the Microsoft Teams zip app package. */
-    private String _displayName;
+    private String displayName;
     /** The method of distribution for the app. Read-only. */
-    private TeamsAppDistributionMethod _distributionMethod;
+    private TeamsAppDistributionMethod distributionMethod;
     /** The ID of the catalog provided by the app developer in the Microsoft Teams zip app package. */
-    private String _externalId;
+    private String externalId;
     /**
      * Instantiates a new teamsApp and sets the default values.
      * @return a void
@@ -41,7 +39,7 @@ public class TeamsApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TeamsAppDefinition> getAppDefinitions() {
-        return this._appDefinitions;
+        return this.appDefinitions;
     }
     /**
      * Gets the displayName property value. The name of the catalog app provided by the app developer in the Microsoft Teams zip app package.
@@ -49,7 +47,7 @@ public class TeamsApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the distributionMethod property value. The method of distribution for the app. Read-only.
@@ -57,7 +55,7 @@ public class TeamsApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamsAppDistributionMethod getDistributionMethod() {
-        return this._distributionMethod;
+        return this.distributionMethod;
     }
     /**
      * Gets the externalId property value. The ID of the catalog provided by the app developer in the Microsoft Teams zip app package.
@@ -65,15 +63,15 @@ public class TeamsApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getExternalId() {
-        return this._externalId;
+        return this.externalId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appDefinitions", (n) -> { this.setAppDefinitions(n.getCollectionOfObjectValues(TeamsAppDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("distributionMethod", (n) -> { this.setDistributionMethod(n.getEnumValue(TeamsAppDistributionMethod.class)); });
@@ -101,7 +99,7 @@ public class TeamsApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppDefinitions(@javax.annotation.Nullable final java.util.List<TeamsAppDefinition> value) {
-        this._appDefinitions = value;
+        this.appDefinitions = value;
     }
     /**
      * Sets the displayName property value. The name of the catalog app provided by the app developer in the Microsoft Teams zip app package.
@@ -110,7 +108,7 @@ public class TeamsApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the distributionMethod property value. The method of distribution for the app. Read-only.
@@ -119,7 +117,7 @@ public class TeamsApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDistributionMethod(@javax.annotation.Nullable final TeamsAppDistributionMethod value) {
-        this._distributionMethod = value;
+        this.distributionMethod = value;
     }
     /**
      * Sets the externalId property value. The ID of the catalog provided by the app developer in the Microsoft Teams zip app package.
@@ -128,6 +126,6 @@ public class TeamsApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
-        this._externalId = value;
+        this.externalId = value;
     }
 }

@@ -4,29 +4,28 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The answer given by the user in case the answerInputType is text. */
-    private String _answer;
+    private String answer;
     /** The expected answer type. The possible values are: text, radioButton, unknownFutureValue. */
-    private AnswerInputType _answerInputType;
+    private AnswerInputType answerInputType;
     /** In case the answerInputType is radioButton, this will consists of a list of possible answer values. */
-    private java.util.List<String> _answerOptions;
+    private java.util.List<String> answerOptions;
     /** Indicates whether it is mandatory to answer the custom question. */
-    private Boolean _isRequired;
+    private Boolean isRequired;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The question. */
-    private String _question;
+    private String question;
     /** The ID of the custom question. */
-    private String _questionId;
+    private String questionId;
     /** The answers selected by the user. */
-    private java.util.List<String> _selectedOptions;
+    private java.util.List<String> selectedOptions;
     /**
      * Instantiates a new bookingQuestionAnswer and sets the default values.
      * @return a void
@@ -51,7 +50,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the answer property value. The answer given by the user in case the answerInputType is text.
@@ -59,7 +58,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAnswer() {
-        return this._answer;
+        return this.answer;
     }
     /**
      * Gets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
@@ -67,7 +66,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public AnswerInputType getAnswerInputType() {
-        return this._answerInputType;
+        return this.answerInputType;
     }
     /**
      * Gets the answerOptions property value. In case the answerInputType is radioButton, this will consists of a list of possible answer values.
@@ -75,15 +74,15 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAnswerOptions() {
-        return this._answerOptions;
+        return this.answerOptions;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("answer", (n) -> { this.setAnswer(n.getStringValue()); });
         deserializerMap.put("answerInputType", (n) -> { this.setAnswerInputType(n.getEnumValue(AnswerInputType.class)); });
         deserializerMap.put("answerOptions", (n) -> { this.setAnswerOptions(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -100,7 +99,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsRequired() {
-        return this._isRequired;
+        return this.isRequired;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -108,7 +107,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the question property value. The question.
@@ -116,7 +115,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getQuestion() {
-        return this._question;
+        return this.question;
     }
     /**
      * Gets the questionId property value. The ID of the custom question.
@@ -124,7 +123,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getQuestionId() {
-        return this._questionId;
+        return this.questionId;
     }
     /**
      * Gets the selectedOptions property value. The answers selected by the user.
@@ -132,7 +131,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSelectedOptions() {
-        return this._selectedOptions;
+        return this.selectedOptions;
     }
     /**
      * Serializes information the current object
@@ -159,7 +158,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the answer property value. The answer given by the user in case the answerInputType is text.
@@ -168,7 +167,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAnswer(@javax.annotation.Nullable final String value) {
-        this._answer = value;
+        this.answer = value;
     }
     /**
      * Sets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
@@ -177,7 +176,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAnswerInputType(@javax.annotation.Nullable final AnswerInputType value) {
-        this._answerInputType = value;
+        this.answerInputType = value;
     }
     /**
      * Sets the answerOptions property value. In case the answerInputType is radioButton, this will consists of a list of possible answer values.
@@ -186,7 +185,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAnswerOptions(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._answerOptions = value;
+        this.answerOptions = value;
     }
     /**
      * Sets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
@@ -195,7 +194,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsRequired(@javax.annotation.Nullable final Boolean value) {
-        this._isRequired = value;
+        this.isRequired = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -204,7 +203,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the question property value. The question.
@@ -213,7 +212,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setQuestion(@javax.annotation.Nullable final String value) {
-        this._question = value;
+        this.question = value;
     }
     /**
      * Sets the questionId property value. The ID of the custom question.
@@ -222,7 +221,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setQuestionId(@javax.annotation.Nullable final String value) {
-        this._questionId = value;
+        this.questionId = value;
     }
     /**
      * Sets the selectedOptions property value. The answers selected by the user.
@@ -231,6 +230,6 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSelectedOptions(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._selectedOptions = value;
+        this.selectedOptions = value;
     }
 }

@@ -4,30 +4,28 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class ExternalConnection extends Entity implements Parsable {
     /** Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional. */
-    private Configuration _configuration;
+    private Configuration configuration;
     /** Description of the connection displayed in the Microsoft 365 admin center. Optional. */
-    private String _description;
+    private String description;
     /** The groups property */
-    private java.util.List<ExternalGroup> _groups;
+    private java.util.List<ExternalGroup> groups;
     /** The items property */
-    private java.util.List<ExternalItem> _items;
+    private java.util.List<ExternalItem> items;
     /** The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required. */
-    private String _name;
+    private String name;
     /** The operations property */
-    private java.util.List<ConnectionOperation> _operations;
+    private java.util.List<ConnectionOperation> operations;
     /** The schema property */
-    private Schema _schema;
+    private Schema schema;
     /** Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue. */
-    private ConnectionState _state;
+    private ConnectionState state;
     /**
-     * Instantiates a new externalConnection and sets the default values.
+     * Instantiates a new ExternalConnection and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -37,7 +35,7 @@ public class ExternalConnection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a externalConnection
+     * @return a ExternalConnection
      */
     @javax.annotation.Nonnull
     public static ExternalConnection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +48,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Configuration getConfiguration() {
-        return this._configuration;
+        return this.configuration;
     }
     /**
      * Gets the description property value. Description of the connection displayed in the Microsoft 365 admin center. Optional.
@@ -58,15 +56,15 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("configuration", (n) -> { this.setConfiguration(n.getObjectValue(Configuration::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("groups", (n) -> { this.setGroups(n.getCollectionOfObjectValues(ExternalGroup::createFromDiscriminatorValue)); });
@@ -83,7 +81,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ExternalGroup> getGroups() {
-        return this._groups;
+        return this.groups;
     }
     /**
      * Gets the items property value. The items property
@@ -91,7 +89,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ExternalItem> getItems() {
-        return this._items;
+        return this.items;
     }
     /**
      * Gets the name property value. The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
@@ -99,7 +97,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the operations property value. The operations property
@@ -107,7 +105,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ConnectionOperation> getOperations() {
-        return this._operations;
+        return this.operations;
     }
     /**
      * Gets the schema property value. The schema property
@@ -115,7 +113,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Schema getSchema() {
-        return this._schema;
+        return this.schema;
     }
     /**
      * Gets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
@@ -123,7 +121,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ConnectionState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Serializes information the current object
@@ -149,7 +147,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setConfiguration(@javax.annotation.Nullable final Configuration value) {
-        this._configuration = value;
+        this.configuration = value;
     }
     /**
      * Sets the description property value. Description of the connection displayed in the Microsoft 365 admin center. Optional.
@@ -158,7 +156,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the groups property value. The groups property
@@ -167,7 +165,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setGroups(@javax.annotation.Nullable final java.util.List<ExternalGroup> value) {
-        this._groups = value;
+        this.groups = value;
     }
     /**
      * Sets the items property value. The items property
@@ -176,7 +174,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setItems(@javax.annotation.Nullable final java.util.List<ExternalItem> value) {
-        this._items = value;
+        this.items = value;
     }
     /**
      * Sets the name property value. The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
@@ -185,7 +183,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the operations property value. The operations property
@@ -194,7 +192,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<ConnectionOperation> value) {
-        this._operations = value;
+        this.operations = value;
     }
     /**
      * Sets the schema property value. The schema property
@@ -203,7 +201,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSchema(@javax.annotation.Nullable final Schema value) {
-        this._schema = value;
+        this.schema = value;
     }
     /**
      * Sets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
@@ -212,6 +210,6 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ConnectionState value) {
-        this._state = value;
+        this.state = value;
     }
 }

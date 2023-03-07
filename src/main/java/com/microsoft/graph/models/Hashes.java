@@ -4,23 +4,22 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Hashes implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The CRC32 value of the file in little endian (if available). Read-only. */
-    private String _crc32Hash;
+    private String crc32Hash;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only. */
-    private String _quickXorHash;
+    private String quickXorHash;
     /** SHA1 hash for the contents of the file (if available). Read-only. */
-    private String _sha1Hash;
+    private String sha1Hash;
     /** SHA256 hash for the contents of the file (if available). Read-only. */
-    private String _sha256Hash;
+    private String sha256Hash;
     /**
      * Instantiates a new hashes and sets the default values.
      * @return a void
@@ -45,7 +44,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the crc32Hash property value. The CRC32 value of the file in little endian (if available). Read-only.
@@ -53,15 +52,15 @@ public class Hashes implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCrc32Hash() {
-        return this._crc32Hash;
+        return this.crc32Hash;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("crc32Hash", (n) -> { this.setCrc32Hash(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("quickXorHash", (n) -> { this.setQuickXorHash(n.getStringValue()); });
@@ -75,7 +74,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the quickXorHash property value. A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
@@ -83,7 +82,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getQuickXorHash() {
-        return this._quickXorHash;
+        return this.quickXorHash;
     }
     /**
      * Gets the sha1Hash property value. SHA1 hash for the contents of the file (if available). Read-only.
@@ -91,7 +90,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSha1Hash() {
-        return this._sha1Hash;
+        return this.sha1Hash;
     }
     /**
      * Gets the sha256Hash property value. SHA256 hash for the contents of the file (if available). Read-only.
@@ -99,7 +98,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSha256Hash() {
-        return this._sha256Hash;
+        return this.sha256Hash;
     }
     /**
      * Serializes information the current object
@@ -123,7 +122,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the crc32Hash property value. The CRC32 value of the file in little endian (if available). Read-only.
@@ -132,7 +131,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCrc32Hash(@javax.annotation.Nullable final String value) {
-        this._crc32Hash = value;
+        this.crc32Hash = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -141,7 +140,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the quickXorHash property value. A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
@@ -150,7 +149,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setQuickXorHash(@javax.annotation.Nullable final String value) {
-        this._quickXorHash = value;
+        this.quickXorHash = value;
     }
     /**
      * Sets the sha1Hash property value. SHA1 hash for the contents of the file (if available). Read-only.
@@ -159,7 +158,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSha1Hash(@javax.annotation.Nullable final String value) {
-        this._sha1Hash = value;
+        this.sha1Hash = value;
     }
     /**
      * Sets the sha256Hash property value. SHA256 hash for the contents of the file (if available). Read-only.
@@ -168,6 +167,6 @@ public class Hashes implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSha256Hash(@javax.annotation.Nullable final String value) {
-        this._sha256Hash = value;
+        this.sha256Hash = value;
     }
 }

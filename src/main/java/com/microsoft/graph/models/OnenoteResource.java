@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable {
     /** The content stream */
-    private byte[] _content;
+    private byte[] content;
     /** The URL for downloading the content */
-    private String _contentUrl;
+    private String contentUrl;
     /**
      * Instantiates a new OnenoteResource and sets the default values.
      * @return a void
@@ -37,7 +36,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
      */
     @javax.annotation.Nullable
     public byte[] getContent() {
-        return this._content;
+        return this.content;
     }
     /**
      * Gets the contentUrl property value. The URL for downloading the content
@@ -45,15 +44,15 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
      */
     @javax.annotation.Nullable
     public String getContentUrl() {
-        return this._contentUrl;
+        return this.contentUrl;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
         deserializerMap.put("contentUrl", (n) -> { this.setContentUrl(n.getStringValue()); });
         return deserializerMap;
@@ -77,7 +76,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
-        this._content = value;
+        this.content = value;
     }
     /**
      * Sets the contentUrl property value. The URL for downloading the content
@@ -86,6 +85,6 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setContentUrl(@javax.annotation.Nullable final String value) {
-        this._contentUrl = value;
+        this.contentUrl = value;
     }
 }

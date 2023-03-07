@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PasswordProfile implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** true if the user must change her password on the next login; otherwise false. If not set, default is false. NOTE:  For Azure B2C tenants, set to false and instead use custom policies and user flows to force password reset at first sign in. See Force password reset at first logon. */
-    private Boolean _forceChangePasswordNextSignIn;
+    private Map<String, Object> additionalData;
+    /** true if the user must change her password on the next login; otherwise false. */
+    private Boolean forceChangePasswordNextSignIn;
     /** If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false. */
-    private Boolean _forceChangePasswordNextSignInWithMfa;
+    private Boolean forceChangePasswordNextSignInWithMfa;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the users passwordPolicies property. By default, a strong password is required. */
-    private String _password;
+    private String password;
     /**
      * Instantiates a new passwordProfile and sets the default values.
      * @return a void
@@ -43,15 +42,15 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("forceChangePasswordNextSignIn", (n) -> { this.setForceChangePasswordNextSignIn(n.getBooleanValue()); });
         deserializerMap.put("forceChangePasswordNextSignInWithMfa", (n) -> { this.setForceChangePasswordNextSignInWithMfa(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -59,12 +58,12 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the forceChangePasswordNextSignIn property value. true if the user must change her password on the next login; otherwise false. If not set, default is false. NOTE:  For Azure B2C tenants, set to false and instead use custom policies and user flows to force password reset at first sign in. See Force password reset at first logon.
+     * Gets the forceChangePasswordNextSignIn property value. true if the user must change her password on the next login; otherwise false.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getForceChangePasswordNextSignIn() {
-        return this._forceChangePasswordNextSignIn;
+        return this.forceChangePasswordNextSignIn;
     }
     /**
      * Gets the forceChangePasswordNextSignInWithMfa property value. If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
@@ -72,7 +71,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getForceChangePasswordNextSignInWithMfa() {
-        return this._forceChangePasswordNextSignInWithMfa;
+        return this.forceChangePasswordNextSignInWithMfa;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -80,7 +79,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the users passwordPolicies property. By default, a strong password is required.
@@ -88,7 +87,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getPassword() {
-        return this._password;
+        return this.password;
     }
     /**
      * Serializes information the current object
@@ -111,16 +110,16 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
-     * Sets the forceChangePasswordNextSignIn property value. true if the user must change her password on the next login; otherwise false. If not set, default is false. NOTE:  For Azure B2C tenants, set to false and instead use custom policies and user flows to force password reset at first sign in. See Force password reset at first logon.
+     * Sets the forceChangePasswordNextSignIn property value. true if the user must change her password on the next login; otherwise false.
      * @param value Value to set for the forceChangePasswordNextSignIn property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setForceChangePasswordNextSignIn(@javax.annotation.Nullable final Boolean value) {
-        this._forceChangePasswordNextSignIn = value;
+        this.forceChangePasswordNextSignIn = value;
     }
     /**
      * Sets the forceChangePasswordNextSignInWithMfa property value. If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
@@ -129,7 +128,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setForceChangePasswordNextSignInWithMfa(@javax.annotation.Nullable final Boolean value) {
-        this._forceChangePasswordNextSignInWithMfa = value;
+        this.forceChangePasswordNextSignInWithMfa = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -138,7 +137,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the users passwordPolicies property. By default, a strong password is required.
@@ -147,6 +146,6 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPassword(@javax.annotation.Nullable final String value) {
-        this._password = value;
+        this.password = value;
     }
 }

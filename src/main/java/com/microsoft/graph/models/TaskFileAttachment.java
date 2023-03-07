@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TaskFileAttachment extends AttachmentBase implements Parsable {
-    /** The contentBytes property */
-    private byte[] _contentBytes;
+    /** The base64-encoded contents of the file. */
+    private byte[] contentBytes;
     /**
      * Instantiates a new TaskFileAttachment and sets the default values.
      * @return a void
@@ -30,20 +29,20 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
         return new TaskFileAttachment();
     }
     /**
-     * Gets the contentBytes property value. The contentBytes property
+     * Gets the contentBytes property value. The base64-encoded contents of the file.
      * @return a binary
      */
     @javax.annotation.Nullable
     public byte[] getContentBytes() {
-        return this._contentBytes;
+        return this.contentBytes;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contentBytes", (n) -> { this.setContentBytes(n.getByteArrayValue()); });
         return deserializerMap;
     }
@@ -59,12 +58,12 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
         writer.writeByteArrayValue("contentBytes", this.getContentBytes());
     }
     /**
-     * Sets the contentBytes property value. The contentBytes property
+     * Sets the contentBytes property value. The base64-encoded contents of the file.
      * @param value Value to set for the contentBytes property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setContentBytes(@javax.annotation.Nullable final byte[] value) {
-        this._contentBytes = value;
+        this.contentBytes = value;
     }
 }

@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChannelIdentity implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The identity of the channel in which the message was posted. */
-    private String _channelId;
+    private String channelId;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The identity of the team in which the message was posted. */
-    private String _teamId;
+    private String teamId;
     /**
      * Instantiates a new channelIdentity and sets the default values.
      * @return a void
@@ -41,7 +40,7 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the channelId property value. The identity of the channel in which the message was posted.
@@ -49,15 +48,15 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getChannelId() {
-        return this._channelId;
+        return this.channelId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("channelId", (n) -> { this.setChannelId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("teamId", (n) -> { this.setTeamId(n.getStringValue()); });
@@ -69,7 +68,7 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the teamId property value. The identity of the team in which the message was posted.
@@ -77,7 +76,7 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getTeamId() {
-        return this._teamId;
+        return this.teamId;
     }
     /**
      * Serializes information the current object
@@ -99,7 +98,7 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the channelId property value. The identity of the channel in which the message was posted.
@@ -108,7 +107,7 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setChannelId(@javax.annotation.Nullable final String value) {
-        this._channelId = value;
+        this.channelId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -117,7 +116,7 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the teamId property value. The identity of the team in which the message was posted.
@@ -126,6 +125,6 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTeamId(@javax.annotation.Nullable final String value) {
-        this._teamId = value;
+        this.teamId = value;
     }
 }

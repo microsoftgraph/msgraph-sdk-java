@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class VerifiedDomain implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** For example, Email, OfficeCommunicationsOnline. */
-    private String _capabilities;
+    private String capabilities;
     /** true if this is the default domain associated with the tenant; otherwise, false. */
-    private Boolean _isDefault;
+    private Boolean isDefault;
     /** true if this is the initial domain associated with the tenant; otherwise, false. */
-    private Boolean _isInitial;
+    private Boolean isInitial;
     /** The domain name; for example, contoso.onmicrosoft.com. */
-    private String _name;
+    private String name;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** For example, Managed. */
-    private String _type;
+    private String type;
     /**
      * Instantiates a new verifiedDomain and sets the default values.
      * @return a void
@@ -47,7 +46,7 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the capabilities property value. For example, Email, OfficeCommunicationsOnline.
@@ -55,15 +54,15 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCapabilities() {
-        return this._capabilities;
+        return this.capabilities;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("capabilities", (n) -> { this.setCapabilities(n.getStringValue()); });
         deserializerMap.put("isDefault", (n) -> { this.setIsDefault(n.getBooleanValue()); });
         deserializerMap.put("isInitial", (n) -> { this.setIsInitial(n.getBooleanValue()); });
@@ -78,7 +77,7 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsDefault() {
-        return this._isDefault;
+        return this.isDefault;
     }
     /**
      * Gets the isInitial property value. true if this is the initial domain associated with the tenant; otherwise, false.
@@ -86,7 +85,7 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsInitial() {
-        return this._isInitial;
+        return this.isInitial;
     }
     /**
      * Gets the name property value. The domain name; for example, contoso.onmicrosoft.com.
@@ -94,7 +93,7 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -102,7 +101,7 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the type property value. For example, Managed.
@@ -110,7 +109,7 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
@@ -135,7 +134,7 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the capabilities property value. For example, Email, OfficeCommunicationsOnline.
@@ -144,7 +143,7 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCapabilities(@javax.annotation.Nullable final String value) {
-        this._capabilities = value;
+        this.capabilities = value;
     }
     /**
      * Sets the isDefault property value. true if this is the default domain associated with the tenant; otherwise, false.
@@ -153,7 +152,7 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
-        this._isDefault = value;
+        this.isDefault = value;
     }
     /**
      * Sets the isInitial property value. true if this is the initial domain associated with the tenant; otherwise, false.
@@ -162,7 +161,7 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsInitial(@javax.annotation.Nullable final Boolean value) {
-        this._isInitial = value;
+        this.isInitial = value;
     }
     /**
      * Sets the name property value. The domain name; for example, contoso.onmicrosoft.com.
@@ -171,7 +170,7 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -180,7 +179,7 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the type property value. For example, Managed.
@@ -189,6 +188,6 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+        this.type = value;
     }
 }

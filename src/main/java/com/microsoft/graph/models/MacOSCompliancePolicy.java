@@ -3,45 +3,44 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /** Require that devices have enabled device threat protection. */
-    private Boolean _deviceThreatProtectionEnabled;
+    private Boolean deviceThreatProtectionEnabled;
     /** Device threat protection levels for the Device Threat Protection API. */
-    private DeviceThreatProtectionLevel _deviceThreatProtectionRequiredSecurityLevel;
+    private DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
     /** Corresponds to the 'Block all incoming connections' option. */
-    private Boolean _firewallBlockAllIncoming;
+    private Boolean firewallBlockAllIncoming;
     /** Whether the firewall should be enabled or not. */
-    private Boolean _firewallEnabled;
+    private Boolean firewallEnabled;
     /** Corresponds to 'Enable stealth mode.' */
-    private Boolean _firewallEnableStealthMode;
+    private Boolean firewallEnableStealthMode;
     /** Maximum MacOS version. */
-    private String _osMaximumVersion;
+    private String osMaximumVersion;
     /** Minimum MacOS version. */
-    private String _osMinimumVersion;
+    private String osMinimumVersion;
     /** Indicates whether or not to block simple passwords. */
-    private Boolean _passwordBlockSimple;
+    private Boolean passwordBlockSimple;
     /** Number of days before the password expires. Valid values 1 to 65535 */
-    private Integer _passwordExpirationDays;
+    private Integer passwordExpirationDays;
     /** The number of character sets required in the password. */
-    private Integer _passwordMinimumCharacterSetCount;
+    private Integer passwordMinimumCharacterSetCount;
     /** Minimum length of password. Valid values 4 to 14 */
-    private Integer _passwordMinimumLength;
+    private Integer passwordMinimumLength;
     /** Minutes of inactivity before a password is required. */
-    private Integer _passwordMinutesOfInactivityBeforeLock;
+    private Integer passwordMinutesOfInactivityBeforeLock;
     /** Number of previous passwords to block. Valid values 1 to 24 */
-    private Integer _passwordPreviousPasswordBlockCount;
+    private Integer passwordPreviousPasswordBlockCount;
     /** Whether or not to require a password. */
-    private Boolean _passwordRequired;
+    private Boolean passwordRequired;
     /** Possible values of required passwords. */
-    private RequiredPasswordType _passwordRequiredType;
+    private RequiredPasswordType passwordRequiredType;
     /** Require encryption on Mac OS devices. */
-    private Boolean _storageRequireEncryption;
+    private Boolean storageRequireEncryption;
     /** Require that devices have enabled system integrity protection. */
-    private Boolean _systemIntegrityProtectionEnabled;
+    private Boolean systemIntegrityProtectionEnabled;
     /**
      * Instantiates a new MacOSCompliancePolicy and sets the default values.
      * @return a void
@@ -67,7 +66,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nullable
     public Boolean getDeviceThreatProtectionEnabled() {
-        return this._deviceThreatProtectionEnabled;
+        return this.deviceThreatProtectionEnabled;
     }
     /**
      * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
@@ -75,15 +74,15 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nullable
     public DeviceThreatProtectionLevel getDeviceThreatProtectionRequiredSecurityLevel() {
-        return this._deviceThreatProtectionRequiredSecurityLevel;
+        return this.deviceThreatProtectionRequiredSecurityLevel;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceThreatProtectionEnabled", (n) -> { this.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
         deserializerMap.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { this.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
         deserializerMap.put("firewallBlockAllIncoming", (n) -> { this.setFirewallBlockAllIncoming(n.getBooleanValue()); });
@@ -109,7 +108,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nullable
     public Boolean getFirewallBlockAllIncoming() {
-        return this._firewallBlockAllIncoming;
+        return this.firewallBlockAllIncoming;
     }
     /**
      * Gets the firewallEnabled property value. Whether the firewall should be enabled or not.
@@ -117,7 +116,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nullable
     public Boolean getFirewallEnabled() {
-        return this._firewallEnabled;
+        return this.firewallEnabled;
     }
     /**
      * Gets the firewallEnableStealthMode property value. Corresponds to 'Enable stealth mode.'
@@ -125,7 +124,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nullable
     public Boolean getFirewallEnableStealthMode() {
-        return this._firewallEnableStealthMode;
+        return this.firewallEnableStealthMode;
     }
     /**
      * Gets the osMaximumVersion property value. Maximum MacOS version.
@@ -133,7 +132,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nullable
     public String getOsMaximumVersion() {
-        return this._osMaximumVersion;
+        return this.osMaximumVersion;
     }
     /**
      * Gets the osMinimumVersion property value. Minimum MacOS version.
@@ -141,7 +140,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nullable
     public String getOsMinimumVersion() {
-        return this._osMinimumVersion;
+        return this.osMinimumVersion;
     }
     /**
      * Gets the passwordBlockSimple property value. Indicates whether or not to block simple passwords.
@@ -149,7 +148,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
-        return this._passwordBlockSimple;
+        return this.passwordBlockSimple;
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 65535
@@ -157,7 +156,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nullable
     public Integer getPasswordExpirationDays() {
-        return this._passwordExpirationDays;
+        return this.passwordExpirationDays;
     }
     /**
      * Gets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
@@ -165,7 +164,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
-        return this._passwordMinimumCharacterSetCount;
+        return this.passwordMinimumCharacterSetCount;
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum length of password. Valid values 4 to 14
@@ -173,7 +172,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nullable
     public Integer getPasswordMinimumLength() {
-        return this._passwordMinimumLength;
+        return this.passwordMinimumLength;
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
@@ -181,7 +180,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
-        return this._passwordMinutesOfInactivityBeforeLock;
+        return this.passwordMinutesOfInactivityBeforeLock;
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 1 to 24
@@ -189,7 +188,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
-        return this._passwordPreviousPasswordBlockCount;
+        return this.passwordPreviousPasswordBlockCount;
     }
     /**
      * Gets the passwordRequired property value. Whether or not to require a password.
@@ -197,7 +196,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nullable
     public Boolean getPasswordRequired() {
-        return this._passwordRequired;
+        return this.passwordRequired;
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
@@ -205,7 +204,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
-        return this._passwordRequiredType;
+        return this.passwordRequiredType;
     }
     /**
      * Gets the storageRequireEncryption property value. Require encryption on Mac OS devices.
@@ -213,7 +212,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
-        return this._storageRequireEncryption;
+        return this.storageRequireEncryption;
     }
     /**
      * Gets the systemIntegrityProtectionEnabled property value. Require that devices have enabled system integrity protection.
@@ -221,7 +220,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nullable
     public Boolean getSystemIntegrityProtectionEnabled() {
-        return this._systemIntegrityProtectionEnabled;
+        return this.systemIntegrityProtectionEnabled;
     }
     /**
      * Serializes information the current object
@@ -257,7 +256,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nonnull
     public void setDeviceThreatProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._deviceThreatProtectionEnabled = value;
+        this.deviceThreatProtectionEnabled = value;
     }
     /**
      * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
@@ -266,7 +265,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nonnull
     public void setDeviceThreatProtectionRequiredSecurityLevel(@javax.annotation.Nullable final DeviceThreatProtectionLevel value) {
-        this._deviceThreatProtectionRequiredSecurityLevel = value;
+        this.deviceThreatProtectionRequiredSecurityLevel = value;
     }
     /**
      * Sets the firewallBlockAllIncoming property value. Corresponds to the 'Block all incoming connections' option.
@@ -275,7 +274,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nonnull
     public void setFirewallBlockAllIncoming(@javax.annotation.Nullable final Boolean value) {
-        this._firewallBlockAllIncoming = value;
+        this.firewallBlockAllIncoming = value;
     }
     /**
      * Sets the firewallEnabled property value. Whether the firewall should be enabled or not.
@@ -284,7 +283,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nonnull
     public void setFirewallEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._firewallEnabled = value;
+        this.firewallEnabled = value;
     }
     /**
      * Sets the firewallEnableStealthMode property value. Corresponds to 'Enable stealth mode.'
@@ -293,7 +292,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nonnull
     public void setFirewallEnableStealthMode(@javax.annotation.Nullable final Boolean value) {
-        this._firewallEnableStealthMode = value;
+        this.firewallEnableStealthMode = value;
     }
     /**
      * Sets the osMaximumVersion property value. Maximum MacOS version.
@@ -302,7 +301,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nonnull
     public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
-        this._osMaximumVersion = value;
+        this.osMaximumVersion = value;
     }
     /**
      * Sets the osMinimumVersion property value. Minimum MacOS version.
@@ -311,7 +310,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nonnull
     public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
-        this._osMinimumVersion = value;
+        this.osMinimumVersion = value;
     }
     /**
      * Sets the passwordBlockSimple property value. Indicates whether or not to block simple passwords.
@@ -320,7 +319,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nonnull
     public void setPasswordBlockSimple(@javax.annotation.Nullable final Boolean value) {
-        this._passwordBlockSimple = value;
+        this.passwordBlockSimple = value;
     }
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 65535
@@ -329,7 +328,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
-        this._passwordExpirationDays = value;
+        this.passwordExpirationDays = value;
     }
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
@@ -338,7 +337,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nonnull
     public void setPasswordMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
-        this._passwordMinimumCharacterSetCount = value;
+        this.passwordMinimumCharacterSetCount = value;
     }
     /**
      * Sets the passwordMinimumLength property value. Minimum length of password. Valid values 4 to 14
@@ -347,7 +346,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
-        this._passwordMinimumLength = value;
+        this.passwordMinimumLength = value;
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
@@ -356,7 +355,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
-        this._passwordMinutesOfInactivityBeforeLock = value;
+        this.passwordMinutesOfInactivityBeforeLock = value;
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 1 to 24
@@ -365,7 +364,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
-        this._passwordPreviousPasswordBlockCount = value;
+        this.passwordPreviousPasswordBlockCount = value;
     }
     /**
      * Sets the passwordRequired property value. Whether or not to require a password.
@@ -374,7 +373,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nonnull
     public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
-        this._passwordRequired = value;
+        this.passwordRequired = value;
     }
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
@@ -383,7 +382,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
-        this._passwordRequiredType = value;
+        this.passwordRequiredType = value;
     }
     /**
      * Sets the storageRequireEncryption property value. Require encryption on Mac OS devices.
@@ -392,7 +391,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nonnull
     public void setStorageRequireEncryption(@javax.annotation.Nullable final Boolean value) {
-        this._storageRequireEncryption = value;
+        this.storageRequireEncryption = value;
     }
     /**
      * Sets the systemIntegrityProtectionEnabled property value. Require that devices have enabled system integrity protection.
@@ -401,6 +400,6 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     @javax.annotation.Nonnull
     public void setSystemIntegrityProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._systemIntegrityProtectionEnabled = value;
+        this.systemIntegrityProtectionEnabled = value;
     }
 }

@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /** A collection of Microsoft Authenticator settings such as application context and location context, and whether they are enabled for all users or specific users only. */
-    private MicrosoftAuthenticatorFeatureSettings _featureSettings;
-    /** A collection of users or groups who are enabled to use the authentication method. Expanded by default. */
-    private java.util.List<MicrosoftAuthenticatorAuthenticationMethodTarget> _includeTargets;
+    private MicrosoftAuthenticatorFeatureSettings featureSettings;
+    /** A collection of groups that are enabled to use the authentication method. Expanded by default. */
+    private java.util.List<MicrosoftAuthenticatorAuthenticationMethodTarget> includeTargets;
     /**
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodConfiguration and sets the default values.
      * @return a void
@@ -37,26 +36,26 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      */
     @javax.annotation.Nullable
     public MicrosoftAuthenticatorFeatureSettings getFeatureSettings() {
-        return this._featureSettings;
+        return this.featureSettings;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("featureSettings", (n) -> { this.setFeatureSettings(n.getObjectValue(MicrosoftAuthenticatorFeatureSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(MicrosoftAuthenticatorAuthenticationMethodTarget::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method. Expanded by default.
+     * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method. Expanded by default.
      * @return a microsoftAuthenticatorAuthenticationMethodTarget
      */
     @javax.annotation.Nullable
     public java.util.List<MicrosoftAuthenticatorAuthenticationMethodTarget> getIncludeTargets() {
-        return this._includeTargets;
+        return this.includeTargets;
     }
     /**
      * Serializes information the current object
@@ -77,15 +76,15 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      */
     @javax.annotation.Nonnull
     public void setFeatureSettings(@javax.annotation.Nullable final MicrosoftAuthenticatorFeatureSettings value) {
-        this._featureSettings = value;
+        this.featureSettings = value;
     }
     /**
-     * Sets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method. Expanded by default.
+     * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method. Expanded by default.
      * @param value Value to set for the includeTargets property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setIncludeTargets(@javax.annotation.Nullable final java.util.List<MicrosoftAuthenticatorAuthenticationMethodTarget> value) {
-        this._includeTargets = value;
+        this.includeTargets = value;
     }
 }

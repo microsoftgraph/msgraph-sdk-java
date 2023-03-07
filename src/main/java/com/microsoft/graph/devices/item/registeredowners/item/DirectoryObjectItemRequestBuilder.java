@@ -1,24 +1,36 @@
 package com.microsoft.graph.devices.item.registeredowners.item;
 
-import com.microsoft.graph.devices.item.registeredowners.item.approleassignment.AppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.devices.item.registeredowners.item.endpoint.EndpointRequestBuilder;
+import com.microsoft.graph.devices.item.registeredowners.item.graphapproleassignment.GraphAppRoleAssignmentRequestBuilder;
+import com.microsoft.graph.devices.item.registeredowners.item.graphendpoint.GraphEndpointRequestBuilder;
+import com.microsoft.graph.devices.item.registeredowners.item.graphserviceprincipal.GraphServicePrincipalRequestBuilder;
+import com.microsoft.graph.devices.item.registeredowners.item.graphuser.GraphUserRequestBuilder;
 import com.microsoft.graph.devices.item.registeredowners.item.ref.RefRequestBuilder;
-import com.microsoft.graph.devices.item.registeredowners.item.serviceprincipal.ServicePrincipalRequestBuilder;
-import com.microsoft.graph.devices.item.registeredowners.item.user.UserRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-/** Builds and executes requests for operations under /devices/{device-id}/registeredOwners/{directoryObject-id} */
+/**
+ * Builds and executes requests for operations under /devices/{device-id}/registeredOwners/{directoryObject-id}
+ */
 public class DirectoryObjectItemRequestBuilder {
     /** Casts the previous resource to appRoleAssignment. */
     @javax.annotation.Nonnull
-    public AppRoleAssignmentRequestBuilder appRoleAssignment() {
-        return new AppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
+    public GraphAppRoleAssignmentRequestBuilder graphAppRoleAssignment() {
+        return new GraphAppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
     }
     /** Casts the previous resource to endpoint. */
     @javax.annotation.Nonnull
-    public EndpointRequestBuilder endpoint() {
-        return new EndpointRequestBuilder(pathParameters, requestAdapter);
+    public GraphEndpointRequestBuilder graphEndpoint() {
+        return new GraphEndpointRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Casts the previous resource to servicePrincipal. */
+    @javax.annotation.Nonnull
+    public GraphServicePrincipalRequestBuilder graphServicePrincipal() {
+        return new GraphServicePrincipalRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Casts the previous resource to user. */
+    @javax.annotation.Nonnull
+    public GraphUserRequestBuilder graphUser() {
+        return new GraphUserRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
@@ -29,18 +41,8 @@ public class DirectoryObjectItemRequestBuilder {
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** Casts the previous resource to servicePrincipal. */
-    @javax.annotation.Nonnull
-    public ServicePrincipalRequestBuilder servicePrincipal() {
-        return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** Casts the previous resource to user. */
-    @javax.annotation.Nonnull
-    public UserRequestBuilder user() {
-        return new UserRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

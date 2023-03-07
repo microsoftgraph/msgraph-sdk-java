@@ -4,30 +4,31 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Entity which represents a connection to an Exchange environment. */
+/**
+ * Entity which represents a connection to an Exchange environment.
+ */
 public class DeviceManagementExchangeConnector extends Entity implements Parsable {
     /** The name of the server hosting the Exchange Connector. */
-    private String _connectorServerName;
+    private String connectorServerName;
     /** An alias assigned to the Exchange server */
-    private String _exchangeAlias;
+    private String exchangeAlias;
     /** The type of Exchange Connector. */
-    private DeviceManagementExchangeConnectorType _exchangeConnectorType;
+    private DeviceManagementExchangeConnectorType exchangeConnectorType;
     /** Exchange Organization to the Exchange server */
-    private String _exchangeOrganization;
+    private String exchangeOrganization;
     /** Last sync time for the Exchange Connector */
-    private OffsetDateTime _lastSyncDateTime;
+    private OffsetDateTime lastSyncDateTime;
     /** Email address used to configure the Service To Service Exchange Connector. */
-    private String _primarySmtpAddress;
+    private String primarySmtpAddress;
     /** The name of the Exchange server. */
-    private String _serverName;
+    private String serverName;
     /** The current status of the Exchange Connector. */
-    private DeviceManagementExchangeConnectorStatus _status;
+    private DeviceManagementExchangeConnectorStatus status;
     /** The version of the ExchangeConnectorAgent */
-    private String _version;
+    private String version;
     /**
      * Instantiates a new deviceManagementExchangeConnector and sets the default values.
      * @return a void
@@ -52,7 +53,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getConnectorServerName() {
-        return this._connectorServerName;
+        return this.connectorServerName;
     }
     /**
      * Gets the exchangeAlias property value. An alias assigned to the Exchange server
@@ -60,7 +61,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getExchangeAlias() {
-        return this._exchangeAlias;
+        return this.exchangeAlias;
     }
     /**
      * Gets the exchangeConnectorType property value. The type of Exchange Connector.
@@ -68,7 +69,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public DeviceManagementExchangeConnectorType getExchangeConnectorType() {
-        return this._exchangeConnectorType;
+        return this.exchangeConnectorType;
     }
     /**
      * Gets the exchangeOrganization property value. Exchange Organization to the Exchange server
@@ -76,15 +77,15 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getExchangeOrganization() {
-        return this._exchangeOrganization;
+        return this.exchangeOrganization;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("connectorServerName", (n) -> { this.setConnectorServerName(n.getStringValue()); });
         deserializerMap.put("exchangeAlias", (n) -> { this.setExchangeAlias(n.getStringValue()); });
         deserializerMap.put("exchangeConnectorType", (n) -> { this.setExchangeConnectorType(n.getEnumValue(DeviceManagementExchangeConnectorType.class)); });
@@ -102,7 +103,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this._lastSyncDateTime;
+        return this.lastSyncDateTime;
     }
     /**
      * Gets the primarySmtpAddress property value. Email address used to configure the Service To Service Exchange Connector.
@@ -110,7 +111,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getPrimarySmtpAddress() {
-        return this._primarySmtpAddress;
+        return this.primarySmtpAddress;
     }
     /**
      * Gets the serverName property value. The name of the Exchange server.
@@ -118,7 +119,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getServerName() {
-        return this._serverName;
+        return this.serverName;
     }
     /**
      * Gets the status property value. The current status of the Exchange Connector.
@@ -126,7 +127,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public DeviceManagementExchangeConnectorStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the version property value. The version of the ExchangeConnectorAgent
@@ -134,7 +135,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
@@ -162,7 +163,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setConnectorServerName(@javax.annotation.Nullable final String value) {
-        this._connectorServerName = value;
+        this.connectorServerName = value;
     }
     /**
      * Sets the exchangeAlias property value. An alias assigned to the Exchange server
@@ -171,7 +172,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setExchangeAlias(@javax.annotation.Nullable final String value) {
-        this._exchangeAlias = value;
+        this.exchangeAlias = value;
     }
     /**
      * Sets the exchangeConnectorType property value. The type of Exchange Connector.
@@ -180,7 +181,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setExchangeConnectorType(@javax.annotation.Nullable final DeviceManagementExchangeConnectorType value) {
-        this._exchangeConnectorType = value;
+        this.exchangeConnectorType = value;
     }
     /**
      * Sets the exchangeOrganization property value. Exchange Organization to the Exchange server
@@ -189,7 +190,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setExchangeOrganization(@javax.annotation.Nullable final String value) {
-        this._exchangeOrganization = value;
+        this.exchangeOrganization = value;
     }
     /**
      * Sets the lastSyncDateTime property value. Last sync time for the Exchange Connector
@@ -198,7 +199,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastSyncDateTime = value;
+        this.lastSyncDateTime = value;
     }
     /**
      * Sets the primarySmtpAddress property value. Email address used to configure the Service To Service Exchange Connector.
@@ -207,7 +208,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setPrimarySmtpAddress(@javax.annotation.Nullable final String value) {
-        this._primarySmtpAddress = value;
+        this.primarySmtpAddress = value;
     }
     /**
      * Sets the serverName property value. The name of the Exchange server.
@@ -216,7 +217,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setServerName(@javax.annotation.Nullable final String value) {
-        this._serverName = value;
+        this.serverName = value;
     }
     /**
      * Sets the status property value. The current status of the Exchange Connector.
@@ -225,7 +226,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final DeviceManagementExchangeConnectorStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the version property value. The version of the ExchangeConnectorAgent
@@ -234,6 +235,6 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

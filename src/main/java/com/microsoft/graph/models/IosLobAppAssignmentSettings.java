@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /** When TRUE, indicates that the app can be uninstalled by the user. When FALSE, indicates that the app cannot be uninstalled by the user. By default, this property is set to null which internally is treated as TRUE. */
-    private Boolean _isRemovable;
+    private Boolean isRemovable;
     /** When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE. */
-    private Boolean _uninstallOnDeviceRemoval;
+    private Boolean uninstallOnDeviceRemoval;
     /** This is the unique identifier (Id) of the VPN Configuration to apply to the app. */
-    private String _vpnConfigurationId;
+    private String vpnConfigurationId;
     /**
      * Instantiates a new IosLobAppAssignmentSettings and sets the default values.
      * @return a void
@@ -35,11 +34,11 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isRemovable", (n) -> { this.setIsRemovable(n.getBooleanValue()); });
         deserializerMap.put("uninstallOnDeviceRemoval", (n) -> { this.setUninstallOnDeviceRemoval(n.getBooleanValue()); });
         deserializerMap.put("vpnConfigurationId", (n) -> { this.setVpnConfigurationId(n.getStringValue()); });
@@ -51,7 +50,7 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
      */
     @javax.annotation.Nullable
     public Boolean getIsRemovable() {
-        return this._isRemovable;
+        return this.isRemovable;
     }
     /**
      * Gets the uninstallOnDeviceRemoval property value. When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
@@ -59,7 +58,7 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
      */
     @javax.annotation.Nullable
     public Boolean getUninstallOnDeviceRemoval() {
-        return this._uninstallOnDeviceRemoval;
+        return this.uninstallOnDeviceRemoval;
     }
     /**
      * Gets the vpnConfigurationId property value. This is the unique identifier (Id) of the VPN Configuration to apply to the app.
@@ -67,7 +66,7 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
      */
     @javax.annotation.Nullable
     public String getVpnConfigurationId() {
-        return this._vpnConfigurationId;
+        return this.vpnConfigurationId;
     }
     /**
      * Serializes information the current object
@@ -89,7 +88,7 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
      */
     @javax.annotation.Nonnull
     public void setIsRemovable(@javax.annotation.Nullable final Boolean value) {
-        this._isRemovable = value;
+        this.isRemovable = value;
     }
     /**
      * Sets the uninstallOnDeviceRemoval property value. When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
@@ -98,7 +97,7 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
      */
     @javax.annotation.Nonnull
     public void setUninstallOnDeviceRemoval(@javax.annotation.Nullable final Boolean value) {
-        this._uninstallOnDeviceRemoval = value;
+        this.uninstallOnDeviceRemoval = value;
     }
     /**
      * Sets the vpnConfigurationId property value. This is the unique identifier (Id) of the VPN Configuration to apply to the app.
@@ -107,6 +106,6 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
      */
     @javax.annotation.Nonnull
     public void setVpnConfigurationId(@javax.annotation.Nullable final String value) {
-        this._vpnConfigurationId = value;
+        this.vpnConfigurationId = value;
     }
 }

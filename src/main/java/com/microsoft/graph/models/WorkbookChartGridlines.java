@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartGridlines extends Entity implements Parsable {
     /** Represents the formatting of chart gridlines. Read-only. */
-    private WorkbookChartGridlinesFormat _format;
+    private WorkbookChartGridlinesFormat format;
     /** Boolean value representing if the axis gridlines are visible or not. */
-    private Boolean _visible;
+    private Boolean visible;
     /**
      * Instantiates a new workbookChartGridlines and sets the default values.
      * @return a void
@@ -32,11 +31,11 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartGridlinesFormat::createFromDiscriminatorValue)); });
         deserializerMap.put("visible", (n) -> { this.setVisible(n.getBooleanValue()); });
         return deserializerMap;
@@ -47,7 +46,7 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartGridlinesFormat getFormat() {
-        return this._format;
+        return this.format;
     }
     /**
      * Gets the visible property value. Boolean value representing if the axis gridlines are visible or not.
@@ -55,7 +54,7 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getVisible() {
-        return this._visible;
+        return this.visible;
     }
     /**
      * Serializes information the current object
@@ -76,7 +75,7 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final WorkbookChartGridlinesFormat value) {
-        this._format = value;
+        this.format = value;
     }
     /**
      * Sets the visible property value. Boolean value representing if the axis gridlines are visible or not.
@@ -85,6 +84,6 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVisible(@javax.annotation.Nullable final Boolean value) {
-        this._visible = value;
+        this.visible = value;
     }
 }

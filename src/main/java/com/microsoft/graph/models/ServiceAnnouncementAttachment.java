@@ -4,22 +4,20 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     /** The attachment content. */
-    private byte[] _content;
+    private byte[] content;
     /** The contentType property */
-    private String _contentType;
+    private String contentType;
     /** The lastModifiedDateTime property */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The name property */
-    private String _name;
+    private String name;
     /** The size property */
-    private Integer _size;
+    private Integer size;
     /**
      * Instantiates a new serviceAnnouncementAttachment and sets the default values.
      * @return a void
@@ -44,7 +42,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public byte[] getContent() {
-        return this._content;
+        return this.content;
     }
     /**
      * Gets the contentType property value. The contentType property
@@ -52,15 +50,15 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getContentType() {
-        return this._contentType;
+        return this.contentType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -74,7 +72,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the name property value. The name property
@@ -82,7 +80,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the size property value. The size property
@@ -90,7 +88,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getSize() {
-        return this._size;
+        return this.size;
     }
     /**
      * Serializes information the current object
@@ -114,7 +112,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
-        this._content = value;
+        this.content = value;
     }
     /**
      * Sets the contentType property value. The contentType property
@@ -123,7 +121,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentType(@javax.annotation.Nullable final String value) {
-        this._contentType = value;
+        this.contentType = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -132,7 +130,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the name property value. The name property
@@ -141,7 +139,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the size property value. The size property
@@ -150,6 +148,6 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Integer value) {
-        this._size = value;
+        this.size = value;
     }
 }

@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosCustomConfiguration extends DeviceConfiguration implements Parsable {
     /** Payload. (UTF8 encoded byte array) */
-    private byte[] _payload;
+    private byte[] payload;
     /** Payload file name (.mobileconfig */
-    private String _payloadFileName;
+    private String payloadFileName;
     /** Name that is displayed to the user. */
-    private String _payloadName;
+    private String payloadName;
     /**
      * Instantiates a new IosCustomConfiguration and sets the default values.
      * @return a void
@@ -35,11 +34,11 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("payload", (n) -> { this.setPayload(n.getByteArrayValue()); });
         deserializerMap.put("payloadFileName", (n) -> { this.setPayloadFileName(n.getStringValue()); });
         deserializerMap.put("payloadName", (n) -> { this.setPayloadName(n.getStringValue()); });
@@ -51,7 +50,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
      */
     @javax.annotation.Nullable
     public byte[] getPayload() {
-        return this._payload;
+        return this.payload;
     }
     /**
      * Gets the payloadFileName property value. Payload file name (.mobileconfig
@@ -59,7 +58,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
      */
     @javax.annotation.Nullable
     public String getPayloadFileName() {
-        return this._payloadFileName;
+        return this.payloadFileName;
     }
     /**
      * Gets the payloadName property value. Name that is displayed to the user.
@@ -67,7 +66,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
      */
     @javax.annotation.Nullable
     public String getPayloadName() {
-        return this._payloadName;
+        return this.payloadName;
     }
     /**
      * Serializes information the current object
@@ -89,7 +88,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
      */
     @javax.annotation.Nonnull
     public void setPayload(@javax.annotation.Nullable final byte[] value) {
-        this._payload = value;
+        this.payload = value;
     }
     /**
      * Sets the payloadFileName property value. Payload file name (.mobileconfig
@@ -98,7 +97,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
      */
     @javax.annotation.Nonnull
     public void setPayloadFileName(@javax.annotation.Nullable final String value) {
-        this._payloadFileName = value;
+        this.payloadFileName = value;
     }
     /**
      * Sets the payloadName property value. Name that is displayed to the user.
@@ -107,6 +106,6 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
      */
     @javax.annotation.Nonnull
     public void setPayloadName(@javax.annotation.Nullable final String value) {
-        this._payloadName = value;
+        this.payloadName = value;
     }
 }

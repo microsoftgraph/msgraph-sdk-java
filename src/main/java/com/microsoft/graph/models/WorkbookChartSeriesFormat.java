@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartSeriesFormat extends Entity implements Parsable {
     /** Represents the fill format of a chart series, which includes background formating information. Read-only. */
-    private WorkbookChartFill _fill;
+    private WorkbookChartFill fill;
     /** Represents line formatting. Read-only. */
-    private WorkbookChartLineFormat _line;
+    private WorkbookChartLineFormat line;
     /**
      * Instantiates a new workbookChartSeriesFormat and sets the default values.
      * @return a void
@@ -32,11 +31,11 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("fill", (n) -> { this.setFill(n.getObjectValue(WorkbookChartFill::createFromDiscriminatorValue)); });
         deserializerMap.put("line", (n) -> { this.setLine(n.getObjectValue(WorkbookChartLineFormat::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -47,7 +46,7 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartFill getFill() {
-        return this._fill;
+        return this.fill;
     }
     /**
      * Gets the line property value. Represents line formatting. Read-only.
@@ -55,7 +54,7 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartLineFormat getLine() {
-        return this._line;
+        return this.line;
     }
     /**
      * Serializes information the current object
@@ -76,7 +75,7 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFill(@javax.annotation.Nullable final WorkbookChartFill value) {
-        this._fill = value;
+        this.fill = value;
     }
     /**
      * Sets the line property value. Represents line formatting. Read-only.
@@ -85,6 +84,6 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLine(@javax.annotation.Nullable final WorkbookChartLineFormat value) {
-        this._line = value;
+        this.line = value;
     }
 }
