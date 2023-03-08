@@ -176,4 +176,24 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
     public com.microsoft.graph.requests.IdentityProviderBaseRequestBuilder federationConfigurations(@Nonnull final String id) {
         return new com.microsoft.graph.requests.IdentityProviderBaseRequestBuilder(getRequestUrlWithAdditionalSegment("federationConfigurations") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the OnPremisesDirectorySynchronization collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.OnPremisesDirectorySynchronizationCollectionRequestBuilder onPremisesSynchronization() {
+        return new com.microsoft.graph.requests.OnPremisesDirectorySynchronizationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("onPremisesSynchronization"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the OnPremisesDirectorySynchronization item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.OnPremisesDirectorySynchronizationRequestBuilder onPremisesSynchronization(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OnPremisesDirectorySynchronizationRequestBuilder(getRequestUrlWithAdditionalSegment("onPremisesSynchronization") + "/" + id, getClient(), null);
+    }
 }

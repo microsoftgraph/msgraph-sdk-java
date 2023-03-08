@@ -11,6 +11,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.48.0] - 2023-03-08
+
+### Added
+
+- Adds delta function to DirectoryObject collection types
+- Access Management Policy  
+
+### Changed
+
+- Fixed invalid odata casts for memberOf and transitiveMemberOf methods
+
 ## [5.47.0] - 2023-02-14
 
 ### Added
