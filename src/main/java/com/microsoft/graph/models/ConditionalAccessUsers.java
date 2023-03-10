@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.ConditionalAccessGuestsOrExternalUsers;
 
 
 import com.google.gson.JsonObject;
@@ -48,6 +49,15 @@ public class ConditionalAccessUsers implements IJsonBackedObject {
     public java.util.List<String> excludeGroups;
 
     /**
+     * The Exclude Guests Or External Users.
+     * 
+     */
+    @SerializedName(value = "excludeGuestsOrExternalUsers", alternate = {"ExcludeGuestsOrExternalUsers"})
+    @Expose
+	@Nullable
+    public ConditionalAccessGuestsOrExternalUsers excludeGuestsOrExternalUsers;
+
+    /**
      * The Exclude Roles.
      * Role IDs excluded from scope of policy.
      */
@@ -73,6 +83,15 @@ public class ConditionalAccessUsers implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<String> includeGroups;
+
+    /**
+     * The Include Guests Or External Users.
+     * 
+     */
+    @SerializedName(value = "includeGuestsOrExternalUsers", alternate = {"IncludeGuestsOrExternalUsers"})
+    @Expose
+	@Nullable
+    public ConditionalAccessGuestsOrExternalUsers includeGuestsOrExternalUsers;
 
     /**
      * The Include Roles.
