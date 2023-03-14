@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.49.0] - 2023-03-14
+
+### Added
+
+- Added conditional access external tenants and guests.
+- Added learning experience/content/provider.
+
 ## [5.48.0] - 2023-03-08
 
 ### Added
