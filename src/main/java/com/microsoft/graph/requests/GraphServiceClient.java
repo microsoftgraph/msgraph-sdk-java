@@ -1266,4 +1266,14 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     public com.microsoft.graph.requests.InformationProtectionRequestBuilder informationProtection() {
         return new com.microsoft.graph.requests.InformationProtectionRequestBuilder(getServiceRoot() + "/informationProtection", this, null);
     }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the EmployeeExperience
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.EmployeeExperienceRequestBuilder employeeExperience() {
+        return new com.microsoft.graph.requests.EmployeeExperienceRequestBuilder(getServiceRoot() + "/employeeExperience", this, null);
+    }
 }
