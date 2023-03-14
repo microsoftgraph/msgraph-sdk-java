@@ -1,20 +1,18 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AccessReviewInactiveUsersQueryScope;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewQueryScope extends AccessReviewScope implements Parsable {
     /** The query representing what will be reviewed in an access review. */
-    private String _query;
+    private String query;
     /** In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query is specified. For example, ./manager. */
-    private String _queryRoot;
+    private String queryRoot;
     /** Indicates the type of query. Types include MicrosoftGraph and ARM. */
-    private String _queryType;
+    private String queryType;
     /**
      * Instantiates a new AccessReviewQueryScope and sets the default values.
      * @return a void
@@ -43,11 +41,11 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("query", (n) -> { this.setQuery(n.getStringValue()); });
         deserializerMap.put("queryRoot", (n) -> { this.setQueryRoot(n.getStringValue()); });
         deserializerMap.put("queryType", (n) -> { this.setQueryType(n.getStringValue()); });
@@ -59,7 +57,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      */
     @javax.annotation.Nullable
     public String getQuery() {
-        return this._query;
+        return this.query;
     }
     /**
      * Gets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query is specified. For example, ./manager.
@@ -67,7 +65,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      */
     @javax.annotation.Nullable
     public String getQueryRoot() {
-        return this._queryRoot;
+        return this.queryRoot;
     }
     /**
      * Gets the queryType property value. Indicates the type of query. Types include MicrosoftGraph and ARM.
@@ -75,7 +73,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      */
     @javax.annotation.Nullable
     public String getQueryType() {
-        return this._queryType;
+        return this.queryType;
     }
     /**
      * Serializes information the current object
@@ -97,7 +95,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setQuery(@javax.annotation.Nullable final String value) {
-        this._query = value;
+        this.query = value;
     }
     /**
      * Sets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query is specified. For example, ./manager.
@@ -106,7 +104,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setQueryRoot(@javax.annotation.Nullable final String value) {
-        this._queryRoot = value;
+        this.queryRoot = value;
     }
     /**
      * Sets the queryType property value. Indicates the type of query. Types include MicrosoftGraph and ARM.
@@ -115,6 +113,6 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setQueryType(@javax.annotation.Nullable final String value) {
-        this._queryType = value;
+        this.queryType = value;
     }
 }

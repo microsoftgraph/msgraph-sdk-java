@@ -3,22 +3,20 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable {
     /** The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy. */
-    private UnifiedRoleManagementPolicy _policy;
+    private UnifiedRoleManagementPolicy policy;
     /** The id of the policy. Inherited from entity. */
-    private String _policyId;
+    private String policyId;
     /** The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq). */
-    private String _roleDefinitionId;
+    private String roleDefinitionId;
     /** The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required. */
-    private String _scopeId;
+    private String scopeId;
     /** The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required. */
-    private String _scopeType;
+    private String scopeType;
     /**
      * Instantiates a new unifiedRoleManagementPolicyAssignment and sets the default values.
      * @return a void
@@ -39,11 +37,11 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("policy", (n) -> { this.setPolicy(n.getObjectValue(UnifiedRoleManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("policyId", (n) -> { this.setPolicyId(n.getStringValue()); });
         deserializerMap.put("roleDefinitionId", (n) -> { this.setRoleDefinitionId(n.getStringValue()); });
@@ -57,7 +55,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      */
     @javax.annotation.Nullable
     public UnifiedRoleManagementPolicy getPolicy() {
-        return this._policy;
+        return this.policy;
     }
     /**
      * Gets the policyId property value. The id of the policy. Inherited from entity.
@@ -65,7 +63,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      */
     @javax.annotation.Nullable
     public String getPolicyId() {
-        return this._policyId;
+        return this.policyId;
     }
     /**
      * Gets the roleDefinitionId property value. The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
@@ -73,7 +71,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      */
     @javax.annotation.Nullable
     public String getRoleDefinitionId() {
-        return this._roleDefinitionId;
+        return this.roleDefinitionId;
     }
     /**
      * Gets the scopeId property value. The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
@@ -81,7 +79,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      */
     @javax.annotation.Nullable
     public String getScopeId() {
-        return this._scopeId;
+        return this.scopeId;
     }
     /**
      * Gets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
@@ -89,7 +87,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      */
     @javax.annotation.Nullable
     public String getScopeType() {
-        return this._scopeType;
+        return this.scopeType;
     }
     /**
      * Serializes information the current object
@@ -113,7 +111,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      */
     @javax.annotation.Nonnull
     public void setPolicy(@javax.annotation.Nullable final UnifiedRoleManagementPolicy value) {
-        this._policy = value;
+        this.policy = value;
     }
     /**
      * Sets the policyId property value. The id of the policy. Inherited from entity.
@@ -122,7 +120,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      */
     @javax.annotation.Nonnull
     public void setPolicyId(@javax.annotation.Nullable final String value) {
-        this._policyId = value;
+        this.policyId = value;
     }
     /**
      * Sets the roleDefinitionId property value. The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
@@ -131,7 +129,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      */
     @javax.annotation.Nonnull
     public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
-        this._roleDefinitionId = value;
+        this.roleDefinitionId = value;
     }
     /**
      * Sets the scopeId property value. The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
@@ -140,7 +138,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      */
     @javax.annotation.Nonnull
     public void setScopeId(@javax.annotation.Nullable final String value) {
-        this._scopeId = value;
+        this.scopeId = value;
     }
     /**
      * Sets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
@@ -149,6 +147,6 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      */
     @javax.annotation.Nonnull
     public void setScopeType(@javax.annotation.Nullable final String value) {
-        this._scopeType = value;
+        this.scopeType = value;
     }
 }

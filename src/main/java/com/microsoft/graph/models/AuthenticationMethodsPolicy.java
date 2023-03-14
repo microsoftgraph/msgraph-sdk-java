@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     /** Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy. */
-    private java.util.List<AuthenticationMethodConfiguration> _authenticationMethodConfigurations;
+    private java.util.List<AuthenticationMethodConfiguration> authenticationMethodConfigurations;
     /** A description of the policy. Read-only. */
-    private String _description;
+    private String description;
     /** The name of the policy. Read-only. */
-    private String _displayName;
+    private String displayName;
     /** The date and time of the last update to the policy. Read-only. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The version of the policy in use. Read-only. */
-    private String _policyVersion;
+    private String policyVersion;
     /** The reconfirmationInDays property */
-    private Integer _reconfirmationInDays;
+    private Integer reconfirmationInDays;
     /** Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods. */
-    private RegistrationEnforcement _registrationEnforcement;
+    private RegistrationEnforcement registrationEnforcement;
     /**
      * Instantiates a new AuthenticationMethodsPolicy and sets the default values.
      * @return a void
@@ -47,7 +46,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AuthenticationMethodConfiguration> getAuthenticationMethodConfigurations() {
-        return this._authenticationMethodConfigurations;
+        return this.authenticationMethodConfigurations;
     }
     /**
      * Gets the description property value. A description of the policy. Read-only.
@@ -55,7 +54,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The name of the policy. Read-only.
@@ -63,15 +62,15 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationMethodConfigurations", (n) -> { this.setAuthenticationMethodConfigurations(n.getCollectionOfObjectValues(AuthenticationMethodConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -87,7 +86,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the policyVersion property value. The version of the policy in use. Read-only.
@@ -95,7 +94,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPolicyVersion() {
-        return this._policyVersion;
+        return this.policyVersion;
     }
     /**
      * Gets the reconfirmationInDays property value. The reconfirmationInDays property
@@ -103,7 +102,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getReconfirmationInDays() {
-        return this._reconfirmationInDays;
+        return this.reconfirmationInDays;
     }
     /**
      * Gets the registrationEnforcement property value. Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
@@ -111,7 +110,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RegistrationEnforcement getRegistrationEnforcement() {
-        return this._registrationEnforcement;
+        return this.registrationEnforcement;
     }
     /**
      * Serializes information the current object
@@ -137,7 +136,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAuthenticationMethodConfigurations(@javax.annotation.Nullable final java.util.List<AuthenticationMethodConfiguration> value) {
-        this._authenticationMethodConfigurations = value;
+        this.authenticationMethodConfigurations = value;
     }
     /**
      * Sets the description property value. A description of the policy. Read-only.
@@ -146,7 +145,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The name of the policy. Read-only.
@@ -155,7 +154,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time of the last update to the policy. Read-only.
@@ -164,7 +163,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the policyVersion property value. The version of the policy in use. Read-only.
@@ -173,7 +172,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPolicyVersion(@javax.annotation.Nullable final String value) {
-        this._policyVersion = value;
+        this.policyVersion = value;
     }
     /**
      * Sets the reconfirmationInDays property value. The reconfirmationInDays property
@@ -182,7 +181,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setReconfirmationInDays(@javax.annotation.Nullable final Integer value) {
-        this._reconfirmationInDays = value;
+        this.reconfirmationInDays = value;
     }
     /**
      * Sets the registrationEnforcement property value. Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
@@ -191,6 +190,6 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRegistrationEnforcement(@javax.annotation.Nullable final RegistrationEnforcement value) {
-        this._registrationEnforcement = value;
+        this.registrationEnforcement = value;
     }
 }

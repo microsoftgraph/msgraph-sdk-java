@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkConversationIdentity extends Identity implements Parsable {
     /** Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue. */
-    private TeamworkConversationIdentityType _conversationIdentityType;
+    private TeamworkConversationIdentityType conversationIdentityType;
     /**
      * Instantiates a new teamworkConversationIdentity and sets the default values.
      * @return a void
@@ -35,15 +34,15 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamworkConversationIdentityType getConversationIdentityType() {
-        return this._conversationIdentityType;
+        return this.conversationIdentityType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("conversationIdentityType", (n) -> { this.setConversationIdentityType(n.getEnumValue(TeamworkConversationIdentityType.class)); });
         return deserializerMap;
     }
@@ -65,6 +64,6 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setConversationIdentityType(@javax.annotation.Nullable final TeamworkConversationIdentityType value) {
-        this._conversationIdentityType = value;
+        this.conversationIdentityType = value;
     }
 }

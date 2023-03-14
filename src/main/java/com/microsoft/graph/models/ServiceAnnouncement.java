@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServiceAnnouncement extends Entity implements Parsable {
     /** A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly. */
-    private java.util.List<ServiceHealth> _healthOverviews;
+    private java.util.List<ServiceHealth> healthOverviews;
     /** A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly. */
-    private java.util.List<ServiceHealthIssue> _issues;
+    private java.util.List<ServiceHealthIssue> issues;
     /** A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly. */
-    private java.util.List<ServiceUpdateMessage> _messages;
+    private java.util.List<ServiceUpdateMessage> messages;
     /**
      * Instantiates a new ServiceAnnouncement and sets the default values.
      * @return a void
@@ -34,11 +33,11 @@ public class ServiceAnnouncement extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("healthOverviews", (n) -> { this.setHealthOverviews(n.getCollectionOfObjectValues(ServiceHealth::createFromDiscriminatorValue)); });
         deserializerMap.put("issues", (n) -> { this.setIssues(n.getCollectionOfObjectValues(ServiceHealthIssue::createFromDiscriminatorValue)); });
         deserializerMap.put("messages", (n) -> { this.setMessages(n.getCollectionOfObjectValues(ServiceUpdateMessage::createFromDiscriminatorValue)); });
@@ -50,7 +49,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ServiceHealth> getHealthOverviews() {
-        return this._healthOverviews;
+        return this.healthOverviews;
     }
     /**
      * Gets the issues property value. A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
@@ -58,7 +57,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ServiceHealthIssue> getIssues() {
-        return this._issues;
+        return this.issues;
     }
     /**
      * Gets the messages property value. A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
@@ -66,7 +65,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ServiceUpdateMessage> getMessages() {
-        return this._messages;
+        return this.messages;
     }
     /**
      * Serializes information the current object
@@ -88,7 +87,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setHealthOverviews(@javax.annotation.Nullable final java.util.List<ServiceHealth> value) {
-        this._healthOverviews = value;
+        this.healthOverviews = value;
     }
     /**
      * Sets the issues property value. A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
@@ -97,7 +96,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIssues(@javax.annotation.Nullable final java.util.List<ServiceHealthIssue> value) {
-        this._issues = value;
+        this.issues = value;
     }
     /**
      * Sets the messages property value. A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
@@ -106,6 +105,6 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMessages(@javax.annotation.Nullable final java.util.List<ServiceUpdateMessage> value) {
-        this._messages = value;
+        this.messages = value;
     }
 }

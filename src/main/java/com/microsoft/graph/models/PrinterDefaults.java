@@ -4,49 +4,48 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrinterDefaults implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The default color mode to use when printing the document. Valid values are described in the following table. */
-    private PrintColorMode _colorMode;
+    private PrintColorMode colorMode;
     /** The default content (MIME) type to use when processing documents. */
-    private String _contentType;
+    private String contentType;
     /** The default number of copies printed per job. */
-    private Integer _copiesPerJob;
+    private Integer copiesPerJob;
     /** The default resolution in DPI to use when printing the job. */
-    private Integer _dpi;
+    private Integer dpi;
     /** The default duplex (double-sided) configuration to use when printing a document. Valid values are described in the following table. */
-    private PrintDuplexMode _duplexMode;
+    private PrintDuplexMode duplexMode;
     /** The default set of finishings to apply to print jobs. Valid values are described in the following table. */
-    private java.util.List<PrintFinishing> _finishings;
+    private java.util.List<PrintFinishing> finishings;
     /** The default fitPdfToPage setting. True to fit each page of a PDF document to a physical sheet of media; false to let the printer decide how to lay out impressions. */
-    private Boolean _fitPdfToPage;
+    private Boolean fitPdfToPage;
     /** The inputBin property */
-    private String _inputBin;
+    private String inputBin;
     /** The default media (such as paper) color to print the document on. */
-    private String _mediaColor;
+    private String mediaColor;
     /** The default media size to use. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic. */
-    private String _mediaSize;
+    private String mediaSize;
     /** The default media (such as paper) type to print the document on. */
-    private String _mediaType;
+    private String mediaType;
     /** The default direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table. */
-    private PrintMultipageLayout _multipageLayout;
+    private PrintMultipageLayout multipageLayout;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The default orientation to use when printing the document. Valid values are described in the following table. */
-    private PrintOrientation _orientation;
+    private PrintOrientation orientation;
     /** The default output bin to place completed prints into. See the printer's capabilities for a list of supported output bins. */
-    private String _outputBin;
+    private String outputBin;
     /** The default number of document pages to print on each sheet. */
-    private Integer _pagesPerSheet;
+    private Integer pagesPerSheet;
     /** The default quality to use when printing the document. Valid values are described in the following table. */
-    private PrintQuality _quality;
+    private PrintQuality quality;
     /** Specifies how the printer scales the document data to fit the requested media. Valid values are described in the following table. */
-    private PrintScaling _scaling;
+    private PrintScaling scaling;
     /**
      * Instantiates a new printerDefaults and sets the default values.
      * @return a void
@@ -71,7 +70,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the colorMode property value. The default color mode to use when printing the document. Valid values are described in the following table.
@@ -79,7 +78,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public PrintColorMode getColorMode() {
-        return this._colorMode;
+        return this.colorMode;
     }
     /**
      * Gets the contentType property value. The default content (MIME) type to use when processing documents.
@@ -87,7 +86,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getContentType() {
-        return this._contentType;
+        return this.contentType;
     }
     /**
      * Gets the copiesPerJob property value. The default number of copies printed per job.
@@ -95,7 +94,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getCopiesPerJob() {
-        return this._copiesPerJob;
+        return this.copiesPerJob;
     }
     /**
      * Gets the dpi property value. The default resolution in DPI to use when printing the job.
@@ -103,7 +102,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getDpi() {
-        return this._dpi;
+        return this.dpi;
     }
     /**
      * Gets the duplexMode property value. The default duplex (double-sided) configuration to use when printing a document. Valid values are described in the following table.
@@ -111,15 +110,15 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public PrintDuplexMode getDuplexMode() {
-        return this._duplexMode;
+        return this.duplexMode;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(18);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(18);
         deserializerMap.put("colorMode", (n) -> { this.setColorMode(n.getEnumValue(PrintColorMode.class)); });
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getStringValue()); });
         deserializerMap.put("copiesPerJob", (n) -> { this.setCopiesPerJob(n.getIntegerValue()); });
@@ -146,7 +145,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintFinishing> getFinishings() {
-        return this._finishings;
+        return this.finishings;
     }
     /**
      * Gets the fitPdfToPage property value. The default fitPdfToPage setting. True to fit each page of a PDF document to a physical sheet of media; false to let the printer decide how to lay out impressions.
@@ -154,7 +153,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getFitPdfToPage() {
-        return this._fitPdfToPage;
+        return this.fitPdfToPage;
     }
     /**
      * Gets the inputBin property value. The inputBin property
@@ -162,7 +161,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getInputBin() {
-        return this._inputBin;
+        return this.inputBin;
     }
     /**
      * Gets the mediaColor property value. The default media (such as paper) color to print the document on.
@@ -170,7 +169,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getMediaColor() {
-        return this._mediaColor;
+        return this.mediaColor;
     }
     /**
      * Gets the mediaSize property value. The default media size to use. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
@@ -178,7 +177,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getMediaSize() {
-        return this._mediaSize;
+        return this.mediaSize;
     }
     /**
      * Gets the mediaType property value. The default media (such as paper) type to print the document on.
@@ -186,7 +185,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getMediaType() {
-        return this._mediaType;
+        return this.mediaType;
     }
     /**
      * Gets the multipageLayout property value. The default direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
@@ -194,7 +193,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public PrintMultipageLayout getMultipageLayout() {
-        return this._multipageLayout;
+        return this.multipageLayout;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -202,7 +201,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the orientation property value. The default orientation to use when printing the document. Valid values are described in the following table.
@@ -210,7 +209,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public PrintOrientation getOrientation() {
-        return this._orientation;
+        return this.orientation;
     }
     /**
      * Gets the outputBin property value. The default output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
@@ -218,7 +217,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOutputBin() {
-        return this._outputBin;
+        return this.outputBin;
     }
     /**
      * Gets the pagesPerSheet property value. The default number of document pages to print on each sheet.
@@ -226,7 +225,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getPagesPerSheet() {
-        return this._pagesPerSheet;
+        return this.pagesPerSheet;
     }
     /**
      * Gets the quality property value. The default quality to use when printing the document. Valid values are described in the following table.
@@ -234,7 +233,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public PrintQuality getQuality() {
-        return this._quality;
+        return this.quality;
     }
     /**
      * Gets the scaling property value. Specifies how the printer scales the document data to fit the requested media. Valid values are described in the following table.
@@ -242,7 +241,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public PrintScaling getScaling() {
-        return this._scaling;
+        return this.scaling;
     }
     /**
      * Serializes information the current object
@@ -279,7 +278,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the colorMode property value. The default color mode to use when printing the document. Valid values are described in the following table.
@@ -288,7 +287,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setColorMode(@javax.annotation.Nullable final PrintColorMode value) {
-        this._colorMode = value;
+        this.colorMode = value;
     }
     /**
      * Sets the contentType property value. The default content (MIME) type to use when processing documents.
@@ -297,7 +296,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentType(@javax.annotation.Nullable final String value) {
-        this._contentType = value;
+        this.contentType = value;
     }
     /**
      * Sets the copiesPerJob property value. The default number of copies printed per job.
@@ -306,7 +305,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCopiesPerJob(@javax.annotation.Nullable final Integer value) {
-        this._copiesPerJob = value;
+        this.copiesPerJob = value;
     }
     /**
      * Sets the dpi property value. The default resolution in DPI to use when printing the job.
@@ -315,7 +314,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDpi(@javax.annotation.Nullable final Integer value) {
-        this._dpi = value;
+        this.dpi = value;
     }
     /**
      * Sets the duplexMode property value. The default duplex (double-sided) configuration to use when printing a document. Valid values are described in the following table.
@@ -324,7 +323,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDuplexMode(@javax.annotation.Nullable final PrintDuplexMode value) {
-        this._duplexMode = value;
+        this.duplexMode = value;
     }
     /**
      * Sets the finishings property value. The default set of finishings to apply to print jobs. Valid values are described in the following table.
@@ -333,7 +332,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFinishings(@javax.annotation.Nullable final java.util.List<PrintFinishing> value) {
-        this._finishings = value;
+        this.finishings = value;
     }
     /**
      * Sets the fitPdfToPage property value. The default fitPdfToPage setting. True to fit each page of a PDF document to a physical sheet of media; false to let the printer decide how to lay out impressions.
@@ -342,7 +341,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFitPdfToPage(@javax.annotation.Nullable final Boolean value) {
-        this._fitPdfToPage = value;
+        this.fitPdfToPage = value;
     }
     /**
      * Sets the inputBin property value. The inputBin property
@@ -351,7 +350,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setInputBin(@javax.annotation.Nullable final String value) {
-        this._inputBin = value;
+        this.inputBin = value;
     }
     /**
      * Sets the mediaColor property value. The default media (such as paper) color to print the document on.
@@ -360,7 +359,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMediaColor(@javax.annotation.Nullable final String value) {
-        this._mediaColor = value;
+        this.mediaColor = value;
     }
     /**
      * Sets the mediaSize property value. The default media size to use. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
@@ -369,7 +368,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMediaSize(@javax.annotation.Nullable final String value) {
-        this._mediaSize = value;
+        this.mediaSize = value;
     }
     /**
      * Sets the mediaType property value. The default media (such as paper) type to print the document on.
@@ -378,7 +377,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMediaType(@javax.annotation.Nullable final String value) {
-        this._mediaType = value;
+        this.mediaType = value;
     }
     /**
      * Sets the multipageLayout property value. The default direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
@@ -387,7 +386,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMultipageLayout(@javax.annotation.Nullable final PrintMultipageLayout value) {
-        this._multipageLayout = value;
+        this.multipageLayout = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -396,7 +395,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the orientation property value. The default orientation to use when printing the document. Valid values are described in the following table.
@@ -405,7 +404,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOrientation(@javax.annotation.Nullable final PrintOrientation value) {
-        this._orientation = value;
+        this.orientation = value;
     }
     /**
      * Sets the outputBin property value. The default output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
@@ -414,7 +413,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOutputBin(@javax.annotation.Nullable final String value) {
-        this._outputBin = value;
+        this.outputBin = value;
     }
     /**
      * Sets the pagesPerSheet property value. The default number of document pages to print on each sheet.
@@ -423,7 +422,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPagesPerSheet(@javax.annotation.Nullable final Integer value) {
-        this._pagesPerSheet = value;
+        this.pagesPerSheet = value;
     }
     /**
      * Sets the quality property value. The default quality to use when printing the document. Valid values are described in the following table.
@@ -432,7 +431,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setQuality(@javax.annotation.Nullable final PrintQuality value) {
-        this._quality = value;
+        this.quality = value;
     }
     /**
      * Sets the scaling property value. Specifies how the printer scales the document data to fit the requested media. Valid values are described in the following table.
@@ -441,6 +440,6 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setScaling(@javax.annotation.Nullable final PrintScaling value) {
-        this._scaling = value;
+        this.scaling = value;
     }
 }

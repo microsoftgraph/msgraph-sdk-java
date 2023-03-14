@@ -3,10 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
 public enum IdentityUserFlowAttributeDataType implements ValuedEnum {
     String("string"),
-    Boolean_escaped("boolean_escaped"),
+    BooleanEscaped("booleanEscaped"),
     Int64("int64"),
     StringCollection("stringCollection"),
     DateTime("dateTime"),
@@ -22,7 +21,7 @@ public enum IdentityUserFlowAttributeDataType implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "string": return String;
-            case "boolean": return Boolean_escaped;
+            case "boolean": return BooleanEscaped;
             case "int64": return Int64;
             case "stringCollection": return StringCollection;
             case "dateTime": return DateTime;

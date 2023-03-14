@@ -8,6 +8,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
+import com.microsoft.kiota.RequestHeaders;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
@@ -18,7 +19,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the attachments property of the microsoft.graph.todoTask entity. */
+/**
+ * Provides operations to manage the attachments property of the microsoft.graph.todoTask entity.
+ */
 public class AttachmentsRequestBuilder {
     /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
@@ -66,74 +69,14 @@ public class AttachmentsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get attachments from me
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation() throws URISyntaxException {
-        return createGetRequestInformation(null);
-    }
-    /**
-     * Get attachments from me
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Create new navigation property to attachments for me
-     * @param body 
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final AttachmentBase body) throws URISyntaxException {
-        return createPostRequestInformation(body, null);
-    }
-    /**
-     * Create new navigation property to attachments for me
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final AttachmentBase body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Get attachments from me
+     * Get a list of the taskFileAttachment objects and their properties. The **contentBytes** property will not be returned in the response. Use the Get attachment API to view the **contentBytes**.
      * @return a CompletableFuture of AttachmentBaseCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/todotask-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentBaseCollectionResponse> get() {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(null);
+            final RequestInformation requestInfo = toGetRequestInformation(null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -145,14 +88,15 @@ public class AttachmentsRequestBuilder {
         }
     }
     /**
-     * Get attachments from me
+     * Get a list of the taskFileAttachment objects and their properties. The **contentBytes** property will not be returned in the response. Use the Get attachment API to view the **contentBytes**.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AttachmentBaseCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/todotask-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentBaseCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
+            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -164,14 +108,15 @@ public class AttachmentsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to attachments for me
-     * @param body 
+     * Add a new taskFileAttachment object to a todoTask. This operation limits the size of the attachment you can add to under 3 MB. If the size of the file attachments is more than 3 MB, create an upload session to upload the attachments.
+     * @param body The request body
      * @return a CompletableFuture of attachmentBase
+     * @see <a href="https://docs.microsoft.com/graph/api/todotask-post-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentBase> post(@javax.annotation.Nonnull final AttachmentBase body) {
         try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, null);
+            final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -183,16 +128,17 @@ public class AttachmentsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to attachments for me
-     * @param body 
+     * Add a new taskFileAttachment object to a todoTask. This operation limits the size of the attachment you can add to under 3 MB. If the size of the file attachments is more than 3 MB, create an upload session to upload the attachments.
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of attachmentBase
+     * @see <a href="https://docs.microsoft.com/graph/api/todotask-post-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentBase> post(@javax.annotation.Nonnull final AttachmentBase body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
+            final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -203,7 +149,70 @@ public class AttachmentsRequestBuilder {
             return executionException;
         }
     }
-    /** Get attachments from me */
+    /**
+     * Get a list of the taskFileAttachment objects and their properties. The **contentBytes** property will not be returned in the response. Use the Get attachment API to view the **contentBytes**.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+        return toGetRequestInformation(null);
+    }
+    /**
+     * Get a list of the taskFileAttachment objects and their properties. The **contentBytes** property will not be returned in the response. Use the Get attachment API to view the **contentBytes**.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        if (requestConfiguration != null) {
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Add a new taskFileAttachment object to a todoTask. This operation limits the size of the attachment you can add to under 3 MB. If the size of the file attachments is more than 3 MB, create an upload session to upload the attachments.
+     * @param body The request body
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final AttachmentBase body) throws URISyntaxException {
+        return toPostRequestInformation(body, null);
+    }
+    /**
+     * Add a new taskFileAttachment object to a todoTask. This operation limits the size of the attachment you can add to under 3 MB. If the size of the file attachments is more than 3 MB, create an upload session to upload the attachments.
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final AttachmentBase body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        if (requestConfiguration != null) {
+            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Get a list of the taskFileAttachment objects and their properties. The **contentBytes** property will not be returned in the response. Use the Get attachment API to view the **contentBytes**.
+     */
     public class GetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -230,11 +239,13 @@ public class AttachmentsRequestBuilder {
         @javax.annotation.Nullable
         public Integer top;
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
     public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
+        public RequestHeaders headers = new RequestHeaders();
         /** Request options */
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
@@ -249,11 +260,13 @@ public class AttachmentsRequestBuilder {
         public GetRequestConfiguration() {
         }
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
     public class PostRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
+        public RequestHeaders headers = new RequestHeaders();
         /** Request options */
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();

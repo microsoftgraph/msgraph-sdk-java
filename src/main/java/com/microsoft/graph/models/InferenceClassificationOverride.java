@@ -3,16 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class InferenceClassificationOverride extends Entity implements Parsable {
     /** Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other. */
-    private InferenceClassificationType _classifyAs;
+    private InferenceClassificationType classifyAs;
     /** The email address information of the sender for whom the override is created. */
-    private EmailAddress _senderEmailAddress;
+    private EmailAddress senderEmailAddress;
     /**
      * Instantiates a new inferenceClassificationOverride and sets the default values.
      * @return a void
@@ -37,15 +35,15 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public InferenceClassificationType getClassifyAs() {
-        return this._classifyAs;
+        return this.classifyAs;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("classifyAs", (n) -> { this.setClassifyAs(n.getEnumValue(InferenceClassificationType.class)); });
         deserializerMap.put("senderEmailAddress", (n) -> { this.setSenderEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -56,7 +54,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public EmailAddress getSenderEmailAddress() {
-        return this._senderEmailAddress;
+        return this.senderEmailAddress;
     }
     /**
      * Serializes information the current object
@@ -77,7 +75,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setClassifyAs(@javax.annotation.Nullable final InferenceClassificationType value) {
-        this._classifyAs = value;
+        this.classifyAs = value;
     }
     /**
      * Sets the senderEmailAddress property value. The email address information of the sender for whom the override is created.
@@ -86,6 +84,6 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setSenderEmailAddress(@javax.annotation.Nullable final EmailAddress value) {
-        this._senderEmailAddress = value;
+        this.senderEmailAddress = value;
     }
 }

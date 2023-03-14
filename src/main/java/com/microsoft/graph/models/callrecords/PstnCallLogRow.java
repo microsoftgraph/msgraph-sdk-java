@@ -6,61 +6,60 @@ import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator may provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft. */
-    private PstnCallDurationSource _callDurationSource;
+    private PstnCallDurationSource callDurationSource;
     /** Number dialed in E.164 format. */
-    private String _calleeNumber;
+    private String calleeNumber;
     /** Number that received the call for inbound calls or the number dialed for outbound calls. E.164 format. */
-    private String _callerNumber;
+    private String callerNumber;
     /** Call identifier. Not guaranteed to be unique. */
-    private String _callId;
+    private String callId;
     /** Whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference. */
-    private String _callType;
+    private String callType;
     /** Amount of money or cost of the call that is charged to your account. */
-    private BigDecimal _charge;
+    private BigDecimal charge;
     /** ID of the audio conference. */
-    private String _conferenceId;
+    private String conferenceId;
     /** Connection fee price. */
-    private BigDecimal _connectionCharge;
-    /** Type of currency used to calculate the cost of the call (ISO 4217). */
-    private String _currency;
+    private BigDecimal connectionCharge;
+    /** Type of currency used to calculate the cost of the call. For details, see (ISO 4217. */
+    private String currency;
     /** Whether the call was domestic (within a country or region) or international (outside a country or region) based on the user's location. */
-    private String _destinationContext;
+    private String destinationContext;
     /** Country or region dialed. */
-    private String _destinationName;
+    private String destinationName;
     /** How long the call was connected, in seconds. */
-    private Integer _duration;
+    private Integer duration;
     /** Call end time. */
-    private OffsetDateTime _endDateTime;
+    private OffsetDateTime endDateTime;
     /** Unique call identifier. GUID. */
-    private String _id;
+    private String id;
     /** User's phone number type, such as a service of toll-free number. */
-    private String _inventoryType;
+    private String inventoryType;
     /** The license used for the call. */
-    private String _licenseCapability;
+    private String licenseCapability;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program. */
-    private String _operator;
+    private String operator;
     /** Call start time. */
-    private OffsetDateTime _startDateTime;
-    /** Country code of the tenant, ISO 3166-1 alpha-2. */
-    private String _tenantCountryCode;
-    /** Country code of the user, ISO 3166-1 alpha-2. */
-    private String _usageCountryCode;
+    private OffsetDateTime startDateTime;
+    /** Country code of the tenant. For details, see ISO 3166-1 alpha-2. */
+    private String tenantCountryCode;
+    /** Country code of the user. For details, see ISO 3166-1 alpha-2. */
+    private String usageCountryCode;
     /** Display name of the user. */
-    private String _userDisplayName;
+    private String userDisplayName;
     /** Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucap_in, ucap_out). */
-    private String _userId;
-    /** UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address. */
-    private String _userPrincipalName;
+    private String userId;
+    /** The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address. */
+    private String userPrincipalName;
     /**
      * Instantiates a new pstnCallLogRow and sets the default values.
      * @return a void
@@ -85,7 +84,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the callDurationSource property value. The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator may provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
@@ -93,7 +92,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public PstnCallDurationSource getCallDurationSource() {
-        return this._callDurationSource;
+        return this.callDurationSource;
     }
     /**
      * Gets the calleeNumber property value. Number dialed in E.164 format.
@@ -101,7 +100,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCalleeNumber() {
-        return this._calleeNumber;
+        return this.calleeNumber;
     }
     /**
      * Gets the callerNumber property value. Number that received the call for inbound calls or the number dialed for outbound calls. E.164 format.
@@ -109,7 +108,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCallerNumber() {
-        return this._callerNumber;
+        return this.callerNumber;
     }
     /**
      * Gets the callId property value. Call identifier. Not guaranteed to be unique.
@@ -117,7 +116,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCallId() {
-        return this._callId;
+        return this.callId;
     }
     /**
      * Gets the callType property value. Whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference.
@@ -125,7 +124,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCallType() {
-        return this._callType;
+        return this.callType;
     }
     /**
      * Gets the charge property value. Amount of money or cost of the call that is charged to your account.
@@ -133,7 +132,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getCharge() {
-        return this._charge;
+        return this.charge;
     }
     /**
      * Gets the conferenceId property value. ID of the audio conference.
@@ -141,7 +140,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getConferenceId() {
-        return this._conferenceId;
+        return this.conferenceId;
     }
     /**
      * Gets the connectionCharge property value. Connection fee price.
@@ -149,15 +148,15 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getConnectionCharge() {
-        return this._connectionCharge;
+        return this.connectionCharge;
     }
     /**
-     * Gets the currency property value. Type of currency used to calculate the cost of the call (ISO 4217).
+     * Gets the currency property value. Type of currency used to calculate the cost of the call. For details, see (ISO 4217.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getCurrency() {
-        return this._currency;
+        return this.currency;
     }
     /**
      * Gets the destinationContext property value. Whether the call was domestic (within a country or region) or international (outside a country or region) based on the user's location.
@@ -165,7 +164,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDestinationContext() {
-        return this._destinationContext;
+        return this.destinationContext;
     }
     /**
      * Gets the destinationName property value. Country or region dialed.
@@ -173,7 +172,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDestinationName() {
-        return this._destinationName;
+        return this.destinationName;
     }
     /**
      * Gets the duration property value. How long the call was connected, in seconds.
@@ -181,7 +180,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getDuration() {
-        return this._duration;
+        return this.duration;
     }
     /**
      * Gets the endDateTime property value. Call end time.
@@ -189,15 +188,15 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(24);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(24);
         deserializerMap.put("callDurationSource", (n) -> { this.setCallDurationSource(n.getEnumValue(PstnCallDurationSource.class)); });
         deserializerMap.put("calleeNumber", (n) -> { this.setCalleeNumber(n.getStringValue()); });
         deserializerMap.put("callerNumber", (n) -> { this.setCallerNumber(n.getStringValue()); });
@@ -230,7 +229,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getId() {
-        return this._id;
+        return this.id;
     }
     /**
      * Gets the inventoryType property value. User's phone number type, such as a service of toll-free number.
@@ -238,7 +237,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getInventoryType() {
-        return this._inventoryType;
+        return this.inventoryType;
     }
     /**
      * Gets the licenseCapability property value. The license used for the call.
@@ -246,7 +245,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getLicenseCapability() {
-        return this._licenseCapability;
+        return this.licenseCapability;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -254,7 +253,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the operator property value. The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
@@ -262,7 +261,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOperator() {
-        return this._operator;
+        return this.operator;
     }
     /**
      * Gets the startDateTime property value. Call start time.
@@ -270,23 +269,23 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
-     * Gets the tenantCountryCode property value. Country code of the tenant, ISO 3166-1 alpha-2.
+     * Gets the tenantCountryCode property value. Country code of the tenant. For details, see ISO 3166-1 alpha-2.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getTenantCountryCode() {
-        return this._tenantCountryCode;
+        return this.tenantCountryCode;
     }
     /**
-     * Gets the usageCountryCode property value. Country code of the user, ISO 3166-1 alpha-2.
+     * Gets the usageCountryCode property value. Country code of the user. For details, see ISO 3166-1 alpha-2.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getUsageCountryCode() {
-        return this._usageCountryCode;
+        return this.usageCountryCode;
     }
     /**
      * Gets the userDisplayName property value. Display name of the user.
@@ -294,7 +293,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getUserDisplayName() {
-        return this._userDisplayName;
+        return this.userDisplayName;
     }
     /**
      * Gets the userId property value. Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
@@ -302,15 +301,15 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
-     * Gets the userPrincipalName property value. UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
+     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
@@ -353,7 +352,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the callDurationSource property value. The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator may provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
@@ -362,7 +361,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCallDurationSource(@javax.annotation.Nullable final PstnCallDurationSource value) {
-        this._callDurationSource = value;
+        this.callDurationSource = value;
     }
     /**
      * Sets the calleeNumber property value. Number dialed in E.164 format.
@@ -371,7 +370,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCalleeNumber(@javax.annotation.Nullable final String value) {
-        this._calleeNumber = value;
+        this.calleeNumber = value;
     }
     /**
      * Sets the callerNumber property value. Number that received the call for inbound calls or the number dialed for outbound calls. E.164 format.
@@ -380,7 +379,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCallerNumber(@javax.annotation.Nullable final String value) {
-        this._callerNumber = value;
+        this.callerNumber = value;
     }
     /**
      * Sets the callId property value. Call identifier. Not guaranteed to be unique.
@@ -389,7 +388,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCallId(@javax.annotation.Nullable final String value) {
-        this._callId = value;
+        this.callId = value;
     }
     /**
      * Sets the callType property value. Whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference.
@@ -398,7 +397,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCallType(@javax.annotation.Nullable final String value) {
-        this._callType = value;
+        this.callType = value;
     }
     /**
      * Sets the charge property value. Amount of money or cost of the call that is charged to your account.
@@ -407,7 +406,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCharge(@javax.annotation.Nullable final BigDecimal value) {
-        this._charge = value;
+        this.charge = value;
     }
     /**
      * Sets the conferenceId property value. ID of the audio conference.
@@ -416,7 +415,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setConferenceId(@javax.annotation.Nullable final String value) {
-        this._conferenceId = value;
+        this.conferenceId = value;
     }
     /**
      * Sets the connectionCharge property value. Connection fee price.
@@ -425,16 +424,16 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setConnectionCharge(@javax.annotation.Nullable final BigDecimal value) {
-        this._connectionCharge = value;
+        this.connectionCharge = value;
     }
     /**
-     * Sets the currency property value. Type of currency used to calculate the cost of the call (ISO 4217).
+     * Sets the currency property value. Type of currency used to calculate the cost of the call. For details, see (ISO 4217.
      * @param value Value to set for the currency property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setCurrency(@javax.annotation.Nullable final String value) {
-        this._currency = value;
+        this.currency = value;
     }
     /**
      * Sets the destinationContext property value. Whether the call was domestic (within a country or region) or international (outside a country or region) based on the user's location.
@@ -443,7 +442,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDestinationContext(@javax.annotation.Nullable final String value) {
-        this._destinationContext = value;
+        this.destinationContext = value;
     }
     /**
      * Sets the destinationName property value. Country or region dialed.
@@ -452,7 +451,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDestinationName(@javax.annotation.Nullable final String value) {
-        this._destinationName = value;
+        this.destinationName = value;
     }
     /**
      * Sets the duration property value. How long the call was connected, in seconds.
@@ -461,7 +460,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDuration(@javax.annotation.Nullable final Integer value) {
-        this._duration = value;
+        this.duration = value;
     }
     /**
      * Sets the endDateTime property value. Call end time.
@@ -470,7 +469,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
      * Sets the id property value. Unique call identifier. GUID.
@@ -479,7 +478,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+        this.id = value;
     }
     /**
      * Sets the inventoryType property value. User's phone number type, such as a service of toll-free number.
@@ -488,7 +487,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setInventoryType(@javax.annotation.Nullable final String value) {
-        this._inventoryType = value;
+        this.inventoryType = value;
     }
     /**
      * Sets the licenseCapability property value. The license used for the call.
@@ -497,7 +496,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLicenseCapability(@javax.annotation.Nullable final String value) {
-        this._licenseCapability = value;
+        this.licenseCapability = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -506,7 +505,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the operator property value. The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
@@ -515,7 +514,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOperator(@javax.annotation.Nullable final String value) {
-        this._operator = value;
+        this.operator = value;
     }
     /**
      * Sets the startDateTime property value. Call start time.
@@ -524,25 +523,25 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
     /**
-     * Sets the tenantCountryCode property value. Country code of the tenant, ISO 3166-1 alpha-2.
+     * Sets the tenantCountryCode property value. Country code of the tenant. For details, see ISO 3166-1 alpha-2.
      * @param value Value to set for the tenantCountryCode property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setTenantCountryCode(@javax.annotation.Nullable final String value) {
-        this._tenantCountryCode = value;
+        this.tenantCountryCode = value;
     }
     /**
-     * Sets the usageCountryCode property value. Country code of the user, ISO 3166-1 alpha-2.
+     * Sets the usageCountryCode property value. Country code of the user. For details, see ISO 3166-1 alpha-2.
      * @param value Value to set for the usageCountryCode property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setUsageCountryCode(@javax.annotation.Nullable final String value) {
-        this._usageCountryCode = value;
+        this.usageCountryCode = value;
     }
     /**
      * Sets the userDisplayName property value. Display name of the user.
@@ -551,7 +550,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
-        this._userDisplayName = value;
+        this.userDisplayName = value;
     }
     /**
      * Sets the userId property value. Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
@@ -560,15 +559,15 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
     /**
-     * Sets the userPrincipalName property value. UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
+     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

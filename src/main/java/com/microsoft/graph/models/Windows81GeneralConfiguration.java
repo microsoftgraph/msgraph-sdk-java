@@ -3,77 +3,76 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsable {
     /** Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account. */
-    private Boolean _accountsBlockAddingNonMicrosoftAccountEmail;
+    private Boolean accountsBlockAddingNonMicrosoftAccountEmail;
     /** Value indicating whether this policy only applies to Windows 8.1. This property is read-only. */
-    private Boolean _applyOnlyToWindows81;
+    private Boolean applyOnlyToWindows81;
     /** Indicates whether or not to block auto fill. */
-    private Boolean _browserBlockAutofill;
+    private Boolean browserBlockAutofill;
     /** Indicates whether or not to block automatic detection of Intranet sites. */
-    private Boolean _browserBlockAutomaticDetectionOfIntranetSites;
+    private Boolean browserBlockAutomaticDetectionOfIntranetSites;
     /** Indicates whether or not to block enterprise mode access. */
-    private Boolean _browserBlockEnterpriseModeAccess;
+    private Boolean browserBlockEnterpriseModeAccess;
     /** Indicates whether or not to Block the user from using JavaScript. */
-    private Boolean _browserBlockJavaScript;
+    private Boolean browserBlockJavaScript;
     /** Indicates whether or not to block plug-ins. */
-    private Boolean _browserBlockPlugins;
+    private Boolean browserBlockPlugins;
     /** Indicates whether or not to block popups. */
-    private Boolean _browserBlockPopups;
+    private Boolean browserBlockPopups;
     /** Indicates whether or not to Block the user from sending the do not track header. */
-    private Boolean _browserBlockSendingDoNotTrackHeader;
+    private Boolean browserBlockSendingDoNotTrackHeader;
     /** Indicates whether or not to block a single word entry on Intranet sites. */
-    private Boolean _browserBlockSingleWordEntryOnIntranetSites;
+    private Boolean browserBlockSingleWordEntryOnIntranetSites;
     /** The enterprise mode site list location. Could be a local file, local network or http location. */
-    private String _browserEnterpriseModeSiteListLocation;
+    private String browserEnterpriseModeSiteListLocation;
     /** Possible values for internet site security level. */
-    private InternetSiteSecurityLevel _browserInternetSecurityLevel;
+    private InternetSiteSecurityLevel browserInternetSecurityLevel;
     /** Possible values for site security level. */
-    private SiteSecurityLevel _browserIntranetSecurityLevel;
+    private SiteSecurityLevel browserIntranetSecurityLevel;
     /** The logging report location. */
-    private String _browserLoggingReportLocation;
+    private String browserLoggingReportLocation;
     /** Indicates whether or not to require a firewall. */
-    private Boolean _browserRequireFirewall;
+    private Boolean browserRequireFirewall;
     /** Indicates whether or not to require fraud warning. */
-    private Boolean _browserRequireFraudWarning;
+    private Boolean browserRequireFraudWarning;
     /** Indicates whether or not to require high security for restricted sites. */
-    private Boolean _browserRequireHighSecurityForRestrictedSites;
+    private Boolean browserRequireHighSecurityForRestrictedSites;
     /** Indicates whether or not to require the user to use the smart screen filter. */
-    private Boolean _browserRequireSmartScreen;
+    private Boolean browserRequireSmartScreen;
     /** Possible values for site security level. */
-    private SiteSecurityLevel _browserTrustedSitesSecurityLevel;
+    private SiteSecurityLevel browserTrustedSitesSecurityLevel;
     /** Indicates whether or not to block data roaming. */
-    private Boolean _cellularBlockDataRoaming;
+    private Boolean cellularBlockDataRoaming;
     /** Indicates whether or not to block diagnostic data submission. */
-    private Boolean _diagnosticsBlockDataSubmission;
+    private Boolean diagnosticsBlockDataSubmission;
     /** Indicates whether or not to Block the user from using a pictures password and pin. */
-    private Boolean _passwordBlockPicturePasswordAndPin;
+    private Boolean passwordBlockPicturePasswordAndPin;
     /** Password expiration in days. */
-    private Integer _passwordExpirationDays;
+    private Integer passwordExpirationDays;
     /** The number of character sets required in the password. */
-    private Integer _passwordMinimumCharacterSetCount;
+    private Integer passwordMinimumCharacterSetCount;
     /** The minimum password length. */
-    private Integer _passwordMinimumLength;
+    private Integer passwordMinimumLength;
     /** The minutes of inactivity before the screen times out. */
-    private Integer _passwordMinutesOfInactivityBeforeScreenTimeout;
+    private Integer passwordMinutesOfInactivityBeforeScreenTimeout;
     /** The number of previous passwords to prevent re-use of. Valid values 0 to 24 */
-    private Integer _passwordPreviousPasswordBlockCount;
+    private Integer passwordPreviousPasswordBlockCount;
     /** Possible values of required passwords. */
-    private RequiredPasswordType _passwordRequiredType;
+    private RequiredPasswordType passwordRequiredType;
     /** The number of sign in failures before factory reset. */
-    private Integer _passwordSignInFailureCountBeforeFactoryReset;
+    private Integer passwordSignInFailureCountBeforeFactoryReset;
     /** Indicates whether or not to require encryption on a mobile device. */
-    private Boolean _storageRequireDeviceEncryption;
+    private Boolean storageRequireDeviceEncryption;
     /** Indicates whether or not to require automatic updates. */
-    private Boolean _updatesRequireAutomaticUpdates;
+    private Boolean updatesRequireAutomaticUpdates;
     /** Possible values for Windows user account control settings. */
-    private WindowsUserAccountControlSettings _userAccountControlSettings;
+    private WindowsUserAccountControlSettings userAccountControlSettings;
     /** The work folders url. */
-    private String _workFoldersUrl;
+    private String workFoldersUrl;
     /**
      * Instantiates a new Windows81GeneralConfiguration and sets the default values.
      * @return a void
@@ -99,7 +98,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getAccountsBlockAddingNonMicrosoftAccountEmail() {
-        return this._accountsBlockAddingNonMicrosoftAccountEmail;
+        return this.accountsBlockAddingNonMicrosoftAccountEmail;
     }
     /**
      * Gets the applyOnlyToWindows81 property value. Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
@@ -107,7 +106,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getApplyOnlyToWindows81() {
-        return this._applyOnlyToWindows81;
+        return this.applyOnlyToWindows81;
     }
     /**
      * Gets the browserBlockAutofill property value. Indicates whether or not to block auto fill.
@@ -115,7 +114,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getBrowserBlockAutofill() {
-        return this._browserBlockAutofill;
+        return this.browserBlockAutofill;
     }
     /**
      * Gets the browserBlockAutomaticDetectionOfIntranetSites property value. Indicates whether or not to block automatic detection of Intranet sites.
@@ -123,7 +122,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getBrowserBlockAutomaticDetectionOfIntranetSites() {
-        return this._browserBlockAutomaticDetectionOfIntranetSites;
+        return this.browserBlockAutomaticDetectionOfIntranetSites;
     }
     /**
      * Gets the browserBlockEnterpriseModeAccess property value. Indicates whether or not to block enterprise mode access.
@@ -131,7 +130,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getBrowserBlockEnterpriseModeAccess() {
-        return this._browserBlockEnterpriseModeAccess;
+        return this.browserBlockEnterpriseModeAccess;
     }
     /**
      * Gets the browserBlockJavaScript property value. Indicates whether or not to Block the user from using JavaScript.
@@ -139,7 +138,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getBrowserBlockJavaScript() {
-        return this._browserBlockJavaScript;
+        return this.browserBlockJavaScript;
     }
     /**
      * Gets the browserBlockPlugins property value. Indicates whether or not to block plug-ins.
@@ -147,7 +146,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getBrowserBlockPlugins() {
-        return this._browserBlockPlugins;
+        return this.browserBlockPlugins;
     }
     /**
      * Gets the browserBlockPopups property value. Indicates whether or not to block popups.
@@ -155,7 +154,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getBrowserBlockPopups() {
-        return this._browserBlockPopups;
+        return this.browserBlockPopups;
     }
     /**
      * Gets the browserBlockSendingDoNotTrackHeader property value. Indicates whether or not to Block the user from sending the do not track header.
@@ -163,7 +162,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getBrowserBlockSendingDoNotTrackHeader() {
-        return this._browserBlockSendingDoNotTrackHeader;
+        return this.browserBlockSendingDoNotTrackHeader;
     }
     /**
      * Gets the browserBlockSingleWordEntryOnIntranetSites property value. Indicates whether or not to block a single word entry on Intranet sites.
@@ -171,7 +170,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getBrowserBlockSingleWordEntryOnIntranetSites() {
-        return this._browserBlockSingleWordEntryOnIntranetSites;
+        return this.browserBlockSingleWordEntryOnIntranetSites;
     }
     /**
      * Gets the browserEnterpriseModeSiteListLocation property value. The enterprise mode site list location. Could be a local file, local network or http location.
@@ -179,7 +178,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public String getBrowserEnterpriseModeSiteListLocation() {
-        return this._browserEnterpriseModeSiteListLocation;
+        return this.browserEnterpriseModeSiteListLocation;
     }
     /**
      * Gets the browserInternetSecurityLevel property value. Possible values for internet site security level.
@@ -187,7 +186,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public InternetSiteSecurityLevel getBrowserInternetSecurityLevel() {
-        return this._browserInternetSecurityLevel;
+        return this.browserInternetSecurityLevel;
     }
     /**
      * Gets the browserIntranetSecurityLevel property value. Possible values for site security level.
@@ -195,7 +194,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public SiteSecurityLevel getBrowserIntranetSecurityLevel() {
-        return this._browserIntranetSecurityLevel;
+        return this.browserIntranetSecurityLevel;
     }
     /**
      * Gets the browserLoggingReportLocation property value. The logging report location.
@@ -203,7 +202,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public String getBrowserLoggingReportLocation() {
-        return this._browserLoggingReportLocation;
+        return this.browserLoggingReportLocation;
     }
     /**
      * Gets the browserRequireFirewall property value. Indicates whether or not to require a firewall.
@@ -211,7 +210,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getBrowserRequireFirewall() {
-        return this._browserRequireFirewall;
+        return this.browserRequireFirewall;
     }
     /**
      * Gets the browserRequireFraudWarning property value. Indicates whether or not to require fraud warning.
@@ -219,7 +218,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getBrowserRequireFraudWarning() {
-        return this._browserRequireFraudWarning;
+        return this.browserRequireFraudWarning;
     }
     /**
      * Gets the browserRequireHighSecurityForRestrictedSites property value. Indicates whether or not to require high security for restricted sites.
@@ -227,7 +226,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getBrowserRequireHighSecurityForRestrictedSites() {
-        return this._browserRequireHighSecurityForRestrictedSites;
+        return this.browserRequireHighSecurityForRestrictedSites;
     }
     /**
      * Gets the browserRequireSmartScreen property value. Indicates whether or not to require the user to use the smart screen filter.
@@ -235,7 +234,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getBrowserRequireSmartScreen() {
-        return this._browserRequireSmartScreen;
+        return this.browserRequireSmartScreen;
     }
     /**
      * Gets the browserTrustedSitesSecurityLevel property value. Possible values for site security level.
@@ -243,7 +242,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public SiteSecurityLevel getBrowserTrustedSitesSecurityLevel() {
-        return this._browserTrustedSitesSecurityLevel;
+        return this.browserTrustedSitesSecurityLevel;
     }
     /**
      * Gets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
@@ -251,7 +250,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getCellularBlockDataRoaming() {
-        return this._cellularBlockDataRoaming;
+        return this.cellularBlockDataRoaming;
     }
     /**
      * Gets the diagnosticsBlockDataSubmission property value. Indicates whether or not to block diagnostic data submission.
@@ -259,15 +258,15 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getDiagnosticsBlockDataSubmission() {
-        return this._diagnosticsBlockDataSubmission;
+        return this.diagnosticsBlockDataSubmission;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountsBlockAddingNonMicrosoftAccountEmail", (n) -> { this.setAccountsBlockAddingNonMicrosoftAccountEmail(n.getBooleanValue()); });
         deserializerMap.put("applyOnlyToWindows81", (n) -> { this.setApplyOnlyToWindows81(n.getBooleanValue()); });
         deserializerMap.put("browserBlockAutofill", (n) -> { this.setBrowserBlockAutofill(n.getBooleanValue()); });
@@ -309,7 +308,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getPasswordBlockPicturePasswordAndPin() {
-        return this._passwordBlockPicturePasswordAndPin;
+        return this.passwordBlockPicturePasswordAndPin;
     }
     /**
      * Gets the passwordExpirationDays property value. Password expiration in days.
@@ -317,7 +316,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Integer getPasswordExpirationDays() {
-        return this._passwordExpirationDays;
+        return this.passwordExpirationDays;
     }
     /**
      * Gets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
@@ -325,7 +324,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
-        return this._passwordMinimumCharacterSetCount;
+        return this.passwordMinimumCharacterSetCount;
     }
     /**
      * Gets the passwordMinimumLength property value. The minimum password length.
@@ -333,7 +332,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Integer getPasswordMinimumLength() {
-        return this._passwordMinimumLength;
+        return this.passwordMinimumLength;
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeScreenTimeout property value. The minutes of inactivity before the screen times out.
@@ -341,7 +340,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeScreenTimeout() {
-        return this._passwordMinutesOfInactivityBeforeScreenTimeout;
+        return this.passwordMinutesOfInactivityBeforeScreenTimeout;
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of. Valid values 0 to 24
@@ -349,7 +348,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
-        return this._passwordPreviousPasswordBlockCount;
+        return this.passwordPreviousPasswordBlockCount;
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
@@ -357,7 +356,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
-        return this._passwordRequiredType;
+        return this.passwordRequiredType;
     }
     /**
      * Gets the passwordSignInFailureCountBeforeFactoryReset property value. The number of sign in failures before factory reset.
@@ -365,7 +364,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Integer getPasswordSignInFailureCountBeforeFactoryReset() {
-        return this._passwordSignInFailureCountBeforeFactoryReset;
+        return this.passwordSignInFailureCountBeforeFactoryReset;
     }
     /**
      * Gets the storageRequireDeviceEncryption property value. Indicates whether or not to require encryption on a mobile device.
@@ -373,7 +372,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getStorageRequireDeviceEncryption() {
-        return this._storageRequireDeviceEncryption;
+        return this.storageRequireDeviceEncryption;
     }
     /**
      * Gets the updatesRequireAutomaticUpdates property value. Indicates whether or not to require automatic updates.
@@ -381,7 +380,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getUpdatesRequireAutomaticUpdates() {
-        return this._updatesRequireAutomaticUpdates;
+        return this.updatesRequireAutomaticUpdates;
     }
     /**
      * Gets the userAccountControlSettings property value. Possible values for Windows user account control settings.
@@ -389,7 +388,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public WindowsUserAccountControlSettings getUserAccountControlSettings() {
-        return this._userAccountControlSettings;
+        return this.userAccountControlSettings;
     }
     /**
      * Gets the workFoldersUrl property value. The work folders url.
@@ -397,7 +396,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public String getWorkFoldersUrl() {
-        return this._workFoldersUrl;
+        return this.workFoldersUrl;
     }
     /**
      * Serializes information the current object
@@ -448,7 +447,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setAccountsBlockAddingNonMicrosoftAccountEmail(@javax.annotation.Nullable final Boolean value) {
-        this._accountsBlockAddingNonMicrosoftAccountEmail = value;
+        this.accountsBlockAddingNonMicrosoftAccountEmail = value;
     }
     /**
      * Sets the applyOnlyToWindows81 property value. Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
@@ -457,7 +456,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setApplyOnlyToWindows81(@javax.annotation.Nullable final Boolean value) {
-        this._applyOnlyToWindows81 = value;
+        this.applyOnlyToWindows81 = value;
     }
     /**
      * Sets the browserBlockAutofill property value. Indicates whether or not to block auto fill.
@@ -466,7 +465,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBrowserBlockAutofill(@javax.annotation.Nullable final Boolean value) {
-        this._browserBlockAutofill = value;
+        this.browserBlockAutofill = value;
     }
     /**
      * Sets the browserBlockAutomaticDetectionOfIntranetSites property value. Indicates whether or not to block automatic detection of Intranet sites.
@@ -475,7 +474,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBrowserBlockAutomaticDetectionOfIntranetSites(@javax.annotation.Nullable final Boolean value) {
-        this._browserBlockAutomaticDetectionOfIntranetSites = value;
+        this.browserBlockAutomaticDetectionOfIntranetSites = value;
     }
     /**
      * Sets the browserBlockEnterpriseModeAccess property value. Indicates whether or not to block enterprise mode access.
@@ -484,7 +483,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBrowserBlockEnterpriseModeAccess(@javax.annotation.Nullable final Boolean value) {
-        this._browserBlockEnterpriseModeAccess = value;
+        this.browserBlockEnterpriseModeAccess = value;
     }
     /**
      * Sets the browserBlockJavaScript property value. Indicates whether or not to Block the user from using JavaScript.
@@ -493,7 +492,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBrowserBlockJavaScript(@javax.annotation.Nullable final Boolean value) {
-        this._browserBlockJavaScript = value;
+        this.browserBlockJavaScript = value;
     }
     /**
      * Sets the browserBlockPlugins property value. Indicates whether or not to block plug-ins.
@@ -502,7 +501,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBrowserBlockPlugins(@javax.annotation.Nullable final Boolean value) {
-        this._browserBlockPlugins = value;
+        this.browserBlockPlugins = value;
     }
     /**
      * Sets the browserBlockPopups property value. Indicates whether or not to block popups.
@@ -511,7 +510,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBrowserBlockPopups(@javax.annotation.Nullable final Boolean value) {
-        this._browserBlockPopups = value;
+        this.browserBlockPopups = value;
     }
     /**
      * Sets the browserBlockSendingDoNotTrackHeader property value. Indicates whether or not to Block the user from sending the do not track header.
@@ -520,7 +519,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBrowserBlockSendingDoNotTrackHeader(@javax.annotation.Nullable final Boolean value) {
-        this._browserBlockSendingDoNotTrackHeader = value;
+        this.browserBlockSendingDoNotTrackHeader = value;
     }
     /**
      * Sets the browserBlockSingleWordEntryOnIntranetSites property value. Indicates whether or not to block a single word entry on Intranet sites.
@@ -529,7 +528,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBrowserBlockSingleWordEntryOnIntranetSites(@javax.annotation.Nullable final Boolean value) {
-        this._browserBlockSingleWordEntryOnIntranetSites = value;
+        this.browserBlockSingleWordEntryOnIntranetSites = value;
     }
     /**
      * Sets the browserEnterpriseModeSiteListLocation property value. The enterprise mode site list location. Could be a local file, local network or http location.
@@ -538,7 +537,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBrowserEnterpriseModeSiteListLocation(@javax.annotation.Nullable final String value) {
-        this._browserEnterpriseModeSiteListLocation = value;
+        this.browserEnterpriseModeSiteListLocation = value;
     }
     /**
      * Sets the browserInternetSecurityLevel property value. Possible values for internet site security level.
@@ -547,7 +546,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBrowserInternetSecurityLevel(@javax.annotation.Nullable final InternetSiteSecurityLevel value) {
-        this._browserInternetSecurityLevel = value;
+        this.browserInternetSecurityLevel = value;
     }
     /**
      * Sets the browserIntranetSecurityLevel property value. Possible values for site security level.
@@ -556,7 +555,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBrowserIntranetSecurityLevel(@javax.annotation.Nullable final SiteSecurityLevel value) {
-        this._browserIntranetSecurityLevel = value;
+        this.browserIntranetSecurityLevel = value;
     }
     /**
      * Sets the browserLoggingReportLocation property value. The logging report location.
@@ -565,7 +564,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBrowserLoggingReportLocation(@javax.annotation.Nullable final String value) {
-        this._browserLoggingReportLocation = value;
+        this.browserLoggingReportLocation = value;
     }
     /**
      * Sets the browserRequireFirewall property value. Indicates whether or not to require a firewall.
@@ -574,7 +573,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBrowserRequireFirewall(@javax.annotation.Nullable final Boolean value) {
-        this._browserRequireFirewall = value;
+        this.browserRequireFirewall = value;
     }
     /**
      * Sets the browserRequireFraudWarning property value. Indicates whether or not to require fraud warning.
@@ -583,7 +582,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBrowserRequireFraudWarning(@javax.annotation.Nullable final Boolean value) {
-        this._browserRequireFraudWarning = value;
+        this.browserRequireFraudWarning = value;
     }
     /**
      * Sets the browserRequireHighSecurityForRestrictedSites property value. Indicates whether or not to require high security for restricted sites.
@@ -592,7 +591,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBrowserRequireHighSecurityForRestrictedSites(@javax.annotation.Nullable final Boolean value) {
-        this._browserRequireHighSecurityForRestrictedSites = value;
+        this.browserRequireHighSecurityForRestrictedSites = value;
     }
     /**
      * Sets the browserRequireSmartScreen property value. Indicates whether or not to require the user to use the smart screen filter.
@@ -601,7 +600,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBrowserRequireSmartScreen(@javax.annotation.Nullable final Boolean value) {
-        this._browserRequireSmartScreen = value;
+        this.browserRequireSmartScreen = value;
     }
     /**
      * Sets the browserTrustedSitesSecurityLevel property value. Possible values for site security level.
@@ -610,7 +609,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBrowserTrustedSitesSecurityLevel(@javax.annotation.Nullable final SiteSecurityLevel value) {
-        this._browserTrustedSitesSecurityLevel = value;
+        this.browserTrustedSitesSecurityLevel = value;
     }
     /**
      * Sets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
@@ -619,7 +618,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setCellularBlockDataRoaming(@javax.annotation.Nullable final Boolean value) {
-        this._cellularBlockDataRoaming = value;
+        this.cellularBlockDataRoaming = value;
     }
     /**
      * Sets the diagnosticsBlockDataSubmission property value. Indicates whether or not to block diagnostic data submission.
@@ -628,7 +627,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setDiagnosticsBlockDataSubmission(@javax.annotation.Nullable final Boolean value) {
-        this._diagnosticsBlockDataSubmission = value;
+        this.diagnosticsBlockDataSubmission = value;
     }
     /**
      * Sets the passwordBlockPicturePasswordAndPin property value. Indicates whether or not to Block the user from using a pictures password and pin.
@@ -637,7 +636,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasswordBlockPicturePasswordAndPin(@javax.annotation.Nullable final Boolean value) {
-        this._passwordBlockPicturePasswordAndPin = value;
+        this.passwordBlockPicturePasswordAndPin = value;
     }
     /**
      * Sets the passwordExpirationDays property value. Password expiration in days.
@@ -646,7 +645,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
-        this._passwordExpirationDays = value;
+        this.passwordExpirationDays = value;
     }
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
@@ -655,7 +654,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasswordMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
-        this._passwordMinimumCharacterSetCount = value;
+        this.passwordMinimumCharacterSetCount = value;
     }
     /**
      * Sets the passwordMinimumLength property value. The minimum password length.
@@ -664,7 +663,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
-        this._passwordMinimumLength = value;
+        this.passwordMinimumLength = value;
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. The minutes of inactivity before the screen times out.
@@ -673,7 +672,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
-        this._passwordMinutesOfInactivityBeforeScreenTimeout = value;
+        this.passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of. Valid values 0 to 24
@@ -682,7 +681,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
-        this._passwordPreviousPasswordBlockCount = value;
+        this.passwordPreviousPasswordBlockCount = value;
     }
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
@@ -691,7 +690,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
-        this._passwordRequiredType = value;
+        this.passwordRequiredType = value;
     }
     /**
      * Sets the passwordSignInFailureCountBeforeFactoryReset property value. The number of sign in failures before factory reset.
@@ -700,7 +699,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
-        this._passwordSignInFailureCountBeforeFactoryReset = value;
+        this.passwordSignInFailureCountBeforeFactoryReset = value;
     }
     /**
      * Sets the storageRequireDeviceEncryption property value. Indicates whether or not to require encryption on a mobile device.
@@ -709,7 +708,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setStorageRequireDeviceEncryption(@javax.annotation.Nullable final Boolean value) {
-        this._storageRequireDeviceEncryption = value;
+        this.storageRequireDeviceEncryption = value;
     }
     /**
      * Sets the updatesRequireAutomaticUpdates property value. Indicates whether or not to require automatic updates.
@@ -718,7 +717,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setUpdatesRequireAutomaticUpdates(@javax.annotation.Nullable final Boolean value) {
-        this._updatesRequireAutomaticUpdates = value;
+        this.updatesRequireAutomaticUpdates = value;
     }
     /**
      * Sets the userAccountControlSettings property value. Possible values for Windows user account control settings.
@@ -727,7 +726,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setUserAccountControlSettings(@javax.annotation.Nullable final WindowsUserAccountControlSettings value) {
-        this._userAccountControlSettings = value;
+        this.userAccountControlSettings = value;
     }
     /**
      * Sets the workFoldersUrl property value. The work folders url.
@@ -736,6 +735,6 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setWorkFoldersUrl(@javax.annotation.Nullable final String value) {
-        this._workFoldersUrl = value;
+        this.workFoldersUrl = value;
     }
 }

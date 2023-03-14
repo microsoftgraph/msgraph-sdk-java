@@ -4,27 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Group IDs excluded from scope of policy. */
-    private java.util.List<String> _excludeGroups;
+    private java.util.List<String> excludeGroups;
+    /** The excludeGuestsOrExternalUsers property */
+    private ConditionalAccessGuestsOrExternalUsers excludeGuestsOrExternalUsers;
     /** Role IDs excluded from scope of policy. */
-    private java.util.List<String> _excludeRoles;
+    private java.util.List<String> excludeRoles;
     /** User IDs excluded from scope of policy and/or GuestsOrExternalUsers. */
-    private java.util.List<String> _excludeUsers;
+    private java.util.List<String> excludeUsers;
     /** Group IDs in scope of policy unless explicitly excluded, or All. */
-    private java.util.List<String> _includeGroups;
+    private java.util.List<String> includeGroups;
+    /** The includeGuestsOrExternalUsers property */
+    private ConditionalAccessGuestsOrExternalUsers includeGuestsOrExternalUsers;
     /** Role IDs in scope of policy unless explicitly excluded, or All. */
-    private java.util.List<String> _includeRoles;
+    private java.util.List<String> includeRoles;
     /** User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers. */
-    private java.util.List<String> _includeUsers;
+    private java.util.List<String> includeUsers;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new conditionalAccessUsers and sets the default values.
      * @return a void
@@ -49,7 +52,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the excludeGroups property value. Group IDs excluded from scope of policy.
@@ -57,7 +60,15 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getExcludeGroups() {
-        return this._excludeGroups;
+        return this.excludeGroups;
+    }
+    /**
+     * Gets the excludeGuestsOrExternalUsers property value. The excludeGuestsOrExternalUsers property
+     * @return a conditionalAccessGuestsOrExternalUsers
+     */
+    @javax.annotation.Nullable
+    public ConditionalAccessGuestsOrExternalUsers getExcludeGuestsOrExternalUsers() {
+        return this.excludeGuestsOrExternalUsers;
     }
     /**
      * Gets the excludeRoles property value. Role IDs excluded from scope of policy.
@@ -65,7 +76,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getExcludeRoles() {
-        return this._excludeRoles;
+        return this.excludeRoles;
     }
     /**
      * Gets the excludeUsers property value. User IDs excluded from scope of policy and/or GuestsOrExternalUsers.
@@ -73,19 +84,21 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getExcludeUsers() {
-        return this._excludeUsers;
+        return this.excludeUsers;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("excludeGroups", (n) -> { this.setExcludeGroups(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("excludeGuestsOrExternalUsers", (n) -> { this.setExcludeGuestsOrExternalUsers(n.getObjectValue(ConditionalAccessGuestsOrExternalUsers::createFromDiscriminatorValue)); });
         deserializerMap.put("excludeRoles", (n) -> { this.setExcludeRoles(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("excludeUsers", (n) -> { this.setExcludeUsers(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("includeGroups", (n) -> { this.setIncludeGroups(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("includeGuestsOrExternalUsers", (n) -> { this.setIncludeGuestsOrExternalUsers(n.getObjectValue(ConditionalAccessGuestsOrExternalUsers::createFromDiscriminatorValue)); });
         deserializerMap.put("includeRoles", (n) -> { this.setIncludeRoles(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("includeUsers", (n) -> { this.setIncludeUsers(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -97,7 +110,15 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getIncludeGroups() {
-        return this._includeGroups;
+        return this.includeGroups;
+    }
+    /**
+     * Gets the includeGuestsOrExternalUsers property value. The includeGuestsOrExternalUsers property
+     * @return a conditionalAccessGuestsOrExternalUsers
+     */
+    @javax.annotation.Nullable
+    public ConditionalAccessGuestsOrExternalUsers getIncludeGuestsOrExternalUsers() {
+        return this.includeGuestsOrExternalUsers;
     }
     /**
      * Gets the includeRoles property value. Role IDs in scope of policy unless explicitly excluded, or All.
@@ -105,7 +126,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getIncludeRoles() {
-        return this._includeRoles;
+        return this.includeRoles;
     }
     /**
      * Gets the includeUsers property value. User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
@@ -113,7 +134,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getIncludeUsers() {
-        return this._includeUsers;
+        return this.includeUsers;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -121,7 +142,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -132,9 +153,11 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("excludeGroups", this.getExcludeGroups());
+        writer.writeObjectValue("excludeGuestsOrExternalUsers", this.getExcludeGuestsOrExternalUsers());
         writer.writeCollectionOfPrimitiveValues("excludeRoles", this.getExcludeRoles());
         writer.writeCollectionOfPrimitiveValues("excludeUsers", this.getExcludeUsers());
         writer.writeCollectionOfPrimitiveValues("includeGroups", this.getIncludeGroups());
+        writer.writeObjectValue("includeGuestsOrExternalUsers", this.getIncludeGuestsOrExternalUsers());
         writer.writeCollectionOfPrimitiveValues("includeRoles", this.getIncludeRoles());
         writer.writeCollectionOfPrimitiveValues("includeUsers", this.getIncludeUsers());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -147,7 +170,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the excludeGroups property value. Group IDs excluded from scope of policy.
@@ -156,7 +179,16 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setExcludeGroups(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._excludeGroups = value;
+        this.excludeGroups = value;
+    }
+    /**
+     * Sets the excludeGuestsOrExternalUsers property value. The excludeGuestsOrExternalUsers property
+     * @param value Value to set for the excludeGuestsOrExternalUsers property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setExcludeGuestsOrExternalUsers(@javax.annotation.Nullable final ConditionalAccessGuestsOrExternalUsers value) {
+        this.excludeGuestsOrExternalUsers = value;
     }
     /**
      * Sets the excludeRoles property value. Role IDs excluded from scope of policy.
@@ -165,7 +197,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setExcludeRoles(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._excludeRoles = value;
+        this.excludeRoles = value;
     }
     /**
      * Sets the excludeUsers property value. User IDs excluded from scope of policy and/or GuestsOrExternalUsers.
@@ -174,7 +206,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setExcludeUsers(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._excludeUsers = value;
+        this.excludeUsers = value;
     }
     /**
      * Sets the includeGroups property value. Group IDs in scope of policy unless explicitly excluded, or All.
@@ -183,7 +215,16 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIncludeGroups(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._includeGroups = value;
+        this.includeGroups = value;
+    }
+    /**
+     * Sets the includeGuestsOrExternalUsers property value. The includeGuestsOrExternalUsers property
+     * @param value Value to set for the includeGuestsOrExternalUsers property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIncludeGuestsOrExternalUsers(@javax.annotation.Nullable final ConditionalAccessGuestsOrExternalUsers value) {
+        this.includeGuestsOrExternalUsers = value;
     }
     /**
      * Sets the includeRoles property value. Role IDs in scope of policy unless explicitly excluded, or All.
@@ -192,7 +233,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIncludeRoles(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._includeRoles = value;
+        this.includeRoles = value;
     }
     /**
      * Sets the includeUsers property value. User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
@@ -201,7 +242,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIncludeUsers(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._includeUsers = value;
+        this.includeUsers = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -210,6 +251,6 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

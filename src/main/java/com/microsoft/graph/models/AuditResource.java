@@ -4,24 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A class containing the properties for Audit Resource. */
+/**
+ * A class containing the properties for Audit Resource.
+ */
 public class AuditResource implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Audit resource's type. */
-    private String _auditResourceType;
+    private String auditResourceType;
     /** Display name. */
-    private String _displayName;
+    private String displayName;
     /** List of modified properties. */
-    private java.util.List<AuditProperty> _modifiedProperties;
+    private java.util.List<AuditProperty> modifiedProperties;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Audit resource's Id. */
-    private String _resourceId;
+    private String resourceId;
     /**
      * Instantiates a new auditResource and sets the default values.
      * @return a void
@@ -46,7 +47,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the auditResourceType property value. Audit resource's type.
@@ -54,7 +55,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAuditResourceType() {
-        return this._auditResourceType;
+        return this.auditResourceType;
     }
     /**
      * Gets the displayName property value. Display name.
@@ -62,15 +63,15 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("auditResourceType", (n) -> { this.setAuditResourceType(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("modifiedProperties", (n) -> { this.setModifiedProperties(n.getCollectionOfObjectValues(AuditProperty::createFromDiscriminatorValue)); });
@@ -84,7 +85,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AuditProperty> getModifiedProperties() {
-        return this._modifiedProperties;
+        return this.modifiedProperties;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -92,7 +93,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the resourceId property value. Audit resource's Id.
@@ -100,7 +101,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getResourceId() {
-        return this._resourceId;
+        return this.resourceId;
     }
     /**
      * Serializes information the current object
@@ -124,7 +125,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the auditResourceType property value. Audit resource's type.
@@ -133,7 +134,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAuditResourceType(@javax.annotation.Nullable final String value) {
-        this._auditResourceType = value;
+        this.auditResourceType = value;
     }
     /**
      * Sets the displayName property value. Display name.
@@ -142,7 +143,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the modifiedProperties property value. List of modified properties.
@@ -151,7 +152,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setModifiedProperties(@javax.annotation.Nullable final java.util.List<AuditProperty> value) {
-        this._modifiedProperties = value;
+        this.modifiedProperties = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -160,7 +161,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the resourceId property value. Audit resource's Id.
@@ -169,6 +170,6 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setResourceId(@javax.annotation.Nullable final String value) {
-        this._resourceId = value;
+        this.resourceId = value;
     }
 }

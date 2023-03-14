@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstanceBase implements Parsable {
     /** The end date of the schedule instance. */
-    private OffsetDateTime _endDateTime;
+    private OffsetDateTime endDateTime;
     /** How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne). */
-    private String _memberType;
+    private String memberType;
     /** The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne). */
-    private String _roleEligibilityScheduleId;
+    private String roleEligibilityScheduleId;
     /** When this instance starts. */
-    private OffsetDateTime _startDateTime;
+    private OffsetDateTime startDateTime;
     /**
      * Instantiates a new unifiedRoleEligibilityScheduleInstance and sets the default values.
      * @return a void
@@ -41,15 +40,15 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("memberType", (n) -> { this.setMemberType(n.getStringValue()); });
         deserializerMap.put("roleEligibilityScheduleId", (n) -> { this.setRoleEligibilityScheduleId(n.getStringValue()); });
@@ -62,7 +61,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     @javax.annotation.Nullable
     public String getMemberType() {
-        return this._memberType;
+        return this.memberType;
     }
     /**
      * Gets the roleEligibilityScheduleId property value. The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne).
@@ -70,7 +69,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     @javax.annotation.Nullable
     public String getRoleEligibilityScheduleId() {
-        return this._roleEligibilityScheduleId;
+        return this.roleEligibilityScheduleId;
     }
     /**
      * Gets the startDateTime property value. When this instance starts.
@@ -78,7 +77,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Serializes information the current object
@@ -101,7 +100,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
      * Sets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
@@ -110,7 +109,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     @javax.annotation.Nonnull
     public void setMemberType(@javax.annotation.Nullable final String value) {
-        this._memberType = value;
+        this.memberType = value;
     }
     /**
      * Sets the roleEligibilityScheduleId property value. The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne).
@@ -119,7 +118,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     @javax.annotation.Nonnull
     public void setRoleEligibilityScheduleId(@javax.annotation.Nullable final String value) {
-        this._roleEligibilityScheduleId = value;
+        this.roleEligibilityScheduleId = value;
     }
     /**
      * Sets the startDateTime property value. When this instance starts.
@@ -128,6 +127,6 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
 }

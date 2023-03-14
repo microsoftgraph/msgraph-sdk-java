@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OfficeGraphInsights extends Entity implements Parsable {
     /** Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share. */
-    private java.util.List<SharedInsight> _shared;
+    private java.util.List<SharedInsight> shared;
     /** Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before. */
-    private java.util.List<Trending> _trending;
+    private java.util.List<Trending> trending;
     /** Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use. */
-    private java.util.List<UsedInsight> _used;
+    private java.util.List<UsedInsight> used;
     /**
      * Instantiates a new officeGraphInsights and sets the default values.
      * @return a void
@@ -34,11 +33,11 @@ public class OfficeGraphInsights extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("shared", (n) -> { this.setShared(n.getCollectionOfObjectValues(SharedInsight::createFromDiscriminatorValue)); });
         deserializerMap.put("trending", (n) -> { this.setTrending(n.getCollectionOfObjectValues(Trending::createFromDiscriminatorValue)); });
         deserializerMap.put("used", (n) -> { this.setUsed(n.getCollectionOfObjectValues(UsedInsight::createFromDiscriminatorValue)); });
@@ -50,7 +49,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SharedInsight> getShared() {
-        return this._shared;
+        return this.shared;
     }
     /**
      * Gets the trending property value. Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
@@ -58,7 +57,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Trending> getTrending() {
-        return this._trending;
+        return this.trending;
     }
     /**
      * Gets the used property value. Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
@@ -66,7 +65,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UsedInsight> getUsed() {
-        return this._used;
+        return this.used;
     }
     /**
      * Serializes information the current object
@@ -88,7 +87,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setShared(@javax.annotation.Nullable final java.util.List<SharedInsight> value) {
-        this._shared = value;
+        this.shared = value;
     }
     /**
      * Sets the trending property value. Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
@@ -97,7 +96,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTrending(@javax.annotation.Nullable final java.util.List<Trending> value) {
-        this._trending = value;
+        this.trending = value;
     }
     /**
      * Sets the used property value. Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
@@ -106,6 +105,6 @@ public class OfficeGraphInsights extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUsed(@javax.annotation.Nullable final java.util.List<UsedInsight> value) {
-        this._used = value;
+        this.used = value;
     }
 }

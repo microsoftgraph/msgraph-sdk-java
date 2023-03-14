@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class B2xIdentityUserFlowCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
-    private java.util.List<B2xIdentityUserFlow> _value;
+    private java.util.List<B2xIdentityUserFlow> value;
     /**
      * Instantiates a new B2xIdentityUserFlowCollectionResponse and sets the default values.
      * @return a void
@@ -30,11 +29,11 @@ public class B2xIdentityUserFlowCollectionResponse extends BaseCollectionPaginat
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(B2xIdentityUserFlow::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -44,7 +43,7 @@ public class B2xIdentityUserFlowCollectionResponse extends BaseCollectionPaginat
      */
     @javax.annotation.Nullable
     public java.util.List<B2xIdentityUserFlow> getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
@@ -64,6 +63,6 @@ public class B2xIdentityUserFlowCollectionResponse extends BaseCollectionPaginat
      */
     @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final java.util.List<B2xIdentityUserFlow> value) {
-        this._value = value;
+        this.value = value;
     }
 }

@@ -4,28 +4,26 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class TeamsAsyncOperation extends Entity implements Parsable {
     /** Number of times the operation was attempted before being marked successful or failed. */
-    private Integer _attemptsCount;
+    private Integer attemptsCount;
     /** Time when the operation was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Any error that causes the async operation to fail. */
-    private OperationError _error;
+    private OperationError error;
     /** Time when the async operation was last updated. */
-    private OffsetDateTime _lastActionDateTime;
+    private OffsetDateTime lastActionDateTime;
     /** The operationType property */
-    private TeamsAsyncOperationType _operationType;
+    private TeamsAsyncOperationType operationType;
     /** The status property */
-    private TeamsAsyncOperationStatus _status;
+    private TeamsAsyncOperationStatus status;
     /** The ID of the object that's created or modified as result of this async operation, typically a team. */
-    private String _targetResourceId;
+    private String targetResourceId;
     /** The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths. */
-    private String _targetResourceLocation;
+    private String targetResourceLocation;
     /**
      * Instantiates a new teamsAsyncOperation and sets the default values.
      * @return a void
@@ -50,7 +48,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getAttemptsCount() {
-        return this._attemptsCount;
+        return this.attemptsCount;
     }
     /**
      * Gets the createdDateTime property value. Time when the operation was created.
@@ -58,7 +56,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the error property value. Any error that causes the async operation to fail.
@@ -66,15 +64,15 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OperationError getError() {
-        return this._error;
+        return this.error;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("attemptsCount", (n) -> { this.setAttemptsCount(n.getIntegerValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(OperationError::createFromDiscriminatorValue)); });
@@ -91,7 +89,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this._lastActionDateTime;
+        return this.lastActionDateTime;
     }
     /**
      * Gets the operationType property value. The operationType property
@@ -99,7 +97,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamsAsyncOperationType getOperationType() {
-        return this._operationType;
+        return this.operationType;
     }
     /**
      * Gets the status property value. The status property
@@ -107,7 +105,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamsAsyncOperationStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the targetResourceId property value. The ID of the object that's created or modified as result of this async operation, typically a team.
@@ -115,7 +113,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTargetResourceId() {
-        return this._targetResourceId;
+        return this.targetResourceId;
     }
     /**
      * Gets the targetResourceLocation property value. The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
@@ -123,7 +121,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTargetResourceLocation() {
-        return this._targetResourceLocation;
+        return this.targetResourceLocation;
     }
     /**
      * Serializes information the current object
@@ -150,7 +148,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAttemptsCount(@javax.annotation.Nullable final Integer value) {
-        this._attemptsCount = value;
+        this.attemptsCount = value;
     }
     /**
      * Sets the createdDateTime property value. Time when the operation was created.
@@ -159,7 +157,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the error property value. Any error that causes the async operation to fail.
@@ -168,7 +166,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final OperationError value) {
-        this._error = value;
+        this.error = value;
     }
     /**
      * Sets the lastActionDateTime property value. Time when the async operation was last updated.
@@ -177,7 +175,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastActionDateTime = value;
+        this.lastActionDateTime = value;
     }
     /**
      * Sets the operationType property value. The operationType property
@@ -186,7 +184,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOperationType(@javax.annotation.Nullable final TeamsAsyncOperationType value) {
-        this._operationType = value;
+        this.operationType = value;
     }
     /**
      * Sets the status property value. The status property
@@ -195,7 +193,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final TeamsAsyncOperationStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the targetResourceId property value. The ID of the object that's created or modified as result of this async operation, typically a team.
@@ -204,7 +202,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTargetResourceId(@javax.annotation.Nullable final String value) {
-        this._targetResourceId = value;
+        this.targetResourceId = value;
     }
     /**
      * Sets the targetResourceLocation property value. The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
@@ -213,6 +211,6 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTargetResourceLocation(@javax.annotation.Nullable final String value) {
-        this._targetResourceLocation = value;
+        this.targetResourceLocation = value;
     }
 }

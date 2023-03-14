@@ -3,7 +3,6 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the addToReviewSet method. */
 public enum AdditionalDataOptions implements ValuedEnum {
     AllVersions("allVersions"),
     LinkedFiles("linkedFiles"),

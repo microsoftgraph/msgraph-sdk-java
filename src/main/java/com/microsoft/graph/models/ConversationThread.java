@@ -4,30 +4,28 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class ConversationThread extends Entity implements Parsable {
     /** The Cc: recipients for the thread. Returned only on $select. */
-    private java.util.List<Recipient> _ccRecipients;
+    private java.util.List<Recipient> ccRecipients;
     /** Indicates whether any of the posts within this thread has at least one attachment. Returned by default. */
-    private Boolean _hasAttachments;
+    private Boolean hasAttachments;
     /** Indicates if the thread is locked. Returned by default. */
-    private Boolean _isLocked;
+    private Boolean isLocked;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default. */
-    private OffsetDateTime _lastDeliveredDateTime;
+    private OffsetDateTime lastDeliveredDateTime;
     /** The posts property */
-    private java.util.List<Post> _posts;
+    private java.util.List<Post> posts;
     /** A short summary from the body of the latest post in this conversation. Returned by default. */
-    private String _preview;
+    private String preview;
     /** The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated. Returned by default. */
-    private String _topic;
+    private String topic;
     /** The To: recipients for the thread. Returned only on $select. */
-    private java.util.List<Recipient> _toRecipients;
+    private java.util.List<Recipient> toRecipients;
     /** All the users that sent a message to this thread. Returned by default. */
-    private java.util.List<String> _uniqueSenders;
+    private java.util.List<String> uniqueSenders;
     /**
      * Instantiates a new conversationThread and sets the default values.
      * @return a void
@@ -52,15 +50,15 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Recipient> getCcRecipients() {
-        return this._ccRecipients;
+        return this.ccRecipients;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("ccRecipients", (n) -> { this.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
         deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
         deserializerMap.put("isLocked", (n) -> { this.setIsLocked(n.getBooleanValue()); });
@@ -78,7 +76,7 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getHasAttachments() {
-        return this._hasAttachments;
+        return this.hasAttachments;
     }
     /**
      * Gets the isLocked property value. Indicates if the thread is locked. Returned by default.
@@ -86,7 +84,7 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsLocked() {
-        return this._isLocked;
+        return this.isLocked;
     }
     /**
      * Gets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default.
@@ -94,7 +92,7 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastDeliveredDateTime() {
-        return this._lastDeliveredDateTime;
+        return this.lastDeliveredDateTime;
     }
     /**
      * Gets the posts property value. The posts property
@@ -102,7 +100,7 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Post> getPosts() {
-        return this._posts;
+        return this.posts;
     }
     /**
      * Gets the preview property value. A short summary from the body of the latest post in this conversation. Returned by default.
@@ -110,7 +108,7 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPreview() {
-        return this._preview;
+        return this.preview;
     }
     /**
      * Gets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated. Returned by default.
@@ -118,7 +116,7 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTopic() {
-        return this._topic;
+        return this.topic;
     }
     /**
      * Gets the toRecipients property value. The To: recipients for the thread. Returned only on $select.
@@ -126,7 +124,7 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Recipient> getToRecipients() {
-        return this._toRecipients;
+        return this.toRecipients;
     }
     /**
      * Gets the uniqueSenders property value. All the users that sent a message to this thread. Returned by default.
@@ -134,7 +132,7 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getUniqueSenders() {
-        return this._uniqueSenders;
+        return this.uniqueSenders;
     }
     /**
      * Serializes information the current object
@@ -162,7 +160,7 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCcRecipients(@javax.annotation.Nullable final java.util.List<Recipient> value) {
-        this._ccRecipients = value;
+        this.ccRecipients = value;
     }
     /**
      * Sets the hasAttachments property value. Indicates whether any of the posts within this thread has at least one attachment. Returned by default.
@@ -171,7 +169,7 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
-        this._hasAttachments = value;
+        this.hasAttachments = value;
     }
     /**
      * Sets the isLocked property value. Indicates if the thread is locked. Returned by default.
@@ -180,7 +178,7 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsLocked(@javax.annotation.Nullable final Boolean value) {
-        this._isLocked = value;
+        this.isLocked = value;
     }
     /**
      * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default.
@@ -189,7 +187,7 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastDeliveredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastDeliveredDateTime = value;
+        this.lastDeliveredDateTime = value;
     }
     /**
      * Sets the posts property value. The posts property
@@ -198,7 +196,7 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPosts(@javax.annotation.Nullable final java.util.List<Post> value) {
-        this._posts = value;
+        this.posts = value;
     }
     /**
      * Sets the preview property value. A short summary from the body of the latest post in this conversation. Returned by default.
@@ -207,7 +205,7 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPreview(@javax.annotation.Nullable final String value) {
-        this._preview = value;
+        this.preview = value;
     }
     /**
      * Sets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated. Returned by default.
@@ -216,7 +214,7 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTopic(@javax.annotation.Nullable final String value) {
-        this._topic = value;
+        this.topic = value;
     }
     /**
      * Sets the toRecipients property value. The To: recipients for the thread. Returned only on $select.
@@ -225,7 +223,7 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setToRecipients(@javax.annotation.Nullable final java.util.List<Recipient> value) {
-        this._toRecipients = value;
+        this.toRecipients = value;
     }
     /**
      * Sets the uniqueSenders property value. All the users that sent a message to this thread. Returned by default.
@@ -234,6 +232,6 @@ public class ConversationThread extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUniqueSenders(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._uniqueSenders = value;
+        this.uniqueSenders = value;
     }
 }

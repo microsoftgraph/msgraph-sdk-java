@@ -4,27 +4,26 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TargetResource implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Indicates the visible name defined for the resource. Typically specified when the resource is created. */
-    private String _displayName;
+    private String displayName;
     /** When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue */
-    private GroupType _groupType;
+    private GroupType groupType;
     /** Indicates the unique ID of the resource. */
-    private String _id;
+    private String id;
     /** Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type. */
-    private java.util.List<ModifiedProperty> _modifiedProperties;
+    private java.util.List<ModifiedProperty> modifiedProperties;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User. */
-    private String _type;
+    private String type;
     /** When type is set to User, this includes the user name that initiated the action; null for other types. */
-    private String _userPrincipalName;
+    private String userPrincipalName;
     /**
      * Instantiates a new targetResource and sets the default values.
      * @return a void
@@ -49,7 +48,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the displayName property value. Indicates the visible name defined for the resource. Typically specified when the resource is created.
@@ -57,15 +56,15 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("groupType", (n) -> { this.setGroupType(n.getEnumValue(GroupType.class)); });
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
@@ -81,7 +80,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public GroupType getGroupType() {
-        return this._groupType;
+        return this.groupType;
     }
     /**
      * Gets the id property value. Indicates the unique ID of the resource.
@@ -89,7 +88,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getId() {
-        return this._id;
+        return this.id;
     }
     /**
      * Gets the modifiedProperties property value. Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.
@@ -97,7 +96,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ModifiedProperty> getModifiedProperties() {
-        return this._modifiedProperties;
+        return this.modifiedProperties;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -105,7 +104,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the type property value. Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User.
@@ -113,7 +112,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Gets the userPrincipalName property value. When type is set to User, this includes the user name that initiated the action; null for other types.
@@ -121,7 +120,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
@@ -147,7 +146,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the displayName property value. Indicates the visible name defined for the resource. Typically specified when the resource is created.
@@ -156,7 +155,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
@@ -165,7 +164,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setGroupType(@javax.annotation.Nullable final GroupType value) {
-        this._groupType = value;
+        this.groupType = value;
     }
     /**
      * Sets the id property value. Indicates the unique ID of the resource.
@@ -174,7 +173,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+        this.id = value;
     }
     /**
      * Sets the modifiedProperties property value. Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.
@@ -183,7 +182,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setModifiedProperties(@javax.annotation.Nullable final java.util.List<ModifiedProperty> value) {
-        this._modifiedProperties = value;
+        this.modifiedProperties = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -192,7 +191,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the type property value. Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User.
@@ -201,7 +200,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+        this.type = value;
     }
     /**
      * Sets the userPrincipalName property value. When type is set to User, this includes the user name that initiated the action; null for other types.
@@ -210,6 +209,6 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsable {
     /** The action property */
-    private CalendarSharingAction _action;
+    private CalendarSharingAction action;
     /** The actionType property */
-    private CalendarSharingActionType _actionType;
+    private CalendarSharingActionType actionType;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The importance property */
-    private CalendarSharingActionImportance _importance;
+    private CalendarSharingActionImportance importance;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new calendarSharingMessageAction and sets the default values.
      * @return a void
@@ -43,7 +42,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public CalendarSharingAction getAction() {
-        return this._action;
+        return this.action;
     }
     /**
      * Gets the actionType property value. The actionType property
@@ -51,7 +50,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public CalendarSharingActionType getActionType() {
-        return this._actionType;
+        return this.actionType;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -59,15 +58,15 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(CalendarSharingAction.class)); });
         deserializerMap.put("actionType", (n) -> { this.setActionType(n.getEnumValue(CalendarSharingActionType.class)); });
         deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(CalendarSharingActionImportance.class)); });
@@ -80,7 +79,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public CalendarSharingActionImportance getImportance() {
-        return this._importance;
+        return this.importance;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +87,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setAction(@javax.annotation.Nullable final CalendarSharingAction value) {
-        this._action = value;
+        this.action = value;
     }
     /**
      * Sets the actionType property value. The actionType property
@@ -120,7 +119,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setActionType(@javax.annotation.Nullable final CalendarSharingActionType value) {
-        this._actionType = value;
+        this.actionType = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -129,7 +128,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the importance property value. The importance property
@@ -138,7 +137,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setImportance(@javax.annotation.Nullable final CalendarSharingActionImportance value) {
-        this._importance = value;
+        this.importance = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -147,6 +146,6 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

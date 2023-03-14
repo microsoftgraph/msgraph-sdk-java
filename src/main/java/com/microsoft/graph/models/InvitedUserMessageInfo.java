@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported. */
-    private java.util.List<Recipient> _ccRecipients;
+    private java.util.List<Recipient> ccRecipients;
     /** Customized message body you want to send if you don't want the default message. */
-    private String _customizedMessageBody;
+    private String customizedMessageBody;
     /** The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US. */
-    private String _messageLanguage;
+    private String messageLanguage;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new invitedUserMessageInfo and sets the default values.
      * @return a void
@@ -43,7 +42,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
@@ -51,7 +50,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Recipient> getCcRecipients() {
-        return this._ccRecipients;
+        return this.ccRecipients;
     }
     /**
      * Gets the customizedMessageBody property value. Customized message body you want to send if you don't want the default message.
@@ -59,15 +58,15 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCustomizedMessageBody() {
-        return this._customizedMessageBody;
+        return this.customizedMessageBody;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("ccRecipients", (n) -> { this.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
         deserializerMap.put("customizedMessageBody", (n) -> { this.setCustomizedMessageBody(n.getStringValue()); });
         deserializerMap.put("messageLanguage", (n) -> { this.setMessageLanguage(n.getStringValue()); });
@@ -80,7 +79,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getMessageLanguage() {
-        return this._messageLanguage;
+        return this.messageLanguage;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +87,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
@@ -120,7 +119,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCcRecipients(@javax.annotation.Nullable final java.util.List<Recipient> value) {
-        this._ccRecipients = value;
+        this.ccRecipients = value;
     }
     /**
      * Sets the customizedMessageBody property value. Customized message body you want to send if you don't want the default message.
@@ -129,7 +128,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCustomizedMessageBody(@javax.annotation.Nullable final String value) {
-        this._customizedMessageBody = value;
+        this.customizedMessageBody = value;
     }
     /**
      * Sets the messageLanguage property value. The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
@@ -138,7 +137,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMessageLanguage(@javax.annotation.Nullable final String value) {
-        this._messageLanguage = value;
+        this.messageLanguage = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -147,6 +146,6 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

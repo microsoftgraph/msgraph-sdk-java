@@ -1,16 +1,14 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.TargetedManagedAppConfiguration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsable {
     /** A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service */
-    private java.util.List<KeyValuePair> _customSettings;
+    private java.util.List<KeyValuePair> customSettings;
     /**
      * Instantiates a new ManagedAppConfiguration and sets the default values.
      * @return a void
@@ -43,15 +41,15 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
      */
     @javax.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomSettings() {
-        return this._customSettings;
+        return this.customSettings;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("customSettings", (n) -> { this.setCustomSettings(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -73,6 +71,6 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setCustomSettings(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this._customSettings = value;
+        this.customSettings = value;
     }
 }

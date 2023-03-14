@@ -4,30 +4,28 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class ActivityHistoryItem extends Entity implements Parsable {
     /** Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime. */
-    private Integer _activeDurationSeconds;
+    private Integer activeDurationSeconds;
     /** The activity property */
-    private UserActivity _activity;
+    private UserActivity activity;
     /** Set by the server. DateTime in UTC when the object was created on the server. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client. */
-    private OffsetDateTime _expirationDateTime;
+    private OffsetDateTime expirationDateTime;
     /** Optional. UTC DateTime when the historyItem (activity session) was last understood as active or finished - if null, historyItem status should be Ongoing. */
-    private OffsetDateTime _lastActiveDateTime;
+    private OffsetDateTime lastActiveDateTime;
     /** Set by the server. DateTime in UTC when the object was modified on the server. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history. */
-    private OffsetDateTime _startedDateTime;
+    private OffsetDateTime startedDateTime;
     /** Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored. */
-    private Status _status;
+    private Status status;
     /** Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation. */
-    private String _userTimezone;
+    private String userTimezone;
     /**
      * Instantiates a new activityHistoryItem and sets the default values.
      * @return a void
@@ -52,7 +50,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getActiveDurationSeconds() {
-        return this._activeDurationSeconds;
+        return this.activeDurationSeconds;
     }
     /**
      * Gets the activity property value. The activity property
@@ -60,7 +58,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public UserActivity getActivity() {
-        return this._activity;
+        return this.activity;
     }
     /**
      * Gets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
@@ -68,7 +66,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the expirationDateTime property value. Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
@@ -76,15 +74,15 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this._expirationDateTime;
+        return this.expirationDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeDurationSeconds", (n) -> { this.setActiveDurationSeconds(n.getIntegerValue()); });
         deserializerMap.put("activity", (n) -> { this.setActivity(n.getObjectValue(UserActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -102,7 +100,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastActiveDateTime() {
-        return this._lastActiveDateTime;
+        return this.lastActiveDateTime;
     }
     /**
      * Gets the lastModifiedDateTime property value. Set by the server. DateTime in UTC when the object was modified on the server.
@@ -110,7 +108,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the startedDateTime property value. Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history.
@@ -118,7 +116,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {
-        return this._startedDateTime;
+        return this.startedDateTime;
     }
     /**
      * Gets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
@@ -126,7 +124,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Status getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
@@ -134,7 +132,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserTimezone() {
-        return this._userTimezone;
+        return this.userTimezone;
     }
     /**
      * Serializes information the current object
@@ -162,7 +160,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setActiveDurationSeconds(@javax.annotation.Nullable final Integer value) {
-        this._activeDurationSeconds = value;
+        this.activeDurationSeconds = value;
     }
     /**
      * Sets the activity property value. The activity property
@@ -171,7 +169,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setActivity(@javax.annotation.Nullable final UserActivity value) {
-        this._activity = value;
+        this.activity = value;
     }
     /**
      * Sets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
@@ -180,7 +178,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the expirationDateTime property value. Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
@@ -189,7 +187,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._expirationDateTime = value;
+        this.expirationDateTime = value;
     }
     /**
      * Sets the lastActiveDateTime property value. Optional. UTC DateTime when the historyItem (activity session) was last understood as active or finished - if null, historyItem status should be Ongoing.
@@ -198,7 +196,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastActiveDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastActiveDateTime = value;
+        this.lastActiveDateTime = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Set by the server. DateTime in UTC when the object was modified on the server.
@@ -207,7 +205,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the startedDateTime property value. Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history.
@@ -216,7 +214,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStartedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startedDateTime = value;
+        this.startedDateTime = value;
     }
     /**
      * Sets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
@@ -225,7 +223,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final Status value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
@@ -234,6 +232,6 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserTimezone(@javax.annotation.Nullable final String value) {
-        this._userTimezone = value;
+        this.userTimezone = value;
     }
 }

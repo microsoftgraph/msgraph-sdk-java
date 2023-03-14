@@ -4,31 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** If false, the requestor is not permitted to include a schedule in their request. */
-    private Boolean _allowCustomAssignmentSchedule;
+    private Boolean allowCustomAssignmentSchedule;
     /** If true, allows on-behalf-of requestors to create a request to add access for another principal. */
-    private Boolean _enableOnBehalfRequestorsToAddAccess;
+    private Boolean enableOnBehalfRequestorsToAddAccess;
     /** If true, allows on-behalf-of requestors to create a request to remove access for another principal. */
-    private Boolean _enableOnBehalfRequestorsToRemoveAccess;
+    private Boolean enableOnBehalfRequestorsToRemoveAccess;
     /** If true, allows on-behalf-of requestors to create a request to update access for another principal. */
-    private Boolean _enableOnBehalfRequestorsToUpdateAccess;
+    private Boolean enableOnBehalfRequestorsToUpdateAccess;
     /** If true, allows requestors to create a request to add access for themselves. */
-    private Boolean _enableTargetsToSelfAddAccess;
+    private Boolean enableTargetsToSelfAddAccess;
     /** If true, allows requestors to create a request to remove their access. */
-    private Boolean _enableTargetsToSelfRemoveAccess;
+    private Boolean enableTargetsToSelfRemoveAccess;
     /** If true, allows requestors to create a request to update their access. */
-    private Boolean _enableTargetsToSelfUpdateAccess;
+    private Boolean enableTargetsToSelfUpdateAccess;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The principals who can request on-behalf-of others. */
-    private java.util.List<SubjectSet> _onBehalfRequestors;
+    private java.util.List<SubjectSet> onBehalfRequestors;
     /**
      * Instantiates a new accessPackageAssignmentRequestorSettings and sets the default values.
      * @return a void
@@ -53,7 +52,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the allowCustomAssignmentSchedule property value. If false, the requestor is not permitted to include a schedule in their request.
@@ -61,7 +60,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public Boolean getAllowCustomAssignmentSchedule() {
-        return this._allowCustomAssignmentSchedule;
+        return this.allowCustomAssignmentSchedule;
     }
     /**
      * Gets the enableOnBehalfRequestorsToAddAccess property value. If true, allows on-behalf-of requestors to create a request to add access for another principal.
@@ -69,7 +68,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public Boolean getEnableOnBehalfRequestorsToAddAccess() {
-        return this._enableOnBehalfRequestorsToAddAccess;
+        return this.enableOnBehalfRequestorsToAddAccess;
     }
     /**
      * Gets the enableOnBehalfRequestorsToRemoveAccess property value. If true, allows on-behalf-of requestors to create a request to remove access for another principal.
@@ -77,7 +76,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public Boolean getEnableOnBehalfRequestorsToRemoveAccess() {
-        return this._enableOnBehalfRequestorsToRemoveAccess;
+        return this.enableOnBehalfRequestorsToRemoveAccess;
     }
     /**
      * Gets the enableOnBehalfRequestorsToUpdateAccess property value. If true, allows on-behalf-of requestors to create a request to update access for another principal.
@@ -85,7 +84,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public Boolean getEnableOnBehalfRequestorsToUpdateAccess() {
-        return this._enableOnBehalfRequestorsToUpdateAccess;
+        return this.enableOnBehalfRequestorsToUpdateAccess;
     }
     /**
      * Gets the enableTargetsToSelfAddAccess property value. If true, allows requestors to create a request to add access for themselves.
@@ -93,7 +92,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public Boolean getEnableTargetsToSelfAddAccess() {
-        return this._enableTargetsToSelfAddAccess;
+        return this.enableTargetsToSelfAddAccess;
     }
     /**
      * Gets the enableTargetsToSelfRemoveAccess property value. If true, allows requestors to create a request to remove their access.
@@ -101,7 +100,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public Boolean getEnableTargetsToSelfRemoveAccess() {
-        return this._enableTargetsToSelfRemoveAccess;
+        return this.enableTargetsToSelfRemoveAccess;
     }
     /**
      * Gets the enableTargetsToSelfUpdateAccess property value. If true, allows requestors to create a request to update their access.
@@ -109,15 +108,15 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public Boolean getEnableTargetsToSelfUpdateAccess() {
-        return this._enableTargetsToSelfUpdateAccess;
+        return this.enableTargetsToSelfUpdateAccess;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("allowCustomAssignmentSchedule", (n) -> { this.setAllowCustomAssignmentSchedule(n.getBooleanValue()); });
         deserializerMap.put("enableOnBehalfRequestorsToAddAccess", (n) -> { this.setEnableOnBehalfRequestorsToAddAccess(n.getBooleanValue()); });
         deserializerMap.put("enableOnBehalfRequestorsToRemoveAccess", (n) -> { this.setEnableOnBehalfRequestorsToRemoveAccess(n.getBooleanValue()); });
@@ -135,7 +134,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the onBehalfRequestors property value. The principals who can request on-behalf-of others.
@@ -143,7 +142,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public java.util.List<SubjectSet> getOnBehalfRequestors() {
-        return this._onBehalfRequestors;
+        return this.onBehalfRequestors;
     }
     /**
      * Serializes information the current object
@@ -171,7 +170,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the allowCustomAssignmentSchedule property value. If false, the requestor is not permitted to include a schedule in their request.
@@ -180,7 +179,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public void setAllowCustomAssignmentSchedule(@javax.annotation.Nullable final Boolean value) {
-        this._allowCustomAssignmentSchedule = value;
+        this.allowCustomAssignmentSchedule = value;
     }
     /**
      * Sets the enableOnBehalfRequestorsToAddAccess property value. If true, allows on-behalf-of requestors to create a request to add access for another principal.
@@ -189,7 +188,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public void setEnableOnBehalfRequestorsToAddAccess(@javax.annotation.Nullable final Boolean value) {
-        this._enableOnBehalfRequestorsToAddAccess = value;
+        this.enableOnBehalfRequestorsToAddAccess = value;
     }
     /**
      * Sets the enableOnBehalfRequestorsToRemoveAccess property value. If true, allows on-behalf-of requestors to create a request to remove access for another principal.
@@ -198,7 +197,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public void setEnableOnBehalfRequestorsToRemoveAccess(@javax.annotation.Nullable final Boolean value) {
-        this._enableOnBehalfRequestorsToRemoveAccess = value;
+        this.enableOnBehalfRequestorsToRemoveAccess = value;
     }
     /**
      * Sets the enableOnBehalfRequestorsToUpdateAccess property value. If true, allows on-behalf-of requestors to create a request to update access for another principal.
@@ -207,7 +206,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public void setEnableOnBehalfRequestorsToUpdateAccess(@javax.annotation.Nullable final Boolean value) {
-        this._enableOnBehalfRequestorsToUpdateAccess = value;
+        this.enableOnBehalfRequestorsToUpdateAccess = value;
     }
     /**
      * Sets the enableTargetsToSelfAddAccess property value. If true, allows requestors to create a request to add access for themselves.
@@ -216,7 +215,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public void setEnableTargetsToSelfAddAccess(@javax.annotation.Nullable final Boolean value) {
-        this._enableTargetsToSelfAddAccess = value;
+        this.enableTargetsToSelfAddAccess = value;
     }
     /**
      * Sets the enableTargetsToSelfRemoveAccess property value. If true, allows requestors to create a request to remove their access.
@@ -225,7 +224,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public void setEnableTargetsToSelfRemoveAccess(@javax.annotation.Nullable final Boolean value) {
-        this._enableTargetsToSelfRemoveAccess = value;
+        this.enableTargetsToSelfRemoveAccess = value;
     }
     /**
      * Sets the enableTargetsToSelfUpdateAccess property value. If true, allows requestors to create a request to update their access.
@@ -234,7 +233,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public void setEnableTargetsToSelfUpdateAccess(@javax.annotation.Nullable final Boolean value) {
-        this._enableTargetsToSelfUpdateAccess = value;
+        this.enableTargetsToSelfUpdateAccess = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -243,7 +242,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the onBehalfRequestors property value. The principals who can request on-behalf-of others.
@@ -252,6 +251,6 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public void setOnBehalfRequestors(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
-        this._onBehalfRequestors = value;
+        this.onBehalfRequestors = value;
     }
 }

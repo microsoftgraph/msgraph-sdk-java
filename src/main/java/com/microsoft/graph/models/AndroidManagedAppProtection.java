@@ -3,31 +3,30 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidManagedAppProtection extends TargetedManagedAppProtection implements Parsable {
     /** List of apps to which the policy is deployed. */
-    private java.util.List<ManagedMobileApp> _apps;
+    private java.util.List<ManagedMobileApp> apps;
     /** Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. */
-    private String _customBrowserDisplayName;
+    private String customBrowserDisplayName;
     /** Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. */
-    private String _customBrowserPackageId;
+    private String customBrowserPackageId;
     /** Count of apps to which the current policy is deployed. */
-    private Integer _deployedAppCount;
+    private Integer deployedAppCount;
     /** Navigation property to deployment summary of the configuration. */
-    private ManagedAppPolicyDeploymentSummary _deploymentSummary;
+    private ManagedAppPolicyDeploymentSummary deploymentSummary;
     /** When this setting is enabled, app level encryption is disabled if device level encryption is enabled */
-    private Boolean _disableAppEncryptionIfDeviceEncryptionIsEnabled;
+    private Boolean disableAppEncryptionIfDeviceEncryptionIsEnabled;
     /** Indicates whether application data for managed apps should be encrypted */
-    private Boolean _encryptAppData;
+    private Boolean encryptAppData;
     /** Define the oldest required Android security patch level a user can have to gain secure access to the app. */
-    private String _minimumRequiredPatchVersion;
+    private String minimumRequiredPatchVersion;
     /** Define the oldest recommended Android security patch level a user can have for secure access to the app. */
-    private String _minimumWarningPatchVersion;
+    private String minimumWarningPatchVersion;
     /** Indicates whether a managed user can take screen captures of managed apps */
-    private Boolean _screenCaptureBlocked;
+    private Boolean screenCaptureBlocked;
     /**
      * Instantiates a new AndroidManagedAppProtection and sets the default values.
      * @return a void
@@ -53,7 +52,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
-        return this._apps;
+        return this.apps;
     }
     /**
      * Gets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
@@ -61,7 +60,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nullable
     public String getCustomBrowserDisplayName() {
-        return this._customBrowserDisplayName;
+        return this.customBrowserDisplayName;
     }
     /**
      * Gets the customBrowserPackageId property value. Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
@@ -69,7 +68,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nullable
     public String getCustomBrowserPackageId() {
-        return this._customBrowserPackageId;
+        return this.customBrowserPackageId;
     }
     /**
      * Gets the deployedAppCount property value. Count of apps to which the current policy is deployed.
@@ -77,7 +76,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nullable
     public Integer getDeployedAppCount() {
-        return this._deployedAppCount;
+        return this.deployedAppCount;
     }
     /**
      * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
@@ -85,7 +84,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
-        return this._deploymentSummary;
+        return this.deploymentSummary;
     }
     /**
      * Gets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled
@@ -93,7 +92,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nullable
     public Boolean getDisableAppEncryptionIfDeviceEncryptionIsEnabled() {
-        return this._disableAppEncryptionIfDeviceEncryptionIsEnabled;
+        return this.disableAppEncryptionIfDeviceEncryptionIsEnabled;
     }
     /**
      * Gets the encryptAppData property value. Indicates whether application data for managed apps should be encrypted
@@ -101,15 +100,15 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nullable
     public Boolean getEncryptAppData() {
-        return this._encryptAppData;
+        return this.encryptAppData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("apps", (n) -> { this.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
         deserializerMap.put("customBrowserDisplayName", (n) -> { this.setCustomBrowserDisplayName(n.getStringValue()); });
         deserializerMap.put("customBrowserPackageId", (n) -> { this.setCustomBrowserPackageId(n.getStringValue()); });
@@ -128,7 +127,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nullable
     public String getMinimumRequiredPatchVersion() {
-        return this._minimumRequiredPatchVersion;
+        return this.minimumRequiredPatchVersion;
     }
     /**
      * Gets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app.
@@ -136,7 +135,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nullable
     public String getMinimumWarningPatchVersion() {
-        return this._minimumWarningPatchVersion;
+        return this.minimumWarningPatchVersion;
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether a managed user can take screen captures of managed apps
@@ -144,7 +143,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
-        return this._screenCaptureBlocked;
+        return this.screenCaptureBlocked;
     }
     /**
      * Serializes information the current object
@@ -173,7 +172,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nonnull
     public void setApps(@javax.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
-        this._apps = value;
+        this.apps = value;
     }
     /**
      * Sets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
@@ -182,7 +181,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nonnull
     public void setCustomBrowserDisplayName(@javax.annotation.Nullable final String value) {
-        this._customBrowserDisplayName = value;
+        this.customBrowserDisplayName = value;
     }
     /**
      * Sets the customBrowserPackageId property value. Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
@@ -191,7 +190,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nonnull
     public void setCustomBrowserPackageId(@javax.annotation.Nullable final String value) {
-        this._customBrowserPackageId = value;
+        this.customBrowserPackageId = value;
     }
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
@@ -200,7 +199,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nonnull
     public void setDeployedAppCount(@javax.annotation.Nullable final Integer value) {
-        this._deployedAppCount = value;
+        this.deployedAppCount = value;
     }
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
@@ -209,7 +208,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nonnull
     public void setDeploymentSummary(@javax.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
-        this._deploymentSummary = value;
+        this.deploymentSummary = value;
     }
     /**
      * Sets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled
@@ -218,7 +217,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nonnull
     public void setDisableAppEncryptionIfDeviceEncryptionIsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._disableAppEncryptionIfDeviceEncryptionIsEnabled = value;
+        this.disableAppEncryptionIfDeviceEncryptionIsEnabled = value;
     }
     /**
      * Sets the encryptAppData property value. Indicates whether application data for managed apps should be encrypted
@@ -227,7 +226,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nonnull
     public void setEncryptAppData(@javax.annotation.Nullable final Boolean value) {
-        this._encryptAppData = value;
+        this.encryptAppData = value;
     }
     /**
      * Sets the minimumRequiredPatchVersion property value. Define the oldest required Android security patch level a user can have to gain secure access to the app.
@@ -236,7 +235,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nonnull
     public void setMinimumRequiredPatchVersion(@javax.annotation.Nullable final String value) {
-        this._minimumRequiredPatchVersion = value;
+        this.minimumRequiredPatchVersion = value;
     }
     /**
      * Sets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app.
@@ -245,7 +244,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nonnull
     public void setMinimumWarningPatchVersion(@javax.annotation.Nullable final String value) {
-        this._minimumWarningPatchVersion = value;
+        this.minimumWarningPatchVersion = value;
     }
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether a managed user can take screen captures of managed apps
@@ -254,6 +253,6 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @javax.annotation.Nonnull
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._screenCaptureBlocked = value;
+        this.screenCaptureBlocked = value;
     }
 }

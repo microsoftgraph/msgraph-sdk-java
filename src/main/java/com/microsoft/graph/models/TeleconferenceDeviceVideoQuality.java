@@ -1,22 +1,20 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.TeleconferenceDeviceScreenSharingQuality;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality implements Parsable {
     /** The average inbound stream video bit rate per second. */
-    private Double _averageInboundBitRate;
+    private Double averageInboundBitRate;
     /** The average inbound stream video frame rate per second. */
-    private Double _averageInboundFrameRate;
+    private Double averageInboundFrameRate;
     /** The average outbound stream video bit rate per second. */
-    private Double _averageOutboundBitRate;
+    private Double averageOutboundBitRate;
     /** The average outbound stream video frame rate per second. */
-    private Double _averageOutboundFrameRate;
+    private Double averageOutboundFrameRate;
     /**
      * Instantiates a new TeleconferenceDeviceVideoQuality and sets the default values.
      * @return a void
@@ -49,7 +47,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      */
     @javax.annotation.Nullable
     public Double getAverageInboundBitRate() {
-        return this._averageInboundBitRate;
+        return this.averageInboundBitRate;
     }
     /**
      * Gets the averageInboundFrameRate property value. The average inbound stream video frame rate per second.
@@ -57,7 +55,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      */
     @javax.annotation.Nullable
     public Double getAverageInboundFrameRate() {
-        return this._averageInboundFrameRate;
+        return this.averageInboundFrameRate;
     }
     /**
      * Gets the averageOutboundBitRate property value. The average outbound stream video bit rate per second.
@@ -65,7 +63,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      */
     @javax.annotation.Nullable
     public Double getAverageOutboundBitRate() {
-        return this._averageOutboundBitRate;
+        return this.averageOutboundBitRate;
     }
     /**
      * Gets the averageOutboundFrameRate property value. The average outbound stream video frame rate per second.
@@ -73,15 +71,15 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      */
     @javax.annotation.Nullable
     public Double getAverageOutboundFrameRate() {
-        return this._averageOutboundFrameRate;
+        return this.averageOutboundFrameRate;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("averageInboundBitRate", (n) -> { this.setAverageInboundBitRate(n.getDoubleValue()); });
         deserializerMap.put("averageInboundFrameRate", (n) -> { this.setAverageInboundFrameRate(n.getDoubleValue()); });
         deserializerMap.put("averageOutboundBitRate", (n) -> { this.setAverageOutboundBitRate(n.getDoubleValue()); });
@@ -109,7 +107,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      */
     @javax.annotation.Nonnull
     public void setAverageInboundBitRate(@javax.annotation.Nullable final Double value) {
-        this._averageInboundBitRate = value;
+        this.averageInboundBitRate = value;
     }
     /**
      * Sets the averageInboundFrameRate property value. The average inbound stream video frame rate per second.
@@ -118,7 +116,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      */
     @javax.annotation.Nonnull
     public void setAverageInboundFrameRate(@javax.annotation.Nullable final Double value) {
-        this._averageInboundFrameRate = value;
+        this.averageInboundFrameRate = value;
     }
     /**
      * Sets the averageOutboundBitRate property value. The average outbound stream video bit rate per second.
@@ -127,7 +125,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      */
     @javax.annotation.Nonnull
     public void setAverageOutboundBitRate(@javax.annotation.Nullable final Double value) {
-        this._averageOutboundBitRate = value;
+        this.averageOutboundBitRate = value;
     }
     /**
      * Sets the averageOutboundFrameRate property value. The average outbound stream video frame rate per second.
@@ -136,6 +134,6 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      */
     @javax.annotation.Nonnull
     public void setAverageOutboundFrameRate(@javax.annotation.Nullable final Double value) {
-        this._averageOutboundFrameRate = value;
+        this.averageOutboundFrameRate = value;
     }
 }

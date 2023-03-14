@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
 public enum ColumnTypes implements ValuedEnum {
     Note("note"),
     Text("text"),
@@ -13,7 +12,7 @@ public enum ColumnTypes implements ValuedEnum {
     Currency("currency"),
     DateTime("dateTime"),
     Lookup("lookup"),
-    Boolean_escaped("boolean_escaped"),
+    BooleanEscaped("booleanEscaped"),
     User("user"),
     Url("url"),
     Calculated("calculated"),
@@ -42,7 +41,7 @@ public enum ColumnTypes implements ValuedEnum {
             case "currency": return Currency;
             case "dateTime": return DateTime;
             case "lookup": return Lookup;
-            case "boolean": return Boolean_escaped;
+            case "boolean": return BooleanEscaped;
             case "user": return User;
             case "url": return Url;
             case "calculated": return Calculated;

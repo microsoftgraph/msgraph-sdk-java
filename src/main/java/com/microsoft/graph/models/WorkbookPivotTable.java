@@ -3,16 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookPivotTable extends Entity implements Parsable {
     /** Name of the PivotTable. */
-    private String _name;
+    private String name;
     /** The worksheet containing the current PivotTable. Read-only. */
-    private WorkbookWorksheet _worksheet;
+    private WorkbookWorksheet worksheet;
     /**
      * Instantiates a new workbookPivotTable and sets the default values.
      * @return a void
@@ -33,11 +31,11 @@ public class WorkbookPivotTable extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("worksheet", (n) -> { this.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -48,7 +46,7 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the worksheet property value. The worksheet containing the current PivotTable. Read-only.
@@ -56,7 +54,7 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookWorksheet getWorksheet() {
-        return this._worksheet;
+        return this.worksheet;
     }
     /**
      * Serializes information the current object
@@ -77,7 +75,7 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the worksheet property value. The worksheet containing the current PivotTable. Read-only.
@@ -86,6 +84,6 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWorksheet(@javax.annotation.Nullable final WorkbookWorksheet value) {
-        this._worksheet = value;
+        this.worksheet = value;
     }
 }

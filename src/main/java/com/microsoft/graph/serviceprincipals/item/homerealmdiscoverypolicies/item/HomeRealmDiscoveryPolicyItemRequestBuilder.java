@@ -4,7 +4,9 @@ import com.microsoft.graph.serviceprincipals.item.homerealmdiscoverypolicies.ite
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-/** Builds and executes requests for operations under /servicePrincipals/{servicePrincipal-id}/homeRealmDiscoveryPolicies/{homeRealmDiscoveryPolicy-id} */
+/**
+ * Builds and executes requests for operations under /servicePrincipals/{servicePrincipal-id}/homeRealmDiscoveryPolicies/{homeRealmDiscoveryPolicy-id}
+ */
 public class HomeRealmDiscoveryPolicyItemRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;

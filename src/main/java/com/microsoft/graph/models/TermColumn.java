@@ -6,23 +6,22 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TermColumn implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Specifies whether the column will allow more than one value. */
-    private Boolean _allowMultipleValues;
+    private Boolean allowMultipleValues;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The parentTerm property */
-    private Term _parentTerm;
+    private Term parentTerm;
     /** Specifies whether to display the entire term path or only the term label. */
-    private Boolean _showFullyQualifiedName;
+    private Boolean showFullyQualifiedName;
     /** The termSet property */
-    private Set _termSet;
+    private Set termSet;
     /**
      * Instantiates a new termColumn and sets the default values.
      * @return a void
@@ -47,7 +46,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the allowMultipleValues property value. Specifies whether the column will allow more than one value.
@@ -55,15 +54,15 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAllowMultipleValues() {
-        return this._allowMultipleValues;
+        return this.allowMultipleValues;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("allowMultipleValues", (n) -> { this.setAllowMultipleValues(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("parentTerm", (n) -> { this.setParentTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
@@ -77,7 +76,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the parentTerm property value. The parentTerm property
@@ -85,7 +84,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Term getParentTerm() {
-        return this._parentTerm;
+        return this.parentTerm;
     }
     /**
      * Gets the showFullyQualifiedName property value. Specifies whether to display the entire term path or only the term label.
@@ -93,7 +92,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getShowFullyQualifiedName() {
-        return this._showFullyQualifiedName;
+        return this.showFullyQualifiedName;
     }
     /**
      * Gets the termSet property value. The termSet property
@@ -101,7 +100,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Set getTermSet() {
-        return this._termSet;
+        return this.termSet;
     }
     /**
      * Serializes information the current object
@@ -125,7 +124,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the allowMultipleValues property value. Specifies whether the column will allow more than one value.
@@ -134,7 +133,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowMultipleValues(@javax.annotation.Nullable final Boolean value) {
-        this._allowMultipleValues = value;
+        this.allowMultipleValues = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -143,7 +142,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the parentTerm property value. The parentTerm property
@@ -152,7 +151,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setParentTerm(@javax.annotation.Nullable final Term value) {
-        this._parentTerm = value;
+        this.parentTerm = value;
     }
     /**
      * Sets the showFullyQualifiedName property value. Specifies whether to display the entire term path or only the term label.
@@ -161,7 +160,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setShowFullyQualifiedName(@javax.annotation.Nullable final Boolean value) {
-        this._showFullyQualifiedName = value;
+        this.showFullyQualifiedName = value;
     }
     /**
      * Sets the termSet property value. The termSet property
@@ -170,6 +169,6 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTermSet(@javax.annotation.Nullable final Set value) {
-        this._termSet = value;
+        this.termSet = value;
     }
 }

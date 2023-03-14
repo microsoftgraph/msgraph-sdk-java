@@ -3,10 +3,10 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Allows IT admind to set a predefined default search engine for MDM-Controlled devices */
 public enum EdgeSearchEngineType implements ValuedEnum {
     /** Uses factory settings of Edge to assign the default search engine as per the user market */
-    Default_escaped("default_escaped"),
+    DefaultEscaped("defaultEscaped"),
     /** Sets Bing as the default search engine */
     Bing("bing");
     public final String value;
@@ -19,7 +19,7 @@ public enum EdgeSearchEngineType implements ValuedEnum {
     public static EdgeSearchEngineType forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "default": return Default_escaped;
+            case "default": return DefaultEscaped;
             case "bing": return Bing;
             default: return null;
         }

@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
     /** Availability of the user to be scheduled for work and its recurrence pattern. */
-    private java.util.List<ShiftAvailability> _availability;
+    private java.util.List<ShiftAvailability> availability;
     /**
      * Instantiates a new ShiftPreferences and sets the default values.
      * @return a void
@@ -35,15 +34,15 @@ public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ShiftAvailability> getAvailability() {
-        return this._availability;
+        return this.availability;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("availability", (n) -> { this.setAvailability(n.getCollectionOfObjectValues(ShiftAvailability::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -65,6 +64,6 @@ public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAvailability(@javax.annotation.Nullable final java.util.List<ShiftAvailability> value) {
-        this._availability = value;
+        this.availability = value;
     }
 }

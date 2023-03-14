@@ -5,27 +5,27 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The assignedByGroup property */
-    private String _assignedByGroup;
+    private String assignedByGroup;
     /** The disabledPlans property */
-    private java.util.List<String> _disabledPlans;
+    private java.util.List<UUID> disabledPlans;
     /** The error property */
-    private String _error;
+    private String error;
     /** The lastUpdatedDateTime property */
-    private OffsetDateTime _lastUpdatedDateTime;
+    private OffsetDateTime lastUpdatedDateTime;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The skuId property */
-    private String _skuId;
+    private UUID skuId;
     /** The state property */
-    private String _state;
+    private String state;
     /**
      * Instantiates a new licenseAssignmentState and sets the default values.
      * @return a void
@@ -50,7 +50,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the assignedByGroup property value. The assignedByGroup property
@@ -58,15 +58,15 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAssignedByGroup() {
-        return this._assignedByGroup;
+        return this.assignedByGroup;
     }
     /**
      * Gets the disabledPlans property value. The disabledPlans property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getDisabledPlans() {
-        return this._disabledPlans;
+    public java.util.List<UUID> getDisabledPlans() {
+        return this.disabledPlans;
     }
     /**
      * Gets the error property value. The error property
@@ -74,21 +74,21 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getError() {
-        return this._error;
+        return this.error;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("assignedByGroup", (n) -> { this.setAssignedByGroup(n.getStringValue()); });
-        deserializerMap.put("disabledPlans", (n) -> { this.setDisabledPlans(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("disabledPlans", (n) -> { this.setDisabledPlans(n.getCollectionOfPrimitiveValues(UUID.class)); });
         deserializerMap.put("error", (n) -> { this.setError(n.getStringValue()); });
         deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("skuId", (n) -> { this.setSkuId(n.getStringValue()); });
+        deserializerMap.put("skuId", (n) -> { this.setSkuId(n.getUUIDValue()); });
         deserializerMap.put("state", (n) -> { this.setState(n.getStringValue()); });
         return deserializerMap;
     }
@@ -98,7 +98,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this._lastUpdatedDateTime;
+        return this.lastUpdatedDateTime;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -106,15 +106,15 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the skuId property value. The skuId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getSkuId() {
-        return this._skuId;
+    public UUID getSkuId() {
+        return this.skuId;
     }
     /**
      * Gets the state property value. The state property
@@ -122,7 +122,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Serializes information the current object
@@ -137,7 +137,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("error", this.getError());
         writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeStringValue("skuId", this.getSkuId());
+        writer.writeUUIDValue("skuId", this.getSkuId());
         writer.writeStringValue("state", this.getState());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -148,7 +148,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the assignedByGroup property value. The assignedByGroup property
@@ -157,7 +157,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAssignedByGroup(@javax.annotation.Nullable final String value) {
-        this._assignedByGroup = value;
+        this.assignedByGroup = value;
     }
     /**
      * Sets the disabledPlans property value. The disabledPlans property
@@ -165,8 +165,8 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setDisabledPlans(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._disabledPlans = value;
+    public void setDisabledPlans(@javax.annotation.Nullable final java.util.List<UUID> value) {
+        this.disabledPlans = value;
     }
     /**
      * Sets the error property value. The error property
@@ -175,7 +175,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final String value) {
-        this._error = value;
+        this.error = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
@@ -184,7 +184,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastUpdatedDateTime = value;
+        this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -193,7 +193,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the skuId property value. The skuId property
@@ -201,8 +201,8 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setSkuId(@javax.annotation.Nullable final String value) {
-        this._skuId = value;
+    public void setSkuId(@javax.annotation.Nullable final UUID value) {
+        this.skuId = value;
     }
     /**
      * Sets the state property value. The state property
@@ -211,6 +211,6 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final String value) {
-        this._state = value;
+        this.state = value;
     }
 }

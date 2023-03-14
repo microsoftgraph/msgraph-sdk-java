@@ -11,6 +11,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
+import com.microsoft.kiota.RequestHeaders;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
@@ -21,12 +22,19 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of group entities. */
+/**
+ * Provides operations to manage the collection of group entities.
+ */
 public class GroupsRequestBuilder {
     /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the delta method. */
+    @javax.annotation.Nonnull
+    public DeltaRequestBuilder delta() {
+        return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to call the getAvailableExtensionProperties method. */
     @javax.annotation.Nonnull
@@ -80,81 +88,13 @@ public class GroupsRequestBuilder {
     }
     /**
      * List all the groups available in an organization, excluding dynamic distribution groups. To retrieve dynamic distribution groups, use the Exchange admin center. This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the group and specify the properties in a `$select` OData query option. The **hasMembersWithLicenseErrors** and **isArchived** properties are an exception and are not returned in the `$select` query.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation() throws URISyntaxException {
-        return createGetRequestInformation(null);
-    }
-    /**
-     * List all the groups available in an organization, excluding dynamic distribution groups. To retrieve dynamic distribution groups, use the Exchange admin center. This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the group and specify the properties in a `$select` OData query option. The **hasMembersWithLicenseErrors** and **isArchived** properties are an exception and are not returned in the `$select` query.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Create a new group as specified in the request body. You can create the following types of groups: This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation and specify the properties in a `$select` OData query option.
-     * @param body 
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final Group body) throws URISyntaxException {
-        return createPostRequestInformation(body, null);
-    }
-    /**
-     * Create a new group as specified in the request body. You can create the following types of groups: This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation and specify the properties in a `$select` OData query option.
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final Group body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Provides operations to call the delta method.
-     * @return a deltaRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeltaRequestBuilder delta() {
-        return new DeltaRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * List all the groups available in an organization, excluding dynamic distribution groups. To retrieve dynamic distribution groups, use the Exchange admin center. This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the group and specify the properties in a `$select` OData query option. The **hasMembersWithLicenseErrors** and **isArchived** properties are an exception and are not returned in the `$select` query.
      * @return a CompletableFuture of GroupCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/group-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupCollectionResponse> get() {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(null);
+            final RequestInformation requestInfo = toGetRequestInformation(null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -169,11 +109,12 @@ public class GroupsRequestBuilder {
      * List all the groups available in an organization, excluding dynamic distribution groups. To retrieve dynamic distribution groups, use the Exchange admin center. This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the group and specify the properties in a `$select` OData query option. The **hasMembersWithLicenseErrors** and **isArchived** properties are an exception and are not returned in the `$select` query.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of GroupCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/group-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
+            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -186,13 +127,14 @@ public class GroupsRequestBuilder {
     }
     /**
      * Create a new group as specified in the request body. You can create the following types of groups: This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation and specify the properties in a `$select` OData query option.
-     * @param body 
+     * @param body The request body
      * @return a CompletableFuture of group
+     * @see <a href="https://docs.microsoft.com/graph/api/group-post-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> post(@javax.annotation.Nonnull final Group body) {
         try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, null);
+            final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -205,15 +147,16 @@ public class GroupsRequestBuilder {
     }
     /**
      * Create a new group as specified in the request body. You can create the following types of groups: This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation and specify the properties in a `$select` OData query option.
-     * @param body 
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of group
+     * @see <a href="https://docs.microsoft.com/graph/api/group-post-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> post(@javax.annotation.Nonnull final Group body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
+            final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -224,7 +167,70 @@ public class GroupsRequestBuilder {
             return executionException;
         }
     }
-    /** List all the groups available in an organization, excluding dynamic distribution groups. To retrieve dynamic distribution groups, use the Exchange admin center. This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the group and specify the properties in a `$select` OData query option. The **hasMembersWithLicenseErrors** and **isArchived** properties are an exception and are not returned in the `$select` query. */
+    /**
+     * List all the groups available in an organization, excluding dynamic distribution groups. To retrieve dynamic distribution groups, use the Exchange admin center. This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the group and specify the properties in a `$select` OData query option. The **hasMembersWithLicenseErrors** and **isArchived** properties are an exception and are not returned in the `$select` query.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+        return toGetRequestInformation(null);
+    }
+    /**
+     * List all the groups available in an organization, excluding dynamic distribution groups. To retrieve dynamic distribution groups, use the Exchange admin center. This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the group and specify the properties in a `$select` OData query option. The **hasMembersWithLicenseErrors** and **isArchived** properties are an exception and are not returned in the `$select` query.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        if (requestConfiguration != null) {
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Create a new group as specified in the request body. You can create the following types of groups: This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation and specify the properties in a `$select` OData query option.
+     * @param body The request body
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final Group body) throws URISyntaxException {
+        return toPostRequestInformation(body, null);
+    }
+    /**
+     * Create a new group as specified in the request body. You can create the following types of groups: This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation and specify the properties in a `$select` OData query option.
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final Group body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        if (requestConfiguration != null) {
+            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * List all the groups available in an organization, excluding dynamic distribution groups. To retrieve dynamic distribution groups, use the Exchange admin center. This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the group and specify the properties in a `$select` OData query option. The **hasMembersWithLicenseErrors** and **isArchived** properties are an exception and are not returned in the `$select` query.
+     */
     public class GetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -259,11 +265,13 @@ public class GroupsRequestBuilder {
         @javax.annotation.Nullable
         public Integer top;
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
     public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
+        public RequestHeaders headers = new RequestHeaders();
         /** Request options */
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
@@ -278,11 +286,13 @@ public class GroupsRequestBuilder {
         public GetRequestConfiguration() {
         }
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
     public class PostRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
+        public RequestHeaders headers = new RequestHeaders();
         /** Request options */
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();

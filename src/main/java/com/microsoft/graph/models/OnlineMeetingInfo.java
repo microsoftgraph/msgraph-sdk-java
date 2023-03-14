@@ -4,27 +4,26 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The ID of the conference. */
-    private String _conferenceId;
+    private String conferenceId;
     /** The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting. */
-    private String _joinUrl;
+    private String joinUrl;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** All of the phone numbers associated with this conference. */
-    private java.util.List<Phone> _phones;
+    private java.util.List<Phone> phones;
     /** The pre-formatted quickdial for this call. */
-    private String _quickDial;
+    private String quickDial;
     /** The toll free numbers that can be used to join the conference. */
-    private java.util.List<String> _tollFreeNumbers;
+    private java.util.List<String> tollFreeNumbers;
     /** The toll number that can be used to join the conference. */
-    private String _tollNumber;
+    private String tollNumber;
     /**
      * Instantiates a new onlineMeetingInfo and sets the default values.
      * @return a void
@@ -49,7 +48,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the conferenceId property value. The ID of the conference.
@@ -57,15 +56,15 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getConferenceId() {
-        return this._conferenceId;
+        return this.conferenceId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("conferenceId", (n) -> { this.setConferenceId(n.getStringValue()); });
         deserializerMap.put("joinUrl", (n) -> { this.setJoinUrl(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -81,7 +80,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getJoinUrl() {
-        return this._joinUrl;
+        return this.joinUrl;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -89,7 +88,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the phones property value. All of the phone numbers associated with this conference.
@@ -97,7 +96,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Phone> getPhones() {
-        return this._phones;
+        return this.phones;
     }
     /**
      * Gets the quickDial property value. The pre-formatted quickdial for this call.
@@ -105,7 +104,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getQuickDial() {
-        return this._quickDial;
+        return this.quickDial;
     }
     /**
      * Gets the tollFreeNumbers property value. The toll free numbers that can be used to join the conference.
@@ -113,7 +112,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getTollFreeNumbers() {
-        return this._tollFreeNumbers;
+        return this.tollFreeNumbers;
     }
     /**
      * Gets the tollNumber property value. The toll number that can be used to join the conference.
@@ -121,7 +120,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getTollNumber() {
-        return this._tollNumber;
+        return this.tollNumber;
     }
     /**
      * Serializes information the current object
@@ -147,7 +146,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the conferenceId property value. The ID of the conference.
@@ -156,7 +155,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setConferenceId(@javax.annotation.Nullable final String value) {
-        this._conferenceId = value;
+        this.conferenceId = value;
     }
     /**
      * Sets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
@@ -165,7 +164,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setJoinUrl(@javax.annotation.Nullable final String value) {
-        this._joinUrl = value;
+        this.joinUrl = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -174,7 +173,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the phones property value. All of the phone numbers associated with this conference.
@@ -183,7 +182,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPhones(@javax.annotation.Nullable final java.util.List<Phone> value) {
-        this._phones = value;
+        this.phones = value;
     }
     /**
      * Sets the quickDial property value. The pre-formatted quickdial for this call.
@@ -192,7 +191,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setQuickDial(@javax.annotation.Nullable final String value) {
-        this._quickDial = value;
+        this.quickDial = value;
     }
     /**
      * Sets the tollFreeNumbers property value. The toll free numbers that can be used to join the conference.
@@ -201,7 +200,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTollFreeNumbers(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._tollFreeNumbers = value;
+        this.tollFreeNumbers = value;
     }
     /**
      * Sets the tollNumber property value. The toll number that can be used to join the conference.
@@ -210,6 +209,6 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTollNumber(@javax.annotation.Nullable final String value) {
-        this._tollNumber = value;
+        this.tollNumber = value;
     }
 }

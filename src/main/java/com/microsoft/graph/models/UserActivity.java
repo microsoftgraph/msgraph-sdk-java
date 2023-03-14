@@ -4,40 +4,38 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class UserActivity extends Entity implements Parsable {
     /** Required. URL used to launch the activity in the best native experience represented by the appId. Might launch a web-based app if no native app exists. */
-    private String _activationUrl;
+    private String activationUrl;
     /** Required. URL for the domain representing the cross-platform identity mapping for the app. Mapping is stored either as a JSON file hosted on the domain or configurable via Windows Dev Center. The JSON file is named cross-platform-app-identifiers and is hosted at root of your HTTPS domain, either at the top level domain or include a sub domain. For example: https://contoso.com or https://myapp.contoso.com but NOT https://myapp.contoso.com/somepath. You must have a unique file and domain (or sub domain) per cross-platform app identity. For example, a separate file and domain is needed for Word vs. PowerPoint. */
-    private String _activitySourceHost;
+    private String activitySourceHost;
     /** Required. The unique activity ID in the context of the app - supplied by caller and immutable thereafter. */
-    private String _appActivityId;
+    private String appActivityId;
     /** Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the users local device. */
-    private String _appDisplayName;
+    private String appDisplayName;
     /** Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax. */
-    private Json _contentInfo;
+    private Json contentInfo;
     /** Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed). */
-    private String _contentUrl;
+    private String contentUrl;
     /** Set by the server. DateTime in UTC when the object was created on the server. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Set by the server. DateTime in UTC when the object expired on the server. */
-    private OffsetDateTime _expirationDateTime;
+    private OffsetDateTime expirationDateTime;
     /** Optional. URL used to launch the activity in a web-based app, if available. */
-    private String _fallbackUrl;
+    private String fallbackUrl;
     /** Optional. NavigationProperty/Containment; navigation property to the activity's historyItems. */
-    private java.util.List<ActivityHistoryItem> _historyItems;
+    private java.util.List<ActivityHistoryItem> historyItems;
     /** Set by the server. DateTime in UTC when the object was modified on the server. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored. */
-    private Status _status;
+    private Status status;
     /** Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation. */
-    private String _userTimezone;
+    private String userTimezone;
     /** The visualElements property */
-    private VisualInfo _visualElements;
+    private VisualInfo visualElements;
     /**
      * Instantiates a new userActivity and sets the default values.
      * @return a void
@@ -62,7 +60,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getActivationUrl() {
-        return this._activationUrl;
+        return this.activationUrl;
     }
     /**
      * Gets the activitySourceHost property value. Required. URL for the domain representing the cross-platform identity mapping for the app. Mapping is stored either as a JSON file hosted on the domain or configurable via Windows Dev Center. The JSON file is named cross-platform-app-identifiers and is hosted at root of your HTTPS domain, either at the top level domain or include a sub domain. For example: https://contoso.com or https://myapp.contoso.com but NOT https://myapp.contoso.com/somepath. You must have a unique file and domain (or sub domain) per cross-platform app identity. For example, a separate file and domain is needed for Word vs. PowerPoint.
@@ -70,7 +68,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getActivitySourceHost() {
-        return this._activitySourceHost;
+        return this.activitySourceHost;
     }
     /**
      * Gets the appActivityId property value. Required. The unique activity ID in the context of the app - supplied by caller and immutable thereafter.
@@ -78,7 +76,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppActivityId() {
-        return this._appActivityId;
+        return this.appActivityId;
     }
     /**
      * Gets the appDisplayName property value. Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the users local device.
@@ -86,7 +84,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppDisplayName() {
-        return this._appDisplayName;
+        return this.appDisplayName;
     }
     /**
      * Gets the contentInfo property value. Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
@@ -94,7 +92,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Json getContentInfo() {
-        return this._contentInfo;
+        return this.contentInfo;
     }
     /**
      * Gets the contentUrl property value. Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed).
@@ -102,7 +100,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getContentUrl() {
-        return this._contentUrl;
+        return this.contentUrl;
     }
     /**
      * Gets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
@@ -110,7 +108,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the expirationDateTime property value. Set by the server. DateTime in UTC when the object expired on the server.
@@ -118,7 +116,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this._expirationDateTime;
+        return this.expirationDateTime;
     }
     /**
      * Gets the fallbackUrl property value. Optional. URL used to launch the activity in a web-based app, if available.
@@ -126,15 +124,15 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getFallbackUrl() {
-        return this._fallbackUrl;
+        return this.fallbackUrl;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activationUrl", (n) -> { this.setActivationUrl(n.getStringValue()); });
         deserializerMap.put("activitySourceHost", (n) -> { this.setActivitySourceHost(n.getStringValue()); });
         deserializerMap.put("appActivityId", (n) -> { this.setAppActivityId(n.getStringValue()); });
@@ -157,7 +155,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ActivityHistoryItem> getHistoryItems() {
-        return this._historyItems;
+        return this.historyItems;
     }
     /**
      * Gets the lastModifiedDateTime property value. Set by the server. DateTime in UTC when the object was modified on the server.
@@ -165,7 +163,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
@@ -173,7 +171,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Status getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
@@ -181,7 +179,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserTimezone() {
-        return this._userTimezone;
+        return this.userTimezone;
     }
     /**
      * Gets the visualElements property value. The visualElements property
@@ -189,7 +187,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public VisualInfo getVisualElements() {
-        return this._visualElements;
+        return this.visualElements;
     }
     /**
      * Serializes information the current object
@@ -222,7 +220,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setActivationUrl(@javax.annotation.Nullable final String value) {
-        this._activationUrl = value;
+        this.activationUrl = value;
     }
     /**
      * Sets the activitySourceHost property value. Required. URL for the domain representing the cross-platform identity mapping for the app. Mapping is stored either as a JSON file hosted on the domain or configurable via Windows Dev Center. The JSON file is named cross-platform-app-identifiers and is hosted at root of your HTTPS domain, either at the top level domain or include a sub domain. For example: https://contoso.com or https://myapp.contoso.com but NOT https://myapp.contoso.com/somepath. You must have a unique file and domain (or sub domain) per cross-platform app identity. For example, a separate file and domain is needed for Word vs. PowerPoint.
@@ -231,7 +229,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setActivitySourceHost(@javax.annotation.Nullable final String value) {
-        this._activitySourceHost = value;
+        this.activitySourceHost = value;
     }
     /**
      * Sets the appActivityId property value. Required. The unique activity ID in the context of the app - supplied by caller and immutable thereafter.
@@ -240,7 +238,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppActivityId(@javax.annotation.Nullable final String value) {
-        this._appActivityId = value;
+        this.appActivityId = value;
     }
     /**
      * Sets the appDisplayName property value. Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the users local device.
@@ -249,7 +247,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
-        this._appDisplayName = value;
+        this.appDisplayName = value;
     }
     /**
      * Sets the contentInfo property value. Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
@@ -258,7 +256,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentInfo(@javax.annotation.Nullable final Json value) {
-        this._contentInfo = value;
+        this.contentInfo = value;
     }
     /**
      * Sets the contentUrl property value. Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed).
@@ -267,7 +265,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentUrl(@javax.annotation.Nullable final String value) {
-        this._contentUrl = value;
+        this.contentUrl = value;
     }
     /**
      * Sets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
@@ -276,7 +274,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the expirationDateTime property value. Set by the server. DateTime in UTC when the object expired on the server.
@@ -285,7 +283,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._expirationDateTime = value;
+        this.expirationDateTime = value;
     }
     /**
      * Sets the fallbackUrl property value. Optional. URL used to launch the activity in a web-based app, if available.
@@ -294,7 +292,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFallbackUrl(@javax.annotation.Nullable final String value) {
-        this._fallbackUrl = value;
+        this.fallbackUrl = value;
     }
     /**
      * Sets the historyItems property value. Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
@@ -303,7 +301,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setHistoryItems(@javax.annotation.Nullable final java.util.List<ActivityHistoryItem> value) {
-        this._historyItems = value;
+        this.historyItems = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Set by the server. DateTime in UTC when the object was modified on the server.
@@ -312,7 +310,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
@@ -321,7 +319,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final Status value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
@@ -330,7 +328,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserTimezone(@javax.annotation.Nullable final String value) {
-        this._userTimezone = value;
+        this.userTimezone = value;
     }
     /**
      * Sets the visualElements property value. The visualElements property
@@ -339,6 +337,6 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVisualElements(@javax.annotation.Nullable final VisualInfo value) {
-        this._visualElements = value;
+        this.visualElements = value;
     }
 }

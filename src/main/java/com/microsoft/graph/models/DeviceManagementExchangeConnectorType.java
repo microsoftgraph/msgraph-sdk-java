@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
+/** The type of Exchange Connector. */
 public enum DeviceManagementExchangeConnectorType implements ValuedEnum {
     /** Connects to on-premises Exchange Environment. */
     OnPremises("onPremises"),
@@ -12,7 +12,9 @@ public enum DeviceManagementExchangeConnectorType implements ValuedEnum {
     /** Intune Service connects directly to O365 multi-tenant Exchange environment */
     ServiceToService("serviceToService"),
     /** Connects to O365 Dedicated Exchange environment. */
-    Dedicated("dedicated");
+    Dedicated("dedicated"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceManagementExchangeConnectorType(final String value) {
         this.value = value;
@@ -27,6 +29,7 @@ public enum DeviceManagementExchangeConnectorType implements ValuedEnum {
             case "hosted": return Hosted;
             case "serviceToService": return ServiceToService;
             case "dedicated": return Dedicated;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

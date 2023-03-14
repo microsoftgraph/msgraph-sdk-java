@@ -4,51 +4,50 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SubjectRightsRequest extends Entity implements Parsable {
     /** Identity that the request is assigned to. */
-    private Identity _assignedTo;
+    private Identity assignedTo;
     /** The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _closedDateTime;
+    private OffsetDateTime closedDateTime;
     /** Identity information for the entity that created the request. */
-    private IdentitySet _createdBy;
+    private IdentitySet createdBy;
     /** The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Information about the data subject. */
-    private DataSubject _dataSubject;
+    private DataSubject dataSubject;
     /** The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue. */
-    private DataSubjectType _dataSubjectType;
+    private DataSubjectType dataSubjectType;
     /** Description for the request. */
-    private String _description;
+    private String description;
     /** The name of the request. */
-    private String _displayName;
+    private String displayName;
     /** Collection of history change events. */
-    private java.util.List<SubjectRightsRequestHistory> _history;
+    private java.util.List<SubjectRightsRequestHistory> history;
     /** Insight about the request. */
-    private SubjectRightsRequestDetail _insight;
+    private SubjectRightsRequestDetail insight;
     /** The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _internalDueDateTime;
+    private OffsetDateTime internalDueDateTime;
     /** Identity information for the entity that last modified the request. */
-    private IdentitySet _lastModifiedBy;
+    private IdentitySet lastModifiedBy;
     /** The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** List of notes associcated with the request. */
-    private java.util.List<AuthoredNote> _notes;
+    private java.util.List<AuthoredNote> notes;
     /** List of regulations that this request will fulfill. */
-    private java.util.List<String> _regulations;
+    private java.util.List<String> regulations;
     /** Information about the different stages for the request. */
-    private java.util.List<SubjectRightsRequestStageDetail> _stages;
+    private java.util.List<SubjectRightsRequestStageDetail> stages;
     /** The status of the request.. Possible values are: active, closed, unknownFutureValue. */
-    private SubjectRightsRequestStatus _status;
+    private SubjectRightsRequestStatus status;
     /** Information about the Microsoft Teams team that was created for the request. */
-    private Team _team;
+    private Team team;
     /** The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue. */
-    private SubjectRightsRequestType _type;
+    private SubjectRightsRequestType type;
     /**
-     * Instantiates a new SubjectRightsRequest and sets the default values.
+     * Instantiates a new subjectRightsRequest and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -58,7 +57,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SubjectRightsRequest
+     * @return a subjectRightsRequest
      */
     @javax.annotation.Nonnull
     public static SubjectRightsRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +70,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Identity getAssignedTo() {
-        return this._assignedTo;
+        return this.assignedTo;
     }
     /**
      * Gets the closedDateTime property value. The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -79,7 +78,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getClosedDateTime() {
-        return this._closedDateTime;
+        return this.closedDateTime;
     }
     /**
      * Gets the createdBy property value. Identity information for the entity that created the request.
@@ -87,7 +86,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdDateTime property value. The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -95,7 +94,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the dataSubject property value. Information about the data subject.
@@ -103,7 +102,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DataSubject getDataSubject() {
-        return this._dataSubject;
+        return this.dataSubject;
     }
     /**
      * Gets the dataSubjectType property value. The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
@@ -111,7 +110,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DataSubjectType getDataSubjectType() {
-        return this._dataSubjectType;
+        return this.dataSubjectType;
     }
     /**
      * Gets the description property value. Description for the request.
@@ -119,7 +118,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The name of the request.
@@ -127,15 +126,15 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("closedDateTime", (n) -> { this.setClosedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -163,7 +162,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SubjectRightsRequestHistory> getHistory() {
-        return this._history;
+        return this.history;
     }
     /**
      * Gets the insight property value. Insight about the request.
@@ -171,7 +170,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SubjectRightsRequestDetail getInsight() {
-        return this._insight;
+        return this.insight;
     }
     /**
      * Gets the internalDueDateTime property value. The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -179,7 +178,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getInternalDueDateTime() {
-        return this._internalDueDateTime;
+        return this.internalDueDateTime;
     }
     /**
      * Gets the lastModifiedBy property value. Identity information for the entity that last modified the request.
@@ -187,7 +186,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this._lastModifiedBy;
+        return this.lastModifiedBy;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -195,7 +194,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the notes property value. List of notes associcated with the request.
@@ -203,7 +202,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AuthoredNote> getNotes() {
-        return this._notes;
+        return this.notes;
     }
     /**
      * Gets the regulations property value. List of regulations that this request will fulfill.
@@ -211,7 +210,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getRegulations() {
-        return this._regulations;
+        return this.regulations;
     }
     /**
      * Gets the stages property value. Information about the different stages for the request.
@@ -219,7 +218,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SubjectRightsRequestStageDetail> getStages() {
-        return this._stages;
+        return this.stages;
     }
     /**
      * Gets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
@@ -227,7 +226,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SubjectRightsRequestStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the team property value. Information about the Microsoft Teams team that was created for the request.
@@ -235,7 +234,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Team getTeam() {
-        return this._team;
+        return this.team;
     }
     /**
      * Gets the type property value. The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
@@ -243,7 +242,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SubjectRightsRequestType getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
@@ -281,7 +280,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAssignedTo(@javax.annotation.Nullable final Identity value) {
-        this._assignedTo = value;
+        this.assignedTo = value;
     }
     /**
      * Sets the closedDateTime property value. The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -290,7 +289,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setClosedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._closedDateTime = value;
+        this.closedDateTime = value;
     }
     /**
      * Sets the createdBy property value. Identity information for the entity that created the request.
@@ -299,7 +298,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -308,7 +307,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the dataSubject property value. Information about the data subject.
@@ -317,7 +316,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDataSubject(@javax.annotation.Nullable final DataSubject value) {
-        this._dataSubject = value;
+        this.dataSubject = value;
     }
     /**
      * Sets the dataSubjectType property value. The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
@@ -326,7 +325,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDataSubjectType(@javax.annotation.Nullable final DataSubjectType value) {
-        this._dataSubjectType = value;
+        this.dataSubjectType = value;
     }
     /**
      * Sets the description property value. Description for the request.
@@ -335,7 +334,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The name of the request.
@@ -344,7 +343,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the history property value. Collection of history change events.
@@ -353,7 +352,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setHistory(@javax.annotation.Nullable final java.util.List<SubjectRightsRequestHistory> value) {
-        this._history = value;
+        this.history = value;
     }
     /**
      * Sets the insight property value. Insight about the request.
@@ -362,7 +361,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInsight(@javax.annotation.Nullable final SubjectRightsRequestDetail value) {
-        this._insight = value;
+        this.insight = value;
     }
     /**
      * Sets the internalDueDateTime property value. The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -371,7 +370,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInternalDueDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._internalDueDateTime = value;
+        this.internalDueDateTime = value;
     }
     /**
      * Sets the lastModifiedBy property value. Identity information for the entity that last modified the request.
@@ -380,7 +379,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._lastModifiedBy = value;
+        this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -389,7 +388,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the notes property value. List of notes associcated with the request.
@@ -398,7 +397,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final java.util.List<AuthoredNote> value) {
-        this._notes = value;
+        this.notes = value;
     }
     /**
      * Sets the regulations property value. List of regulations that this request will fulfill.
@@ -407,7 +406,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRegulations(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._regulations = value;
+        this.regulations = value;
     }
     /**
      * Sets the stages property value. Information about the different stages for the request.
@@ -416,7 +415,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStages(@javax.annotation.Nullable final java.util.List<SubjectRightsRequestStageDetail> value) {
-        this._stages = value;
+        this.stages = value;
     }
     /**
      * Sets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
@@ -425,7 +424,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final SubjectRightsRequestStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the team property value. Information about the Microsoft Teams team that was created for the request.
@@ -434,7 +433,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTeam(@javax.annotation.Nullable final Team value) {
-        this._team = value;
+        this.team = value;
     }
     /**
      * Sets the type property value. The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
@@ -443,6 +442,6 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final SubjectRightsRequestType value) {
-        this._type = value;
+        this.type = value;
     }
 }

@@ -4,13 +4,13 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Site;
 import com.microsoft.graph.sites.item.analytics.AnalyticsRequestBuilder;
 import com.microsoft.graph.sites.item.columns.ColumnsRequestBuilder;
-import com.microsoft.graph.sites.item.columns.item.ColumnDefinitionItemRequestBuilder;
 import com.microsoft.graph.sites.item.contenttypes.ContentTypesRequestBuilder;
 import com.microsoft.graph.sites.item.contenttypes.item.ContentTypeItemRequestBuilder;
 import com.microsoft.graph.sites.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.sites.item.drives.DrivesRequestBuilder;
 import com.microsoft.graph.sites.item.drives.item.DriveItemRequestBuilder;
 import com.microsoft.graph.sites.item.externalcolumns.ExternalColumnsRequestBuilder;
+import com.microsoft.graph.sites.item.externalcolumns.item.ColumnDefinitionItemRequestBuilder;
 import com.microsoft.graph.sites.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
 import com.microsoft.graph.sites.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 import com.microsoft.graph.sites.item.getapplicablecontenttypesforlistwithlistid.GetApplicableContentTypesForListWithListIdRequestBuilder;
@@ -31,6 +31,7 @@ import com.microsoft.graph.sites.item.termstores.TermStoresRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
+import com.microsoft.kiota.RequestHeaders;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
@@ -41,7 +42,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of site entities. */
+/**
+ * Provides operations to manage the collection of site entities.
+ */
 public class SiteItemRequestBuilder {
     /** Provides operations to manage the analytics property of the microsoft.graph.site entity. */
     @javax.annotation.Nonnull
@@ -72,6 +75,11 @@ public class SiteItemRequestBuilder {
     @javax.annotation.Nonnull
     public ExternalColumnsRequestBuilder externalColumns() {
         return new ExternalColumnsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the getActivitiesByInterval method. */
+    @javax.annotation.Nonnull
+    public GetActivitiesByIntervalRequestBuilder getActivitiesByInterval() {
+        return new GetActivitiesByIntervalRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the items property of the microsoft.graph.site entity. */
     @javax.annotation.Nonnull
@@ -173,67 +181,6 @@ public class SiteItemRequestBuilder {
         return new ContentTypeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Retrieve properties and relationships for a [site][] resource.A **site** resource represents a team site in SharePoint.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation() throws URISyntaxException {
-        return createGetRequestInformation(null);
-    }
-    /**
-     * Retrieve properties and relationships for a [site][] resource.A **site** resource represents a team site in SharePoint.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Update entity in sites
-     * @param body 
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final Site body) throws URISyntaxException {
-        return createPatchRequestInformation(body, null);
-    }
-    /**
-     * Update entity in sites
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final Site body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
      * Provides operations to manage the drives property of the microsoft.graph.site entity.
      * @param id Unique identifier of the item
      * @return a DriveItemRequestBuilder
@@ -260,11 +207,12 @@ public class SiteItemRequestBuilder {
     /**
      * Retrieve properties and relationships for a [site][] resource.A **site** resource represents a team site in SharePoint.
      * @return a CompletableFuture of site
+     * @see <a href="https://docs.microsoft.com/graph/api/site-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Site> get() {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(null);
+            final RequestInformation requestInfo = toGetRequestInformation(null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -279,11 +227,12 @@ public class SiteItemRequestBuilder {
      * Retrieve properties and relationships for a [site][] resource.A **site** resource represents a team site in SharePoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of site
+     * @see <a href="https://docs.microsoft.com/graph/api/site-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Site> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
+            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -293,14 +242,6 @@ public class SiteItemRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to call the getActivitiesByInterval method.
-     * @return a getActivitiesByIntervalRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GetActivitiesByIntervalRequestBuilder getActivitiesByInterval() {
-        return new GetActivitiesByIntervalRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getActivitiesByInterval method.
@@ -374,13 +315,13 @@ public class SiteItemRequestBuilder {
     }
     /**
      * Update entity in sites
-     * @param body 
+     * @param body The request body
      * @return a CompletableFuture of site
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Site> patch(@javax.annotation.Nonnull final Site body) {
         try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, null);
+            final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -393,7 +334,7 @@ public class SiteItemRequestBuilder {
     }
     /**
      * Update entity in sites
-     * @param body 
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of site
      */
@@ -401,7 +342,7 @@ public class SiteItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Site> patch(@javax.annotation.Nonnull final Site body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
+            final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -448,7 +389,70 @@ public class SiteItemRequestBuilder {
         urlTplParams.put("store%2Did", id);
         return new StoreItemRequestBuilder(urlTplParams, requestAdapter);
     }
-    /** Retrieve properties and relationships for a [site][] resource.A **site** resource represents a team site in SharePoint. */
+    /**
+     * Retrieve properties and relationships for a [site][] resource.A **site** resource represents a team site in SharePoint.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+        return toGetRequestInformation(null);
+    }
+    /**
+     * Retrieve properties and relationships for a [site][] resource.A **site** resource represents a team site in SharePoint.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        if (requestConfiguration != null) {
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Update entity in sites
+     * @param body The request body
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final Site body) throws URISyntaxException {
+        return toPatchRequestInformation(body, null);
+    }
+    /**
+     * Update entity in sites
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final Site body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        if (requestConfiguration != null) {
+            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Retrieve properties and relationships for a [site][] resource.A **site** resource represents a team site in SharePoint.
+     */
     public class GetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -459,11 +463,13 @@ public class SiteItemRequestBuilder {
         @javax.annotation.Nullable
         public String[] select;
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
     public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
+        public RequestHeaders headers = new RequestHeaders();
         /** Request options */
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
@@ -478,11 +484,13 @@ public class SiteItemRequestBuilder {
         public GetRequestConfiguration() {
         }
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
     public class PatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
+        public RequestHeaders headers = new RequestHeaders();
         /** Request options */
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();

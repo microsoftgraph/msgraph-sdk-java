@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
+import com.microsoft.kiota.RequestHeaders;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
@@ -14,7 +15,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getAttackSimulationTrainingUserCoverage method. */
+/**
+ * Provides operations to call the getAttackSimulationTrainingUserCoverage method.
+ */
 public class GetAttackSimulationTrainingUserCoverageRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
@@ -32,7 +35,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder {
     public GetAttackSimulationTrainingUserCoverageRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/reports/security/microsoft.graph.getAttackSimulationTrainingUserCoverage(){?%24top,%24skip,%24search,%24filter,%24count}";
+        this.urlTemplate = "{+baseurl}/reports/security/getAttackSimulationTrainingUserCoverage(){?%24top,%24skip,%24search,%24filter,%24count}";
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -45,40 +48,11 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder {
      */
     @javax.annotation.Nullable
     public GetAttackSimulationTrainingUserCoverageRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/reports/security/microsoft.graph.getAttackSimulationTrainingUserCoverage(){?%24top,%24skip,%24search,%24filter,%24count}";
+        this.urlTemplate = "{+baseurl}/reports/security/getAttackSimulationTrainingUserCoverage(){?%24top,%24skip,%24search,%24filter,%24count}";
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
-    }
-    /**
-     * Invoke function getAttackSimulationTrainingUserCoverage
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation() throws URISyntaxException {
-        return createGetRequestInformation(null);
-    }
-    /**
-     * Invoke function getAttackSimulationTrainingUserCoverage
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
     }
     /**
      * Invoke function getAttackSimulationTrainingUserCoverage
@@ -87,7 +61,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder {
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetAttackSimulationTrainingUserCoverageResponse> get() {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(null);
+            final RequestInformation requestInfo = toGetRequestInformation(null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -106,7 +80,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder {
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetAttackSimulationTrainingUserCoverageResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
+            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -117,7 +91,38 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder {
             return executionException;
         }
     }
-    /** Invoke function getAttackSimulationTrainingUserCoverage */
+    /**
+     * Invoke function getAttackSimulationTrainingUserCoverage
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+        return toGetRequestInformation(null);
+    }
+    /**
+     * Invoke function getAttackSimulationTrainingUserCoverage
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        if (requestConfiguration != null) {
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Invoke function getAttackSimulationTrainingUserCoverage
+     */
     public class GetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -140,11 +145,13 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder {
         @javax.annotation.Nullable
         public Integer top;
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
     public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
+        public RequestHeaders headers = new RequestHeaders();
         /** Request options */
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();

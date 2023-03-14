@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SearchAlteration implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is: /ue000, /ue001. */
-    private String _alteredHighlightedQueryString;
+    private String alteredHighlightedQueryString;
     /** Defines the altered query string with spelling correction. */
-    private String _alteredQueryString;
+    private String alteredQueryString;
     /** Represents changed segments related to an original user query. */
-    private java.util.List<AlteredQueryToken> _alteredQueryTokens;
+    private java.util.List<AlteredQueryToken> alteredQueryTokens;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new searchAlteration and sets the default values.
      * @return a void
@@ -43,7 +42,7 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the alteredHighlightedQueryString property value. Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is: /ue000, /ue001.
@@ -51,7 +50,7 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAlteredHighlightedQueryString() {
-        return this._alteredHighlightedQueryString;
+        return this.alteredHighlightedQueryString;
     }
     /**
      * Gets the alteredQueryString property value. Defines the altered query string with spelling correction.
@@ -59,7 +58,7 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAlteredQueryString() {
-        return this._alteredQueryString;
+        return this.alteredQueryString;
     }
     /**
      * Gets the alteredQueryTokens property value. Represents changed segments related to an original user query.
@@ -67,15 +66,15 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AlteredQueryToken> getAlteredQueryTokens() {
-        return this._alteredQueryTokens;
+        return this.alteredQueryTokens;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("alteredHighlightedQueryString", (n) -> { this.setAlteredHighlightedQueryString(n.getStringValue()); });
         deserializerMap.put("alteredQueryString", (n) -> { this.setAlteredQueryString(n.getStringValue()); });
         deserializerMap.put("alteredQueryTokens", (n) -> { this.setAlteredQueryTokens(n.getCollectionOfObjectValues(AlteredQueryToken::createFromDiscriminatorValue)); });
@@ -88,7 +87,7 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the alteredHighlightedQueryString property value. Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is: /ue000, /ue001.
@@ -120,7 +119,7 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAlteredHighlightedQueryString(@javax.annotation.Nullable final String value) {
-        this._alteredHighlightedQueryString = value;
+        this.alteredHighlightedQueryString = value;
     }
     /**
      * Sets the alteredQueryString property value. Defines the altered query string with spelling correction.
@@ -129,7 +128,7 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAlteredQueryString(@javax.annotation.Nullable final String value) {
-        this._alteredQueryString = value;
+        this.alteredQueryString = value;
     }
     /**
      * Sets the alteredQueryTokens property value. Represents changed segments related to an original user query.
@@ -138,7 +137,7 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAlteredQueryTokens(@javax.annotation.Nullable final java.util.List<AlteredQueryToken> value) {
-        this._alteredQueryTokens = value;
+        this.alteredQueryTokens = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -147,6 +146,6 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

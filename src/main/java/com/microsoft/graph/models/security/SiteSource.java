@@ -4,13 +4,12 @@ import com.microsoft.graph.models.Site;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SiteSource extends DataSource implements Parsable {
     /** The site property */
-    private Site _site;
+    private Site site;
     /**
      * Instantiates a new SiteSource and sets the default values.
      * @return a void
@@ -32,11 +31,11 @@ public class SiteSource extends DataSource implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("site", (n) -> { this.setSite(n.getObjectValue(Site::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -46,7 +45,7 @@ public class SiteSource extends DataSource implements Parsable {
      */
     @javax.annotation.Nullable
     public Site getSite() {
-        return this._site;
+        return this.site;
     }
     /**
      * Serializes information the current object
@@ -66,6 +65,6 @@ public class SiteSource extends DataSource implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSite(@javax.annotation.Nullable final Site value) {
-        this._site = value;
+        this.site = value;
     }
 }

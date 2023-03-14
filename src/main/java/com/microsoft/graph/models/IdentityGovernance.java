@@ -4,23 +4,22 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentityGovernance implements AdditionalDataHolder, Parsable {
     /** The accessReviews property */
-    private AccessReviewSet _accessReviews;
+    private AccessReviewSet accessReviews;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The appConsent property */
-    private AppConsentApprovalRoute _appConsent;
+    private AppConsentApprovalRoute appConsent;
     /** The entitlementManagement property */
-    private EntitlementManagement _entitlementManagement;
+    private EntitlementManagement entitlementManagement;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The termsOfUse property */
-    private TermsOfUseContainer _termsOfUse;
+    private TermsOfUseContainer termsOfUse;
     /**
      * Instantiates a new IdentityGovernance and sets the default values.
      * @return a void
@@ -45,7 +44,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public AccessReviewSet getAccessReviews() {
-        return this._accessReviews;
+        return this.accessReviews;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -53,7 +52,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the appConsent property value. The appConsent property
@@ -61,7 +60,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public AppConsentApprovalRoute getAppConsent() {
-        return this._appConsent;
+        return this.appConsent;
     }
     /**
      * Gets the entitlementManagement property value. The entitlementManagement property
@@ -69,15 +68,15 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public EntitlementManagement getEntitlementManagement() {
-        return this._entitlementManagement;
+        return this.entitlementManagement;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("accessReviews", (n) -> { this.setAccessReviews(n.getObjectValue(AccessReviewSet::createFromDiscriminatorValue)); });
         deserializerMap.put("appConsent", (n) -> { this.setAppConsent(n.getObjectValue(AppConsentApprovalRoute::createFromDiscriminatorValue)); });
         deserializerMap.put("entitlementManagement", (n) -> { this.setEntitlementManagement(n.getObjectValue(EntitlementManagement::createFromDiscriminatorValue)); });
@@ -91,7 +90,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the termsOfUse property value. The termsOfUse property
@@ -99,7 +98,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public TermsOfUseContainer getTermsOfUse() {
-        return this._termsOfUse;
+        return this.termsOfUse;
     }
     /**
      * Serializes information the current object
@@ -123,7 +122,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAccessReviews(@javax.annotation.Nullable final AccessReviewSet value) {
-        this._accessReviews = value;
+        this.accessReviews = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -132,7 +131,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the appConsent property value. The appConsent property
@@ -141,7 +140,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppConsent(@javax.annotation.Nullable final AppConsentApprovalRoute value) {
-        this._appConsent = value;
+        this.appConsent = value;
     }
     /**
      * Sets the entitlementManagement property value. The entitlementManagement property
@@ -150,7 +149,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEntitlementManagement(@javax.annotation.Nullable final EntitlementManagement value) {
-        this._entitlementManagement = value;
+        this.entitlementManagement = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -159,7 +158,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the termsOfUse property value. The termsOfUse property
@@ -168,6 +167,6 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTermsOfUse(@javax.annotation.Nullable final TermsOfUseContainer value) {
-        this._termsOfUse = value;
+        this.termsOfUse = value;
     }
 }

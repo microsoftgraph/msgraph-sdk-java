@@ -4,49 +4,48 @@ import com.microsoft.graph.models.termstore.Store;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Site extends BaseItem implements Parsable {
     /** Analytics about the view activities that took place in this site. */
-    private ItemAnalytics _analytics;
+    private ItemAnalytics analytics;
     /** The collection of column definitions reusable across lists under this site. */
-    private java.util.List<ColumnDefinition> _columns;
+    private java.util.List<ColumnDefinition> columns;
     /** The collection of content types defined for this site. */
-    private java.util.List<ContentType> _contentTypes;
+    private java.util.List<ContentType> contentTypes;
     /** The full title for the site. Read-only. */
-    private String _displayName;
+    private String displayName;
     /** The default drive (document library) for this site. */
-    private Drive _drive;
+    private Drive drive;
     /** The collection of drives (document libraries) under this site. */
-    private java.util.List<Drive> _drives;
+    private java.util.List<Drive> drives;
     /** The error property */
-    private PublicError _error;
+    private PublicError error;
     /** The externalColumns property */
-    private java.util.List<ColumnDefinition> _externalColumns;
+    private java.util.List<ColumnDefinition> externalColumns;
     /** Used to address any item contained in this site. This collection can't be enumerated. */
-    private java.util.List<BaseItem> _items;
+    private java.util.List<BaseItem> items;
     /** The collection of lists under this site. */
-    private java.util.List<List> _lists;
+    private java.util.List<List> lists;
     /** Calls the OneNote service for notebook related operations. */
-    private Onenote _onenote;
+    private Onenote onenote;
     /** The collection of long-running operations on the site. */
-    private java.util.List<RichLongRunningOperation> _operations;
+    private java.util.List<RichLongRunningOperation> operations;
     /** The permissions associated with the site. Nullable. */
-    private java.util.List<Permission> _permissions;
+    private java.util.List<Permission> permissions;
     /** If present, indicates that this is the root site in the site collection. Read-only. */
-    private Root _root;
+    private Root root;
     /** Returns identifiers useful for SharePoint REST compatibility. Read-only. */
-    private SharepointIds _sharepointIds;
+    private SharepointIds sharepointIds;
     /** Provides details about the site's site collection. Available only on the root site. Read-only. */
-    private SiteCollection _siteCollection;
+    private SiteCollection siteCollection;
     /** The collection of the sub-sites under this site. */
-    private java.util.List<Site> _sites;
+    private java.util.List<Site> sites;
     /** The default termStore under this site. */
-    private Store _termStore;
+    private Store termStore;
     /** The collection of termStores under this site. */
-    private java.util.List<Store> _termStores;
+    private java.util.List<Store> termStores;
     /**
      * Instantiates a new Site and sets the default values.
      * @return a void
@@ -72,7 +71,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public ItemAnalytics getAnalytics() {
-        return this._analytics;
+        return this.analytics;
     }
     /**
      * Gets the columns property value. The collection of column definitions reusable across lists under this site.
@@ -80,7 +79,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ColumnDefinition> getColumns() {
-        return this._columns;
+        return this.columns;
     }
     /**
      * Gets the contentTypes property value. The collection of content types defined for this site.
@@ -88,7 +87,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ContentType> getContentTypes() {
-        return this._contentTypes;
+        return this.contentTypes;
     }
     /**
      * Gets the displayName property value. The full title for the site. Read-only.
@@ -96,7 +95,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the drive property value. The default drive (document library) for this site.
@@ -104,7 +103,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public Drive getDrive() {
-        return this._drive;
+        return this.drive;
     }
     /**
      * Gets the drives property value. The collection of drives (document libraries) under this site.
@@ -112,7 +111,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Drive> getDrives() {
-        return this._drives;
+        return this.drives;
     }
     /**
      * Gets the error property value. The error property
@@ -120,7 +119,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public PublicError getError() {
-        return this._error;
+        return this.error;
     }
     /**
      * Gets the externalColumns property value. The externalColumns property
@@ -128,15 +127,15 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ColumnDefinition> getExternalColumns() {
-        return this._externalColumns;
+        return this.externalColumns;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("analytics", (n) -> { this.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
         deserializerMap.put("columns", (n) -> { this.setColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("contentTypes", (n) -> { this.setContentTypes(n.getCollectionOfObjectValues(ContentType::createFromDiscriminatorValue)); });
@@ -164,7 +163,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BaseItem> getItems() {
-        return this._items;
+        return this.items;
     }
     /**
      * Gets the lists property value. The collection of lists under this site.
@@ -172,7 +171,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<List> getLists() {
-        return this._lists;
+        return this.lists;
     }
     /**
      * Gets the onenote property value. Calls the OneNote service for notebook related operations.
@@ -180,7 +179,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public Onenote getOnenote() {
-        return this._onenote;
+        return this.onenote;
     }
     /**
      * Gets the operations property value. The collection of long-running operations on the site.
@@ -188,7 +187,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<RichLongRunningOperation> getOperations() {
-        return this._operations;
+        return this.operations;
     }
     /**
      * Gets the permissions property value. The permissions associated with the site. Nullable.
@@ -196,7 +195,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Permission> getPermissions() {
-        return this._permissions;
+        return this.permissions;
     }
     /**
      * Gets the root property value. If present, indicates that this is the root site in the site collection. Read-only.
@@ -204,7 +203,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public Root getRoot() {
-        return this._root;
+        return this.root;
     }
     /**
      * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
@@ -212,7 +211,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public SharepointIds getSharepointIds() {
-        return this._sharepointIds;
+        return this.sharepointIds;
     }
     /**
      * Gets the siteCollection property value. Provides details about the site's site collection. Available only on the root site. Read-only.
@@ -220,7 +219,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public SiteCollection getSiteCollection() {
-        return this._siteCollection;
+        return this.siteCollection;
     }
     /**
      * Gets the sites property value. The collection of the sub-sites under this site.
@@ -228,7 +227,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Site> getSites() {
-        return this._sites;
+        return this.sites;
     }
     /**
      * Gets the termStore property value. The default termStore under this site.
@@ -236,7 +235,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public Store getTermStore() {
-        return this._termStore;
+        return this.termStore;
     }
     /**
      * Gets the termStores property value. The collection of termStores under this site.
@@ -244,7 +243,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Store> getTermStores() {
-        return this._termStores;
+        return this.termStores;
     }
     /**
      * Serializes information the current object
@@ -282,7 +281,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAnalytics(@javax.annotation.Nullable final ItemAnalytics value) {
-        this._analytics = value;
+        this.analytics = value;
     }
     /**
      * Sets the columns property value. The collection of column definitions reusable across lists under this site.
@@ -291,7 +290,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setColumns(@javax.annotation.Nullable final java.util.List<ColumnDefinition> value) {
-        this._columns = value;
+        this.columns = value;
     }
     /**
      * Sets the contentTypes property value. The collection of content types defined for this site.
@@ -300,7 +299,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentTypes(@javax.annotation.Nullable final java.util.List<ContentType> value) {
-        this._contentTypes = value;
+        this.contentTypes = value;
     }
     /**
      * Sets the displayName property value. The full title for the site. Read-only.
@@ -309,7 +308,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the drive property value. The default drive (document library) for this site.
@@ -318,7 +317,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDrive(@javax.annotation.Nullable final Drive value) {
-        this._drive = value;
+        this.drive = value;
     }
     /**
      * Sets the drives property value. The collection of drives (document libraries) under this site.
@@ -327,7 +326,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDrives(@javax.annotation.Nullable final java.util.List<Drive> value) {
-        this._drives = value;
+        this.drives = value;
     }
     /**
      * Sets the error property value. The error property
@@ -336,7 +335,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final PublicError value) {
-        this._error = value;
+        this.error = value;
     }
     /**
      * Sets the externalColumns property value. The externalColumns property
@@ -345,7 +344,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setExternalColumns(@javax.annotation.Nullable final java.util.List<ColumnDefinition> value) {
-        this._externalColumns = value;
+        this.externalColumns = value;
     }
     /**
      * Sets the items property value. Used to address any item contained in this site. This collection can't be enumerated.
@@ -354,7 +353,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setItems(@javax.annotation.Nullable final java.util.List<BaseItem> value) {
-        this._items = value;
+        this.items = value;
     }
     /**
      * Sets the lists property value. The collection of lists under this site.
@@ -363,7 +362,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLists(@javax.annotation.Nullable final java.util.List<List> value) {
-        this._lists = value;
+        this.lists = value;
     }
     /**
      * Sets the onenote property value. Calls the OneNote service for notebook related operations.
@@ -372,7 +371,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOnenote(@javax.annotation.Nullable final Onenote value) {
-        this._onenote = value;
+        this.onenote = value;
     }
     /**
      * Sets the operations property value. The collection of long-running operations on the site.
@@ -381,7 +380,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<RichLongRunningOperation> value) {
-        this._operations = value;
+        this.operations = value;
     }
     /**
      * Sets the permissions property value. The permissions associated with the site. Nullable.
@@ -390,7 +389,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPermissions(@javax.annotation.Nullable final java.util.List<Permission> value) {
-        this._permissions = value;
+        this.permissions = value;
     }
     /**
      * Sets the root property value. If present, indicates that this is the root site in the site collection. Read-only.
@@ -399,7 +398,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRoot(@javax.annotation.Nullable final Root value) {
-        this._root = value;
+        this.root = value;
     }
     /**
      * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
@@ -408,7 +407,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSharepointIds(@javax.annotation.Nullable final SharepointIds value) {
-        this._sharepointIds = value;
+        this.sharepointIds = value;
     }
     /**
      * Sets the siteCollection property value. Provides details about the site's site collection. Available only on the root site. Read-only.
@@ -417,7 +416,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSiteCollection(@javax.annotation.Nullable final SiteCollection value) {
-        this._siteCollection = value;
+        this.siteCollection = value;
     }
     /**
      * Sets the sites property value. The collection of the sub-sites under this site.
@@ -426,7 +425,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSites(@javax.annotation.Nullable final java.util.List<Site> value) {
-        this._sites = value;
+        this.sites = value;
     }
     /**
      * Sets the termStore property value. The default termStore under this site.
@@ -435,7 +434,7 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTermStore(@javax.annotation.Nullable final Store value) {
-        this._termStore = value;
+        this.termStore = value;
     }
     /**
      * Sets the termStores property value. The collection of termStores under this site.
@@ -444,6 +443,6 @@ public class Site extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTermStores(@javax.annotation.Nullable final java.util.List<Store> value) {
-        this._termStores = value;
+        this.termStores = value;
     }
 }

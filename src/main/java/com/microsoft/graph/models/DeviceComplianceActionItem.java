@@ -3,20 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Scheduled Action Configuration */
+/**
+ * Scheduled Action Configuration
+ */
 public class DeviceComplianceActionItem extends Entity implements Parsable {
     /** Scheduled Action Type Enum */
-    private DeviceComplianceActionType _actionType;
+    private DeviceComplianceActionType actionType;
     /** Number of hours to wait till the action will be enforced. Valid values 0 to 8760 */
-    private Integer _gracePeriodHours;
+    private Integer gracePeriodHours;
     /** A list of group IDs to speicify who to CC this notification message to. */
-    private java.util.List<String> _notificationMessageCCList;
+    private java.util.List<String> notificationMessageCCList;
     /** What notification Message template to use */
-    private String _notificationTemplateId;
+    private String notificationTemplateId;
     /**
      * Instantiates a new deviceComplianceActionItem and sets the default values.
      * @return a void
@@ -41,15 +42,15 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceComplianceActionType getActionType() {
-        return this._actionType;
+        return this.actionType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("actionType", (n) -> { this.setActionType(n.getEnumValue(DeviceComplianceActionType.class)); });
         deserializerMap.put("gracePeriodHours", (n) -> { this.setGracePeriodHours(n.getIntegerValue()); });
         deserializerMap.put("notificationMessageCCList", (n) -> { this.setNotificationMessageCCList(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -62,7 +63,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getGracePeriodHours() {
-        return this._gracePeriodHours;
+        return this.gracePeriodHours;
     }
     /**
      * Gets the notificationMessageCCList property value. A list of group IDs to speicify who to CC this notification message to.
@@ -70,7 +71,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getNotificationMessageCCList() {
-        return this._notificationMessageCCList;
+        return this.notificationMessageCCList;
     }
     /**
      * Gets the notificationTemplateId property value. What notification Message template to use
@@ -78,7 +79,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getNotificationTemplateId() {
-        return this._notificationTemplateId;
+        return this.notificationTemplateId;
     }
     /**
      * Serializes information the current object
@@ -101,7 +102,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setActionType(@javax.annotation.Nullable final DeviceComplianceActionType value) {
-        this._actionType = value;
+        this.actionType = value;
     }
     /**
      * Sets the gracePeriodHours property value. Number of hours to wait till the action will be enforced. Valid values 0 to 8760
@@ -110,7 +111,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setGracePeriodHours(@javax.annotation.Nullable final Integer value) {
-        this._gracePeriodHours = value;
+        this.gracePeriodHours = value;
     }
     /**
      * Sets the notificationMessageCCList property value. A list of group IDs to speicify who to CC this notification message to.
@@ -119,7 +120,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setNotificationMessageCCList(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._notificationMessageCCList = value;
+        this.notificationMessageCCList = value;
     }
     /**
      * Sets the notificationTemplateId property value. What notification Message template to use
@@ -128,6 +129,6 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setNotificationTemplateId(@javax.annotation.Nullable final String value) {
-        this._notificationTemplateId = value;
+        this.notificationTemplateId = value;
     }
 }

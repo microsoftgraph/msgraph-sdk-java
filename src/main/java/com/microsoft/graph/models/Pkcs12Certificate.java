@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Parsable {
     /** The password for the pfx file. Required. If no password is used, you must still provide a value of ''. */
-    private String _password;
+    private String password;
     /** Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required. */
-    private String _pkcs12Value;
+    private String pkcs12Value;
     /**
      * Instantiates a new Pkcs12Certificate and sets the default values.
      * @return a void
@@ -33,11 +32,11 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("password", (n) -> { this.setPassword(n.getStringValue()); });
         deserializerMap.put("pkcs12Value", (n) -> { this.setPkcs12Value(n.getStringValue()); });
         return deserializerMap;
@@ -48,7 +47,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
      */
     @javax.annotation.Nullable
     public String getPassword() {
-        return this._password;
+        return this.password;
     }
     /**
      * Gets the pkcs12Value property value. Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
@@ -56,7 +55,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
      */
     @javax.annotation.Nullable
     public String getPkcs12Value() {
-        return this._pkcs12Value;
+        return this.pkcs12Value;
     }
     /**
      * Serializes information the current object
@@ -77,7 +76,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
      */
     @javax.annotation.Nonnull
     public void setPassword(@javax.annotation.Nullable final String value) {
-        this._password = value;
+        this.password = value;
     }
     /**
      * Sets the pkcs12Value property value. Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
@@ -86,6 +85,6 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
      */
     @javax.annotation.Nonnull
     public void setPkcs12Value(@javax.annotation.Nullable final String value) {
-        this._pkcs12Value = value;
+        this.pkcs12Value = value;
     }
 }

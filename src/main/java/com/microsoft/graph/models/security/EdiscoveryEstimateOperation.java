@@ -3,27 +3,26 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoveryEstimateOperation extends CaseOperation implements Parsable {
     /** The estimated count of items for the search that matched the content query. */
-    private Long _indexedItemCount;
+    private Long indexedItemCount;
     /** The estimated size of items for the search that matched the content query. */
-    private Long _indexedItemsSize;
+    private Long indexedItemsSize;
     /** The number of mailboxes that had search hits. */
-    private Integer _mailboxCount;
+    private Integer mailboxCount;
     /** eDiscovery search. */
-    private EdiscoverySearch _search;
+    private EdiscoverySearch search;
     /** The number of mailboxes that had search hits. */
-    private Integer _siteCount;
+    private Integer siteCount;
     /** The estimated count of unindexed items for the collection. */
-    private Long _unindexedItemCount;
+    private Long unindexedItemCount;
     /** The estimated size of unindexed items for the collection. */
-    private Long _unindexedItemsSize;
+    private Long unindexedItemsSize;
     /**
-     * Instantiates a new ediscoveryEstimateOperation and sets the default values.
+     * Instantiates a new EdiscoveryEstimateOperation and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -33,7 +32,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ediscoveryEstimateOperation
+     * @return a EdiscoveryEstimateOperation
      */
     @javax.annotation.Nonnull
     public static EdiscoveryEstimateOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +41,11 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("indexedItemCount", (n) -> { this.setIndexedItemCount(n.getLongValue()); });
         deserializerMap.put("indexedItemsSize", (n) -> { this.setIndexedItemsSize(n.getLongValue()); });
         deserializerMap.put("mailboxCount", (n) -> { this.setMailboxCount(n.getIntegerValue()); });
@@ -62,7 +61,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      */
     @javax.annotation.Nullable
     public Long getIndexedItemCount() {
-        return this._indexedItemCount;
+        return this.indexedItemCount;
     }
     /**
      * Gets the indexedItemsSize property value. The estimated size of items for the search that matched the content query.
@@ -70,7 +69,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      */
     @javax.annotation.Nullable
     public Long getIndexedItemsSize() {
-        return this._indexedItemsSize;
+        return this.indexedItemsSize;
     }
     /**
      * Gets the mailboxCount property value. The number of mailboxes that had search hits.
@@ -78,7 +77,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      */
     @javax.annotation.Nullable
     public Integer getMailboxCount() {
-        return this._mailboxCount;
+        return this.mailboxCount;
     }
     /**
      * Gets the search property value. eDiscovery search.
@@ -86,7 +85,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      */
     @javax.annotation.Nullable
     public EdiscoverySearch getSearch() {
-        return this._search;
+        return this.search;
     }
     /**
      * Gets the siteCount property value. The number of mailboxes that had search hits.
@@ -94,7 +93,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      */
     @javax.annotation.Nullable
     public Integer getSiteCount() {
-        return this._siteCount;
+        return this.siteCount;
     }
     /**
      * Gets the unindexedItemCount property value. The estimated count of unindexed items for the collection.
@@ -102,7 +101,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      */
     @javax.annotation.Nullable
     public Long getUnindexedItemCount() {
-        return this._unindexedItemCount;
+        return this.unindexedItemCount;
     }
     /**
      * Gets the unindexedItemsSize property value. The estimated size of unindexed items for the collection.
@@ -110,7 +109,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      */
     @javax.annotation.Nullable
     public Long getUnindexedItemsSize() {
-        return this._unindexedItemsSize;
+        return this.unindexedItemsSize;
     }
     /**
      * Serializes information the current object
@@ -136,7 +135,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      */
     @javax.annotation.Nonnull
     public void setIndexedItemCount(@javax.annotation.Nullable final Long value) {
-        this._indexedItemCount = value;
+        this.indexedItemCount = value;
     }
     /**
      * Sets the indexedItemsSize property value. The estimated size of items for the search that matched the content query.
@@ -145,7 +144,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      */
     @javax.annotation.Nonnull
     public void setIndexedItemsSize(@javax.annotation.Nullable final Long value) {
-        this._indexedItemsSize = value;
+        this.indexedItemsSize = value;
     }
     /**
      * Sets the mailboxCount property value. The number of mailboxes that had search hits.
@@ -154,7 +153,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      */
     @javax.annotation.Nonnull
     public void setMailboxCount(@javax.annotation.Nullable final Integer value) {
-        this._mailboxCount = value;
+        this.mailboxCount = value;
     }
     /**
      * Sets the search property value. eDiscovery search.
@@ -163,7 +162,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      */
     @javax.annotation.Nonnull
     public void setSearch(@javax.annotation.Nullable final EdiscoverySearch value) {
-        this._search = value;
+        this.search = value;
     }
     /**
      * Sets the siteCount property value. The number of mailboxes that had search hits.
@@ -172,7 +171,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      */
     @javax.annotation.Nonnull
     public void setSiteCount(@javax.annotation.Nullable final Integer value) {
-        this._siteCount = value;
+        this.siteCount = value;
     }
     /**
      * Sets the unindexedItemCount property value. The estimated count of unindexed items for the collection.
@@ -181,7 +180,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      */
     @javax.annotation.Nonnull
     public void setUnindexedItemCount(@javax.annotation.Nullable final Long value) {
-        this._unindexedItemCount = value;
+        this.unindexedItemCount = value;
     }
     /**
      * Sets the unindexedItemsSize property value. The estimated size of unindexed items for the collection.
@@ -190,6 +189,6 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      */
     @javax.annotation.Nonnull
     public void setUnindexedItemsSize(@javax.annotation.Nullable final Long value) {
-        this._unindexedItemsSize = value;
+        this.unindexedItemsSize = value;
     }
 }

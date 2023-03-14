@@ -3,19 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartTitle extends Entity implements Parsable {
     /** Represents the formatting of a chart title, which includes fill and font formatting. Read-only. */
-    private WorkbookChartTitleFormat _format;
+    private WorkbookChartTitleFormat format;
     /** Boolean value representing if the chart title will overlay the chart or not. */
-    private Boolean _overlay;
+    private Boolean overlay;
     /** Represents the title text of a chart. */
-    private String _text;
+    private String text;
     /** A boolean value the represents the visibility of a chart title object. */
-    private Boolean _visible;
+    private Boolean visible;
     /**
      * Instantiates a new workbookChartTitle and sets the default values.
      * @return a void
@@ -36,11 +35,11 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartTitleFormat::createFromDiscriminatorValue)); });
         deserializerMap.put("overlay", (n) -> { this.setOverlay(n.getBooleanValue()); });
         deserializerMap.put("text", (n) -> { this.setText(n.getStringValue()); });
@@ -53,7 +52,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartTitleFormat getFormat() {
-        return this._format;
+        return this.format;
     }
     /**
      * Gets the overlay property value. Boolean value representing if the chart title will overlay the chart or not.
@@ -61,7 +60,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getOverlay() {
-        return this._overlay;
+        return this.overlay;
     }
     /**
      * Gets the text property value. Represents the title text of a chart.
@@ -69,7 +68,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getText() {
-        return this._text;
+        return this.text;
     }
     /**
      * Gets the visible property value. A boolean value the represents the visibility of a chart title object.
@@ -77,7 +76,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getVisible() {
-        return this._visible;
+        return this.visible;
     }
     /**
      * Serializes information the current object
@@ -100,7 +99,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final WorkbookChartTitleFormat value) {
-        this._format = value;
+        this.format = value;
     }
     /**
      * Sets the overlay property value. Boolean value representing if the chart title will overlay the chart or not.
@@ -109,7 +108,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOverlay(@javax.annotation.Nullable final Boolean value) {
-        this._overlay = value;
+        this.overlay = value;
     }
     /**
      * Sets the text property value. Represents the title text of a chart.
@@ -118,7 +117,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final String value) {
-        this._text = value;
+        this.text = value;
     }
     /**
      * Sets the visible property value. A boolean value the represents the visibility of a chart title object.
@@ -127,6 +126,6 @@ public class WorkbookChartTitle extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVisible(@javax.annotation.Nullable final Boolean value) {
-        this._visible = value;
+        this.visible = value;
     }
 }

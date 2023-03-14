@@ -5,19 +5,18 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ResponseStatus implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The response type. Possible values are: none, organizer, tentativelyAccepted, accepted, declined, notResponded.To differentiate between none and notResponded:  none  from organizer's perspective. This value is used when the status of an attendee/participant is reported to the organizer of a meeting.  notResponded  from attendee's perspective. Indicates the attendee has not responded to the meeting request.  Clients can treat notResponded == none.  As an example, if attendee Alex hasn't responded to a meeting request, getting Alex' response status for that event in Alex' calendar returns notResponded. Getting Alex' response from the calendar of any other attendee or the organizer's returns none. Getting the organizer's response for the event in anybody's calendar also returns none. */
-    private ResponseType _response;
+    private ResponseType response;
     /** The date and time when the response was returned. It uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _time;
+    private OffsetDateTime time;
     /**
      * Instantiates a new responseStatus and sets the default values.
      * @return a void
@@ -42,15 +41,15 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("response", (n) -> { this.setResponse(n.getEnumValue(ResponseType.class)); });
         deserializerMap.put("time", (n) -> { this.setTime(n.getOffsetDateTimeValue()); });
@@ -62,7 +61,7 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the response property value. The response type. Possible values are: none, organizer, tentativelyAccepted, accepted, declined, notResponded.To differentiate between none and notResponded:  none  from organizer's perspective. This value is used when the status of an attendee/participant is reported to the organizer of a meeting.  notResponded  from attendee's perspective. Indicates the attendee has not responded to the meeting request.  Clients can treat notResponded == none.  As an example, if attendee Alex hasn't responded to a meeting request, getting Alex' response status for that event in Alex' calendar returns notResponded. Getting Alex' response from the calendar of any other attendee or the organizer's returns none. Getting the organizer's response for the event in anybody's calendar also returns none.
@@ -70,7 +69,7 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ResponseType getResponse() {
-        return this._response;
+        return this.response;
     }
     /**
      * Gets the time property value. The date and time when the response was returned. It uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -78,7 +77,7 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getTime() {
-        return this._time;
+        return this.time;
     }
     /**
      * Serializes information the current object
@@ -100,7 +99,7 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -109,7 +108,7 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the response property value. The response type. Possible values are: none, organizer, tentativelyAccepted, accepted, declined, notResponded.To differentiate between none and notResponded:  none  from organizer's perspective. This value is used when the status of an attendee/participant is reported to the organizer of a meeting.  notResponded  from attendee's perspective. Indicates the attendee has not responded to the meeting request.  Clients can treat notResponded == none.  As an example, if attendee Alex hasn't responded to a meeting request, getting Alex' response status for that event in Alex' calendar returns notResponded. Getting Alex' response from the calendar of any other attendee or the organizer's returns none. Getting the organizer's response for the event in anybody's calendar also returns none.
@@ -118,7 +117,7 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setResponse(@javax.annotation.Nullable final ResponseType value) {
-        this._response = value;
+        this.response = value;
     }
     /**
      * Sets the time property value. The date and time when the response was returned. It uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -127,6 +126,6 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._time = value;
+        this.time = value;
     }
 }

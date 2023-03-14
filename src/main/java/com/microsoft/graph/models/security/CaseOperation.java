@@ -3,35 +3,28 @@ package com.microsoft.graph.models.security;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.ResultInfo;
-import com.microsoft.graph.models.security.EdiscoveryAddToReviewSetOperation;
-import com.microsoft.graph.models.security.EdiscoveryEstimateOperation;
-import com.microsoft.graph.models.security.EdiscoveryHoldOperation;
-import com.microsoft.graph.models.security.EdiscoveryIndexOperation;
-import com.microsoft.graph.models.security.EdiscoveryPurgeDataOperation;
-import com.microsoft.graph.models.security.EdiscoveryTagOperation;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CaseOperation extends Entity implements Parsable {
     /** The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData */
-    private CaseAction _action;
+    private CaseAction action;
     /** The date and time the operation was completed. */
-    private OffsetDateTime _completedDateTime;
+    private OffsetDateTime completedDateTime;
     /** The user that created the operation. */
-    private IdentitySet _createdBy;
+    private IdentitySet createdBy;
     /** The date and time the operation was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The progress of the operation. */
-    private Integer _percentProgress;
+    private Integer percentProgress;
     /** Contains success and failure-specific result information. */
-    private ResultInfo _resultInfo;
+    private ResultInfo resultInfo;
     /** The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed. */
-    private CaseOperationStatus _status;
+    private CaseOperationStatus status;
     /**
      * Instantiates a new caseOperation and sets the default values.
      * @return a void
@@ -68,7 +61,7 @@ public class CaseOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CaseAction getAction() {
-        return this._action;
+        return this.action;
     }
     /**
      * Gets the completedDateTime property value. The date and time the operation was completed.
@@ -76,7 +69,7 @@ public class CaseOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
-        return this._completedDateTime;
+        return this.completedDateTime;
     }
     /**
      * Gets the createdBy property value. The user that created the operation.
@@ -84,7 +77,7 @@ public class CaseOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdDateTime property value. The date and time the operation was created.
@@ -92,15 +85,15 @@ public class CaseOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(CaseAction.class)); });
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -116,7 +109,7 @@ public class CaseOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getPercentProgress() {
-        return this._percentProgress;
+        return this.percentProgress;
     }
     /**
      * Gets the resultInfo property value. Contains success and failure-specific result information.
@@ -124,7 +117,7 @@ public class CaseOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ResultInfo getResultInfo() {
-        return this._resultInfo;
+        return this.resultInfo;
     }
     /**
      * Gets the status property value. The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed.
@@ -132,7 +125,7 @@ public class CaseOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CaseOperationStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
@@ -158,7 +151,7 @@ public class CaseOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAction(@javax.annotation.Nullable final CaseAction value) {
-        this._action = value;
+        this.action = value;
     }
     /**
      * Sets the completedDateTime property value. The date and time the operation was completed.
@@ -167,7 +160,7 @@ public class CaseOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._completedDateTime = value;
+        this.completedDateTime = value;
     }
     /**
      * Sets the createdBy property value. The user that created the operation.
@@ -176,7 +169,7 @@ public class CaseOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time the operation was created.
@@ -185,7 +178,7 @@ public class CaseOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the percentProgress property value. The progress of the operation.
@@ -194,7 +187,7 @@ public class CaseOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPercentProgress(@javax.annotation.Nullable final Integer value) {
-        this._percentProgress = value;
+        this.percentProgress = value;
     }
     /**
      * Sets the resultInfo property value. Contains success and failure-specific result information.
@@ -203,7 +196,7 @@ public class CaseOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setResultInfo(@javax.annotation.Nullable final ResultInfo value) {
-        this._resultInfo = value;
+        this.resultInfo = value;
     }
     /**
      * Sets the status property value. The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed.
@@ -212,6 +205,6 @@ public class CaseOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final CaseOperationStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }

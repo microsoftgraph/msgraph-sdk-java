@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserIdentity extends Identity implements Parsable {
     /** Indicates the client IP address used by user performing the activity (audit log only). */
-    private String _ipAddress;
+    private String ipAddress;
     /** The userPrincipalName attribute of the user. */
-    private String _userPrincipalName;
+    private String userPrincipalName;
     /**
      * Instantiates a new UserIdentity and sets the default values.
      * @return a void
@@ -33,11 +32,11 @@ public class UserIdentity extends Identity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
@@ -48,7 +47,7 @@ public class UserIdentity extends Identity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getIpAddress() {
-        return this._ipAddress;
+        return this.ipAddress;
     }
     /**
      * Gets the userPrincipalName property value. The userPrincipalName attribute of the user.
@@ -56,7 +55,7 @@ public class UserIdentity extends Identity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
@@ -77,7 +76,7 @@ public class UserIdentity extends Identity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
-        this._ipAddress = value;
+        this.ipAddress = value;
     }
     /**
      * Sets the userPrincipalName property value. The userPrincipalName attribute of the user.
@@ -86,6 +85,6 @@ public class UserIdentity extends Identity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

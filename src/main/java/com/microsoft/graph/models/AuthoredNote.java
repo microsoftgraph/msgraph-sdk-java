@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthoredNote extends Entity implements Parsable {
     /** Identity information about the note's author. */
-    private Identity _author;
+    private Identity author;
     /** The content of the note. */
-    private ItemBody _content;
+    private ItemBody content;
     /** The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /**
-     * Instantiates a new AuthoredNote and sets the default values.
+     * Instantiates a new authoredNote and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -26,7 +25,7 @@ public class AuthoredNote extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthoredNote
+     * @return a authoredNote
      */
     @javax.annotation.Nonnull
     public static AuthoredNote createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +38,7 @@ public class AuthoredNote extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Identity getAuthor() {
-        return this._author;
+        return this.author;
     }
     /**
      * Gets the content property value. The content of the note.
@@ -47,7 +46,7 @@ public class AuthoredNote extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ItemBody getContent() {
-        return this._content;
+        return this.content;
     }
     /**
      * Gets the createdDateTime property value. The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -55,15 +54,15 @@ public class AuthoredNote extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("author", (n) -> { this.setAuthor(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -89,7 +88,7 @@ public class AuthoredNote extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAuthor(@javax.annotation.Nullable final Identity value) {
-        this._author = value;
+        this.author = value;
     }
     /**
      * Sets the content property value. The content of the note.
@@ -98,7 +97,7 @@ public class AuthoredNote extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final ItemBody value) {
-        this._content = value;
+        this.content = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -107,6 +106,6 @@ public class AuthoredNote extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
 }

@@ -3,23 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EventMessageRequest extends EventMessage implements Parsable {
     /** True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true. */
-    private Boolean _allowNewTimeProposals;
+    private Boolean allowNewTimeProposals;
     /** The meetingRequestType property */
-    private MeetingRequestType _meetingRequestType;
+    private MeetingRequestType meetingRequestType;
     /** If the meeting update changes the meeting end time, this property specifies the previous meeting end time. */
-    private DateTimeTimeZone _previousEndDateTime;
+    private DateTimeTimeZone previousEndDateTime;
     /** If the meeting update changes the meeting location, this property specifies the previous meeting location. */
-    private Location _previousLocation;
+    private Location previousLocation;
     /** If the meeting update changes the meeting start time, this property specifies the previous meeting start time. */
-    private DateTimeTimeZone _previousStartDateTime;
+    private DateTimeTimeZone previousStartDateTime;
     /** Set to true if the sender would like the invitee to send a response to the requested meeting. */
-    private Boolean _responseRequested;
+    private Boolean responseRequested;
     /**
      * Instantiates a new EventMessageRequest and sets the default values.
      * @return a void
@@ -45,15 +44,15 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAllowNewTimeProposals() {
-        return this._allowNewTimeProposals;
+        return this.allowNewTimeProposals;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowNewTimeProposals", (n) -> { this.setAllowNewTimeProposals(n.getBooleanValue()); });
         deserializerMap.put("meetingRequestType", (n) -> { this.setMeetingRequestType(n.getEnumValue(MeetingRequestType.class)); });
         deserializerMap.put("previousEndDateTime", (n) -> { this.setPreviousEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
@@ -68,7 +67,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      */
     @javax.annotation.Nullable
     public MeetingRequestType getMeetingRequestType() {
-        return this._meetingRequestType;
+        return this.meetingRequestType;
     }
     /**
      * Gets the previousEndDateTime property value. If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
@@ -76,7 +75,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getPreviousEndDateTime() {
-        return this._previousEndDateTime;
+        return this.previousEndDateTime;
     }
     /**
      * Gets the previousLocation property value. If the meeting update changes the meeting location, this property specifies the previous meeting location.
@@ -84,7 +83,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      */
     @javax.annotation.Nullable
     public Location getPreviousLocation() {
-        return this._previousLocation;
+        return this.previousLocation;
     }
     /**
      * Gets the previousStartDateTime property value. If the meeting update changes the meeting start time, this property specifies the previous meeting start time.
@@ -92,7 +91,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getPreviousStartDateTime() {
-        return this._previousStartDateTime;
+        return this.previousStartDateTime;
     }
     /**
      * Gets the responseRequested property value. Set to true if the sender would like the invitee to send a response to the requested meeting.
@@ -100,7 +99,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getResponseRequested() {
-        return this._responseRequested;
+        return this.responseRequested;
     }
     /**
      * Serializes information the current object
@@ -125,7 +124,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowNewTimeProposals(@javax.annotation.Nullable final Boolean value) {
-        this._allowNewTimeProposals = value;
+        this.allowNewTimeProposals = value;
     }
     /**
      * Sets the meetingRequestType property value. The meetingRequestType property
@@ -134,7 +133,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMeetingRequestType(@javax.annotation.Nullable final MeetingRequestType value) {
-        this._meetingRequestType = value;
+        this.meetingRequestType = value;
     }
     /**
      * Sets the previousEndDateTime property value. If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
@@ -143,7 +142,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPreviousEndDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
-        this._previousEndDateTime = value;
+        this.previousEndDateTime = value;
     }
     /**
      * Sets the previousLocation property value. If the meeting update changes the meeting location, this property specifies the previous meeting location.
@@ -152,7 +151,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPreviousLocation(@javax.annotation.Nullable final Location value) {
-        this._previousLocation = value;
+        this.previousLocation = value;
     }
     /**
      * Sets the previousStartDateTime property value. If the meeting update changes the meeting start time, this property specifies the previous meeting start time.
@@ -161,7 +160,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPreviousStartDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
-        this._previousStartDateTime = value;
+        this.previousStartDateTime = value;
     }
     /**
      * Sets the responseRequested property value. Set to true if the sender would like the invitee to send a response to the requested meeting.
@@ -170,6 +169,6 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setResponseRequested(@javax.annotation.Nullable final Boolean value) {
-        this._responseRequested = value;
+        this.responseRequested = value;
     }
 }

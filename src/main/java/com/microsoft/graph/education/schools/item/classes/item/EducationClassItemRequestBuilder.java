@@ -4,7 +4,9 @@ import com.microsoft.graph.education.schools.item.classes.item.ref.RefRequestBui
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-/** Builds and executes requests for operations under /education/schools/{educationSchool-id}/classes/{educationClass-id} */
+/**
+ * Builds and executes requests for operations under /education/schools/{educationSchool-id}/classes/{educationClass-id}
+ */
 public class EducationClassItemRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;

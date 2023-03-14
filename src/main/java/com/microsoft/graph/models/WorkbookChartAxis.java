@@ -3,27 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartAxis extends Entity implements Parsable {
     /** Represents the formatting of a chart object, which includes line and font formatting. Read-only. */
-    private WorkbookChartAxisFormat _format;
+    private WorkbookChartAxisFormat format;
     /** Returns a gridlines object that represents the major gridlines for the specified axis. Read-only. */
-    private WorkbookChartGridlines _majorGridlines;
+    private WorkbookChartGridlines majorGridlines;
     /** Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number. */
-    private Json _majorUnit;
+    private Json majorUnit;
     /** Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number. */
-    private Json _maximum;
+    private Json maximum;
     /** Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number. */
-    private Json _minimum;
+    private Json minimum;
     /** Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only. */
-    private WorkbookChartGridlines _minorGridlines;
+    private WorkbookChartGridlines minorGridlines;
     /** Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number. */
-    private Json _minorUnit;
+    private Json minorUnit;
     /** Represents the axis title. Read-only. */
-    private WorkbookChartAxisTitle _title;
+    private WorkbookChartAxisTitle title;
     /**
      * Instantiates a new workbookChartAxis and sets the default values.
      * @return a void
@@ -44,11 +43,11 @@ public class WorkbookChartAxis extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartAxisFormat::createFromDiscriminatorValue)); });
         deserializerMap.put("majorGridlines", (n) -> { this.setMajorGridlines(n.getObjectValue(WorkbookChartGridlines::createFromDiscriminatorValue)); });
         deserializerMap.put("majorUnit", (n) -> { this.setMajorUnit(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -65,7 +64,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartAxisFormat getFormat() {
-        return this._format;
+        return this.format;
     }
     /**
      * Gets the majorGridlines property value. Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
@@ -73,7 +72,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartGridlines getMajorGridlines() {
-        return this._majorGridlines;
+        return this.majorGridlines;
     }
     /**
      * Gets the majorUnit property value. Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
@@ -81,7 +80,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Json getMajorUnit() {
-        return this._majorUnit;
+        return this.majorUnit;
     }
     /**
      * Gets the maximum property value. Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
@@ -89,7 +88,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Json getMaximum() {
-        return this._maximum;
+        return this.maximum;
     }
     /**
      * Gets the minimum property value. Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
@@ -97,7 +96,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Json getMinimum() {
-        return this._minimum;
+        return this.minimum;
     }
     /**
      * Gets the minorGridlines property value. Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
@@ -105,7 +104,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartGridlines getMinorGridlines() {
-        return this._minorGridlines;
+        return this.minorGridlines;
     }
     /**
      * Gets the minorUnit property value. Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
@@ -113,7 +112,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Json getMinorUnit() {
-        return this._minorUnit;
+        return this.minorUnit;
     }
     /**
      * Gets the title property value. Represents the axis title. Read-only.
@@ -121,7 +120,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartAxisTitle getTitle() {
-        return this._title;
+        return this.title;
     }
     /**
      * Serializes information the current object
@@ -148,7 +147,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final WorkbookChartAxisFormat value) {
-        this._format = value;
+        this.format = value;
     }
     /**
      * Sets the majorGridlines property value. Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
@@ -157,7 +156,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMajorGridlines(@javax.annotation.Nullable final WorkbookChartGridlines value) {
-        this._majorGridlines = value;
+        this.majorGridlines = value;
     }
     /**
      * Sets the majorUnit property value. Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
@@ -166,7 +165,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMajorUnit(@javax.annotation.Nullable final Json value) {
-        this._majorUnit = value;
+        this.majorUnit = value;
     }
     /**
      * Sets the maximum property value. Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
@@ -175,7 +174,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMaximum(@javax.annotation.Nullable final Json value) {
-        this._maximum = value;
+        this.maximum = value;
     }
     /**
      * Sets the minimum property value. Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
@@ -184,7 +183,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMinimum(@javax.annotation.Nullable final Json value) {
-        this._minimum = value;
+        this.minimum = value;
     }
     /**
      * Sets the minorGridlines property value. Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
@@ -193,7 +192,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMinorGridlines(@javax.annotation.Nullable final WorkbookChartGridlines value) {
-        this._minorGridlines = value;
+        this.minorGridlines = value;
     }
     /**
      * Sets the minorUnit property value. Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
@@ -202,7 +201,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMinorUnit(@javax.annotation.Nullable final Json value) {
-        this._minorUnit = value;
+        this.minorUnit = value;
     }
     /**
      * Sets the title property value. Represents the axis title. Read-only.
@@ -211,6 +210,6 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final WorkbookChartAxisTitle value) {
-        this._title = value;
+        this.title = value;
     }
 }

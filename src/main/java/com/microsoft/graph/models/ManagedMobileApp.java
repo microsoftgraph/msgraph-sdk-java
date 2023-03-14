@@ -3,16 +3,17 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The identifier for the deployment an app. */
+/**
+ * The identifier for the deployment an app.
+ */
 public class ManagedMobileApp extends Entity implements Parsable {
     /** The identifier for an app with it's operating system type. */
-    private MobileAppIdentifier _mobileAppIdentifier;
+    private MobileAppIdentifier mobileAppIdentifier;
     /** Version of the entity. */
-    private String _version;
+    private String version;
     /**
      * Instantiates a new managedMobileApp and sets the default values.
      * @return a void
@@ -33,11 +34,11 @@ public class ManagedMobileApp extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("mobileAppIdentifier", (n) -> { this.setMobileAppIdentifier(n.getObjectValue(MobileAppIdentifier::createFromDiscriminatorValue)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
         return deserializerMap;
@@ -48,7 +49,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public MobileAppIdentifier getMobileAppIdentifier() {
-        return this._mobileAppIdentifier;
+        return this.mobileAppIdentifier;
     }
     /**
      * Gets the version property value. Version of the entity.
@@ -56,7 +57,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
@@ -77,7 +78,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMobileAppIdentifier(@javax.annotation.Nullable final MobileAppIdentifier value) {
-        this._mobileAppIdentifier = value;
+        this.mobileAppIdentifier = value;
     }
     /**
      * Sets the version property value. Version of the entity.
@@ -86,6 +87,6 @@ public class ManagedMobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

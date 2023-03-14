@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Auto restart required notification dismissal method */
 public enum AutoRestartNotificationDismissalMethod implements ValuedEnum {
     /** Not configured */
     NotConfigured("notConfigured"),

@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LookupColumn implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Indicates whether multiple values can be selected from the source. */
-    private Boolean _allowMultipleValues;
+    private Boolean allowMultipleValues;
     /** Indicates whether values in the column should be able to exceed the standard limit of 255 characters. */
-    private Boolean _allowUnlimitedLength;
+    private Boolean allowUnlimitedLength;
     /** The name of the lookup source column. */
-    private String _columnName;
+    private String columnName;
     /** The unique identifier of the lookup source list. */
-    private String _listId;
+    private String listId;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here. */
-    private String _primaryLookupColumnId;
+    private String primaryLookupColumnId;
     /**
      * Instantiates a new lookupColumn and sets the default values.
      * @return a void
@@ -47,7 +46,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the allowMultipleValues property value. Indicates whether multiple values can be selected from the source.
@@ -55,7 +54,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAllowMultipleValues() {
-        return this._allowMultipleValues;
+        return this.allowMultipleValues;
     }
     /**
      * Gets the allowUnlimitedLength property value. Indicates whether values in the column should be able to exceed the standard limit of 255 characters.
@@ -63,7 +62,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAllowUnlimitedLength() {
-        return this._allowUnlimitedLength;
+        return this.allowUnlimitedLength;
     }
     /**
      * Gets the columnName property value. The name of the lookup source column.
@@ -71,15 +70,15 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getColumnName() {
-        return this._columnName;
+        return this.columnName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("allowMultipleValues", (n) -> { this.setAllowMultipleValues(n.getBooleanValue()); });
         deserializerMap.put("allowUnlimitedLength", (n) -> { this.setAllowUnlimitedLength(n.getBooleanValue()); });
         deserializerMap.put("columnName", (n) -> { this.setColumnName(n.getStringValue()); });
@@ -94,7 +93,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getListId() {
-        return this._listId;
+        return this.listId;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -102,7 +101,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the primaryLookupColumnId property value. If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here.
@@ -110,7 +109,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getPrimaryLookupColumnId() {
-        return this._primaryLookupColumnId;
+        return this.primaryLookupColumnId;
     }
     /**
      * Serializes information the current object
@@ -135,7 +134,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the allowMultipleValues property value. Indicates whether multiple values can be selected from the source.
@@ -144,7 +143,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowMultipleValues(@javax.annotation.Nullable final Boolean value) {
-        this._allowMultipleValues = value;
+        this.allowMultipleValues = value;
     }
     /**
      * Sets the allowUnlimitedLength property value. Indicates whether values in the column should be able to exceed the standard limit of 255 characters.
@@ -153,7 +152,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowUnlimitedLength(@javax.annotation.Nullable final Boolean value) {
-        this._allowUnlimitedLength = value;
+        this.allowUnlimitedLength = value;
     }
     /**
      * Sets the columnName property value. The name of the lookup source column.
@@ -162,7 +161,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setColumnName(@javax.annotation.Nullable final String value) {
-        this._columnName = value;
+        this.columnName = value;
     }
     /**
      * Sets the listId property value. The unique identifier of the lookup source list.
@@ -171,7 +170,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setListId(@javax.annotation.Nullable final String value) {
-        this._listId = value;
+        this.listId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -180,7 +179,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the primaryLookupColumnId property value. If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here.
@@ -189,6 +188,6 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPrimaryLookupColumnId(@javax.annotation.Nullable final String value) {
-        this._primaryLookupColumnId = value;
+        this.primaryLookupColumnId = value;
     }
 }

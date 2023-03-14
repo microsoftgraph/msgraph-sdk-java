@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GeoCoordinates implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Optional. The altitude (height), in feet,  above sea level for the item. Read-only. */
-    private Double _altitude;
+    private Double altitude;
     /** Optional. The latitude, in decimal, for the item. Read-only. */
-    private Double _latitude;
+    private Double latitude;
     /** Optional. The longitude, in decimal, for the item. Read-only. */
-    private Double _longitude;
+    private Double longitude;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new geoCoordinates and sets the default values.
      * @return a void
@@ -43,7 +42,7 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the altitude property value. Optional. The altitude (height), in feet,  above sea level for the item. Read-only.
@@ -51,15 +50,15 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Double getAltitude() {
-        return this._altitude;
+        return this.altitude;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("altitude", (n) -> { this.setAltitude(n.getDoubleValue()); });
         deserializerMap.put("latitude", (n) -> { this.setLatitude(n.getDoubleValue()); });
         deserializerMap.put("longitude", (n) -> { this.setLongitude(n.getDoubleValue()); });
@@ -72,7 +71,7 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Double getLatitude() {
-        return this._latitude;
+        return this.latitude;
     }
     /**
      * Gets the longitude property value. Optional. The longitude, in decimal, for the item. Read-only.
@@ -80,7 +79,7 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Double getLongitude() {
-        return this._longitude;
+        return this.longitude;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +87,7 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the altitude property value. Optional. The altitude (height), in feet,  above sea level for the item. Read-only.
@@ -120,7 +119,7 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAltitude(@javax.annotation.Nullable final Double value) {
-        this._altitude = value;
+        this.altitude = value;
     }
     /**
      * Sets the latitude property value. Optional. The latitude, in decimal, for the item. Read-only.
@@ -129,7 +128,7 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLatitude(@javax.annotation.Nullable final Double value) {
-        this._latitude = value;
+        this.latitude = value;
     }
     /**
      * Sets the longitude property value. Optional. The longitude, in decimal, for the item. Read-only.
@@ -138,7 +137,7 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLongitude(@javax.annotation.Nullable final Double value) {
-        this._longitude = value;
+        this.longitude = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -147,6 +146,6 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

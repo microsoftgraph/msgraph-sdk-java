@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AadUserNotificationRecipient extends TeamworkNotificationRecipient implements Parsable {
     /** Azure AD user identifier. Use the List users method to get this ID. */
-    private String _userId;
+    private String userId;
     /**
      * Instantiates a new AadUserNotificationRecipient and sets the default values.
      * @return a void
@@ -31,11 +30,11 @@ public class AadUserNotificationRecipient extends TeamworkNotificationRecipient 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         return deserializerMap;
     }
@@ -45,7 +44,7 @@ public class AadUserNotificationRecipient extends TeamworkNotificationRecipient 
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
@@ -65,6 +64,6 @@ public class AadUserNotificationRecipient extends TeamworkNotificationRecipient 
      */
     @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }

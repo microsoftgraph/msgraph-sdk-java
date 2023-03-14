@@ -3,19 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RichLongRunningOperation extends LongRunningOperation implements Parsable {
     /** Error that caused the operation to fail. */
-    private PublicError _error;
+    private PublicError error;
     /** A value between 0 and 100 that indicates the progress of the operation. */
-    private Integer _percentageComplete;
+    private Integer percentageComplete;
     /** The unique identifier for the result. */
-    private String _resourceId;
+    private String resourceId;
     /** The type of the operation. */
-    private String _type;
+    private String type;
     /**
      * Instantiates a new RichLongRunningOperation and sets the default values.
      * @return a void
@@ -40,15 +39,15 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
      */
     @javax.annotation.Nullable
     public PublicError getError() {
-        return this._error;
+        return this.error;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
         deserializerMap.put("percentageComplete", (n) -> { this.setPercentageComplete(n.getIntegerValue()); });
         deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
@@ -61,7 +60,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
      */
     @javax.annotation.Nullable
     public Integer getPercentageComplete() {
-        return this._percentageComplete;
+        return this.percentageComplete;
     }
     /**
      * Gets the resourceId property value. The unique identifier for the result.
@@ -69,7 +68,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
      */
     @javax.annotation.Nullable
     public String getResourceId() {
-        return this._resourceId;
+        return this.resourceId;
     }
     /**
      * Gets the type property value. The type of the operation.
@@ -77,7 +76,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
      */
     @javax.annotation.Nullable
     public String getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
@@ -100,7 +99,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
      */
     @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final PublicError value) {
-        this._error = value;
+        this.error = value;
     }
     /**
      * Sets the percentageComplete property value. A value between 0 and 100 that indicates the progress of the operation.
@@ -109,7 +108,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
      */
     @javax.annotation.Nonnull
     public void setPercentageComplete(@javax.annotation.Nullable final Integer value) {
-        this._percentageComplete = value;
+        this.percentageComplete = value;
     }
     /**
      * Sets the resourceId property value. The unique identifier for the result.
@@ -118,7 +117,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
      */
     @javax.annotation.Nonnull
     public void setResourceId(@javax.annotation.Nullable final String value) {
-        this._resourceId = value;
+        this.resourceId = value;
     }
     /**
      * Sets the type property value. The type of the operation.
@@ -127,6 +126,6 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
      */
     @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+        this.type = value;
     }
 }

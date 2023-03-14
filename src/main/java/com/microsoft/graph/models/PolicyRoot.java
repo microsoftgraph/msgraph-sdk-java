@@ -3,43 +3,46 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PolicyRoot extends Entity implements Parsable {
     /** The policy that controls the idle time out for web sessions for applications. */
-    private java.util.List<ActivityBasedTimeoutPolicy> _activityBasedTimeoutPolicies;
+    private java.util.List<ActivityBasedTimeoutPolicy> activityBasedTimeoutPolicies;
     /** The policy by which consent requests are created and managed for the entire tenant. */
-    private AdminConsentRequestPolicy _adminConsentRequestPolicy;
+    private AdminConsentRequestPolicy adminConsentRequestPolicy;
+    /** The appManagementPolicies property */
+    private java.util.List<AppManagementPolicy> appManagementPolicies;
     /** The policy configuration of the self-service sign-up experience of external users. */
-    private AuthenticationFlowsPolicy _authenticationFlowsPolicy;
+    private AuthenticationFlowsPolicy authenticationFlowsPolicy;
     /** The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD). */
-    private AuthenticationMethodsPolicy _authenticationMethodsPolicy;
+    private AuthenticationMethodsPolicy authenticationMethodsPolicy;
     /** The policy that controls Azure AD authorization settings. */
-    private AuthorizationPolicy _authorizationPolicy;
+    private AuthorizationPolicy authorizationPolicy;
     /** The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application. */
-    private java.util.List<ClaimsMappingPolicy> _claimsMappingPolicies;
+    private java.util.List<ClaimsMappingPolicy> claimsMappingPolicies;
     /** The custom rules that define an access scenario. */
-    private java.util.List<ConditionalAccessPolicy> _conditionalAccessPolicies;
+    private java.util.List<ConditionalAccessPolicy> conditionalAccessPolicies;
     /** The custom rules that define an access scenario when interacting with external Azure AD tenants. */
-    private CrossTenantAccessPolicy _crossTenantAccessPolicy;
+    private CrossTenantAccessPolicy crossTenantAccessPolicy;
+    /** The defaultAppManagementPolicy property */
+    private TenantAppManagementPolicy defaultAppManagementPolicy;
     /** The feature rollout policy associated with a directory object. */
-    private java.util.List<FeatureRolloutPolicy> _featureRolloutPolicies;
+    private java.util.List<FeatureRolloutPolicy> featureRolloutPolicies;
     /** The policy to control Azure AD authentication behavior for federated users. */
-    private java.util.List<HomeRealmDiscoveryPolicy> _homeRealmDiscoveryPolicies;
+    private java.util.List<HomeRealmDiscoveryPolicy> homeRealmDiscoveryPolicies;
     /** The policy that represents the security defaults that protect against common attacks. */
-    private IdentitySecurityDefaultsEnforcementPolicy _identitySecurityDefaultsEnforcementPolicy;
+    private IdentitySecurityDefaultsEnforcementPolicy identitySecurityDefaultsEnforcementPolicy;
     /** The policy that specifies the conditions under which consent can be granted. */
-    private java.util.List<PermissionGrantPolicy> _permissionGrantPolicies;
+    private java.util.List<PermissionGrantPolicy> permissionGrantPolicies;
     /** Specifies the various policies associated with scopes and roles. */
-    private java.util.List<UnifiedRoleManagementPolicy> _roleManagementPolicies;
+    private java.util.List<UnifiedRoleManagementPolicy> roleManagementPolicies;
     /** The assignment of a role management policy to a role definition object. */
-    private java.util.List<UnifiedRoleManagementPolicyAssignment> _roleManagementPolicyAssignments;
+    private java.util.List<UnifiedRoleManagementPolicyAssignment> roleManagementPolicyAssignments;
     /** The policy that specifies the characteristics of SAML tokens issued by Azure AD. */
-    private java.util.List<TokenIssuancePolicy> _tokenIssuancePolicies;
+    private java.util.List<TokenIssuancePolicy> tokenIssuancePolicies;
     /** The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD. */
-    private java.util.List<TokenLifetimePolicy> _tokenLifetimePolicies;
+    private java.util.List<TokenLifetimePolicy> tokenLifetimePolicies;
     /**
      * Instantiates a new PolicyRoot and sets the default values.
      * @return a void
@@ -64,7 +67,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ActivityBasedTimeoutPolicy> getActivityBasedTimeoutPolicies() {
-        return this._activityBasedTimeoutPolicies;
+        return this.activityBasedTimeoutPolicies;
     }
     /**
      * Gets the adminConsentRequestPolicy property value. The policy by which consent requests are created and managed for the entire tenant.
@@ -72,7 +75,15 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AdminConsentRequestPolicy getAdminConsentRequestPolicy() {
-        return this._adminConsentRequestPolicy;
+        return this.adminConsentRequestPolicy;
+    }
+    /**
+     * Gets the appManagementPolicies property value. The appManagementPolicies property
+     * @return a appManagementPolicy
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AppManagementPolicy> getAppManagementPolicies() {
+        return this.appManagementPolicies;
     }
     /**
      * Gets the authenticationFlowsPolicy property value. The policy configuration of the self-service sign-up experience of external users.
@@ -80,7 +91,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AuthenticationFlowsPolicy getAuthenticationFlowsPolicy() {
-        return this._authenticationFlowsPolicy;
+        return this.authenticationFlowsPolicy;
     }
     /**
      * Gets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
@@ -88,7 +99,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AuthenticationMethodsPolicy getAuthenticationMethodsPolicy() {
-        return this._authenticationMethodsPolicy;
+        return this.authenticationMethodsPolicy;
     }
     /**
      * Gets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.
@@ -96,7 +107,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AuthorizationPolicy getAuthorizationPolicy() {
-        return this._authorizationPolicy;
+        return this.authorizationPolicy;
     }
     /**
      * Gets the claimsMappingPolicies property value. The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
@@ -104,7 +115,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ClaimsMappingPolicy> getClaimsMappingPolicies() {
-        return this._claimsMappingPolicies;
+        return this.claimsMappingPolicies;
     }
     /**
      * Gets the conditionalAccessPolicies property value. The custom rules that define an access scenario.
@@ -112,7 +123,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ConditionalAccessPolicy> getConditionalAccessPolicies() {
-        return this._conditionalAccessPolicies;
+        return this.conditionalAccessPolicies;
     }
     /**
      * Gets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Azure AD tenants.
@@ -120,7 +131,15 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CrossTenantAccessPolicy getCrossTenantAccessPolicy() {
-        return this._crossTenantAccessPolicy;
+        return this.crossTenantAccessPolicy;
+    }
+    /**
+     * Gets the defaultAppManagementPolicy property value. The defaultAppManagementPolicy property
+     * @return a tenantAppManagementPolicy
+     */
+    @javax.annotation.Nullable
+    public TenantAppManagementPolicy getDefaultAppManagementPolicy() {
+        return this.defaultAppManagementPolicy;
     }
     /**
      * Gets the featureRolloutPolicies property value. The feature rollout policy associated with a directory object.
@@ -128,23 +147,25 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<FeatureRolloutPolicy> getFeatureRolloutPolicies() {
-        return this._featureRolloutPolicies;
+        return this.featureRolloutPolicies;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activityBasedTimeoutPolicies", (n) -> { this.setActivityBasedTimeoutPolicies(n.getCollectionOfObjectValues(ActivityBasedTimeoutPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("adminConsentRequestPolicy", (n) -> { this.setAdminConsentRequestPolicy(n.getObjectValue(AdminConsentRequestPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("appManagementPolicies", (n) -> { this.setAppManagementPolicies(n.getCollectionOfObjectValues(AppManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationFlowsPolicy", (n) -> { this.setAuthenticationFlowsPolicy(n.getObjectValue(AuthenticationFlowsPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationMethodsPolicy", (n) -> { this.setAuthenticationMethodsPolicy(n.getObjectValue(AuthenticationMethodsPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("authorizationPolicy", (n) -> { this.setAuthorizationPolicy(n.getObjectValue(AuthorizationPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("claimsMappingPolicies", (n) -> { this.setClaimsMappingPolicies(n.getCollectionOfObjectValues(ClaimsMappingPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("conditionalAccessPolicies", (n) -> { this.setConditionalAccessPolicies(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("crossTenantAccessPolicy", (n) -> { this.setCrossTenantAccessPolicy(n.getObjectValue(CrossTenantAccessPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultAppManagementPolicy", (n) -> { this.setDefaultAppManagementPolicy(n.getObjectValue(TenantAppManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("featureRolloutPolicies", (n) -> { this.setFeatureRolloutPolicies(n.getCollectionOfObjectValues(FeatureRolloutPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("homeRealmDiscoveryPolicies", (n) -> { this.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("identitySecurityDefaultsEnforcementPolicy", (n) -> { this.setIdentitySecurityDefaultsEnforcementPolicy(n.getObjectValue(IdentitySecurityDefaultsEnforcementPolicy::createFromDiscriminatorValue)); });
@@ -161,7 +182,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<HomeRealmDiscoveryPolicy> getHomeRealmDiscoveryPolicies() {
-        return this._homeRealmDiscoveryPolicies;
+        return this.homeRealmDiscoveryPolicies;
     }
     /**
      * Gets the identitySecurityDefaultsEnforcementPolicy property value. The policy that represents the security defaults that protect against common attacks.
@@ -169,7 +190,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySecurityDefaultsEnforcementPolicy getIdentitySecurityDefaultsEnforcementPolicy() {
-        return this._identitySecurityDefaultsEnforcementPolicy;
+        return this.identitySecurityDefaultsEnforcementPolicy;
     }
     /**
      * Gets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.
@@ -177,7 +198,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PermissionGrantPolicy> getPermissionGrantPolicies() {
-        return this._permissionGrantPolicies;
+        return this.permissionGrantPolicies;
     }
     /**
      * Gets the roleManagementPolicies property value. Specifies the various policies associated with scopes and roles.
@@ -185,7 +206,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicy> getRoleManagementPolicies() {
-        return this._roleManagementPolicies;
+        return this.roleManagementPolicies;
     }
     /**
      * Gets the roleManagementPolicyAssignments property value. The assignment of a role management policy to a role definition object.
@@ -193,7 +214,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicyAssignment> getRoleManagementPolicyAssignments() {
-        return this._roleManagementPolicyAssignments;
+        return this.roleManagementPolicyAssignments;
     }
     /**
      * Gets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Azure AD.
@@ -201,7 +222,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TokenIssuancePolicy> getTokenIssuancePolicies() {
-        return this._tokenIssuancePolicies;
+        return this.tokenIssuancePolicies;
     }
     /**
      * Gets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
@@ -209,7 +230,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TokenLifetimePolicy> getTokenLifetimePolicies() {
-        return this._tokenLifetimePolicies;
+        return this.tokenLifetimePolicies;
     }
     /**
      * Serializes information the current object
@@ -222,12 +243,14 @@ public class PolicyRoot extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("activityBasedTimeoutPolicies", this.getActivityBasedTimeoutPolicies());
         writer.writeObjectValue("adminConsentRequestPolicy", this.getAdminConsentRequestPolicy());
+        writer.writeCollectionOfObjectValues("appManagementPolicies", this.getAppManagementPolicies());
         writer.writeObjectValue("authenticationFlowsPolicy", this.getAuthenticationFlowsPolicy());
         writer.writeObjectValue("authenticationMethodsPolicy", this.getAuthenticationMethodsPolicy());
         writer.writeObjectValue("authorizationPolicy", this.getAuthorizationPolicy());
         writer.writeCollectionOfObjectValues("claimsMappingPolicies", this.getClaimsMappingPolicies());
         writer.writeCollectionOfObjectValues("conditionalAccessPolicies", this.getConditionalAccessPolicies());
         writer.writeObjectValue("crossTenantAccessPolicy", this.getCrossTenantAccessPolicy());
+        writer.writeObjectValue("defaultAppManagementPolicy", this.getDefaultAppManagementPolicy());
         writer.writeCollectionOfObjectValues("featureRolloutPolicies", this.getFeatureRolloutPolicies());
         writer.writeCollectionOfObjectValues("homeRealmDiscoveryPolicies", this.getHomeRealmDiscoveryPolicies());
         writer.writeObjectValue("identitySecurityDefaultsEnforcementPolicy", this.getIdentitySecurityDefaultsEnforcementPolicy());
@@ -244,7 +267,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setActivityBasedTimeoutPolicies(@javax.annotation.Nullable final java.util.List<ActivityBasedTimeoutPolicy> value) {
-        this._activityBasedTimeoutPolicies = value;
+        this.activityBasedTimeoutPolicies = value;
     }
     /**
      * Sets the adminConsentRequestPolicy property value. The policy by which consent requests are created and managed for the entire tenant.
@@ -253,7 +276,16 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdminConsentRequestPolicy(@javax.annotation.Nullable final AdminConsentRequestPolicy value) {
-        this._adminConsentRequestPolicy = value;
+        this.adminConsentRequestPolicy = value;
+    }
+    /**
+     * Sets the appManagementPolicies property value. The appManagementPolicies property
+     * @param value Value to set for the appManagementPolicies property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAppManagementPolicies(@javax.annotation.Nullable final java.util.List<AppManagementPolicy> value) {
+        this.appManagementPolicies = value;
     }
     /**
      * Sets the authenticationFlowsPolicy property value. The policy configuration of the self-service sign-up experience of external users.
@@ -262,7 +294,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAuthenticationFlowsPolicy(@javax.annotation.Nullable final AuthenticationFlowsPolicy value) {
-        this._authenticationFlowsPolicy = value;
+        this.authenticationFlowsPolicy = value;
     }
     /**
      * Sets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
@@ -271,7 +303,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAuthenticationMethodsPolicy(@javax.annotation.Nullable final AuthenticationMethodsPolicy value) {
-        this._authenticationMethodsPolicy = value;
+        this.authenticationMethodsPolicy = value;
     }
     /**
      * Sets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.
@@ -280,7 +312,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAuthorizationPolicy(@javax.annotation.Nullable final AuthorizationPolicy value) {
-        this._authorizationPolicy = value;
+        this.authorizationPolicy = value;
     }
     /**
      * Sets the claimsMappingPolicies property value. The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
@@ -289,7 +321,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setClaimsMappingPolicies(@javax.annotation.Nullable final java.util.List<ClaimsMappingPolicy> value) {
-        this._claimsMappingPolicies = value;
+        this.claimsMappingPolicies = value;
     }
     /**
      * Sets the conditionalAccessPolicies property value. The custom rules that define an access scenario.
@@ -298,7 +330,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setConditionalAccessPolicies(@javax.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {
-        this._conditionalAccessPolicies = value;
+        this.conditionalAccessPolicies = value;
     }
     /**
      * Sets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Azure AD tenants.
@@ -307,7 +339,16 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCrossTenantAccessPolicy(@javax.annotation.Nullable final CrossTenantAccessPolicy value) {
-        this._crossTenantAccessPolicy = value;
+        this.crossTenantAccessPolicy = value;
+    }
+    /**
+     * Sets the defaultAppManagementPolicy property value. The defaultAppManagementPolicy property
+     * @param value Value to set for the defaultAppManagementPolicy property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDefaultAppManagementPolicy(@javax.annotation.Nullable final TenantAppManagementPolicy value) {
+        this.defaultAppManagementPolicy = value;
     }
     /**
      * Sets the featureRolloutPolicies property value. The feature rollout policy associated with a directory object.
@@ -316,7 +357,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFeatureRolloutPolicies(@javax.annotation.Nullable final java.util.List<FeatureRolloutPolicy> value) {
-        this._featureRolloutPolicies = value;
+        this.featureRolloutPolicies = value;
     }
     /**
      * Sets the homeRealmDiscoveryPolicies property value. The policy to control Azure AD authentication behavior for federated users.
@@ -325,7 +366,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setHomeRealmDiscoveryPolicies(@javax.annotation.Nullable final java.util.List<HomeRealmDiscoveryPolicy> value) {
-        this._homeRealmDiscoveryPolicies = value;
+        this.homeRealmDiscoveryPolicies = value;
     }
     /**
      * Sets the identitySecurityDefaultsEnforcementPolicy property value. The policy that represents the security defaults that protect against common attacks.
@@ -334,7 +375,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIdentitySecurityDefaultsEnforcementPolicy(@javax.annotation.Nullable final IdentitySecurityDefaultsEnforcementPolicy value) {
-        this._identitySecurityDefaultsEnforcementPolicy = value;
+        this.identitySecurityDefaultsEnforcementPolicy = value;
     }
     /**
      * Sets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.
@@ -343,7 +384,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPermissionGrantPolicies(@javax.annotation.Nullable final java.util.List<PermissionGrantPolicy> value) {
-        this._permissionGrantPolicies = value;
+        this.permissionGrantPolicies = value;
     }
     /**
      * Sets the roleManagementPolicies property value. Specifies the various policies associated with scopes and roles.
@@ -352,7 +393,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRoleManagementPolicies(@javax.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicy> value) {
-        this._roleManagementPolicies = value;
+        this.roleManagementPolicies = value;
     }
     /**
      * Sets the roleManagementPolicyAssignments property value. The assignment of a role management policy to a role definition object.
@@ -361,7 +402,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRoleManagementPolicyAssignments(@javax.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyAssignment> value) {
-        this._roleManagementPolicyAssignments = value;
+        this.roleManagementPolicyAssignments = value;
     }
     /**
      * Sets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Azure AD.
@@ -370,7 +411,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTokenIssuancePolicies(@javax.annotation.Nullable final java.util.List<TokenIssuancePolicy> value) {
-        this._tokenIssuancePolicies = value;
+        this.tokenIssuancePolicies = value;
     }
     /**
      * Sets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
@@ -379,6 +420,6 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTokenLifetimePolicies(@javax.annotation.Nullable final java.util.List<TokenLifetimePolicy> value) {
-        this._tokenLifetimePolicies = value;
+        this.tokenLifetimePolicies = value;
     }
 }

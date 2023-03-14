@@ -3,19 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsable {
     /** Edition Upgrade License File Content. */
-    private String _license;
+    private String license;
     /** Edition Upgrade License type */
-    private EditionUpgradeLicenseType _licenseType;
+    private EditionUpgradeLicenseType licenseType;
     /** Edition Upgrade Product Key. */
-    private String _productKey;
+    private String productKey;
     /** Windows 10 Edition type. */
-    private Windows10EditionType _targetEdition;
+    private Windows10EditionType targetEdition;
     /**
      * Instantiates a new EditionUpgradeConfiguration and sets the default values.
      * @return a void
@@ -37,11 +36,11 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("license", (n) -> { this.setLicense(n.getStringValue()); });
         deserializerMap.put("licenseType", (n) -> { this.setLicenseType(n.getEnumValue(EditionUpgradeLicenseType.class)); });
         deserializerMap.put("productKey", (n) -> { this.setProductKey(n.getStringValue()); });
@@ -54,7 +53,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      */
     @javax.annotation.Nullable
     public String getLicense() {
-        return this._license;
+        return this.license;
     }
     /**
      * Gets the licenseType property value. Edition Upgrade License type
@@ -62,7 +61,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      */
     @javax.annotation.Nullable
     public EditionUpgradeLicenseType getLicenseType() {
-        return this._licenseType;
+        return this.licenseType;
     }
     /**
      * Gets the productKey property value. Edition Upgrade Product Key.
@@ -70,7 +69,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      */
     @javax.annotation.Nullable
     public String getProductKey() {
-        return this._productKey;
+        return this.productKey;
     }
     /**
      * Gets the targetEdition property value. Windows 10 Edition type.
@@ -78,7 +77,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      */
     @javax.annotation.Nullable
     public Windows10EditionType getTargetEdition() {
-        return this._targetEdition;
+        return this.targetEdition;
     }
     /**
      * Serializes information the current object
@@ -101,7 +100,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      */
     @javax.annotation.Nonnull
     public void setLicense(@javax.annotation.Nullable final String value) {
-        this._license = value;
+        this.license = value;
     }
     /**
      * Sets the licenseType property value. Edition Upgrade License type
@@ -110,7 +109,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      */
     @javax.annotation.Nonnull
     public void setLicenseType(@javax.annotation.Nullable final EditionUpgradeLicenseType value) {
-        this._licenseType = value;
+        this.licenseType = value;
     }
     /**
      * Sets the productKey property value. Edition Upgrade Product Key.
@@ -119,7 +118,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      */
     @javax.annotation.Nonnull
     public void setProductKey(@javax.annotation.Nullable final String value) {
-        this._productKey = value;
+        this.productKey = value;
     }
     /**
      * Sets the targetEdition property value. Windows 10 Edition type.
@@ -128,6 +127,6 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      */
     @javax.annotation.Nonnull
     public void setTargetEdition(@javax.annotation.Nullable final Windows10EditionType value) {
-        this._targetEdition = value;
+        this.targetEdition = value;
     }
 }

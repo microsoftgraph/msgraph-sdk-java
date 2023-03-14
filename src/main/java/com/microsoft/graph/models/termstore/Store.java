@@ -4,19 +4,18 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Store extends Entity implements Parsable {
     /** Default language of the term store. */
-    private String _defaultLanguageTag;
+    private String defaultLanguageTag;
     /** Collection of all groups available in the term store. */
-    private java.util.List<Group> _groups;
+    private java.util.List<Group> groups;
     /** List of languages for the term store. */
-    private java.util.List<String> _languageTags;
+    private java.util.List<String> languageTags;
     /** Collection of all sets available in the term store. This relationship can only be used to load a specific term set. */
-    private java.util.List<Set> _sets;
+    private java.util.List<Set> sets;
     /**
      * Instantiates a new store and sets the default values.
      * @return a void
@@ -41,15 +40,15 @@ public class Store extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDefaultLanguageTag() {
-        return this._defaultLanguageTag;
+        return this.defaultLanguageTag;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("defaultLanguageTag", (n) -> { this.setDefaultLanguageTag(n.getStringValue()); });
         deserializerMap.put("groups", (n) -> { this.setGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
         deserializerMap.put("languageTags", (n) -> { this.setLanguageTags(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -62,7 +61,7 @@ public class Store extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Group> getGroups() {
-        return this._groups;
+        return this.groups;
     }
     /**
      * Gets the languageTags property value. List of languages for the term store.
@@ -70,7 +69,7 @@ public class Store extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getLanguageTags() {
-        return this._languageTags;
+        return this.languageTags;
     }
     /**
      * Gets the sets property value. Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
@@ -78,7 +77,7 @@ public class Store extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Set> getSets() {
-        return this._sets;
+        return this.sets;
     }
     /**
      * Serializes information the current object
@@ -101,7 +100,7 @@ public class Store extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDefaultLanguageTag(@javax.annotation.Nullable final String value) {
-        this._defaultLanguageTag = value;
+        this.defaultLanguageTag = value;
     }
     /**
      * Sets the groups property value. Collection of all groups available in the term store.
@@ -110,7 +109,7 @@ public class Store extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setGroups(@javax.annotation.Nullable final java.util.List<Group> value) {
-        this._groups = value;
+        this.groups = value;
     }
     /**
      * Sets the languageTags property value. List of languages for the term store.
@@ -119,7 +118,7 @@ public class Store extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLanguageTags(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._languageTags = value;
+        this.languageTags = value;
     }
     /**
      * Sets the sets property value. Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
@@ -128,6 +127,6 @@ public class Store extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSets(@javax.annotation.Nullable final java.util.List<Set> value) {
-        this._sets = value;
+        this.sets = value;
     }
 }

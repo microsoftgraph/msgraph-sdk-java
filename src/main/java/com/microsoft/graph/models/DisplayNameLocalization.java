@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DisplayNameLocalization implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** If present, the value of this field contains the displayName string that has been set for the language present in the languageTag field. */
-    private String _displayName;
+    private String displayName;
     /** Provides the language culture-code and friendly name of the language that the displayName field has been provided in. */
-    private String _languageTag;
+    private String languageTag;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new displayNameLocalization and sets the default values.
      * @return a void
@@ -41,7 +40,7 @@ public class DisplayNameLocalization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the displayName property value. If present, the value of this field contains the displayName string that has been set for the language present in the languageTag field.
@@ -49,15 +48,15 @@ public class DisplayNameLocalization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("languageTag", (n) -> { this.setLanguageTag(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -69,7 +68,7 @@ public class DisplayNameLocalization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getLanguageTag() {
-        return this._languageTag;
+        return this.languageTag;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -77,7 +76,7 @@ public class DisplayNameLocalization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -99,7 +98,7 @@ public class DisplayNameLocalization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the displayName property value. If present, the value of this field contains the displayName string that has been set for the language present in the languageTag field.
@@ -108,7 +107,7 @@ public class DisplayNameLocalization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the languageTag property value. Provides the language culture-code and friendly name of the language that the displayName field has been provided in.
@@ -117,7 +116,7 @@ public class DisplayNameLocalization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLanguageTag(@javax.annotation.Nullable final String value) {
-        this._languageTag = value;
+        this.languageTag = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -126,6 +125,6 @@ public class DisplayNameLocalization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

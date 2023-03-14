@@ -1,20 +1,14 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.EmailAuthenticationMethodConfiguration;
-import com.microsoft.graph.models.Fido2AuthenticationMethodConfiguration;
-import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethodConfiguration;
-import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethodConfiguration;
-import com.microsoft.graph.models.X509CertificateAuthenticationMethodConfiguration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationMethodConfiguration extends Entity implements Parsable {
     /** The state of the policy. Possible values are: enabled, disabled. */
-    private AuthenticationMethodState _state;
+    private AuthenticationMethodState state;
     /**
      * Instantiates a new AuthenticationMethodConfiguration and sets the default values.
      * @return a void
@@ -46,11 +40,11 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AuthenticationMethodState.class)); });
         return deserializerMap;
     }
@@ -60,7 +54,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public AuthenticationMethodState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Serializes information the current object
@@ -80,6 +74,6 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final AuthenticationMethodState value) {
-        this._state = value;
+        this.state = value;
     }
 }

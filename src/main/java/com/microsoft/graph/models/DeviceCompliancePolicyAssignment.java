@@ -3,14 +3,15 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device compliance policy assignment. */
+/**
+ * Device compliance policy assignment.
+ */
 public class DeviceCompliancePolicyAssignment extends Entity implements Parsable {
     /** Target for the compliance policy assignment. */
-    private DeviceAndAppManagementAssignmentTarget _target;
+    private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new deviceCompliancePolicyAssignment and sets the default values.
      * @return a void
@@ -31,11 +32,11 @@ public class DeviceCompliancePolicyAssignment extends Entity implements Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -45,7 +46,7 @@ public class DeviceCompliancePolicyAssignment extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this._target;
+        return this.target;
     }
     /**
      * Serializes information the current object
@@ -65,6 +66,6 @@ public class DeviceCompliancePolicyAssignment extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this._target = value;
+        this.target = value;
     }
 }

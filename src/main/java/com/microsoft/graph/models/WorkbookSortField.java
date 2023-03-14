@@ -4,27 +4,26 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Represents whether the sorting is done in an ascending fashion. */
-    private Boolean _ascending;
+    private Boolean ascending;
     /** Represents the color that is the target of the condition if the sorting is on font or cell color. */
-    private String _color;
+    private String color;
     /** Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber. */
-    private String _dataOption;
+    private String dataOption;
     /** Represents the icon that is the target of the condition if the sorting is on the cell's icon. */
-    private WorkbookIcon _icon;
+    private WorkbookIcon icon;
     /** Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset from the first column (or row). */
-    private Integer _key;
+    private Integer key;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon. */
-    private String _sortOn;
+    private String sortOn;
     /**
      * Instantiates a new workbookSortField and sets the default values.
      * @return a void
@@ -49,7 +48,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the ascending property value. Represents whether the sorting is done in an ascending fashion.
@@ -57,7 +56,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAscending() {
-        return this._ascending;
+        return this.ascending;
     }
     /**
      * Gets the color property value. Represents the color that is the target of the condition if the sorting is on font or cell color.
@@ -65,7 +64,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getColor() {
-        return this._color;
+        return this.color;
     }
     /**
      * Gets the dataOption property value. Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
@@ -73,15 +72,15 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDataOption() {
-        return this._dataOption;
+        return this.dataOption;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("ascending", (n) -> { this.setAscending(n.getBooleanValue()); });
         deserializerMap.put("color", (n) -> { this.setColor(n.getStringValue()); });
         deserializerMap.put("dataOption", (n) -> { this.setDataOption(n.getStringValue()); });
@@ -97,7 +96,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookIcon getIcon() {
-        return this._icon;
+        return this.icon;
     }
     /**
      * Gets the key property value. Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset from the first column (or row).
@@ -105,7 +104,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getKey() {
-        return this._key;
+        return this.key;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -113,7 +112,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the sortOn property value. Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
@@ -121,7 +120,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSortOn() {
-        return this._sortOn;
+        return this.sortOn;
     }
     /**
      * Serializes information the current object
@@ -147,7 +146,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the ascending property value. Represents whether the sorting is done in an ascending fashion.
@@ -156,7 +155,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAscending(@javax.annotation.Nullable final Boolean value) {
-        this._ascending = value;
+        this.ascending = value;
     }
     /**
      * Sets the color property value. Represents the color that is the target of the condition if the sorting is on font or cell color.
@@ -165,7 +164,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setColor(@javax.annotation.Nullable final String value) {
-        this._color = value;
+        this.color = value;
     }
     /**
      * Sets the dataOption property value. Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
@@ -174,7 +173,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDataOption(@javax.annotation.Nullable final String value) {
-        this._dataOption = value;
+        this.dataOption = value;
     }
     /**
      * Sets the icon property value. Represents the icon that is the target of the condition if the sorting is on the cell's icon.
@@ -183,7 +182,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIcon(@javax.annotation.Nullable final WorkbookIcon value) {
-        this._icon = value;
+        this.icon = value;
     }
     /**
      * Sets the key property value. Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset from the first column (or row).
@@ -192,7 +191,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setKey(@javax.annotation.Nullable final Integer value) {
-        this._key = value;
+        this.key = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -201,7 +200,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the sortOn property value. Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
@@ -210,6 +209,6 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSortOn(@javax.annotation.Nullable final String value) {
-        this._sortOn = value;
+        this.sortOn = value;
     }
 }

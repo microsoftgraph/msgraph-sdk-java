@@ -5,18 +5,16 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the forward method. */
 public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The Comment property */
-    private String _comment;
+    private String comment;
     /** The ToRecipients property */
-    private java.util.List<Recipient> _toRecipients;
+    private java.util.List<Recipient> toRecipients;
     /**
      * Instantiates a new forwardPostRequestBody and sets the default values.
      * @return a void
@@ -41,7 +39,7 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the comment property value. The Comment property
@@ -49,17 +47,17 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getComment() {
-        return this._comment;
+        return this.comment;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
-        deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
-        deserializerMap.put("toRecipients", (n) -> { this.setToRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        deserializerMap.put("Comment", (n) -> { this.setComment(n.getStringValue()); });
+        deserializerMap.put("ToRecipients", (n) -> { this.setToRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -68,7 +66,7 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Recipient> getToRecipients() {
-        return this._toRecipients;
+        return this.toRecipients;
     }
     /**
      * Serializes information the current object
@@ -78,8 +76,8 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("comment", this.getComment());
-        writer.writeCollectionOfObjectValues("toRecipients", this.getToRecipients());
+        writer.writeStringValue("Comment", this.getComment());
+        writer.writeCollectionOfObjectValues("ToRecipients", this.getToRecipients());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -89,7 +87,7 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the comment property value. The Comment property
@@ -98,7 +96,7 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setComment(@javax.annotation.Nullable final String value) {
-        this._comment = value;
+        this.comment = value;
     }
     /**
      * Sets the toRecipients property value. The ToRecipients property
@@ -107,6 +105,6 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setToRecipients(@javax.annotation.Nullable final java.util.List<Recipient> value) {
-        this._toRecipients = value;
+        this.toRecipients = value;
     }
 }

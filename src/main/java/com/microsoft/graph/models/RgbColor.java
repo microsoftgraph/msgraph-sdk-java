@@ -4,22 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Color in RGB. */
+/**
+ * Color in RGB.
+ */
 public class RgbColor implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Blue value */
-    private Byte _b;
+    private Byte b;
     /** Green value */
-    private Byte _g;
+    private Byte g;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Red value */
-    private Byte _r;
+    private Byte r;
     /**
      * Instantiates a new rgbColor and sets the default values.
      * @return a void
@@ -44,7 +45,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the b property value. Blue value
@@ -52,15 +53,15 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Byte getB() {
-        return this._b;
+        return this.b;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("b", (n) -> { this.setB(n.getByteValue()); });
         deserializerMap.put("g", (n) -> { this.setG(n.getByteValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -73,7 +74,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Byte getG() {
-        return this._g;
+        return this.g;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -81,7 +82,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the r property value. Red value
@@ -89,7 +90,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Byte getR() {
-        return this._r;
+        return this.r;
     }
     /**
      * Serializes information the current object
@@ -112,7 +113,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the b property value. Blue value
@@ -121,7 +122,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setB(@javax.annotation.Nullable final Byte value) {
-        this._b = value;
+        this.b = value;
     }
     /**
      * Sets the g property value. Green value
@@ -130,7 +131,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setG(@javax.annotation.Nullable final Byte value) {
-        this._g = value;
+        this.g = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -139,7 +140,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the r property value. Red value
@@ -148,6 +149,6 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setR(@javax.annotation.Nullable final Byte value) {
-        this._r = value;
+        this.r = value;
     }
 }

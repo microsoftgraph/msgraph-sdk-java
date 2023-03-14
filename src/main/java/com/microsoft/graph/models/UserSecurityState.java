@@ -5,43 +5,42 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserSecurityState implements AdditionalDataHolder, Parsable {
     /** AAD User object identifier (GUID) - represents the physical/multi-account user entity. */
-    private String _aadUserId;
+    private String aadUserId;
     /** Account name of user account (without Active Directory domain or DNS domain) - (also called mailNickName). */
-    private String _accountName;
+    private String accountName;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** NetBIOS/Active Directory domain of user account (that is, domain/account format). */
-    private String _domainName;
+    private String domainName;
     /** For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient. */
-    private EmailRole _emailRole;
+    private EmailRole emailRole;
     /** Indicates whether the user logged on through a VPN. */
-    private Boolean _isVpn;
+    private Boolean isVpn;
     /** Time at which the sign-in occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _logonDateTime;
+    private OffsetDateTime logonDateTime;
     /** User sign-in ID. */
-    private String _logonId;
+    private String logonId;
     /** IP Address the sign-in request originated from. */
-    private String _logonIp;
+    private String logonIp;
     /** Location (by IP address mapping) associated with a user sign-in event by this user. */
-    private String _logonLocation;
+    private String logonLocation;
     /** Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service. */
-    private LogonType _logonType;
+    private LogonType logonType;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Active Directory (on-premises) Security Identifier (SID) of the user. */
-    private String _onPremisesSecurityIdentifier;
+    private String onPremisesSecurityIdentifier;
     /** Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a percentage. */
-    private String _riskScore;
+    private String riskScore;
     /** User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator. */
-    private UserAccountSecurityType _userAccountType;
+    private UserAccountSecurityType userAccountType;
     /** User sign-in name - internet format: (user account name)@(user account DNS domain name). */
-    private String _userPrincipalName;
+    private String userPrincipalName;
     /**
      * Instantiates a new userSecurityState and sets the default values.
      * @return a void
@@ -66,7 +65,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAadUserId() {
-        return this._aadUserId;
+        return this.aadUserId;
     }
     /**
      * Gets the accountName property value. Account name of user account (without Active Directory domain or DNS domain) - (also called mailNickName).
@@ -74,7 +73,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAccountName() {
-        return this._accountName;
+        return this.accountName;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -82,7 +81,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the domainName property value. NetBIOS/Active Directory domain of user account (that is, domain/account format).
@@ -90,7 +89,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDomainName() {
-        return this._domainName;
+        return this.domainName;
     }
     /**
      * Gets the emailRole property value. For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
@@ -98,15 +97,15 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public EmailRole getEmailRole() {
-        return this._emailRole;
+        return this.emailRole;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(15);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(15);
         deserializerMap.put("aadUserId", (n) -> { this.setAadUserId(n.getStringValue()); });
         deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
         deserializerMap.put("domainName", (n) -> { this.setDomainName(n.getStringValue()); });
@@ -130,7 +129,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsVpn() {
-        return this._isVpn;
+        return this.isVpn;
     }
     /**
      * Gets the logonDateTime property value. Time at which the sign-in occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -138,7 +137,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLogonDateTime() {
-        return this._logonDateTime;
+        return this.logonDateTime;
     }
     /**
      * Gets the logonId property value. User sign-in ID.
@@ -146,7 +145,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getLogonId() {
-        return this._logonId;
+        return this.logonId;
     }
     /**
      * Gets the logonIp property value. IP Address the sign-in request originated from.
@@ -154,7 +153,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getLogonIp() {
-        return this._logonIp;
+        return this.logonIp;
     }
     /**
      * Gets the logonLocation property value. Location (by IP address mapping) associated with a user sign-in event by this user.
@@ -162,7 +161,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getLogonLocation() {
-        return this._logonLocation;
+        return this.logonLocation;
     }
     /**
      * Gets the logonType property value. Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
@@ -170,7 +169,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public LogonType getLogonType() {
-        return this._logonType;
+        return this.logonType;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -178,7 +177,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the onPremisesSecurityIdentifier property value. Active Directory (on-premises) Security Identifier (SID) of the user.
@@ -186,7 +185,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOnPremisesSecurityIdentifier() {
-        return this._onPremisesSecurityIdentifier;
+        return this.onPremisesSecurityIdentifier;
     }
     /**
      * Gets the riskScore property value. Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a percentage.
@@ -194,7 +193,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getRiskScore() {
-        return this._riskScore;
+        return this.riskScore;
     }
     /**
      * Gets the userAccountType property value. User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
@@ -202,7 +201,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public UserAccountSecurityType getUserAccountType() {
-        return this._userAccountType;
+        return this.userAccountType;
     }
     /**
      * Gets the userPrincipalName property value. User sign-in name - internet format: (user account name)@(user account DNS domain name).
@@ -210,7 +209,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
@@ -244,7 +243,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAadUserId(@javax.annotation.Nullable final String value) {
-        this._aadUserId = value;
+        this.aadUserId = value;
     }
     /**
      * Sets the accountName property value. Account name of user account (without Active Directory domain or DNS domain) - (also called mailNickName).
@@ -253,7 +252,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAccountName(@javax.annotation.Nullable final String value) {
-        this._accountName = value;
+        this.accountName = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -262,7 +261,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the domainName property value. NetBIOS/Active Directory domain of user account (that is, domain/account format).
@@ -271,7 +270,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDomainName(@javax.annotation.Nullable final String value) {
-        this._domainName = value;
+        this.domainName = value;
     }
     /**
      * Sets the emailRole property value. For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
@@ -280,7 +279,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEmailRole(@javax.annotation.Nullable final EmailRole value) {
-        this._emailRole = value;
+        this.emailRole = value;
     }
     /**
      * Sets the isVpn property value. Indicates whether the user logged on through a VPN.
@@ -289,7 +288,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsVpn(@javax.annotation.Nullable final Boolean value) {
-        this._isVpn = value;
+        this.isVpn = value;
     }
     /**
      * Sets the logonDateTime property value. Time at which the sign-in occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -298,7 +297,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLogonDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._logonDateTime = value;
+        this.logonDateTime = value;
     }
     /**
      * Sets the logonId property value. User sign-in ID.
@@ -307,7 +306,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLogonId(@javax.annotation.Nullable final String value) {
-        this._logonId = value;
+        this.logonId = value;
     }
     /**
      * Sets the logonIp property value. IP Address the sign-in request originated from.
@@ -316,7 +315,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLogonIp(@javax.annotation.Nullable final String value) {
-        this._logonIp = value;
+        this.logonIp = value;
     }
     /**
      * Sets the logonLocation property value. Location (by IP address mapping) associated with a user sign-in event by this user.
@@ -325,7 +324,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLogonLocation(@javax.annotation.Nullable final String value) {
-        this._logonLocation = value;
+        this.logonLocation = value;
     }
     /**
      * Sets the logonType property value. Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
@@ -334,7 +333,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLogonType(@javax.annotation.Nullable final LogonType value) {
-        this._logonType = value;
+        this.logonType = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -343,7 +342,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the onPremisesSecurityIdentifier property value. Active Directory (on-premises) Security Identifier (SID) of the user.
@@ -352,7 +351,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOnPremisesSecurityIdentifier(@javax.annotation.Nullable final String value) {
-        this._onPremisesSecurityIdentifier = value;
+        this.onPremisesSecurityIdentifier = value;
     }
     /**
      * Sets the riskScore property value. Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a percentage.
@@ -361,7 +360,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final String value) {
-        this._riskScore = value;
+        this.riskScore = value;
     }
     /**
      * Sets the userAccountType property value. User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
@@ -370,7 +369,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserAccountType(@javax.annotation.Nullable final UserAccountSecurityType value) {
-        this._userAccountType = value;
+        this.userAccountType = value;
     }
     /**
      * Sets the userPrincipalName property value. User sign-in name - internet format: (user account name)@(user account DNS domain name).
@@ -379,6 +378,6 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

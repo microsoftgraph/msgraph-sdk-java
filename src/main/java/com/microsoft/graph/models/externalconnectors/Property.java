@@ -4,31 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Property implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^. Optional. */
-    private java.util.List<String> _aliases;
+    private java.util.List<String> aliases;
     /** Specifies if the property is queryable. Queryable properties can be used in Keyword Query Language (KQL) queries. Optional. */
-    private Boolean _isQueryable;
+    private Boolean isQueryable;
     /** Specifies if the property is refinable.  Refinable properties can be used to filter search results in the Search API and add a refiner control in the Microsoft Search user experience. Optional. */
-    private Boolean _isRefinable;
+    private Boolean isRefinable;
     /** Specifies if the property is retrievable. Retrievable properties are returned in the result set when items are returned by the search API. Retrievable properties are also available to add to the display template used to render search results. Optional. */
-    private Boolean _isRetrievable;
+    private Boolean isRetrievable;
     /** Specifies if the property is searchable. Only properties of type String or StringCollection can be searchable. Non-searchable properties are not added to the search index. Optional. */
-    private Boolean _isSearchable;
+    private Boolean isSearchable;
     /** Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional. */
-    private java.util.List<Label> _labels;
+    private java.util.List<Label> labels;
     /** The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^.  Required. */
-    private String _name;
+    private String name;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The type property */
-    private PropertyType _type;
+    private PropertyType type;
     /**
      * Instantiates a new property and sets the default values.
      * @return a void
@@ -53,7 +52,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the aliases property value. A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^. Optional.
@@ -61,15 +60,15 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAliases() {
-        return this._aliases;
+        return this.aliases;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("aliases", (n) -> { this.setAliases(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("isQueryable", (n) -> { this.setIsQueryable(n.getBooleanValue()); });
         deserializerMap.put("isRefinable", (n) -> { this.setIsRefinable(n.getBooleanValue()); });
@@ -87,7 +86,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsQueryable() {
-        return this._isQueryable;
+        return this.isQueryable;
     }
     /**
      * Gets the isRefinable property value. Specifies if the property is refinable.  Refinable properties can be used to filter search results in the Search API and add a refiner control in the Microsoft Search user experience. Optional.
@@ -95,7 +94,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsRefinable() {
-        return this._isRefinable;
+        return this.isRefinable;
     }
     /**
      * Gets the isRetrievable property value. Specifies if the property is retrievable. Retrievable properties are returned in the result set when items are returned by the search API. Retrievable properties are also available to add to the display template used to render search results. Optional.
@@ -103,7 +102,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsRetrievable() {
-        return this._isRetrievable;
+        return this.isRetrievable;
     }
     /**
      * Gets the isSearchable property value. Specifies if the property is searchable. Only properties of type String or StringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.
@@ -111,7 +110,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsSearchable() {
-        return this._isSearchable;
+        return this.isSearchable;
     }
     /**
      * Gets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional.
@@ -119,7 +118,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Label> getLabels() {
-        return this._labels;
+        return this.labels;
     }
     /**
      * Gets the name property value. The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^.  Required.
@@ -127,7 +126,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -135,7 +134,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the type property value. The type property
@@ -143,7 +142,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public PropertyType getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
@@ -171,7 +170,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the aliases property value. A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^. Optional.
@@ -180,7 +179,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAliases(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._aliases = value;
+        this.aliases = value;
     }
     /**
      * Sets the isQueryable property value. Specifies if the property is queryable. Queryable properties can be used in Keyword Query Language (KQL) queries. Optional.
@@ -189,7 +188,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsQueryable(@javax.annotation.Nullable final Boolean value) {
-        this._isQueryable = value;
+        this.isQueryable = value;
     }
     /**
      * Sets the isRefinable property value. Specifies if the property is refinable.  Refinable properties can be used to filter search results in the Search API and add a refiner control in the Microsoft Search user experience. Optional.
@@ -198,7 +197,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsRefinable(@javax.annotation.Nullable final Boolean value) {
-        this._isRefinable = value;
+        this.isRefinable = value;
     }
     /**
      * Sets the isRetrievable property value. Specifies if the property is retrievable. Retrievable properties are returned in the result set when items are returned by the search API. Retrievable properties are also available to add to the display template used to render search results. Optional.
@@ -207,7 +206,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsRetrievable(@javax.annotation.Nullable final Boolean value) {
-        this._isRetrievable = value;
+        this.isRetrievable = value;
     }
     /**
      * Sets the isSearchable property value. Specifies if the property is searchable. Only properties of type String or StringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.
@@ -216,7 +215,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsSearchable(@javax.annotation.Nullable final Boolean value) {
-        this._isSearchable = value;
+        this.isSearchable = value;
     }
     /**
      * Sets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional.
@@ -225,7 +224,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLabels(@javax.annotation.Nullable final java.util.List<Label> value) {
-        this._labels = value;
+        this.labels = value;
     }
     /**
      * Sets the name property value. The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^.  Required.
@@ -234,7 +233,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -243,7 +242,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the type property value. The type property
@@ -252,6 +251,6 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final PropertyType value) {
-        this._type = value;
+        this.type = value;
     }
 }

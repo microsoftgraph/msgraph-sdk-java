@@ -3,21 +3,20 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable {
     /** The licenseType property */
-    private MicrosoftStoreForBusinessLicenseType _licenseType;
+    private MicrosoftStoreForBusinessLicenseType licenseType;
     /** The app package identifier */
-    private String _packageIdentityName;
+    private String packageIdentityName;
     /** The app product key */
-    private String _productKey;
+    private String productKey;
     /** The total number of Microsoft Store for Business licenses. */
-    private Integer _totalLicenseCount;
+    private Integer totalLicenseCount;
     /** The number of Microsoft Store for Business licenses in use. */
-    private Integer _usedLicenseCount;
+    private Integer usedLicenseCount;
     /**
      * Instantiates a new MicrosoftStoreForBusinessApp and sets the default values.
      * @return a void
@@ -39,11 +38,11 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("licenseType", (n) -> { this.setLicenseType(n.getEnumValue(MicrosoftStoreForBusinessLicenseType.class)); });
         deserializerMap.put("packageIdentityName", (n) -> { this.setPackageIdentityName(n.getStringValue()); });
         deserializerMap.put("productKey", (n) -> { this.setProductKey(n.getStringValue()); });
@@ -57,7 +56,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      */
     @javax.annotation.Nullable
     public MicrosoftStoreForBusinessLicenseType getLicenseType() {
-        return this._licenseType;
+        return this.licenseType;
     }
     /**
      * Gets the packageIdentityName property value. The app package identifier
@@ -65,7 +64,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      */
     @javax.annotation.Nullable
     public String getPackageIdentityName() {
-        return this._packageIdentityName;
+        return this.packageIdentityName;
     }
     /**
      * Gets the productKey property value. The app product key
@@ -73,7 +72,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      */
     @javax.annotation.Nullable
     public String getProductKey() {
-        return this._productKey;
+        return this.productKey;
     }
     /**
      * Gets the totalLicenseCount property value. The total number of Microsoft Store for Business licenses.
@@ -81,7 +80,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      */
     @javax.annotation.Nullable
     public Integer getTotalLicenseCount() {
-        return this._totalLicenseCount;
+        return this.totalLicenseCount;
     }
     /**
      * Gets the usedLicenseCount property value. The number of Microsoft Store for Business licenses in use.
@@ -89,7 +88,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      */
     @javax.annotation.Nullable
     public Integer getUsedLicenseCount() {
-        return this._usedLicenseCount;
+        return this.usedLicenseCount;
     }
     /**
      * Serializes information the current object
@@ -113,7 +112,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setLicenseType(@javax.annotation.Nullable final MicrosoftStoreForBusinessLicenseType value) {
-        this._licenseType = value;
+        this.licenseType = value;
     }
     /**
      * Sets the packageIdentityName property value. The app package identifier
@@ -122,7 +121,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setPackageIdentityName(@javax.annotation.Nullable final String value) {
-        this._packageIdentityName = value;
+        this.packageIdentityName = value;
     }
     /**
      * Sets the productKey property value. The app product key
@@ -131,7 +130,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setProductKey(@javax.annotation.Nullable final String value) {
-        this._productKey = value;
+        this.productKey = value;
     }
     /**
      * Sets the totalLicenseCount property value. The total number of Microsoft Store for Business licenses.
@@ -140,7 +139,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setTotalLicenseCount(@javax.annotation.Nullable final Integer value) {
-        this._totalLicenseCount = value;
+        this.totalLicenseCount = value;
     }
     /**
      * Sets the usedLicenseCount property value. The number of Microsoft Store for Business licenses in use.
@@ -149,6 +148,6 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setUsedLicenseCount(@javax.annotation.Nullable final Integer value) {
-        this._usedLicenseCount = value;
+        this.usedLicenseCount = value;
     }
 }

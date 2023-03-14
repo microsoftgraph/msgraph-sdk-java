@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsable {
     /** The product code of the app. */
-    private String _productCode;
+    private String productCode;
     /** The product version comparison value. */
-    private String _productVersion;
+    private String productVersion;
     /** Contains properties for detection operator. */
-    private Win32LobAppRuleOperator _productVersionOperator;
+    private Win32LobAppRuleOperator productVersionOperator;
     /**
      * Instantiates a new Win32LobAppProductCodeRule and sets the default values.
      * @return a void
@@ -35,11 +34,11 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("productCode", (n) -> { this.setProductCode(n.getStringValue()); });
         deserializerMap.put("productVersion", (n) -> { this.setProductVersion(n.getStringValue()); });
         deserializerMap.put("productVersionOperator", (n) -> { this.setProductVersionOperator(n.getEnumValue(Win32LobAppRuleOperator.class)); });
@@ -51,7 +50,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      */
     @javax.annotation.Nullable
     public String getProductCode() {
-        return this._productCode;
+        return this.productCode;
     }
     /**
      * Gets the productVersion property value. The product version comparison value.
@@ -59,7 +58,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      */
     @javax.annotation.Nullable
     public String getProductVersion() {
-        return this._productVersion;
+        return this.productVersion;
     }
     /**
      * Gets the productVersionOperator property value. Contains properties for detection operator.
@@ -67,7 +66,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      */
     @javax.annotation.Nullable
     public Win32LobAppRuleOperator getProductVersionOperator() {
-        return this._productVersionOperator;
+        return this.productVersionOperator;
     }
     /**
      * Serializes information the current object
@@ -89,7 +88,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      */
     @javax.annotation.Nonnull
     public void setProductCode(@javax.annotation.Nullable final String value) {
-        this._productCode = value;
+        this.productCode = value;
     }
     /**
      * Sets the productVersion property value. The product version comparison value.
@@ -98,7 +97,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      */
     @javax.annotation.Nonnull
     public void setProductVersion(@javax.annotation.Nullable final String value) {
-        this._productVersion = value;
+        this.productVersion = value;
     }
     /**
      * Sets the productVersionOperator property value. Contains properties for detection operator.
@@ -107,6 +106,6 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      */
     @javax.annotation.Nonnull
     public void setProductVersionOperator(@javax.annotation.Nullable final Win32LobAppRuleOperator value) {
-        this._productVersionOperator = value;
+        this.productVersionOperator = value;
     }
 }

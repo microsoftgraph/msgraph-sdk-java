@@ -4,58 +4,56 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class ChatMessage extends Entity implements Parsable {
     /** References to attached objects like files, tabs, meetings etc. */
-    private java.util.List<ChatMessageAttachment> _attachments;
+    private java.util.List<ChatMessageAttachment> attachments;
     /** The body property */
-    private ItemBody _body;
+    private ItemBody body;
     /** If the message was sent in a channel, represents identity of the channel. */
-    private ChannelIdentity _channelIdentity;
+    private ChannelIdentity channelIdentity;
     /** If the message was sent in a chat, represents the identity of the chat. */
-    private String _chatId;
+    private String chatId;
     /** Timestamp of when the chat message was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Read only. Timestamp at which the chat message was deleted, or null if not deleted. */
-    private OffsetDateTime _deletedDateTime;
+    private OffsetDateTime deletedDateTime;
     /** Read-only. Version number of the chat message. */
-    private String _etag;
+    private String etag;
     /** Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage. */
-    private EventMessageDetail _eventDetail;
+    private EventMessageDetail eventDetail;
     /** Details of the sender of the chat message. Can only be set during migration. */
-    private ChatMessageFromIdentitySet _from;
+    private ChatMessageFromIdentitySet from;
     /** Content in a message hosted by Microsoft Teams - for example, images or code snippets. */
-    private java.util.List<ChatMessageHostedContent> _hostedContents;
+    private java.util.List<ChatMessageHostedContent> hostedContents;
     /** The importance property */
-    private ChatMessageImportance _importance;
+    private ChatMessageImportance importance;
     /** Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null. */
-    private OffsetDateTime _lastEditedDateTime;
+    private OffsetDateTime lastEditedDateTime;
     /** Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** Locale of the chat message set by the client. Always set to en-us. */
-    private String _locale;
+    private String locale;
     /** List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel. */
-    private java.util.List<ChatMessageMention> _mentions;
+    private java.util.List<ChatMessageMention> mentions;
     /** The messageType property */
-    private ChatMessageType _messageType;
+    private ChatMessageType messageType;
     /** Defines the properties of a policy violation set by a data loss prevention (DLP) application. */
-    private ChatMessagePolicyViolation _policyViolation;
+    private ChatMessagePolicyViolation policyViolation;
     /** Reactions for this chat message (for example, Like). */
-    private java.util.List<ChatMessageReaction> _reactions;
+    private java.util.List<ChatMessageReaction> reactions;
     /** Replies for a specified message. Supports $expand for channel messages. */
-    private java.util.List<ChatMessage> _replies;
+    private java.util.List<ChatMessage> replies;
     /** Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.) */
-    private String _replyToId;
+    private String replyToId;
     /** The subject of the chat message, in plaintext. */
-    private String _subject;
+    private String subject;
     /** Summary text of the chat message that could be used for push notifications and summary views or fall back views. Only applies to channel chat messages, not chat messages in a chat. */
-    private String _summary;
+    private String summary;
     /** Read-only. Link to the message in Microsoft Teams. */
-    private String _webUrl;
+    private String webUrl;
     /**
      * Instantiates a new chatMessage and sets the default values.
      * @return a void
@@ -80,7 +78,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ChatMessageAttachment> getAttachments() {
-        return this._attachments;
+        return this.attachments;
     }
     /**
      * Gets the body property value. The body property
@@ -88,7 +86,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ItemBody getBody() {
-        return this._body;
+        return this.body;
     }
     /**
      * Gets the channelIdentity property value. If the message was sent in a channel, represents identity of the channel.
@@ -96,7 +94,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ChannelIdentity getChannelIdentity() {
-        return this._channelIdentity;
+        return this.channelIdentity;
     }
     /**
      * Gets the chatId property value. If the message was sent in a chat, represents the identity of the chat.
@@ -104,7 +102,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getChatId() {
-        return this._chatId;
+        return this.chatId;
     }
     /**
      * Gets the createdDateTime property value. Timestamp of when the chat message was created.
@@ -112,7 +110,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the deletedDateTime property value. Read only. Timestamp at which the chat message was deleted, or null if not deleted.
@@ -120,7 +118,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getDeletedDateTime() {
-        return this._deletedDateTime;
+        return this.deletedDateTime;
     }
     /**
      * Gets the etag property value. Read-only. Version number of the chat message.
@@ -128,7 +126,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEtag() {
-        return this._etag;
+        return this.etag;
     }
     /**
      * Gets the eventDetail property value. Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
@@ -136,15 +134,15 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EventMessageDetail getEventDetail() {
-        return this._eventDetail;
+        return this.eventDetail;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("attachments", (n) -> { this.setAttachments(n.getCollectionOfObjectValues(ChatMessageAttachment::createFromDiscriminatorValue)); });
         deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("channelIdentity", (n) -> { this.setChannelIdentity(n.getObjectValue(ChannelIdentity::createFromDiscriminatorValue)); });
@@ -176,7 +174,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ChatMessageFromIdentitySet getFrom() {
-        return this._from;
+        return this.from;
     }
     /**
      * Gets the hostedContents property value. Content in a message hosted by Microsoft Teams - for example, images or code snippets.
@@ -184,7 +182,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ChatMessageHostedContent> getHostedContents() {
-        return this._hostedContents;
+        return this.hostedContents;
     }
     /**
      * Gets the importance property value. The importance property
@@ -192,7 +190,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ChatMessageImportance getImportance() {
-        return this._importance;
+        return this.importance;
     }
     /**
      * Gets the lastEditedDateTime property value. Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
@@ -200,7 +198,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastEditedDateTime() {
-        return this._lastEditedDateTime;
+        return this.lastEditedDateTime;
     }
     /**
      * Gets the lastModifiedDateTime property value. Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
@@ -208,7 +206,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the locale property value. Locale of the chat message set by the client. Always set to en-us.
@@ -216,7 +214,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLocale() {
-        return this._locale;
+        return this.locale;
     }
     /**
      * Gets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
@@ -224,7 +222,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ChatMessageMention> getMentions() {
-        return this._mentions;
+        return this.mentions;
     }
     /**
      * Gets the messageType property value. The messageType property
@@ -232,7 +230,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ChatMessageType getMessageType() {
-        return this._messageType;
+        return this.messageType;
     }
     /**
      * Gets the policyViolation property value. Defines the properties of a policy violation set by a data loss prevention (DLP) application.
@@ -240,7 +238,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ChatMessagePolicyViolation getPolicyViolation() {
-        return this._policyViolation;
+        return this.policyViolation;
     }
     /**
      * Gets the reactions property value. Reactions for this chat message (for example, Like).
@@ -248,7 +246,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ChatMessageReaction> getReactions() {
-        return this._reactions;
+        return this.reactions;
     }
     /**
      * Gets the replies property value. Replies for a specified message. Supports $expand for channel messages.
@@ -256,7 +254,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ChatMessage> getReplies() {
-        return this._replies;
+        return this.replies;
     }
     /**
      * Gets the replyToId property value. Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
@@ -264,7 +262,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getReplyToId() {
-        return this._replyToId;
+        return this.replyToId;
     }
     /**
      * Gets the subject property value. The subject of the chat message, in plaintext.
@@ -272,7 +270,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSubject() {
-        return this._subject;
+        return this.subject;
     }
     /**
      * Gets the summary property value. Summary text of the chat message that could be used for push notifications and summary views or fall back views. Only applies to channel chat messages, not chat messages in a chat.
@@ -280,7 +278,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSummary() {
-        return this._summary;
+        return this.summary;
     }
     /**
      * Gets the webUrl property value. Read-only. Link to the message in Microsoft Teams.
@@ -288,7 +286,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getWebUrl() {
-        return this._webUrl;
+        return this.webUrl;
     }
     /**
      * Serializes information the current object
@@ -330,7 +328,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAttachments(@javax.annotation.Nullable final java.util.List<ChatMessageAttachment> value) {
-        this._attachments = value;
+        this.attachments = value;
     }
     /**
      * Sets the body property value. The body property
@@ -339,7 +337,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setBody(@javax.annotation.Nullable final ItemBody value) {
-        this._body = value;
+        this.body = value;
     }
     /**
      * Sets the channelIdentity property value. If the message was sent in a channel, represents identity of the channel.
@@ -348,7 +346,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setChannelIdentity(@javax.annotation.Nullable final ChannelIdentity value) {
-        this._channelIdentity = value;
+        this.channelIdentity = value;
     }
     /**
      * Sets the chatId property value. If the message was sent in a chat, represents the identity of the chat.
@@ -357,7 +355,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setChatId(@javax.annotation.Nullable final String value) {
-        this._chatId = value;
+        this.chatId = value;
     }
     /**
      * Sets the createdDateTime property value. Timestamp of when the chat message was created.
@@ -366,7 +364,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the deletedDateTime property value. Read only. Timestamp at which the chat message was deleted, or null if not deleted.
@@ -375,7 +373,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._deletedDateTime = value;
+        this.deletedDateTime = value;
     }
     /**
      * Sets the etag property value. Read-only. Version number of the chat message.
@@ -384,7 +382,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEtag(@javax.annotation.Nullable final String value) {
-        this._etag = value;
+        this.etag = value;
     }
     /**
      * Sets the eventDetail property value. Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
@@ -393,7 +391,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEventDetail(@javax.annotation.Nullable final EventMessageDetail value) {
-        this._eventDetail = value;
+        this.eventDetail = value;
     }
     /**
      * Sets the from property value. Details of the sender of the chat message. Can only be set during migration.
@@ -402,7 +400,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFrom(@javax.annotation.Nullable final ChatMessageFromIdentitySet value) {
-        this._from = value;
+        this.from = value;
     }
     /**
      * Sets the hostedContents property value. Content in a message hosted by Microsoft Teams - for example, images or code snippets.
@@ -411,7 +409,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setHostedContents(@javax.annotation.Nullable final java.util.List<ChatMessageHostedContent> value) {
-        this._hostedContents = value;
+        this.hostedContents = value;
     }
     /**
      * Sets the importance property value. The importance property
@@ -420,7 +418,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setImportance(@javax.annotation.Nullable final ChatMessageImportance value) {
-        this._importance = value;
+        this.importance = value;
     }
     /**
      * Sets the lastEditedDateTime property value. Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
@@ -429,7 +427,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastEditedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastEditedDateTime = value;
+        this.lastEditedDateTime = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
@@ -438,7 +436,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the locale property value. Locale of the chat message set by the client. Always set to en-us.
@@ -447,7 +445,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLocale(@javax.annotation.Nullable final String value) {
-        this._locale = value;
+        this.locale = value;
     }
     /**
      * Sets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
@@ -456,7 +454,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMentions(@javax.annotation.Nullable final java.util.List<ChatMessageMention> value) {
-        this._mentions = value;
+        this.mentions = value;
     }
     /**
      * Sets the messageType property value. The messageType property
@@ -465,7 +463,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMessageType(@javax.annotation.Nullable final ChatMessageType value) {
-        this._messageType = value;
+        this.messageType = value;
     }
     /**
      * Sets the policyViolation property value. Defines the properties of a policy violation set by a data loss prevention (DLP) application.
@@ -474,7 +472,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPolicyViolation(@javax.annotation.Nullable final ChatMessagePolicyViolation value) {
-        this._policyViolation = value;
+        this.policyViolation = value;
     }
     /**
      * Sets the reactions property value. Reactions for this chat message (for example, Like).
@@ -483,7 +481,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setReactions(@javax.annotation.Nullable final java.util.List<ChatMessageReaction> value) {
-        this._reactions = value;
+        this.reactions = value;
     }
     /**
      * Sets the replies property value. Replies for a specified message. Supports $expand for channel messages.
@@ -492,7 +490,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setReplies(@javax.annotation.Nullable final java.util.List<ChatMessage> value) {
-        this._replies = value;
+        this.replies = value;
     }
     /**
      * Sets the replyToId property value. Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
@@ -501,7 +499,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setReplyToId(@javax.annotation.Nullable final String value) {
-        this._replyToId = value;
+        this.replyToId = value;
     }
     /**
      * Sets the subject property value. The subject of the chat message, in plaintext.
@@ -510,7 +508,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
-        this._subject = value;
+        this.subject = value;
     }
     /**
      * Sets the summary property value. Summary text of the chat message that could be used for push notifications and summary views or fall back views. Only applies to channel chat messages, not chat messages in a chat.
@@ -519,7 +517,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSummary(@javax.annotation.Nullable final String value) {
-        this._summary = value;
+        this.summary = value;
     }
     /**
      * Sets the webUrl property value. Read-only. Link to the message in Microsoft Teams.
@@ -528,6 +526,6 @@ public class ChatMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
-        this._webUrl = value;
+        this.webUrl = value;
     }
 }

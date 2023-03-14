@@ -1,20 +1,18 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.B2xIdentityUserFlow;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentityUserFlow extends Entity implements Parsable {
     /** The userFlowType property */
-    private UserFlowType _userFlowType;
+    private UserFlowType userFlowType;
     /** The userFlowTypeVersion property */
-    private Float _userFlowTypeVersion;
+    private Float userFlowTypeVersion;
     /**
-     * Instantiates a new IdentityUserFlow and sets the default values.
+     * Instantiates a new identityUserFlow and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -24,7 +22,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IdentityUserFlow
+     * @return a identityUserFlow
      */
     @javax.annotation.Nonnull
     public static IdentityUserFlow createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +38,11 @@ public class IdentityUserFlow extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("userFlowType", (n) -> { this.setUserFlowType(n.getEnumValue(UserFlowType.class)); });
         deserializerMap.put("userFlowTypeVersion", (n) -> { this.setUserFlowTypeVersion(n.getFloatValue()); });
         return deserializerMap;
@@ -55,7 +53,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public UserFlowType getUserFlowType() {
-        return this._userFlowType;
+        return this.userFlowType;
     }
     /**
      * Gets the userFlowTypeVersion property value. The userFlowTypeVersion property
@@ -63,7 +61,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Float getUserFlowTypeVersion() {
-        return this._userFlowTypeVersion;
+        return this.userFlowTypeVersion;
     }
     /**
      * Serializes information the current object
@@ -84,7 +82,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserFlowType(@javax.annotation.Nullable final UserFlowType value) {
-        this._userFlowType = value;
+        this.userFlowType = value;
     }
     /**
      * Sets the userFlowTypeVersion property value. The userFlowTypeVersion property
@@ -93,6 +91,6 @@ public class IdentityUserFlow extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserFlowTypeVersion(@javax.annotation.Nullable final Float value) {
-        this._userFlowTypeVersion = value;
+        this.userFlowTypeVersion = value;
     }
 }

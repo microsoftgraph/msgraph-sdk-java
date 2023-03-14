@@ -4,22 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Network Usage Rules allow enterprises to specify how managed apps use networks, such as cellular data networks. */
+/**
+ * Network Usage Rules allow enterprises to specify how managed apps use networks, such as cellular data networks.
+ */
 public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** If set to true, corresponding managed apps will not be allowed to use cellular data at any time. */
-    private Boolean _cellularDataBlocked;
+    private Boolean cellularDataBlocked;
     /** If set to true, corresponding managed apps will not be allowed to use cellular data when roaming. */
-    private Boolean _cellularDataBlockWhenRoaming;
+    private Boolean cellularDataBlockWhenRoaming;
     /** Information about the managed apps that this rule is going to apply to. This collection can contain a maximum of 500 elements. */
-    private java.util.List<AppListItem> _managedApps;
+    private java.util.List<AppListItem> managedApps;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new iosNetworkUsageRule and sets the default values.
      * @return a void
@@ -44,7 +45,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the cellularDataBlocked property value. If set to true, corresponding managed apps will not be allowed to use cellular data at any time.
@@ -52,7 +53,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getCellularDataBlocked() {
-        return this._cellularDataBlocked;
+        return this.cellularDataBlocked;
     }
     /**
      * Gets the cellularDataBlockWhenRoaming property value. If set to true, corresponding managed apps will not be allowed to use cellular data when roaming.
@@ -60,15 +61,15 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getCellularDataBlockWhenRoaming() {
-        return this._cellularDataBlockWhenRoaming;
+        return this.cellularDataBlockWhenRoaming;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("cellularDataBlocked", (n) -> { this.setCellularDataBlocked(n.getBooleanValue()); });
         deserializerMap.put("cellularDataBlockWhenRoaming", (n) -> { this.setCellularDataBlockWhenRoaming(n.getBooleanValue()); });
         deserializerMap.put("managedApps", (n) -> { this.setManagedApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
@@ -81,7 +82,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AppListItem> getManagedApps() {
-        return this._managedApps;
+        return this.managedApps;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -89,7 +90,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -112,7 +113,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the cellularDataBlocked property value. If set to true, corresponding managed apps will not be allowed to use cellular data at any time.
@@ -121,7 +122,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCellularDataBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._cellularDataBlocked = value;
+        this.cellularDataBlocked = value;
     }
     /**
      * Sets the cellularDataBlockWhenRoaming property value. If set to true, corresponding managed apps will not be allowed to use cellular data when roaming.
@@ -130,7 +131,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCellularDataBlockWhenRoaming(@javax.annotation.Nullable final Boolean value) {
-        this._cellularDataBlockWhenRoaming = value;
+        this.cellularDataBlockWhenRoaming = value;
     }
     /**
      * Sets the managedApps property value. Information about the managed apps that this rule is going to apply to. This collection can contain a maximum of 500 elements.
@@ -139,7 +140,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setManagedApps(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
-        this._managedApps = value;
+        this.managedApps = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -148,6 +149,6 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }
