@@ -311,6 +311,26 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder<ServicePr
         return new com.microsoft.graph.requests.GroupRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.group", getClient(), null);
     }
     /**
+     *  Gets a request builder for the AdministrativeUnit collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AdministrativeUnitCollectionRequestBuilder memberOfAsAdministrativeUnit() {
+        return new com.microsoft.graph.requests.AdministrativeUnitCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.administrativeUnit", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AdministrativeUnit item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AdministrativeUnitRequestBuilder memberOfAsAdministrativeUnit(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AdministrativeUnitRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.administrativeUnit", getClient(), null);
+    }
+    /**
      *  Gets a request builder for the OAuth2PermissionGrant collection
      *
      * @return the collection request builder
@@ -629,6 +649,26 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder<ServicePr
     @Nonnull
     public com.microsoft.graph.requests.GroupRequestBuilder transitiveMemberOfAsGroup(@Nonnull final String id) {
         return new com.microsoft.graph.requests.GroupRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.group", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AdministrativeUnit collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AdministrativeUnitCollectionRequestBuilder transitiveMemberOfAsAdministrativeUnit() {
+        return new com.microsoft.graph.requests.AdministrativeUnitCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.administrativeUnit", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AdministrativeUnit item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AdministrativeUnitRequestBuilder transitiveMemberOfAsAdministrativeUnit(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AdministrativeUnitRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.administrativeUnit", getClient(), null);
     }
 
     /**

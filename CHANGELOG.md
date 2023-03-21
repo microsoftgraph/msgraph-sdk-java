@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.50.0] - 2023-03-21
+
+### Added
+
+- Added members of type cast segment to administative units.
+
 ## [5.49.0] - 2023-03-14
 
 ### Added

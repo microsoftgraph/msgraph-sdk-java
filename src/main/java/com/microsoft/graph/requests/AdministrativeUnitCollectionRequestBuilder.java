@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.Directory;
+import com.microsoft.graph.models.OrgContact;
 import com.microsoft.graph.models.AdministrativeUnit;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.ExtensionProperty;
@@ -41,7 +41,7 @@ import com.microsoft.graph.models.DirectoryObjectGetByIdsParameterSet;
 public class AdministrativeUnitCollectionRequestBuilder extends BaseCollectionRequestBuilder<AdministrativeUnit, AdministrativeUnitRequestBuilder, AdministrativeUnitCollectionResponse, AdministrativeUnitCollectionPage, AdministrativeUnitCollectionRequest> {
 
     /**
-     * The request builder for this collection of Directory
+     * The request builder for this collection of OrgContact
      *
      * @param requestUrl     the request URL
      * @param client         the service client
