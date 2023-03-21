@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManagementPolicyRule implements Parsable {
     /** The settings for approval of the role assignment. */
-    private ApprovalSettings _setting;
+    private ApprovalSettings setting;
     /**
      * Instantiates a new UnifiedRoleManagementPolicyApprovalRule and sets the default values.
      * @return a void
@@ -31,11 +30,11 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("setting", (n) -> { this.setSetting(n.getObjectValue(ApprovalSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -45,7 +44,7 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
      */
     @javax.annotation.Nullable
     public ApprovalSettings getSetting() {
-        return this._setting;
+        return this.setting;
     }
     /**
      * Serializes information the current object
@@ -65,6 +64,6 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
      */
     @javax.annotation.Nonnull
     public void setSetting(@javax.annotation.Nullable final ApprovalSettings value) {
-        this._setting = value;
+        this.setting = value;
     }
 }

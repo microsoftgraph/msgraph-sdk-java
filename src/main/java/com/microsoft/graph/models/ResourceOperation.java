@@ -3,18 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Describes the resourceOperation resource (entity) of the Microsoft Graph API (REST), which supports Intune workflows related to role-based access control (RBAC). */
+/**
+ * Describes the resourceOperation resource (entity) of the Microsoft Graph API (REST), which supports Intune workflows related to role-based access control (RBAC).
+ */
 public class ResourceOperation extends Entity implements Parsable {
     /** Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible. */
-    private String _actionName;
+    private String actionName;
     /** Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal. */
-    private String _description;
+    private String description;
     /** Name of the Resource this operation is performed on. */
-    private String _resourceName;
+    private String resourceName;
     /**
      * Instantiates a new resourceOperation and sets the default values.
      * @return a void
@@ -39,7 +40,7 @@ public class ResourceOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getActionName() {
-        return this._actionName;
+        return this.actionName;
     }
     /**
      * Gets the description property value. Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
@@ -47,15 +48,15 @@ public class ResourceOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("actionName", (n) -> { this.setActionName(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("resourceName", (n) -> { this.setResourceName(n.getStringValue()); });
@@ -67,7 +68,7 @@ public class ResourceOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getResourceName() {
-        return this._resourceName;
+        return this.resourceName;
     }
     /**
      * Serializes information the current object
@@ -89,7 +90,7 @@ public class ResourceOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setActionName(@javax.annotation.Nullable final String value) {
-        this._actionName = value;
+        this.actionName = value;
     }
     /**
      * Sets the description property value. Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
@@ -98,7 +99,7 @@ public class ResourceOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the resourceName property value. Name of the Resource this operation is performed on.
@@ -107,6 +108,6 @@ public class ResourceOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setResourceName(@javax.annotation.Nullable final String value) {
-        this._resourceName = value;
+        this.resourceName = value;
     }
 }

@@ -4,35 +4,34 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SharedPCConfiguration extends DeviceConfiguration implements Parsable {
     /** Specifies how accounts are managed on a shared PC. Only applies when disableAccountManager is false. */
-    private SharedPCAccountManagerPolicy _accountManagerPolicy;
+    private SharedPCAccountManagerPolicy accountManagerPolicy;
     /** Type of accounts that are allowed to share the PC. */
-    private SharedPCAllowedAccountType _allowedAccounts;
+    private SharedPCAllowedAccountType allowedAccounts;
     /** Specifies whether local storage is allowed on a shared PC. */
-    private Boolean _allowLocalStorage;
+    private Boolean allowLocalStorage;
     /** Disables the account manager for shared PC mode. */
-    private Boolean _disableAccountManager;
+    private Boolean disableAccountManager;
     /** Specifies whether the default shared PC education environment policies should be disabled. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true. */
-    private Boolean _disableEduPolicies;
+    private Boolean disableEduPolicies;
     /** Specifies whether the default shared PC power policies should be disabled. */
-    private Boolean _disablePowerPolicies;
+    private Boolean disablePowerPolicies;
     /** Disables the requirement to sign in whenever the device wakes up from sleep mode. */
-    private Boolean _disableSignInOnResume;
+    private Boolean disableSignInOnResume;
     /** Enables shared PC mode and applies the shared pc policies. */
-    private Boolean _enabled;
+    private Boolean enabled;
     /** Specifies the time in seconds that a device must sit idle before the PC goes to sleep. Setting this value to 0 prevents the sleep timeout from occurring. */
-    private Integer _idleTimeBeforeSleepInSeconds;
+    private Integer idleTimeBeforeSleepInSeconds;
     /** Specifies the display text for the account shown on the sign-in screen which launches the app specified by SetKioskAppUserModelId. Only applies when KioskAppUserModelId is set. */
-    private String _kioskAppDisplayName;
+    private String kioskAppDisplayName;
     /** Specifies the application user model ID of the app to use with assigned access. */
-    private String _kioskAppUserModelId;
+    private String kioskAppUserModelId;
     /** Specifies the daily start time of maintenance hour. */
-    private LocalTime _maintenanceStartTime;
+    private LocalTime maintenanceStartTime;
     /**
      * Instantiates a new SharedPCConfiguration and sets the default values.
      * @return a void
@@ -58,7 +57,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nullable
     public SharedPCAccountManagerPolicy getAccountManagerPolicy() {
-        return this._accountManagerPolicy;
+        return this.accountManagerPolicy;
     }
     /**
      * Gets the allowedAccounts property value. Type of accounts that are allowed to share the PC.
@@ -66,7 +65,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nullable
     public SharedPCAllowedAccountType getAllowedAccounts() {
-        return this._allowedAccounts;
+        return this.allowedAccounts;
     }
     /**
      * Gets the allowLocalStorage property value. Specifies whether local storage is allowed on a shared PC.
@@ -74,7 +73,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nullable
     public Boolean getAllowLocalStorage() {
-        return this._allowLocalStorage;
+        return this.allowLocalStorage;
     }
     /**
      * Gets the disableAccountManager property value. Disables the account manager for shared PC mode.
@@ -82,7 +81,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nullable
     public Boolean getDisableAccountManager() {
-        return this._disableAccountManager;
+        return this.disableAccountManager;
     }
     /**
      * Gets the disableEduPolicies property value. Specifies whether the default shared PC education environment policies should be disabled. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
@@ -90,7 +89,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nullable
     public Boolean getDisableEduPolicies() {
-        return this._disableEduPolicies;
+        return this.disableEduPolicies;
     }
     /**
      * Gets the disablePowerPolicies property value. Specifies whether the default shared PC power policies should be disabled.
@@ -98,7 +97,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nullable
     public Boolean getDisablePowerPolicies() {
-        return this._disablePowerPolicies;
+        return this.disablePowerPolicies;
     }
     /**
      * Gets the disableSignInOnResume property value. Disables the requirement to sign in whenever the device wakes up from sleep mode.
@@ -106,7 +105,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nullable
     public Boolean getDisableSignInOnResume() {
-        return this._disableSignInOnResume;
+        return this.disableSignInOnResume;
     }
     /**
      * Gets the enabled property value. Enables shared PC mode and applies the shared pc policies.
@@ -114,15 +113,15 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nullable
     public Boolean getEnabled() {
-        return this._enabled;
+        return this.enabled;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountManagerPolicy", (n) -> { this.setAccountManagerPolicy(n.getObjectValue(SharedPCAccountManagerPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("allowedAccounts", (n) -> { this.setAllowedAccounts(n.getEnumValue(SharedPCAllowedAccountType.class)); });
         deserializerMap.put("allowLocalStorage", (n) -> { this.setAllowLocalStorage(n.getBooleanValue()); });
@@ -143,7 +142,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nullable
     public Integer getIdleTimeBeforeSleepInSeconds() {
-        return this._idleTimeBeforeSleepInSeconds;
+        return this.idleTimeBeforeSleepInSeconds;
     }
     /**
      * Gets the kioskAppDisplayName property value. Specifies the display text for the account shown on the sign-in screen which launches the app specified by SetKioskAppUserModelId. Only applies when KioskAppUserModelId is set.
@@ -151,7 +150,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nullable
     public String getKioskAppDisplayName() {
-        return this._kioskAppDisplayName;
+        return this.kioskAppDisplayName;
     }
     /**
      * Gets the kioskAppUserModelId property value. Specifies the application user model ID of the app to use with assigned access.
@@ -159,7 +158,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nullable
     public String getKioskAppUserModelId() {
-        return this._kioskAppUserModelId;
+        return this.kioskAppUserModelId;
     }
     /**
      * Gets the maintenanceStartTime property value. Specifies the daily start time of maintenance hour.
@@ -167,7 +166,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nullable
     public LocalTime getMaintenanceStartTime() {
-        return this._maintenanceStartTime;
+        return this.maintenanceStartTime;
     }
     /**
      * Serializes information the current object
@@ -198,7 +197,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nonnull
     public void setAccountManagerPolicy(@javax.annotation.Nullable final SharedPCAccountManagerPolicy value) {
-        this._accountManagerPolicy = value;
+        this.accountManagerPolicy = value;
     }
     /**
      * Sets the allowedAccounts property value. Type of accounts that are allowed to share the PC.
@@ -207,7 +206,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nonnull
     public void setAllowedAccounts(@javax.annotation.Nullable final SharedPCAllowedAccountType value) {
-        this._allowedAccounts = value;
+        this.allowedAccounts = value;
     }
     /**
      * Sets the allowLocalStorage property value. Specifies whether local storage is allowed on a shared PC.
@@ -216,7 +215,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nonnull
     public void setAllowLocalStorage(@javax.annotation.Nullable final Boolean value) {
-        this._allowLocalStorage = value;
+        this.allowLocalStorage = value;
     }
     /**
      * Sets the disableAccountManager property value. Disables the account manager for shared PC mode.
@@ -225,7 +224,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nonnull
     public void setDisableAccountManager(@javax.annotation.Nullable final Boolean value) {
-        this._disableAccountManager = value;
+        this.disableAccountManager = value;
     }
     /**
      * Sets the disableEduPolicies property value. Specifies whether the default shared PC education environment policies should be disabled. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
@@ -234,7 +233,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nonnull
     public void setDisableEduPolicies(@javax.annotation.Nullable final Boolean value) {
-        this._disableEduPolicies = value;
+        this.disableEduPolicies = value;
     }
     /**
      * Sets the disablePowerPolicies property value. Specifies whether the default shared PC power policies should be disabled.
@@ -243,7 +242,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nonnull
     public void setDisablePowerPolicies(@javax.annotation.Nullable final Boolean value) {
-        this._disablePowerPolicies = value;
+        this.disablePowerPolicies = value;
     }
     /**
      * Sets the disableSignInOnResume property value. Disables the requirement to sign in whenever the device wakes up from sleep mode.
@@ -252,7 +251,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nonnull
     public void setDisableSignInOnResume(@javax.annotation.Nullable final Boolean value) {
-        this._disableSignInOnResume = value;
+        this.disableSignInOnResume = value;
     }
     /**
      * Sets the enabled property value. Enables shared PC mode and applies the shared pc policies.
@@ -261,7 +260,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nonnull
     public void setEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._enabled = value;
+        this.enabled = value;
     }
     /**
      * Sets the idleTimeBeforeSleepInSeconds property value. Specifies the time in seconds that a device must sit idle before the PC goes to sleep. Setting this value to 0 prevents the sleep timeout from occurring.
@@ -270,7 +269,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nonnull
     public void setIdleTimeBeforeSleepInSeconds(@javax.annotation.Nullable final Integer value) {
-        this._idleTimeBeforeSleepInSeconds = value;
+        this.idleTimeBeforeSleepInSeconds = value;
     }
     /**
      * Sets the kioskAppDisplayName property value. Specifies the display text for the account shown on the sign-in screen which launches the app specified by SetKioskAppUserModelId. Only applies when KioskAppUserModelId is set.
@@ -279,7 +278,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nonnull
     public void setKioskAppDisplayName(@javax.annotation.Nullable final String value) {
-        this._kioskAppDisplayName = value;
+        this.kioskAppDisplayName = value;
     }
     /**
      * Sets the kioskAppUserModelId property value. Specifies the application user model ID of the app to use with assigned access.
@@ -288,7 +287,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nonnull
     public void setKioskAppUserModelId(@javax.annotation.Nullable final String value) {
-        this._kioskAppUserModelId = value;
+        this.kioskAppUserModelId = value;
     }
     /**
      * Sets the maintenanceStartTime property value. Specifies the daily start time of maintenance hour.
@@ -297,6 +296,6 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nonnull
     public void setMaintenanceStartTime(@javax.annotation.Nullable final LocalTime value) {
-        this._maintenanceStartTime = value;
+        this.maintenanceStartTime = value;
     }
 }

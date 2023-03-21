@@ -3,25 +3,24 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ListItem extends BaseItem implements Parsable {
     /** Analytics about the view activities that took place on this item. */
-    private ItemAnalytics _analytics;
+    private ItemAnalytics analytics;
     /** The content type of this list item */
-    private ContentTypeInfo _contentType;
+    private ContentTypeInfo contentType;
     /** Version information for a document set version created by a user. */
-    private java.util.List<DocumentSetVersion> _documentSetVersions;
+    private java.util.List<DocumentSetVersion> documentSetVersions;
     /** For document libraries, the driveItem relationship exposes the listItem as a [driveItem][] */
-    private DriveItem _driveItem;
+    private DriveItem driveItem;
     /** The values of the columns set on this list item. */
-    private FieldValueSet _fields;
+    private FieldValueSet fields;
     /** Returns identifiers useful for SharePoint REST compatibility. Read-only. */
-    private SharepointIds _sharepointIds;
+    private SharepointIds sharepointIds;
     /** The list of previous versions of the list item. */
-    private java.util.List<ListItemVersion> _versions;
+    private java.util.List<ListItemVersion> versions;
     /**
      * Instantiates a new listItem and sets the default values.
      * @return a void
@@ -47,7 +46,7 @@ public class ListItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public ItemAnalytics getAnalytics() {
-        return this._analytics;
+        return this.analytics;
     }
     /**
      * Gets the contentType property value. The content type of this list item
@@ -55,7 +54,7 @@ public class ListItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public ContentTypeInfo getContentType() {
-        return this._contentType;
+        return this.contentType;
     }
     /**
      * Gets the documentSetVersions property value. Version information for a document set version created by a user.
@@ -63,7 +62,7 @@ public class ListItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DocumentSetVersion> getDocumentSetVersions() {
-        return this._documentSetVersions;
+        return this.documentSetVersions;
     }
     /**
      * Gets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
@@ -71,15 +70,15 @@ public class ListItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public DriveItem getDriveItem() {
-        return this._driveItem;
+        return this.driveItem;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("analytics", (n) -> { this.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getObjectValue(ContentTypeInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("documentSetVersions", (n) -> { this.setDocumentSetVersions(n.getCollectionOfObjectValues(DocumentSetVersion::createFromDiscriminatorValue)); });
@@ -95,7 +94,7 @@ public class ListItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public FieldValueSet getFields() {
-        return this._fields;
+        return this.fields;
     }
     /**
      * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
@@ -103,7 +102,7 @@ public class ListItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public SharepointIds getSharepointIds() {
-        return this._sharepointIds;
+        return this.sharepointIds;
     }
     /**
      * Gets the versions property value. The list of previous versions of the list item.
@@ -111,7 +110,7 @@ public class ListItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ListItemVersion> getVersions() {
-        return this._versions;
+        return this.versions;
     }
     /**
      * Serializes information the current object
@@ -137,7 +136,7 @@ public class ListItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAnalytics(@javax.annotation.Nullable final ItemAnalytics value) {
-        this._analytics = value;
+        this.analytics = value;
     }
     /**
      * Sets the contentType property value. The content type of this list item
@@ -146,7 +145,7 @@ public class ListItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentType(@javax.annotation.Nullable final ContentTypeInfo value) {
-        this._contentType = value;
+        this.contentType = value;
     }
     /**
      * Sets the documentSetVersions property value. Version information for a document set version created by a user.
@@ -155,7 +154,7 @@ public class ListItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDocumentSetVersions(@javax.annotation.Nullable final java.util.List<DocumentSetVersion> value) {
-        this._documentSetVersions = value;
+        this.documentSetVersions = value;
     }
     /**
      * Sets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
@@ -164,7 +163,7 @@ public class ListItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDriveItem(@javax.annotation.Nullable final DriveItem value) {
-        this._driveItem = value;
+        this.driveItem = value;
     }
     /**
      * Sets the fields property value. The values of the columns set on this list item.
@@ -173,7 +172,7 @@ public class ListItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFields(@javax.annotation.Nullable final FieldValueSet value) {
-        this._fields = value;
+        this.fields = value;
     }
     /**
      * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
@@ -182,7 +181,7 @@ public class ListItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSharepointIds(@javax.annotation.Nullable final SharepointIds value) {
-        this._sharepointIds = value;
+        this.sharepointIds = value;
     }
     /**
      * Sets the versions property value. The list of previous versions of the list item.
@@ -191,6 +190,6 @@ public class ListItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVersions(@javax.annotation.Nullable final java.util.List<ListItemVersion> value) {
-        this._versions = value;
+        this.versions = value;
     }
 }

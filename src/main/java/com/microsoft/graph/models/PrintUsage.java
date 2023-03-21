@@ -1,25 +1,21 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.PrintUsageByPrinter;
-import com.microsoft.graph.models.PrintUsageByUser;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalDate;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class PrintUsage extends Entity implements Parsable {
     /** The completedBlackAndWhiteJobCount property */
-    private Long _completedBlackAndWhiteJobCount;
+    private Long completedBlackAndWhiteJobCount;
     /** The completedColorJobCount property */
-    private Long _completedColorJobCount;
+    private Long completedColorJobCount;
     /** The incompleteJobCount property */
-    private Long _incompleteJobCount;
+    private Long incompleteJobCount;
     /** The usageDate property */
-    private LocalDate _usageDate;
+    private LocalDate usageDate;
     /**
      * Instantiates a new printUsage and sets the default values.
      * @return a void
@@ -52,7 +48,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Long getCompletedBlackAndWhiteJobCount() {
-        return this._completedBlackAndWhiteJobCount;
+        return this.completedBlackAndWhiteJobCount;
     }
     /**
      * Gets the completedColorJobCount property value. The completedColorJobCount property
@@ -60,15 +56,15 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Long getCompletedColorJobCount() {
-        return this._completedColorJobCount;
+        return this.completedColorJobCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("completedBlackAndWhiteJobCount", (n) -> { this.setCompletedBlackAndWhiteJobCount(n.getLongValue()); });
         deserializerMap.put("completedColorJobCount", (n) -> { this.setCompletedColorJobCount(n.getLongValue()); });
         deserializerMap.put("incompleteJobCount", (n) -> { this.setIncompleteJobCount(n.getLongValue()); });
@@ -81,7 +77,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Long getIncompleteJobCount() {
-        return this._incompleteJobCount;
+        return this.incompleteJobCount;
     }
     /**
      * Gets the usageDate property value. The usageDate property
@@ -89,7 +85,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LocalDate getUsageDate() {
-        return this._usageDate;
+        return this.usageDate;
     }
     /**
      * Serializes information the current object
@@ -112,7 +108,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCompletedBlackAndWhiteJobCount(@javax.annotation.Nullable final Long value) {
-        this._completedBlackAndWhiteJobCount = value;
+        this.completedBlackAndWhiteJobCount = value;
     }
     /**
      * Sets the completedColorJobCount property value. The completedColorJobCount property
@@ -121,7 +117,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCompletedColorJobCount(@javax.annotation.Nullable final Long value) {
-        this._completedColorJobCount = value;
+        this.completedColorJobCount = value;
     }
     /**
      * Sets the incompleteJobCount property value. The incompleteJobCount property
@@ -130,7 +126,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIncompleteJobCount(@javax.annotation.Nullable final Long value) {
-        this._incompleteJobCount = value;
+        this.incompleteJobCount = value;
     }
     /**
      * Sets the usageDate property value. The usageDate property
@@ -139,6 +135,6 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUsageDate(@javax.annotation.Nullable final LocalDate value) {
-        this._usageDate = value;
+        this.usageDate = value;
     }
 }

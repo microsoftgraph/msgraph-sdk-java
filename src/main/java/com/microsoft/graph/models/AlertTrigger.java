@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AlertTrigger implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Name of the property serving as a detection trigger. */
-    private String _name;
+    private String name;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Type of the property in the key:value pair for interpretation. For example, String, Boolean etc. */
-    private String _type;
+    private String type;
     /** Value of the property serving as a detection trigger. */
-    private String _value;
+    private String value;
     /**
      * Instantiates a new alertTrigger and sets the default values.
      * @return a void
@@ -43,15 +42,15 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
@@ -64,7 +63,7 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -72,7 +71,7 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the type property value. Type of the property in the key:value pair for interpretation. For example, String, Boolean etc.
@@ -80,7 +79,7 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Gets the value property value. Value of the property serving as a detection trigger.
@@ -88,7 +87,7 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the name property value. Name of the property serving as a detection trigger.
@@ -120,7 +119,7 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -129,7 +128,7 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the type property value. Type of the property in the key:value pair for interpretation. For example, String, Boolean etc.
@@ -138,7 +137,7 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+        this.type = value;
     }
     /**
      * Sets the value property value. Value of the property serving as a detection trigger.
@@ -147,6 +146,6 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final String value) {
-        this._value = value;
+        this.value = value;
     }
 }

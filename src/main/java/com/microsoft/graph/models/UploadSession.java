@@ -5,21 +5,20 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UploadSession implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached. */
-    private OffsetDateTime _expirationDateTime;
+    private OffsetDateTime expirationDateTime;
     /** A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format 'start-end' (e.g. '0-26' to indicate the first 27 bytes of the file). When uploading files as Outlook attachments, instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file where the next upload should begin. */
-    private java.util.List<String> _nextExpectedRanges;
+    private java.util.List<String> nextExpectedRanges;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The URL endpoint that accepts PUT requests for byte ranges of the file. */
-    private String _uploadUrl;
+    private String uploadUrl;
     /**
      * Instantiates a new uploadSession and sets the default values.
      * @return a void
@@ -44,7 +43,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the expirationDateTime property value. The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached.
@@ -52,15 +51,15 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this._expirationDateTime;
+        return this.expirationDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("nextExpectedRanges", (n) -> { this.setNextExpectedRanges(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -73,7 +72,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getNextExpectedRanges() {
-        return this._nextExpectedRanges;
+        return this.nextExpectedRanges;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -81,7 +80,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the uploadUrl property value. The URL endpoint that accepts PUT requests for byte ranges of the file.
@@ -89,7 +88,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getUploadUrl() {
-        return this._uploadUrl;
+        return this.uploadUrl;
     }
     /**
      * Serializes information the current object
@@ -112,7 +111,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the expirationDateTime property value. The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached.
@@ -121,7 +120,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._expirationDateTime = value;
+        this.expirationDateTime = value;
     }
     /**
      * Sets the nextExpectedRanges property value. A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format 'start-end' (e.g. '0-26' to indicate the first 27 bytes of the file). When uploading files as Outlook attachments, instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file where the next upload should begin.
@@ -130,7 +129,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setNextExpectedRanges(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._nextExpectedRanges = value;
+        this.nextExpectedRanges = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -139,7 +138,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the uploadUrl property value. The URL endpoint that accepts PUT requests for byte ranges of the file.
@@ -148,6 +147,6 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUploadUrl(@javax.annotation.Nullable final String value) {
-        this._uploadUrl = value;
+        this.uploadUrl = value;
     }
 }

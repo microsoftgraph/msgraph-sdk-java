@@ -4,20 +4,18 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class SimulationAutomationRun extends Entity implements Parsable {
     /** Date and time when the run ends in an attack simulation automation. */
-    private OffsetDateTime _endDateTime;
+    private OffsetDateTime endDateTime;
     /** Unique identifier for the attack simulation campaign initiated in the attack simulation automation run. */
-    private String _simulationId;
+    private String simulationId;
     /** Date and time when the run starts in an attack simulation automation. */
-    private OffsetDateTime _startDateTime;
+    private OffsetDateTime startDateTime;
     /** Status of the attack simulation automation run. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue. */
-    private SimulationAutomationRunStatus _status;
+    private SimulationAutomationRunStatus status;
     /**
      * Instantiates a new simulationAutomationRun and sets the default values.
      * @return a void
@@ -42,15 +40,15 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("simulationId", (n) -> { this.setSimulationId(n.getStringValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
@@ -63,7 +61,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSimulationId() {
-        return this._simulationId;
+        return this.simulationId;
     }
     /**
      * Gets the startDateTime property value. Date and time when the run starts in an attack simulation automation.
@@ -71,7 +69,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Gets the status property value. Status of the attack simulation automation run. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
@@ -79,7 +77,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SimulationAutomationRunStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
@@ -102,7 +100,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
      * Sets the simulationId property value. Unique identifier for the attack simulation campaign initiated in the attack simulation automation run.
@@ -111,7 +109,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSimulationId(@javax.annotation.Nullable final String value) {
-        this._simulationId = value;
+        this.simulationId = value;
     }
     /**
      * Sets the startDateTime property value. Date and time when the run starts in an attack simulation automation.
@@ -120,7 +118,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
     /**
      * Sets the status property value. Status of the attack simulation automation run. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
@@ -129,6 +127,6 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final SimulationAutomationRunStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }

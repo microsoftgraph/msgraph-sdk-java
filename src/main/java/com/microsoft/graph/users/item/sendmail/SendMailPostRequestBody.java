@@ -5,18 +5,16 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the sendMail method. */
 public class SendMailPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The Message property */
-    private Message _message;
+    private Message message;
     /** The SaveToSentItems property */
-    private Boolean _saveToSentItems;
+    private Boolean saveToSentItems;
     /**
      * Instantiates a new sendMailPostRequestBody and sets the default values.
      * @return a void
@@ -41,17 +39,17 @@ public class SendMailPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
-        deserializerMap.put("message", (n) -> { this.setMessage(n.getObjectValue(Message::createFromDiscriminatorValue)); });
-        deserializerMap.put("saveToSentItems", (n) -> { this.setSaveToSentItems(n.getBooleanValue()); });
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        deserializerMap.put("Message", (n) -> { this.setMessage(n.getObjectValue(Message::createFromDiscriminatorValue)); });
+        deserializerMap.put("SaveToSentItems", (n) -> { this.setSaveToSentItems(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
@@ -60,7 +58,7 @@ public class SendMailPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Message getMessage() {
-        return this._message;
+        return this.message;
     }
     /**
      * Gets the saveToSentItems property value. The SaveToSentItems property
@@ -68,7 +66,7 @@ public class SendMailPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getSaveToSentItems() {
-        return this._saveToSentItems;
+        return this.saveToSentItems;
     }
     /**
      * Serializes information the current object
@@ -78,8 +76,8 @@ public class SendMailPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeObjectValue("message", this.getMessage());
-        writer.writeBooleanValue("saveToSentItems", this.getSaveToSentItems());
+        writer.writeObjectValue("Message", this.getMessage());
+        writer.writeBooleanValue("SaveToSentItems", this.getSaveToSentItems());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -89,7 +87,7 @@ public class SendMailPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the message property value. The Message property
@@ -98,7 +96,7 @@ public class SendMailPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final Message value) {
-        this._message = value;
+        this.message = value;
     }
     /**
      * Sets the saveToSentItems property value. The SaveToSentItems property
@@ -107,6 +105,6 @@ public class SendMailPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSaveToSentItems(@javax.annotation.Nullable final Boolean value) {
-        this._saveToSentItems = value;
+        this.saveToSentItems = value;
     }
 }

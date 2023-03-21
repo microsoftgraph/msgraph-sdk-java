@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentityApiConnector extends Entity implements Parsable {
     /** The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported. */
-    private ApiAuthenticationConfigurationBase _authenticationConfiguration;
+    private ApiAuthenticationConfigurationBase authenticationConfiguration;
     /** The name of the API connector. */
-    private String _displayName;
+    private String displayName;
     /** The URL of the API endpoint to call. */
-    private String _targetUrl;
+    private String targetUrl;
     /**
      * Instantiates a new IdentityApiConnector and sets the default values.
      * @return a void
@@ -38,7 +37,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ApiAuthenticationConfigurationBase getAuthenticationConfiguration() {
-        return this._authenticationConfiguration;
+        return this.authenticationConfiguration;
     }
     /**
      * Gets the displayName property value. The name of the API connector.
@@ -46,15 +45,15 @@ public class IdentityApiConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationConfiguration", (n) -> { this.setAuthenticationConfiguration(n.getObjectValue(ApiAuthenticationConfigurationBase::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("targetUrl", (n) -> { this.setTargetUrl(n.getStringValue()); });
@@ -66,7 +65,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTargetUrl() {
-        return this._targetUrl;
+        return this.targetUrl;
     }
     /**
      * Serializes information the current object
@@ -88,7 +87,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAuthenticationConfiguration(@javax.annotation.Nullable final ApiAuthenticationConfigurationBase value) {
-        this._authenticationConfiguration = value;
+        this.authenticationConfiguration = value;
     }
     /**
      * Sets the displayName property value. The name of the API connector.
@@ -97,7 +96,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the targetUrl property value. The URL of the API endpoint to call.
@@ -106,6 +105,6 @@ public class IdentityApiConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTargetUrl(@javax.annotation.Nullable final String value) {
-        this._targetUrl = value;
+        this.targetUrl = value;
     }
 }

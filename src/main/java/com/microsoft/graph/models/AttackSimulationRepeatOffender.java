@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The user in an attack simulation and training campaign. */
-    private AttackSimulationUser _attackSimulationUser;
+    private AttackSimulationUser attackSimulationUser;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Number of repeat offences of the user in attack simulation and training campaigns. */
-    private Integer _repeatOffenceCount;
+    private Integer repeatOffenceCount;
     /**
      * Instantiates a new attackSimulationRepeatOffender and sets the default values.
      * @return a void
@@ -41,7 +40,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the attackSimulationUser property value. The user in an attack simulation and training campaign.
@@ -49,15 +48,15 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public AttackSimulationUser getAttackSimulationUser() {
-        return this._attackSimulationUser;
+        return this.attackSimulationUser;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("attackSimulationUser", (n) -> { this.setAttackSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("repeatOffenceCount", (n) -> { this.setRepeatOffenceCount(n.getIntegerValue()); });
@@ -69,7 +68,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the repeatOffenceCount property value. Number of repeat offences of the user in attack simulation and training campaigns.
@@ -77,7 +76,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public Integer getRepeatOffenceCount() {
-        return this._repeatOffenceCount;
+        return this.repeatOffenceCount;
     }
     /**
      * Serializes information the current object
@@ -99,7 +98,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the attackSimulationUser property value. The user in an attack simulation and training campaign.
@@ -108,7 +107,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public void setAttackSimulationUser(@javax.annotation.Nullable final AttackSimulationUser value) {
-        this._attackSimulationUser = value;
+        this.attackSimulationUser = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -117,7 +116,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the repeatOffenceCount property value. Number of repeat offences of the user in attack simulation and training campaigns.
@@ -126,6 +125,6 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public void setRepeatOffenceCount(@javax.annotation.Nullable final Integer value) {
-        this._repeatOffenceCount = value;
+        this.repeatOffenceCount = value;
     }
 }

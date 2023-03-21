@@ -4,7 +4,9 @@ import com.microsoft.graph.print.shares.item.allowedusers.item.ref.RefRequestBui
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-/** Builds and executes requests for operations under /print/shares/{printerShare-id}/allowedUsers/{user-id} */
+/**
+ * Builds and executes requests for operations under /print/shares/{printerShare-id}/allowedUsers/{user-id}
+ */
 public class UserItemRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;

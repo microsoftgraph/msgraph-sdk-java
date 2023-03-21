@@ -5,18 +5,17 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the assignLicense method. */
+import java.util.UUID;
 public class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The addLicenses property */
-    private java.util.List<AssignedLicense> _addLicenses;
+    private java.util.List<AssignedLicense> addLicenses;
     /** The removeLicenses property */
-    private java.util.List<String> _removeLicenses;
+    private java.util.List<UUID> removeLicenses;
     /**
      * Instantiates a new assignLicensePostRequestBody and sets the default values.
      * @return a void
@@ -41,7 +40,7 @@ public class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the addLicenses property value. The addLicenses property
@@ -49,26 +48,26 @@ public class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public java.util.List<AssignedLicense> getAddLicenses() {
-        return this._addLicenses;
+        return this.addLicenses;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("addLicenses", (n) -> { this.setAddLicenses(n.getCollectionOfObjectValues(AssignedLicense::createFromDiscriminatorValue)); });
-        deserializerMap.put("removeLicenses", (n) -> { this.setRemoveLicenses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("removeLicenses", (n) -> { this.setRemoveLicenses(n.getCollectionOfPrimitiveValues(UUID.class)); });
         return deserializerMap;
     }
     /**
      * Gets the removeLicenses property value. The removeLicenses property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getRemoveLicenses() {
-        return this._removeLicenses;
+    public java.util.List<UUID> getRemoveLicenses() {
+        return this.removeLicenses;
     }
     /**
      * Serializes information the current object
@@ -89,7 +88,7 @@ public class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the addLicenses property value. The addLicenses property
@@ -98,7 +97,7 @@ public class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setAddLicenses(@javax.annotation.Nullable final java.util.List<AssignedLicense> value) {
-        this._addLicenses = value;
+        this.addLicenses = value;
     }
     /**
      * Sets the removeLicenses property value. The removeLicenses property
@@ -106,7 +105,7 @@ public class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsa
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setRemoveLicenses(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._removeLicenses = value;
+    public void setRemoveLicenses(@javax.annotation.Nullable final java.util.List<UUID> value) {
+        this.removeLicenses = value;
     }
 }

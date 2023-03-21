@@ -3,18 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class ServiceHealth extends Entity implements Parsable {
     /** A collection of issues that happened on the service, with detailed information for each issue. */
-    private java.util.List<ServiceHealthIssue> _issues;
+    private java.util.List<ServiceHealthIssue> issues;
     /** The service name. Use the list healthOverviews operation to get exact string names for services subscribed by the tenant. */
-    private String _service;
+    private String service;
     /** The status property */
-    private ServiceHealthStatus _status;
+    private ServiceHealthStatus status;
     /**
      * Instantiates a new serviceHealth and sets the default values.
      * @return a void
@@ -35,11 +33,11 @@ public class ServiceHealth extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("issues", (n) -> { this.setIssues(n.getCollectionOfObjectValues(ServiceHealthIssue::createFromDiscriminatorValue)); });
         deserializerMap.put("service", (n) -> { this.setService(n.getStringValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ServiceHealthStatus.class)); });
@@ -51,7 +49,7 @@ public class ServiceHealth extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ServiceHealthIssue> getIssues() {
-        return this._issues;
+        return this.issues;
     }
     /**
      * Gets the service property value. The service name. Use the list healthOverviews operation to get exact string names for services subscribed by the tenant.
@@ -59,7 +57,7 @@ public class ServiceHealth extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getService() {
-        return this._service;
+        return this.service;
     }
     /**
      * Gets the status property value. The status property
@@ -67,7 +65,7 @@ public class ServiceHealth extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ServiceHealthStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
@@ -89,7 +87,7 @@ public class ServiceHealth extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIssues(@javax.annotation.Nullable final java.util.List<ServiceHealthIssue> value) {
-        this._issues = value;
+        this.issues = value;
     }
     /**
      * Sets the service property value. The service name. Use the list healthOverviews operation to get exact string names for services subscribed by the tenant.
@@ -98,7 +96,7 @@ public class ServiceHealth extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setService(@javax.annotation.Nullable final String value) {
-        this._service = value;
+        this.service = value;
     }
     /**
      * Sets the status property value. The status property
@@ -107,6 +105,6 @@ public class ServiceHealth extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ServiceHealthStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }

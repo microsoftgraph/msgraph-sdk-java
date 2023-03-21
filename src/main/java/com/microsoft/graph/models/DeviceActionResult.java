@@ -1,33 +1,29 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.DeleteUserFromSharedAppleDeviceActionResult;
-import com.microsoft.graph.models.LocateDeviceActionResult;
-import com.microsoft.graph.models.RemoteLockActionResult;
-import com.microsoft.graph.models.ResetPasscodeActionResult;
-import com.microsoft.graph.models.WindowsDefenderScanActionResult;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device action result */
+/**
+ * Device action result
+ */
 public class DeviceActionResult implements AdditionalDataHolder, Parsable {
     /** Action name */
-    private String _actionName;
+    private String actionName;
     /** State of the action on the device */
-    private ActionState _actionState;
+    private ActionState actionState;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Time the action state was last updated */
-    private OffsetDateTime _lastUpdatedDateTime;
+    private OffsetDateTime lastUpdatedDateTime;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Time the action was initiated */
-    private OffsetDateTime _startDateTime;
+    private OffsetDateTime startDateTime;
     /**
      * Instantiates a new deviceActionResult and sets the default values.
      * @return a void
@@ -63,7 +59,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getActionName() {
-        return this._actionName;
+        return this.actionName;
     }
     /**
      * Gets the actionState property value. State of the action on the device
@@ -71,7 +67,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ActionState getActionState() {
-        return this._actionState;
+        return this.actionState;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -79,15 +75,15 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("actionName", (n) -> { this.setActionName(n.getStringValue()); });
         deserializerMap.put("actionState", (n) -> { this.setActionState(n.getEnumValue(ActionState.class)); });
         deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
@@ -101,7 +97,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this._lastUpdatedDateTime;
+        return this.lastUpdatedDateTime;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -109,7 +105,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the startDateTime property value. Time the action was initiated
@@ -117,7 +113,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Serializes information the current object
@@ -141,7 +137,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setActionName(@javax.annotation.Nullable final String value) {
-        this._actionName = value;
+        this.actionName = value;
     }
     /**
      * Sets the actionState property value. State of the action on the device
@@ -150,7 +146,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setActionState(@javax.annotation.Nullable final ActionState value) {
-        this._actionState = value;
+        this.actionState = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -159,7 +155,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. Time the action state was last updated
@@ -168,7 +164,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastUpdatedDateTime = value;
+        this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -177,7 +173,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the startDateTime property value. Time the action was initiated
@@ -186,6 +182,6 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
 }

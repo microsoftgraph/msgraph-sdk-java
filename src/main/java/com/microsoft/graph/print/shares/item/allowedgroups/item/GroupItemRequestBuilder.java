@@ -4,7 +4,9 @@ import com.microsoft.graph.print.shares.item.allowedgroups.item.ref.RefRequestBu
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-/** Builds and executes requests for operations under /print/shares/{printerShare-id}/allowedGroups/{group-id} */
+/**
+ * Builds and executes requests for operations under /print/shares/{printerShare-id}/allowedGroups/{group-id}
+ */
 public class GroupItemRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;

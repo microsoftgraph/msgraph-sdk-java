@@ -4,61 +4,60 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Device extends DirectoryObject implements Parsable {
     /** true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property. */
-    private Boolean _accountEnabled;
+    private Boolean accountEnabled;
     /** For internal use only. Not nullable. Supports $filter (eq, not, ge, le). */
-    private java.util.List<AlternativeSecurityId> _alternativeSecurityIds;
+    private java.util.List<AlternativeSecurityId> alternativeSecurityIds;
     /** The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderBy. */
-    private OffsetDateTime _approximateLastSignInDateTime;
+    private OffsetDateTime approximateLastSignInDateTime;
     /** The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
-    private OffsetDateTime _complianceExpirationDateTime;
-    /** Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith). */
-    private String _deviceId;
+    private OffsetDateTime complianceExpirationDateTime;
+    /** Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith). */
+    private String deviceId;
     /** For internal use only. Set to null. */
-    private String _deviceMetadata;
+    private String deviceMetadata;
     /** For internal use only. */
-    private Integer _deviceVersion;
+    private Integer deviceVersion;
     /** The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
-    private String _displayName;
+    private String displayName;
     /** The collection of open extensions defined for the device. Read-only. Nullable. */
-    private java.util.List<Extension> _extensions;
+    private java.util.List<Extension> extensions;
     /** true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not). */
-    private Boolean _isCompliant;
+    private Boolean isCompliant;
     /** true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not). */
-    private Boolean _isManaged;
+    private Boolean isManaged;
     /** Application identifier used to register device into MDM. Read-only. Supports $filter (eq, ne, not, startsWith). */
-    private String _mdmAppId;
+    private String mdmAppId;
     /** Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand. */
-    private java.util.List<DirectoryObject> _memberOf;
+    private java.util.List<DirectoryObject> memberOf;
     /** The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only. Supports $filter (eq, ne, not, ge, le, in). */
-    private OffsetDateTime _onPremisesLastSyncDateTime;
+    private OffsetDateTime onPremisesLastSyncDateTime;
     /** true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values). */
-    private Boolean _onPremisesSyncEnabled;
+    private Boolean onPremisesSyncEnabled;
     /** The type of operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values). */
-    private String _operatingSystem;
+    private String operatingSystem;
     /** The version of the operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values). */
-    private String _operatingSystemVersion;
+    private String operatingSystemVersion;
     /** For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith,/$count eq 0, /$count ne 0). */
-    private java.util.List<String> _physicalIds;
+    private java.util.List<String> physicalIds;
     /** The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT. */
-    private String _profileType;
+    private String profileType;
     /** The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand. */
-    private java.util.List<DirectoryObject> _registeredOwners;
+    private java.util.List<DirectoryObject> registeredOwners;
     /** Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand. */
-    private java.util.List<DirectoryObject> _registeredUsers;
+    private java.util.List<DirectoryObject> registeredUsers;
     /** List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0). */
-    private java.util.List<String> _systemLabels;
+    private java.util.List<String> systemLabels;
     /** Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand. */
-    private java.util.List<DirectoryObject> _transitiveMemberOf;
+    private java.util.List<DirectoryObject> transitiveMemberOf;
     /** Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory */
-    private String _trustType;
+    private String trustType;
     /**
-     * Instantiates a new device and sets the default values.
+     * Instantiates a new Device and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -69,7 +68,7 @@ public class Device extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a device
+     * @return a Device
      */
     @javax.annotation.Nonnull
     public static Device createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -82,7 +81,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAccountEnabled() {
-        return this._accountEnabled;
+        return this.accountEnabled;
     }
     /**
      * Gets the alternativeSecurityIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le).
@@ -90,7 +89,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AlternativeSecurityId> getAlternativeSecurityIds() {
-        return this._alternativeSecurityIds;
+        return this.alternativeSecurityIds;
     }
     /**
      * Gets the approximateLastSignInDateTime property value. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderBy.
@@ -98,7 +97,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getApproximateLastSignInDateTime() {
-        return this._approximateLastSignInDateTime;
+        return this.approximateLastSignInDateTime;
     }
     /**
      * Gets the complianceExpirationDateTime property value. The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -106,15 +105,15 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getComplianceExpirationDateTime() {
-        return this._complianceExpirationDateTime;
+        return this.complianceExpirationDateTime;
     }
     /**
-     * Gets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
+     * Gets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
      * @return a string
      */
     @javax.annotation.Nullable
     public String getDeviceId() {
-        return this._deviceId;
+        return this.deviceId;
     }
     /**
      * Gets the deviceMetadata property value. For internal use only. Set to null.
@@ -122,7 +121,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceMetadata() {
-        return this._deviceMetadata;
+        return this.deviceMetadata;
     }
     /**
      * Gets the deviceVersion property value. For internal use only.
@@ -130,7 +129,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getDeviceVersion() {
-        return this._deviceVersion;
+        return this.deviceVersion;
     }
     /**
      * Gets the displayName property value. The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
@@ -138,7 +137,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the device. Read-only. Nullable.
@@ -146,15 +145,15 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
-        return this._extensions;
+        return this.extensions;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountEnabled", (n) -> { this.setAccountEnabled(n.getBooleanValue()); });
         deserializerMap.put("alternativeSecurityIds", (n) -> { this.setAlternativeSecurityIds(n.getCollectionOfObjectValues(AlternativeSecurityId::createFromDiscriminatorValue)); });
         deserializerMap.put("approximateLastSignInDateTime", (n) -> { this.setApproximateLastSignInDateTime(n.getOffsetDateTimeValue()); });
@@ -187,7 +186,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsCompliant() {
-        return this._isCompliant;
+        return this.isCompliant;
     }
     /**
      * Gets the isManaged property value. true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not).
@@ -195,7 +194,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsManaged() {
-        return this._isManaged;
+        return this.isManaged;
     }
     /**
      * Gets the mdmAppId property value. Application identifier used to register device into MDM. Read-only. Supports $filter (eq, ne, not, startsWith).
@@ -203,7 +202,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMdmAppId() {
-        return this._mdmAppId;
+        return this.mdmAppId;
     }
     /**
      * Gets the memberOf property value. Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
@@ -211,7 +210,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getMemberOf() {
-        return this._memberOf;
+        return this.memberOf;
     }
     /**
      * Gets the onPremisesLastSyncDateTime property value. The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only. Supports $filter (eq, ne, not, ge, le, in).
@@ -219,7 +218,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getOnPremisesLastSyncDateTime() {
-        return this._onPremisesLastSyncDateTime;
+        return this.onPremisesLastSyncDateTime;
     }
     /**
      * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
@@ -227,7 +226,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getOnPremisesSyncEnabled() {
-        return this._onPremisesSyncEnabled;
+        return this.onPremisesSyncEnabled;
     }
     /**
      * Gets the operatingSystem property value. The type of operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
@@ -235,7 +234,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOperatingSystem() {
-        return this._operatingSystem;
+        return this.operatingSystem;
     }
     /**
      * Gets the operatingSystemVersion property value. The version of the operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
@@ -243,7 +242,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOperatingSystemVersion() {
-        return this._operatingSystemVersion;
+        return this.operatingSystemVersion;
     }
     /**
      * Gets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith,/$count eq 0, /$count ne 0).
@@ -251,7 +250,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getPhysicalIds() {
-        return this._physicalIds;
+        return this.physicalIds;
     }
     /**
      * Gets the profileType property value. The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT.
@@ -259,7 +258,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getProfileType() {
-        return this._profileType;
+        return this.profileType;
     }
     /**
      * Gets the registeredOwners property value. The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.
@@ -267,7 +266,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getRegisteredOwners() {
-        return this._registeredOwners;
+        return this.registeredOwners;
     }
     /**
      * Gets the registeredUsers property value. Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
@@ -275,7 +274,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getRegisteredUsers() {
-        return this._registeredUsers;
+        return this.registeredUsers;
     }
     /**
      * Gets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0).
@@ -283,7 +282,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSystemLabels() {
-        return this._systemLabels;
+        return this.systemLabels;
     }
     /**
      * Gets the transitiveMemberOf property value. Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand.
@@ -291,7 +290,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getTransitiveMemberOf() {
-        return this._transitiveMemberOf;
+        return this.transitiveMemberOf;
     }
     /**
      * Gets the trustType property value. Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
@@ -299,7 +298,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTrustType() {
-        return this._trustType;
+        return this.trustType;
     }
     /**
      * Serializes information the current object
@@ -342,7 +341,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAccountEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._accountEnabled = value;
+        this.accountEnabled = value;
     }
     /**
      * Sets the alternativeSecurityIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le).
@@ -351,7 +350,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAlternativeSecurityIds(@javax.annotation.Nullable final java.util.List<AlternativeSecurityId> value) {
-        this._alternativeSecurityIds = value;
+        this.alternativeSecurityIds = value;
     }
     /**
      * Sets the approximateLastSignInDateTime property value. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderBy.
@@ -360,7 +359,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setApproximateLastSignInDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._approximateLastSignInDateTime = value;
+        this.approximateLastSignInDateTime = value;
     }
     /**
      * Sets the complianceExpirationDateTime property value. The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -369,16 +368,16 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setComplianceExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._complianceExpirationDateTime = value;
+        this.complianceExpirationDateTime = value;
     }
     /**
-     * Sets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
+     * Sets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
      * @param value Value to set for the deviceId property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
-        this._deviceId = value;
+        this.deviceId = value;
     }
     /**
      * Sets the deviceMetadata property value. For internal use only. Set to null.
@@ -387,7 +386,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceMetadata(@javax.annotation.Nullable final String value) {
-        this._deviceMetadata = value;
+        this.deviceMetadata = value;
     }
     /**
      * Sets the deviceVersion property value. For internal use only.
@@ -396,7 +395,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceVersion(@javax.annotation.Nullable final Integer value) {
-        this._deviceVersion = value;
+        this.deviceVersion = value;
     }
     /**
      * Sets the displayName property value. The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
@@ -405,7 +404,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the device. Read-only. Nullable.
@@ -414,7 +413,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
-        this._extensions = value;
+        this.extensions = value;
     }
     /**
      * Sets the isCompliant property value. true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not).
@@ -423,7 +422,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsCompliant(@javax.annotation.Nullable final Boolean value) {
-        this._isCompliant = value;
+        this.isCompliant = value;
     }
     /**
      * Sets the isManaged property value. true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not).
@@ -432,7 +431,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsManaged(@javax.annotation.Nullable final Boolean value) {
-        this._isManaged = value;
+        this.isManaged = value;
     }
     /**
      * Sets the mdmAppId property value. Application identifier used to register device into MDM. Read-only. Supports $filter (eq, ne, not, startsWith).
@@ -441,7 +440,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMdmAppId(@javax.annotation.Nullable final String value) {
-        this._mdmAppId = value;
+        this.mdmAppId = value;
     }
     /**
      * Sets the memberOf property value. Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
@@ -450,7 +449,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._memberOf = value;
+        this.memberOf = value;
     }
     /**
      * Sets the onPremisesLastSyncDateTime property value. The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only. Supports $filter (eq, ne, not, ge, le, in).
@@ -459,7 +458,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOnPremisesLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._onPremisesLastSyncDateTime = value;
+        this.onPremisesLastSyncDateTime = value;
     }
     /**
      * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
@@ -468,7 +467,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOnPremisesSyncEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._onPremisesSyncEnabled = value;
+        this.onPremisesSyncEnabled = value;
     }
     /**
      * Sets the operatingSystem property value. The type of operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
@@ -477,7 +476,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOperatingSystem(@javax.annotation.Nullable final String value) {
-        this._operatingSystem = value;
+        this.operatingSystem = value;
     }
     /**
      * Sets the operatingSystemVersion property value. The version of the operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
@@ -486,7 +485,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOperatingSystemVersion(@javax.annotation.Nullable final String value) {
-        this._operatingSystemVersion = value;
+        this.operatingSystemVersion = value;
     }
     /**
      * Sets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith,/$count eq 0, /$count ne 0).
@@ -495,7 +494,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPhysicalIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._physicalIds = value;
+        this.physicalIds = value;
     }
     /**
      * Sets the profileType property value. The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT.
@@ -504,7 +503,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setProfileType(@javax.annotation.Nullable final String value) {
-        this._profileType = value;
+        this.profileType = value;
     }
     /**
      * Sets the registeredOwners property value. The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.
@@ -513,7 +512,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRegisteredOwners(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._registeredOwners = value;
+        this.registeredOwners = value;
     }
     /**
      * Sets the registeredUsers property value. Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
@@ -522,7 +521,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRegisteredUsers(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._registeredUsers = value;
+        this.registeredUsers = value;
     }
     /**
      * Sets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0).
@@ -531,7 +530,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSystemLabels(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._systemLabels = value;
+        this.systemLabels = value;
     }
     /**
      * Sets the transitiveMemberOf property value. Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand.
@@ -540,7 +539,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTransitiveMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._transitiveMemberOf = value;
+        this.transitiveMemberOf = value;
     }
     /**
      * Sets the trustType property value. Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
@@ -549,6 +548,6 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTrustType(@javax.annotation.Nullable final String value) {
-        this._trustType = value;
+        this.trustType = value;
     }
 }

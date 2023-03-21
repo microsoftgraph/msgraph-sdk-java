@@ -5,22 +5,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getSchedule method. */
 public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The AvailabilityViewInterval property */
-    private Integer _availabilityViewInterval;
+    private Integer availabilityViewInterval;
     /** The EndTime property */
-    private DateTimeTimeZone _endTime;
+    private DateTimeTimeZone endTime;
     /** The Schedules property */
-    private java.util.List<String> _schedules;
+    private java.util.List<String> schedules;
     /** The StartTime property */
-    private DateTimeTimeZone _startTime;
+    private DateTimeTimeZone startTime;
     /**
      * Instantiates a new getSchedulePostRequestBody and sets the default values.
      * @return a void
@@ -45,7 +43,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the availabilityViewInterval property value. The AvailabilityViewInterval property
@@ -53,7 +51,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Integer getAvailabilityViewInterval() {
-        return this._availabilityViewInterval;
+        return this.availabilityViewInterval;
     }
     /**
      * Gets the endTime property value. The EndTime property
@@ -61,19 +59,19 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getEndTime() {
-        return this._endTime;
+        return this.endTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
-        deserializerMap.put("availabilityViewInterval", (n) -> { this.setAvailabilityViewInterval(n.getIntegerValue()); });
-        deserializerMap.put("endTime", (n) -> { this.setEndTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        deserializerMap.put("schedules", (n) -> { this.setSchedules(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("startTime", (n) -> { this.setStartTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("AvailabilityViewInterval", (n) -> { this.setAvailabilityViewInterval(n.getIntegerValue()); });
+        deserializerMap.put("EndTime", (n) -> { this.setEndTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("Schedules", (n) -> { this.setSchedules(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("StartTime", (n) -> { this.setStartTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -82,7 +80,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSchedules() {
-        return this._schedules;
+        return this.schedules;
     }
     /**
      * Gets the startTime property value. The StartTime property
@@ -90,7 +88,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getStartTime() {
-        return this._startTime;
+        return this.startTime;
     }
     /**
      * Serializes information the current object
@@ -100,10 +98,10 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeIntegerValue("availabilityViewInterval", this.getAvailabilityViewInterval());
-        writer.writeObjectValue("endTime", this.getEndTime());
-        writer.writeCollectionOfPrimitiveValues("schedules", this.getSchedules());
-        writer.writeObjectValue("startTime", this.getStartTime());
+        writer.writeIntegerValue("AvailabilityViewInterval", this.getAvailabilityViewInterval());
+        writer.writeObjectValue("EndTime", this.getEndTime());
+        writer.writeCollectionOfPrimitiveValues("Schedules", this.getSchedules());
+        writer.writeObjectValue("StartTime", this.getStartTime());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -113,7 +111,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the availabilityViewInterval property value. The AvailabilityViewInterval property
@@ -122,7 +120,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setAvailabilityViewInterval(@javax.annotation.Nullable final Integer value) {
-        this._availabilityViewInterval = value;
+        this.availabilityViewInterval = value;
     }
     /**
      * Sets the endTime property value. The EndTime property
@@ -131,7 +129,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setEndTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
-        this._endTime = value;
+        this.endTime = value;
     }
     /**
      * Sets the schedules property value. The Schedules property
@@ -140,7 +138,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setSchedules(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._schedules = value;
+        this.schedules = value;
     }
     /**
      * Sets the startTime property value. The StartTime property
@@ -149,6 +147,6 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setStartTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
-        this._startTime = value;
+        this.startTime = value;
     }
 }

@@ -2,15 +2,16 @@ package com.microsoft.graph.serviceprincipals.item.ownedobjects;
 
 import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.serviceprincipals.item.ownedobjects.application.ApplicationRequestBuilder;
-import com.microsoft.graph.serviceprincipals.item.ownedobjects.approleassignment.AppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.ownedobjects.count.CountRequestBuilder;
-import com.microsoft.graph.serviceprincipals.item.ownedobjects.endpoint.EndpointRequestBuilder;
-import com.microsoft.graph.serviceprincipals.item.ownedobjects.group.GroupRequestBuilder;
-import com.microsoft.graph.serviceprincipals.item.ownedobjects.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.ownedobjects.graphapplication.GraphApplicationRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.ownedobjects.graphapproleassignment.GraphAppRoleAssignmentRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.ownedobjects.graphendpoint.GraphEndpointRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.ownedobjects.graphgroup.GraphGroupRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.ownedobjects.graphserviceprincipal.GraphServicePrincipalRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
+import com.microsoft.kiota.RequestHeaders;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
@@ -21,42 +22,44 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the ownedObjects property of the microsoft.graph.servicePrincipal entity. */
+/**
+ * Provides operations to manage the ownedObjects property of the microsoft.graph.servicePrincipal entity.
+ */
 public class OwnedObjectsRequestBuilder {
-    /** Casts the previous resource to application. */
-    @javax.annotation.Nonnull
-    public ApplicationRequestBuilder application() {
-        return new ApplicationRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Casts the previous resource to appRoleAssignment. */
-    @javax.annotation.Nonnull
-    public AppRoleAssignmentRequestBuilder appRoleAssignment() {
-        return new AppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
+    /** Casts the previous resource to application. */
+    @javax.annotation.Nonnull
+    public GraphApplicationRequestBuilder graphApplication() {
+        return new GraphApplicationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Casts the previous resource to appRoleAssignment. */
+    @javax.annotation.Nonnull
+    public GraphAppRoleAssignmentRequestBuilder graphAppRoleAssignment() {
+        return new GraphAppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Casts the previous resource to endpoint. */
     @javax.annotation.Nonnull
-    public EndpointRequestBuilder endpoint() {
-        return new EndpointRequestBuilder(pathParameters, requestAdapter);
+    public GraphEndpointRequestBuilder graphEndpoint() {
+        return new GraphEndpointRequestBuilder(pathParameters, requestAdapter);
     }
     /** Casts the previous resource to group. */
     @javax.annotation.Nonnull
-    public GroupRequestBuilder group() {
-        return new GroupRequestBuilder(pathParameters, requestAdapter);
+    public GraphGroupRequestBuilder graphGroup() {
+        return new GraphGroupRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Casts the previous resource to servicePrincipal. */
+    @javax.annotation.Nonnull
+    public GraphServicePrincipalRequestBuilder graphServicePrincipal() {
+        return new GraphServicePrincipalRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** Casts the previous resource to servicePrincipal. */
-    @javax.annotation.Nonnull
-    public ServicePrincipalRequestBuilder servicePrincipal() {
-        return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
@@ -90,41 +93,12 @@ public class OwnedObjectsRequestBuilder {
     }
     /**
      * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation() throws URISyntaxException {
-        return createGetRequestInformation(null);
-    }
-    /**
-     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(null);
+            final RequestInformation requestInfo = toGetRequestInformation(null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -143,7 +117,7 @@ public class OwnedObjectsRequestBuilder {
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
+            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -154,7 +128,38 @@ public class OwnedObjectsRequestBuilder {
             return executionException;
         }
     }
-    /** Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). */
+    /**
+     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+        return toGetRequestInformation(null);
+    }
+    /**
+     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        if (requestConfiguration != null) {
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+     */
     public class GetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -189,11 +194,13 @@ public class OwnedObjectsRequestBuilder {
         @javax.annotation.Nullable
         public Integer top;
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
     public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
+        public RequestHeaders headers = new RequestHeaders();
         /** Request options */
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();

@@ -4,47 +4,46 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Audio implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The title of the album for this audio file. */
-    private String _album;
+    private String album;
     /** The artist named on the album for the audio file. */
-    private String _albumArtist;
+    private String albumArtist;
     /** The performing artist for the audio file. */
-    private String _artist;
+    private String artist;
     /** Bitrate expressed in kbps. */
-    private Long _bitrate;
+    private Long bitrate;
     /** The name of the composer of the audio file. */
-    private String _composers;
+    private String composers;
     /** Copyright information for the audio file. */
-    private String _copyright;
+    private String copyright;
     /** The number of the disc this audio file came from. */
-    private Integer _disc;
+    private Integer disc;
     /** The total number of discs in this album. */
-    private Integer _discCount;
+    private Integer discCount;
     /** Duration of the audio file, expressed in milliseconds */
-    private Long _duration;
+    private Long duration;
     /** The genre of this audio file. */
-    private String _genre;
+    private String genre;
     /** Indicates if the file is protected with digital rights management. */
-    private Boolean _hasDrm;
+    private Boolean hasDrm;
     /** Indicates if the file is encoded with a variable bitrate. */
-    private Boolean _isVariableBitrate;
+    private Boolean isVariableBitrate;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The title of the audio file. */
-    private String _title;
+    private String title;
     /** The number of the track on the original disc for this audio file. */
-    private Integer _track;
+    private Integer track;
     /** The total number of tracks on the original disc for this audio file. */
-    private Integer _trackCount;
+    private Integer trackCount;
     /** The year the audio file was recorded. */
-    private Integer _year;
+    private Integer year;
     /**
      * Instantiates a new audio and sets the default values.
      * @return a void
@@ -69,7 +68,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the album property value. The title of the album for this audio file.
@@ -77,7 +76,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAlbum() {
-        return this._album;
+        return this.album;
     }
     /**
      * Gets the albumArtist property value. The artist named on the album for the audio file.
@@ -85,7 +84,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAlbumArtist() {
-        return this._albumArtist;
+        return this.albumArtist;
     }
     /**
      * Gets the artist property value. The performing artist for the audio file.
@@ -93,7 +92,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getArtist() {
-        return this._artist;
+        return this.artist;
     }
     /**
      * Gets the bitrate property value. Bitrate expressed in kbps.
@@ -101,7 +100,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Long getBitrate() {
-        return this._bitrate;
+        return this.bitrate;
     }
     /**
      * Gets the composers property value. The name of the composer of the audio file.
@@ -109,7 +108,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getComposers() {
-        return this._composers;
+        return this.composers;
     }
     /**
      * Gets the copyright property value. Copyright information for the audio file.
@@ -117,7 +116,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCopyright() {
-        return this._copyright;
+        return this.copyright;
     }
     /**
      * Gets the disc property value. The number of the disc this audio file came from.
@@ -125,7 +124,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getDisc() {
-        return this._disc;
+        return this.disc;
     }
     /**
      * Gets the discCount property value. The total number of discs in this album.
@@ -133,7 +132,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getDiscCount() {
-        return this._discCount;
+        return this.discCount;
     }
     /**
      * Gets the duration property value. Duration of the audio file, expressed in milliseconds
@@ -141,15 +140,15 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Long getDuration() {
-        return this._duration;
+        return this.duration;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(17);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(17);
         deserializerMap.put("album", (n) -> { this.setAlbum(n.getStringValue()); });
         deserializerMap.put("albumArtist", (n) -> { this.setAlbumArtist(n.getStringValue()); });
         deserializerMap.put("artist", (n) -> { this.setArtist(n.getStringValue()); });
@@ -175,7 +174,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getGenre() {
-        return this._genre;
+        return this.genre;
     }
     /**
      * Gets the hasDrm property value. Indicates if the file is protected with digital rights management.
@@ -183,7 +182,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getHasDrm() {
-        return this._hasDrm;
+        return this.hasDrm;
     }
     /**
      * Gets the isVariableBitrate property value. Indicates if the file is encoded with a variable bitrate.
@@ -191,7 +190,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsVariableBitrate() {
-        return this._isVariableBitrate;
+        return this.isVariableBitrate;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -199,7 +198,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the title property value. The title of the audio file.
@@ -207,7 +206,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getTitle() {
-        return this._title;
+        return this.title;
     }
     /**
      * Gets the track property value. The number of the track on the original disc for this audio file.
@@ -215,7 +214,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getTrack() {
-        return this._track;
+        return this.track;
     }
     /**
      * Gets the trackCount property value. The total number of tracks on the original disc for this audio file.
@@ -223,7 +222,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getTrackCount() {
-        return this._trackCount;
+        return this.trackCount;
     }
     /**
      * Gets the year property value. The year the audio file was recorded.
@@ -231,7 +230,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getYear() {
-        return this._year;
+        return this.year;
     }
     /**
      * Serializes information the current object
@@ -267,7 +266,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the album property value. The title of the album for this audio file.
@@ -276,7 +275,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAlbum(@javax.annotation.Nullable final String value) {
-        this._album = value;
+        this.album = value;
     }
     /**
      * Sets the albumArtist property value. The artist named on the album for the audio file.
@@ -285,7 +284,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAlbumArtist(@javax.annotation.Nullable final String value) {
-        this._albumArtist = value;
+        this.albumArtist = value;
     }
     /**
      * Sets the artist property value. The performing artist for the audio file.
@@ -294,7 +293,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setArtist(@javax.annotation.Nullable final String value) {
-        this._artist = value;
+        this.artist = value;
     }
     /**
      * Sets the bitrate property value. Bitrate expressed in kbps.
@@ -303,7 +302,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setBitrate(@javax.annotation.Nullable final Long value) {
-        this._bitrate = value;
+        this.bitrate = value;
     }
     /**
      * Sets the composers property value. The name of the composer of the audio file.
@@ -312,7 +311,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setComposers(@javax.annotation.Nullable final String value) {
-        this._composers = value;
+        this.composers = value;
     }
     /**
      * Sets the copyright property value. Copyright information for the audio file.
@@ -321,7 +320,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCopyright(@javax.annotation.Nullable final String value) {
-        this._copyright = value;
+        this.copyright = value;
     }
     /**
      * Sets the disc property value. The number of the disc this audio file came from.
@@ -330,7 +329,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisc(@javax.annotation.Nullable final Integer value) {
-        this._disc = value;
+        this.disc = value;
     }
     /**
      * Sets the discCount property value. The total number of discs in this album.
@@ -339,7 +338,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDiscCount(@javax.annotation.Nullable final Integer value) {
-        this._discCount = value;
+        this.discCount = value;
     }
     /**
      * Sets the duration property value. Duration of the audio file, expressed in milliseconds
@@ -348,7 +347,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDuration(@javax.annotation.Nullable final Long value) {
-        this._duration = value;
+        this.duration = value;
     }
     /**
      * Sets the genre property value. The genre of this audio file.
@@ -357,7 +356,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setGenre(@javax.annotation.Nullable final String value) {
-        this._genre = value;
+        this.genre = value;
     }
     /**
      * Sets the hasDrm property value. Indicates if the file is protected with digital rights management.
@@ -366,7 +365,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setHasDrm(@javax.annotation.Nullable final Boolean value) {
-        this._hasDrm = value;
+        this.hasDrm = value;
     }
     /**
      * Sets the isVariableBitrate property value. Indicates if the file is encoded with a variable bitrate.
@@ -375,7 +374,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsVariableBitrate(@javax.annotation.Nullable final Boolean value) {
-        this._isVariableBitrate = value;
+        this.isVariableBitrate = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -384,7 +383,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the title property value. The title of the audio file.
@@ -393,7 +392,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
-        this._title = value;
+        this.title = value;
     }
     /**
      * Sets the track property value. The number of the track on the original disc for this audio file.
@@ -402,7 +401,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTrack(@javax.annotation.Nullable final Integer value) {
-        this._track = value;
+        this.track = value;
     }
     /**
      * Sets the trackCount property value. The total number of tracks on the original disc for this audio file.
@@ -411,7 +410,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTrackCount(@javax.annotation.Nullable final Integer value) {
-        this._trackCount = value;
+        this.trackCount = value;
     }
     /**
      * Sets the year property value. The year the audio file was recorded.
@@ -420,6 +419,6 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setYear(@javax.annotation.Nullable final Integer value) {
-        this._year = value;
+        this.year = value;
     }
 }

@@ -4,22 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the updateDeviceProperties method. */
 public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The addressableUserName property */
-    private String _addressableUserName;
+    private String addressableUserName;
     /** The displayName property */
-    private String _displayName;
+    private String displayName;
     /** The groupTag property */
-    private String _groupTag;
+    private String groupTag;
     /** The userPrincipalName property */
-    private String _userPrincipalName;
+    private String userPrincipalName;
     /**
      * Instantiates a new updateDevicePropertiesPostRequestBody and sets the default values.
      * @return a void
@@ -44,7 +42,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the addressableUserName property value. The addressableUserName property
@@ -52,7 +50,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public String getAddressableUserName() {
-        return this._addressableUserName;
+        return this.addressableUserName;
     }
     /**
      * Gets the displayName property value. The displayName property
@@ -60,15 +58,15 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("addressableUserName", (n) -> { this.setAddressableUserName(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("groupTag", (n) -> { this.setGroupTag(n.getStringValue()); });
@@ -81,7 +79,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public String getGroupTag() {
-        return this._groupTag;
+        return this.groupTag;
     }
     /**
      * Gets the userPrincipalName property value. The userPrincipalName property
@@ -89,7 +87,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
@@ -112,7 +110,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the addressableUserName property value. The addressableUserName property
@@ -121,7 +119,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setAddressableUserName(@javax.annotation.Nullable final String value) {
-        this._addressableUserName = value;
+        this.addressableUserName = value;
     }
     /**
      * Sets the displayName property value. The displayName property
@@ -130,7 +128,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the groupTag property value. The groupTag property
@@ -139,7 +137,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setGroupTag(@javax.annotation.Nullable final String value) {
-        this._groupTag = value;
+        this.groupTag = value;
     }
     /**
      * Sets the userPrincipalName property value. The userPrincipalName property
@@ -148,6 +146,6 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

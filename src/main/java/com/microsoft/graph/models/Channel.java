@@ -4,38 +4,36 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class Channel extends Entity implements Parsable {
     /** Read only. Timestamp at which the channel was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Optional textual description for the channel. */
-    private String _description;
+    private String description;
     /** Channel name as it will appear to the user in Microsoft Teams. The maximum length is 50 characters. */
-    private String _displayName;
+    private String displayName;
     /** The email address for sending messages to the channel. Read-only. */
-    private String _email;
+    private String email;
     /** Metadata for the location where the channel's files are stored. */
-    private DriveItem _filesFolder;
+    private DriveItem filesFolder;
     /** Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false. */
-    private Boolean _isFavoriteByDefault;
+    private Boolean isFavoriteByDefault;
     /** A collection of membership records associated with the channel. */
-    private java.util.List<ConversationMember> _members;
+    private java.util.List<ConversationMember> members;
     /** The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared. */
-    private ChannelMembershipType _membershipType;
+    private ChannelMembershipType membershipType;
     /** A collection of all the messages in the channel. A navigation property. Nullable. */
-    private java.util.List<ChatMessage> _messages;
+    private java.util.List<ChatMessage> messages;
     /** A collection of teams with which a channel is shared. */
-    private java.util.List<SharedWithChannelTeamInfo> _sharedWithTeams;
+    private java.util.List<SharedWithChannelTeamInfo> sharedWithTeams;
     /** A collection of all the tabs in the channel. A navigation property. */
-    private java.util.List<TeamsTab> _tabs;
+    private java.util.List<TeamsTab> tabs;
     /** The ID of the Azure Active Directory tenant. */
-    private String _tenantId;
+    private String tenantId;
     /** A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only. */
-    private String _webUrl;
+    private String webUrl;
     /**
      * Instantiates a new channel and sets the default values.
      * @return a void
@@ -60,7 +58,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. Optional textual description for the channel.
@@ -68,7 +66,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Channel name as it will appear to the user in Microsoft Teams. The maximum length is 50 characters.
@@ -76,7 +74,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the email property value. The email address for sending messages to the channel. Read-only.
@@ -84,15 +82,15 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEmail() {
-        return this._email;
+        return this.email;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -114,7 +112,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DriveItem getFilesFolder() {
-        return this._filesFolder;
+        return this.filesFolder;
     }
     /**
      * Gets the isFavoriteByDefault property value. Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
@@ -122,7 +120,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsFavoriteByDefault() {
-        return this._isFavoriteByDefault;
+        return this.isFavoriteByDefault;
     }
     /**
      * Gets the members property value. A collection of membership records associated with the channel.
@@ -130,7 +128,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ConversationMember> getMembers() {
-        return this._members;
+        return this.members;
     }
     /**
      * Gets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
@@ -138,7 +136,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ChannelMembershipType getMembershipType() {
-        return this._membershipType;
+        return this.membershipType;
     }
     /**
      * Gets the messages property value. A collection of all the messages in the channel. A navigation property. Nullable.
@@ -146,7 +144,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ChatMessage> getMessages() {
-        return this._messages;
+        return this.messages;
     }
     /**
      * Gets the sharedWithTeams property value. A collection of teams with which a channel is shared.
@@ -154,7 +152,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SharedWithChannelTeamInfo> getSharedWithTeams() {
-        return this._sharedWithTeams;
+        return this.sharedWithTeams;
     }
     /**
      * Gets the tabs property value. A collection of all the tabs in the channel. A navigation property.
@@ -162,7 +160,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TeamsTab> getTabs() {
-        return this._tabs;
+        return this.tabs;
     }
     /**
      * Gets the tenantId property value. The ID of the Azure Active Directory tenant.
@@ -170,7 +168,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Gets the webUrl property value. A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
@@ -178,7 +176,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getWebUrl() {
-        return this._webUrl;
+        return this.webUrl;
     }
     /**
      * Serializes information the current object
@@ -210,7 +208,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Optional textual description for the channel.
@@ -219,7 +217,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Channel name as it will appear to the user in Microsoft Teams. The maximum length is 50 characters.
@@ -228,7 +226,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the email property value. The email address for sending messages to the channel. Read-only.
@@ -237,7 +235,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
-        this._email = value;
+        this.email = value;
     }
     /**
      * Sets the filesFolder property value. Metadata for the location where the channel's files are stored.
@@ -246,7 +244,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFilesFolder(@javax.annotation.Nullable final DriveItem value) {
-        this._filesFolder = value;
+        this.filesFolder = value;
     }
     /**
      * Sets the isFavoriteByDefault property value. Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
@@ -255,7 +253,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsFavoriteByDefault(@javax.annotation.Nullable final Boolean value) {
-        this._isFavoriteByDefault = value;
+        this.isFavoriteByDefault = value;
     }
     /**
      * Sets the members property value. A collection of membership records associated with the channel.
@@ -264,7 +262,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<ConversationMember> value) {
-        this._members = value;
+        this.members = value;
     }
     /**
      * Sets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
@@ -273,7 +271,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMembershipType(@javax.annotation.Nullable final ChannelMembershipType value) {
-        this._membershipType = value;
+        this.membershipType = value;
     }
     /**
      * Sets the messages property value. A collection of all the messages in the channel. A navigation property. Nullable.
@@ -282,7 +280,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMessages(@javax.annotation.Nullable final java.util.List<ChatMessage> value) {
-        this._messages = value;
+        this.messages = value;
     }
     /**
      * Sets the sharedWithTeams property value. A collection of teams with which a channel is shared.
@@ -291,7 +289,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSharedWithTeams(@javax.annotation.Nullable final java.util.List<SharedWithChannelTeamInfo> value) {
-        this._sharedWithTeams = value;
+        this.sharedWithTeams = value;
     }
     /**
      * Sets the tabs property value. A collection of all the tabs in the channel. A navigation property.
@@ -300,7 +298,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTabs(@javax.annotation.Nullable final java.util.List<TeamsTab> value) {
-        this._tabs = value;
+        this.tabs = value;
     }
     /**
      * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
@@ -309,7 +307,7 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
     /**
      * Sets the webUrl property value. A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
@@ -318,6 +316,6 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
-        this._webUrl = value;
+        this.webUrl = value;
     }
 }

@@ -4,23 +4,22 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The aggregations property */
-    private java.util.List<SearchAggregation> _aggregations;
+    private java.util.List<SearchAggregation> aggregations;
     /** A collection of the search results. */
-    private java.util.List<SearchHit> _hits;
+    private java.util.List<SearchHit> hits;
     /** Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly. */
-    private Boolean _moreResultsAvailable;
+    private Boolean moreResultsAvailable;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query. */
-    private Integer _total;
+    private Integer total;
     /**
      * Instantiates a new searchHitsContainer and sets the default values.
      * @return a void
@@ -45,7 +44,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the aggregations property value. The aggregations property
@@ -53,15 +52,15 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SearchAggregation> getAggregations() {
-        return this._aggregations;
+        return this.aggregations;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("aggregations", (n) -> { this.setAggregations(n.getCollectionOfObjectValues(SearchAggregation::createFromDiscriminatorValue)); });
         deserializerMap.put("hits", (n) -> { this.setHits(n.getCollectionOfObjectValues(SearchHit::createFromDiscriminatorValue)); });
         deserializerMap.put("moreResultsAvailable", (n) -> { this.setMoreResultsAvailable(n.getBooleanValue()); });
@@ -75,7 +74,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SearchHit> getHits() {
-        return this._hits;
+        return this.hits;
     }
     /**
      * Gets the moreResultsAvailable property value. Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly.
@@ -83,7 +82,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getMoreResultsAvailable() {
-        return this._moreResultsAvailable;
+        return this.moreResultsAvailable;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -91,7 +90,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the total property value. The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
@@ -99,7 +98,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getTotal() {
-        return this._total;
+        return this.total;
     }
     /**
      * Serializes information the current object
@@ -123,7 +122,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the aggregations property value. The aggregations property
@@ -132,7 +131,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAggregations(@javax.annotation.Nullable final java.util.List<SearchAggregation> value) {
-        this._aggregations = value;
+        this.aggregations = value;
     }
     /**
      * Sets the hits property value. A collection of the search results.
@@ -141,7 +140,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setHits(@javax.annotation.Nullable final java.util.List<SearchHit> value) {
-        this._hits = value;
+        this.hits = value;
     }
     /**
      * Sets the moreResultsAvailable property value. Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly.
@@ -150,7 +149,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMoreResultsAvailable(@javax.annotation.Nullable final Boolean value) {
-        this._moreResultsAvailable = value;
+        this.moreResultsAvailable = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -159,7 +158,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the total property value. The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
@@ -168,6 +167,6 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTotal(@javax.annotation.Nullable final Integer value) {
-        this._total = value;
+        this.total = value;
     }
 }

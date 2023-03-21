@@ -4,7 +4,9 @@ import com.microsoft.graph.serviceprincipals.item.claimsmappingpolicies.item.ref
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-/** Builds and executes requests for operations under /servicePrincipals/{servicePrincipal-id}/claimsMappingPolicies/{claimsMappingPolicy-id} */
+/**
+ * Builds and executes requests for operations under /servicePrincipals/{servicePrincipal-id}/claimsMappingPolicies/{claimsMappingPolicy-id}
+ */
 public class ClaimsMappingPolicyItemRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;

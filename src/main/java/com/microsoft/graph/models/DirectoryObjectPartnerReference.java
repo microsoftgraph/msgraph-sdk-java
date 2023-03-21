@@ -3,19 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class DirectoryObjectPartnerReference extends DirectoryObject implements Parsable {
     /** Description of the object returned. Read-only. */
-    private String _description;
+    private String description;
     /** Name of directory object being returned, like group or application. Read-only. */
-    private String _displayName;
+    private String displayName;
     /** The tenant identifier for the partner tenant. Read-only. */
-    private String _externalPartnerTenantId;
+    private UUID externalPartnerTenantId;
     /** The type of the referenced object in the partner tenant. Read-only. */
-    private String _objectType;
+    private String objectType;
     /**
      * Instantiates a new DirectoryObjectPartnerReference and sets the default values.
      * @return a void
@@ -41,7 +41,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Name of directory object being returned, like group or application. Read-only.
@@ -49,26 +49,26 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the externalPartnerTenantId property value. The tenant identifier for the partner tenant. Read-only.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getExternalPartnerTenantId() {
-        return this._externalPartnerTenantId;
+    public UUID getExternalPartnerTenantId() {
+        return this.externalPartnerTenantId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("externalPartnerTenantId", (n) -> { this.setExternalPartnerTenantId(n.getStringValue()); });
+        deserializerMap.put("externalPartnerTenantId", (n) -> { this.setExternalPartnerTenantId(n.getUUIDValue()); });
         deserializerMap.put("objectType", (n) -> { this.setObjectType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -78,7 +78,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      */
     @javax.annotation.Nullable
     public String getObjectType() {
-        return this._objectType;
+        return this.objectType;
     }
     /**
      * Serializes information the current object
@@ -91,7 +91,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeStringValue("externalPartnerTenantId", this.getExternalPartnerTenantId());
+        writer.writeUUIDValue("externalPartnerTenantId", this.getExternalPartnerTenantId());
         writer.writeStringValue("objectType", this.getObjectType());
     }
     /**
@@ -101,7 +101,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Name of directory object being returned, like group or application. Read-only.
@@ -110,7 +110,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the externalPartnerTenantId property value. The tenant identifier for the partner tenant. Read-only.
@@ -118,8 +118,8 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setExternalPartnerTenantId(@javax.annotation.Nullable final String value) {
-        this._externalPartnerTenantId = value;
+    public void setExternalPartnerTenantId(@javax.annotation.Nullable final UUID value) {
+        this.externalPartnerTenantId = value;
     }
     /**
      * Sets the objectType property value. The type of the referenced object in the partner tenant. Read-only.
@@ -128,6 +128,6 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      */
     @javax.annotation.Nonnull
     public void setObjectType(@javax.annotation.Nullable final String value) {
-        this._objectType = value;
+        this.objectType = value;
     }
 }

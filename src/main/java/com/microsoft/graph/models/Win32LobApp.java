@@ -3,37 +3,36 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Win32LobApp extends MobileLobApp implements Parsable {
     /** Contains properties for Windows architecture. */
-    private WindowsArchitecture _applicableArchitectures;
+    private WindowsArchitecture applicableArchitectures;
     /** The command line to install this app */
-    private String _installCommandLine;
+    private String installCommandLine;
     /** The install experience for this app. */
-    private Win32LobAppInstallExperience _installExperience;
+    private Win32LobAppInstallExperience installExperience;
     /** The value for the minimum CPU speed which is required to install this app. */
-    private Integer _minimumCpuSpeedInMHz;
+    private Integer minimumCpuSpeedInMHz;
     /** The value for the minimum free disk space which is required to install this app. */
-    private Integer _minimumFreeDiskSpaceInMB;
+    private Integer minimumFreeDiskSpaceInMB;
     /** The value for the minimum physical memory which is required to install this app. */
-    private Integer _minimumMemoryInMB;
+    private Integer minimumMemoryInMB;
     /** The value for the minimum number of processors which is required to install this app. */
-    private Integer _minimumNumberOfProcessors;
+    private Integer minimumNumberOfProcessors;
     /** The value for the minimum supported windows release. */
-    private String _minimumSupportedWindowsRelease;
+    private String minimumSupportedWindowsRelease;
     /** The MSI details if this Win32 app is an MSI app. */
-    private Win32LobAppMsiInformation _msiInformation;
+    private Win32LobAppMsiInformation msiInformation;
     /** The return codes for post installation behavior. */
-    private java.util.List<Win32LobAppReturnCode> _returnCodes;
+    private java.util.List<Win32LobAppReturnCode> returnCodes;
     /** The detection and requirement rules for this app. */
-    private java.util.List<Win32LobAppRule> _rules;
+    private java.util.List<Win32LobAppRule> rules;
     /** The relative path of the setup file in the encrypted Win32LobApp package. */
-    private String _setupFilePath;
+    private String setupFilePath;
     /** The command line to uninstall this app */
-    private String _uninstallCommandLine;
+    private String uninstallCommandLine;
     /**
      * Instantiates a new Win32LobApp and sets the default values.
      * @return a void
@@ -59,15 +58,15 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public WindowsArchitecture getApplicableArchitectures() {
-        return this._applicableArchitectures;
+        return this.applicableArchitectures;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumValue(WindowsArchitecture.class)); });
         deserializerMap.put("installCommandLine", (n) -> { this.setInstallCommandLine(n.getStringValue()); });
         deserializerMap.put("installExperience", (n) -> { this.setInstallExperience(n.getObjectValue(Win32LobAppInstallExperience::createFromDiscriminatorValue)); });
@@ -89,7 +88,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInstallCommandLine() {
-        return this._installCommandLine;
+        return this.installCommandLine;
     }
     /**
      * Gets the installExperience property value. The install experience for this app.
@@ -97,7 +96,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Win32LobAppInstallExperience getInstallExperience() {
-        return this._installExperience;
+        return this.installExperience;
     }
     /**
      * Gets the minimumCpuSpeedInMHz property value. The value for the minimum CPU speed which is required to install this app.
@@ -105,7 +104,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getMinimumCpuSpeedInMHz() {
-        return this._minimumCpuSpeedInMHz;
+        return this.minimumCpuSpeedInMHz;
     }
     /**
      * Gets the minimumFreeDiskSpaceInMB property value. The value for the minimum free disk space which is required to install this app.
@@ -113,7 +112,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getMinimumFreeDiskSpaceInMB() {
-        return this._minimumFreeDiskSpaceInMB;
+        return this.minimumFreeDiskSpaceInMB;
     }
     /**
      * Gets the minimumMemoryInMB property value. The value for the minimum physical memory which is required to install this app.
@@ -121,7 +120,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getMinimumMemoryInMB() {
-        return this._minimumMemoryInMB;
+        return this.minimumMemoryInMB;
     }
     /**
      * Gets the minimumNumberOfProcessors property value. The value for the minimum number of processors which is required to install this app.
@@ -129,7 +128,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getMinimumNumberOfProcessors() {
-        return this._minimumNumberOfProcessors;
+        return this.minimumNumberOfProcessors;
     }
     /**
      * Gets the minimumSupportedWindowsRelease property value. The value for the minimum supported windows release.
@@ -137,7 +136,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMinimumSupportedWindowsRelease() {
-        return this._minimumSupportedWindowsRelease;
+        return this.minimumSupportedWindowsRelease;
     }
     /**
      * Gets the msiInformation property value. The MSI details if this Win32 app is an MSI app.
@@ -145,7 +144,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Win32LobAppMsiInformation getMsiInformation() {
-        return this._msiInformation;
+        return this.msiInformation;
     }
     /**
      * Gets the returnCodes property value. The return codes for post installation behavior.
@@ -153,7 +152,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Win32LobAppReturnCode> getReturnCodes() {
-        return this._returnCodes;
+        return this.returnCodes;
     }
     /**
      * Gets the rules property value. The detection and requirement rules for this app.
@@ -161,7 +160,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Win32LobAppRule> getRules() {
-        return this._rules;
+        return this.rules;
     }
     /**
      * Gets the setupFilePath property value. The relative path of the setup file in the encrypted Win32LobApp package.
@@ -169,7 +168,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSetupFilePath() {
-        return this._setupFilePath;
+        return this.setupFilePath;
     }
     /**
      * Gets the uninstallCommandLine property value. The command line to uninstall this app
@@ -177,7 +176,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUninstallCommandLine() {
-        return this._uninstallCommandLine;
+        return this.uninstallCommandLine;
     }
     /**
      * Serializes information the current object
@@ -209,7 +208,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setApplicableArchitectures(@javax.annotation.Nullable final WindowsArchitecture value) {
-        this._applicableArchitectures = value;
+        this.applicableArchitectures = value;
     }
     /**
      * Sets the installCommandLine property value. The command line to install this app
@@ -218,7 +217,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInstallCommandLine(@javax.annotation.Nullable final String value) {
-        this._installCommandLine = value;
+        this.installCommandLine = value;
     }
     /**
      * Sets the installExperience property value. The install experience for this app.
@@ -227,7 +226,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInstallExperience(@javax.annotation.Nullable final Win32LobAppInstallExperience value) {
-        this._installExperience = value;
+        this.installExperience = value;
     }
     /**
      * Sets the minimumCpuSpeedInMHz property value. The value for the minimum CPU speed which is required to install this app.
@@ -236,7 +235,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMinimumCpuSpeedInMHz(@javax.annotation.Nullable final Integer value) {
-        this._minimumCpuSpeedInMHz = value;
+        this.minimumCpuSpeedInMHz = value;
     }
     /**
      * Sets the minimumFreeDiskSpaceInMB property value. The value for the minimum free disk space which is required to install this app.
@@ -245,7 +244,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMinimumFreeDiskSpaceInMB(@javax.annotation.Nullable final Integer value) {
-        this._minimumFreeDiskSpaceInMB = value;
+        this.minimumFreeDiskSpaceInMB = value;
     }
     /**
      * Sets the minimumMemoryInMB property value. The value for the minimum physical memory which is required to install this app.
@@ -254,7 +253,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMinimumMemoryInMB(@javax.annotation.Nullable final Integer value) {
-        this._minimumMemoryInMB = value;
+        this.minimumMemoryInMB = value;
     }
     /**
      * Sets the minimumNumberOfProcessors property value. The value for the minimum number of processors which is required to install this app.
@@ -263,7 +262,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMinimumNumberOfProcessors(@javax.annotation.Nullable final Integer value) {
-        this._minimumNumberOfProcessors = value;
+        this.minimumNumberOfProcessors = value;
     }
     /**
      * Sets the minimumSupportedWindowsRelease property value. The value for the minimum supported windows release.
@@ -272,7 +271,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMinimumSupportedWindowsRelease(@javax.annotation.Nullable final String value) {
-        this._minimumSupportedWindowsRelease = value;
+        this.minimumSupportedWindowsRelease = value;
     }
     /**
      * Sets the msiInformation property value. The MSI details if this Win32 app is an MSI app.
@@ -281,7 +280,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMsiInformation(@javax.annotation.Nullable final Win32LobAppMsiInformation value) {
-        this._msiInformation = value;
+        this.msiInformation = value;
     }
     /**
      * Sets the returnCodes property value. The return codes for post installation behavior.
@@ -290,7 +289,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setReturnCodes(@javax.annotation.Nullable final java.util.List<Win32LobAppReturnCode> value) {
-        this._returnCodes = value;
+        this.returnCodes = value;
     }
     /**
      * Sets the rules property value. The detection and requirement rules for this app.
@@ -299,7 +298,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRules(@javax.annotation.Nullable final java.util.List<Win32LobAppRule> value) {
-        this._rules = value;
+        this.rules = value;
     }
     /**
      * Sets the setupFilePath property value. The relative path of the setup file in the encrypted Win32LobApp package.
@@ -308,7 +307,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSetupFilePath(@javax.annotation.Nullable final String value) {
-        this._setupFilePath = value;
+        this.setupFilePath = value;
     }
     /**
      * Sets the uninstallCommandLine property value. The command line to uninstall this app
@@ -317,6 +316,6 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUninstallCommandLine(@javax.annotation.Nullable final String value) {
-        this._uninstallCommandLine = value;
+        this.uninstallCommandLine = value;
     }
 }

@@ -4,23 +4,22 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator. */
-    private String _aaGuid;
+    private String aaGuid;
     /** The attestation certificate(s) attached to this security key. */
-    private java.util.List<String> _attestationCertificates;
+    private java.util.List<String> attestationCertificates;
     /** The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested. */
-    private AttestationLevel _attestationLevel;
+    private AttestationLevel attestationLevel;
     /** The timestamp when this key was registered to the user. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The display name of the key as given by the user. */
-    private String _displayName;
+    private String displayName;
     /** The manufacturer-assigned model of the FIDO2 security key. */
-    private String _model;
+    private String model;
     /**
      * Instantiates a new Fido2AuthenticationMethod and sets the default values.
      * @return a void
@@ -46,7 +45,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nullable
     public String getAaGuid() {
-        return this._aaGuid;
+        return this.aaGuid;
     }
     /**
      * Gets the attestationCertificates property value. The attestation certificate(s) attached to this security key.
@@ -54,7 +53,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAttestationCertificates() {
-        return this._attestationCertificates;
+        return this.attestationCertificates;
     }
     /**
      * Gets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
@@ -62,7 +61,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nullable
     public AttestationLevel getAttestationLevel() {
-        return this._attestationLevel;
+        return this.attestationLevel;
     }
     /**
      * Gets the createdDateTime property value. The timestamp when this key was registered to the user.
@@ -70,7 +69,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the displayName property value. The display name of the key as given by the user.
@@ -78,15 +77,15 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("aaGuid", (n) -> { this.setAaGuid(n.getStringValue()); });
         deserializerMap.put("attestationCertificates", (n) -> { this.setAttestationCertificates(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("attestationLevel", (n) -> { this.setAttestationLevel(n.getEnumValue(AttestationLevel.class)); });
@@ -101,7 +100,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nullable
     public String getModel() {
-        return this._model;
+        return this.model;
     }
     /**
      * Serializes information the current object
@@ -126,7 +125,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nonnull
     public void setAaGuid(@javax.annotation.Nullable final String value) {
-        this._aaGuid = value;
+        this.aaGuid = value;
     }
     /**
      * Sets the attestationCertificates property value. The attestation certificate(s) attached to this security key.
@@ -135,7 +134,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nonnull
     public void setAttestationCertificates(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._attestationCertificates = value;
+        this.attestationCertificates = value;
     }
     /**
      * Sets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
@@ -144,7 +143,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nonnull
     public void setAttestationLevel(@javax.annotation.Nullable final AttestationLevel value) {
-        this._attestationLevel = value;
+        this.attestationLevel = value;
     }
     /**
      * Sets the createdDateTime property value. The timestamp when this key was registered to the user.
@@ -153,7 +152,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the displayName property value. The display name of the key as given by the user.
@@ -162,7 +161,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the model property value. The manufacturer-assigned model of the FIDO2 security key.
@@ -171,6 +170,6 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
-        this._model = value;
+        this.model = value;
     }
 }

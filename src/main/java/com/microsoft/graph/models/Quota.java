@@ -4,27 +4,26 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Quota implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Total space consumed by files in the recycle bin, in bytes. Read-only. */
-    private Long _deleted;
+    private Long deleted;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Total space remaining before reaching the quota limit, in bytes. Read-only. */
-    private Long _remaining;
+    private Long remaining;
     /** Enumeration value that indicates the state of the storage space. Read-only. */
-    private String _state;
+    private String state;
     /** Information about the drive's storage quota plans. Only in Personal OneDrive. */
-    private StoragePlanInformation _storagePlanInformation;
+    private StoragePlanInformation storagePlanInformation;
     /** Total allowed storage space, in bytes. Read-only. */
-    private Long _total;
+    private Long total;
     /** Total space used, in bytes. Read-only. */
-    private Long _used;
+    private Long used;
     /**
      * Instantiates a new quota and sets the default values.
      * @return a void
@@ -49,7 +48,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the deleted property value. Total space consumed by files in the recycle bin, in bytes. Read-only.
@@ -57,15 +56,15 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Long getDeleted() {
-        return this._deleted;
+        return this.deleted;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("deleted", (n) -> { this.setDeleted(n.getLongValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("remaining", (n) -> { this.setRemaining(n.getLongValue()); });
@@ -81,7 +80,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the remaining property value. Total space remaining before reaching the quota limit, in bytes. Read-only.
@@ -89,7 +88,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Long getRemaining() {
-        return this._remaining;
+        return this.remaining;
     }
     /**
      * Gets the state property value. Enumeration value that indicates the state of the storage space. Read-only.
@@ -97,7 +96,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Gets the storagePlanInformation property value. Information about the drive's storage quota plans. Only in Personal OneDrive.
@@ -105,7 +104,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public StoragePlanInformation getStoragePlanInformation() {
-        return this._storagePlanInformation;
+        return this.storagePlanInformation;
     }
     /**
      * Gets the total property value. Total allowed storage space, in bytes. Read-only.
@@ -113,7 +112,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Long getTotal() {
-        return this._total;
+        return this.total;
     }
     /**
      * Gets the used property value. Total space used, in bytes. Read-only.
@@ -121,7 +120,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Long getUsed() {
-        return this._used;
+        return this.used;
     }
     /**
      * Serializes information the current object
@@ -147,7 +146,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the deleted property value. Total space consumed by files in the recycle bin, in bytes. Read-only.
@@ -156,7 +155,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeleted(@javax.annotation.Nullable final Long value) {
-        this._deleted = value;
+        this.deleted = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -165,7 +164,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the remaining property value. Total space remaining before reaching the quota limit, in bytes. Read-only.
@@ -174,7 +173,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRemaining(@javax.annotation.Nullable final Long value) {
-        this._remaining = value;
+        this.remaining = value;
     }
     /**
      * Sets the state property value. Enumeration value that indicates the state of the storage space. Read-only.
@@ -183,7 +182,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final String value) {
-        this._state = value;
+        this.state = value;
     }
     /**
      * Sets the storagePlanInformation property value. Information about the drive's storage quota plans. Only in Personal OneDrive.
@@ -192,7 +191,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setStoragePlanInformation(@javax.annotation.Nullable final StoragePlanInformation value) {
-        this._storagePlanInformation = value;
+        this.storagePlanInformation = value;
     }
     /**
      * Sets the total property value. Total allowed storage space, in bytes. Read-only.
@@ -201,7 +200,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTotal(@javax.annotation.Nullable final Long value) {
-        this._total = value;
+        this.total = value;
     }
     /**
      * Sets the used property value. Total space used, in bytes. Read-only.
@@ -210,6 +209,6 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUsed(@javax.annotation.Nullable final Long value) {
-        this._used = value;
+        this.used = value;
     }
 }

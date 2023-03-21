@@ -4,30 +4,33 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties of the minimum operating system required for an iOS mobile app. */
+/**
+ * Contains properties of the minimum operating system required for an iOS mobile app.
+ */
 public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
-    /** Version 10.0 or later. */
-    private Boolean _v10_0;
-    /** Version 11.0 or later. */
-    private Boolean _v11_0;
-    /** Version 12.0 or later. */
-    private Boolean _v12_0;
-    /** Version 13.0 or later. */
-    private Boolean _v13_0;
-    /** Version 14.0 or later. */
-    private Boolean _v14_0;
-    /** Version 8.0 or later. */
-    private Boolean _v8_0;
-    /** Version 9.0 or later. */
-    private Boolean _v9_0;
+    private String odataType;
+    /** When TRUE, only Version 10.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE. */
+    private Boolean v100;
+    /** When TRUE, only Version 11.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE. */
+    private Boolean v110;
+    /** When TRUE, only Version 12.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE. */
+    private Boolean v120;
+    /** When TRUE, only Version 13.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE. */
+    private Boolean v130;
+    /** When TRUE, only Version 14.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE. */
+    private Boolean v140;
+    /** When TRUE, only Version 15.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE. */
+    private Boolean v150;
+    /** When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE. */
+    private Boolean v80;
+    /** When TRUE, only Version 9.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE. */
+    private Boolean v90;
     /**
      * Instantiates a new iosMinimumOperatingSystem and sets the default values.
      * @return a void
@@ -52,23 +55,24 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("v10_0", (n) -> { this.setV10_0(n.getBooleanValue()); });
-        deserializerMap.put("v11_0", (n) -> { this.setV11_0(n.getBooleanValue()); });
-        deserializerMap.put("v12_0", (n) -> { this.setV12_0(n.getBooleanValue()); });
-        deserializerMap.put("v13_0", (n) -> { this.setV13_0(n.getBooleanValue()); });
-        deserializerMap.put("v14_0", (n) -> { this.setV14_0(n.getBooleanValue()); });
-        deserializerMap.put("v8_0", (n) -> { this.setV8_0(n.getBooleanValue()); });
-        deserializerMap.put("v9_0", (n) -> { this.setV9_0(n.getBooleanValue()); });
+        deserializerMap.put("v10_0", (n) -> { this.setV100(n.getBooleanValue()); });
+        deserializerMap.put("v11_0", (n) -> { this.setV110(n.getBooleanValue()); });
+        deserializerMap.put("v12_0", (n) -> { this.setV120(n.getBooleanValue()); });
+        deserializerMap.put("v13_0", (n) -> { this.setV130(n.getBooleanValue()); });
+        deserializerMap.put("v14_0", (n) -> { this.setV140(n.getBooleanValue()); });
+        deserializerMap.put("v15_0", (n) -> { this.setV150(n.getBooleanValue()); });
+        deserializerMap.put("v8_0", (n) -> { this.setV80(n.getBooleanValue()); });
+        deserializerMap.put("v9_0", (n) -> { this.setV90(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
@@ -77,63 +81,71 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
-     * Gets the v10_0 property value. Version 10.0 or later.
+     * Gets the v10_0 property value. When TRUE, only Version 10.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a boolean
      */
     @javax.annotation.Nullable
-    public Boolean getV10_0() {
-        return this._v10_0;
+    public Boolean getV100() {
+        return this.v100;
     }
     /**
-     * Gets the v11_0 property value. Version 11.0 or later.
+     * Gets the v11_0 property value. When TRUE, only Version 11.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a boolean
      */
     @javax.annotation.Nullable
-    public Boolean getV11_0() {
-        return this._v11_0;
+    public Boolean getV110() {
+        return this.v110;
     }
     /**
-     * Gets the v12_0 property value. Version 12.0 or later.
+     * Gets the v12_0 property value. When TRUE, only Version 12.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a boolean
      */
     @javax.annotation.Nullable
-    public Boolean getV12_0() {
-        return this._v12_0;
+    public Boolean getV120() {
+        return this.v120;
     }
     /**
-     * Gets the v13_0 property value. Version 13.0 or later.
+     * Gets the v13_0 property value. When TRUE, only Version 13.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a boolean
      */
     @javax.annotation.Nullable
-    public Boolean getV13_0() {
-        return this._v13_0;
+    public Boolean getV130() {
+        return this.v130;
     }
     /**
-     * Gets the v14_0 property value. Version 14.0 or later.
+     * Gets the v14_0 property value. When TRUE, only Version 14.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a boolean
      */
     @javax.annotation.Nullable
-    public Boolean getV14_0() {
-        return this._v14_0;
+    public Boolean getV140() {
+        return this.v140;
     }
     /**
-     * Gets the v8_0 property value. Version 8.0 or later.
+     * Gets the v15_0 property value. When TRUE, only Version 15.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a boolean
      */
     @javax.annotation.Nullable
-    public Boolean getV8_0() {
-        return this._v8_0;
+    public Boolean getV150() {
+        return this.v150;
     }
     /**
-     * Gets the v9_0 property value. Version 9.0 or later.
+     * Gets the v8_0 property value. When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a boolean
      */
     @javax.annotation.Nullable
-    public Boolean getV9_0() {
-        return this._v9_0;
+    public Boolean getV80() {
+        return this.v80;
+    }
+    /**
+     * Gets the v9_0 property value. When TRUE, only Version 9.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getV90() {
+        return this.v90;
     }
     /**
      * Serializes information the current object
@@ -144,13 +156,14 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeBooleanValue("v10_0", this.getV10_0());
-        writer.writeBooleanValue("v11_0", this.getV11_0());
-        writer.writeBooleanValue("v12_0", this.getV12_0());
-        writer.writeBooleanValue("v13_0", this.getV13_0());
-        writer.writeBooleanValue("v14_0", this.getV14_0());
-        writer.writeBooleanValue("v8_0", this.getV8_0());
-        writer.writeBooleanValue("v9_0", this.getV9_0());
+        writer.writeBooleanValue("v10_0", this.getV100());
+        writer.writeBooleanValue("v11_0", this.getV110());
+        writer.writeBooleanValue("v12_0", this.getV120());
+        writer.writeBooleanValue("v13_0", this.getV130());
+        writer.writeBooleanValue("v14_0", this.getV140());
+        writer.writeBooleanValue("v15_0", this.getV150());
+        writer.writeBooleanValue("v8_0", this.getV80());
+        writer.writeBooleanValue("v9_0", this.getV90());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -160,7 +173,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -169,69 +182,78 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
-     * Sets the v10_0 property value. Version 10.0 or later.
-     * @param value Value to set for the v10_0 property.
+     * Sets the v10_0 property value. When TRUE, only Version 10.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * @param value Value to set for the v100 property.
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setV10_0(@javax.annotation.Nullable final Boolean value) {
-        this._v10_0 = value;
+    public void setV100(@javax.annotation.Nullable final Boolean value) {
+        this.v100 = value;
     }
     /**
-     * Sets the v11_0 property value. Version 11.0 or later.
-     * @param value Value to set for the v11_0 property.
+     * Sets the v11_0 property value. When TRUE, only Version 11.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * @param value Value to set for the v110 property.
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setV11_0(@javax.annotation.Nullable final Boolean value) {
-        this._v11_0 = value;
+    public void setV110(@javax.annotation.Nullable final Boolean value) {
+        this.v110 = value;
     }
     /**
-     * Sets the v12_0 property value. Version 12.0 or later.
-     * @param value Value to set for the v12_0 property.
+     * Sets the v12_0 property value. When TRUE, only Version 12.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * @param value Value to set for the v120 property.
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setV12_0(@javax.annotation.Nullable final Boolean value) {
-        this._v12_0 = value;
+    public void setV120(@javax.annotation.Nullable final Boolean value) {
+        this.v120 = value;
     }
     /**
-     * Sets the v13_0 property value. Version 13.0 or later.
-     * @param value Value to set for the v13_0 property.
+     * Sets the v13_0 property value. When TRUE, only Version 13.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * @param value Value to set for the v130 property.
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setV13_0(@javax.annotation.Nullable final Boolean value) {
-        this._v13_0 = value;
+    public void setV130(@javax.annotation.Nullable final Boolean value) {
+        this.v130 = value;
     }
     /**
-     * Sets the v14_0 property value. Version 14.0 or later.
-     * @param value Value to set for the v14_0 property.
+     * Sets the v14_0 property value. When TRUE, only Version 14.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * @param value Value to set for the v140 property.
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setV14_0(@javax.annotation.Nullable final Boolean value) {
-        this._v14_0 = value;
+    public void setV140(@javax.annotation.Nullable final Boolean value) {
+        this.v140 = value;
     }
     /**
-     * Sets the v8_0 property value. Version 8.0 or later.
-     * @param value Value to set for the v8_0 property.
+     * Sets the v15_0 property value. When TRUE, only Version 15.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * @param value Value to set for the v150 property.
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setV8_0(@javax.annotation.Nullable final Boolean value) {
-        this._v8_0 = value;
+    public void setV150(@javax.annotation.Nullable final Boolean value) {
+        this.v150 = value;
     }
     /**
-     * Sets the v9_0 property value. Version 9.0 or later.
-     * @param value Value to set for the v9_0 property.
+     * Sets the v8_0 property value. When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * @param value Value to set for the v80 property.
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setV9_0(@javax.annotation.Nullable final Boolean value) {
-        this._v9_0 = value;
+    public void setV80(@javax.annotation.Nullable final Boolean value) {
+        this.v80 = value;
+    }
+    /**
+     * Sets the v9_0 property value. When TRUE, only Version 9.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * @param value Value to set for the v90 property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setV90(@javax.annotation.Nullable final Boolean value) {
+        this.v90 = value;
     }
 }

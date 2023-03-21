@@ -3,26 +3,24 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookNamedItem extends Entity implements Parsable {
     /** Represents the comment associated with this name. */
-    private String _comment;
+    private String comment;
     /** The name of the object. Read-only. */
-    private String _name;
+    private String name;
     /** Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only. */
-    private String _scope;
+    private String scope;
     /** Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only. */
-    private String _type;
+    private String type;
     /** Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only. */
-    private Json _value;
+    private Json value;
     /** Specifies whether the object is visible or not. */
-    private Boolean _visible;
+    private Boolean visible;
     /** Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only. */
-    private WorkbookWorksheet _worksheet;
+    private WorkbookWorksheet worksheet;
     /**
      * Instantiates a new workbookNamedItem and sets the default values.
      * @return a void
@@ -47,15 +45,15 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getComment() {
-        return this._comment;
+        return this.comment;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("scope", (n) -> { this.setScope(n.getStringValue()); });
@@ -71,7 +69,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the scope property value. Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only.
@@ -79,7 +77,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getScope() {
-        return this._scope;
+        return this.scope;
     }
     /**
      * Gets the type property value. Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
@@ -87,7 +85,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Gets the value property value. Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
@@ -95,7 +93,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Json getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Gets the visible property value. Specifies whether the object is visible or not.
@@ -103,7 +101,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getVisible() {
-        return this._visible;
+        return this.visible;
     }
     /**
      * Gets the worksheet property value. Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
@@ -111,7 +109,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookWorksheet getWorksheet() {
-        return this._worksheet;
+        return this.worksheet;
     }
     /**
      * Serializes information the current object
@@ -137,7 +135,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setComment(@javax.annotation.Nullable final String value) {
-        this._comment = value;
+        this.comment = value;
     }
     /**
      * Sets the name property value. The name of the object. Read-only.
@@ -146,7 +144,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the scope property value. Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only.
@@ -155,7 +153,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setScope(@javax.annotation.Nullable final String value) {
-        this._scope = value;
+        this.scope = value;
     }
     /**
      * Sets the type property value. Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
@@ -164,7 +162,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+        this.type = value;
     }
     /**
      * Sets the value property value. Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
@@ -173,7 +171,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final Json value) {
-        this._value = value;
+        this.value = value;
     }
     /**
      * Sets the visible property value. Specifies whether the object is visible or not.
@@ -182,7 +180,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVisible(@javax.annotation.Nullable final Boolean value) {
-        this._visible = value;
+        this.visible = value;
     }
     /**
      * Sets the worksheet property value. Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
@@ -191,6 +189,6 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWorksheet(@javax.annotation.Nullable final WorkbookWorksheet value) {
-        this._worksheet = value;
+        this.worksheet = value;
     }
 }

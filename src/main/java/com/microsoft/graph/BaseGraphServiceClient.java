@@ -44,10 +44,10 @@ import com.microsoft.graph.domaindnsrecords.DomainDnsRecordsRequestBuilder;
 import com.microsoft.graph.domaindnsrecords.item.DomainDnsRecordItemRequestBuilder;
 import com.microsoft.graph.domains.DomainsRequestBuilder;
 import com.microsoft.graph.domains.item.DomainItemRequestBuilder;
-import com.microsoft.graph.drive.DriveRequestBuilder;
 import com.microsoft.graph.drives.DrivesRequestBuilder;
 import com.microsoft.graph.drives.item.DriveItemRequestBuilder;
 import com.microsoft.graph.education.EducationRequestBuilder;
+import com.microsoft.graph.employeeexperience.EmployeeExperienceRequestBuilder;
 import com.microsoft.graph.external.ExternalRequestBuilder;
 import com.microsoft.graph.grouplifecyclepolicies.GroupLifecyclePoliciesRequestBuilder;
 import com.microsoft.graph.grouplifecyclepolicies.item.GroupLifecyclePolicyItemRequestBuilder;
@@ -104,12 +104,13 @@ import com.microsoft.graph.teams.TeamsRequestBuilder;
 import com.microsoft.graph.teamstemplates.item.TeamsTemplateItemRequestBuilder;
 import com.microsoft.graph.teamstemplates.TeamsTemplatesRequestBuilder;
 import com.microsoft.graph.teamwork.TeamworkRequestBuilder;
+import com.microsoft.graph.tenantrelationships.TenantRelationshipsRequestBuilder;
 import com.microsoft.graph.users.item.UserItemRequestBuilder;
 import com.microsoft.graph.users.UsersRequestBuilder;
-import com.microsoft.graph.workbooks.item.DriveItemItemRequestBuilder;
-import com.microsoft.graph.workbooks.WorkbooksRequestBuilder;
 import com.microsoft.kiota.ApiClientBuilder;
 import com.microsoft.kiota.RequestAdapter;
+import com.microsoft.kiota.serialization.FormParseNodeFactory;
+import com.microsoft.kiota.serialization.FormSerializationWriterFactory;
 import com.microsoft.kiota.serialization.JsonParseNodeFactory;
 import com.microsoft.kiota.serialization.JsonSerializationWriterFactory;
 import com.microsoft.kiota.serialization.ParseNodeFactoryRegistry;
@@ -118,7 +119,9 @@ import com.microsoft.kiota.serialization.TextParseNodeFactory;
 import com.microsoft.kiota.serialization.TextSerializationWriterFactory;
 import java.util.HashMap;
 import java.util.Objects;
-/** The main entry point of the SDK, exposes the configuration and the fluent API. */
+/**
+ * The main entry point of the SDK, exposes the configuration and the fluent API.
+ */
 public class BaseGraphServiceClient {
     /** Provides operations to manage the admin singleton. */
     @javax.annotation.Nonnull
@@ -255,11 +258,6 @@ public class BaseGraphServiceClient {
     public DomainsRequestBuilder domains() {
         return new DomainsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the drive singleton. */
-    @javax.annotation.Nonnull
-    public DriveRequestBuilder drive() {
-        return new DriveRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Provides operations to manage the collection of drive entities. */
     @javax.annotation.Nonnull
     public DrivesRequestBuilder drives() {
@@ -269,6 +267,11 @@ public class BaseGraphServiceClient {
     @javax.annotation.Nonnull
     public EducationRequestBuilder education() {
         return new EducationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the employeeExperience singleton. */
+    @javax.annotation.Nonnull
+    public EmployeeExperienceRequestBuilder employeeExperience() {
+        return new EmployeeExperienceRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the external singleton. */
     @javax.annotation.Nonnull
@@ -352,7 +355,7 @@ public class BaseGraphServiceClient {
     public PermissionGrantsRequestBuilder permissionGrants() {
         return new PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of place entities. */
+    /** The places property */
     @javax.annotation.Nonnull
     public PlacesRequestBuilder places() {
         return new PlacesRequestBuilder(pathParameters, requestAdapter);
@@ -454,17 +457,17 @@ public class BaseGraphServiceClient {
     public TeamworkRequestBuilder teamwork() {
         return new TeamworkRequestBuilder(pathParameters, requestAdapter);
     }
+    /** Provides operations to manage the tenantRelationship singleton. */
+    @javax.annotation.Nonnull
+    public TenantRelationshipsRequestBuilder tenantRelationships() {
+        return new TenantRelationshipsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /** Provides operations to manage the collection of user entities. */
     @javax.annotation.Nonnull
     public UsersRequestBuilder users() {
         return new UsersRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the collection of driveItem entities. */
-    @javax.annotation.Nonnull
-    public WorkbooksRequestBuilder workbooks() {
-        return new WorkbooksRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the collection of agreementAcceptance entities.
@@ -575,11 +578,14 @@ public class BaseGraphServiceClient {
         this.requestAdapter = requestAdapter;
         ApiClientBuilder.registerDefaultSerializer(JsonSerializationWriterFactory.class);
         ApiClientBuilder.registerDefaultSerializer(TextSerializationWriterFactory.class);
+        ApiClientBuilder.registerDefaultSerializer(FormSerializationWriterFactory.class);
         ApiClientBuilder.registerDefaultDeserializer(JsonParseNodeFactory.class);
+        ApiClientBuilder.registerDefaultDeserializer(FormParseNodeFactory.class);
         ApiClientBuilder.registerDefaultDeserializer(TextParseNodeFactory.class);
         if (requestAdapter.getBaseUrl() == null || requestAdapter.getBaseUrl().isEmpty()) {
             requestAdapter.setBaseUrl("https://graph.microsoft.com/v1.0");
         }
+        pathParameters.put("baseurl", requestAdapter.getBaseUrl());
     }
     /**
      * Provides operations to manage the collection of orgContact entities.
@@ -952,17 +958,5 @@ public class BaseGraphServiceClient {
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("user%2Did", id);
         return new UserItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the collection of driveItem entities.
-     * @param id Unique identifier of the item
-     * @return a DriveItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DriveItemItemRequestBuilder workbooks(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("driveItem%2Did", id);
-        return new DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
 }

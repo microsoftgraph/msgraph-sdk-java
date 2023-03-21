@@ -4,65 +4,64 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** A list of supported bottom margins(in microns) for the printer. */
-    private java.util.List<Integer> _bottomMargins;
+    private java.util.List<Integer> bottomMargins;
     /** True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise. */
-    private Boolean _collation;
+    private Boolean collation;
     /** The color modes supported by the printer. Valid values are described in the following table. */
-    private java.util.List<PrintColorMode> _colorModes;
+    private java.util.List<PrintColorMode> colorModes;
     /** A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types. */
-    private java.util.List<String> _contentTypes;
+    private java.util.List<String> contentTypes;
     /** The range of copies per job supported by the printer. */
-    private IntegerRange _copiesPerJob;
+    private IntegerRange copiesPerJob;
     /** The list of print resolutions in DPI that are supported by the printer. */
-    private java.util.List<Integer> _dpis;
+    private java.util.List<Integer> dpis;
     /** The list of duplex modes that are supported by the printer. Valid values are described in the following table. */
-    private java.util.List<PrintDuplexMode> _duplexModes;
+    private java.util.List<PrintDuplexMode> duplexModes;
     /** The list of feed orientations that are supported by the printer. */
-    private java.util.List<PrinterFeedOrientation> _feedOrientations;
+    private java.util.List<PrinterFeedOrientation> feedOrientations;
     /** Finishing processes the printer supports for a printed document. */
-    private java.util.List<PrintFinishing> _finishings;
+    private java.util.List<PrintFinishing> finishings;
     /** Supported input bins for the printer. */
-    private java.util.List<String> _inputBins;
+    private java.util.List<String> inputBins;
     /** True if color printing is supported by the printer; false otherwise. Read-only. */
-    private Boolean _isColorPrintingSupported;
+    private Boolean isColorPrintingSupported;
     /** True if the printer supports printing by page ranges; false otherwise. */
-    private Boolean _isPageRangeSupported;
+    private Boolean isPageRangeSupported;
     /** A list of supported left margins(in microns) for the printer. */
-    private java.util.List<Integer> _leftMargins;
+    private java.util.List<Integer> leftMargins;
     /** The media (i.e., paper) colors supported by the printer. */
-    private java.util.List<String> _mediaColors;
+    private java.util.List<String> mediaColors;
     /** The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table. */
-    private java.util.List<String> _mediaSizes;
+    private java.util.List<String> mediaSizes;
     /** The media types supported by the printer. */
-    private java.util.List<String> _mediaTypes;
+    private java.util.List<String> mediaTypes;
     /** The presentation directions supported by the printer. Supported values are described in the following table. */
-    private java.util.List<PrintMultipageLayout> _multipageLayouts;
+    private java.util.List<PrintMultipageLayout> multipageLayouts;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The print orientations supported by the printer. Valid values are described in the following table. */
-    private java.util.List<PrintOrientation> _orientations;
+    private java.util.List<PrintOrientation> orientations;
     /** The printer's supported output bins (trays). */
-    private java.util.List<String> _outputBins;
+    private java.util.List<String> outputBins;
     /** Supported number of Input Pages to impose upon a single Impression. */
-    private java.util.List<Integer> _pagesPerSheet;
+    private java.util.List<Integer> pagesPerSheet;
     /** The print qualities supported by the printer. */
-    private java.util.List<PrintQuality> _qualities;
+    private java.util.List<PrintQuality> qualities;
     /** A list of supported right margins(in microns) for the printer. */
-    private java.util.List<Integer> _rightMargins;
+    private java.util.List<Integer> rightMargins;
     /** Supported print scalings. */
-    private java.util.List<PrintScaling> _scalings;
+    private java.util.List<PrintScaling> scalings;
     /** True if the printer supports scaling PDF pages to match the print media size; false otherwise. */
-    private Boolean _supportsFitPdfToPage;
+    private Boolean supportsFitPdfToPage;
     /** A list of supported top margins(in microns) for the printer. */
-    private java.util.List<Integer> _topMargins;
+    private java.util.List<Integer> topMargins;
     /**
      * Instantiates a new printerCapabilities and sets the default values.
      * @return a void
@@ -87,7 +86,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the bottomMargins property value. A list of supported bottom margins(in microns) for the printer.
@@ -95,7 +94,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Integer> getBottomMargins() {
-        return this._bottomMargins;
+        return this.bottomMargins;
     }
     /**
      * Gets the collation property value. True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise.
@@ -103,7 +102,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getCollation() {
-        return this._collation;
+        return this.collation;
     }
     /**
      * Gets the colorModes property value. The color modes supported by the printer. Valid values are described in the following table.
@@ -111,7 +110,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintColorMode> getColorModes() {
-        return this._colorModes;
+        return this.colorModes;
     }
     /**
      * Gets the contentTypes property value. A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types.
@@ -119,7 +118,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getContentTypes() {
-        return this._contentTypes;
+        return this.contentTypes;
     }
     /**
      * Gets the copiesPerJob property value. The range of copies per job supported by the printer.
@@ -127,7 +126,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public IntegerRange getCopiesPerJob() {
-        return this._copiesPerJob;
+        return this.copiesPerJob;
     }
     /**
      * Gets the dpis property value. The list of print resolutions in DPI that are supported by the printer.
@@ -135,7 +134,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Integer> getDpis() {
-        return this._dpis;
+        return this.dpis;
     }
     /**
      * Gets the duplexModes property value. The list of duplex modes that are supported by the printer. Valid values are described in the following table.
@@ -143,7 +142,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintDuplexMode> getDuplexModes() {
-        return this._duplexModes;
+        return this.duplexModes;
     }
     /**
      * Gets the feedOrientations property value. The list of feed orientations that are supported by the printer.
@@ -151,15 +150,15 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrinterFeedOrientation> getFeedOrientations() {
-        return this._feedOrientations;
+        return this.feedOrientations;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(26);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(26);
         deserializerMap.put("bottomMargins", (n) -> { this.setBottomMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
         deserializerMap.put("collation", (n) -> { this.setCollation(n.getBooleanValue()); });
         deserializerMap.put("colorModes", (n) -> { this.setColorModes(n.getCollectionOfEnumValues(PrintColorMode.class)); });
@@ -194,7 +193,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintFinishing> getFinishings() {
-        return this._finishings;
+        return this.finishings;
     }
     /**
      * Gets the inputBins property value. Supported input bins for the printer.
@@ -202,7 +201,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getInputBins() {
-        return this._inputBins;
+        return this.inputBins;
     }
     /**
      * Gets the isColorPrintingSupported property value. True if color printing is supported by the printer; false otherwise. Read-only.
@@ -210,7 +209,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsColorPrintingSupported() {
-        return this._isColorPrintingSupported;
+        return this.isColorPrintingSupported;
     }
     /**
      * Gets the isPageRangeSupported property value. True if the printer supports printing by page ranges; false otherwise.
@@ -218,7 +217,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsPageRangeSupported() {
-        return this._isPageRangeSupported;
+        return this.isPageRangeSupported;
     }
     /**
      * Gets the leftMargins property value. A list of supported left margins(in microns) for the printer.
@@ -226,7 +225,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Integer> getLeftMargins() {
-        return this._leftMargins;
+        return this.leftMargins;
     }
     /**
      * Gets the mediaColors property value. The media (i.e., paper) colors supported by the printer.
@@ -234,7 +233,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getMediaColors() {
-        return this._mediaColors;
+        return this.mediaColors;
     }
     /**
      * Gets the mediaSizes property value. The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table.
@@ -242,7 +241,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getMediaSizes() {
-        return this._mediaSizes;
+        return this.mediaSizes;
     }
     /**
      * Gets the mediaTypes property value. The media types supported by the printer.
@@ -250,7 +249,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getMediaTypes() {
-        return this._mediaTypes;
+        return this.mediaTypes;
     }
     /**
      * Gets the multipageLayouts property value. The presentation directions supported by the printer. Supported values are described in the following table.
@@ -258,7 +257,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintMultipageLayout> getMultipageLayouts() {
-        return this._multipageLayouts;
+        return this.multipageLayouts;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -266,7 +265,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the orientations property value. The print orientations supported by the printer. Valid values are described in the following table.
@@ -274,7 +273,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintOrientation> getOrientations() {
-        return this._orientations;
+        return this.orientations;
     }
     /**
      * Gets the outputBins property value. The printer's supported output bins (trays).
@@ -282,7 +281,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getOutputBins() {
-        return this._outputBins;
+        return this.outputBins;
     }
     /**
      * Gets the pagesPerSheet property value. Supported number of Input Pages to impose upon a single Impression.
@@ -290,7 +289,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Integer> getPagesPerSheet() {
-        return this._pagesPerSheet;
+        return this.pagesPerSheet;
     }
     /**
      * Gets the qualities property value. The print qualities supported by the printer.
@@ -298,7 +297,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintQuality> getQualities() {
-        return this._qualities;
+        return this.qualities;
     }
     /**
      * Gets the rightMargins property value. A list of supported right margins(in microns) for the printer.
@@ -306,7 +305,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Integer> getRightMargins() {
-        return this._rightMargins;
+        return this.rightMargins;
     }
     /**
      * Gets the scalings property value. Supported print scalings.
@@ -314,7 +313,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintScaling> getScalings() {
-        return this._scalings;
+        return this.scalings;
     }
     /**
      * Gets the supportsFitPdfToPage property value. True if the printer supports scaling PDF pages to match the print media size; false otherwise.
@@ -322,7 +321,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getSupportsFitPdfToPage() {
-        return this._supportsFitPdfToPage;
+        return this.supportsFitPdfToPage;
     }
     /**
      * Gets the topMargins property value. A list of supported top margins(in microns) for the printer.
@@ -330,7 +329,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Integer> getTopMargins() {
-        return this._topMargins;
+        return this.topMargins;
     }
     /**
      * Serializes information the current object
@@ -375,7 +374,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the bottomMargins property value. A list of supported bottom margins(in microns) for the printer.
@@ -384,7 +383,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setBottomMargins(@javax.annotation.Nullable final java.util.List<Integer> value) {
-        this._bottomMargins = value;
+        this.bottomMargins = value;
     }
     /**
      * Sets the collation property value. True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise.
@@ -393,7 +392,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCollation(@javax.annotation.Nullable final Boolean value) {
-        this._collation = value;
+        this.collation = value;
     }
     /**
      * Sets the colorModes property value. The color modes supported by the printer. Valid values are described in the following table.
@@ -402,7 +401,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setColorModes(@javax.annotation.Nullable final java.util.List<PrintColorMode> value) {
-        this._colorModes = value;
+        this.colorModes = value;
     }
     /**
      * Sets the contentTypes property value. A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types.
@@ -411,7 +410,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentTypes(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._contentTypes = value;
+        this.contentTypes = value;
     }
     /**
      * Sets the copiesPerJob property value. The range of copies per job supported by the printer.
@@ -420,7 +419,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCopiesPerJob(@javax.annotation.Nullable final IntegerRange value) {
-        this._copiesPerJob = value;
+        this.copiesPerJob = value;
     }
     /**
      * Sets the dpis property value. The list of print resolutions in DPI that are supported by the printer.
@@ -429,7 +428,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDpis(@javax.annotation.Nullable final java.util.List<Integer> value) {
-        this._dpis = value;
+        this.dpis = value;
     }
     /**
      * Sets the duplexModes property value. The list of duplex modes that are supported by the printer. Valid values are described in the following table.
@@ -438,7 +437,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDuplexModes(@javax.annotation.Nullable final java.util.List<PrintDuplexMode> value) {
-        this._duplexModes = value;
+        this.duplexModes = value;
     }
     /**
      * Sets the feedOrientations property value. The list of feed orientations that are supported by the printer.
@@ -447,7 +446,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFeedOrientations(@javax.annotation.Nullable final java.util.List<PrinterFeedOrientation> value) {
-        this._feedOrientations = value;
+        this.feedOrientations = value;
     }
     /**
      * Sets the finishings property value. Finishing processes the printer supports for a printed document.
@@ -456,7 +455,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFinishings(@javax.annotation.Nullable final java.util.List<PrintFinishing> value) {
-        this._finishings = value;
+        this.finishings = value;
     }
     /**
      * Sets the inputBins property value. Supported input bins for the printer.
@@ -465,7 +464,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setInputBins(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._inputBins = value;
+        this.inputBins = value;
     }
     /**
      * Sets the isColorPrintingSupported property value. True if color printing is supported by the printer; false otherwise. Read-only.
@@ -474,7 +473,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsColorPrintingSupported(@javax.annotation.Nullable final Boolean value) {
-        this._isColorPrintingSupported = value;
+        this.isColorPrintingSupported = value;
     }
     /**
      * Sets the isPageRangeSupported property value. True if the printer supports printing by page ranges; false otherwise.
@@ -483,7 +482,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsPageRangeSupported(@javax.annotation.Nullable final Boolean value) {
-        this._isPageRangeSupported = value;
+        this.isPageRangeSupported = value;
     }
     /**
      * Sets the leftMargins property value. A list of supported left margins(in microns) for the printer.
@@ -492,7 +491,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLeftMargins(@javax.annotation.Nullable final java.util.List<Integer> value) {
-        this._leftMargins = value;
+        this.leftMargins = value;
     }
     /**
      * Sets the mediaColors property value. The media (i.e., paper) colors supported by the printer.
@@ -501,7 +500,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMediaColors(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._mediaColors = value;
+        this.mediaColors = value;
     }
     /**
      * Sets the mediaSizes property value. The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table.
@@ -510,7 +509,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMediaSizes(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._mediaSizes = value;
+        this.mediaSizes = value;
     }
     /**
      * Sets the mediaTypes property value. The media types supported by the printer.
@@ -519,7 +518,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMediaTypes(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._mediaTypes = value;
+        this.mediaTypes = value;
     }
     /**
      * Sets the multipageLayouts property value. The presentation directions supported by the printer. Supported values are described in the following table.
@@ -528,7 +527,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMultipageLayouts(@javax.annotation.Nullable final java.util.List<PrintMultipageLayout> value) {
-        this._multipageLayouts = value;
+        this.multipageLayouts = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -537,7 +536,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the orientations property value. The print orientations supported by the printer. Valid values are described in the following table.
@@ -546,7 +545,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOrientations(@javax.annotation.Nullable final java.util.List<PrintOrientation> value) {
-        this._orientations = value;
+        this.orientations = value;
     }
     /**
      * Sets the outputBins property value. The printer's supported output bins (trays).
@@ -555,7 +554,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOutputBins(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._outputBins = value;
+        this.outputBins = value;
     }
     /**
      * Sets the pagesPerSheet property value. Supported number of Input Pages to impose upon a single Impression.
@@ -564,7 +563,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPagesPerSheet(@javax.annotation.Nullable final java.util.List<Integer> value) {
-        this._pagesPerSheet = value;
+        this.pagesPerSheet = value;
     }
     /**
      * Sets the qualities property value. The print qualities supported by the printer.
@@ -573,7 +572,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setQualities(@javax.annotation.Nullable final java.util.List<PrintQuality> value) {
-        this._qualities = value;
+        this.qualities = value;
     }
     /**
      * Sets the rightMargins property value. A list of supported right margins(in microns) for the printer.
@@ -582,7 +581,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRightMargins(@javax.annotation.Nullable final java.util.List<Integer> value) {
-        this._rightMargins = value;
+        this.rightMargins = value;
     }
     /**
      * Sets the scalings property value. Supported print scalings.
@@ -591,7 +590,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setScalings(@javax.annotation.Nullable final java.util.List<PrintScaling> value) {
-        this._scalings = value;
+        this.scalings = value;
     }
     /**
      * Sets the supportsFitPdfToPage property value. True if the printer supports scaling PDF pages to match the print media size; false otherwise.
@@ -600,7 +599,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSupportsFitPdfToPage(@javax.annotation.Nullable final Boolean value) {
-        this._supportsFitPdfToPage = value;
+        this.supportsFitPdfToPage = value;
     }
     /**
      * Sets the topMargins property value. A list of supported top margins(in microns) for the printer.
@@ -609,6 +608,6 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTopMargins(@javax.annotation.Nullable final java.util.List<Integer> value) {
-        this._topMargins = value;
+        this.topMargins = value;
     }
 }

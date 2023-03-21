@@ -4,27 +4,28 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The content of the attachment. If the attachment is a rich card, set the property to the rich card object. This property and contentUrl are mutually exclusive. */
-    private String _content;
+    private String content;
     /** The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.Any contentTypes supported by the Bot Framework's Attachment objectapplication/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header. */
-    private String _contentType;
+    private String contentType;
     /** URL for the content of the attachment. Supported protocols: http, https, file and data. */
-    private String _contentUrl;
+    private String contentUrl;
     /** Read-only. Unique id of the attachment. */
-    private String _id;
+    private String id;
     /** Name of the attachment. */
-    private String _name;
+    private String name;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
+    /** The ID of the Teams app that is associated with the attachment. The property is specifically used to attribute a Teams message card to the specified app. */
+    private String teamsAppId;
     /** URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document. */
-    private String _thumbnailUrl;
+    private String thumbnailUrl;
     /**
      * Instantiates a new chatMessageAttachment and sets the default values.
      * @return a void
@@ -49,7 +50,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the content property value. The content of the attachment. If the attachment is a rich card, set the property to the rich card object. This property and contentUrl are mutually exclusive.
@@ -57,7 +58,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getContent() {
-        return this._content;
+        return this.content;
     }
     /**
      * Gets the contentType property value. The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.Any contentTypes supported by the Bot Framework's Attachment objectapplication/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header.
@@ -65,7 +66,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getContentType() {
-        return this._contentType;
+        return this.contentType;
     }
     /**
      * Gets the contentUrl property value. URL for the content of the attachment. Supported protocols: http, https, file and data.
@@ -73,21 +74,22 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getContentUrl() {
-        return this._contentUrl;
+        return this.contentUrl;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getStringValue()); });
         deserializerMap.put("contentUrl", (n) -> { this.setContentUrl(n.getStringValue()); });
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("teamsAppId", (n) -> { this.setTeamsAppId(n.getStringValue()); });
         deserializerMap.put("thumbnailUrl", (n) -> { this.setThumbnailUrl(n.getStringValue()); });
         return deserializerMap;
     }
@@ -97,7 +99,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getId() {
-        return this._id;
+        return this.id;
     }
     /**
      * Gets the name property value. Name of the attachment.
@@ -105,7 +107,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -113,7 +115,15 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
+    }
+    /**
+     * Gets the teamsAppId property value. The ID of the Teams app that is associated with the attachment. The property is specifically used to attribute a Teams message card to the specified app.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getTeamsAppId() {
+        return this.teamsAppId;
     }
     /**
      * Gets the thumbnailUrl property value. URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document.
@@ -121,7 +131,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getThumbnailUrl() {
-        return this._thumbnailUrl;
+        return this.thumbnailUrl;
     }
     /**
      * Serializes information the current object
@@ -137,6 +147,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("id", this.getId());
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeStringValue("teamsAppId", this.getTeamsAppId());
         writer.writeStringValue("thumbnailUrl", this.getThumbnailUrl());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -147,7 +158,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the content property value. The content of the attachment. If the attachment is a rich card, set the property to the rich card object. This property and contentUrl are mutually exclusive.
@@ -156,7 +167,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final String value) {
-        this._content = value;
+        this.content = value;
     }
     /**
      * Sets the contentType property value. The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.Any contentTypes supported by the Bot Framework's Attachment objectapplication/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header.
@@ -165,7 +176,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentType(@javax.annotation.Nullable final String value) {
-        this._contentType = value;
+        this.contentType = value;
     }
     /**
      * Sets the contentUrl property value. URL for the content of the attachment. Supported protocols: http, https, file and data.
@@ -174,7 +185,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentUrl(@javax.annotation.Nullable final String value) {
-        this._contentUrl = value;
+        this.contentUrl = value;
     }
     /**
      * Sets the id property value. Read-only. Unique id of the attachment.
@@ -183,7 +194,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+        this.id = value;
     }
     /**
      * Sets the name property value. Name of the attachment.
@@ -192,7 +203,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -201,7 +212,16 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
+    }
+    /**
+     * Sets the teamsAppId property value. The ID of the Teams app that is associated with the attachment. The property is specifically used to attribute a Teams message card to the specified app.
+     * @param value Value to set for the teamsAppId property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setTeamsAppId(@javax.annotation.Nullable final String value) {
+        this.teamsAppId = value;
     }
     /**
      * Sets the thumbnailUrl property value. URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document.
@@ -210,6 +230,6 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setThumbnailUrl(@javax.annotation.Nullable final String value) {
-        this._thumbnailUrl = value;
+        this.thumbnailUrl = value;
     }
 }

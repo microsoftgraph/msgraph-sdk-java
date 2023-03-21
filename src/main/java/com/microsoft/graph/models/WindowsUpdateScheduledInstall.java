@@ -4,15 +4,14 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType implements Parsable {
     /** Possible values for a weekly schedule. */
-    private WeeklySchedule _scheduledInstallDay;
+    private WeeklySchedule scheduledInstallDay;
     /** Scheduled Install Time during day */
-    private LocalTime _scheduledInstallTime;
+    private LocalTime scheduledInstallTime;
     /**
      * Instantiates a new WindowsUpdateScheduledInstall and sets the default values.
      * @return a void
@@ -34,11 +33,11 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("scheduledInstallDay", (n) -> { this.setScheduledInstallDay(n.getEnumValue(WeeklySchedule.class)); });
         deserializerMap.put("scheduledInstallTime", (n) -> { this.setScheduledInstallTime(n.getLocalTimeValue()); });
         return deserializerMap;
@@ -49,7 +48,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      */
     @javax.annotation.Nullable
     public WeeklySchedule getScheduledInstallDay() {
-        return this._scheduledInstallDay;
+        return this.scheduledInstallDay;
     }
     /**
      * Gets the scheduledInstallTime property value. Scheduled Install Time during day
@@ -57,7 +56,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      */
     @javax.annotation.Nullable
     public LocalTime getScheduledInstallTime() {
-        return this._scheduledInstallTime;
+        return this.scheduledInstallTime;
     }
     /**
      * Serializes information the current object
@@ -78,7 +77,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      */
     @javax.annotation.Nonnull
     public void setScheduledInstallDay(@javax.annotation.Nullable final WeeklySchedule value) {
-        this._scheduledInstallDay = value;
+        this.scheduledInstallDay = value;
     }
     /**
      * Sets the scheduledInstallTime property value. Scheduled Install Time during day
@@ -87,6 +86,6 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      */
     @javax.annotation.Nonnull
     public void setScheduledInstallTime(@javax.annotation.Nullable final LocalTime value) {
-        this._scheduledInstallTime = value;
+        this.scheduledInstallTime = value;
     }
 }

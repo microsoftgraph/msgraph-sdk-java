@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProvisionedIdentity extends Identity implements Parsable {
     /** Details of the identity. */
-    private DetailsInfo _details;
+    private DetailsInfo details;
     /** Type of identity that has been provisioned, such as 'user' or 'group'. */
-    private String _identityType;
+    private String identityType;
     /**
      * Instantiates a new ProvisionedIdentity and sets the default values.
      * @return a void
@@ -37,15 +36,15 @@ public class ProvisionedIdentity extends Identity implements Parsable {
      */
     @javax.annotation.Nullable
     public DetailsInfo getDetails() {
-        return this._details;
+        return this.details;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("details", (n) -> { this.setDetails(n.getObjectValue(DetailsInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("identityType", (n) -> { this.setIdentityType(n.getStringValue()); });
         return deserializerMap;
@@ -56,7 +55,7 @@ public class ProvisionedIdentity extends Identity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getIdentityType() {
-        return this._identityType;
+        return this.identityType;
     }
     /**
      * Serializes information the current object
@@ -77,7 +76,7 @@ public class ProvisionedIdentity extends Identity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDetails(@javax.annotation.Nullable final DetailsInfo value) {
-        this._details = value;
+        this.details = value;
     }
     /**
      * Sets the identityType property value. Type of identity that has been provisioned, such as 'user' or 'group'.
@@ -86,6 +85,6 @@ public class ProvisionedIdentity extends Identity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIdentityType(@javax.annotation.Nullable final String value) {
-        this._identityType = value;
+        this.identityType = value;
     }
 }

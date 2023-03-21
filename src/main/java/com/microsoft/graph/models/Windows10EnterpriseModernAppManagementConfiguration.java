@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceConfiguration implements Parsable {
     /** Indicates whether or not to uninstall a fixed list of built-in Windows apps. */
-    private Boolean _uninstallBuiltInApps;
+    private Boolean uninstallBuiltInApps;
     /**
      * Instantiates a new Windows10EnterpriseModernAppManagementConfiguration and sets the default values.
      * @return a void
@@ -31,11 +30,11 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("uninstallBuiltInApps", (n) -> { this.setUninstallBuiltInApps(n.getBooleanValue()); });
         return deserializerMap;
     }
@@ -45,7 +44,7 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
      */
     @javax.annotation.Nullable
     public Boolean getUninstallBuiltInApps() {
-        return this._uninstallBuiltInApps;
+        return this.uninstallBuiltInApps;
     }
     /**
      * Serializes information the current object
@@ -65,6 +64,6 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
      */
     @javax.annotation.Nonnull
     public void setUninstallBuiltInApps(@javax.annotation.Nullable final Boolean value) {
-        this._uninstallBuiltInApps = value;
+        this.uninstallBuiltInApps = value;
     }
 }

@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Apps rating as in media content */
 public enum RatingAppsType implements ValuedEnum {
     /** Default value, allow all apps content */
     AllAllowed("allAllowed"),

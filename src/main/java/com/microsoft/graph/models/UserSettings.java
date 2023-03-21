@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserSettings extends Entity implements Parsable {
     /** The contributionToContentDiscoveryAsOrganizationDisabled property */
-    private Boolean _contributionToContentDiscoveryAsOrganizationDisabled;
+    private Boolean contributionToContentDiscoveryAsOrganizationDisabled;
     /** The contributionToContentDiscoveryDisabled property */
-    private Boolean _contributionToContentDiscoveryDisabled;
+    private Boolean contributionToContentDiscoveryDisabled;
     /** The shiftPreferences property */
-    private ShiftPreferences _shiftPreferences;
+    private ShiftPreferences shiftPreferences;
     /**
      * Instantiates a new userSettings and sets the default values.
      * @return a void
@@ -38,7 +37,7 @@ public class UserSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getContributionToContentDiscoveryAsOrganizationDisabled() {
-        return this._contributionToContentDiscoveryAsOrganizationDisabled;
+        return this.contributionToContentDiscoveryAsOrganizationDisabled;
     }
     /**
      * Gets the contributionToContentDiscoveryDisabled property value. The contributionToContentDiscoveryDisabled property
@@ -46,15 +45,15 @@ public class UserSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getContributionToContentDiscoveryDisabled() {
-        return this._contributionToContentDiscoveryDisabled;
+        return this.contributionToContentDiscoveryDisabled;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contributionToContentDiscoveryAsOrganizationDisabled", (n) -> { this.setContributionToContentDiscoveryAsOrganizationDisabled(n.getBooleanValue()); });
         deserializerMap.put("contributionToContentDiscoveryDisabled", (n) -> { this.setContributionToContentDiscoveryDisabled(n.getBooleanValue()); });
         deserializerMap.put("shiftPreferences", (n) -> { this.setShiftPreferences(n.getObjectValue(ShiftPreferences::createFromDiscriminatorValue)); });
@@ -66,7 +65,7 @@ public class UserSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ShiftPreferences getShiftPreferences() {
-        return this._shiftPreferences;
+        return this.shiftPreferences;
     }
     /**
      * Serializes information the current object
@@ -88,7 +87,7 @@ public class UserSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContributionToContentDiscoveryAsOrganizationDisabled(@javax.annotation.Nullable final Boolean value) {
-        this._contributionToContentDiscoveryAsOrganizationDisabled = value;
+        this.contributionToContentDiscoveryAsOrganizationDisabled = value;
     }
     /**
      * Sets the contributionToContentDiscoveryDisabled property value. The contributionToContentDiscoveryDisabled property
@@ -97,7 +96,7 @@ public class UserSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContributionToContentDiscoveryDisabled(@javax.annotation.Nullable final Boolean value) {
-        this._contributionToContentDiscoveryDisabled = value;
+        this.contributionToContentDiscoveryDisabled = value;
     }
     /**
      * Sets the shiftPreferences property value. The shiftPreferences property
@@ -106,6 +105,6 @@ public class UserSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setShiftPreferences(@javax.annotation.Nullable final ShiftPreferences value) {
-        this._shiftPreferences = value;
+        this.shiftPreferences = value;
     }
 }

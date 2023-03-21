@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OpenShiftItem extends ShiftItem implements Parsable {
     /** Count of the number of slots for the given open shift. */
-    private Integer _openSlotCount;
+    private Integer openSlotCount;
     /**
      * Instantiates a new OpenShiftItem and sets the default values.
      * @return a void
@@ -31,11 +30,11 @@ public class OpenShiftItem extends ShiftItem implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("openSlotCount", (n) -> { this.setOpenSlotCount(n.getIntegerValue()); });
         return deserializerMap;
     }
@@ -45,7 +44,7 @@ public class OpenShiftItem extends ShiftItem implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getOpenSlotCount() {
-        return this._openSlotCount;
+        return this.openSlotCount;
     }
     /**
      * Serializes information the current object
@@ -65,6 +64,6 @@ public class OpenShiftItem extends ShiftItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOpenSlotCount(@javax.annotation.Nullable final Integer value) {
-        this._openSlotCount = value;
+        this.openSlotCount = value;
     }
 }

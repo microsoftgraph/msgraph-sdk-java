@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamSummary implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The guestsCount property */
-    private Integer _guestsCount;
-    /** The membersCount property */
-    private Integer _membersCount;
+    private Map<String, Object> additionalData;
+    /** Count of guests in a team. */
+    private Integer guestsCount;
+    /** Count of members in a team. */
+    private Integer membersCount;
     /** The OdataType property */
-    private String _odataType;
-    /** The ownersCount property */
-    private Integer _ownersCount;
+    private String odataType;
+    /** Count of owners in a team. */
+    private Integer ownersCount;
     /**
      * Instantiates a new teamSummary and sets the default values.
      * @return a void
@@ -43,15 +42,15 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("guestsCount", (n) -> { this.setGuestsCount(n.getIntegerValue()); });
         deserializerMap.put("membersCount", (n) -> { this.setMembersCount(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -59,20 +58,20 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the guestsCount property value. The guestsCount property
+     * Gets the guestsCount property value. Count of guests in a team.
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getGuestsCount() {
-        return this._guestsCount;
+        return this.guestsCount;
     }
     /**
-     * Gets the membersCount property value. The membersCount property
+     * Gets the membersCount property value. Count of members in a team.
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getMembersCount() {
-        return this._membersCount;
+        return this.membersCount;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -80,15 +79,15 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
-     * Gets the ownersCount property value. The ownersCount property
+     * Gets the ownersCount property value. Count of owners in a team.
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getOwnersCount() {
-        return this._ownersCount;
+        return this.ownersCount;
     }
     /**
      * Serializes information the current object
@@ -111,25 +110,25 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
-     * Sets the guestsCount property value. The guestsCount property
+     * Sets the guestsCount property value. Count of guests in a team.
      * @param value Value to set for the guestsCount property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setGuestsCount(@javax.annotation.Nullable final Integer value) {
-        this._guestsCount = value;
+        this.guestsCount = value;
     }
     /**
-     * Sets the membersCount property value. The membersCount property
+     * Sets the membersCount property value. Count of members in a team.
      * @param value Value to set for the membersCount property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setMembersCount(@javax.annotation.Nullable final Integer value) {
-        this._membersCount = value;
+        this.membersCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -138,15 +137,15 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
-     * Sets the ownersCount property value. The ownersCount property
+     * Sets the ownersCount property value. Count of owners in a team.
      * @param value Value to set for the ownersCount property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setOwnersCount(@javax.annotation.Nullable final Integer value) {
-        this._ownersCount = value;
+        this.ownersCount = value;
     }
 }

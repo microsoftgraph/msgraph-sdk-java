@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SkypeUserConversationMember extends ConversationMember implements Parsable {
-    /** The skypeId property */
-    private String _skypeId;
+    /** Skype ID of the user. */
+    private String skypeId;
     /**
      * Instantiates a new SkypeUserConversationMember and sets the default values.
      * @return a void
@@ -31,21 +30,21 @@ public class SkypeUserConversationMember extends ConversationMember implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("skypeId", (n) -> { this.setSkypeId(n.getStringValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the skypeId property value. The skypeId property
+     * Gets the skypeId property value. Skype ID of the user.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getSkypeId() {
-        return this._skypeId;
+        return this.skypeId;
     }
     /**
      * Serializes information the current object
@@ -59,12 +58,12 @@ public class SkypeUserConversationMember extends ConversationMember implements P
         writer.writeStringValue("skypeId", this.getSkypeId());
     }
     /**
-     * Sets the skypeId property value. The skypeId property
+     * Sets the skypeId property value. Skype ID of the user.
      * @param value Value to set for the skypeId property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setSkypeId(@javax.annotation.Nullable final String value) {
-        this._skypeId = value;
+        this.skypeId = value;
     }
 }

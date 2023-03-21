@@ -5,27 +5,26 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ShiftActivity implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Customer defined code for the shiftActivity. Required. */
-    private String _code;
+    private String code;
     /** The name of the shiftActivity. Required. */
-    private String _displayName;
+    private String displayName;
     /** The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required. */
-    private OffsetDateTime _endDateTime;
+    private OffsetDateTime endDateTime;
     /** Indicates whether the microsoft.graph.user should be paid for the activity during their shift. Required. */
-    private Boolean _isPaid;
+    private Boolean isPaid;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required. */
-    private OffsetDateTime _startDateTime;
+    private OffsetDateTime startDateTime;
     /** The theme property */
-    private ScheduleEntityTheme _theme;
+    private ScheduleEntityTheme theme;
     /**
      * Instantiates a new shiftActivity and sets the default values.
      * @return a void
@@ -50,7 +49,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the code property value. Customer defined code for the shiftActivity. Required.
@@ -58,7 +57,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCode() {
-        return this._code;
+        return this.code;
     }
     /**
      * Gets the displayName property value. The name of the shiftActivity. Required.
@@ -66,7 +65,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the endDateTime property value. The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
@@ -74,15 +73,15 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
@@ -98,7 +97,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsPaid() {
-        return this._isPaid;
+        return this.isPaid;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -106,7 +105,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the startDateTime property value. The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
@@ -114,7 +113,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Gets the theme property value. The theme property
@@ -122,7 +121,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ScheduleEntityTheme getTheme() {
-        return this._theme;
+        return this.theme;
     }
     /**
      * Serializes information the current object
@@ -148,7 +147,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the code property value. Customer defined code for the shiftActivity. Required.
@@ -157,7 +156,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final String value) {
-        this._code = value;
+        this.code = value;
     }
     /**
      * Sets the displayName property value. The name of the shiftActivity. Required.
@@ -166,7 +165,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the endDateTime property value. The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
@@ -175,7 +174,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
      * Sets the isPaid property value. Indicates whether the microsoft.graph.user should be paid for the activity during their shift. Required.
@@ -184,7 +183,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsPaid(@javax.annotation.Nullable final Boolean value) {
-        this._isPaid = value;
+        this.isPaid = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -193,7 +192,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the startDateTime property value. The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
@@ -202,7 +201,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
     /**
      * Sets the theme property value. The theme property
@@ -211,6 +210,6 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTheme(@javax.annotation.Nullable final ScheduleEntityTheme value) {
-        this._theme = value;
+        this.theme = value;
     }
 }

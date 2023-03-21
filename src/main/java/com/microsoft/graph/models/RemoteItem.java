@@ -5,53 +5,52 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RemoteItem implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Identity of the user, device, and application which created the item. Read-only. */
-    private IdentitySet _createdBy;
+    private IdentitySet createdBy;
     /** Date and time of item creation. Read-only. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Indicates that the remote item is a file. Read-only. */
-    private File _file;
+    private File file;
     /** Information about the remote item from the local file system. Read-only. */
-    private FileSystemInfo _fileSystemInfo;
+    private FileSystemInfo fileSystemInfo;
     /** Indicates that the remote item is a folder. Read-only. */
-    private Folder _folder;
+    private Folder folder;
     /** Unique identifier for the remote item in its drive. Read-only. */
-    private String _id;
+    private String id;
     /** Image metadata, if the item is an image. Read-only. */
-    private Image _image;
+    private Image image;
     /** Identity of the user, device, and application which last modified the item. Read-only. */
-    private IdentitySet _lastModifiedBy;
+    private IdentitySet lastModifiedBy;
     /** Date and time the item was last modified. Read-only. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** Optional. Filename of the remote item. Read-only. */
-    private String _name;
+    private String name;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only. */
-    private Package_escaped _package_escaped;
+    private PackageEscaped packageEscaped;
     /** Properties of the parent of the remote item. Read-only. */
-    private ItemReference _parentReference;
+    private ItemReference parentReference;
     /** Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only. */
-    private Shared _shared;
+    private Shared shared;
     /** Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only. */
-    private SharepointIds _sharepointIds;
+    private SharepointIds sharepointIds;
     /** Size of the remote item. Read-only. */
-    private Long _size;
+    private Long size;
     /** If the current item is also available as a special folder, this facet is returned. Read-only. */
-    private SpecialFolder _specialFolder;
+    private SpecialFolder specialFolder;
     /** Video metadata, if the item is a video. Read-only. */
-    private Video _video;
+    private Video video;
     /** DAV compatible URL for the item. */
-    private String _webDavUrl;
+    private String webDavUrl;
     /** URL that displays the resource in the browser. Read-only. */
-    private String _webUrl;
+    private String webUrl;
     /**
      * Instantiates a new remoteItem and sets the default values.
      * @return a void
@@ -76,7 +75,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the createdBy property value. Identity of the user, device, and application which created the item. Read-only.
@@ -84,7 +83,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdDateTime property value. Date and time of item creation. Read-only.
@@ -92,15 +91,15 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(20);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(20);
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("file", (n) -> { this.setFile(n.getObjectValue(File::createFromDiscriminatorValue)); });
@@ -112,7 +111,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("package", (n) -> { this.setPackage(n.getObjectValue(Package_escaped::createFromDiscriminatorValue)); });
+        deserializerMap.put("package", (n) -> { this.setPackage(n.getObjectValue(PackageEscaped::createFromDiscriminatorValue)); });
         deserializerMap.put("parentReference", (n) -> { this.setParentReference(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
         deserializerMap.put("shared", (n) -> { this.setShared(n.getObjectValue(Shared::createFromDiscriminatorValue)); });
         deserializerMap.put("sharepointIds", (n) -> { this.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
@@ -129,7 +128,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public File getFile() {
-        return this._file;
+        return this.file;
     }
     /**
      * Gets the fileSystemInfo property value. Information about the remote item from the local file system. Read-only.
@@ -137,7 +136,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public FileSystemInfo getFileSystemInfo() {
-        return this._fileSystemInfo;
+        return this.fileSystemInfo;
     }
     /**
      * Gets the folder property value. Indicates that the remote item is a folder. Read-only.
@@ -145,7 +144,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Folder getFolder() {
-        return this._folder;
+        return this.folder;
     }
     /**
      * Gets the id property value. Unique identifier for the remote item in its drive. Read-only.
@@ -153,7 +152,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getId() {
-        return this._id;
+        return this.id;
     }
     /**
      * Gets the image property value. Image metadata, if the item is an image. Read-only.
@@ -161,7 +160,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Image getImage() {
-        return this._image;
+        return this.image;
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
@@ -169,7 +168,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this._lastModifiedBy;
+        return this.lastModifiedBy;
     }
     /**
      * Gets the lastModifiedDateTime property value. Date and time the item was last modified. Read-only.
@@ -177,7 +176,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the name property value. Optional. Filename of the remote item. Read-only.
@@ -185,7 +184,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -193,15 +192,15 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the package property value. If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
-     * @return a package_escaped
+     * @return a packageEscaped
      */
     @javax.annotation.Nullable
-    public Package_escaped getPackage() {
-        return this._package_escaped;
+    public PackageEscaped getPackage() {
+        return this.packageEscaped;
     }
     /**
      * Gets the parentReference property value. Properties of the parent of the remote item. Read-only.
@@ -209,7 +208,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ItemReference getParentReference() {
-        return this._parentReference;
+        return this.parentReference;
     }
     /**
      * Gets the shared property value. Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
@@ -217,7 +216,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Shared getShared() {
-        return this._shared;
+        return this.shared;
     }
     /**
      * Gets the sharepointIds property value. Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only.
@@ -225,7 +224,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public SharepointIds getSharepointIds() {
-        return this._sharepointIds;
+        return this.sharepointIds;
     }
     /**
      * Gets the size property value. Size of the remote item. Read-only.
@@ -233,7 +232,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Long getSize() {
-        return this._size;
+        return this.size;
     }
     /**
      * Gets the specialFolder property value. If the current item is also available as a special folder, this facet is returned. Read-only.
@@ -241,7 +240,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public SpecialFolder getSpecialFolder() {
-        return this._specialFolder;
+        return this.specialFolder;
     }
     /**
      * Gets the video property value. Video metadata, if the item is a video. Read-only.
@@ -249,7 +248,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Video getVideo() {
-        return this._video;
+        return this.video;
     }
     /**
      * Gets the webDavUrl property value. DAV compatible URL for the item.
@@ -257,7 +256,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getWebDavUrl() {
-        return this._webDavUrl;
+        return this.webDavUrl;
     }
     /**
      * Gets the webUrl property value. URL that displays the resource in the browser. Read-only.
@@ -265,7 +264,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getWebUrl() {
-        return this._webUrl;
+        return this.webUrl;
     }
     /**
      * Serializes information the current object
@@ -304,7 +303,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the createdBy property value. Identity of the user, device, and application which created the item. Read-only.
@@ -313,7 +312,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. Date and time of item creation. Read-only.
@@ -322,7 +321,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the file property value. Indicates that the remote item is a file. Read-only.
@@ -331,7 +330,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFile(@javax.annotation.Nullable final File value) {
-        this._file = value;
+        this.file = value;
     }
     /**
      * Sets the fileSystemInfo property value. Information about the remote item from the local file system. Read-only.
@@ -340,7 +339,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFileSystemInfo(@javax.annotation.Nullable final FileSystemInfo value) {
-        this._fileSystemInfo = value;
+        this.fileSystemInfo = value;
     }
     /**
      * Sets the folder property value. Indicates that the remote item is a folder. Read-only.
@@ -349,7 +348,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFolder(@javax.annotation.Nullable final Folder value) {
-        this._folder = value;
+        this.folder = value;
     }
     /**
      * Sets the id property value. Unique identifier for the remote item in its drive. Read-only.
@@ -358,7 +357,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+        this.id = value;
     }
     /**
      * Sets the image property value. Image metadata, if the item is an image. Read-only.
@@ -367,7 +366,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setImage(@javax.annotation.Nullable final Image value) {
-        this._image = value;
+        this.image = value;
     }
     /**
      * Sets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
@@ -376,7 +375,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._lastModifiedBy = value;
+        this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Date and time the item was last modified. Read-only.
@@ -385,7 +384,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the name property value. Optional. Filename of the remote item. Read-only.
@@ -394,7 +393,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -403,7 +402,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the package property value. If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
@@ -411,8 +410,8 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setPackage(@javax.annotation.Nullable final Package_escaped value) {
-        this._package_escaped = value;
+    public void setPackage(@javax.annotation.Nullable final PackageEscaped value) {
+        this.packageEscaped = value;
     }
     /**
      * Sets the parentReference property value. Properties of the parent of the remote item. Read-only.
@@ -421,7 +420,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setParentReference(@javax.annotation.Nullable final ItemReference value) {
-        this._parentReference = value;
+        this.parentReference = value;
     }
     /**
      * Sets the shared property value. Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
@@ -430,7 +429,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setShared(@javax.annotation.Nullable final Shared value) {
-        this._shared = value;
+        this.shared = value;
     }
     /**
      * Sets the sharepointIds property value. Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only.
@@ -439,7 +438,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSharepointIds(@javax.annotation.Nullable final SharepointIds value) {
-        this._sharepointIds = value;
+        this.sharepointIds = value;
     }
     /**
      * Sets the size property value. Size of the remote item. Read-only.
@@ -448,7 +447,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Long value) {
-        this._size = value;
+        this.size = value;
     }
     /**
      * Sets the specialFolder property value. If the current item is also available as a special folder, this facet is returned. Read-only.
@@ -457,7 +456,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSpecialFolder(@javax.annotation.Nullable final SpecialFolder value) {
-        this._specialFolder = value;
+        this.specialFolder = value;
     }
     /**
      * Sets the video property value. Video metadata, if the item is a video. Read-only.
@@ -466,7 +465,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setVideo(@javax.annotation.Nullable final Video value) {
-        this._video = value;
+        this.video = value;
     }
     /**
      * Sets the webDavUrl property value. DAV compatible URL for the item.
@@ -475,7 +474,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setWebDavUrl(@javax.annotation.Nullable final String value) {
-        this._webDavUrl = value;
+        this.webDavUrl = value;
     }
     /**
      * Sets the webUrl property value. URL that displays the resource in the browser. Read-only.
@@ -484,6 +483,6 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
-        this._webUrl = value;
+        this.webUrl = value;
     }
 }

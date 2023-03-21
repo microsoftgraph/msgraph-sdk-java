@@ -3,27 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookWorksheet extends Entity implements Parsable {
     /** Returns collection of charts that are part of the worksheet. Read-only. */
-    private java.util.List<WorkbookChart> _charts;
+    private java.util.List<WorkbookChart> charts;
     /** The display name of the worksheet. */
-    private String _name;
+    private String name;
     /** Returns collection of names that are associated with the worksheet. Read-only. */
-    private java.util.List<WorkbookNamedItem> _names;
+    private java.util.List<WorkbookNamedItem> names;
     /** Collection of PivotTables that are part of the worksheet. */
-    private java.util.List<WorkbookPivotTable> _pivotTables;
+    private java.util.List<WorkbookPivotTable> pivotTables;
     /** The zero-based position of the worksheet within the workbook. */
-    private Integer _position;
+    private Integer position;
     /** Returns sheet protection object for a worksheet. Read-only. */
-    private WorkbookWorksheetProtection _protection;
+    private WorkbookWorksheetProtection protection;
     /** Collection of tables that are part of the worksheet. Read-only. */
-    private java.util.List<WorkbookTable> _tables;
+    private java.util.List<WorkbookTable> tables;
     /** The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden. */
-    private String _visibility;
+    private String visibility;
     /**
      * Instantiates a new workbookWorksheet and sets the default values.
      * @return a void
@@ -48,15 +47,15 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WorkbookChart> getCharts() {
-        return this._charts;
+        return this.charts;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("charts", (n) -> { this.setCharts(n.getCollectionOfObjectValues(WorkbookChart::createFromDiscriminatorValue)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("names", (n) -> { this.setNames(n.getCollectionOfObjectValues(WorkbookNamedItem::createFromDiscriminatorValue)); });
@@ -73,7 +72,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the names property value. Returns collection of names that are associated with the worksheet. Read-only.
@@ -81,7 +80,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WorkbookNamedItem> getNames() {
-        return this._names;
+        return this.names;
     }
     /**
      * Gets the pivotTables property value. Collection of PivotTables that are part of the worksheet.
@@ -89,7 +88,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WorkbookPivotTable> getPivotTables() {
-        return this._pivotTables;
+        return this.pivotTables;
     }
     /**
      * Gets the position property value. The zero-based position of the worksheet within the workbook.
@@ -97,7 +96,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getPosition() {
-        return this._position;
+        return this.position;
     }
     /**
      * Gets the protection property value. Returns sheet protection object for a worksheet. Read-only.
@@ -105,7 +104,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookWorksheetProtection getProtection() {
-        return this._protection;
+        return this.protection;
     }
     /**
      * Gets the tables property value. Collection of tables that are part of the worksheet. Read-only.
@@ -113,7 +112,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WorkbookTable> getTables() {
-        return this._tables;
+        return this.tables;
     }
     /**
      * Gets the visibility property value. The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
@@ -121,7 +120,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVisibility() {
-        return this._visibility;
+        return this.visibility;
     }
     /**
      * Serializes information the current object
@@ -148,7 +147,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCharts(@javax.annotation.Nullable final java.util.List<WorkbookChart> value) {
-        this._charts = value;
+        this.charts = value;
     }
     /**
      * Sets the name property value. The display name of the worksheet.
@@ -157,7 +156,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the names property value. Returns collection of names that are associated with the worksheet. Read-only.
@@ -166,7 +165,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setNames(@javax.annotation.Nullable final java.util.List<WorkbookNamedItem> value) {
-        this._names = value;
+        this.names = value;
     }
     /**
      * Sets the pivotTables property value. Collection of PivotTables that are part of the worksheet.
@@ -175,7 +174,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPivotTables(@javax.annotation.Nullable final java.util.List<WorkbookPivotTable> value) {
-        this._pivotTables = value;
+        this.pivotTables = value;
     }
     /**
      * Sets the position property value. The zero-based position of the worksheet within the workbook.
@@ -184,7 +183,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPosition(@javax.annotation.Nullable final Integer value) {
-        this._position = value;
+        this.position = value;
     }
     /**
      * Sets the protection property value. Returns sheet protection object for a worksheet. Read-only.
@@ -193,7 +192,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setProtection(@javax.annotation.Nullable final WorkbookWorksheetProtection value) {
-        this._protection = value;
+        this.protection = value;
     }
     /**
      * Sets the tables property value. Collection of tables that are part of the worksheet. Read-only.
@@ -202,7 +201,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTables(@javax.annotation.Nullable final java.util.List<WorkbookTable> value) {
-        this._tables = value;
+        this.tables = value;
     }
     /**
      * Sets the visibility property value. The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
@@ -211,6 +210,6 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVisibility(@javax.annotation.Nullable final String value) {
-        this._visibility = value;
+        this.visibility = value;
     }
 }

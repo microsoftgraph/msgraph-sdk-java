@@ -3,35 +3,34 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsInformationProtectionPolicy extends WindowsInformationProtection implements Parsable {
     /** Offline interval before app data is wiped (days) */
-    private Integer _daysWithoutContactBeforeUnenroll;
+    private Integer daysWithoutContactBeforeUnenroll;
     /** Enrollment url for the MDM */
-    private String _mdmEnrollmentUrl;
+    private String mdmEnrollmentUrl;
     /** Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 <= X <= 999. */
-    private Integer _minutesOfInactivityBeforeDeviceLock;
+    private Integer minutesOfInactivityBeforeDeviceLock;
     /** Integer value that specifies the number of past PINs that can be associated to a user account that can't be reused. The largest number you can configure for this policy setting is 50. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then storage of previous PINs is not required. This node was added in Windows 10, version 1511. Default is 0. */
-    private Integer _numberOfPastPinsRemembered;
+    private Integer numberOfPastPinsRemembered;
     /** The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 <= X <= 16 for desktop and 0 <= X <= 999 for mobile devices. */
-    private Integer _passwordMaximumAttemptCount;
+    private Integer passwordMaximumAttemptCount;
     /** Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user's PIN will never expire. This node was added in Windows 10, version 1511. Default is 0. */
-    private Integer _pinExpirationDays;
+    private Integer pinExpirationDays;
     /** Pin Character Requirements */
-    private WindowsInformationProtectionPinCharacterRequirements _pinLowercaseLetters;
+    private WindowsInformationProtectionPinCharacterRequirements pinLowercaseLetters;
     /** Integer value that sets the minimum number of characters required for the PIN. Default value is 4. The lowest number you can configure for this policy setting is 4. The largest number you can configure must be less than the number configured in the Maximum PIN length policy setting or the number 127, whichever is the lowest. */
-    private Integer _pinMinimumLength;
+    private Integer pinMinimumLength;
     /** Pin Character Requirements */
-    private WindowsInformationProtectionPinCharacterRequirements _pinSpecialCharacters;
+    private WindowsInformationProtectionPinCharacterRequirements pinSpecialCharacters;
     /** Pin Character Requirements */
-    private WindowsInformationProtectionPinCharacterRequirements _pinUppercaseLetters;
+    private WindowsInformationProtectionPinCharacterRequirements pinUppercaseLetters;
     /** New property in RS2, pending documentation */
-    private Boolean _revokeOnMdmHandoffDisabled;
+    private Boolean revokeOnMdmHandoffDisabled;
     /** Boolean value that sets Windows Hello for Business as a method for signing into Windows. */
-    private Boolean _windowsHelloForBusinessBlocked;
+    private Boolean windowsHelloForBusinessBlocked;
     /**
      * Instantiates a new WindowsInformationProtectionPolicy and sets the default values.
      * @return a void
@@ -57,15 +56,15 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nullable
     public Integer getDaysWithoutContactBeforeUnenroll() {
-        return this._daysWithoutContactBeforeUnenroll;
+        return this.daysWithoutContactBeforeUnenroll;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("daysWithoutContactBeforeUnenroll", (n) -> { this.setDaysWithoutContactBeforeUnenroll(n.getIntegerValue()); });
         deserializerMap.put("mdmEnrollmentUrl", (n) -> { this.setMdmEnrollmentUrl(n.getStringValue()); });
         deserializerMap.put("minutesOfInactivityBeforeDeviceLock", (n) -> { this.setMinutesOfInactivityBeforeDeviceLock(n.getIntegerValue()); });
@@ -86,7 +85,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nullable
     public String getMdmEnrollmentUrl() {
-        return this._mdmEnrollmentUrl;
+        return this.mdmEnrollmentUrl;
     }
     /**
      * Gets the minutesOfInactivityBeforeDeviceLock property value. Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 <= X <= 999.
@@ -94,7 +93,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nullable
     public Integer getMinutesOfInactivityBeforeDeviceLock() {
-        return this._minutesOfInactivityBeforeDeviceLock;
+        return this.minutesOfInactivityBeforeDeviceLock;
     }
     /**
      * Gets the numberOfPastPinsRemembered property value. Integer value that specifies the number of past PINs that can be associated to a user account that can't be reused. The largest number you can configure for this policy setting is 50. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then storage of previous PINs is not required. This node was added in Windows 10, version 1511. Default is 0.
@@ -102,7 +101,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nullable
     public Integer getNumberOfPastPinsRemembered() {
-        return this._numberOfPastPinsRemembered;
+        return this.numberOfPastPinsRemembered;
     }
     /**
      * Gets the passwordMaximumAttemptCount property value. The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 <= X <= 16 for desktop and 0 <= X <= 999 for mobile devices.
@@ -110,7 +109,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nullable
     public Integer getPasswordMaximumAttemptCount() {
-        return this._passwordMaximumAttemptCount;
+        return this.passwordMaximumAttemptCount;
     }
     /**
      * Gets the pinExpirationDays property value. Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user's PIN will never expire. This node was added in Windows 10, version 1511. Default is 0.
@@ -118,7 +117,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nullable
     public Integer getPinExpirationDays() {
-        return this._pinExpirationDays;
+        return this.pinExpirationDays;
     }
     /**
      * Gets the pinLowercaseLetters property value. Pin Character Requirements
@@ -126,7 +125,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nullable
     public WindowsInformationProtectionPinCharacterRequirements getPinLowercaseLetters() {
-        return this._pinLowercaseLetters;
+        return this.pinLowercaseLetters;
     }
     /**
      * Gets the pinMinimumLength property value. Integer value that sets the minimum number of characters required for the PIN. Default value is 4. The lowest number you can configure for this policy setting is 4. The largest number you can configure must be less than the number configured in the Maximum PIN length policy setting or the number 127, whichever is the lowest.
@@ -134,7 +133,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nullable
     public Integer getPinMinimumLength() {
-        return this._pinMinimumLength;
+        return this.pinMinimumLength;
     }
     /**
      * Gets the pinSpecialCharacters property value. Pin Character Requirements
@@ -142,7 +141,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nullable
     public WindowsInformationProtectionPinCharacterRequirements getPinSpecialCharacters() {
-        return this._pinSpecialCharacters;
+        return this.pinSpecialCharacters;
     }
     /**
      * Gets the pinUppercaseLetters property value. Pin Character Requirements
@@ -150,7 +149,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nullable
     public WindowsInformationProtectionPinCharacterRequirements getPinUppercaseLetters() {
-        return this._pinUppercaseLetters;
+        return this.pinUppercaseLetters;
     }
     /**
      * Gets the revokeOnMdmHandoffDisabled property value. New property in RS2, pending documentation
@@ -158,7 +157,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nullable
     public Boolean getRevokeOnMdmHandoffDisabled() {
-        return this._revokeOnMdmHandoffDisabled;
+        return this.revokeOnMdmHandoffDisabled;
     }
     /**
      * Gets the windowsHelloForBusinessBlocked property value. Boolean value that sets Windows Hello for Business as a method for signing into Windows.
@@ -166,7 +165,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nullable
     public Boolean getWindowsHelloForBusinessBlocked() {
-        return this._windowsHelloForBusinessBlocked;
+        return this.windowsHelloForBusinessBlocked;
     }
     /**
      * Serializes information the current object
@@ -197,7 +196,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nonnull
     public void setDaysWithoutContactBeforeUnenroll(@javax.annotation.Nullable final Integer value) {
-        this._daysWithoutContactBeforeUnenroll = value;
+        this.daysWithoutContactBeforeUnenroll = value;
     }
     /**
      * Sets the mdmEnrollmentUrl property value. Enrollment url for the MDM
@@ -206,7 +205,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nonnull
     public void setMdmEnrollmentUrl(@javax.annotation.Nullable final String value) {
-        this._mdmEnrollmentUrl = value;
+        this.mdmEnrollmentUrl = value;
     }
     /**
      * Sets the minutesOfInactivityBeforeDeviceLock property value. Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 <= X <= 999.
@@ -215,7 +214,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nonnull
     public void setMinutesOfInactivityBeforeDeviceLock(@javax.annotation.Nullable final Integer value) {
-        this._minutesOfInactivityBeforeDeviceLock = value;
+        this.minutesOfInactivityBeforeDeviceLock = value;
     }
     /**
      * Sets the numberOfPastPinsRemembered property value. Integer value that specifies the number of past PINs that can be associated to a user account that can't be reused. The largest number you can configure for this policy setting is 50. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then storage of previous PINs is not required. This node was added in Windows 10, version 1511. Default is 0.
@@ -224,7 +223,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nonnull
     public void setNumberOfPastPinsRemembered(@javax.annotation.Nullable final Integer value) {
-        this._numberOfPastPinsRemembered = value;
+        this.numberOfPastPinsRemembered = value;
     }
     /**
      * Sets the passwordMaximumAttemptCount property value. The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 <= X <= 16 for desktop and 0 <= X <= 999 for mobile devices.
@@ -233,7 +232,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nonnull
     public void setPasswordMaximumAttemptCount(@javax.annotation.Nullable final Integer value) {
-        this._passwordMaximumAttemptCount = value;
+        this.passwordMaximumAttemptCount = value;
     }
     /**
      * Sets the pinExpirationDays property value. Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user's PIN will never expire. This node was added in Windows 10, version 1511. Default is 0.
@@ -242,7 +241,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nonnull
     public void setPinExpirationDays(@javax.annotation.Nullable final Integer value) {
-        this._pinExpirationDays = value;
+        this.pinExpirationDays = value;
     }
     /**
      * Sets the pinLowercaseLetters property value. Pin Character Requirements
@@ -251,7 +250,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nonnull
     public void setPinLowercaseLetters(@javax.annotation.Nullable final WindowsInformationProtectionPinCharacterRequirements value) {
-        this._pinLowercaseLetters = value;
+        this.pinLowercaseLetters = value;
     }
     /**
      * Sets the pinMinimumLength property value. Integer value that sets the minimum number of characters required for the PIN. Default value is 4. The lowest number you can configure for this policy setting is 4. The largest number you can configure must be less than the number configured in the Maximum PIN length policy setting or the number 127, whichever is the lowest.
@@ -260,7 +259,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nonnull
     public void setPinMinimumLength(@javax.annotation.Nullable final Integer value) {
-        this._pinMinimumLength = value;
+        this.pinMinimumLength = value;
     }
     /**
      * Sets the pinSpecialCharacters property value. Pin Character Requirements
@@ -269,7 +268,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nonnull
     public void setPinSpecialCharacters(@javax.annotation.Nullable final WindowsInformationProtectionPinCharacterRequirements value) {
-        this._pinSpecialCharacters = value;
+        this.pinSpecialCharacters = value;
     }
     /**
      * Sets the pinUppercaseLetters property value. Pin Character Requirements
@@ -278,7 +277,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nonnull
     public void setPinUppercaseLetters(@javax.annotation.Nullable final WindowsInformationProtectionPinCharacterRequirements value) {
-        this._pinUppercaseLetters = value;
+        this.pinUppercaseLetters = value;
     }
     /**
      * Sets the revokeOnMdmHandoffDisabled property value. New property in RS2, pending documentation
@@ -287,7 +286,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nonnull
     public void setRevokeOnMdmHandoffDisabled(@javax.annotation.Nullable final Boolean value) {
-        this._revokeOnMdmHandoffDisabled = value;
+        this.revokeOnMdmHandoffDisabled = value;
     }
     /**
      * Sets the windowsHelloForBusinessBlocked property value. Boolean value that sets Windows Hello for Business as a method for signing into Windows.
@@ -296,6 +295,6 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nonnull
     public void setWindowsHelloForBusinessBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._windowsHelloForBusinessBlocked = value;
+        this.windowsHelloForBusinessBlocked = value;
     }
 }

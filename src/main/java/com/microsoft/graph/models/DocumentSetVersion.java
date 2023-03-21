@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DocumentSetVersion extends ListItemVersion implements Parsable {
     /** Comment about the captured version. */
-    private String _comment;
+    private String comment;
     /** User who captured the version. */
-    private IdentitySet _createdBy;
+    private IdentitySet createdBy;
     /** Date and time when this version was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Items within the document set that are captured as part of this version. */
-    private java.util.List<DocumentSetVersionItem> _items;
+    private java.util.List<DocumentSetVersionItem> items;
     /** If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false. */
-    private Boolean _shouldCaptureMinorVersion;
+    private Boolean shouldCaptureMinorVersion;
     /**
      * Instantiates a new DocumentSetVersion and sets the default values.
      * @return a void
@@ -44,7 +43,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      */
     @javax.annotation.Nullable
     public String getComment() {
-        return this._comment;
+        return this.comment;
     }
     /**
      * Gets the createdBy property value. User who captured the version.
@@ -52,7 +51,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdDateTime property value. Date and time when this version was created.
@@ -60,15 +59,15 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -82,7 +81,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DocumentSetVersionItem> getItems() {
-        return this._items;
+        return this.items;
     }
     /**
      * Gets the shouldCaptureMinorVersion property value. If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
@@ -90,7 +89,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getShouldCaptureMinorVersion() {
-        return this._shouldCaptureMinorVersion;
+        return this.shouldCaptureMinorVersion;
     }
     /**
      * Serializes information the current object
@@ -114,7 +113,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setComment(@javax.annotation.Nullable final String value) {
-        this._comment = value;
+        this.comment = value;
     }
     /**
      * Sets the createdBy property value. User who captured the version.
@@ -123,7 +122,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. Date and time when this version was created.
@@ -132,7 +131,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the items property value. Items within the document set that are captured as part of this version.
@@ -141,7 +140,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setItems(@javax.annotation.Nullable final java.util.List<DocumentSetVersionItem> value) {
-        this._items = value;
+        this.items = value;
     }
     /**
      * Sets the shouldCaptureMinorVersion property value. If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
@@ -150,6 +149,6 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setShouldCaptureMinorVersion(@javax.annotation.Nullable final Boolean value) {
-        this._shouldCaptureMinorVersion = value;
+        this.shouldCaptureMinorVersion = value;
     }
 }

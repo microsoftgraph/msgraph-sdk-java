@@ -5,45 +5,44 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The createdBy property */
-    private String _createdBy;
+    private String createdBy;
     /** The createdByIdentity property */
-    private IdentitySet _createdByIdentity;
+    private IdentitySet createdByIdentity;
     /** The createdTime property */
-    private OffsetDateTime _createdTime;
+    private OffsetDateTime createdTime;
     /** The id property */
-    private String _id;
+    private String id;
     /** The isDefault property */
-    private Boolean _isDefault;
+    private Boolean isDefault;
     /** The isShared property */
-    private Boolean _isShared;
+    private Boolean isShared;
     /** The lastModifiedBy property */
-    private String _lastModifiedBy;
+    private String lastModifiedBy;
     /** The lastModifiedByIdentity property */
-    private IdentitySet _lastModifiedByIdentity;
+    private IdentitySet lastModifiedByIdentity;
     /** The lastModifiedTime property */
-    private OffsetDateTime _lastModifiedTime;
+    private OffsetDateTime lastModifiedTime;
     /** The links property */
-    private NotebookLinks _links;
+    private NotebookLinks links;
     /** The name property */
-    private String _name;
+    private String name;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The sectionGroupsUrl property */
-    private String _sectionGroupsUrl;
+    private String sectionGroupsUrl;
     /** The sectionsUrl property */
-    private String _sectionsUrl;
+    private String sectionsUrl;
     /** The self property */
-    private String _self;
+    private String self;
     /** The userRole property */
-    private OnenoteUserRole _userRole;
+    private OnenoteUserRole userRole;
     /**
      * Instantiates a new CopyNotebookModel and sets the default values.
      * @return a void
@@ -68,7 +67,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the createdBy property value. The createdBy property
@@ -76,7 +75,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdByIdentity property value. The createdByIdentity property
@@ -84,7 +83,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedByIdentity() {
-        return this._createdByIdentity;
+        return this.createdByIdentity;
     }
     /**
      * Gets the createdTime property value. The createdTime property
@@ -92,15 +91,15 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedTime() {
-        return this._createdTime;
+        return this.createdTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(16);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(16);
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getStringValue()); });
         deserializerMap.put("createdByIdentity", (n) -> { this.setCreatedByIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdTime", (n) -> { this.setCreatedTime(n.getOffsetDateTimeValue()); });
@@ -125,7 +124,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getId() {
-        return this._id;
+        return this.id;
     }
     /**
      * Gets the isDefault property value. The isDefault property
@@ -133,7 +132,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsDefault() {
-        return this._isDefault;
+        return this.isDefault;
     }
     /**
      * Gets the isShared property value. The isShared property
@@ -141,7 +140,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsShared() {
-        return this._isShared;
+        return this.isShared;
     }
     /**
      * Gets the lastModifiedBy property value. The lastModifiedBy property
@@ -149,7 +148,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getLastModifiedBy() {
-        return this._lastModifiedBy;
+        return this.lastModifiedBy;
     }
     /**
      * Gets the lastModifiedByIdentity property value. The lastModifiedByIdentity property
@@ -157,7 +156,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getLastModifiedByIdentity() {
-        return this._lastModifiedByIdentity;
+        return this.lastModifiedByIdentity;
     }
     /**
      * Gets the lastModifiedTime property value. The lastModifiedTime property
@@ -165,7 +164,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedTime() {
-        return this._lastModifiedTime;
+        return this.lastModifiedTime;
     }
     /**
      * Gets the links property value. The links property
@@ -173,7 +172,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public NotebookLinks getLinks() {
-        return this._links;
+        return this.links;
     }
     /**
      * Gets the name property value. The name property
@@ -181,7 +180,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -189,7 +188,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the sectionGroupsUrl property value. The sectionGroupsUrl property
@@ -197,7 +196,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSectionGroupsUrl() {
-        return this._sectionGroupsUrl;
+        return this.sectionGroupsUrl;
     }
     /**
      * Gets the sectionsUrl property value. The sectionsUrl property
@@ -205,7 +204,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSectionsUrl() {
-        return this._sectionsUrl;
+        return this.sectionsUrl;
     }
     /**
      * Gets the self property value. The self property
@@ -213,7 +212,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSelf() {
-        return this._self;
+        return this.self;
     }
     /**
      * Gets the userRole property value. The userRole property
@@ -221,7 +220,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OnenoteUserRole getUserRole() {
-        return this._userRole;
+        return this.userRole;
     }
     /**
      * Serializes information the current object
@@ -256,7 +255,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the createdBy property value. The createdBy property
@@ -265,7 +264,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final String value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdByIdentity property value. The createdByIdentity property
@@ -274,7 +273,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedByIdentity(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdByIdentity = value;
+        this.createdByIdentity = value;
     }
     /**
      * Sets the createdTime property value. The createdTime property
@@ -283,7 +282,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdTime = value;
+        this.createdTime = value;
     }
     /**
      * Sets the id property value. The id property
@@ -292,7 +291,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+        this.id = value;
     }
     /**
      * Sets the isDefault property value. The isDefault property
@@ -301,7 +300,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
-        this._isDefault = value;
+        this.isDefault = value;
     }
     /**
      * Sets the isShared property value. The isShared property
@@ -310,7 +309,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsShared(@javax.annotation.Nullable final Boolean value) {
-        this._isShared = value;
+        this.isShared = value;
     }
     /**
      * Sets the lastModifiedBy property value. The lastModifiedBy property
@@ -319,7 +318,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final String value) {
-        this._lastModifiedBy = value;
+        this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedByIdentity property value. The lastModifiedByIdentity property
@@ -328,7 +327,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedByIdentity(@javax.annotation.Nullable final IdentitySet value) {
-        this._lastModifiedByIdentity = value;
+        this.lastModifiedByIdentity = value;
     }
     /**
      * Sets the lastModifiedTime property value. The lastModifiedTime property
@@ -337,7 +336,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedTime = value;
+        this.lastModifiedTime = value;
     }
     /**
      * Sets the links property value. The links property
@@ -346,7 +345,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLinks(@javax.annotation.Nullable final NotebookLinks value) {
-        this._links = value;
+        this.links = value;
     }
     /**
      * Sets the name property value. The name property
@@ -355,7 +354,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -364,7 +363,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the sectionGroupsUrl property value. The sectionGroupsUrl property
@@ -373,7 +372,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSectionGroupsUrl(@javax.annotation.Nullable final String value) {
-        this._sectionGroupsUrl = value;
+        this.sectionGroupsUrl = value;
     }
     /**
      * Sets the sectionsUrl property value. The sectionsUrl property
@@ -382,7 +381,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSectionsUrl(@javax.annotation.Nullable final String value) {
-        this._sectionsUrl = value;
+        this.sectionsUrl = value;
     }
     /**
      * Sets the self property value. The self property
@@ -391,7 +390,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSelf(@javax.annotation.Nullable final String value) {
-        this._self = value;
+        this.self = value;
     }
     /**
      * Sets the userRole property value. The userRole property
@@ -400,6 +399,6 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserRole(@javax.annotation.Nullable final OnenoteUserRole value) {
-        this._userRole = value;
+        this.userRole = value;
     }
 }

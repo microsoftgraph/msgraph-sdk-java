@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OpenShift extends ChangeTrackedEntity implements Parsable {
     /** An unpublished open shift. */
-    private OpenShiftItem _draftOpenShift;
+    private OpenShiftItem draftOpenShift;
     /** ID for the scheduling group that the open shift belongs to. */
-    private String _schedulingGroupId;
+    private String schedulingGroupId;
     /** A published open shift. */
-    private OpenShiftItem _sharedOpenShift;
+    private OpenShiftItem sharedOpenShift;
     /**
      * Instantiates a new OpenShift and sets the default values.
      * @return a void
@@ -39,15 +38,15 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public OpenShiftItem getDraftOpenShift() {
-        return this._draftOpenShift;
+        return this.draftOpenShift;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("draftOpenShift", (n) -> { this.setDraftOpenShift(n.getObjectValue(OpenShiftItem::createFromDiscriminatorValue)); });
         deserializerMap.put("schedulingGroupId", (n) -> { this.setSchedulingGroupId(n.getStringValue()); });
         deserializerMap.put("sharedOpenShift", (n) -> { this.setSharedOpenShift(n.getObjectValue(OpenShiftItem::createFromDiscriminatorValue)); });
@@ -59,7 +58,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSchedulingGroupId() {
-        return this._schedulingGroupId;
+        return this.schedulingGroupId;
     }
     /**
      * Gets the sharedOpenShift property value. A published open shift.
@@ -67,7 +66,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public OpenShiftItem getSharedOpenShift() {
-        return this._sharedOpenShift;
+        return this.sharedOpenShift;
     }
     /**
      * Serializes information the current object
@@ -89,7 +88,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDraftOpenShift(@javax.annotation.Nullable final OpenShiftItem value) {
-        this._draftOpenShift = value;
+        this.draftOpenShift = value;
     }
     /**
      * Sets the schedulingGroupId property value. ID for the scheduling group that the open shift belongs to.
@@ -98,7 +97,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSchedulingGroupId(@javax.annotation.Nullable final String value) {
-        this._schedulingGroupId = value;
+        this.schedulingGroupId = value;
     }
     /**
      * Sets the sharedOpenShift property value. A published open shift.
@@ -107,6 +106,6 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSharedOpenShift(@javax.annotation.Nullable final OpenShiftItem value) {
-        this._sharedOpenShift = value;
+        this.sharedOpenShift = value;
     }
 }

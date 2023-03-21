@@ -3,16 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class EducationSubmissionResource extends Entity implements Parsable {
     /** Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource. */
-    private String _assignmentResourceUrl;
+    private String assignmentResourceUrl;
     /** Resource object. */
-    private EducationResource _resource;
+    private EducationResource resource;
     /**
      * Instantiates a new educationSubmissionResource and sets the default values.
      * @return a void
@@ -37,15 +35,15 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAssignmentResourceUrl() {
-        return this._assignmentResourceUrl;
+        return this.assignmentResourceUrl;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignmentResourceUrl", (n) -> { this.setAssignmentResourceUrl(n.getStringValue()); });
         deserializerMap.put("resource", (n) -> { this.setResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -56,7 +54,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EducationResource getResource() {
-        return this._resource;
+        return this.resource;
     }
     /**
      * Serializes information the current object
@@ -77,7 +75,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAssignmentResourceUrl(@javax.annotation.Nullable final String value) {
-        this._assignmentResourceUrl = value;
+        this.assignmentResourceUrl = value;
     }
     /**
      * Sets the resource property value. Resource object.
@@ -86,6 +84,6 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final EducationResource value) {
-        this._resource = value;
+        this.resource = value;
     }
 }

@@ -3,27 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ApplicationTemplate extends Entity implements Parsable {
     /** The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer, Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design & hosting. */
-    private java.util.List<String> _categories;
+    private java.util.List<String> categories;
     /** A description of the application. */
-    private String _description;
+    private String description;
     /** The name of the application. */
-    private String _displayName;
+    private String displayName;
     /** The home page URL of the application. */
-    private String _homePageUrl;
+    private String homePageUrl;
     /** The URL to get the logo for this application. */
-    private String _logoUrl;
+    private String logoUrl;
     /** The name of the publisher for this application. */
-    private String _publisher;
+    private String publisher;
     /** The list of provisioning modes supported by this application. The only valid value is sync. */
-    private java.util.List<String> _supportedProvisioningTypes;
+    private java.util.List<String> supportedProvisioningTypes;
     /** The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported. */
-    private java.util.List<String> _supportedSingleSignOnModes;
+    private java.util.List<String> supportedSingleSignOnModes;
     /**
      * Instantiates a new ApplicationTemplate and sets the default values.
      * @return a void
@@ -48,7 +47,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getCategories() {
-        return this._categories;
+        return this.categories;
     }
     /**
      * Gets the description property value. A description of the application.
@@ -56,7 +55,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The name of the application.
@@ -64,15 +63,15 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -89,7 +88,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getHomePageUrl() {
-        return this._homePageUrl;
+        return this.homePageUrl;
     }
     /**
      * Gets the logoUrl property value. The URL to get the logo for this application.
@@ -97,7 +96,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLogoUrl() {
-        return this._logoUrl;
+        return this.logoUrl;
     }
     /**
      * Gets the publisher property value. The name of the publisher for this application.
@@ -105,7 +104,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPublisher() {
-        return this._publisher;
+        return this.publisher;
     }
     /**
      * Gets the supportedProvisioningTypes property value. The list of provisioning modes supported by this application. The only valid value is sync.
@@ -113,7 +112,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSupportedProvisioningTypes() {
-        return this._supportedProvisioningTypes;
+        return this.supportedProvisioningTypes;
     }
     /**
      * Gets the supportedSingleSignOnModes property value. The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported.
@@ -121,7 +120,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSupportedSingleSignOnModes() {
-        return this._supportedSingleSignOnModes;
+        return this.supportedSingleSignOnModes;
     }
     /**
      * Serializes information the current object
@@ -148,7 +147,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._categories = value;
+        this.categories = value;
     }
     /**
      * Sets the description property value. A description of the application.
@@ -157,7 +156,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The name of the application.
@@ -166,7 +165,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the homePageUrl property value. The home page URL of the application.
@@ -175,7 +174,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setHomePageUrl(@javax.annotation.Nullable final String value) {
-        this._homePageUrl = value;
+        this.homePageUrl = value;
     }
     /**
      * Sets the logoUrl property value. The URL to get the logo for this application.
@@ -184,7 +183,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLogoUrl(@javax.annotation.Nullable final String value) {
-        this._logoUrl = value;
+        this.logoUrl = value;
     }
     /**
      * Sets the publisher property value. The name of the publisher for this application.
@@ -193,7 +192,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
-        this._publisher = value;
+        this.publisher = value;
     }
     /**
      * Sets the supportedProvisioningTypes property value. The list of provisioning modes supported by this application. The only valid value is sync.
@@ -202,7 +201,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSupportedProvisioningTypes(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._supportedProvisioningTypes = value;
+        this.supportedProvisioningTypes = value;
     }
     /**
      * Sets the supportedSingleSignOnModes property value. The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported.
@@ -211,6 +210,6 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSupportedSingleSignOnModes(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._supportedSingleSignOnModes = value;
+        this.supportedSingleSignOnModes = value;
     }
 }

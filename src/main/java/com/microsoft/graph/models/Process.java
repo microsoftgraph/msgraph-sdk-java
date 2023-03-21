@@ -5,39 +5,38 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Process implements AdditionalDataHolder, Parsable {
     /** User account identifier (user account context the process ran under) for example, AccountName, SID, and so on. */
-    private String _accountName;
+    private String accountName;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The full process invocation commandline including all parameters. */
-    private String _commandLine;
+    private String commandLine;
     /** Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Complex type containing file hashes (cryptographic and location-sensitive). */
-    private FileHash _fileHash;
+    private FileHash fileHash;
     /** The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system. */
-    private ProcessIntegrityLevel _integrityLevel;
+    private ProcessIntegrityLevel integrityLevel;
     /** True if the process is elevated. */
-    private Boolean _isElevated;
+    private Boolean isElevated;
     /** The name of the process' Image file. */
-    private String _name;
+    private String name;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _parentProcessCreatedDateTime;
+    private OffsetDateTime parentProcessCreatedDateTime;
     /** The Process ID (PID) of the parent process. */
-    private Integer _parentProcessId;
+    private Integer parentProcessId;
     /** The name of the image file of the parent process. */
-    private String _parentProcessName;
+    private String parentProcessName;
     /** Full path, including filename. */
-    private String _path;
+    private String path;
     /** The Process ID (PID) of the process. */
-    private Integer _processId;
+    private Integer processId;
     /**
      * Instantiates a new process and sets the default values.
      * @return a void
@@ -62,7 +61,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAccountName() {
-        return this._accountName;
+        return this.accountName;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -70,7 +69,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the commandLine property value. The full process invocation commandline including all parameters.
@@ -78,7 +77,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCommandLine() {
-        return this._commandLine;
+        return this.commandLine;
     }
     /**
      * Gets the createdDateTime property value. Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -86,15 +85,15 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(13);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
         deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
         deserializerMap.put("commandLine", (n) -> { this.setCommandLine(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -116,7 +115,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public FileHash getFileHash() {
-        return this._fileHash;
+        return this.fileHash;
     }
     /**
      * Gets the integrityLevel property value. The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
@@ -124,7 +123,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ProcessIntegrityLevel getIntegrityLevel() {
-        return this._integrityLevel;
+        return this.integrityLevel;
     }
     /**
      * Gets the isElevated property value. True if the process is elevated.
@@ -132,7 +131,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsElevated() {
-        return this._isElevated;
+        return this.isElevated;
     }
     /**
      * Gets the name property value. The name of the process' Image file.
@@ -140,7 +139,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -148,7 +147,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the parentProcessCreatedDateTime property value. DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -156,7 +155,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getParentProcessCreatedDateTime() {
-        return this._parentProcessCreatedDateTime;
+        return this.parentProcessCreatedDateTime;
     }
     /**
      * Gets the parentProcessId property value. The Process ID (PID) of the parent process.
@@ -164,7 +163,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getParentProcessId() {
-        return this._parentProcessId;
+        return this.parentProcessId;
     }
     /**
      * Gets the parentProcessName property value. The name of the image file of the parent process.
@@ -172,7 +171,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getParentProcessName() {
-        return this._parentProcessName;
+        return this.parentProcessName;
     }
     /**
      * Gets the path property value. Full path, including filename.
@@ -180,7 +179,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getPath() {
-        return this._path;
+        return this.path;
     }
     /**
      * Gets the processId property value. The Process ID (PID) of the process.
@@ -188,7 +187,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getProcessId() {
-        return this._processId;
+        return this.processId;
     }
     /**
      * Serializes information the current object
@@ -220,7 +219,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAccountName(@javax.annotation.Nullable final String value) {
-        this._accountName = value;
+        this.accountName = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -229,7 +228,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the commandLine property value. The full process invocation commandline including all parameters.
@@ -238,7 +237,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCommandLine(@javax.annotation.Nullable final String value) {
-        this._commandLine = value;
+        this.commandLine = value;
     }
     /**
      * Sets the createdDateTime property value. Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -247,7 +246,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the fileHash property value. Complex type containing file hashes (cryptographic and location-sensitive).
@@ -256,7 +255,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFileHash(@javax.annotation.Nullable final FileHash value) {
-        this._fileHash = value;
+        this.fileHash = value;
     }
     /**
      * Sets the integrityLevel property value. The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
@@ -265,7 +264,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIntegrityLevel(@javax.annotation.Nullable final ProcessIntegrityLevel value) {
-        this._integrityLevel = value;
+        this.integrityLevel = value;
     }
     /**
      * Sets the isElevated property value. True if the process is elevated.
@@ -274,7 +273,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsElevated(@javax.annotation.Nullable final Boolean value) {
-        this._isElevated = value;
+        this.isElevated = value;
     }
     /**
      * Sets the name property value. The name of the process' Image file.
@@ -283,7 +282,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -292,7 +291,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the parentProcessCreatedDateTime property value. DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -301,7 +300,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setParentProcessCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._parentProcessCreatedDateTime = value;
+        this.parentProcessCreatedDateTime = value;
     }
     /**
      * Sets the parentProcessId property value. The Process ID (PID) of the parent process.
@@ -310,7 +309,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setParentProcessId(@javax.annotation.Nullable final Integer value) {
-        this._parentProcessId = value;
+        this.parentProcessId = value;
     }
     /**
      * Sets the parentProcessName property value. The name of the image file of the parent process.
@@ -319,7 +318,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setParentProcessName(@javax.annotation.Nullable final String value) {
-        this._parentProcessName = value;
+        this.parentProcessName = value;
     }
     /**
      * Sets the path property value. Full path, including filename.
@@ -328,7 +327,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPath(@javax.annotation.Nullable final String value) {
-        this._path = value;
+        this.path = value;
     }
     /**
      * Sets the processId property value. The Process ID (PID) of the process.
@@ -337,6 +336,6 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setProcessId(@javax.annotation.Nullable final Integer value) {
-        this._processId = value;
+        this.processId = value;
     }
 }

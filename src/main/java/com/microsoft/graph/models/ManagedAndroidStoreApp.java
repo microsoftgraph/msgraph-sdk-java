@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
     /** The Android AppStoreUrl. */
-    private String _appStoreUrl;
+    private String appStoreUrl;
     /** Contains properties for the minimum operating system required for an Android mobile app. */
-    private AndroidMinimumOperatingSystem _minimumSupportedOperatingSystem;
+    private AndroidMinimumOperatingSystem minimumSupportedOperatingSystem;
     /** The app's package ID. */
-    private String _packageId;
+    private String packageId;
     /**
      * Instantiates a new ManagedAndroidStoreApp and sets the default values.
      * @return a void
@@ -39,15 +38,15 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppStoreUrl() {
-        return this._appStoreUrl;
+        return this.appStoreUrl;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appStoreUrl", (n) -> { this.setAppStoreUrl(n.getStringValue()); });
         deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { this.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
         deserializerMap.put("packageId", (n) -> { this.setPackageId(n.getStringValue()); });
@@ -59,7 +58,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
      */
     @javax.annotation.Nullable
     public AndroidMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
-        return this._minimumSupportedOperatingSystem;
+        return this.minimumSupportedOperatingSystem;
     }
     /**
      * Gets the packageId property value. The app's package ID.
@@ -67,7 +66,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPackageId() {
-        return this._packageId;
+        return this.packageId;
     }
     /**
      * Serializes information the current object
@@ -89,7 +88,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppStoreUrl(@javax.annotation.Nullable final String value) {
-        this._appStoreUrl = value;
+        this.appStoreUrl = value;
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. Contains properties for the minimum operating system required for an Android mobile app.
@@ -98,7 +97,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final AndroidMinimumOperatingSystem value) {
-        this._minimumSupportedOperatingSystem = value;
+        this.minimumSupportedOperatingSystem = value;
     }
     /**
      * Sets the packageId property value. The app's package ID.
@@ -107,6 +106,6 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPackageId(@javax.annotation.Nullable final String value) {
-        this._packageId = value;
+        this.packageId = value;
     }
 }

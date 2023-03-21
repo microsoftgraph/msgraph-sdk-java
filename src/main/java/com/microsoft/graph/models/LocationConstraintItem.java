@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LocationConstraintItem extends Location implements Parsable {
     /** If set to true and the specified resource is busy, findMeetingTimes looks for another resource that is free. If set to false and the specified resource is busy, findMeetingTimes returns the resource best ranked in the user's cache without checking if it's free. Default is true. */
-    private Boolean _resolveAvailability;
+    private Boolean resolveAvailability;
     /**
      * Instantiates a new LocationConstraintItem and sets the default values.
      * @return a void
@@ -31,11 +30,11 @@ public class LocationConstraintItem extends Location implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("resolveAvailability", (n) -> { this.setResolveAvailability(n.getBooleanValue()); });
         return deserializerMap;
     }
@@ -45,7 +44,7 @@ public class LocationConstraintItem extends Location implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getResolveAvailability() {
-        return this._resolveAvailability;
+        return this.resolveAvailability;
     }
     /**
      * Serializes information the current object
@@ -65,6 +64,6 @@ public class LocationConstraintItem extends Location implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setResolveAvailability(@javax.annotation.Nullable final Boolean value) {
-        this._resolveAvailability = value;
+        this.resolveAvailability = value;
     }
 }

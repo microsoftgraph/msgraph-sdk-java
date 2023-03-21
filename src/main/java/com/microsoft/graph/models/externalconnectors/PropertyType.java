@@ -3,13 +3,12 @@ package com.microsoft.graph.models.externalconnectors;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
 public enum PropertyType implements ValuedEnum {
     String("string"),
     Int64("int64"),
-    Double_escaped("double_escaped"),
+    DoubleEscaped("doubleEscaped"),
     DateTime("dateTime"),
-    Boolean_escaped("boolean_escaped"),
+    BooleanEscaped("booleanEscaped"),
     StringCollection("stringCollection"),
     Int64Collection("int64Collection"),
     DoubleCollection("doubleCollection"),
@@ -27,9 +26,9 @@ public enum PropertyType implements ValuedEnum {
         switch(searchValue) {
             case "string": return String;
             case "int64": return Int64;
-            case "double": return Double_escaped;
+            case "double": return DoubleEscaped;
             case "dateTime": return DateTime;
-            case "boolean": return Boolean_escaped;
+            case "boolean": return BooleanEscaped;
             case "stringCollection": return StringCollection;
             case "int64Collection": return Int64Collection;
             case "doubleCollection": return DoubleCollection;

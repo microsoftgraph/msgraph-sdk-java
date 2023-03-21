@@ -3,26 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A managed or unmanaged app that is installed on a managed device. Unmanaged apps will only appear for devices marked as corporate owned. */
+/**
+ * A managed or unmanaged app that is installed on a managed device. Unmanaged apps will only appear for devices marked as corporate owned.
+ */
 public class DetectedApp extends Entity implements Parsable {
     /** The number of devices that have installed this application */
-    private Integer _deviceCount;
+    private Integer deviceCount;
     /** Name of the discovered application. Read-only */
-    private String _displayName;
+    private String displayName;
     /** The devices that have the discovered application installed */
-    private java.util.List<ManagedDevice> _managedDevices;
+    private java.util.List<ManagedDevice> managedDevices;
     /** Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0). */
-    private DetectedAppPlatformType _platform;
+    private DetectedAppPlatformType platform;
     /** Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string. */
-    private String _publisher;
+    private String publisher;
     /** Discovered application size in bytes. Read-only */
-    private Long _sizeInByte;
+    private Long sizeInByte;
     /** Version of the discovered application. Read-only */
-    private String _version;
+    private String version;
     /**
      * Instantiates a new detectedApp and sets the default values.
      * @return a void
@@ -47,7 +48,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getDeviceCount() {
-        return this._deviceCount;
+        return this.deviceCount;
     }
     /**
      * Gets the displayName property value. Name of the discovered application. Read-only
@@ -55,15 +56,15 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getIntegerValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("managedDevices", (n) -> { this.setManagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
@@ -79,7 +80,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedDevice> getManagedDevices() {
-        return this._managedDevices;
+        return this.managedDevices;
     }
     /**
      * Gets the platform property value. Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0).
@@ -87,7 +88,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DetectedAppPlatformType getPlatform() {
-        return this._platform;
+        return this.platform;
     }
     /**
      * Gets the publisher property value. Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string.
@@ -95,7 +96,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPublisher() {
-        return this._publisher;
+        return this.publisher;
     }
     /**
      * Gets the sizeInByte property value. Discovered application size in bytes. Read-only
@@ -103,7 +104,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Long getSizeInByte() {
-        return this._sizeInByte;
+        return this.sizeInByte;
     }
     /**
      * Gets the version property value. Version of the discovered application. Read-only
@@ -111,7 +112,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
@@ -137,7 +138,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._deviceCount = value;
+        this.deviceCount = value;
     }
     /**
      * Sets the displayName property value. Name of the discovered application. Read-only
@@ -146,7 +147,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the managedDevices property value. The devices that have the discovered application installed
@@ -155,7 +156,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setManagedDevices(@javax.annotation.Nullable final java.util.List<ManagedDevice> value) {
-        this._managedDevices = value;
+        this.managedDevices = value;
     }
     /**
      * Sets the platform property value. Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0).
@@ -164,7 +165,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final DetectedAppPlatformType value) {
-        this._platform = value;
+        this.platform = value;
     }
     /**
      * Sets the publisher property value. Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string.
@@ -173,7 +174,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
-        this._publisher = value;
+        this.publisher = value;
     }
     /**
      * Sets the sizeInByte property value. Discovered application size in bytes. Read-only
@@ -182,7 +183,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSizeInByte(@javax.annotation.Nullable final Long value) {
-        this._sizeInByte = value;
+        this.sizeInByte = value;
     }
     /**
      * Sets the version property value. Version of the discovered application. Read-only
@@ -191,6 +192,6 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

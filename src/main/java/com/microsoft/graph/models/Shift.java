@@ -3,19 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Shift extends ChangeTrackedEntity implements Parsable {
     /** The draft version of this shift that is viewable by managers. Required. */
-    private ShiftItem _draftShift;
+    private ShiftItem draftShift;
     /** ID of the scheduling group the shift is part of. Required. */
-    private String _schedulingGroupId;
+    private String schedulingGroupId;
     /** The shared version of this shift that is viewable by both employees and managers. Required. */
-    private ShiftItem _sharedShift;
+    private ShiftItem sharedShift;
     /** ID of the user assigned to the shift. Required. */
-    private String _userId;
+    private String userId;
     /**
      * Instantiates a new Shift and sets the default values.
      * @return a void
@@ -41,15 +40,15 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public ShiftItem getDraftShift() {
-        return this._draftShift;
+        return this.draftShift;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("draftShift", (n) -> { this.setDraftShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
         deserializerMap.put("schedulingGroupId", (n) -> { this.setSchedulingGroupId(n.getStringValue()); });
         deserializerMap.put("sharedShift", (n) -> { this.setSharedShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
@@ -62,7 +61,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSchedulingGroupId() {
-        return this._schedulingGroupId;
+        return this.schedulingGroupId;
     }
     /**
      * Gets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Required.
@@ -70,7 +69,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public ShiftItem getSharedShift() {
-        return this._sharedShift;
+        return this.sharedShift;
     }
     /**
      * Gets the userId property value. ID of the user assigned to the shift. Required.
@@ -78,7 +77,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
@@ -101,7 +100,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDraftShift(@javax.annotation.Nullable final ShiftItem value) {
-        this._draftShift = value;
+        this.draftShift = value;
     }
     /**
      * Sets the schedulingGroupId property value. ID of the scheduling group the shift is part of. Required.
@@ -110,7 +109,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSchedulingGroupId(@javax.annotation.Nullable final String value) {
-        this._schedulingGroupId = value;
+        this.schedulingGroupId = value;
     }
     /**
      * Sets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Required.
@@ -119,7 +118,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSharedShift(@javax.annotation.Nullable final ShiftItem value) {
-        this._sharedShift = value;
+        this.sharedShift = value;
     }
     /**
      * Sets the userId property value. ID of the user assigned to the shift. Required.
@@ -128,6 +127,6 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }

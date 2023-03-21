@@ -4,29 +4,28 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DocumentSet implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Content types allowed in document set. */
-    private java.util.List<ContentTypeInfo> _allowedContentTypes;
+    private java.util.List<ContentTypeInfo> allowedContentTypes;
     /** Default contents of document set. */
-    private java.util.List<DocumentSetContent> _defaultContents;
+    private java.util.List<DocumentSetContent> defaultContents;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Specifies whether to push welcome page changes to inherited content types. */
-    private Boolean _propagateWelcomePageChanges;
+    private Boolean propagateWelcomePageChanges;
     /** The sharedColumns property */
-    private java.util.List<ColumnDefinition> _sharedColumns;
+    private java.util.List<ColumnDefinition> sharedColumns;
     /** Indicates whether to add the name of the document set to each file name. */
-    private Boolean _shouldPrefixNameToFile;
+    private Boolean shouldPrefixNameToFile;
     /** The welcomePageColumns property */
-    private java.util.List<ColumnDefinition> _welcomePageColumns;
+    private java.util.List<ColumnDefinition> welcomePageColumns;
     /** Welcome page absolute URL. */
-    private String _welcomePageUrl;
+    private String welcomePageUrl;
     /**
      * Instantiates a new documentSet and sets the default values.
      * @return a void
@@ -51,7 +50,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the allowedContentTypes property value. Content types allowed in document set.
@@ -59,7 +58,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ContentTypeInfo> getAllowedContentTypes() {
-        return this._allowedContentTypes;
+        return this.allowedContentTypes;
     }
     /**
      * Gets the defaultContents property value. Default contents of document set.
@@ -67,15 +66,15 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DocumentSetContent> getDefaultContents() {
-        return this._defaultContents;
+        return this.defaultContents;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("allowedContentTypes", (n) -> { this.setAllowedContentTypes(n.getCollectionOfObjectValues(ContentTypeInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("defaultContents", (n) -> { this.setDefaultContents(n.getCollectionOfObjectValues(DocumentSetContent::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -92,7 +91,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the propagateWelcomePageChanges property value. Specifies whether to push welcome page changes to inherited content types.
@@ -100,7 +99,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getPropagateWelcomePageChanges() {
-        return this._propagateWelcomePageChanges;
+        return this.propagateWelcomePageChanges;
     }
     /**
      * Gets the sharedColumns property value. The sharedColumns property
@@ -108,7 +107,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ColumnDefinition> getSharedColumns() {
-        return this._sharedColumns;
+        return this.sharedColumns;
     }
     /**
      * Gets the shouldPrefixNameToFile property value. Indicates whether to add the name of the document set to each file name.
@@ -116,7 +115,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getShouldPrefixNameToFile() {
-        return this._shouldPrefixNameToFile;
+        return this.shouldPrefixNameToFile;
     }
     /**
      * Gets the welcomePageColumns property value. The welcomePageColumns property
@@ -124,7 +123,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ColumnDefinition> getWelcomePageColumns() {
-        return this._welcomePageColumns;
+        return this.welcomePageColumns;
     }
     /**
      * Gets the welcomePageUrl property value. Welcome page absolute URL.
@@ -132,7 +131,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getWelcomePageUrl() {
-        return this._welcomePageUrl;
+        return this.welcomePageUrl;
     }
     /**
      * Serializes information the current object
@@ -159,7 +158,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the allowedContentTypes property value. Content types allowed in document set.
@@ -168,7 +167,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowedContentTypes(@javax.annotation.Nullable final java.util.List<ContentTypeInfo> value) {
-        this._allowedContentTypes = value;
+        this.allowedContentTypes = value;
     }
     /**
      * Sets the defaultContents property value. Default contents of document set.
@@ -177,7 +176,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDefaultContents(@javax.annotation.Nullable final java.util.List<DocumentSetContent> value) {
-        this._defaultContents = value;
+        this.defaultContents = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -186,7 +185,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the propagateWelcomePageChanges property value. Specifies whether to push welcome page changes to inherited content types.
@@ -195,7 +194,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPropagateWelcomePageChanges(@javax.annotation.Nullable final Boolean value) {
-        this._propagateWelcomePageChanges = value;
+        this.propagateWelcomePageChanges = value;
     }
     /**
      * Sets the sharedColumns property value. The sharedColumns property
@@ -204,7 +203,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSharedColumns(@javax.annotation.Nullable final java.util.List<ColumnDefinition> value) {
-        this._sharedColumns = value;
+        this.sharedColumns = value;
     }
     /**
      * Sets the shouldPrefixNameToFile property value. Indicates whether to add the name of the document set to each file name.
@@ -213,7 +212,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setShouldPrefixNameToFile(@javax.annotation.Nullable final Boolean value) {
-        this._shouldPrefixNameToFile = value;
+        this.shouldPrefixNameToFile = value;
     }
     /**
      * Sets the welcomePageColumns property value. The welcomePageColumns property
@@ -222,7 +221,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setWelcomePageColumns(@javax.annotation.Nullable final java.util.List<ColumnDefinition> value) {
-        this._welcomePageColumns = value;
+        this.welcomePageColumns = value;
     }
     /**
      * Sets the welcomePageUrl property value. Welcome page absolute URL.
@@ -231,6 +230,6 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setWelcomePageUrl(@javax.annotation.Nullable final String value) {
-        this._welcomePageUrl = value;
+        this.welcomePageUrl = value;
     }
 }

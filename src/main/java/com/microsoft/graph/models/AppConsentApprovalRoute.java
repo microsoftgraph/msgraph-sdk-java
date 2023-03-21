@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AppConsentApprovalRoute extends Entity implements Parsable {
     /** A collection of userConsentRequest objects for a specific application. */
-    private java.util.List<AppConsentRequest> _appConsentRequests;
+    private java.util.List<AppConsentRequest> appConsentRequests;
     /**
      * Instantiates a new AppConsentApprovalRoute and sets the default values.
      * @return a void
@@ -34,15 +33,15 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AppConsentRequest> getAppConsentRequests() {
-        return this._appConsentRequests;
+        return this.appConsentRequests;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appConsentRequests", (n) -> { this.setAppConsentRequests(n.getCollectionOfObjectValues(AppConsentRequest::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -64,6 +63,6 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppConsentRequests(@javax.annotation.Nullable final java.util.List<AppConsentRequest> value) {
-        this._appConsentRequests = value;
+        this.appConsentRequests = value;
     }
 }

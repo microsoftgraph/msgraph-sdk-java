@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ScheduleInformation implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working elsewhere. */
-    private String _availabilityView;
+    private String availabilityView;
     /** Error information from attempting to get the availability of the user, distribution list, or resource. */
-    private FreeBusyError _error;
+    private FreeBusyError error;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation. */
-    private String _scheduleId;
+    private String scheduleId;
     /** Contains the items that describe the availability of the user or resource. */
-    private java.util.List<ScheduleItem> _scheduleItems;
+    private java.util.List<ScheduleItem> scheduleItems;
     /** The days of the week and hours in a specific time zone that the user works. These are set as part of the user's mailboxSettings. */
-    private WorkingHours _workingHours;
+    private WorkingHours workingHours;
     /**
      * Instantiates a new scheduleInformation and sets the default values.
      * @return a void
@@ -47,7 +46,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the availabilityView property value. Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working elsewhere.
@@ -55,7 +54,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAvailabilityView() {
-        return this._availabilityView;
+        return this.availabilityView;
     }
     /**
      * Gets the error property value. Error information from attempting to get the availability of the user, distribution list, or resource.
@@ -63,15 +62,15 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public FreeBusyError getError() {
-        return this._error;
+        return this.error;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("availabilityView", (n) -> { this.setAvailabilityView(n.getStringValue()); });
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(FreeBusyError::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -86,7 +85,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the scheduleId property value. An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
@@ -94,7 +93,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getScheduleId() {
-        return this._scheduleId;
+        return this.scheduleId;
     }
     /**
      * Gets the scheduleItems property value. Contains the items that describe the availability of the user or resource.
@@ -102,7 +101,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ScheduleItem> getScheduleItems() {
-        return this._scheduleItems;
+        return this.scheduleItems;
     }
     /**
      * Gets the workingHours property value. The days of the week and hours in a specific time zone that the user works. These are set as part of the user's mailboxSettings.
@@ -110,7 +109,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public WorkingHours getWorkingHours() {
-        return this._workingHours;
+        return this.workingHours;
     }
     /**
      * Serializes information the current object
@@ -135,7 +134,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the availabilityView property value. Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working elsewhere.
@@ -144,7 +143,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAvailabilityView(@javax.annotation.Nullable final String value) {
-        this._availabilityView = value;
+        this.availabilityView = value;
     }
     /**
      * Sets the error property value. Error information from attempting to get the availability of the user, distribution list, or resource.
@@ -153,7 +152,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final FreeBusyError value) {
-        this._error = value;
+        this.error = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -162,7 +161,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the scheduleId property value. An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
@@ -171,7 +170,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setScheduleId(@javax.annotation.Nullable final String value) {
-        this._scheduleId = value;
+        this.scheduleId = value;
     }
     /**
      * Sets the scheduleItems property value. Contains the items that describe the availability of the user or resource.
@@ -180,7 +179,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setScheduleItems(@javax.annotation.Nullable final java.util.List<ScheduleItem> value) {
-        this._scheduleItems = value;
+        this.scheduleItems = value;
     }
     /**
      * Sets the workingHours property value. The days of the week and hours in a specific time zone that the user works. These are set as part of the user's mailboxSettings.
@@ -189,6 +188,6 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setWorkingHours(@javax.annotation.Nullable final WorkingHours value) {
-        this._workingHours = value;
+        this.workingHours = value;
     }
 }

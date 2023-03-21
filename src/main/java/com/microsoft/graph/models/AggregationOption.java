@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AggregationOption implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The bucketDefinition property */
-    private BucketAggregationDefinition _bucketDefinition;
+    private BucketAggregationDefinition bucketDefinition;
     /** Computes aggregation on the field while the field exists in current entity type. Required. */
-    private String _field;
+    private String field;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The number of searchBucket resources to be returned. This is not required when the range is provided manually in the search request. Optional. */
-    private Integer _size;
+    private Integer size;
     /**
      * Instantiates a new aggregationOption and sets the default values.
      * @return a void
@@ -43,7 +42,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the bucketDefinition property value. The bucketDefinition property
@@ -51,7 +50,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public BucketAggregationDefinition getBucketDefinition() {
-        return this._bucketDefinition;
+        return this.bucketDefinition;
     }
     /**
      * Gets the field property value. Computes aggregation on the field while the field exists in current entity type. Required.
@@ -59,15 +58,15 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getField() {
-        return this._field;
+        return this.field;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("bucketDefinition", (n) -> { this.setBucketDefinition(n.getObjectValue(BucketAggregationDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("field", (n) -> { this.setField(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -80,7 +79,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the size property value. The number of searchBucket resources to be returned. This is not required when the range is provided manually in the search request. Optional.
@@ -88,7 +87,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getSize() {
-        return this._size;
+        return this.size;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the bucketDefinition property value. The bucketDefinition property
@@ -120,7 +119,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setBucketDefinition(@javax.annotation.Nullable final BucketAggregationDefinition value) {
-        this._bucketDefinition = value;
+        this.bucketDefinition = value;
     }
     /**
      * Sets the field property value. Computes aggregation on the field while the field exists in current entity type. Required.
@@ -129,7 +128,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setField(@javax.annotation.Nullable final String value) {
-        this._field = value;
+        this.field = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -138,7 +137,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the size property value. The number of searchBucket resources to be returned. This is not required when the range is provided manually in the search request. Optional.
@@ -147,6 +146,6 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Integer value) {
-        this._size = value;
+        this.size = value;
     }
 }

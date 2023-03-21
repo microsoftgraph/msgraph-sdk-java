@@ -4,32 +4,33 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A class containing the properties for Audit Actor. */
+/**
+ * A class containing the properties for Audit Actor.
+ */
 public class AuditActor implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Name of the Application. */
-    private String _applicationDisplayName;
+    private String applicationDisplayName;
     /** AAD Application Id. */
-    private String _applicationId;
+    private String applicationId;
     /** Actor Type. */
-    private String _auditActorType;
+    private String auditActorType;
     /** IPAddress. */
-    private String _ipAddress;
+    private String ipAddress;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Service Principal Name (SPN). */
-    private String _servicePrincipalName;
+    private String servicePrincipalName;
     /** User Id. */
-    private String _userId;
+    private String userId;
     /** List of user permissions when the audit was performed. */
-    private java.util.List<String> _userPermissions;
+    private java.util.List<String> userPermissions;
     /** User Principal Name (UPN). */
-    private String _userPrincipalName;
+    private String userPrincipalName;
     /**
      * Instantiates a new auditActor and sets the default values.
      * @return a void
@@ -54,7 +55,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the applicationDisplayName property value. Name of the Application.
@@ -62,7 +63,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getApplicationDisplayName() {
-        return this._applicationDisplayName;
+        return this.applicationDisplayName;
     }
     /**
      * Gets the applicationId property value. AAD Application Id.
@@ -70,7 +71,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getApplicationId() {
-        return this._applicationId;
+        return this.applicationId;
     }
     /**
      * Gets the auditActorType property value. Actor Type.
@@ -78,15 +79,15 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAuditActorType() {
-        return this._auditActorType;
+        return this.auditActorType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("applicationDisplayName", (n) -> { this.setApplicationDisplayName(n.getStringValue()); });
         deserializerMap.put("applicationId", (n) -> { this.setApplicationId(n.getStringValue()); });
         deserializerMap.put("auditActorType", (n) -> { this.setAuditActorType(n.getStringValue()); });
@@ -104,7 +105,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getIpAddress() {
-        return this._ipAddress;
+        return this.ipAddress;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -112,7 +113,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the servicePrincipalName property value. Service Principal Name (SPN).
@@ -120,7 +121,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getServicePrincipalName() {
-        return this._servicePrincipalName;
+        return this.servicePrincipalName;
     }
     /**
      * Gets the userId property value. User Id.
@@ -128,7 +129,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Gets the userPermissions property value. List of user permissions when the audit was performed.
@@ -136,7 +137,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getUserPermissions() {
-        return this._userPermissions;
+        return this.userPermissions;
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name (UPN).
@@ -144,7 +145,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
@@ -172,7 +173,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the applicationDisplayName property value. Name of the Application.
@@ -181,7 +182,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setApplicationDisplayName(@javax.annotation.Nullable final String value) {
-        this._applicationDisplayName = value;
+        this.applicationDisplayName = value;
     }
     /**
      * Sets the applicationId property value. AAD Application Id.
@@ -190,7 +191,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setApplicationId(@javax.annotation.Nullable final String value) {
-        this._applicationId = value;
+        this.applicationId = value;
     }
     /**
      * Sets the auditActorType property value. Actor Type.
@@ -199,7 +200,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAuditActorType(@javax.annotation.Nullable final String value) {
-        this._auditActorType = value;
+        this.auditActorType = value;
     }
     /**
      * Sets the ipAddress property value. IPAddress.
@@ -208,7 +209,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
-        this._ipAddress = value;
+        this.ipAddress = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -217,7 +218,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the servicePrincipalName property value. Service Principal Name (SPN).
@@ -226,7 +227,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setServicePrincipalName(@javax.annotation.Nullable final String value) {
-        this._servicePrincipalName = value;
+        this.servicePrincipalName = value;
     }
     /**
      * Sets the userId property value. User Id.
@@ -235,7 +236,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
     /**
      * Sets the userPermissions property value. List of user permissions when the audit was performed.
@@ -244,7 +245,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserPermissions(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._userPermissions = value;
+        this.userPermissions = value;
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name (UPN).
@@ -253,6 +254,6 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

@@ -4,27 +4,26 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** The date and time when the Temporary Access Pass was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The state of the authentication method that indicates whether it's currently usable by the user. */
-    private Boolean _isUsable;
+    private Boolean isUsable;
     /** Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime. */
-    private Boolean _isUsableOnce;
+    private Boolean isUsableOnce;
     /** The lifetime of the Temporary Access Pass in minutes starting at startDateTime. Must be between 10 and 43200 inclusive (equivalent to 30 days). */
-    private Integer _lifetimeInMinutes;
+    private Integer lifetimeInMinutes;
     /** Details about the usability state (isUsable). Reasons can include: EnabledByPolicy, DisabledByPolicy, Expired, NotYetValid, OneTimeUsed. */
-    private String _methodUsabilityReason;
+    private String methodUsabilityReason;
     /** The date and time when the Temporary Access Pass becomes available to use and when isUsable is true is enforced. */
-    private OffsetDateTime _startDateTime;
+    private OffsetDateTime startDateTime;
     /** The Temporary Access Pass used to authenticate. Returned only on creation of a new temporaryAccessPassAuthenticationMethod object; Hidden in subsequent read operations and returned as null with GET. */
-    private String _temporaryAccessPass;
+    private String temporaryAccessPass;
     /**
-     * Instantiates a new TemporaryAccessPassAuthenticationMethod and sets the default values.
+     * Instantiates a new temporaryAccessPassAuthenticationMethod and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +34,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TemporaryAccessPassAuthenticationMethod
+     * @return a temporaryAccessPassAuthenticationMethod
      */
     @javax.annotation.Nonnull
     public static TemporaryAccessPassAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -48,15 +47,15 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("isUsable", (n) -> { this.setIsUsable(n.getBooleanValue()); });
         deserializerMap.put("isUsableOnce", (n) -> { this.setIsUsableOnce(n.getBooleanValue()); });
@@ -72,7 +71,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @javax.annotation.Nullable
     public Boolean getIsUsable() {
-        return this._isUsable;
+        return this.isUsable;
     }
     /**
      * Gets the isUsableOnce property value. Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime.
@@ -80,7 +79,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @javax.annotation.Nullable
     public Boolean getIsUsableOnce() {
-        return this._isUsableOnce;
+        return this.isUsableOnce;
     }
     /**
      * Gets the lifetimeInMinutes property value. The lifetime of the Temporary Access Pass in minutes starting at startDateTime. Must be between 10 and 43200 inclusive (equivalent to 30 days).
@@ -88,7 +87,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @javax.annotation.Nullable
     public Integer getLifetimeInMinutes() {
-        return this._lifetimeInMinutes;
+        return this.lifetimeInMinutes;
     }
     /**
      * Gets the methodUsabilityReason property value. Details about the usability state (isUsable). Reasons can include: EnabledByPolicy, DisabledByPolicy, Expired, NotYetValid, OneTimeUsed.
@@ -96,7 +95,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @javax.annotation.Nullable
     public String getMethodUsabilityReason() {
-        return this._methodUsabilityReason;
+        return this.methodUsabilityReason;
     }
     /**
      * Gets the startDateTime property value. The date and time when the Temporary Access Pass becomes available to use and when isUsable is true is enforced.
@@ -104,7 +103,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Gets the temporaryAccessPass property value. The Temporary Access Pass used to authenticate. Returned only on creation of a new temporaryAccessPassAuthenticationMethod object; Hidden in subsequent read operations and returned as null with GET.
@@ -112,7 +111,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @javax.annotation.Nullable
     public String getTemporaryAccessPass() {
-        return this._temporaryAccessPass;
+        return this.temporaryAccessPass;
     }
     /**
      * Serializes information the current object
@@ -138,7 +137,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the isUsable property value. The state of the authentication method that indicates whether it's currently usable by the user.
@@ -147,7 +146,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @javax.annotation.Nonnull
     public void setIsUsable(@javax.annotation.Nullable final Boolean value) {
-        this._isUsable = value;
+        this.isUsable = value;
     }
     /**
      * Sets the isUsableOnce property value. Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime.
@@ -156,7 +155,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @javax.annotation.Nonnull
     public void setIsUsableOnce(@javax.annotation.Nullable final Boolean value) {
-        this._isUsableOnce = value;
+        this.isUsableOnce = value;
     }
     /**
      * Sets the lifetimeInMinutes property value. The lifetime of the Temporary Access Pass in minutes starting at startDateTime. Must be between 10 and 43200 inclusive (equivalent to 30 days).
@@ -165,7 +164,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @javax.annotation.Nonnull
     public void setLifetimeInMinutes(@javax.annotation.Nullable final Integer value) {
-        this._lifetimeInMinutes = value;
+        this.lifetimeInMinutes = value;
     }
     /**
      * Sets the methodUsabilityReason property value. Details about the usability state (isUsable). Reasons can include: EnabledByPolicy, DisabledByPolicy, Expired, NotYetValid, OneTimeUsed.
@@ -174,7 +173,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @javax.annotation.Nonnull
     public void setMethodUsabilityReason(@javax.annotation.Nullable final String value) {
-        this._methodUsabilityReason = value;
+        this.methodUsabilityReason = value;
     }
     /**
      * Sets the startDateTime property value. The date and time when the Temporary Access Pass becomes available to use and when isUsable is true is enforced.
@@ -183,7 +182,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
     /**
      * Sets the temporaryAccessPass property value. The Temporary Access Pass used to authenticate. Returned only on creation of a new temporaryAccessPassAuthenticationMethod object; Hidden in subsequent read operations and returned as null with GET.
@@ -192,6 +191,6 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @javax.annotation.Nonnull
     public void setTemporaryAccessPass(@javax.annotation.Nullable final String value) {
-        this._temporaryAccessPass = value;
+        this.temporaryAccessPass = value;
     }
 }

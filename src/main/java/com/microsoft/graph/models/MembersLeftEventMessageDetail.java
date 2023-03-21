@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MembersLeftEventMessageDetail extends EventMessageDetail implements Parsable {
     /** Initiator of the event. */
-    private IdentitySet _initiator;
+    private IdentitySet initiator;
     /** List of members who left the chat. */
-    private java.util.List<TeamworkUserIdentity> _members;
+    private java.util.List<TeamworkUserIdentity> members;
     /**
      * Instantiates a new MembersLeftEventMessageDetail and sets the default values.
      * @return a void
@@ -33,11 +32,11 @@ public class MembersLeftEventMessageDetail extends EventMessageDetail implements
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(TeamworkUserIdentity::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -48,7 +47,7 @@ public class MembersLeftEventMessageDetail extends EventMessageDetail implements
      */
     @javax.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this._initiator;
+        return this.initiator;
     }
     /**
      * Gets the members property value. List of members who left the chat.
@@ -56,7 +55,7 @@ public class MembersLeftEventMessageDetail extends EventMessageDetail implements
      */
     @javax.annotation.Nullable
     public java.util.List<TeamworkUserIdentity> getMembers() {
-        return this._members;
+        return this.members;
     }
     /**
      * Serializes information the current object
@@ -77,7 +76,7 @@ public class MembersLeftEventMessageDetail extends EventMessageDetail implements
      */
     @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
-        this._initiator = value;
+        this.initiator = value;
     }
     /**
      * Sets the members property value. List of members who left the chat.
@@ -86,6 +85,6 @@ public class MembersLeftEventMessageDetail extends EventMessageDetail implements
      */
     @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<TeamworkUserIdentity> value) {
-        this._members = value;
+        this.members = value;
     }
 }

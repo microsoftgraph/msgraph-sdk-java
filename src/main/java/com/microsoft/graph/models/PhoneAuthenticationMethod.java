@@ -3,19 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** The phone number to text or call for authentication. Phone numbers use the format +{country code} {number}x{extension}, with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating or updating if they do not match the required format. */
-    private String _phoneNumber;
+    private String phoneNumber;
     /** The type of this phone. Possible values are: mobile, alternateMobile, or office. */
-    private AuthenticationPhoneType _phoneType;
+    private AuthenticationPhoneType phoneType;
     /** Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue. */
-    private AuthenticationMethodSignInState _smsSignInState;
+    private AuthenticationMethodSignInState smsSignInState;
     /**
-     * Instantiates a new PhoneAuthenticationMethod and sets the default values.
+     * Instantiates a new phoneAuthenticationMethod and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -26,7 +25,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PhoneAuthenticationMethod
+     * @return a phoneAuthenticationMethod
      */
     @javax.annotation.Nonnull
     public static PhoneAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -35,11 +34,11 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("phoneNumber", (n) -> { this.setPhoneNumber(n.getStringValue()); });
         deserializerMap.put("phoneType", (n) -> { this.setPhoneType(n.getEnumValue(AuthenticationPhoneType.class)); });
         deserializerMap.put("smsSignInState", (n) -> { this.setSmsSignInState(n.getEnumValue(AuthenticationMethodSignInState.class)); });
@@ -51,7 +50,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nullable
     public String getPhoneNumber() {
-        return this._phoneNumber;
+        return this.phoneNumber;
     }
     /**
      * Gets the phoneType property value. The type of this phone. Possible values are: mobile, alternateMobile, or office.
@@ -59,7 +58,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nullable
     public AuthenticationPhoneType getPhoneType() {
-        return this._phoneType;
+        return this.phoneType;
     }
     /**
      * Gets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
@@ -67,7 +66,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nullable
     public AuthenticationMethodSignInState getSmsSignInState() {
-        return this._smsSignInState;
+        return this.smsSignInState;
     }
     /**
      * Serializes information the current object
@@ -89,7 +88,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nonnull
     public void setPhoneNumber(@javax.annotation.Nullable final String value) {
-        this._phoneNumber = value;
+        this.phoneNumber = value;
     }
     /**
      * Sets the phoneType property value. The type of this phone. Possible values are: mobile, alternateMobile, or office.
@@ -98,7 +97,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nonnull
     public void setPhoneType(@javax.annotation.Nullable final AuthenticationPhoneType value) {
-        this._phoneType = value;
+        this.phoneType = value;
     }
     /**
      * Sets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
@@ -107,6 +106,6 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nonnull
     public void setSmsSignInState(@javax.annotation.Nullable final AuthenticationMethodSignInState value) {
-        this._smsSignInState = value;
+        this.smsSignInState = value;
     }
 }

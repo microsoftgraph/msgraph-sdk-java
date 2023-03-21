@@ -3,9 +3,8 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
 public enum ProvisioningStepType implements ValuedEnum {
-    Import_escaped("import_escaped"),
+    ImportEscaped("importEscaped"),
     Scoping("scoping"),
     Matching("matching"),
     Processing("processing"),
@@ -22,7 +21,7 @@ public enum ProvisioningStepType implements ValuedEnum {
     public static ProvisioningStepType forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "import": return Import_escaped;
+            case "import": return ImportEscaped;
             case "scoping": return Scoping;
             case "matching": return Matching;
             case "processing": return Processing;

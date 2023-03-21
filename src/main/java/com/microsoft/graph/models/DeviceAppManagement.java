@@ -4,47 +4,46 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceAppManagement extends Entity implements Parsable {
     /** Android managed app policies. */
-    private java.util.List<AndroidManagedAppProtection> _androidManagedAppProtections;
+    private java.util.List<AndroidManagedAppProtection> androidManagedAppProtections;
     /** Default managed app policies. */
-    private java.util.List<DefaultManagedAppProtection> _defaultManagedAppProtections;
+    private java.util.List<DefaultManagedAppProtection> defaultManagedAppProtections;
     /** iOS managed app policies. */
-    private java.util.List<IosManagedAppProtection> _iosManagedAppProtections;
+    private java.util.List<IosManagedAppProtection> iosManagedAppProtections;
     /** Whether the account is enabled for syncing applications from the Microsoft Store for Business. */
-    private Boolean _isEnabledForMicrosoftStoreForBusiness;
+    private Boolean isEnabledForMicrosoftStoreForBusiness;
     /** Managed app policies. */
-    private java.util.List<ManagedAppPolicy> _managedAppPolicies;
+    private java.util.List<ManagedAppPolicy> managedAppPolicies;
     /** The managed app registrations. */
-    private java.util.List<ManagedAppRegistration> _managedAppRegistrations;
+    private java.util.List<ManagedAppRegistration> managedAppRegistrations;
     /** The managed app statuses. */
-    private java.util.List<ManagedAppStatus> _managedAppStatuses;
+    private java.util.List<ManagedAppStatus> managedAppStatuses;
     /** The Managed eBook. */
-    private java.util.List<ManagedEBook> _managedEBooks;
+    private java.util.List<ManagedEBook> managedEBooks;
     /** Windows information protection for apps running on devices which are MDM enrolled. */
-    private java.util.List<MdmWindowsInformationProtectionPolicy> _mdmWindowsInformationProtectionPolicies;
+    private java.util.List<MdmWindowsInformationProtectionPolicy> mdmWindowsInformationProtectionPolicies;
     /** The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture. */
-    private String _microsoftStoreForBusinessLanguage;
+    private String microsoftStoreForBusinessLanguage;
     /** The last time an application sync from the Microsoft Store for Business was completed. */
-    private OffsetDateTime _microsoftStoreForBusinessLastCompletedApplicationSyncTime;
+    private OffsetDateTime microsoftStoreForBusinessLastCompletedApplicationSyncTime;
     /** The last time the apps from the Microsoft Store for Business were synced successfully for the account. */
-    private OffsetDateTime _microsoftStoreForBusinessLastSuccessfulSyncDateTime;
+    private OffsetDateTime microsoftStoreForBusinessLastSuccessfulSyncDateTime;
     /** The mobile app categories. */
-    private java.util.List<MobileAppCategory> _mobileAppCategories;
+    private java.util.List<MobileAppCategory> mobileAppCategories;
     /** The Managed Device Mobile Application Configurations. */
-    private java.util.List<ManagedDeviceMobileAppConfiguration> _mobileAppConfigurations;
+    private java.util.List<ManagedDeviceMobileAppConfiguration> mobileAppConfigurations;
     /** The mobile apps. */
-    private java.util.List<MobileApp> _mobileApps;
+    private java.util.List<MobileApp> mobileApps;
     /** Targeted managed app configurations. */
-    private java.util.List<TargetedManagedAppConfiguration> _targetedManagedAppConfigurations;
+    private java.util.List<TargetedManagedAppConfiguration> targetedManagedAppConfigurations;
     /** List of Vpp tokens for this organization. */
-    private java.util.List<VppToken> _vppTokens;
+    private java.util.List<VppToken> vppTokens;
     /** Windows information protection for apps running on devices which are not MDM enrolled. */
-    private java.util.List<WindowsInformationProtectionPolicy> _windowsInformationProtectionPolicies;
+    private java.util.List<WindowsInformationProtectionPolicy> windowsInformationProtectionPolicies;
     /**
      * Instantiates a new DeviceAppManagement and sets the default values.
      * @return a void
@@ -69,7 +68,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AndroidManagedAppProtection> getAndroidManagedAppProtections() {
-        return this._androidManagedAppProtections;
+        return this.androidManagedAppProtections;
     }
     /**
      * Gets the defaultManagedAppProtections property value. Default managed app policies.
@@ -77,15 +76,15 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DefaultManagedAppProtection> getDefaultManagedAppProtections() {
-        return this._defaultManagedAppProtections;
+        return this.defaultManagedAppProtections;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("androidManagedAppProtections", (n) -> { this.setAndroidManagedAppProtections(n.getCollectionOfObjectValues(AndroidManagedAppProtection::createFromDiscriminatorValue)); });
         deserializerMap.put("defaultManagedAppProtections", (n) -> { this.setDefaultManagedAppProtections(n.getCollectionOfObjectValues(DefaultManagedAppProtection::createFromDiscriminatorValue)); });
         deserializerMap.put("iosManagedAppProtections", (n) -> { this.setIosManagedAppProtections(n.getCollectionOfObjectValues(IosManagedAppProtection::createFromDiscriminatorValue)); });
@@ -112,7 +111,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<IosManagedAppProtection> getIosManagedAppProtections() {
-        return this._iosManagedAppProtections;
+        return this.iosManagedAppProtections;
     }
     /**
      * Gets the isEnabledForMicrosoftStoreForBusiness property value. Whether the account is enabled for syncing applications from the Microsoft Store for Business.
@@ -120,7 +119,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsEnabledForMicrosoftStoreForBusiness() {
-        return this._isEnabledForMicrosoftStoreForBusiness;
+        return this.isEnabledForMicrosoftStoreForBusiness;
     }
     /**
      * Gets the managedAppPolicies property value. Managed app policies.
@@ -128,7 +127,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedAppPolicy> getManagedAppPolicies() {
-        return this._managedAppPolicies;
+        return this.managedAppPolicies;
     }
     /**
      * Gets the managedAppRegistrations property value. The managed app registrations.
@@ -136,7 +135,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedAppRegistration> getManagedAppRegistrations() {
-        return this._managedAppRegistrations;
+        return this.managedAppRegistrations;
     }
     /**
      * Gets the managedAppStatuses property value. The managed app statuses.
@@ -144,7 +143,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedAppStatus> getManagedAppStatuses() {
-        return this._managedAppStatuses;
+        return this.managedAppStatuses;
     }
     /**
      * Gets the managedEBooks property value. The Managed eBook.
@@ -152,7 +151,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedEBook> getManagedEBooks() {
-        return this._managedEBooks;
+        return this.managedEBooks;
     }
     /**
      * Gets the mdmWindowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are MDM enrolled.
@@ -160,7 +159,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MdmWindowsInformationProtectionPolicy> getMdmWindowsInformationProtectionPolicies() {
-        return this._mdmWindowsInformationProtectionPolicies;
+        return this.mdmWindowsInformationProtectionPolicies;
     }
     /**
      * Gets the microsoftStoreForBusinessLanguage property value. The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
@@ -168,7 +167,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMicrosoftStoreForBusinessLanguage() {
-        return this._microsoftStoreForBusinessLanguage;
+        return this.microsoftStoreForBusinessLanguage;
     }
     /**
      * Gets the microsoftStoreForBusinessLastCompletedApplicationSyncTime property value. The last time an application sync from the Microsoft Store for Business was completed.
@@ -176,7 +175,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getMicrosoftStoreForBusinessLastCompletedApplicationSyncTime() {
-        return this._microsoftStoreForBusinessLastCompletedApplicationSyncTime;
+        return this.microsoftStoreForBusinessLastCompletedApplicationSyncTime;
     }
     /**
      * Gets the microsoftStoreForBusinessLastSuccessfulSyncDateTime property value. The last time the apps from the Microsoft Store for Business were synced successfully for the account.
@@ -184,7 +183,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getMicrosoftStoreForBusinessLastSuccessfulSyncDateTime() {
-        return this._microsoftStoreForBusinessLastSuccessfulSyncDateTime;
+        return this.microsoftStoreForBusinessLastSuccessfulSyncDateTime;
     }
     /**
      * Gets the mobileAppCategories property value. The mobile app categories.
@@ -192,7 +191,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MobileAppCategory> getMobileAppCategories() {
-        return this._mobileAppCategories;
+        return this.mobileAppCategories;
     }
     /**
      * Gets the mobileAppConfigurations property value. The Managed Device Mobile Application Configurations.
@@ -200,7 +199,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfiguration> getMobileAppConfigurations() {
-        return this._mobileAppConfigurations;
+        return this.mobileAppConfigurations;
     }
     /**
      * Gets the mobileApps property value. The mobile apps.
@@ -208,7 +207,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MobileApp> getMobileApps() {
-        return this._mobileApps;
+        return this.mobileApps;
     }
     /**
      * Gets the targetedManagedAppConfigurations property value. Targeted managed app configurations.
@@ -216,7 +215,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TargetedManagedAppConfiguration> getTargetedManagedAppConfigurations() {
-        return this._targetedManagedAppConfigurations;
+        return this.targetedManagedAppConfigurations;
     }
     /**
      * Gets the vppTokens property value. List of Vpp tokens for this organization.
@@ -224,7 +223,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<VppToken> getVppTokens() {
-        return this._vppTokens;
+        return this.vppTokens;
     }
     /**
      * Gets the windowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are not MDM enrolled.
@@ -232,7 +231,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WindowsInformationProtectionPolicy> getWindowsInformationProtectionPolicies() {
-        return this._windowsInformationProtectionPolicies;
+        return this.windowsInformationProtectionPolicies;
     }
     /**
      * Serializes information the current object
@@ -269,7 +268,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAndroidManagedAppProtections(@javax.annotation.Nullable final java.util.List<AndroidManagedAppProtection> value) {
-        this._androidManagedAppProtections = value;
+        this.androidManagedAppProtections = value;
     }
     /**
      * Sets the defaultManagedAppProtections property value. Default managed app policies.
@@ -278,7 +277,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDefaultManagedAppProtections(@javax.annotation.Nullable final java.util.List<DefaultManagedAppProtection> value) {
-        this._defaultManagedAppProtections = value;
+        this.defaultManagedAppProtections = value;
     }
     /**
      * Sets the iosManagedAppProtections property value. iOS managed app policies.
@@ -287,7 +286,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIosManagedAppProtections(@javax.annotation.Nullable final java.util.List<IosManagedAppProtection> value) {
-        this._iosManagedAppProtections = value;
+        this.iosManagedAppProtections = value;
     }
     /**
      * Sets the isEnabledForMicrosoftStoreForBusiness property value. Whether the account is enabled for syncing applications from the Microsoft Store for Business.
@@ -296,7 +295,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsEnabledForMicrosoftStoreForBusiness(@javax.annotation.Nullable final Boolean value) {
-        this._isEnabledForMicrosoftStoreForBusiness = value;
+        this.isEnabledForMicrosoftStoreForBusiness = value;
     }
     /**
      * Sets the managedAppPolicies property value. Managed app policies.
@@ -305,7 +304,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setManagedAppPolicies(@javax.annotation.Nullable final java.util.List<ManagedAppPolicy> value) {
-        this._managedAppPolicies = value;
+        this.managedAppPolicies = value;
     }
     /**
      * Sets the managedAppRegistrations property value. The managed app registrations.
@@ -314,7 +313,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setManagedAppRegistrations(@javax.annotation.Nullable final java.util.List<ManagedAppRegistration> value) {
-        this._managedAppRegistrations = value;
+        this.managedAppRegistrations = value;
     }
     /**
      * Sets the managedAppStatuses property value. The managed app statuses.
@@ -323,7 +322,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setManagedAppStatuses(@javax.annotation.Nullable final java.util.List<ManagedAppStatus> value) {
-        this._managedAppStatuses = value;
+        this.managedAppStatuses = value;
     }
     /**
      * Sets the managedEBooks property value. The Managed eBook.
@@ -332,7 +331,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setManagedEBooks(@javax.annotation.Nullable final java.util.List<ManagedEBook> value) {
-        this._managedEBooks = value;
+        this.managedEBooks = value;
     }
     /**
      * Sets the mdmWindowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are MDM enrolled.
@@ -341,7 +340,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMdmWindowsInformationProtectionPolicies(@javax.annotation.Nullable final java.util.List<MdmWindowsInformationProtectionPolicy> value) {
-        this._mdmWindowsInformationProtectionPolicies = value;
+        this.mdmWindowsInformationProtectionPolicies = value;
     }
     /**
      * Sets the microsoftStoreForBusinessLanguage property value. The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
@@ -350,7 +349,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMicrosoftStoreForBusinessLanguage(@javax.annotation.Nullable final String value) {
-        this._microsoftStoreForBusinessLanguage = value;
+        this.microsoftStoreForBusinessLanguage = value;
     }
     /**
      * Sets the microsoftStoreForBusinessLastCompletedApplicationSyncTime property value. The last time an application sync from the Microsoft Store for Business was completed.
@@ -359,7 +358,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMicrosoftStoreForBusinessLastCompletedApplicationSyncTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._microsoftStoreForBusinessLastCompletedApplicationSyncTime = value;
+        this.microsoftStoreForBusinessLastCompletedApplicationSyncTime = value;
     }
     /**
      * Sets the microsoftStoreForBusinessLastSuccessfulSyncDateTime property value. The last time the apps from the Microsoft Store for Business were synced successfully for the account.
@@ -368,7 +367,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMicrosoftStoreForBusinessLastSuccessfulSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._microsoftStoreForBusinessLastSuccessfulSyncDateTime = value;
+        this.microsoftStoreForBusinessLastSuccessfulSyncDateTime = value;
     }
     /**
      * Sets the mobileAppCategories property value. The mobile app categories.
@@ -377,7 +376,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMobileAppCategories(@javax.annotation.Nullable final java.util.List<MobileAppCategory> value) {
-        this._mobileAppCategories = value;
+        this.mobileAppCategories = value;
     }
     /**
      * Sets the mobileAppConfigurations property value. The Managed Device Mobile Application Configurations.
@@ -386,7 +385,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMobileAppConfigurations(@javax.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfiguration> value) {
-        this._mobileAppConfigurations = value;
+        this.mobileAppConfigurations = value;
     }
     /**
      * Sets the mobileApps property value. The mobile apps.
@@ -395,7 +394,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMobileApps(@javax.annotation.Nullable final java.util.List<MobileApp> value) {
-        this._mobileApps = value;
+        this.mobileApps = value;
     }
     /**
      * Sets the targetedManagedAppConfigurations property value. Targeted managed app configurations.
@@ -404,7 +403,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTargetedManagedAppConfigurations(@javax.annotation.Nullable final java.util.List<TargetedManagedAppConfiguration> value) {
-        this._targetedManagedAppConfigurations = value;
+        this.targetedManagedAppConfigurations = value;
     }
     /**
      * Sets the vppTokens property value. List of Vpp tokens for this organization.
@@ -413,7 +412,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVppTokens(@javax.annotation.Nullable final java.util.List<VppToken> value) {
-        this._vppTokens = value;
+        this.vppTokens = value;
     }
     /**
      * Sets the windowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are not MDM enrolled.
@@ -422,6 +421,6 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWindowsInformationProtectionPolicies(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionPolicy> value) {
-        this._windowsInformationProtectionPolicies = value;
+        this.windowsInformationProtectionPolicies = value;
     }
 }

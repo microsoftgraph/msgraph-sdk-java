@@ -3,51 +3,50 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookRange extends Entity implements Parsable {
     /** Represents the range reference in A1-style. Address value will contain the Sheet reference (e.g. Sheet1!A1:B4). Read-only. */
-    private String _address;
+    private String address;
     /** Represents range reference for the specified range in the language of the user. Read-only. */
-    private String _addressLocal;
+    private String addressLocal;
     /** Number of cells in the range. Read-only. */
-    private Integer _cellCount;
+    private Integer cellCount;
     /** Represents the total number of columns in the range. Read-only. */
-    private Integer _columnCount;
+    private Integer columnCount;
     /** Represents if all columns of the current range are hidden. */
-    private Boolean _columnHidden;
+    private Boolean columnHidden;
     /** Represents the column number of the first cell in the range. Zero-indexed. Read-only. */
-    private Integer _columnIndex;
+    private Integer columnIndex;
     /** Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only. */
-    private WorkbookRangeFormat _format;
+    private WorkbookRangeFormat format;
     /** Represents the formula in A1-style notation. */
-    private Json _formulas;
+    private Json formulas;
     /** Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German. */
-    private Json _formulasLocal;
+    private Json formulasLocal;
     /** Represents the formula in R1C1-style notation. */
-    private Json _formulasR1C1;
+    private Json formulasR1C1;
     /** Represents if all cells of the current range are hidden. Read-only. */
-    private Boolean _hidden;
+    private Boolean hidden;
     /** Represents Excel's number format code for the given cell. */
-    private Json _numberFormat;
+    private Json numberFormat;
     /** Returns the total number of rows in the range. Read-only. */
-    private Integer _rowCount;
+    private Integer rowCount;
     /** Represents if all rows of the current range are hidden. */
-    private Boolean _rowHidden;
+    private Boolean rowHidden;
     /** Returns the row number of the first cell in the range. Zero-indexed. Read-only. */
-    private Integer _rowIndex;
+    private Integer rowIndex;
     /** The worksheet containing the current range. Read-only. */
-    private WorkbookRangeSort _sort;
+    private WorkbookRangeSort sort;
     /** Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only. */
-    private Json _text;
+    private Json text;
     /** Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string. */
-    private Json _values;
+    private Json values;
     /** Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only. */
-    private Json _valueTypes;
+    private Json valueTypes;
     /** The worksheet containing the current range. Read-only. */
-    private WorkbookWorksheet _worksheet;
+    private WorkbookWorksheet worksheet;
     /**
      * Instantiates a new WorkbookRange and sets the default values.
      * @return a void
@@ -72,7 +71,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAddress() {
-        return this._address;
+        return this.address;
     }
     /**
      * Gets the addressLocal property value. Represents range reference for the specified range in the language of the user. Read-only.
@@ -80,7 +79,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAddressLocal() {
-        return this._addressLocal;
+        return this.addressLocal;
     }
     /**
      * Gets the cellCount property value. Number of cells in the range. Read-only.
@@ -88,7 +87,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getCellCount() {
-        return this._cellCount;
+        return this.cellCount;
     }
     /**
      * Gets the columnCount property value. Represents the total number of columns in the range. Read-only.
@@ -96,7 +95,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getColumnCount() {
-        return this._columnCount;
+        return this.columnCount;
     }
     /**
      * Gets the columnHidden property value. Represents if all columns of the current range are hidden.
@@ -104,7 +103,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getColumnHidden() {
-        return this._columnHidden;
+        return this.columnHidden;
     }
     /**
      * Gets the columnIndex property value. Represents the column number of the first cell in the range. Zero-indexed. Read-only.
@@ -112,15 +111,15 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getColumnIndex() {
-        return this._columnIndex;
+        return this.columnIndex;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("address", (n) -> { this.setAddress(n.getStringValue()); });
         deserializerMap.put("addressLocal", (n) -> { this.setAddressLocal(n.getStringValue()); });
         deserializerMap.put("cellCount", (n) -> { this.setCellCount(n.getIntegerValue()); });
@@ -149,7 +148,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookRangeFormat getFormat() {
-        return this._format;
+        return this.format;
     }
     /**
      * Gets the formulas property value. Represents the formula in A1-style notation.
@@ -157,7 +156,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Json getFormulas() {
-        return this._formulas;
+        return this.formulas;
     }
     /**
      * Gets the formulasLocal property value. Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
@@ -165,7 +164,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Json getFormulasLocal() {
-        return this._formulasLocal;
+        return this.formulasLocal;
     }
     /**
      * Gets the formulasR1C1 property value. Represents the formula in R1C1-style notation.
@@ -173,7 +172,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Json getFormulasR1C1() {
-        return this._formulasR1C1;
+        return this.formulasR1C1;
     }
     /**
      * Gets the hidden property value. Represents if all cells of the current range are hidden. Read-only.
@@ -181,7 +180,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getHidden() {
-        return this._hidden;
+        return this.hidden;
     }
     /**
      * Gets the numberFormat property value. Represents Excel's number format code for the given cell.
@@ -189,7 +188,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Json getNumberFormat() {
-        return this._numberFormat;
+        return this.numberFormat;
     }
     /**
      * Gets the rowCount property value. Returns the total number of rows in the range. Read-only.
@@ -197,7 +196,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getRowCount() {
-        return this._rowCount;
+        return this.rowCount;
     }
     /**
      * Gets the rowHidden property value. Represents if all rows of the current range are hidden.
@@ -205,7 +204,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getRowHidden() {
-        return this._rowHidden;
+        return this.rowHidden;
     }
     /**
      * Gets the rowIndex property value. Returns the row number of the first cell in the range. Zero-indexed. Read-only.
@@ -213,7 +212,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getRowIndex() {
-        return this._rowIndex;
+        return this.rowIndex;
     }
     /**
      * Gets the sort property value. The worksheet containing the current range. Read-only.
@@ -221,7 +220,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookRangeSort getSort() {
-        return this._sort;
+        return this.sort;
     }
     /**
      * Gets the text property value. Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
@@ -229,7 +228,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Json getText() {
-        return this._text;
+        return this.text;
     }
     /**
      * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
@@ -237,7 +236,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Json getValues() {
-        return this._values;
+        return this.values;
     }
     /**
      * Gets the valueTypes property value. Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
@@ -245,7 +244,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Json getValueTypes() {
-        return this._valueTypes;
+        return this.valueTypes;
     }
     /**
      * Gets the worksheet property value. The worksheet containing the current range. Read-only.
@@ -253,7 +252,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookWorksheet getWorksheet() {
-        return this._worksheet;
+        return this.worksheet;
     }
     /**
      * Serializes information the current object
@@ -292,7 +291,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAddress(@javax.annotation.Nullable final String value) {
-        this._address = value;
+        this.address = value;
     }
     /**
      * Sets the addressLocal property value. Represents range reference for the specified range in the language of the user. Read-only.
@@ -301,7 +300,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAddressLocal(@javax.annotation.Nullable final String value) {
-        this._addressLocal = value;
+        this.addressLocal = value;
     }
     /**
      * Sets the cellCount property value. Number of cells in the range. Read-only.
@@ -310,7 +309,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCellCount(@javax.annotation.Nullable final Integer value) {
-        this._cellCount = value;
+        this.cellCount = value;
     }
     /**
      * Sets the columnCount property value. Represents the total number of columns in the range. Read-only.
@@ -319,7 +318,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setColumnCount(@javax.annotation.Nullable final Integer value) {
-        this._columnCount = value;
+        this.columnCount = value;
     }
     /**
      * Sets the columnHidden property value. Represents if all columns of the current range are hidden.
@@ -328,7 +327,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setColumnHidden(@javax.annotation.Nullable final Boolean value) {
-        this._columnHidden = value;
+        this.columnHidden = value;
     }
     /**
      * Sets the columnIndex property value. Represents the column number of the first cell in the range. Zero-indexed. Read-only.
@@ -337,7 +336,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setColumnIndex(@javax.annotation.Nullable final Integer value) {
-        this._columnIndex = value;
+        this.columnIndex = value;
     }
     /**
      * Sets the format property value. Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
@@ -346,7 +345,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final WorkbookRangeFormat value) {
-        this._format = value;
+        this.format = value;
     }
     /**
      * Sets the formulas property value. Represents the formula in A1-style notation.
@@ -355,7 +354,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFormulas(@javax.annotation.Nullable final Json value) {
-        this._formulas = value;
+        this.formulas = value;
     }
     /**
      * Sets the formulasLocal property value. Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
@@ -364,7 +363,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFormulasLocal(@javax.annotation.Nullable final Json value) {
-        this._formulasLocal = value;
+        this.formulasLocal = value;
     }
     /**
      * Sets the formulasR1C1 property value. Represents the formula in R1C1-style notation.
@@ -373,7 +372,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFormulasR1C1(@javax.annotation.Nullable final Json value) {
-        this._formulasR1C1 = value;
+        this.formulasR1C1 = value;
     }
     /**
      * Sets the hidden property value. Represents if all cells of the current range are hidden. Read-only.
@@ -382,7 +381,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setHidden(@javax.annotation.Nullable final Boolean value) {
-        this._hidden = value;
+        this.hidden = value;
     }
     /**
      * Sets the numberFormat property value. Represents Excel's number format code for the given cell.
@@ -391,7 +390,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setNumberFormat(@javax.annotation.Nullable final Json value) {
-        this._numberFormat = value;
+        this.numberFormat = value;
     }
     /**
      * Sets the rowCount property value. Returns the total number of rows in the range. Read-only.
@@ -400,7 +399,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRowCount(@javax.annotation.Nullable final Integer value) {
-        this._rowCount = value;
+        this.rowCount = value;
     }
     /**
      * Sets the rowHidden property value. Represents if all rows of the current range are hidden.
@@ -409,7 +408,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRowHidden(@javax.annotation.Nullable final Boolean value) {
-        this._rowHidden = value;
+        this.rowHidden = value;
     }
     /**
      * Sets the rowIndex property value. Returns the row number of the first cell in the range. Zero-indexed. Read-only.
@@ -418,7 +417,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRowIndex(@javax.annotation.Nullable final Integer value) {
-        this._rowIndex = value;
+        this.rowIndex = value;
     }
     /**
      * Sets the sort property value. The worksheet containing the current range. Read-only.
@@ -427,7 +426,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSort(@javax.annotation.Nullable final WorkbookRangeSort value) {
-        this._sort = value;
+        this.sort = value;
     }
     /**
      * Sets the text property value. Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
@@ -436,7 +435,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final Json value) {
-        this._text = value;
+        this.text = value;
     }
     /**
      * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
@@ -445,7 +444,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setValues(@javax.annotation.Nullable final Json value) {
-        this._values = value;
+        this.values = value;
     }
     /**
      * Sets the valueTypes property value. Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
@@ -454,7 +453,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setValueTypes(@javax.annotation.Nullable final Json value) {
-        this._valueTypes = value;
+        this.valueTypes = value;
     }
     /**
      * Sets the worksheet property value. The worksheet containing the current range. Read-only.
@@ -463,6 +462,6 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWorksheet(@javax.annotation.Nullable final WorkbookWorksheet value) {
-        this._worksheet = value;
+        this.worksheet = value;
     }
 }

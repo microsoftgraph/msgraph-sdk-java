@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource extends AccessReviewInstanceDecisionItemResource implements Parsable {
     /** Display name of the access package to which access has been granted. */
-    private String _accessPackageDisplayName;
+    private String accessPackageDisplayName;
     /** Identifier of the access package to which access has been granted. */
-    private String _accessPackageId;
+    private String accessPackageId;
     /**
      * Instantiates a new AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource and sets the default values.
      * @return a void
@@ -37,7 +36,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
      */
     @javax.annotation.Nullable
     public String getAccessPackageDisplayName() {
-        return this._accessPackageDisplayName;
+        return this.accessPackageDisplayName;
     }
     /**
      * Gets the accessPackageId property value. Identifier of the access package to which access has been granted.
@@ -45,15 +44,15 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
      */
     @javax.annotation.Nullable
     public String getAccessPackageId() {
-        return this._accessPackageId;
+        return this.accessPackageId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackageDisplayName", (n) -> { this.setAccessPackageDisplayName(n.getStringValue()); });
         deserializerMap.put("accessPackageId", (n) -> { this.setAccessPackageId(n.getStringValue()); });
         return deserializerMap;
@@ -77,7 +76,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
      */
     @javax.annotation.Nonnull
     public void setAccessPackageDisplayName(@javax.annotation.Nullable final String value) {
-        this._accessPackageDisplayName = value;
+        this.accessPackageDisplayName = value;
     }
     /**
      * Sets the accessPackageId property value. Identifier of the access package to which access has been granted.
@@ -86,6 +85,6 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
      */
     @javax.annotation.Nonnull
     public void setAccessPackageId(@javax.annotation.Nullable final String value) {
-        this._accessPackageId = value;
+        this.accessPackageId = value;
     }
 }

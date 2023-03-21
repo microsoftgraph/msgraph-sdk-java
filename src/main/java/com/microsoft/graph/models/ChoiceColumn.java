@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChoiceColumn implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** If true, allows custom values that aren't in the configured choices. */
-    private Boolean _allowTextEntry;
+    private Boolean allowTextEntry;
     /** The list of values available for this column. */
-    private java.util.List<String> _choices;
+    private java.util.List<String> choices;
     /** How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons */
-    private String _displayAs;
+    private String displayAs;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new choiceColumn and sets the default values.
      * @return a void
@@ -43,7 +42,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the allowTextEntry property value. If true, allows custom values that aren't in the configured choices.
@@ -51,7 +50,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAllowTextEntry() {
-        return this._allowTextEntry;
+        return this.allowTextEntry;
     }
     /**
      * Gets the choices property value. The list of values available for this column.
@@ -59,7 +58,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getChoices() {
-        return this._choices;
+        return this.choices;
     }
     /**
      * Gets the displayAs property value. How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons
@@ -67,15 +66,15 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayAs() {
-        return this._displayAs;
+        return this.displayAs;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("allowTextEntry", (n) -> { this.setAllowTextEntry(n.getBooleanValue()); });
         deserializerMap.put("choices", (n) -> { this.setChoices(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("displayAs", (n) -> { this.setDisplayAs(n.getStringValue()); });
@@ -88,7 +87,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the allowTextEntry property value. If true, allows custom values that aren't in the configured choices.
@@ -120,7 +119,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowTextEntry(@javax.annotation.Nullable final Boolean value) {
-        this._allowTextEntry = value;
+        this.allowTextEntry = value;
     }
     /**
      * Sets the choices property value. The list of values available for this column.
@@ -129,7 +128,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setChoices(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._choices = value;
+        this.choices = value;
     }
     /**
      * Sets the displayAs property value. How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons
@@ -138,7 +137,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayAs(@javax.annotation.Nullable final String value) {
-        this._displayAs = value;
+        this.displayAs = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -147,6 +146,6 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

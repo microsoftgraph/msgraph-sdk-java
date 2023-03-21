@@ -1,28 +1,23 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.ChatMessageFromIdentitySet;
-import com.microsoft.graph.models.ChatMessageMentionedIdentitySet;
-import com.microsoft.graph.models.ChatMessageReactionIdentitySet;
-import com.microsoft.graph.models.SharePointIdentitySet;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentitySet implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Optional. The application associated with this action. */
-    private Identity _application;
+    private Identity application;
     /** Optional. The device associated with this action. */
-    private Identity _device;
+    private Identity device;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Optional. The user associated with this action. */
-    private Identity _user;
+    private Identity user;
     /**
      * Instantiates a new identitySet and sets the default values.
      * @return a void
@@ -57,7 +52,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the application property value. Optional. The application associated with this action.
@@ -65,7 +60,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Identity getApplication() {
-        return this._application;
+        return this.application;
     }
     /**
      * Gets the device property value. Optional. The device associated with this action.
@@ -73,15 +68,15 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Identity getDevice() {
-        return this._device;
+        return this.device;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("application", (n) -> { this.setApplication(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("device", (n) -> { this.setDevice(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -94,7 +89,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the user property value. Optional. The user associated with this action.
@@ -102,7 +97,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Identity getUser() {
-        return this._user;
+        return this.user;
     }
     /**
      * Serializes information the current object
@@ -125,7 +120,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the application property value. Optional. The application associated with this action.
@@ -134,7 +129,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setApplication(@javax.annotation.Nullable final Identity value) {
-        this._application = value;
+        this.application = value;
     }
     /**
      * Sets the device property value. Optional. The device associated with this action.
@@ -143,7 +138,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDevice(@javax.annotation.Nullable final Identity value) {
-        this._device = value;
+        this.device = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -152,7 +147,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the user property value. Optional. The user associated with this action.
@@ -161,6 +156,6 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUser(@javax.annotation.Nullable final Identity value) {
-        this._user = value;
+        this.user = value;
     }
 }
