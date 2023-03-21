@@ -64,6 +64,15 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
     public AllowInvitesFrom allowInvitesFrom;
 
     /**
+     * The Allow User Consent For Risky Apps.
+     * 
+     */
+    @SerializedName(value = "allowUserConsentForRiskyApps", alternate = {"AllowUserConsentForRiskyApps"})
+    @Expose
+	@Nullable
+    public Boolean allowUserConsentForRiskyApps;
+
+    /**
      * The Block Msol Power Shell.
      * To disable the use of MSOL PowerShell set this property to true. This will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
      */

@@ -29,7 +29,7 @@ public class DeletedTeam extends Entity implements IJsonBackedObject {
 
     /**
      * The Channels.
-     * 
+     * The channels that are either shared with this deleted team or created in this deleted team.
      */
     @SerializedName(value = "channels", alternate = {"Channels"})
     @Expose
