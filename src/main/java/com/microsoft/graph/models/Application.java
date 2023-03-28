@@ -265,7 +265,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Request Signature Verification.
-     * 
+     * Specifies whether this application requires Azure AD to verify the signed authentication requests.
      */
     @SerializedName(value = "requestSignatureVerification", alternate = {"RequestSignatureVerification"})
     @Expose
@@ -355,7 +355,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Management Policies.
-     * 
+     * The appManagementPolicy applied to this application.
      */
 	@Nullable
     public com.microsoft.graph.requests.AppManagementPolicyCollectionPage appManagementPolicies;

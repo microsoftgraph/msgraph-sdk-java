@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.SignInActivity;
 import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.AssignedPlan;
 import com.microsoft.graph.models.AuthorizationInfo;
@@ -68,6 +69,15 @@ import javax.annotation.Nonnull;
  */
 public class User extends DirectoryObject implements IJsonBackedObject {
 
+
+    /**
+     * The Sign In Activity.
+     * 
+     */
+    @SerializedName(value = "signInActivity", alternate = {"SignInActivity"})
+    @Expose
+	@Nullable
+    public SignInActivity signInActivity;
 
     /**
      * The Account Enabled.

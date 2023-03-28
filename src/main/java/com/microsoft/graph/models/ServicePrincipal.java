@@ -342,7 +342,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The App Management Policies.
-     * 
+     * The appManagementPolicy applied to this application.
      */
 	@Nullable
     public com.microsoft.graph.requests.AppManagementPolicyCollectionPage appManagementPolicies;
