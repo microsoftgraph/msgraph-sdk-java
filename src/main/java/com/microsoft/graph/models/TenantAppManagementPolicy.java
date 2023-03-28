@@ -28,7 +28,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements IJsonBacked
 
     /**
      * The Application Restrictions.
-     * 
+     * Restrictions that apply as default to all application objects in the tenant.
      */
     @SerializedName(value = "applicationRestrictions", alternate = {"ApplicationRestrictions"})
     @Expose
@@ -37,7 +37,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements IJsonBacked
 
     /**
      * The Is Enabled.
-     * 
+     * Denotes whether the policy is enabled. Default value is false.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -46,7 +46,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements IJsonBacked
 
     /**
      * The Service Principal Restrictions.
-     * 
+     * Restrictions that apply as default to all service principal objects in the tenant.
      */
     @SerializedName(value = "servicePrincipalRestrictions", alternate = {"ServicePrincipalRestrictions"})
     @Expose

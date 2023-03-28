@@ -40,7 +40,7 @@ public class RequestSignatureVerification implements IJsonBackedObject {
 
     /**
      * The Allowed Weak Algorithms.
-     * 
+     * Specifies which weak algorithms are allowed.  The possible values are: rsaSha1, unknownFutureValue.
      */
     @SerializedName(value = "allowedWeakAlgorithms", alternate = {"AllowedWeakAlgorithms"})
     @Expose
@@ -49,7 +49,7 @@ public class RequestSignatureVerification implements IJsonBackedObject {
 
     /**
      * The Is Signed Request Required.
-     * 
+     * Specifies whether signed authentication requests for this application should be required.
      */
     @SerializedName(value = "isSignedRequestRequired", alternate = {"IsSignedRequestRequired"})
     @Expose

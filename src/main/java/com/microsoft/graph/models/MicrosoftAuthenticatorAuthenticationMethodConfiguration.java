@@ -38,6 +38,15 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
     public MicrosoftAuthenticatorFeatureSettings featureSettings;
 
     /**
+     * The Is Software Oath Enabled.
+     * 
+     */
+    @SerializedName(value = "isSoftwareOathEnabled", alternate = {"IsSoftwareOathEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isSoftwareOathEnabled;
+
+    /**
      * The Include Targets.
      * A collection of groups that are enabled to use the authentication method. Expanded by default.
      */

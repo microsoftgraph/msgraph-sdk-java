@@ -8,6 +8,8 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.ExcludeTarget;
 import com.microsoft.graph.models.AuthenticationMethodState;
 import com.microsoft.graph.models.Entity;
 
@@ -25,6 +27,15 @@ import javax.annotation.Nonnull;
  */
 public class AuthenticationMethodConfiguration extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Exclude Targets.
+     * Groups of users that are excluded from a policy.
+     */
+    @SerializedName(value = "excludeTargets", alternate = {"ExcludeTargets"})
+    @Expose
+	@Nullable
+    public java.util.List<ExcludeTarget> excludeTargets;
 
     /**
      * The State.

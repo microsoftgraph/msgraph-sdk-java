@@ -49,7 +49,7 @@ public class PasswordCredentialConfiguration implements IJsonBackedObject {
 
     /**
      * The Restrict For Apps Created After Date Time.
-     * 
+     * Enforces the policy for an app created on or after the enforcement date. For existing applications, the enforcement date would be back dated. To apply to all applications, enforcement datetime would be null.
      */
     @SerializedName(value = "restrictForAppsCreatedAfterDateTime", alternate = {"RestrictForAppsCreatedAfterDateTime"})
     @Expose
@@ -58,7 +58,7 @@ public class PasswordCredentialConfiguration implements IJsonBackedObject {
 
     /**
      * The Restriction Type.
-     * 
+     * The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime,customPasswordAddition, unknownFutureValue. Each value of restrictionType can be used only once per policy.
      */
     @SerializedName(value = "restrictionType", alternate = {"RestrictionType"})
     @Expose
