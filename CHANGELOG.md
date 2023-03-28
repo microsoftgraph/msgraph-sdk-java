@@ -11,6 +11,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.51.0] - 2023-03-28
+
+### Added
+
+- Adds AuthenticationMethodConfiguration derived types instances
+- Added AuthenticationMethodsPolicyMigrationState
+
+
 ## [5.50.0] - 2023-03-21
 
 ### Added
