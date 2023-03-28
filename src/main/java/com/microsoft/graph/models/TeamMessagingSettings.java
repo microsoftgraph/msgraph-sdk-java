@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** If set to true, @channel mentions are allowed. */
-    private Boolean _allowChannelMentions;
+    private Boolean allowChannelMentions;
     /** If set to true, owners can delete any message. */
-    private Boolean _allowOwnerDeleteMessages;
+    private Boolean allowOwnerDeleteMessages;
     /** If set to true, @team mentions are allowed. */
-    private Boolean _allowTeamMentions;
+    private Boolean allowTeamMentions;
     /** If set to true, users can delete their messages. */
-    private Boolean _allowUserDeleteMessages;
+    private Boolean allowUserDeleteMessages;
     /** If set to true, users can edit their messages. */
-    private Boolean _allowUserEditMessages;
+    private Boolean allowUserEditMessages;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new teamMessagingSettings and sets the default values.
      * @return a void
@@ -47,7 +46,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the allowChannelMentions property value. If set to true, @channel mentions are allowed.
@@ -55,7 +54,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAllowChannelMentions() {
-        return this._allowChannelMentions;
+        return this.allowChannelMentions;
     }
     /**
      * Gets the allowOwnerDeleteMessages property value. If set to true, owners can delete any message.
@@ -63,7 +62,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAllowOwnerDeleteMessages() {
-        return this._allowOwnerDeleteMessages;
+        return this.allowOwnerDeleteMessages;
     }
     /**
      * Gets the allowTeamMentions property value. If set to true, @team mentions are allowed.
@@ -71,7 +70,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAllowTeamMentions() {
-        return this._allowTeamMentions;
+        return this.allowTeamMentions;
     }
     /**
      * Gets the allowUserDeleteMessages property value. If set to true, users can delete their messages.
@@ -79,7 +78,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAllowUserDeleteMessages() {
-        return this._allowUserDeleteMessages;
+        return this.allowUserDeleteMessages;
     }
     /**
      * Gets the allowUserEditMessages property value. If set to true, users can edit their messages.
@@ -87,15 +86,15 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAllowUserEditMessages() {
-        return this._allowUserEditMessages;
+        return this.allowUserEditMessages;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("allowChannelMentions", (n) -> { this.setAllowChannelMentions(n.getBooleanValue()); });
         deserializerMap.put("allowOwnerDeleteMessages", (n) -> { this.setAllowOwnerDeleteMessages(n.getBooleanValue()); });
         deserializerMap.put("allowTeamMentions", (n) -> { this.setAllowTeamMentions(n.getBooleanValue()); });
@@ -110,7 +109,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -135,7 +134,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the allowChannelMentions property value. If set to true, @channel mentions are allowed.
@@ -144,7 +143,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowChannelMentions(@javax.annotation.Nullable final Boolean value) {
-        this._allowChannelMentions = value;
+        this.allowChannelMentions = value;
     }
     /**
      * Sets the allowOwnerDeleteMessages property value. If set to true, owners can delete any message.
@@ -153,7 +152,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowOwnerDeleteMessages(@javax.annotation.Nullable final Boolean value) {
-        this._allowOwnerDeleteMessages = value;
+        this.allowOwnerDeleteMessages = value;
     }
     /**
      * Sets the allowTeamMentions property value. If set to true, @team mentions are allowed.
@@ -162,7 +161,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowTeamMentions(@javax.annotation.Nullable final Boolean value) {
-        this._allowTeamMentions = value;
+        this.allowTeamMentions = value;
     }
     /**
      * Sets the allowUserDeleteMessages property value. If set to true, users can delete their messages.
@@ -171,7 +170,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowUserDeleteMessages(@javax.annotation.Nullable final Boolean value) {
-        this._allowUserDeleteMessages = value;
+        this.allowUserDeleteMessages = value;
     }
     /**
      * Sets the allowUserEditMessages property value. If set to true, users can edit their messages.
@@ -180,7 +179,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowUserEditMessages(@javax.annotation.Nullable final Boolean value) {
-        this._allowUserEditMessages = value;
+        this.allowUserEditMessages = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -189,6 +188,6 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

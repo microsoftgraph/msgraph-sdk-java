@@ -4,28 +4,26 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getCachedReport method. */
 public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The groupBy property */
-    private java.util.List<String> _groupBy;
+    private java.util.List<String> groupBy;
     /** The id property */
-    private String _id;
+    private String id;
     /** The orderBy property */
-    private java.util.List<String> _orderBy;
+    private java.util.List<String> orderBy;
     /** The search property */
-    private String _search;
+    private String search;
     /** The select property */
-    private java.util.List<String> _select;
+    private java.util.List<String> select;
     /** The skip property */
-    private Integer _skip;
+    private Integer skip;
     /** The top property */
-    private Integer _top;
+    private Integer top;
     /**
      * Instantiates a new getCachedReportPostRequestBody and sets the default values.
      * @return a void
@@ -50,15 +48,15 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("groupBy", (n) -> { this.setGroupBy(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("orderBy", (n) -> { this.setOrderBy(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -74,7 +72,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public java.util.List<String> getGroupBy() {
-        return this._groupBy;
+        return this.groupBy;
     }
     /**
      * Gets the id property value. The id property
@@ -82,7 +80,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public String getId() {
-        return this._id;
+        return this.id;
     }
     /**
      * Gets the orderBy property value. The orderBy property
@@ -90,7 +88,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public java.util.List<String> getOrderBy() {
-        return this._orderBy;
+        return this.orderBy;
     }
     /**
      * Gets the search property value. The search property
@@ -98,7 +96,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public String getSearch() {
-        return this._search;
+        return this.search;
     }
     /**
      * Gets the select property value. The select property
@@ -106,7 +104,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSelect() {
-        return this._select;
+        return this.select;
     }
     /**
      * Gets the skip property value. The skip property
@@ -114,7 +112,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public Integer getSkip() {
-        return this._skip;
+        return this.skip;
     }
     /**
      * Gets the top property value. The top property
@@ -122,7 +120,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public Integer getTop() {
-        return this._top;
+        return this.top;
     }
     /**
      * Serializes information the current object
@@ -148,7 +146,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the groupBy property value. The groupBy property
@@ -157,7 +155,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public void setGroupBy(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._groupBy = value;
+        this.groupBy = value;
     }
     /**
      * Sets the id property value. The id property
@@ -166,7 +164,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+        this.id = value;
     }
     /**
      * Sets the orderBy property value. The orderBy property
@@ -175,7 +173,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public void setOrderBy(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._orderBy = value;
+        this.orderBy = value;
     }
     /**
      * Sets the search property value. The search property
@@ -184,7 +182,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public void setSearch(@javax.annotation.Nullable final String value) {
-        this._search = value;
+        this.search = value;
     }
     /**
      * Sets the select property value. The select property
@@ -193,7 +191,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public void setSelect(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._select = value;
+        this.select = value;
     }
     /**
      * Sets the skip property value. The skip property
@@ -202,7 +200,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public void setSkip(@javax.annotation.Nullable final Integer value) {
-        this._skip = value;
+        this.skip = value;
     }
     /**
      * Sets the top property value. The top property
@@ -211,6 +209,6 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public void setTop(@javax.annotation.Nullable final Integer value) {
-        this._top = value;
+        this.top = value;
     }
 }

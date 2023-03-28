@@ -5,27 +5,26 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalDate;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationStudent implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Birth date of the student. */
-    private LocalDate _birthDate;
+    private LocalDate birthDate;
     /** ID of the student in the source system. */
-    private String _externalId;
+    private String externalId;
     /** The possible values are: female, male, other, unknownFutureValue. */
-    private EducationGender _gender;
+    private EducationGender gender;
     /** Current grade level of the student. */
-    private String _grade;
+    private String grade;
     /** Year the student is graduating from the school. */
-    private String _graduationYear;
+    private String graduationYear;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Student Number. */
-    private String _studentNumber;
+    private String studentNumber;
     /**
      * Instantiates a new educationStudent and sets the default values.
      * @return a void
@@ -50,7 +49,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the birthDate property value. Birth date of the student.
@@ -58,7 +57,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public LocalDate getBirthDate() {
-        return this._birthDate;
+        return this.birthDate;
     }
     /**
      * Gets the externalId property value. ID of the student in the source system.
@@ -66,15 +65,15 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getExternalId() {
-        return this._externalId;
+        return this.externalId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("birthDate", (n) -> { this.setBirthDate(n.getLocalDateValue()); });
         deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
         deserializerMap.put("gender", (n) -> { this.setGender(n.getEnumValue(EducationGender.class)); });
@@ -90,7 +89,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public EducationGender getGender() {
-        return this._gender;
+        return this.gender;
     }
     /**
      * Gets the grade property value. Current grade level of the student.
@@ -98,7 +97,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getGrade() {
-        return this._grade;
+        return this.grade;
     }
     /**
      * Gets the graduationYear property value. Year the student is graduating from the school.
@@ -106,7 +105,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getGraduationYear() {
-        return this._graduationYear;
+        return this.graduationYear;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -114,7 +113,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the studentNumber property value. Student Number.
@@ -122,7 +121,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getStudentNumber() {
-        return this._studentNumber;
+        return this.studentNumber;
     }
     /**
      * Serializes information the current object
@@ -148,7 +147,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the birthDate property value. Birth date of the student.
@@ -157,7 +156,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setBirthDate(@javax.annotation.Nullable final LocalDate value) {
-        this._birthDate = value;
+        this.birthDate = value;
     }
     /**
      * Sets the externalId property value. ID of the student in the source system.
@@ -166,7 +165,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
-        this._externalId = value;
+        this.externalId = value;
     }
     /**
      * Sets the gender property value. The possible values are: female, male, other, unknownFutureValue.
@@ -175,7 +174,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setGender(@javax.annotation.Nullable final EducationGender value) {
-        this._gender = value;
+        this.gender = value;
     }
     /**
      * Sets the grade property value. Current grade level of the student.
@@ -184,7 +183,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setGrade(@javax.annotation.Nullable final String value) {
-        this._grade = value;
+        this.grade = value;
     }
     /**
      * Sets the graduationYear property value. Year the student is graduating from the school.
@@ -193,7 +192,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setGraduationYear(@javax.annotation.Nullable final String value) {
-        this._graduationYear = value;
+        this.graduationYear = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -202,7 +201,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the studentNumber property value. Student Number.
@@ -211,6 +210,6 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setStudentNumber(@javax.annotation.Nullable final String value) {
-        this._studentNumber = value;
+        this.studentNumber = value;
     }
 }

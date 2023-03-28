@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Represents the level to which app data is encrypted for managed apps */
 public enum ManagedAppDataEncryptionType implements ValuedEnum {
     /** App data is encrypted based on the default settings on the device. */
     UseDeviceSettings("useDeviceSettings"),

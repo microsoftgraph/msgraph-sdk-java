@@ -3,21 +3,20 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedDeviceOverview extends Entity implements Parsable {
     /** Distribution of Exchange Access State in Intune */
-    private DeviceExchangeAccessStateSummary _deviceExchangeAccessStateSummary;
+    private DeviceExchangeAccessStateSummary deviceExchangeAccessStateSummary;
     /** Device operating system summary. */
-    private DeviceOperatingSystemSummary _deviceOperatingSystemSummary;
+    private DeviceOperatingSystemSummary deviceOperatingSystemSummary;
     /** The number of devices enrolled in both MDM and EAS */
-    private Integer _dualEnrolledDeviceCount;
+    private Integer dualEnrolledDeviceCount;
     /** Total enrolled device count. Does not include PC devices managed via Intune PC Agent */
-    private Integer _enrolledDeviceCount;
+    private Integer enrolledDeviceCount;
     /** The number of devices enrolled in MDM */
-    private Integer _mdmEnrolledCount;
+    private Integer mdmEnrolledCount;
     /**
      * Instantiates a new managedDeviceOverview and sets the default values.
      * @return a void
@@ -42,7 +41,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceExchangeAccessStateSummary getDeviceExchangeAccessStateSummary() {
-        return this._deviceExchangeAccessStateSummary;
+        return this.deviceExchangeAccessStateSummary;
     }
     /**
      * Gets the deviceOperatingSystemSummary property value. Device operating system summary.
@@ -50,7 +49,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceOperatingSystemSummary getDeviceOperatingSystemSummary() {
-        return this._deviceOperatingSystemSummary;
+        return this.deviceOperatingSystemSummary;
     }
     /**
      * Gets the dualEnrolledDeviceCount property value. The number of devices enrolled in both MDM and EAS
@@ -58,7 +57,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getDualEnrolledDeviceCount() {
-        return this._dualEnrolledDeviceCount;
+        return this.dualEnrolledDeviceCount;
     }
     /**
      * Gets the enrolledDeviceCount property value. Total enrolled device count. Does not include PC devices managed via Intune PC Agent
@@ -66,15 +65,15 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getEnrolledDeviceCount() {
-        return this._enrolledDeviceCount;
+        return this.enrolledDeviceCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceExchangeAccessStateSummary", (n) -> { this.setDeviceExchangeAccessStateSummary(n.getObjectValue(DeviceExchangeAccessStateSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceOperatingSystemSummary", (n) -> { this.setDeviceOperatingSystemSummary(n.getObjectValue(DeviceOperatingSystemSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("dualEnrolledDeviceCount", (n) -> { this.setDualEnrolledDeviceCount(n.getIntegerValue()); });
@@ -88,7 +87,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getMdmEnrolledCount() {
-        return this._mdmEnrolledCount;
+        return this.mdmEnrolledCount;
     }
     /**
      * Serializes information the current object
@@ -112,7 +111,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceExchangeAccessStateSummary(@javax.annotation.Nullable final DeviceExchangeAccessStateSummary value) {
-        this._deviceExchangeAccessStateSummary = value;
+        this.deviceExchangeAccessStateSummary = value;
     }
     /**
      * Sets the deviceOperatingSystemSummary property value. Device operating system summary.
@@ -121,7 +120,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceOperatingSystemSummary(@javax.annotation.Nullable final DeviceOperatingSystemSummary value) {
-        this._deviceOperatingSystemSummary = value;
+        this.deviceOperatingSystemSummary = value;
     }
     /**
      * Sets the dualEnrolledDeviceCount property value. The number of devices enrolled in both MDM and EAS
@@ -130,7 +129,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDualEnrolledDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._dualEnrolledDeviceCount = value;
+        this.dualEnrolledDeviceCount = value;
     }
     /**
      * Sets the enrolledDeviceCount property value. Total enrolled device count. Does not include PC devices managed via Intune PC Agent
@@ -139,7 +138,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEnrolledDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._enrolledDeviceCount = value;
+        this.enrolledDeviceCount = value;
     }
     /**
      * Sets the mdmEnrolledCount property value. The number of devices enrolled in MDM
@@ -148,6 +147,6 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMdmEnrolledCount(@javax.annotation.Nullable final Integer value) {
-        this._mdmEnrolledCount = value;
+        this.mdmEnrolledCount = value;
     }
 }

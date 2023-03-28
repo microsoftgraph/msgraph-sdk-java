@@ -5,20 +5,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the translateExchangeIds method. */
 public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The InputIds property */
-    private java.util.List<String> _inputIds;
+    private java.util.List<String> inputIds;
     /** The SourceIdType property */
-    private ExchangeIdFormat _sourceIdType;
+    private ExchangeIdFormat sourceIdType;
     /** The TargetIdType property */
-    private ExchangeIdFormat _targetIdType;
+    private ExchangeIdFormat targetIdType;
     /**
      * Instantiates a new translateExchangeIdsPostRequestBody and sets the default values.
      * @return a void
@@ -43,18 +41,18 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
-        deserializerMap.put("inputIds", (n) -> { this.setInputIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("sourceIdType", (n) -> { this.setSourceIdType(n.getEnumValue(ExchangeIdFormat.class)); });
-        deserializerMap.put("targetIdType", (n) -> { this.setTargetIdType(n.getEnumValue(ExchangeIdFormat.class)); });
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("InputIds", (n) -> { this.setInputIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("SourceIdType", (n) -> { this.setSourceIdType(n.getEnumValue(ExchangeIdFormat.class)); });
+        deserializerMap.put("TargetIdType", (n) -> { this.setTargetIdType(n.getEnumValue(ExchangeIdFormat.class)); });
         return deserializerMap;
     }
     /**
@@ -63,7 +61,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public java.util.List<String> getInputIds() {
-        return this._inputIds;
+        return this.inputIds;
     }
     /**
      * Gets the sourceIdType property value. The SourceIdType property
@@ -71,7 +69,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public ExchangeIdFormat getSourceIdType() {
-        return this._sourceIdType;
+        return this.sourceIdType;
     }
     /**
      * Gets the targetIdType property value. The TargetIdType property
@@ -79,7 +77,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public ExchangeIdFormat getTargetIdType() {
-        return this._targetIdType;
+        return this.targetIdType;
     }
     /**
      * Serializes information the current object
@@ -89,9 +87,9 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeCollectionOfPrimitiveValues("inputIds", this.getInputIds());
-        writer.writeEnumValue("sourceIdType", this.getSourceIdType());
-        writer.writeEnumValue("targetIdType", this.getTargetIdType());
+        writer.writeCollectionOfPrimitiveValues("InputIds", this.getInputIds());
+        writer.writeEnumValue("SourceIdType", this.getSourceIdType());
+        writer.writeEnumValue("TargetIdType", this.getTargetIdType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -101,7 +99,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the inputIds property value. The InputIds property
@@ -110,7 +108,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setInputIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._inputIds = value;
+        this.inputIds = value;
     }
     /**
      * Sets the sourceIdType property value. The SourceIdType property
@@ -119,7 +117,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setSourceIdType(@javax.annotation.Nullable final ExchangeIdFormat value) {
-        this._sourceIdType = value;
+        this.sourceIdType = value;
     }
     /**
      * Sets the targetIdType property value. The TargetIdType property
@@ -128,6 +126,6 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setTargetIdType(@javax.annotation.Nullable final ExchangeIdFormat value) {
-        this._targetIdType = value;
+        this.targetIdType = value;
     }
 }

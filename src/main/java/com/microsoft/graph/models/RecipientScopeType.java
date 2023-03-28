@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the getMailTips method. */
 public enum RecipientScopeType implements ValuedEnum {
     None("none"),
     Internal("internal"),

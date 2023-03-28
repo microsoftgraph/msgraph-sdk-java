@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessSessionControls implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control. */
-    private ApplicationEnforcedRestrictionsSessionControl _applicationEnforcedRestrictions;
+    private ApplicationEnforcedRestrictionsSessionControl applicationEnforcedRestrictions;
     /** Session control to apply cloud app security. */
-    private CloudAppSecuritySessionControl _cloudAppSecurity;
+    private CloudAppSecuritySessionControl cloudAppSecurity;
     /** Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not. */
-    private Boolean _disableResilienceDefaults;
+    private Boolean disableResilienceDefaults;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly. */
-    private PersistentBrowserSessionControl _persistentBrowser;
+    private PersistentBrowserSessionControl persistentBrowser;
     /** Session control to enforce signin frequency. */
-    private SignInFrequencySessionControl _signInFrequency;
+    private SignInFrequencySessionControl signInFrequency;
     /**
      * Instantiates a new conditionalAccessSessionControls and sets the default values.
      * @return a void
@@ -47,7 +46,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the applicationEnforcedRestrictions property value. Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control.
@@ -55,7 +54,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nullable
     public ApplicationEnforcedRestrictionsSessionControl getApplicationEnforcedRestrictions() {
-        return this._applicationEnforcedRestrictions;
+        return this.applicationEnforcedRestrictions;
     }
     /**
      * Gets the cloudAppSecurity property value. Session control to apply cloud app security.
@@ -63,7 +62,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nullable
     public CloudAppSecuritySessionControl getCloudAppSecurity() {
-        return this._cloudAppSecurity;
+        return this.cloudAppSecurity;
     }
     /**
      * Gets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
@@ -71,15 +70,15 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nullable
     public Boolean getDisableResilienceDefaults() {
-        return this._disableResilienceDefaults;
+        return this.disableResilienceDefaults;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("applicationEnforcedRestrictions", (n) -> { this.setApplicationEnforcedRestrictions(n.getObjectValue(ApplicationEnforcedRestrictionsSessionControl::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudAppSecurity", (n) -> { this.setCloudAppSecurity(n.getObjectValue(CloudAppSecuritySessionControl::createFromDiscriminatorValue)); });
         deserializerMap.put("disableResilienceDefaults", (n) -> { this.setDisableResilienceDefaults(n.getBooleanValue()); });
@@ -94,7 +93,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the persistentBrowser property value. Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
@@ -102,7 +101,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nullable
     public PersistentBrowserSessionControl getPersistentBrowser() {
-        return this._persistentBrowser;
+        return this.persistentBrowser;
     }
     /**
      * Gets the signInFrequency property value. Session control to enforce signin frequency.
@@ -110,7 +109,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nullable
     public SignInFrequencySessionControl getSignInFrequency() {
-        return this._signInFrequency;
+        return this.signInFrequency;
     }
     /**
      * Serializes information the current object
@@ -135,7 +134,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the applicationEnforcedRestrictions property value. Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control.
@@ -144,7 +143,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nonnull
     public void setApplicationEnforcedRestrictions(@javax.annotation.Nullable final ApplicationEnforcedRestrictionsSessionControl value) {
-        this._applicationEnforcedRestrictions = value;
+        this.applicationEnforcedRestrictions = value;
     }
     /**
      * Sets the cloudAppSecurity property value. Session control to apply cloud app security.
@@ -153,7 +152,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nonnull
     public void setCloudAppSecurity(@javax.annotation.Nullable final CloudAppSecuritySessionControl value) {
-        this._cloudAppSecurity = value;
+        this.cloudAppSecurity = value;
     }
     /**
      * Sets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
@@ -162,7 +161,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nonnull
     public void setDisableResilienceDefaults(@javax.annotation.Nullable final Boolean value) {
-        this._disableResilienceDefaults = value;
+        this.disableResilienceDefaults = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -171,7 +170,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the persistentBrowser property value. Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
@@ -180,7 +179,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nonnull
     public void setPersistentBrowser(@javax.annotation.Nullable final PersistentBrowserSessionControl value) {
-        this._persistentBrowser = value;
+        this.persistentBrowser = value;
     }
     /**
      * Sets the signInFrequency property value. Session control to enforce signin frequency.
@@ -189,6 +188,6 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nonnull
     public void setSignInFrequency(@javax.annotation.Nullable final SignInFrequencySessionControl value) {
-        this._signInFrequency = value;
+        this.signInFrequency = value;
     }
 }

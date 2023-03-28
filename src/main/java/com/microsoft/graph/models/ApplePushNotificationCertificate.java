@@ -4,27 +4,26 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ApplePushNotificationCertificate extends Entity implements Parsable {
     /** Apple Id of the account used to create the MDM push certificate. */
-    private String _appleIdentifier;
+    private String appleIdentifier;
     /** Not yet documented */
-    private String _certificate;
+    private String certificate;
     /** Certificate serial number. This property is read-only. */
-    private String _certificateSerialNumber;
+    private String certificateSerialNumber;
     /** The reason the certificate upload failed. */
-    private String _certificateUploadFailureReason;
+    private String certificateUploadFailureReason;
     /** The certificate upload status. */
-    private String _certificateUploadStatus;
+    private String certificateUploadStatus;
     /** The expiration date and time for Apple push notification certificate. */
-    private OffsetDateTime _expirationDateTime;
+    private OffsetDateTime expirationDateTime;
     /** Last modified date and time for Apple push notification certificate. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** Topic Id. */
-    private String _topicIdentifier;
+    private String topicIdentifier;
     /**
      * Instantiates a new applePushNotificationCertificate and sets the default values.
      * @return a void
@@ -49,7 +48,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getAppleIdentifier() {
-        return this._appleIdentifier;
+        return this.appleIdentifier;
     }
     /**
      * Gets the certificate property value. Not yet documented
@@ -57,7 +56,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getCertificate() {
-        return this._certificate;
+        return this.certificate;
     }
     /**
      * Gets the certificateSerialNumber property value. Certificate serial number. This property is read-only.
@@ -65,7 +64,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getCertificateSerialNumber() {
-        return this._certificateSerialNumber;
+        return this.certificateSerialNumber;
     }
     /**
      * Gets the certificateUploadFailureReason property value. The reason the certificate upload failed.
@@ -73,7 +72,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getCertificateUploadFailureReason() {
-        return this._certificateUploadFailureReason;
+        return this.certificateUploadFailureReason;
     }
     /**
      * Gets the certificateUploadStatus property value. The certificate upload status.
@@ -81,7 +80,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getCertificateUploadStatus() {
-        return this._certificateUploadStatus;
+        return this.certificateUploadStatus;
     }
     /**
      * Gets the expirationDateTime property value. The expiration date and time for Apple push notification certificate.
@@ -89,15 +88,15 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this._expirationDateTime;
+        return this.expirationDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appleIdentifier", (n) -> { this.setAppleIdentifier(n.getStringValue()); });
         deserializerMap.put("certificate", (n) -> { this.setCertificate(n.getStringValue()); });
         deserializerMap.put("certificateSerialNumber", (n) -> { this.setCertificateSerialNumber(n.getStringValue()); });
@@ -114,7 +113,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the topicIdentifier property value. Topic Id.
@@ -122,7 +121,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getTopicIdentifier() {
-        return this._topicIdentifier;
+        return this.topicIdentifier;
     }
     /**
      * Serializes information the current object
@@ -148,7 +147,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setAppleIdentifier(@javax.annotation.Nullable final String value) {
-        this._appleIdentifier = value;
+        this.appleIdentifier = value;
     }
     /**
      * Sets the certificate property value. Not yet documented
@@ -157,7 +156,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setCertificate(@javax.annotation.Nullable final String value) {
-        this._certificate = value;
+        this.certificate = value;
     }
     /**
      * Sets the certificateSerialNumber property value. Certificate serial number. This property is read-only.
@@ -166,7 +165,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setCertificateSerialNumber(@javax.annotation.Nullable final String value) {
-        this._certificateSerialNumber = value;
+        this.certificateSerialNumber = value;
     }
     /**
      * Sets the certificateUploadFailureReason property value. The reason the certificate upload failed.
@@ -175,7 +174,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setCertificateUploadFailureReason(@javax.annotation.Nullable final String value) {
-        this._certificateUploadFailureReason = value;
+        this.certificateUploadFailureReason = value;
     }
     /**
      * Sets the certificateUploadStatus property value. The certificate upload status.
@@ -184,7 +183,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setCertificateUploadStatus(@javax.annotation.Nullable final String value) {
-        this._certificateUploadStatus = value;
+        this.certificateUploadStatus = value;
     }
     /**
      * Sets the expirationDateTime property value. The expiration date and time for Apple push notification certificate.
@@ -193,7 +192,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._expirationDateTime = value;
+        this.expirationDateTime = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Last modified date and time for Apple push notification certificate.
@@ -202,7 +201,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the topicIdentifier property value. Topic Id.
@@ -211,6 +210,6 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setTopicIdentifier(@javax.annotation.Nullable final String value) {
-        this._topicIdentifier = value;
+        this.topicIdentifier = value;
     }
 }

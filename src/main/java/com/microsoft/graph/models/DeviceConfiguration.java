@@ -1,63 +1,38 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AndroidCustomConfiguration;
-import com.microsoft.graph.models.AndroidGeneralDeviceConfiguration;
-import com.microsoft.graph.models.AndroidWorkProfileCustomConfiguration;
-import com.microsoft.graph.models.AndroidWorkProfileGeneralDeviceConfiguration;
-import com.microsoft.graph.models.AppleDeviceFeaturesConfigurationBase;
-import com.microsoft.graph.models.EditionUpgradeConfiguration;
-import com.microsoft.graph.models.IosCertificateProfile;
-import com.microsoft.graph.models.IosCustomConfiguration;
-import com.microsoft.graph.models.IosDeviceFeaturesConfiguration;
-import com.microsoft.graph.models.IosGeneralDeviceConfiguration;
-import com.microsoft.graph.models.IosUpdateConfiguration;
-import com.microsoft.graph.models.MacOSCustomConfiguration;
-import com.microsoft.graph.models.MacOSDeviceFeaturesConfiguration;
-import com.microsoft.graph.models.MacOSGeneralDeviceConfiguration;
-import com.microsoft.graph.models.SharedPCConfiguration;
-import com.microsoft.graph.models.Windows10CustomConfiguration;
-import com.microsoft.graph.models.Windows10EndpointProtectionConfiguration;
-import com.microsoft.graph.models.Windows10EnterpriseModernAppManagementConfiguration;
-import com.microsoft.graph.models.Windows10GeneralConfiguration;
-import com.microsoft.graph.models.Windows10SecureAssessmentConfiguration;
-import com.microsoft.graph.models.Windows10TeamGeneralConfiguration;
-import com.microsoft.graph.models.Windows81GeneralConfiguration;
-import com.microsoft.graph.models.WindowsDefenderAdvancedThreatProtectionConfiguration;
-import com.microsoft.graph.models.WindowsPhone81CustomConfiguration;
-import com.microsoft.graph.models.WindowsPhone81GeneralConfiguration;
-import com.microsoft.graph.models.WindowsUpdateForBusinessConfiguration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device Configuration. */
+/**
+ * Device Configuration.
+ */
 public class DeviceConfiguration extends Entity implements Parsable {
     /** The list of assignments for the device configuration profile. */
-    private java.util.List<DeviceConfigurationAssignment> _assignments;
+    private java.util.List<DeviceConfigurationAssignment> assignments;
     /** DateTime the object was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Admin provided description of the Device Configuration. */
-    private String _description;
+    private String description;
     /** Device Configuration Setting State Device Summary */
-    private java.util.List<SettingStateDeviceSummary> _deviceSettingStateSummaries;
+    private java.util.List<SettingStateDeviceSummary> deviceSettingStateSummaries;
     /** Device configuration installation status by device. */
-    private java.util.List<DeviceConfigurationDeviceStatus> _deviceStatuses;
+    private java.util.List<DeviceConfigurationDeviceStatus> deviceStatuses;
     /** Device Configuration devices status overview */
-    private DeviceConfigurationDeviceOverview _deviceStatusOverview;
+    private DeviceConfigurationDeviceOverview deviceStatusOverview;
     /** Admin provided name of the device configuration. */
-    private String _displayName;
+    private String displayName;
     /** DateTime the object was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** Device configuration installation status by user. */
-    private java.util.List<DeviceConfigurationUserStatus> _userStatuses;
+    private java.util.List<DeviceConfigurationUserStatus> userStatuses;
     /** Device Configuration users status overview */
-    private DeviceConfigurationUserOverview _userStatusOverview;
+    private DeviceConfigurationUserOverview userStatusOverview;
     /** Version of the device configuration. */
-    private Integer _version;
+    private Integer version;
     /**
      * Instantiates a new deviceConfiguration and sets the default values.
      * @return a void
@@ -114,7 +89,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceConfigurationAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * Gets the createdDateTime property value. DateTime the object was created.
@@ -122,7 +97,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. Admin provided description of the Device Configuration.
@@ -130,7 +105,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the deviceSettingStateSummaries property value. Device Configuration Setting State Device Summary
@@ -138,7 +113,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SettingStateDeviceSummary> getDeviceSettingStateSummaries() {
-        return this._deviceSettingStateSummaries;
+        return this.deviceSettingStateSummaries;
     }
     /**
      * Gets the deviceStatuses property value. Device configuration installation status by device.
@@ -146,7 +121,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceConfigurationDeviceStatus> getDeviceStatuses() {
-        return this._deviceStatuses;
+        return this.deviceStatuses;
     }
     /**
      * Gets the deviceStatusOverview property value. Device Configuration devices status overview
@@ -154,7 +129,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceConfigurationDeviceOverview getDeviceStatusOverview() {
-        return this._deviceStatusOverview;
+        return this.deviceStatusOverview;
     }
     /**
      * Gets the displayName property value. Admin provided name of the device configuration.
@@ -162,15 +137,15 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(DeviceConfigurationAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -190,7 +165,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the userStatuses property value. Device configuration installation status by user.
@@ -198,7 +173,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceConfigurationUserStatus> getUserStatuses() {
-        return this._userStatuses;
+        return this.userStatuses;
     }
     /**
      * Gets the userStatusOverview property value. Device Configuration users status overview
@@ -206,7 +181,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceConfigurationUserOverview getUserStatusOverview() {
-        return this._userStatusOverview;
+        return this.userStatusOverview;
     }
     /**
      * Gets the version property value. Version of the device configuration.
@@ -214,7 +189,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
@@ -244,7 +219,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<DeviceConfigurationAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the createdDateTime property value. DateTime the object was created.
@@ -253,7 +228,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Admin provided description of the Device Configuration.
@@ -262,7 +237,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the deviceSettingStateSummaries property value. Device Configuration Setting State Device Summary
@@ -271,7 +246,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceSettingStateSummaries(@javax.annotation.Nullable final java.util.List<SettingStateDeviceSummary> value) {
-        this._deviceSettingStateSummaries = value;
+        this.deviceSettingStateSummaries = value;
     }
     /**
      * Sets the deviceStatuses property value. Device configuration installation status by device.
@@ -280,7 +255,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceStatuses(@javax.annotation.Nullable final java.util.List<DeviceConfigurationDeviceStatus> value) {
-        this._deviceStatuses = value;
+        this.deviceStatuses = value;
     }
     /**
      * Sets the deviceStatusOverview property value. Device Configuration devices status overview
@@ -289,7 +264,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceStatusOverview(@javax.annotation.Nullable final DeviceConfigurationDeviceOverview value) {
-        this._deviceStatusOverview = value;
+        this.deviceStatusOverview = value;
     }
     /**
      * Sets the displayName property value. Admin provided name of the device configuration.
@@ -298,7 +273,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
@@ -307,7 +282,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the userStatuses property value. Device configuration installation status by user.
@@ -316,7 +291,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserStatuses(@javax.annotation.Nullable final java.util.List<DeviceConfigurationUserStatus> value) {
-        this._userStatuses = value;
+        this.userStatuses = value;
     }
     /**
      * Sets the userStatusOverview property value. Device Configuration users status overview
@@ -325,7 +300,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserStatusOverview(@javax.annotation.Nullable final DeviceConfigurationUserOverview value) {
-        this._userStatusOverview = value;
+        this.userStatusOverview = value;
     }
     /**
      * Sets the version property value. Version of the device configuration.
@@ -334,6 +309,6 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
-        this._version = value;
+        this.version = value;
     }
 }

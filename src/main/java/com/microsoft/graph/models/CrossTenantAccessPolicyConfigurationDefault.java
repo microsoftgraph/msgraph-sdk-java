@@ -3,23 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Parsable {
     /** Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B collaboration. */
-    private CrossTenantAccessPolicyB2BSetting _b2bCollaborationInbound;
+    private CrossTenantAccessPolicyB2BSetting b2bCollaborationInbound;
     /** Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration. */
-    private CrossTenantAccessPolicyB2BSetting _b2bCollaborationOutbound;
+    private CrossTenantAccessPolicyB2BSetting b2bCollaborationOutbound;
     /** Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B direct connect. */
-    private CrossTenantAccessPolicyB2BSetting _b2bDirectConnectInbound;
+    private CrossTenantAccessPolicyB2BSetting b2bDirectConnectInbound;
     /** Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect. */
-    private CrossTenantAccessPolicyB2BSetting _b2bDirectConnectOutbound;
+    private CrossTenantAccessPolicyB2BSetting b2bDirectConnectOutbound;
     /** Determines the default configuration for trusting other Conditional Access claims from external Azure AD organizations. */
-    private CrossTenantAccessPolicyInboundTrust _inboundTrust;
+    private CrossTenantAccessPolicyInboundTrust inboundTrust;
     /** If true, the default configuration is set to the system default configuration. If false, the default settings have been customized. */
-    private Boolean _isServiceDefault;
+    private Boolean isServiceDefault;
     /**
      * Instantiates a new crossTenantAccessPolicyConfigurationDefault and sets the default values.
      * @return a void
@@ -44,7 +43,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @javax.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bCollaborationInbound() {
-        return this._b2bCollaborationInbound;
+        return this.b2bCollaborationInbound;
     }
     /**
      * Gets the b2bCollaborationOutbound property value. Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
@@ -52,7 +51,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @javax.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bCollaborationOutbound() {
-        return this._b2bCollaborationOutbound;
+        return this.b2bCollaborationOutbound;
     }
     /**
      * Gets the b2bDirectConnectInbound property value. Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B direct connect.
@@ -60,7 +59,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @javax.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bDirectConnectInbound() {
-        return this._b2bDirectConnectInbound;
+        return this.b2bDirectConnectInbound;
     }
     /**
      * Gets the b2bDirectConnectOutbound property value. Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
@@ -68,15 +67,15 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @javax.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bDirectConnectOutbound() {
-        return this._b2bDirectConnectOutbound;
+        return this.b2bDirectConnectOutbound;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("b2bCollaborationInbound", (n) -> { this.setB2bCollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationOutbound", (n) -> { this.setB2bCollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bDirectConnectInbound", (n) -> { this.setB2bDirectConnectInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
@@ -91,7 +90,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @javax.annotation.Nullable
     public CrossTenantAccessPolicyInboundTrust getInboundTrust() {
-        return this._inboundTrust;
+        return this.inboundTrust;
     }
     /**
      * Gets the isServiceDefault property value. If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
@@ -99,7 +98,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @javax.annotation.Nullable
     public Boolean getIsServiceDefault() {
-        return this._isServiceDefault;
+        return this.isServiceDefault;
     }
     /**
      * Serializes information the current object
@@ -124,7 +123,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @javax.annotation.Nonnull
     public void setB2bCollaborationInbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
-        this._b2bCollaborationInbound = value;
+        this.b2bCollaborationInbound = value;
     }
     /**
      * Sets the b2bCollaborationOutbound property value. Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
@@ -133,7 +132,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @javax.annotation.Nonnull
     public void setB2bCollaborationOutbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
-        this._b2bCollaborationOutbound = value;
+        this.b2bCollaborationOutbound = value;
     }
     /**
      * Sets the b2bDirectConnectInbound property value. Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B direct connect.
@@ -142,7 +141,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @javax.annotation.Nonnull
     public void setB2bDirectConnectInbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
-        this._b2bDirectConnectInbound = value;
+        this.b2bDirectConnectInbound = value;
     }
     /**
      * Sets the b2bDirectConnectOutbound property value. Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
@@ -151,7 +150,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @javax.annotation.Nonnull
     public void setB2bDirectConnectOutbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
-        this._b2bDirectConnectOutbound = value;
+        this.b2bDirectConnectOutbound = value;
     }
     /**
      * Sets the inboundTrust property value. Determines the default configuration for trusting other Conditional Access claims from external Azure AD organizations.
@@ -160,7 +159,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @javax.annotation.Nonnull
     public void setInboundTrust(@javax.annotation.Nullable final CrossTenantAccessPolicyInboundTrust value) {
-        this._inboundTrust = value;
+        this.inboundTrust = value;
     }
     /**
      * Sets the isServiceDefault property value. If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
@@ -169,6 +168,6 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @javax.annotation.Nonnull
     public void setIsServiceDefault(@javax.annotation.Nullable final Boolean value) {
-        this._isServiceDefault = value;
+        this.isServiceDefault = value;
     }
 }

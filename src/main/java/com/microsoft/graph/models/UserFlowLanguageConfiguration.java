@@ -3,20 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class UserFlowLanguageConfiguration extends Entity implements Parsable {
     /** Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification. */
-    private java.util.List<UserFlowLanguagePage> _defaultPages;
+    private java.util.List<UserFlowLanguagePage> defaultPages;
     /** The language name to display. This property is read-only. */
-    private String _displayName;
+    private String displayName;
     /** Indicates whether the language is enabled within the user flow. */
-    private Boolean _isEnabled;
+    private Boolean isEnabled;
     /** Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages). */
-    private java.util.List<UserFlowLanguagePage> _overridesPages;
+    private java.util.List<UserFlowLanguagePage> overridesPages;
     /**
      * Instantiates a new userFlowLanguageConfiguration and sets the default values.
      * @return a void
@@ -41,7 +39,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UserFlowLanguagePage> getDefaultPages() {
-        return this._defaultPages;
+        return this.defaultPages;
     }
     /**
      * Gets the displayName property value. The language name to display. This property is read-only.
@@ -49,15 +47,15 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("defaultPages", (n) -> { this.setDefaultPages(n.getCollectionOfObjectValues(UserFlowLanguagePage::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
@@ -70,7 +68,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this._isEnabled;
+        return this.isEnabled;
     }
     /**
      * Gets the overridesPages property value. Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages).
@@ -78,7 +76,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UserFlowLanguagePage> getOverridesPages() {
-        return this._overridesPages;
+        return this.overridesPages;
     }
     /**
      * Serializes information the current object
@@ -101,7 +99,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDefaultPages(@javax.annotation.Nullable final java.util.List<UserFlowLanguagePage> value) {
-        this._defaultPages = value;
+        this.defaultPages = value;
     }
     /**
      * Sets the displayName property value. The language name to display. This property is read-only.
@@ -110,7 +108,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the isEnabled property value. Indicates whether the language is enabled within the user flow.
@@ -119,7 +117,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isEnabled = value;
+        this.isEnabled = value;
     }
     /**
      * Sets the overridesPages property value. Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages).
@@ -128,6 +126,6 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOverridesPages(@javax.annotation.Nullable final java.util.List<UserFlowLanguagePage> value) {
-        this._overridesPages = value;
+        this.overridesPages = value;
     }
 }

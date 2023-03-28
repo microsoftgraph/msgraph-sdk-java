@@ -4,31 +4,30 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackage extends Entity implements Parsable {
     /** The access packages that are incompatible with this package. Read-only. */
-    private java.util.List<AccessPackage> _accessPackagesIncompatibleWith;
+    private java.util.List<AccessPackage> accessPackagesIncompatibleWith;
     /** The assignmentPolicies property */
-    private java.util.List<AccessPackageAssignmentPolicy> _assignmentPolicies;
+    private java.util.List<AccessPackageAssignmentPolicy> assignmentPolicies;
     /** The catalog property */
-    private AccessPackageCatalog _catalog;
+    private AccessPackageCatalog catalog;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The description of the access package. */
-    private String _description;
+    private String description;
     /** The display name of the access package. Supports $filter (eq, contains). */
-    private String _displayName;
+    private String displayName;
     /** The access packages whose assigned users are ineligible to be assigned this access package. */
-    private java.util.List<AccessPackage> _incompatibleAccessPackages;
+    private java.util.List<AccessPackage> incompatibleAccessPackages;
     /** The groups whose members are ineligible to be assigned this access package. */
-    private java.util.List<Group> _incompatibleGroups;
+    private java.util.List<Group> incompatibleGroups;
     /** Whether the access package is hidden from the requestor. */
-    private Boolean _isHidden;
+    private Boolean isHidden;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
-    private OffsetDateTime _modifiedDateTime;
+    private OffsetDateTime modifiedDateTime;
     /**
      * Instantiates a new accessPackage and sets the default values.
      * @return a void
@@ -53,7 +52,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AccessPackage> getAccessPackagesIncompatibleWith() {
-        return this._accessPackagesIncompatibleWith;
+        return this.accessPackagesIncompatibleWith;
     }
     /**
      * Gets the assignmentPolicies property value. The assignmentPolicies property
@@ -61,7 +60,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AccessPackageAssignmentPolicy> getAssignmentPolicies() {
-        return this._assignmentPolicies;
+        return this.assignmentPolicies;
     }
     /**
      * Gets the catalog property value. The catalog property
@@ -69,7 +68,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackageCatalog getCatalog() {
-        return this._catalog;
+        return this.catalog;
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -77,7 +76,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. The description of the access package.
@@ -85,7 +84,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The display name of the access package. Supports $filter (eq, contains).
@@ -93,15 +92,15 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackagesIncompatibleWith", (n) -> { this.setAccessPackagesIncompatibleWith(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
         deserializerMap.put("assignmentPolicies", (n) -> { this.setAssignmentPolicies(n.getCollectionOfObjectValues(AccessPackageAssignmentPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("catalog", (n) -> { this.setCatalog(n.getObjectValue(AccessPackageCatalog::createFromDiscriminatorValue)); });
@@ -120,7 +119,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AccessPackage> getIncompatibleAccessPackages() {
-        return this._incompatibleAccessPackages;
+        return this.incompatibleAccessPackages;
     }
     /**
      * Gets the incompatibleGroups property value. The groups whose members are ineligible to be assigned this access package.
@@ -128,7 +127,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Group> getIncompatibleGroups() {
-        return this._incompatibleGroups;
+        return this.incompatibleGroups;
     }
     /**
      * Gets the isHidden property value. Whether the access package is hidden from the requestor.
@@ -136,7 +135,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsHidden() {
-        return this._isHidden;
+        return this.isHidden;
     }
     /**
      * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -144,7 +143,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this._modifiedDateTime;
+        return this.modifiedDateTime;
     }
     /**
      * Serializes information the current object
@@ -173,7 +172,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAccessPackagesIncompatibleWith(@javax.annotation.Nullable final java.util.List<AccessPackage> value) {
-        this._accessPackagesIncompatibleWith = value;
+        this.accessPackagesIncompatibleWith = value;
     }
     /**
      * Sets the assignmentPolicies property value. The assignmentPolicies property
@@ -182,7 +181,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAssignmentPolicies(@javax.annotation.Nullable final java.util.List<AccessPackageAssignmentPolicy> value) {
-        this._assignmentPolicies = value;
+        this.assignmentPolicies = value;
     }
     /**
      * Sets the catalog property value. The catalog property
@@ -191,7 +190,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCatalog(@javax.annotation.Nullable final AccessPackageCatalog value) {
-        this._catalog = value;
+        this.catalog = value;
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -200,7 +199,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description of the access package.
@@ -209,7 +208,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The display name of the access package. Supports $filter (eq, contains).
@@ -218,7 +217,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the incompatibleAccessPackages property value. The access packages whose assigned users are ineligible to be assigned this access package.
@@ -227,7 +226,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIncompatibleAccessPackages(@javax.annotation.Nullable final java.util.List<AccessPackage> value) {
-        this._incompatibleAccessPackages = value;
+        this.incompatibleAccessPackages = value;
     }
     /**
      * Sets the incompatibleGroups property value. The groups whose members are ineligible to be assigned this access package.
@@ -236,7 +235,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIncompatibleGroups(@javax.annotation.Nullable final java.util.List<Group> value) {
-        this._incompatibleGroups = value;
+        this.incompatibleGroups = value;
     }
     /**
      * Sets the isHidden property value. Whether the access package is hidden from the requestor.
@@ -245,7 +244,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsHidden(@javax.annotation.Nullable final Boolean value) {
-        this._isHidden = value;
+        this.isHidden = value;
     }
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -254,6 +253,6 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._modifiedDateTime = value;
+        this.modifiedDateTime = value;
     }
 }

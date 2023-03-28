@@ -1,435 +1,16 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AadUserConversationMember;
-import com.microsoft.graph.models.AccessPackage;
-import com.microsoft.graph.models.AccessPackageAssignment;
-import com.microsoft.graph.models.AccessPackageAssignmentPolicy;
-import com.microsoft.graph.models.AccessPackageAssignmentRequest;
-import com.microsoft.graph.models.AccessPackageCatalog;
-import com.microsoft.graph.models.AccessPackageSubject;
-import com.microsoft.graph.models.AccessReviewHistoryDefinition;
-import com.microsoft.graph.models.AccessReviewHistoryInstance;
-import com.microsoft.graph.models.AccessReviewInstance;
-import com.microsoft.graph.models.AccessReviewInstanceDecisionItem;
-import com.microsoft.graph.models.AccessReviewReviewer;
-import com.microsoft.graph.models.AccessReviewScheduleDefinition;
-import com.microsoft.graph.models.AccessReviewSet;
-import com.microsoft.graph.models.AccessReviewStage;
-import com.microsoft.graph.models.ActivityBasedTimeoutPolicy;
-import com.microsoft.graph.models.ActivityHistoryItem;
-import com.microsoft.graph.models.AddLargeGalleryViewOperation;
-import com.microsoft.graph.models.AdminConsentRequestPolicy;
-import com.microsoft.graph.models.AdministrativeUnit;
-import com.microsoft.graph.models.Agreement;
-import com.microsoft.graph.models.AgreementAcceptance;
-import com.microsoft.graph.models.AgreementFile;
-import com.microsoft.graph.models.AgreementFileLocalization;
-import com.microsoft.graph.models.AgreementFileProperties;
-import com.microsoft.graph.models.AgreementFileVersion;
-import com.microsoft.graph.models.Alert;
-import com.microsoft.graph.models.AndroidCompliancePolicy;
-import com.microsoft.graph.models.AndroidCustomConfiguration;
-import com.microsoft.graph.models.AndroidGeneralDeviceConfiguration;
-import com.microsoft.graph.models.AndroidLobApp;
-import com.microsoft.graph.models.AndroidManagedAppProtection;
-import com.microsoft.graph.models.AndroidManagedAppRegistration;
-import com.microsoft.graph.models.AndroidStoreApp;
-import com.microsoft.graph.models.AndroidWorkProfileCompliancePolicy;
-import com.microsoft.graph.models.AndroidWorkProfileCustomConfiguration;
-import com.microsoft.graph.models.AndroidWorkProfileGeneralDeviceConfiguration;
-import com.microsoft.graph.models.AnonymousGuestConversationMember;
-import com.microsoft.graph.models.AppCatalogs;
-import com.microsoft.graph.models.AppConsentApprovalRoute;
-import com.microsoft.graph.models.AppConsentRequest;
-import com.microsoft.graph.models.AppleDeviceFeaturesConfigurationBase;
-import com.microsoft.graph.models.AppleManagedIdentityProvider;
-import com.microsoft.graph.models.ApplePushNotificationCertificate;
-import com.microsoft.graph.models.Application;
-import com.microsoft.graph.models.ApplicationTemplate;
-import com.microsoft.graph.models.AppRoleAssignment;
-import com.microsoft.graph.models.Approval;
-import com.microsoft.graph.models.ApprovalStage;
-import com.microsoft.graph.models.AppScope;
-import com.microsoft.graph.models.AssociatedTeamInfo;
-import com.microsoft.graph.models.Attachment;
-import com.microsoft.graph.models.AttachmentBase;
-import com.microsoft.graph.models.AttachmentSession;
-import com.microsoft.graph.models.AttackSimulationRoot;
-import com.microsoft.graph.models.AttendanceRecord;
-import com.microsoft.graph.models.AudioRoutingGroup;
-import com.microsoft.graph.models.AuditEvent;
-import com.microsoft.graph.models.AuditLogRoot;
-import com.microsoft.graph.models.Authentication;
-import com.microsoft.graph.models.AuthenticationContextClassReference;
-import com.microsoft.graph.models.AuthenticationFlowsPolicy;
-import com.microsoft.graph.models.AuthenticationMethod;
-import com.microsoft.graph.models.AuthenticationMethodConfiguration;
-import com.microsoft.graph.models.AuthenticationMethodsPolicy;
-import com.microsoft.graph.models.AuthenticationMethodTarget;
-import com.microsoft.graph.models.AuthoredNote;
-import com.microsoft.graph.models.AuthorizationPolicy;
-import com.microsoft.graph.models.B2xIdentityUserFlow;
-import com.microsoft.graph.models.BaseItem;
-import com.microsoft.graph.models.BaseItemVersion;
-import com.microsoft.graph.models.Bitlocker;
-import com.microsoft.graph.models.BitlockerRecoveryKey;
-import com.microsoft.graph.models.BookingAppointment;
-import com.microsoft.graph.models.BookingBusiness;
-import com.microsoft.graph.models.BookingCurrency;
-import com.microsoft.graph.models.BookingCustomer;
-import com.microsoft.graph.models.BookingCustomerBase;
-import com.microsoft.graph.models.BookingCustomQuestion;
-import com.microsoft.graph.models.BookingService;
-import com.microsoft.graph.models.BookingStaffMember;
-import com.microsoft.graph.models.BookingStaffMemberBase;
-import com.microsoft.graph.models.BuiltInIdentityProvider;
-import com.microsoft.graph.models.Calendar;
-import com.microsoft.graph.models.CalendarGroup;
-import com.microsoft.graph.models.CalendarPermission;
-import com.microsoft.graph.models.CalendarSharingMessage;
-import com.microsoft.graph.models.Call;
 import com.microsoft.graph.models.callrecords.CallRecord;
 import com.microsoft.graph.models.callrecords.Segment;
 import com.microsoft.graph.models.callrecords.Session;
-import com.microsoft.graph.models.CancelMediaProcessingOperation;
-import com.microsoft.graph.models.CertificateBasedAuthConfiguration;
-import com.microsoft.graph.models.ChangeTrackedEntity;
-import com.microsoft.graph.models.Channel;
-import com.microsoft.graph.models.Chat;
-import com.microsoft.graph.models.ChatMessage;
-import com.microsoft.graph.models.ChatMessageHostedContent;
-import com.microsoft.graph.models.ChatMessageInfo;
-import com.microsoft.graph.models.ChecklistItem;
-import com.microsoft.graph.models.ClaimsMappingPolicy;
-import com.microsoft.graph.models.CloudCommunications;
-import com.microsoft.graph.models.ColumnDefinition;
-import com.microsoft.graph.models.ColumnLink;
-import com.microsoft.graph.models.CommsOperation;
-import com.microsoft.graph.models.ComplianceManagementPartner;
-import com.microsoft.graph.models.ConditionalAccessPolicy;
-import com.microsoft.graph.models.ConditionalAccessRoot;
-import com.microsoft.graph.models.ConditionalAccessTemplate;
-import com.microsoft.graph.models.ConnectedOrganization;
-import com.microsoft.graph.models.Contact;
-import com.microsoft.graph.models.ContactFolder;
-import com.microsoft.graph.models.ContentSharingSession;
-import com.microsoft.graph.models.ContentType;
-import com.microsoft.graph.models.Contract;
-import com.microsoft.graph.models.Conversation;
-import com.microsoft.graph.models.ConversationMember;
-import com.microsoft.graph.models.ConversationThread;
-import com.microsoft.graph.models.CountryNamedLocation;
-import com.microsoft.graph.models.CrossTenantAccessPolicy;
-import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationDefault;
-import com.microsoft.graph.models.DataPolicyOperation;
-import com.microsoft.graph.models.DefaultManagedAppProtection;
-import com.microsoft.graph.models.DelegatedPermissionClassification;
-import com.microsoft.graph.models.DetectedApp;
-import com.microsoft.graph.models.Device;
-import com.microsoft.graph.models.DeviceAndAppManagementRoleAssignment;
-import com.microsoft.graph.models.DeviceAndAppManagementRoleDefinition;
-import com.microsoft.graph.models.DeviceAppManagement;
-import com.microsoft.graph.models.DeviceCategory;
-import com.microsoft.graph.models.DeviceComplianceActionItem;
-import com.microsoft.graph.models.DeviceComplianceDeviceOverview;
-import com.microsoft.graph.models.DeviceComplianceDeviceStatus;
-import com.microsoft.graph.models.DeviceCompliancePolicy;
-import com.microsoft.graph.models.DeviceCompliancePolicyAssignment;
-import com.microsoft.graph.models.DeviceCompliancePolicyDeviceStateSummary;
-import com.microsoft.graph.models.DeviceCompliancePolicySettingStateSummary;
-import com.microsoft.graph.models.DeviceCompliancePolicyState;
-import com.microsoft.graph.models.DeviceComplianceScheduledActionForRule;
-import com.microsoft.graph.models.DeviceComplianceSettingState;
-import com.microsoft.graph.models.DeviceComplianceUserOverview;
-import com.microsoft.graph.models.DeviceComplianceUserStatus;
-import com.microsoft.graph.models.DeviceConfiguration;
-import com.microsoft.graph.models.DeviceConfigurationAssignment;
-import com.microsoft.graph.models.DeviceConfigurationDeviceOverview;
-import com.microsoft.graph.models.DeviceConfigurationDeviceStateSummary;
-import com.microsoft.graph.models.DeviceConfigurationDeviceStatus;
-import com.microsoft.graph.models.DeviceConfigurationState;
-import com.microsoft.graph.models.DeviceConfigurationUserOverview;
-import com.microsoft.graph.models.DeviceConfigurationUserStatus;
-import com.microsoft.graph.models.DeviceEnrollmentConfiguration;
-import com.microsoft.graph.models.DeviceEnrollmentLimitConfiguration;
-import com.microsoft.graph.models.DeviceEnrollmentPlatformRestrictionsConfiguration;
-import com.microsoft.graph.models.DeviceEnrollmentWindowsHelloForBusinessConfiguration;
-import com.microsoft.graph.models.DeviceInstallState;
-import com.microsoft.graph.models.DeviceManagement;
-import com.microsoft.graph.models.DeviceManagementExchangeConnector;
-import com.microsoft.graph.models.DeviceManagementExportJob;
-import com.microsoft.graph.models.DeviceManagementPartner;
-import com.microsoft.graph.models.DeviceManagementReports;
-import com.microsoft.graph.models.DeviceManagementTroubleshootingEvent;
-import com.microsoft.graph.models.Directory;
-import com.microsoft.graph.models.DirectoryAudit;
-import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.models.DirectoryObjectPartnerReference;
-import com.microsoft.graph.models.DirectoryRole;
-import com.microsoft.graph.models.DirectoryRoleTemplate;
-import com.microsoft.graph.models.DocumentSetVersion;
-import com.microsoft.graph.models.Domain;
-import com.microsoft.graph.models.DomainDnsCnameRecord;
-import com.microsoft.graph.models.DomainDnsMxRecord;
-import com.microsoft.graph.models.DomainDnsRecord;
-import com.microsoft.graph.models.DomainDnsSrvRecord;
-import com.microsoft.graph.models.DomainDnsTxtRecord;
-import com.microsoft.graph.models.DomainDnsUnavailableRecord;
-import com.microsoft.graph.models.Drive;
-import com.microsoft.graph.models.DriveItem;
-import com.microsoft.graph.models.DriveItemVersion;
-import com.microsoft.graph.models.EBookInstallSummary;
-import com.microsoft.graph.models.EditionUpgradeConfiguration;
-import com.microsoft.graph.models.EducationAssignment;
-import com.microsoft.graph.models.EducationAssignmentDefaults;
-import com.microsoft.graph.models.EducationAssignmentResource;
-import com.microsoft.graph.models.EducationAssignmentSettings;
-import com.microsoft.graph.models.EducationCategory;
-import com.microsoft.graph.models.EducationClass;
-import com.microsoft.graph.models.EducationFeedbackOutcome;
-import com.microsoft.graph.models.EducationFeedbackResourceOutcome;
-import com.microsoft.graph.models.EducationOrganization;
-import com.microsoft.graph.models.EducationOutcome;
-import com.microsoft.graph.models.EducationPointsOutcome;
-import com.microsoft.graph.models.EducationRubric;
-import com.microsoft.graph.models.EducationRubricOutcome;
-import com.microsoft.graph.models.EducationSchool;
-import com.microsoft.graph.models.EducationSubmission;
-import com.microsoft.graph.models.EducationSubmissionResource;
-import com.microsoft.graph.models.EducationUser;
-import com.microsoft.graph.models.EmailAuthenticationMethod;
-import com.microsoft.graph.models.EmailAuthenticationMethodConfiguration;
-import com.microsoft.graph.models.EmailFileAssessmentRequest;
-import com.microsoft.graph.models.Endpoint;
-import com.microsoft.graph.models.EnrollmentConfigurationAssignment;
-import com.microsoft.graph.models.EnrollmentTroubleshootingEvent;
-import com.microsoft.graph.models.EntitlementManagement;
-import com.microsoft.graph.models.EntitlementManagementSettings;
-import com.microsoft.graph.models.Event;
-import com.microsoft.graph.models.EventMessage;
-import com.microsoft.graph.models.EventMessageRequest;
-import com.microsoft.graph.models.EventMessageResponse;
-import com.microsoft.graph.models.Extension;
-import com.microsoft.graph.models.ExtensionProperty;
 import com.microsoft.graph.models.externalconnectors.ConnectionOperation;
 import com.microsoft.graph.models.externalconnectors.ExternalConnection;
 import com.microsoft.graph.models.externalconnectors.ExternalGroup;
 import com.microsoft.graph.models.externalconnectors.ExternalItem;
 import com.microsoft.graph.models.externalconnectors.Identity;
 import com.microsoft.graph.models.externalconnectors.Schema;
-import com.microsoft.graph.models.ExternalDomainName;
-import com.microsoft.graph.models.FeatureRolloutPolicy;
-import com.microsoft.graph.models.FederatedIdentityCredential;
-import com.microsoft.graph.models.Fido2AuthenticationMethod;
-import com.microsoft.graph.models.Fido2AuthenticationMethodConfiguration;
-import com.microsoft.graph.models.FieldValueSet;
-import com.microsoft.graph.models.FileAssessmentRequest;
-import com.microsoft.graph.models.FileAttachment;
-import com.microsoft.graph.models.Group;
-import com.microsoft.graph.models.GroupLifecyclePolicy;
-import com.microsoft.graph.models.GroupSetting;
-import com.microsoft.graph.models.GroupSettingTemplate;
-import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
-import com.microsoft.graph.models.IdentityApiConnector;
-import com.microsoft.graph.models.IdentityBuiltInUserFlowAttribute;
-import com.microsoft.graph.models.IdentityContainer;
-import com.microsoft.graph.models.IdentityCustomUserFlowAttribute;
-import com.microsoft.graph.models.IdentityProvider;
-import com.microsoft.graph.models.IdentityProviderBase;
-import com.microsoft.graph.models.IdentitySecurityDefaultsEnforcementPolicy;
-import com.microsoft.graph.models.IdentityUserFlow;
-import com.microsoft.graph.models.IdentityUserFlowAttribute;
-import com.microsoft.graph.models.IdentityUserFlowAttributeAssignment;
-import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentity;
-import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentityUpload;
-import com.microsoft.graph.models.InferenceClassification;
-import com.microsoft.graph.models.InferenceClassificationOverride;
-import com.microsoft.graph.models.InformationProtection;
-import com.microsoft.graph.models.InternalDomainFederation;
-import com.microsoft.graph.models.Invitation;
-import com.microsoft.graph.models.InviteParticipantsOperation;
-import com.microsoft.graph.models.IosCertificateProfile;
-import com.microsoft.graph.models.IosCompliancePolicy;
-import com.microsoft.graph.models.IosCustomConfiguration;
-import com.microsoft.graph.models.IosDeviceFeaturesConfiguration;
-import com.microsoft.graph.models.IosGeneralDeviceConfiguration;
-import com.microsoft.graph.models.IosLobApp;
-import com.microsoft.graph.models.IosManagedAppProtection;
-import com.microsoft.graph.models.IosManagedAppRegistration;
-import com.microsoft.graph.models.IosMobileAppConfiguration;
-import com.microsoft.graph.models.IosStoreApp;
-import com.microsoft.graph.models.IosUpdateConfiguration;
-import com.microsoft.graph.models.IosUpdateDeviceStatus;
-import com.microsoft.graph.models.IosVppApp;
-import com.microsoft.graph.models.IosVppEBook;
-import com.microsoft.graph.models.IosVppEBookAssignment;
-import com.microsoft.graph.models.IpNamedLocation;
-import com.microsoft.graph.models.ItemActivity;
-import com.microsoft.graph.models.ItemActivityStat;
-import com.microsoft.graph.models.ItemAnalytics;
-import com.microsoft.graph.models.ItemAttachment;
-import com.microsoft.graph.models.LicenseDetails;
-import com.microsoft.graph.models.LinkedResource;
-import com.microsoft.graph.models.List;
-import com.microsoft.graph.models.ListItem;
-import com.microsoft.graph.models.ListItemVersion;
-import com.microsoft.graph.models.LocalizedNotificationMessage;
-import com.microsoft.graph.models.LongRunningOperation;
-import com.microsoft.graph.models.MacOSCompliancePolicy;
-import com.microsoft.graph.models.MacOSCustomConfiguration;
-import com.microsoft.graph.models.MacOSDeviceFeaturesConfiguration;
-import com.microsoft.graph.models.MacOSGeneralDeviceConfiguration;
-import com.microsoft.graph.models.MacOSLobApp;
-import com.microsoft.graph.models.MacOSMicrosoftEdgeApp;
-import com.microsoft.graph.models.MacOSOfficeSuiteApp;
-import com.microsoft.graph.models.MailAssessmentRequest;
-import com.microsoft.graph.models.MailFolder;
-import com.microsoft.graph.models.MailSearchFolder;
-import com.microsoft.graph.models.ManagedAndroidLobApp;
-import com.microsoft.graph.models.ManagedAndroidStoreApp;
-import com.microsoft.graph.models.ManagedApp;
-import com.microsoft.graph.models.ManagedAppConfiguration;
-import com.microsoft.graph.models.ManagedAppOperation;
-import com.microsoft.graph.models.ManagedAppPolicy;
-import com.microsoft.graph.models.ManagedAppPolicyDeploymentSummary;
-import com.microsoft.graph.models.ManagedAppProtection;
-import com.microsoft.graph.models.ManagedAppRegistration;
-import com.microsoft.graph.models.ManagedAppStatus;
-import com.microsoft.graph.models.ManagedAppStatusRaw;
-import com.microsoft.graph.models.ManagedDevice;
-import com.microsoft.graph.models.ManagedDeviceMobileAppConfiguration;
-import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationAssignment;
-import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationDeviceStatus;
-import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationDeviceSummary;
-import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationUserStatus;
-import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationUserSummary;
-import com.microsoft.graph.models.ManagedDeviceOverview;
-import com.microsoft.graph.models.ManagedEBook;
-import com.microsoft.graph.models.ManagedEBookAssignment;
-import com.microsoft.graph.models.ManagedIOSLobApp;
-import com.microsoft.graph.models.ManagedIOSStoreApp;
-import com.microsoft.graph.models.ManagedMobileApp;
-import com.microsoft.graph.models.ManagedMobileLobApp;
-import com.microsoft.graph.models.MdmWindowsInformationProtectionPolicy;
-import com.microsoft.graph.models.MeetingAttendanceReport;
-import com.microsoft.graph.models.Message;
-import com.microsoft.graph.models.MessageRule;
-import com.microsoft.graph.models.MicrosoftAccountUserConversationMember;
-import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethod;
-import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethodConfiguration;
-import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethodTarget;
-import com.microsoft.graph.models.MicrosoftStoreForBusinessApp;
-import com.microsoft.graph.models.MobileApp;
-import com.microsoft.graph.models.MobileAppAssignment;
-import com.microsoft.graph.models.MobileAppCategory;
-import com.microsoft.graph.models.MobileAppContent;
-import com.microsoft.graph.models.MobileAppContentFile;
-import com.microsoft.graph.models.MobileLobApp;
-import com.microsoft.graph.models.MobileThreatDefenseConnector;
-import com.microsoft.graph.models.MultiValueLegacyExtendedProperty;
-import com.microsoft.graph.models.MuteParticipantOperation;
-import com.microsoft.graph.models.NamedLocation;
-import com.microsoft.graph.models.Notebook;
-import com.microsoft.graph.models.NotificationMessageTemplate;
-import com.microsoft.graph.models.OAuth2PermissionGrant;
-import com.microsoft.graph.models.OfferShiftRequest;
-import com.microsoft.graph.models.OfficeGraphInsights;
-import com.microsoft.graph.models.Onenote;
-import com.microsoft.graph.models.OnenoteEntityBaseModel;
-import com.microsoft.graph.models.OnenoteEntityHierarchyModel;
-import com.microsoft.graph.models.OnenoteEntitySchemaObjectModel;
-import com.microsoft.graph.models.OnenoteOperation;
-import com.microsoft.graph.models.OnenotePage;
-import com.microsoft.graph.models.OnenoteResource;
-import com.microsoft.graph.models.OnenoteSection;
-import com.microsoft.graph.models.OnlineMeeting;
-import com.microsoft.graph.models.OnPremisesConditionalAccessSettings;
-import com.microsoft.graph.models.OpenShift;
-import com.microsoft.graph.models.OpenShiftChangeRequest;
-import com.microsoft.graph.models.OpenTypeExtension;
-import com.microsoft.graph.models.Operation;
-import com.microsoft.graph.models.Organization;
-import com.microsoft.graph.models.OrganizationalBranding;
-import com.microsoft.graph.models.OrganizationalBrandingLocalization;
-import com.microsoft.graph.models.OrganizationalBrandingProperties;
-import com.microsoft.graph.models.OrgContact;
-import com.microsoft.graph.models.OutlookCategory;
-import com.microsoft.graph.models.OutlookItem;
-import com.microsoft.graph.models.OutlookUser;
-import com.microsoft.graph.models.Participant;
-import com.microsoft.graph.models.ParticipantJoiningNotification;
-import com.microsoft.graph.models.ParticipantLeftNotification;
-import com.microsoft.graph.models.PasswordAuthenticationMethod;
-import com.microsoft.graph.models.Permission;
-import com.microsoft.graph.models.PermissionGrantConditionSet;
-import com.microsoft.graph.models.PermissionGrantPolicy;
-import com.microsoft.graph.models.Person;
-import com.microsoft.graph.models.PhoneAuthenticationMethod;
-import com.microsoft.graph.models.PinnedChatMessageInfo;
-import com.microsoft.graph.models.Place;
-import com.microsoft.graph.models.Planner;
-import com.microsoft.graph.models.PlannerAssignedToTaskBoardTaskFormat;
-import com.microsoft.graph.models.PlannerBucket;
-import com.microsoft.graph.models.PlannerBucketTaskBoardTaskFormat;
-import com.microsoft.graph.models.PlannerGroup;
-import com.microsoft.graph.models.PlannerPlan;
-import com.microsoft.graph.models.PlannerPlanDetails;
-import com.microsoft.graph.models.PlannerProgressTaskBoardTaskFormat;
-import com.microsoft.graph.models.PlannerTask;
-import com.microsoft.graph.models.PlannerTaskDetails;
-import com.microsoft.graph.models.PlannerUser;
-import com.microsoft.graph.models.PlayPromptOperation;
-import com.microsoft.graph.models.PolicyBase;
-import com.microsoft.graph.models.PolicyRoot;
-import com.microsoft.graph.models.Post;
-import com.microsoft.graph.models.Presence;
-import com.microsoft.graph.models.PrintConnector;
-import com.microsoft.graph.models.PrintDocument;
-import com.microsoft.graph.models.Printer;
-import com.microsoft.graph.models.PrinterBase;
-import com.microsoft.graph.models.PrinterCreateOperation;
-import com.microsoft.graph.models.PrinterShare;
-import com.microsoft.graph.models.PrintJob;
-import com.microsoft.graph.models.PrintOperation;
-import com.microsoft.graph.models.PrintService;
-import com.microsoft.graph.models.PrintServiceEndpoint;
-import com.microsoft.graph.models.PrintTask;
-import com.microsoft.graph.models.PrintTaskDefinition;
-import com.microsoft.graph.models.PrintTaskTrigger;
-import com.microsoft.graph.models.PrintUsage;
-import com.microsoft.graph.models.PrintUsageByPrinter;
-import com.microsoft.graph.models.PrintUsageByUser;
-import com.microsoft.graph.models.ProfilePhoto;
-import com.microsoft.graph.models.ProvisioningObjectSummary;
-import com.microsoft.graph.models.RbacApplication;
-import com.microsoft.graph.models.RecordOperation;
-import com.microsoft.graph.models.ReferenceAttachment;
-import com.microsoft.graph.models.RemoteAssistancePartner;
-import com.microsoft.graph.models.ReportRoot;
-import com.microsoft.graph.models.Request;
-import com.microsoft.graph.models.ResourceOperation;
-import com.microsoft.graph.models.ResourceSpecificPermissionGrant;
-import com.microsoft.graph.models.RichLongRunningOperation;
-import com.microsoft.graph.models.RiskDetection;
-import com.microsoft.graph.models.RiskyUser;
-import com.microsoft.graph.models.RiskyUserHistoryItem;
-import com.microsoft.graph.models.RoleAssignment;
-import com.microsoft.graph.models.RoleDefinition;
-import com.microsoft.graph.models.Room;
-import com.microsoft.graph.models.RoomList;
-import com.microsoft.graph.models.SamlOrWsFedExternalDomainFederation;
-import com.microsoft.graph.models.SamlOrWsFedProvider;
-import com.microsoft.graph.models.Schedule;
-import com.microsoft.graph.models.ScheduleChangeRequest;
-import com.microsoft.graph.models.SchedulingGroup;
-import com.microsoft.graph.models.SchemaExtension;
-import com.microsoft.graph.models.ScopedRoleMembership;
-import com.microsoft.graph.models.SearchEntity;
-import com.microsoft.graph.models.SectionGroup;
-import com.microsoft.graph.models.SecureScore;
-import com.microsoft.graph.models.SecureScoreControlProfile;
-import com.microsoft.graph.models.Security;
-import com.microsoft.graph.models.security.Case_escaped;
+import com.microsoft.graph.models.security.Alert;
+import com.microsoft.graph.models.security.CaseEscaped;
 import com.microsoft.graph.models.security.CaseOperation;
 import com.microsoft.graph.models.security.CasesRoot;
 import com.microsoft.graph.models.security.DataSet;
@@ -449,207 +30,31 @@ import com.microsoft.graph.models.security.EdiscoveryReviewSetQuery;
 import com.microsoft.graph.models.security.EdiscoveryReviewTag;
 import com.microsoft.graph.models.security.EdiscoverySearch;
 import com.microsoft.graph.models.security.EdiscoveryTagOperation;
+import com.microsoft.graph.models.security.Incident;
 import com.microsoft.graph.models.security.Search;
 import com.microsoft.graph.models.security.SiteSource;
 import com.microsoft.graph.models.security.Tag;
 import com.microsoft.graph.models.security.UnifiedGroupSource;
 import com.microsoft.graph.models.security.UserSource;
-import com.microsoft.graph.models.SecurityReportsRoot;
-import com.microsoft.graph.models.ServiceAnnouncement;
-import com.microsoft.graph.models.ServiceAnnouncementAttachment;
-import com.microsoft.graph.models.ServiceAnnouncementBase;
-import com.microsoft.graph.models.ServiceHealth;
-import com.microsoft.graph.models.ServiceHealthIssue;
-import com.microsoft.graph.models.ServicePrincipal;
-import com.microsoft.graph.models.ServiceUpdateMessage;
-import com.microsoft.graph.models.SettingStateDeviceSummary;
-import com.microsoft.graph.models.SharedDriveItem;
-import com.microsoft.graph.models.SharedInsight;
-import com.microsoft.graph.models.SharedPCConfiguration;
-import com.microsoft.graph.models.SharedWithChannelTeamInfo;
-import com.microsoft.graph.models.Shift;
-import com.microsoft.graph.models.ShiftPreferences;
-import com.microsoft.graph.models.SignIn;
-import com.microsoft.graph.models.Simulation;
-import com.microsoft.graph.models.SimulationAutomation;
-import com.microsoft.graph.models.SimulationAutomationRun;
-import com.microsoft.graph.models.SingleValueLegacyExtendedProperty;
-import com.microsoft.graph.models.Site;
-import com.microsoft.graph.models.SkypeForBusinessUserConversationMember;
-import com.microsoft.graph.models.SkypeUserConversationMember;
-import com.microsoft.graph.models.SocialIdentityProvider;
-import com.microsoft.graph.models.SoftwareOathAuthenticationMethod;
-import com.microsoft.graph.models.SoftwareUpdateStatusSummary;
-import com.microsoft.graph.models.StartHoldMusicOperation;
-import com.microsoft.graph.models.StopHoldMusicOperation;
-import com.microsoft.graph.models.StsPolicy;
-import com.microsoft.graph.models.SubjectRightsRequest;
-import com.microsoft.graph.models.SubscribedSku;
-import com.microsoft.graph.models.SubscribeToToneOperation;
-import com.microsoft.graph.models.Subscription;
-import com.microsoft.graph.models.SwapShiftsChangeRequest;
-import com.microsoft.graph.models.TargetedManagedAppConfiguration;
-import com.microsoft.graph.models.TargetedManagedAppPolicyAssignment;
-import com.microsoft.graph.models.TargetedManagedAppProtection;
-import com.microsoft.graph.models.TaskFileAttachment;
-import com.microsoft.graph.models.Team;
-import com.microsoft.graph.models.TeamInfo;
-import com.microsoft.graph.models.TeamsApp;
-import com.microsoft.graph.models.TeamsAppDefinition;
-import com.microsoft.graph.models.TeamsAppInstallation;
-import com.microsoft.graph.models.TeamsAsyncOperation;
-import com.microsoft.graph.models.TeamsTab;
-import com.microsoft.graph.models.TeamsTemplate;
-import com.microsoft.graph.models.Teamwork;
-import com.microsoft.graph.models.TeamworkBot;
-import com.microsoft.graph.models.TeamworkHostedContent;
-import com.microsoft.graph.models.TeamworkTag;
-import com.microsoft.graph.models.TeamworkTagMember;
-import com.microsoft.graph.models.TelecomExpenseManagementPartner;
-import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethod;
-import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethodConfiguration;
-import com.microsoft.graph.models.TermsAndConditions;
-import com.microsoft.graph.models.TermsAndConditionsAcceptanceStatus;
-import com.microsoft.graph.models.TermsAndConditionsAssignment;
-import com.microsoft.graph.models.TermsOfUseContainer;
+import com.microsoft.graph.models.termstore.Group;
 import com.microsoft.graph.models.termstore.Relation;
 import com.microsoft.graph.models.termstore.Set;
 import com.microsoft.graph.models.termstore.Store;
 import com.microsoft.graph.models.termstore.Term;
-import com.microsoft.graph.models.ThreatAssessmentRequest;
-import com.microsoft.graph.models.ThreatAssessmentResult;
-import com.microsoft.graph.models.ThumbnailSet;
-import com.microsoft.graph.models.TimeOff;
-import com.microsoft.graph.models.TimeOffReason;
-import com.microsoft.graph.models.TimeOffRequest;
-import com.microsoft.graph.models.Todo;
-import com.microsoft.graph.models.TodoTask;
-import com.microsoft.graph.models.TodoTaskList;
-import com.microsoft.graph.models.TokenIssuancePolicy;
-import com.microsoft.graph.models.TokenLifetimePolicy;
-import com.microsoft.graph.models.Trending;
-import com.microsoft.graph.models.UnifiedRoleAssignment;
-import com.microsoft.graph.models.UnifiedRoleAssignmentSchedule;
-import com.microsoft.graph.models.UnifiedRoleAssignmentScheduleInstance;
-import com.microsoft.graph.models.UnifiedRoleAssignmentScheduleRequest;
-import com.microsoft.graph.models.UnifiedRoleDefinition;
-import com.microsoft.graph.models.UnifiedRoleEligibilitySchedule;
-import com.microsoft.graph.models.UnifiedRoleEligibilityScheduleInstance;
-import com.microsoft.graph.models.UnifiedRoleEligibilityScheduleRequest;
-import com.microsoft.graph.models.UnifiedRoleManagementPolicy;
-import com.microsoft.graph.models.UnifiedRoleManagementPolicyApprovalRule;
-import com.microsoft.graph.models.UnifiedRoleManagementPolicyAssignment;
-import com.microsoft.graph.models.UnifiedRoleManagementPolicyAuthenticationContextRule;
-import com.microsoft.graph.models.UnifiedRoleManagementPolicyEnablementRule;
-import com.microsoft.graph.models.UnifiedRoleManagementPolicyExpirationRule;
-import com.microsoft.graph.models.UnifiedRoleManagementPolicyNotificationRule;
-import com.microsoft.graph.models.UnifiedRoleManagementPolicyRule;
-import com.microsoft.graph.models.UnifiedRoleScheduleBase;
-import com.microsoft.graph.models.UnifiedRoleScheduleInstanceBase;
-import com.microsoft.graph.models.UnmuteParticipantOperation;
-import com.microsoft.graph.models.UpdateRecordingStatusOperation;
-import com.microsoft.graph.models.UrlAssessmentRequest;
-import com.microsoft.graph.models.UsedInsight;
-import com.microsoft.graph.models.User;
-import com.microsoft.graph.models.UserActivity;
-import com.microsoft.graph.models.UserConsentRequest;
-import com.microsoft.graph.models.UserExperienceAnalyticsDevicePerformance;
-import com.microsoft.graph.models.UserFlowLanguageConfiguration;
-import com.microsoft.graph.models.UserFlowLanguagePage;
-import com.microsoft.graph.models.UserInstallStateSummary;
-import com.microsoft.graph.models.UserScopeTeamsAppInstallation;
-import com.microsoft.graph.models.UserSettings;
-import com.microsoft.graph.models.UserTeamwork;
-import com.microsoft.graph.models.VppToken;
-import com.microsoft.graph.models.WebApp;
-import com.microsoft.graph.models.Win32LobApp;
-import com.microsoft.graph.models.Windows10CompliancePolicy;
-import com.microsoft.graph.models.Windows10CustomConfiguration;
-import com.microsoft.graph.models.Windows10EndpointProtectionConfiguration;
-import com.microsoft.graph.models.Windows10EnterpriseModernAppManagementConfiguration;
-import com.microsoft.graph.models.Windows10GeneralConfiguration;
-import com.microsoft.graph.models.Windows10MobileCompliancePolicy;
-import com.microsoft.graph.models.Windows10SecureAssessmentConfiguration;
-import com.microsoft.graph.models.Windows10TeamGeneralConfiguration;
-import com.microsoft.graph.models.Windows81CompliancePolicy;
-import com.microsoft.graph.models.Windows81GeneralConfiguration;
-import com.microsoft.graph.models.WindowsAutopilotDeviceIdentity;
-import com.microsoft.graph.models.WindowsDefenderAdvancedThreatProtectionConfiguration;
-import com.microsoft.graph.models.WindowsHelloForBusinessAuthenticationMethod;
-import com.microsoft.graph.models.WindowsInformationProtection;
-import com.microsoft.graph.models.WindowsInformationProtectionAppLearningSummary;
-import com.microsoft.graph.models.WindowsInformationProtectionAppLockerFile;
-import com.microsoft.graph.models.WindowsInformationProtectionNetworkLearningSummary;
-import com.microsoft.graph.models.WindowsInformationProtectionPolicy;
-import com.microsoft.graph.models.WindowsMobileMSI;
-import com.microsoft.graph.models.WindowsPhone81CompliancePolicy;
-import com.microsoft.graph.models.WindowsPhone81CustomConfiguration;
-import com.microsoft.graph.models.WindowsPhone81GeneralConfiguration;
-import com.microsoft.graph.models.WindowsUniversalAppX;
-import com.microsoft.graph.models.WindowsUpdateForBusinessConfiguration;
-import com.microsoft.graph.models.Workbook;
-import com.microsoft.graph.models.WorkbookApplication;
-import com.microsoft.graph.models.WorkbookChart;
-import com.microsoft.graph.models.WorkbookChartAreaFormat;
-import com.microsoft.graph.models.WorkbookChartAxes;
-import com.microsoft.graph.models.WorkbookChartAxis;
-import com.microsoft.graph.models.WorkbookChartAxisFormat;
-import com.microsoft.graph.models.WorkbookChartAxisTitle;
-import com.microsoft.graph.models.WorkbookChartAxisTitleFormat;
-import com.microsoft.graph.models.WorkbookChartDataLabelFormat;
-import com.microsoft.graph.models.WorkbookChartDataLabels;
-import com.microsoft.graph.models.WorkbookChartFill;
-import com.microsoft.graph.models.WorkbookChartFont;
-import com.microsoft.graph.models.WorkbookChartGridlines;
-import com.microsoft.graph.models.WorkbookChartGridlinesFormat;
-import com.microsoft.graph.models.WorkbookChartLegend;
-import com.microsoft.graph.models.WorkbookChartLegendFormat;
-import com.microsoft.graph.models.WorkbookChartLineFormat;
-import com.microsoft.graph.models.WorkbookChartPoint;
-import com.microsoft.graph.models.WorkbookChartPointFormat;
-import com.microsoft.graph.models.WorkbookChartSeries;
-import com.microsoft.graph.models.WorkbookChartSeriesFormat;
-import com.microsoft.graph.models.WorkbookChartTitle;
-import com.microsoft.graph.models.WorkbookChartTitleFormat;
-import com.microsoft.graph.models.WorkbookComment;
-import com.microsoft.graph.models.WorkbookCommentReply;
-import com.microsoft.graph.models.WorkbookFilter;
-import com.microsoft.graph.models.WorkbookFormatProtection;
-import com.microsoft.graph.models.WorkbookFunctionResult;
-import com.microsoft.graph.models.WorkbookFunctions;
-import com.microsoft.graph.models.WorkbookNamedItem;
-import com.microsoft.graph.models.WorkbookOperation;
-import com.microsoft.graph.models.WorkbookPivotTable;
-import com.microsoft.graph.models.WorkbookRange;
-import com.microsoft.graph.models.WorkbookRangeBorder;
-import com.microsoft.graph.models.WorkbookRangeFill;
-import com.microsoft.graph.models.WorkbookRangeFont;
-import com.microsoft.graph.models.WorkbookRangeFormat;
-import com.microsoft.graph.models.WorkbookRangeSort;
-import com.microsoft.graph.models.WorkbookRangeView;
-import com.microsoft.graph.models.WorkbookTable;
-import com.microsoft.graph.models.WorkbookTableColumn;
-import com.microsoft.graph.models.WorkbookTableRow;
-import com.microsoft.graph.models.WorkbookTableSort;
-import com.microsoft.graph.models.WorkbookWorksheet;
-import com.microsoft.graph.models.WorkbookWorksheetProtection;
-import com.microsoft.graph.models.WorkforceIntegration;
-import com.microsoft.graph.models.X509CertificateAuthenticationMethodConfiguration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Entity implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The unique idenfier for an entity. Read-only. */
-    private String _id;
+    private String id;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new entity and sets the default values.
      * @return a void
@@ -694,7 +99,10 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.accessPackageAssignmentPolicy": return new AccessPackageAssignmentPolicy();
             case "#microsoft.graph.accessPackageAssignmentRequest": return new AccessPackageAssignmentRequest();
             case "#microsoft.graph.accessPackageCatalog": return new AccessPackageCatalog();
+            case "#microsoft.graph.accessPackageMultipleChoiceQuestion": return new AccessPackageMultipleChoiceQuestion();
+            case "#microsoft.graph.accessPackageQuestion": return new AccessPackageQuestion();
             case "#microsoft.graph.accessPackageSubject": return new AccessPackageSubject();
+            case "#microsoft.graph.accessPackageTextInputQuestion": return new AccessPackageTextInputQuestion();
             case "#microsoft.graph.accessReviewHistoryDefinition": return new AccessReviewHistoryDefinition();
             case "#microsoft.graph.accessReviewHistoryInstance": return new AccessReviewHistoryInstance();
             case "#microsoft.graph.accessReviewInstance": return new AccessReviewInstance();
@@ -734,6 +142,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.applePushNotificationCertificate": return new ApplePushNotificationCertificate();
             case "#microsoft.graph.application": return new Application();
             case "#microsoft.graph.applicationTemplate": return new ApplicationTemplate();
+            case "#microsoft.graph.appManagementPolicy": return new AppManagementPolicy();
             case "#microsoft.graph.appRoleAssignment": return new AppRoleAssignment();
             case "#microsoft.graph.approval": return new Approval();
             case "#microsoft.graph.approvalStage": return new ApprovalStage();
@@ -756,6 +165,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.authenticationMethodTarget": return new AuthenticationMethodTarget();
             case "#microsoft.graph.authoredNote": return new AuthoredNote();
             case "#microsoft.graph.authorizationPolicy": return new AuthorizationPolicy();
+            case "#microsoft.graph.azureCommunicationServicesUserConversationMember": return new AzureCommunicationServicesUserConversationMember();
             case "#microsoft.graph.b2xIdentityUserFlow": return new B2xIdentityUserFlow();
             case "#microsoft.graph.baseItem": return new BaseItem();
             case "#microsoft.graph.baseItemVersion": return new BaseItemVersion();
@@ -811,7 +221,14 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.crossTenantAccessPolicyConfigurationDefault": return new CrossTenantAccessPolicyConfigurationDefault();
             case "#microsoft.graph.dataPolicyOperation": return new DataPolicyOperation();
             case "#microsoft.graph.defaultManagedAppProtection": return new DefaultManagedAppProtection();
+            case "#microsoft.graph.delegatedAdminAccessAssignment": return new DelegatedAdminAccessAssignment();
+            case "#microsoft.graph.delegatedAdminCustomer": return new DelegatedAdminCustomer();
+            case "#microsoft.graph.delegatedAdminRelationship": return new DelegatedAdminRelationship();
+            case "#microsoft.graph.delegatedAdminRelationshipOperation": return new DelegatedAdminRelationshipOperation();
+            case "#microsoft.graph.delegatedAdminRelationshipRequest": return new DelegatedAdminRelationshipRequest();
+            case "#microsoft.graph.delegatedAdminServiceManagementDetail": return new DelegatedAdminServiceManagementDetail();
             case "#microsoft.graph.delegatedPermissionClassification": return new DelegatedPermissionClassification();
+            case "#microsoft.graph.deletedTeam": return new DeletedTeam();
             case "#microsoft.graph.detectedApp": return new DetectedApp();
             case "#microsoft.graph.device": return new Device();
             case "#microsoft.graph.deviceAndAppManagementRoleAssignment": return new DeviceAndAppManagementRoleAssignment();
@@ -891,6 +308,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.endpoint": return new Endpoint();
             case "#microsoft.graph.enrollmentConfigurationAssignment": return new EnrollmentConfigurationAssignment();
             case "#microsoft.graph.enrollmentTroubleshootingEvent": return new EnrollmentTroubleshootingEvent();
+            case "#microsoft.graph.enterpriseCodeSigningCertificate": return new EnterpriseCodeSigningCertificate();
             case "#microsoft.graph.entitlementManagement": return new EntitlementManagement();
             case "#microsoft.graph.entitlementManagementSettings": return new EntitlementManagementSettings();
             case "#microsoft.graph.event": return new Event();
@@ -932,7 +350,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.importedWindowsAutopilotDeviceIdentityUpload": return new ImportedWindowsAutopilotDeviceIdentityUpload();
             case "#microsoft.graph.inferenceClassification": return new InferenceClassification();
             case "#microsoft.graph.inferenceClassificationOverride": return new InferenceClassificationOverride();
-            case "#microsoft.graph.informationProtection": return new InformationProtection();
             case "#microsoft.graph.internalDomainFederation": return new InternalDomainFederation();
             case "#microsoft.graph.invitation": return new Invitation();
             case "#microsoft.graph.inviteParticipantsOperation": return new InviteParticipantsOperation();
@@ -941,7 +358,9 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.iosCustomConfiguration": return new IosCustomConfiguration();
             case "#microsoft.graph.iosDeviceFeaturesConfiguration": return new IosDeviceFeaturesConfiguration();
             case "#microsoft.graph.iosGeneralDeviceConfiguration": return new IosGeneralDeviceConfiguration();
+            case "#microsoft.graph.iosiPadOSWebClip": return new IosiPadOSWebClip();
             case "#microsoft.graph.iosLobApp": return new IosLobApp();
+            case "#microsoft.graph.iosLobAppProvisioningConfigurationAssignment": return new IosLobAppProvisioningConfigurationAssignment();
             case "#microsoft.graph.iosManagedAppProtection": return new IosManagedAppProtection();
             case "#microsoft.graph.iosManagedAppRegistration": return new IosManagedAppRegistration();
             case "#microsoft.graph.iosMobileAppConfiguration": return new IosMobileAppConfiguration();
@@ -956,6 +375,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.itemActivityStat": return new ItemActivityStat();
             case "#microsoft.graph.itemAnalytics": return new ItemAnalytics();
             case "#microsoft.graph.itemAttachment": return new ItemAttachment();
+            case "#microsoft.graph.learningContent": return new LearningContent();
+            case "#microsoft.graph.learningProvider": return new LearningProvider();
             case "#microsoft.graph.licenseDetails": return new LicenseDetails();
             case "#microsoft.graph.linkedResource": return new LinkedResource();
             case "#microsoft.graph.list": return new List();
@@ -1012,6 +433,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.mobileAppCategory": return new MobileAppCategory();
             case "#microsoft.graph.mobileAppContent": return new MobileAppContent();
             case "#microsoft.graph.mobileAppContentFile": return new MobileAppContentFile();
+            case "#microsoft.graph.mobileContainedApp": return new MobileContainedApp();
             case "#microsoft.graph.mobileLobApp": return new MobileLobApp();
             case "#microsoft.graph.mobileThreatDefenseConnector": return new MobileThreatDefenseConnector();
             case "#microsoft.graph.multiValueLegacyExtendedProperty": return new MultiValueLegacyExtendedProperty();
@@ -1032,6 +454,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.onenoteSection": return new OnenoteSection();
             case "#microsoft.graph.onlineMeeting": return new OnlineMeeting();
             case "#microsoft.graph.onPremisesConditionalAccessSettings": return new OnPremisesConditionalAccessSettings();
+            case "#microsoft.graph.onPremisesDirectorySynchronization": return new OnPremisesDirectorySynchronization();
             case "#microsoft.graph.openShift": return new OpenShift();
             case "#microsoft.graph.openShiftChangeRequest": return new OpenShiftChangeRequest();
             case "#microsoft.graph.openTypeExtension": return new OpenTypeExtension();
@@ -1093,12 +516,13 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.recordOperation": return new RecordOperation();
             case "#microsoft.graph.referenceAttachment": return new ReferenceAttachment();
             case "#microsoft.graph.remoteAssistancePartner": return new RemoteAssistancePartner();
-            case "#microsoft.graph.reportRoot": return new ReportRoot();
             case "#microsoft.graph.request": return new Request();
             case "#microsoft.graph.resourceOperation": return new ResourceOperation();
             case "#microsoft.graph.resourceSpecificPermissionGrant": return new ResourceSpecificPermissionGrant();
             case "#microsoft.graph.richLongRunningOperation": return new RichLongRunningOperation();
             case "#microsoft.graph.riskDetection": return new RiskDetection();
+            case "#microsoft.graph.riskyServicePrincipal": return new RiskyServicePrincipal();
+            case "#microsoft.graph.riskyServicePrincipalHistoryItem": return new RiskyServicePrincipalHistoryItem();
             case "#microsoft.graph.riskyUser": return new RiskyUser();
             case "#microsoft.graph.riskyUserHistoryItem": return new RiskyUserHistoryItem();
             case "#microsoft.graph.roleAssignment": return new RoleAssignment();
@@ -1117,7 +541,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.secureScore": return new SecureScore();
             case "#microsoft.graph.secureScoreControlProfile": return new SecureScoreControlProfile();
             case "#microsoft.graph.security": return new Security();
-            case "#microsoft.graph.security.case": return new Case_escaped();
+            case "#microsoft.graph.security.alert": return new Alert();
+            case "#microsoft.graph.security.case": return new CaseEscaped();
             case "#microsoft.graph.security.caseOperation": return new CaseOperation();
             case "#microsoft.graph.security.casesRoot": return new CasesRoot();
             case "#microsoft.graph.security.dataSet": return new DataSet();
@@ -1137,6 +562,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.security.ediscoveryReviewTag": return new EdiscoveryReviewTag();
             case "#microsoft.graph.security.ediscoverySearch": return new EdiscoverySearch();
             case "#microsoft.graph.security.ediscoveryTagOperation": return new EdiscoveryTagOperation();
+            case "#microsoft.graph.security.incident": return new Incident();
             case "#microsoft.graph.security.search": return new Search();
             case "#microsoft.graph.security.siteSource": return new SiteSource();
             case "#microsoft.graph.security.tag": return new Tag();
@@ -1149,6 +575,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.serviceHealth": return new ServiceHealth();
             case "#microsoft.graph.serviceHealthIssue": return new ServiceHealthIssue();
             case "#microsoft.graph.servicePrincipal": return new ServicePrincipal();
+            case "#microsoft.graph.servicePrincipalRiskDetection": return new ServicePrincipalRiskDetection();
             case "#microsoft.graph.serviceUpdateMessage": return new ServiceUpdateMessage();
             case "#microsoft.graph.settingStateDeviceSummary": return new SettingStateDeviceSummary();
             case "#microsoft.graph.sharedDriveItem": return new SharedDriveItem();
@@ -1165,8 +592,22 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.site": return new Site();
             case "#microsoft.graph.skypeForBusinessUserConversationMember": return new SkypeForBusinessUserConversationMember();
             case "#microsoft.graph.skypeUserConversationMember": return new SkypeUserConversationMember();
+            case "#microsoft.graph.smsAuthenticationMethodConfiguration": return new SmsAuthenticationMethodConfiguration();
+        }
+        return null;
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param discriminatorValue Discriminator value from the payload
+     * @return a entity
+     */
+    @javax.annotation.Nonnull
+    private static Entity createFromDiscriminatorValue_1(@javax.annotation.Nonnull final String discriminatorValue) {
+        switch (discriminatorValue) {
+            case "#microsoft.graph.smsAuthenticationMethodTarget": return new SmsAuthenticationMethodTarget();
             case "#microsoft.graph.socialIdentityProvider": return new SocialIdentityProvider();
             case "#microsoft.graph.softwareOathAuthenticationMethod": return new SoftwareOathAuthenticationMethod();
+            case "#microsoft.graph.softwareOathAuthenticationMethodConfiguration": return new SoftwareOathAuthenticationMethodConfiguration();
             case "#microsoft.graph.softwareUpdateStatusSummary": return new SoftwareUpdateStatusSummary();
             case "#microsoft.graph.startHoldMusicOperation": return new StartHoldMusicOperation();
             case "#microsoft.graph.stopHoldMusicOperation": return new StopHoldMusicOperation();
@@ -1188,17 +629,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.teamsAsyncOperation": return new TeamsAsyncOperation();
             case "#microsoft.graph.teamsTab": return new TeamsTab();
             case "#microsoft.graph.teamsTemplate": return new TeamsTemplate();
-        }
-        return null;
-    }
-    /**
-     * Creates a new instance of the appropriate class based on discriminator value
-     * @param discriminatorValue Discriminator value from the payload
-     * @return a entity
-     */
-    @javax.annotation.Nonnull
-    private static Entity createFromDiscriminatorValue_1(@javax.annotation.Nonnull final String discriminatorValue) {
-        switch (discriminatorValue) {
             case "#microsoft.graph.teamwork": return new Teamwork();
             case "#microsoft.graph.teamworkBot": return new TeamworkBot();
             case "#microsoft.graph.teamworkHostedContent": return new TeamworkHostedContent();
@@ -1207,6 +637,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.telecomExpenseManagementPartner": return new TelecomExpenseManagementPartner();
             case "#microsoft.graph.temporaryAccessPassAuthenticationMethod": return new TemporaryAccessPassAuthenticationMethod();
             case "#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration": return new TemporaryAccessPassAuthenticationMethodConfiguration();
+            case "#microsoft.graph.tenantAppManagementPolicy": return new TenantAppManagementPolicy();
             case "#microsoft.graph.termsAndConditions": return new TermsAndConditions();
             case "#microsoft.graph.termsAndConditionsAcceptanceStatus": return new TermsAndConditionsAcceptanceStatus();
             case "#microsoft.graph.termsAndConditionsAssignment": return new TermsAndConditionsAssignment();
@@ -1260,6 +691,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.userScopeTeamsAppInstallation": return new UserScopeTeamsAppInstallation();
             case "#microsoft.graph.userSettings": return new UserSettings();
             case "#microsoft.graph.userTeamwork": return new UserTeamwork();
+            case "#microsoft.graph.voiceAuthenticationMethodConfiguration": return new VoiceAuthenticationMethodConfiguration();
             case "#microsoft.graph.vppToken": return new VppToken();
             case "#microsoft.graph.webApp": return new WebApp();
             case "#microsoft.graph.win32LobApp": return new Win32LobApp();
@@ -1281,12 +713,15 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.windowsInformationProtectionAppLockerFile": return new WindowsInformationProtectionAppLockerFile();
             case "#microsoft.graph.windowsInformationProtectionNetworkLearningSummary": return new WindowsInformationProtectionNetworkLearningSummary();
             case "#microsoft.graph.windowsInformationProtectionPolicy": return new WindowsInformationProtectionPolicy();
+            case "#microsoft.graph.windowsMicrosoftEdgeApp": return new WindowsMicrosoftEdgeApp();
             case "#microsoft.graph.windowsMobileMSI": return new WindowsMobileMSI();
             case "#microsoft.graph.windowsPhone81CompliancePolicy": return new WindowsPhone81CompliancePolicy();
             case "#microsoft.graph.windowsPhone81CustomConfiguration": return new WindowsPhone81CustomConfiguration();
             case "#microsoft.graph.windowsPhone81GeneralConfiguration": return new WindowsPhone81GeneralConfiguration();
             case "#microsoft.graph.windowsUniversalAppX": return new WindowsUniversalAppX();
+            case "#microsoft.graph.windowsUniversalAppXContainedApp": return new WindowsUniversalAppXContainedApp();
             case "#microsoft.graph.windowsUpdateForBusinessConfiguration": return new WindowsUpdateForBusinessConfiguration();
+            case "#microsoft.graph.windowsWebApp": return new WindowsWebApp();
             case "#microsoft.graph.workbook": return new Workbook();
             case "#microsoft.graph.workbookApplication": return new WorkbookApplication();
             case "#microsoft.graph.workbookChart": return new WorkbookChart();
@@ -1344,15 +779,15 @@ public class Entity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
@@ -1363,7 +798,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getId() {
-        return this._id;
+        return this.id;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -1371,7 +806,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -1392,7 +827,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the id property value. The unique idenfier for an entity. Read-only.
@@ -1401,7 +836,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+        this.id = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -1410,6 +845,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

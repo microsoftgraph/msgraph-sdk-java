@@ -3,20 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class AppConsentRequest extends Entity implements Parsable {
     /** The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby. */
-    private String _appDisplayName;
+    private String appDisplayName;
     /** The identifier of the application. Required. Supports $filter (eq only) and $orderby. */
-    private String _appId;
+    private String appId;
     /** A list of pending scopes waiting for approval. Required. */
-    private java.util.List<AppConsentRequestScope> _pendingScopes;
+    private java.util.List<AppConsentRequestScope> pendingScopes;
     /** A list of pending user consent requests. Supports $filter (eq). */
-    private java.util.List<UserConsentRequest> _userConsentRequests;
+    private java.util.List<UserConsentRequest> userConsentRequests;
     /**
      * Instantiates a new appConsentRequest and sets the default values.
      * @return a void
@@ -41,7 +39,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppDisplayName() {
-        return this._appDisplayName;
+        return this.appDisplayName;
     }
     /**
      * Gets the appId property value. The identifier of the application. Required. Supports $filter (eq only) and $orderby.
@@ -49,15 +47,15 @@ public class AppConsentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppId() {
-        return this._appId;
+        return this.appId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appDisplayName", (n) -> { this.setAppDisplayName(n.getStringValue()); });
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("pendingScopes", (n) -> { this.setPendingScopes(n.getCollectionOfObjectValues(AppConsentRequestScope::createFromDiscriminatorValue)); });
@@ -70,7 +68,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AppConsentRequestScope> getPendingScopes() {
-        return this._pendingScopes;
+        return this.pendingScopes;
     }
     /**
      * Gets the userConsentRequests property value. A list of pending user consent requests. Supports $filter (eq).
@@ -78,7 +76,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UserConsentRequest> getUserConsentRequests() {
-        return this._userConsentRequests;
+        return this.userConsentRequests;
     }
     /**
      * Serializes information the current object
@@ -101,7 +99,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
-        this._appDisplayName = value;
+        this.appDisplayName = value;
     }
     /**
      * Sets the appId property value. The identifier of the application. Required. Supports $filter (eq only) and $orderby.
@@ -110,7 +108,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
-        this._appId = value;
+        this.appId = value;
     }
     /**
      * Sets the pendingScopes property value. A list of pending scopes waiting for approval. Required.
@@ -119,7 +117,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPendingScopes(@javax.annotation.Nullable final java.util.List<AppConsentRequestScope> value) {
-        this._pendingScopes = value;
+        this.pendingScopes = value;
     }
     /**
      * Sets the userConsentRequests property value. A list of pending user consent requests. Supports $filter (eq).
@@ -128,6 +126,6 @@ public class AppConsentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserConsentRequests(@javax.annotation.Nullable final java.util.List<UserConsentRequest> value) {
-        this._userConsentRequests = value;
+        this.userConsentRequests = value;
     }
 }

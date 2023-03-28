@@ -5,55 +5,54 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class NetworkConnection implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Name of the application managing the network connection (for example, Facebook or SMTP). */
-    private String _applicationName;
+    private String applicationName;
     /** Destination IP address (of the network connection). */
-    private String _destinationAddress;
+    private String destinationAddress;
     /** Destination domain portion of the destination URL. (for example 'www.contoso.com'). */
-    private String _destinationDomain;
+    private String destinationDomain;
     /** Location (by IP address mapping) associated with the destination of a network connection. */
-    private String _destinationLocation;
+    private String destinationLocation;
     /** Destination port (of the network connection). */
-    private String _destinationPort;
+    private String destinationPort;
     /** Network connection URL/URI string - excluding parameters. (for example 'www.contoso.com/products/default.html') */
-    private String _destinationUrl;
+    private String destinationUrl;
     /** Network connection direction. Possible values are: unknown, inbound, outbound. */
-    private ConnectionDirection _direction;
+    private ConnectionDirection direction;
     /** Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _domainRegisteredDateTime;
+    private OffsetDateTime domainRegisteredDateTime;
     /** The local DNS name resolution as it appears in the host's local DNS cache (for example, in case the 'hosts' file was tampered with). */
-    private String _localDnsName;
+    private String localDnsName;
     /** Network Address Translation destination IP address. */
-    private String _natDestinationAddress;
+    private String natDestinationAddress;
     /** Network Address Translation destination port. */
-    private String _natDestinationPort;
+    private String natDestinationPort;
     /** Network Address Translation source IP address. */
-    private String _natSourceAddress;
+    private String natSourceAddress;
     /** Network Address Translation source port. */
-    private String _natSourcePort;
+    private String natSourcePort;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII. */
-    private SecurityNetworkProtocol _protocol;
+    private SecurityNetworkProtocol protocol;
     /** Provider generated/calculated risk score of the network connection. Recommended value range of 0-1, which equates to a percentage. */
-    private String _riskScore;
+    private String riskScore;
     /** Source (i.e. origin) IP address (of the network connection). */
-    private String _sourceAddress;
+    private String sourceAddress;
     /** Location (by IP address mapping) associated with the source of a network connection. */
-    private String _sourceLocation;
+    private String sourceLocation;
     /** Source (i.e. origin) IP port (of the network connection). */
-    private String _sourcePort;
+    private String sourcePort;
     /** Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed. */
-    private ConnectionStatus _status;
+    private ConnectionStatus status;
     /** Parameters (suffix) of the destination URL. */
-    private String _urlParameters;
+    private String urlParameters;
     /**
      * Instantiates a new networkConnection and sets the default values.
      * @return a void
@@ -78,7 +77,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the applicationName property value. Name of the application managing the network connection (for example, Facebook or SMTP).
@@ -86,7 +85,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getApplicationName() {
-        return this._applicationName;
+        return this.applicationName;
     }
     /**
      * Gets the destinationAddress property value. Destination IP address (of the network connection).
@@ -94,7 +93,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDestinationAddress() {
-        return this._destinationAddress;
+        return this.destinationAddress;
     }
     /**
      * Gets the destinationDomain property value. Destination domain portion of the destination URL. (for example 'www.contoso.com').
@@ -102,7 +101,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDestinationDomain() {
-        return this._destinationDomain;
+        return this.destinationDomain;
     }
     /**
      * Gets the destinationLocation property value. Location (by IP address mapping) associated with the destination of a network connection.
@@ -110,7 +109,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDestinationLocation() {
-        return this._destinationLocation;
+        return this.destinationLocation;
     }
     /**
      * Gets the destinationPort property value. Destination port (of the network connection).
@@ -118,7 +117,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDestinationPort() {
-        return this._destinationPort;
+        return this.destinationPort;
     }
     /**
      * Gets the destinationUrl property value. Network connection URL/URI string - excluding parameters. (for example 'www.contoso.com/products/default.html')
@@ -126,7 +125,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDestinationUrl() {
-        return this._destinationUrl;
+        return this.destinationUrl;
     }
     /**
      * Gets the direction property value. Network connection direction. Possible values are: unknown, inbound, outbound.
@@ -134,7 +133,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ConnectionDirection getDirection() {
-        return this._direction;
+        return this.direction;
     }
     /**
      * Gets the domainRegisteredDateTime property value. Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -142,15 +141,15 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getDomainRegisteredDateTime() {
-        return this._domainRegisteredDateTime;
+        return this.domainRegisteredDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(21);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(21);
         deserializerMap.put("applicationName", (n) -> { this.setApplicationName(n.getStringValue()); });
         deserializerMap.put("destinationAddress", (n) -> { this.setDestinationAddress(n.getStringValue()); });
         deserializerMap.put("destinationDomain", (n) -> { this.setDestinationDomain(n.getStringValue()); });
@@ -180,7 +179,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getLocalDnsName() {
-        return this._localDnsName;
+        return this.localDnsName;
     }
     /**
      * Gets the natDestinationAddress property value. Network Address Translation destination IP address.
@@ -188,7 +187,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getNatDestinationAddress() {
-        return this._natDestinationAddress;
+        return this.natDestinationAddress;
     }
     /**
      * Gets the natDestinationPort property value. Network Address Translation destination port.
@@ -196,7 +195,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getNatDestinationPort() {
-        return this._natDestinationPort;
+        return this.natDestinationPort;
     }
     /**
      * Gets the natSourceAddress property value. Network Address Translation source IP address.
@@ -204,7 +203,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getNatSourceAddress() {
-        return this._natSourceAddress;
+        return this.natSourceAddress;
     }
     /**
      * Gets the natSourcePort property value. Network Address Translation source port.
@@ -212,7 +211,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getNatSourcePort() {
-        return this._natSourcePort;
+        return this.natSourcePort;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -220,7 +219,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the protocol property value. Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
@@ -228,7 +227,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public SecurityNetworkProtocol getProtocol() {
-        return this._protocol;
+        return this.protocol;
     }
     /**
      * Gets the riskScore property value. Provider generated/calculated risk score of the network connection. Recommended value range of 0-1, which equates to a percentage.
@@ -236,7 +235,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getRiskScore() {
-        return this._riskScore;
+        return this.riskScore;
     }
     /**
      * Gets the sourceAddress property value. Source (i.e. origin) IP address (of the network connection).
@@ -244,7 +243,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSourceAddress() {
-        return this._sourceAddress;
+        return this.sourceAddress;
     }
     /**
      * Gets the sourceLocation property value. Location (by IP address mapping) associated with the source of a network connection.
@@ -252,7 +251,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSourceLocation() {
-        return this._sourceLocation;
+        return this.sourceLocation;
     }
     /**
      * Gets the sourcePort property value. Source (i.e. origin) IP port (of the network connection).
@@ -260,7 +259,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSourcePort() {
-        return this._sourcePort;
+        return this.sourcePort;
     }
     /**
      * Gets the status property value. Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
@@ -268,7 +267,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ConnectionStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the urlParameters property value. Parameters (suffix) of the destination URL.
@@ -276,7 +275,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getUrlParameters() {
-        return this._urlParameters;
+        return this.urlParameters;
     }
     /**
      * Serializes information the current object
@@ -316,7 +315,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the applicationName property value. Name of the application managing the network connection (for example, Facebook or SMTP).
@@ -325,7 +324,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setApplicationName(@javax.annotation.Nullable final String value) {
-        this._applicationName = value;
+        this.applicationName = value;
     }
     /**
      * Sets the destinationAddress property value. Destination IP address (of the network connection).
@@ -334,7 +333,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDestinationAddress(@javax.annotation.Nullable final String value) {
-        this._destinationAddress = value;
+        this.destinationAddress = value;
     }
     /**
      * Sets the destinationDomain property value. Destination domain portion of the destination URL. (for example 'www.contoso.com').
@@ -343,7 +342,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDestinationDomain(@javax.annotation.Nullable final String value) {
-        this._destinationDomain = value;
+        this.destinationDomain = value;
     }
     /**
      * Sets the destinationLocation property value. Location (by IP address mapping) associated with the destination of a network connection.
@@ -352,7 +351,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDestinationLocation(@javax.annotation.Nullable final String value) {
-        this._destinationLocation = value;
+        this.destinationLocation = value;
     }
     /**
      * Sets the destinationPort property value. Destination port (of the network connection).
@@ -361,7 +360,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDestinationPort(@javax.annotation.Nullable final String value) {
-        this._destinationPort = value;
+        this.destinationPort = value;
     }
     /**
      * Sets the destinationUrl property value. Network connection URL/URI string - excluding parameters. (for example 'www.contoso.com/products/default.html')
@@ -370,7 +369,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDestinationUrl(@javax.annotation.Nullable final String value) {
-        this._destinationUrl = value;
+        this.destinationUrl = value;
     }
     /**
      * Sets the direction property value. Network connection direction. Possible values are: unknown, inbound, outbound.
@@ -379,7 +378,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDirection(@javax.annotation.Nullable final ConnectionDirection value) {
-        this._direction = value;
+        this.direction = value;
     }
     /**
      * Sets the domainRegisteredDateTime property value. Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -388,7 +387,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDomainRegisteredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._domainRegisteredDateTime = value;
+        this.domainRegisteredDateTime = value;
     }
     /**
      * Sets the localDnsName property value. The local DNS name resolution as it appears in the host's local DNS cache (for example, in case the 'hosts' file was tampered with).
@@ -397,7 +396,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLocalDnsName(@javax.annotation.Nullable final String value) {
-        this._localDnsName = value;
+        this.localDnsName = value;
     }
     /**
      * Sets the natDestinationAddress property value. Network Address Translation destination IP address.
@@ -406,7 +405,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setNatDestinationAddress(@javax.annotation.Nullable final String value) {
-        this._natDestinationAddress = value;
+        this.natDestinationAddress = value;
     }
     /**
      * Sets the natDestinationPort property value. Network Address Translation destination port.
@@ -415,7 +414,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setNatDestinationPort(@javax.annotation.Nullable final String value) {
-        this._natDestinationPort = value;
+        this.natDestinationPort = value;
     }
     /**
      * Sets the natSourceAddress property value. Network Address Translation source IP address.
@@ -424,7 +423,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setNatSourceAddress(@javax.annotation.Nullable final String value) {
-        this._natSourceAddress = value;
+        this.natSourceAddress = value;
     }
     /**
      * Sets the natSourcePort property value. Network Address Translation source port.
@@ -433,7 +432,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setNatSourcePort(@javax.annotation.Nullable final String value) {
-        this._natSourcePort = value;
+        this.natSourcePort = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -442,7 +441,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the protocol property value. Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
@@ -451,7 +450,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setProtocol(@javax.annotation.Nullable final SecurityNetworkProtocol value) {
-        this._protocol = value;
+        this.protocol = value;
     }
     /**
      * Sets the riskScore property value. Provider generated/calculated risk score of the network connection. Recommended value range of 0-1, which equates to a percentage.
@@ -460,7 +459,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final String value) {
-        this._riskScore = value;
+        this.riskScore = value;
     }
     /**
      * Sets the sourceAddress property value. Source (i.e. origin) IP address (of the network connection).
@@ -469,7 +468,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSourceAddress(@javax.annotation.Nullable final String value) {
-        this._sourceAddress = value;
+        this.sourceAddress = value;
     }
     /**
      * Sets the sourceLocation property value. Location (by IP address mapping) associated with the source of a network connection.
@@ -478,7 +477,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSourceLocation(@javax.annotation.Nullable final String value) {
-        this._sourceLocation = value;
+        this.sourceLocation = value;
     }
     /**
      * Sets the sourcePort property value. Source (i.e. origin) IP port (of the network connection).
@@ -487,7 +486,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSourcePort(@javax.annotation.Nullable final String value) {
-        this._sourcePort = value;
+        this.sourcePort = value;
     }
     /**
      * Sets the status property value. Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
@@ -496,7 +495,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ConnectionStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the urlParameters property value. Parameters (suffix) of the destination URL.
@@ -505,6 +504,6 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUrlParameters(@javax.annotation.Nullable final String value) {
-        this._urlParameters = value;
+        this.urlParameters = value;
     }
 }

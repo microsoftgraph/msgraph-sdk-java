@@ -5,20 +5,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getStaffAvailability method. */
 public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The endDateTime property */
-    private DateTimeTimeZone _endDateTime;
+    private DateTimeTimeZone endDateTime;
     /** The staffIds property */
-    private java.util.List<String> _staffIds;
+    private java.util.List<String> staffIds;
     /** The startDateTime property */
-    private DateTimeTimeZone _startDateTime;
+    private DateTimeTimeZone startDateTime;
     /**
      * Instantiates a new getStaffAvailabilityPostRequestBody and sets the default values.
      * @return a void
@@ -43,7 +41,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
@@ -51,15 +49,15 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("staffIds", (n) -> { this.setStaffIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
@@ -71,7 +69,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public java.util.List<String> getStaffIds() {
-        return this._staffIds;
+        return this.staffIds;
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
@@ -79,7 +77,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Serializes information the current object
@@ -101,7 +99,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the endDateTime property value. The endDateTime property
@@ -110,7 +108,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
      * Sets the staffIds property value. The staffIds property
@@ -119,7 +117,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setStaffIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._staffIds = value;
+        this.staffIds = value;
     }
     /**
      * Sets the startDateTime property value. The startDateTime property
@@ -128,6 +126,6 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
 }

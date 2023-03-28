@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ErrorDetails implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The code property */
-    private String _code;
+    private String code;
     /** The message property */
-    private String _message;
+    private String message;
     /** The target property */
-    private String _target;
+    private String target;
     /**
      * Instantiates a new ErrorDetails and sets the default values.
      * @return a void
@@ -41,7 +40,7 @@ public class ErrorDetails implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the code property value. The code property
@@ -49,15 +48,15 @@ public class ErrorDetails implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCode() {
-        return this._code;
+        return this.code;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
         deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
         deserializerMap.put("target", (n) -> { this.setTarget(n.getStringValue()); });
@@ -69,7 +68,7 @@ public class ErrorDetails implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getMessage() {
-        return this._message;
+        return this.message;
     }
     /**
      * Gets the target property value. The target property
@@ -77,7 +76,7 @@ public class ErrorDetails implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getTarget() {
-        return this._target;
+        return this.target;
     }
     /**
      * Serializes information the current object
@@ -99,7 +98,7 @@ public class ErrorDetails implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the code property value. The code property
@@ -108,7 +107,7 @@ public class ErrorDetails implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final String value) {
-        this._code = value;
+        this.code = value;
     }
     /**
      * Sets the message property value. The message property
@@ -117,7 +116,7 @@ public class ErrorDetails implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final String value) {
-        this._message = value;
+        this.message = value;
     }
     /**
      * Sets the target property value. The target property
@@ -126,6 +125,6 @@ public class ErrorDetails implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final String value) {
-        this._target = value;
+        this.target = value;
     }
 }

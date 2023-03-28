@@ -5,23 +5,22 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Category of the provisioning error. Note: Currently, there is only one possible value. Possible value: PropertyConflict - indicates a property value is not unique. Other objects contain the same value for the property. */
-    private String _category;
+    private String category;
     /** The date and time at which the error occurred. */
-    private OffsetDateTime _occurredDateTime;
+    private OffsetDateTime occurredDateTime;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress */
-    private String _propertyCausingError;
+    private String propertyCausingError;
     /** Value of the property causing the error. */
-    private String _value;
+    private String value;
     /**
      * Instantiates a new onPremisesProvisioningError and sets the default values.
      * @return a void
@@ -46,7 +45,7 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the category property value. Category of the provisioning error. Note: Currently, there is only one possible value. Possible value: PropertyConflict - indicates a property value is not unique. Other objects contain the same value for the property.
@@ -54,15 +53,15 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory() {
-        return this._category;
+        return this.category;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("category", (n) -> { this.setCategory(n.getStringValue()); });
         deserializerMap.put("occurredDateTime", (n) -> { this.setOccurredDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -76,7 +75,7 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public OffsetDateTime getOccurredDateTime() {
-        return this._occurredDateTime;
+        return this.occurredDateTime;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -84,7 +83,7 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the propertyCausingError property value. Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress
@@ -92,7 +91,7 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getPropertyCausingError() {
-        return this._propertyCausingError;
+        return this.propertyCausingError;
     }
     /**
      * Gets the value property value. Value of the property causing the error.
@@ -100,7 +99,7 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
@@ -124,7 +123,7 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the category property value. Category of the provisioning error. Note: Currently, there is only one possible value. Possible value: PropertyConflict - indicates a property value is not unique. Other objects contain the same value for the property.
@@ -133,7 +132,7 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final String value) {
-        this._category = value;
+        this.category = value;
     }
     /**
      * Sets the occurredDateTime property value. The date and time at which the error occurred.
@@ -142,7 +141,7 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setOccurredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._occurredDateTime = value;
+        this.occurredDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -151,7 +150,7 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the propertyCausingError property value. Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress
@@ -160,7 +159,7 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setPropertyCausingError(@javax.annotation.Nullable final String value) {
-        this._propertyCausingError = value;
+        this.propertyCausingError = value;
     }
     /**
      * Sets the value property value. Value of the property causing the error.
@@ -169,6 +168,6 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final String value) {
-        this._value = value;
+        this.value = value;
     }
 }

@@ -3,23 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AdministrativeUnit extends DirectoryObject implements Parsable {
     /** An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith), $search. */
-    private String _description;
+    private String description;
     /** Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
-    private String _displayName;
+    private String displayName;
     /** The collection of open extensions defined for this administrative unit. Nullable. */
-    private java.util.List<Extension> _extensions;
+    private java.util.List<Extension> extensions;
     /** Users and groups that are members of this administrative unit. Supports $expand. */
-    private java.util.List<DirectoryObject> _members;
+    private java.util.List<DirectoryObject> members;
     /** Scoped-role members of this administrative unit. */
-    private java.util.List<ScopedRoleMembership> _scopedRoleMembers;
+    private java.util.List<ScopedRoleMembership> scopedRoleMembers;
     /** Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit. */
-    private String _visibility;
+    private String visibility;
     /**
      * Instantiates a new AdministrativeUnit and sets the default values.
      * @return a void
@@ -45,7 +44,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
@@ -53,7 +52,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for this administrative unit. Nullable.
@@ -61,15 +60,15 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
-        return this._extensions;
+        return this.extensions;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
@@ -84,7 +83,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getMembers() {
-        return this._members;
+        return this.members;
     }
     /**
      * Gets the scopedRoleMembers property value. Scoped-role members of this administrative unit.
@@ -92,7 +91,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ScopedRoleMembership> getScopedRoleMembers() {
-        return this._scopedRoleMembers;
+        return this.scopedRoleMembers;
     }
     /**
      * Gets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
@@ -100,7 +99,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVisibility() {
-        return this._visibility;
+        return this.visibility;
     }
     /**
      * Serializes information the current object
@@ -125,7 +124,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
@@ -134,7 +133,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for this administrative unit. Nullable.
@@ -143,7 +142,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
-        this._extensions = value;
+        this.extensions = value;
     }
     /**
      * Sets the members property value. Users and groups that are members of this administrative unit. Supports $expand.
@@ -152,7 +151,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._members = value;
+        this.members = value;
     }
     /**
      * Sets the scopedRoleMembers property value. Scoped-role members of this administrative unit.
@@ -161,7 +160,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setScopedRoleMembers(@javax.annotation.Nullable final java.util.List<ScopedRoleMembership> value) {
-        this._scopedRoleMembers = value;
+        this.scopedRoleMembers = value;
     }
     /**
      * Sets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
@@ -170,6 +169,6 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVisibility(@javax.annotation.Nullable final String value) {
-        this._visibility = value;
+        this.visibility = value;
     }
 }

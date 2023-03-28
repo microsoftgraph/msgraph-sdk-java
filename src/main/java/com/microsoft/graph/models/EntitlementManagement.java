@@ -3,27 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EntitlementManagement extends Entity implements Parsable {
     /** Approval stages for decisions associated with access package assignment requests. */
-    private java.util.List<Approval> _accessPackageAssignmentApprovals;
+    private java.util.List<Approval> accessPackageAssignmentApprovals;
     /** Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources. */
-    private java.util.List<AccessPackage> _accessPackages;
+    private java.util.List<AccessPackage> accessPackages;
     /** Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment. */
-    private java.util.List<AccessPackageAssignmentPolicy> _assignmentPolicies;
+    private java.util.List<AccessPackageAssignmentPolicy> assignmentPolicies;
     /** Access package assignment requests created by or on behalf of a subject. */
-    private java.util.List<AccessPackageAssignmentRequest> _assignmentRequests;
+    private java.util.List<AccessPackageAssignmentRequest> assignmentRequests;
     /** The assignment of an access package to a subject for a period of time. */
-    private java.util.List<AccessPackageAssignment> _assignments;
+    private java.util.List<AccessPackageAssignment> assignments;
     /** A container for access packages. */
-    private java.util.List<AccessPackageCatalog> _catalogs;
+    private java.util.List<AccessPackageCatalog> catalogs;
     /** References to a directory or domain of another organization whose users can request access. */
-    private java.util.List<ConnectedOrganization> _connectedOrganizations;
+    private java.util.List<ConnectedOrganization> connectedOrganizations;
     /** The settings that control the behavior of Azure AD entitlement management. */
-    private EntitlementManagementSettings _settings;
+    private EntitlementManagementSettings settings;
     /**
      * Instantiates a new EntitlementManagement and sets the default values.
      * @return a void
@@ -48,7 +47,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Approval> getAccessPackageAssignmentApprovals() {
-        return this._accessPackageAssignmentApprovals;
+        return this.accessPackageAssignmentApprovals;
     }
     /**
      * Gets the accessPackages property value. Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
@@ -56,7 +55,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AccessPackage> getAccessPackages() {
-        return this._accessPackages;
+        return this.accessPackages;
     }
     /**
      * Gets the assignmentPolicies property value. Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
@@ -64,7 +63,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AccessPackageAssignmentPolicy> getAssignmentPolicies() {
-        return this._assignmentPolicies;
+        return this.assignmentPolicies;
     }
     /**
      * Gets the assignmentRequests property value. Access package assignment requests created by or on behalf of a subject.
@@ -72,7 +71,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AccessPackageAssignmentRequest> getAssignmentRequests() {
-        return this._assignmentRequests;
+        return this.assignmentRequests;
     }
     /**
      * Gets the assignments property value. The assignment of an access package to a subject for a period of time.
@@ -80,7 +79,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AccessPackageAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * Gets the catalogs property value. A container for access packages.
@@ -88,7 +87,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AccessPackageCatalog> getCatalogs() {
-        return this._catalogs;
+        return this.catalogs;
     }
     /**
      * Gets the connectedOrganizations property value. References to a directory or domain of another organization whose users can request access.
@@ -96,15 +95,15 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ConnectedOrganization> getConnectedOrganizations() {
-        return this._connectedOrganizations;
+        return this.connectedOrganizations;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackageAssignmentApprovals", (n) -> { this.setAccessPackageAssignmentApprovals(n.getCollectionOfObjectValues(Approval::createFromDiscriminatorValue)); });
         deserializerMap.put("accessPackages", (n) -> { this.setAccessPackages(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
         deserializerMap.put("assignmentPolicies", (n) -> { this.setAssignmentPolicies(n.getCollectionOfObjectValues(AccessPackageAssignmentPolicy::createFromDiscriminatorValue)); });
@@ -121,7 +120,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EntitlementManagementSettings getSettings() {
-        return this._settings;
+        return this.settings;
     }
     /**
      * Serializes information the current object
@@ -148,7 +147,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAccessPackageAssignmentApprovals(@javax.annotation.Nullable final java.util.List<Approval> value) {
-        this._accessPackageAssignmentApprovals = value;
+        this.accessPackageAssignmentApprovals = value;
     }
     /**
      * Sets the accessPackages property value. Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
@@ -157,7 +156,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAccessPackages(@javax.annotation.Nullable final java.util.List<AccessPackage> value) {
-        this._accessPackages = value;
+        this.accessPackages = value;
     }
     /**
      * Sets the assignmentPolicies property value. Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
@@ -166,7 +165,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAssignmentPolicies(@javax.annotation.Nullable final java.util.List<AccessPackageAssignmentPolicy> value) {
-        this._assignmentPolicies = value;
+        this.assignmentPolicies = value;
     }
     /**
      * Sets the assignmentRequests property value. Access package assignment requests created by or on behalf of a subject.
@@ -175,7 +174,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAssignmentRequests(@javax.annotation.Nullable final java.util.List<AccessPackageAssignmentRequest> value) {
-        this._assignmentRequests = value;
+        this.assignmentRequests = value;
     }
     /**
      * Sets the assignments property value. The assignment of an access package to a subject for a period of time.
@@ -184,7 +183,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<AccessPackageAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the catalogs property value. A container for access packages.
@@ -193,7 +192,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCatalogs(@javax.annotation.Nullable final java.util.List<AccessPackageCatalog> value) {
-        this._catalogs = value;
+        this.catalogs = value;
     }
     /**
      * Sets the connectedOrganizations property value. References to a directory or domain of another organization whose users can request access.
@@ -202,7 +201,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setConnectedOrganizations(@javax.annotation.Nullable final java.util.List<ConnectedOrganization> value) {
-        this._connectedOrganizations = value;
+        this.connectedOrganizations = value;
     }
     /**
      * Sets the settings property value. The settings that control the behavior of Azure AD entitlement management.
@@ -211,6 +210,6 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final EntitlementManagementSettings value) {
-        this._settings = value;
+        this.settings = value;
     }
 }

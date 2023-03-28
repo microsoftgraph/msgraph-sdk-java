@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessLocations implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Location IDs excluded from scope of policy. */
-    private java.util.List<String> _excludeLocations;
+    private java.util.List<String> excludeLocations;
     /** Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted. */
-    private java.util.List<String> _includeLocations;
+    private java.util.List<String> includeLocations;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new conditionalAccessLocations and sets the default values.
      * @return a void
@@ -41,7 +40,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the excludeLocations property value. Location IDs excluded from scope of policy.
@@ -49,15 +48,15 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public java.util.List<String> getExcludeLocations() {
-        return this._excludeLocations;
+        return this.excludeLocations;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("excludeLocations", (n) -> { this.setExcludeLocations(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("includeLocations", (n) -> { this.setIncludeLocations(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -69,7 +68,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public java.util.List<String> getIncludeLocations() {
-        return this._includeLocations;
+        return this.includeLocations;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -77,7 +76,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -99,7 +98,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the excludeLocations property value. Location IDs excluded from scope of policy.
@@ -108,7 +107,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setExcludeLocations(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._excludeLocations = value;
+        this.excludeLocations = value;
     }
     /**
      * Sets the includeLocations property value. Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted.
@@ -117,7 +116,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setIncludeLocations(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._includeLocations = value;
+        this.includeLocations = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -126,6 +125,6 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

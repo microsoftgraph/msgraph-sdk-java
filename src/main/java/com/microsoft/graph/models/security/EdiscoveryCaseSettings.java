@@ -4,17 +4,16 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoveryCaseSettings extends Entity implements Parsable {
     /** The OCR (Optical Character Recognition) settings for the case. */
-    private OcrSettings _ocr;
+    private OcrSettings ocr;
     /** The redundancy (near duplicate and email threading) detection settings for the case. */
-    private RedundancyDetectionSettings _redundancyDetection;
+    private RedundancyDetectionSettings redundancyDetection;
     /** The Topic Modeling (Themes) settings for the case. */
-    private TopicModelingSettings _topicModeling;
+    private TopicModelingSettings topicModeling;
     /**
      * Instantiates a new ediscoveryCaseSettings and sets the default values.
      * @return a void
@@ -35,11 +34,11 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("ocr", (n) -> { this.setOcr(n.getObjectValue(OcrSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("redundancyDetection", (n) -> { this.setRedundancyDetection(n.getObjectValue(RedundancyDetectionSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("topicModeling", (n) -> { this.setTopicModeling(n.getObjectValue(TopicModelingSettings::createFromDiscriminatorValue)); });
@@ -51,7 +50,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OcrSettings getOcr() {
-        return this._ocr;
+        return this.ocr;
     }
     /**
      * Gets the redundancyDetection property value. The redundancy (near duplicate and email threading) detection settings for the case.
@@ -59,7 +58,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RedundancyDetectionSettings getRedundancyDetection() {
-        return this._redundancyDetection;
+        return this.redundancyDetection;
     }
     /**
      * Gets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
@@ -67,7 +66,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TopicModelingSettings getTopicModeling() {
-        return this._topicModeling;
+        return this.topicModeling;
     }
     /**
      * Serializes information the current object
@@ -89,7 +88,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOcr(@javax.annotation.Nullable final OcrSettings value) {
-        this._ocr = value;
+        this.ocr = value;
     }
     /**
      * Sets the redundancyDetection property value. The redundancy (near duplicate and email threading) detection settings for the case.
@@ -98,7 +97,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRedundancyDetection(@javax.annotation.Nullable final RedundancyDetectionSettings value) {
-        this._redundancyDetection = value;
+        this.redundancyDetection = value;
     }
     /**
      * Sets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
@@ -107,6 +106,6 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTopicModeling(@javax.annotation.Nullable final TopicModelingSettings value) {
-        this._topicModeling = value;
+        this.topicModeling = value;
     }
 }

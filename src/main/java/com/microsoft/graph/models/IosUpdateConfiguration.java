@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosUpdateConfiguration extends DeviceConfiguration implements Parsable {
     /** Active Hours End (active hours mean the time window when updates install should not happen) */
-    private LocalTime _activeHoursEnd;
+    private LocalTime activeHoursEnd;
     /** Active Hours Start (active hours mean the time window when updates install should not happen) */
-    private LocalTime _activeHoursStart;
+    private LocalTime activeHoursStart;
     /** Days in week for which active hours are configured. This collection can contain a maximum of 7 elements. */
-    private java.util.List<DayOfWeek> _scheduledInstallDays;
+    private java.util.List<DayOfWeek> scheduledInstallDays;
     /** UTC Time Offset indicated in minutes */
-    private Integer _utcTimeOffsetInMinutes;
+    private Integer utcTimeOffsetInMinutes;
     /**
      * Instantiates a new IosUpdateConfiguration and sets the default values.
      * @return a void
@@ -42,7 +41,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      */
     @javax.annotation.Nullable
     public LocalTime getActiveHoursEnd() {
-        return this._activeHoursEnd;
+        return this.activeHoursEnd;
     }
     /**
      * Gets the activeHoursStart property value. Active Hours Start (active hours mean the time window when updates install should not happen)
@@ -50,15 +49,15 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      */
     @javax.annotation.Nullable
     public LocalTime getActiveHoursStart() {
-        return this._activeHoursStart;
+        return this.activeHoursStart;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeHoursEnd", (n) -> { this.setActiveHoursEnd(n.getLocalTimeValue()); });
         deserializerMap.put("activeHoursStart", (n) -> { this.setActiveHoursStart(n.getLocalTimeValue()); });
         deserializerMap.put("scheduledInstallDays", (n) -> { this.setScheduledInstallDays(n.getCollectionOfEnumValues(DayOfWeek.class)); });
@@ -71,7 +70,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      */
     @javax.annotation.Nullable
     public java.util.List<DayOfWeek> getScheduledInstallDays() {
-        return this._scheduledInstallDays;
+        return this.scheduledInstallDays;
     }
     /**
      * Gets the utcTimeOffsetInMinutes property value. UTC Time Offset indicated in minutes
@@ -79,7 +78,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      */
     @javax.annotation.Nullable
     public Integer getUtcTimeOffsetInMinutes() {
-        return this._utcTimeOffsetInMinutes;
+        return this.utcTimeOffsetInMinutes;
     }
     /**
      * Serializes information the current object
@@ -102,7 +101,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      */
     @javax.annotation.Nonnull
     public void setActiveHoursEnd(@javax.annotation.Nullable final LocalTime value) {
-        this._activeHoursEnd = value;
+        this.activeHoursEnd = value;
     }
     /**
      * Sets the activeHoursStart property value. Active Hours Start (active hours mean the time window when updates install should not happen)
@@ -111,7 +110,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      */
     @javax.annotation.Nonnull
     public void setActiveHoursStart(@javax.annotation.Nullable final LocalTime value) {
-        this._activeHoursStart = value;
+        this.activeHoursStart = value;
     }
     /**
      * Sets the scheduledInstallDays property value. Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
@@ -120,7 +119,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      */
     @javax.annotation.Nonnull
     public void setScheduledInstallDays(@javax.annotation.Nullable final java.util.List<DayOfWeek> value) {
-        this._scheduledInstallDays = value;
+        this.scheduledInstallDays = value;
     }
     /**
      * Sets the utcTimeOffsetInMinutes property value. UTC Time Offset indicated in minutes
@@ -129,6 +128,6 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      */
     @javax.annotation.Nonnull
     public void setUtcTimeOffsetInMinutes(@javax.annotation.Nullable final Integer value) {
-        this._utcTimeOffsetInMinutes = value;
+        this.utcTimeOffsetInMinutes = value;
     }
 }

@@ -4,35 +4,34 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** A Windows registry hive : HKEY_CURRENT_CONFIG HKEY_CURRENT_USER HKEY_LOCAL_MACHINE/SAM HKEY_LOCAL_MACHINE/Security HKEY_LOCAL_MACHINE/Software HKEY_LOCAL_MACHINE/System HKEY_USERS/.Default. Possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault. */
-    private RegistryHive _hive;
+    private RegistryHive hive;
     /** Current (i.e. changed) registry key (excludes HIVE). */
-    private String _key;
+    private String key;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Previous (i.e. before changed) registry key (excludes HIVE). */
-    private String _oldKey;
+    private String oldKey;
     /** Previous (i.e. before changed) registry key value data (contents). */
-    private String _oldValueData;
+    private String oldValueData;
     /** Previous (i.e. before changed) registry key value name. */
-    private String _oldValueName;
+    private String oldValueName;
     /** Operation that changed the registry key name and/or value. Possible values are: unknown, create, modify, delete. */
-    private RegistryOperation _operation;
+    private RegistryOperation operation;
     /** Process ID (PID) of the process that modified the registry key (process details will appear in the alert 'processes' collection). */
-    private Integer _processId;
+    private Integer processId;
     /** Current (i.e. changed) registry key value data (contents). */
-    private String _valueData;
+    private String valueData;
     /** Current (i.e. changed) registry key value name */
-    private String _valueName;
+    private String valueName;
     /** Registry key value type REG_BINARY REG_DWORD REG_DWORD_LITTLE_ENDIAN REG_DWORD_BIG_ENDIANREG_EXPAND_SZ REG_LINK REG_MULTI_SZ REG_NONE REG_QWORD REG_QWORD_LITTLE_ENDIAN REG_SZ Possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz. */
-    private RegistryValueType _valueType;
+    private RegistryValueType valueType;
     /**
      * Instantiates a new registryKeyState and sets the default values.
      * @return a void
@@ -57,15 +56,15 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(11);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("hive", (n) -> { this.setHive(n.getEnumValue(RegistryHive.class)); });
         deserializerMap.put("key", (n) -> { this.setKey(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -85,7 +84,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public RegistryHive getHive() {
-        return this._hive;
+        return this.hive;
     }
     /**
      * Gets the key property value. Current (i.e. changed) registry key (excludes HIVE).
@@ -93,7 +92,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getKey() {
-        return this._key;
+        return this.key;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -101,7 +100,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the oldKey property value. Previous (i.e. before changed) registry key (excludes HIVE).
@@ -109,7 +108,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOldKey() {
-        return this._oldKey;
+        return this.oldKey;
     }
     /**
      * Gets the oldValueData property value. Previous (i.e. before changed) registry key value data (contents).
@@ -117,7 +116,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOldValueData() {
-        return this._oldValueData;
+        return this.oldValueData;
     }
     /**
      * Gets the oldValueName property value. Previous (i.e. before changed) registry key value name.
@@ -125,7 +124,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOldValueName() {
-        return this._oldValueName;
+        return this.oldValueName;
     }
     /**
      * Gets the operation property value. Operation that changed the registry key name and/or value. Possible values are: unknown, create, modify, delete.
@@ -133,7 +132,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public RegistryOperation getOperation() {
-        return this._operation;
+        return this.operation;
     }
     /**
      * Gets the processId property value. Process ID (PID) of the process that modified the registry key (process details will appear in the alert 'processes' collection).
@@ -141,7 +140,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getProcessId() {
-        return this._processId;
+        return this.processId;
     }
     /**
      * Gets the valueData property value. Current (i.e. changed) registry key value data (contents).
@@ -149,7 +148,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getValueData() {
-        return this._valueData;
+        return this.valueData;
     }
     /**
      * Gets the valueName property value. Current (i.e. changed) registry key value name
@@ -157,7 +156,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getValueName() {
-        return this._valueName;
+        return this.valueName;
     }
     /**
      * Gets the valueType property value. Registry key value type REG_BINARY REG_DWORD REG_DWORD_LITTLE_ENDIAN REG_DWORD_BIG_ENDIANREG_EXPAND_SZ REG_LINK REG_MULTI_SZ REG_NONE REG_QWORD REG_QWORD_LITTLE_ENDIAN REG_SZ Possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz.
@@ -165,7 +164,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public RegistryValueType getValueType() {
-        return this._valueType;
+        return this.valueType;
     }
     /**
      * Serializes information the current object
@@ -195,7 +194,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the hive property value. A Windows registry hive : HKEY_CURRENT_CONFIG HKEY_CURRENT_USER HKEY_LOCAL_MACHINE/SAM HKEY_LOCAL_MACHINE/Security HKEY_LOCAL_MACHINE/Software HKEY_LOCAL_MACHINE/System HKEY_USERS/.Default. Possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault.
@@ -204,7 +203,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setHive(@javax.annotation.Nullable final RegistryHive value) {
-        this._hive = value;
+        this.hive = value;
     }
     /**
      * Sets the key property value. Current (i.e. changed) registry key (excludes HIVE).
@@ -213,7 +212,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setKey(@javax.annotation.Nullable final String value) {
-        this._key = value;
+        this.key = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -222,7 +221,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the oldKey property value. Previous (i.e. before changed) registry key (excludes HIVE).
@@ -231,7 +230,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOldKey(@javax.annotation.Nullable final String value) {
-        this._oldKey = value;
+        this.oldKey = value;
     }
     /**
      * Sets the oldValueData property value. Previous (i.e. before changed) registry key value data (contents).
@@ -240,7 +239,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOldValueData(@javax.annotation.Nullable final String value) {
-        this._oldValueData = value;
+        this.oldValueData = value;
     }
     /**
      * Sets the oldValueName property value. Previous (i.e. before changed) registry key value name.
@@ -249,7 +248,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOldValueName(@javax.annotation.Nullable final String value) {
-        this._oldValueName = value;
+        this.oldValueName = value;
     }
     /**
      * Sets the operation property value. Operation that changed the registry key name and/or value. Possible values are: unknown, create, modify, delete.
@@ -258,7 +257,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOperation(@javax.annotation.Nullable final RegistryOperation value) {
-        this._operation = value;
+        this.operation = value;
     }
     /**
      * Sets the processId property value. Process ID (PID) of the process that modified the registry key (process details will appear in the alert 'processes' collection).
@@ -267,7 +266,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setProcessId(@javax.annotation.Nullable final Integer value) {
-        this._processId = value;
+        this.processId = value;
     }
     /**
      * Sets the valueData property value. Current (i.e. changed) registry key value data (contents).
@@ -276,7 +275,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setValueData(@javax.annotation.Nullable final String value) {
-        this._valueData = value;
+        this.valueData = value;
     }
     /**
      * Sets the valueName property value. Current (i.e. changed) registry key value name
@@ -285,7 +284,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setValueName(@javax.annotation.Nullable final String value) {
-        this._valueName = value;
+        this.valueName = value;
     }
     /**
      * Sets the valueType property value. Registry key value type REG_BINARY REG_DWORD REG_DWORD_LITTLE_ENDIAN REG_DWORD_BIG_ENDIANREG_EXPAND_SZ REG_LINK REG_MULTI_SZ REG_NONE REG_QWORD REG_QWORD_LITTLE_ENDIAN REG_SZ Possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz.
@@ -294,6 +293,6 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setValueType(@javax.annotation.Nullable final RegistryValueType value) {
-        this._valueType = value;
+        this.valueType = value;
     }
 }

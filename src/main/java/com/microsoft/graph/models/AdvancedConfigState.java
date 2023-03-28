@@ -3,9 +3,8 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
 public enum AdvancedConfigState implements ValuedEnum {
-    Default_escaped("default_escaped"),
+    DefaultEscaped("default"),
     Enabled("enabled"),
     Disabled("disabled"),
     UnknownFutureValue("unknownFutureValue");
@@ -19,7 +18,7 @@ public enum AdvancedConfigState implements ValuedEnum {
     public static AdvancedConfigState forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "default": return Default_escaped;
+            case "default": return DefaultEscaped;
             case "enabled": return Enabled;
             case "disabled": return Disabled;
             case "unknownFutureValue": return UnknownFutureValue;

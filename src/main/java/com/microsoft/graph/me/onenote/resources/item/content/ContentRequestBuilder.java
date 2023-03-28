@@ -1,6 +1,8 @@
 package com.microsoft.graph.me.onenote.resources.item.content;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.kiota.BaseRequestBuilder;
+import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -10,18 +12,13 @@ import com.microsoft.kiota.serialization.ParsableFactory;
 import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the media for the user entity. */
-public class ContentRequestBuilder {
-    /** Path parameters for the request */
-    private HashMap<String, Object> pathParameters;
-    /** The request adapter to use to execute the requests. */
-    private RequestAdapter requestAdapter;
-    /** Url template to use to build the URL for the current request builder */
-    private String urlTemplate;
+/**
+ * Provides operations to manage the media for the user entity.
+ */
+public class ContentRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new ContentRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -30,12 +27,7 @@ public class ContentRequestBuilder {
      */
     @javax.annotation.Nullable
     public ContentRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        Objects.requireNonNull(pathParameters);
-        Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/me/onenote/resources/{onenoteResource%2Did}/content";
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
+        super(requestAdapter, "{+baseurl}/me/onenote/resources/{onenoteResource%2Did}/content", pathParameters);
     }
     /**
      * Instantiates a new ContentRequestBuilder and sets the default values.
@@ -45,69 +37,7 @@ public class ContentRequestBuilder {
      */
     @javax.annotation.Nullable
     public ContentRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/me/onenote/resources/{onenoteResource%2Did}/content";
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
-        urlTplParams.put("request-raw-url", rawUrl);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
-    }
-    /**
-     * The content stream
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation() throws URISyntaxException {
-        return createGetRequestInformation(null);
-    }
-    /**
-     * The content stream
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * The content stream
-     * @param body Binary request body
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPutRequestInformation(@javax.annotation.Nonnull final InputStream body) throws URISyntaxException {
-        return createPutRequestInformation(body, null);
-    }
-    /**
-     * The content stream
-     * @param body Binary request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPutRequestInformation(@javax.annotation.Nonnull final InputStream body, @javax.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PUT;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.setStreamContent(body);
-        if (requestConfiguration != null) {
-            final PutRequestConfiguration requestConfig = new PutRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
+        super(requestAdapter, "{+baseurl}/me/onenote/resources/{onenoteResource%2Did}/content", rawUrl);
     }
     /**
      * The content stream
@@ -116,7 +46,7 @@ public class ContentRequestBuilder {
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> get() {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(null);
+            final RequestInformation requestInfo = toGetRequestInformation(null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -135,7 +65,7 @@ public class ContentRequestBuilder {
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
+            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -154,7 +84,7 @@ public class ContentRequestBuilder {
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> put(@javax.annotation.Nonnull final InputStream body) {
         try {
-            final RequestInformation requestInfo = createPutRequestInformation(body, null);
+            final RequestInformation requestInfo = toPutRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -175,7 +105,7 @@ public class ContentRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> put(@javax.annotation.Nonnull final InputStream body, @javax.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
-            final RequestInformation requestInfo = createPutRequestInformation(body, requestConfiguration);
+            final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -186,36 +116,72 @@ public class ContentRequestBuilder {
             return executionException;
         }
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public java.util.List<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        @javax.annotation.Nullable
-        public GetRequestConfiguration() {
-        }
+    /**
+     * The content stream
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+        return toGetRequestInformation(null);
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PutRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public java.util.List<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new PutRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        @javax.annotation.Nullable
-        public PutRequestConfiguration() {
+    /**
+     * The content stream
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        if (requestConfiguration != null) {
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
         }
+        return requestInfo;
+    }
+    /**
+     * The content stream
+     * @param body Binary request body
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPutRequestInformation(@javax.annotation.Nonnull final InputStream body) throws URISyntaxException {
+        return toPutRequestInformation(body, null);
+    }
+    /**
+     * The content stream
+     * @param body Binary request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPutRequestInformation(@javax.annotation.Nonnull final InputStream body, @javax.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.PUT;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.setStreamContent(body);
+        if (requestConfiguration != null) {
+            final PutRequestConfiguration requestConfig = new PutRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class GetRequestConfiguration extends BaseRequestConfiguration {
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class PutRequestConfiguration extends BaseRequestConfiguration {
     }
 }

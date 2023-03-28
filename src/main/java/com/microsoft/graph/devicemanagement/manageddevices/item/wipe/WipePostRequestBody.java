@@ -4,22 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the wipe method. */
 public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The keepEnrollmentData property */
-    private Boolean _keepEnrollmentData;
+    private Boolean keepEnrollmentData;
     /** The keepUserData property */
-    private Boolean _keepUserData;
+    private Boolean keepUserData;
     /** The macOsUnlockCode property */
-    private String _macOsUnlockCode;
+    private String macOsUnlockCode;
     /** The persistEsimDataPlan property */
-    private Boolean _persistEsimDataPlan;
+    private Boolean persistEsimDataPlan;
     /**
      * Instantiates a new wipePostRequestBody and sets the default values.
      * @return a void
@@ -44,15 +42,15 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("keepEnrollmentData", (n) -> { this.setKeepEnrollmentData(n.getBooleanValue()); });
         deserializerMap.put("keepUserData", (n) -> { this.setKeepUserData(n.getBooleanValue()); });
         deserializerMap.put("macOsUnlockCode", (n) -> { this.setMacOsUnlockCode(n.getStringValue()); });
@@ -65,7 +63,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getKeepEnrollmentData() {
-        return this._keepEnrollmentData;
+        return this.keepEnrollmentData;
     }
     /**
      * Gets the keepUserData property value. The keepUserData property
@@ -73,7 +71,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getKeepUserData() {
-        return this._keepUserData;
+        return this.keepUserData;
     }
     /**
      * Gets the macOsUnlockCode property value. The macOsUnlockCode property
@@ -81,7 +79,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getMacOsUnlockCode() {
-        return this._macOsUnlockCode;
+        return this.macOsUnlockCode;
     }
     /**
      * Gets the persistEsimDataPlan property value. The persistEsimDataPlan property
@@ -89,7 +87,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getPersistEsimDataPlan() {
-        return this._persistEsimDataPlan;
+        return this.persistEsimDataPlan;
     }
     /**
      * Serializes information the current object
@@ -112,7 +110,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the keepEnrollmentData property value. The keepEnrollmentData property
@@ -121,7 +119,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setKeepEnrollmentData(@javax.annotation.Nullable final Boolean value) {
-        this._keepEnrollmentData = value;
+        this.keepEnrollmentData = value;
     }
     /**
      * Sets the keepUserData property value. The keepUserData property
@@ -130,7 +128,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setKeepUserData(@javax.annotation.Nullable final Boolean value) {
-        this._keepUserData = value;
+        this.keepUserData = value;
     }
     /**
      * Sets the macOsUnlockCode property value. The macOsUnlockCode property
@@ -139,7 +137,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMacOsUnlockCode(@javax.annotation.Nullable final String value) {
-        this._macOsUnlockCode = value;
+        this.macOsUnlockCode = value;
     }
     /**
      * Sets the persistEsimDataPlan property value. The persistEsimDataPlan property
@@ -148,6 +146,6 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPersistEsimDataPlan(@javax.annotation.Nullable final Boolean value) {
-        this._persistEsimDataPlan = value;
+        this.persistEsimDataPlan = value;
     }
 }

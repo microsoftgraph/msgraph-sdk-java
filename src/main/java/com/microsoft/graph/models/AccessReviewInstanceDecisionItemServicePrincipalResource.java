@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewInstanceDecisionItemServicePrincipalResource extends AccessReviewInstanceDecisionItemResource implements Parsable {
     /** The appId property */
-    private String _appId;
+    private String appId;
     /**
      * Instantiates a new AccessReviewInstanceDecisionItemServicePrincipalResource and sets the default values.
      * @return a void
@@ -35,15 +34,15 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
      */
     @javax.annotation.Nullable
     public String getAppId() {
-        return this._appId;
+        return this.appId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         return deserializerMap;
     }
@@ -65,6 +64,6 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
      */
     @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
-        this._appId = value;
+        this.appId = value;
     }
 }

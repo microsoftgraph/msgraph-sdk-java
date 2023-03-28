@@ -3,31 +3,30 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class List extends BaseItem implements Parsable {
     /** The collection of field definitions for this list. */
-    private java.util.List<ColumnDefinition> _columns;
+    private java.util.List<ColumnDefinition> columns;
     /** The collection of content types present in this list. */
-    private java.util.List<ContentType> _contentTypes;
+    private java.util.List<ContentType> contentTypes;
     /** The displayable title of the list. */
-    private String _displayName;
+    private String displayName;
     /** Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem]. */
-    private Drive _drive;
+    private Drive drive;
     /** All items contained in the list. */
-    private java.util.List<ListItem> _items;
+    private java.util.List<ListItem> items;
     /** Provides additional details about the list. */
-    private ListInfo _list;
+    private ListInfo list;
     /** The collection of long-running operations on the list. */
-    private java.util.List<RichLongRunningOperation> _operations;
+    private java.util.List<RichLongRunningOperation> operations;
     /** Returns identifiers useful for SharePoint REST compatibility. Read-only. */
-    private SharepointIds _sharepointIds;
+    private SharepointIds sharepointIds;
     /** The set of subscriptions on the list. */
-    private java.util.List<Subscription> _subscriptions;
+    private java.util.List<Subscription> subscriptions;
     /** If present, indicates that this is a system-managed list. Read-only. */
-    private SystemFacet _system;
+    private SystemFacet system;
     /**
      * Instantiates a new list and sets the default values.
      * @return a void
@@ -53,7 +52,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ColumnDefinition> getColumns() {
-        return this._columns;
+        return this.columns;
     }
     /**
      * Gets the contentTypes property value. The collection of content types present in this list.
@@ -61,7 +60,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ContentType> getContentTypes() {
-        return this._contentTypes;
+        return this.contentTypes;
     }
     /**
      * Gets the displayName property value. The displayable title of the list.
@@ -69,7 +68,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the drive property value. Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
@@ -77,15 +76,15 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public Drive getDrive() {
-        return this._drive;
+        return this.drive;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("columns", (n) -> { this.setColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("contentTypes", (n) -> { this.setContentTypes(n.getCollectionOfObjectValues(ContentType::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -104,7 +103,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ListItem> getItems() {
-        return this._items;
+        return this.items;
     }
     /**
      * Gets the list property value. Provides additional details about the list.
@@ -112,7 +111,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public ListInfo getList() {
-        return this._list;
+        return this.list;
     }
     /**
      * Gets the operations property value. The collection of long-running operations on the list.
@@ -120,7 +119,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<RichLongRunningOperation> getOperations() {
-        return this._operations;
+        return this.operations;
     }
     /**
      * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
@@ -128,7 +127,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public SharepointIds getSharepointIds() {
-        return this._sharepointIds;
+        return this.sharepointIds;
     }
     /**
      * Gets the subscriptions property value. The set of subscriptions on the list.
@@ -136,7 +135,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Subscription> getSubscriptions() {
-        return this._subscriptions;
+        return this.subscriptions;
     }
     /**
      * Gets the system property value. If present, indicates that this is a system-managed list. Read-only.
@@ -144,7 +143,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public SystemFacet getSystem() {
-        return this._system;
+        return this.system;
     }
     /**
      * Serializes information the current object
@@ -173,7 +172,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setColumns(@javax.annotation.Nullable final java.util.List<ColumnDefinition> value) {
-        this._columns = value;
+        this.columns = value;
     }
     /**
      * Sets the contentTypes property value. The collection of content types present in this list.
@@ -182,7 +181,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentTypes(@javax.annotation.Nullable final java.util.List<ContentType> value) {
-        this._contentTypes = value;
+        this.contentTypes = value;
     }
     /**
      * Sets the displayName property value. The displayable title of the list.
@@ -191,7 +190,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the drive property value. Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
@@ -200,7 +199,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDrive(@javax.annotation.Nullable final Drive value) {
-        this._drive = value;
+        this.drive = value;
     }
     /**
      * Sets the items property value. All items contained in the list.
@@ -209,7 +208,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setItems(@javax.annotation.Nullable final java.util.List<ListItem> value) {
-        this._items = value;
+        this.items = value;
     }
     /**
      * Sets the list property value. Provides additional details about the list.
@@ -218,7 +217,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setList(@javax.annotation.Nullable final ListInfo value) {
-        this._list = value;
+        this.list = value;
     }
     /**
      * Sets the operations property value. The collection of long-running operations on the list.
@@ -227,7 +226,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<RichLongRunningOperation> value) {
-        this._operations = value;
+        this.operations = value;
     }
     /**
      * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
@@ -236,7 +235,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSharepointIds(@javax.annotation.Nullable final SharepointIds value) {
-        this._sharepointIds = value;
+        this.sharepointIds = value;
     }
     /**
      * Sets the subscriptions property value. The set of subscriptions on the list.
@@ -245,7 +244,7 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSubscriptions(@javax.annotation.Nullable final java.util.List<Subscription> value) {
-        this._subscriptions = value;
+        this.subscriptions = value;
     }
     /**
      * Sets the system property value. If present, indicates that this is a system-managed list. Read-only.
@@ -254,6 +253,6 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSystem(@javax.annotation.Nullable final SystemFacet value) {
-        this._system = value;
+        this.system = value;
     }
 }

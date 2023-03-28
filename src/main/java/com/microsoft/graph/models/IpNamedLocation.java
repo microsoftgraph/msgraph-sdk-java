@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IpNamedLocation extends NamedLocation implements Parsable {
-    /** List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596. Required. */
-    private java.util.List<IpRange> _ipRanges;
+    /** List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC5969. Required. */
+    private java.util.List<IpRange> ipRanges;
     /** true if this location is explicitly trusted. Optional. Default value is false. */
-    private Boolean _isTrusted;
+    private Boolean isTrusted;
     /**
      * Instantiates a new IpNamedLocation and sets the default values.
      * @return a void
@@ -32,22 +31,22 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("ipRanges", (n) -> { this.setIpRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
         deserializerMap.put("isTrusted", (n) -> { this.setIsTrusted(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the ipRanges property value. List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596. Required.
+     * Gets the ipRanges property value. List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC5969. Required.
      * @return a ipRange
      */
     @javax.annotation.Nullable
     public java.util.List<IpRange> getIpRanges() {
-        return this._ipRanges;
+        return this.ipRanges;
     }
     /**
      * Gets the isTrusted property value. true if this location is explicitly trusted. Optional. Default value is false.
@@ -55,7 +54,7 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsTrusted() {
-        return this._isTrusted;
+        return this.isTrusted;
     }
     /**
      * Serializes information the current object
@@ -70,13 +69,13 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
         writer.writeBooleanValue("isTrusted", this.getIsTrusted());
     }
     /**
-     * Sets the ipRanges property value. List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596. Required.
+     * Sets the ipRanges property value. List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC5969. Required.
      * @param value Value to set for the ipRanges property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setIpRanges(@javax.annotation.Nullable final java.util.List<IpRange> value) {
-        this._ipRanges = value;
+        this.ipRanges = value;
     }
     /**
      * Sets the isTrusted property value. true if this location is explicitly trusted. Optional. Default value is false.
@@ -85,6 +84,6 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsTrusted(@javax.annotation.Nullable final Boolean value) {
-        this._isTrusted = value;
+        this.isTrusted = value;
     }
 }

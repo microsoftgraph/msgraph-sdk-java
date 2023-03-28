@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChannelMembersNotificationRecipient extends TeamworkNotificationRecipient implements Parsable {
     /** The unique identifier for the channel whose members should receive the notification. */
-    private String _channelId;
+    private String channelId;
     /** The unique identifier for the team under which the channel resides. */
-    private String _teamId;
+    private String teamId;
     /**
      * Instantiates a new ChannelMembersNotificationRecipient and sets the default values.
      * @return a void
@@ -37,15 +36,15 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
      */
     @javax.annotation.Nullable
     public String getChannelId() {
-        return this._channelId;
+        return this.channelId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("channelId", (n) -> { this.setChannelId(n.getStringValue()); });
         deserializerMap.put("teamId", (n) -> { this.setTeamId(n.getStringValue()); });
         return deserializerMap;
@@ -56,7 +55,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
      */
     @javax.annotation.Nullable
     public String getTeamId() {
-        return this._teamId;
+        return this.teamId;
     }
     /**
      * Serializes information the current object
@@ -77,7 +76,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
      */
     @javax.annotation.Nonnull
     public void setChannelId(@javax.annotation.Nullable final String value) {
-        this._channelId = value;
+        this.channelId = value;
     }
     /**
      * Sets the teamId property value. The unique identifier for the team under which the channel resides.
@@ -86,6 +85,6 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
      */
     @javax.annotation.Nonnull
     public void setTeamId(@javax.annotation.Nullable final String value) {
-        this._teamId = value;
+        this.teamId = value;
     }
 }

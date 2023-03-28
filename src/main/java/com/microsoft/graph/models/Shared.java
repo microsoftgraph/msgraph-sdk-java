@@ -5,23 +5,22 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Shared implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The identity of the owner of the shared item. Read-only. */
-    private IdentitySet _owner;
+    private IdentitySet owner;
     /** Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only. */
-    private String _scope;
+    private String scope;
     /** The identity of the user who shared the item. Read-only. */
-    private IdentitySet _sharedBy;
+    private IdentitySet sharedBy;
     /** The UTC date and time when the item was shared. Read-only. */
-    private OffsetDateTime _sharedDateTime;
+    private OffsetDateTime sharedDateTime;
     /**
      * Instantiates a new shared and sets the default values.
      * @return a void
@@ -46,15 +45,15 @@ public class Shared implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("owner", (n) -> { this.setOwner(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("scope", (n) -> { this.setScope(n.getStringValue()); });
@@ -68,7 +67,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the owner property value. The identity of the owner of the shared item. Read-only.
@@ -76,7 +75,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getOwner() {
-        return this._owner;
+        return this.owner;
     }
     /**
      * Gets the scope property value. Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
@@ -84,7 +83,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getScope() {
-        return this._scope;
+        return this.scope;
     }
     /**
      * Gets the sharedBy property value. The identity of the user who shared the item. Read-only.
@@ -92,7 +91,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getSharedBy() {
-        return this._sharedBy;
+        return this.sharedBy;
     }
     /**
      * Gets the sharedDateTime property value. The UTC date and time when the item was shared. Read-only.
@@ -100,7 +99,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getSharedDateTime() {
-        return this._sharedDateTime;
+        return this.sharedDateTime;
     }
     /**
      * Serializes information the current object
@@ -124,7 +123,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -133,7 +132,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the owner property value. The identity of the owner of the shared item. Read-only.
@@ -142,7 +141,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOwner(@javax.annotation.Nullable final IdentitySet value) {
-        this._owner = value;
+        this.owner = value;
     }
     /**
      * Sets the scope property value. Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
@@ -151,7 +150,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setScope(@javax.annotation.Nullable final String value) {
-        this._scope = value;
+        this.scope = value;
     }
     /**
      * Sets the sharedBy property value. The identity of the user who shared the item. Read-only.
@@ -160,7 +159,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSharedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._sharedBy = value;
+        this.sharedBy = value;
     }
     /**
      * Sets the sharedDateTime property value. The UTC date and time when the item was shared. Read-only.
@@ -169,6 +168,6 @@ public class Shared implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSharedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._sharedDateTime = value;
+        this.sharedDateTime = value;
     }
 }

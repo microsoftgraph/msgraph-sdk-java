@@ -4,22 +4,23 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A termsAndConditionsAcceptanceStatus entity represents the acceptance status of a given Terms and Conditions (T&C) policy by a given user. Users must accept the most up-to-date version of the terms in order to retain access to the Company Portal. */
+/**
+ * A termsAndConditionsAcceptanceStatus entity represents the acceptance status of a given Terms and Conditions (T&C) policy by a given user. Users must accept the most up-to-date version of the terms in order to retain access to the Company Portal.
+ */
 public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable {
     /** DateTime when the terms were last accepted by the user. */
-    private OffsetDateTime _acceptedDateTime;
+    private OffsetDateTime acceptedDateTime;
     /** Most recent version number of the T&C accepted by the user. */
-    private Integer _acceptedVersion;
+    private Integer acceptedVersion;
     /** Navigation link to the terms and conditions that are assigned. */
-    private TermsAndConditions _termsAndConditions;
+    private TermsAndConditions termsAndConditions;
     /** Display name of the user whose acceptance the entity represents. */
-    private String _userDisplayName;
+    private String userDisplayName;
     /** The userPrincipalName of the User that accepted the term. */
-    private String _userPrincipalName;
+    private String userPrincipalName;
     /**
      * Instantiates a new termsAndConditionsAcceptanceStatus and sets the default values.
      * @return a void
@@ -44,7 +45,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public OffsetDateTime getAcceptedDateTime() {
-        return this._acceptedDateTime;
+        return this.acceptedDateTime;
     }
     /**
      * Gets the acceptedVersion property value. Most recent version number of the T&C accepted by the user.
@@ -52,15 +53,15 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public Integer getAcceptedVersion() {
-        return this._acceptedVersion;
+        return this.acceptedVersion;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("acceptedDateTime", (n) -> { this.setAcceptedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("acceptedVersion", (n) -> { this.setAcceptedVersion(n.getIntegerValue()); });
         deserializerMap.put("termsAndConditions", (n) -> { this.setTermsAndConditions(n.getObjectValue(TermsAndConditions::createFromDiscriminatorValue)); });
@@ -74,7 +75,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public TermsAndConditions getTermsAndConditions() {
-        return this._termsAndConditions;
+        return this.termsAndConditions;
     }
     /**
      * Gets the userDisplayName property value. Display name of the user whose acceptance the entity represents.
@@ -82,7 +83,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public String getUserDisplayName() {
-        return this._userDisplayName;
+        return this.userDisplayName;
     }
     /**
      * Gets the userPrincipalName property value. The userPrincipalName of the User that accepted the term.
@@ -90,7 +91,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
@@ -114,7 +115,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      */
     @javax.annotation.Nonnull
     public void setAcceptedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._acceptedDateTime = value;
+        this.acceptedDateTime = value;
     }
     /**
      * Sets the acceptedVersion property value. Most recent version number of the T&C accepted by the user.
@@ -123,7 +124,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      */
     @javax.annotation.Nonnull
     public void setAcceptedVersion(@javax.annotation.Nullable final Integer value) {
-        this._acceptedVersion = value;
+        this.acceptedVersion = value;
     }
     /**
      * Sets the termsAndConditions property value. Navigation link to the terms and conditions that are assigned.
@@ -132,7 +133,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      */
     @javax.annotation.Nonnull
     public void setTermsAndConditions(@javax.annotation.Nullable final TermsAndConditions value) {
-        this._termsAndConditions = value;
+        this.termsAndConditions = value;
     }
     /**
      * Sets the userDisplayName property value. Display name of the user whose acceptance the entity represents.
@@ -141,7 +142,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      */
     @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
-        this._userDisplayName = value;
+        this.userDisplayName = value;
     }
     /**
      * Sets the userPrincipalName property value. The userPrincipalName of the User that accepted the term.
@@ -150,6 +151,6 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      */
     @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

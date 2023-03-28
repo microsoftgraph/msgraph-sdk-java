@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewSet extends Entity implements Parsable {
     /** Represents the template and scheduling for an access review. */
-    private java.util.List<AccessReviewScheduleDefinition> _definitions;
+    private java.util.List<AccessReviewScheduleDefinition> definitions;
     /** Represents a collection of access review history data and the scopes used to collect that data. */
-    private java.util.List<AccessReviewHistoryDefinition> _historyDefinitions;
+    private java.util.List<AccessReviewHistoryDefinition> historyDefinitions;
     /**
      * Instantiates a new AccessReviewSet and sets the default values.
      * @return a void
@@ -36,15 +35,15 @@ public class AccessReviewSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AccessReviewScheduleDefinition> getDefinitions() {
-        return this._definitions;
+        return this.definitions;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("definitions", (n) -> { this.setDefinitions(n.getCollectionOfObjectValues(AccessReviewScheduleDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("historyDefinitions", (n) -> { this.setHistoryDefinitions(n.getCollectionOfObjectValues(AccessReviewHistoryDefinition::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -55,7 +54,7 @@ public class AccessReviewSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AccessReviewHistoryDefinition> getHistoryDefinitions() {
-        return this._historyDefinitions;
+        return this.historyDefinitions;
     }
     /**
      * Serializes information the current object
@@ -76,7 +75,7 @@ public class AccessReviewSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDefinitions(@javax.annotation.Nullable final java.util.List<AccessReviewScheduleDefinition> value) {
-        this._definitions = value;
+        this.definitions = value;
     }
     /**
      * Sets the historyDefinitions property value. Represents a collection of access review history data and the scopes used to collect that data.
@@ -85,6 +84,6 @@ public class AccessReviewSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setHistoryDefinitions(@javax.annotation.Nullable final java.util.List<AccessReviewHistoryDefinition> value) {
-        this._historyDefinitions = value;
+        this.historyDefinitions = value;
     }
 }

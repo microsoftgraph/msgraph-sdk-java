@@ -3,9 +3,8 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
 public enum LocationType implements ValuedEnum {
-    Default_escaped("default_escaped"),
+    DefaultEscaped("default"),
     ConferenceRoom("conferenceRoom"),
     HomeAddress("homeAddress"),
     BusinessAddress("businessAddress"),
@@ -25,7 +24,7 @@ public enum LocationType implements ValuedEnum {
     public static LocationType forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "default": return Default_escaped;
+            case "default": return DefaultEscaped;
             case "conferenceRoom": return ConferenceRoom;
             case "homeAddress": return HomeAddress;
             case "businessAddress": return BusinessAddress;

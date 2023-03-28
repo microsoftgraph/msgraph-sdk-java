@@ -5,14 +5,12 @@ import com.microsoft.graph.models.BaseCollectionPaginationCountResponse;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getAttackSimulationTrainingUserCoverage method. */
 public class GetAttackSimulationTrainingUserCoverageResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
-    private java.util.List<AttackSimulationTrainingUserCoverage> _value;
+    private java.util.List<AttackSimulationTrainingUserCoverage> value;
     /**
      * Instantiates a new getAttackSimulationTrainingUserCoverageResponse and sets the default values.
      * @return a void
@@ -33,11 +31,11 @@ public class GetAttackSimulationTrainingUserCoverageResponse extends BaseCollect
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(AttackSimulationTrainingUserCoverage::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -47,7 +45,7 @@ public class GetAttackSimulationTrainingUserCoverageResponse extends BaseCollect
      */
     @javax.annotation.Nullable
     public java.util.List<AttackSimulationTrainingUserCoverage> getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
@@ -67,6 +65,6 @@ public class GetAttackSimulationTrainingUserCoverageResponse extends BaseCollect
      */
     @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final java.util.List<AttackSimulationTrainingUserCoverage> value) {
-        this._value = value;
+        this.value = value;
     }
 }

@@ -4,23 +4,22 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Indicates whether email threading and near duplicate detection are enabled. */
-    private Boolean _isEnabled;
+    private Boolean isEnabled;
     /** Specifies the maximum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words. */
-    private Integer _maxWords;
+    private Integer maxWords;
     /** Specifies the minimum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words. */
-    private Integer _minWords;
+    private Integer minWords;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Specifies the similarity level for documents to be put in the same near duplicate set. To learn more, see Document and email similarity threshold. */
-    private Integer _similarityThreshold;
+    private Integer similarityThreshold;
     /**
      * Instantiates a new redundancyDetectionSettings and sets the default values.
      * @return a void
@@ -45,15 +44,15 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("maxWords", (n) -> { this.setMaxWords(n.getIntegerValue()); });
         deserializerMap.put("minWords", (n) -> { this.setMinWords(n.getIntegerValue()); });
@@ -67,7 +66,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this._isEnabled;
+        return this.isEnabled;
     }
     /**
      * Gets the maxWords property value. Specifies the maximum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
@@ -75,7 +74,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public Integer getMaxWords() {
-        return this._maxWords;
+        return this.maxWords;
     }
     /**
      * Gets the minWords property value. Specifies the minimum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
@@ -83,7 +82,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public Integer getMinWords() {
-        return this._minWords;
+        return this.minWords;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -91,7 +90,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the similarityThreshold property value. Specifies the similarity level for documents to be put in the same near duplicate set. To learn more, see Document and email similarity threshold.
@@ -99,7 +98,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public Integer getSimilarityThreshold() {
-        return this._similarityThreshold;
+        return this.similarityThreshold;
     }
     /**
      * Serializes information the current object
@@ -123,7 +122,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the isEnabled property value. Indicates whether email threading and near duplicate detection are enabled.
@@ -132,7 +131,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isEnabled = value;
+        this.isEnabled = value;
     }
     /**
      * Sets the maxWords property value. Specifies the maximum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
@@ -141,7 +140,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setMaxWords(@javax.annotation.Nullable final Integer value) {
-        this._maxWords = value;
+        this.maxWords = value;
     }
     /**
      * Sets the minWords property value. Specifies the minimum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
@@ -150,7 +149,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setMinWords(@javax.annotation.Nullable final Integer value) {
-        this._minWords = value;
+        this.minWords = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -159,7 +158,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the similarityThreshold property value. Specifies the similarity level for documents to be put in the same near duplicate set. To learn more, see Document and email similarity threshold.
@@ -168,6 +167,6 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setSimilarityThreshold(@javax.annotation.Nullable final Integer value) {
-        this._similarityThreshold = value;
+        this.similarityThreshold = value;
     }
 }

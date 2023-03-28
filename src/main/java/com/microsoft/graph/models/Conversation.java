@@ -4,24 +4,22 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class Conversation extends Entity implements Parsable {
     /** Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search. */
-    private Boolean _hasAttachments;
+    private Boolean hasAttachments;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _lastDeliveredDateTime;
+    private OffsetDateTime lastDeliveredDateTime;
     /** A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge). */
-    private String _preview;
+    private String preview;
     /** A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable. */
-    private java.util.List<ConversationThread> _threads;
+    private java.util.List<ConversationThread> threads;
     /** The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated. */
-    private String _topic;
+    private String topic;
     /** All the users that sent a message to this Conversation. */
-    private java.util.List<String> _uniqueSenders;
+    private java.util.List<String> uniqueSenders;
     /**
      * Instantiates a new conversation and sets the default values.
      * @return a void
@@ -42,11 +40,11 @@ public class Conversation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
         deserializerMap.put("lastDeliveredDateTime", (n) -> { this.setLastDeliveredDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("preview", (n) -> { this.setPreview(n.getStringValue()); });
@@ -61,7 +59,7 @@ public class Conversation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getHasAttachments() {
-        return this._hasAttachments;
+        return this.hasAttachments;
     }
     /**
      * Gets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -69,7 +67,7 @@ public class Conversation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastDeliveredDateTime() {
-        return this._lastDeliveredDateTime;
+        return this.lastDeliveredDateTime;
     }
     /**
      * Gets the preview property value. A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
@@ -77,7 +75,7 @@ public class Conversation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPreview() {
-        return this._preview;
+        return this.preview;
     }
     /**
      * Gets the threads property value. A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
@@ -85,7 +83,7 @@ public class Conversation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ConversationThread> getThreads() {
-        return this._threads;
+        return this.threads;
     }
     /**
      * Gets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
@@ -93,7 +91,7 @@ public class Conversation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTopic() {
-        return this._topic;
+        return this.topic;
     }
     /**
      * Gets the uniqueSenders property value. All the users that sent a message to this Conversation.
@@ -101,7 +99,7 @@ public class Conversation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getUniqueSenders() {
-        return this._uniqueSenders;
+        return this.uniqueSenders;
     }
     /**
      * Serializes information the current object
@@ -126,7 +124,7 @@ public class Conversation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
-        this._hasAttachments = value;
+        this.hasAttachments = value;
     }
     /**
      * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -135,7 +133,7 @@ public class Conversation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastDeliveredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastDeliveredDateTime = value;
+        this.lastDeliveredDateTime = value;
     }
     /**
      * Sets the preview property value. A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
@@ -144,7 +142,7 @@ public class Conversation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPreview(@javax.annotation.Nullable final String value) {
-        this._preview = value;
+        this.preview = value;
     }
     /**
      * Sets the threads property value. A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
@@ -153,7 +151,7 @@ public class Conversation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setThreads(@javax.annotation.Nullable final java.util.List<ConversationThread> value) {
-        this._threads = value;
+        this.threads = value;
     }
     /**
      * Sets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
@@ -162,7 +160,7 @@ public class Conversation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTopic(@javax.annotation.Nullable final String value) {
-        this._topic = value;
+        this.topic = value;
     }
     /**
      * Sets the uniqueSenders property value. All the users that sent a message to this Conversation.
@@ -171,6 +169,6 @@ public class Conversation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUniqueSenders(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._uniqueSenders = value;
+        this.uniqueSenders = value;
     }
 }

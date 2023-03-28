@@ -3,22 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties for the installation state summary for a user. */
+/**
+ * Contains properties for the installation state summary for a user.
+ */
 public class UserInstallStateSummary extends Entity implements Parsable {
     /** The install state of the eBook. */
-    private java.util.List<DeviceInstallState> _deviceStates;
+    private java.util.List<DeviceInstallState> deviceStates;
     /** Failed Device Count. */
-    private Integer _failedDeviceCount;
+    private Integer failedDeviceCount;
     /** Installed Device Count. */
-    private Integer _installedDeviceCount;
+    private Integer installedDeviceCount;
     /** Not installed device count. */
-    private Integer _notInstalledDeviceCount;
+    private Integer notInstalledDeviceCount;
     /** User name. */
-    private String _userName;
+    private String userName;
     /**
      * Instantiates a new userInstallStateSummary and sets the default values.
      * @return a void
@@ -43,7 +44,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceInstallState> getDeviceStates() {
-        return this._deviceStates;
+        return this.deviceStates;
     }
     /**
      * Gets the failedDeviceCount property value. Failed Device Count.
@@ -51,15 +52,15 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getFailedDeviceCount() {
-        return this._failedDeviceCount;
+        return this.failedDeviceCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceStates", (n) -> { this.setDeviceStates(n.getCollectionOfObjectValues(DeviceInstallState::createFromDiscriminatorValue)); });
         deserializerMap.put("failedDeviceCount", (n) -> { this.setFailedDeviceCount(n.getIntegerValue()); });
         deserializerMap.put("installedDeviceCount", (n) -> { this.setInstalledDeviceCount(n.getIntegerValue()); });
@@ -73,7 +74,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getInstalledDeviceCount() {
-        return this._installedDeviceCount;
+        return this.installedDeviceCount;
     }
     /**
      * Gets the notInstalledDeviceCount property value. Not installed device count.
@@ -81,7 +82,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getNotInstalledDeviceCount() {
-        return this._notInstalledDeviceCount;
+        return this.notInstalledDeviceCount;
     }
     /**
      * Gets the userName property value. User name.
@@ -89,7 +90,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserName() {
-        return this._userName;
+        return this.userName;
     }
     /**
      * Serializes information the current object
@@ -113,7 +114,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceStates(@javax.annotation.Nullable final java.util.List<DeviceInstallState> value) {
-        this._deviceStates = value;
+        this.deviceStates = value;
     }
     /**
      * Sets the failedDeviceCount property value. Failed Device Count.
@@ -122,7 +123,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFailedDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._failedDeviceCount = value;
+        this.failedDeviceCount = value;
     }
     /**
      * Sets the installedDeviceCount property value. Installed Device Count.
@@ -131,7 +132,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInstalledDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._installedDeviceCount = value;
+        this.installedDeviceCount = value;
     }
     /**
      * Sets the notInstalledDeviceCount property value. Not installed device count.
@@ -140,7 +141,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setNotInstalledDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._notInstalledDeviceCount = value;
+        this.notInstalledDeviceCount = value;
     }
     /**
      * Sets the userName property value. User name.
@@ -149,6 +150,6 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
-        this._userName = value;
+        this.userName = value;
     }
 }

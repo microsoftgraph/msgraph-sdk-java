@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
+/** Configures how the requested export job is localized */
 public enum DeviceManagementExportJobLocalizationType implements ValuedEnum {
     /** Configures the export job to expose localized values as an additional column */
     LocalizedValuesAsAdditionalColumn("localizedValuesAsAdditionalColumn"),

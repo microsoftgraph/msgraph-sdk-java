@@ -5,18 +5,16 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the copyToDefaultContentLocation method. */
 public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The destinationFileName property */
-    private String _destinationFileName;
+    private String destinationFileName;
     /** The sourceFile property */
-    private ItemReference _sourceFile;
+    private ItemReference sourceFile;
     /**
      * Instantiates a new copyToDefaultContentLocationPostRequestBody and sets the default values.
      * @return a void
@@ -41,7 +39,7 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the destinationFileName property value. The destinationFileName property
@@ -49,15 +47,15 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
      */
     @javax.annotation.Nullable
     public String getDestinationFileName() {
-        return this._destinationFileName;
+        return this.destinationFileName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("destinationFileName", (n) -> { this.setDestinationFileName(n.getStringValue()); });
         deserializerMap.put("sourceFile", (n) -> { this.setSourceFile(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -68,7 +66,7 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
      */
     @javax.annotation.Nullable
     public ItemReference getSourceFile() {
-        return this._sourceFile;
+        return this.sourceFile;
     }
     /**
      * Serializes information the current object
@@ -89,7 +87,7 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the destinationFileName property value. The destinationFileName property
@@ -98,7 +96,7 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public void setDestinationFileName(@javax.annotation.Nullable final String value) {
-        this._destinationFileName = value;
+        this.destinationFileName = value;
     }
     /**
      * Sets the sourceFile property value. The sourceFile property
@@ -107,6 +105,6 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public void setSourceFile(@javax.annotation.Nullable final ItemReference value) {
-        this._sourceFile = value;
+        this.sourceFile = value;
     }
 }

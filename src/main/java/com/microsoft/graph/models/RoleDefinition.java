@@ -1,24 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.DeviceAndAppManagementRoleDefinition;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * The Role Definition resource. The role definition is the foundation of role based access in Intune. The role combines an Intune resource such as a Mobile App and associated role permissions such as Create or Read for the resource. There are two types of roles, built-in and custom. Built-in roles cannot be modified. Both built-in roles and custom roles must have assignments to be enforced. Create custom roles if you want to define a role that allows any of the available resources and role permissions to be combined into a single role.
+ */
 public class RoleDefinition extends Entity implements Parsable {
     /** Description of the Role definition. */
-    private String _description;
+    private String description;
     /** Display Name of the Role definition. */
-    private String _displayName;
+    private String displayName;
     /** Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition. */
-    private Boolean _isBuiltIn;
+    private Boolean isBuiltIn;
     /** List of Role assignments for this role definition. */
-    private java.util.List<RoleAssignment> _roleAssignments;
+    private java.util.List<RoleAssignment> roleAssignments;
     /** List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission. */
-    private java.util.List<RolePermission> _rolePermissions;
+    private java.util.List<RolePermission> rolePermissions;
     /**
      * Instantiates a new roleDefinition and sets the default values.
      * @return a void
@@ -50,7 +51,7 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Display Name of the Role definition.
@@ -58,15 +59,15 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("isBuiltIn", (n) -> { this.setIsBuiltIn(n.getBooleanValue()); });
@@ -80,7 +81,7 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsBuiltIn() {
-        return this._isBuiltIn;
+        return this.isBuiltIn;
     }
     /**
      * Gets the roleAssignments property value. List of Role assignments for this role definition.
@@ -88,7 +89,7 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<RoleAssignment> getRoleAssignments() {
-        return this._roleAssignments;
+        return this.roleAssignments;
     }
     /**
      * Gets the rolePermissions property value. List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
@@ -96,7 +97,7 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<RolePermission> getRolePermissions() {
-        return this._rolePermissions;
+        return this.rolePermissions;
     }
     /**
      * Serializes information the current object
@@ -120,7 +121,7 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Display Name of the Role definition.
@@ -129,7 +130,7 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the isBuiltIn property value. Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
@@ -138,7 +139,7 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsBuiltIn(@javax.annotation.Nullable final Boolean value) {
-        this._isBuiltIn = value;
+        this.isBuiltIn = value;
     }
     /**
      * Sets the roleAssignments property value. List of Role assignments for this role definition.
@@ -147,7 +148,7 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRoleAssignments(@javax.annotation.Nullable final java.util.List<RoleAssignment> value) {
-        this._roleAssignments = value;
+        this.roleAssignments = value;
     }
     /**
      * Sets the rolePermissions property value. List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
@@ -156,6 +157,6 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRolePermissions(@javax.annotation.Nullable final java.util.List<RolePermission> value) {
-        this._rolePermissions = value;
+        this.rolePermissions = value;
     }
 }

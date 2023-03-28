@@ -4,32 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getDeviceManagementIntentSettingsReport method. */
 public class GetDeviceManagementIntentSettingsReportPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The filter property */
-    private String _filter;
+    private String filter;
     /** The groupBy property */
-    private java.util.List<String> _groupBy;
+    private java.util.List<String> groupBy;
     /** The name property */
-    private String _name;
+    private String name;
     /** The orderBy property */
-    private java.util.List<String> _orderBy;
+    private java.util.List<String> orderBy;
     /** The search property */
-    private String _search;
+    private String search;
     /** The select property */
-    private java.util.List<String> _select;
+    private java.util.List<String> select;
     /** The sessionId property */
-    private String _sessionId;
+    private String sessionId;
     /** The skip property */
-    private Integer _skip;
+    private Integer skip;
     /** The top property */
-    private Integer _top;
+    private Integer top;
     /**
      * Instantiates a new getDeviceManagementIntentSettingsReportPostRequestBody and sets the default values.
      * @return a void
@@ -54,15 +52,15 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("filter", (n) -> { this.setFilter(n.getStringValue()); });
         deserializerMap.put("groupBy", (n) -> { this.setGroupBy(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
@@ -80,7 +78,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nullable
     public String getFilter() {
-        return this._filter;
+        return this.filter;
     }
     /**
      * Gets the groupBy property value. The groupBy property
@@ -88,7 +86,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nullable
     public java.util.List<String> getGroupBy() {
-        return this._groupBy;
+        return this.groupBy;
     }
     /**
      * Gets the name property value. The name property
@@ -96,7 +94,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the orderBy property value. The orderBy property
@@ -104,7 +102,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nullable
     public java.util.List<String> getOrderBy() {
-        return this._orderBy;
+        return this.orderBy;
     }
     /**
      * Gets the search property value. The search property
@@ -112,7 +110,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nullable
     public String getSearch() {
-        return this._search;
+        return this.search;
     }
     /**
      * Gets the select property value. The select property
@@ -120,7 +118,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSelect() {
-        return this._select;
+        return this.select;
     }
     /**
      * Gets the sessionId property value. The sessionId property
@@ -128,7 +126,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nullable
     public String getSessionId() {
-        return this._sessionId;
+        return this.sessionId;
     }
     /**
      * Gets the skip property value. The skip property
@@ -136,7 +134,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nullable
     public Integer getSkip() {
-        return this._skip;
+        return this.skip;
     }
     /**
      * Gets the top property value. The top property
@@ -144,7 +142,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nullable
     public Integer getTop() {
-        return this._top;
+        return this.top;
     }
     /**
      * Serializes information the current object
@@ -172,7 +170,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the filter property value. The filter property
@@ -181,7 +179,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nonnull
     public void setFilter(@javax.annotation.Nullable final String value) {
-        this._filter = value;
+        this.filter = value;
     }
     /**
      * Sets the groupBy property value. The groupBy property
@@ -190,7 +188,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nonnull
     public void setGroupBy(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._groupBy = value;
+        this.groupBy = value;
     }
     /**
      * Sets the name property value. The name property
@@ -199,7 +197,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the orderBy property value. The orderBy property
@@ -208,7 +206,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nonnull
     public void setOrderBy(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._orderBy = value;
+        this.orderBy = value;
     }
     /**
      * Sets the search property value. The search property
@@ -217,7 +215,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nonnull
     public void setSearch(@javax.annotation.Nullable final String value) {
-        this._search = value;
+        this.search = value;
     }
     /**
      * Sets the select property value. The select property
@@ -226,7 +224,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nonnull
     public void setSelect(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._select = value;
+        this.select = value;
     }
     /**
      * Sets the sessionId property value. The sessionId property
@@ -235,7 +233,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nonnull
     public void setSessionId(@javax.annotation.Nullable final String value) {
-        this._sessionId = value;
+        this.sessionId = value;
     }
     /**
      * Sets the skip property value. The skip property
@@ -244,7 +242,7 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nonnull
     public void setSkip(@javax.annotation.Nullable final Integer value) {
-        this._skip = value;
+        this.skip = value;
     }
     /**
      * Sets the top property value. The top property
@@ -253,6 +251,6 @@ public class GetDeviceManagementIntentSettingsReportPostRequestBody implements A
      */
     @javax.annotation.Nonnull
     public void setTop(@javax.annotation.Nullable final Integer value) {
-        this._top = value;
+        this.top = value;
     }
 }

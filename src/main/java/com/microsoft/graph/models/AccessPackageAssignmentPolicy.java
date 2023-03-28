@@ -4,38 +4,38 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     /** Access package containing this policy. Read-only. */
-    private AccessPackage _accessPackage;
+    private AccessPackage accessPackage;
     /** Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue. */
-    private AllowedTargetScope _allowedTargetScope;
+    private AllowedTargetScope allowedTargetScope;
     /** This property is only present for an auto assignment policy; if absent, this is a request-based policy. */
-    private AccessPackageAutomaticRequestSettings _automaticRequestSettings;
+    private AccessPackageAutomaticRequestSettings automaticRequestSettings;
     /** Catalog of the access package containing this policy. Read-only. */
-    private AccessPackageCatalog _catalog;
+    private AccessPackageCatalog catalog;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The description of the policy. */
-    private String _description;
+    private String description;
     /** The display name of the policy. */
-    private String _displayName;
+    private String displayName;
     /** The expiration date for assignments created in this policy. */
-    private ExpirationPattern _expiration;
+    private ExpirationPattern expiration;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _modifiedDateTime;
+    private OffsetDateTime modifiedDateTime;
+    /** Questions that are posed to the  requestor. */
+    private java.util.List<AccessPackageQuestion> questions;
     /** Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests. */
-    private AccessPackageAssignmentApprovalSettings _requestApprovalSettings;
+    private AccessPackageAssignmentApprovalSettings requestApprovalSettings;
     /** Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request. */
-    private AccessPackageAssignmentRequestorSettings _requestorSettings;
+    private AccessPackageAssignmentRequestorSettings requestorSettings;
     /** Settings for access reviews of assignments through this policy. */
-    private AccessPackageAssignmentReviewSettings _reviewSettings;
+    private AccessPackageAssignmentReviewSettings reviewSettings;
     /** The principals that can be assigned access from an access package through this policy. */
-    private java.util.List<SubjectSet> _specificAllowedTargets;
+    private java.util.List<SubjectSet> specificAllowedTargets;
     /**
      * Instantiates a new accessPackageAssignmentPolicy and sets the default values.
      * @return a void
@@ -60,7 +60,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackage getAccessPackage() {
-        return this._accessPackage;
+        return this.accessPackage;
     }
     /**
      * Gets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
@@ -68,7 +68,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AllowedTargetScope getAllowedTargetScope() {
-        return this._allowedTargetScope;
+        return this.allowedTargetScope;
     }
     /**
      * Gets the automaticRequestSettings property value. This property is only present for an auto assignment policy; if absent, this is a request-based policy.
@@ -76,7 +76,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackageAutomaticRequestSettings getAutomaticRequestSettings() {
-        return this._automaticRequestSettings;
+        return this.automaticRequestSettings;
     }
     /**
      * Gets the catalog property value. Catalog of the access package containing this policy. Read-only.
@@ -84,7 +84,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackageCatalog getCatalog() {
-        return this._catalog;
+        return this.catalog;
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -92,7 +92,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. The description of the policy.
@@ -100,7 +100,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The display name of the policy.
@@ -108,7 +108,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the expiration property value. The expiration date for assignments created in this policy.
@@ -116,15 +116,15 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ExpirationPattern getExpiration() {
-        return this._expiration;
+        return this.expiration;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackage", (n) -> { this.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
         deserializerMap.put("allowedTargetScope", (n) -> { this.setAllowedTargetScope(n.getEnumValue(AllowedTargetScope.class)); });
         deserializerMap.put("automaticRequestSettings", (n) -> { this.setAutomaticRequestSettings(n.getObjectValue(AccessPackageAutomaticRequestSettings::createFromDiscriminatorValue)); });
@@ -134,6 +134,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("expiration", (n) -> { this.setExpiration(n.getObjectValue(ExpirationPattern::createFromDiscriminatorValue)); });
         deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("questions", (n) -> { this.setQuestions(n.getCollectionOfObjectValues(AccessPackageQuestion::createFromDiscriminatorValue)); });
         deserializerMap.put("requestApprovalSettings", (n) -> { this.setRequestApprovalSettings(n.getObjectValue(AccessPackageAssignmentApprovalSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("requestorSettings", (n) -> { this.setRequestorSettings(n.getObjectValue(AccessPackageAssignmentRequestorSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("reviewSettings", (n) -> { this.setReviewSettings(n.getObjectValue(AccessPackageAssignmentReviewSettings::createFromDiscriminatorValue)); });
@@ -146,7 +147,15 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this._modifiedDateTime;
+        return this.modifiedDateTime;
+    }
+    /**
+     * Gets the questions property value. Questions that are posed to the  requestor.
+     * @return a accessPackageQuestion
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AccessPackageQuestion> getQuestions() {
+        return this.questions;
     }
     /**
      * Gets the requestApprovalSettings property value. Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests.
@@ -154,7 +163,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackageAssignmentApprovalSettings getRequestApprovalSettings() {
-        return this._requestApprovalSettings;
+        return this.requestApprovalSettings;
     }
     /**
      * Gets the requestorSettings property value. Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request.
@@ -162,7 +171,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackageAssignmentRequestorSettings getRequestorSettings() {
-        return this._requestorSettings;
+        return this.requestorSettings;
     }
     /**
      * Gets the reviewSettings property value. Settings for access reviews of assignments through this policy.
@@ -170,7 +179,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackageAssignmentReviewSettings getReviewSettings() {
-        return this._reviewSettings;
+        return this.reviewSettings;
     }
     /**
      * Gets the specificAllowedTargets property value. The principals that can be assigned access from an access package through this policy.
@@ -178,7 +187,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SubjectSet> getSpecificAllowedTargets() {
-        return this._specificAllowedTargets;
+        return this.specificAllowedTargets;
     }
     /**
      * Serializes information the current object
@@ -198,6 +207,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("expiration", this.getExpiration());
         writer.writeOffsetDateTimeValue("modifiedDateTime", this.getModifiedDateTime());
+        writer.writeCollectionOfObjectValues("questions", this.getQuestions());
         writer.writeObjectValue("requestApprovalSettings", this.getRequestApprovalSettings());
         writer.writeObjectValue("requestorSettings", this.getRequestorSettings());
         writer.writeObjectValue("reviewSettings", this.getReviewSettings());
@@ -210,7 +220,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAccessPackage(@javax.annotation.Nullable final AccessPackage value) {
-        this._accessPackage = value;
+        this.accessPackage = value;
     }
     /**
      * Sets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
@@ -219,7 +229,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowedTargetScope(@javax.annotation.Nullable final AllowedTargetScope value) {
-        this._allowedTargetScope = value;
+        this.allowedTargetScope = value;
     }
     /**
      * Sets the automaticRequestSettings property value. This property is only present for an auto assignment policy; if absent, this is a request-based policy.
@@ -228,7 +238,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAutomaticRequestSettings(@javax.annotation.Nullable final AccessPackageAutomaticRequestSettings value) {
-        this._automaticRequestSettings = value;
+        this.automaticRequestSettings = value;
     }
     /**
      * Sets the catalog property value. Catalog of the access package containing this policy. Read-only.
@@ -237,7 +247,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCatalog(@javax.annotation.Nullable final AccessPackageCatalog value) {
-        this._catalog = value;
+        this.catalog = value;
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -246,7 +256,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description of the policy.
@@ -255,7 +265,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The display name of the policy.
@@ -264,7 +274,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the expiration property value. The expiration date for assignments created in this policy.
@@ -273,7 +283,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setExpiration(@javax.annotation.Nullable final ExpirationPattern value) {
-        this._expiration = value;
+        this.expiration = value;
     }
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -282,7 +292,16 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._modifiedDateTime = value;
+        this.modifiedDateTime = value;
+    }
+    /**
+     * Sets the questions property value. Questions that are posed to the  requestor.
+     * @param value Value to set for the questions property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setQuestions(@javax.annotation.Nullable final java.util.List<AccessPackageQuestion> value) {
+        this.questions = value;
     }
     /**
      * Sets the requestApprovalSettings property value. Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests.
@@ -291,7 +310,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRequestApprovalSettings(@javax.annotation.Nullable final AccessPackageAssignmentApprovalSettings value) {
-        this._requestApprovalSettings = value;
+        this.requestApprovalSettings = value;
     }
     /**
      * Sets the requestorSettings property value. Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request.
@@ -300,7 +319,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRequestorSettings(@javax.annotation.Nullable final AccessPackageAssignmentRequestorSettings value) {
-        this._requestorSettings = value;
+        this.requestorSettings = value;
     }
     /**
      * Sets the reviewSettings property value. Settings for access reviews of assignments through this policy.
@@ -309,7 +328,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setReviewSettings(@javax.annotation.Nullable final AccessPackageAssignmentReviewSettings value) {
-        this._reviewSettings = value;
+        this.reviewSettings = value;
     }
     /**
      * Sets the specificAllowedTargets property value. The principals that can be assigned access from an access package through this policy.
@@ -318,6 +337,6 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSpecificAllowedTargets(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
-        this._specificAllowedTargets = value;
+        this.specificAllowedTargets = value;
     }
 }

@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Printer extends PrinterBase implements Parsable {
     /** The connectors that are associated with the printer. */
-    private java.util.List<PrintConnector> _connectors;
+    private java.util.List<PrintConnector> connectors;
     /** True if the printer has a physical device for printing. Read-only. */
-    private Boolean _hasPhysicalDevice;
+    private Boolean hasPhysicalDevice;
     /** True if the printer is shared; false otherwise. Read-only. */
-    private Boolean _isShared;
+    private Boolean isShared;
     /** The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only. */
-    private OffsetDateTime _lastSeenDateTime;
+    private OffsetDateTime lastSeenDateTime;
     /** The DateTimeOffset when the printer was registered. Read-only. */
-    private OffsetDateTime _registeredDateTime;
+    private OffsetDateTime registeredDateTime;
     /** The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable. */
-    private java.util.List<PrinterShare> _shares;
+    private java.util.List<PrinterShare> shares;
     /** A list of task triggers that are associated with the printer. */
-    private java.util.List<PrintTaskTrigger> _taskTriggers;
+    private java.util.List<PrintTaskTrigger> taskTriggers;
     /**
      * Instantiates a new Printer and sets the default values.
      * @return a void
@@ -48,15 +47,15 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintConnector> getConnectors() {
-        return this._connectors;
+        return this.connectors;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("connectors", (n) -> { this.setConnectors(n.getCollectionOfObjectValues(PrintConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("hasPhysicalDevice", (n) -> { this.setHasPhysicalDevice(n.getBooleanValue()); });
         deserializerMap.put("isShared", (n) -> { this.setIsShared(n.getBooleanValue()); });
@@ -72,7 +71,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getHasPhysicalDevice() {
-        return this._hasPhysicalDevice;
+        return this.hasPhysicalDevice;
     }
     /**
      * Gets the isShared property value. True if the printer is shared; false otherwise. Read-only.
@@ -80,7 +79,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsShared() {
-        return this._isShared;
+        return this.isShared;
     }
     /**
      * Gets the lastSeenDateTime property value. The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
@@ -88,7 +87,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
-        return this._lastSeenDateTime;
+        return this.lastSeenDateTime;
     }
     /**
      * Gets the registeredDateTime property value. The DateTimeOffset when the printer was registered. Read-only.
@@ -96,7 +95,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getRegisteredDateTime() {
-        return this._registeredDateTime;
+        return this.registeredDateTime;
     }
     /**
      * Gets the shares property value. The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
@@ -104,7 +103,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrinterShare> getShares() {
-        return this._shares;
+        return this.shares;
     }
     /**
      * Gets the taskTriggers property value. A list of task triggers that are associated with the printer.
@@ -112,7 +111,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintTaskTrigger> getTaskTriggers() {
-        return this._taskTriggers;
+        return this.taskTriggers;
     }
     /**
      * Serializes information the current object
@@ -138,7 +137,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setConnectors(@javax.annotation.Nullable final java.util.List<PrintConnector> value) {
-        this._connectors = value;
+        this.connectors = value;
     }
     /**
      * Sets the hasPhysicalDevice property value. True if the printer has a physical device for printing. Read-only.
@@ -147,7 +146,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setHasPhysicalDevice(@javax.annotation.Nullable final Boolean value) {
-        this._hasPhysicalDevice = value;
+        this.hasPhysicalDevice = value;
     }
     /**
      * Sets the isShared property value. True if the printer is shared; false otherwise. Read-only.
@@ -156,7 +155,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsShared(@javax.annotation.Nullable final Boolean value) {
-        this._isShared = value;
+        this.isShared = value;
     }
     /**
      * Sets the lastSeenDateTime property value. The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
@@ -165,7 +164,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastSeenDateTime = value;
+        this.lastSeenDateTime = value;
     }
     /**
      * Sets the registeredDateTime property value. The DateTimeOffset when the printer was registered. Read-only.
@@ -174,7 +173,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRegisteredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._registeredDateTime = value;
+        this.registeredDateTime = value;
     }
     /**
      * Sets the shares property value. The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
@@ -183,7 +182,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setShares(@javax.annotation.Nullable final java.util.List<PrinterShare> value) {
-        this._shares = value;
+        this.shares = value;
     }
     /**
      * Sets the taskTriggers property value. A list of task triggers that are associated with the printer.
@@ -192,6 +191,6 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTaskTriggers(@javax.annotation.Nullable final java.util.List<PrintTaskTrigger> value) {
-        this._taskTriggers = value;
+        this.taskTriggers = value;
     }
 }

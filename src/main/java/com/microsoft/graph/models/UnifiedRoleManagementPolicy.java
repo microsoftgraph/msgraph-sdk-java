@@ -4,30 +4,28 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     /** Description for the policy. */
-    private String _description;
+    private String description;
     /** Display name for the policy. */
-    private String _displayName;
+    private String displayName;
     /** The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand. */
-    private java.util.List<UnifiedRoleManagementPolicyRule> _effectiveRules;
+    private java.util.List<UnifiedRoleManagementPolicyRule> effectiveRules;
     /** This can only be set to true for a single tenant-wide policy which will apply to all scopes and roles. Set the scopeId to / and scopeType to Directory. Supports $filter (eq, ne). */
-    private Boolean _isOrganizationDefault;
+    private Boolean isOrganizationDefault;
     /** The identity who last modified the role setting. */
-    private Identity _lastModifiedBy;
+    private Identity lastModifiedBy;
     /** The time when the role setting was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The collection of rules like approval rules and expiration rules. Supports $expand. */
-    private java.util.List<UnifiedRoleManagementPolicyRule> _rules;
+    private java.util.List<UnifiedRoleManagementPolicyRule> rules;
     /** The identifier of the scope where the policy is created. Can be / for the tenant or a group ID. Required. */
-    private String _scopeId;
+    private String scopeId;
     /** The type of the scope where the policy is created. One of Directory, DirectoryRole. Required. */
-    private String _scopeType;
+    private String scopeType;
     /**
      * Instantiates a new unifiedRoleManagementPolicy and sets the default values.
      * @return a void
@@ -52,7 +50,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Display name for the policy.
@@ -60,7 +58,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the effectiveRules property value. The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
@@ -68,15 +66,15 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicyRule> getEffectiveRules() {
-        return this._effectiveRules;
+        return this.effectiveRules;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("effectiveRules", (n) -> { this.setEffectiveRules(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicyRule::createFromDiscriminatorValue)); });
@@ -94,7 +92,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsOrganizationDefault() {
-        return this._isOrganizationDefault;
+        return this.isOrganizationDefault;
     }
     /**
      * Gets the lastModifiedBy property value. The identity who last modified the role setting.
@@ -102,7 +100,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Identity getLastModifiedBy() {
-        return this._lastModifiedBy;
+        return this.lastModifiedBy;
     }
     /**
      * Gets the lastModifiedDateTime property value. The time when the role setting was last modified.
@@ -110,7 +108,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the rules property value. The collection of rules like approval rules and expiration rules. Supports $expand.
@@ -118,7 +116,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicyRule> getRules() {
-        return this._rules;
+        return this.rules;
     }
     /**
      * Gets the scopeId property value. The identifier of the scope where the policy is created. Can be / for the tenant or a group ID. Required.
@@ -126,7 +124,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getScopeId() {
-        return this._scopeId;
+        return this.scopeId;
     }
     /**
      * Gets the scopeType property value. The type of the scope where the policy is created. One of Directory, DirectoryRole. Required.
@@ -134,7 +132,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getScopeType() {
-        return this._scopeType;
+        return this.scopeType;
     }
     /**
      * Serializes information the current object
@@ -162,7 +160,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Display name for the policy.
@@ -171,7 +169,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the effectiveRules property value. The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
@@ -180,7 +178,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEffectiveRules(@javax.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRule> value) {
-        this._effectiveRules = value;
+        this.effectiveRules = value;
     }
     /**
      * Sets the isOrganizationDefault property value. This can only be set to true for a single tenant-wide policy which will apply to all scopes and roles. Set the scopeId to / and scopeType to Directory. Supports $filter (eq, ne).
@@ -189,7 +187,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsOrganizationDefault(@javax.annotation.Nullable final Boolean value) {
-        this._isOrganizationDefault = value;
+        this.isOrganizationDefault = value;
     }
     /**
      * Sets the lastModifiedBy property value. The identity who last modified the role setting.
@@ -198,7 +196,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final Identity value) {
-        this._lastModifiedBy = value;
+        this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The time when the role setting was last modified.
@@ -207,7 +205,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the rules property value. The collection of rules like approval rules and expiration rules. Supports $expand.
@@ -216,7 +214,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRules(@javax.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRule> value) {
-        this._rules = value;
+        this.rules = value;
     }
     /**
      * Sets the scopeId property value. The identifier of the scope where the policy is created. Can be / for the tenant or a group ID. Required.
@@ -225,7 +223,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setScopeId(@javax.annotation.Nullable final String value) {
-        this._scopeId = value;
+        this.scopeId = value;
     }
     /**
      * Sets the scopeType property value. The type of the scope where the policy is created. One of Directory, DirectoryRole. Required.
@@ -234,6 +232,6 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setScopeType(@javax.annotation.Nullable final String value) {
-        this._scopeType = value;
+        this.scopeType = value;
     }
 }

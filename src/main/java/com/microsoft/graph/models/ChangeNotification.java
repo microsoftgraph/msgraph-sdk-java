@@ -5,35 +5,35 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class ChangeNotification implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The changeType property */
-    private ChangeType _changeType;
+    private ChangeType changeType;
     /** Value of the clientState property sent in the subscription request (if any). The maximum length is 255 characters. The client can check whether the change notification came from the service by comparing the values of the clientState property. The value of the clientState property sent with the subscription is compared with the value of the clientState property received with each change notification. Optional. */
-    private String _clientState;
+    private String clientState;
     /** (Preview) Encrypted content attached with the change notification. Only provided if encryptionCertificate and includeResourceData were defined during the subscription request and if the resource supports it. Optional. */
-    private ChangeNotificationEncryptedContent _encryptedContent;
+    private ChangeNotificationEncryptedContent encryptedContent;
     /** Unique ID for the notification. Optional. */
-    private String _id;
+    private String id;
     /** The type of lifecycle notification if the current notification is a lifecycle notification. Optional. Supported values are missed, subscriptionRemoved, reauthorizationRequired. Optional. */
-    private LifecycleEventType _lifecycleEvent;
+    private LifecycleEventType lifecycleEvent;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The URI of the resource that emitted the change notification relative to https://graph.microsoft.com. Required. */
-    private String _resource;
+    private String resource;
     /** The content of this property depends on the type of resource being subscribed to. Optional. */
-    private ResourceData _resourceData;
+    private ResourceData resourceData;
     /** The expiration time for the subscription. Required. */
-    private OffsetDateTime _subscriptionExpirationDateTime;
+    private OffsetDateTime subscriptionExpirationDateTime;
     /** The unique identifier of the subscription that generated the notification.Required. */
-    private String _subscriptionId;
+    private UUID subscriptionId;
     /** The unique identifier of the tenant from which the change notification originated. Required. */
-    private String _tenantId;
+    private UUID tenantId;
     /**
      * Instantiates a new changeNotification and sets the default values.
      * @return a void
@@ -58,7 +58,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the changeType property value. The changeType property
@@ -66,7 +66,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ChangeType getChangeType() {
-        return this._changeType;
+        return this.changeType;
     }
     /**
      * Gets the clientState property value. Value of the clientState property sent in the subscription request (if any). The maximum length is 255 characters. The client can check whether the change notification came from the service by comparing the values of the clientState property. The value of the clientState property sent with the subscription is compared with the value of the clientState property received with each change notification. Optional.
@@ -74,7 +74,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getClientState() {
-        return this._clientState;
+        return this.clientState;
     }
     /**
      * Gets the encryptedContent property value. (Preview) Encrypted content attached with the change notification. Only provided if encryptionCertificate and includeResourceData were defined during the subscription request and if the resource supports it. Optional.
@@ -82,15 +82,15 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ChangeNotificationEncryptedContent getEncryptedContent() {
-        return this._encryptedContent;
+        return this.encryptedContent;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(11);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("changeType", (n) -> { this.setChangeType(n.getEnumValue(ChangeType.class)); });
         deserializerMap.put("clientState", (n) -> { this.setClientState(n.getStringValue()); });
         deserializerMap.put("encryptedContent", (n) -> { this.setEncryptedContent(n.getObjectValue(ChangeNotificationEncryptedContent::createFromDiscriminatorValue)); });
@@ -100,8 +100,8 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
         deserializerMap.put("resource", (n) -> { this.setResource(n.getStringValue()); });
         deserializerMap.put("resourceData", (n) -> { this.setResourceData(n.getObjectValue(ResourceData::createFromDiscriminatorValue)); });
         deserializerMap.put("subscriptionExpirationDateTime", (n) -> { this.setSubscriptionExpirationDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("subscriptionId", (n) -> { this.setSubscriptionId(n.getStringValue()); });
-        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("subscriptionId", (n) -> { this.setSubscriptionId(n.getUUIDValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getUUIDValue()); });
         return deserializerMap;
     }
     /**
@@ -110,7 +110,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getId() {
-        return this._id;
+        return this.id;
     }
     /**
      * Gets the lifecycleEvent property value. The type of lifecycle notification if the current notification is a lifecycle notification. Optional. Supported values are missed, subscriptionRemoved, reauthorizationRequired. Optional.
@@ -118,7 +118,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public LifecycleEventType getLifecycleEvent() {
-        return this._lifecycleEvent;
+        return this.lifecycleEvent;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -126,7 +126,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the resource property value. The URI of the resource that emitted the change notification relative to https://graph.microsoft.com. Required.
@@ -134,7 +134,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getResource() {
-        return this._resource;
+        return this.resource;
     }
     /**
      * Gets the resourceData property value. The content of this property depends on the type of resource being subscribed to. Optional.
@@ -142,7 +142,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ResourceData getResourceData() {
-        return this._resourceData;
+        return this.resourceData;
     }
     /**
      * Gets the subscriptionExpirationDateTime property value. The expiration time for the subscription. Required.
@@ -150,23 +150,23 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getSubscriptionExpirationDateTime() {
-        return this._subscriptionExpirationDateTime;
+        return this.subscriptionExpirationDateTime;
     }
     /**
      * Gets the subscriptionId property value. The unique identifier of the subscription that generated the notification.Required.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getSubscriptionId() {
-        return this._subscriptionId;
+    public UUID getSubscriptionId() {
+        return this.subscriptionId;
     }
     /**
      * Gets the tenantId property value. The unique identifier of the tenant from which the change notification originated. Required.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getTenantId() {
-        return this._tenantId;
+    public UUID getTenantId() {
+        return this.tenantId;
     }
     /**
      * Serializes information the current object
@@ -185,8 +185,8 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("resource", this.getResource());
         writer.writeObjectValue("resourceData", this.getResourceData());
         writer.writeOffsetDateTimeValue("subscriptionExpirationDateTime", this.getSubscriptionExpirationDateTime());
-        writer.writeStringValue("subscriptionId", this.getSubscriptionId());
-        writer.writeStringValue("tenantId", this.getTenantId());
+        writer.writeUUIDValue("subscriptionId", this.getSubscriptionId());
+        writer.writeUUIDValue("tenantId", this.getTenantId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -196,7 +196,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the changeType property value. The changeType property
@@ -205,7 +205,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setChangeType(@javax.annotation.Nullable final ChangeType value) {
-        this._changeType = value;
+        this.changeType = value;
     }
     /**
      * Sets the clientState property value. Value of the clientState property sent in the subscription request (if any). The maximum length is 255 characters. The client can check whether the change notification came from the service by comparing the values of the clientState property. The value of the clientState property sent with the subscription is compared with the value of the clientState property received with each change notification. Optional.
@@ -214,7 +214,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setClientState(@javax.annotation.Nullable final String value) {
-        this._clientState = value;
+        this.clientState = value;
     }
     /**
      * Sets the encryptedContent property value. (Preview) Encrypted content attached with the change notification. Only provided if encryptionCertificate and includeResourceData were defined during the subscription request and if the resource supports it. Optional.
@@ -223,7 +223,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEncryptedContent(@javax.annotation.Nullable final ChangeNotificationEncryptedContent value) {
-        this._encryptedContent = value;
+        this.encryptedContent = value;
     }
     /**
      * Sets the id property value. Unique ID for the notification. Optional.
@@ -232,7 +232,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+        this.id = value;
     }
     /**
      * Sets the lifecycleEvent property value. The type of lifecycle notification if the current notification is a lifecycle notification. Optional. Supported values are missed, subscriptionRemoved, reauthorizationRequired. Optional.
@@ -241,7 +241,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLifecycleEvent(@javax.annotation.Nullable final LifecycleEventType value) {
-        this._lifecycleEvent = value;
+        this.lifecycleEvent = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -250,7 +250,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the resource property value. The URI of the resource that emitted the change notification relative to https://graph.microsoft.com. Required.
@@ -259,7 +259,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final String value) {
-        this._resource = value;
+        this.resource = value;
     }
     /**
      * Sets the resourceData property value. The content of this property depends on the type of resource being subscribed to. Optional.
@@ -268,7 +268,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setResourceData(@javax.annotation.Nullable final ResourceData value) {
-        this._resourceData = value;
+        this.resourceData = value;
     }
     /**
      * Sets the subscriptionExpirationDateTime property value. The expiration time for the subscription. Required.
@@ -277,7 +277,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSubscriptionExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._subscriptionExpirationDateTime = value;
+        this.subscriptionExpirationDateTime = value;
     }
     /**
      * Sets the subscriptionId property value. The unique identifier of the subscription that generated the notification.Required.
@@ -285,8 +285,8 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setSubscriptionId(@javax.annotation.Nullable final String value) {
-        this._subscriptionId = value;
+    public void setSubscriptionId(@javax.annotation.Nullable final UUID value) {
+        this.subscriptionId = value;
     }
     /**
      * Sets the tenantId property value. The unique identifier of the tenant from which the change notification originated. Required.
@@ -294,7 +294,7 @@ public class ChangeNotification implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+    public void setTenantId(@javax.annotation.Nullable final UUID value) {
+        this.tenantId = value;
     }
 }

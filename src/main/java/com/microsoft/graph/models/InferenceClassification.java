@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InferenceClassification extends Entity implements Parsable {
     /** A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable. */
-    private java.util.List<InferenceClassificationOverride> _overrides;
+    private java.util.List<InferenceClassificationOverride> overrides;
     /**
      * Instantiates a new inferenceClassification and sets the default values.
      * @return a void
@@ -30,11 +29,11 @@ public class InferenceClassification extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("overrides", (n) -> { this.setOverrides(n.getCollectionOfObjectValues(InferenceClassificationOverride::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -44,7 +43,7 @@ public class InferenceClassification extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<InferenceClassificationOverride> getOverrides() {
-        return this._overrides;
+        return this.overrides;
     }
     /**
      * Serializes information the current object
@@ -64,6 +63,6 @@ public class InferenceClassification extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOverrides(@javax.annotation.Nullable final java.util.List<InferenceClassificationOverride> value) {
-        this._overrides = value;
+        this.overrides = value;
     }
 }

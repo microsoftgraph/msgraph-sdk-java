@@ -3,7 +3,6 @@ package com.microsoft.graph.models.termstore;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
 public enum RelationType implements ValuedEnum {
     Pin("pin"),
     Reuse("reuse"),

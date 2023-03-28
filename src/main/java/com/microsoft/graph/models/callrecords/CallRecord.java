@@ -6,32 +6,30 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class CallRecord extends Entity implements Parsable {
     /** UTC time when the last user left the call. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _endDateTime;
+    private OffsetDateTime endDateTime;
     /** Meeting URL associated to the call. May not be available for a peerToPeer call record type. */
-    private String _joinWebUrl;
+    private String joinWebUrl;
     /** UTC time when the call record was created. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue. */
-    private java.util.List<Modality> _modalities;
+    private java.util.List<Modality> modalities;
     /** The organizing party's identity. */
-    private IdentitySet _organizer;
+    private IdentitySet organizer;
     /** List of distinct identities involved in the call. */
-    private java.util.List<IdentitySet> _participants;
+    private java.util.List<IdentitySet> participants;
     /** List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable. */
-    private java.util.List<Session> _sessions;
+    private java.util.List<Session> sessions;
     /** UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _startDateTime;
+    private OffsetDateTime startDateTime;
     /** The type property */
-    private CallType _type;
+    private CallType type;
     /** Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version. */
-    private Long _version;
+    private Long version;
     /**
      * Instantiates a new callRecord and sets the default values.
      * @return a void
@@ -56,15 +54,15 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("joinWebUrl", (n) -> { this.setJoinWebUrl(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -83,7 +81,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getJoinWebUrl() {
-        return this._joinWebUrl;
+        return this.joinWebUrl;
     }
     /**
      * Gets the lastModifiedDateTime property value. UTC time when the call record was created. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -91,7 +89,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the modalities property value. List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
@@ -99,7 +97,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Modality> getModalities() {
-        return this._modalities;
+        return this.modalities;
     }
     /**
      * Gets the organizer property value. The organizing party's identity.
@@ -107,7 +105,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getOrganizer() {
-        return this._organizer;
+        return this.organizer;
     }
     /**
      * Gets the participants property value. List of distinct identities involved in the call.
@@ -115,7 +113,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<IdentitySet> getParticipants() {
-        return this._participants;
+        return this.participants;
     }
     /**
      * Gets the sessions property value. List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.
@@ -123,7 +121,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Session> getSessions() {
-        return this._sessions;
+        return this.sessions;
     }
     /**
      * Gets the startDateTime property value. UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -131,7 +129,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Gets the type property value. The type property
@@ -139,7 +137,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CallType getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Gets the version property value. Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
@@ -147,7 +145,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Long getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
@@ -176,7 +174,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
      * Sets the joinWebUrl property value. Meeting URL associated to the call. May not be available for a peerToPeer call record type.
@@ -185,7 +183,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setJoinWebUrl(@javax.annotation.Nullable final String value) {
-        this._joinWebUrl = value;
+        this.joinWebUrl = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. UTC time when the call record was created. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -194,7 +192,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the modalities property value. List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
@@ -203,7 +201,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setModalities(@javax.annotation.Nullable final java.util.List<Modality> value) {
-        this._modalities = value;
+        this.modalities = value;
     }
     /**
      * Sets the organizer property value. The organizing party's identity.
@@ -212,7 +210,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOrganizer(@javax.annotation.Nullable final IdentitySet value) {
-        this._organizer = value;
+        this.organizer = value;
     }
     /**
      * Sets the participants property value. List of distinct identities involved in the call.
@@ -221,7 +219,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setParticipants(@javax.annotation.Nullable final java.util.List<IdentitySet> value) {
-        this._participants = value;
+        this.participants = value;
     }
     /**
      * Sets the sessions property value. List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.
@@ -230,7 +228,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSessions(@javax.annotation.Nullable final java.util.List<Session> value) {
-        this._sessions = value;
+        this.sessions = value;
     }
     /**
      * Sets the startDateTime property value. UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -239,7 +237,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
     /**
      * Sets the type property value. The type property
@@ -248,7 +246,7 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final CallType value) {
-        this._type = value;
+        this.type = value;
     }
     /**
      * Sets the version property value. Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
@@ -257,6 +255,6 @@ public class CallRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Long value) {
-        this._version = value;
+        this.version = value;
     }
 }

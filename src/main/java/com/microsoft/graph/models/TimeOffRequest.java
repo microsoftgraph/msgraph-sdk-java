@@ -4,17 +4,16 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _endDateTime;
+    private OffsetDateTime endDateTime;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _startDateTime;
+    private OffsetDateTime startDateTime;
     /** The reason for the time off. */
-    private String _timeOffReasonId;
+    private String timeOffReasonId;
     /**
      * Instantiates a new TimeOffRequest and sets the default values.
      * @return a void
@@ -40,15 +39,15 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("timeOffReasonId", (n) -> { this.setTimeOffReasonId(n.getStringValue()); });
@@ -60,7 +59,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Gets the timeOffReasonId property value. The reason for the time off.
@@ -68,7 +67,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTimeOffReasonId() {
-        return this._timeOffReasonId;
+        return this.timeOffReasonId;
     }
     /**
      * Serializes information the current object
@@ -90,7 +89,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
      * Sets the startDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -99,7 +98,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
     /**
      * Sets the timeOffReasonId property value. The reason for the time off.
@@ -108,6 +107,6 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTimeOffReasonId(@javax.annotation.Nullable final String value) {
-        this._timeOffReasonId = value;
+        this.timeOffReasonId = value;
     }
 }

@@ -4,22 +4,20 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class PrinterShare extends PrinterBase implements Parsable {
     /** If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties. */
-    private Boolean _allowAllUsers;
+    private Boolean allowAllUsers;
     /** The groups whose users have access to print using the printer. */
-    private java.util.List<Group> _allowedGroups;
+    private java.util.List<Group> allowedGroups;
     /** The users who have access to print using the printer. */
-    private java.util.List<User> _allowedUsers;
+    private java.util.List<User> allowedUsers;
     /** The DateTimeOffset when the printer share was created. Read-only. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The printer that this printer share is related to. */
-    private Printer _printer;
+    private Printer printer;
     /**
      * Instantiates a new printerShare and sets the default values.
      * @return a void
@@ -45,7 +43,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAllowAllUsers() {
-        return this._allowAllUsers;
+        return this.allowAllUsers;
     }
     /**
      * Gets the allowedGroups property value. The groups whose users have access to print using the printer.
@@ -53,7 +51,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Group> getAllowedGroups() {
-        return this._allowedGroups;
+        return this.allowedGroups;
     }
     /**
      * Gets the allowedUsers property value. The users who have access to print using the printer.
@@ -61,7 +59,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<User> getAllowedUsers() {
-        return this._allowedUsers;
+        return this.allowedUsers;
     }
     /**
      * Gets the createdDateTime property value. The DateTimeOffset when the printer share was created. Read-only.
@@ -69,15 +67,15 @@ public class PrinterShare extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowAllUsers", (n) -> { this.setAllowAllUsers(n.getBooleanValue()); });
         deserializerMap.put("allowedGroups", (n) -> { this.setAllowedGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
         deserializerMap.put("allowedUsers", (n) -> { this.setAllowedUsers(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
@@ -91,7 +89,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nullable
     public Printer getPrinter() {
-        return this._printer;
+        return this.printer;
     }
     /**
      * Serializes information the current object
@@ -115,7 +113,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowAllUsers(@javax.annotation.Nullable final Boolean value) {
-        this._allowAllUsers = value;
+        this.allowAllUsers = value;
     }
     /**
      * Sets the allowedGroups property value. The groups whose users have access to print using the printer.
@@ -124,7 +122,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowedGroups(@javax.annotation.Nullable final java.util.List<Group> value) {
-        this._allowedGroups = value;
+        this.allowedGroups = value;
     }
     /**
      * Sets the allowedUsers property value. The users who have access to print using the printer.
@@ -133,7 +131,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowedUsers(@javax.annotation.Nullable final java.util.List<User> value) {
-        this._allowedUsers = value;
+        this.allowedUsers = value;
     }
     /**
      * Sets the createdDateTime property value. The DateTimeOffset when the printer share was created. Read-only.
@@ -142,7 +140,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the printer property value. The printer that this printer share is related to.
@@ -151,6 +149,6 @@ public class PrinterShare extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPrinter(@javax.annotation.Nullable final Printer value) {
-        this._printer = value;
+        this.printer = value;
     }
 }

@@ -4,23 +4,22 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationRoot implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The classes property */
-    private java.util.List<EducationClass> _classes;
+    private java.util.List<EducationClass> classes;
     /** The me property */
-    private EducationUser _me;
+    private EducationUser me;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The schools property */
-    private java.util.List<EducationSchool> _schools;
+    private java.util.List<EducationSchool> schools;
     /** The users property */
-    private java.util.List<EducationUser> _users;
+    private java.util.List<EducationUser> users;
     /**
      * Instantiates a new EducationRoot and sets the default values.
      * @return a void
@@ -45,7 +44,7 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the classes property value. The classes property
@@ -53,15 +52,15 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EducationClass> getClasses() {
-        return this._classes;
+        return this.classes;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("classes", (n) -> { this.setClasses(n.getCollectionOfObjectValues(EducationClass::createFromDiscriminatorValue)); });
         deserializerMap.put("me", (n) -> { this.setMe(n.getObjectValue(EducationUser::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -75,7 +74,7 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public EducationUser getMe() {
-        return this._me;
+        return this.me;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -83,7 +82,7 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the schools property value. The schools property
@@ -91,7 +90,7 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EducationSchool> getSchools() {
-        return this._schools;
+        return this.schools;
     }
     /**
      * Gets the users property value. The users property
@@ -99,7 +98,7 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EducationUser> getUsers() {
-        return this._users;
+        return this.users;
     }
     /**
      * Serializes information the current object
@@ -123,7 +122,7 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the classes property value. The classes property
@@ -132,7 +131,7 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setClasses(@javax.annotation.Nullable final java.util.List<EducationClass> value) {
-        this._classes = value;
+        this.classes = value;
     }
     /**
      * Sets the me property value. The me property
@@ -141,7 +140,7 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMe(@javax.annotation.Nullable final EducationUser value) {
-        this._me = value;
+        this.me = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -150,7 +149,7 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the schools property value. The schools property
@@ -159,7 +158,7 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSchools(@javax.annotation.Nullable final java.util.List<EducationSchool> value) {
-        this._schools = value;
+        this.schools = value;
     }
     /**
      * Sets the users property value. The users property
@@ -168,6 +167,6 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUsers(@javax.annotation.Nullable final java.util.List<EducationUser> value) {
-        this._users = value;
+        this.users = value;
     }
 }

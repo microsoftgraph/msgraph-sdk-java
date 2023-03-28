@@ -3,19 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingCustomer extends BookingCustomerBase implements Parsable {
     /** Addresses associated with the customer. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others. */
-    private java.util.List<PhysicalAddress> _addresses;
+    private java.util.List<PhysicalAddress> addresses;
     /** The name of the customer. */
-    private String _displayName;
+    private String displayName;
     /** The SMTP address of the customer. */
-    private String _emailAddress;
+    private String emailAddress;
     /** Phone numbers associated with the customer, including home, business and mobile numbers. */
-    private java.util.List<Phone> _phones;
+    private java.util.List<Phone> phones;
     /**
      * Instantiates a new BookingCustomer and sets the default values.
      * @return a void
@@ -41,7 +40,7 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PhysicalAddress> getAddresses() {
-        return this._addresses;
+        return this.addresses;
     }
     /**
      * Gets the displayName property value. The name of the customer.
@@ -49,7 +48,7 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the emailAddress property value. The SMTP address of the customer.
@@ -57,15 +56,15 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEmailAddress() {
-        return this._emailAddress;
+        return this.emailAddress;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("addresses", (n) -> { this.setAddresses(n.getCollectionOfObjectValues(PhysicalAddress::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
@@ -78,7 +77,7 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Phone> getPhones() {
-        return this._phones;
+        return this.phones;
     }
     /**
      * Serializes information the current object
@@ -101,7 +100,7 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAddresses(@javax.annotation.Nullable final java.util.List<PhysicalAddress> value) {
-        this._addresses = value;
+        this.addresses = value;
     }
     /**
      * Sets the displayName property value. The name of the customer.
@@ -110,7 +109,7 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the emailAddress property value. The SMTP address of the customer.
@@ -119,7 +118,7 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final String value) {
-        this._emailAddress = value;
+        this.emailAddress = value;
     }
     /**
      * Sets the phones property value. Phone numbers associated with the customer, including home, business and mobile numbers.
@@ -128,6 +127,6 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPhones(@javax.annotation.Nullable final java.util.List<Phone> value) {
-        this._phones = value;
+        this.phones = value;
     }
 }

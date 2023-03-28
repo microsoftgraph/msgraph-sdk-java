@@ -1,24 +1,20 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.IdentityBuiltInUserFlowAttribute;
-import com.microsoft.graph.models.IdentityCustomUserFlowAttribute;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class IdentityUserFlowAttribute extends Entity implements Parsable {
     /** The dataType property */
-    private IdentityUserFlowAttributeDataType _dataType;
+    private IdentityUserFlowAttributeDataType dataType;
     /** The description of the user flow attribute that's shown to the user at the time of sign-up. */
-    private String _description;
+    private String description;
     /** The display name of the user flow attribute. */
-    private String _displayName;
+    private String displayName;
     /** The userFlowAttributeType property */
-    private IdentityUserFlowAttributeType _userFlowAttributeType;
+    private IdentityUserFlowAttributeType userFlowAttributeType;
     /**
      * Instantiates a new identityUserFlowAttribute and sets the default values.
      * @return a void
@@ -51,7 +47,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentityUserFlowAttributeDataType getDataType() {
-        return this._dataType;
+        return this.dataType;
     }
     /**
      * Gets the description property value. The description of the user flow attribute that's shown to the user at the time of sign-up.
@@ -59,7 +55,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The display name of the user flow attribute.
@@ -67,15 +63,15 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("dataType", (n) -> { this.setDataType(n.getEnumValue(IdentityUserFlowAttributeDataType.class)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -88,7 +84,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentityUserFlowAttributeType getUserFlowAttributeType() {
-        return this._userFlowAttributeType;
+        return this.userFlowAttributeType;
     }
     /**
      * Serializes information the current object
@@ -111,7 +107,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDataType(@javax.annotation.Nullable final IdentityUserFlowAttributeDataType value) {
-        this._dataType = value;
+        this.dataType = value;
     }
     /**
      * Sets the description property value. The description of the user flow attribute that's shown to the user at the time of sign-up.
@@ -120,7 +116,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The display name of the user flow attribute.
@@ -129,7 +125,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the userFlowAttributeType property value. The userFlowAttributeType property
@@ -138,6 +134,6 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserFlowAttributeType(@javax.annotation.Nullable final IdentityUserFlowAttributeType value) {
-        this._userFlowAttributeType = value;
+        this.userFlowAttributeType = value;
     }
 }

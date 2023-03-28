@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InviteParticipantsOperation extends CommsOperation implements Parsable {
     /** The participants to invite. */
-    private java.util.List<InvitationParticipantInfo> _participants;
+    private java.util.List<InvitationParticipantInfo> participants;
     /**
      * Instantiates a new InviteParticipantsOperation and sets the default values.
      * @return a void
@@ -30,11 +29,11 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("participants", (n) -> { this.setParticipants(n.getCollectionOfObjectValues(InvitationParticipantInfo::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -44,7 +43,7 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
      */
     @javax.annotation.Nullable
     public java.util.List<InvitationParticipantInfo> getParticipants() {
-        return this._participants;
+        return this.participants;
     }
     /**
      * Serializes information the current object
@@ -64,6 +63,6 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
      */
     @javax.annotation.Nonnull
     public void setParticipants(@javax.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
-        this._participants = value;
+        this.participants = value;
     }
 }

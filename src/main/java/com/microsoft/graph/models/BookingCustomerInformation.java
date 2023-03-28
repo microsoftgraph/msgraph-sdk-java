@@ -3,27 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingCustomerInformation extends BookingCustomerInformationBase implements Parsable {
     /** The ID of the bookingCustomer for this appointment. If no ID is specified when an appointment is created, then a new bookingCustomer object is created. Once set, you should consider the customerId immutable. */
-    private String _customerId;
+    private String customerId;
     /** It consists of the list of custom questions and answers given by the customer as part of the appointment */
-    private java.util.List<BookingQuestionAnswer> _customQuestionAnswers;
+    private java.util.List<BookingQuestionAnswer> customQuestionAnswers;
     /** The SMTP address of the bookingCustomer who is booking the appointment */
-    private String _emailAddress;
+    private String emailAddress;
     /** Represents location information for thebookingCustomerwho is booking the appointment. */
-    private Location _location;
+    private Location location;
     /** The customer's name. */
-    private String _name;
+    private String name;
     /** Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID. You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by the customerId. */
-    private String _notes;
+    private String notes;
     /** The customer's phone number. */
-    private String _phone;
+    private String phone;
     /** The time zone of the customer. For a list of possible values, see dateTimeTimeZone. */
-    private String _timeZone;
+    private String timeZone;
     /**
      * Instantiates a new BookingCustomerInformation and sets the default values.
      * @return a void
@@ -49,7 +48,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @javax.annotation.Nullable
     public String getCustomerId() {
-        return this._customerId;
+        return this.customerId;
     }
     /**
      * Gets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment
@@ -57,7 +56,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @javax.annotation.Nullable
     public java.util.List<BookingQuestionAnswer> getCustomQuestionAnswers() {
-        return this._customQuestionAnswers;
+        return this.customQuestionAnswers;
     }
     /**
      * Gets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment
@@ -65,15 +64,15 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @javax.annotation.Nullable
     public String getEmailAddress() {
-        return this._emailAddress;
+        return this.emailAddress;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("customerId", (n) -> { this.setCustomerId(n.getStringValue()); });
         deserializerMap.put("customQuestionAnswers", (n) -> { this.setCustomQuestionAnswers(n.getCollectionOfObjectValues(BookingQuestionAnswer::createFromDiscriminatorValue)); });
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
@@ -90,7 +89,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @javax.annotation.Nullable
     public Location getLocation() {
-        return this._location;
+        return this.location;
     }
     /**
      * Gets the name property value. The customer's name.
@@ -98,7 +97,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the notes property value. Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID. You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by the customerId.
@@ -106,7 +105,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @javax.annotation.Nullable
     public String getNotes() {
-        return this._notes;
+        return this.notes;
     }
     /**
      * Gets the phone property value. The customer's phone number.
@@ -114,7 +113,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @javax.annotation.Nullable
     public String getPhone() {
-        return this._phone;
+        return this.phone;
     }
     /**
      * Gets the timeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
@@ -122,7 +121,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @javax.annotation.Nullable
     public String getTimeZone() {
-        return this._timeZone;
+        return this.timeZone;
     }
     /**
      * Serializes information the current object
@@ -149,7 +148,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @javax.annotation.Nonnull
     public void setCustomerId(@javax.annotation.Nullable final String value) {
-        this._customerId = value;
+        this.customerId = value;
     }
     /**
      * Sets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment
@@ -158,7 +157,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @javax.annotation.Nonnull
     public void setCustomQuestionAnswers(@javax.annotation.Nullable final java.util.List<BookingQuestionAnswer> value) {
-        this._customQuestionAnswers = value;
+        this.customQuestionAnswers = value;
     }
     /**
      * Sets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment
@@ -167,7 +166,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final String value) {
-        this._emailAddress = value;
+        this.emailAddress = value;
     }
     /**
      * Sets the location property value. Represents location information for thebookingCustomerwho is booking the appointment.
@@ -176,7 +175,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final Location value) {
-        this._location = value;
+        this.location = value;
     }
     /**
      * Sets the name property value. The customer's name.
@@ -185,7 +184,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the notes property value. Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID. You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by the customerId.
@@ -194,7 +193,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final String value) {
-        this._notes = value;
+        this.notes = value;
     }
     /**
      * Sets the phone property value. The customer's phone number.
@@ -203,7 +202,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @javax.annotation.Nonnull
     public void setPhone(@javax.annotation.Nullable final String value) {
-        this._phone = value;
+        this.phone = value;
     }
     /**
      * Sets the timeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
@@ -212,6 +211,6 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @javax.annotation.Nonnull
     public void setTimeZone(@javax.annotation.Nullable final String value) {
-        this._timeZone = value;
+        this.timeZone = value;
     }
 }

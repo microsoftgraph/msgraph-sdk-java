@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IPv6CidrRange extends IpRange implements Parsable {
     /** IPv6 address in CIDR notation. Not nullable. */
-    private String _cidrAddress;
+    private String cidrAddress;
     /**
      * Instantiates a new IPv6CidrRange and sets the default values.
      * @return a void
@@ -35,15 +34,15 @@ public class IPv6CidrRange extends IpRange implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCidrAddress() {
-        return this._cidrAddress;
+        return this.cidrAddress;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("cidrAddress", (n) -> { this.setCidrAddress(n.getStringValue()); });
         return deserializerMap;
     }
@@ -65,6 +64,6 @@ public class IPv6CidrRange extends IpRange implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCidrAddress(@javax.annotation.Nullable final String value) {
-        this._cidrAddress = value;
+        this.cidrAddress = value;
     }
 }

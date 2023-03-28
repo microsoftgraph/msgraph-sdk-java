@@ -3,22 +3,20 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class AttendanceRecord extends Entity implements Parsable {
     /** List of time periods between joining and leaving a meeting. */
-    private java.util.List<AttendanceInterval> _attendanceIntervals;
+    private java.util.List<AttendanceInterval> attendanceIntervals;
     /** Email address of the user associated with this atttendance record. */
-    private String _emailAddress;
+    private String emailAddress;
     /** Identity of the user associated with this atttendance record. */
-    private Identity _identity;
+    private Identity identity;
     /** Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer. */
-    private String _role;
+    private String role;
     /** Total duration of the attendances in seconds. */
-    private Integer _totalAttendanceInSeconds;
+    private Integer totalAttendanceInSeconds;
     /**
      * Instantiates a new attendanceRecord and sets the default values.
      * @return a void
@@ -43,7 +41,7 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AttendanceInterval> getAttendanceIntervals() {
-        return this._attendanceIntervals;
+        return this.attendanceIntervals;
     }
     /**
      * Gets the emailAddress property value. Email address of the user associated with this atttendance record.
@@ -51,15 +49,15 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEmailAddress() {
-        return this._emailAddress;
+        return this.emailAddress;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("attendanceIntervals", (n) -> { this.setAttendanceIntervals(n.getCollectionOfObjectValues(AttendanceInterval::createFromDiscriminatorValue)); });
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
         deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
@@ -73,7 +71,7 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Identity getIdentity() {
-        return this._identity;
+        return this.identity;
     }
     /**
      * Gets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
@@ -81,7 +79,7 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRole() {
-        return this._role;
+        return this.role;
     }
     /**
      * Gets the totalAttendanceInSeconds property value. Total duration of the attendances in seconds.
@@ -89,7 +87,7 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getTotalAttendanceInSeconds() {
-        return this._totalAttendanceInSeconds;
+        return this.totalAttendanceInSeconds;
     }
     /**
      * Serializes information the current object
@@ -113,7 +111,7 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAttendanceIntervals(@javax.annotation.Nullable final java.util.List<AttendanceInterval> value) {
-        this._attendanceIntervals = value;
+        this.attendanceIntervals = value;
     }
     /**
      * Sets the emailAddress property value. Email address of the user associated with this atttendance record.
@@ -122,7 +120,7 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final String value) {
-        this._emailAddress = value;
+        this.emailAddress = value;
     }
     /**
      * Sets the identity property value. Identity of the user associated with this atttendance record.
@@ -131,7 +129,7 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIdentity(@javax.annotation.Nullable final Identity value) {
-        this._identity = value;
+        this.identity = value;
     }
     /**
      * Sets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
@@ -140,7 +138,7 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRole(@javax.annotation.Nullable final String value) {
-        this._role = value;
+        this.role = value;
     }
     /**
      * Sets the totalAttendanceInSeconds property value. Total duration of the attendances in seconds.
@@ -149,6 +147,6 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTotalAttendanceInSeconds(@javax.annotation.Nullable final Integer value) {
-        this._totalAttendanceInSeconds = value;
+        this.totalAttendanceInSeconds = value;
     }
 }

@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
     /** Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements. */
-    private java.util.List<IosHomeScreenFolderPage> _pages;
+    private java.util.List<IosHomeScreenFolderPage> pages;
     /**
      * Instantiates a new IosHomeScreenFolder and sets the default values.
      * @return a void
@@ -31,11 +30,11 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("pages", (n) -> { this.setPages(n.getCollectionOfObjectValues(IosHomeScreenFolderPage::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -45,7 +44,7 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<IosHomeScreenFolderPage> getPages() {
-        return this._pages;
+        return this.pages;
     }
     /**
      * Serializes information the current object
@@ -65,6 +64,6 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPages(@javax.annotation.Nullable final java.util.List<IosHomeScreenFolderPage> value) {
-        this._pages = value;
+        this.pages = value;
     }
 }

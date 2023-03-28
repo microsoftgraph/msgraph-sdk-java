@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationCourse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Unique identifier for the course. */
-    private String _courseNumber;
+    private String courseNumber;
     /** Description of the course. */
-    private String _description;
+    private String description;
     /** Name of the course. */
-    private String _displayName;
+    private String displayName;
     /** ID of the course from the syncing system. */
-    private String _externalId;
+    private String externalId;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Subject of the course. */
-    private String _subject;
+    private String subject;
     /**
      * Instantiates a new educationCourse and sets the default values.
      * @return a void
@@ -47,7 +46,7 @@ public class EducationCourse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the courseNumber property value. Unique identifier for the course.
@@ -55,7 +54,7 @@ public class EducationCourse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCourseNumber() {
-        return this._courseNumber;
+        return this.courseNumber;
     }
     /**
      * Gets the description property value. Description of the course.
@@ -63,7 +62,7 @@ public class EducationCourse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Name of the course.
@@ -71,7 +70,7 @@ public class EducationCourse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the externalId property value. ID of the course from the syncing system.
@@ -79,15 +78,15 @@ public class EducationCourse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getExternalId() {
-        return this._externalId;
+        return this.externalId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("courseNumber", (n) -> { this.setCourseNumber(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -102,7 +101,7 @@ public class EducationCourse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the subject property value. Subject of the course.
@@ -110,7 +109,7 @@ public class EducationCourse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSubject() {
-        return this._subject;
+        return this.subject;
     }
     /**
      * Serializes information the current object
@@ -135,7 +134,7 @@ public class EducationCourse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the courseNumber property value. Unique identifier for the course.
@@ -144,7 +143,7 @@ public class EducationCourse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCourseNumber(@javax.annotation.Nullable final String value) {
-        this._courseNumber = value;
+        this.courseNumber = value;
     }
     /**
      * Sets the description property value. Description of the course.
@@ -153,7 +152,7 @@ public class EducationCourse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Name of the course.
@@ -162,7 +161,7 @@ public class EducationCourse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the externalId property value. ID of the course from the syncing system.
@@ -171,7 +170,7 @@ public class EducationCourse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
-        this._externalId = value;
+        this.externalId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -180,7 +179,7 @@ public class EducationCourse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the subject property value. Subject of the course.
@@ -189,6 +188,6 @@ public class EducationCourse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
-        this._subject = value;
+        this.subject = value;
     }
 }

@@ -3,18 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class GroupSetting extends Entity implements Parsable {
     /** Display name of this group of settings, which comes from the associated template. */
-    private String _displayName;
+    private String displayName;
     /** Unique identifier for the tenant-level groupSettingTemplates object that's been customized for this group-level settings object. Read-only. */
-    private String _templateId;
+    private String templateId;
     /** Collection of name-value pairs corresponding to the name and defaultValue properties in the referenced groupSettingTemplates object. */
-    private java.util.List<SettingValue> _values;
+    private java.util.List<SettingValue> values;
     /**
      * Instantiates a new groupSetting and sets the default values.
      * @return a void
@@ -39,15 +37,15 @@ public class GroupSetting extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("templateId", (n) -> { this.setTemplateId(n.getStringValue()); });
         deserializerMap.put("values", (n) -> { this.setValues(n.getCollectionOfObjectValues(SettingValue::createFromDiscriminatorValue)); });
@@ -59,7 +57,7 @@ public class GroupSetting extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTemplateId() {
-        return this._templateId;
+        return this.templateId;
     }
     /**
      * Gets the values property value. Collection of name-value pairs corresponding to the name and defaultValue properties in the referenced groupSettingTemplates object.
@@ -67,7 +65,7 @@ public class GroupSetting extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SettingValue> getValues() {
-        return this._values;
+        return this.values;
     }
     /**
      * Serializes information the current object
@@ -89,7 +87,7 @@ public class GroupSetting extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the templateId property value. Unique identifier for the tenant-level groupSettingTemplates object that's been customized for this group-level settings object. Read-only.
@@ -98,7 +96,7 @@ public class GroupSetting extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTemplateId(@javax.annotation.Nullable final String value) {
-        this._templateId = value;
+        this.templateId = value;
     }
     /**
      * Sets the values property value. Collection of name-value pairs corresponding to the name and defaultValue properties in the referenced groupSettingTemplates object.
@@ -107,6 +105,6 @@ public class GroupSetting extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setValues(@javax.annotation.Nullable final java.util.List<SettingValue> value) {
-        this._values = value;
+        this.values = value;
     }
 }

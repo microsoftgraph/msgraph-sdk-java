@@ -1,16 +1,14 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.DocumentSetVersion;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ListItemVersion extends BaseItemVersion implements Parsable {
     /** A collection of the fields and values for this version of the list item. */
-    private FieldValueSet _fields;
+    private FieldValueSet fields;
     /**
      * Instantiates a new ListItemVersion and sets the default values.
      * @return a void
@@ -39,11 +37,11 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("fields", (n) -> { this.setFields(n.getObjectValue(FieldValueSet::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -53,7 +51,7 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
      */
     @javax.annotation.Nullable
     public FieldValueSet getFields() {
-        return this._fields;
+        return this.fields;
     }
     /**
      * Serializes information the current object
@@ -73,6 +71,6 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFields(@javax.annotation.Nullable final FieldValueSet value) {
-        this._fields = value;
+        this.fields = value;
     }
 }

@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TicketInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The ticket number. */
-    private String _ticketNumber;
+    private String ticketNumber;
     /** The description of the ticket system. */
-    private String _ticketSystem;
+    private String ticketSystem;
     /**
      * Instantiates a new ticketInfo and sets the default values.
      * @return a void
@@ -41,15 +40,15 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("ticketNumber", (n) -> { this.setTicketNumber(n.getStringValue()); });
         deserializerMap.put("ticketSystem", (n) -> { this.setTicketSystem(n.getStringValue()); });
@@ -61,7 +60,7 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the ticketNumber property value. The ticket number.
@@ -69,7 +68,7 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getTicketNumber() {
-        return this._ticketNumber;
+        return this.ticketNumber;
     }
     /**
      * Gets the ticketSystem property value. The description of the ticket system.
@@ -77,7 +76,7 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getTicketSystem() {
-        return this._ticketSystem;
+        return this.ticketSystem;
     }
     /**
      * Serializes information the current object
@@ -99,7 +98,7 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -108,7 +107,7 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the ticketNumber property value. The ticket number.
@@ -117,7 +116,7 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTicketNumber(@javax.annotation.Nullable final String value) {
-        this._ticketNumber = value;
+        this.ticketNumber = value;
     }
     /**
      * Sets the ticketSystem property value. The description of the ticket system.
@@ -126,6 +125,6 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTicketSystem(@javax.annotation.Nullable final String value) {
-        this._ticketSystem = value;
+        this.ticketSystem = value;
     }
 }

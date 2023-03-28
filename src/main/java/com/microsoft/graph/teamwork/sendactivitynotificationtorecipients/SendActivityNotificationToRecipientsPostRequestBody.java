@@ -8,28 +8,26 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the sendActivityNotificationToRecipients method. */
 public class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalDataHolder, Parsable {
     /** The activityType property */
-    private String _activityType;
+    private String activityType;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The chainId property */
-    private Long _chainId;
+    private Long chainId;
     /** The previewText property */
-    private ItemBody _previewText;
+    private ItemBody previewText;
     /** The recipients property */
-    private java.util.List<TeamworkNotificationRecipient> _recipients;
+    private java.util.List<TeamworkNotificationRecipient> recipients;
     /** The teamsAppId property */
-    private String _teamsAppId;
+    private String teamsAppId;
     /** The templateParameters property */
-    private java.util.List<KeyValuePair> _templateParameters;
+    private java.util.List<KeyValuePair> templateParameters;
     /** The topic property */
-    private TeamworkActivityTopic _topic;
+    private TeamworkActivityTopic topic;
     /**
      * Instantiates a new sendActivityNotificationToRecipientsPostRequestBody and sets the default values.
      * @return a void
@@ -54,7 +52,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     @javax.annotation.Nullable
     public String getActivityType() {
-        return this._activityType;
+        return this.activityType;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -62,7 +60,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the chainId property value. The chainId property
@@ -70,15 +68,15 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     @javax.annotation.Nullable
     public Long getChainId() {
-        return this._chainId;
+        return this.chainId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("activityType", (n) -> { this.setActivityType(n.getStringValue()); });
         deserializerMap.put("chainId", (n) -> { this.setChainId(n.getLongValue()); });
         deserializerMap.put("previewText", (n) -> { this.setPreviewText(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
@@ -94,7 +92,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     @javax.annotation.Nullable
     public ItemBody getPreviewText() {
-        return this._previewText;
+        return this.previewText;
     }
     /**
      * Gets the recipients property value. The recipients property
@@ -102,7 +100,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     @javax.annotation.Nullable
     public java.util.List<TeamworkNotificationRecipient> getRecipients() {
-        return this._recipients;
+        return this.recipients;
     }
     /**
      * Gets the teamsAppId property value. The teamsAppId property
@@ -110,7 +108,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     @javax.annotation.Nullable
     public String getTeamsAppId() {
-        return this._teamsAppId;
+        return this.teamsAppId;
     }
     /**
      * Gets the templateParameters property value. The templateParameters property
@@ -118,7 +116,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     @javax.annotation.Nullable
     public java.util.List<KeyValuePair> getTemplateParameters() {
-        return this._templateParameters;
+        return this.templateParameters;
     }
     /**
      * Gets the topic property value. The topic property
@@ -126,7 +124,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     @javax.annotation.Nullable
     public TeamworkActivityTopic getTopic() {
-        return this._topic;
+        return this.topic;
     }
     /**
      * Serializes information the current object
@@ -152,7 +150,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     @javax.annotation.Nonnull
     public void setActivityType(@javax.annotation.Nullable final String value) {
-        this._activityType = value;
+        this.activityType = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -161,7 +159,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the chainId property value. The chainId property
@@ -170,7 +168,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     @javax.annotation.Nonnull
     public void setChainId(@javax.annotation.Nullable final Long value) {
-        this._chainId = value;
+        this.chainId = value;
     }
     /**
      * Sets the previewText property value. The previewText property
@@ -179,7 +177,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     @javax.annotation.Nonnull
     public void setPreviewText(@javax.annotation.Nullable final ItemBody value) {
-        this._previewText = value;
+        this.previewText = value;
     }
     /**
      * Sets the recipients property value. The recipients property
@@ -188,7 +186,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     @javax.annotation.Nonnull
     public void setRecipients(@javax.annotation.Nullable final java.util.List<TeamworkNotificationRecipient> value) {
-        this._recipients = value;
+        this.recipients = value;
     }
     /**
      * Sets the teamsAppId property value. The teamsAppId property
@@ -197,7 +195,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     @javax.annotation.Nonnull
     public void setTeamsAppId(@javax.annotation.Nullable final String value) {
-        this._teamsAppId = value;
+        this.teamsAppId = value;
     }
     /**
      * Sets the templateParameters property value. The templateParameters property
@@ -206,7 +204,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     @javax.annotation.Nonnull
     public void setTemplateParameters(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this._templateParameters = value;
+        this.templateParameters = value;
     }
     /**
      * Sets the topic property value. The topic property
@@ -215,6 +213,6 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     @javax.annotation.Nonnull
     public void setTopic(@javax.annotation.Nullable final TeamworkActivityTopic value) {
-        this._topic = value;
+        this.topic = value;
     }
 }

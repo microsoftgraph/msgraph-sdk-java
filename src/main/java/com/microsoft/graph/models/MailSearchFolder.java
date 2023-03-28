@@ -3,19 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MailSearchFolder extends MailFolder implements Parsable {
     /** The OData query to filter the messages. */
-    private String _filterQuery;
+    private String filterQuery;
     /** Indicates how the mailbox folder hierarchy should be traversed in the search. true means that a deep search should be done to include child folders in the hierarchy of each folder explicitly specified in sourceFolderIds. false means a shallow search of only each of the folders explicitly specified in sourceFolderIds. */
-    private Boolean _includeNestedFolders;
+    private Boolean includeNestedFolders;
     /** Indicates whether a search folder is editable using REST APIs. */
-    private Boolean _isSupported;
+    private Boolean isSupported;
     /** The mailbox folders that should be mined. */
-    private java.util.List<String> _sourceFolderIds;
+    private java.util.List<String> sourceFolderIds;
     /**
      * Instantiates a new MailSearchFolder and sets the default values.
      * @return a void
@@ -37,11 +36,11 @@ public class MailSearchFolder extends MailFolder implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("filterQuery", (n) -> { this.setFilterQuery(n.getStringValue()); });
         deserializerMap.put("includeNestedFolders", (n) -> { this.setIncludeNestedFolders(n.getBooleanValue()); });
         deserializerMap.put("isSupported", (n) -> { this.setIsSupported(n.getBooleanValue()); });
@@ -54,7 +53,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
      */
     @javax.annotation.Nullable
     public String getFilterQuery() {
-        return this._filterQuery;
+        return this.filterQuery;
     }
     /**
      * Gets the includeNestedFolders property value. Indicates how the mailbox folder hierarchy should be traversed in the search. true means that a deep search should be done to include child folders in the hierarchy of each folder explicitly specified in sourceFolderIds. false means a shallow search of only each of the folders explicitly specified in sourceFolderIds.
@@ -62,7 +61,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIncludeNestedFolders() {
-        return this._includeNestedFolders;
+        return this.includeNestedFolders;
     }
     /**
      * Gets the isSupported property value. Indicates whether a search folder is editable using REST APIs.
@@ -70,7 +69,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsSupported() {
-        return this._isSupported;
+        return this.isSupported;
     }
     /**
      * Gets the sourceFolderIds property value. The mailbox folders that should be mined.
@@ -78,7 +77,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSourceFolderIds() {
-        return this._sourceFolderIds;
+        return this.sourceFolderIds;
     }
     /**
      * Serializes information the current object
@@ -101,7 +100,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFilterQuery(@javax.annotation.Nullable final String value) {
-        this._filterQuery = value;
+        this.filterQuery = value;
     }
     /**
      * Sets the includeNestedFolders property value. Indicates how the mailbox folder hierarchy should be traversed in the search. true means that a deep search should be done to include child folders in the hierarchy of each folder explicitly specified in sourceFolderIds. false means a shallow search of only each of the folders explicitly specified in sourceFolderIds.
@@ -110,7 +109,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIncludeNestedFolders(@javax.annotation.Nullable final Boolean value) {
-        this._includeNestedFolders = value;
+        this.includeNestedFolders = value;
     }
     /**
      * Sets the isSupported property value. Indicates whether a search folder is editable using REST APIs.
@@ -119,7 +118,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsSupported(@javax.annotation.Nullable final Boolean value) {
-        this._isSupported = value;
+        this.isSupported = value;
     }
     /**
      * Sets the sourceFolderIds property value. The mailbox folders that should be mined.
@@ -128,6 +127,6 @@ public class MailSearchFolder extends MailFolder implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSourceFolderIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._sourceFolderIds = value;
+        this.sourceFolderIds = value;
     }
 }

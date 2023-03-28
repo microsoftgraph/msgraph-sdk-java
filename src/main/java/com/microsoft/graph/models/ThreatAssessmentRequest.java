@@ -1,37 +1,31 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.EmailFileAssessmentRequest;
-import com.microsoft.graph.models.FileAssessmentRequest;
-import com.microsoft.graph.models.MailAssessmentRequest;
-import com.microsoft.graph.models.UrlAssessmentRequest;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class ThreatAssessmentRequest extends Entity implements Parsable {
     /** The category property */
-    private ThreatCategory _category;
+    private ThreatCategory category;
     /** The content type of threat assessment. Possible values are: mail, url, file. */
-    private ThreatAssessmentContentType _contentType;
+    private ThreatAssessmentContentType contentType;
     /** The threat assessment request creator. */
-    private IdentitySet _createdBy;
+    private IdentitySet createdBy;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The expectedAssessment property */
-    private ThreatExpectedAssessment _expectedAssessment;
+    private ThreatExpectedAssessment expectedAssessment;
     /** The source of the threat assessment request. Possible values are: administrator. */
-    private ThreatAssessmentRequestSource _requestSource;
+    private ThreatAssessmentRequestSource requestSource;
     /** A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it. */
-    private java.util.List<ThreatAssessmentResult> _results;
+    private java.util.List<ThreatAssessmentResult> results;
     /** The assessment process status. Possible values are: pending, completed. */
-    private ThreatAssessmentStatus _status;
+    private ThreatAssessmentStatus status;
     /**
-     * Instantiates a new threatAssessmentRequest and sets the default values.
+     * Instantiates a new ThreatAssessmentRequest and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -41,7 +35,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a threatAssessmentRequest
+     * @return a ThreatAssessmentRequest
      */
     @javax.annotation.Nonnull
     public static ThreatAssessmentRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -64,7 +58,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ThreatCategory getCategory() {
-        return this._category;
+        return this.category;
     }
     /**
      * Gets the contentType property value. The content type of threat assessment. Possible values are: mail, url, file.
@@ -72,7 +66,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ThreatAssessmentContentType getContentType() {
-        return this._contentType;
+        return this.contentType;
     }
     /**
      * Gets the createdBy property value. The threat assessment request creator.
@@ -80,7 +74,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -88,7 +82,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the expectedAssessment property value. The expectedAssessment property
@@ -96,15 +90,15 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ThreatExpectedAssessment getExpectedAssessment() {
-        return this._expectedAssessment;
+        return this.expectedAssessment;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(ThreatCategory.class)); });
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getEnumValue(ThreatAssessmentContentType.class)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -121,7 +115,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ThreatAssessmentRequestSource getRequestSource() {
-        return this._requestSource;
+        return this.requestSource;
     }
     /**
      * Gets the results property value. A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
@@ -129,7 +123,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ThreatAssessmentResult> getResults() {
-        return this._results;
+        return this.results;
     }
     /**
      * Gets the status property value. The assessment process status. Possible values are: pending, completed.
@@ -137,7 +131,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ThreatAssessmentStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
@@ -164,7 +158,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final ThreatCategory value) {
-        this._category = value;
+        this.category = value;
     }
     /**
      * Sets the contentType property value. The content type of threat assessment. Possible values are: mail, url, file.
@@ -173,7 +167,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentType(@javax.annotation.Nullable final ThreatAssessmentContentType value) {
-        this._contentType = value;
+        this.contentType = value;
     }
     /**
      * Sets the createdBy property value. The threat assessment request creator.
@@ -182,7 +176,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -191,7 +185,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the expectedAssessment property value. The expectedAssessment property
@@ -200,7 +194,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setExpectedAssessment(@javax.annotation.Nullable final ThreatExpectedAssessment value) {
-        this._expectedAssessment = value;
+        this.expectedAssessment = value;
     }
     /**
      * Sets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
@@ -209,7 +203,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRequestSource(@javax.annotation.Nullable final ThreatAssessmentRequestSource value) {
-        this._requestSource = value;
+        this.requestSource = value;
     }
     /**
      * Sets the results property value. A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
@@ -218,7 +212,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setResults(@javax.annotation.Nullable final java.util.List<ThreatAssessmentResult> value) {
-        this._results = value;
+        this.results = value;
     }
     /**
      * Sets the status property value. The assessment process status. Possible values are: pending, completed.
@@ -227,6 +221,6 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ThreatAssessmentStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }
