@@ -57,6 +57,15 @@ public class DefaultUserRolePermissions implements IJsonBackedObject {
     public Boolean allowedToCreateSecurityGroups;
 
     /**
+     * The Allowed To Read Bitlocker Keys For Owned Device.
+     * 
+     */
+    @SerializedName(value = "allowedToReadBitlockerKeysForOwnedDevice", alternate = {"AllowedToReadBitlockerKeysForOwnedDevice"})
+    @Expose
+	@Nullable
+    public Boolean allowedToReadBitlockerKeysForOwnedDevice;
+
+    /**
      * The Allowed To Read Other Users.
      * Indicates whether the default user role can read other users.
      */

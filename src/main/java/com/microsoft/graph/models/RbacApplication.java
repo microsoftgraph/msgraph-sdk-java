@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.UnifiedRbacResourceNamespaceCollectionPage;
 import com.microsoft.graph.requests.UnifiedRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionPage;
 import com.microsoft.graph.requests.UnifiedRoleAssignmentScheduleInstanceCollectionPage;
@@ -33,6 +34,15 @@ import javax.annotation.Nonnull;
  */
 public class RbacApplication extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Resource Namespaces.
+     * 
+     */
+    @SerializedName(value = "resourceNamespaces", alternate = {"ResourceNamespaces"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UnifiedRbacResourceNamespaceCollectionPage resourceNamespaces;
 
     /**
      * The Role Assignments.
@@ -115,6 +125,10 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("resourceNamespaces")) {
+            resourceNamespaces = serializer.deserializeObject(json.get("resourceNamespaces"), com.microsoft.graph.requests.UnifiedRbacResourceNamespaceCollectionPage.class);
+        }
 
         if (json.has("roleAssignments")) {
             roleAssignments = serializer.deserializeObject(json.get("roleAssignments"), com.microsoft.graph.requests.UnifiedRoleAssignmentCollectionPage.class);

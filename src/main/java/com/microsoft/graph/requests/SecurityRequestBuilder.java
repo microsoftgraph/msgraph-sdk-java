@@ -118,6 +118,26 @@ public class SecurityRequestBuilder extends BaseRequestBuilder<Security> {
     public com.microsoft.graph.requests.AttackSimulationRootRequestBuilder attackSimulation() {
         return new com.microsoft.graph.requests.AttackSimulationRootRequestBuilder(getRequestUrlWithAdditionalSegment("attackSimulation"), getClient(), null);
     }
+
+    /**
+     * Gets the request builder for TriggersRoot
+     *
+     * @return the TriggersRootRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.TriggersRootRequestBuilder triggers() {
+        return new com.microsoft.graph.security.requests.TriggersRootRequestBuilder(getRequestUrlWithAdditionalSegment("triggers"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for TriggerTypesRoot
+     *
+     * @return the TriggerTypesRootRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.TriggerTypesRootRequestBuilder triggerTypes() {
+        return new com.microsoft.graph.security.requests.TriggerTypesRootRequestBuilder(getRequestUrlWithAdditionalSegment("triggerTypes"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the Alert collection
      *
