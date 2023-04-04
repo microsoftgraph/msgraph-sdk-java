@@ -4,18 +4,16 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the uploadClientCertificate method. */
 public class UploadClientCertificatePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The password property */
-    private String _password;
+    private String password;
     /** The pkcs12Value property */
-    private String _pkcs12Value;
+    private String pkcs12Value;
     /**
      * Instantiates a new uploadClientCertificatePostRequestBody and sets the default values.
      * @return a void
@@ -40,15 +38,15 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("password", (n) -> { this.setPassword(n.getStringValue()); });
         deserializerMap.put("pkcs12Value", (n) -> { this.setPkcs12Value(n.getStringValue()); });
         return deserializerMap;
@@ -59,7 +57,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      */
     @javax.annotation.Nullable
     public String getPassword() {
-        return this._password;
+        return this.password;
     }
     /**
      * Gets the pkcs12Value property value. The pkcs12Value property
@@ -67,7 +65,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      */
     @javax.annotation.Nullable
     public String getPkcs12Value() {
-        return this._pkcs12Value;
+        return this.pkcs12Value;
     }
     /**
      * Serializes information the current object
@@ -88,7 +86,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the password property value. The password property
@@ -97,7 +95,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      */
     @javax.annotation.Nonnull
     public void setPassword(@javax.annotation.Nullable final String value) {
-        this._password = value;
+        this.password = value;
     }
     /**
      * Sets the pkcs12Value property value. The pkcs12Value property
@@ -106,6 +104,6 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      */
     @javax.annotation.Nonnull
     public void setPkcs12Value(@javax.annotation.Nullable final String value) {
-        this._pkcs12Value = value;
+        this.pkcs12Value = value;
     }
 }

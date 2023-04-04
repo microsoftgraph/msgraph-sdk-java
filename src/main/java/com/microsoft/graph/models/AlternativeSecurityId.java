@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** For internal use only */
-    private String _identityProvider;
+    private String identityProvider;
     /** For internal use only */
-    private byte[] _key;
+    private byte[] key;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** For internal use only */
-    private Integer _type;
+    private Integer type;
     /**
      * Instantiates a new alternativeSecurityId and sets the default values.
      * @return a void
@@ -43,15 +42,15 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("identityProvider", (n) -> { this.setIdentityProvider(n.getStringValue()); });
         deserializerMap.put("key", (n) -> { this.setKey(n.getByteArrayValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -64,15 +63,15 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getIdentityProvider() {
-        return this._identityProvider;
+        return this.identityProvider;
     }
     /**
      * Gets the key property value. For internal use only
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getKey() {
-        return this._key;
+        return this.key;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -80,7 +79,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the type property value. For internal use only
@@ -88,7 +87,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the identityProvider property value. For internal use only
@@ -120,7 +119,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIdentityProvider(@javax.annotation.Nullable final String value) {
-        this._identityProvider = value;
+        this.identityProvider = value;
     }
     /**
      * Sets the key property value. For internal use only
@@ -129,7 +128,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setKey(@javax.annotation.Nullable final byte[] value) {
-        this._key = value;
+        this.key = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -138,7 +137,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the type property value. For internal use only
@@ -147,6 +146,6 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final Integer value) {
-        this._type = value;
+        this.type = value;
     }
 }

@@ -7,24 +7,22 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the answer method. */
 public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
     /** The acceptedModalities property */
-    private java.util.List<Modality> _acceptedModalities;
+    private java.util.List<Modality> acceptedModalities;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The callbackUri property */
-    private String _callbackUri;
+    private String callbackUri;
     /** The callOptions property */
-    private IncomingCallOptions _callOptions;
+    private IncomingCallOptions callOptions;
     /** The mediaConfig property */
-    private MediaConfig _mediaConfig;
+    private MediaConfig mediaConfig;
     /** The participantCapacity property */
-    private Integer _participantCapacity;
+    private Integer participantCapacity;
     /**
      * Instantiates a new answerPostRequestBody and sets the default values.
      * @return a void
@@ -49,7 +47,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Modality> getAcceptedModalities() {
-        return this._acceptedModalities;
+        return this.acceptedModalities;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -57,7 +55,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the callbackUri property value. The callbackUri property
@@ -65,7 +63,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCallbackUri() {
-        return this._callbackUri;
+        return this.callbackUri;
     }
     /**
      * Gets the callOptions property value. The callOptions property
@@ -73,15 +71,15 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public IncomingCallOptions getCallOptions() {
-        return this._callOptions;
+        return this.callOptions;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("acceptedModalities", (n) -> { this.setAcceptedModalities(n.getCollectionOfEnumValues(Modality.class)); });
         deserializerMap.put("callbackUri", (n) -> { this.setCallbackUri(n.getStringValue()); });
         deserializerMap.put("callOptions", (n) -> { this.setCallOptions(n.getObjectValue(IncomingCallOptions::createFromDiscriminatorValue)); });
@@ -95,7 +93,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public MediaConfig getMediaConfig() {
-        return this._mediaConfig;
+        return this.mediaConfig;
     }
     /**
      * Gets the participantCapacity property value. The participantCapacity property
@@ -103,7 +101,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getParticipantCapacity() {
-        return this._participantCapacity;
+        return this.participantCapacity;
     }
     /**
      * Serializes information the current object
@@ -127,7 +125,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAcceptedModalities(@javax.annotation.Nullable final java.util.List<Modality> value) {
-        this._acceptedModalities = value;
+        this.acceptedModalities = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -136,7 +134,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the callbackUri property value. The callbackUri property
@@ -145,7 +143,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCallbackUri(@javax.annotation.Nullable final String value) {
-        this._callbackUri = value;
+        this.callbackUri = value;
     }
     /**
      * Sets the callOptions property value. The callOptions property
@@ -154,7 +152,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCallOptions(@javax.annotation.Nullable final IncomingCallOptions value) {
-        this._callOptions = value;
+        this.callOptions = value;
     }
     /**
      * Sets the mediaConfig property value. The mediaConfig property
@@ -163,7 +161,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMediaConfig(@javax.annotation.Nullable final MediaConfig value) {
-        this._mediaConfig = value;
+        this.mediaConfig = value;
     }
     /**
      * Sets the participantCapacity property value. The participantCapacity property
@@ -172,6 +170,6 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setParticipantCapacity(@javax.annotation.Nullable final Integer value) {
-        this._participantCapacity = value;
+        this.participantCapacity = value;
     }
 }

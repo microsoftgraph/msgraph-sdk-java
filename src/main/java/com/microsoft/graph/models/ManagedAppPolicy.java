@@ -1,35 +1,26 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AndroidManagedAppProtection;
-import com.microsoft.graph.models.DefaultManagedAppProtection;
-import com.microsoft.graph.models.IosManagedAppProtection;
-import com.microsoft.graph.models.ManagedAppConfiguration;
-import com.microsoft.graph.models.ManagedAppProtection;
-import com.microsoft.graph.models.MdmWindowsInformationProtectionPolicy;
-import com.microsoft.graph.models.TargetedManagedAppConfiguration;
-import com.microsoft.graph.models.TargetedManagedAppProtection;
-import com.microsoft.graph.models.WindowsInformationProtection;
-import com.microsoft.graph.models.WindowsInformationProtectionPolicy;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The ManagedAppPolicy resource represents a base type for platform specific policies. */
+/**
+ * The ManagedAppPolicy resource represents a base type for platform specific policies.
+ */
 public class ManagedAppPolicy extends Entity implements Parsable {
     /** The date and time the policy was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The policy's description. */
-    private String _description;
+    private String description;
     /** Policy display name. */
-    private String _displayName;
+    private String displayName;
     /** Last time the policy was modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** Version of the entity. */
-    private String _version;
+    private String version;
     /**
      * Instantiates a new managedAppPolicy and sets the default values.
      * @return a void
@@ -70,7 +61,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. The policy's description.
@@ -78,7 +69,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Policy display name.
@@ -86,15 +77,15 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -108,7 +99,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the version property value. Version of the entity.
@@ -116,7 +107,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
@@ -140,7 +131,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The policy's description.
@@ -149,7 +140,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Policy display name.
@@ -158,7 +149,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Last time the policy was modified.
@@ -167,7 +158,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the version property value. Version of the entity.
@@ -176,6 +167,6 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

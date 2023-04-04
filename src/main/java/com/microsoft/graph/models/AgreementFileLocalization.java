@@ -3,14 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class AgreementFileLocalization extends AgreementFileProperties implements Parsable {
     /** Read-only. Customized versions of the terms of use agreement in the Azure AD tenant. */
-    private java.util.List<AgreementFileVersion> _versions;
+    private java.util.List<AgreementFileVersion> versions;
     /**
      * Instantiates a new agreementFileLocalization and sets the default values.
      * @return a void
@@ -31,11 +29,11 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("versions", (n) -> { this.setVersions(n.getCollectionOfObjectValues(AgreementFileVersion::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -45,7 +43,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
      */
     @javax.annotation.Nullable
     public java.util.List<AgreementFileVersion> getVersions() {
-        return this._versions;
+        return this.versions;
     }
     /**
      * Serializes information the current object
@@ -65,6 +63,6 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
      */
     @javax.annotation.Nonnull
     public void setVersions(@javax.annotation.Nullable final java.util.List<AgreementFileVersion> value) {
-        this._versions = value;
+        this.versions = value;
     }
 }

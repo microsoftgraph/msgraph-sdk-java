@@ -3,9 +3,8 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
 public enum TemplateScenarios implements ValuedEnum {
-    New_escaped("new_escaped"),
+    NewEscaped("new"),
     SecureFoundation("secureFoundation"),
     ZeroTrust("zeroTrust"),
     RemoteWork("remoteWork"),
@@ -22,7 +21,7 @@ public enum TemplateScenarios implements ValuedEnum {
     public static TemplateScenarios forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "new": return New_escaped;
+            case "new": return NewEscaped;
             case "secureFoundation": return SecureFoundation;
             case "zeroTrust": return ZeroTrust;
             case "remoteWork": return RemoteWork;

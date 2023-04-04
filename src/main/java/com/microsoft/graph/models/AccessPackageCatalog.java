@@ -4,27 +4,26 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageCatalog extends Entity implements Parsable {
     /** The access packages in this catalog. Read-only. Nullable. */
-    private java.util.List<AccessPackage> _accessPackages;
+    private java.util.List<AccessPackage> accessPackages;
     /** Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue. */
-    private AccessPackageCatalogType _catalogType;
+    private AccessPackageCatalogType catalogType;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The description of the access package catalog. */
-    private String _description;
+    private String description;
     /** The display name of the access package catalog. */
-    private String _displayName;
+    private String displayName;
     /** Whether the access packages in this catalog can be requested by users outside of the tenant. */
-    private Boolean _isExternallyVisible;
+    private Boolean isExternallyVisible;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
-    private OffsetDateTime _modifiedDateTime;
+    private OffsetDateTime modifiedDateTime;
     /** Has the value published if the access packages are available for management. The possible values are: unpublished, published, unknownFutureValue. */
-    private AccessPackageCatalogState _state;
+    private AccessPackageCatalogState state;
     /**
      * Instantiates a new accessPackageCatalog and sets the default values.
      * @return a void
@@ -49,7 +48,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AccessPackage> getAccessPackages() {
-        return this._accessPackages;
+        return this.accessPackages;
     }
     /**
      * Gets the catalogType property value. Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
@@ -57,7 +56,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackageCatalogType getCatalogType() {
-        return this._catalogType;
+        return this.catalogType;
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -65,7 +64,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. The description of the access package catalog.
@@ -73,7 +72,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The display name of the access package catalog.
@@ -81,15 +80,15 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackages", (n) -> { this.setAccessPackages(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
         deserializerMap.put("catalogType", (n) -> { this.setCatalogType(n.getEnumValue(AccessPackageCatalogType.class)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -106,7 +105,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsExternallyVisible() {
-        return this._isExternallyVisible;
+        return this.isExternallyVisible;
     }
     /**
      * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -114,7 +113,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this._modifiedDateTime;
+        return this.modifiedDateTime;
     }
     /**
      * Gets the state property value. Has the value published if the access packages are available for management. The possible values are: unpublished, published, unknownFutureValue.
@@ -122,7 +121,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackageCatalogState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Serializes information the current object
@@ -149,7 +148,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAccessPackages(@javax.annotation.Nullable final java.util.List<AccessPackage> value) {
-        this._accessPackages = value;
+        this.accessPackages = value;
     }
     /**
      * Sets the catalogType property value. Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
@@ -158,7 +157,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCatalogType(@javax.annotation.Nullable final AccessPackageCatalogType value) {
-        this._catalogType = value;
+        this.catalogType = value;
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -167,7 +166,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description of the access package catalog.
@@ -176,7 +175,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The display name of the access package catalog.
@@ -185,7 +184,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the isExternallyVisible property value. Whether the access packages in this catalog can be requested by users outside of the tenant.
@@ -194,7 +193,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsExternallyVisible(@javax.annotation.Nullable final Boolean value) {
-        this._isExternallyVisible = value;
+        this.isExternallyVisible = value;
     }
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -203,7 +202,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._modifiedDateTime = value;
+        this.modifiedDateTime = value;
     }
     /**
      * Sets the state property value. Has the value published if the access packages are available for management. The possible values are: unpublished, published, unknownFutureValue.
@@ -212,6 +211,6 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final AccessPackageCatalogState value) {
-        this._state = value;
+        this.state = value;
     }
 }

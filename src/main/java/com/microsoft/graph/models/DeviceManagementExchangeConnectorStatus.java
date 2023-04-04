@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
+/** The current status of the Exchange Connector. */
 public enum DeviceManagementExchangeConnectorStatus implements ValuedEnum {
     /** No Connector exists. */
     None("none"),
@@ -12,7 +12,9 @@ public enum DeviceManagementExchangeConnectorStatus implements ValuedEnum {
     /** Connected to the Exchange Environment */
     Connected("connected"),
     /** Disconnected from the Exchange Environment */
-    Disconnected("disconnected");
+    Disconnected("disconnected"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceManagementExchangeConnectorStatus(final String value) {
         this.value = value;
@@ -27,6 +29,7 @@ public enum DeviceManagementExchangeConnectorStatus implements ValuedEnum {
             case "connectionPending": return ConnectionPending;
             case "connected": return Connected;
             case "disconnected": return Disconnected;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

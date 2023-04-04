@@ -3,22 +3,20 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class Endpoint extends DirectoryObject implements Parsable {
     /** The capability property */
-    private String _capability;
+    private String capability;
     /** The providerId property */
-    private String _providerId;
+    private String providerId;
     /** The providerName property */
-    private String _providerName;
+    private String providerName;
     /** The providerResourceId property */
-    private String _providerResourceId;
+    private String providerResourceId;
     /** The uri property */
-    private String _uri;
+    private String uri;
     /**
      * Instantiates a new endpoint and sets the default values.
      * @return a void
@@ -44,15 +42,15 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCapability() {
-        return this._capability;
+        return this.capability;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("capability", (n) -> { this.setCapability(n.getStringValue()); });
         deserializerMap.put("providerId", (n) -> { this.setProviderId(n.getStringValue()); });
         deserializerMap.put("providerName", (n) -> { this.setProviderName(n.getStringValue()); });
@@ -66,7 +64,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getProviderId() {
-        return this._providerId;
+        return this.providerId;
     }
     /**
      * Gets the providerName property value. The providerName property
@@ -74,7 +72,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getProviderName() {
-        return this._providerName;
+        return this.providerName;
     }
     /**
      * Gets the providerResourceId property value. The providerResourceId property
@@ -82,7 +80,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getProviderResourceId() {
-        return this._providerResourceId;
+        return this.providerResourceId;
     }
     /**
      * Gets the uri property value. The uri property
@@ -90,7 +88,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUri() {
-        return this._uri;
+        return this.uri;
     }
     /**
      * Serializes information the current object
@@ -114,7 +112,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCapability(@javax.annotation.Nullable final String value) {
-        this._capability = value;
+        this.capability = value;
     }
     /**
      * Sets the providerId property value. The providerId property
@@ -123,7 +121,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setProviderId(@javax.annotation.Nullable final String value) {
-        this._providerId = value;
+        this.providerId = value;
     }
     /**
      * Sets the providerName property value. The providerName property
@@ -132,7 +130,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setProviderName(@javax.annotation.Nullable final String value) {
-        this._providerName = value;
+        this.providerName = value;
     }
     /**
      * Sets the providerResourceId property value. The providerResourceId property
@@ -141,7 +139,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setProviderResourceId(@javax.annotation.Nullable final String value) {
-        this._providerResourceId = value;
+        this.providerResourceId = value;
     }
     /**
      * Sets the uri property value. The uri property
@@ -150,6 +148,6 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUri(@javax.annotation.Nullable final String value) {
-        this._uri = value;
+        this.uri = value;
     }
 }

@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNotificationRecipientScope implements Parsable {
     /** Represents the query for who the recipients are. For example, /groups/{group id}/members for group members and /users/{user id} for a specific user. */
-    private String _query;
+    private String query;
     /** In the scenario where reviewers need to be specified dynamically, indicates the relative source of the query. This property is only required if a relative query (that is, ./manager) is specified. */
-    private String _queryRoot;
+    private String queryRoot;
     /** Indicates the type of query. Allowed value is MicrosoftGraph. */
-    private String _queryType;
+    private String queryType;
     /**
      * Instantiates a new AccessReviewNotificationRecipientQueryScope and sets the default values.
      * @return a void
@@ -35,11 +34,11 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("query", (n) -> { this.setQuery(n.getStringValue()); });
         deserializerMap.put("queryRoot", (n) -> { this.setQueryRoot(n.getStringValue()); });
         deserializerMap.put("queryType", (n) -> { this.setQueryType(n.getStringValue()); });
@@ -51,7 +50,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
      */
     @javax.annotation.Nullable
     public String getQuery() {
-        return this._query;
+        return this.query;
     }
     /**
      * Gets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, indicates the relative source of the query. This property is only required if a relative query (that is, ./manager) is specified.
@@ -59,7 +58,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
      */
     @javax.annotation.Nullable
     public String getQueryRoot() {
-        return this._queryRoot;
+        return this.queryRoot;
     }
     /**
      * Gets the queryType property value. Indicates the type of query. Allowed value is MicrosoftGraph.
@@ -67,7 +66,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
      */
     @javax.annotation.Nullable
     public String getQueryType() {
-        return this._queryType;
+        return this.queryType;
     }
     /**
      * Serializes information the current object
@@ -89,7 +88,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
      */
     @javax.annotation.Nonnull
     public void setQuery(@javax.annotation.Nullable final String value) {
-        this._query = value;
+        this.query = value;
     }
     /**
      * Sets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, indicates the relative source of the query. This property is only required if a relative query (that is, ./manager) is specified.
@@ -98,7 +97,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
      */
     @javax.annotation.Nonnull
     public void setQueryRoot(@javax.annotation.Nullable final String value) {
-        this._queryRoot = value;
+        this.queryRoot = value;
     }
     /**
      * Sets the queryType property value. Indicates the type of query. Allowed value is MicrosoftGraph.
@@ -107,6 +106,6 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
      */
     @javax.annotation.Nonnull
     public void setQueryType(@javax.annotation.Nullable final String value) {
-        this._queryType = value;
+        this.queryType = value;
     }
 }

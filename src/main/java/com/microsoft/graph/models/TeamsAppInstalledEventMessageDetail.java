@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail implements Parsable {
     /** Initiator of the event. */
-    private IdentitySet _initiator;
+    private IdentitySet initiator;
     /** Display name of the teamsApp. */
-    private String _teamsAppDisplayName;
+    private String teamsAppDisplayName;
     /** Unique identifier of the teamsApp. */
-    private String _teamsAppId;
+    private String teamsAppId;
     /**
      * Instantiates a new TeamsAppInstalledEventMessageDetail and sets the default values.
      * @return a void
@@ -35,11 +34,11 @@ public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail impl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("teamsAppDisplayName", (n) -> { this.setTeamsAppDisplayName(n.getStringValue()); });
         deserializerMap.put("teamsAppId", (n) -> { this.setTeamsAppId(n.getStringValue()); });
@@ -51,7 +50,7 @@ public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail impl
      */
     @javax.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this._initiator;
+        return this.initiator;
     }
     /**
      * Gets the teamsAppDisplayName property value. Display name of the teamsApp.
@@ -59,7 +58,7 @@ public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail impl
      */
     @javax.annotation.Nullable
     public String getTeamsAppDisplayName() {
-        return this._teamsAppDisplayName;
+        return this.teamsAppDisplayName;
     }
     /**
      * Gets the teamsAppId property value. Unique identifier of the teamsApp.
@@ -67,7 +66,7 @@ public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail impl
      */
     @javax.annotation.Nullable
     public String getTeamsAppId() {
-        return this._teamsAppId;
+        return this.teamsAppId;
     }
     /**
      * Serializes information the current object
@@ -89,7 +88,7 @@ public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail impl
      */
     @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
-        this._initiator = value;
+        this.initiator = value;
     }
     /**
      * Sets the teamsAppDisplayName property value. Display name of the teamsApp.
@@ -98,7 +97,7 @@ public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail impl
      */
     @javax.annotation.Nonnull
     public void setTeamsAppDisplayName(@javax.annotation.Nullable final String value) {
-        this._teamsAppDisplayName = value;
+        this.teamsAppDisplayName = value;
     }
     /**
      * Sets the teamsAppId property value. Unique identifier of the teamsApp.
@@ -107,6 +106,6 @@ public class TeamsAppInstalledEventMessageDetail extends EventMessageDetail impl
      */
     @javax.annotation.Nonnull
     public void setTeamsAppId(@javax.annotation.Nullable final String value) {
-        this._teamsAppId = value;
+        this.teamsAppId = value;
     }
 }

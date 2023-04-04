@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements Parsable {
     /** How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne). */
-    private String _memberType;
+    private String memberType;
     /** The period of the role eligibility. */
-    private RequestSchedule _scheduleInfo;
+    private RequestSchedule scheduleInfo;
     /**
      * Instantiates a new unifiedRoleEligibilitySchedule and sets the default values.
      * @return a void
@@ -32,11 +31,11 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("memberType", (n) -> { this.setMemberType(n.getStringValue()); });
         deserializerMap.put("scheduleInfo", (n) -> { this.setScheduleInfo(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -47,7 +46,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
      */
     @javax.annotation.Nullable
     public String getMemberType() {
-        return this._memberType;
+        return this.memberType;
     }
     /**
      * Gets the scheduleInfo property value. The period of the role eligibility.
@@ -55,7 +54,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
      */
     @javax.annotation.Nullable
     public RequestSchedule getScheduleInfo() {
-        return this._scheduleInfo;
+        return this.scheduleInfo;
     }
     /**
      * Serializes information the current object
@@ -76,7 +75,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
      */
     @javax.annotation.Nonnull
     public void setMemberType(@javax.annotation.Nullable final String value) {
-        this._memberType = value;
+        this.memberType = value;
     }
     /**
      * Sets the scheduleInfo property value. The period of the role eligibility.
@@ -85,6 +84,6 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
      */
     @javax.annotation.Nonnull
     public void setScheduleInfo(@javax.annotation.Nullable final RequestSchedule value) {
-        this._scheduleInfo = value;
+        this.scheduleInfo = value;
     }
 }

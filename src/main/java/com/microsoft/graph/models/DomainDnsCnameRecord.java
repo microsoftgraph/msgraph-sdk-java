@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
     /** The canonical name of the CNAME record. Used to configure the CNAME record at the DNS host. */
-    private String _canonicalName;
+    private String canonicalName;
     /**
      * Instantiates a new DomainDnsCnameRecord and sets the default values.
      * @return a void
@@ -34,15 +33,15 @@ public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCanonicalName() {
-        return this._canonicalName;
+        return this.canonicalName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("canonicalName", (n) -> { this.setCanonicalName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -64,6 +63,6 @@ public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCanonicalName(@javax.annotation.Nullable final String value) {
-        this._canonicalName = value;
+        this.canonicalName = value;
     }
 }

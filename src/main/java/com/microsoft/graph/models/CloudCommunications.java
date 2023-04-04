@@ -4,20 +4,18 @@ import com.microsoft.graph.models.callrecords.CallRecord;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the cloudCommunications singleton. */
 public class CloudCommunications extends Entity implements Parsable {
     /** The callRecords property */
-    private java.util.List<CallRecord> _callRecords;
+    private java.util.List<CallRecord> callRecords;
     /** The calls property */
-    private java.util.List<Call> _calls;
+    private java.util.List<Call> calls;
     /** The onlineMeetings property */
-    private java.util.List<OnlineMeeting> _onlineMeetings;
+    private java.util.List<OnlineMeeting> onlineMeetings;
     /** The presences property */
-    private java.util.List<Presence> _presences;
+    private java.util.List<Presence> presences;
     /**
      * Instantiates a new cloudCommunications and sets the default values.
      * @return a void
@@ -42,7 +40,7 @@ public class CloudCommunications extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CallRecord> getCallRecords() {
-        return this._callRecords;
+        return this.callRecords;
     }
     /**
      * Gets the calls property value. The calls property
@@ -50,15 +48,15 @@ public class CloudCommunications extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Call> getCalls() {
-        return this._calls;
+        return this.calls;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("callRecords", (n) -> { this.setCallRecords(n.getCollectionOfObjectValues(CallRecord::createFromDiscriminatorValue)); });
         deserializerMap.put("calls", (n) -> { this.setCalls(n.getCollectionOfObjectValues(Call::createFromDiscriminatorValue)); });
         deserializerMap.put("onlineMeetings", (n) -> { this.setOnlineMeetings(n.getCollectionOfObjectValues(OnlineMeeting::createFromDiscriminatorValue)); });
@@ -71,7 +69,7 @@ public class CloudCommunications extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<OnlineMeeting> getOnlineMeetings() {
-        return this._onlineMeetings;
+        return this.onlineMeetings;
     }
     /**
      * Gets the presences property value. The presences property
@@ -79,7 +77,7 @@ public class CloudCommunications extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Presence> getPresences() {
-        return this._presences;
+        return this.presences;
     }
     /**
      * Serializes information the current object
@@ -102,7 +100,7 @@ public class CloudCommunications extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCallRecords(@javax.annotation.Nullable final java.util.List<CallRecord> value) {
-        this._callRecords = value;
+        this.callRecords = value;
     }
     /**
      * Sets the calls property value. The calls property
@@ -111,7 +109,7 @@ public class CloudCommunications extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCalls(@javax.annotation.Nullable final java.util.List<Call> value) {
-        this._calls = value;
+        this.calls = value;
     }
     /**
      * Sets the onlineMeetings property value. The onlineMeetings property
@@ -120,7 +118,7 @@ public class CloudCommunications extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOnlineMeetings(@javax.annotation.Nullable final java.util.List<OnlineMeeting> value) {
-        this._onlineMeetings = value;
+        this.onlineMeetings = value;
     }
     /**
      * Sets the presences property value. The presences property
@@ -129,6 +127,6 @@ public class CloudCommunications extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPresences(@javax.annotation.Nullable final java.util.List<Presence> value) {
-        this._presences = value;
+        this.presences = value;
     }
 }

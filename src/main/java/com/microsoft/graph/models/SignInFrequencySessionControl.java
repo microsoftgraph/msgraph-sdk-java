@@ -3,19 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SignInFrequencySessionControl extends ConditionalAccessSessionControl implements Parsable {
     /** The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue. */
-    private SignInFrequencyAuthenticationType _authenticationType;
+    private SignInFrequencyAuthenticationType authenticationType;
     /** The possible values are timeBased, everyTime, unknownFutureValue. */
-    private SignInFrequencyInterval _frequencyInterval;
+    private SignInFrequencyInterval frequencyInterval;
     /** Possible values are: days, hours. */
-    private SigninFrequencyType _type;
+    private SigninFrequencyType type;
     /** The number of days or hours. */
-    private Integer _value;
+    private Integer value;
     /**
      * Instantiates a new SignInFrequencySessionControl and sets the default values.
      * @return a void
@@ -41,15 +40,15 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      */
     @javax.annotation.Nullable
     public SignInFrequencyAuthenticationType getAuthenticationType() {
-        return this._authenticationType;
+        return this.authenticationType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationType", (n) -> { this.setAuthenticationType(n.getEnumValue(SignInFrequencyAuthenticationType.class)); });
         deserializerMap.put("frequencyInterval", (n) -> { this.setFrequencyInterval(n.getEnumValue(SignInFrequencyInterval.class)); });
         deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(SigninFrequencyType.class)); });
@@ -62,7 +61,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      */
     @javax.annotation.Nullable
     public SignInFrequencyInterval getFrequencyInterval() {
-        return this._frequencyInterval;
+        return this.frequencyInterval;
     }
     /**
      * Gets the type property value. Possible values are: days, hours.
@@ -70,7 +69,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      */
     @javax.annotation.Nullable
     public SigninFrequencyType getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Gets the value property value. The number of days or hours.
@@ -78,7 +77,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      */
     @javax.annotation.Nullable
     public Integer getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
@@ -101,7 +100,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      */
     @javax.annotation.Nonnull
     public void setAuthenticationType(@javax.annotation.Nullable final SignInFrequencyAuthenticationType value) {
-        this._authenticationType = value;
+        this.authenticationType = value;
     }
     /**
      * Sets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue.
@@ -110,7 +109,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      */
     @javax.annotation.Nonnull
     public void setFrequencyInterval(@javax.annotation.Nullable final SignInFrequencyInterval value) {
-        this._frequencyInterval = value;
+        this.frequencyInterval = value;
     }
     /**
      * Sets the type property value. Possible values are: days, hours.
@@ -119,7 +118,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      */
     @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final SigninFrequencyType value) {
-        this._type = value;
+        this.type = value;
     }
     /**
      * Sets the value property value. The number of days or hours.
@@ -128,6 +127,6 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      */
     @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final Integer value) {
-        this._value = value;
+        this.value = value;
     }
 }

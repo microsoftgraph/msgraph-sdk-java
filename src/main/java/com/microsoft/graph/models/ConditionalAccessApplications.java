@@ -4,23 +4,22 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessApplications implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365 */
-    private java.util.List<String> _excludeApplications;
+    private java.util.List<String> excludeApplications;
     /** Can be one of the following:  The list of client IDs (appId) the policy applies to, unless explicitly excluded (in excludeApplications)  All  Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365 */
-    private java.util.List<String> _includeApplications;
+    private java.util.List<String> includeApplications;
     /** The includeAuthenticationContextClassReferences property */
-    private java.util.List<String> _includeAuthenticationContextClassReferences;
+    private java.util.List<String> includeAuthenticationContextClassReferences;
     /** User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice */
-    private java.util.List<String> _includeUserActions;
+    private java.util.List<String> includeUserActions;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new conditionalAccessApplications and sets the default values.
      * @return a void
@@ -45,7 +44,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the excludeApplications property value. Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
@@ -53,15 +52,15 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public java.util.List<String> getExcludeApplications() {
-        return this._excludeApplications;
+        return this.excludeApplications;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("excludeApplications", (n) -> { this.setExcludeApplications(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("includeApplications", (n) -> { this.setIncludeApplications(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("includeAuthenticationContextClassReferences", (n) -> { this.setIncludeAuthenticationContextClassReferences(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -75,7 +74,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public java.util.List<String> getIncludeApplications() {
-        return this._includeApplications;
+        return this.includeApplications;
     }
     /**
      * Gets the includeAuthenticationContextClassReferences property value. The includeAuthenticationContextClassReferences property
@@ -83,7 +82,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public java.util.List<String> getIncludeAuthenticationContextClassReferences() {
-        return this._includeAuthenticationContextClassReferences;
+        return this.includeAuthenticationContextClassReferences;
     }
     /**
      * Gets the includeUserActions property value. User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice
@@ -91,7 +90,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public java.util.List<String> getIncludeUserActions() {
-        return this._includeUserActions;
+        return this.includeUserActions;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -99,7 +98,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -123,7 +122,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the excludeApplications property value. Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
@@ -132,7 +131,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setExcludeApplications(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._excludeApplications = value;
+        this.excludeApplications = value;
     }
     /**
      * Sets the includeApplications property value. Can be one of the following:  The list of client IDs (appId) the policy applies to, unless explicitly excluded (in excludeApplications)  All  Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
@@ -141,7 +140,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setIncludeApplications(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._includeApplications = value;
+        this.includeApplications = value;
     }
     /**
      * Sets the includeAuthenticationContextClassReferences property value. The includeAuthenticationContextClassReferences property
@@ -150,7 +149,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setIncludeAuthenticationContextClassReferences(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._includeAuthenticationContextClassReferences = value;
+        this.includeAuthenticationContextClassReferences = value;
     }
     /**
      * Sets the includeUserActions property value. User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice
@@ -159,7 +158,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setIncludeUserActions(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._includeUserActions = value;
+        this.includeUserActions = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -168,6 +167,6 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

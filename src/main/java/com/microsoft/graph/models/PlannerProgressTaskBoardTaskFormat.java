@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsable {
     /** Hint value used to order the task on the progress view of the task board. For details about the supported format, see Using order hints in Planner. */
-    private String _orderHint;
+    private String orderHint;
     /**
      * Instantiates a new plannerProgressTaskBoardTaskFormat and sets the default values.
      * @return a void
@@ -30,11 +29,11 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("orderHint", (n) -> { this.setOrderHint(n.getStringValue()); });
         return deserializerMap;
     }
@@ -44,7 +43,7 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public String getOrderHint() {
-        return this._orderHint;
+        return this.orderHint;
     }
     /**
      * Serializes information the current object
@@ -64,6 +63,6 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
      */
     @javax.annotation.Nonnull
     public void setOrderHint(@javax.annotation.Nullable final String value) {
-        this._orderHint = value;
+        this.orderHint = value;
     }
 }

@@ -1,19 +1,16 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AndroidManagedAppProtection;
-import com.microsoft.graph.models.IosManagedAppProtection;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TargetedManagedAppProtection extends ManagedAppProtection implements Parsable {
     /** Navigation property to list of inclusion and exclusion groups to which the policy is deployed. */
-    private java.util.List<TargetedManagedAppPolicyAssignment> _assignments;
+    private java.util.List<TargetedManagedAppPolicyAssignment> assignments;
     /** Indicates if the policy is deployed to any inclusion groups or not. */
-    private Boolean _isAssigned;
+    private Boolean isAssigned;
     /**
      * Instantiates a new TargetedManagedAppProtection and sets the default values.
      * @return a void
@@ -47,15 +44,15 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      */
     @javax.annotation.Nullable
     public java.util.List<TargetedManagedAppPolicyAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("isAssigned", (n) -> { this.setIsAssigned(n.getBooleanValue()); });
         return deserializerMap;
@@ -66,7 +63,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      */
     @javax.annotation.Nullable
     public Boolean getIsAssigned() {
-        return this._isAssigned;
+        return this.isAssigned;
     }
     /**
      * Serializes information the current object
@@ -87,7 +84,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      */
     @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<TargetedManagedAppPolicyAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
@@ -96,6 +93,6 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      */
     @javax.annotation.Nonnull
     public void setIsAssigned(@javax.annotation.Nullable final Boolean value) {
-        this._isAssigned = value;
+        this.isAssigned = value;
     }
 }

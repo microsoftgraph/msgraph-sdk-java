@@ -3,16 +3,17 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Windows Information Protection Network learning Summary entity. */
+/**
+ * Windows Information Protection Network learning Summary entity.
+ */
 public class WindowsInformationProtectionNetworkLearningSummary extends Entity implements Parsable {
     /** Device Count */
-    private Integer _deviceCount;
+    private Integer deviceCount;
     /** Website url */
-    private String _url;
+    private String url;
     /**
      * Instantiates a new windowsInformationProtectionNetworkLearningSummary and sets the default values.
      * @return a void
@@ -37,15 +38,15 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      */
     @javax.annotation.Nullable
     public Integer getDeviceCount() {
-        return this._deviceCount;
+        return this.deviceCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getIntegerValue()); });
         deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
         return deserializerMap;
@@ -56,7 +57,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      */
     @javax.annotation.Nullable
     public String getUrl() {
-        return this._url;
+        return this.url;
     }
     /**
      * Serializes information the current object
@@ -77,7 +78,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      */
     @javax.annotation.Nonnull
     public void setDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._deviceCount = value;
+        this.deviceCount = value;
     }
     /**
      * Sets the url property value. Website url
@@ -86,6 +87,6 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      */
     @javax.annotation.Nonnull
     public void setUrl(@javax.annotation.Nullable final String value) {
-        this._url = value;
+        this.url = value;
     }
 }

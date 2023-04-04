@@ -3,19 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessRoot extends Entity implements Parsable {
     /** Read-only. Nullable. Returns a collection of the specified authentication context class references. */
-    private java.util.List<AuthenticationContextClassReference> _authenticationContextClassReferences;
+    private java.util.List<AuthenticationContextClassReference> authenticationContextClassReferences;
     /** Read-only. Nullable. Returns a collection of the specified named locations. */
-    private java.util.List<NamedLocation> _namedLocations;
+    private java.util.List<NamedLocation> namedLocations;
     /** Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies. */
-    private java.util.List<ConditionalAccessPolicy> _policies;
+    private java.util.List<ConditionalAccessPolicy> policies;
     /** Read-only. Nullable. Returns a collection of the specified Conditional Access templates. */
-    private java.util.List<ConditionalAccessTemplate> _templates;
+    private java.util.List<ConditionalAccessTemplate> templates;
     /**
      * Instantiates a new conditionalAccessRoot and sets the default values.
      * @return a void
@@ -40,15 +39,15 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AuthenticationContextClassReference> getAuthenticationContextClassReferences() {
-        return this._authenticationContextClassReferences;
+        return this.authenticationContextClassReferences;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationContextClassReferences", (n) -> { this.setAuthenticationContextClassReferences(n.getCollectionOfObjectValues(AuthenticationContextClassReference::createFromDiscriminatorValue)); });
         deserializerMap.put("namedLocations", (n) -> { this.setNamedLocations(n.getCollectionOfObjectValues(NamedLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("policies", (n) -> { this.setPolicies(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
@@ -61,7 +60,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<NamedLocation> getNamedLocations() {
-        return this._namedLocations;
+        return this.namedLocations;
     }
     /**
      * Gets the policies property value. Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
@@ -69,7 +68,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ConditionalAccessPolicy> getPolicies() {
-        return this._policies;
+        return this.policies;
     }
     /**
      * Gets the templates property value. Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
@@ -77,7 +76,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ConditionalAccessTemplate> getTemplates() {
-        return this._templates;
+        return this.templates;
     }
     /**
      * Serializes information the current object
@@ -100,7 +99,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAuthenticationContextClassReferences(@javax.annotation.Nullable final java.util.List<AuthenticationContextClassReference> value) {
-        this._authenticationContextClassReferences = value;
+        this.authenticationContextClassReferences = value;
     }
     /**
      * Sets the namedLocations property value. Read-only. Nullable. Returns a collection of the specified named locations.
@@ -109,7 +108,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setNamedLocations(@javax.annotation.Nullable final java.util.List<NamedLocation> value) {
-        this._namedLocations = value;
+        this.namedLocations = value;
     }
     /**
      * Sets the policies property value. Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
@@ -118,7 +117,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPolicies(@javax.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {
-        this._policies = value;
+        this.policies = value;
     }
     /**
      * Sets the templates property value. Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
@@ -127,6 +126,6 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTemplates(@javax.annotation.Nullable final java.util.List<ConditionalAccessTemplate> value) {
-        this._templates = value;
+        this.templates = value;
     }
 }

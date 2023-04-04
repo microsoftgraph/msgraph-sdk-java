@@ -1,21 +1,14 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.UnifiedRoleManagementPolicyApprovalRule;
-import com.microsoft.graph.models.UnifiedRoleManagementPolicyAuthenticationContextRule;
-import com.microsoft.graph.models.UnifiedRoleManagementPolicyEnablementRule;
-import com.microsoft.graph.models.UnifiedRoleManagementPolicyExpirationRule;
-import com.microsoft.graph.models.UnifiedRoleManagementPolicyNotificationRule;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable {
     /** Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne). */
-    private UnifiedRoleManagementPolicyRuleTarget _target;
+    private UnifiedRoleManagementPolicyRuleTarget target;
     /**
      * Instantiates a new unifiedRoleManagementPolicyRule and sets the default values.
      * @return a void
@@ -47,11 +40,11 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(UnifiedRoleManagementPolicyRuleTarget::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -61,7 +54,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public UnifiedRoleManagementPolicyRuleTarget getTarget() {
-        return this._target;
+        return this.target;
     }
     /**
      * Serializes information the current object
@@ -81,6 +74,6 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final UnifiedRoleManagementPolicyRuleTarget value) {
-        this._target = value;
+        this.target = value;
     }
 }

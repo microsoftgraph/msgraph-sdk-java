@@ -5,18 +5,16 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the reject method. */
 public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The callbackUri property */
-    private String _callbackUri;
+    private String callbackUri;
     /** The reason property */
-    private RejectReason _reason;
+    private RejectReason reason;
     /**
      * Instantiates a new rejectPostRequestBody and sets the default values.
      * @return a void
@@ -41,7 +39,7 @@ public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the callbackUri property value. The callbackUri property
@@ -49,15 +47,15 @@ public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCallbackUri() {
-        return this._callbackUri;
+        return this.callbackUri;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("callbackUri", (n) -> { this.setCallbackUri(n.getStringValue()); });
         deserializerMap.put("reason", (n) -> { this.setReason(n.getEnumValue(RejectReason.class)); });
         return deserializerMap;
@@ -68,7 +66,7 @@ public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public RejectReason getReason() {
-        return this._reason;
+        return this.reason;
     }
     /**
      * Serializes information the current object
@@ -89,7 +87,7 @@ public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the callbackUri property value. The callbackUri property
@@ -98,7 +96,7 @@ public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCallbackUri(@javax.annotation.Nullable final String value) {
-        this._callbackUri = value;
+        this.callbackUri = value;
     }
     /**
      * Sets the reason property value. The reason property
@@ -107,6 +105,6 @@ public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setReason(@javax.annotation.Nullable final RejectReason value) {
-        this._reason = value;
+        this.reason = value;
     }
 }

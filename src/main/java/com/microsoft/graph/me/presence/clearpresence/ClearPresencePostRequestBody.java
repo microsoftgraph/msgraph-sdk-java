@@ -4,16 +4,14 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the clearPresence method. */
 public class ClearPresencePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The sessionId property */
-    private String _sessionId;
+    private String sessionId;
     /**
      * Instantiates a new clearPresencePostRequestBody and sets the default values.
      * @return a void
@@ -38,15 +36,15 @@ public class ClearPresencePostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
         deserializerMap.put("sessionId", (n) -> { this.setSessionId(n.getStringValue()); });
         return deserializerMap;
     }
@@ -56,7 +54,7 @@ public class ClearPresencePostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public String getSessionId() {
-        return this._sessionId;
+        return this.sessionId;
     }
     /**
      * Serializes information the current object
@@ -76,7 +74,7 @@ public class ClearPresencePostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the sessionId property value. The sessionId property
@@ -85,6 +83,6 @@ public class ClearPresencePostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setSessionId(@javax.annotation.Nullable final String value) {
-        this._sessionId = value;
+        this.sessionId = value;
     }
 }

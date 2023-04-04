@@ -4,31 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue. */
-    private AccessReviewExpirationBehavior _expirationBehavior;
+    private AccessReviewExpirationBehavior expirationBehavior;
     /** This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond. */
-    private java.util.List<SubjectSet> _fallbackReviewers;
+    private java.util.List<SubjectSet> fallbackReviewers;
     /** If true, access reviews are required for assignments through this policy. */
-    private Boolean _isEnabled;
+    private Boolean isEnabled;
     /** Specifies whether to display recommendations to the reviewer. The default value is true. */
-    private Boolean _isRecommendationEnabled;
+    private Boolean isRecommendationEnabled;
     /** Specifies whether the reviewer must provide justification for the approval. The default value is true. */
-    private Boolean _isReviewerJustificationRequired;
+    private Boolean isReviewerJustificationRequired;
     /** Specifies whether the principals can review their own assignments. */
-    private Boolean _isSelfReview;
+    private Boolean isSelfReview;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** This collection specifies the users or group of users who will review the access package assignments. */
-    private java.util.List<SubjectSet> _primaryReviewers;
+    private java.util.List<SubjectSet> primaryReviewers;
     /** When the first review should start and how often it should recur. */
-    private EntitlementManagementSchedule _schedule;
+    private EntitlementManagementSchedule schedule;
     /**
      * Instantiates a new accessPackageAssignmentReviewSettings and sets the default values.
      * @return a void
@@ -53,7 +52,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the expirationBehavior property value. The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
@@ -61,7 +60,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public AccessReviewExpirationBehavior getExpirationBehavior() {
-        return this._expirationBehavior;
+        return this.expirationBehavior;
     }
     /**
      * Gets the fallbackReviewers property value. This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
@@ -69,15 +68,15 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public java.util.List<SubjectSet> getFallbackReviewers() {
-        return this._fallbackReviewers;
+        return this.fallbackReviewers;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("expirationBehavior", (n) -> { this.setExpirationBehavior(n.getEnumValue(AccessReviewExpirationBehavior.class)); });
         deserializerMap.put("fallbackReviewers", (n) -> { this.setFallbackReviewers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
@@ -95,7 +94,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this._isEnabled;
+        return this.isEnabled;
     }
     /**
      * Gets the isRecommendationEnabled property value. Specifies whether to display recommendations to the reviewer. The default value is true.
@@ -103,7 +102,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public Boolean getIsRecommendationEnabled() {
-        return this._isRecommendationEnabled;
+        return this.isRecommendationEnabled;
     }
     /**
      * Gets the isReviewerJustificationRequired property value. Specifies whether the reviewer must provide justification for the approval. The default value is true.
@@ -111,7 +110,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public Boolean getIsReviewerJustificationRequired() {
-        return this._isReviewerJustificationRequired;
+        return this.isReviewerJustificationRequired;
     }
     /**
      * Gets the isSelfReview property value. Specifies whether the principals can review their own assignments.
@@ -119,7 +118,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public Boolean getIsSelfReview() {
-        return this._isSelfReview;
+        return this.isSelfReview;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -127,7 +126,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the primaryReviewers property value. This collection specifies the users or group of users who will review the access package assignments.
@@ -135,7 +134,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public java.util.List<SubjectSet> getPrimaryReviewers() {
-        return this._primaryReviewers;
+        return this.primaryReviewers;
     }
     /**
      * Gets the schedule property value. When the first review should start and how often it should recur.
@@ -143,7 +142,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public EntitlementManagementSchedule getSchedule() {
-        return this._schedule;
+        return this.schedule;
     }
     /**
      * Serializes information the current object
@@ -171,7 +170,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the expirationBehavior property value. The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
@@ -180,7 +179,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setExpirationBehavior(@javax.annotation.Nullable final AccessReviewExpirationBehavior value) {
-        this._expirationBehavior = value;
+        this.expirationBehavior = value;
     }
     /**
      * Sets the fallbackReviewers property value. This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
@@ -189,7 +188,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setFallbackReviewers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
-        this._fallbackReviewers = value;
+        this.fallbackReviewers = value;
     }
     /**
      * Sets the isEnabled property value. If true, access reviews are required for assignments through this policy.
@@ -198,7 +197,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isEnabled = value;
+        this.isEnabled = value;
     }
     /**
      * Sets the isRecommendationEnabled property value. Specifies whether to display recommendations to the reviewer. The default value is true.
@@ -207,7 +206,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setIsRecommendationEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isRecommendationEnabled = value;
+        this.isRecommendationEnabled = value;
     }
     /**
      * Sets the isReviewerJustificationRequired property value. Specifies whether the reviewer must provide justification for the approval. The default value is true.
@@ -216,7 +215,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setIsReviewerJustificationRequired(@javax.annotation.Nullable final Boolean value) {
-        this._isReviewerJustificationRequired = value;
+        this.isReviewerJustificationRequired = value;
     }
     /**
      * Sets the isSelfReview property value. Specifies whether the principals can review their own assignments.
@@ -225,7 +224,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setIsSelfReview(@javax.annotation.Nullable final Boolean value) {
-        this._isSelfReview = value;
+        this.isSelfReview = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -234,7 +233,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the primaryReviewers property value. This collection specifies the users or group of users who will review the access package assignments.
@@ -243,7 +242,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setPrimaryReviewers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
-        this._primaryReviewers = value;
+        this.primaryReviewers = value;
     }
     /**
      * Sets the schedule property value. When the first review should start and how often it should recur.
@@ -252,6 +251,6 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setSchedule(@javax.annotation.Nullable final EntitlementManagementSchedule value) {
-        this._schedule = value;
+        this.schedule = value;
     }
 }

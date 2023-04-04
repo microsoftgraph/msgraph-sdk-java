@@ -1,19 +1,17 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.PrinterCreateOperation;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintOperation extends Entity implements Parsable {
     /** The DateTimeOffset when the operation was created. Read-only. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The status property */
-    private PrintOperationStatus _status;
+    private PrintOperationStatus status;
     /**
      * Instantiates a new PrintOperation and sets the default values.
      * @return a void
@@ -45,15 +43,15 @@ public class PrintOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getObjectValue(PrintOperationStatus::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -64,7 +62,7 @@ public class PrintOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrintOperationStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
@@ -85,7 +83,7 @@ public class PrintOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the status property value. The status property
@@ -94,6 +92,6 @@ public class PrintOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final PrintOperationStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }

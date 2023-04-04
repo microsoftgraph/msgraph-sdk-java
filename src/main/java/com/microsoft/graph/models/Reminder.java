@@ -4,31 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Reminder implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. */
-    private String _changeKey;
+    private String changeKey;
     /** The date, time and time zone that the event ends. */
-    private DateTimeTimeZone _eventEndTime;
+    private DateTimeTimeZone eventEndTime;
     /** The unique ID of the event. Read only. */
-    private String _eventId;
+    private String eventId;
     /** The location of the event. */
-    private Location _eventLocation;
+    private Location eventLocation;
     /** The date, time, and time zone that the event starts. */
-    private DateTimeTimeZone _eventStartTime;
+    private DateTimeTimeZone eventStartTime;
     /** The text of the event's subject line. */
-    private String _eventSubject;
+    private String eventSubject;
     /** The URL to open the event in Outlook on the web.The event will open in the browser if you are logged in to your mailbox via Outlook on the web. You will be prompted to login if you are not already logged in with the browser.This URL cannot be accessed from within an iFrame. */
-    private String _eventWebLink;
+    private String eventWebLink;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The date, time, and time zone that the reminder is set to occur. */
-    private DateTimeTimeZone _reminderFireTime;
+    private DateTimeTimeZone reminderFireTime;
     /**
      * Instantiates a new reminder and sets the default values.
      * @return a void
@@ -53,7 +52,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the changeKey property value. Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object.
@@ -61,7 +60,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getChangeKey() {
-        return this._changeKey;
+        return this.changeKey;
     }
     /**
      * Gets the eventEndTime property value. The date, time and time zone that the event ends.
@@ -69,7 +68,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getEventEndTime() {
-        return this._eventEndTime;
+        return this.eventEndTime;
     }
     /**
      * Gets the eventId property value. The unique ID of the event. Read only.
@@ -77,7 +76,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getEventId() {
-        return this._eventId;
+        return this.eventId;
     }
     /**
      * Gets the eventLocation property value. The location of the event.
@@ -85,7 +84,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Location getEventLocation() {
-        return this._eventLocation;
+        return this.eventLocation;
     }
     /**
      * Gets the eventStartTime property value. The date, time, and time zone that the event starts.
@@ -93,7 +92,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getEventStartTime() {
-        return this._eventStartTime;
+        return this.eventStartTime;
     }
     /**
      * Gets the eventSubject property value. The text of the event's subject line.
@@ -101,7 +100,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getEventSubject() {
-        return this._eventSubject;
+        return this.eventSubject;
     }
     /**
      * Gets the eventWebLink property value. The URL to open the event in Outlook on the web.The event will open in the browser if you are logged in to your mailbox via Outlook on the web. You will be prompted to login if you are not already logged in with the browser.This URL cannot be accessed from within an iFrame.
@@ -109,15 +108,15 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getEventWebLink() {
-        return this._eventWebLink;
+        return this.eventWebLink;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("changeKey", (n) -> { this.setChangeKey(n.getStringValue()); });
         deserializerMap.put("eventEndTime", (n) -> { this.setEventEndTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("eventId", (n) -> { this.setEventId(n.getStringValue()); });
@@ -135,7 +134,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the reminderFireTime property value. The date, time, and time zone that the reminder is set to occur.
@@ -143,7 +142,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getReminderFireTime() {
-        return this._reminderFireTime;
+        return this.reminderFireTime;
     }
     /**
      * Serializes information the current object
@@ -171,7 +170,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the changeKey property value. Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object.
@@ -180,7 +179,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setChangeKey(@javax.annotation.Nullable final String value) {
-        this._changeKey = value;
+        this.changeKey = value;
     }
     /**
      * Sets the eventEndTime property value. The date, time and time zone that the event ends.
@@ -189,7 +188,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEventEndTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
-        this._eventEndTime = value;
+        this.eventEndTime = value;
     }
     /**
      * Sets the eventId property value. The unique ID of the event. Read only.
@@ -198,7 +197,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEventId(@javax.annotation.Nullable final String value) {
-        this._eventId = value;
+        this.eventId = value;
     }
     /**
      * Sets the eventLocation property value. The location of the event.
@@ -207,7 +206,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEventLocation(@javax.annotation.Nullable final Location value) {
-        this._eventLocation = value;
+        this.eventLocation = value;
     }
     /**
      * Sets the eventStartTime property value. The date, time, and time zone that the event starts.
@@ -216,7 +215,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEventStartTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
-        this._eventStartTime = value;
+        this.eventStartTime = value;
     }
     /**
      * Sets the eventSubject property value. The text of the event's subject line.
@@ -225,7 +224,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEventSubject(@javax.annotation.Nullable final String value) {
-        this._eventSubject = value;
+        this.eventSubject = value;
     }
     /**
      * Sets the eventWebLink property value. The URL to open the event in Outlook on the web.The event will open in the browser if you are logged in to your mailbox via Outlook on the web. You will be prompted to login if you are not already logged in with the browser.This URL cannot be accessed from within an iFrame.
@@ -234,7 +233,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEventWebLink(@javax.annotation.Nullable final String value) {
-        this._eventWebLink = value;
+        this.eventWebLink = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -243,7 +242,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the reminderFireTime property value. The date, time, and time zone that the reminder is set to occur.
@@ -252,6 +251,6 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setReminderFireTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
-        this._reminderFireTime = value;
+        this.reminderFireTime = value;
     }
 }

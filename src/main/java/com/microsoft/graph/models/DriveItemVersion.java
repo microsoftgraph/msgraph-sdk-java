@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DriveItemVersion extends BaseItemVersion implements Parsable {
     /** The content stream for this version of the item. */
-    private byte[] _content;
+    private byte[] content;
     /** Indicates the size of the content stream for this version of the item. */
-    private Long _size;
+    private Long size;
     /**
      * Instantiates a new DriveItemVersion and sets the default values.
      * @return a void
@@ -33,19 +32,19 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
     }
     /**
      * Gets the content property value. The content stream for this version of the item.
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getContent() {
-        return this._content;
+        return this.content;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
         deserializerMap.put("size", (n) -> { this.setSize(n.getLongValue()); });
         return deserializerMap;
@@ -56,7 +55,7 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
      */
     @javax.annotation.Nullable
     public Long getSize() {
-        return this._size;
+        return this.size;
     }
     /**
      * Serializes information the current object
@@ -77,7 +76,7 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
-        this._content = value;
+        this.content = value;
     }
     /**
      * Sets the size property value. Indicates the size of the content stream for this version of the item.
@@ -86,6 +85,6 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Long value) {
-        this._size = value;
+        this.size = value;
     }
 }

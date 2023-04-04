@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /** Whether or not to use device licensing. */
-    private Boolean _useDeviceLicensing;
+    private Boolean useDeviceLicensing;
     /** The VPN Configuration Id to apply for this app. */
-    private String _vpnConfigurationId;
+    private String vpnConfigurationId;
     /**
      * Instantiates a new IosVppAppAssignmentSettings and sets the default values.
      * @return a void
@@ -33,11 +32,11 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("useDeviceLicensing", (n) -> { this.setUseDeviceLicensing(n.getBooleanValue()); });
         deserializerMap.put("vpnConfigurationId", (n) -> { this.setVpnConfigurationId(n.getStringValue()); });
         return deserializerMap;
@@ -48,7 +47,7 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
      */
     @javax.annotation.Nullable
     public Boolean getUseDeviceLicensing() {
-        return this._useDeviceLicensing;
+        return this.useDeviceLicensing;
     }
     /**
      * Gets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
@@ -56,7 +55,7 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
      */
     @javax.annotation.Nullable
     public String getVpnConfigurationId() {
-        return this._vpnConfigurationId;
+        return this.vpnConfigurationId;
     }
     /**
      * Serializes information the current object
@@ -77,7 +76,7 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
      */
     @javax.annotation.Nonnull
     public void setUseDeviceLicensing(@javax.annotation.Nullable final Boolean value) {
-        this._useDeviceLicensing = value;
+        this.useDeviceLicensing = value;
     }
     /**
      * Sets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
@@ -86,6 +85,6 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
      */
     @javax.annotation.Nonnull
     public void setVpnConfigurationId(@javax.annotation.Nullable final String value) {
-        this._vpnConfigurationId = value;
+        this.vpnConfigurationId = value;
     }
 }

@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
-    /** The allowedCloudEndpoints property */
-    private java.util.List<String> _allowedCloudEndpoints;
+    /** Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn. */
+    private java.util.List<String> allowedCloudEndpoints;
     /** Defines the default configuration for how your organization interacts with external Azure Active Directory organizations. */
-    private CrossTenantAccessPolicyConfigurationDefault _default_escaped;
+    private CrossTenantAccessPolicyConfigurationDefault defaultEscaped;
     /** Defines partner-specific configurations for external Azure Active Directory organizations. */
-    private java.util.List<CrossTenantAccessPolicyConfigurationPartner> _partners;
+    private java.util.List<CrossTenantAccessPolicyConfigurationPartner> partners;
     /**
      * Instantiates a new CrossTenantAccessPolicy and sets the default values.
      * @return a void
@@ -34,12 +33,12 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
         return new CrossTenantAccessPolicy();
     }
     /**
-     * Gets the allowedCloudEndpoints property value. The allowedCloudEndpoints property
+     * Gets the allowedCloudEndpoints property value. Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn.
      * @return a string
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAllowedCloudEndpoints() {
-        return this._allowedCloudEndpoints;
+        return this.allowedCloudEndpoints;
     }
     /**
      * Gets the default property value. Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
@@ -47,15 +46,15 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
      */
     @javax.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationDefault getDefault() {
-        return this._default_escaped;
+        return this.defaultEscaped;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowedCloudEndpoints", (n) -> { this.setAllowedCloudEndpoints(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("default", (n) -> { this.setDefault(n.getObjectValue(CrossTenantAccessPolicyConfigurationDefault::createFromDiscriminatorValue)); });
         deserializerMap.put("partners", (n) -> { this.setPartners(n.getCollectionOfObjectValues(CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue)); });
@@ -67,7 +66,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CrossTenantAccessPolicyConfigurationPartner> getPartners() {
-        return this._partners;
+        return this.partners;
     }
     /**
      * Serializes information the current object
@@ -83,13 +82,13 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
         writer.writeCollectionOfObjectValues("partners", this.getPartners());
     }
     /**
-     * Sets the allowedCloudEndpoints property value. The allowedCloudEndpoints property
+     * Sets the allowedCloudEndpoints property value. Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn.
      * @param value Value to set for the allowedCloudEndpoints property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setAllowedCloudEndpoints(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._allowedCloudEndpoints = value;
+        this.allowedCloudEndpoints = value;
     }
     /**
      * Sets the default property value. Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
@@ -98,7 +97,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDefault(@javax.annotation.Nullable final CrossTenantAccessPolicyConfigurationDefault value) {
-        this._default_escaped = value;
+        this.defaultEscaped = value;
     }
     /**
      * Sets the partners property value. Defines partner-specific configurations for external Azure Active Directory organizations.
@@ -107,6 +106,6 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPartners(@javax.annotation.Nullable final java.util.List<CrossTenantAccessPolicyConfigurationPartner> value) {
-        this._partners = value;
+        this.partners = value;
     }
 }

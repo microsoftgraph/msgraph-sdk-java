@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OptionalClaims implements AdditionalDataHolder, Parsable {
     /** The optional claims returned in the JWT access token. */
-    private java.util.List<OptionalClaim> _accessToken;
+    private java.util.List<OptionalClaim> accessToken;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The optional claims returned in the JWT ID token. */
-    private java.util.List<OptionalClaim> _idToken;
+    private java.util.List<OptionalClaim> idToken;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The optional claims returned in the SAML token. */
-    private java.util.List<OptionalClaim> _saml2Token;
+    private java.util.List<OptionalClaim> saml2Token;
     /**
      * Instantiates a new optionalClaims and sets the default values.
      * @return a void
@@ -43,7 +42,7 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<OptionalClaim> getAccessToken() {
-        return this._accessToken;
+        return this.accessToken;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -51,15 +50,15 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("accessToken", (n) -> { this.setAccessToken(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
         deserializerMap.put("idToken", (n) -> { this.setIdToken(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -72,7 +71,7 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<OptionalClaim> getIdToken() {
-        return this._idToken;
+        return this.idToken;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -80,7 +79,7 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the saml2Token property value. The optional claims returned in the SAML token.
@@ -88,7 +87,7 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<OptionalClaim> getSaml2Token() {
-        return this._saml2Token;
+        return this.saml2Token;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAccessToken(@javax.annotation.Nullable final java.util.List<OptionalClaim> value) {
-        this._accessToken = value;
+        this.accessToken = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -120,7 +119,7 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the idToken property value. The optional claims returned in the JWT ID token.
@@ -129,7 +128,7 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIdToken(@javax.annotation.Nullable final java.util.List<OptionalClaim> value) {
-        this._idToken = value;
+        this.idToken = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -138,7 +137,7 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the saml2Token property value. The optional claims returned in the SAML token.
@@ -147,6 +146,6 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSaml2Token(@javax.annotation.Nullable final java.util.List<OptionalClaim> value) {
-        this._saml2Token = value;
+        this.saml2Token = value;
     }
 }

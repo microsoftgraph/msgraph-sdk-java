@@ -4,23 +4,22 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamFunSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** If set to true, enables users to include custom memes. */
-    private Boolean _allowCustomMemes;
+    private Boolean allowCustomMemes;
     /** If set to true, enables Giphy use. */
-    private Boolean _allowGiphy;
+    private Boolean allowGiphy;
     /** If set to true, enables users to include stickers and memes. */
-    private Boolean _allowStickersAndMemes;
+    private Boolean allowStickersAndMemes;
     /** Giphy content rating. Possible values are: moderate, strict. */
-    private GiphyRatingType _giphyContentRating;
+    private GiphyRatingType giphyContentRating;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new teamFunSettings and sets the default values.
      * @return a void
@@ -45,7 +44,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the allowCustomMemes property value. If set to true, enables users to include custom memes.
@@ -53,7 +52,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAllowCustomMemes() {
-        return this._allowCustomMemes;
+        return this.allowCustomMemes;
     }
     /**
      * Gets the allowGiphy property value. If set to true, enables Giphy use.
@@ -61,7 +60,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAllowGiphy() {
-        return this._allowGiphy;
+        return this.allowGiphy;
     }
     /**
      * Gets the allowStickersAndMemes property value. If set to true, enables users to include stickers and memes.
@@ -69,15 +68,15 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAllowStickersAndMemes() {
-        return this._allowStickersAndMemes;
+        return this.allowStickersAndMemes;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("allowCustomMemes", (n) -> { this.setAllowCustomMemes(n.getBooleanValue()); });
         deserializerMap.put("allowGiphy", (n) -> { this.setAllowGiphy(n.getBooleanValue()); });
         deserializerMap.put("allowStickersAndMemes", (n) -> { this.setAllowStickersAndMemes(n.getBooleanValue()); });
@@ -91,7 +90,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public GiphyRatingType getGiphyContentRating() {
-        return this._giphyContentRating;
+        return this.giphyContentRating;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -99,7 +98,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -123,7 +122,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the allowCustomMemes property value. If set to true, enables users to include custom memes.
@@ -132,7 +131,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowCustomMemes(@javax.annotation.Nullable final Boolean value) {
-        this._allowCustomMemes = value;
+        this.allowCustomMemes = value;
     }
     /**
      * Sets the allowGiphy property value. If set to true, enables Giphy use.
@@ -141,7 +140,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowGiphy(@javax.annotation.Nullable final Boolean value) {
-        this._allowGiphy = value;
+        this.allowGiphy = value;
     }
     /**
      * Sets the allowStickersAndMemes property value. If set to true, enables users to include stickers and memes.
@@ -150,7 +149,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowStickersAndMemes(@javax.annotation.Nullable final Boolean value) {
-        this._allowStickersAndMemes = value;
+        this.allowStickersAndMemes = value;
     }
     /**
      * Sets the giphyContentRating property value. Giphy content rating. Possible values are: moderate, strict.
@@ -159,7 +158,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setGiphyContentRating(@javax.annotation.Nullable final GiphyRatingType value) {
-        this._giphyContentRating = value;
+        this.giphyContentRating = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -168,6 +167,6 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

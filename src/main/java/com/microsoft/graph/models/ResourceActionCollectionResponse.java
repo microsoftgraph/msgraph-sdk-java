@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ResourceActionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
-    private java.util.List<ResourceAction> _value;
+    private java.util.List<ResourceAction> value;
     /**
      * Instantiates a new ResourceActionCollectionResponse and sets the default values.
      * @return a void
@@ -30,11 +29,11 @@ public class ResourceActionCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(ResourceAction::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -44,7 +43,7 @@ public class ResourceActionCollectionResponse extends BaseCollectionPaginationCo
      */
     @javax.annotation.Nullable
     public java.util.List<ResourceAction> getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
@@ -64,6 +63,6 @@ public class ResourceActionCollectionResponse extends BaseCollectionPaginationCo
      */
     @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final java.util.List<ResourceAction> value) {
-        this._value = value;
+        this.value = value;
     }
 }

@@ -5,30 +5,28 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the invite method. */
 public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The expirationDateTime property */
-    private String _expirationDateTime;
+    private String expirationDateTime;
     /** The message property */
-    private String _message;
+    private String message;
     /** The password property */
-    private String _password;
+    private String password;
     /** The recipients property */
-    private java.util.List<DriveRecipient> _recipients;
+    private java.util.List<DriveRecipient> recipients;
     /** The requireSignIn property */
-    private Boolean _requireSignIn;
+    private Boolean requireSignIn;
     /** The retainInheritedPermissions property */
-    private Boolean _retainInheritedPermissions;
+    private Boolean retainInheritedPermissions;
     /** The roles property */
-    private java.util.List<String> _roles;
+    private java.util.List<String> roles;
     /** The sendInvitation property */
-    private Boolean _sendInvitation;
+    private Boolean sendInvitation;
     /**
      * Instantiates a new invitePostRequestBody and sets the default values.
      * @return a void
@@ -53,7 +51,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the expirationDateTime property value. The expirationDateTime property
@@ -61,15 +59,15 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getExpirationDateTime() {
-        return this._expirationDateTime;
+        return this.expirationDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getStringValue()); });
         deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
         deserializerMap.put("password", (n) -> { this.setPassword(n.getStringValue()); });
@@ -86,7 +84,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getMessage() {
-        return this._message;
+        return this.message;
     }
     /**
      * Gets the password property value. The password property
@@ -94,7 +92,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getPassword() {
-        return this._password;
+        return this.password;
     }
     /**
      * Gets the recipients property value. The recipients property
@@ -102,7 +100,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DriveRecipient> getRecipients() {
-        return this._recipients;
+        return this.recipients;
     }
     /**
      * Gets the requireSignIn property value. The requireSignIn property
@@ -110,7 +108,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getRequireSignIn() {
-        return this._requireSignIn;
+        return this.requireSignIn;
     }
     /**
      * Gets the retainInheritedPermissions property value. The retainInheritedPermissions property
@@ -118,7 +116,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getRetainInheritedPermissions() {
-        return this._retainInheritedPermissions;
+        return this.retainInheritedPermissions;
     }
     /**
      * Gets the roles property value. The roles property
@@ -126,7 +124,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getRoles() {
-        return this._roles;
+        return this.roles;
     }
     /**
      * Gets the sendInvitation property value. The sendInvitation property
@@ -134,7 +132,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getSendInvitation() {
-        return this._sendInvitation;
+        return this.sendInvitation;
     }
     /**
      * Serializes information the current object
@@ -161,7 +159,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the expirationDateTime property value. The expirationDateTime property
@@ -170,7 +168,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final String value) {
-        this._expirationDateTime = value;
+        this.expirationDateTime = value;
     }
     /**
      * Sets the message property value. The message property
@@ -179,7 +177,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final String value) {
-        this._message = value;
+        this.message = value;
     }
     /**
      * Sets the password property value. The password property
@@ -188,7 +186,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPassword(@javax.annotation.Nullable final String value) {
-        this._password = value;
+        this.password = value;
     }
     /**
      * Sets the recipients property value. The recipients property
@@ -197,7 +195,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRecipients(@javax.annotation.Nullable final java.util.List<DriveRecipient> value) {
-        this._recipients = value;
+        this.recipients = value;
     }
     /**
      * Sets the requireSignIn property value. The requireSignIn property
@@ -206,7 +204,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRequireSignIn(@javax.annotation.Nullable final Boolean value) {
-        this._requireSignIn = value;
+        this.requireSignIn = value;
     }
     /**
      * Sets the retainInheritedPermissions property value. The retainInheritedPermissions property
@@ -215,7 +213,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRetainInheritedPermissions(@javax.annotation.Nullable final Boolean value) {
-        this._retainInheritedPermissions = value;
+        this.retainInheritedPermissions = value;
     }
     /**
      * Sets the roles property value. The roles property
@@ -224,7 +222,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRoles(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._roles = value;
+        this.roles = value;
     }
     /**
      * Sets the sendInvitation property value. The sendInvitation property
@@ -233,6 +231,6 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSendInvitation(@javax.annotation.Nullable final Boolean value) {
-        this._sendInvitation = value;
+        this.sendInvitation = value;
     }
 }

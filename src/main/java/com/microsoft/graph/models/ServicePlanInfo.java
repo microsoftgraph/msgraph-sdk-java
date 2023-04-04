@@ -4,23 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The object the service plan can be assigned to. The possible values are:User - service plan can be assigned to individual users.Company - service plan can be assigned to the entire tenant. */
-    private String _appliesTo;
+    private String appliesTo;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The provisioning status of the service plan. The possible values are:Success - Service is fully provisioned.Disabled - Service has been disabled.ErrorStatus - The service plan has not been provisioned and is in an error state.PendingInput - Service is not yet provisioned; awaiting service confirmation.PendingActivation - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet. */
-    private String _provisioningStatus;
+    private String provisioningStatus;
     /** The unique identifier of the service plan. */
-    private String _servicePlanId;
+    private UUID servicePlanId;
     /** The name of the service plan. */
-    private String _servicePlanName;
+    private String servicePlanName;
     /**
      * Instantiates a new servicePlanInfo and sets the default values.
      * @return a void
@@ -45,7 +45,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the appliesTo property value. The object the service plan can be assigned to. The possible values are:User - service plan can be assigned to individual users.Company - service plan can be assigned to the entire tenant.
@@ -53,19 +53,19 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAppliesTo() {
-        return this._appliesTo;
+        return this.appliesTo;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("provisioningStatus", (n) -> { this.setProvisioningStatus(n.getStringValue()); });
-        deserializerMap.put("servicePlanId", (n) -> { this.setServicePlanId(n.getStringValue()); });
+        deserializerMap.put("servicePlanId", (n) -> { this.setServicePlanId(n.getUUIDValue()); });
         deserializerMap.put("servicePlanName", (n) -> { this.setServicePlanName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -75,7 +75,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the provisioningStatus property value. The provisioning status of the service plan. The possible values are:Success - Service is fully provisioned.Disabled - Service has been disabled.ErrorStatus - The service plan has not been provisioned and is in an error state.PendingInput - Service is not yet provisioned; awaiting service confirmation.PendingActivation - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet.
@@ -83,15 +83,15 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getProvisioningStatus() {
-        return this._provisioningStatus;
+        return this.provisioningStatus;
     }
     /**
      * Gets the servicePlanId property value. The unique identifier of the service plan.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getServicePlanId() {
-        return this._servicePlanId;
+    public UUID getServicePlanId() {
+        return this.servicePlanId;
     }
     /**
      * Gets the servicePlanName property value. The name of the service plan.
@@ -99,7 +99,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getServicePlanName() {
-        return this._servicePlanName;
+        return this.servicePlanName;
     }
     /**
      * Serializes information the current object
@@ -112,7 +112,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("appliesTo", this.getAppliesTo());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("provisioningStatus", this.getProvisioningStatus());
-        writer.writeStringValue("servicePlanId", this.getServicePlanId());
+        writer.writeUUIDValue("servicePlanId", this.getServicePlanId());
         writer.writeStringValue("servicePlanName", this.getServicePlanName());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -123,7 +123,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the appliesTo property value. The object the service plan can be assigned to. The possible values are:User - service plan can be assigned to individual users.Company - service plan can be assigned to the entire tenant.
@@ -132,7 +132,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppliesTo(@javax.annotation.Nullable final String value) {
-        this._appliesTo = value;
+        this.appliesTo = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -141,7 +141,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the provisioningStatus property value. The provisioning status of the service plan. The possible values are:Success - Service is fully provisioned.Disabled - Service has been disabled.ErrorStatus - The service plan has not been provisioned and is in an error state.PendingInput - Service is not yet provisioned; awaiting service confirmation.PendingActivation - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet.
@@ -150,7 +150,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setProvisioningStatus(@javax.annotation.Nullable final String value) {
-        this._provisioningStatus = value;
+        this.provisioningStatus = value;
     }
     /**
      * Sets the servicePlanId property value. The unique identifier of the service plan.
@@ -158,8 +158,8 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setServicePlanId(@javax.annotation.Nullable final String value) {
-        this._servicePlanId = value;
+    public void setServicePlanId(@javax.annotation.Nullable final UUID value) {
+        this.servicePlanId = value;
     }
     /**
      * Sets the servicePlanName property value. The name of the service plan.
@@ -168,6 +168,6 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setServicePlanName(@javax.annotation.Nullable final String value) {
-        this._servicePlanName = value;
+        this.servicePlanName = value;
     }
 }

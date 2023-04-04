@@ -5,21 +5,20 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.Period;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The gracePeriodBeforeAccessRemoval property */
-    private Period _gracePeriodBeforeAccessRemoval;
+    private Period gracePeriodBeforeAccessRemoval;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The removeAccessWhenTargetLeavesAllowedTargets property */
-    private Boolean _removeAccessWhenTargetLeavesAllowedTargets;
+    private Boolean removeAccessWhenTargetLeavesAllowedTargets;
     /** If set to true, automatic assignments will be created for targets in the allowed target scope. */
-    private Boolean _requestAccessForAllowedTargets;
+    private Boolean requestAccessForAllowedTargets;
     /**
      * Instantiates a new accessPackageAutomaticRequestSettings and sets the default values.
      * @return a void
@@ -44,15 +43,15 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("gracePeriodBeforeAccessRemoval", (n) -> { this.setGracePeriodBeforeAccessRemoval(n.getPeriodValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("removeAccessWhenTargetLeavesAllowedTargets", (n) -> { this.setRemoveAccessWhenTargetLeavesAllowedTargets(n.getBooleanValue()); });
@@ -65,7 +64,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public Period getGracePeriodBeforeAccessRemoval() {
-        return this._gracePeriodBeforeAccessRemoval;
+        return this.gracePeriodBeforeAccessRemoval;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -73,7 +72,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the removeAccessWhenTargetLeavesAllowedTargets property value. The removeAccessWhenTargetLeavesAllowedTargets property
@@ -81,7 +80,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public Boolean getRemoveAccessWhenTargetLeavesAllowedTargets() {
-        return this._removeAccessWhenTargetLeavesAllowedTargets;
+        return this.removeAccessWhenTargetLeavesAllowedTargets;
     }
     /**
      * Gets the requestAccessForAllowedTargets property value. If set to true, automatic assignments will be created for targets in the allowed target scope.
@@ -89,7 +88,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public Boolean getRequestAccessForAllowedTargets() {
-        return this._requestAccessForAllowedTargets;
+        return this.requestAccessForAllowedTargets;
     }
     /**
      * Serializes information the current object
@@ -112,7 +111,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the gracePeriodBeforeAccessRemoval property value. The gracePeriodBeforeAccessRemoval property
@@ -121,7 +120,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setGracePeriodBeforeAccessRemoval(@javax.annotation.Nullable final Period value) {
-        this._gracePeriodBeforeAccessRemoval = value;
+        this.gracePeriodBeforeAccessRemoval = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -130,7 +129,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the removeAccessWhenTargetLeavesAllowedTargets property value. The removeAccessWhenTargetLeavesAllowedTargets property
@@ -139,7 +138,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setRemoveAccessWhenTargetLeavesAllowedTargets(@javax.annotation.Nullable final Boolean value) {
-        this._removeAccessWhenTargetLeavesAllowedTargets = value;
+        this.removeAccessWhenTargetLeavesAllowedTargets = value;
     }
     /**
      * Sets the requestAccessForAllowedTargets property value. If set to true, automatic assignments will be created for targets in the allowed target scope.
@@ -148,6 +147,6 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public void setRequestAccessForAllowedTargets(@javax.annotation.Nullable final Boolean value) {
-        this._requestAccessForAllowedTargets = value;
+        this.requestAccessForAllowedTargets = value;
     }
 }

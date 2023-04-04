@@ -5,16 +5,14 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the createUploadSession method. */
 public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The AttachmentItem property */
-    private AttachmentItem _attachmentItem;
+    private AttachmentItem attachmentItem;
     /**
      * Instantiates a new createUploadSessionPostRequestBody and sets the default values.
      * @return a void
@@ -39,7 +37,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the attachmentItem property value. The AttachmentItem property
@@ -47,16 +45,16 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public AttachmentItem getAttachmentItem() {
-        return this._attachmentItem;
+        return this.attachmentItem;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
-        deserializerMap.put("attachmentItem", (n) -> { this.setAttachmentItem(n.getObjectValue(AttachmentItem::createFromDiscriminatorValue)); });
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        deserializerMap.put("AttachmentItem", (n) -> { this.setAttachmentItem(n.getObjectValue(AttachmentItem::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -67,7 +65,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeObjectValue("attachmentItem", this.getAttachmentItem());
+        writer.writeObjectValue("AttachmentItem", this.getAttachmentItem());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -77,7 +75,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the attachmentItem property value. The AttachmentItem property
@@ -86,6 +84,6 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setAttachmentItem(@javax.annotation.Nullable final AttachmentItem value) {
-        this._attachmentItem = value;
+        this.attachmentItem = value;
     }
 }

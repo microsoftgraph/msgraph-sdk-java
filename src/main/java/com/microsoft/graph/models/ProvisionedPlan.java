@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** For example, 'Enabled'. */
-    private String _capabilityStatus;
+    private String capabilityStatus;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** For example, 'Success'. */
-    private String _provisioningStatus;
+    private String provisioningStatus;
     /** The name of the service; for example, 'AccessControlS2S' */
-    private String _service;
+    private String service;
     /**
      * Instantiates a new provisionedPlan and sets the default values.
      * @return a void
@@ -43,7 +42,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the capabilityStatus property value. For example, 'Enabled'.
@@ -51,15 +50,15 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCapabilityStatus() {
-        return this._capabilityStatus;
+        return this.capabilityStatus;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("capabilityStatus", (n) -> { this.setCapabilityStatus(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("provisioningStatus", (n) -> { this.setProvisioningStatus(n.getStringValue()); });
@@ -72,7 +71,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the provisioningStatus property value. For example, 'Success'.
@@ -80,7 +79,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getProvisioningStatus() {
-        return this._provisioningStatus;
+        return this.provisioningStatus;
     }
     /**
      * Gets the service property value. The name of the service; for example, 'AccessControlS2S'
@@ -88,7 +87,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getService() {
-        return this._service;
+        return this.service;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the capabilityStatus property value. For example, 'Enabled'.
@@ -120,7 +119,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCapabilityStatus(@javax.annotation.Nullable final String value) {
-        this._capabilityStatus = value;
+        this.capabilityStatus = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -129,7 +128,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the provisioningStatus property value. For example, 'Success'.
@@ -138,7 +137,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setProvisioningStatus(@javax.annotation.Nullable final String value) {
-        this._provisioningStatus = value;
+        this.provisioningStatus = value;
     }
     /**
      * Sets the service property value. The name of the service; for example, 'AccessControlS2S'
@@ -147,6 +146,6 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setService(@javax.annotation.Nullable final String value) {
-        this._service = value;
+        this.service = value;
     }
 }

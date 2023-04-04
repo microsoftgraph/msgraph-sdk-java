@@ -3,18 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class DelegatedPermissionClassification extends Entity implements Parsable {
     /** The classification value being given. Possible value: low. Does not support $filter. */
-    private PermissionClassificationType _classification;
+    private PermissionClassificationType classification;
     /** The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter. */
-    private String _permissionId;
+    private String permissionId;
     /** The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter. */
-    private String _permissionName;
+    private String permissionName;
     /**
      * Instantiates a new delegatedPermissionClassification and sets the default values.
      * @return a void
@@ -39,15 +37,15 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public PermissionClassificationType getClassification() {
-        return this._classification;
+        return this.classification;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(PermissionClassificationType.class)); });
         deserializerMap.put("permissionId", (n) -> { this.setPermissionId(n.getStringValue()); });
         deserializerMap.put("permissionName", (n) -> { this.setPermissionName(n.getStringValue()); });
@@ -59,7 +57,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getPermissionId() {
-        return this._permissionId;
+        return this.permissionId;
     }
     /**
      * Gets the permissionName property value. The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter.
@@ -67,7 +65,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getPermissionName() {
-        return this._permissionName;
+        return this.permissionName;
     }
     /**
      * Serializes information the current object
@@ -89,7 +87,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setClassification(@javax.annotation.Nullable final PermissionClassificationType value) {
-        this._classification = value;
+        this.classification = value;
     }
     /**
      * Sets the permissionId property value. The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
@@ -98,7 +96,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setPermissionId(@javax.annotation.Nullable final String value) {
-        this._permissionId = value;
+        this.permissionId = value;
     }
     /**
      * Sets the permissionName property value. The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter.
@@ -107,6 +105,6 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setPermissionName(@javax.annotation.Nullable final String value) {
-        this._permissionName = value;
+        this.permissionName = value;
     }
 }

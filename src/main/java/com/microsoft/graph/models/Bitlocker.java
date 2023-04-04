@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Bitlocker extends Entity implements Parsable {
     /** The recovery keys associated with the bitlocker entity. */
-    private java.util.List<BitlockerRecoveryKey> _recoveryKeys;
+    private java.util.List<BitlockerRecoveryKey> recoveryKeys;
     /**
      * Instantiates a new Bitlocker and sets the default values.
      * @return a void
@@ -30,11 +29,11 @@ public class Bitlocker extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("recoveryKeys", (n) -> { this.setRecoveryKeys(n.getCollectionOfObjectValues(BitlockerRecoveryKey::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -44,7 +43,7 @@ public class Bitlocker extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BitlockerRecoveryKey> getRecoveryKeys() {
-        return this._recoveryKeys;
+        return this.recoveryKeys;
     }
     /**
      * Serializes information the current object
@@ -64,6 +63,6 @@ public class Bitlocker extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRecoveryKeys(@javax.annotation.Nullable final java.util.List<BitlockerRecoveryKey> value) {
-        this._recoveryKeys = value;
+        this.recoveryKeys = value;
     }
 }

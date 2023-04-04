@@ -4,27 +4,26 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SearchHit implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The name of the content source that the externalItem is part of. */
-    private String _contentSource;
+    private String contentSource;
     /** The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format. */
-    private String _hitId;
+    private String hitId;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The rank or the order of the result. */
-    private Integer _rank;
+    private Integer rank;
     /** The resource property */
-    private Entity _resource;
+    private Entity resource;
     /** ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse. */
-    private String _resultTemplateId;
+    private String resultTemplateId;
     /** A summary of the result, if a summary is available. */
-    private String _summary;
+    private String summary;
     /**
      * Instantiates a new searchHit and sets the default values.
      * @return a void
@@ -49,7 +48,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the contentSource property value. The name of the content source that the externalItem is part of.
@@ -57,15 +56,15 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getContentSource() {
-        return this._contentSource;
+        return this.contentSource;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("contentSource", (n) -> { this.setContentSource(n.getStringValue()); });
         deserializerMap.put("hitId", (n) -> { this.setHitId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -81,7 +80,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getHitId() {
-        return this._hitId;
+        return this.hitId;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -89,7 +88,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the rank property value. The rank or the order of the result.
@@ -97,7 +96,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getRank() {
-        return this._rank;
+        return this.rank;
     }
     /**
      * Gets the resource property value. The resource property
@@ -105,7 +104,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Entity getResource() {
-        return this._resource;
+        return this.resource;
     }
     /**
      * Gets the resultTemplateId property value. ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse.
@@ -113,7 +112,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getResultTemplateId() {
-        return this._resultTemplateId;
+        return this.resultTemplateId;
     }
     /**
      * Gets the summary property value. A summary of the result, if a summary is available.
@@ -121,7 +120,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSummary() {
-        return this._summary;
+        return this.summary;
     }
     /**
      * Serializes information the current object
@@ -147,7 +146,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the contentSource property value. The name of the content source that the externalItem is part of.
@@ -156,7 +155,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentSource(@javax.annotation.Nullable final String value) {
-        this._contentSource = value;
+        this.contentSource = value;
     }
     /**
      * Sets the hitId property value. The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format.
@@ -165,7 +164,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setHitId(@javax.annotation.Nullable final String value) {
-        this._hitId = value;
+        this.hitId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -174,7 +173,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the rank property value. The rank or the order of the result.
@@ -183,7 +182,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRank(@javax.annotation.Nullable final Integer value) {
-        this._rank = value;
+        this.rank = value;
     }
     /**
      * Sets the resource property value. The resource property
@@ -192,7 +191,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final Entity value) {
-        this._resource = value;
+        this.resource = value;
     }
     /**
      * Sets the resultTemplateId property value. ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse.
@@ -201,7 +200,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setResultTemplateId(@javax.annotation.Nullable final String value) {
-        this._resultTemplateId = value;
+        this.resultTemplateId = value;
     }
     /**
      * Sets the summary property value. A summary of the result, if a summary is available.
@@ -210,6 +209,6 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSummary(@javax.annotation.Nullable final String value) {
-        this._summary = value;
+        this.summary = value;
     }
 }

@@ -4,22 +4,23 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The text content of a Notification Message Template for the specified locale. */
+/**
+ * The text content of a Notification Message Template for the specified locale.
+ */
 public class LocalizedNotificationMessage extends Entity implements Parsable {
     /** Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message. */
-    private Boolean _isDefault;
+    private Boolean isDefault;
     /** DateTime the object was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The Locale for which this message is destined. */
-    private String _locale;
+    private String locale;
     /** The Message Template content. */
-    private String _messageTemplate;
+    private String messageTemplate;
     /** The Message Template Subject. */
-    private String _subject;
+    private String subject;
     /**
      * Instantiates a new localizedNotificationMessage and sets the default values.
      * @return a void
@@ -40,11 +41,11 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isDefault", (n) -> { this.setIsDefault(n.getBooleanValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("locale", (n) -> { this.setLocale(n.getStringValue()); });
@@ -58,7 +59,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsDefault() {
-        return this._isDefault;
+        return this.isDefault;
     }
     /**
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
@@ -66,7 +67,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the locale property value. The Locale for which this message is destined.
@@ -74,7 +75,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLocale() {
-        return this._locale;
+        return this.locale;
     }
     /**
      * Gets the messageTemplate property value. The Message Template content.
@@ -82,7 +83,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMessageTemplate() {
-        return this._messageTemplate;
+        return this.messageTemplate;
     }
     /**
      * Gets the subject property value. The Message Template Subject.
@@ -90,7 +91,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSubject() {
-        return this._subject;
+        return this.subject;
     }
     /**
      * Serializes information the current object
@@ -114,7 +115,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
-        this._isDefault = value;
+        this.isDefault = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
@@ -123,7 +124,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the locale property value. The Locale for which this message is destined.
@@ -132,7 +133,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLocale(@javax.annotation.Nullable final String value) {
-        this._locale = value;
+        this.locale = value;
     }
     /**
      * Sets the messageTemplate property value. The Message Template content.
@@ -141,7 +142,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMessageTemplate(@javax.annotation.Nullable final String value) {
-        this._messageTemplate = value;
+        this.messageTemplate = value;
     }
     /**
      * Sets the subject property value. The Message Template Subject.
@@ -150,6 +151,6 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
-        this._subject = value;
+        this.subject = value;
     }
 }

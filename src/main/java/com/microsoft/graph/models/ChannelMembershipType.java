@@ -3,10 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
 public enum ChannelMembershipType implements ValuedEnum {
     Standard("standard"),
-    Private_escaped("private_escaped"),
+    PrivateEscaped("private"),
     UnknownFutureValue("unknownFutureValue"),
     Shared("shared");
     public final String value;
@@ -20,7 +19,7 @@ public enum ChannelMembershipType implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "standard": return Standard;
-            case "private": return Private_escaped;
+            case "private": return PrivateEscaped;
             case "unknownFutureValue": return UnknownFutureValue;
             case "shared": return Shared;
             default: return null;

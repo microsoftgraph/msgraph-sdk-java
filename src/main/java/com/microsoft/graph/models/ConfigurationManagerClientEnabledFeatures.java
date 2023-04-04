@@ -4,28 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** configuration Manager client enabled features */
+/**
+ * configuration Manager client enabled features
+ */
 public class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Whether compliance policy is managed by Intune */
-    private Boolean _compliancePolicy;
+    private Boolean compliancePolicy;
     /** Whether device configuration is managed by Intune */
-    private Boolean _deviceConfiguration;
+    private Boolean deviceConfiguration;
     /** Whether inventory is managed by Intune */
-    private Boolean _inventory;
+    private Boolean inventory;
     /** Whether modern application is managed by Intune */
-    private Boolean _modernApps;
+    private Boolean modernApps;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Whether resource access is managed by Intune */
-    private Boolean _resourceAccess;
+    private Boolean resourceAccess;
     /** Whether Windows Update for Business is managed by Intune */
-    private Boolean _windowsUpdateForBusiness;
+    private Boolean windowsUpdateForBusiness;
     /**
      * Instantiates a new configurationManagerClientEnabledFeatures and sets the default values.
      * @return a void
@@ -50,7 +51,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the compliancePolicy property value. Whether compliance policy is managed by Intune
@@ -58,7 +59,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nullable
     public Boolean getCompliancePolicy() {
-        return this._compliancePolicy;
+        return this.compliancePolicy;
     }
     /**
      * Gets the deviceConfiguration property value. Whether device configuration is managed by Intune
@@ -66,15 +67,15 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nullable
     public Boolean getDeviceConfiguration() {
-        return this._deviceConfiguration;
+        return this.deviceConfiguration;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("compliancePolicy", (n) -> { this.setCompliancePolicy(n.getBooleanValue()); });
         deserializerMap.put("deviceConfiguration", (n) -> { this.setDeviceConfiguration(n.getBooleanValue()); });
         deserializerMap.put("inventory", (n) -> { this.setInventory(n.getBooleanValue()); });
@@ -90,7 +91,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nullable
     public Boolean getInventory() {
-        return this._inventory;
+        return this.inventory;
     }
     /**
      * Gets the modernApps property value. Whether modern application is managed by Intune
@@ -98,7 +99,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nullable
     public Boolean getModernApps() {
-        return this._modernApps;
+        return this.modernApps;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -106,7 +107,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the resourceAccess property value. Whether resource access is managed by Intune
@@ -114,7 +115,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nullable
     public Boolean getResourceAccess() {
-        return this._resourceAccess;
+        return this.resourceAccess;
     }
     /**
      * Gets the windowsUpdateForBusiness property value. Whether Windows Update for Business is managed by Intune
@@ -122,7 +123,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nullable
     public Boolean getWindowsUpdateForBusiness() {
-        return this._windowsUpdateForBusiness;
+        return this.windowsUpdateForBusiness;
     }
     /**
      * Serializes information the current object
@@ -148,7 +149,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the compliancePolicy property value. Whether compliance policy is managed by Intune
@@ -157,7 +158,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setCompliancePolicy(@javax.annotation.Nullable final Boolean value) {
-        this._compliancePolicy = value;
+        this.compliancePolicy = value;
     }
     /**
      * Sets the deviceConfiguration property value. Whether device configuration is managed by Intune
@@ -166,7 +167,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setDeviceConfiguration(@javax.annotation.Nullable final Boolean value) {
-        this._deviceConfiguration = value;
+        this.deviceConfiguration = value;
     }
     /**
      * Sets the inventory property value. Whether inventory is managed by Intune
@@ -175,7 +176,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setInventory(@javax.annotation.Nullable final Boolean value) {
-        this._inventory = value;
+        this.inventory = value;
     }
     /**
      * Sets the modernApps property value. Whether modern application is managed by Intune
@@ -184,7 +185,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setModernApps(@javax.annotation.Nullable final Boolean value) {
-        this._modernApps = value;
+        this.modernApps = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -193,7 +194,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the resourceAccess property value. Whether resource access is managed by Intune
@@ -202,7 +203,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setResourceAccess(@javax.annotation.Nullable final Boolean value) {
-        this._resourceAccess = value;
+        this.resourceAccess = value;
     }
     /**
      * Sets the windowsUpdateForBusiness property value. Whether Windows Update for Business is managed by Intune
@@ -211,6 +212,6 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setWindowsUpdateForBusiness(@javax.annotation.Nullable final Boolean value) {
-        this._windowsUpdateForBusiness = value;
+        this.windowsUpdateForBusiness = value;
     }
 }

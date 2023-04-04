@@ -3,20 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class LinkedResource extends Entity implements Parsable {
-    /** Field indicating the app name of the source that is sending the linkedResource. */
-    private String _applicationName;
-    /** Field indicating the title of the linkedResource. */
-    private String _displayName;
-    /** Id of the object that is associated with this task on the third-party/partner system. */
-    private String _externalId;
+    /** The app name of the source that sends the linkedResource. */
+    private String applicationName;
+    /** The title of the linkedResource. */
+    private String displayName;
+    /** ID of the object that is associated with this task on the third-party/partner system. */
+    private String externalId;
     /** Deep link to the linkedResource. */
-    private String _webUrl;
+    private String webUrl;
     /**
      * Instantiates a new linkedResource and sets the default values.
      * @return a void
@@ -36,36 +34,36 @@ public class LinkedResource extends Entity implements Parsable {
         return new LinkedResource();
     }
     /**
-     * Gets the applicationName property value. Field indicating the app name of the source that is sending the linkedResource.
+     * Gets the applicationName property value. The app name of the source that sends the linkedResource.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getApplicationName() {
-        return this._applicationName;
+        return this.applicationName;
     }
     /**
-     * Gets the displayName property value. Field indicating the title of the linkedResource.
+     * Gets the displayName property value. The title of the linkedResource.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
-     * Gets the externalId property value. Id of the object that is associated with this task on the third-party/partner system.
+     * Gets the externalId property value. ID of the object that is associated with this task on the third-party/partner system.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getExternalId() {
-        return this._externalId;
+        return this.externalId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicationName", (n) -> { this.setApplicationName(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
@@ -78,7 +76,7 @@ public class LinkedResource extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getWebUrl() {
-        return this._webUrl;
+        return this.webUrl;
     }
     /**
      * Serializes information the current object
@@ -95,31 +93,31 @@ public class LinkedResource extends Entity implements Parsable {
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
-     * Sets the applicationName property value. Field indicating the app name of the source that is sending the linkedResource.
+     * Sets the applicationName property value. The app name of the source that sends the linkedResource.
      * @param value Value to set for the applicationName property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setApplicationName(@javax.annotation.Nullable final String value) {
-        this._applicationName = value;
+        this.applicationName = value;
     }
     /**
-     * Sets the displayName property value. Field indicating the title of the linkedResource.
+     * Sets the displayName property value. The title of the linkedResource.
      * @param value Value to set for the displayName property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
-     * Sets the externalId property value. Id of the object that is associated with this task on the third-party/partner system.
+     * Sets the externalId property value. ID of the object that is associated with this task on the third-party/partner system.
      * @param value Value to set for the externalId property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
-        this._externalId = value;
+        this.externalId = value;
     }
     /**
      * Sets the webUrl property value. Deep link to the linkedResource.
@@ -128,6 +126,6 @@ public class LinkedResource extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
-        this._webUrl = value;
+        this.webUrl = value;
     }
 }

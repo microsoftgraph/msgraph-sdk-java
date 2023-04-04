@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Storage locations where managed apps can potentially store their data */
 public enum ManagedAppDataStorageLocation implements ValuedEnum {
     /** OneDrive for business */
     OneDriveForBusiness("oneDriveForBusiness"),

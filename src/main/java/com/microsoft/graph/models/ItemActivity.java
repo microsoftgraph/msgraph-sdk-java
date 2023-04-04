@@ -4,20 +4,18 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class ItemActivity extends Entity implements Parsable {
     /** An item was accessed. */
-    private AccessAction _access;
+    private AccessAction access;
     /** Details about when the activity took place. Read-only. */
-    private OffsetDateTime _activityDateTime;
+    private OffsetDateTime activityDateTime;
     /** Identity of who performed the action. Read-only. */
-    private IdentitySet _actor;
+    private IdentitySet actor;
     /** Exposes the driveItem that was the target of this activity. */
-    private DriveItem _driveItem;
+    private DriveItem driveItem;
     /**
      * Instantiates a new itemActivity and sets the default values.
      * @return a void
@@ -42,7 +40,7 @@ public class ItemActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessAction getAccess() {
-        return this._access;
+        return this.access;
     }
     /**
      * Gets the activityDateTime property value. Details about when the activity took place. Read-only.
@@ -50,7 +48,7 @@ public class ItemActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
-        return this._activityDateTime;
+        return this.activityDateTime;
     }
     /**
      * Gets the actor property value. Identity of who performed the action. Read-only.
@@ -58,7 +56,7 @@ public class ItemActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getActor() {
-        return this._actor;
+        return this.actor;
     }
     /**
      * Gets the driveItem property value. Exposes the driveItem that was the target of this activity.
@@ -66,15 +64,15 @@ public class ItemActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DriveItem getDriveItem() {
-        return this._driveItem;
+        return this.driveItem;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("access", (n) -> { this.setAccess(n.getObjectValue(AccessAction::createFromDiscriminatorValue)); });
         deserializerMap.put("activityDateTime", (n) -> { this.setActivityDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("actor", (n) -> { this.setActor(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -102,7 +100,7 @@ public class ItemActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAccess(@javax.annotation.Nullable final AccessAction value) {
-        this._access = value;
+        this.access = value;
     }
     /**
      * Sets the activityDateTime property value. Details about when the activity took place. Read-only.
@@ -111,7 +109,7 @@ public class ItemActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._activityDateTime = value;
+        this.activityDateTime = value;
     }
     /**
      * Sets the actor property value. Identity of who performed the action. Read-only.
@@ -120,7 +118,7 @@ public class ItemActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setActor(@javax.annotation.Nullable final IdentitySet value) {
-        this._actor = value;
+        this.actor = value;
     }
     /**
      * Sets the driveItem property value. Exposes the driveItem that was the target of this activity.
@@ -129,6 +127,6 @@ public class ItemActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDriveItem(@javax.annotation.Nullable final DriveItem value) {
-        this._driveItem = value;
+        this.driveItem = value;
     }
 }

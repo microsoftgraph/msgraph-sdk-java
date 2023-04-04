@@ -1,20 +1,20 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.EnrollmentTroubleshootingEvent;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Event representing an general failure. */
+/**
+ * Event representing an general failure.
+ */
 public class DeviceManagementTroubleshootingEvent extends Entity implements Parsable {
     /** Id used for tracing the failure in the service. */
-    private String _correlationId;
+    private String correlationId;
     /** Time when the event occurred . */
-    private OffsetDateTime _eventDateTime;
+    private OffsetDateTime eventDateTime;
     /**
      * Instantiates a new deviceManagementTroubleshootingEvent and sets the default values.
      * @return a void
@@ -46,7 +46,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      */
     @javax.annotation.Nullable
     public String getCorrelationId() {
-        return this._correlationId;
+        return this.correlationId;
     }
     /**
      * Gets the eventDateTime property value. Time when the event occurred .
@@ -54,15 +54,15 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
-        return this._eventDateTime;
+        return this.eventDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
         deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
         return deserializerMap;
@@ -86,7 +86,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      */
     @javax.annotation.Nonnull
     public void setCorrelationId(@javax.annotation.Nullable final String value) {
-        this._correlationId = value;
+        this.correlationId = value;
     }
     /**
      * Sets the eventDateTime property value. Time when the event occurred .
@@ -95,6 +95,6 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      */
     @javax.annotation.Nonnull
     public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._eventDateTime = value;
+        this.eventDateTime = value;
     }
 }

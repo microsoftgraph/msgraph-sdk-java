@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ImplicitGrantSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Specifies whether this web application can request an access token using the OAuth 2.0 implicit flow. */
-    private Boolean _enableAccessTokenIssuance;
+    private Boolean enableAccessTokenIssuance;
     /** Specifies whether this web application can request an ID token using the OAuth 2.0 implicit flow. */
-    private Boolean _enableIdTokenIssuance;
+    private Boolean enableIdTokenIssuance;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new implicitGrantSettings and sets the default values.
      * @return a void
@@ -41,7 +40,7 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the enableAccessTokenIssuance property value. Specifies whether this web application can request an access token using the OAuth 2.0 implicit flow.
@@ -49,7 +48,7 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getEnableAccessTokenIssuance() {
-        return this._enableAccessTokenIssuance;
+        return this.enableAccessTokenIssuance;
     }
     /**
      * Gets the enableIdTokenIssuance property value. Specifies whether this web application can request an ID token using the OAuth 2.0 implicit flow.
@@ -57,15 +56,15 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getEnableIdTokenIssuance() {
-        return this._enableIdTokenIssuance;
+        return this.enableIdTokenIssuance;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("enableAccessTokenIssuance", (n) -> { this.setEnableAccessTokenIssuance(n.getBooleanValue()); });
         deserializerMap.put("enableIdTokenIssuance", (n) -> { this.setEnableIdTokenIssuance(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -77,7 +76,7 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -99,7 +98,7 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the enableAccessTokenIssuance property value. Specifies whether this web application can request an access token using the OAuth 2.0 implicit flow.
@@ -108,7 +107,7 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEnableAccessTokenIssuance(@javax.annotation.Nullable final Boolean value) {
-        this._enableAccessTokenIssuance = value;
+        this.enableAccessTokenIssuance = value;
     }
     /**
      * Sets the enableIdTokenIssuance property value. Specifies whether this web application can request an ID token using the OAuth 2.0 implicit flow.
@@ -117,7 +116,7 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEnableIdTokenIssuance(@javax.annotation.Nullable final Boolean value) {
-        this._enableIdTokenIssuance = value;
+        this.enableIdTokenIssuance = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -126,6 +125,6 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

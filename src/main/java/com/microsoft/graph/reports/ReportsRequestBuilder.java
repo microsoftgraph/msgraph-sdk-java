@@ -4,7 +4,6 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ReportRoot;
 import com.microsoft.graph.reports.dailyprintusagebyprinter.DailyPrintUsageByPrinterRequestBuilder;
 import com.microsoft.graph.reports.dailyprintusagebyuser.DailyPrintUsageByUserRequestBuilder;
-import com.microsoft.graph.reports.dailyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder;
 import com.microsoft.graph.reports.deviceconfigurationdeviceactivity.DeviceConfigurationDeviceActivityRequestBuilder;
 import com.microsoft.graph.reports.deviceconfigurationuseractivity.DeviceConfigurationUserActivityRequestBuilder;
 import com.microsoft.graph.reports.getemailactivitycountswithperiod.GetEmailActivityCountsWithPeriodRequestBuilder;
@@ -103,8 +102,11 @@ import com.microsoft.graph.reports.manageddeviceenrollmenttopfailures.ManagedDev
 import com.microsoft.graph.reports.manageddeviceenrollmenttopfailureswithperiod.ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder;
 import com.microsoft.graph.reports.monthlyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder;
 import com.microsoft.graph.reports.monthlyprintusagebyprinter.MonthlyPrintUsageByPrinterRequestBuilder;
+import com.microsoft.graph.reports.monthlyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder;
 import com.microsoft.graph.reports.monthlyprintusagebyuser.MonthlyPrintUsageByUserRequestBuilder;
 import com.microsoft.graph.reports.security.SecurityRequestBuilder;
+import com.microsoft.kiota.BaseRequestBuilder;
+import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -116,12 +118,13 @@ import java.net.URISyntaxException;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the reportRoot singleton. */
-public class ReportsRequestBuilder {
+/**
+ * Provides operations to manage the reportRoot singleton.
+ */
+public class ReportsRequestBuilder extends BaseRequestBuilder {
     /** Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public DailyPrintUsageByPrinterRequestBuilder dailyPrintUsageByPrinter() {
@@ -131,6 +134,41 @@ public class ReportsRequestBuilder {
     @javax.annotation.Nonnull
     public DailyPrintUsageByUserRequestBuilder dailyPrintUsageByUser() {
         return new DailyPrintUsageByUserRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the deviceConfigurationDeviceActivity method. */
+    @javax.annotation.Nonnull
+    public DeviceConfigurationDeviceActivityRequestBuilder deviceConfigurationDeviceActivity() {
+        return new DeviceConfigurationDeviceActivityRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the deviceConfigurationUserActivity method. */
+    @javax.annotation.Nonnull
+    public DeviceConfigurationUserActivityRequestBuilder deviceConfigurationUserActivity() {
+        return new DeviceConfigurationUserActivityRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the getOffice365ActivationCounts method. */
+    @javax.annotation.Nonnull
+    public GetOffice365ActivationCountsRequestBuilder getOffice365ActivationCounts() {
+        return new GetOffice365ActivationCountsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the getOffice365ActivationsUserCounts method. */
+    @javax.annotation.Nonnull
+    public GetOffice365ActivationsUserCountsRequestBuilder getOffice365ActivationsUserCounts() {
+        return new GetOffice365ActivationsUserCountsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the getOffice365ActivationsUserDetail method. */
+    @javax.annotation.Nonnull
+    public GetOffice365ActivationsUserDetailRequestBuilder getOffice365ActivationsUserDetail() {
+        return new GetOffice365ActivationsUserDetailRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the managedDeviceEnrollmentFailureDetails method. */
+    @javax.annotation.Nonnull
+    public ManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails() {
+        return new ManagedDeviceEnrollmentFailureDetailsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the managedDeviceEnrollmentTopFailures method. */
+    @javax.annotation.Nonnull
+    public ManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures() {
+        return new ManagedDeviceEnrollmentTopFailuresRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the monthlyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
@@ -142,17 +180,11 @@ public class ReportsRequestBuilder {
     public MonthlyPrintUsageByUserRequestBuilder monthlyPrintUsageByUser() {
         return new MonthlyPrintUsageByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Path parameters for the request */
-    private HashMap<String, Object> pathParameters;
-    /** The request adapter to use to execute the requests. */
-    private RequestAdapter requestAdapter;
     /** Provides operations to manage the security property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public SecurityRequestBuilder security() {
         return new SecurityRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Url template to use to build the URL for the current request builder */
-    private String urlTemplate;
     /**
      * Instantiates a new ReportsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -161,12 +193,7 @@ public class ReportsRequestBuilder {
      */
     @javax.annotation.Nullable
     public ReportsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        Objects.requireNonNull(pathParameters);
-        Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/reports{?%24select,%24expand}";
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
+        super(requestAdapter, "{+baseurl}/reports{?%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new ReportsRequestBuilder and sets the default values.
@@ -176,72 +203,7 @@ public class ReportsRequestBuilder {
      */
     @javax.annotation.Nullable
     public ReportsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/reports{?%24select,%24expand}";
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
-        urlTplParams.put("request-raw-url", rawUrl);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
-    }
-    /**
-     * Get reports
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation() throws URISyntaxException {
-        return createGetRequestInformation(null);
-    }
-    /**
-     * Get reports
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Update reports
-     * @param body 
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final ReportRoot body) throws URISyntaxException {
-        return createPatchRequestInformation(body, null);
-    }
-    /**
-     * Update reports
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final ReportRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
+        super(requestAdapter, "{+baseurl}/reports{?%24select,%24expand}", rawUrl);
     }
     /**
      * Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
@@ -268,29 +230,13 @@ public class ReportsRequestBuilder {
         return new com.microsoft.graph.reports.dailyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Provides operations to call the deviceConfigurationDeviceActivity method.
-     * @return a deviceConfigurationDeviceActivityRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceConfigurationDeviceActivityRequestBuilder deviceConfigurationDeviceActivity() {
-        return new DeviceConfigurationDeviceActivityRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the deviceConfigurationUserActivity method.
-     * @return a deviceConfigurationUserActivityRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceConfigurationUserActivityRequestBuilder deviceConfigurationUserActivity() {
-        return new DeviceConfigurationUserActivityRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Get reports
-     * @return a CompletableFuture of reportRoot
+     * @return a CompletableFuture of ReportRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> get() {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(null);
+            final RequestInformation requestInfo = toGetRequestInformation(null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -304,12 +250,12 @@ public class ReportsRequestBuilder {
     /**
      * Get reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of reportRoot
+     * @return a CompletableFuture of ReportRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
+            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -503,30 +449,6 @@ public class ReportsRequestBuilder {
     public GetMailboxUsageStorageWithPeriodRequestBuilder getMailboxUsageStorageWithPeriod(@javax.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
         return new GetMailboxUsageStorageWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
-    }
-    /**
-     * Provides operations to call the getOffice365ActivationCounts method.
-     * @return a getOffice365ActivationCountsRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GetOffice365ActivationCountsRequestBuilder getOffice365ActivationCounts() {
-        return new GetOffice365ActivationCountsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getOffice365ActivationsUserCounts method.
-     * @return a getOffice365ActivationsUserCountsRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GetOffice365ActivationsUserCountsRequestBuilder getOffice365ActivationsUserCounts() {
-        return new GetOffice365ActivationsUserCountsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getOffice365ActivationsUserDetail method.
-     * @return a getOffice365ActivationsUserDetailRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GetOffice365ActivationsUserDetailRequestBuilder getOffice365ActivationsUserDetail() {
-        return new GetOffice365ActivationsUserDetailRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getOffice365ActiveUserCounts method.
@@ -1228,14 +1150,6 @@ public class ReportsRequestBuilder {
     }
     /**
      * Provides operations to call the managedDeviceEnrollmentFailureDetails method.
-     * @return a managedDeviceEnrollmentFailureDetailsRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails() {
-        return new ManagedDeviceEnrollmentFailureDetailsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the managedDeviceEnrollmentFailureDetails method.
      * @param filter Usage: filter='{filter}'
      * @param skip Usage: skip={skip}
      * @param skipToken Usage: skipToken='{skipToken}'
@@ -1249,14 +1163,6 @@ public class ReportsRequestBuilder {
         Objects.requireNonNull(skipToken);
         Objects.requireNonNull(top);
         return new ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder(pathParameters, requestAdapter, filter, skip, skipToken, top);
-    }
-    /**
-     * Provides operations to call the managedDeviceEnrollmentTopFailures method.
-     * @return a managedDeviceEnrollmentTopFailuresRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures() {
-        return new ManagedDeviceEnrollmentTopFailuresRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the managedDeviceEnrollmentTopFailures method.
@@ -1294,13 +1200,13 @@ public class ReportsRequestBuilder {
     }
     /**
      * Update reports
-     * @param body 
-     * @return a CompletableFuture of reportRoot
+     * @param body The request body
+     * @return a CompletableFuture of ReportRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> patch(@javax.annotation.Nonnull final ReportRoot body) {
         try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, null);
+            final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -1313,15 +1219,15 @@ public class ReportsRequestBuilder {
     }
     /**
      * Update reports
-     * @param body 
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of reportRoot
+     * @return a CompletableFuture of ReportRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> patch(@javax.annotation.Nonnull final ReportRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
+            final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -1332,7 +1238,70 @@ public class ReportsRequestBuilder {
             return executionException;
         }
     }
-    /** Get reports */
+    /**
+     * Get reports
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+        return toGetRequestInformation(null);
+    }
+    /**
+     * Get reports
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        if (requestConfiguration != null) {
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Update reports
+     * @param body The request body
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final ReportRoot body) throws URISyntaxException {
+        return toPatchRequestInformation(body, null);
+    }
+    /**
+     * Update reports
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final ReportRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        if (requestConfiguration != null) {
+            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Get reports
+     */
     public class GetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -1343,39 +1312,17 @@ public class ReportsRequestBuilder {
         @javax.annotation.Nullable
         public String[] select;
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public java.util.List<RequestOption> options = Collections.emptyList();
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class GetRequestConfiguration extends BaseRequestConfiguration {
         /** Request query parameters */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
-        /**
-         * Instantiates a new GetRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        @javax.annotation.Nullable
-        public GetRequestConfiguration() {
-        }
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class PatchRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public java.util.List<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new PatchRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        @javax.annotation.Nullable
-        public PatchRequestConfiguration() {
-        }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class PatchRequestConfiguration extends BaseRequestConfiguration {
     }
 }

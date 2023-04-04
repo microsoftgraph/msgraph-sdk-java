@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
+/** Possible values for install state. */
 public enum InstallState implements ValuedEnum {
     /** Not Applicable. */
     NotApplicable("notApplicable"),

@@ -5,20 +5,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the decline method. */
 public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The Comment property */
-    private String _comment;
+    private String comment;
     /** The ProposedNewTime property */
-    private TimeSlot _proposedNewTime;
+    private TimeSlot proposedNewTime;
     /** The SendResponse property */
-    private Boolean _sendResponse;
+    private Boolean sendResponse;
     /**
      * Instantiates a new declinePostRequestBody and sets the default values.
      * @return a void
@@ -43,7 +41,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the comment property value. The Comment property
@@ -51,18 +49,18 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getComment() {
-        return this._comment;
+        return this.comment;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
-        deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
-        deserializerMap.put("proposedNewTime", (n) -> { this.setProposedNewTime(n.getObjectValue(TimeSlot::createFromDiscriminatorValue)); });
-        deserializerMap.put("sendResponse", (n) -> { this.setSendResponse(n.getBooleanValue()); });
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("Comment", (n) -> { this.setComment(n.getStringValue()); });
+        deserializerMap.put("ProposedNewTime", (n) -> { this.setProposedNewTime(n.getObjectValue(TimeSlot::createFromDiscriminatorValue)); });
+        deserializerMap.put("SendResponse", (n) -> { this.setSendResponse(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
@@ -71,7 +69,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public TimeSlot getProposedNewTime() {
-        return this._proposedNewTime;
+        return this.proposedNewTime;
     }
     /**
      * Gets the sendResponse property value. The SendResponse property
@@ -79,7 +77,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getSendResponse() {
-        return this._sendResponse;
+        return this.sendResponse;
     }
     /**
      * Serializes information the current object
@@ -89,9 +87,9 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("comment", this.getComment());
-        writer.writeObjectValue("proposedNewTime", this.getProposedNewTime());
-        writer.writeBooleanValue("sendResponse", this.getSendResponse());
+        writer.writeStringValue("Comment", this.getComment());
+        writer.writeObjectValue("ProposedNewTime", this.getProposedNewTime());
+        writer.writeBooleanValue("SendResponse", this.getSendResponse());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -101,7 +99,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the comment property value. The Comment property
@@ -110,7 +108,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setComment(@javax.annotation.Nullable final String value) {
-        this._comment = value;
+        this.comment = value;
     }
     /**
      * Sets the proposedNewTime property value. The ProposedNewTime property
@@ -119,7 +117,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setProposedNewTime(@javax.annotation.Nullable final TimeSlot value) {
-        this._proposedNewTime = value;
+        this.proposedNewTime = value;
     }
     /**
      * Sets the sendResponse property value. The SendResponse property
@@ -128,6 +126,6 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSendResponse(@javax.annotation.Nullable final Boolean value) {
-        this._sendResponse = value;
+        this.sendResponse = value;
     }
 }

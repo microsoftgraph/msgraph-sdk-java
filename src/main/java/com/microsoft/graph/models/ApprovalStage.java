@@ -4,26 +4,24 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class ApprovalStage extends Entity implements Parsable {
     /** Indicates whether the stage is assigned to the calling user to review. Read-only. */
-    private Boolean _assignedToMe;
+    private Boolean assignedToMe;
     /** The label provided by the policy creator to identify an approval stage. Read-only. */
-    private String _displayName;
+    private String displayName;
     /** The justification associated with the approval stage decision. */
-    private String _justification;
+    private String justification;
     /** The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only. */
-    private Identity _reviewedBy;
+    private Identity reviewedBy;
     /** The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
-    private OffsetDateTime _reviewedDateTime;
+    private OffsetDateTime reviewedDateTime;
     /** The result of this approval record. Possible values include: NotReviewed, Approved, Denied. */
-    private String _reviewResult;
+    private String reviewResult;
     /** The stage status. Possible values: InProgress, Initializing, Completed, Expired. Read-only. */
-    private String _status;
+    private String status;
     /**
      * Instantiates a new approvalStage and sets the default values.
      * @return a void
@@ -48,7 +46,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAssignedToMe() {
-        return this._assignedToMe;
+        return this.assignedToMe;
     }
     /**
      * Gets the displayName property value. The label provided by the policy creator to identify an approval stage. Read-only.
@@ -56,15 +54,15 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignedToMe", (n) -> { this.setAssignedToMe(n.getBooleanValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
@@ -80,7 +78,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getJustification() {
-        return this._justification;
+        return this.justification;
     }
     /**
      * Gets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
@@ -88,7 +86,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Identity getReviewedBy() {
-        return this._reviewedBy;
+        return this.reviewedBy;
     }
     /**
      * Gets the reviewedDateTime property value. The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -96,7 +94,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getReviewedDateTime() {
-        return this._reviewedDateTime;
+        return this.reviewedDateTime;
     }
     /**
      * Gets the reviewResult property value. The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
@@ -104,7 +102,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getReviewResult() {
-        return this._reviewResult;
+        return this.reviewResult;
     }
     /**
      * Gets the status property value. The stage status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
@@ -112,7 +110,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
@@ -138,7 +136,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAssignedToMe(@javax.annotation.Nullable final Boolean value) {
-        this._assignedToMe = value;
+        this.assignedToMe = value;
     }
     /**
      * Sets the displayName property value. The label provided by the policy creator to identify an approval stage. Read-only.
@@ -147,7 +145,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the justification property value. The justification associated with the approval stage decision.
@@ -156,7 +154,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setJustification(@javax.annotation.Nullable final String value) {
-        this._justification = value;
+        this.justification = value;
     }
     /**
      * Sets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
@@ -165,7 +163,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setReviewedBy(@javax.annotation.Nullable final Identity value) {
-        this._reviewedBy = value;
+        this.reviewedBy = value;
     }
     /**
      * Sets the reviewedDateTime property value. The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -174,7 +172,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setReviewedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._reviewedDateTime = value;
+        this.reviewedDateTime = value;
     }
     /**
      * Sets the reviewResult property value. The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
@@ -183,7 +181,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setReviewResult(@javax.annotation.Nullable final String value) {
-        this._reviewResult = value;
+        this.reviewResult = value;
     }
     /**
      * Sets the status property value. The stage status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
@@ -192,6 +190,6 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
-        this._status = value;
+        this.status = value;
     }
 }

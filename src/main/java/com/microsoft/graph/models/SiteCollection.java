@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SiteCollection implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The geographic region code for where this site collection resides. Read-only. */
-    private String _dataLocationCode;
+    private String dataLocationCode;
     /** The hostname for the site collection. Read-only. */
-    private String _hostname;
+    private String hostname;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** If present, indicates that this is a root site collection in SharePoint. Read-only. */
-    private Root _root;
+    private Root root;
     /**
      * Instantiates a new siteCollection and sets the default values.
      * @return a void
@@ -43,7 +42,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the dataLocationCode property value. The geographic region code for where this site collection resides. Read-only.
@@ -51,15 +50,15 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDataLocationCode() {
-        return this._dataLocationCode;
+        return this.dataLocationCode;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("dataLocationCode", (n) -> { this.setDataLocationCode(n.getStringValue()); });
         deserializerMap.put("hostname", (n) -> { this.setHostname(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -72,7 +71,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getHostname() {
-        return this._hostname;
+        return this.hostname;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -80,7 +79,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the root property value. If present, indicates that this is a root site collection in SharePoint. Read-only.
@@ -88,7 +87,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Root getRoot() {
-        return this._root;
+        return this.root;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the dataLocationCode property value. The geographic region code for where this site collection resides. Read-only.
@@ -120,7 +119,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDataLocationCode(@javax.annotation.Nullable final String value) {
-        this._dataLocationCode = value;
+        this.dataLocationCode = value;
     }
     /**
      * Sets the hostname property value. The hostname for the site collection. Read-only.
@@ -129,7 +128,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setHostname(@javax.annotation.Nullable final String value) {
-        this._hostname = value;
+        this.hostname = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -138,7 +137,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the root property value. If present, indicates that this is a root site collection in SharePoint. Read-only.
@@ -147,6 +146,6 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRoot(@javax.annotation.Nullable final Root value) {
-        this._root = value;
+        this.root = value;
     }
 }

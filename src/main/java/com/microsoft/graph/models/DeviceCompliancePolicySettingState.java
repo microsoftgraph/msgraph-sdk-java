@@ -4,40 +4,41 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device Compilance Policy Setting State for a given device. */
+/**
+ * Device Compilance Policy Setting State for a given device.
+ */
 public class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Current value of setting on device */
-    private String _currentValue;
+    private String currentValue;
     /** Error code for the setting */
-    private Long _errorCode;
+    private Long errorCode;
     /** Error description */
-    private String _errorDescription;
+    private String errorDescription;
     /** Name of setting instance that is being reported. */
-    private String _instanceDisplayName;
+    private String instanceDisplayName;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The setting that is being reported */
-    private String _setting;
+    private String setting;
     /** Localized/user friendly setting name that is being reported */
-    private String _settingName;
+    private String settingName;
     /** Contributing policies */
-    private java.util.List<SettingSource> _sources;
+    private java.util.List<SettingSource> sources;
     /** The state property */
-    private ComplianceStatus _state;
+    private ComplianceStatus state;
     /** UserEmail */
-    private String _userEmail;
+    private String userEmail;
     /** UserId */
-    private String _userId;
+    private String userId;
     /** UserName */
-    private String _userName;
+    private String userName;
     /** UserPrincipalName. */
-    private String _userPrincipalName;
+    private String userPrincipalName;
     /**
      * Instantiates a new deviceCompliancePolicySettingState and sets the default values.
      * @return a void
@@ -62,7 +63,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the currentValue property value. Current value of setting on device
@@ -70,7 +71,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public String getCurrentValue() {
-        return this._currentValue;
+        return this.currentValue;
     }
     /**
      * Gets the errorCode property value. Error code for the setting
@@ -78,7 +79,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Long getErrorCode() {
-        return this._errorCode;
+        return this.errorCode;
     }
     /**
      * Gets the errorDescription property value. Error description
@@ -86,15 +87,15 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public String getErrorDescription() {
-        return this._errorDescription;
+        return this.errorDescription;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(13);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
         deserializerMap.put("currentValue", (n) -> { this.setCurrentValue(n.getStringValue()); });
         deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getLongValue()); });
         deserializerMap.put("errorDescription", (n) -> { this.setErrorDescription(n.getStringValue()); });
@@ -116,7 +117,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public String getInstanceDisplayName() {
-        return this._instanceDisplayName;
+        return this.instanceDisplayName;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -124,7 +125,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the setting property value. The setting that is being reported
@@ -132,7 +133,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public String getSetting() {
-        return this._setting;
+        return this.setting;
     }
     /**
      * Gets the settingName property value. Localized/user friendly setting name that is being reported
@@ -140,7 +141,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public String getSettingName() {
-        return this._settingName;
+        return this.settingName;
     }
     /**
      * Gets the sources property value. Contributing policies
@@ -148,7 +149,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public java.util.List<SettingSource> getSources() {
-        return this._sources;
+        return this.sources;
     }
     /**
      * Gets the state property value. The state property
@@ -156,7 +157,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public ComplianceStatus getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Gets the userEmail property value. UserEmail
@@ -164,7 +165,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public String getUserEmail() {
-        return this._userEmail;
+        return this.userEmail;
     }
     /**
      * Gets the userId property value. UserId
@@ -172,7 +173,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Gets the userName property value. UserName
@@ -180,7 +181,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public String getUserName() {
-        return this._userName;
+        return this.userName;
     }
     /**
      * Gets the userPrincipalName property value. UserPrincipalName.
@@ -188,7 +189,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
@@ -220,7 +221,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the currentValue property value. Current value of setting on device
@@ -229,7 +230,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setCurrentValue(@javax.annotation.Nullable final String value) {
-        this._currentValue = value;
+        this.currentValue = value;
     }
     /**
      * Sets the errorCode property value. Error code for the setting
@@ -238,7 +239,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final Long value) {
-        this._errorCode = value;
+        this.errorCode = value;
     }
     /**
      * Sets the errorDescription property value. Error description
@@ -247,7 +248,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setErrorDescription(@javax.annotation.Nullable final String value) {
-        this._errorDescription = value;
+        this.errorDescription = value;
     }
     /**
      * Sets the instanceDisplayName property value. Name of setting instance that is being reported.
@@ -256,7 +257,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setInstanceDisplayName(@javax.annotation.Nullable final String value) {
-        this._instanceDisplayName = value;
+        this.instanceDisplayName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -265,7 +266,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the setting property value. The setting that is being reported
@@ -274,7 +275,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setSetting(@javax.annotation.Nullable final String value) {
-        this._setting = value;
+        this.setting = value;
     }
     /**
      * Sets the settingName property value. Localized/user friendly setting name that is being reported
@@ -283,7 +284,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setSettingName(@javax.annotation.Nullable final String value) {
-        this._settingName = value;
+        this.settingName = value;
     }
     /**
      * Sets the sources property value. Contributing policies
@@ -292,7 +293,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setSources(@javax.annotation.Nullable final java.util.List<SettingSource> value) {
-        this._sources = value;
+        this.sources = value;
     }
     /**
      * Sets the state property value. The state property
@@ -301,7 +302,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ComplianceStatus value) {
-        this._state = value;
+        this.state = value;
     }
     /**
      * Sets the userEmail property value. UserEmail
@@ -310,7 +311,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setUserEmail(@javax.annotation.Nullable final String value) {
-        this._userEmail = value;
+        this.userEmail = value;
     }
     /**
      * Sets the userId property value. UserId
@@ -319,7 +320,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
     /**
      * Sets the userName property value. UserName
@@ -328,7 +329,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
-        this._userName = value;
+        this.userName = value;
     }
     /**
      * Sets the userPrincipalName property value. UserPrincipalName.
@@ -337,6 +338,6 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

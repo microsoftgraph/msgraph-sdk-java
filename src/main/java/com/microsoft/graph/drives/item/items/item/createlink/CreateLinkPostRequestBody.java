@@ -5,26 +5,24 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the createLink method. */
 public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The expirationDateTime property */
-    private OffsetDateTime _expirationDateTime;
+    private OffsetDateTime expirationDateTime;
     /** The message property */
-    private String _message;
+    private String message;
     /** The password property */
-    private String _password;
+    private String password;
     /** The retainInheritedPermissions property */
-    private Boolean _retainInheritedPermissions;
+    private Boolean retainInheritedPermissions;
     /** The scope property */
-    private String _scope;
+    private String scope;
     /** The type property */
-    private String _type;
+    private String type;
     /**
      * Instantiates a new createLinkPostRequestBody and sets the default values.
      * @return a void
@@ -49,7 +47,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the expirationDateTime property value. The expirationDateTime property
@@ -57,15 +55,15 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this._expirationDateTime;
+        return this.expirationDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
         deserializerMap.put("password", (n) -> { this.setPassword(n.getStringValue()); });
@@ -80,7 +78,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getMessage() {
-        return this._message;
+        return this.message;
     }
     /**
      * Gets the password property value. The password property
@@ -88,7 +86,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getPassword() {
-        return this._password;
+        return this.password;
     }
     /**
      * Gets the retainInheritedPermissions property value. The retainInheritedPermissions property
@@ -96,7 +94,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public Boolean getRetainInheritedPermissions() {
-        return this._retainInheritedPermissions;
+        return this.retainInheritedPermissions;
     }
     /**
      * Gets the scope property value. The scope property
@@ -104,7 +102,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getScope() {
-        return this._scope;
+        return this.scope;
     }
     /**
      * Gets the type property value. The type property
@@ -112,7 +110,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
@@ -137,7 +135,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the expirationDateTime property value. The expirationDateTime property
@@ -146,7 +144,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._expirationDateTime = value;
+        this.expirationDateTime = value;
     }
     /**
      * Sets the message property value. The message property
@@ -155,7 +153,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final String value) {
-        this._message = value;
+        this.message = value;
     }
     /**
      * Sets the password property value. The password property
@@ -164,7 +162,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setPassword(@javax.annotation.Nullable final String value) {
-        this._password = value;
+        this.password = value;
     }
     /**
      * Sets the retainInheritedPermissions property value. The retainInheritedPermissions property
@@ -173,7 +171,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setRetainInheritedPermissions(@javax.annotation.Nullable final Boolean value) {
-        this._retainInheritedPermissions = value;
+        this.retainInheritedPermissions = value;
     }
     /**
      * Sets the scope property value. The scope property
@@ -182,7 +180,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setScope(@javax.annotation.Nullable final String value) {
-        this._scope = value;
+        this.scope = value;
     }
     /**
      * Sets the type property value. The type property
@@ -191,6 +189,6 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+        this.type = value;
     }
 }

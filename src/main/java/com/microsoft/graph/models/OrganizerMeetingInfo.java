@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OrganizerMeetingInfo extends MeetingInfo implements Parsable {
     /** The organizer property */
-    private IdentitySet _organizer;
+    private IdentitySet organizer;
     /**
      * Instantiates a new OrganizerMeetingInfo and sets the default values.
      * @return a void
@@ -31,11 +30,11 @@ public class OrganizerMeetingInfo extends MeetingInfo implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("organizer", (n) -> { this.setOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -45,7 +44,7 @@ public class OrganizerMeetingInfo extends MeetingInfo implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getOrganizer() {
-        return this._organizer;
+        return this.organizer;
     }
     /**
      * Serializes information the current object
@@ -65,6 +64,6 @@ public class OrganizerMeetingInfo extends MeetingInfo implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOrganizer(@javax.annotation.Nullable final IdentitySet value) {
-        this._organizer = value;
+        this.organizer = value;
     }
 }

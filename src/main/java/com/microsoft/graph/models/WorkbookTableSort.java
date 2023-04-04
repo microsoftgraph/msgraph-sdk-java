@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookTableSort extends Entity implements Parsable {
     /** Represents the current conditions used to last sort the table. Read-only. */
-    private java.util.List<WorkbookSortField> _fields;
+    private java.util.List<WorkbookSortField> fields;
     /** Represents whether the casing impacted the last sort of the table. Read-only. */
-    private Boolean _matchCase;
+    private Boolean matchCase;
     /** Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only. */
-    private String _method;
+    private String method;
     /**
      * Instantiates a new workbookTableSort and sets the default values.
      * @return a void
@@ -34,11 +33,11 @@ public class WorkbookTableSort extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("fields", (n) -> { this.setFields(n.getCollectionOfObjectValues(WorkbookSortField::createFromDiscriminatorValue)); });
         deserializerMap.put("matchCase", (n) -> { this.setMatchCase(n.getBooleanValue()); });
         deserializerMap.put("method", (n) -> { this.setMethod(n.getStringValue()); });
@@ -50,7 +49,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WorkbookSortField> getFields() {
-        return this._fields;
+        return this.fields;
     }
     /**
      * Gets the matchCase property value. Represents whether the casing impacted the last sort of the table. Read-only.
@@ -58,7 +57,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getMatchCase() {
-        return this._matchCase;
+        return this.matchCase;
     }
     /**
      * Gets the method property value. Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
@@ -66,7 +65,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMethod() {
-        return this._method;
+        return this.method;
     }
     /**
      * Serializes information the current object
@@ -88,7 +87,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFields(@javax.annotation.Nullable final java.util.List<WorkbookSortField> value) {
-        this._fields = value;
+        this.fields = value;
     }
     /**
      * Sets the matchCase property value. Represents whether the casing impacted the last sort of the table. Read-only.
@@ -97,7 +96,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMatchCase(@javax.annotation.Nullable final Boolean value) {
-        this._matchCase = value;
+        this.matchCase = value;
     }
     /**
      * Sets the method property value. Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
@@ -106,6 +105,6 @@ public class WorkbookTableSort extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMethod(@javax.annotation.Nullable final String value) {
-        this._method = value;
+        this.method = value;
     }
 }

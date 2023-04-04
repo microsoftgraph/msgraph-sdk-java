@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TextColumn implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Whether to allow multiple lines of text. */
-    private Boolean _allowMultipleLines;
+    private Boolean allowMultipleLines;
     /** Whether updates to this column should replace existing text, or append to it. */
-    private Boolean _appendChangesToExistingText;
+    private Boolean appendChangesToExistingText;
     /** The size of the text box. */
-    private Integer _linesForEditing;
+    private Integer linesForEditing;
     /** The maximum number of characters for the value. */
-    private Integer _maxLength;
+    private Integer maxLength;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The type of text being stored. Must be one of plain or richText */
-    private String _textType;
+    private String textType;
     /**
      * Instantiates a new textColumn and sets the default values.
      * @return a void
@@ -47,7 +46,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the allowMultipleLines property value. Whether to allow multiple lines of text.
@@ -55,7 +54,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAllowMultipleLines() {
-        return this._allowMultipleLines;
+        return this.allowMultipleLines;
     }
     /**
      * Gets the appendChangesToExistingText property value. Whether updates to this column should replace existing text, or append to it.
@@ -63,15 +62,15 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAppendChangesToExistingText() {
-        return this._appendChangesToExistingText;
+        return this.appendChangesToExistingText;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("allowMultipleLines", (n) -> { this.setAllowMultipleLines(n.getBooleanValue()); });
         deserializerMap.put("appendChangesToExistingText", (n) -> { this.setAppendChangesToExistingText(n.getBooleanValue()); });
         deserializerMap.put("linesForEditing", (n) -> { this.setLinesForEditing(n.getIntegerValue()); });
@@ -86,7 +85,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getLinesForEditing() {
-        return this._linesForEditing;
+        return this.linesForEditing;
     }
     /**
      * Gets the maxLength property value. The maximum number of characters for the value.
@@ -94,7 +93,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getMaxLength() {
-        return this._maxLength;
+        return this.maxLength;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -102,7 +101,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the textType property value. The type of text being stored. Must be one of plain or richText
@@ -110,7 +109,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getTextType() {
-        return this._textType;
+        return this.textType;
     }
     /**
      * Serializes information the current object
@@ -135,7 +134,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the allowMultipleLines property value. Whether to allow multiple lines of text.
@@ -144,7 +143,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowMultipleLines(@javax.annotation.Nullable final Boolean value) {
-        this._allowMultipleLines = value;
+        this.allowMultipleLines = value;
     }
     /**
      * Sets the appendChangesToExistingText property value. Whether updates to this column should replace existing text, or append to it.
@@ -153,7 +152,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppendChangesToExistingText(@javax.annotation.Nullable final Boolean value) {
-        this._appendChangesToExistingText = value;
+        this.appendChangesToExistingText = value;
     }
     /**
      * Sets the linesForEditing property value. The size of the text box.
@@ -162,7 +161,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLinesForEditing(@javax.annotation.Nullable final Integer value) {
-        this._linesForEditing = value;
+        this.linesForEditing = value;
     }
     /**
      * Sets the maxLength property value. The maximum number of characters for the value.
@@ -171,7 +170,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMaxLength(@javax.annotation.Nullable final Integer value) {
-        this._maxLength = value;
+        this.maxLength = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -180,7 +179,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the textType property value. The type of text being stored. Must be one of plain or richText
@@ -189,6 +188,6 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTextType(@javax.annotation.Nullable final String value) {
-        this._textType = value;
+        this.textType = value;
     }
 }

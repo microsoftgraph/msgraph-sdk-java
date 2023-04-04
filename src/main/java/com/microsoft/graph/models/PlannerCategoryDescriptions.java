@@ -4,65 +4,64 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The label associated with Category 1 */
-    private String _category1;
+    private String category1;
     /** The label associated with Category 10 */
-    private String _category10;
+    private String category10;
     /** The label associated with Category 11 */
-    private String _category11;
+    private String category11;
     /** The label associated with Category 12 */
-    private String _category12;
+    private String category12;
     /** The label associated with Category 13 */
-    private String _category13;
+    private String category13;
     /** The label associated with Category 14 */
-    private String _category14;
+    private String category14;
     /** The label associated with Category 15 */
-    private String _category15;
+    private String category15;
     /** The label associated with Category 16 */
-    private String _category16;
+    private String category16;
     /** The label associated with Category 17 */
-    private String _category17;
+    private String category17;
     /** The label associated with Category 18 */
-    private String _category18;
+    private String category18;
     /** The label associated with Category 19 */
-    private String _category19;
+    private String category19;
     /** The label associated with Category 2 */
-    private String _category2;
+    private String category2;
     /** The label associated with Category 20 */
-    private String _category20;
+    private String category20;
     /** The label associated with Category 21 */
-    private String _category21;
+    private String category21;
     /** The label associated with Category 22 */
-    private String _category22;
+    private String category22;
     /** The label associated with Category 23 */
-    private String _category23;
+    private String category23;
     /** The label associated with Category 24 */
-    private String _category24;
+    private String category24;
     /** The label associated with Category 25 */
-    private String _category25;
+    private String category25;
     /** The label associated with Category 3 */
-    private String _category3;
+    private String category3;
     /** The label associated with Category 4 */
-    private String _category4;
+    private String category4;
     /** The label associated with Category 5 */
-    private String _category5;
+    private String category5;
     /** The label associated with Category 6 */
-    private String _category6;
+    private String category6;
     /** The label associated with Category 7 */
-    private String _category7;
+    private String category7;
     /** The label associated with Category 8 */
-    private String _category8;
+    private String category8;
     /** The label associated with Category 9 */
-    private String _category9;
+    private String category9;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new plannerCategoryDescriptions and sets the default values.
      * @return a void
@@ -87,7 +86,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the category1 property value. The label associated with Category 1
@@ -95,7 +94,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory1() {
-        return this._category1;
+        return this.category1;
     }
     /**
      * Gets the category10 property value. The label associated with Category 10
@@ -103,7 +102,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory10() {
-        return this._category10;
+        return this.category10;
     }
     /**
      * Gets the category11 property value. The label associated with Category 11
@@ -111,7 +110,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory11() {
-        return this._category11;
+        return this.category11;
     }
     /**
      * Gets the category12 property value. The label associated with Category 12
@@ -119,7 +118,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory12() {
-        return this._category12;
+        return this.category12;
     }
     /**
      * Gets the category13 property value. The label associated with Category 13
@@ -127,7 +126,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory13() {
-        return this._category13;
+        return this.category13;
     }
     /**
      * Gets the category14 property value. The label associated with Category 14
@@ -135,7 +134,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory14() {
-        return this._category14;
+        return this.category14;
     }
     /**
      * Gets the category15 property value. The label associated with Category 15
@@ -143,7 +142,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory15() {
-        return this._category15;
+        return this.category15;
     }
     /**
      * Gets the category16 property value. The label associated with Category 16
@@ -151,7 +150,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory16() {
-        return this._category16;
+        return this.category16;
     }
     /**
      * Gets the category17 property value. The label associated with Category 17
@@ -159,7 +158,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory17() {
-        return this._category17;
+        return this.category17;
     }
     /**
      * Gets the category18 property value. The label associated with Category 18
@@ -167,7 +166,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory18() {
-        return this._category18;
+        return this.category18;
     }
     /**
      * Gets the category19 property value. The label associated with Category 19
@@ -175,7 +174,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory19() {
-        return this._category19;
+        return this.category19;
     }
     /**
      * Gets the category2 property value. The label associated with Category 2
@@ -183,7 +182,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory2() {
-        return this._category2;
+        return this.category2;
     }
     /**
      * Gets the category20 property value. The label associated with Category 20
@@ -191,7 +190,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory20() {
-        return this._category20;
+        return this.category20;
     }
     /**
      * Gets the category21 property value. The label associated with Category 21
@@ -199,7 +198,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory21() {
-        return this._category21;
+        return this.category21;
     }
     /**
      * Gets the category22 property value. The label associated with Category 22
@@ -207,7 +206,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory22() {
-        return this._category22;
+        return this.category22;
     }
     /**
      * Gets the category23 property value. The label associated with Category 23
@@ -215,7 +214,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory23() {
-        return this._category23;
+        return this.category23;
     }
     /**
      * Gets the category24 property value. The label associated with Category 24
@@ -223,7 +222,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory24() {
-        return this._category24;
+        return this.category24;
     }
     /**
      * Gets the category25 property value. The label associated with Category 25
@@ -231,7 +230,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory25() {
-        return this._category25;
+        return this.category25;
     }
     /**
      * Gets the category3 property value. The label associated with Category 3
@@ -239,7 +238,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory3() {
-        return this._category3;
+        return this.category3;
     }
     /**
      * Gets the category4 property value. The label associated with Category 4
@@ -247,7 +246,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory4() {
-        return this._category4;
+        return this.category4;
     }
     /**
      * Gets the category5 property value. The label associated with Category 5
@@ -255,7 +254,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory5() {
-        return this._category5;
+        return this.category5;
     }
     /**
      * Gets the category6 property value. The label associated with Category 6
@@ -263,7 +262,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory6() {
-        return this._category6;
+        return this.category6;
     }
     /**
      * Gets the category7 property value. The label associated with Category 7
@@ -271,7 +270,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory7() {
-        return this._category7;
+        return this.category7;
     }
     /**
      * Gets the category8 property value. The label associated with Category 8
@@ -279,7 +278,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory8() {
-        return this._category8;
+        return this.category8;
     }
     /**
      * Gets the category9 property value. The label associated with Category 9
@@ -287,15 +286,15 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getCategory9() {
-        return this._category9;
+        return this.category9;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(26);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(26);
         deserializerMap.put("category1", (n) -> { this.setCategory1(n.getStringValue()); });
         deserializerMap.put("category10", (n) -> { this.setCategory10(n.getStringValue()); });
         deserializerMap.put("category11", (n) -> { this.setCategory11(n.getStringValue()); });
@@ -330,7 +329,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -375,7 +374,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the category1 property value. The label associated with Category 1
@@ -384,7 +383,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory1(@javax.annotation.Nullable final String value) {
-        this._category1 = value;
+        this.category1 = value;
     }
     /**
      * Sets the category10 property value. The label associated with Category 10
@@ -393,7 +392,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory10(@javax.annotation.Nullable final String value) {
-        this._category10 = value;
+        this.category10 = value;
     }
     /**
      * Sets the category11 property value. The label associated with Category 11
@@ -402,7 +401,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory11(@javax.annotation.Nullable final String value) {
-        this._category11 = value;
+        this.category11 = value;
     }
     /**
      * Sets the category12 property value. The label associated with Category 12
@@ -411,7 +410,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory12(@javax.annotation.Nullable final String value) {
-        this._category12 = value;
+        this.category12 = value;
     }
     /**
      * Sets the category13 property value. The label associated with Category 13
@@ -420,7 +419,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory13(@javax.annotation.Nullable final String value) {
-        this._category13 = value;
+        this.category13 = value;
     }
     /**
      * Sets the category14 property value. The label associated with Category 14
@@ -429,7 +428,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory14(@javax.annotation.Nullable final String value) {
-        this._category14 = value;
+        this.category14 = value;
     }
     /**
      * Sets the category15 property value. The label associated with Category 15
@@ -438,7 +437,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory15(@javax.annotation.Nullable final String value) {
-        this._category15 = value;
+        this.category15 = value;
     }
     /**
      * Sets the category16 property value. The label associated with Category 16
@@ -447,7 +446,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory16(@javax.annotation.Nullable final String value) {
-        this._category16 = value;
+        this.category16 = value;
     }
     /**
      * Sets the category17 property value. The label associated with Category 17
@@ -456,7 +455,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory17(@javax.annotation.Nullable final String value) {
-        this._category17 = value;
+        this.category17 = value;
     }
     /**
      * Sets the category18 property value. The label associated with Category 18
@@ -465,7 +464,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory18(@javax.annotation.Nullable final String value) {
-        this._category18 = value;
+        this.category18 = value;
     }
     /**
      * Sets the category19 property value. The label associated with Category 19
@@ -474,7 +473,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory19(@javax.annotation.Nullable final String value) {
-        this._category19 = value;
+        this.category19 = value;
     }
     /**
      * Sets the category2 property value. The label associated with Category 2
@@ -483,7 +482,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory2(@javax.annotation.Nullable final String value) {
-        this._category2 = value;
+        this.category2 = value;
     }
     /**
      * Sets the category20 property value. The label associated with Category 20
@@ -492,7 +491,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory20(@javax.annotation.Nullable final String value) {
-        this._category20 = value;
+        this.category20 = value;
     }
     /**
      * Sets the category21 property value. The label associated with Category 21
@@ -501,7 +500,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory21(@javax.annotation.Nullable final String value) {
-        this._category21 = value;
+        this.category21 = value;
     }
     /**
      * Sets the category22 property value. The label associated with Category 22
@@ -510,7 +509,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory22(@javax.annotation.Nullable final String value) {
-        this._category22 = value;
+        this.category22 = value;
     }
     /**
      * Sets the category23 property value. The label associated with Category 23
@@ -519,7 +518,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory23(@javax.annotation.Nullable final String value) {
-        this._category23 = value;
+        this.category23 = value;
     }
     /**
      * Sets the category24 property value. The label associated with Category 24
@@ -528,7 +527,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory24(@javax.annotation.Nullable final String value) {
-        this._category24 = value;
+        this.category24 = value;
     }
     /**
      * Sets the category25 property value. The label associated with Category 25
@@ -537,7 +536,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory25(@javax.annotation.Nullable final String value) {
-        this._category25 = value;
+        this.category25 = value;
     }
     /**
      * Sets the category3 property value. The label associated with Category 3
@@ -546,7 +545,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory3(@javax.annotation.Nullable final String value) {
-        this._category3 = value;
+        this.category3 = value;
     }
     /**
      * Sets the category4 property value. The label associated with Category 4
@@ -555,7 +554,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory4(@javax.annotation.Nullable final String value) {
-        this._category4 = value;
+        this.category4 = value;
     }
     /**
      * Sets the category5 property value. The label associated with Category 5
@@ -564,7 +563,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory5(@javax.annotation.Nullable final String value) {
-        this._category5 = value;
+        this.category5 = value;
     }
     /**
      * Sets the category6 property value. The label associated with Category 6
@@ -573,7 +572,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory6(@javax.annotation.Nullable final String value) {
-        this._category6 = value;
+        this.category6 = value;
     }
     /**
      * Sets the category7 property value. The label associated with Category 7
@@ -582,7 +581,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory7(@javax.annotation.Nullable final String value) {
-        this._category7 = value;
+        this.category7 = value;
     }
     /**
      * Sets the category8 property value. The label associated with Category 8
@@ -591,7 +590,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory8(@javax.annotation.Nullable final String value) {
-        this._category8 = value;
+        this.category8 = value;
     }
     /**
      * Sets the category9 property value. The label associated with Category 9
@@ -600,7 +599,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setCategory9(@javax.annotation.Nullable final String value) {
-        this._category9 = value;
+        this.category9 = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -609,6 +608,6 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

@@ -3,20 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class ThumbnailSet extends Entity implements Parsable {
     /** A 1920x1920 scaled thumbnail. */
-    private Thumbnail _large;
+    private Thumbnail large;
     /** A 176x176 scaled thumbnail. */
-    private Thumbnail _medium;
+    private Thumbnail medium;
     /** A 48x48 cropped thumbnail. */
-    private Thumbnail _small;
+    private Thumbnail small;
     /** A custom thumbnail image or the original image used to generate other thumbnails. */
-    private Thumbnail _source;
+    private Thumbnail source;
     /**
      * Instantiates a new thumbnailSet and sets the default values.
      * @return a void
@@ -37,11 +35,11 @@ public class ThumbnailSet extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("large", (n) -> { this.setLarge(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
         deserializerMap.put("medium", (n) -> { this.setMedium(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
         deserializerMap.put("small", (n) -> { this.setSmall(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
@@ -54,7 +52,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Thumbnail getLarge() {
-        return this._large;
+        return this.large;
     }
     /**
      * Gets the medium property value. A 176x176 scaled thumbnail.
@@ -62,7 +60,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Thumbnail getMedium() {
-        return this._medium;
+        return this.medium;
     }
     /**
      * Gets the small property value. A 48x48 cropped thumbnail.
@@ -70,7 +68,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Thumbnail getSmall() {
-        return this._small;
+        return this.small;
     }
     /**
      * Gets the source property value. A custom thumbnail image or the original image used to generate other thumbnails.
@@ -78,7 +76,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Thumbnail getSource() {
-        return this._source;
+        return this.source;
     }
     /**
      * Serializes information the current object
@@ -101,7 +99,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLarge(@javax.annotation.Nullable final Thumbnail value) {
-        this._large = value;
+        this.large = value;
     }
     /**
      * Sets the medium property value. A 176x176 scaled thumbnail.
@@ -110,7 +108,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMedium(@javax.annotation.Nullable final Thumbnail value) {
-        this._medium = value;
+        this.medium = value;
     }
     /**
      * Sets the small property value. A 48x48 cropped thumbnail.
@@ -119,7 +117,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSmall(@javax.annotation.Nullable final Thumbnail value) {
-        this._small = value;
+        this.small = value;
     }
     /**
      * Sets the source property value. A custom thumbnail image or the original image used to generate other thumbnails.
@@ -128,6 +126,6 @@ public class ThumbnailSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final Thumbnail value) {
-        this._source = value;
+        this.source = value;
     }
 }

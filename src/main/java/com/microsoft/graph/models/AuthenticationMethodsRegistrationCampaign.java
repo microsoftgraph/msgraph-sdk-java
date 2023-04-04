@@ -4,23 +4,22 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Users and groups of users that are excluded from being prompted to set up the authentication method. */
-    private java.util.List<ExcludeTarget> _excludeTargets;
+    private java.util.List<ExcludeTarget> excludeTargets;
     /** Users and groups of users that are prompted to set up the authentication method. */
-    private java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> _includeTargets;
+    private java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> includeTargets;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum: 0 days. Maximum: 14 days. If the value is '0', the user is prompted during every MFA attempt. */
-    private Integer _snoozeDurationInDays;
+    private Integer snoozeDurationInDays;
     /** The state property */
-    private AdvancedConfigState _state;
+    private AdvancedConfigState state;
     /**
      * Instantiates a new authenticationMethodsRegistrationCampaign and sets the default values.
      * @return a void
@@ -45,7 +44,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the excludeTargets property value. Users and groups of users that are excluded from being prompted to set up the authentication method.
@@ -53,15 +52,15 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     @javax.annotation.Nullable
     public java.util.List<ExcludeTarget> getExcludeTargets() {
-        return this._excludeTargets;
+        return this.excludeTargets;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("excludeTargets", (n) -> { this.setExcludeTargets(n.getCollectionOfObjectValues(ExcludeTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodsRegistrationCampaignIncludeTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -75,7 +74,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     @javax.annotation.Nullable
     public java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> getIncludeTargets() {
-        return this._includeTargets;
+        return this.includeTargets;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -83,7 +82,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum: 0 days. Maximum: 14 days. If the value is '0', the user is prompted during every MFA attempt.
@@ -91,7 +90,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     @javax.annotation.Nullable
     public Integer getSnoozeDurationInDays() {
-        return this._snoozeDurationInDays;
+        return this.snoozeDurationInDays;
     }
     /**
      * Gets the state property value. The state property
@@ -99,7 +98,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     @javax.annotation.Nullable
     public AdvancedConfigState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Serializes information the current object
@@ -123,7 +122,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the excludeTargets property value. Users and groups of users that are excluded from being prompted to set up the authentication method.
@@ -132,7 +131,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setExcludeTargets(@javax.annotation.Nullable final java.util.List<ExcludeTarget> value) {
-        this._excludeTargets = value;
+        this.excludeTargets = value;
     }
     /**
      * Sets the includeTargets property value. Users and groups of users that are prompted to set up the authentication method.
@@ -141,7 +140,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setIncludeTargets(@javax.annotation.Nullable final java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> value) {
-        this._includeTargets = value;
+        this.includeTargets = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -150,7 +149,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum: 0 days. Maximum: 14 days. If the value is '0', the user is prompted during every MFA attempt.
@@ -159,7 +158,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setSnoozeDurationInDays(@javax.annotation.Nullable final Integer value) {
-        this._snoozeDurationInDays = value;
+        this.snoozeDurationInDays = value;
     }
     /**
      * Sets the state property value. The state property
@@ -168,6 +167,6 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final AdvancedConfigState value) {
-        this._state = value;
+        this.state = value;
     }
 }

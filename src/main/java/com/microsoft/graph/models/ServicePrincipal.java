@@ -3,109 +3,111 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class ServicePrincipal extends DirectoryObject implements Parsable {
     /** true if the service principal account is enabled; otherwise, false. If set to false, then no users will be able to sign in to this app, even if they are assigned to it. Supports $filter (eq, ne, not, in). */
-    private Boolean _accountEnabled;
+    private Boolean accountEnabled;
     /** Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on. */
-    private java.util.List<AddIn> _addIns;
+    private java.util.List<AddIn> addIns;
     /** Used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities. Supports $filter (eq, not, ge, le, startsWith). */
-    private java.util.List<String> _alternativeNames;
+    private java.util.List<String> alternativeNames;
     /** The description exposed by the associated application. */
-    private String _appDescription;
+    private String appDescription;
     /** The display name exposed by the associated application. */
-    private String _appDisplayName;
+    private String appDisplayName;
     /** The unique identifier for the associated application (its appId property). Supports $filter (eq, ne, not, in, startsWith). */
-    private String _appId;
+    private String appId;
     /** Unique identifier of the applicationTemplate that the servicePrincipal was created from. Read-only. Supports $filter (eq, ne, NOT, startsWith). */
-    private String _applicationTemplateId;
+    private String applicationTemplateId;
+    /** The appManagementPolicy applied to this application. */
+    private java.util.List<AppManagementPolicy> appManagementPolicies;
     /** Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le). */
-    private String _appOwnerOrganizationId;
+    private UUID appOwnerOrganizationId;
     /** App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand. */
-    private java.util.List<AppRoleAssignment> _appRoleAssignedTo;
+    private java.util.List<AppRoleAssignment> appRoleAssignedTo;
     /** Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens. The default value is false. Not nullable. Supports $filter (eq, ne, NOT). */
-    private Boolean _appRoleAssignmentRequired;
+    private Boolean appRoleAssignmentRequired;
     /** App role assignment for another app or service, granted to this service principal. Supports $expand. */
-    private java.util.List<AppRoleAssignment> _appRoleAssignments;
+    private java.util.List<AppRoleAssignment> appRoleAssignments;
     /** The roles exposed by the application which this service principal represents. For more information see the appRoles property definition on the application entity. Not nullable. */
-    private java.util.List<AppRole> _appRoles;
+    private java.util.List<AppRole> appRoles;
     /** The claimsMappingPolicies assigned to this service principal. Supports $expand. */
-    private java.util.List<ClaimsMappingPolicy> _claimsMappingPolicies;
+    private java.util.List<ClaimsMappingPolicy> claimsMappingPolicies;
     /** Directory objects created by this service principal. Read-only. Nullable. */
-    private java.util.List<DirectoryObject> _createdObjects;
+    private java.util.List<DirectoryObject> createdObjects;
     /** The delegatedPermissionClassifications property */
-    private java.util.List<DelegatedPermissionClassification> _delegatedPermissionClassifications;
+    private java.util.List<DelegatedPermissionClassification> delegatedPermissionClassifications;
     /** Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search. */
-    private String _description;
+    private String description;
     /** Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not). */
-    private String _disabledByMicrosoftStatus;
+    private String disabledByMicrosoftStatus;
     /** The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
-    private String _displayName;
+    private String displayName;
     /** The endpoints property */
-    private java.util.List<Endpoint> _endpoints;
+    private java.util.List<Endpoint> endpoints;
     /** Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0). */
-    private java.util.List<FederatedIdentityCredential> _federatedIdentityCredentials;
+    private java.util.List<FederatedIdentityCredential> federatedIdentityCredentials;
     /** Home page or landing page of the application. */
-    private String _homepage;
+    private String homepage;
     /** The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand. */
-    private java.util.List<HomeRealmDiscoveryPolicy> _homeRealmDiscoveryPolicies;
+    private java.util.List<HomeRealmDiscoveryPolicy> homeRealmDiscoveryPolicies;
     /** Basic profile information of the acquired application such as app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values). */
-    private InformationalUrl _info;
+    private InformationalUrl info;
     /** The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, not, ge, le). */
-    private java.util.List<KeyCredential> _keyCredentials;
+    private java.util.List<KeyCredential> keyCredentials;
     /** Specifies the URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps. When blank, Azure AD performs IdP-initiated sign-on for applications configured with SAML-based single sign-on. The user launches the application from Microsoft 365, the Azure AD My Apps, or the Azure AD SSO URL. */
-    private String _loginUrl;
+    private String loginUrl;
     /** Specifies the URL that will be used by Microsoft's authorization service to logout an user using OpenId Connect front-channel, back-channel or SAML logout protocols. */
-    private String _logoutUrl;
+    private String logoutUrl;
     /** Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand. */
-    private java.util.List<DirectoryObject> _memberOf;
+    private java.util.List<DirectoryObject> memberOf;
     /** Free text field to capture information about the service principal, typically used for operational purposes. Maximum allowed size is 1024 characters. */
-    private String _notes;
+    private String notes;
     /** Specifies the list of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications. */
-    private java.util.List<String> _notificationEmailAddresses;
+    private java.util.List<String> notificationEmailAddresses;
     /** Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable. */
-    private java.util.List<OAuth2PermissionGrant> _oauth2PermissionGrants;
+    private java.util.List<OAuth2PermissionGrant> oauth2PermissionGrants;
     /** The delegated permissions exposed by the application. For more information see the oauth2PermissionScopes property on the application entity's api property. Not nullable. */
-    private java.util.List<PermissionScope> _oauth2PermissionScopes;
+    private java.util.List<PermissionScope> oauth2PermissionScopes;
     /** Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). */
-    private java.util.List<DirectoryObject> _ownedObjects;
+    private java.util.List<DirectoryObject> ownedObjects;
     /** Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.  Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). */
-    private java.util.List<DirectoryObject> _owners;
+    private java.util.List<DirectoryObject> owners;
     /** The collection of password credentials associated with the application. Not nullable. */
-    private java.util.List<PasswordCredential> _passwordCredentials;
+    private java.util.List<PasswordCredential> passwordCredentials;
     /** Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, notSupported, and oidc. */
-    private String _preferredSingleSignOnMode;
+    private String preferredSingleSignOnMode;
     /** Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions. */
-    private String _preferredTokenSigningKeyThumbprint;
+    private String preferredTokenSigningKeyThumbprint;
     /** The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable. */
-    private java.util.List<String> _replyUrls;
+    private java.util.List<String> replyUrls;
     /** The resource-specific application permissions exposed by this application. Currently, resource-specific permissions are only supported for Teams apps accessing to specific chats and teams using Microsoft Graph. Read-only. */
-    private java.util.List<ResourceSpecificPermission> _resourceSpecificApplicationPermissions;
+    private java.util.List<ResourceSpecificPermission> resourceSpecificApplicationPermissions;
     /** The collection for settings related to saml single sign-on. */
-    private SamlSingleSignOnSettings _samlSingleSignOnSettings;
+    private SamlSingleSignOnSettings samlSingleSignOnSettings;
     /** Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.  Supports $filter (eq, not, ge, le, startsWith). */
-    private java.util.List<String> _servicePrincipalNames;
+    private java.util.List<String> servicePrincipalNames;
     /** Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use. */
-    private String _servicePrincipalType;
+    private String servicePrincipalType;
     /** Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organizations Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organizations Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organizations Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only. */
-    private String _signInAudience;
-    /** Custom strings that can be used to categorize and identify the service principal. Not nullable. Supports $filter (eq, not, ge, le, startsWith). */
-    private java.util.List<String> _tags;
+    private String signInAudience;
+    /** Custom strings that can be used to categorize and identify the service principal. Not nullable. The value is the union of strings set here and on the associated application entity's tags property.Supports $filter (eq, not, ge, le, startsWith). */
+    private java.util.List<String> tags;
     /** Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD issues tokens for this application encrypted using the key specified by this property. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user. */
-    private String _tokenEncryptionKeyId;
+    private UUID tokenEncryptionKeyId;
     /** The tokenIssuancePolicies assigned to this service principal. */
-    private java.util.List<TokenIssuancePolicy> _tokenIssuancePolicies;
+    private java.util.List<TokenIssuancePolicy> tokenIssuancePolicies;
     /** The tokenLifetimePolicies assigned to this service principal. */
-    private java.util.List<TokenLifetimePolicy> _tokenLifetimePolicies;
+    private java.util.List<TokenLifetimePolicy> tokenLifetimePolicies;
     /** The transitiveMemberOf property */
-    private java.util.List<DirectoryObject> _transitiveMemberOf;
+    private java.util.List<DirectoryObject> transitiveMemberOf;
     /** Specifies the verified publisher of the application which this service principal represents. */
-    private VerifiedPublisher _verifiedPublisher;
+    private VerifiedPublisher verifiedPublisher;
     /**
-     * Instantiates a new ServicePrincipal and sets the default values.
+     * Instantiates a new servicePrincipal and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -116,7 +118,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServicePrincipal
+     * @return a servicePrincipal
      */
     @javax.annotation.Nonnull
     public static ServicePrincipal createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -129,7 +131,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAccountEnabled() {
-        return this._accountEnabled;
+        return this.accountEnabled;
     }
     /**
      * Gets the addIns property value. Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on.
@@ -137,7 +139,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AddIn> getAddIns() {
-        return this._addIns;
+        return this.addIns;
     }
     /**
      * Gets the alternativeNames property value. Used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities. Supports $filter (eq, not, ge, le, startsWith).
@@ -145,7 +147,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAlternativeNames() {
-        return this._alternativeNames;
+        return this.alternativeNames;
     }
     /**
      * Gets the appDescription property value. The description exposed by the associated application.
@@ -153,7 +155,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppDescription() {
-        return this._appDescription;
+        return this.appDescription;
     }
     /**
      * Gets the appDisplayName property value. The display name exposed by the associated application.
@@ -161,7 +163,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppDisplayName() {
-        return this._appDisplayName;
+        return this.appDisplayName;
     }
     /**
      * Gets the appId property value. The unique identifier for the associated application (its appId property). Supports $filter (eq, ne, not, in, startsWith).
@@ -169,7 +171,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppId() {
-        return this._appId;
+        return this.appId;
     }
     /**
      * Gets the applicationTemplateId property value. Unique identifier of the applicationTemplate that the servicePrincipal was created from. Read-only. Supports $filter (eq, ne, NOT, startsWith).
@@ -177,15 +179,23 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getApplicationTemplateId() {
-        return this._applicationTemplateId;
+        return this.applicationTemplateId;
+    }
+    /**
+     * Gets the appManagementPolicies property value. The appManagementPolicy applied to this application.
+     * @return a appManagementPolicy
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AppManagementPolicy> getAppManagementPolicies() {
+        return this.appManagementPolicies;
     }
     /**
      * Gets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getAppOwnerOrganizationId() {
-        return this._appOwnerOrganizationId;
+    public UUID getAppOwnerOrganizationId() {
+        return this.appOwnerOrganizationId;
     }
     /**
      * Gets the appRoleAssignedTo property value. App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
@@ -193,7 +203,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AppRoleAssignment> getAppRoleAssignedTo() {
-        return this._appRoleAssignedTo;
+        return this.appRoleAssignedTo;
     }
     /**
      * Gets the appRoleAssignmentRequired property value. Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens. The default value is false. Not nullable. Supports $filter (eq, ne, NOT).
@@ -201,7 +211,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAppRoleAssignmentRequired() {
-        return this._appRoleAssignmentRequired;
+        return this.appRoleAssignmentRequired;
     }
     /**
      * Gets the appRoleAssignments property value. App role assignment for another app or service, granted to this service principal. Supports $expand.
@@ -209,7 +219,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AppRoleAssignment> getAppRoleAssignments() {
-        return this._appRoleAssignments;
+        return this.appRoleAssignments;
     }
     /**
      * Gets the appRoles property value. The roles exposed by the application which this service principal represents. For more information see the appRoles property definition on the application entity. Not nullable.
@@ -217,7 +227,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AppRole> getAppRoles() {
-        return this._appRoles;
+        return this.appRoles;
     }
     /**
      * Gets the claimsMappingPolicies property value. The claimsMappingPolicies assigned to this service principal. Supports $expand.
@@ -225,7 +235,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ClaimsMappingPolicy> getClaimsMappingPolicies() {
-        return this._claimsMappingPolicies;
+        return this.claimsMappingPolicies;
     }
     /**
      * Gets the createdObjects property value. Directory objects created by this service principal. Read-only. Nullable.
@@ -233,7 +243,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getCreatedObjects() {
-        return this._createdObjects;
+        return this.createdObjects;
     }
     /**
      * Gets the delegatedPermissionClassifications property value. The delegatedPermissionClassifications property
@@ -241,7 +251,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DelegatedPermissionClassification> getDelegatedPermissionClassifications() {
-        return this._delegatedPermissionClassifications;
+        return this.delegatedPermissionClassifications;
     }
     /**
      * Gets the description property value. Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
@@ -249,7 +259,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the disabledByMicrosoftStatus property value. Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
@@ -257,7 +267,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisabledByMicrosoftStatus() {
-        return this._disabledByMicrosoftStatus;
+        return this.disabledByMicrosoftStatus;
     }
     /**
      * Gets the displayName property value. The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
@@ -265,7 +275,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the endpoints property value. The endpoints property
@@ -273,7 +283,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Endpoint> getEndpoints() {
-        return this._endpoints;
+        return this.endpoints;
     }
     /**
      * Gets the federatedIdentityCredentials property value. Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).
@@ -281,15 +291,15 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<FederatedIdentityCredential> getFederatedIdentityCredentials() {
-        return this._federatedIdentityCredentials;
+        return this.federatedIdentityCredentials;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountEnabled", (n) -> { this.setAccountEnabled(n.getBooleanValue()); });
         deserializerMap.put("addIns", (n) -> { this.setAddIns(n.getCollectionOfObjectValues(AddIn::createFromDiscriminatorValue)); });
         deserializerMap.put("alternativeNames", (n) -> { this.setAlternativeNames(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -297,7 +307,8 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         deserializerMap.put("appDisplayName", (n) -> { this.setAppDisplayName(n.getStringValue()); });
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("applicationTemplateId", (n) -> { this.setApplicationTemplateId(n.getStringValue()); });
-        deserializerMap.put("appOwnerOrganizationId", (n) -> { this.setAppOwnerOrganizationId(n.getStringValue()); });
+        deserializerMap.put("appManagementPolicies", (n) -> { this.setAppManagementPolicies(n.getCollectionOfObjectValues(AppManagementPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("appOwnerOrganizationId", (n) -> { this.setAppOwnerOrganizationId(n.getUUIDValue()); });
         deserializerMap.put("appRoleAssignedTo", (n) -> { this.setAppRoleAssignedTo(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("appRoleAssignmentRequired", (n) -> { this.setAppRoleAssignmentRequired(n.getBooleanValue()); });
         deserializerMap.put("appRoleAssignments", (n) -> { this.setAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
@@ -333,7 +344,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         deserializerMap.put("servicePrincipalType", (n) -> { this.setServicePrincipalType(n.getStringValue()); });
         deserializerMap.put("signInAudience", (n) -> { this.setSignInAudience(n.getStringValue()); });
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("tokenEncryptionKeyId", (n) -> { this.setTokenEncryptionKeyId(n.getStringValue()); });
+        deserializerMap.put("tokenEncryptionKeyId", (n) -> { this.setTokenEncryptionKeyId(n.getUUIDValue()); });
         deserializerMap.put("tokenIssuancePolicies", (n) -> { this.setTokenIssuancePolicies(n.getCollectionOfObjectValues(TokenIssuancePolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("tokenLifetimePolicies", (n) -> { this.setTokenLifetimePolicies(n.getCollectionOfObjectValues(TokenLifetimePolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("transitiveMemberOf", (n) -> { this.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
@@ -346,7 +357,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getHomepage() {
-        return this._homepage;
+        return this.homepage;
     }
     /**
      * Gets the homeRealmDiscoveryPolicies property value. The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
@@ -354,7 +365,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<HomeRealmDiscoveryPolicy> getHomeRealmDiscoveryPolicies() {
-        return this._homeRealmDiscoveryPolicies;
+        return this.homeRealmDiscoveryPolicies;
     }
     /**
      * Gets the info property value. Basic profile information of the acquired application such as app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
@@ -362,7 +373,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public InformationalUrl getInfo() {
-        return this._info;
+        return this.info;
     }
     /**
      * Gets the keyCredentials property value. The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, not, ge, le).
@@ -370,7 +381,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<KeyCredential> getKeyCredentials() {
-        return this._keyCredentials;
+        return this.keyCredentials;
     }
     /**
      * Gets the loginUrl property value. Specifies the URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps. When blank, Azure AD performs IdP-initiated sign-on for applications configured with SAML-based single sign-on. The user launches the application from Microsoft 365, the Azure AD My Apps, or the Azure AD SSO URL.
@@ -378,7 +389,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLoginUrl() {
-        return this._loginUrl;
+        return this.loginUrl;
     }
     /**
      * Gets the logoutUrl property value. Specifies the URL that will be used by Microsoft's authorization service to logout an user using OpenId Connect front-channel, back-channel or SAML logout protocols.
@@ -386,7 +397,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLogoutUrl() {
-        return this._logoutUrl;
+        return this.logoutUrl;
     }
     /**
      * Gets the memberOf property value. Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
@@ -394,7 +405,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getMemberOf() {
-        return this._memberOf;
+        return this.memberOf;
     }
     /**
      * Gets the notes property value. Free text field to capture information about the service principal, typically used for operational purposes. Maximum allowed size is 1024 characters.
@@ -402,7 +413,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getNotes() {
-        return this._notes;
+        return this.notes;
     }
     /**
      * Gets the notificationEmailAddresses property value. Specifies the list of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
@@ -410,7 +421,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getNotificationEmailAddresses() {
-        return this._notificationEmailAddresses;
+        return this.notificationEmailAddresses;
     }
     /**
      * Gets the oauth2PermissionGrants property value. Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable.
@@ -418,7 +429,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<OAuth2PermissionGrant> getOauth2PermissionGrants() {
-        return this._oauth2PermissionGrants;
+        return this.oauth2PermissionGrants;
     }
     /**
      * Gets the oauth2PermissionScopes property value. The delegated permissions exposed by the application. For more information see the oauth2PermissionScopes property on the application entity's api property. Not nullable.
@@ -426,7 +437,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PermissionScope> getOauth2PermissionScopes() {
-        return this._oauth2PermissionScopes;
+        return this.oauth2PermissionScopes;
     }
     /**
      * Gets the ownedObjects property value. Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
@@ -434,7 +445,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getOwnedObjects() {
-        return this._ownedObjects;
+        return this.ownedObjects;
     }
     /**
      * Gets the owners property value. Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.  Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
@@ -442,7 +453,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getOwners() {
-        return this._owners;
+        return this.owners;
     }
     /**
      * Gets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
@@ -450,7 +461,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PasswordCredential> getPasswordCredentials() {
-        return this._passwordCredentials;
+        return this.passwordCredentials;
     }
     /**
      * Gets the preferredSingleSignOnMode property value. Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, notSupported, and oidc.
@@ -458,7 +469,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPreferredSingleSignOnMode() {
-        return this._preferredSingleSignOnMode;
+        return this.preferredSingleSignOnMode;
     }
     /**
      * Gets the preferredTokenSigningKeyThumbprint property value. Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
@@ -466,7 +477,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPreferredTokenSigningKeyThumbprint() {
-        return this._preferredTokenSigningKeyThumbprint;
+        return this.preferredTokenSigningKeyThumbprint;
     }
     /**
      * Gets the replyUrls property value. The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable.
@@ -474,7 +485,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getReplyUrls() {
-        return this._replyUrls;
+        return this.replyUrls;
     }
     /**
      * Gets the resourceSpecificApplicationPermissions property value. The resource-specific application permissions exposed by this application. Currently, resource-specific permissions are only supported for Teams apps accessing to specific chats and teams using Microsoft Graph. Read-only.
@@ -482,7 +493,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ResourceSpecificPermission> getResourceSpecificApplicationPermissions() {
-        return this._resourceSpecificApplicationPermissions;
+        return this.resourceSpecificApplicationPermissions;
     }
     /**
      * Gets the samlSingleSignOnSettings property value. The collection for settings related to saml single sign-on.
@@ -490,7 +501,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public SamlSingleSignOnSettings getSamlSingleSignOnSettings() {
-        return this._samlSingleSignOnSettings;
+        return this.samlSingleSignOnSettings;
     }
     /**
      * Gets the servicePrincipalNames property value. Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.  Supports $filter (eq, not, ge, le, startsWith).
@@ -498,7 +509,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getServicePrincipalNames() {
-        return this._servicePrincipalNames;
+        return this.servicePrincipalNames;
     }
     /**
      * Gets the servicePrincipalType property value. Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.
@@ -506,7 +517,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getServicePrincipalType() {
-        return this._servicePrincipalType;
+        return this.servicePrincipalType;
     }
     /**
      * Gets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organizations Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organizations Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organizations Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
@@ -514,23 +525,23 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSignInAudience() {
-        return this._signInAudience;
+        return this.signInAudience;
     }
     /**
-     * Gets the tags property value. Custom strings that can be used to categorize and identify the service principal. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+     * Gets the tags property value. Custom strings that can be used to categorize and identify the service principal. Not nullable. The value is the union of strings set here and on the associated application entity's tags property.Supports $filter (eq, not, ge, le, startsWith).
      * @return a string
      */
     @javax.annotation.Nullable
     public java.util.List<String> getTags() {
-        return this._tags;
+        return this.tags;
     }
     /**
      * Gets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD issues tokens for this application encrypted using the key specified by this property. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getTokenEncryptionKeyId() {
-        return this._tokenEncryptionKeyId;
+    public UUID getTokenEncryptionKeyId() {
+        return this.tokenEncryptionKeyId;
     }
     /**
      * Gets the tokenIssuancePolicies property value. The tokenIssuancePolicies assigned to this service principal.
@@ -538,7 +549,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TokenIssuancePolicy> getTokenIssuancePolicies() {
-        return this._tokenIssuancePolicies;
+        return this.tokenIssuancePolicies;
     }
     /**
      * Gets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this service principal.
@@ -546,7 +557,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TokenLifetimePolicy> getTokenLifetimePolicies() {
-        return this._tokenLifetimePolicies;
+        return this.tokenLifetimePolicies;
     }
     /**
      * Gets the transitiveMemberOf property value. The transitiveMemberOf property
@@ -554,7 +565,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getTransitiveMemberOf() {
-        return this._transitiveMemberOf;
+        return this.transitiveMemberOf;
     }
     /**
      * Gets the verifiedPublisher property value. Specifies the verified publisher of the application which this service principal represents.
@@ -562,7 +573,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public VerifiedPublisher getVerifiedPublisher() {
-        return this._verifiedPublisher;
+        return this.verifiedPublisher;
     }
     /**
      * Serializes information the current object
@@ -580,7 +591,8 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeStringValue("appDisplayName", this.getAppDisplayName());
         writer.writeStringValue("appId", this.getAppId());
         writer.writeStringValue("applicationTemplateId", this.getApplicationTemplateId());
-        writer.writeStringValue("appOwnerOrganizationId", this.getAppOwnerOrganizationId());
+        writer.writeCollectionOfObjectValues("appManagementPolicies", this.getAppManagementPolicies());
+        writer.writeUUIDValue("appOwnerOrganizationId", this.getAppOwnerOrganizationId());
         writer.writeCollectionOfObjectValues("appRoleAssignedTo", this.getAppRoleAssignedTo());
         writer.writeBooleanValue("appRoleAssignmentRequired", this.getAppRoleAssignmentRequired());
         writer.writeCollectionOfObjectValues("appRoleAssignments", this.getAppRoleAssignments());
@@ -616,7 +628,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeStringValue("servicePrincipalType", this.getServicePrincipalType());
         writer.writeStringValue("signInAudience", this.getSignInAudience());
         writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
-        writer.writeStringValue("tokenEncryptionKeyId", this.getTokenEncryptionKeyId());
+        writer.writeUUIDValue("tokenEncryptionKeyId", this.getTokenEncryptionKeyId());
         writer.writeCollectionOfObjectValues("tokenIssuancePolicies", this.getTokenIssuancePolicies());
         writer.writeCollectionOfObjectValues("tokenLifetimePolicies", this.getTokenLifetimePolicies());
         writer.writeCollectionOfObjectValues("transitiveMemberOf", this.getTransitiveMemberOf());
@@ -629,7 +641,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAccountEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._accountEnabled = value;
+        this.accountEnabled = value;
     }
     /**
      * Sets the addIns property value. Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on.
@@ -638,7 +650,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAddIns(@javax.annotation.Nullable final java.util.List<AddIn> value) {
-        this._addIns = value;
+        this.addIns = value;
     }
     /**
      * Sets the alternativeNames property value. Used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities. Supports $filter (eq, not, ge, le, startsWith).
@@ -647,7 +659,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAlternativeNames(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._alternativeNames = value;
+        this.alternativeNames = value;
     }
     /**
      * Sets the appDescription property value. The description exposed by the associated application.
@@ -656,7 +668,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppDescription(@javax.annotation.Nullable final String value) {
-        this._appDescription = value;
+        this.appDescription = value;
     }
     /**
      * Sets the appDisplayName property value. The display name exposed by the associated application.
@@ -665,7 +677,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
-        this._appDisplayName = value;
+        this.appDisplayName = value;
     }
     /**
      * Sets the appId property value. The unique identifier for the associated application (its appId property). Supports $filter (eq, ne, not, in, startsWith).
@@ -674,7 +686,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
-        this._appId = value;
+        this.appId = value;
     }
     /**
      * Sets the applicationTemplateId property value. Unique identifier of the applicationTemplate that the servicePrincipal was created from. Read-only. Supports $filter (eq, ne, NOT, startsWith).
@@ -683,7 +695,16 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setApplicationTemplateId(@javax.annotation.Nullable final String value) {
-        this._applicationTemplateId = value;
+        this.applicationTemplateId = value;
+    }
+    /**
+     * Sets the appManagementPolicies property value. The appManagementPolicy applied to this application.
+     * @param value Value to set for the appManagementPolicies property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAppManagementPolicies(@javax.annotation.Nullable final java.util.List<AppManagementPolicy> value) {
+        this.appManagementPolicies = value;
     }
     /**
      * Sets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
@@ -691,8 +712,8 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setAppOwnerOrganizationId(@javax.annotation.Nullable final String value) {
-        this._appOwnerOrganizationId = value;
+    public void setAppOwnerOrganizationId(@javax.annotation.Nullable final UUID value) {
+        this.appOwnerOrganizationId = value;
     }
     /**
      * Sets the appRoleAssignedTo property value. App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
@@ -701,7 +722,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppRoleAssignedTo(@javax.annotation.Nullable final java.util.List<AppRoleAssignment> value) {
-        this._appRoleAssignedTo = value;
+        this.appRoleAssignedTo = value;
     }
     /**
      * Sets the appRoleAssignmentRequired property value. Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens. The default value is false. Not nullable. Supports $filter (eq, ne, NOT).
@@ -710,7 +731,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppRoleAssignmentRequired(@javax.annotation.Nullable final Boolean value) {
-        this._appRoleAssignmentRequired = value;
+        this.appRoleAssignmentRequired = value;
     }
     /**
      * Sets the appRoleAssignments property value. App role assignment for another app or service, granted to this service principal. Supports $expand.
@@ -719,7 +740,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppRoleAssignments(@javax.annotation.Nullable final java.util.List<AppRoleAssignment> value) {
-        this._appRoleAssignments = value;
+        this.appRoleAssignments = value;
     }
     /**
      * Sets the appRoles property value. The roles exposed by the application which this service principal represents. For more information see the appRoles property definition on the application entity. Not nullable.
@@ -728,7 +749,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppRoles(@javax.annotation.Nullable final java.util.List<AppRole> value) {
-        this._appRoles = value;
+        this.appRoles = value;
     }
     /**
      * Sets the claimsMappingPolicies property value. The claimsMappingPolicies assigned to this service principal. Supports $expand.
@@ -737,7 +758,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setClaimsMappingPolicies(@javax.annotation.Nullable final java.util.List<ClaimsMappingPolicy> value) {
-        this._claimsMappingPolicies = value;
+        this.claimsMappingPolicies = value;
     }
     /**
      * Sets the createdObjects property value. Directory objects created by this service principal. Read-only. Nullable.
@@ -746,7 +767,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedObjects(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._createdObjects = value;
+        this.createdObjects = value;
     }
     /**
      * Sets the delegatedPermissionClassifications property value. The delegatedPermissionClassifications property
@@ -755,7 +776,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDelegatedPermissionClassifications(@javax.annotation.Nullable final java.util.List<DelegatedPermissionClassification> value) {
-        this._delegatedPermissionClassifications = value;
+        this.delegatedPermissionClassifications = value;
     }
     /**
      * Sets the description property value. Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
@@ -764,7 +785,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the disabledByMicrosoftStatus property value. Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
@@ -773,7 +794,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisabledByMicrosoftStatus(@javax.annotation.Nullable final String value) {
-        this._disabledByMicrosoftStatus = value;
+        this.disabledByMicrosoftStatus = value;
     }
     /**
      * Sets the displayName property value. The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
@@ -782,7 +803,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the endpoints property value. The endpoints property
@@ -791,7 +812,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEndpoints(@javax.annotation.Nullable final java.util.List<Endpoint> value) {
-        this._endpoints = value;
+        this.endpoints = value;
     }
     /**
      * Sets the federatedIdentityCredentials property value. Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).
@@ -800,7 +821,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFederatedIdentityCredentials(@javax.annotation.Nullable final java.util.List<FederatedIdentityCredential> value) {
-        this._federatedIdentityCredentials = value;
+        this.federatedIdentityCredentials = value;
     }
     /**
      * Sets the homepage property value. Home page or landing page of the application.
@@ -809,7 +830,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setHomepage(@javax.annotation.Nullable final String value) {
-        this._homepage = value;
+        this.homepage = value;
     }
     /**
      * Sets the homeRealmDiscoveryPolicies property value. The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
@@ -818,7 +839,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setHomeRealmDiscoveryPolicies(@javax.annotation.Nullable final java.util.List<HomeRealmDiscoveryPolicy> value) {
-        this._homeRealmDiscoveryPolicies = value;
+        this.homeRealmDiscoveryPolicies = value;
     }
     /**
      * Sets the info property value. Basic profile information of the acquired application such as app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
@@ -827,7 +848,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInfo(@javax.annotation.Nullable final InformationalUrl value) {
-        this._info = value;
+        this.info = value;
     }
     /**
      * Sets the keyCredentials property value. The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, not, ge, le).
@@ -836,7 +857,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setKeyCredentials(@javax.annotation.Nullable final java.util.List<KeyCredential> value) {
-        this._keyCredentials = value;
+        this.keyCredentials = value;
     }
     /**
      * Sets the loginUrl property value. Specifies the URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps. When blank, Azure AD performs IdP-initiated sign-on for applications configured with SAML-based single sign-on. The user launches the application from Microsoft 365, the Azure AD My Apps, or the Azure AD SSO URL.
@@ -845,7 +866,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLoginUrl(@javax.annotation.Nullable final String value) {
-        this._loginUrl = value;
+        this.loginUrl = value;
     }
     /**
      * Sets the logoutUrl property value. Specifies the URL that will be used by Microsoft's authorization service to logout an user using OpenId Connect front-channel, back-channel or SAML logout protocols.
@@ -854,7 +875,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLogoutUrl(@javax.annotation.Nullable final String value) {
-        this._logoutUrl = value;
+        this.logoutUrl = value;
     }
     /**
      * Sets the memberOf property value. Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
@@ -863,7 +884,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._memberOf = value;
+        this.memberOf = value;
     }
     /**
      * Sets the notes property value. Free text field to capture information about the service principal, typically used for operational purposes. Maximum allowed size is 1024 characters.
@@ -872,7 +893,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final String value) {
-        this._notes = value;
+        this.notes = value;
     }
     /**
      * Sets the notificationEmailAddresses property value. Specifies the list of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
@@ -881,7 +902,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setNotificationEmailAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._notificationEmailAddresses = value;
+        this.notificationEmailAddresses = value;
     }
     /**
      * Sets the oauth2PermissionGrants property value. Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable.
@@ -890,7 +911,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOauth2PermissionGrants(@javax.annotation.Nullable final java.util.List<OAuth2PermissionGrant> value) {
-        this._oauth2PermissionGrants = value;
+        this.oauth2PermissionGrants = value;
     }
     /**
      * Sets the oauth2PermissionScopes property value. The delegated permissions exposed by the application. For more information see the oauth2PermissionScopes property on the application entity's api property. Not nullable.
@@ -899,7 +920,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOauth2PermissionScopes(@javax.annotation.Nullable final java.util.List<PermissionScope> value) {
-        this._oauth2PermissionScopes = value;
+        this.oauth2PermissionScopes = value;
     }
     /**
      * Sets the ownedObjects property value. Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
@@ -908,7 +929,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOwnedObjects(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._ownedObjects = value;
+        this.ownedObjects = value;
     }
     /**
      * Sets the owners property value. Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.  Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
@@ -917,7 +938,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOwners(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._owners = value;
+        this.owners = value;
     }
     /**
      * Sets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
@@ -926,7 +947,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPasswordCredentials(@javax.annotation.Nullable final java.util.List<PasswordCredential> value) {
-        this._passwordCredentials = value;
+        this.passwordCredentials = value;
     }
     /**
      * Sets the preferredSingleSignOnMode property value. Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, notSupported, and oidc.
@@ -935,7 +956,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPreferredSingleSignOnMode(@javax.annotation.Nullable final String value) {
-        this._preferredSingleSignOnMode = value;
+        this.preferredSingleSignOnMode = value;
     }
     /**
      * Sets the preferredTokenSigningKeyThumbprint property value. Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
@@ -944,7 +965,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPreferredTokenSigningKeyThumbprint(@javax.annotation.Nullable final String value) {
-        this._preferredTokenSigningKeyThumbprint = value;
+        this.preferredTokenSigningKeyThumbprint = value;
     }
     /**
      * Sets the replyUrls property value. The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable.
@@ -953,7 +974,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setReplyUrls(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._replyUrls = value;
+        this.replyUrls = value;
     }
     /**
      * Sets the resourceSpecificApplicationPermissions property value. The resource-specific application permissions exposed by this application. Currently, resource-specific permissions are only supported for Teams apps accessing to specific chats and teams using Microsoft Graph. Read-only.
@@ -962,7 +983,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setResourceSpecificApplicationPermissions(@javax.annotation.Nullable final java.util.List<ResourceSpecificPermission> value) {
-        this._resourceSpecificApplicationPermissions = value;
+        this.resourceSpecificApplicationPermissions = value;
     }
     /**
      * Sets the samlSingleSignOnSettings property value. The collection for settings related to saml single sign-on.
@@ -971,7 +992,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSamlSingleSignOnSettings(@javax.annotation.Nullable final SamlSingleSignOnSettings value) {
-        this._samlSingleSignOnSettings = value;
+        this.samlSingleSignOnSettings = value;
     }
     /**
      * Sets the servicePrincipalNames property value. Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.  Supports $filter (eq, not, ge, le, startsWith).
@@ -980,7 +1001,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setServicePrincipalNames(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._servicePrincipalNames = value;
+        this.servicePrincipalNames = value;
     }
     /**
      * Sets the servicePrincipalType property value. Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.
@@ -989,7 +1010,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setServicePrincipalType(@javax.annotation.Nullable final String value) {
-        this._servicePrincipalType = value;
+        this.servicePrincipalType = value;
     }
     /**
      * Sets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organizations Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organizations Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organizations Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
@@ -998,16 +1019,16 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSignInAudience(@javax.annotation.Nullable final String value) {
-        this._signInAudience = value;
+        this.signInAudience = value;
     }
     /**
-     * Sets the tags property value. Custom strings that can be used to categorize and identify the service principal. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+     * Sets the tags property value. Custom strings that can be used to categorize and identify the service principal. Not nullable. The value is the union of strings set here and on the associated application entity's tags property.Supports $filter (eq, not, ge, le, startsWith).
      * @param value Value to set for the tags property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._tags = value;
+        this.tags = value;
     }
     /**
      * Sets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD issues tokens for this application encrypted using the key specified by this property. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
@@ -1015,8 +1036,8 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setTokenEncryptionKeyId(@javax.annotation.Nullable final String value) {
-        this._tokenEncryptionKeyId = value;
+    public void setTokenEncryptionKeyId(@javax.annotation.Nullable final UUID value) {
+        this.tokenEncryptionKeyId = value;
     }
     /**
      * Sets the tokenIssuancePolicies property value. The tokenIssuancePolicies assigned to this service principal.
@@ -1025,7 +1046,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTokenIssuancePolicies(@javax.annotation.Nullable final java.util.List<TokenIssuancePolicy> value) {
-        this._tokenIssuancePolicies = value;
+        this.tokenIssuancePolicies = value;
     }
     /**
      * Sets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this service principal.
@@ -1034,7 +1055,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTokenLifetimePolicies(@javax.annotation.Nullable final java.util.List<TokenLifetimePolicy> value) {
-        this._tokenLifetimePolicies = value;
+        this.tokenLifetimePolicies = value;
     }
     /**
      * Sets the transitiveMemberOf property value. The transitiveMemberOf property
@@ -1043,7 +1064,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTransitiveMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._transitiveMemberOf = value;
+        this.transitiveMemberOf = value;
     }
     /**
      * Sets the verifiedPublisher property value. Specifies the verified publisher of the application which this service principal represents.
@@ -1052,6 +1073,6 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVerifiedPublisher(@javax.annotation.Nullable final VerifiedPublisher value) {
-        this._verifiedPublisher = value;
+        this.verifiedPublisher = value;
     }
 }

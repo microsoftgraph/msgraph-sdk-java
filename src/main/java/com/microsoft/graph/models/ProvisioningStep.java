@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProvisioningStep implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Summary of what occurred during the step. */
-    private String _description;
+    private String description;
     /** Details of what occurred during the step. */
-    private DetailsInfo _details;
+    private DetailsInfo details;
     /** Name of the step. */
-    private String _name;
+    private String name;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue. */
-    private ProvisioningStepType _provisioningStepType;
+    private ProvisioningStepType provisioningStepType;
     /** Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue. */
-    private ProvisioningResult _status;
+    private ProvisioningResult status;
     /**
      * Instantiates a new provisioningStep and sets the default values.
      * @return a void
@@ -47,7 +46,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the description property value. Summary of what occurred during the step.
@@ -55,7 +54,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the details property value. Details of what occurred during the step.
@@ -63,15 +62,15 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public DetailsInfo getDetails() {
-        return this._details;
+        return this.details;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("details", (n) -> { this.setDetails(n.getObjectValue(DetailsInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
@@ -86,7 +85,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -94,7 +93,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the provisioningStepType property value. Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
@@ -102,7 +101,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ProvisioningStepType getProvisioningStepType() {
-        return this._provisioningStepType;
+        return this.provisioningStepType;
     }
     /**
      * Gets the status property value. Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
@@ -110,7 +109,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ProvisioningResult getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
@@ -135,7 +134,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the description property value. Summary of what occurred during the step.
@@ -144,7 +143,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the details property value. Details of what occurred during the step.
@@ -153,7 +152,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDetails(@javax.annotation.Nullable final DetailsInfo value) {
-        this._details = value;
+        this.details = value;
     }
     /**
      * Sets the name property value. Name of the step.
@@ -162,7 +161,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -171,7 +170,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the provisioningStepType property value. Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
@@ -180,7 +179,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setProvisioningStepType(@javax.annotation.Nullable final ProvisioningStepType value) {
-        this._provisioningStepType = value;
+        this.provisioningStepType = value;
     }
     /**
      * Sets the status property value. Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
@@ -189,6 +188,6 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ProvisioningResult value) {
-        this._status = value;
+        this.status = value;
     }
 }

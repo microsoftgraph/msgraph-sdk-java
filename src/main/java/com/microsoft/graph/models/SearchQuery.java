@@ -4,17 +4,16 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SearchQuery implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The search query containing the search terms. Required. */
-    private String _queryString;
+    private String queryString;
     /**
      * Instantiates a new searchQuery and sets the default values.
      * @return a void
@@ -39,15 +38,15 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("queryString", (n) -> { this.setQueryString(n.getStringValue()); });
         return deserializerMap;
@@ -58,7 +57,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the queryString property value. The search query containing the search terms. Required.
@@ -66,7 +65,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getQueryString() {
-        return this._queryString;
+        return this.queryString;
     }
     /**
      * Serializes information the current object
@@ -87,7 +86,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -96,7 +95,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the queryString property value. The search query containing the search terms. Required.
@@ -105,6 +104,6 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setQueryString(@javax.annotation.Nullable final String value) {
-        this._queryString = value;
+        this.queryString = value;
     }
 }

@@ -3,41 +3,40 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable {
     /** Represents the type of operation on the role eligibility request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew, selfExtend, selfRenew, unknownFutureValue. adminAssign: For administrators to assign eligible roles to principals.adminRemove: For administrators to remove eligible roles from principals. adminUpdate: For administrators to change existing role eligibilities.adminExtend: For administrators to extend expiring role eligibilities.adminRenew: For administrators to renew expired eligibilities.selfActivate: For users to activate their assignments.selfDeactivate: For users to deactivate their active assignments.selfExtend: For users to request to extend their expiring assignments.selfRenew: For users to request to renew their expired assignments. */
-    private UnifiedRoleScheduleRequestActions _action;
+    private UnifiedRoleScheduleRequestActions action;
     /** Read-only property with details of the app-specific scope when the role eligibility is scoped to an app. Nullable. Supports $expand. */
-    private AppScope _appScope;
+    private AppScope appScope;
     /** Identifier of the app-specific scope when the role eligibility is scoped to an app. The scope of a role eligibility determines the set of resources for which the principal is eligible to access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, ne, and on null values). */
-    private String _appScopeId;
+    private String appScopeId;
     /** The directory object that is the scope of the role eligibility. Read-only. Supports $expand. */
-    private DirectoryObject _directoryScope;
+    private DirectoryObject directoryScope;
     /** Identifier of the directory object representing the scope of the role eligibility. The scope of a role eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, ne, and on null values). */
-    private String _directoryScopeId;
+    private String directoryScopeId;
     /** Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request. */
-    private Boolean _isValidationOnly;
+    private Boolean isValidationOnly;
     /** A message provided by users and administrators when create they create the unifiedRoleEligibilityScheduleRequest object. */
-    private String _justification;
+    private String justification;
     /** The principal that's getting a role eligibility through the request. Supports $expand. */
-    private DirectoryObject _principal;
+    private DirectoryObject principal;
     /** Identifier of the principal that has been granted the role eligibility. Can be a user or a role-assignable group. You can grant only active assignments service principals.Supports $filter (eq, ne). */
-    private String _principalId;
+    private String principalId;
     /** Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand. */
-    private UnifiedRoleDefinition _roleDefinition;
+    private UnifiedRoleDefinition roleDefinition;
     /** Identifier of the unifiedRoleDefinition object that is being assigned to the principal. Supports $filter (eq, ne). */
-    private String _roleDefinitionId;
+    private String roleDefinitionId;
     /** The period of the role eligibility. Recurring schedules are currently unsupported. */
-    private RequestSchedule _scheduleInfo;
+    private RequestSchedule scheduleInfo;
     /** The schedule for a role eligibility that is referenced through the targetScheduleId property. Supports $expand. */
-    private UnifiedRoleEligibilitySchedule _targetSchedule;
+    private UnifiedRoleEligibilitySchedule targetSchedule;
     /** Identifier of the schedule object that's linked to the eligibility request. Supports $filter (eq, ne). */
-    private String _targetScheduleId;
+    private String targetScheduleId;
     /** Ticket details linked to the role eligibility request including details of the ticket number and ticket system. Optional. */
-    private TicketInfo _ticketInfo;
+    private TicketInfo ticketInfo;
     /**
      * Instantiates a new UnifiedRoleEligibilityScheduleRequest and sets the default values.
      * @return a void
@@ -62,7 +61,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nullable
     public UnifiedRoleScheduleRequestActions getAction() {
-        return this._action;
+        return this.action;
     }
     /**
      * Gets the appScope property value. Read-only property with details of the app-specific scope when the role eligibility is scoped to an app. Nullable. Supports $expand.
@@ -70,7 +69,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nullable
     public AppScope getAppScope() {
-        return this._appScope;
+        return this.appScope;
     }
     /**
      * Gets the appScopeId property value. Identifier of the app-specific scope when the role eligibility is scoped to an app. The scope of a role eligibility determines the set of resources for which the principal is eligible to access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, ne, and on null values).
@@ -78,7 +77,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nullable
     public String getAppScopeId() {
-        return this._appScopeId;
+        return this.appScopeId;
     }
     /**
      * Gets the directoryScope property value. The directory object that is the scope of the role eligibility. Read-only. Supports $expand.
@@ -86,7 +85,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nullable
     public DirectoryObject getDirectoryScope() {
-        return this._directoryScope;
+        return this.directoryScope;
     }
     /**
      * Gets the directoryScopeId property value. Identifier of the directory object representing the scope of the role eligibility. The scope of a role eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, ne, and on null values).
@@ -94,15 +93,15 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nullable
     public String getDirectoryScopeId() {
-        return this._directoryScopeId;
+        return this.directoryScopeId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(UnifiedRoleScheduleRequestActions.class)); });
         deserializerMap.put("appScope", (n) -> { this.setAppScope(n.getObjectValue(AppScope::createFromDiscriminatorValue)); });
         deserializerMap.put("appScopeId", (n) -> { this.setAppScopeId(n.getStringValue()); });
@@ -126,7 +125,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nullable
     public Boolean getIsValidationOnly() {
-        return this._isValidationOnly;
+        return this.isValidationOnly;
     }
     /**
      * Gets the justification property value. A message provided by users and administrators when create they create the unifiedRoleEligibilityScheduleRequest object.
@@ -134,7 +133,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nullable
     public String getJustification() {
-        return this._justification;
+        return this.justification;
     }
     /**
      * Gets the principal property value. The principal that's getting a role eligibility through the request. Supports $expand.
@@ -142,7 +141,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nullable
     public DirectoryObject getPrincipal() {
-        return this._principal;
+        return this.principal;
     }
     /**
      * Gets the principalId property value. Identifier of the principal that has been granted the role eligibility. Can be a user or a role-assignable group. You can grant only active assignments service principals.Supports $filter (eq, ne).
@@ -150,7 +149,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nullable
     public String getPrincipalId() {
-        return this._principalId;
+        return this.principalId;
     }
     /**
      * Gets the roleDefinition property value. Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
@@ -158,7 +157,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nullable
     public UnifiedRoleDefinition getRoleDefinition() {
-        return this._roleDefinition;
+        return this.roleDefinition;
     }
     /**
      * Gets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition object that is being assigned to the principal. Supports $filter (eq, ne).
@@ -166,7 +165,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nullable
     public String getRoleDefinitionId() {
-        return this._roleDefinitionId;
+        return this.roleDefinitionId;
     }
     /**
      * Gets the scheduleInfo property value. The period of the role eligibility. Recurring schedules are currently unsupported.
@@ -174,7 +173,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nullable
     public RequestSchedule getScheduleInfo() {
-        return this._scheduleInfo;
+        return this.scheduleInfo;
     }
     /**
      * Gets the targetSchedule property value. The schedule for a role eligibility that is referenced through the targetScheduleId property. Supports $expand.
@@ -182,7 +181,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nullable
     public UnifiedRoleEligibilitySchedule getTargetSchedule() {
-        return this._targetSchedule;
+        return this.targetSchedule;
     }
     /**
      * Gets the targetScheduleId property value. Identifier of the schedule object that's linked to the eligibility request. Supports $filter (eq, ne).
@@ -190,7 +189,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nullable
     public String getTargetScheduleId() {
-        return this._targetScheduleId;
+        return this.targetScheduleId;
     }
     /**
      * Gets the ticketInfo property value. Ticket details linked to the role eligibility request including details of the ticket number and ticket system. Optional.
@@ -198,7 +197,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nullable
     public TicketInfo getTicketInfo() {
-        return this._ticketInfo;
+        return this.ticketInfo;
     }
     /**
      * Serializes information the current object
@@ -232,7 +231,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nonnull
     public void setAction(@javax.annotation.Nullable final UnifiedRoleScheduleRequestActions value) {
-        this._action = value;
+        this.action = value;
     }
     /**
      * Sets the appScope property value. Read-only property with details of the app-specific scope when the role eligibility is scoped to an app. Nullable. Supports $expand.
@@ -241,7 +240,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nonnull
     public void setAppScope(@javax.annotation.Nullable final AppScope value) {
-        this._appScope = value;
+        this.appScope = value;
     }
     /**
      * Sets the appScopeId property value. Identifier of the app-specific scope when the role eligibility is scoped to an app. The scope of a role eligibility determines the set of resources for which the principal is eligible to access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, ne, and on null values).
@@ -250,7 +249,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nonnull
     public void setAppScopeId(@javax.annotation.Nullable final String value) {
-        this._appScopeId = value;
+        this.appScopeId = value;
     }
     /**
      * Sets the directoryScope property value. The directory object that is the scope of the role eligibility. Read-only. Supports $expand.
@@ -259,7 +258,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nonnull
     public void setDirectoryScope(@javax.annotation.Nullable final DirectoryObject value) {
-        this._directoryScope = value;
+        this.directoryScope = value;
     }
     /**
      * Sets the directoryScopeId property value. Identifier of the directory object representing the scope of the role eligibility. The scope of a role eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, ne, and on null values).
@@ -268,7 +267,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nonnull
     public void setDirectoryScopeId(@javax.annotation.Nullable final String value) {
-        this._directoryScopeId = value;
+        this.directoryScopeId = value;
     }
     /**
      * Sets the isValidationOnly property value. Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
@@ -277,7 +276,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nonnull
     public void setIsValidationOnly(@javax.annotation.Nullable final Boolean value) {
-        this._isValidationOnly = value;
+        this.isValidationOnly = value;
     }
     /**
      * Sets the justification property value. A message provided by users and administrators when create they create the unifiedRoleEligibilityScheduleRequest object.
@@ -286,7 +285,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nonnull
     public void setJustification(@javax.annotation.Nullable final String value) {
-        this._justification = value;
+        this.justification = value;
     }
     /**
      * Sets the principal property value. The principal that's getting a role eligibility through the request. Supports $expand.
@@ -295,7 +294,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nonnull
     public void setPrincipal(@javax.annotation.Nullable final DirectoryObject value) {
-        this._principal = value;
+        this.principal = value;
     }
     /**
      * Sets the principalId property value. Identifier of the principal that has been granted the role eligibility. Can be a user or a role-assignable group. You can grant only active assignments service principals.Supports $filter (eq, ne).
@@ -304,7 +303,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nonnull
     public void setPrincipalId(@javax.annotation.Nullable final String value) {
-        this._principalId = value;
+        this.principalId = value;
     }
     /**
      * Sets the roleDefinition property value. Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
@@ -313,7 +312,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nonnull
     public void setRoleDefinition(@javax.annotation.Nullable final UnifiedRoleDefinition value) {
-        this._roleDefinition = value;
+        this.roleDefinition = value;
     }
     /**
      * Sets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition object that is being assigned to the principal. Supports $filter (eq, ne).
@@ -322,7 +321,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nonnull
     public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
-        this._roleDefinitionId = value;
+        this.roleDefinitionId = value;
     }
     /**
      * Sets the scheduleInfo property value. The period of the role eligibility. Recurring schedules are currently unsupported.
@@ -331,7 +330,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nonnull
     public void setScheduleInfo(@javax.annotation.Nullable final RequestSchedule value) {
-        this._scheduleInfo = value;
+        this.scheduleInfo = value;
     }
     /**
      * Sets the targetSchedule property value. The schedule for a role eligibility that is referenced through the targetScheduleId property. Supports $expand.
@@ -340,7 +339,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nonnull
     public void setTargetSchedule(@javax.annotation.Nullable final UnifiedRoleEligibilitySchedule value) {
-        this._targetSchedule = value;
+        this.targetSchedule = value;
     }
     /**
      * Sets the targetScheduleId property value. Identifier of the schedule object that's linked to the eligibility request. Supports $filter (eq, ne).
@@ -349,7 +348,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nonnull
     public void setTargetScheduleId(@javax.annotation.Nullable final String value) {
-        this._targetScheduleId = value;
+        this.targetScheduleId = value;
     }
     /**
      * Sets the ticketInfo property value. Ticket details linked to the role eligibility request including details of the ticket number and ticket system. Optional.
@@ -358,6 +357,6 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     @javax.annotation.Nonnull
     public void setTicketInfo(@javax.annotation.Nullable final TicketInfo value) {
-        this._ticketInfo = value;
+        this.ticketInfo = value;
     }
 }

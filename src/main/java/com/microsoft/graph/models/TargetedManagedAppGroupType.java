@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the targetApps method. */
+/** Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps */
 public enum TargetedManagedAppGroupType implements ValuedEnum {
     /** Target the collection of apps manually selected by the admin. */
     SelectedPublicApps("selectedPublicApps"),

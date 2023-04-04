@@ -4,18 +4,16 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getByIds method. */
 public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The ids property */
-    private java.util.List<String> _ids;
+    private java.util.List<String> ids;
     /** The types property */
-    private java.util.List<String> _types;
+    private java.util.List<String> types;
     /**
      * Instantiates a new getByIdsPostRequestBody and sets the default values.
      * @return a void
@@ -40,15 +38,15 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("ids", (n) -> { this.setIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("types", (n) -> { this.setTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
@@ -59,7 +57,7 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getIds() {
-        return this._ids;
+        return this.ids;
     }
     /**
      * Gets the types property value. The types property
@@ -67,7 +65,7 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getTypes() {
-        return this._types;
+        return this.types;
     }
     /**
      * Serializes information the current object
@@ -88,7 +86,7 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the ids property value. The ids property
@@ -97,7 +95,7 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._ids = value;
+        this.ids = value;
     }
     /**
      * Sets the types property value. The types property
@@ -106,6 +104,6 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTypes(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._types = value;
+        this.types = value;
     }
 }

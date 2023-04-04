@@ -3,20 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class TeamsTab extends Entity implements Parsable {
     /** Container for custom settings applied to a tab. The tab is considered configured only once this property is set. */
-    private TeamsTabConfiguration _configuration;
+    private TeamsTabConfiguration configuration;
     /** Name of the tab. */
-    private String _displayName;
+    private String displayName;
     /** The application that is linked to the tab. This cannot be changed after tab creation. */
-    private TeamsApp _teamsApp;
+    private TeamsApp teamsApp;
     /** Deep link URL of the tab instance. Read only. */
-    private String _webUrl;
+    private String webUrl;
     /**
      * Instantiates a new teamsTab and sets the default values.
      * @return a void
@@ -41,7 +39,7 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamsTabConfiguration getConfiguration() {
-        return this._configuration;
+        return this.configuration;
     }
     /**
      * Gets the displayName property value. Name of the tab.
@@ -49,15 +47,15 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("configuration", (n) -> { this.setConfiguration(n.getObjectValue(TeamsTabConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("teamsApp", (n) -> { this.setTeamsApp(n.getObjectValue(TeamsApp::createFromDiscriminatorValue)); });
@@ -70,7 +68,7 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamsApp getTeamsApp() {
-        return this._teamsApp;
+        return this.teamsApp;
     }
     /**
      * Gets the webUrl property value. Deep link URL of the tab instance. Read only.
@@ -78,7 +76,7 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getWebUrl() {
-        return this._webUrl;
+        return this.webUrl;
     }
     /**
      * Serializes information the current object
@@ -101,7 +99,7 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setConfiguration(@javax.annotation.Nullable final TeamsTabConfiguration value) {
-        this._configuration = value;
+        this.configuration = value;
     }
     /**
      * Sets the displayName property value. Name of the tab.
@@ -110,7 +108,7 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the teamsApp property value. The application that is linked to the tab. This cannot be changed after tab creation.
@@ -119,7 +117,7 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTeamsApp(@javax.annotation.Nullable final TeamsApp value) {
-        this._teamsApp = value;
+        this.teamsApp = value;
     }
     /**
      * Sets the webUrl property value. Deep link URL of the tab instance. Read only.
@@ -128,6 +126,6 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
-        this._webUrl = value;
+        this.webUrl = value;
     }
 }

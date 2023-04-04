@@ -4,23 +4,22 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SecurityVendorInformation implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Specific provider (product/service - not vendor company); for example, WindowsDefenderATP. */
-    private String _provider;
+    private String provider;
     /** Version of the provider or subprovider, if it exists, that generated the alert. Required */
-    private String _providerVersion;
+    private String providerVersion;
     /** Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen. */
-    private String _subProvider;
+    private String subProvider;
     /** Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required */
-    private String _vendor;
+    private String vendor;
     /**
      * Instantiates a new securityVendorInformation and sets the default values.
      * @return a void
@@ -45,15 +44,15 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("provider", (n) -> { this.setProvider(n.getStringValue()); });
         deserializerMap.put("providerVersion", (n) -> { this.setProviderVersion(n.getStringValue()); });
@@ -67,7 +66,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the provider property value. Specific provider (product/service - not vendor company); for example, WindowsDefenderATP.
@@ -75,7 +74,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getProvider() {
-        return this._provider;
+        return this.provider;
     }
     /**
      * Gets the providerVersion property value. Version of the provider or subprovider, if it exists, that generated the alert. Required
@@ -83,7 +82,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getProviderVersion() {
-        return this._providerVersion;
+        return this.providerVersion;
     }
     /**
      * Gets the subProvider property value. Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen.
@@ -91,7 +90,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getSubProvider() {
-        return this._subProvider;
+        return this.subProvider;
     }
     /**
      * Gets the vendor property value. Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required
@@ -99,7 +98,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getVendor() {
-        return this._vendor;
+        return this.vendor;
     }
     /**
      * Serializes information the current object
@@ -123,7 +122,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -132,7 +131,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the provider property value. Specific provider (product/service - not vendor company); for example, WindowsDefenderATP.
@@ -141,7 +140,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setProvider(@javax.annotation.Nullable final String value) {
-        this._provider = value;
+        this.provider = value;
     }
     /**
      * Sets the providerVersion property value. Version of the provider or subprovider, if it exists, that generated the alert. Required
@@ -150,7 +149,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setProviderVersion(@javax.annotation.Nullable final String value) {
-        this._providerVersion = value;
+        this.providerVersion = value;
     }
     /**
      * Sets the subProvider property value. Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen.
@@ -159,7 +158,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setSubProvider(@javax.annotation.Nullable final String value) {
-        this._subProvider = value;
+        this.subProvider = value;
     }
     /**
      * Sets the vendor property value. Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required
@@ -168,6 +167,6 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setVendor(@javax.annotation.Nullable final String value) {
-        this._vendor = value;
+        this.vendor = value;
     }
 }

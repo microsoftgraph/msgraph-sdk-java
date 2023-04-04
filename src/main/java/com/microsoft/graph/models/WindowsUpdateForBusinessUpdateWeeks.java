@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Scheduled the update installation on the weeks of the month */
 public enum WindowsUpdateForBusinessUpdateWeeks implements ValuedEnum {
     /** Allow the user to set. */
     UserDefined("userDefined"),

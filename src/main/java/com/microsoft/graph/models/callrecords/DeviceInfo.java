@@ -4,57 +4,56 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Name of the capture device driver used by the media endpoint. */
-    private String _captureDeviceDriver;
+    private String captureDeviceDriver;
     /** Name of the capture device used by the media endpoint. */
-    private String _captureDeviceName;
+    private String captureDeviceName;
     /** Fraction of the call that the media endpoint detected the capture device was not working properly. */
-    private Float _captureNotFunctioningEventRatio;
+    private Float captureNotFunctioningEventRatio;
     /** Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received. */
-    private Float _cpuInsufficentEventRatio;
+    private Float cpuInsufficentEventRatio;
     /** Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent. */
-    private Float _deviceClippingEventRatio;
+    private Float deviceClippingEventRatio;
     /** Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received. */
-    private Float _deviceGlitchEventRatio;
+    private Float deviceGlitchEventRatio;
     /** Number of times during the call that the media endpoint detected howling or screeching audio. */
-    private Integer _howlingEventCount;
+    private Integer howlingEventCount;
     /** The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call. */
-    private Float _initialSignalLevelRootMeanSquare;
+    private Float initialSignalLevelRootMeanSquare;
     /** Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent. */
-    private Float _lowSpeechLevelEventRatio;
+    private Float lowSpeechLevelEventRatio;
     /** Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent. */
-    private Float _lowSpeechToNoiseEventRatio;
+    private Float lowSpeechToNoiseEventRatio;
     /** Glitches per 5 minute interval for the media endpoint's microphone. */
-    private Float _micGlitchRate;
+    private Float micGlitchRate;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint. */
-    private Integer _receivedNoiseLevel;
+    private Integer receivedNoiseLevel;
     /** Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint. */
-    private Integer _receivedSignalLevel;
+    private Integer receivedSignalLevel;
     /** Name of the render device driver used by the media endpoint. */
-    private String _renderDeviceDriver;
+    private String renderDeviceDriver;
     /** Name of the render device used by the media endpoint. */
-    private String _renderDeviceName;
+    private String renderDeviceName;
     /** Fraction of the call that media endpoint detected device render is muted. */
-    private Float _renderMuteEventRatio;
+    private Float renderMuteEventRatio;
     /** Fraction of the call that the media endpoint detected the render device was not working properly. */
-    private Float _renderNotFunctioningEventRatio;
+    private Float renderNotFunctioningEventRatio;
     /** Fraction of the call that media endpoint detected device render volume is set to 0. */
-    private Float _renderZeroVolumeEventRatio;
+    private Float renderZeroVolumeEventRatio;
     /** Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint. */
-    private Integer _sentNoiseLevel;
+    private Integer sentNoiseLevel;
     /** Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint. */
-    private Integer _sentSignalLevel;
+    private Integer sentSignalLevel;
     /** Glitches per 5 minute internal for the media endpoint's loudspeaker. */
-    private Float _speakerGlitchRate;
+    private Float speakerGlitchRate;
     /**
      * Instantiates a new deviceInfo and sets the default values.
      * @return a void
@@ -79,7 +78,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the captureDeviceDriver property value. Name of the capture device driver used by the media endpoint.
@@ -87,7 +86,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCaptureDeviceDriver() {
-        return this._captureDeviceDriver;
+        return this.captureDeviceDriver;
     }
     /**
      * Gets the captureDeviceName property value. Name of the capture device used by the media endpoint.
@@ -95,7 +94,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCaptureDeviceName() {
-        return this._captureDeviceName;
+        return this.captureDeviceName;
     }
     /**
      * Gets the captureNotFunctioningEventRatio property value. Fraction of the call that the media endpoint detected the capture device was not working properly.
@@ -103,7 +102,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Float getCaptureNotFunctioningEventRatio() {
-        return this._captureNotFunctioningEventRatio;
+        return this.captureNotFunctioningEventRatio;
     }
     /**
      * Gets the cpuInsufficentEventRatio property value. Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received.
@@ -111,7 +110,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Float getCpuInsufficentEventRatio() {
-        return this._cpuInsufficentEventRatio;
+        return this.cpuInsufficentEventRatio;
     }
     /**
      * Gets the deviceClippingEventRatio property value. Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent.
@@ -119,7 +118,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Float getDeviceClippingEventRatio() {
-        return this._deviceClippingEventRatio;
+        return this.deviceClippingEventRatio;
     }
     /**
      * Gets the deviceGlitchEventRatio property value. Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received.
@@ -127,15 +126,15 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Float getDeviceGlitchEventRatio() {
-        return this._deviceGlitchEventRatio;
+        return this.deviceGlitchEventRatio;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(22);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(22);
         deserializerMap.put("captureDeviceDriver", (n) -> { this.setCaptureDeviceDriver(n.getStringValue()); });
         deserializerMap.put("captureDeviceName", (n) -> { this.setCaptureDeviceName(n.getStringValue()); });
         deserializerMap.put("captureNotFunctioningEventRatio", (n) -> { this.setCaptureNotFunctioningEventRatio(n.getFloatValue()); });
@@ -166,7 +165,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getHowlingEventCount() {
-        return this._howlingEventCount;
+        return this.howlingEventCount;
     }
     /**
      * Gets the initialSignalLevelRootMeanSquare property value. The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.
@@ -174,7 +173,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Float getInitialSignalLevelRootMeanSquare() {
-        return this._initialSignalLevelRootMeanSquare;
+        return this.initialSignalLevelRootMeanSquare;
     }
     /**
      * Gets the lowSpeechLevelEventRatio property value. Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent.
@@ -182,7 +181,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Float getLowSpeechLevelEventRatio() {
-        return this._lowSpeechLevelEventRatio;
+        return this.lowSpeechLevelEventRatio;
     }
     /**
      * Gets the lowSpeechToNoiseEventRatio property value. Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.
@@ -190,7 +189,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Float getLowSpeechToNoiseEventRatio() {
-        return this._lowSpeechToNoiseEventRatio;
+        return this.lowSpeechToNoiseEventRatio;
     }
     /**
      * Gets the micGlitchRate property value. Glitches per 5 minute interval for the media endpoint's microphone.
@@ -198,7 +197,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Float getMicGlitchRate() {
-        return this._micGlitchRate;
+        return this.micGlitchRate;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -206,7 +205,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the receivedNoiseLevel property value. Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
@@ -214,7 +213,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getReceivedNoiseLevel() {
-        return this._receivedNoiseLevel;
+        return this.receivedNoiseLevel;
     }
     /**
      * Gets the receivedSignalLevel property value. Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
@@ -222,7 +221,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getReceivedSignalLevel() {
-        return this._receivedSignalLevel;
+        return this.receivedSignalLevel;
     }
     /**
      * Gets the renderDeviceDriver property value. Name of the render device driver used by the media endpoint.
@@ -230,7 +229,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getRenderDeviceDriver() {
-        return this._renderDeviceDriver;
+        return this.renderDeviceDriver;
     }
     /**
      * Gets the renderDeviceName property value. Name of the render device used by the media endpoint.
@@ -238,7 +237,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getRenderDeviceName() {
-        return this._renderDeviceName;
+        return this.renderDeviceName;
     }
     /**
      * Gets the renderMuteEventRatio property value. Fraction of the call that media endpoint detected device render is muted.
@@ -246,7 +245,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Float getRenderMuteEventRatio() {
-        return this._renderMuteEventRatio;
+        return this.renderMuteEventRatio;
     }
     /**
      * Gets the renderNotFunctioningEventRatio property value. Fraction of the call that the media endpoint detected the render device was not working properly.
@@ -254,7 +253,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Float getRenderNotFunctioningEventRatio() {
-        return this._renderNotFunctioningEventRatio;
+        return this.renderNotFunctioningEventRatio;
     }
     /**
      * Gets the renderZeroVolumeEventRatio property value. Fraction of the call that media endpoint detected device render volume is set to 0.
@@ -262,7 +261,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Float getRenderZeroVolumeEventRatio() {
-        return this._renderZeroVolumeEventRatio;
+        return this.renderZeroVolumeEventRatio;
     }
     /**
      * Gets the sentNoiseLevel property value. Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
@@ -270,7 +269,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getSentNoiseLevel() {
-        return this._sentNoiseLevel;
+        return this.sentNoiseLevel;
     }
     /**
      * Gets the sentSignalLevel property value. Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
@@ -278,7 +277,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getSentSignalLevel() {
-        return this._sentSignalLevel;
+        return this.sentSignalLevel;
     }
     /**
      * Gets the speakerGlitchRate property value. Glitches per 5 minute internal for the media endpoint's loudspeaker.
@@ -286,7 +285,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Float getSpeakerGlitchRate() {
-        return this._speakerGlitchRate;
+        return this.speakerGlitchRate;
     }
     /**
      * Serializes information the current object
@@ -327,7 +326,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the captureDeviceDriver property value. Name of the capture device driver used by the media endpoint.
@@ -336,7 +335,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCaptureDeviceDriver(@javax.annotation.Nullable final String value) {
-        this._captureDeviceDriver = value;
+        this.captureDeviceDriver = value;
     }
     /**
      * Sets the captureDeviceName property value. Name of the capture device used by the media endpoint.
@@ -345,7 +344,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCaptureDeviceName(@javax.annotation.Nullable final String value) {
-        this._captureDeviceName = value;
+        this.captureDeviceName = value;
     }
     /**
      * Sets the captureNotFunctioningEventRatio property value. Fraction of the call that the media endpoint detected the capture device was not working properly.
@@ -354,7 +353,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCaptureNotFunctioningEventRatio(@javax.annotation.Nullable final Float value) {
-        this._captureNotFunctioningEventRatio = value;
+        this.captureNotFunctioningEventRatio = value;
     }
     /**
      * Sets the cpuInsufficentEventRatio property value. Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received.
@@ -363,7 +362,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCpuInsufficentEventRatio(@javax.annotation.Nullable final Float value) {
-        this._cpuInsufficentEventRatio = value;
+        this.cpuInsufficentEventRatio = value;
     }
     /**
      * Sets the deviceClippingEventRatio property value. Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent.
@@ -372,7 +371,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceClippingEventRatio(@javax.annotation.Nullable final Float value) {
-        this._deviceClippingEventRatio = value;
+        this.deviceClippingEventRatio = value;
     }
     /**
      * Sets the deviceGlitchEventRatio property value. Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received.
@@ -381,7 +380,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceGlitchEventRatio(@javax.annotation.Nullable final Float value) {
-        this._deviceGlitchEventRatio = value;
+        this.deviceGlitchEventRatio = value;
     }
     /**
      * Sets the howlingEventCount property value. Number of times during the call that the media endpoint detected howling or screeching audio.
@@ -390,7 +389,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setHowlingEventCount(@javax.annotation.Nullable final Integer value) {
-        this._howlingEventCount = value;
+        this.howlingEventCount = value;
     }
     /**
      * Sets the initialSignalLevelRootMeanSquare property value. The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.
@@ -399,7 +398,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setInitialSignalLevelRootMeanSquare(@javax.annotation.Nullable final Float value) {
-        this._initialSignalLevelRootMeanSquare = value;
+        this.initialSignalLevelRootMeanSquare = value;
     }
     /**
      * Sets the lowSpeechLevelEventRatio property value. Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent.
@@ -408,7 +407,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLowSpeechLevelEventRatio(@javax.annotation.Nullable final Float value) {
-        this._lowSpeechLevelEventRatio = value;
+        this.lowSpeechLevelEventRatio = value;
     }
     /**
      * Sets the lowSpeechToNoiseEventRatio property value. Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.
@@ -417,7 +416,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLowSpeechToNoiseEventRatio(@javax.annotation.Nullable final Float value) {
-        this._lowSpeechToNoiseEventRatio = value;
+        this.lowSpeechToNoiseEventRatio = value;
     }
     /**
      * Sets the micGlitchRate property value. Glitches per 5 minute interval for the media endpoint's microphone.
@@ -426,7 +425,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMicGlitchRate(@javax.annotation.Nullable final Float value) {
-        this._micGlitchRate = value;
+        this.micGlitchRate = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -435,7 +434,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the receivedNoiseLevel property value. Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
@@ -444,7 +443,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setReceivedNoiseLevel(@javax.annotation.Nullable final Integer value) {
-        this._receivedNoiseLevel = value;
+        this.receivedNoiseLevel = value;
     }
     /**
      * Sets the receivedSignalLevel property value. Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
@@ -453,7 +452,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setReceivedSignalLevel(@javax.annotation.Nullable final Integer value) {
-        this._receivedSignalLevel = value;
+        this.receivedSignalLevel = value;
     }
     /**
      * Sets the renderDeviceDriver property value. Name of the render device driver used by the media endpoint.
@@ -462,7 +461,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRenderDeviceDriver(@javax.annotation.Nullable final String value) {
-        this._renderDeviceDriver = value;
+        this.renderDeviceDriver = value;
     }
     /**
      * Sets the renderDeviceName property value. Name of the render device used by the media endpoint.
@@ -471,7 +470,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRenderDeviceName(@javax.annotation.Nullable final String value) {
-        this._renderDeviceName = value;
+        this.renderDeviceName = value;
     }
     /**
      * Sets the renderMuteEventRatio property value. Fraction of the call that media endpoint detected device render is muted.
@@ -480,7 +479,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRenderMuteEventRatio(@javax.annotation.Nullable final Float value) {
-        this._renderMuteEventRatio = value;
+        this.renderMuteEventRatio = value;
     }
     /**
      * Sets the renderNotFunctioningEventRatio property value. Fraction of the call that the media endpoint detected the render device was not working properly.
@@ -489,7 +488,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRenderNotFunctioningEventRatio(@javax.annotation.Nullable final Float value) {
-        this._renderNotFunctioningEventRatio = value;
+        this.renderNotFunctioningEventRatio = value;
     }
     /**
      * Sets the renderZeroVolumeEventRatio property value. Fraction of the call that media endpoint detected device render volume is set to 0.
@@ -498,7 +497,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRenderZeroVolumeEventRatio(@javax.annotation.Nullable final Float value) {
-        this._renderZeroVolumeEventRatio = value;
+        this.renderZeroVolumeEventRatio = value;
     }
     /**
      * Sets the sentNoiseLevel property value. Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
@@ -507,7 +506,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSentNoiseLevel(@javax.annotation.Nullable final Integer value) {
-        this._sentNoiseLevel = value;
+        this.sentNoiseLevel = value;
     }
     /**
      * Sets the sentSignalLevel property value. Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
@@ -516,7 +515,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSentSignalLevel(@javax.annotation.Nullable final Integer value) {
-        this._sentSignalLevel = value;
+        this.sentSignalLevel = value;
     }
     /**
      * Sets the speakerGlitchRate property value. Glitches per 5 minute internal for the media endpoint's loudspeaker.
@@ -525,6 +524,6 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSpeakerGlitchRate(@javax.annotation.Nullable final Float value) {
-        this._speakerGlitchRate = value;
+        this.speakerGlitchRate = value;
     }
 }
