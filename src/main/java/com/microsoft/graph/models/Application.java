@@ -319,7 +319,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Tags.
-     * Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+     * Custom strings that can be used to categorize and identify the application. Not nullable. Strings added here will also appear in the tags property of any associated service principals.Supports $filter (eq, not, ge, le, startsWith).
      */
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose

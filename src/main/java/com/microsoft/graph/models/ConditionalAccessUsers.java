@@ -77,7 +77,7 @@ public class ConditionalAccessUsers implements IJsonBackedObject {
 
     /**
      * The Include Groups.
-     * Group IDs in scope of policy unless explicitly excluded, or All.
+     * Group IDs in scope of policy unless explicitly excluded.
      */
     @SerializedName(value = "includeGroups", alternate = {"IncludeGroups"})
     @Expose
@@ -95,7 +95,7 @@ public class ConditionalAccessUsers implements IJsonBackedObject {
 
     /**
      * The Include Roles.
-     * Role IDs in scope of policy unless explicitly excluded, or All.
+     * Role IDs in scope of policy unless explicitly excluded.
      */
     @SerializedName(value = "includeRoles", alternate = {"IncludeRoles"})
     @Expose
@@ -104,7 +104,7 @@ public class ConditionalAccessUsers implements IJsonBackedObject {
 
     /**
      * The Include Users.
-     * User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
+     * User IDs in scope of policy unless explicitly excluded, None, All, or GuestsOrExternalUsers.
      */
     @SerializedName(value = "includeUsers", alternate = {"IncludeUsers"})
     @Expose

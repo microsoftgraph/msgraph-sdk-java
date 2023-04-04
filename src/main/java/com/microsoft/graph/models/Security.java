@@ -11,6 +11,8 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.security.models.CasesRoot;
 import com.microsoft.graph.models.AttackSimulationRoot;
+import com.microsoft.graph.security.models.TriggersRoot;
+import com.microsoft.graph.security.models.TriggerTypesRoot;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.security.requests.IncidentCollectionPage;
 import com.microsoft.graph.requests.SecureScoreControlProfileCollectionPage;
@@ -66,6 +68,24 @@ public class Security extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public AttackSimulationRoot attackSimulation;
+
+    /**
+     * The Triggers.
+     * 
+     */
+    @SerializedName(value = "triggers", alternate = {"Triggers"})
+    @Expose
+	@Nullable
+    public TriggersRoot triggers;
+
+    /**
+     * The Trigger Types.
+     * 
+     */
+    @SerializedName(value = "triggerTypes", alternate = {"TriggerTypes"})
+    @Expose
+	@Nullable
+    public TriggerTypesRoot triggerTypes;
 
     /**
      * The Alerts.

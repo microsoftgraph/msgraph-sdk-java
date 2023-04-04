@@ -57,6 +57,26 @@ public class RbacApplicationRequestBuilder extends BaseRequestBuilder<RbacApplic
 
 
     /**
+     *  Gets a request builder for the UnifiedRbacResourceNamespace collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UnifiedRbacResourceNamespaceCollectionRequestBuilder resourceNamespaces() {
+        return new com.microsoft.graph.requests.UnifiedRbacResourceNamespaceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceNamespaces"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UnifiedRbacResourceNamespace item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UnifiedRbacResourceNamespaceRequestBuilder resourceNamespaces(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UnifiedRbacResourceNamespaceRequestBuilder(getRequestUrlWithAdditionalSegment("resourceNamespaces") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the UnifiedRoleAssignment collection
      *
      * @return the collection request builder
