@@ -74,7 +74,7 @@ jobs:
           name: drop
           path: artifacts/current/
       - name: Download Last Successful Build
-        uses: dawidd6/action-download-artifact@v2.26.0
+        uses: dawidd6/action-download-artifact@v2.26.1
         with: 
           workflow: preview-and-release.yml
           workflow_conclusion: success
