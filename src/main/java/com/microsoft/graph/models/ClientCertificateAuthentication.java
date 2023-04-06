@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase implements Parsable {
     /** The list of certificates uploaded for this API connector. */
-    private java.util.List<Pkcs12CertificateInformation> _certificateList;
+    private java.util.List<Pkcs12CertificateInformation> certificateList;
     /**
      * Instantiates a new ClientCertificateAuthentication and sets the default values.
      * @return a void
@@ -35,15 +34,15 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
      */
     @javax.annotation.Nullable
     public java.util.List<Pkcs12CertificateInformation> getCertificateList() {
-        return this._certificateList;
+        return this.certificateList;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("certificateList", (n) -> { this.setCertificateList(n.getCollectionOfObjectValues(Pkcs12CertificateInformation::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -65,6 +64,6 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
      */
     @javax.annotation.Nonnull
     public void setCertificateList(@javax.annotation.Nullable final java.util.List<Pkcs12CertificateInformation> value) {
-        this._certificateList = value;
+        this.certificateList = value;
     }
 }

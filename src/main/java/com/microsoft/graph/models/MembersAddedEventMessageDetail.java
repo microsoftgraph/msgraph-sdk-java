@@ -4,17 +4,16 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsable {
     /** Initiator of the event. */
-    private IdentitySet _initiator;
+    private IdentitySet initiator;
     /** List of members added. */
-    private java.util.List<TeamworkUserIdentity> _members;
+    private java.util.List<TeamworkUserIdentity> members;
     /** The timestamp that denotes how far back a conversation's history is shared with the conversation members. */
-    private OffsetDateTime _visibleHistoryStartDateTime;
+    private OffsetDateTime visibleHistoryStartDateTime;
     /**
      * Instantiates a new MembersAddedEventMessageDetail and sets the default values.
      * @return a void
@@ -36,11 +35,11 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(TeamworkUserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("visibleHistoryStartDateTime", (n) -> { this.setVisibleHistoryStartDateTime(n.getOffsetDateTimeValue()); });
@@ -52,7 +51,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
      */
     @javax.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this._initiator;
+        return this.initiator;
     }
     /**
      * Gets the members property value. List of members added.
@@ -60,7 +59,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
      */
     @javax.annotation.Nullable
     public java.util.List<TeamworkUserIdentity> getMembers() {
-        return this._members;
+        return this.members;
     }
     /**
      * Gets the visibleHistoryStartDateTime property value. The timestamp that denotes how far back a conversation's history is shared with the conversation members.
@@ -68,7 +67,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
      */
     @javax.annotation.Nullable
     public OffsetDateTime getVisibleHistoryStartDateTime() {
-        return this._visibleHistoryStartDateTime;
+        return this.visibleHistoryStartDateTime;
     }
     /**
      * Serializes information the current object
@@ -90,7 +89,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
      */
     @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
-        this._initiator = value;
+        this.initiator = value;
     }
     /**
      * Sets the members property value. List of members added.
@@ -99,7 +98,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
      */
     @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<TeamworkUserIdentity> value) {
-        this._members = value;
+        this.members = value;
     }
     /**
      * Sets the visibleHistoryStartDateTime property value. The timestamp that denotes how far back a conversation's history is shared with the conversation members.
@@ -108,6 +107,6 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
      */
     @javax.annotation.Nonnull
     public void setVisibleHistoryStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._visibleHistoryStartDateTime = value;
+        this.visibleHistoryStartDateTime = value;
     }
 }

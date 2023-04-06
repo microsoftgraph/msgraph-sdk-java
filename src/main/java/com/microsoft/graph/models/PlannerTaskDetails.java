@@ -3,19 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerTaskDetails extends Entity implements Parsable {
     /** The collection of checklist items on the task. */
-    private PlannerChecklistItems _checklist;
+    private PlannerChecklistItems checklist;
     /** Description of the task. */
-    private String _description;
+    private String description;
     /** This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task. */
-    private PlannerPreviewType _previewType;
+    private PlannerPreviewType previewType;
     /** The collection of references on the task. */
-    private PlannerExternalReferences _references;
+    private PlannerExternalReferences references;
     /**
      * Instantiates a new plannerTaskDetails and sets the default values.
      * @return a void
@@ -40,7 +39,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PlannerChecklistItems getChecklist() {
-        return this._checklist;
+        return this.checklist;
     }
     /**
      * Gets the description property value. Description of the task.
@@ -48,15 +47,15 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("checklist", (n) -> { this.setChecklist(n.getObjectValue(PlannerChecklistItems::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("previewType", (n) -> { this.setPreviewType(n.getEnumValue(PlannerPreviewType.class)); });
@@ -69,7 +68,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PlannerPreviewType getPreviewType() {
-        return this._previewType;
+        return this.previewType;
     }
     /**
      * Gets the references property value. The collection of references on the task.
@@ -77,7 +76,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PlannerExternalReferences getReferences() {
-        return this._references;
+        return this.references;
     }
     /**
      * Serializes information the current object
@@ -100,7 +99,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setChecklist(@javax.annotation.Nullable final PlannerChecklistItems value) {
-        this._checklist = value;
+        this.checklist = value;
     }
     /**
      * Sets the description property value. Description of the task.
@@ -109,7 +108,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
@@ -118,7 +117,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPreviewType(@javax.annotation.Nullable final PlannerPreviewType value) {
-        this._previewType = value;
+        this.previewType = value;
     }
     /**
      * Sets the references property value. The collection of references on the task.
@@ -127,6 +126,6 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setReferences(@javax.annotation.Nullable final PlannerExternalReferences value) {
-        this._references = value;
+        this.references = value;
     }
 }

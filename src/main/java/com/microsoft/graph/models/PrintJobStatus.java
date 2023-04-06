@@ -4,23 +4,22 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintJobStatus implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** A human-readable description of the print job's current processing state. Read-only. */
-    private String _description;
+    private String description;
     /** Additional details for print job state. Valid values are described in the following table. Read-only. */
-    private java.util.List<PrintJobStateDetail> _details;
+    private java.util.List<PrintJobStateDetail> details;
     /** True if the job was acknowledged by a printer; false otherwise. Read-only. */
-    private Boolean _isAcquiredByPrinter;
+    private Boolean isAcquiredByPrinter;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The state property */
-    private PrintJobProcessingState _state;
+    private PrintJobProcessingState state;
     /**
      * Instantiates a new printJobStatus and sets the default values.
      * @return a void
@@ -45,7 +44,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the description property value. A human-readable description of the print job's current processing state. Read-only.
@@ -53,7 +52,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the details property value. Additional details for print job state. Valid values are described in the following table. Read-only.
@@ -61,15 +60,15 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintJobStateDetail> getDetails() {
-        return this._details;
+        return this.details;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("details", (n) -> { this.setDetails(n.getCollectionOfEnumValues(PrintJobStateDetail.class)); });
         deserializerMap.put("isAcquiredByPrinter", (n) -> { this.setIsAcquiredByPrinter(n.getBooleanValue()); });
@@ -83,7 +82,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsAcquiredByPrinter() {
-        return this._isAcquiredByPrinter;
+        return this.isAcquiredByPrinter;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -91,7 +90,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the state property value. The state property
@@ -99,7 +98,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public PrintJobProcessingState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Serializes information the current object
@@ -123,7 +122,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the description property value. A human-readable description of the print job's current processing state. Read-only.
@@ -132,7 +131,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the details property value. Additional details for print job state. Valid values are described in the following table. Read-only.
@@ -141,7 +140,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDetails(@javax.annotation.Nullable final java.util.List<PrintJobStateDetail> value) {
-        this._details = value;
+        this.details = value;
     }
     /**
      * Sets the isAcquiredByPrinter property value. True if the job was acknowledged by a printer; false otherwise. Read-only.
@@ -150,7 +149,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsAcquiredByPrinter(@javax.annotation.Nullable final Boolean value) {
-        this._isAcquiredByPrinter = value;
+        this.isAcquiredByPrinter = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -159,7 +158,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the state property value. The state property
@@ -168,6 +167,6 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final PrintJobProcessingState value) {
-        this._state = value;
+        this.state = value;
     }
 }

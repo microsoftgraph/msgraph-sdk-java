@@ -3,23 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartFont extends Entity implements Parsable {
     /** Represents the bold status of font. */
-    private Boolean _bold;
+    private Boolean bold;
     /** HTML color code representation of the text color. E.g. #FF0000 represents Red. */
-    private String _color;
+    private String color;
     /** Represents the italic status of the font. */
-    private Boolean _italic;
+    private Boolean italic;
     /** Font name (e.g. 'Calibri') */
-    private String _name;
+    private String name;
     /** Size of the font (e.g. 11) */
-    private Double _size;
+    private Double size;
     /** Type of underline applied to the font. The possible values are: None, Single. */
-    private String _underline;
+    private String underline;
     /**
      * Instantiates a new workbookChartFont and sets the default values.
      * @return a void
@@ -44,7 +43,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getBold() {
-        return this._bold;
+        return this.bold;
     }
     /**
      * Gets the color property value. HTML color code representation of the text color. E.g. #FF0000 represents Red.
@@ -52,15 +51,15 @@ public class WorkbookChartFont extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getColor() {
-        return this._color;
+        return this.color;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("bold", (n) -> { this.setBold(n.getBooleanValue()); });
         deserializerMap.put("color", (n) -> { this.setColor(n.getStringValue()); });
         deserializerMap.put("italic", (n) -> { this.setItalic(n.getBooleanValue()); });
@@ -75,7 +74,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getItalic() {
-        return this._italic;
+        return this.italic;
     }
     /**
      * Gets the name property value. Font name (e.g. 'Calibri')
@@ -83,7 +82,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the size property value. Size of the font (e.g. 11)
@@ -91,7 +90,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Double getSize() {
-        return this._size;
+        return this.size;
     }
     /**
      * Gets the underline property value. Type of underline applied to the font. The possible values are: None, Single.
@@ -99,7 +98,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUnderline() {
-        return this._underline;
+        return this.underline;
     }
     /**
      * Serializes information the current object
@@ -124,7 +123,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setBold(@javax.annotation.Nullable final Boolean value) {
-        this._bold = value;
+        this.bold = value;
     }
     /**
      * Sets the color property value. HTML color code representation of the text color. E.g. #FF0000 represents Red.
@@ -133,7 +132,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setColor(@javax.annotation.Nullable final String value) {
-        this._color = value;
+        this.color = value;
     }
     /**
      * Sets the italic property value. Represents the italic status of the font.
@@ -142,7 +141,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setItalic(@javax.annotation.Nullable final Boolean value) {
-        this._italic = value;
+        this.italic = value;
     }
     /**
      * Sets the name property value. Font name (e.g. 'Calibri')
@@ -151,7 +150,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the size property value. Size of the font (e.g. 11)
@@ -160,7 +159,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Double value) {
-        this._size = value;
+        this.size = value;
     }
     /**
      * Sets the underline property value. Type of underline applied to the font. The possible values are: None, Single.
@@ -169,6 +168,6 @@ public class WorkbookChartFont extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUnderline(@javax.annotation.Nullable final String value) {
-        this._underline = value;
+        this.underline = value;
     }
 }

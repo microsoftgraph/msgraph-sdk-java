@@ -3,37 +3,39 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Policy used to configure detailed management settings for a specified set of apps for all users not targeted by a TargetedManagedAppProtection Policy
+ */
 public class DefaultManagedAppProtection extends ManagedAppProtection implements Parsable {
     /** Represents the level to which app data is encrypted for managed apps */
-    private ManagedAppDataEncryptionType _appDataEncryptionType;
+    private ManagedAppDataEncryptionType appDataEncryptionType;
     /** List of apps to which the policy is deployed. */
-    private java.util.List<ManagedMobileApp> _apps;
+    private java.util.List<ManagedMobileApp> apps;
     /** A set of string key and string value pairs to be sent to the affected users, unalterned by this service */
-    private java.util.List<KeyValuePair> _customSettings;
+    private java.util.List<KeyValuePair> customSettings;
     /** Count of apps to which the current policy is deployed. */
-    private Integer _deployedAppCount;
+    private Integer deployedAppCount;
     /** Navigation property to deployment summary of the configuration. */
-    private ManagedAppPolicyDeploymentSummary _deploymentSummary;
+    private ManagedAppPolicyDeploymentSummary deploymentSummary;
     /** When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only) */
-    private Boolean _disableAppEncryptionIfDeviceEncryptionIsEnabled;
+    private Boolean disableAppEncryptionIfDeviceEncryptionIsEnabled;
     /** Indicates whether managed-app data should be encrypted. (Android only) */
-    private Boolean _encryptAppData;
+    private Boolean encryptAppData;
     /** Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only) */
-    private Boolean _faceIdBlocked;
+    private Boolean faceIdBlocked;
     /** Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only) */
-    private String _minimumRequiredPatchVersion;
+    private String minimumRequiredPatchVersion;
     /** Versions less than the specified version will block the managed app from accessing company data. (iOS Only) */
-    private String _minimumRequiredSdkVersion;
+    private String minimumRequiredSdkVersion;
     /** Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only) */
-    private String _minimumWarningPatchVersion;
+    private String minimumWarningPatchVersion;
     /** Indicates whether screen capture is blocked. (Android only) */
-    private Boolean _screenCaptureBlocked;
+    private Boolean screenCaptureBlocked;
     /**
-     * Instantiates a new DefaultManagedAppProtection and sets the default values.
+     * Instantiates a new defaultManagedAppProtection and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -44,7 +46,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DefaultManagedAppProtection
+     * @return a defaultManagedAppProtection
      */
     @javax.annotation.Nonnull
     public static DefaultManagedAppProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -57,7 +59,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public ManagedAppDataEncryptionType getAppDataEncryptionType() {
-        return this._appDataEncryptionType;
+        return this.appDataEncryptionType;
     }
     /**
      * Gets the apps property value. List of apps to which the policy is deployed.
@@ -65,7 +67,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
-        return this._apps;
+        return this.apps;
     }
     /**
      * Gets the customSettings property value. A set of string key and string value pairs to be sent to the affected users, unalterned by this service
@@ -73,7 +75,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomSettings() {
-        return this._customSettings;
+        return this.customSettings;
     }
     /**
      * Gets the deployedAppCount property value. Count of apps to which the current policy is deployed.
@@ -81,7 +83,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Integer getDeployedAppCount() {
-        return this._deployedAppCount;
+        return this.deployedAppCount;
     }
     /**
      * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
@@ -89,7 +91,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
-        return this._deploymentSummary;
+        return this.deploymentSummary;
     }
     /**
      * Gets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
@@ -97,7 +99,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getDisableAppEncryptionIfDeviceEncryptionIsEnabled() {
-        return this._disableAppEncryptionIfDeviceEncryptionIsEnabled;
+        return this.disableAppEncryptionIfDeviceEncryptionIsEnabled;
     }
     /**
      * Gets the encryptAppData property value. Indicates whether managed-app data should be encrypted. (Android only)
@@ -105,7 +107,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getEncryptAppData() {
-        return this._encryptAppData;
+        return this.encryptAppData;
     }
     /**
      * Gets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
@@ -113,15 +115,15 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getFaceIdBlocked() {
-        return this._faceIdBlocked;
+        return this.faceIdBlocked;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appDataEncryptionType", (n) -> { this.setAppDataEncryptionType(n.getEnumValue(ManagedAppDataEncryptionType.class)); });
         deserializerMap.put("apps", (n) -> { this.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
         deserializerMap.put("customSettings", (n) -> { this.setCustomSettings(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
@@ -142,7 +144,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getMinimumRequiredPatchVersion() {
-        return this._minimumRequiredPatchVersion;
+        return this.minimumRequiredPatchVersion;
     }
     /**
      * Gets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
@@ -150,7 +152,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getMinimumRequiredSdkVersion() {
-        return this._minimumRequiredSdkVersion;
+        return this.minimumRequiredSdkVersion;
     }
     /**
      * Gets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
@@ -158,7 +160,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getMinimumWarningPatchVersion() {
-        return this._minimumWarningPatchVersion;
+        return this.minimumWarningPatchVersion;
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether screen capture is blocked. (Android only)
@@ -166,7 +168,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
-        return this._screenCaptureBlocked;
+        return this.screenCaptureBlocked;
     }
     /**
      * Serializes information the current object
@@ -197,7 +199,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nonnull
     public void setAppDataEncryptionType(@javax.annotation.Nullable final ManagedAppDataEncryptionType value) {
-        this._appDataEncryptionType = value;
+        this.appDataEncryptionType = value;
     }
     /**
      * Sets the apps property value. List of apps to which the policy is deployed.
@@ -206,7 +208,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nonnull
     public void setApps(@javax.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
-        this._apps = value;
+        this.apps = value;
     }
     /**
      * Sets the customSettings property value. A set of string key and string value pairs to be sent to the affected users, unalterned by this service
@@ -215,7 +217,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nonnull
     public void setCustomSettings(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this._customSettings = value;
+        this.customSettings = value;
     }
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
@@ -224,7 +226,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nonnull
     public void setDeployedAppCount(@javax.annotation.Nullable final Integer value) {
-        this._deployedAppCount = value;
+        this.deployedAppCount = value;
     }
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
@@ -233,7 +235,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nonnull
     public void setDeploymentSummary(@javax.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
-        this._deploymentSummary = value;
+        this.deploymentSummary = value;
     }
     /**
      * Sets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
@@ -242,7 +244,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nonnull
     public void setDisableAppEncryptionIfDeviceEncryptionIsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._disableAppEncryptionIfDeviceEncryptionIsEnabled = value;
+        this.disableAppEncryptionIfDeviceEncryptionIsEnabled = value;
     }
     /**
      * Sets the encryptAppData property value. Indicates whether managed-app data should be encrypted. (Android only)
@@ -251,7 +253,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nonnull
     public void setEncryptAppData(@javax.annotation.Nullable final Boolean value) {
-        this._encryptAppData = value;
+        this.encryptAppData = value;
     }
     /**
      * Sets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
@@ -260,7 +262,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nonnull
     public void setFaceIdBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._faceIdBlocked = value;
+        this.faceIdBlocked = value;
     }
     /**
      * Sets the minimumRequiredPatchVersion property value. Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
@@ -269,7 +271,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nonnull
     public void setMinimumRequiredPatchVersion(@javax.annotation.Nullable final String value) {
-        this._minimumRequiredPatchVersion = value;
+        this.minimumRequiredPatchVersion = value;
     }
     /**
      * Sets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
@@ -278,7 +280,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nonnull
     public void setMinimumRequiredSdkVersion(@javax.annotation.Nullable final String value) {
-        this._minimumRequiredSdkVersion = value;
+        this.minimumRequiredSdkVersion = value;
     }
     /**
      * Sets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
@@ -287,7 +289,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nonnull
     public void setMinimumWarningPatchVersion(@javax.annotation.Nullable final String value) {
-        this._minimumWarningPatchVersion = value;
+        this.minimumWarningPatchVersion = value;
     }
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether screen capture is blocked. (Android only)
@@ -296,6 +298,6 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nonnull
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._screenCaptureBlocked = value;
+        this.screenCaptureBlocked = value;
     }
 }

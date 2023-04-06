@@ -4,32 +4,30 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class SecureScore extends Entity implements Parsable {
     /** Active user count of the given tenant. */
-    private Integer _activeUserCount;
+    private Integer activeUserCount;
     /** Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope. */
-    private java.util.List<AverageComparativeScore> _averageComparativeScores;
+    private java.util.List<AverageComparativeScore> averageComparativeScores;
     /** GUID string for tenant ID. */
-    private String _azureTenantId;
+    private String azureTenantId;
     /** Contains tenant scores for a set of controls. */
-    private java.util.List<ControlScore> _controlScores;
+    private java.util.List<ControlScore> controlScores;
     /** The date when the entity is created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Tenant current attained score on specified date. */
-    private Double _currentScore;
+    private Double currentScore;
     /** Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint). */
-    private java.util.List<String> _enabledServices;
+    private java.util.List<String> enabledServices;
     /** Licensed user count of the given tenant. */
-    private Integer _licensedUserCount;
+    private Integer licensedUserCount;
     /** Tenant maximum possible score on specified date. */
-    private Double _maxScore;
+    private Double maxScore;
     /** Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required. */
-    private SecurityVendorInformation _vendorInformation;
+    private SecurityVendorInformation vendorInformation;
     /**
      * Instantiates a new secureScore and sets the default values.
      * @return a void
@@ -54,7 +52,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getActiveUserCount() {
-        return this._activeUserCount;
+        return this.activeUserCount;
     }
     /**
      * Gets the averageComparativeScores property value. Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
@@ -62,7 +60,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AverageComparativeScore> getAverageComparativeScores() {
-        return this._averageComparativeScores;
+        return this.averageComparativeScores;
     }
     /**
      * Gets the azureTenantId property value. GUID string for tenant ID.
@@ -70,7 +68,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAzureTenantId() {
-        return this._azureTenantId;
+        return this.azureTenantId;
     }
     /**
      * Gets the controlScores property value. Contains tenant scores for a set of controls.
@@ -78,7 +76,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ControlScore> getControlScores() {
-        return this._controlScores;
+        return this.controlScores;
     }
     /**
      * Gets the createdDateTime property value. The date when the entity is created.
@@ -86,7 +84,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the currentScore property value. Tenant current attained score on specified date.
@@ -94,7 +92,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Double getCurrentScore() {
-        return this._currentScore;
+        return this.currentScore;
     }
     /**
      * Gets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
@@ -102,15 +100,15 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getEnabledServices() {
-        return this._enabledServices;
+        return this.enabledServices;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeUserCount", (n) -> { this.setActiveUserCount(n.getIntegerValue()); });
         deserializerMap.put("averageComparativeScores", (n) -> { this.setAverageComparativeScores(n.getCollectionOfObjectValues(AverageComparativeScore::createFromDiscriminatorValue)); });
         deserializerMap.put("azureTenantId", (n) -> { this.setAzureTenantId(n.getStringValue()); });
@@ -129,7 +127,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getLicensedUserCount() {
-        return this._licensedUserCount;
+        return this.licensedUserCount;
     }
     /**
      * Gets the maxScore property value. Tenant maximum possible score on specified date.
@@ -137,7 +135,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Double getMaxScore() {
-        return this._maxScore;
+        return this.maxScore;
     }
     /**
      * Gets the vendorInformation property value. Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
@@ -145,7 +143,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {
-        return this._vendorInformation;
+        return this.vendorInformation;
     }
     /**
      * Serializes information the current object
@@ -174,7 +172,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setActiveUserCount(@javax.annotation.Nullable final Integer value) {
-        this._activeUserCount = value;
+        this.activeUserCount = value;
     }
     /**
      * Sets the averageComparativeScores property value. Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
@@ -183,7 +181,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAverageComparativeScores(@javax.annotation.Nullable final java.util.List<AverageComparativeScore> value) {
-        this._averageComparativeScores = value;
+        this.averageComparativeScores = value;
     }
     /**
      * Sets the azureTenantId property value. GUID string for tenant ID.
@@ -192,7 +190,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
-        this._azureTenantId = value;
+        this.azureTenantId = value;
     }
     /**
      * Sets the controlScores property value. Contains tenant scores for a set of controls.
@@ -201,7 +199,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setControlScores(@javax.annotation.Nullable final java.util.List<ControlScore> value) {
-        this._controlScores = value;
+        this.controlScores = value;
     }
     /**
      * Sets the createdDateTime property value. The date when the entity is created.
@@ -210,7 +208,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the currentScore property value. Tenant current attained score on specified date.
@@ -219,7 +217,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCurrentScore(@javax.annotation.Nullable final Double value) {
-        this._currentScore = value;
+        this.currentScore = value;
     }
     /**
      * Sets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
@@ -228,7 +226,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEnabledServices(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._enabledServices = value;
+        this.enabledServices = value;
     }
     /**
      * Sets the licensedUserCount property value. Licensed user count of the given tenant.
@@ -237,7 +235,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLicensedUserCount(@javax.annotation.Nullable final Integer value) {
-        this._licensedUserCount = value;
+        this.licensedUserCount = value;
     }
     /**
      * Sets the maxScore property value. Tenant maximum possible score on specified date.
@@ -246,7 +244,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMaxScore(@javax.annotation.Nullable final Double value) {
-        this._maxScore = value;
+        this.maxScore = value;
     }
     /**
      * Sets the vendorInformation property value. Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
@@ -255,6 +253,6 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
-        this._vendorInformation = value;
+        this.vendorInformation = value;
     }
 }

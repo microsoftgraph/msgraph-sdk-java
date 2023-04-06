@@ -4,29 +4,28 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationRubric extends Entity implements Parsable {
     /** The user who created this resource. */
-    private IdentitySet _createdBy;
+    private IdentitySet createdBy;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The description of this rubric. */
-    private EducationItemBody _description;
+    private EducationItemBody description;
     /** The name of this rubric. */
-    private String _displayName;
+    private String displayName;
     /** The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric. */
-    private EducationAssignmentGradeType _grading;
+    private EducationAssignmentGradeType grading;
     /** The last user to modify the resource. */
-    private IdentitySet _lastModifiedBy;
+    private IdentitySet lastModifiedBy;
     /** Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The collection of levels making up this rubric. */
-    private java.util.List<RubricLevel> _levels;
+    private java.util.List<RubricLevel> levels;
     /** The collection of qualities making up this rubric. */
-    private java.util.List<RubricQuality> _qualities;
+    private java.util.List<RubricQuality> qualities;
     /**
      * Instantiates a new educationRubric and sets the default values.
      * @return a void
@@ -51,7 +50,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -59,7 +58,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. The description of this rubric.
@@ -67,7 +66,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EducationItemBody getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The name of this rubric.
@@ -75,15 +74,15 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
@@ -101,7 +100,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EducationAssignmentGradeType getGrading() {
-        return this._grading;
+        return this.grading;
     }
     /**
      * Gets the lastModifiedBy property value. The last user to modify the resource.
@@ -109,7 +108,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this._lastModifiedBy;
+        return this.lastModifiedBy;
     }
     /**
      * Gets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -117,7 +116,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the levels property value. The collection of levels making up this rubric.
@@ -125,7 +124,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<RubricLevel> getLevels() {
-        return this._levels;
+        return this.levels;
     }
     /**
      * Gets the qualities property value. The collection of qualities making up this rubric.
@@ -133,7 +132,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<RubricQuality> getQualities() {
-        return this._qualities;
+        return this.qualities;
     }
     /**
      * Serializes information the current object
@@ -157,7 +156,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -166,7 +165,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description of this rubric.
@@ -175,7 +174,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final EducationItemBody value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The name of this rubric.
@@ -184,7 +183,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the grading property value. The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.
@@ -193,7 +192,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setGrading(@javax.annotation.Nullable final EducationAssignmentGradeType value) {
-        this._grading = value;
+        this.grading = value;
     }
     /**
      * Sets the lastModifiedBy property value. The last user to modify the resource.
@@ -202,7 +201,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._lastModifiedBy = value;
+        this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -211,7 +210,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the levels property value. The collection of levels making up this rubric.
@@ -220,7 +219,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLevels(@javax.annotation.Nullable final java.util.List<RubricLevel> value) {
-        this._levels = value;
+        this.levels = value;
     }
     /**
      * Sets the qualities property value. The collection of qualities making up this rubric.
@@ -229,6 +228,6 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setQualities(@javax.annotation.Nullable final java.util.List<RubricQuality> value) {
-        this._qualities = value;
+        this.qualities = value;
     }
 }

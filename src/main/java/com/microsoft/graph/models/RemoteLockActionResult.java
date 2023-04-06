@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RemoteLockActionResult extends DeviceActionResult implements Parsable {
     /** Pin to unlock the client */
-    private String _unlockPin;
+    private String unlockPin;
     /**
      * Instantiates a new RemoteLockActionResult and sets the default values.
      * @return a void
@@ -30,11 +29,11 @@ public class RemoteLockActionResult extends DeviceActionResult implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("unlockPin", (n) -> { this.setUnlockPin(n.getStringValue()); });
         return deserializerMap;
     }
@@ -44,7 +43,7 @@ public class RemoteLockActionResult extends DeviceActionResult implements Parsab
      */
     @javax.annotation.Nullable
     public String getUnlockPin() {
-        return this._unlockPin;
+        return this.unlockPin;
     }
     /**
      * Serializes information the current object
@@ -64,6 +63,6 @@ public class RemoteLockActionResult extends DeviceActionResult implements Parsab
      */
     @javax.annotation.Nonnull
     public void setUnlockPin(@javax.annotation.Nullable final String value) {
-        this._unlockPin = value;
+        this.unlockPin = value;
     }
 }

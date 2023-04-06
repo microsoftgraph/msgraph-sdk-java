@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookIcon implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Represents the index of the icon in the given set. */
-    private Integer _index;
+    private Integer index;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Represents the set that the icon is part of. The possible values are: Invalid, ThreeArrows, ThreeArrowsGray, ThreeFlags, ThreeTrafficLights1, ThreeTrafficLights2, ThreeSigns, ThreeSymbols, ThreeSymbols2, FourArrows, FourArrowsGray, FourRedToBlack, FourRating, FourTrafficLights, FiveArrows, FiveArrowsGray, FiveRating, FiveQuarters, ThreeStars, ThreeTriangles, FiveBoxes. */
-    private String _set;
+    private String set;
     /**
      * Instantiates a new workbookIcon and sets the default values.
      * @return a void
@@ -41,15 +40,15 @@ public class WorkbookIcon implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("index", (n) -> { this.setIndex(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("set", (n) -> { this.setSet(n.getStringValue()); });
@@ -61,7 +60,7 @@ public class WorkbookIcon implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getIndex() {
-        return this._index;
+        return this.index;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -69,7 +68,7 @@ public class WorkbookIcon implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the set property value. Represents the set that the icon is part of. The possible values are: Invalid, ThreeArrows, ThreeArrowsGray, ThreeFlags, ThreeTrafficLights1, ThreeTrafficLights2, ThreeSigns, ThreeSymbols, ThreeSymbols2, FourArrows, FourArrowsGray, FourRedToBlack, FourRating, FourTrafficLights, FiveArrows, FiveArrowsGray, FiveRating, FiveQuarters, ThreeStars, ThreeTriangles, FiveBoxes.
@@ -77,7 +76,7 @@ public class WorkbookIcon implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSet() {
-        return this._set;
+        return this.set;
     }
     /**
      * Serializes information the current object
@@ -99,7 +98,7 @@ public class WorkbookIcon implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the index property value. Represents the index of the icon in the given set.
@@ -108,7 +107,7 @@ public class WorkbookIcon implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIndex(@javax.annotation.Nullable final Integer value) {
-        this._index = value;
+        this.index = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -117,7 +116,7 @@ public class WorkbookIcon implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the set property value. Represents the set that the icon is part of. The possible values are: Invalid, ThreeArrows, ThreeArrowsGray, ThreeFlags, ThreeTrafficLights1, ThreeTrafficLights2, ThreeSigns, ThreeSymbols, ThreeSymbols2, FourArrows, FourArrowsGray, FourRedToBlack, FourRating, FourTrafficLights, FiveArrows, FiveArrowsGray, FiveRating, FiveQuarters, ThreeStars, ThreeTriangles, FiveBoxes.
@@ -126,6 +125,6 @@ public class WorkbookIcon implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSet(@javax.annotation.Nullable final String value) {
-        this._set = value;
+        this.set = value;
     }
 }

@@ -5,19 +5,18 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The time of the day when work stops. For example, 17:00:00.0000000. */
-    private LocalTime _endTime;
+    private LocalTime endTime;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The time of the day when work starts. For example, 08:00:00.0000000. */
-    private LocalTime _startTime;
+    private LocalTime startTime;
     /**
      * Instantiates a new bookingWorkTimeSlot and sets the default values.
      * @return a void
@@ -42,7 +41,7 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the endTime property value. The time of the day when work stops. For example, 17:00:00.0000000.
@@ -50,15 +49,15 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public LocalTime getEndTime() {
-        return this._endTime;
+        return this.endTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("endTime", (n) -> { this.setEndTime(n.getLocalTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("startTime", (n) -> { this.setStartTime(n.getLocalTimeValue()); });
@@ -70,7 +69,7 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the startTime property value. The time of the day when work starts. For example, 08:00:00.0000000.
@@ -78,7 +77,7 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public LocalTime getStartTime() {
-        return this._startTime;
+        return this.startTime;
     }
     /**
      * Serializes information the current object
@@ -100,7 +99,7 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the endTime property value. The time of the day when work stops. For example, 17:00:00.0000000.
@@ -109,7 +108,7 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEndTime(@javax.annotation.Nullable final LocalTime value) {
-        this._endTime = value;
+        this.endTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -118,7 +117,7 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the startTime property value. The time of the day when work starts. For example, 08:00:00.0000000.
@@ -127,6 +126,6 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setStartTime(@javax.annotation.Nullable final LocalTime value) {
-        this._startTime = value;
+        this.startTime = value;
     }
 }

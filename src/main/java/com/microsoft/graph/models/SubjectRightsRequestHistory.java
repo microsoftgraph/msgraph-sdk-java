@@ -5,25 +5,24 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Identity of the user who changed the  subject rights request. */
-    private IdentitySet _changedBy;
+    private IdentitySet changedBy;
     /** Data and time when the entity was changed. */
-    private OffsetDateTime _eventDateTime;
+    private OffsetDateTime eventDateTime;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue. */
-    private SubjectRightsRequestStage _stage;
+    private SubjectRightsRequestStage stage;
     /** The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue. */
-    private SubjectRightsRequestStageStatus _stageStatus;
+    private SubjectRightsRequestStageStatus stageStatus;
     /** Type of history. */
-    private String _type;
+    private String type;
     /**
      * Instantiates a new subjectRightsRequestHistory and sets the default values.
      * @return a void
@@ -48,7 +47,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the changedBy property value. Identity of the user who changed the  subject rights request.
@@ -56,7 +55,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public IdentitySet getChangedBy() {
-        return this._changedBy;
+        return this.changedBy;
     }
     /**
      * Gets the eventDateTime property value. Data and time when the entity was changed.
@@ -64,15 +63,15 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
-        return this._eventDateTime;
+        return this.eventDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("changedBy", (n) -> { this.setChangedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -87,7 +86,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
@@ -95,7 +94,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public SubjectRightsRequestStage getStage() {
-        return this._stage;
+        return this.stage;
     }
     /**
      * Gets the stageStatus property value. The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
@@ -103,7 +102,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public SubjectRightsRequestStageStatus getStageStatus() {
-        return this._stageStatus;
+        return this.stageStatus;
     }
     /**
      * Gets the type property value. Type of history.
@@ -111,7 +110,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
@@ -136,7 +135,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the changedBy property value. Identity of the user who changed the  subject rights request.
@@ -145,7 +144,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setChangedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._changedBy = value;
+        this.changedBy = value;
     }
     /**
      * Sets the eventDateTime property value. Data and time when the entity was changed.
@@ -154,7 +153,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._eventDateTime = value;
+        this.eventDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -163,7 +162,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
@@ -172,7 +171,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setStage(@javax.annotation.Nullable final SubjectRightsRequestStage value) {
-        this._stage = value;
+        this.stage = value;
     }
     /**
      * Sets the stageStatus property value. The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
@@ -181,7 +180,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setStageStatus(@javax.annotation.Nullable final SubjectRightsRequestStageStatus value) {
-        this._stageStatus = value;
+        this.stageStatus = value;
     }
     /**
      * Sets the type property value. Type of history.
@@ -190,6 +189,6 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+        this.type = value;
     }
 }

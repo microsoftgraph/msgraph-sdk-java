@@ -3,16 +3,14 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Parsable {
     /** User source or SharePoint site data source as non-custodial data source. */
-    private DataSource _dataSource;
+    private DataSource dataSource;
     /** Operation entity that represents the latest indexing for the non-custodial data source. */
-    private EdiscoveryIndexOperation _lastIndexOperation;
+    private EdiscoveryIndexOperation lastIndexOperation;
     /**
      * Instantiates a new ediscoveryNoncustodialDataSource and sets the default values.
      * @return a void
@@ -38,15 +36,15 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
      */
     @javax.annotation.Nullable
     public DataSource getDataSource() {
-        return this._dataSource;
+        return this.dataSource;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("dataSource", (n) -> { this.setDataSource(n.getObjectValue(DataSource::createFromDiscriminatorValue)); });
         deserializerMap.put("lastIndexOperation", (n) -> { this.setLastIndexOperation(n.getObjectValue(EdiscoveryIndexOperation::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -57,7 +55,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
      */
     @javax.annotation.Nullable
     public EdiscoveryIndexOperation getLastIndexOperation() {
-        return this._lastIndexOperation;
+        return this.lastIndexOperation;
     }
     /**
      * Serializes information the current object
@@ -78,7 +76,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
      */
     @javax.annotation.Nonnull
     public void setDataSource(@javax.annotation.Nullable final DataSource value) {
-        this._dataSource = value;
+        this.dataSource = value;
     }
     /**
      * Sets the lastIndexOperation property value. Operation entity that represents the latest indexing for the non-custodial data source.
@@ -87,6 +85,6 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
      */
     @javax.annotation.Nonnull
     public void setLastIndexOperation(@javax.annotation.Nullable final EdiscoveryIndexOperation value) {
-        this._lastIndexOperation = value;
+        this.lastIndexOperation = value;
     }
 }

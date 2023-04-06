@@ -3,25 +3,25 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class SubscribedSku extends Entity implements Parsable {
     /** For example, 'User' or 'Company'. */
-    private String _appliesTo;
+    private String appliesTo;
     /** Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription. */
-    private String _capabilityStatus;
+    private String capabilityStatus;
     /** The number of licenses that have been assigned. */
-    private Integer _consumedUnits;
+    private Integer consumedUnits;
     /** Information about the number and status of prepaid licenses. */
-    private LicenseUnitsDetail _prepaidUnits;
+    private LicenseUnitsDetail prepaidUnits;
     /** Information about the service plans that are available with the SKU. Not nullable */
-    private java.util.List<ServicePlanInfo> _servicePlans;
+    private java.util.List<ServicePlanInfo> servicePlans;
     /** The unique identifier (GUID) for the service SKU. */
-    private String _skuId;
+    private UUID skuId;
     /** The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus. */
-    private String _skuPartNumber;
+    private String skuPartNumber;
     /**
      * Instantiates a new SubscribedSku and sets the default values.
      * @return a void
@@ -46,7 +46,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppliesTo() {
-        return this._appliesTo;
+        return this.appliesTo;
     }
     /**
      * Gets the capabilityStatus property value. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription.
@@ -54,7 +54,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCapabilityStatus() {
-        return this._capabilityStatus;
+        return this.capabilityStatus;
     }
     /**
      * Gets the consumedUnits property value. The number of licenses that have been assigned.
@@ -62,21 +62,21 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getConsumedUnits() {
-        return this._consumedUnits;
+        return this.consumedUnits;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getStringValue()); });
         deserializerMap.put("capabilityStatus", (n) -> { this.setCapabilityStatus(n.getStringValue()); });
         deserializerMap.put("consumedUnits", (n) -> { this.setConsumedUnits(n.getIntegerValue()); });
         deserializerMap.put("prepaidUnits", (n) -> { this.setPrepaidUnits(n.getObjectValue(LicenseUnitsDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("servicePlans", (n) -> { this.setServicePlans(n.getCollectionOfObjectValues(ServicePlanInfo::createFromDiscriminatorValue)); });
-        deserializerMap.put("skuId", (n) -> { this.setSkuId(n.getStringValue()); });
+        deserializerMap.put("skuId", (n) -> { this.setSkuId(n.getUUIDValue()); });
         deserializerMap.put("skuPartNumber", (n) -> { this.setSkuPartNumber(n.getStringValue()); });
         return deserializerMap;
     }
@@ -86,7 +86,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LicenseUnitsDetail getPrepaidUnits() {
-        return this._prepaidUnits;
+        return this.prepaidUnits;
     }
     /**
      * Gets the servicePlans property value. Information about the service plans that are available with the SKU. Not nullable
@@ -94,15 +94,15 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ServicePlanInfo> getServicePlans() {
-        return this._servicePlans;
+        return this.servicePlans;
     }
     /**
      * Gets the skuId property value. The unique identifier (GUID) for the service SKU.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getSkuId() {
-        return this._skuId;
+    public UUID getSkuId() {
+        return this.skuId;
     }
     /**
      * Gets the skuPartNumber property value. The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
@@ -110,7 +110,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSkuPartNumber() {
-        return this._skuPartNumber;
+        return this.skuPartNumber;
     }
     /**
      * Serializes information the current object
@@ -126,7 +126,7 @@ public class SubscribedSku extends Entity implements Parsable {
         writer.writeIntegerValue("consumedUnits", this.getConsumedUnits());
         writer.writeObjectValue("prepaidUnits", this.getPrepaidUnits());
         writer.writeCollectionOfObjectValues("servicePlans", this.getServicePlans());
-        writer.writeStringValue("skuId", this.getSkuId());
+        writer.writeUUIDValue("skuId", this.getSkuId());
         writer.writeStringValue("skuPartNumber", this.getSkuPartNumber());
     }
     /**
@@ -136,7 +136,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppliesTo(@javax.annotation.Nullable final String value) {
-        this._appliesTo = value;
+        this.appliesTo = value;
     }
     /**
      * Sets the capabilityStatus property value. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription.
@@ -145,7 +145,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCapabilityStatus(@javax.annotation.Nullable final String value) {
-        this._capabilityStatus = value;
+        this.capabilityStatus = value;
     }
     /**
      * Sets the consumedUnits property value. The number of licenses that have been assigned.
@@ -154,7 +154,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setConsumedUnits(@javax.annotation.Nullable final Integer value) {
-        this._consumedUnits = value;
+        this.consumedUnits = value;
     }
     /**
      * Sets the prepaidUnits property value. Information about the number and status of prepaid licenses.
@@ -163,7 +163,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPrepaidUnits(@javax.annotation.Nullable final LicenseUnitsDetail value) {
-        this._prepaidUnits = value;
+        this.prepaidUnits = value;
     }
     /**
      * Sets the servicePlans property value. Information about the service plans that are available with the SKU. Not nullable
@@ -172,7 +172,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setServicePlans(@javax.annotation.Nullable final java.util.List<ServicePlanInfo> value) {
-        this._servicePlans = value;
+        this.servicePlans = value;
     }
     /**
      * Sets the skuId property value. The unique identifier (GUID) for the service SKU.
@@ -180,8 +180,8 @@ public class SubscribedSku extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setSkuId(@javax.annotation.Nullable final String value) {
-        this._skuId = value;
+    public void setSkuId(@javax.annotation.Nullable final UUID value) {
+        this.skuId = value;
     }
     /**
      * Sets the skuPartNumber property value. The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
@@ -190,6 +190,6 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSkuPartNumber(@javax.annotation.Nullable final String value) {
-        this._skuPartNumber = value;
+        this.skuPartNumber = value;
     }
 }

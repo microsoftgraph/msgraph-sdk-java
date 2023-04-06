@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartLineFormat extends Entity implements Parsable {
     /** HTML color code representing the color of lines in the chart. */
-    private String _color;
+    private String color;
     /**
      * Instantiates a new workbookChartLineFormat and sets the default values.
      * @return a void
@@ -34,15 +33,15 @@ public class WorkbookChartLineFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getColor() {
-        return this._color;
+        return this.color;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("color", (n) -> { this.setColor(n.getStringValue()); });
         return deserializerMap;
     }
@@ -64,6 +63,6 @@ public class WorkbookChartLineFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setColor(@javax.annotation.Nullable final String value) {
-        this._color = value;
+        this.color = value;
     }
 }

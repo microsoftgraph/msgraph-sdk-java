@@ -3,85 +3,88 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
+/**
+ * Singleton entity that acts as a container for all device management functionality.
+ */
 public class DeviceManagement extends Entity implements Parsable {
     /** Apple push notification certificate. */
-    private ApplePushNotificationCertificate _applePushNotificationCertificate;
+    private ApplePushNotificationCertificate applePushNotificationCertificate;
     /** The Audit Events */
-    private java.util.List<AuditEvent> _auditEvents;
+    private java.util.List<AuditEvent> auditEvents;
     /** The list of Compliance Management Partners configured by the tenant. */
-    private java.util.List<ComplianceManagementPartner> _complianceManagementPartners;
+    private java.util.List<ComplianceManagementPartner> complianceManagementPartners;
     /** The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access */
-    private OnPremisesConditionalAccessSettings _conditionalAccessSettings;
+    private OnPremisesConditionalAccessSettings conditionalAccessSettings;
     /** The list of detected apps associated with a device. */
-    private java.util.List<DetectedApp> _detectedApps;
+    private java.util.List<DetectedApp> detectedApps;
     /** The list of device categories with the tenant. */
-    private java.util.List<DeviceCategory> _deviceCategories;
+    private java.util.List<DeviceCategory> deviceCategories;
     /** The device compliance policies. */
-    private java.util.List<DeviceCompliancePolicy> _deviceCompliancePolicies;
+    private java.util.List<DeviceCompliancePolicy> deviceCompliancePolicies;
     /** The device compliance state summary for this account. */
-    private DeviceCompliancePolicyDeviceStateSummary _deviceCompliancePolicyDeviceStateSummary;
+    private DeviceCompliancePolicyDeviceStateSummary deviceCompliancePolicyDeviceStateSummary;
     /** The summary states of compliance policy settings for this account. */
-    private java.util.List<DeviceCompliancePolicySettingStateSummary> _deviceCompliancePolicySettingStateSummaries;
+    private java.util.List<DeviceCompliancePolicySettingStateSummary> deviceCompliancePolicySettingStateSummaries;
     /** The device configuration device state summary for this account. */
-    private DeviceConfigurationDeviceStateSummary _deviceConfigurationDeviceStateSummaries;
+    private DeviceConfigurationDeviceStateSummary deviceConfigurationDeviceStateSummaries;
     /** The device configurations. */
-    private java.util.List<DeviceConfiguration> _deviceConfigurations;
+    private java.util.List<DeviceConfiguration> deviceConfigurations;
     /** The list of device enrollment configurations */
-    private java.util.List<DeviceEnrollmentConfiguration> _deviceEnrollmentConfigurations;
+    private java.util.List<DeviceEnrollmentConfiguration> deviceEnrollmentConfigurations;
     /** The list of Device Management Partners configured by the tenant. */
-    private java.util.List<DeviceManagementPartner> _deviceManagementPartners;
+    private java.util.List<DeviceManagementPartner> deviceManagementPartners;
     /** The list of Exchange Connectors configured by the tenant. */
-    private java.util.List<DeviceManagementExchangeConnector> _exchangeConnectors;
+    private java.util.List<DeviceManagementExchangeConnector> exchangeConnectors;
     /** Collection of imported Windows autopilot devices. */
-    private java.util.List<ImportedWindowsAutopilotDeviceIdentity> _importedWindowsAutopilotDeviceIdentities;
+    private java.util.List<ImportedWindowsAutopilotDeviceIdentity> importedWindowsAutopilotDeviceIdentities;
     /** Intune Account Id for given tenant */
-    private String _intuneAccountId;
+    private UUID intuneAccountId;
     /** intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal. */
-    private IntuneBrand _intuneBrand;
+    private IntuneBrand intuneBrand;
     /** The IOS software update installation statuses for this account. */
-    private java.util.List<IosUpdateDeviceStatus> _iosUpdateStatuses;
+    private java.util.List<IosUpdateDeviceStatus> iosUpdateStatuses;
     /** Device overview */
-    private ManagedDeviceOverview _managedDeviceOverview;
+    private ManagedDeviceOverview managedDeviceOverview;
     /** The list of managed devices. */
-    private java.util.List<ManagedDevice> _managedDevices;
+    private java.util.List<ManagedDevice> managedDevices;
     /** The list of Mobile threat Defense connectors configured by the tenant. */
-    private java.util.List<MobileThreatDefenseConnector> _mobileThreatDefenseConnectors;
+    private java.util.List<MobileThreatDefenseConnector> mobileThreatDefenseConnectors;
     /** The Notification Message Templates. */
-    private java.util.List<NotificationMessageTemplate> _notificationMessageTemplates;
+    private java.util.List<NotificationMessageTemplate> notificationMessageTemplates;
     /** The remote assist partners. */
-    private java.util.List<RemoteAssistancePartner> _remoteAssistancePartners;
+    private java.util.List<RemoteAssistancePartner> remoteAssistancePartners;
     /** Reports singleton */
-    private DeviceManagementReports _reports;
+    private DeviceManagementReports reports;
     /** The Resource Operations. */
-    private java.util.List<ResourceOperation> _resourceOperations;
+    private java.util.List<ResourceOperation> resourceOperations;
     /** The Role Assignments. */
-    private java.util.List<DeviceAndAppManagementRoleAssignment> _roleAssignments;
+    private java.util.List<DeviceAndAppManagementRoleAssignment> roleAssignments;
     /** The Role Definitions. */
-    private java.util.List<RoleDefinition> _roleDefinitions;
+    private java.util.List<RoleDefinition> roleDefinitions;
     /** Account level settings. */
-    private DeviceManagementSettings _settings;
+    private DeviceManagementSettings settings;
     /** The software update status summary. */
-    private SoftwareUpdateStatusSummary _softwareUpdateStatusSummary;
+    private SoftwareUpdateStatusSummary softwareUpdateStatusSummary;
     /** Tenant mobile device management subscription state. */
-    private DeviceManagementSubscriptionState _subscriptionState;
+    private DeviceManagementSubscriptionState subscriptionState;
     /** The telecom expense management partners. */
-    private java.util.List<TelecomExpenseManagementPartner> _telecomExpenseManagementPartners;
+    private java.util.List<TelecomExpenseManagementPartner> telecomExpenseManagementPartners;
     /** The terms and conditions associated with device management of the company. */
-    private java.util.List<TermsAndConditions> _termsAndConditions;
+    private java.util.List<TermsAndConditions> termsAndConditions;
     /** The list of troubleshooting events for the tenant. */
-    private java.util.List<DeviceManagementTroubleshootingEvent> _troubleshootingEvents;
+    private java.util.List<DeviceManagementTroubleshootingEvent> troubleshootingEvents;
     /** The Windows autopilot device identities contained collection. */
-    private java.util.List<WindowsAutopilotDeviceIdentity> _windowsAutopilotDeviceIdentities;
+    private java.util.List<WindowsAutopilotDeviceIdentity> windowsAutopilotDeviceIdentities;
     /** The windows information protection app learning summaries. */
-    private java.util.List<WindowsInformationProtectionAppLearningSummary> _windowsInformationProtectionAppLearningSummaries;
+    private java.util.List<WindowsInformationProtectionAppLearningSummary> windowsInformationProtectionAppLearningSummaries;
     /** The windows information protection network learning summaries. */
-    private java.util.List<WindowsInformationProtectionNetworkLearningSummary> _windowsInformationProtectionNetworkLearningSummaries;
+    private java.util.List<WindowsInformationProtectionNetworkLearningSummary> windowsInformationProtectionNetworkLearningSummaries;
     /**
-     * Instantiates a new DeviceManagement and sets the default values.
+     * Instantiates a new deviceManagement and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -91,7 +94,7 @@ public class DeviceManagement extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagement
+     * @return a deviceManagement
      */
     @javax.annotation.Nonnull
     public static DeviceManagement createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -104,7 +107,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ApplePushNotificationCertificate getApplePushNotificationCertificate() {
-        return this._applePushNotificationCertificate;
+        return this.applePushNotificationCertificate;
     }
     /**
      * Gets the auditEvents property value. The Audit Events
@@ -112,7 +115,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AuditEvent> getAuditEvents() {
-        return this._auditEvents;
+        return this.auditEvents;
     }
     /**
      * Gets the complianceManagementPartners property value. The list of Compliance Management Partners configured by the tenant.
@@ -120,7 +123,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ComplianceManagementPartner> getComplianceManagementPartners() {
-        return this._complianceManagementPartners;
+        return this.complianceManagementPartners;
     }
     /**
      * Gets the conditionalAccessSettings property value. The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
@@ -128,7 +131,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OnPremisesConditionalAccessSettings getConditionalAccessSettings() {
-        return this._conditionalAccessSettings;
+        return this.conditionalAccessSettings;
     }
     /**
      * Gets the detectedApps property value. The list of detected apps associated with a device.
@@ -136,7 +139,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DetectedApp> getDetectedApps() {
-        return this._detectedApps;
+        return this.detectedApps;
     }
     /**
      * Gets the deviceCategories property value. The list of device categories with the tenant.
@@ -144,7 +147,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceCategory> getDeviceCategories() {
-        return this._deviceCategories;
+        return this.deviceCategories;
     }
     /**
      * Gets the deviceCompliancePolicies property value. The device compliance policies.
@@ -152,7 +155,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceCompliancePolicy> getDeviceCompliancePolicies() {
-        return this._deviceCompliancePolicies;
+        return this.deviceCompliancePolicies;
     }
     /**
      * Gets the deviceCompliancePolicyDeviceStateSummary property value. The device compliance state summary for this account.
@@ -160,7 +163,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceCompliancePolicyDeviceStateSummary getDeviceCompliancePolicyDeviceStateSummary() {
-        return this._deviceCompliancePolicyDeviceStateSummary;
+        return this.deviceCompliancePolicyDeviceStateSummary;
     }
     /**
      * Gets the deviceCompliancePolicySettingStateSummaries property value. The summary states of compliance policy settings for this account.
@@ -168,7 +171,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceCompliancePolicySettingStateSummary> getDeviceCompliancePolicySettingStateSummaries() {
-        return this._deviceCompliancePolicySettingStateSummaries;
+        return this.deviceCompliancePolicySettingStateSummaries;
     }
     /**
      * Gets the deviceConfigurationDeviceStateSummaries property value. The device configuration device state summary for this account.
@@ -176,7 +179,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceConfigurationDeviceStateSummary getDeviceConfigurationDeviceStateSummaries() {
-        return this._deviceConfigurationDeviceStateSummaries;
+        return this.deviceConfigurationDeviceStateSummaries;
     }
     /**
      * Gets the deviceConfigurations property value. The device configurations.
@@ -184,7 +187,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceConfiguration> getDeviceConfigurations() {
-        return this._deviceConfigurations;
+        return this.deviceConfigurations;
     }
     /**
      * Gets the deviceEnrollmentConfigurations property value. The list of device enrollment configurations
@@ -192,7 +195,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceEnrollmentConfiguration> getDeviceEnrollmentConfigurations() {
-        return this._deviceEnrollmentConfigurations;
+        return this.deviceEnrollmentConfigurations;
     }
     /**
      * Gets the deviceManagementPartners property value. The list of Device Management Partners configured by the tenant.
@@ -200,7 +203,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementPartner> getDeviceManagementPartners() {
-        return this._deviceManagementPartners;
+        return this.deviceManagementPartners;
     }
     /**
      * Gets the exchangeConnectors property value. The list of Exchange Connectors configured by the tenant.
@@ -208,15 +211,15 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementExchangeConnector> getExchangeConnectors() {
-        return this._exchangeConnectors;
+        return this.exchangeConnectors;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applePushNotificationCertificate", (n) -> { this.setApplePushNotificationCertificate(n.getObjectValue(ApplePushNotificationCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("auditEvents", (n) -> { this.setAuditEvents(n.getCollectionOfObjectValues(AuditEvent::createFromDiscriminatorValue)); });
         deserializerMap.put("complianceManagementPartners", (n) -> { this.setComplianceManagementPartners(n.getCollectionOfObjectValues(ComplianceManagementPartner::createFromDiscriminatorValue)); });
@@ -232,7 +235,7 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("deviceManagementPartners", (n) -> { this.setDeviceManagementPartners(n.getCollectionOfObjectValues(DeviceManagementPartner::createFromDiscriminatorValue)); });
         deserializerMap.put("exchangeConnectors", (n) -> { this.setExchangeConnectors(n.getCollectionOfObjectValues(DeviceManagementExchangeConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("importedWindowsAutopilotDeviceIdentities", (n) -> { this.setImportedWindowsAutopilotDeviceIdentities(n.getCollectionOfObjectValues(ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
-        deserializerMap.put("intuneAccountId", (n) -> { this.setIntuneAccountId(n.getStringValue()); });
+        deserializerMap.put("intuneAccountId", (n) -> { this.setIntuneAccountId(n.getUUIDValue()); });
         deserializerMap.put("intuneBrand", (n) -> { this.setIntuneBrand(n.getObjectValue(IntuneBrand::createFromDiscriminatorValue)); });
         deserializerMap.put("iosUpdateStatuses", (n) -> { this.setIosUpdateStatuses(n.getCollectionOfObjectValues(IosUpdateDeviceStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("managedDeviceOverview", (n) -> { this.setManagedDeviceOverview(n.getObjectValue(ManagedDeviceOverview::createFromDiscriminatorValue)); });
@@ -261,15 +264,15 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ImportedWindowsAutopilotDeviceIdentity> getImportedWindowsAutopilotDeviceIdentities() {
-        return this._importedWindowsAutopilotDeviceIdentities;
+        return this.importedWindowsAutopilotDeviceIdentities;
     }
     /**
      * Gets the intuneAccountId property value. Intune Account Id for given tenant
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getIntuneAccountId() {
-        return this._intuneAccountId;
+    public UUID getIntuneAccountId() {
+        return this.intuneAccountId;
     }
     /**
      * Gets the intuneBrand property value. intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
@@ -277,7 +280,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IntuneBrand getIntuneBrand() {
-        return this._intuneBrand;
+        return this.intuneBrand;
     }
     /**
      * Gets the iosUpdateStatuses property value. The IOS software update installation statuses for this account.
@@ -285,7 +288,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<IosUpdateDeviceStatus> getIosUpdateStatuses() {
-        return this._iosUpdateStatuses;
+        return this.iosUpdateStatuses;
     }
     /**
      * Gets the managedDeviceOverview property value. Device overview
@@ -293,7 +296,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ManagedDeviceOverview getManagedDeviceOverview() {
-        return this._managedDeviceOverview;
+        return this.managedDeviceOverview;
     }
     /**
      * Gets the managedDevices property value. The list of managed devices.
@@ -301,7 +304,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedDevice> getManagedDevices() {
-        return this._managedDevices;
+        return this.managedDevices;
     }
     /**
      * Gets the mobileThreatDefenseConnectors property value. The list of Mobile threat Defense connectors configured by the tenant.
@@ -309,7 +312,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MobileThreatDefenseConnector> getMobileThreatDefenseConnectors() {
-        return this._mobileThreatDefenseConnectors;
+        return this.mobileThreatDefenseConnectors;
     }
     /**
      * Gets the notificationMessageTemplates property value. The Notification Message Templates.
@@ -317,7 +320,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<NotificationMessageTemplate> getNotificationMessageTemplates() {
-        return this._notificationMessageTemplates;
+        return this.notificationMessageTemplates;
     }
     /**
      * Gets the remoteAssistancePartners property value. The remote assist partners.
@@ -325,7 +328,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<RemoteAssistancePartner> getRemoteAssistancePartners() {
-        return this._remoteAssistancePartners;
+        return this.remoteAssistancePartners;
     }
     /**
      * Gets the reports property value. Reports singleton
@@ -333,7 +336,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceManagementReports getReports() {
-        return this._reports;
+        return this.reports;
     }
     /**
      * Gets the resourceOperations property value. The Resource Operations.
@@ -341,7 +344,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ResourceOperation> getResourceOperations() {
-        return this._resourceOperations;
+        return this.resourceOperations;
     }
     /**
      * Gets the roleAssignments property value. The Role Assignments.
@@ -349,7 +352,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceAndAppManagementRoleAssignment> getRoleAssignments() {
-        return this._roleAssignments;
+        return this.roleAssignments;
     }
     /**
      * Gets the roleDefinitions property value. The Role Definitions.
@@ -357,7 +360,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<RoleDefinition> getRoleDefinitions() {
-        return this._roleDefinitions;
+        return this.roleDefinitions;
     }
     /**
      * Gets the settings property value. Account level settings.
@@ -365,7 +368,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceManagementSettings getSettings() {
-        return this._settings;
+        return this.settings;
     }
     /**
      * Gets the softwareUpdateStatusSummary property value. The software update status summary.
@@ -373,7 +376,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SoftwareUpdateStatusSummary getSoftwareUpdateStatusSummary() {
-        return this._softwareUpdateStatusSummary;
+        return this.softwareUpdateStatusSummary;
     }
     /**
      * Gets the subscriptionState property value. Tenant mobile device management subscription state.
@@ -381,7 +384,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceManagementSubscriptionState getSubscriptionState() {
-        return this._subscriptionState;
+        return this.subscriptionState;
     }
     /**
      * Gets the telecomExpenseManagementPartners property value. The telecom expense management partners.
@@ -389,7 +392,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TelecomExpenseManagementPartner> getTelecomExpenseManagementPartners() {
-        return this._telecomExpenseManagementPartners;
+        return this.telecomExpenseManagementPartners;
     }
     /**
      * Gets the termsAndConditions property value. The terms and conditions associated with device management of the company.
@@ -397,7 +400,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TermsAndConditions> getTermsAndConditions() {
-        return this._termsAndConditions;
+        return this.termsAndConditions;
     }
     /**
      * Gets the troubleshootingEvents property value. The list of troubleshooting events for the tenant.
@@ -405,7 +408,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementTroubleshootingEvent> getTroubleshootingEvents() {
-        return this._troubleshootingEvents;
+        return this.troubleshootingEvents;
     }
     /**
      * Gets the windowsAutopilotDeviceIdentities property value. The Windows autopilot device identities contained collection.
@@ -413,7 +416,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WindowsAutopilotDeviceIdentity> getWindowsAutopilotDeviceIdentities() {
-        return this._windowsAutopilotDeviceIdentities;
+        return this.windowsAutopilotDeviceIdentities;
     }
     /**
      * Gets the windowsInformationProtectionAppLearningSummaries property value. The windows information protection app learning summaries.
@@ -421,7 +424,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WindowsInformationProtectionAppLearningSummary> getWindowsInformationProtectionAppLearningSummaries() {
-        return this._windowsInformationProtectionAppLearningSummaries;
+        return this.windowsInformationProtectionAppLearningSummaries;
     }
     /**
      * Gets the windowsInformationProtectionNetworkLearningSummaries property value. The windows information protection network learning summaries.
@@ -429,7 +432,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WindowsInformationProtectionNetworkLearningSummary> getWindowsInformationProtectionNetworkLearningSummaries() {
-        return this._windowsInformationProtectionNetworkLearningSummaries;
+        return this.windowsInformationProtectionNetworkLearningSummaries;
     }
     /**
      * Serializes information the current object
@@ -455,7 +458,7 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("deviceManagementPartners", this.getDeviceManagementPartners());
         writer.writeCollectionOfObjectValues("exchangeConnectors", this.getExchangeConnectors());
         writer.writeCollectionOfObjectValues("importedWindowsAutopilotDeviceIdentities", this.getImportedWindowsAutopilotDeviceIdentities());
-        writer.writeStringValue("intuneAccountId", this.getIntuneAccountId());
+        writer.writeUUIDValue("intuneAccountId", this.getIntuneAccountId());
         writer.writeObjectValue("intuneBrand", this.getIntuneBrand());
         writer.writeCollectionOfObjectValues("iosUpdateStatuses", this.getIosUpdateStatuses());
         writer.writeObjectValue("managedDeviceOverview", this.getManagedDeviceOverview());
@@ -484,7 +487,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setApplePushNotificationCertificate(@javax.annotation.Nullable final ApplePushNotificationCertificate value) {
-        this._applePushNotificationCertificate = value;
+        this.applePushNotificationCertificate = value;
     }
     /**
      * Sets the auditEvents property value. The Audit Events
@@ -493,7 +496,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAuditEvents(@javax.annotation.Nullable final java.util.List<AuditEvent> value) {
-        this._auditEvents = value;
+        this.auditEvents = value;
     }
     /**
      * Sets the complianceManagementPartners property value. The list of Compliance Management Partners configured by the tenant.
@@ -502,7 +505,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setComplianceManagementPartners(@javax.annotation.Nullable final java.util.List<ComplianceManagementPartner> value) {
-        this._complianceManagementPartners = value;
+        this.complianceManagementPartners = value;
     }
     /**
      * Sets the conditionalAccessSettings property value. The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
@@ -511,7 +514,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setConditionalAccessSettings(@javax.annotation.Nullable final OnPremisesConditionalAccessSettings value) {
-        this._conditionalAccessSettings = value;
+        this.conditionalAccessSettings = value;
     }
     /**
      * Sets the detectedApps property value. The list of detected apps associated with a device.
@@ -520,7 +523,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDetectedApps(@javax.annotation.Nullable final java.util.List<DetectedApp> value) {
-        this._detectedApps = value;
+        this.detectedApps = value;
     }
     /**
      * Sets the deviceCategories property value. The list of device categories with the tenant.
@@ -529,7 +532,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceCategories(@javax.annotation.Nullable final java.util.List<DeviceCategory> value) {
-        this._deviceCategories = value;
+        this.deviceCategories = value;
     }
     /**
      * Sets the deviceCompliancePolicies property value. The device compliance policies.
@@ -538,7 +541,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceCompliancePolicies(@javax.annotation.Nullable final java.util.List<DeviceCompliancePolicy> value) {
-        this._deviceCompliancePolicies = value;
+        this.deviceCompliancePolicies = value;
     }
     /**
      * Sets the deviceCompliancePolicyDeviceStateSummary property value. The device compliance state summary for this account.
@@ -547,7 +550,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceCompliancePolicyDeviceStateSummary(@javax.annotation.Nullable final DeviceCompliancePolicyDeviceStateSummary value) {
-        this._deviceCompliancePolicyDeviceStateSummary = value;
+        this.deviceCompliancePolicyDeviceStateSummary = value;
     }
     /**
      * Sets the deviceCompliancePolicySettingStateSummaries property value. The summary states of compliance policy settings for this account.
@@ -556,7 +559,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceCompliancePolicySettingStateSummaries(@javax.annotation.Nullable final java.util.List<DeviceCompliancePolicySettingStateSummary> value) {
-        this._deviceCompliancePolicySettingStateSummaries = value;
+        this.deviceCompliancePolicySettingStateSummaries = value;
     }
     /**
      * Sets the deviceConfigurationDeviceStateSummaries property value. The device configuration device state summary for this account.
@@ -565,7 +568,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceConfigurationDeviceStateSummaries(@javax.annotation.Nullable final DeviceConfigurationDeviceStateSummary value) {
-        this._deviceConfigurationDeviceStateSummaries = value;
+        this.deviceConfigurationDeviceStateSummaries = value;
     }
     /**
      * Sets the deviceConfigurations property value. The device configurations.
@@ -574,7 +577,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceConfigurations(@javax.annotation.Nullable final java.util.List<DeviceConfiguration> value) {
-        this._deviceConfigurations = value;
+        this.deviceConfigurations = value;
     }
     /**
      * Sets the deviceEnrollmentConfigurations property value. The list of device enrollment configurations
@@ -583,7 +586,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceEnrollmentConfigurations(@javax.annotation.Nullable final java.util.List<DeviceEnrollmentConfiguration> value) {
-        this._deviceEnrollmentConfigurations = value;
+        this.deviceEnrollmentConfigurations = value;
     }
     /**
      * Sets the deviceManagementPartners property value. The list of Device Management Partners configured by the tenant.
@@ -592,7 +595,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceManagementPartners(@javax.annotation.Nullable final java.util.List<DeviceManagementPartner> value) {
-        this._deviceManagementPartners = value;
+        this.deviceManagementPartners = value;
     }
     /**
      * Sets the exchangeConnectors property value. The list of Exchange Connectors configured by the tenant.
@@ -601,7 +604,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setExchangeConnectors(@javax.annotation.Nullable final java.util.List<DeviceManagementExchangeConnector> value) {
-        this._exchangeConnectors = value;
+        this.exchangeConnectors = value;
     }
     /**
      * Sets the importedWindowsAutopilotDeviceIdentities property value. Collection of imported Windows autopilot devices.
@@ -610,7 +613,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setImportedWindowsAutopilotDeviceIdentities(@javax.annotation.Nullable final java.util.List<ImportedWindowsAutopilotDeviceIdentity> value) {
-        this._importedWindowsAutopilotDeviceIdentities = value;
+        this.importedWindowsAutopilotDeviceIdentities = value;
     }
     /**
      * Sets the intuneAccountId property value. Intune Account Id for given tenant
@@ -618,8 +621,8 @@ public class DeviceManagement extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setIntuneAccountId(@javax.annotation.Nullable final String value) {
-        this._intuneAccountId = value;
+    public void setIntuneAccountId(@javax.annotation.Nullable final UUID value) {
+        this.intuneAccountId = value;
     }
     /**
      * Sets the intuneBrand property value. intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
@@ -628,7 +631,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIntuneBrand(@javax.annotation.Nullable final IntuneBrand value) {
-        this._intuneBrand = value;
+        this.intuneBrand = value;
     }
     /**
      * Sets the iosUpdateStatuses property value. The IOS software update installation statuses for this account.
@@ -637,7 +640,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIosUpdateStatuses(@javax.annotation.Nullable final java.util.List<IosUpdateDeviceStatus> value) {
-        this._iosUpdateStatuses = value;
+        this.iosUpdateStatuses = value;
     }
     /**
      * Sets the managedDeviceOverview property value. Device overview
@@ -646,7 +649,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setManagedDeviceOverview(@javax.annotation.Nullable final ManagedDeviceOverview value) {
-        this._managedDeviceOverview = value;
+        this.managedDeviceOverview = value;
     }
     /**
      * Sets the managedDevices property value. The list of managed devices.
@@ -655,7 +658,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setManagedDevices(@javax.annotation.Nullable final java.util.List<ManagedDevice> value) {
-        this._managedDevices = value;
+        this.managedDevices = value;
     }
     /**
      * Sets the mobileThreatDefenseConnectors property value. The list of Mobile threat Defense connectors configured by the tenant.
@@ -664,7 +667,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMobileThreatDefenseConnectors(@javax.annotation.Nullable final java.util.List<MobileThreatDefenseConnector> value) {
-        this._mobileThreatDefenseConnectors = value;
+        this.mobileThreatDefenseConnectors = value;
     }
     /**
      * Sets the notificationMessageTemplates property value. The Notification Message Templates.
@@ -673,7 +676,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setNotificationMessageTemplates(@javax.annotation.Nullable final java.util.List<NotificationMessageTemplate> value) {
-        this._notificationMessageTemplates = value;
+        this.notificationMessageTemplates = value;
     }
     /**
      * Sets the remoteAssistancePartners property value. The remote assist partners.
@@ -682,7 +685,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRemoteAssistancePartners(@javax.annotation.Nullable final java.util.List<RemoteAssistancePartner> value) {
-        this._remoteAssistancePartners = value;
+        this.remoteAssistancePartners = value;
     }
     /**
      * Sets the reports property value. Reports singleton
@@ -691,7 +694,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setReports(@javax.annotation.Nullable final DeviceManagementReports value) {
-        this._reports = value;
+        this.reports = value;
     }
     /**
      * Sets the resourceOperations property value. The Resource Operations.
@@ -700,7 +703,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setResourceOperations(@javax.annotation.Nullable final java.util.List<ResourceOperation> value) {
-        this._resourceOperations = value;
+        this.resourceOperations = value;
     }
     /**
      * Sets the roleAssignments property value. The Role Assignments.
@@ -709,7 +712,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRoleAssignments(@javax.annotation.Nullable final java.util.List<DeviceAndAppManagementRoleAssignment> value) {
-        this._roleAssignments = value;
+        this.roleAssignments = value;
     }
     /**
      * Sets the roleDefinitions property value. The Role Definitions.
@@ -718,7 +721,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRoleDefinitions(@javax.annotation.Nullable final java.util.List<RoleDefinition> value) {
-        this._roleDefinitions = value;
+        this.roleDefinitions = value;
     }
     /**
      * Sets the settings property value. Account level settings.
@@ -727,7 +730,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final DeviceManagementSettings value) {
-        this._settings = value;
+        this.settings = value;
     }
     /**
      * Sets the softwareUpdateStatusSummary property value. The software update status summary.
@@ -736,7 +739,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSoftwareUpdateStatusSummary(@javax.annotation.Nullable final SoftwareUpdateStatusSummary value) {
-        this._softwareUpdateStatusSummary = value;
+        this.softwareUpdateStatusSummary = value;
     }
     /**
      * Sets the subscriptionState property value. Tenant mobile device management subscription state.
@@ -745,7 +748,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSubscriptionState(@javax.annotation.Nullable final DeviceManagementSubscriptionState value) {
-        this._subscriptionState = value;
+        this.subscriptionState = value;
     }
     /**
      * Sets the telecomExpenseManagementPartners property value. The telecom expense management partners.
@@ -754,7 +757,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTelecomExpenseManagementPartners(@javax.annotation.Nullable final java.util.List<TelecomExpenseManagementPartner> value) {
-        this._telecomExpenseManagementPartners = value;
+        this.telecomExpenseManagementPartners = value;
     }
     /**
      * Sets the termsAndConditions property value. The terms and conditions associated with device management of the company.
@@ -763,7 +766,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTermsAndConditions(@javax.annotation.Nullable final java.util.List<TermsAndConditions> value) {
-        this._termsAndConditions = value;
+        this.termsAndConditions = value;
     }
     /**
      * Sets the troubleshootingEvents property value. The list of troubleshooting events for the tenant.
@@ -772,7 +775,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTroubleshootingEvents(@javax.annotation.Nullable final java.util.List<DeviceManagementTroubleshootingEvent> value) {
-        this._troubleshootingEvents = value;
+        this.troubleshootingEvents = value;
     }
     /**
      * Sets the windowsAutopilotDeviceIdentities property value. The Windows autopilot device identities contained collection.
@@ -781,7 +784,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWindowsAutopilotDeviceIdentities(@javax.annotation.Nullable final java.util.List<WindowsAutopilotDeviceIdentity> value) {
-        this._windowsAutopilotDeviceIdentities = value;
+        this.windowsAutopilotDeviceIdentities = value;
     }
     /**
      * Sets the windowsInformationProtectionAppLearningSummaries property value. The windows information protection app learning summaries.
@@ -790,7 +793,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWindowsInformationProtectionAppLearningSummaries(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionAppLearningSummary> value) {
-        this._windowsInformationProtectionAppLearningSummaries = value;
+        this.windowsInformationProtectionAppLearningSummaries = value;
     }
     /**
      * Sets the windowsInformationProtectionNetworkLearningSummaries property value. The windows information protection network learning summaries.
@@ -799,6 +802,6 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWindowsInformationProtectionNetworkLearningSummaries(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionNetworkLearningSummary> value) {
-        this._windowsInformationProtectionNetworkLearningSummaries = value;
+        this.windowsInformationProtectionNetworkLearningSummaries = value;
     }
 }

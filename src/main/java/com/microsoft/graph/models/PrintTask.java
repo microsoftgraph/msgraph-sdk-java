@@ -3,20 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class PrintTask extends Entity implements Parsable {
     /** The definition property */
-    private PrintTaskDefinition _definition;
+    private PrintTaskDefinition definition;
     /** The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only. */
-    private String _parentUrl;
+    private String parentUrl;
     /** The status property */
-    private PrintTaskStatus _status;
+    private PrintTaskStatus status;
     /** The trigger property */
-    private PrintTaskTrigger _trigger;
+    private PrintTaskTrigger trigger;
     /**
      * Instantiates a new printTask and sets the default values.
      * @return a void
@@ -41,15 +39,15 @@ public class PrintTask extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrintTaskDefinition getDefinition() {
-        return this._definition;
+        return this.definition;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("definition", (n) -> { this.setDefinition(n.getObjectValue(PrintTaskDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("parentUrl", (n) -> { this.setParentUrl(n.getStringValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getObjectValue(PrintTaskStatus::createFromDiscriminatorValue)); });
@@ -62,7 +60,7 @@ public class PrintTask extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getParentUrl() {
-        return this._parentUrl;
+        return this.parentUrl;
     }
     /**
      * Gets the status property value. The status property
@@ -70,7 +68,7 @@ public class PrintTask extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrintTaskStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the trigger property value. The trigger property
@@ -78,7 +76,7 @@ public class PrintTask extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrintTaskTrigger getTrigger() {
-        return this._trigger;
+        return this.trigger;
     }
     /**
      * Serializes information the current object
@@ -101,7 +99,7 @@ public class PrintTask extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDefinition(@javax.annotation.Nullable final PrintTaskDefinition value) {
-        this._definition = value;
+        this.definition = value;
     }
     /**
      * Sets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
@@ -110,7 +108,7 @@ public class PrintTask extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setParentUrl(@javax.annotation.Nullable final String value) {
-        this._parentUrl = value;
+        this.parentUrl = value;
     }
     /**
      * Sets the status property value. The status property
@@ -119,7 +117,7 @@ public class PrintTask extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final PrintTaskStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the trigger property value. The trigger property
@@ -128,6 +126,6 @@ public class PrintTask extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTrigger(@javax.annotation.Nullable final PrintTaskTrigger value) {
-        this._trigger = value;
+        this.trigger = value;
     }
 }

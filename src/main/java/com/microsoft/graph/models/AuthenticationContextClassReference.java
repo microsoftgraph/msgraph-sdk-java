@@ -3,18 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class AuthenticationContextClassReference extends Entity implements Parsable {
     /** A short explanation of the policies that are enforced by authenticationContextClassReference. This value should be used to provide secondary text to describe the authentication context class reference when building user-facing admin experiences. For example, a selection UX. */
-    private String _description;
+    private String description;
     /** The display name is the friendly name of the authenticationContextClassReference object. This value should be used to identify the authentication context class reference when building user-facing admin experiences. For example, a selection UX. */
-    private String _displayName;
+    private String displayName;
     /** Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it is set to false, it should not be shown in authentication context selection UX, or used to protect app resources. It will be shown and available for Conditional Access policy authoring. The default value is false.  Supports $filter (eq). */
-    private Boolean _isAvailable;
+    private Boolean isAvailable;
     /**
      * Instantiates a new authenticationContextClassReference and sets the default values.
      * @return a void
@@ -39,7 +37,7 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The display name is the friendly name of the authenticationContextClassReference object. This value should be used to identify the authentication context class reference when building user-facing admin experiences. For example, a selection UX.
@@ -47,15 +45,15 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("isAvailable", (n) -> { this.setIsAvailable(n.getBooleanValue()); });
@@ -67,7 +65,7 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getIsAvailable() {
-        return this._isAvailable;
+        return this.isAvailable;
     }
     /**
      * Serializes information the current object
@@ -89,7 +87,7 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The display name is the friendly name of the authenticationContextClassReference object. This value should be used to identify the authentication context class reference when building user-facing admin experiences. For example, a selection UX.
@@ -98,7 +96,7 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the isAvailable property value. Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it is set to false, it should not be shown in authentication context selection UX, or used to protect app resources. It will be shown and available for Conditional Access policy authoring. The default value is false.  Supports $filter (eq).
@@ -107,6 +105,6 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
      */
     @javax.annotation.Nonnull
     public void setIsAvailable(@javax.annotation.Nullable final Boolean value) {
-        this._isAvailable = value;
+        this.isAvailable = value;
     }
 }

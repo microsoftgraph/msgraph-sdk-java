@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
     /** Value used when configuring the answer/destination/value of the MX record at the DNS host. */
-    private String _mailExchange;
+    private String mailExchange;
     /** Value used when configuring the Preference/Priority property of the MX record at the DNS host. */
-    private Integer _preference;
+    private Integer preference;
     /**
      * Instantiates a new DomainDnsMxRecord and sets the default values.
      * @return a void
@@ -32,11 +31,11 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("mailExchange", (n) -> { this.setMailExchange(n.getStringValue()); });
         deserializerMap.put("preference", (n) -> { this.setPreference(n.getIntegerValue()); });
         return deserializerMap;
@@ -47,7 +46,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMailExchange() {
-        return this._mailExchange;
+        return this.mailExchange;
     }
     /**
      * Gets the preference property value. Value used when configuring the Preference/Priority property of the MX record at the DNS host.
@@ -55,7 +54,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getPreference() {
-        return this._preference;
+        return this.preference;
     }
     /**
      * Serializes information the current object
@@ -76,7 +75,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMailExchange(@javax.annotation.Nullable final String value) {
-        this._mailExchange = value;
+        this.mailExchange = value;
     }
     /**
      * Sets the preference property value. Value used when configuring the Preference/Priority property of the MX record at the DNS host.
@@ -85,6 +84,6 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPreference(@javax.annotation.Nullable final Integer value) {
-        this._preference = value;
+        this.preference = value;
     }
 }

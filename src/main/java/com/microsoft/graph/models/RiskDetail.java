@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
 public enum RiskDetail implements ValuedEnum {
     None("none"),
     AdminGeneratedTemporaryPassword("adminGeneratedTemporaryPassword"),
@@ -17,6 +16,8 @@ public enum RiskDetail implements ValuedEnum {
     Hidden("hidden"),
     AdminConfirmedUserCompromised("adminConfirmedUserCompromised"),
     UnknownFutureValue("unknownFutureValue"),
+    AdminConfirmedServicePrincipalCompromised("adminConfirmedServicePrincipalCompromised"),
+    AdminDismissedAllRiskForServicePrincipal("adminDismissedAllRiskForServicePrincipal"),
     M365DAdminDismissedDetection("m365DAdminDismissedDetection");
     public final String value;
     RiskDetail(final String value) {
@@ -40,6 +41,8 @@ public enum RiskDetail implements ValuedEnum {
             case "hidden": return Hidden;
             case "adminConfirmedUserCompromised": return AdminConfirmedUserCompromised;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "adminConfirmedServicePrincipalCompromised": return AdminConfirmedServicePrincipalCompromised;
+            case "adminDismissedAllRiskForServicePrincipal": return AdminDismissedAllRiskForServicePrincipal;
             case "m365DAdminDismissedDetection": return M365DAdminDismissedDetection;
             default: return null;
         }

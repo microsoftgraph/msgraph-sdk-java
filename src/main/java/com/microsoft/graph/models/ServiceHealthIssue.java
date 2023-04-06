@@ -3,29 +3,28 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable {
     /** The classification property */
-    private ServiceHealthClassificationType _classification;
+    private ServiceHealthClassificationType classification;
     /** The feature name of the service issue. */
-    private String _feature;
+    private String feature;
     /** The feature group name of the service issue. */
-    private String _featureGroup;
+    private String featureGroup;
     /** The description of the service issue impact. */
-    private String _impactDescription;
+    private String impactDescription;
     /** Indicates whether the issue is resolved. */
-    private Boolean _isResolved;
+    private Boolean isResolved;
     /** The origin property */
-    private ServiceHealthOrigin _origin;
+    private ServiceHealthOrigin origin;
     /** Collection of historical posts for the service issue. */
-    private java.util.List<ServiceHealthIssuePost> _posts;
+    private java.util.List<ServiceHealthIssuePost> posts;
     /** Indicates the service affected by the issue. */
-    private String _service;
+    private String service;
     /** The status property */
-    private ServiceHealthStatus _status;
+    private ServiceHealthStatus status;
     /**
      * Instantiates a new ServiceHealthIssue and sets the default values.
      * @return a void
@@ -51,7 +50,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nullable
     public ServiceHealthClassificationType getClassification() {
-        return this._classification;
+        return this.classification;
     }
     /**
      * Gets the feature property value. The feature name of the service issue.
@@ -59,7 +58,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nullable
     public String getFeature() {
-        return this._feature;
+        return this.feature;
     }
     /**
      * Gets the featureGroup property value. The feature group name of the service issue.
@@ -67,15 +66,15 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nullable
     public String getFeatureGroup() {
-        return this._featureGroup;
+        return this.featureGroup;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(ServiceHealthClassificationType.class)); });
         deserializerMap.put("feature", (n) -> { this.setFeature(n.getStringValue()); });
         deserializerMap.put("featureGroup", (n) -> { this.setFeatureGroup(n.getStringValue()); });
@@ -93,7 +92,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nullable
     public String getImpactDescription() {
-        return this._impactDescription;
+        return this.impactDescription;
     }
     /**
      * Gets the isResolved property value. Indicates whether the issue is resolved.
@@ -101,7 +100,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getIsResolved() {
-        return this._isResolved;
+        return this.isResolved;
     }
     /**
      * Gets the origin property value. The origin property
@@ -109,7 +108,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nullable
     public ServiceHealthOrigin getOrigin() {
-        return this._origin;
+        return this.origin;
     }
     /**
      * Gets the posts property value. Collection of historical posts for the service issue.
@@ -117,7 +116,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nullable
     public java.util.List<ServiceHealthIssuePost> getPosts() {
-        return this._posts;
+        return this.posts;
     }
     /**
      * Gets the service property value. Indicates the service affected by the issue.
@@ -125,7 +124,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nullable
     public String getService() {
-        return this._service;
+        return this.service;
     }
     /**
      * Gets the status property value. The status property
@@ -133,7 +132,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nullable
     public ServiceHealthStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
@@ -161,7 +160,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nonnull
     public void setClassification(@javax.annotation.Nullable final ServiceHealthClassificationType value) {
-        this._classification = value;
+        this.classification = value;
     }
     /**
      * Sets the feature property value. The feature name of the service issue.
@@ -170,7 +169,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nonnull
     public void setFeature(@javax.annotation.Nullable final String value) {
-        this._feature = value;
+        this.feature = value;
     }
     /**
      * Sets the featureGroup property value. The feature group name of the service issue.
@@ -179,7 +178,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nonnull
     public void setFeatureGroup(@javax.annotation.Nullable final String value) {
-        this._featureGroup = value;
+        this.featureGroup = value;
     }
     /**
      * Sets the impactDescription property value. The description of the service issue impact.
@@ -188,7 +187,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nonnull
     public void setImpactDescription(@javax.annotation.Nullable final String value) {
-        this._impactDescription = value;
+        this.impactDescription = value;
     }
     /**
      * Sets the isResolved property value. Indicates whether the issue is resolved.
@@ -197,7 +196,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nonnull
     public void setIsResolved(@javax.annotation.Nullable final Boolean value) {
-        this._isResolved = value;
+        this.isResolved = value;
     }
     /**
      * Sets the origin property value. The origin property
@@ -206,7 +205,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nonnull
     public void setOrigin(@javax.annotation.Nullable final ServiceHealthOrigin value) {
-        this._origin = value;
+        this.origin = value;
     }
     /**
      * Sets the posts property value. Collection of historical posts for the service issue.
@@ -215,7 +214,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nonnull
     public void setPosts(@javax.annotation.Nullable final java.util.List<ServiceHealthIssuePost> value) {
-        this._posts = value;
+        this.posts = value;
     }
     /**
      * Sets the service property value. Indicates the service affected by the issue.
@@ -224,7 +223,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nonnull
     public void setService(@javax.annotation.Nullable final String value) {
-        this._service = value;
+        this.service = value;
     }
     /**
      * Sets the status property value. The status property
@@ -233,6 +232,6 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ServiceHealthStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }

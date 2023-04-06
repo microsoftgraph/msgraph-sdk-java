@@ -3,23 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable {
     /** A value indicating whether to search the 32-bit registry on 64-bit systems. */
-    private Boolean _check32BitOn64System;
+    private Boolean check32BitOn64System;
     /** The registry comparison value. */
-    private String _comparisonValue;
+    private String comparisonValue;
     /** The full path of the registry entry containing the value to detect. */
-    private String _keyPath;
+    private String keyPath;
     /** Contains all supported registry data detection type. */
-    private Win32LobAppRegistryRuleOperationType _operationType;
+    private Win32LobAppRegistryRuleOperationType operationType;
     /** Contains properties for detection operator. */
-    private Win32LobAppRuleOperator _operator;
+    private Win32LobAppRuleOperator operator;
     /** The name of the registry value to detect. */
-    private String _valueName;
+    private String valueName;
     /**
      * Instantiates a new Win32LobAppRegistryRule and sets the default values.
      * @return a void
@@ -45,7 +44,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      */
     @javax.annotation.Nullable
     public Boolean getCheck32BitOn64System() {
-        return this._check32BitOn64System;
+        return this.check32BitOn64System;
     }
     /**
      * Gets the comparisonValue property value. The registry comparison value.
@@ -53,15 +52,15 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      */
     @javax.annotation.Nullable
     public String getComparisonValue() {
-        return this._comparisonValue;
+        return this.comparisonValue;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("check32BitOn64System", (n) -> { this.setCheck32BitOn64System(n.getBooleanValue()); });
         deserializerMap.put("comparisonValue", (n) -> { this.setComparisonValue(n.getStringValue()); });
         deserializerMap.put("keyPath", (n) -> { this.setKeyPath(n.getStringValue()); });
@@ -76,7 +75,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      */
     @javax.annotation.Nullable
     public String getKeyPath() {
-        return this._keyPath;
+        return this.keyPath;
     }
     /**
      * Gets the operationType property value. Contains all supported registry data detection type.
@@ -84,7 +83,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      */
     @javax.annotation.Nullable
     public Win32LobAppRegistryRuleOperationType getOperationType() {
-        return this._operationType;
+        return this.operationType;
     }
     /**
      * Gets the operator property value. Contains properties for detection operator.
@@ -92,7 +91,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      */
     @javax.annotation.Nullable
     public Win32LobAppRuleOperator getOperator() {
-        return this._operator;
+        return this.operator;
     }
     /**
      * Gets the valueName property value. The name of the registry value to detect.
@@ -100,7 +99,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      */
     @javax.annotation.Nullable
     public String getValueName() {
-        return this._valueName;
+        return this.valueName;
     }
     /**
      * Serializes information the current object
@@ -125,7 +124,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      */
     @javax.annotation.Nonnull
     public void setCheck32BitOn64System(@javax.annotation.Nullable final Boolean value) {
-        this._check32BitOn64System = value;
+        this.check32BitOn64System = value;
     }
     /**
      * Sets the comparisonValue property value. The registry comparison value.
@@ -134,7 +133,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      */
     @javax.annotation.Nonnull
     public void setComparisonValue(@javax.annotation.Nullable final String value) {
-        this._comparisonValue = value;
+        this.comparisonValue = value;
     }
     /**
      * Sets the keyPath property value. The full path of the registry entry containing the value to detect.
@@ -143,7 +142,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      */
     @javax.annotation.Nonnull
     public void setKeyPath(@javax.annotation.Nullable final String value) {
-        this._keyPath = value;
+        this.keyPath = value;
     }
     /**
      * Sets the operationType property value. Contains all supported registry data detection type.
@@ -152,7 +151,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      */
     @javax.annotation.Nonnull
     public void setOperationType(@javax.annotation.Nullable final Win32LobAppRegistryRuleOperationType value) {
-        this._operationType = value;
+        this.operationType = value;
     }
     /**
      * Sets the operator property value. Contains properties for detection operator.
@@ -161,7 +160,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      */
     @javax.annotation.Nonnull
     public void setOperator(@javax.annotation.Nullable final Win32LobAppRuleOperator value) {
-        this._operator = value;
+        this.operator = value;
     }
     /**
      * Sets the valueName property value. The name of the registry value to detect.
@@ -170,6 +169,6 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      */
     @javax.annotation.Nonnull
     public void setValueName(@javax.annotation.Nullable final String value) {
-        this._valueName = value;
+        this.valueName = value;
     }
 }

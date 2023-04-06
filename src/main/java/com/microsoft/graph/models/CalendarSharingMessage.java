@@ -3,19 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CalendarSharingMessage extends Message implements Parsable {
     /** The canAccept property */
-    private Boolean _canAccept;
+    private Boolean canAccept;
     /** The sharingMessageAction property */
-    private CalendarSharingMessageAction _sharingMessageAction;
+    private CalendarSharingMessageAction sharingMessageAction;
     /** The sharingMessageActions property */
-    private java.util.List<CalendarSharingMessageAction> _sharingMessageActions;
+    private java.util.List<CalendarSharingMessageAction> sharingMessageActions;
     /** The suggestedCalendarName property */
-    private String _suggestedCalendarName;
+    private String suggestedCalendarName;
     /**
      * Instantiates a new CalendarSharingMessage and sets the default values.
      * @return a void
@@ -41,15 +40,15 @@ public class CalendarSharingMessage extends Message implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getCanAccept() {
-        return this._canAccept;
+        return this.canAccept;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("canAccept", (n) -> { this.setCanAccept(n.getBooleanValue()); });
         deserializerMap.put("sharingMessageAction", (n) -> { this.setSharingMessageAction(n.getObjectValue(CalendarSharingMessageAction::createFromDiscriminatorValue)); });
         deserializerMap.put("sharingMessageActions", (n) -> { this.setSharingMessageActions(n.getCollectionOfObjectValues(CalendarSharingMessageAction::createFromDiscriminatorValue)); });
@@ -62,7 +61,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
      */
     @javax.annotation.Nullable
     public CalendarSharingMessageAction getSharingMessageAction() {
-        return this._sharingMessageAction;
+        return this.sharingMessageAction;
     }
     /**
      * Gets the sharingMessageActions property value. The sharingMessageActions property
@@ -70,7 +69,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CalendarSharingMessageAction> getSharingMessageActions() {
-        return this._sharingMessageActions;
+        return this.sharingMessageActions;
     }
     /**
      * Gets the suggestedCalendarName property value. The suggestedCalendarName property
@@ -78,7 +77,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSuggestedCalendarName() {
-        return this._suggestedCalendarName;
+        return this.suggestedCalendarName;
     }
     /**
      * Serializes information the current object
@@ -101,7 +100,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCanAccept(@javax.annotation.Nullable final Boolean value) {
-        this._canAccept = value;
+        this.canAccept = value;
     }
     /**
      * Sets the sharingMessageAction property value. The sharingMessageAction property
@@ -110,7 +109,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSharingMessageAction(@javax.annotation.Nullable final CalendarSharingMessageAction value) {
-        this._sharingMessageAction = value;
+        this.sharingMessageAction = value;
     }
     /**
      * Sets the sharingMessageActions property value. The sharingMessageActions property
@@ -119,7 +118,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSharingMessageActions(@javax.annotation.Nullable final java.util.List<CalendarSharingMessageAction> value) {
-        this._sharingMessageActions = value;
+        this.sharingMessageActions = value;
     }
     /**
      * Sets the suggestedCalendarName property value. The suggestedCalendarName property
@@ -128,6 +127,6 @@ public class CalendarSharingMessage extends Message implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSuggestedCalendarName(@javax.annotation.Nullable final String value) {
-        this._suggestedCalendarName = value;
+        this.suggestedCalendarName = value;
     }
 }

@@ -1,72 +1,67 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AndroidManagedAppProtection;
-import com.microsoft.graph.models.DefaultManagedAppProtection;
-import com.microsoft.graph.models.IosManagedAppProtection;
-import com.microsoft.graph.models.TargetedManagedAppProtection;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.Period;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /** Data storage locations where a user may store managed data. */
-    private java.util.List<ManagedAppDataStorageLocation> _allowedDataStorageLocations;
+    private java.util.List<ManagedAppDataStorageLocation> allowedDataStorageLocations;
     /** Data can be transferred from/to these classes of apps */
-    private ManagedAppDataTransferLevel _allowedInboundDataTransferSources;
+    private ManagedAppDataTransferLevel allowedInboundDataTransferSources;
     /** Represents the level to which the device's clipboard may be shared between apps */
-    private ManagedAppClipboardSharingLevel _allowedOutboundClipboardSharingLevel;
+    private ManagedAppClipboardSharingLevel allowedOutboundClipboardSharingLevel;
     /** Data can be transferred from/to these classes of apps */
-    private ManagedAppDataTransferLevel _allowedOutboundDataTransferDestinations;
+    private ManagedAppDataTransferLevel allowedOutboundDataTransferDestinations;
     /** Indicates whether contacts can be synced to the user's device. */
-    private Boolean _contactSyncBlocked;
+    private Boolean contactSyncBlocked;
     /** Indicates whether the backup of a managed app's data is blocked. */
-    private Boolean _dataBackupBlocked;
+    private Boolean dataBackupBlocked;
     /** Indicates whether device compliance is required. */
-    private Boolean _deviceComplianceRequired;
+    private Boolean deviceComplianceRequired;
     /** Indicates whether use of the app pin is required if the device pin is set. */
-    private Boolean _disableAppPinIfDevicePinIsSet;
+    private Boolean disableAppPinIfDevicePinIsSet;
     /** Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True. */
-    private Boolean _fingerprintBlocked;
+    private Boolean fingerprintBlocked;
     /** Type of managed browser */
-    private ManagedBrowserType _managedBrowser;
+    private ManagedBrowserType managedBrowser;
     /** Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android) */
-    private Boolean _managedBrowserToOpenLinksRequired;
+    private Boolean managedBrowserToOpenLinksRequired;
     /** Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped. */
-    private Integer _maximumPinRetries;
+    private Integer maximumPinRetries;
     /** Minimum pin length required for an app-level pin if PinRequired is set to True */
-    private Integer _minimumPinLength;
+    private Integer minimumPinLength;
     /** Versions less than the specified version will block the managed app from accessing company data. */
-    private String _minimumRequiredAppVersion;
+    private String minimumRequiredAppVersion;
     /** Versions less than the specified version will block the managed app from accessing company data. */
-    private String _minimumRequiredOsVersion;
+    private String minimumRequiredOsVersion;
     /** Versions less than the specified version will result in warning message on the managed app. */
-    private String _minimumWarningAppVersion;
+    private String minimumWarningAppVersion;
     /** Versions less than the specified version will result in warning message on the managed app from accessing company data. */
-    private String _minimumWarningOsVersion;
+    private String minimumWarningOsVersion;
     /** Indicates whether organizational credentials are required for app use. */
-    private Boolean _organizationalCredentialsRequired;
+    private Boolean organizationalCredentialsRequired;
     /** TimePeriod before the all-level pin must be reset if PinRequired is set to True. */
-    private Period _periodBeforePinReset;
+    private Period periodBeforePinReset;
     /** The period after which access is checked when the device is not connected to the internet. */
-    private Period _periodOfflineBeforeAccessCheck;
+    private Period periodOfflineBeforeAccessCheck;
     /** The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped. */
-    private Period _periodOfflineBeforeWipeIsEnforced;
+    private Period periodOfflineBeforeWipeIsEnforced;
     /** The period after which access is checked when the device is connected to the internet. */
-    private Period _periodOnlineBeforeAccessCheck;
+    private Period periodOnlineBeforeAccessCheck;
     /** Character set which is to be used for a user's app PIN */
-    private ManagedAppPinCharacterSet _pinCharacterSet;
+    private ManagedAppPinCharacterSet pinCharacterSet;
     /** Indicates whether an app-level pin is required. */
-    private Boolean _pinRequired;
+    private Boolean pinRequired;
     /** Indicates whether printing is allowed from managed apps. */
-    private Boolean _printBlocked;
+    private Boolean printBlocked;
     /** Indicates whether users may use the 'Save As' menu item to save a copy of protected files. */
-    private Boolean _saveAsBlocked;
+    private Boolean saveAsBlocked;
     /** Indicates whether simplePin is blocked. */
-    private Boolean _simplePinBlocked;
+    private Boolean simplePinBlocked;
     /**
      * Instantiates a new ManagedAppProtection and sets the default values.
      * @return a void
@@ -102,7 +97,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedAppDataStorageLocation> getAllowedDataStorageLocations() {
-        return this._allowedDataStorageLocations;
+        return this.allowedDataStorageLocations;
     }
     /**
      * Gets the allowedInboundDataTransferSources property value. Data can be transferred from/to these classes of apps
@@ -110,7 +105,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public ManagedAppDataTransferLevel getAllowedInboundDataTransferSources() {
-        return this._allowedInboundDataTransferSources;
+        return this.allowedInboundDataTransferSources;
     }
     /**
      * Gets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
@@ -118,7 +113,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public ManagedAppClipboardSharingLevel getAllowedOutboundClipboardSharingLevel() {
-        return this._allowedOutboundClipboardSharingLevel;
+        return this.allowedOutboundClipboardSharingLevel;
     }
     /**
      * Gets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps
@@ -126,7 +121,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public ManagedAppDataTransferLevel getAllowedOutboundDataTransferDestinations() {
-        return this._allowedOutboundDataTransferDestinations;
+        return this.allowedOutboundDataTransferDestinations;
     }
     /**
      * Gets the contactSyncBlocked property value. Indicates whether contacts can be synced to the user's device.
@@ -134,7 +129,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getContactSyncBlocked() {
-        return this._contactSyncBlocked;
+        return this.contactSyncBlocked;
     }
     /**
      * Gets the dataBackupBlocked property value. Indicates whether the backup of a managed app's data is blocked.
@@ -142,7 +137,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getDataBackupBlocked() {
-        return this._dataBackupBlocked;
+        return this.dataBackupBlocked;
     }
     /**
      * Gets the deviceComplianceRequired property value. Indicates whether device compliance is required.
@@ -150,7 +145,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getDeviceComplianceRequired() {
-        return this._deviceComplianceRequired;
+        return this.deviceComplianceRequired;
     }
     /**
      * Gets the disableAppPinIfDevicePinIsSet property value. Indicates whether use of the app pin is required if the device pin is set.
@@ -158,15 +153,15 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getDisableAppPinIfDevicePinIsSet() {
-        return this._disableAppPinIfDevicePinIsSet;
+        return this.disableAppPinIfDevicePinIsSet;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowedDataStorageLocations", (n) -> { this.setAllowedDataStorageLocations(n.getCollectionOfEnumValues(ManagedAppDataStorageLocation.class)); });
         deserializerMap.put("allowedInboundDataTransferSources", (n) -> { this.setAllowedInboundDataTransferSources(n.getEnumValue(ManagedAppDataTransferLevel.class)); });
         deserializerMap.put("allowedOutboundClipboardSharingLevel", (n) -> { this.setAllowedOutboundClipboardSharingLevel(n.getEnumValue(ManagedAppClipboardSharingLevel.class)); });
@@ -202,7 +197,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getFingerprintBlocked() {
-        return this._fingerprintBlocked;
+        return this.fingerprintBlocked;
     }
     /**
      * Gets the managedBrowser property value. Type of managed browser
@@ -210,7 +205,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public ManagedBrowserType getManagedBrowser() {
-        return this._managedBrowser;
+        return this.managedBrowser;
     }
     /**
      * Gets the managedBrowserToOpenLinksRequired property value. Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android)
@@ -218,7 +213,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getManagedBrowserToOpenLinksRequired() {
-        return this._managedBrowserToOpenLinksRequired;
+        return this.managedBrowserToOpenLinksRequired;
     }
     /**
      * Gets the maximumPinRetries property value. Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
@@ -226,7 +221,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getMaximumPinRetries() {
-        return this._maximumPinRetries;
+        return this.maximumPinRetries;
     }
     /**
      * Gets the minimumPinLength property value. Minimum pin length required for an app-level pin if PinRequired is set to True
@@ -234,7 +229,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getMinimumPinLength() {
-        return this._minimumPinLength;
+        return this.minimumPinLength;
     }
     /**
      * Gets the minimumRequiredAppVersion property value. Versions less than the specified version will block the managed app from accessing company data.
@@ -242,7 +237,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMinimumRequiredAppVersion() {
-        return this._minimumRequiredAppVersion;
+        return this.minimumRequiredAppVersion;
     }
     /**
      * Gets the minimumRequiredOsVersion property value. Versions less than the specified version will block the managed app from accessing company data.
@@ -250,7 +245,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMinimumRequiredOsVersion() {
-        return this._minimumRequiredOsVersion;
+        return this.minimumRequiredOsVersion;
     }
     /**
      * Gets the minimumWarningAppVersion property value. Versions less than the specified version will result in warning message on the managed app.
@@ -258,7 +253,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMinimumWarningAppVersion() {
-        return this._minimumWarningAppVersion;
+        return this.minimumWarningAppVersion;
     }
     /**
      * Gets the minimumWarningOsVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data.
@@ -266,7 +261,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMinimumWarningOsVersion() {
-        return this._minimumWarningOsVersion;
+        return this.minimumWarningOsVersion;
     }
     /**
      * Gets the organizationalCredentialsRequired property value. Indicates whether organizational credentials are required for app use.
@@ -274,7 +269,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getOrganizationalCredentialsRequired() {
-        return this._organizationalCredentialsRequired;
+        return this.organizationalCredentialsRequired;
     }
     /**
      * Gets the periodBeforePinReset property value. TimePeriod before the all-level pin must be reset if PinRequired is set to True.
@@ -282,7 +277,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public Period getPeriodBeforePinReset() {
-        return this._periodBeforePinReset;
+        return this.periodBeforePinReset;
     }
     /**
      * Gets the periodOfflineBeforeAccessCheck property value. The period after which access is checked when the device is not connected to the internet.
@@ -290,7 +285,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public Period getPeriodOfflineBeforeAccessCheck() {
-        return this._periodOfflineBeforeAccessCheck;
+        return this.periodOfflineBeforeAccessCheck;
     }
     /**
      * Gets the periodOfflineBeforeWipeIsEnforced property value. The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped.
@@ -298,7 +293,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public Period getPeriodOfflineBeforeWipeIsEnforced() {
-        return this._periodOfflineBeforeWipeIsEnforced;
+        return this.periodOfflineBeforeWipeIsEnforced;
     }
     /**
      * Gets the periodOnlineBeforeAccessCheck property value. The period after which access is checked when the device is connected to the internet.
@@ -306,7 +301,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public Period getPeriodOnlineBeforeAccessCheck() {
-        return this._periodOnlineBeforeAccessCheck;
+        return this.periodOnlineBeforeAccessCheck;
     }
     /**
      * Gets the pinCharacterSet property value. Character set which is to be used for a user's app PIN
@@ -314,7 +309,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public ManagedAppPinCharacterSet getPinCharacterSet() {
-        return this._pinCharacterSet;
+        return this.pinCharacterSet;
     }
     /**
      * Gets the pinRequired property value. Indicates whether an app-level pin is required.
@@ -322,7 +317,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getPinRequired() {
-        return this._pinRequired;
+        return this.pinRequired;
     }
     /**
      * Gets the printBlocked property value. Indicates whether printing is allowed from managed apps.
@@ -330,7 +325,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getPrintBlocked() {
-        return this._printBlocked;
+        return this.printBlocked;
     }
     /**
      * Gets the saveAsBlocked property value. Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
@@ -338,7 +333,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getSaveAsBlocked() {
-        return this._saveAsBlocked;
+        return this.saveAsBlocked;
     }
     /**
      * Gets the simplePinBlocked property value. Indicates whether simplePin is blocked.
@@ -346,7 +341,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getSimplePinBlocked() {
-        return this._simplePinBlocked;
+        return this.simplePinBlocked;
     }
     /**
      * Serializes information the current object
@@ -392,7 +387,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowedDataStorageLocations(@javax.annotation.Nullable final java.util.List<ManagedAppDataStorageLocation> value) {
-        this._allowedDataStorageLocations = value;
+        this.allowedDataStorageLocations = value;
     }
     /**
      * Sets the allowedInboundDataTransferSources property value. Data can be transferred from/to these classes of apps
@@ -401,7 +396,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowedInboundDataTransferSources(@javax.annotation.Nullable final ManagedAppDataTransferLevel value) {
-        this._allowedInboundDataTransferSources = value;
+        this.allowedInboundDataTransferSources = value;
     }
     /**
      * Sets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
@@ -410,7 +405,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowedOutboundClipboardSharingLevel(@javax.annotation.Nullable final ManagedAppClipboardSharingLevel value) {
-        this._allowedOutboundClipboardSharingLevel = value;
+        this.allowedOutboundClipboardSharingLevel = value;
     }
     /**
      * Sets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps
@@ -419,7 +414,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowedOutboundDataTransferDestinations(@javax.annotation.Nullable final ManagedAppDataTransferLevel value) {
-        this._allowedOutboundDataTransferDestinations = value;
+        this.allowedOutboundDataTransferDestinations = value;
     }
     /**
      * Sets the contactSyncBlocked property value. Indicates whether contacts can be synced to the user's device.
@@ -428,7 +423,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContactSyncBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._contactSyncBlocked = value;
+        this.contactSyncBlocked = value;
     }
     /**
      * Sets the dataBackupBlocked property value. Indicates whether the backup of a managed app's data is blocked.
@@ -437,7 +432,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDataBackupBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._dataBackupBlocked = value;
+        this.dataBackupBlocked = value;
     }
     /**
      * Sets the deviceComplianceRequired property value. Indicates whether device compliance is required.
@@ -446,7 +441,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceComplianceRequired(@javax.annotation.Nullable final Boolean value) {
-        this._deviceComplianceRequired = value;
+        this.deviceComplianceRequired = value;
     }
     /**
      * Sets the disableAppPinIfDevicePinIsSet property value. Indicates whether use of the app pin is required if the device pin is set.
@@ -455,7 +450,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisableAppPinIfDevicePinIsSet(@javax.annotation.Nullable final Boolean value) {
-        this._disableAppPinIfDevicePinIsSet = value;
+        this.disableAppPinIfDevicePinIsSet = value;
     }
     /**
      * Sets the fingerprintBlocked property value. Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True.
@@ -464,7 +459,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFingerprintBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._fingerprintBlocked = value;
+        this.fingerprintBlocked = value;
     }
     /**
      * Sets the managedBrowser property value. Type of managed browser
@@ -473,7 +468,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setManagedBrowser(@javax.annotation.Nullable final ManagedBrowserType value) {
-        this._managedBrowser = value;
+        this.managedBrowser = value;
     }
     /**
      * Sets the managedBrowserToOpenLinksRequired property value. Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android)
@@ -482,7 +477,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setManagedBrowserToOpenLinksRequired(@javax.annotation.Nullable final Boolean value) {
-        this._managedBrowserToOpenLinksRequired = value;
+        this.managedBrowserToOpenLinksRequired = value;
     }
     /**
      * Sets the maximumPinRetries property value. Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
@@ -491,7 +486,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMaximumPinRetries(@javax.annotation.Nullable final Integer value) {
-        this._maximumPinRetries = value;
+        this.maximumPinRetries = value;
     }
     /**
      * Sets the minimumPinLength property value. Minimum pin length required for an app-level pin if PinRequired is set to True
@@ -500,7 +495,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMinimumPinLength(@javax.annotation.Nullable final Integer value) {
-        this._minimumPinLength = value;
+        this.minimumPinLength = value;
     }
     /**
      * Sets the minimumRequiredAppVersion property value. Versions less than the specified version will block the managed app from accessing company data.
@@ -509,7 +504,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMinimumRequiredAppVersion(@javax.annotation.Nullable final String value) {
-        this._minimumRequiredAppVersion = value;
+        this.minimumRequiredAppVersion = value;
     }
     /**
      * Sets the minimumRequiredOsVersion property value. Versions less than the specified version will block the managed app from accessing company data.
@@ -518,7 +513,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMinimumRequiredOsVersion(@javax.annotation.Nullable final String value) {
-        this._minimumRequiredOsVersion = value;
+        this.minimumRequiredOsVersion = value;
     }
     /**
      * Sets the minimumWarningAppVersion property value. Versions less than the specified version will result in warning message on the managed app.
@@ -527,7 +522,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMinimumWarningAppVersion(@javax.annotation.Nullable final String value) {
-        this._minimumWarningAppVersion = value;
+        this.minimumWarningAppVersion = value;
     }
     /**
      * Sets the minimumWarningOsVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data.
@@ -536,7 +531,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMinimumWarningOsVersion(@javax.annotation.Nullable final String value) {
-        this._minimumWarningOsVersion = value;
+        this.minimumWarningOsVersion = value;
     }
     /**
      * Sets the organizationalCredentialsRequired property value. Indicates whether organizational credentials are required for app use.
@@ -545,7 +540,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOrganizationalCredentialsRequired(@javax.annotation.Nullable final Boolean value) {
-        this._organizationalCredentialsRequired = value;
+        this.organizationalCredentialsRequired = value;
     }
     /**
      * Sets the periodBeforePinReset property value. TimePeriod before the all-level pin must be reset if PinRequired is set to True.
@@ -554,7 +549,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPeriodBeforePinReset(@javax.annotation.Nullable final Period value) {
-        this._periodBeforePinReset = value;
+        this.periodBeforePinReset = value;
     }
     /**
      * Sets the periodOfflineBeforeAccessCheck property value. The period after which access is checked when the device is not connected to the internet.
@@ -563,7 +558,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPeriodOfflineBeforeAccessCheck(@javax.annotation.Nullable final Period value) {
-        this._periodOfflineBeforeAccessCheck = value;
+        this.periodOfflineBeforeAccessCheck = value;
     }
     /**
      * Sets the periodOfflineBeforeWipeIsEnforced property value. The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped.
@@ -572,7 +567,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPeriodOfflineBeforeWipeIsEnforced(@javax.annotation.Nullable final Period value) {
-        this._periodOfflineBeforeWipeIsEnforced = value;
+        this.periodOfflineBeforeWipeIsEnforced = value;
     }
     /**
      * Sets the periodOnlineBeforeAccessCheck property value. The period after which access is checked when the device is connected to the internet.
@@ -581,7 +576,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPeriodOnlineBeforeAccessCheck(@javax.annotation.Nullable final Period value) {
-        this._periodOnlineBeforeAccessCheck = value;
+        this.periodOnlineBeforeAccessCheck = value;
     }
     /**
      * Sets the pinCharacterSet property value. Character set which is to be used for a user's app PIN
@@ -590,7 +585,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPinCharacterSet(@javax.annotation.Nullable final ManagedAppPinCharacterSet value) {
-        this._pinCharacterSet = value;
+        this.pinCharacterSet = value;
     }
     /**
      * Sets the pinRequired property value. Indicates whether an app-level pin is required.
@@ -599,7 +594,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPinRequired(@javax.annotation.Nullable final Boolean value) {
-        this._pinRequired = value;
+        this.pinRequired = value;
     }
     /**
      * Sets the printBlocked property value. Indicates whether printing is allowed from managed apps.
@@ -608,7 +603,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPrintBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._printBlocked = value;
+        this.printBlocked = value;
     }
     /**
      * Sets the saveAsBlocked property value. Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
@@ -617,7 +612,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSaveAsBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._saveAsBlocked = value;
+        this.saveAsBlocked = value;
     }
     /**
      * Sets the simplePinBlocked property value. Indicates whether simplePin is blocked.
@@ -626,6 +621,6 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSimplePinBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._simplePinBlocked = value;
+        this.simplePinBlocked = value;
     }
 }

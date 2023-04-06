@@ -3,18 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the cloudCommunications singleton. */
 public class AudioRoutingGroup extends Entity implements Parsable {
     /** The receivers property */
-    private java.util.List<String> _receivers;
+    private java.util.List<String> receivers;
     /** The routingMode property */
-    private RoutingMode _routingMode;
+    private RoutingMode routingMode;
     /** The sources property */
-    private java.util.List<String> _sources;
+    private java.util.List<String> sources;
     /**
      * Instantiates a new audioRoutingGroup and sets the default values.
      * @return a void
@@ -35,11 +33,11 @@ public class AudioRoutingGroup extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("receivers", (n) -> { this.setReceivers(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("routingMode", (n) -> { this.setRoutingMode(n.getEnumValue(RoutingMode.class)); });
         deserializerMap.put("sources", (n) -> { this.setSources(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -51,7 +49,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getReceivers() {
-        return this._receivers;
+        return this.receivers;
     }
     /**
      * Gets the routingMode property value. The routingMode property
@@ -59,7 +57,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RoutingMode getRoutingMode() {
-        return this._routingMode;
+        return this.routingMode;
     }
     /**
      * Gets the sources property value. The sources property
@@ -67,7 +65,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSources() {
-        return this._sources;
+        return this.sources;
     }
     /**
      * Serializes information the current object
@@ -89,7 +87,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setReceivers(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._receivers = value;
+        this.receivers = value;
     }
     /**
      * Sets the routingMode property value. The routingMode property
@@ -98,7 +96,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRoutingMode(@javax.annotation.Nullable final RoutingMode value) {
-        this._routingMode = value;
+        this.routingMode = value;
     }
     /**
      * Sets the sources property value. The sources property
@@ -107,6 +105,6 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSources(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._sources = value;
+        this.sources = value;
     }
 }

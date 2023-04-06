@@ -4,65 +4,64 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Team extends Entity implements Parsable {
     /** List of channels either hosted in or shared with the team (incoming channels). */
-    private java.util.List<Channel> _allChannels;
+    private java.util.List<Channel> allChannels;
     /** The collection of channels and messages associated with the team. */
-    private java.util.List<Channel> _channels;
+    private java.util.List<Channel> channels;
     /** An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory. */
-    private String _classification;
+    private String classification;
     /** Timestamp at which the team was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** An optional description for the team. Maximum length: 1024 characters. */
-    private String _description;
+    private String description;
     /** The name of the team. */
-    private String _displayName;
+    private String displayName;
     /** Settings to configure use of Giphy, memes, and stickers in the team. */
-    private TeamFunSettings _funSettings;
+    private TeamFunSettings funSettings;
     /** The group property */
-    private Group _group;
+    private Group group;
     /** Settings to configure whether guests can create, update, or delete channels in the team. */
-    private TeamGuestSettings _guestSettings;
+    private TeamGuestSettings guestSettings;
     /** List of channels shared with the team. */
-    private java.util.List<Channel> _incomingChannels;
+    private java.util.List<Channel> incomingChannels;
     /** The apps installed in this team. */
-    private java.util.List<TeamsAppInstallation> _installedApps;
+    private java.util.List<TeamsAppInstallation> installedApps;
     /** A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API. */
-    private String _internalId;
+    private String internalId;
     /** Whether this team is in read-only mode. */
-    private Boolean _isArchived;
+    private Boolean isArchived;
     /** Members and owners of the team. */
-    private java.util.List<ConversationMember> _members;
+    private java.util.List<ConversationMember> members;
     /** Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team. */
-    private TeamMemberSettings _memberSettings;
+    private TeamMemberSettings memberSettings;
     /** Settings to configure messaging and mentions in the team. */
-    private TeamMessagingSettings _messagingSettings;
+    private TeamMessagingSettings messagingSettings;
     /** The async operations that ran or are running on this team. */
-    private java.util.List<TeamsAsyncOperation> _operations;
+    private java.util.List<TeamsAsyncOperation> operations;
     /** The profile photo for the team. */
-    private ProfilePhoto _photo;
+    private ProfilePhoto photo;
     /** The general channel for the team. */
-    private Channel _primaryChannel;
+    private Channel primaryChannel;
     /** The schedule of shifts for this team. */
-    private Schedule _schedule;
+    private Schedule schedule;
     /** Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case. */
-    private TeamSpecialization _specialization;
-    /** The summary property */
-    private TeamSummary _summary;
+    private TeamSpecialization specialization;
+    /** Contains summary information about the team, including number of owners, members, and guests. */
+    private TeamSummary summary;
     /** The tags associated with the team. */
-    private java.util.List<TeamworkTag> _tags;
+    private java.util.List<TeamworkTag> tags;
     /** The template this team was created from. See available templates. */
-    private TeamsTemplate _template;
+    private TeamsTemplate template;
     /** The ID of the Azure Active Directory tenant. */
-    private String _tenantId;
+    private String tenantId;
     /** The visibility of the group and team. Defaults to Public. */
-    private TeamVisibilityType _visibility;
+    private TeamVisibilityType visibility;
     /** A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed. */
-    private String _webUrl;
+    private String webUrl;
     /**
      * Instantiates a new team and sets the default values.
      * @return a void
@@ -87,7 +86,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Channel> getAllChannels() {
-        return this._allChannels;
+        return this.allChannels;
     }
     /**
      * Gets the channels property value. The collection of channels and messages associated with the team.
@@ -95,7 +94,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Channel> getChannels() {
-        return this._channels;
+        return this.channels;
     }
     /**
      * Gets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
@@ -103,7 +102,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getClassification() {
-        return this._classification;
+        return this.classification;
     }
     /**
      * Gets the createdDateTime property value. Timestamp at which the team was created.
@@ -111,7 +110,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. An optional description for the team. Maximum length: 1024 characters.
@@ -119,7 +118,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The name of the team.
@@ -127,15 +126,15 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allChannels", (n) -> { this.setAllChannels(n.getCollectionOfObjectValues(Channel::createFromDiscriminatorValue)); });
         deserializerMap.put("channels", (n) -> { this.setChannels(n.getCollectionOfObjectValues(Channel::createFromDiscriminatorValue)); });
         deserializerMap.put("classification", (n) -> { this.setClassification(n.getStringValue()); });
@@ -171,7 +170,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamFunSettings getFunSettings() {
-        return this._funSettings;
+        return this.funSettings;
     }
     /**
      * Gets the group property value. The group property
@@ -179,7 +178,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Group getGroup() {
-        return this._group;
+        return this.group;
     }
     /**
      * Gets the guestSettings property value. Settings to configure whether guests can create, update, or delete channels in the team.
@@ -187,7 +186,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamGuestSettings getGuestSettings() {
-        return this._guestSettings;
+        return this.guestSettings;
     }
     /**
      * Gets the incomingChannels property value. List of channels shared with the team.
@@ -195,7 +194,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Channel> getIncomingChannels() {
-        return this._incomingChannels;
+        return this.incomingChannels;
     }
     /**
      * Gets the installedApps property value. The apps installed in this team.
@@ -203,7 +202,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TeamsAppInstallation> getInstalledApps() {
-        return this._installedApps;
+        return this.installedApps;
     }
     /**
      * Gets the internalId property value. A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
@@ -211,7 +210,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInternalId() {
-        return this._internalId;
+        return this.internalId;
     }
     /**
      * Gets the isArchived property value. Whether this team is in read-only mode.
@@ -219,7 +218,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsArchived() {
-        return this._isArchived;
+        return this.isArchived;
     }
     /**
      * Gets the members property value. Members and owners of the team.
@@ -227,7 +226,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ConversationMember> getMembers() {
-        return this._members;
+        return this.members;
     }
     /**
      * Gets the memberSettings property value. Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team.
@@ -235,7 +234,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamMemberSettings getMemberSettings() {
-        return this._memberSettings;
+        return this.memberSettings;
     }
     /**
      * Gets the messagingSettings property value. Settings to configure messaging and mentions in the team.
@@ -243,7 +242,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamMessagingSettings getMessagingSettings() {
-        return this._messagingSettings;
+        return this.messagingSettings;
     }
     /**
      * Gets the operations property value. The async operations that ran or are running on this team.
@@ -251,7 +250,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TeamsAsyncOperation> getOperations() {
-        return this._operations;
+        return this.operations;
     }
     /**
      * Gets the photo property value. The profile photo for the team.
@@ -259,7 +258,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ProfilePhoto getPhoto() {
-        return this._photo;
+        return this.photo;
     }
     /**
      * Gets the primaryChannel property value. The general channel for the team.
@@ -267,7 +266,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Channel getPrimaryChannel() {
-        return this._primaryChannel;
+        return this.primaryChannel;
     }
     /**
      * Gets the schedule property value. The schedule of shifts for this team.
@@ -275,7 +274,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Schedule getSchedule() {
-        return this._schedule;
+        return this.schedule;
     }
     /**
      * Gets the specialization property value. Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
@@ -283,15 +282,15 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamSpecialization getSpecialization() {
-        return this._specialization;
+        return this.specialization;
     }
     /**
-     * Gets the summary property value. The summary property
+     * Gets the summary property value. Contains summary information about the team, including number of owners, members, and guests.
      * @return a teamSummary
      */
     @javax.annotation.Nullable
     public TeamSummary getSummary() {
-        return this._summary;
+        return this.summary;
     }
     /**
      * Gets the tags property value. The tags associated with the team.
@@ -299,7 +298,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TeamworkTag> getTags() {
-        return this._tags;
+        return this.tags;
     }
     /**
      * Gets the template property value. The template this team was created from. See available templates.
@@ -307,7 +306,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamsTemplate getTemplate() {
-        return this._template;
+        return this.template;
     }
     /**
      * Gets the tenantId property value. The ID of the Azure Active Directory tenant.
@@ -315,7 +314,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Gets the visibility property value. The visibility of the group and team. Defaults to Public.
@@ -323,7 +322,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamVisibilityType getVisibility() {
-        return this._visibility;
+        return this.visibility;
     }
     /**
      * Gets the webUrl property value. A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
@@ -331,7 +330,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getWebUrl() {
-        return this._webUrl;
+        return this.webUrl;
     }
     /**
      * Serializes information the current object
@@ -377,7 +376,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllChannels(@javax.annotation.Nullable final java.util.List<Channel> value) {
-        this._allChannels = value;
+        this.allChannels = value;
     }
     /**
      * Sets the channels property value. The collection of channels and messages associated with the team.
@@ -386,7 +385,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setChannels(@javax.annotation.Nullable final java.util.List<Channel> value) {
-        this._channels = value;
+        this.channels = value;
     }
     /**
      * Sets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
@@ -395,7 +394,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setClassification(@javax.annotation.Nullable final String value) {
-        this._classification = value;
+        this.classification = value;
     }
     /**
      * Sets the createdDateTime property value. Timestamp at which the team was created.
@@ -404,7 +403,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. An optional description for the team. Maximum length: 1024 characters.
@@ -413,7 +412,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The name of the team.
@@ -422,7 +421,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the funSettings property value. Settings to configure use of Giphy, memes, and stickers in the team.
@@ -431,7 +430,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFunSettings(@javax.annotation.Nullable final TeamFunSettings value) {
-        this._funSettings = value;
+        this.funSettings = value;
     }
     /**
      * Sets the group property value. The group property
@@ -440,7 +439,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setGroup(@javax.annotation.Nullable final Group value) {
-        this._group = value;
+        this.group = value;
     }
     /**
      * Sets the guestSettings property value. Settings to configure whether guests can create, update, or delete channels in the team.
@@ -449,7 +448,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setGuestSettings(@javax.annotation.Nullable final TeamGuestSettings value) {
-        this._guestSettings = value;
+        this.guestSettings = value;
     }
     /**
      * Sets the incomingChannels property value. List of channels shared with the team.
@@ -458,7 +457,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIncomingChannels(@javax.annotation.Nullable final java.util.List<Channel> value) {
-        this._incomingChannels = value;
+        this.incomingChannels = value;
     }
     /**
      * Sets the installedApps property value. The apps installed in this team.
@@ -467,7 +466,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInstalledApps(@javax.annotation.Nullable final java.util.List<TeamsAppInstallation> value) {
-        this._installedApps = value;
+        this.installedApps = value;
     }
     /**
      * Sets the internalId property value. A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
@@ -476,7 +475,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInternalId(@javax.annotation.Nullable final String value) {
-        this._internalId = value;
+        this.internalId = value;
     }
     /**
      * Sets the isArchived property value. Whether this team is in read-only mode.
@@ -485,7 +484,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsArchived(@javax.annotation.Nullable final Boolean value) {
-        this._isArchived = value;
+        this.isArchived = value;
     }
     /**
      * Sets the members property value. Members and owners of the team.
@@ -494,7 +493,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<ConversationMember> value) {
-        this._members = value;
+        this.members = value;
     }
     /**
      * Sets the memberSettings property value. Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team.
@@ -503,7 +502,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMemberSettings(@javax.annotation.Nullable final TeamMemberSettings value) {
-        this._memberSettings = value;
+        this.memberSettings = value;
     }
     /**
      * Sets the messagingSettings property value. Settings to configure messaging and mentions in the team.
@@ -512,7 +511,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMessagingSettings(@javax.annotation.Nullable final TeamMessagingSettings value) {
-        this._messagingSettings = value;
+        this.messagingSettings = value;
     }
     /**
      * Sets the operations property value. The async operations that ran or are running on this team.
@@ -521,7 +520,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<TeamsAsyncOperation> value) {
-        this._operations = value;
+        this.operations = value;
     }
     /**
      * Sets the photo property value. The profile photo for the team.
@@ -530,7 +529,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPhoto(@javax.annotation.Nullable final ProfilePhoto value) {
-        this._photo = value;
+        this.photo = value;
     }
     /**
      * Sets the primaryChannel property value. The general channel for the team.
@@ -539,7 +538,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPrimaryChannel(@javax.annotation.Nullable final Channel value) {
-        this._primaryChannel = value;
+        this.primaryChannel = value;
     }
     /**
      * Sets the schedule property value. The schedule of shifts for this team.
@@ -548,7 +547,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSchedule(@javax.annotation.Nullable final Schedule value) {
-        this._schedule = value;
+        this.schedule = value;
     }
     /**
      * Sets the specialization property value. Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
@@ -557,16 +556,16 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSpecialization(@javax.annotation.Nullable final TeamSpecialization value) {
-        this._specialization = value;
+        this.specialization = value;
     }
     /**
-     * Sets the summary property value. The summary property
+     * Sets the summary property value. Contains summary information about the team, including number of owners, members, and guests.
      * @param value Value to set for the summary property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setSummary(@javax.annotation.Nullable final TeamSummary value) {
-        this._summary = value;
+        this.summary = value;
     }
     /**
      * Sets the tags property value. The tags associated with the team.
@@ -575,7 +574,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<TeamworkTag> value) {
-        this._tags = value;
+        this.tags = value;
     }
     /**
      * Sets the template property value. The template this team was created from. See available templates.
@@ -584,7 +583,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTemplate(@javax.annotation.Nullable final TeamsTemplate value) {
-        this._template = value;
+        this.template = value;
     }
     /**
      * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
@@ -593,7 +592,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
     /**
      * Sets the visibility property value. The visibility of the group and team. Defaults to Public.
@@ -602,7 +601,7 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVisibility(@javax.annotation.Nullable final TeamVisibilityType value) {
-        this._visibility = value;
+        this.visibility = value;
     }
     /**
      * Sets the webUrl property value. A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
@@ -611,6 +610,6 @@ public class Team extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
-        this._webUrl = value;
+        this.webUrl = value;
     }
 }

@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkApplicationIdentity extends Identity implements Parsable {
     /** Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue. */
-    private TeamworkApplicationIdentityType _applicationIdentityType;
+    private TeamworkApplicationIdentityType applicationIdentityType;
     /**
      * Instantiates a new TeamworkApplicationIdentity and sets the default values.
      * @return a void
@@ -35,15 +34,15 @@ public class TeamworkApplicationIdentity extends Identity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamworkApplicationIdentityType getApplicationIdentityType() {
-        return this._applicationIdentityType;
+        return this.applicationIdentityType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicationIdentityType", (n) -> { this.setApplicationIdentityType(n.getEnumValue(TeamworkApplicationIdentityType.class)); });
         return deserializerMap;
     }
@@ -65,6 +64,6 @@ public class TeamworkApplicationIdentity extends Identity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setApplicationIdentityType(@javax.annotation.Nullable final TeamworkApplicationIdentityType value) {
-        this._applicationIdentityType = value;
+        this.applicationIdentityType = value;
     }
 }

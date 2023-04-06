@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartAxisTitle extends Entity implements Parsable {
     /** Represents the formatting of chart axis title. Read-only. */
-    private WorkbookChartAxisTitleFormat _format;
+    private WorkbookChartAxisTitleFormat format;
     /** Represents the axis title. */
-    private String _text;
+    private String text;
     /** A boolean that specifies the visibility of an axis title. */
-    private Boolean _visible;
+    private Boolean visible;
     /**
      * Instantiates a new workbookChartAxisTitle and sets the default values.
      * @return a void
@@ -34,11 +33,11 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartAxisTitleFormat::createFromDiscriminatorValue)); });
         deserializerMap.put("text", (n) -> { this.setText(n.getStringValue()); });
         deserializerMap.put("visible", (n) -> { this.setVisible(n.getBooleanValue()); });
@@ -50,7 +49,7 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartAxisTitleFormat getFormat() {
-        return this._format;
+        return this.format;
     }
     /**
      * Gets the text property value. Represents the axis title.
@@ -58,7 +57,7 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getText() {
-        return this._text;
+        return this.text;
     }
     /**
      * Gets the visible property value. A boolean that specifies the visibility of an axis title.
@@ -66,7 +65,7 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getVisible() {
-        return this._visible;
+        return this.visible;
     }
     /**
      * Serializes information the current object
@@ -88,7 +87,7 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final WorkbookChartAxisTitleFormat value) {
-        this._format = value;
+        this.format = value;
     }
     /**
      * Sets the text property value. Represents the axis title.
@@ -97,7 +96,7 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final String value) {
-        this._text = value;
+        this.text = value;
     }
     /**
      * Sets the visible property value. A boolean that specifies the visibility of an axis title.
@@ -106,6 +105,6 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVisible(@javax.annotation.Nullable final Boolean value) {
-        this._visible = value;
+        this.visible = value;
     }
 }

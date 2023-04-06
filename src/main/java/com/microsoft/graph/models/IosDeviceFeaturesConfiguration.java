@@ -3,21 +3,20 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBase implements Parsable {
     /** Asset tag information for the device, displayed on the login window and lock screen. */
-    private String _assetTagTemplate;
+    private String assetTagTemplate;
     /** A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements. */
-    private java.util.List<IosHomeScreenItem> _homeScreenDockIcons;
+    private java.util.List<IosHomeScreenItem> homeScreenDockIcons;
     /** A list of pages on the Home Screen. This collection can contain a maximum of 500 elements. */
-    private java.util.List<IosHomeScreenPage> _homeScreenPages;
+    private java.util.List<IosHomeScreenPage> homeScreenPages;
     /** A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later. */
-    private String _lockScreenFootnote;
+    private String lockScreenFootnote;
     /** Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements. */
-    private java.util.List<IosNotificationSettings> _notificationSettings;
+    private java.util.List<IosNotificationSettings> notificationSettings;
     /**
      * Instantiates a new IosDeviceFeaturesConfiguration and sets the default values.
      * @return a void
@@ -43,15 +42,15 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public String getAssetTagTemplate() {
-        return this._assetTagTemplate;
+        return this.assetTagTemplate;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assetTagTemplate", (n) -> { this.setAssetTagTemplate(n.getStringValue()); });
         deserializerMap.put("homeScreenDockIcons", (n) -> { this.setHomeScreenDockIcons(n.getCollectionOfObjectValues(IosHomeScreenItem::createFromDiscriminatorValue)); });
         deserializerMap.put("homeScreenPages", (n) -> { this.setHomeScreenPages(n.getCollectionOfObjectValues(IosHomeScreenPage::createFromDiscriminatorValue)); });
@@ -65,7 +64,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public java.util.List<IosHomeScreenItem> getHomeScreenDockIcons() {
-        return this._homeScreenDockIcons;
+        return this.homeScreenDockIcons;
     }
     /**
      * Gets the homeScreenPages property value. A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
@@ -73,7 +72,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public java.util.List<IosHomeScreenPage> getHomeScreenPages() {
-        return this._homeScreenPages;
+        return this.homeScreenPages;
     }
     /**
      * Gets the lockScreenFootnote property value. A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
@@ -81,7 +80,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public String getLockScreenFootnote() {
-        return this._lockScreenFootnote;
+        return this.lockScreenFootnote;
     }
     /**
      * Gets the notificationSettings property value. Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
@@ -89,7 +88,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public java.util.List<IosNotificationSettings> getNotificationSettings() {
-        return this._notificationSettings;
+        return this.notificationSettings;
     }
     /**
      * Serializes information the current object
@@ -113,7 +112,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nonnull
     public void setAssetTagTemplate(@javax.annotation.Nullable final String value) {
-        this._assetTagTemplate = value;
+        this.assetTagTemplate = value;
     }
     /**
      * Sets the homeScreenDockIcons property value. A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
@@ -122,7 +121,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nonnull
     public void setHomeScreenDockIcons(@javax.annotation.Nullable final java.util.List<IosHomeScreenItem> value) {
-        this._homeScreenDockIcons = value;
+        this.homeScreenDockIcons = value;
     }
     /**
      * Sets the homeScreenPages property value. A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
@@ -131,7 +130,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nonnull
     public void setHomeScreenPages(@javax.annotation.Nullable final java.util.List<IosHomeScreenPage> value) {
-        this._homeScreenPages = value;
+        this.homeScreenPages = value;
     }
     /**
      * Sets the lockScreenFootnote property value. A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
@@ -140,7 +139,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nonnull
     public void setLockScreenFootnote(@javax.annotation.Nullable final String value) {
-        this._lockScreenFootnote = value;
+        this.lockScreenFootnote = value;
     }
     /**
      * Sets the notificationSettings property value. Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
@@ -149,6 +148,6 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nonnull
     public void setNotificationSettings(@javax.annotation.Nullable final java.util.List<IosNotificationSettings> value) {
-        this._notificationSettings = value;
+        this.notificationSettings = value;
     }
 }

@@ -5,23 +5,23 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class AssignedPlan implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The date and time at which the plan was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _assignedDateTime;
+    private OffsetDateTime assignedDateTime;
     /** Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut. See a detailed description of each value. */
-    private String _capabilityStatus;
+    private String capabilityStatus;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The name of the service; for example, exchange. */
-    private String _service;
+    private String service;
     /** A GUID that identifies the service plan. For a complete list of GUIDs and their equivalent friendly service names, see Product names and service plan identifiers for licensing. */
-    private String _servicePlanId;
+    private UUID servicePlanId;
     /**
      * Instantiates a new assignedPlan and sets the default values.
      * @return a void
@@ -46,7 +46,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the assignedDateTime property value. The date and time at which the plan was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -54,7 +54,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getAssignedDateTime() {
-        return this._assignedDateTime;
+        return this.assignedDateTime;
     }
     /**
      * Gets the capabilityStatus property value. Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut. See a detailed description of each value.
@@ -62,20 +62,20 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCapabilityStatus() {
-        return this._capabilityStatus;
+        return this.capabilityStatus;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("assignedDateTime", (n) -> { this.setAssignedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("capabilityStatus", (n) -> { this.setCapabilityStatus(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("service", (n) -> { this.setService(n.getStringValue()); });
-        deserializerMap.put("servicePlanId", (n) -> { this.setServicePlanId(n.getStringValue()); });
+        deserializerMap.put("servicePlanId", (n) -> { this.setServicePlanId(n.getUUIDValue()); });
         return deserializerMap;
     }
     /**
@@ -84,7 +84,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the service property value. The name of the service; for example, exchange.
@@ -92,15 +92,15 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getService() {
-        return this._service;
+        return this.service;
     }
     /**
      * Gets the servicePlanId property value. A GUID that identifies the service plan. For a complete list of GUIDs and their equivalent friendly service names, see Product names and service plan identifiers for licensing.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getServicePlanId() {
-        return this._servicePlanId;
+    public UUID getServicePlanId() {
+        return this.servicePlanId;
     }
     /**
      * Serializes information the current object
@@ -114,7 +114,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("capabilityStatus", this.getCapabilityStatus());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("service", this.getService());
-        writer.writeStringValue("servicePlanId", this.getServicePlanId());
+        writer.writeUUIDValue("servicePlanId", this.getServicePlanId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -124,7 +124,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the assignedDateTime property value. The date and time at which the plan was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -133,7 +133,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAssignedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._assignedDateTime = value;
+        this.assignedDateTime = value;
     }
     /**
      * Sets the capabilityStatus property value. Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut. See a detailed description of each value.
@@ -142,7 +142,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCapabilityStatus(@javax.annotation.Nullable final String value) {
-        this._capabilityStatus = value;
+        this.capabilityStatus = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -151,7 +151,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the service property value. The name of the service; for example, exchange.
@@ -160,7 +160,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setService(@javax.annotation.Nullable final String value) {
-        this._service = value;
+        this.service = value;
     }
     /**
      * Sets the servicePlanId property value. A GUID that identifies the service plan. For a complete list of GUIDs and their equivalent friendly service names, see Product names and service plan identifiers for licensing.
@@ -168,7 +168,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setServicePlanId(@javax.annotation.Nullable final String value) {
-        this._servicePlanId = value;
+    public void setServicePlanId(@javax.annotation.Nullable final UUID value) {
+        this.servicePlanId = value;
     }
 }

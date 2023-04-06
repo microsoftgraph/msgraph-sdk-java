@@ -3,50 +3,48 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class Person extends Entity implements Parsable {
     /** The person's birthday. */
-    private String _birthday;
+    private String birthday;
     /** The name of the person's company. */
-    private String _companyName;
+    private String companyName;
     /** The person's department. */
-    private String _department;
+    private String department;
     /** The person's display name. */
-    private String _displayName;
+    private String displayName;
     /** The person's given name. */
-    private String _givenName;
+    private String givenName;
     /** The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only. */
-    private String _imAddress;
+    private String imAddress;
     /** true if the user has flagged this person as a favorite. */
-    private Boolean _isFavorite;
+    private Boolean isFavorite;
     /** The person's job title. */
-    private String _jobTitle;
+    private String jobTitle;
     /** The location of the person's office. */
-    private String _officeLocation;
+    private String officeLocation;
     /** Free-form notes that the user has taken about this person. */
-    private String _personNotes;
+    private String personNotes;
     /** The type of person. */
-    private PersonType _personType;
+    private PersonType personType;
     /** The person's phone numbers. */
-    private java.util.List<Phone> _phones;
+    private java.util.List<Phone> phones;
     /** The person's addresses. */
-    private java.util.List<Location> _postalAddresses;
+    private java.util.List<Location> postalAddresses;
     /** The person's profession. */
-    private String _profession;
+    private String profession;
     /** The person's email addresses. */
-    private java.util.List<ScoredEmailAddress> _scoredEmailAddresses;
+    private java.util.List<ScoredEmailAddress> scoredEmailAddresses;
     /** The person's surname. */
-    private String _surname;
+    private String surname;
     /** The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain. */
-    private String _userPrincipalName;
+    private String userPrincipalName;
     /** The person's websites. */
-    private java.util.List<Website> _websites;
+    private java.util.List<Website> websites;
     /** The phonetic Japanese name of the person's company. */
-    private String _yomiCompany;
+    private String yomiCompany;
     /**
      * Instantiates a new person and sets the default values.
      * @return a void
@@ -71,7 +69,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getBirthday() {
-        return this._birthday;
+        return this.birthday;
     }
     /**
      * Gets the companyName property value. The name of the person's company.
@@ -79,7 +77,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCompanyName() {
-        return this._companyName;
+        return this.companyName;
     }
     /**
      * Gets the department property value. The person's department.
@@ -87,7 +85,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDepartment() {
-        return this._department;
+        return this.department;
     }
     /**
      * Gets the displayName property value. The person's display name.
@@ -95,15 +93,15 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("birthday", (n) -> { this.setBirthday(n.getStringValue()); });
         deserializerMap.put("companyName", (n) -> { this.setCompanyName(n.getStringValue()); });
         deserializerMap.put("department", (n) -> { this.setDepartment(n.getStringValue()); });
@@ -131,7 +129,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getGivenName() {
-        return this._givenName;
+        return this.givenName;
     }
     /**
      * Gets the imAddress property value. The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only.
@@ -139,7 +137,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getImAddress() {
-        return this._imAddress;
+        return this.imAddress;
     }
     /**
      * Gets the isFavorite property value. true if the user has flagged this person as a favorite.
@@ -147,7 +145,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsFavorite() {
-        return this._isFavorite;
+        return this.isFavorite;
     }
     /**
      * Gets the jobTitle property value. The person's job title.
@@ -155,7 +153,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getJobTitle() {
-        return this._jobTitle;
+        return this.jobTitle;
     }
     /**
      * Gets the officeLocation property value. The location of the person's office.
@@ -163,7 +161,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOfficeLocation() {
-        return this._officeLocation;
+        return this.officeLocation;
     }
     /**
      * Gets the personNotes property value. Free-form notes that the user has taken about this person.
@@ -171,7 +169,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPersonNotes() {
-        return this._personNotes;
+        return this.personNotes;
     }
     /**
      * Gets the personType property value. The type of person.
@@ -179,7 +177,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PersonType getPersonType() {
-        return this._personType;
+        return this.personType;
     }
     /**
      * Gets the phones property value. The person's phone numbers.
@@ -187,7 +185,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Phone> getPhones() {
-        return this._phones;
+        return this.phones;
     }
     /**
      * Gets the postalAddresses property value. The person's addresses.
@@ -195,7 +193,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Location> getPostalAddresses() {
-        return this._postalAddresses;
+        return this.postalAddresses;
     }
     /**
      * Gets the profession property value. The person's profession.
@@ -203,7 +201,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getProfession() {
-        return this._profession;
+        return this.profession;
     }
     /**
      * Gets the scoredEmailAddresses property value. The person's email addresses.
@@ -211,7 +209,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ScoredEmailAddress> getScoredEmailAddresses() {
-        return this._scoredEmailAddresses;
+        return this.scoredEmailAddresses;
     }
     /**
      * Gets the surname property value. The person's surname.
@@ -219,7 +217,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSurname() {
-        return this._surname;
+        return this.surname;
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain.
@@ -227,7 +225,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Gets the websites property value. The person's websites.
@@ -235,7 +233,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Website> getWebsites() {
-        return this._websites;
+        return this.websites;
     }
     /**
      * Gets the yomiCompany property value. The phonetic Japanese name of the person's company.
@@ -243,7 +241,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getYomiCompany() {
-        return this._yomiCompany;
+        return this.yomiCompany;
     }
     /**
      * Serializes information the current object
@@ -281,7 +279,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setBirthday(@javax.annotation.Nullable final String value) {
-        this._birthday = value;
+        this.birthday = value;
     }
     /**
      * Sets the companyName property value. The name of the person's company.
@@ -290,7 +288,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCompanyName(@javax.annotation.Nullable final String value) {
-        this._companyName = value;
+        this.companyName = value;
     }
     /**
      * Sets the department property value. The person's department.
@@ -299,7 +297,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDepartment(@javax.annotation.Nullable final String value) {
-        this._department = value;
+        this.department = value;
     }
     /**
      * Sets the displayName property value. The person's display name.
@@ -308,7 +306,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the givenName property value. The person's given name.
@@ -317,7 +315,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setGivenName(@javax.annotation.Nullable final String value) {
-        this._givenName = value;
+        this.givenName = value;
     }
     /**
      * Sets the imAddress property value. The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only.
@@ -326,7 +324,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setImAddress(@javax.annotation.Nullable final String value) {
-        this._imAddress = value;
+        this.imAddress = value;
     }
     /**
      * Sets the isFavorite property value. true if the user has flagged this person as a favorite.
@@ -335,7 +333,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsFavorite(@javax.annotation.Nullable final Boolean value) {
-        this._isFavorite = value;
+        this.isFavorite = value;
     }
     /**
      * Sets the jobTitle property value. The person's job title.
@@ -344,7 +342,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setJobTitle(@javax.annotation.Nullable final String value) {
-        this._jobTitle = value;
+        this.jobTitle = value;
     }
     /**
      * Sets the officeLocation property value. The location of the person's office.
@@ -353,7 +351,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOfficeLocation(@javax.annotation.Nullable final String value) {
-        this._officeLocation = value;
+        this.officeLocation = value;
     }
     /**
      * Sets the personNotes property value. Free-form notes that the user has taken about this person.
@@ -362,7 +360,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPersonNotes(@javax.annotation.Nullable final String value) {
-        this._personNotes = value;
+        this.personNotes = value;
     }
     /**
      * Sets the personType property value. The type of person.
@@ -371,7 +369,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPersonType(@javax.annotation.Nullable final PersonType value) {
-        this._personType = value;
+        this.personType = value;
     }
     /**
      * Sets the phones property value. The person's phone numbers.
@@ -380,7 +378,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPhones(@javax.annotation.Nullable final java.util.List<Phone> value) {
-        this._phones = value;
+        this.phones = value;
     }
     /**
      * Sets the postalAddresses property value. The person's addresses.
@@ -389,7 +387,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPostalAddresses(@javax.annotation.Nullable final java.util.List<Location> value) {
-        this._postalAddresses = value;
+        this.postalAddresses = value;
     }
     /**
      * Sets the profession property value. The person's profession.
@@ -398,7 +396,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setProfession(@javax.annotation.Nullable final String value) {
-        this._profession = value;
+        this.profession = value;
     }
     /**
      * Sets the scoredEmailAddresses property value. The person's email addresses.
@@ -407,7 +405,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setScoredEmailAddresses(@javax.annotation.Nullable final java.util.List<ScoredEmailAddress> value) {
-        this._scoredEmailAddresses = value;
+        this.scoredEmailAddresses = value;
     }
     /**
      * Sets the surname property value. The person's surname.
@@ -416,7 +414,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSurname(@javax.annotation.Nullable final String value) {
-        this._surname = value;
+        this.surname = value;
     }
     /**
      * Sets the userPrincipalName property value. The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain.
@@ -425,7 +423,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
     /**
      * Sets the websites property value. The person's websites.
@@ -434,7 +432,7 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWebsites(@javax.annotation.Nullable final java.util.List<Website> value) {
-        this._websites = value;
+        this.websites = value;
     }
     /**
      * Sets the yomiCompany property value. The phonetic Japanese name of the person's company.
@@ -443,6 +441,6 @@ public class Person extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setYomiCompany(@javax.annotation.Nullable final String value) {
-        this._yomiCompany = value;
+        this.yomiCompany = value;
     }
 }

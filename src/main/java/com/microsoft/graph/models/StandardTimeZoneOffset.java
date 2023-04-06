@@ -1,30 +1,28 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.DaylightTimeZoneOffset;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Represents the nth occurrence of the day of week that the transition from daylight saving time to standard time occurs. */
-    private Integer _dayOccurrence;
+    private Integer dayOccurrence;
     /** Represents the day of the week when the transition from daylight saving time to standard time. */
-    private DayOfWeek _dayOfWeek;
+    private DayOfWeek dayOfWeek;
     /** Represents the month of the year when the transition from daylight saving time to standard time occurs. */
-    private Integer _month;
+    private Integer month;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Represents the time of day when the transition from daylight saving time to standard time occurs. */
-    private LocalTime _time;
+    private LocalTime time;
     /** Represents how frequently in terms of years the change from daylight saving time to standard time occurs. For example, a value of 0 means every year. */
-    private Integer _year;
+    private Integer year;
     /**
      * Instantiates a new standardTimeZoneOffset and sets the default values.
      * @return a void
@@ -56,7 +54,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the dayOccurrence property value. Represents the nth occurrence of the day of week that the transition from daylight saving time to standard time occurs.
@@ -64,7 +62,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getDayOccurrence() {
-        return this._dayOccurrence;
+        return this.dayOccurrence;
     }
     /**
      * Gets the dayOfWeek property value. Represents the day of the week when the transition from daylight saving time to standard time.
@@ -72,15 +70,15 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public DayOfWeek getDayOfWeek() {
-        return this._dayOfWeek;
+        return this.dayOfWeek;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("dayOccurrence", (n) -> { this.setDayOccurrence(n.getIntegerValue()); });
         deserializerMap.put("dayOfWeek", (n) -> { this.setDayOfWeek(n.getEnumValue(DayOfWeek.class)); });
         deserializerMap.put("month", (n) -> { this.setMonth(n.getIntegerValue()); });
@@ -95,7 +93,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getMonth() {
-        return this._month;
+        return this.month;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -103,7 +101,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the time property value. Represents the time of day when the transition from daylight saving time to standard time occurs.
@@ -111,7 +109,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public LocalTime getTime() {
-        return this._time;
+        return this.time;
     }
     /**
      * Gets the year property value. Represents how frequently in terms of years the change from daylight saving time to standard time occurs. For example, a value of 0 means every year.
@@ -119,7 +117,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getYear() {
-        return this._year;
+        return this.year;
     }
     /**
      * Serializes information the current object
@@ -144,7 +142,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the dayOccurrence property value. Represents the nth occurrence of the day of week that the transition from daylight saving time to standard time occurs.
@@ -153,7 +151,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDayOccurrence(@javax.annotation.Nullable final Integer value) {
-        this._dayOccurrence = value;
+        this.dayOccurrence = value;
     }
     /**
      * Sets the dayOfWeek property value. Represents the day of the week when the transition from daylight saving time to standard time.
@@ -162,7 +160,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDayOfWeek(@javax.annotation.Nullable final DayOfWeek value) {
-        this._dayOfWeek = value;
+        this.dayOfWeek = value;
     }
     /**
      * Sets the month property value. Represents the month of the year when the transition from daylight saving time to standard time occurs.
@@ -171,7 +169,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMonth(@javax.annotation.Nullable final Integer value) {
-        this._month = value;
+        this.month = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -180,7 +178,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the time property value. Represents the time of day when the transition from daylight saving time to standard time occurs.
@@ -189,7 +187,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTime(@javax.annotation.Nullable final LocalTime value) {
-        this._time = value;
+        this.time = value;
     }
     /**
      * Sets the year property value. Represents how frequently in terms of years the change from daylight saving time to standard time occurs. For example, a value of 0 means every year.
@@ -198,6 +196,6 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setYear(@javax.annotation.Nullable final Integer value) {
-        this._year = value;
+        this.year = value;
     }
 }

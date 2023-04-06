@@ -3,27 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class IosVppEBook extends ManagedEBook implements Parsable {
     /** The Apple ID associated with Vpp token. */
-    private String _appleId;
+    private String appleId;
     /** Genres. */
-    private java.util.List<String> _genres;
+    private java.util.List<String> genres;
     /** Language. */
-    private String _language;
+    private String language;
     /** Seller. */
-    private String _seller;
+    private String seller;
     /** Total license count. */
-    private Integer _totalLicenseCount;
+    private Integer totalLicenseCount;
     /** Used license count. */
-    private Integer _usedLicenseCount;
+    private Integer usedLicenseCount;
     /** The Vpp token's organization name. */
-    private String _vppOrganizationName;
+    private String vppOrganizationName;
     /** The Vpp token ID. */
-    private String _vppTokenId;
+    private UUID vppTokenId;
     /**
      * Instantiates a new IosVppEBook and sets the default values.
      * @return a void
@@ -49,15 +49,15 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppleId() {
-        return this._appleId;
+        return this.appleId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appleId", (n) -> { this.setAppleId(n.getStringValue()); });
         deserializerMap.put("genres", (n) -> { this.setGenres(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("language", (n) -> { this.setLanguage(n.getStringValue()); });
@@ -65,7 +65,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
         deserializerMap.put("totalLicenseCount", (n) -> { this.setTotalLicenseCount(n.getIntegerValue()); });
         deserializerMap.put("usedLicenseCount", (n) -> { this.setUsedLicenseCount(n.getIntegerValue()); });
         deserializerMap.put("vppOrganizationName", (n) -> { this.setVppOrganizationName(n.getStringValue()); });
-        deserializerMap.put("vppTokenId", (n) -> { this.setVppTokenId(n.getStringValue()); });
+        deserializerMap.put("vppTokenId", (n) -> { this.setVppTokenId(n.getUUIDValue()); });
         return deserializerMap;
     }
     /**
@@ -74,7 +74,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getGenres() {
-        return this._genres;
+        return this.genres;
     }
     /**
      * Gets the language property value. Language.
@@ -82,7 +82,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLanguage() {
-        return this._language;
+        return this.language;
     }
     /**
      * Gets the seller property value. Seller.
@@ -90,7 +90,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSeller() {
-        return this._seller;
+        return this.seller;
     }
     /**
      * Gets the totalLicenseCount property value. Total license count.
@@ -98,7 +98,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getTotalLicenseCount() {
-        return this._totalLicenseCount;
+        return this.totalLicenseCount;
     }
     /**
      * Gets the usedLicenseCount property value. Used license count.
@@ -106,7 +106,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getUsedLicenseCount() {
-        return this._usedLicenseCount;
+        return this.usedLicenseCount;
     }
     /**
      * Gets the vppOrganizationName property value. The Vpp token's organization name.
@@ -114,15 +114,15 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVppOrganizationName() {
-        return this._vppOrganizationName;
+        return this.vppOrganizationName;
     }
     /**
      * Gets the vppTokenId property value. The Vpp token ID.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getVppTokenId() {
-        return this._vppTokenId;
+    public UUID getVppTokenId() {
+        return this.vppTokenId;
     }
     /**
      * Serializes information the current object
@@ -140,7 +140,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
         writer.writeIntegerValue("totalLicenseCount", this.getTotalLicenseCount());
         writer.writeIntegerValue("usedLicenseCount", this.getUsedLicenseCount());
         writer.writeStringValue("vppOrganizationName", this.getVppOrganizationName());
-        writer.writeStringValue("vppTokenId", this.getVppTokenId());
+        writer.writeUUIDValue("vppTokenId", this.getVppTokenId());
     }
     /**
      * Sets the appleId property value. The Apple ID associated with Vpp token.
@@ -149,7 +149,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppleId(@javax.annotation.Nullable final String value) {
-        this._appleId = value;
+        this.appleId = value;
     }
     /**
      * Sets the genres property value. Genres.
@@ -158,7 +158,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setGenres(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._genres = value;
+        this.genres = value;
     }
     /**
      * Sets the language property value. Language.
@@ -167,7 +167,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLanguage(@javax.annotation.Nullable final String value) {
-        this._language = value;
+        this.language = value;
     }
     /**
      * Sets the seller property value. Seller.
@@ -176,7 +176,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSeller(@javax.annotation.Nullable final String value) {
-        this._seller = value;
+        this.seller = value;
     }
     /**
      * Sets the totalLicenseCount property value. Total license count.
@@ -185,7 +185,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTotalLicenseCount(@javax.annotation.Nullable final Integer value) {
-        this._totalLicenseCount = value;
+        this.totalLicenseCount = value;
     }
     /**
      * Sets the usedLicenseCount property value. Used license count.
@@ -194,7 +194,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUsedLicenseCount(@javax.annotation.Nullable final Integer value) {
-        this._usedLicenseCount = value;
+        this.usedLicenseCount = value;
     }
     /**
      * Sets the vppOrganizationName property value. The Vpp token's organization name.
@@ -203,7 +203,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVppOrganizationName(@javax.annotation.Nullable final String value) {
-        this._vppOrganizationName = value;
+        this.vppOrganizationName = value;
     }
     /**
      * Sets the vppTokenId property value. The Vpp token ID.
@@ -211,7 +211,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setVppTokenId(@javax.annotation.Nullable final String value) {
-        this._vppTokenId = value;
+    public void setVppTokenId(@javax.annotation.Nullable final UUID value) {
+        this.vppTokenId = value;
     }
 }

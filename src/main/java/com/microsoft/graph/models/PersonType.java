@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PersonType implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The type of data source, such as Person. */
-    private String _class_escaped;
+    private String classEscaped;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The secondary type of data source, such as OrganizationUser. */
-    private String _subclass;
+    private String subclass;
     /**
      * Instantiates a new personType and sets the default values.
      * @return a void
@@ -41,23 +40,23 @@ public class PersonType implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the class property value. The type of data source, such as Person.
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getClass_escaped() {
-        return this._class_escaped;
+    public String getClassEscaped() {
+        return this.classEscaped;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("class", (n) -> { this.setClass(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("subclass", (n) -> { this.setSubclass(n.getStringValue()); });
@@ -69,7 +68,7 @@ public class PersonType implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the subclass property value. The secondary type of data source, such as OrganizationUser.
@@ -77,7 +76,7 @@ public class PersonType implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSubclass() {
-        return this._subclass;
+        return this.subclass;
     }
     /**
      * Serializes information the current object
@@ -87,7 +86,7 @@ public class PersonType implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("class", this.getClass_escaped());
+        writer.writeStringValue("class", this.getClassEscaped());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("subclass", this.getSubclass());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -99,7 +98,7 @@ public class PersonType implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the class property value. The type of data source, such as Person.
@@ -108,7 +107,7 @@ public class PersonType implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setClass(@javax.annotation.Nullable final String value) {
-        this._class_escaped = value;
+        this.classEscaped = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -117,7 +116,7 @@ public class PersonType implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the subclass property value. The secondary type of data source, such as OrganizationUser.
@@ -126,6 +125,6 @@ public class PersonType implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSubclass(@javax.annotation.Nullable final String value) {
-        this._subclass = value;
+        this.subclass = value;
     }
 }

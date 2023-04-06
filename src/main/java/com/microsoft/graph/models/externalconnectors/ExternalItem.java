@@ -4,18 +4,16 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class ExternalItem extends Entity implements Parsable {
     /** An array of access control entries. Each entry specifies the access granted to a user or group. Required. */
-    private java.util.List<Acl> _acl;
+    private java.util.List<Acl> acl;
     /** A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional. */
-    private ExternalItemContent _content;
+    private ExternalItemContent content;
     /** A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required. */
-    private Properties _properties;
+    private Properties properties;
     /**
      * Instantiates a new externalItem and sets the default values.
      * @return a void
@@ -40,7 +38,7 @@ public class ExternalItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Acl> getAcl() {
-        return this._acl;
+        return this.acl;
     }
     /**
      * Gets the content property value. A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
@@ -48,15 +46,15 @@ public class ExternalItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ExternalItemContent getContent() {
-        return this._content;
+        return this.content;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("acl", (n) -> { this.setAcl(n.getCollectionOfObjectValues(Acl::createFromDiscriminatorValue)); });
         deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(ExternalItemContent::createFromDiscriminatorValue)); });
         deserializerMap.put("properties", (n) -> { this.setProperties(n.getObjectValue(Properties::createFromDiscriminatorValue)); });
@@ -68,7 +66,7 @@ public class ExternalItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Properties getProperties() {
-        return this._properties;
+        return this.properties;
     }
     /**
      * Serializes information the current object
@@ -90,7 +88,7 @@ public class ExternalItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAcl(@javax.annotation.Nullable final java.util.List<Acl> value) {
-        this._acl = value;
+        this.acl = value;
     }
     /**
      * Sets the content property value. A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
@@ -99,7 +97,7 @@ public class ExternalItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final ExternalItemContent value) {
-        this._content = value;
+        this.content = value;
     }
     /**
      * Sets the properties property value. A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required.
@@ -108,6 +106,6 @@ public class ExternalItem extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setProperties(@javax.annotation.Nullable final Properties value) {
-        this._properties = value;
+        this.properties = value;
     }
 }

@@ -3,79 +3,78 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
     /** Indicates whether or not to block fingerprint unlock. */
-    private Boolean _passwordBlockFingerprintUnlock;
+    private Boolean passwordBlockFingerprintUnlock;
     /** Indicates whether or not to block Smart Lock and other trust agents. */
-    private Boolean _passwordBlockTrustAgents;
+    private Boolean passwordBlockTrustAgents;
     /** Number of days before the password expires. Valid values 1 to 365 */
-    private Integer _passwordExpirationDays;
+    private Integer passwordExpirationDays;
     /** Minimum length of passwords. Valid values 4 to 16 */
-    private Integer _passwordMinimumLength;
+    private Integer passwordMinimumLength;
     /** Minutes of inactivity before the screen times out. */
-    private Integer _passwordMinutesOfInactivityBeforeScreenTimeout;
+    private Integer passwordMinutesOfInactivityBeforeScreenTimeout;
     /** Number of previous passwords to block. Valid values 0 to 24 */
-    private Integer _passwordPreviousPasswordBlockCount;
+    private Integer passwordPreviousPasswordBlockCount;
     /** Android Work Profile required password type. */
-    private AndroidWorkProfileRequiredPasswordType _passwordRequiredType;
+    private AndroidWorkProfileRequiredPasswordType passwordRequiredType;
     /** Number of sign in failures allowed before factory reset. Valid values 1 to 16 */
-    private Integer _passwordSignInFailureCountBeforeFactoryReset;
+    private Integer passwordSignInFailureCountBeforeFactoryReset;
     /** Require the Android Verify apps feature is turned on. */
-    private Boolean _securityRequireVerifyApps;
+    private Boolean securityRequireVerifyApps;
     /** Block users from adding/removing accounts in work profile. */
-    private Boolean _workProfileBlockAddingAccounts;
+    private Boolean workProfileBlockAddingAccounts;
     /** Block work profile camera. */
-    private Boolean _workProfileBlockCamera;
+    private Boolean workProfileBlockCamera;
     /** Block display work profile caller ID in personal profile. */
-    private Boolean _workProfileBlockCrossProfileCallerId;
+    private Boolean workProfileBlockCrossProfileCallerId;
     /** Block work profile contacts availability in personal profile. */
-    private Boolean _workProfileBlockCrossProfileContactsSearch;
+    private Boolean workProfileBlockCrossProfileContactsSearch;
     /** Boolean that indicates if the setting disallow cross profile copy/paste is enabled. */
-    private Boolean _workProfileBlockCrossProfileCopyPaste;
+    private Boolean workProfileBlockCrossProfileCopyPaste;
     /** Indicates whether or not to block notifications while device locked. */
-    private Boolean _workProfileBlockNotificationsWhileDeviceLocked;
+    private Boolean workProfileBlockNotificationsWhileDeviceLocked;
     /** Block screen capture in work profile. */
-    private Boolean _workProfileBlockScreenCapture;
+    private Boolean workProfileBlockScreenCapture;
     /** Allow bluetooth devices to access enterprise contacts. */
-    private Boolean _workProfileBluetoothEnableContactSharing;
+    private Boolean workProfileBluetoothEnableContactSharing;
     /** Android Work Profile cross profile data sharing type. */
-    private AndroidWorkProfileCrossProfileDataSharingType _workProfileDataSharingType;
+    private AndroidWorkProfileCrossProfileDataSharingType workProfileDataSharingType;
     /** Android Work Profile default app permission policy type. */
-    private AndroidWorkProfileDefaultAppPermissionPolicyType _workProfileDefaultAppPermissionPolicy;
+    private AndroidWorkProfileDefaultAppPermissionPolicyType workProfileDefaultAppPermissionPolicy;
     /** Indicates whether or not to block fingerprint unlock for work profile. */
-    private Boolean _workProfilePasswordBlockFingerprintUnlock;
+    private Boolean workProfilePasswordBlockFingerprintUnlock;
     /** Indicates whether or not to block Smart Lock and other trust agents for work profile. */
-    private Boolean _workProfilePasswordBlockTrustAgents;
+    private Boolean workProfilePasswordBlockTrustAgents;
     /** Number of days before the work profile password expires. Valid values 1 to 365 */
-    private Integer _workProfilePasswordExpirationDays;
+    private Integer workProfilePasswordExpirationDays;
     /** Minimum length of work profile password. Valid values 4 to 16 */
-    private Integer _workProfilePasswordMinimumLength;
+    private Integer workProfilePasswordMinimumLength;
     /** Minimum # of letter characters required in work profile password. Valid values 1 to 10 */
-    private Integer _workProfilePasswordMinLetterCharacters;
+    private Integer workProfilePasswordMinLetterCharacters;
     /** Minimum # of lower-case characters required in work profile password. Valid values 1 to 10 */
-    private Integer _workProfilePasswordMinLowerCaseCharacters;
+    private Integer workProfilePasswordMinLowerCaseCharacters;
     /** Minimum # of non-letter characters required in work profile password. Valid values 1 to 10 */
-    private Integer _workProfilePasswordMinNonLetterCharacters;
+    private Integer workProfilePasswordMinNonLetterCharacters;
     /** Minimum # of numeric characters required in work profile password. Valid values 1 to 10 */
-    private Integer _workProfilePasswordMinNumericCharacters;
+    private Integer workProfilePasswordMinNumericCharacters;
     /** Minimum # of symbols required in work profile password. Valid values 1 to 10 */
-    private Integer _workProfilePasswordMinSymbolCharacters;
+    private Integer workProfilePasswordMinSymbolCharacters;
     /** Minimum # of upper-case characters required in work profile password. Valid values 1 to 10 */
-    private Integer _workProfilePasswordMinUpperCaseCharacters;
+    private Integer workProfilePasswordMinUpperCaseCharacters;
     /** Minutes of inactivity before the screen times out. */
-    private Integer _workProfilePasswordMinutesOfInactivityBeforeScreenTimeout;
+    private Integer workProfilePasswordMinutesOfInactivityBeforeScreenTimeout;
     /** Number of previous work profile passwords to block. Valid values 0 to 24 */
-    private Integer _workProfilePasswordPreviousPasswordBlockCount;
+    private Integer workProfilePasswordPreviousPasswordBlockCount;
     /** Android Work Profile required password type. */
-    private AndroidWorkProfileRequiredPasswordType _workProfilePasswordRequiredType;
+    private AndroidWorkProfileRequiredPasswordType workProfilePasswordRequiredType;
     /** Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16 */
-    private Integer _workProfilePasswordSignInFailureCountBeforeFactoryReset;
+    private Integer workProfilePasswordSignInFailureCountBeforeFactoryReset;
     /** Password is required or not for work profile */
-    private Boolean _workProfileRequirePassword;
+    private Boolean workProfileRequirePassword;
     /**
      * Instantiates a new AndroidWorkProfileGeneralDeviceConfiguration and sets the default values.
      * @return a void
@@ -97,11 +96,11 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("passwordBlockFingerprintUnlock", (n) -> { this.setPasswordBlockFingerprintUnlock(n.getBooleanValue()); });
         deserializerMap.put("passwordBlockTrustAgents", (n) -> { this.setPasswordBlockTrustAgents(n.getBooleanValue()); });
         deserializerMap.put("passwordExpirationDays", (n) -> { this.setPasswordExpirationDays(n.getIntegerValue()); });
@@ -144,7 +143,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Boolean getPasswordBlockFingerprintUnlock() {
-        return this._passwordBlockFingerprintUnlock;
+        return this.passwordBlockFingerprintUnlock;
     }
     /**
      * Gets the passwordBlockTrustAgents property value. Indicates whether or not to block Smart Lock and other trust agents.
@@ -152,7 +151,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Boolean getPasswordBlockTrustAgents() {
-        return this._passwordBlockTrustAgents;
+        return this.passwordBlockTrustAgents;
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 365
@@ -160,7 +159,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Integer getPasswordExpirationDays() {
-        return this._passwordExpirationDays;
+        return this.passwordExpirationDays;
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum length of passwords. Valid values 4 to 16
@@ -168,7 +167,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Integer getPasswordMinimumLength() {
-        return this._passwordMinimumLength;
+        return this.passwordMinimumLength;
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
@@ -176,7 +175,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeScreenTimeout() {
-        return this._passwordMinutesOfInactivityBeforeScreenTimeout;
+        return this.passwordMinutesOfInactivityBeforeScreenTimeout;
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 0 to 24
@@ -184,7 +183,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
-        return this._passwordPreviousPasswordBlockCount;
+        return this.passwordPreviousPasswordBlockCount;
     }
     /**
      * Gets the passwordRequiredType property value. Android Work Profile required password type.
@@ -192,7 +191,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public AndroidWorkProfileRequiredPasswordType getPasswordRequiredType() {
-        return this._passwordRequiredType;
+        return this.passwordRequiredType;
     }
     /**
      * Gets the passwordSignInFailureCountBeforeFactoryReset property value. Number of sign in failures allowed before factory reset. Valid values 1 to 16
@@ -200,7 +199,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Integer getPasswordSignInFailureCountBeforeFactoryReset() {
-        return this._passwordSignInFailureCountBeforeFactoryReset;
+        return this.passwordSignInFailureCountBeforeFactoryReset;
     }
     /**
      * Gets the securityRequireVerifyApps property value. Require the Android Verify apps feature is turned on.
@@ -208,7 +207,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Boolean getSecurityRequireVerifyApps() {
-        return this._securityRequireVerifyApps;
+        return this.securityRequireVerifyApps;
     }
     /**
      * Gets the workProfileBlockAddingAccounts property value. Block users from adding/removing accounts in work profile.
@@ -216,7 +215,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Boolean getWorkProfileBlockAddingAccounts() {
-        return this._workProfileBlockAddingAccounts;
+        return this.workProfileBlockAddingAccounts;
     }
     /**
      * Gets the workProfileBlockCamera property value. Block work profile camera.
@@ -224,7 +223,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Boolean getWorkProfileBlockCamera() {
-        return this._workProfileBlockCamera;
+        return this.workProfileBlockCamera;
     }
     /**
      * Gets the workProfileBlockCrossProfileCallerId property value. Block display work profile caller ID in personal profile.
@@ -232,7 +231,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Boolean getWorkProfileBlockCrossProfileCallerId() {
-        return this._workProfileBlockCrossProfileCallerId;
+        return this.workProfileBlockCrossProfileCallerId;
     }
     /**
      * Gets the workProfileBlockCrossProfileContactsSearch property value. Block work profile contacts availability in personal profile.
@@ -240,7 +239,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Boolean getWorkProfileBlockCrossProfileContactsSearch() {
-        return this._workProfileBlockCrossProfileContactsSearch;
+        return this.workProfileBlockCrossProfileContactsSearch;
     }
     /**
      * Gets the workProfileBlockCrossProfileCopyPaste property value. Boolean that indicates if the setting disallow cross profile copy/paste is enabled.
@@ -248,7 +247,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Boolean getWorkProfileBlockCrossProfileCopyPaste() {
-        return this._workProfileBlockCrossProfileCopyPaste;
+        return this.workProfileBlockCrossProfileCopyPaste;
     }
     /**
      * Gets the workProfileBlockNotificationsWhileDeviceLocked property value. Indicates whether or not to block notifications while device locked.
@@ -256,7 +255,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Boolean getWorkProfileBlockNotificationsWhileDeviceLocked() {
-        return this._workProfileBlockNotificationsWhileDeviceLocked;
+        return this.workProfileBlockNotificationsWhileDeviceLocked;
     }
     /**
      * Gets the workProfileBlockScreenCapture property value. Block screen capture in work profile.
@@ -264,7 +263,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Boolean getWorkProfileBlockScreenCapture() {
-        return this._workProfileBlockScreenCapture;
+        return this.workProfileBlockScreenCapture;
     }
     /**
      * Gets the workProfileBluetoothEnableContactSharing property value. Allow bluetooth devices to access enterprise contacts.
@@ -272,7 +271,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Boolean getWorkProfileBluetoothEnableContactSharing() {
-        return this._workProfileBluetoothEnableContactSharing;
+        return this.workProfileBluetoothEnableContactSharing;
     }
     /**
      * Gets the workProfileDataSharingType property value. Android Work Profile cross profile data sharing type.
@@ -280,7 +279,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public AndroidWorkProfileCrossProfileDataSharingType getWorkProfileDataSharingType() {
-        return this._workProfileDataSharingType;
+        return this.workProfileDataSharingType;
     }
     /**
      * Gets the workProfileDefaultAppPermissionPolicy property value. Android Work Profile default app permission policy type.
@@ -288,7 +287,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public AndroidWorkProfileDefaultAppPermissionPolicyType getWorkProfileDefaultAppPermissionPolicy() {
-        return this._workProfileDefaultAppPermissionPolicy;
+        return this.workProfileDefaultAppPermissionPolicy;
     }
     /**
      * Gets the workProfilePasswordBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock for work profile.
@@ -296,7 +295,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Boolean getWorkProfilePasswordBlockFingerprintUnlock() {
-        return this._workProfilePasswordBlockFingerprintUnlock;
+        return this.workProfilePasswordBlockFingerprintUnlock;
     }
     /**
      * Gets the workProfilePasswordBlockTrustAgents property value. Indicates whether or not to block Smart Lock and other trust agents for work profile.
@@ -304,7 +303,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Boolean getWorkProfilePasswordBlockTrustAgents() {
-        return this._workProfilePasswordBlockTrustAgents;
+        return this.workProfilePasswordBlockTrustAgents;
     }
     /**
      * Gets the workProfilePasswordExpirationDays property value. Number of days before the work profile password expires. Valid values 1 to 365
@@ -312,7 +311,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Integer getWorkProfilePasswordExpirationDays() {
-        return this._workProfilePasswordExpirationDays;
+        return this.workProfilePasswordExpirationDays;
     }
     /**
      * Gets the workProfilePasswordMinimumLength property value. Minimum length of work profile password. Valid values 4 to 16
@@ -320,7 +319,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Integer getWorkProfilePasswordMinimumLength() {
-        return this._workProfilePasswordMinimumLength;
+        return this.workProfilePasswordMinimumLength;
     }
     /**
      * Gets the workProfilePasswordMinLetterCharacters property value. Minimum # of letter characters required in work profile password. Valid values 1 to 10
@@ -328,7 +327,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Integer getWorkProfilePasswordMinLetterCharacters() {
-        return this._workProfilePasswordMinLetterCharacters;
+        return this.workProfilePasswordMinLetterCharacters;
     }
     /**
      * Gets the workProfilePasswordMinLowerCaseCharacters property value. Minimum # of lower-case characters required in work profile password. Valid values 1 to 10
@@ -336,7 +335,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Integer getWorkProfilePasswordMinLowerCaseCharacters() {
-        return this._workProfilePasswordMinLowerCaseCharacters;
+        return this.workProfilePasswordMinLowerCaseCharacters;
     }
     /**
      * Gets the workProfilePasswordMinNonLetterCharacters property value. Minimum # of non-letter characters required in work profile password. Valid values 1 to 10
@@ -344,7 +343,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Integer getWorkProfilePasswordMinNonLetterCharacters() {
-        return this._workProfilePasswordMinNonLetterCharacters;
+        return this.workProfilePasswordMinNonLetterCharacters;
     }
     /**
      * Gets the workProfilePasswordMinNumericCharacters property value. Minimum # of numeric characters required in work profile password. Valid values 1 to 10
@@ -352,7 +351,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Integer getWorkProfilePasswordMinNumericCharacters() {
-        return this._workProfilePasswordMinNumericCharacters;
+        return this.workProfilePasswordMinNumericCharacters;
     }
     /**
      * Gets the workProfilePasswordMinSymbolCharacters property value. Minimum # of symbols required in work profile password. Valid values 1 to 10
@@ -360,7 +359,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Integer getWorkProfilePasswordMinSymbolCharacters() {
-        return this._workProfilePasswordMinSymbolCharacters;
+        return this.workProfilePasswordMinSymbolCharacters;
     }
     /**
      * Gets the workProfilePasswordMinUpperCaseCharacters property value. Minimum # of upper-case characters required in work profile password. Valid values 1 to 10
@@ -368,7 +367,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Integer getWorkProfilePasswordMinUpperCaseCharacters() {
-        return this._workProfilePasswordMinUpperCaseCharacters;
+        return this.workProfilePasswordMinUpperCaseCharacters;
     }
     /**
      * Gets the workProfilePasswordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
@@ -376,7 +375,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Integer getWorkProfilePasswordMinutesOfInactivityBeforeScreenTimeout() {
-        return this._workProfilePasswordMinutesOfInactivityBeforeScreenTimeout;
+        return this.workProfilePasswordMinutesOfInactivityBeforeScreenTimeout;
     }
     /**
      * Gets the workProfilePasswordPreviousPasswordBlockCount property value. Number of previous work profile passwords to block. Valid values 0 to 24
@@ -384,7 +383,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Integer getWorkProfilePasswordPreviousPasswordBlockCount() {
-        return this._workProfilePasswordPreviousPasswordBlockCount;
+        return this.workProfilePasswordPreviousPasswordBlockCount;
     }
     /**
      * Gets the workProfilePasswordRequiredType property value. Android Work Profile required password type.
@@ -392,7 +391,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public AndroidWorkProfileRequiredPasswordType getWorkProfilePasswordRequiredType() {
-        return this._workProfilePasswordRequiredType;
+        return this.workProfilePasswordRequiredType;
     }
     /**
      * Gets the workProfilePasswordSignInFailureCountBeforeFactoryReset property value. Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16
@@ -400,7 +399,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Integer getWorkProfilePasswordSignInFailureCountBeforeFactoryReset() {
-        return this._workProfilePasswordSignInFailureCountBeforeFactoryReset;
+        return this.workProfilePasswordSignInFailureCountBeforeFactoryReset;
     }
     /**
      * Gets the workProfileRequirePassword property value. Password is required or not for work profile
@@ -408,7 +407,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nullable
     public Boolean getWorkProfileRequirePassword() {
-        return this._workProfileRequirePassword;
+        return this.workProfileRequirePassword;
     }
     /**
      * Serializes information the current object
@@ -461,7 +460,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setPasswordBlockFingerprintUnlock(@javax.annotation.Nullable final Boolean value) {
-        this._passwordBlockFingerprintUnlock = value;
+        this.passwordBlockFingerprintUnlock = value;
     }
     /**
      * Sets the passwordBlockTrustAgents property value. Indicates whether or not to block Smart Lock and other trust agents.
@@ -470,7 +469,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setPasswordBlockTrustAgents(@javax.annotation.Nullable final Boolean value) {
-        this._passwordBlockTrustAgents = value;
+        this.passwordBlockTrustAgents = value;
     }
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 365
@@ -479,7 +478,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
-        this._passwordExpirationDays = value;
+        this.passwordExpirationDays = value;
     }
     /**
      * Sets the passwordMinimumLength property value. Minimum length of passwords. Valid values 4 to 16
@@ -488,7 +487,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
-        this._passwordMinimumLength = value;
+        this.passwordMinimumLength = value;
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
@@ -497,7 +496,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
-        this._passwordMinutesOfInactivityBeforeScreenTimeout = value;
+        this.passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 0 to 24
@@ -506,7 +505,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
-        this._passwordPreviousPasswordBlockCount = value;
+        this.passwordPreviousPasswordBlockCount = value;
     }
     /**
      * Sets the passwordRequiredType property value. Android Work Profile required password type.
@@ -515,7 +514,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final AndroidWorkProfileRequiredPasswordType value) {
-        this._passwordRequiredType = value;
+        this.passwordRequiredType = value;
     }
     /**
      * Sets the passwordSignInFailureCountBeforeFactoryReset property value. Number of sign in failures allowed before factory reset. Valid values 1 to 16
@@ -524,7 +523,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
-        this._passwordSignInFailureCountBeforeFactoryReset = value;
+        this.passwordSignInFailureCountBeforeFactoryReset = value;
     }
     /**
      * Sets the securityRequireVerifyApps property value. Require the Android Verify apps feature is turned on.
@@ -533,7 +532,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setSecurityRequireVerifyApps(@javax.annotation.Nullable final Boolean value) {
-        this._securityRequireVerifyApps = value;
+        this.securityRequireVerifyApps = value;
     }
     /**
      * Sets the workProfileBlockAddingAccounts property value. Block users from adding/removing accounts in work profile.
@@ -542,7 +541,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfileBlockAddingAccounts(@javax.annotation.Nullable final Boolean value) {
-        this._workProfileBlockAddingAccounts = value;
+        this.workProfileBlockAddingAccounts = value;
     }
     /**
      * Sets the workProfileBlockCamera property value. Block work profile camera.
@@ -551,7 +550,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfileBlockCamera(@javax.annotation.Nullable final Boolean value) {
-        this._workProfileBlockCamera = value;
+        this.workProfileBlockCamera = value;
     }
     /**
      * Sets the workProfileBlockCrossProfileCallerId property value. Block display work profile caller ID in personal profile.
@@ -560,7 +559,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfileBlockCrossProfileCallerId(@javax.annotation.Nullable final Boolean value) {
-        this._workProfileBlockCrossProfileCallerId = value;
+        this.workProfileBlockCrossProfileCallerId = value;
     }
     /**
      * Sets the workProfileBlockCrossProfileContactsSearch property value. Block work profile contacts availability in personal profile.
@@ -569,7 +568,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfileBlockCrossProfileContactsSearch(@javax.annotation.Nullable final Boolean value) {
-        this._workProfileBlockCrossProfileContactsSearch = value;
+        this.workProfileBlockCrossProfileContactsSearch = value;
     }
     /**
      * Sets the workProfileBlockCrossProfileCopyPaste property value. Boolean that indicates if the setting disallow cross profile copy/paste is enabled.
@@ -578,7 +577,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfileBlockCrossProfileCopyPaste(@javax.annotation.Nullable final Boolean value) {
-        this._workProfileBlockCrossProfileCopyPaste = value;
+        this.workProfileBlockCrossProfileCopyPaste = value;
     }
     /**
      * Sets the workProfileBlockNotificationsWhileDeviceLocked property value. Indicates whether or not to block notifications while device locked.
@@ -587,7 +586,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfileBlockNotificationsWhileDeviceLocked(@javax.annotation.Nullable final Boolean value) {
-        this._workProfileBlockNotificationsWhileDeviceLocked = value;
+        this.workProfileBlockNotificationsWhileDeviceLocked = value;
     }
     /**
      * Sets the workProfileBlockScreenCapture property value. Block screen capture in work profile.
@@ -596,7 +595,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfileBlockScreenCapture(@javax.annotation.Nullable final Boolean value) {
-        this._workProfileBlockScreenCapture = value;
+        this.workProfileBlockScreenCapture = value;
     }
     /**
      * Sets the workProfileBluetoothEnableContactSharing property value. Allow bluetooth devices to access enterprise contacts.
@@ -605,7 +604,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfileBluetoothEnableContactSharing(@javax.annotation.Nullable final Boolean value) {
-        this._workProfileBluetoothEnableContactSharing = value;
+        this.workProfileBluetoothEnableContactSharing = value;
     }
     /**
      * Sets the workProfileDataSharingType property value. Android Work Profile cross profile data sharing type.
@@ -614,7 +613,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfileDataSharingType(@javax.annotation.Nullable final AndroidWorkProfileCrossProfileDataSharingType value) {
-        this._workProfileDataSharingType = value;
+        this.workProfileDataSharingType = value;
     }
     /**
      * Sets the workProfileDefaultAppPermissionPolicy property value. Android Work Profile default app permission policy type.
@@ -623,7 +622,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfileDefaultAppPermissionPolicy(@javax.annotation.Nullable final AndroidWorkProfileDefaultAppPermissionPolicyType value) {
-        this._workProfileDefaultAppPermissionPolicy = value;
+        this.workProfileDefaultAppPermissionPolicy = value;
     }
     /**
      * Sets the workProfilePasswordBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock for work profile.
@@ -632,7 +631,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfilePasswordBlockFingerprintUnlock(@javax.annotation.Nullable final Boolean value) {
-        this._workProfilePasswordBlockFingerprintUnlock = value;
+        this.workProfilePasswordBlockFingerprintUnlock = value;
     }
     /**
      * Sets the workProfilePasswordBlockTrustAgents property value. Indicates whether or not to block Smart Lock and other trust agents for work profile.
@@ -641,7 +640,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfilePasswordBlockTrustAgents(@javax.annotation.Nullable final Boolean value) {
-        this._workProfilePasswordBlockTrustAgents = value;
+        this.workProfilePasswordBlockTrustAgents = value;
     }
     /**
      * Sets the workProfilePasswordExpirationDays property value. Number of days before the work profile password expires. Valid values 1 to 365
@@ -650,7 +649,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfilePasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
-        this._workProfilePasswordExpirationDays = value;
+        this.workProfilePasswordExpirationDays = value;
     }
     /**
      * Sets the workProfilePasswordMinimumLength property value. Minimum length of work profile password. Valid values 4 to 16
@@ -659,7 +658,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
-        this._workProfilePasswordMinimumLength = value;
+        this.workProfilePasswordMinimumLength = value;
     }
     /**
      * Sets the workProfilePasswordMinLetterCharacters property value. Minimum # of letter characters required in work profile password. Valid values 1 to 10
@@ -668,7 +667,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinLetterCharacters(@javax.annotation.Nullable final Integer value) {
-        this._workProfilePasswordMinLetterCharacters = value;
+        this.workProfilePasswordMinLetterCharacters = value;
     }
     /**
      * Sets the workProfilePasswordMinLowerCaseCharacters property value. Minimum # of lower-case characters required in work profile password. Valid values 1 to 10
@@ -677,7 +676,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinLowerCaseCharacters(@javax.annotation.Nullable final Integer value) {
-        this._workProfilePasswordMinLowerCaseCharacters = value;
+        this.workProfilePasswordMinLowerCaseCharacters = value;
     }
     /**
      * Sets the workProfilePasswordMinNonLetterCharacters property value. Minimum # of non-letter characters required in work profile password. Valid values 1 to 10
@@ -686,7 +685,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinNonLetterCharacters(@javax.annotation.Nullable final Integer value) {
-        this._workProfilePasswordMinNonLetterCharacters = value;
+        this.workProfilePasswordMinNonLetterCharacters = value;
     }
     /**
      * Sets the workProfilePasswordMinNumericCharacters property value. Minimum # of numeric characters required in work profile password. Valid values 1 to 10
@@ -695,7 +694,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinNumericCharacters(@javax.annotation.Nullable final Integer value) {
-        this._workProfilePasswordMinNumericCharacters = value;
+        this.workProfilePasswordMinNumericCharacters = value;
     }
     /**
      * Sets the workProfilePasswordMinSymbolCharacters property value. Minimum # of symbols required in work profile password. Valid values 1 to 10
@@ -704,7 +703,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinSymbolCharacters(@javax.annotation.Nullable final Integer value) {
-        this._workProfilePasswordMinSymbolCharacters = value;
+        this.workProfilePasswordMinSymbolCharacters = value;
     }
     /**
      * Sets the workProfilePasswordMinUpperCaseCharacters property value. Minimum # of upper-case characters required in work profile password. Valid values 1 to 10
@@ -713,7 +712,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinUpperCaseCharacters(@javax.annotation.Nullable final Integer value) {
-        this._workProfilePasswordMinUpperCaseCharacters = value;
+        this.workProfilePasswordMinUpperCaseCharacters = value;
     }
     /**
      * Sets the workProfilePasswordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
@@ -722,7 +721,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
-        this._workProfilePasswordMinutesOfInactivityBeforeScreenTimeout = value;
+        this.workProfilePasswordMinutesOfInactivityBeforeScreenTimeout = value;
     }
     /**
      * Sets the workProfilePasswordPreviousPasswordBlockCount property value. Number of previous work profile passwords to block. Valid values 0 to 24
@@ -731,7 +730,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfilePasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
-        this._workProfilePasswordPreviousPasswordBlockCount = value;
+        this.workProfilePasswordPreviousPasswordBlockCount = value;
     }
     /**
      * Sets the workProfilePasswordRequiredType property value. Android Work Profile required password type.
@@ -740,7 +739,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfilePasswordRequiredType(@javax.annotation.Nullable final AndroidWorkProfileRequiredPasswordType value) {
-        this._workProfilePasswordRequiredType = value;
+        this.workProfilePasswordRequiredType = value;
     }
     /**
      * Sets the workProfilePasswordSignInFailureCountBeforeFactoryReset property value. Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16
@@ -749,7 +748,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfilePasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
-        this._workProfilePasswordSignInFailureCountBeforeFactoryReset = value;
+        this.workProfilePasswordSignInFailureCountBeforeFactoryReset = value;
     }
     /**
      * Sets the workProfileRequirePassword property value. Password is required or not for work profile
@@ -758,6 +757,6 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     @javax.annotation.Nonnull
     public void setWorkProfileRequirePassword(@javax.annotation.Nullable final Boolean value) {
-        this._workProfileRequirePassword = value;
+        this.workProfileRequirePassword = value;
     }
 }

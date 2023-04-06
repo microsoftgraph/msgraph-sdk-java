@@ -5,23 +5,22 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RecentNotebook implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The name of the notebook. */
-    private String _displayName;
+    private String displayName;
     /** The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
-    private OffsetDateTime _lastAccessedTime;
+    private OffsetDateTime lastAccessedTime;
     /** Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web. */
-    private RecentNotebookLinks _links;
+    private RecentNotebookLinks links;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The backend store where the Notebook resides, either OneDriveForBusiness or OneDrive. */
-    private OnenoteSourceService _sourceService;
+    private OnenoteSourceService sourceService;
     /**
      * Instantiates a new recentNotebook and sets the default values.
      * @return a void
@@ -46,7 +45,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the displayName property value. The name of the notebook.
@@ -54,15 +53,15 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastAccessedTime", (n) -> { this.setLastAccessedTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("links", (n) -> { this.setLinks(n.getObjectValue(RecentNotebookLinks::createFromDiscriminatorValue)); });
@@ -76,7 +75,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastAccessedTime() {
-        return this._lastAccessedTime;
+        return this.lastAccessedTime;
     }
     /**
      * Gets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
@@ -84,7 +83,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public RecentNotebookLinks getLinks() {
-        return this._links;
+        return this.links;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -92,7 +91,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the sourceService property value. The backend store where the Notebook resides, either OneDriveForBusiness or OneDrive.
@@ -100,7 +99,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OnenoteSourceService getSourceService() {
-        return this._sourceService;
+        return this.sourceService;
     }
     /**
      * Serializes information the current object
@@ -124,7 +123,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the displayName property value. The name of the notebook.
@@ -133,7 +132,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastAccessedTime property value. The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -142,7 +141,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastAccessedTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastAccessedTime = value;
+        this.lastAccessedTime = value;
     }
     /**
      * Sets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
@@ -151,7 +150,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLinks(@javax.annotation.Nullable final RecentNotebookLinks value) {
-        this._links = value;
+        this.links = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -160,7 +159,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the sourceService property value. The backend store where the Notebook resides, either OneDriveForBusiness or OneDrive.
@@ -169,6 +168,6 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSourceService(@javax.annotation.Nullable final OnenoteSourceService value) {
-        this._sourceService = value;
+        this.sourceService = value;
     }
 }

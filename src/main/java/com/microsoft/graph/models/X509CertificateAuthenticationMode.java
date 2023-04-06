@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
 public enum X509CertificateAuthenticationMode implements ValuedEnum {
     X509CertificateSingleFactor("x509CertificateSingleFactor"),
     X509CertificateMultiFactor("x509CertificateMultiFactor"),

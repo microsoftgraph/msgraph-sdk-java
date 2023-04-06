@@ -4,23 +4,22 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DataSubject implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Email of the data subject. */
-    private String _email;
+    private String email;
     /** First name of the data subject. */
-    private String _firstName;
+    private String firstName;
     /** Last Name of the data subject. */
-    private String _lastName;
+    private String lastName;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The country/region of residency. The residency information is uesed only for internal reporting but not for the content search. */
-    private String _residency;
+    private String residency;
     /**
      * Instantiates a new dataSubject and sets the default values.
      * @return a void
@@ -45,7 +44,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the email property value. Email of the data subject.
@@ -53,15 +52,15 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getEmail() {
-        return this._email;
+        return this.email;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
         deserializerMap.put("firstName", (n) -> { this.setFirstName(n.getStringValue()); });
         deserializerMap.put("lastName", (n) -> { this.setLastName(n.getStringValue()); });
@@ -75,7 +74,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getFirstName() {
-        return this._firstName;
+        return this.firstName;
     }
     /**
      * Gets the lastName property value. Last Name of the data subject.
@@ -83,7 +82,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getLastName() {
-        return this._lastName;
+        return this.lastName;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -91,7 +90,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the residency property value. The country/region of residency. The residency information is uesed only for internal reporting but not for the content search.
@@ -99,7 +98,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getResidency() {
-        return this._residency;
+        return this.residency;
     }
     /**
      * Serializes information the current object
@@ -123,7 +122,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the email property value. Email of the data subject.
@@ -132,7 +131,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
-        this._email = value;
+        this.email = value;
     }
     /**
      * Sets the firstName property value. First name of the data subject.
@@ -141,7 +140,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFirstName(@javax.annotation.Nullable final String value) {
-        this._firstName = value;
+        this.firstName = value;
     }
     /**
      * Sets the lastName property value. Last Name of the data subject.
@@ -150,7 +149,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastName(@javax.annotation.Nullable final String value) {
-        this._lastName = value;
+        this.lastName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -159,7 +158,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the residency property value. The country/region of residency. The residency information is uesed only for internal reporting but not for the content search.
@@ -168,6 +167,6 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setResidency(@javax.annotation.Nullable final String value) {
-        this._residency = value;
+        this.residency = value;
     }
 }

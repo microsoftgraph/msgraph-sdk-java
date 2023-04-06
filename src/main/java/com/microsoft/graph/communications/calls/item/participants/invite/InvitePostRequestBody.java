@@ -5,18 +5,16 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the invite method. */
 public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The clientContext property */
-    private String _clientContext;
+    private String clientContext;
     /** The participants property */
-    private java.util.List<InvitationParticipantInfo> _participants;
+    private java.util.List<InvitationParticipantInfo> participants;
     /**
      * Instantiates a new invitePostRequestBody and sets the default values.
      * @return a void
@@ -41,7 +39,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the clientContext property value. The clientContext property
@@ -49,15 +47,15 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getClientContext() {
-        return this._clientContext;
+        return this.clientContext;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("clientContext", (n) -> { this.setClientContext(n.getStringValue()); });
         deserializerMap.put("participants", (n) -> { this.setParticipants(n.getCollectionOfObjectValues(InvitationParticipantInfo::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -68,7 +66,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<InvitationParticipantInfo> getParticipants() {
-        return this._participants;
+        return this.participants;
     }
     /**
      * Serializes information the current object
@@ -89,7 +87,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the clientContext property value. The clientContext property
@@ -98,7 +96,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setClientContext(@javax.annotation.Nullable final String value) {
-        this._clientContext = value;
+        this.clientContext = value;
     }
     /**
      * Sets the participants property value. The participants property
@@ -107,6 +105,6 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setParticipants(@javax.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
-        this._participants = value;
+        this.participants = value;
     }
 }

@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Represents the level to which the device's clipboard may be shared between apps */
 public enum ManagedAppClipboardSharingLevel implements ValuedEnum {
     /** Sharing is allowed between all apps, managed or not */
     AllApps("allApps"),

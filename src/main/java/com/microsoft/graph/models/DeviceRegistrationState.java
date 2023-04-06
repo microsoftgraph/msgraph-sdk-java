@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Device registration status. */
 public enum DeviceRegistrationState implements ValuedEnum {
     /** The device is not registered. */
     NotRegistered("notRegistered"),

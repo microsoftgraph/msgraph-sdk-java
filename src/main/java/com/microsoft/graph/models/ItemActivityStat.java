@@ -4,31 +4,30 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ItemActivityStat extends Entity implements Parsable {
     /** Statistics about the access actions in this interval. Read-only. */
-    private ItemActionStat _access;
+    private ItemActionStat access;
     /** Exposes the itemActivities represented in this itemActivityStat resource. */
-    private java.util.List<ItemActivity> _activities;
+    private java.util.List<ItemActivity> activities;
     /** Statistics about the create actions in this interval. Read-only. */
-    private ItemActionStat _create;
+    private ItemActionStat create;
     /** Statistics about the delete actions in this interval. Read-only. */
-    private ItemActionStat _delete;
+    private ItemActionStat delete;
     /** Statistics about the edit actions in this interval. Read-only. */
-    private ItemActionStat _edit;
+    private ItemActionStat edit;
     /** When the interval ends. Read-only. */
-    private OffsetDateTime _endDateTime;
+    private OffsetDateTime endDateTime;
     /** Indicates that the statistics in this interval are based on incomplete data. Read-only. */
-    private IncompleteData _incompleteData;
+    private IncompleteData incompleteData;
     /** Indicates whether the item is 'trending.' Read-only. */
-    private Boolean _isTrending;
+    private Boolean isTrending;
     /** Statistics about the move actions in this interval. Read-only. */
-    private ItemActionStat _move;
+    private ItemActionStat move;
     /** When the interval starts. Read-only. */
-    private OffsetDateTime _startDateTime;
+    private OffsetDateTime startDateTime;
     /**
      * Instantiates a new itemActivityStat and sets the default values.
      * @return a void
@@ -53,7 +52,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ItemActionStat getAccess() {
-        return this._access;
+        return this.access;
     }
     /**
      * Gets the activities property value. Exposes the itemActivities represented in this itemActivityStat resource.
@@ -61,7 +60,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ItemActivity> getActivities() {
-        return this._activities;
+        return this.activities;
     }
     /**
      * Gets the create property value. Statistics about the create actions in this interval. Read-only.
@@ -69,7 +68,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ItemActionStat getCreate() {
-        return this._create;
+        return this.create;
     }
     /**
      * Gets the delete property value. Statistics about the delete actions in this interval. Read-only.
@@ -77,7 +76,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ItemActionStat getDelete() {
-        return this._delete;
+        return this.delete;
     }
     /**
      * Gets the edit property value. Statistics about the edit actions in this interval. Read-only.
@@ -85,7 +84,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ItemActionStat getEdit() {
-        return this._edit;
+        return this.edit;
     }
     /**
      * Gets the endDateTime property value. When the interval ends. Read-only.
@@ -93,15 +92,15 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("access", (n) -> { this.setAccess(n.getObjectValue(ItemActionStat::createFromDiscriminatorValue)); });
         deserializerMap.put("activities", (n) -> { this.setActivities(n.getCollectionOfObjectValues(ItemActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("create", (n) -> { this.setCreate(n.getObjectValue(ItemActionStat::createFromDiscriminatorValue)); });
@@ -120,7 +119,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IncompleteData getIncompleteData() {
-        return this._incompleteData;
+        return this.incompleteData;
     }
     /**
      * Gets the isTrending property value. Indicates whether the item is 'trending.' Read-only.
@@ -128,7 +127,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsTrending() {
-        return this._isTrending;
+        return this.isTrending;
     }
     /**
      * Gets the move property value. Statistics about the move actions in this interval. Read-only.
@@ -136,7 +135,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ItemActionStat getMove() {
-        return this._move;
+        return this.move;
     }
     /**
      * Gets the startDateTime property value. When the interval starts. Read-only.
@@ -144,7 +143,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Serializes information the current object
@@ -173,7 +172,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAccess(@javax.annotation.Nullable final ItemActionStat value) {
-        this._access = value;
+        this.access = value;
     }
     /**
      * Sets the activities property value. Exposes the itemActivities represented in this itemActivityStat resource.
@@ -182,7 +181,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setActivities(@javax.annotation.Nullable final java.util.List<ItemActivity> value) {
-        this._activities = value;
+        this.activities = value;
     }
     /**
      * Sets the create property value. Statistics about the create actions in this interval. Read-only.
@@ -191,7 +190,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreate(@javax.annotation.Nullable final ItemActionStat value) {
-        this._create = value;
+        this.create = value;
     }
     /**
      * Sets the delete property value. Statistics about the delete actions in this interval. Read-only.
@@ -200,7 +199,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDelete(@javax.annotation.Nullable final ItemActionStat value) {
-        this._delete = value;
+        this.delete = value;
     }
     /**
      * Sets the edit property value. Statistics about the edit actions in this interval. Read-only.
@@ -209,7 +208,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEdit(@javax.annotation.Nullable final ItemActionStat value) {
-        this._edit = value;
+        this.edit = value;
     }
     /**
      * Sets the endDateTime property value. When the interval ends. Read-only.
@@ -218,7 +217,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
      * Sets the incompleteData property value. Indicates that the statistics in this interval are based on incomplete data. Read-only.
@@ -227,7 +226,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIncompleteData(@javax.annotation.Nullable final IncompleteData value) {
-        this._incompleteData = value;
+        this.incompleteData = value;
     }
     /**
      * Sets the isTrending property value. Indicates whether the item is 'trending.' Read-only.
@@ -236,7 +235,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsTrending(@javax.annotation.Nullable final Boolean value) {
-        this._isTrending = value;
+        this.isTrending = value;
     }
     /**
      * Sets the move property value. Statistics about the move actions in this interval. Read-only.
@@ -245,7 +244,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMove(@javax.annotation.Nullable final ItemActionStat value) {
-        this._move = value;
+        this.move = value;
     }
     /**
      * Sets the startDateTime property value. When the interval starts. Read-only.
@@ -254,6 +253,6 @@ public class ItemActivityStat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
 }

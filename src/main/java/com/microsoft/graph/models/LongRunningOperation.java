@@ -1,26 +1,23 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.RichLongRunningOperation;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class LongRunningOperation extends Entity implements Parsable {
-    /** The start time of the operation. */
-    private OffsetDateTime _createdDateTime;
-    /** The time of the last action in the operation. */
-    private OffsetDateTime _lastActionDateTime;
+    /** The start time of the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    private OffsetDateTime createdDateTime;
+    /** The time of the last action in the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    private OffsetDateTime lastActionDateTime;
     /** URI of the resource that the operation is performed on. */
-    private String _resourceLocation;
+    private String resourceLocation;
     /** The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. */
-    private LongRunningOperationStatus _status;
+    private LongRunningOperationStatus status;
     /** Details about the status of the operation. */
-    private String _statusDetail;
+    private String statusDetail;
     /**
      * Instantiates a new longRunningOperation and sets the default values.
      * @return a void
@@ -47,20 +44,20 @@ public class LongRunningOperation extends Entity implements Parsable {
         return new LongRunningOperation();
     }
     /**
-     * Gets the createdDateTime property value. The start time of the operation.
+     * Gets the createdDateTime property value. The start time of the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastActionDateTime", (n) -> { this.setLastActionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("resourceLocation", (n) -> { this.setResourceLocation(n.getStringValue()); });
@@ -69,12 +66,12 @@ public class LongRunningOperation extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastActionDateTime property value. The time of the last action in the operation.
+     * Gets the lastActionDateTime property value. The time of the last action in the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this._lastActionDateTime;
+        return this.lastActionDateTime;
     }
     /**
      * Gets the resourceLocation property value. URI of the resource that the operation is performed on.
@@ -82,7 +79,7 @@ public class LongRunningOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getResourceLocation() {
-        return this._resourceLocation;
+        return this.resourceLocation;
     }
     /**
      * Gets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
@@ -90,7 +87,7 @@ public class LongRunningOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LongRunningOperationStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the statusDetail property value. Details about the status of the operation.
@@ -98,7 +95,7 @@ public class LongRunningOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStatusDetail() {
-        return this._statusDetail;
+        return this.statusDetail;
     }
     /**
      * Serializes information the current object
@@ -116,22 +113,22 @@ public class LongRunningOperation extends Entity implements Parsable {
         writer.writeStringValue("statusDetail", this.getStatusDetail());
     }
     /**
-     * Sets the createdDateTime property value. The start time of the operation.
+     * Sets the createdDateTime property value. The start time of the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
-     * Sets the lastActionDateTime property value. The time of the last action in the operation.
+     * Sets the lastActionDateTime property value. The time of the last action in the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastActionDateTime property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastActionDateTime = value;
+        this.lastActionDateTime = value;
     }
     /**
      * Sets the resourceLocation property value. URI of the resource that the operation is performed on.
@@ -140,7 +137,7 @@ public class LongRunningOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setResourceLocation(@javax.annotation.Nullable final String value) {
-        this._resourceLocation = value;
+        this.resourceLocation = value;
     }
     /**
      * Sets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
@@ -149,7 +146,7 @@ public class LongRunningOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final LongRunningOperationStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the statusDetail property value. Details about the status of the operation.
@@ -158,6 +155,6 @@ public class LongRunningOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatusDetail(@javax.annotation.Nullable final String value) {
-        this._statusDetail = value;
+        this.statusDetail = value;
     }
 }

@@ -4,33 +4,33 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class PermissionScope implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** A description of the delegated permissions, intended to be read by an administrator granting the permission on behalf of all users. This text appears in tenant-wide admin consent experiences. */
-    private String _adminConsentDescription;
+    private String adminConsentDescription;
     /** The permission's title, intended to be read by an administrator granting the permission on behalf of all users. */
-    private String _adminConsentDisplayName;
+    private String adminConsentDisplayName;
     /** Unique delegated permission identifier inside the collection of delegated permissions defined for a resource application. */
-    private String _id;
+    private UUID id;
     /** When creating or updating a permission, this property must be set to true (which is the default). To delete a permission, this property must first be set to false.  At that point, in a subsequent call, the permission may be removed. */
-    private Boolean _isEnabled;
+    private Boolean isEnabled;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The origin property */
-    private String _origin;
+    private String origin;
     /** The possible values are: User and Admin. Specifies whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator consent should always be required. While Microsoft Graph defines the default consent requirement for each permission, the tenant administrator may override the behavior in their organization (by allowing, restricting, or limiting user consent to this delegated permission). For more information, see Configure how users consent to applications. */
-    private String _type;
+    private String type;
     /** A description of the delegated permissions, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves. */
-    private String _userConsentDescription;
+    private String userConsentDescription;
     /** A title for the permission, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves. */
-    private String _userConsentDisplayName;
+    private String userConsentDisplayName;
     /** Specifies the value to include in the scp (scope) claim in access tokens. Must not exceed 120 characters in length. Allowed characters are : ! # $ % & ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with .. */
-    private String _value;
+    private String value;
     /**
      * Instantiates a new permissionScope and sets the default values.
      * @return a void
@@ -55,7 +55,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the adminConsentDescription property value. A description of the delegated permissions, intended to be read by an administrator granting the permission on behalf of all users. This text appears in tenant-wide admin consent experiences.
@@ -63,7 +63,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAdminConsentDescription() {
-        return this._adminConsentDescription;
+        return this.adminConsentDescription;
     }
     /**
      * Gets the adminConsentDisplayName property value. The permission's title, intended to be read by an administrator granting the permission on behalf of all users.
@@ -71,18 +71,18 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAdminConsentDisplayName() {
-        return this._adminConsentDisplayName;
+        return this.adminConsentDisplayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("adminConsentDescription", (n) -> { this.setAdminConsentDescription(n.getStringValue()); });
         deserializerMap.put("adminConsentDisplayName", (n) -> { this.setAdminConsentDisplayName(n.getStringValue()); });
-        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getUUIDValue()); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("origin", (n) -> { this.setOrigin(n.getStringValue()); });
@@ -94,11 +94,11 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. Unique delegated permission identifier inside the collection of delegated permissions defined for a resource application.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getId() {
-        return this._id;
+    public UUID getId() {
+        return this.id;
     }
     /**
      * Gets the isEnabled property value. When creating or updating a permission, this property must be set to true (which is the default). To delete a permission, this property must first be set to false.  At that point, in a subsequent call, the permission may be removed.
@@ -106,7 +106,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this._isEnabled;
+        return this.isEnabled;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -114,7 +114,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the origin property value. The origin property
@@ -122,7 +122,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOrigin() {
-        return this._origin;
+        return this.origin;
     }
     /**
      * Gets the type property value. The possible values are: User and Admin. Specifies whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator consent should always be required. While Microsoft Graph defines the default consent requirement for each permission, the tenant administrator may override the behavior in their organization (by allowing, restricting, or limiting user consent to this delegated permission). For more information, see Configure how users consent to applications.
@@ -130,7 +130,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Gets the userConsentDescription property value. A description of the delegated permissions, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.
@@ -138,7 +138,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getUserConsentDescription() {
-        return this._userConsentDescription;
+        return this.userConsentDescription;
     }
     /**
      * Gets the userConsentDisplayName property value. A title for the permission, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.
@@ -146,7 +146,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getUserConsentDisplayName() {
-        return this._userConsentDisplayName;
+        return this.userConsentDisplayName;
     }
     /**
      * Gets the value property value. Specifies the value to include in the scp (scope) claim in access tokens. Must not exceed 120 characters in length. Allowed characters are : ! # $ % & ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with ..
@@ -154,7 +154,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
@@ -166,7 +166,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("adminConsentDescription", this.getAdminConsentDescription());
         writer.writeStringValue("adminConsentDisplayName", this.getAdminConsentDisplayName());
-        writer.writeStringValue("id", this.getId());
+        writer.writeUUIDValue("id", this.getId());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("origin", this.getOrigin());
@@ -183,7 +183,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the adminConsentDescription property value. A description of the delegated permissions, intended to be read by an administrator granting the permission on behalf of all users. This text appears in tenant-wide admin consent experiences.
@@ -192,7 +192,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdminConsentDescription(@javax.annotation.Nullable final String value) {
-        this._adminConsentDescription = value;
+        this.adminConsentDescription = value;
     }
     /**
      * Sets the adminConsentDisplayName property value. The permission's title, intended to be read by an administrator granting the permission on behalf of all users.
@@ -201,7 +201,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdminConsentDisplayName(@javax.annotation.Nullable final String value) {
-        this._adminConsentDisplayName = value;
+        this.adminConsentDisplayName = value;
     }
     /**
      * Sets the id property value. Unique delegated permission identifier inside the collection of delegated permissions defined for a resource application.
@@ -209,8 +209,8 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+    public void setId(@javax.annotation.Nullable final UUID value) {
+        this.id = value;
     }
     /**
      * Sets the isEnabled property value. When creating or updating a permission, this property must be set to true (which is the default). To delete a permission, this property must first be set to false.  At that point, in a subsequent call, the permission may be removed.
@@ -219,7 +219,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isEnabled = value;
+        this.isEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -228,7 +228,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the origin property value. The origin property
@@ -237,7 +237,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOrigin(@javax.annotation.Nullable final String value) {
-        this._origin = value;
+        this.origin = value;
     }
     /**
      * Sets the type property value. The possible values are: User and Admin. Specifies whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator consent should always be required. While Microsoft Graph defines the default consent requirement for each permission, the tenant administrator may override the behavior in their organization (by allowing, restricting, or limiting user consent to this delegated permission). For more information, see Configure how users consent to applications.
@@ -246,7 +246,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+        this.type = value;
     }
     /**
      * Sets the userConsentDescription property value. A description of the delegated permissions, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.
@@ -255,7 +255,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserConsentDescription(@javax.annotation.Nullable final String value) {
-        this._userConsentDescription = value;
+        this.userConsentDescription = value;
     }
     /**
      * Sets the userConsentDisplayName property value. A title for the permission, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.
@@ -264,7 +264,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserConsentDisplayName(@javax.annotation.Nullable final String value) {
-        this._userConsentDisplayName = value;
+        this.userConsentDisplayName = value;
     }
     /**
      * Sets the value property value. Specifies the value to include in the scp (scope) claim in access tokens. Must not exceed 120 characters in length. Allowed characters are : ! # $ % & ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with ..
@@ -273,6 +273,6 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final String value) {
-        this._value = value;
+        this.value = value;
     }
 }

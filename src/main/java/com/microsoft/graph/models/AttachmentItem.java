@@ -4,27 +4,26 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttachmentItem implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The type of attachment. Possible values are: file, item, reference. Required. */
-    private AttachmentType _attachmentType;
+    private AttachmentType attachmentType;
     /** The CID or Content-Id of the attachment for referencing in case of in-line attachments using <img src='cid:contentId'> tag in HTML messages. Optional. */
-    private String _contentId;
+    private String contentId;
     /** The nature of the data in the attachment. Optional. */
-    private String _contentType;
+    private String contentType;
     /** true if the attachment is an inline attachment; otherwise, false. Optional. */
-    private Boolean _isInline;
+    private Boolean isInline;
     /** The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required. */
-    private String _name;
+    private String name;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The length of the attachment in bytes. Required. */
-    private Long _size;
+    private Long size;
     /**
      * Instantiates a new attachmentItem and sets the default values.
      * @return a void
@@ -49,7 +48,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the attachmentType property value. The type of attachment. Possible values are: file, item, reference. Required.
@@ -57,7 +56,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public AttachmentType getAttachmentType() {
-        return this._attachmentType;
+        return this.attachmentType;
     }
     /**
      * Gets the contentId property value. The CID or Content-Id of the attachment for referencing in case of in-line attachments using <img src='cid:contentId'> tag in HTML messages. Optional.
@@ -65,7 +64,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getContentId() {
-        return this._contentId;
+        return this.contentId;
     }
     /**
      * Gets the contentType property value. The nature of the data in the attachment. Optional.
@@ -73,15 +72,15 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getContentType() {
-        return this._contentType;
+        return this.contentType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("attachmentType", (n) -> { this.setAttachmentType(n.getEnumValue(AttachmentType.class)); });
         deserializerMap.put("contentId", (n) -> { this.setContentId(n.getStringValue()); });
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getStringValue()); });
@@ -97,7 +96,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsInline() {
-        return this._isInline;
+        return this.isInline;
     }
     /**
      * Gets the name property value. The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
@@ -105,7 +104,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -113,7 +112,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the size property value. The length of the attachment in bytes. Required.
@@ -121,7 +120,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Long getSize() {
-        return this._size;
+        return this.size;
     }
     /**
      * Serializes information the current object
@@ -147,7 +146,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the attachmentType property value. The type of attachment. Possible values are: file, item, reference. Required.
@@ -156,7 +155,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAttachmentType(@javax.annotation.Nullable final AttachmentType value) {
-        this._attachmentType = value;
+        this.attachmentType = value;
     }
     /**
      * Sets the contentId property value. The CID or Content-Id of the attachment for referencing in case of in-line attachments using <img src='cid:contentId'> tag in HTML messages. Optional.
@@ -165,7 +164,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentId(@javax.annotation.Nullable final String value) {
-        this._contentId = value;
+        this.contentId = value;
     }
     /**
      * Sets the contentType property value. The nature of the data in the attachment. Optional.
@@ -174,7 +173,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentType(@javax.annotation.Nullable final String value) {
-        this._contentType = value;
+        this.contentType = value;
     }
     /**
      * Sets the isInline property value. true if the attachment is an inline attachment; otherwise, false. Optional.
@@ -183,7 +182,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsInline(@javax.annotation.Nullable final Boolean value) {
-        this._isInline = value;
+        this.isInline = value;
     }
     /**
      * Sets the name property value. The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
@@ -192,7 +191,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -201,7 +200,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the size property value. The length of the attachment in bytes. Required.
@@ -210,6 +209,6 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Long value) {
-        this._size = value;
+        this.size = value;
     }
 }

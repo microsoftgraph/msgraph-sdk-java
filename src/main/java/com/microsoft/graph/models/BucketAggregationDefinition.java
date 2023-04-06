@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BucketAggregationDefinition implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** True to specify the sort order as descending. The default is false, with the sort order as ascending. Optional. */
-    private Boolean _isDescending;
+    private Boolean isDescending;
     /** The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional. */
-    private Integer _minimumCount;
+    private Integer minimumCount;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional. */
-    private String _prefixFilter;
+    private String prefixFilter;
     /** Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional. */
-    private java.util.List<BucketAggregationRange> _ranges;
+    private java.util.List<BucketAggregationRange> ranges;
     /** The sortBy property */
-    private BucketAggregationSortProperty _sortBy;
+    private BucketAggregationSortProperty sortBy;
     /**
      * Instantiates a new bucketAggregationDefinition and sets the default values.
      * @return a void
@@ -47,15 +46,15 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("isDescending", (n) -> { this.setIsDescending(n.getBooleanValue()); });
         deserializerMap.put("minimumCount", (n) -> { this.setMinimumCount(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -70,7 +69,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public Boolean getIsDescending() {
-        return this._isDescending;
+        return this.isDescending;
     }
     /**
      * Gets the minimumCount property value. The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional.
@@ -78,7 +77,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public Integer getMinimumCount() {
-        return this._minimumCount;
+        return this.minimumCount;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -86,7 +85,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the prefixFilter property value. A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
@@ -94,7 +93,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getPrefixFilter() {
-        return this._prefixFilter;
+        return this.prefixFilter;
     }
     /**
      * Gets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
@@ -102,7 +101,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public java.util.List<BucketAggregationRange> getRanges() {
-        return this._ranges;
+        return this.ranges;
     }
     /**
      * Gets the sortBy property value. The sortBy property
@@ -110,7 +109,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public BucketAggregationSortProperty getSortBy() {
-        return this._sortBy;
+        return this.sortBy;
     }
     /**
      * Serializes information the current object
@@ -135,7 +134,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the isDescending property value. True to specify the sort order as descending. The default is false, with the sort order as ascending. Optional.
@@ -144,7 +143,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setIsDescending(@javax.annotation.Nullable final Boolean value) {
-        this._isDescending = value;
+        this.isDescending = value;
     }
     /**
      * Sets the minimumCount property value. The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional.
@@ -153,7 +152,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setMinimumCount(@javax.annotation.Nullable final Integer value) {
-        this._minimumCount = value;
+        this.minimumCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -162,7 +161,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the prefixFilter property value. A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
@@ -171,7 +170,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setPrefixFilter(@javax.annotation.Nullable final String value) {
-        this._prefixFilter = value;
+        this.prefixFilter = value;
     }
     /**
      * Sets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
@@ -180,7 +179,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setRanges(@javax.annotation.Nullable final java.util.List<BucketAggregationRange> value) {
-        this._ranges = value;
+        this.ranges = value;
     }
     /**
      * Sets the sortBy property value. The sortBy property
@@ -189,6 +188,6 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public void setSortBy(@javax.annotation.Nullable final BucketAggregationSortProperty value) {
-        this._sortBy = value;
+        this.sortBy = value;
     }
 }

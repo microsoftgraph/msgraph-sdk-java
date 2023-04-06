@@ -4,30 +4,31 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Compliance management partner for all platforms */
+/**
+ * Compliance management partner for all platforms
+ */
 public class ComplianceManagementPartner extends Entity implements Parsable {
     /** User groups which enroll Android devices through partner. */
-    private java.util.List<ComplianceManagementPartnerAssignment> _androidEnrollmentAssignments;
+    private java.util.List<ComplianceManagementPartnerAssignment> androidEnrollmentAssignments;
     /** Partner onboarded for Android devices. */
-    private Boolean _androidOnboarded;
+    private Boolean androidOnboarded;
     /** Partner display name */
-    private String _displayName;
+    private String displayName;
     /** User groups which enroll ios devices through partner. */
-    private java.util.List<ComplianceManagementPartnerAssignment> _iosEnrollmentAssignments;
+    private java.util.List<ComplianceManagementPartnerAssignment> iosEnrollmentAssignments;
     /** Partner onboarded for ios devices. */
-    private Boolean _iosOnboarded;
+    private Boolean iosOnboarded;
     /** Timestamp of last heartbeat after admin onboarded to the compliance management partner */
-    private OffsetDateTime _lastHeartbeatDateTime;
+    private OffsetDateTime lastHeartbeatDateTime;
     /** User groups which enroll Mac devices through partner. */
-    private java.util.List<ComplianceManagementPartnerAssignment> _macOsEnrollmentAssignments;
+    private java.util.List<ComplianceManagementPartnerAssignment> macOsEnrollmentAssignments;
     /** Partner onboarded for Mac devices. */
-    private Boolean _macOsOnboarded;
+    private Boolean macOsOnboarded;
     /** Partner state of this tenant. */
-    private DeviceManagementPartnerTenantState _partnerState;
+    private DeviceManagementPartnerTenantState partnerState;
     /**
      * Instantiates a new complianceManagementPartner and sets the default values.
      * @return a void
@@ -52,7 +53,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ComplianceManagementPartnerAssignment> getAndroidEnrollmentAssignments() {
-        return this._androidEnrollmentAssignments;
+        return this.androidEnrollmentAssignments;
     }
     /**
      * Gets the androidOnboarded property value. Partner onboarded for Android devices.
@@ -60,7 +61,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAndroidOnboarded() {
-        return this._androidOnboarded;
+        return this.androidOnboarded;
     }
     /**
      * Gets the displayName property value. Partner display name
@@ -68,15 +69,15 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("androidEnrollmentAssignments", (n) -> { this.setAndroidEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("androidOnboarded", (n) -> { this.setAndroidOnboarded(n.getBooleanValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -94,7 +95,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ComplianceManagementPartnerAssignment> getIosEnrollmentAssignments() {
-        return this._iosEnrollmentAssignments;
+        return this.iosEnrollmentAssignments;
     }
     /**
      * Gets the iosOnboarded property value. Partner onboarded for ios devices.
@@ -102,7 +103,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIosOnboarded() {
-        return this._iosOnboarded;
+        return this.iosOnboarded;
     }
     /**
      * Gets the lastHeartbeatDateTime property value. Timestamp of last heartbeat after admin onboarded to the compliance management partner
@@ -110,7 +111,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastHeartbeatDateTime() {
-        return this._lastHeartbeatDateTime;
+        return this.lastHeartbeatDateTime;
     }
     /**
      * Gets the macOsEnrollmentAssignments property value. User groups which enroll Mac devices through partner.
@@ -118,7 +119,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ComplianceManagementPartnerAssignment> getMacOsEnrollmentAssignments() {
-        return this._macOsEnrollmentAssignments;
+        return this.macOsEnrollmentAssignments;
     }
     /**
      * Gets the macOsOnboarded property value. Partner onboarded for Mac devices.
@@ -126,7 +127,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getMacOsOnboarded() {
-        return this._macOsOnboarded;
+        return this.macOsOnboarded;
     }
     /**
      * Gets the partnerState property value. Partner state of this tenant.
@@ -134,7 +135,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceManagementPartnerTenantState getPartnerState() {
-        return this._partnerState;
+        return this.partnerState;
     }
     /**
      * Serializes information the current object
@@ -162,7 +163,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAndroidEnrollmentAssignments(@javax.annotation.Nullable final java.util.List<ComplianceManagementPartnerAssignment> value) {
-        this._androidEnrollmentAssignments = value;
+        this.androidEnrollmentAssignments = value;
     }
     /**
      * Sets the androidOnboarded property value. Partner onboarded for Android devices.
@@ -171,7 +172,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAndroidOnboarded(@javax.annotation.Nullable final Boolean value) {
-        this._androidOnboarded = value;
+        this.androidOnboarded = value;
     }
     /**
      * Sets the displayName property value. Partner display name
@@ -180,7 +181,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the iosEnrollmentAssignments property value. User groups which enroll ios devices through partner.
@@ -189,7 +190,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIosEnrollmentAssignments(@javax.annotation.Nullable final java.util.List<ComplianceManagementPartnerAssignment> value) {
-        this._iosEnrollmentAssignments = value;
+        this.iosEnrollmentAssignments = value;
     }
     /**
      * Sets the iosOnboarded property value. Partner onboarded for ios devices.
@@ -198,7 +199,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIosOnboarded(@javax.annotation.Nullable final Boolean value) {
-        this._iosOnboarded = value;
+        this.iosOnboarded = value;
     }
     /**
      * Sets the lastHeartbeatDateTime property value. Timestamp of last heartbeat after admin onboarded to the compliance management partner
@@ -207,7 +208,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastHeartbeatDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastHeartbeatDateTime = value;
+        this.lastHeartbeatDateTime = value;
     }
     /**
      * Sets the macOsEnrollmentAssignments property value. User groups which enroll Mac devices through partner.
@@ -216,7 +217,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMacOsEnrollmentAssignments(@javax.annotation.Nullable final java.util.List<ComplianceManagementPartnerAssignment> value) {
-        this._macOsEnrollmentAssignments = value;
+        this.macOsEnrollmentAssignments = value;
     }
     /**
      * Sets the macOsOnboarded property value. Partner onboarded for Mac devices.
@@ -225,7 +226,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMacOsOnboarded(@javax.annotation.Nullable final Boolean value) {
-        this._macOsOnboarded = value;
+        this.macOsOnboarded = value;
     }
     /**
      * Sets the partnerState property value. Partner state of this tenant.
@@ -234,6 +235,6 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPartnerState(@javax.annotation.Nullable final DeviceManagementPartnerTenantState value) {
-        this._partnerState = value;
+        this.partnerState = value;
     }
 }

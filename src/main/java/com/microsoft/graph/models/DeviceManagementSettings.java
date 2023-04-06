@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The number of days a device is allowed to go without checking in to remain compliant. */
-    private Integer _deviceComplianceCheckinThresholdDays;
+    private Integer deviceComplianceCheckinThresholdDays;
     /** Is feature enabled or not for scheduled action for rule. */
-    private Boolean _isScheduledActionEnabled;
+    private Boolean isScheduledActionEnabled;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Device should be noncompliant when there is no compliance policy targeted when this is true */
-    private Boolean _secureByDefault;
+    private Boolean secureByDefault;
     /**
      * Instantiates a new deviceManagementSettings and sets the default values.
      * @return a void
@@ -43,7 +42,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the deviceComplianceCheckinThresholdDays property value. The number of days a device is allowed to go without checking in to remain compliant.
@@ -51,15 +50,15 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Integer getDeviceComplianceCheckinThresholdDays() {
-        return this._deviceComplianceCheckinThresholdDays;
+        return this.deviceComplianceCheckinThresholdDays;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("deviceComplianceCheckinThresholdDays", (n) -> { this.setDeviceComplianceCheckinThresholdDays(n.getIntegerValue()); });
         deserializerMap.put("isScheduledActionEnabled", (n) -> { this.setIsScheduledActionEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -72,7 +71,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getIsScheduledActionEnabled() {
-        return this._isScheduledActionEnabled;
+        return this.isScheduledActionEnabled;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -80,7 +79,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the secureByDefault property value. Device should be noncompliant when there is no compliance policy targeted when this is true
@@ -88,7 +87,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getSecureByDefault() {
-        return this._secureByDefault;
+        return this.secureByDefault;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the deviceComplianceCheckinThresholdDays property value. The number of days a device is allowed to go without checking in to remain compliant.
@@ -120,7 +119,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public void setDeviceComplianceCheckinThresholdDays(@javax.annotation.Nullable final Integer value) {
-        this._deviceComplianceCheckinThresholdDays = value;
+        this.deviceComplianceCheckinThresholdDays = value;
     }
     /**
      * Sets the isScheduledActionEnabled property value. Is feature enabled or not for scheduled action for rule.
@@ -129,7 +128,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public void setIsScheduledActionEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isScheduledActionEnabled = value;
+        this.isScheduledActionEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -138,7 +137,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the secureByDefault property value. Device should be noncompliant when there is no compliance policy targeted when this is true
@@ -147,6 +146,6 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public void setSecureByDefault(@javax.annotation.Nullable final Boolean value) {
-        this._secureByDefault = value;
+        this.secureByDefault = value;
     }
 }

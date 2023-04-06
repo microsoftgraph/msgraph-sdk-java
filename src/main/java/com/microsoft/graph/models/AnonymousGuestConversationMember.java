@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AnonymousGuestConversationMember extends ConversationMember implements Parsable {
-    /** The anonymousGuestId property */
-    private String _anonymousGuestId;
+    /** Unique ID that represents the user. Note: This ID can change if the user leaves and rejoins the meeting, or joins from a different device. */
+    private String anonymousGuestId;
     /**
      * Instantiates a new AnonymousGuestConversationMember and sets the default values.
      * @return a void
@@ -30,20 +29,20 @@ public class AnonymousGuestConversationMember extends ConversationMember impleme
         return new AnonymousGuestConversationMember();
     }
     /**
-     * Gets the anonymousGuestId property value. The anonymousGuestId property
+     * Gets the anonymousGuestId property value. Unique ID that represents the user. Note: This ID can change if the user leaves and rejoins the meeting, or joins from a different device.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getAnonymousGuestId() {
-        return this._anonymousGuestId;
+        return this.anonymousGuestId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("anonymousGuestId", (n) -> { this.setAnonymousGuestId(n.getStringValue()); });
         return deserializerMap;
     }
@@ -59,12 +58,12 @@ public class AnonymousGuestConversationMember extends ConversationMember impleme
         writer.writeStringValue("anonymousGuestId", this.getAnonymousGuestId());
     }
     /**
-     * Sets the anonymousGuestId property value. The anonymousGuestId property
+     * Sets the anonymousGuestId property value. Unique ID that represents the user. Note: This ID can change if the user leaves and rejoins the meeting, or joins from a different device.
      * @param value Value to set for the anonymousGuestId property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setAnonymousGuestId(@javax.annotation.Nullable final String value) {
-        this._anonymousGuestId = value;
+        this.anonymousGuestId = value;
     }
 }

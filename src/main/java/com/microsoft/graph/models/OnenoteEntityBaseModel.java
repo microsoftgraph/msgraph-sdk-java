@@ -1,23 +1,14 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.Notebook;
-import com.microsoft.graph.models.OnenoteEntityHierarchyModel;
-import com.microsoft.graph.models.OnenoteEntitySchemaObjectModel;
-import com.microsoft.graph.models.OnenotePage;
-import com.microsoft.graph.models.OnenoteResource;
-import com.microsoft.graph.models.OnenoteSection;
-import com.microsoft.graph.models.SectionGroup;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class OnenoteEntityBaseModel extends Entity implements Parsable {
     /** The endpoint where you can get details about the page. Read-only. */
-    private String _self;
+    private String self;
     /**
      * Instantiates a new onenoteEntityBaseModel and sets the default values.
      * @return a void
@@ -51,11 +42,11 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("self", (n) -> { this.setSelf(n.getStringValue()); });
         return deserializerMap;
     }
@@ -65,7 +56,7 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSelf() {
-        return this._self;
+        return this.self;
     }
     /**
      * Serializes information the current object
@@ -85,6 +76,6 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSelf(@javax.annotation.Nullable final String value) {
-        this._self = value;
+        this.self = value;
     }
 }

@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The frequency of an event.  For access reviews: Do not specify this property for a one-time access review.  Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported. */
-    private RecurrencePattern _pattern;
+    private RecurrencePattern pattern;
     /** The duration of an event. */
-    private RecurrenceRange _range;
+    private RecurrenceRange range;
     /**
      * Instantiates a new patternedRecurrence and sets the default values.
      * @return a void
@@ -41,15 +40,15 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("pattern", (n) -> { this.setPattern(n.getObjectValue(RecurrencePattern::createFromDiscriminatorValue)); });
         deserializerMap.put("range", (n) -> { this.setRange(n.getObjectValue(RecurrenceRange::createFromDiscriminatorValue)); });
@@ -61,7 +60,7 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the pattern property value. The frequency of an event.  For access reviews: Do not specify this property for a one-time access review.  Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported.
@@ -69,7 +68,7 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public RecurrencePattern getPattern() {
-        return this._pattern;
+        return this.pattern;
     }
     /**
      * Gets the range property value. The duration of an event.
@@ -77,7 +76,7 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public RecurrenceRange getRange() {
-        return this._range;
+        return this.range;
     }
     /**
      * Serializes information the current object
@@ -99,7 +98,7 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -108,7 +107,7 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the pattern property value. The frequency of an event.  For access reviews: Do not specify this property for a one-time access review.  Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported.
@@ -117,7 +116,7 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPattern(@javax.annotation.Nullable final RecurrencePattern value) {
-        this._pattern = value;
+        this.pattern = value;
     }
     /**
      * Sets the range property value. The duration of an event.
@@ -126,6 +125,6 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRange(@javax.annotation.Nullable final RecurrenceRange value) {
-        this._range = value;
+        this.range = value;
     }
 }

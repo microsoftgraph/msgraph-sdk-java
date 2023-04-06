@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OutlookUser extends Entity implements Parsable {
     /** A list of categories defined for the user. */
-    private java.util.List<OutlookCategory> _masterCategories;
+    private java.util.List<OutlookCategory> masterCategories;
     /**
      * Instantiates a new outlookUser and sets the default values.
      * @return a void
@@ -30,11 +29,11 @@ public class OutlookUser extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("masterCategories", (n) -> { this.setMasterCategories(n.getCollectionOfObjectValues(OutlookCategory::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -44,7 +43,7 @@ public class OutlookUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<OutlookCategory> getMasterCategories() {
-        return this._masterCategories;
+        return this.masterCategories;
     }
     /**
      * Serializes information the current object
@@ -64,6 +63,6 @@ public class OutlookUser extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMasterCategories(@javax.annotation.Nullable final java.util.List<OutlookCategory> value) {
-        this._masterCategories = value;
+        this.masterCategories = value;
     }
 }

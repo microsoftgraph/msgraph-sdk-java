@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The query specifying who will be the reviewer. */
-    private String _query;
+    private String query;
     /** In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query, for example, ./manager, is specified. Possible value: decisions. */
-    private String _queryRoot;
+    private String queryRoot;
     /** The type of query. Examples include MicrosoftGraph and ARM. */
-    private String _queryType;
+    private String queryType;
     /**
      * Instantiates a new accessReviewReviewerScope and sets the default values.
      * @return a void
@@ -43,15 +42,15 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("query", (n) -> { this.setQuery(n.getStringValue()); });
         deserializerMap.put("queryRoot", (n) -> { this.setQueryRoot(n.getStringValue()); });
@@ -64,7 +63,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the query property value. The query specifying who will be the reviewer.
@@ -72,7 +71,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getQuery() {
-        return this._query;
+        return this.query;
     }
     /**
      * Gets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query, for example, ./manager, is specified. Possible value: decisions.
@@ -80,7 +79,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getQueryRoot() {
-        return this._queryRoot;
+        return this.queryRoot;
     }
     /**
      * Gets the queryType property value. The type of query. Examples include MicrosoftGraph and ARM.
@@ -88,7 +87,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getQueryType() {
-        return this._queryType;
+        return this.queryType;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -120,7 +119,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the query property value. The query specifying who will be the reviewer.
@@ -129,7 +128,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setQuery(@javax.annotation.Nullable final String value) {
-        this._query = value;
+        this.query = value;
     }
     /**
      * Sets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query, for example, ./manager, is specified. Possible value: decisions.
@@ -138,7 +137,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setQueryRoot(@javax.annotation.Nullable final String value) {
-        this._queryRoot = value;
+        this.queryRoot = value;
     }
     /**
      * Sets the queryType property value. The type of query. Examples include MicrosoftGraph and ARM.
@@ -147,6 +146,6 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setQueryType(@javax.annotation.Nullable final String value) {
-        this._queryType = value;
+        this.queryType = value;
     }
 }

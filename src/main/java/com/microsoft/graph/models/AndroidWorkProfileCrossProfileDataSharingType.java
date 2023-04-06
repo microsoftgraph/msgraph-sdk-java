@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Android Work Profile cross profile data sharing type. */
 public enum AndroidWorkProfileCrossProfileDataSharingType implements ValuedEnum {
     /** Device default value, no intent. */
     DeviceDefault("deviceDefault"),

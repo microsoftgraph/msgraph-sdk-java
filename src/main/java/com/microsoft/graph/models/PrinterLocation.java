@@ -4,49 +4,48 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrinterLocation implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The altitude, in meters, that the printer is located at. */
-    private Integer _altitudeInMeters;
+    private Integer altitudeInMeters;
     /** The building that the printer is located in. */
-    private String _building;
+    private String building;
     /** The city that the printer is located in. */
-    private String _city;
+    private String city;
     /** The country or region that the printer is located in. */
-    private String _countryOrRegion;
+    private String countryOrRegion;
     /** The floor that the printer is located on. Only numerical values are supported right now. */
-    private String _floor;
+    private String floor;
     /** The description of the floor that the printer is located on. */
-    private String _floorDescription;
+    private String floorDescription;
     /** The latitude that the printer is located at. */
-    private Double _latitude;
+    private Double latitude;
     /** The longitude that the printer is located at. */
-    private Double _longitude;
+    private Double longitude;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order. */
-    private java.util.List<String> _organization;
+    private java.util.List<String> organization;
     /** The postal code that the printer is located in. */
-    private String _postalCode;
+    private String postalCode;
     /** The description of the room that the printer is located in. */
-    private String _roomDescription;
+    private String roomDescription;
     /** The room that the printer is located in. Only numerical values are supported right now. */
-    private String _roomName;
+    private String roomName;
     /** The site that the printer is located in. */
-    private String _site;
+    private String site;
     /** The state or province that the printer is located in. */
-    private String _stateOrProvince;
+    private String stateOrProvince;
     /** The street address where the printer is located. */
-    private String _streetAddress;
+    private String streetAddress;
     /** The subdivision that the printer is located in. The elements should be in hierarchical order. */
-    private java.util.List<String> _subdivision;
+    private java.util.List<String> subdivision;
     /** The subunit property */
-    private java.util.List<String> _subunit;
+    private java.util.List<String> subunit;
     /**
      * Instantiates a new printerLocation and sets the default values.
      * @return a void
@@ -71,7 +70,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the altitudeInMeters property value. The altitude, in meters, that the printer is located at.
@@ -79,7 +78,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getAltitudeInMeters() {
-        return this._altitudeInMeters;
+        return this.altitudeInMeters;
     }
     /**
      * Gets the building property value. The building that the printer is located in.
@@ -87,7 +86,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getBuilding() {
-        return this._building;
+        return this.building;
     }
     /**
      * Gets the city property value. The city that the printer is located in.
@@ -95,7 +94,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCity() {
-        return this._city;
+        return this.city;
     }
     /**
      * Gets the countryOrRegion property value. The country or region that the printer is located in.
@@ -103,15 +102,15 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCountryOrRegion() {
-        return this._countryOrRegion;
+        return this.countryOrRegion;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(18);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(18);
         deserializerMap.put("altitudeInMeters", (n) -> { this.setAltitudeInMeters(n.getIntegerValue()); });
         deserializerMap.put("building", (n) -> { this.setBuilding(n.getStringValue()); });
         deserializerMap.put("city", (n) -> { this.setCity(n.getStringValue()); });
@@ -138,7 +137,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getFloor() {
-        return this._floor;
+        return this.floor;
     }
     /**
      * Gets the floorDescription property value. The description of the floor that the printer is located on.
@@ -146,7 +145,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getFloorDescription() {
-        return this._floorDescription;
+        return this.floorDescription;
     }
     /**
      * Gets the latitude property value. The latitude that the printer is located at.
@@ -154,7 +153,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Double getLatitude() {
-        return this._latitude;
+        return this.latitude;
     }
     /**
      * Gets the longitude property value. The longitude that the printer is located at.
@@ -162,7 +161,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Double getLongitude() {
-        return this._longitude;
+        return this.longitude;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -170,7 +169,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the organization property value. The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
@@ -178,7 +177,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getOrganization() {
-        return this._organization;
+        return this.organization;
     }
     /**
      * Gets the postalCode property value. The postal code that the printer is located in.
@@ -186,7 +185,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getPostalCode() {
-        return this._postalCode;
+        return this.postalCode;
     }
     /**
      * Gets the roomDescription property value. The description of the room that the printer is located in.
@@ -194,7 +193,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getRoomDescription() {
-        return this._roomDescription;
+        return this.roomDescription;
     }
     /**
      * Gets the roomName property value. The room that the printer is located in. Only numerical values are supported right now.
@@ -202,7 +201,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getRoomName() {
-        return this._roomName;
+        return this.roomName;
     }
     /**
      * Gets the site property value. The site that the printer is located in.
@@ -210,7 +209,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSite() {
-        return this._site;
+        return this.site;
     }
     /**
      * Gets the stateOrProvince property value. The state or province that the printer is located in.
@@ -218,7 +217,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getStateOrProvince() {
-        return this._stateOrProvince;
+        return this.stateOrProvince;
     }
     /**
      * Gets the streetAddress property value. The street address where the printer is located.
@@ -226,7 +225,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getStreetAddress() {
-        return this._streetAddress;
+        return this.streetAddress;
     }
     /**
      * Gets the subdivision property value. The subdivision that the printer is located in. The elements should be in hierarchical order.
@@ -234,7 +233,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSubdivision() {
-        return this._subdivision;
+        return this.subdivision;
     }
     /**
      * Gets the subunit property value. The subunit property
@@ -242,7 +241,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSubunit() {
-        return this._subunit;
+        return this.subunit;
     }
     /**
      * Serializes information the current object
@@ -279,7 +278,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the altitudeInMeters property value. The altitude, in meters, that the printer is located at.
@@ -288,7 +287,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAltitudeInMeters(@javax.annotation.Nullable final Integer value) {
-        this._altitudeInMeters = value;
+        this.altitudeInMeters = value;
     }
     /**
      * Sets the building property value. The building that the printer is located in.
@@ -297,7 +296,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setBuilding(@javax.annotation.Nullable final String value) {
-        this._building = value;
+        this.building = value;
     }
     /**
      * Sets the city property value. The city that the printer is located in.
@@ -306,7 +305,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCity(@javax.annotation.Nullable final String value) {
-        this._city = value;
+        this.city = value;
     }
     /**
      * Sets the countryOrRegion property value. The country or region that the printer is located in.
@@ -315,7 +314,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCountryOrRegion(@javax.annotation.Nullable final String value) {
-        this._countryOrRegion = value;
+        this.countryOrRegion = value;
     }
     /**
      * Sets the floor property value. The floor that the printer is located on. Only numerical values are supported right now.
@@ -324,7 +323,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFloor(@javax.annotation.Nullable final String value) {
-        this._floor = value;
+        this.floor = value;
     }
     /**
      * Sets the floorDescription property value. The description of the floor that the printer is located on.
@@ -333,7 +332,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFloorDescription(@javax.annotation.Nullable final String value) {
-        this._floorDescription = value;
+        this.floorDescription = value;
     }
     /**
      * Sets the latitude property value. The latitude that the printer is located at.
@@ -342,7 +341,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLatitude(@javax.annotation.Nullable final Double value) {
-        this._latitude = value;
+        this.latitude = value;
     }
     /**
      * Sets the longitude property value. The longitude that the printer is located at.
@@ -351,7 +350,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLongitude(@javax.annotation.Nullable final Double value) {
-        this._longitude = value;
+        this.longitude = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -360,7 +359,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the organization property value. The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
@@ -369,7 +368,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOrganization(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._organization = value;
+        this.organization = value;
     }
     /**
      * Sets the postalCode property value. The postal code that the printer is located in.
@@ -378,7 +377,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPostalCode(@javax.annotation.Nullable final String value) {
-        this._postalCode = value;
+        this.postalCode = value;
     }
     /**
      * Sets the roomDescription property value. The description of the room that the printer is located in.
@@ -387,7 +386,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRoomDescription(@javax.annotation.Nullable final String value) {
-        this._roomDescription = value;
+        this.roomDescription = value;
     }
     /**
      * Sets the roomName property value. The room that the printer is located in. Only numerical values are supported right now.
@@ -396,7 +395,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRoomName(@javax.annotation.Nullable final String value) {
-        this._roomName = value;
+        this.roomName = value;
     }
     /**
      * Sets the site property value. The site that the printer is located in.
@@ -405,7 +404,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSite(@javax.annotation.Nullable final String value) {
-        this._site = value;
+        this.site = value;
     }
     /**
      * Sets the stateOrProvince property value. The state or province that the printer is located in.
@@ -414,7 +413,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setStateOrProvince(@javax.annotation.Nullable final String value) {
-        this._stateOrProvince = value;
+        this.stateOrProvince = value;
     }
     /**
      * Sets the streetAddress property value. The street address where the printer is located.
@@ -423,7 +422,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setStreetAddress(@javax.annotation.Nullable final String value) {
-        this._streetAddress = value;
+        this.streetAddress = value;
     }
     /**
      * Sets the subdivision property value. The subdivision that the printer is located in. The elements should be in hierarchical order.
@@ -432,7 +431,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSubdivision(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._subdivision = value;
+        this.subdivision = value;
     }
     /**
      * Sets the subunit property value. The subunit property
@@ -441,6 +440,6 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSubunit(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._subunit = value;
+        this.subunit = value;
     }
 }
