@@ -6,10 +6,10 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.gradle:gradle-enterprise-gradle-plugin:3.11.2"
-        classpath "com.android.tools.build:gradle:7.3.1"
-        classpath "com.github.ben-manes:gradle-versions-plugin:0.43.0"
         classpath "gradle.plugin.com.github.viswaramamoorthy:gradle-util-plugins:0.1.0-RELEASE"
+        classpath "com.gradle:gradle-enterprise-gradle-plugin:3.12.6"
+        classpath "com.android.tools.build:gradle:7.4.2"
+        classpath "com.github.ben-manes:gradle-versions-plugin:0.46.0"
     }
 }
 
