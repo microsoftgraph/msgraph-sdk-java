@@ -3,20 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookTableColumn extends Entity implements Parsable {
     /** Retrieve the filter applied to the column. Read-only. */
-    private WorkbookFilter _filter;
+    private WorkbookFilter filter;
     /** Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only. */
-    private Integer _index;
+    private Integer index;
     /** Returns the name of the table column. */
-    private String _name;
+    private String name;
     /** Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string. */
-    private Json _values;
+    private Json values;
     /**
      * Instantiates a new workbookTableColumn and sets the default values.
      * @return a void
@@ -37,11 +35,11 @@ public class WorkbookTableColumn extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("filter", (n) -> { this.setFilter(n.getObjectValue(WorkbookFilter::createFromDiscriminatorValue)); });
         deserializerMap.put("index", (n) -> { this.setIndex(n.getIntegerValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
@@ -54,7 +52,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookFilter getFilter() {
-        return this._filter;
+        return this.filter;
     }
     /**
      * Gets the index property value. Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
@@ -62,7 +60,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getIndex() {
-        return this._index;
+        return this.index;
     }
     /**
      * Gets the name property value. Returns the name of the table column.
@@ -70,7 +68,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
@@ -78,7 +76,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Json getValues() {
-        return this._values;
+        return this.values;
     }
     /**
      * Serializes information the current object
@@ -101,7 +99,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFilter(@javax.annotation.Nullable final WorkbookFilter value) {
-        this._filter = value;
+        this.filter = value;
     }
     /**
      * Sets the index property value. Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
@@ -110,7 +108,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIndex(@javax.annotation.Nullable final Integer value) {
-        this._index = value;
+        this.index = value;
     }
     /**
      * Sets the name property value. Returns the name of the table column.
@@ -119,7 +117,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
@@ -128,6 +126,6 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setValues(@javax.annotation.Nullable final Json value) {
-        this._values = value;
+        this.values = value;
     }
 }

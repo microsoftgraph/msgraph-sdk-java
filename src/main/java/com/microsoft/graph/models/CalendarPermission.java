@@ -3,22 +3,20 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class CalendarPermission extends Entity implements Parsable {
     /** List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom. */
-    private java.util.List<CalendarRoleType> _allowedRoles;
+    private java.util.List<CalendarRoleType> allowedRoles;
     /** Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only. */
-    private EmailAddress _emailAddress;
+    private EmailAddress emailAddress;
     /** True if the user in context (sharee or delegate) is inside the same organization as the calendar owner. */
-    private Boolean _isInsideOrganization;
+    private Boolean isInsideOrganization;
     /** True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar. */
-    private Boolean _isRemovable;
+    private Boolean isRemovable;
     /** Current permission level of the calendar sharee or delegate. */
-    private CalendarRoleType _role;
+    private CalendarRoleType role;
     /**
      * Instantiates a new calendarPermission and sets the default values.
      * @return a void
@@ -43,7 +41,7 @@ public class CalendarPermission extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CalendarRoleType> getAllowedRoles() {
-        return this._allowedRoles;
+        return this.allowedRoles;
     }
     /**
      * Gets the emailAddress property value. Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only.
@@ -51,15 +49,15 @@ public class CalendarPermission extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EmailAddress getEmailAddress() {
-        return this._emailAddress;
+        return this.emailAddress;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowedRoles", (n) -> { this.setAllowedRoles(n.getCollectionOfEnumValues(CalendarRoleType.class)); });
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
         deserializerMap.put("isInsideOrganization", (n) -> { this.setIsInsideOrganization(n.getBooleanValue()); });
@@ -73,7 +71,7 @@ public class CalendarPermission extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsInsideOrganization() {
-        return this._isInsideOrganization;
+        return this.isInsideOrganization;
     }
     /**
      * Gets the isRemovable property value. True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar.
@@ -81,7 +79,7 @@ public class CalendarPermission extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsRemovable() {
-        return this._isRemovable;
+        return this.isRemovable;
     }
     /**
      * Gets the role property value. Current permission level of the calendar sharee or delegate.
@@ -89,7 +87,7 @@ public class CalendarPermission extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CalendarRoleType getRole() {
-        return this._role;
+        return this.role;
     }
     /**
      * Serializes information the current object
@@ -113,7 +111,7 @@ public class CalendarPermission extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAllowedRoles(@javax.annotation.Nullable final java.util.List<CalendarRoleType> value) {
-        this._allowedRoles = value;
+        this.allowedRoles = value;
     }
     /**
      * Sets the emailAddress property value. Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only.
@@ -122,7 +120,7 @@ public class CalendarPermission extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final EmailAddress value) {
-        this._emailAddress = value;
+        this.emailAddress = value;
     }
     /**
      * Sets the isInsideOrganization property value. True if the user in context (sharee or delegate) is inside the same organization as the calendar owner.
@@ -131,7 +129,7 @@ public class CalendarPermission extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsInsideOrganization(@javax.annotation.Nullable final Boolean value) {
-        this._isInsideOrganization = value;
+        this.isInsideOrganization = value;
     }
     /**
      * Sets the isRemovable property value. True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar.
@@ -140,7 +138,7 @@ public class CalendarPermission extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsRemovable(@javax.annotation.Nullable final Boolean value) {
-        this._isRemovable = value;
+        this.isRemovable = value;
     }
     /**
      * Sets the role property value. Current permission level of the calendar sharee or delegate.
@@ -149,6 +147,6 @@ public class CalendarPermission extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRole(@javax.annotation.Nullable final CalendarRoleType value) {
-        this._role = value;
+        this.role = value;
     }
 }

@@ -3,19 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnenoteOperation extends Operation implements Parsable {
     /** The error returned by the operation. */
-    private OnenoteOperationError _error;
+    private OnenoteOperationError error;
     /** The operation percent complete if the operation is still in running status. */
-    private String _percentComplete;
+    private String percentComplete;
     /** The resource id. */
-    private String _resourceId;
+    private String resourceId;
     /** The resource URI for the object. For example, the resource URI for a copied page or section. */
-    private String _resourceLocation;
+    private String resourceLocation;
     /**
      * Instantiates a new OnenoteOperation and sets the default values.
      * @return a void
@@ -40,15 +39,15 @@ public class OnenoteOperation extends Operation implements Parsable {
      */
     @javax.annotation.Nullable
     public OnenoteOperationError getError() {
-        return this._error;
+        return this.error;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(OnenoteOperationError::createFromDiscriminatorValue)); });
         deserializerMap.put("percentComplete", (n) -> { this.setPercentComplete(n.getStringValue()); });
         deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
@@ -61,7 +60,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPercentComplete() {
-        return this._percentComplete;
+        return this.percentComplete;
     }
     /**
      * Gets the resourceId property value. The resource id.
@@ -69,7 +68,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      */
     @javax.annotation.Nullable
     public String getResourceId() {
-        return this._resourceId;
+        return this.resourceId;
     }
     /**
      * Gets the resourceLocation property value. The resource URI for the object. For example, the resource URI for a copied page or section.
@@ -77,7 +76,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      */
     @javax.annotation.Nullable
     public String getResourceLocation() {
-        return this._resourceLocation;
+        return this.resourceLocation;
     }
     /**
      * Serializes information the current object
@@ -100,7 +99,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final OnenoteOperationError value) {
-        this._error = value;
+        this.error = value;
     }
     /**
      * Sets the percentComplete property value. The operation percent complete if the operation is still in running status.
@@ -109,7 +108,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPercentComplete(@javax.annotation.Nullable final String value) {
-        this._percentComplete = value;
+        this.percentComplete = value;
     }
     /**
      * Sets the resourceId property value. The resource id.
@@ -118,7 +117,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setResourceId(@javax.annotation.Nullable final String value) {
-        this._resourceId = value;
+        this.resourceId = value;
     }
     /**
      * Sets the resourceLocation property value. The resource URI for the object. For example, the resource URI for a copied page or section.
@@ -127,6 +126,6 @@ public class OnenoteOperation extends Operation implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setResourceLocation(@javax.annotation.Nullable final String value) {
-        this._resourceLocation = value;
+        this.resourceLocation = value;
     }
 }

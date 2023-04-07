@@ -4,27 +4,26 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Defines who can join the Teams live event. Possible values are listed in the following table. */
-    private BroadcastMeetingAudience _allowedAudience;
+    private BroadcastMeetingAudience allowedAudience;
     /** Caption settings of a Teams live event. */
-    private BroadcastMeetingCaptionSettings _captions;
+    private BroadcastMeetingCaptionSettings captions;
     /** Indicates whether attendee report is enabled for this Teams live event. Default value is false. */
-    private Boolean _isAttendeeReportEnabled;
+    private Boolean isAttendeeReportEnabled;
     /** Indicates whether Q&A is enabled for this Teams live event. Default value is false. */
-    private Boolean _isQuestionAndAnswerEnabled;
+    private Boolean isQuestionAndAnswerEnabled;
     /** Indicates whether recording is enabled for this Teams live event. Default value is false. */
-    private Boolean _isRecordingEnabled;
+    private Boolean isRecordingEnabled;
     /** Indicates whether video on demand is enabled for this Teams live event. Default value is false. */
-    private Boolean _isVideoOnDemandEnabled;
+    private Boolean isVideoOnDemandEnabled;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new broadcastMeetingSettings and sets the default values.
      * @return a void
@@ -49,7 +48,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the allowedAudience property value. Defines who can join the Teams live event. Possible values are listed in the following table.
@@ -57,7 +56,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public BroadcastMeetingAudience getAllowedAudience() {
-        return this._allowedAudience;
+        return this.allowedAudience;
     }
     /**
      * Gets the captions property value. Caption settings of a Teams live event.
@@ -65,15 +64,15 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public BroadcastMeetingCaptionSettings getCaptions() {
-        return this._captions;
+        return this.captions;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("allowedAudience", (n) -> { this.setAllowedAudience(n.getEnumValue(BroadcastMeetingAudience.class)); });
         deserializerMap.put("captions", (n) -> { this.setCaptions(n.getObjectValue(BroadcastMeetingCaptionSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("isAttendeeReportEnabled", (n) -> { this.setIsAttendeeReportEnabled(n.getBooleanValue()); });
@@ -89,7 +88,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getIsAttendeeReportEnabled() {
-        return this._isAttendeeReportEnabled;
+        return this.isAttendeeReportEnabled;
     }
     /**
      * Gets the isQuestionAndAnswerEnabled property value. Indicates whether Q&A is enabled for this Teams live event. Default value is false.
@@ -97,7 +96,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getIsQuestionAndAnswerEnabled() {
-        return this._isQuestionAndAnswerEnabled;
+        return this.isQuestionAndAnswerEnabled;
     }
     /**
      * Gets the isRecordingEnabled property value. Indicates whether recording is enabled for this Teams live event. Default value is false.
@@ -105,7 +104,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getIsRecordingEnabled() {
-        return this._isRecordingEnabled;
+        return this.isRecordingEnabled;
     }
     /**
      * Gets the isVideoOnDemandEnabled property value. Indicates whether video on demand is enabled for this Teams live event. Default value is false.
@@ -113,7 +112,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getIsVideoOnDemandEnabled() {
-        return this._isVideoOnDemandEnabled;
+        return this.isVideoOnDemandEnabled;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -121,7 +120,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -147,7 +146,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the allowedAudience property value. Defines who can join the Teams live event. Possible values are listed in the following table.
@@ -156,7 +155,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public void setAllowedAudience(@javax.annotation.Nullable final BroadcastMeetingAudience value) {
-        this._allowedAudience = value;
+        this.allowedAudience = value;
     }
     /**
      * Sets the captions property value. Caption settings of a Teams live event.
@@ -165,7 +164,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public void setCaptions(@javax.annotation.Nullable final BroadcastMeetingCaptionSettings value) {
-        this._captions = value;
+        this.captions = value;
     }
     /**
      * Sets the isAttendeeReportEnabled property value. Indicates whether attendee report is enabled for this Teams live event. Default value is false.
@@ -174,7 +173,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public void setIsAttendeeReportEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isAttendeeReportEnabled = value;
+        this.isAttendeeReportEnabled = value;
     }
     /**
      * Sets the isQuestionAndAnswerEnabled property value. Indicates whether Q&A is enabled for this Teams live event. Default value is false.
@@ -183,7 +182,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public void setIsQuestionAndAnswerEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isQuestionAndAnswerEnabled = value;
+        this.isQuestionAndAnswerEnabled = value;
     }
     /**
      * Sets the isRecordingEnabled property value. Indicates whether recording is enabled for this Teams live event. Default value is false.
@@ -192,7 +191,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public void setIsRecordingEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isRecordingEnabled = value;
+        this.isRecordingEnabled = value;
     }
     /**
      * Sets the isVideoOnDemandEnabled property value. Indicates whether video on demand is enabled for this Teams live event. Default value is false.
@@ -201,7 +200,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public void setIsVideoOnDemandEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isVideoOnDemandEnabled = value;
+        this.isVideoOnDemandEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -210,6 +209,6 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

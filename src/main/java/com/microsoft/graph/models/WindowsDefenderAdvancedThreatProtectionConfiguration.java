@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfiguration implements Parsable {
     /** Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule */
-    private Boolean _allowSampleSharing;
+    private Boolean allowSampleSharing;
     /** Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency. */
-    private Boolean _enableExpeditedTelemetryReporting;
+    private Boolean enableExpeditedTelemetryReporting;
     /**
      * Instantiates a new WindowsDefenderAdvancedThreatProtectionConfiguration and sets the default values.
      * @return a void
@@ -37,7 +36,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      */
     @javax.annotation.Nullable
     public Boolean getAllowSampleSharing() {
-        return this._allowSampleSharing;
+        return this.allowSampleSharing;
     }
     /**
      * Gets the enableExpeditedTelemetryReporting property value. Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
@@ -45,15 +44,15 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      */
     @javax.annotation.Nullable
     public Boolean getEnableExpeditedTelemetryReporting() {
-        return this._enableExpeditedTelemetryReporting;
+        return this.enableExpeditedTelemetryReporting;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowSampleSharing", (n) -> { this.setAllowSampleSharing(n.getBooleanValue()); });
         deserializerMap.put("enableExpeditedTelemetryReporting", (n) -> { this.setEnableExpeditedTelemetryReporting(n.getBooleanValue()); });
         return deserializerMap;
@@ -77,7 +76,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      */
     @javax.annotation.Nonnull
     public void setAllowSampleSharing(@javax.annotation.Nullable final Boolean value) {
-        this._allowSampleSharing = value;
+        this.allowSampleSharing = value;
     }
     /**
      * Sets the enableExpeditedTelemetryReporting property value. Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
@@ -86,6 +85,6 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      */
     @javax.annotation.Nonnull
     public void setEnableExpeditedTelemetryReporting(@javax.annotation.Nullable final Boolean value) {
-        this._enableExpeditedTelemetryReporting = value;
+        this.enableExpeditedTelemetryReporting = value;
     }
 }

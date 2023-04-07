@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /** Whether or not to use device execution context for Microsoft Store for Business mobile app. */
-    private Boolean _useDeviceContext;
+    private Boolean useDeviceContext;
     /**
      * Instantiates a new MicrosoftStoreForBusinessAppAssignmentSettings and sets the default values.
      * @return a void
@@ -31,11 +30,11 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("useDeviceContext", (n) -> { this.setUseDeviceContext(n.getBooleanValue()); });
         return deserializerMap;
     }
@@ -45,7 +44,7 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
      */
     @javax.annotation.Nullable
     public Boolean getUseDeviceContext() {
-        return this._useDeviceContext;
+        return this.useDeviceContext;
     }
     /**
      * Serializes information the current object
@@ -65,6 +64,6 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
      */
     @javax.annotation.Nonnull
     public void setUseDeviceContext(@javax.annotation.Nullable final Boolean value) {
-        this._useDeviceContext = value;
+        this.useDeviceContext = value;
     }
 }

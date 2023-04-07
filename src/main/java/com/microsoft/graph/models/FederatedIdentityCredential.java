@@ -3,22 +3,20 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class FederatedIdentityCredential extends Entity implements Parsable {
     /** The audience that can appear in the external token. This field is mandatory and should be set to api://AzureADTokenExchange for Azure AD. It says what Microsoft identity platform should accept in the aud claim in the incoming token. This value represents Azure AD in your external identity provider and has no fixed value across identity providers - you may need to create a new application registration in your identity provider to serve as the audience of this token. This field can only accept a single value and has a limit of 600 characters. Required. */
-    private java.util.List<String> _audiences;
+    private java.util.List<String> audiences;
     /** The un-validated, user-provided description of the federated identity credential. It has a limit of 600 characters. Optional. */
-    private String _description;
+    private String description;
     /** The URL of the external identity provider and must match the issuer claim of the external token being exchanged. The combination of the values of issuer and subject must be unique on the app. It has a limit of 600 characters. Required. */
-    private String _issuer;
+    private String issuer;
     /** is the unique identifier for the federated identity credential, which has a limit of 120 characters and must be URL friendly. It is immutable once created. Required. Not nullable. Supports $filter (eq). */
-    private String _name;
+    private String name;
     /** Required. The identifier of the external software workload within the external identity provider. Like the audience value, it has no fixed format, as each identity provider uses their own - sometimes a GUID, sometimes a colon delimited identifier, sometimes arbitrary strings. The value here must match the sub claim within the token presented to Azure AD. The combination of issuer and subject must be unique on the app. It has a limit of 600 characters. Supports $filter (eq). */
-    private String _subject;
+    private String subject;
     /**
      * Instantiates a new federatedIdentityCredential and sets the default values.
      * @return a void
@@ -43,7 +41,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAudiences() {
-        return this._audiences;
+        return this.audiences;
     }
     /**
      * Gets the description property value. The un-validated, user-provided description of the federated identity credential. It has a limit of 600 characters. Optional.
@@ -51,15 +49,15 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("audiences", (n) -> { this.setAudiences(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("issuer", (n) -> { this.setIssuer(n.getStringValue()); });
@@ -73,7 +71,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getIssuer() {
-        return this._issuer;
+        return this.issuer;
     }
     /**
      * Gets the name property value. is the unique identifier for the federated identity credential, which has a limit of 120 characters and must be URL friendly. It is immutable once created. Required. Not nullable. Supports $filter (eq).
@@ -81,7 +79,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the subject property value. Required. The identifier of the external software workload within the external identity provider. Like the audience value, it has no fixed format, as each identity provider uses their own - sometimes a GUID, sometimes a colon delimited identifier, sometimes arbitrary strings. The value here must match the sub claim within the token presented to Azure AD. The combination of issuer and subject must be unique on the app. It has a limit of 600 characters. Supports $filter (eq).
@@ -89,7 +87,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSubject() {
-        return this._subject;
+        return this.subject;
     }
     /**
      * Serializes information the current object
@@ -113,7 +111,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAudiences(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._audiences = value;
+        this.audiences = value;
     }
     /**
      * Sets the description property value. The un-validated, user-provided description of the federated identity credential. It has a limit of 600 characters. Optional.
@@ -122,7 +120,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the issuer property value. The URL of the external identity provider and must match the issuer claim of the external token being exchanged. The combination of the values of issuer and subject must be unique on the app. It has a limit of 600 characters. Required.
@@ -131,7 +129,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIssuer(@javax.annotation.Nullable final String value) {
-        this._issuer = value;
+        this.issuer = value;
     }
     /**
      * Sets the name property value. is the unique identifier for the federated identity credential, which has a limit of 120 characters and must be URL friendly. It is immutable once created. Required. Not nullable. Supports $filter (eq).
@@ -140,7 +138,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the subject property value. Required. The identifier of the external software workload within the external identity provider. Like the audience value, it has no fixed format, as each identity provider uses their own - sometimes a GUID, sometimes a colon delimited identifier, sometimes arbitrary strings. The value here must match the sub claim within the token presented to Azure AD. The combination of issuer and subject must be unique on the app. It has a limit of 600 characters. Supports $filter (eq).
@@ -149,6 +147,6 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
-        this._subject = value;
+        this.subject = value;
     }
 }

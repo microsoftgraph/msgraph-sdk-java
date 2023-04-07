@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable {
     /** Not yet documented */
-    private Integer _configurationDeployedUserCount;
+    private Integer configurationDeployedUserCount;
     /** Not yet documented */
-    private java.util.List<ManagedAppPolicyDeploymentSummaryPerApp> _configurationDeploymentSummaryPerApp;
+    private java.util.List<ManagedAppPolicyDeploymentSummaryPerApp> configurationDeploymentSummaryPerApp;
     /** Not yet documented */
-    private String _displayName;
+    private String displayName;
     /** Not yet documented */
-    private OffsetDateTime _lastRefreshTime;
+    private OffsetDateTime lastRefreshTime;
     /** Version of the entity. */
-    private String _version;
+    private String version;
     /**
      * Instantiates a new managedAppPolicyDeploymentSummary and sets the default values.
      * @return a void
@@ -43,7 +42,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public Integer getConfigurationDeployedUserCount() {
-        return this._configurationDeployedUserCount;
+        return this.configurationDeployedUserCount;
     }
     /**
      * Gets the configurationDeploymentSummaryPerApp property value. Not yet documented
@@ -51,7 +50,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedAppPolicyDeploymentSummaryPerApp> getConfigurationDeploymentSummaryPerApp() {
-        return this._configurationDeploymentSummaryPerApp;
+        return this.configurationDeploymentSummaryPerApp;
     }
     /**
      * Gets the displayName property value. Not yet documented
@@ -59,15 +58,15 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("configurationDeployedUserCount", (n) -> { this.setConfigurationDeployedUserCount(n.getIntegerValue()); });
         deserializerMap.put("configurationDeploymentSummaryPerApp", (n) -> { this.setConfigurationDeploymentSummaryPerApp(n.getCollectionOfObjectValues(ManagedAppPolicyDeploymentSummaryPerApp::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -81,7 +80,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastRefreshTime() {
-        return this._lastRefreshTime;
+        return this.lastRefreshTime;
     }
     /**
      * Gets the version property value. Version of the entity.
@@ -89,7 +88,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
@@ -113,7 +112,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setConfigurationDeployedUserCount(@javax.annotation.Nullable final Integer value) {
-        this._configurationDeployedUserCount = value;
+        this.configurationDeployedUserCount = value;
     }
     /**
      * Sets the configurationDeploymentSummaryPerApp property value. Not yet documented
@@ -122,7 +121,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setConfigurationDeploymentSummaryPerApp(@javax.annotation.Nullable final java.util.List<ManagedAppPolicyDeploymentSummaryPerApp> value) {
-        this._configurationDeploymentSummaryPerApp = value;
+        this.configurationDeploymentSummaryPerApp = value;
     }
     /**
      * Sets the displayName property value. Not yet documented
@@ -131,7 +130,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastRefreshTime property value. Not yet documented
@@ -140,7 +139,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setLastRefreshTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastRefreshTime = value;
+        this.lastRefreshTime = value;
     }
     /**
      * Sets the version property value. Version of the entity.
@@ -149,6 +148,6 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

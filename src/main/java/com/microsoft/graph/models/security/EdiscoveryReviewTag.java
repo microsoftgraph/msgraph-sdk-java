@@ -3,17 +3,16 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoveryReviewTag extends Tag implements Parsable {
     /** Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group. */
-    private ChildSelectability _childSelectability;
+    private ChildSelectability childSelectability;
     /** Returns the tags that are a child of a tag. */
-    private java.util.List<EdiscoveryReviewTag> _childTags;
+    private java.util.List<EdiscoveryReviewTag> childTags;
     /** Returns the parent tag of the specified tag. */
-    private EdiscoveryReviewTag _parent;
+    private EdiscoveryReviewTag parent;
     /**
      * Instantiates a new EdiscoveryReviewTag and sets the default values.
      * @return a void
@@ -39,7 +38,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      */
     @javax.annotation.Nullable
     public ChildSelectability getChildSelectability() {
-        return this._childSelectability;
+        return this.childSelectability;
     }
     /**
      * Gets the childTags property value. Returns the tags that are a child of a tag.
@@ -47,15 +46,15 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EdiscoveryReviewTag> getChildTags() {
-        return this._childTags;
+        return this.childTags;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("childSelectability", (n) -> { this.setChildSelectability(n.getEnumValue(ChildSelectability.class)); });
         deserializerMap.put("childTags", (n) -> { this.setChildTags(n.getCollectionOfObjectValues(EdiscoveryReviewTag::createFromDiscriminatorValue)); });
         deserializerMap.put("parent", (n) -> { this.setParent(n.getObjectValue(EdiscoveryReviewTag::createFromDiscriminatorValue)); });
@@ -67,7 +66,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      */
     @javax.annotation.Nullable
     public EdiscoveryReviewTag getParent() {
-        return this._parent;
+        return this.parent;
     }
     /**
      * Serializes information the current object
@@ -89,7 +88,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setChildSelectability(@javax.annotation.Nullable final ChildSelectability value) {
-        this._childSelectability = value;
+        this.childSelectability = value;
     }
     /**
      * Sets the childTags property value. Returns the tags that are a child of a tag.
@@ -98,7 +97,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setChildTags(@javax.annotation.Nullable final java.util.List<EdiscoveryReviewTag> value) {
-        this._childTags = value;
+        this.childTags = value;
     }
     /**
      * Sets the parent property value. Returns the parent tag of the specified tag.
@@ -107,6 +106,6 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setParent(@javax.annotation.Nullable final EdiscoveryReviewTag value) {
-        this._parent = value;
+        this.parent = value;
     }
 }

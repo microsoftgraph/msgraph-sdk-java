@@ -4,22 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the batchRecordDecisions method. */
 public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The decision property */
-    private String _decision;
+    private String decision;
     /** The justification property */
-    private String _justification;
+    private String justification;
     /** The principalId property */
-    private String _principalId;
+    private String principalId;
     /** The resourceId property */
-    private String _resourceId;
+    private String resourceId;
     /**
      * Instantiates a new batchRecordDecisionsPostRequestBody and sets the default values.
      * @return a void
@@ -44,7 +42,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the decision property value. The decision property
@@ -52,15 +50,15 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public String getDecision() {
-        return this._decision;
+        return this.decision;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("decision", (n) -> { this.setDecision(n.getStringValue()); });
         deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
         deserializerMap.put("principalId", (n) -> { this.setPrincipalId(n.getStringValue()); });
@@ -73,7 +71,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public String getJustification() {
-        return this._justification;
+        return this.justification;
     }
     /**
      * Gets the principalId property value. The principalId property
@@ -81,7 +79,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public String getPrincipalId() {
-        return this._principalId;
+        return this.principalId;
     }
     /**
      * Gets the resourceId property value. The resourceId property
@@ -89,7 +87,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public String getResourceId() {
-        return this._resourceId;
+        return this.resourceId;
     }
     /**
      * Serializes information the current object
@@ -112,7 +110,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the decision property value. The decision property
@@ -121,7 +119,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setDecision(@javax.annotation.Nullable final String value) {
-        this._decision = value;
+        this.decision = value;
     }
     /**
      * Sets the justification property value. The justification property
@@ -130,7 +128,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setJustification(@javax.annotation.Nullable final String value) {
-        this._justification = value;
+        this.justification = value;
     }
     /**
      * Sets the principalId property value. The principalId property
@@ -139,7 +137,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setPrincipalId(@javax.annotation.Nullable final String value) {
-        this._principalId = value;
+        this.principalId = value;
     }
     /**
      * Sets the resourceId property value. The resourceId property
@@ -148,6 +146,6 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setResourceId(@javax.annotation.Nullable final String value) {
-        this._resourceId = value;
+        this.resourceId = value;
     }
 }

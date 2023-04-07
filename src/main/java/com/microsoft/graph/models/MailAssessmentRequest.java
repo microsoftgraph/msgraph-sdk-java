@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable {
     /** The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk. */
-    private MailDestinationRoutingReason _destinationRoutingReason;
+    private MailDestinationRoutingReason destinationRoutingReason;
     /** The resource URI of the mail message for assessment. */
-    private String _messageUri;
+    private String messageUri;
     /** The mail recipient whose policies are used to assess the mail. */
-    private String _recipientEmail;
+    private String recipientEmail;
     /**
      * Instantiates a new MailAssessmentRequest and sets the default values.
      * @return a void
@@ -39,15 +38,15 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      */
     @javax.annotation.Nullable
     public MailDestinationRoutingReason getDestinationRoutingReason() {
-        return this._destinationRoutingReason;
+        return this.destinationRoutingReason;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("destinationRoutingReason", (n) -> { this.setDestinationRoutingReason(n.getEnumValue(MailDestinationRoutingReason.class)); });
         deserializerMap.put("messageUri", (n) -> { this.setMessageUri(n.getStringValue()); });
         deserializerMap.put("recipientEmail", (n) -> { this.setRecipientEmail(n.getStringValue()); });
@@ -59,7 +58,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      */
     @javax.annotation.Nullable
     public String getMessageUri() {
-        return this._messageUri;
+        return this.messageUri;
     }
     /**
      * Gets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.
@@ -67,7 +66,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      */
     @javax.annotation.Nullable
     public String getRecipientEmail() {
-        return this._recipientEmail;
+        return this.recipientEmail;
     }
     /**
      * Serializes information the current object
@@ -89,7 +88,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      */
     @javax.annotation.Nonnull
     public void setDestinationRoutingReason(@javax.annotation.Nullable final MailDestinationRoutingReason value) {
-        this._destinationRoutingReason = value;
+        this.destinationRoutingReason = value;
     }
     /**
      * Sets the messageUri property value. The resource URI of the mail message for assessment.
@@ -98,7 +97,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      */
     @javax.annotation.Nonnull
     public void setMessageUri(@javax.annotation.Nullable final String value) {
-        this._messageUri = value;
+        this.messageUri = value;
     }
     /**
      * Sets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.
@@ -107,6 +106,6 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      */
     @javax.annotation.Nonnull
     public void setRecipientEmail(@javax.annotation.Nullable final String value) {
-        this._recipientEmail = value;
+        this.recipientEmail = value;
     }
 }

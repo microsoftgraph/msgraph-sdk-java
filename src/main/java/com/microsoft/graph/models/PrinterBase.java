@@ -1,33 +1,30 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.Printer;
-import com.microsoft.graph.models.PrinterShare;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrinterBase extends Entity implements Parsable {
     /** The capabilities of the printer/printerShare. */
-    private PrinterCapabilities _capabilities;
+    private PrinterCapabilities capabilities;
     /** The default print settings of printer/printerShare. */
-    private PrinterDefaults _defaults;
+    private PrinterDefaults defaults;
     /** The name of the printer/printerShare. */
-    private String _displayName;
+    private String displayName;
     /** Whether the printer/printerShare is currently accepting new print jobs. */
-    private Boolean _isAcceptingJobs;
+    private Boolean isAcceptingJobs;
     /** The list of jobs that are queued for printing by the printer/printerShare. */
-    private java.util.List<PrintJob> _jobs;
+    private java.util.List<PrintJob> jobs;
     /** The physical and/or organizational location of the printer/printerShare. */
-    private PrinterLocation _location;
+    private PrinterLocation location;
     /** The manufacturer of the printer/printerShare. */
-    private String _manufacturer;
+    private String manufacturer;
     /** The model name of the printer/printerShare. */
-    private String _model;
+    private String model;
     /** The status property */
-    private PrinterStatus _status;
+    private PrinterStatus status;
     /**
      * Instantiates a new printerBase and sets the default values.
      * @return a void
@@ -60,7 +57,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrinterCapabilities getCapabilities() {
-        return this._capabilities;
+        return this.capabilities;
     }
     /**
      * Gets the defaults property value. The default print settings of printer/printerShare.
@@ -68,7 +65,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrinterDefaults getDefaults() {
-        return this._defaults;
+        return this.defaults;
     }
     /**
      * Gets the displayName property value. The name of the printer/printerShare.
@@ -76,15 +73,15 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("capabilities", (n) -> { this.setCapabilities(n.getObjectValue(PrinterCapabilities::createFromDiscriminatorValue)); });
         deserializerMap.put("defaults", (n) -> { this.setDefaults(n.getObjectValue(PrinterDefaults::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -102,7 +99,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsAcceptingJobs() {
-        return this._isAcceptingJobs;
+        return this.isAcceptingJobs;
     }
     /**
      * Gets the jobs property value. The list of jobs that are queued for printing by the printer/printerShare.
@@ -110,7 +107,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintJob> getJobs() {
-        return this._jobs;
+        return this.jobs;
     }
     /**
      * Gets the location property value. The physical and/or organizational location of the printer/printerShare.
@@ -118,7 +115,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrinterLocation getLocation() {
-        return this._location;
+        return this.location;
     }
     /**
      * Gets the manufacturer property value. The manufacturer of the printer/printerShare.
@@ -126,7 +123,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getManufacturer() {
-        return this._manufacturer;
+        return this.manufacturer;
     }
     /**
      * Gets the model property value. The model name of the printer/printerShare.
@@ -134,7 +131,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getModel() {
-        return this._model;
+        return this.model;
     }
     /**
      * Gets the status property value. The status property
@@ -142,7 +139,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrinterStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
@@ -170,7 +167,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCapabilities(@javax.annotation.Nullable final PrinterCapabilities value) {
-        this._capabilities = value;
+        this.capabilities = value;
     }
     /**
      * Sets the defaults property value. The default print settings of printer/printerShare.
@@ -179,7 +176,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDefaults(@javax.annotation.Nullable final PrinterDefaults value) {
-        this._defaults = value;
+        this.defaults = value;
     }
     /**
      * Sets the displayName property value. The name of the printer/printerShare.
@@ -188,7 +185,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the isAcceptingJobs property value. Whether the printer/printerShare is currently accepting new print jobs.
@@ -197,7 +194,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsAcceptingJobs(@javax.annotation.Nullable final Boolean value) {
-        this._isAcceptingJobs = value;
+        this.isAcceptingJobs = value;
     }
     /**
      * Sets the jobs property value. The list of jobs that are queued for printing by the printer/printerShare.
@@ -206,7 +203,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setJobs(@javax.annotation.Nullable final java.util.List<PrintJob> value) {
-        this._jobs = value;
+        this.jobs = value;
     }
     /**
      * Sets the location property value. The physical and/or organizational location of the printer/printerShare.
@@ -215,7 +212,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final PrinterLocation value) {
-        this._location = value;
+        this.location = value;
     }
     /**
      * Sets the manufacturer property value. The manufacturer of the printer/printerShare.
@@ -224,7 +221,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
-        this._manufacturer = value;
+        this.manufacturer = value;
     }
     /**
      * Sets the model property value. The model name of the printer/printerShare.
@@ -233,7 +230,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
-        this._model = value;
+        this.model = value;
     }
     /**
      * Sets the status property value. The status property
@@ -242,6 +239,6 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final PrinterStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }

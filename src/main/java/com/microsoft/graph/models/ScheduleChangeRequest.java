@@ -1,34 +1,29 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.OfferShiftRequest;
-import com.microsoft.graph.models.OpenShiftChangeRequest;
-import com.microsoft.graph.models.SwapShiftsChangeRequest;
-import com.microsoft.graph.models.TimeOffRequest;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable {
     /** The assignedTo property */
-    private ScheduleChangeRequestActor _assignedTo;
+    private ScheduleChangeRequestActor assignedTo;
     /** The managerActionDateTime property */
-    private OffsetDateTime _managerActionDateTime;
+    private OffsetDateTime managerActionDateTime;
     /** The managerActionMessage property */
-    private String _managerActionMessage;
+    private String managerActionMessage;
     /** The managerUserId property */
-    private String _managerUserId;
+    private String managerUserId;
     /** The senderDateTime property */
-    private OffsetDateTime _senderDateTime;
+    private OffsetDateTime senderDateTime;
     /** The senderMessage property */
-    private String _senderMessage;
+    private String senderMessage;
     /** The senderUserId property */
-    private String _senderUserId;
+    private String senderUserId;
     /** The state property */
-    private ScheduleChangeState _state;
+    private ScheduleChangeState state;
     /**
      * Instantiates a new ScheduleChangeRequest and sets the default values.
      * @return a void
@@ -64,15 +59,15 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @javax.annotation.Nullable
     public ScheduleChangeRequestActor getAssignedTo() {
-        return this._assignedTo;
+        return this.assignedTo;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getEnumValue(ScheduleChangeRequestActor.class)); });
         deserializerMap.put("managerActionDateTime", (n) -> { this.setManagerActionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("managerActionMessage", (n) -> { this.setManagerActionMessage(n.getStringValue()); });
@@ -89,7 +84,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @javax.annotation.Nullable
     public OffsetDateTime getManagerActionDateTime() {
-        return this._managerActionDateTime;
+        return this.managerActionDateTime;
     }
     /**
      * Gets the managerActionMessage property value. The managerActionMessage property
@@ -97,7 +92,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @javax.annotation.Nullable
     public String getManagerActionMessage() {
-        return this._managerActionMessage;
+        return this.managerActionMessage;
     }
     /**
      * Gets the managerUserId property value. The managerUserId property
@@ -105,7 +100,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @javax.annotation.Nullable
     public String getManagerUserId() {
-        return this._managerUserId;
+        return this.managerUserId;
     }
     /**
      * Gets the senderDateTime property value. The senderDateTime property
@@ -113,7 +108,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @javax.annotation.Nullable
     public OffsetDateTime getSenderDateTime() {
-        return this._senderDateTime;
+        return this.senderDateTime;
     }
     /**
      * Gets the senderMessage property value. The senderMessage property
@@ -121,7 +116,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @javax.annotation.Nullable
     public String getSenderMessage() {
-        return this._senderMessage;
+        return this.senderMessage;
     }
     /**
      * Gets the senderUserId property value. The senderUserId property
@@ -129,7 +124,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @javax.annotation.Nullable
     public String getSenderUserId() {
-        return this._senderUserId;
+        return this.senderUserId;
     }
     /**
      * Gets the state property value. The state property
@@ -137,7 +132,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @javax.annotation.Nullable
     public ScheduleChangeState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Serializes information the current object
@@ -160,7 +155,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @javax.annotation.Nonnull
     public void setAssignedTo(@javax.annotation.Nullable final ScheduleChangeRequestActor value) {
-        this._assignedTo = value;
+        this.assignedTo = value;
     }
     /**
      * Sets the managerActionDateTime property value. The managerActionDateTime property
@@ -169,7 +164,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @javax.annotation.Nonnull
     public void setManagerActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._managerActionDateTime = value;
+        this.managerActionDateTime = value;
     }
     /**
      * Sets the managerActionMessage property value. The managerActionMessage property
@@ -178,7 +173,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @javax.annotation.Nonnull
     public void setManagerActionMessage(@javax.annotation.Nullable final String value) {
-        this._managerActionMessage = value;
+        this.managerActionMessage = value;
     }
     /**
      * Sets the managerUserId property value. The managerUserId property
@@ -187,7 +182,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @javax.annotation.Nonnull
     public void setManagerUserId(@javax.annotation.Nullable final String value) {
-        this._managerUserId = value;
+        this.managerUserId = value;
     }
     /**
      * Sets the senderDateTime property value. The senderDateTime property
@@ -196,7 +191,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @javax.annotation.Nonnull
     public void setSenderDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._senderDateTime = value;
+        this.senderDateTime = value;
     }
     /**
      * Sets the senderMessage property value. The senderMessage property
@@ -205,7 +200,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @javax.annotation.Nonnull
     public void setSenderMessage(@javax.annotation.Nullable final String value) {
-        this._senderMessage = value;
+        this.senderMessage = value;
     }
     /**
      * Sets the senderUserId property value. The senderUserId property
@@ -214,7 +209,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @javax.annotation.Nonnull
     public void setSenderUserId(@javax.annotation.Nullable final String value) {
-        this._senderUserId = value;
+        this.senderUserId = value;
     }
     /**
      * Sets the state property value. The state property
@@ -223,6 +218,6 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ScheduleChangeState value) {
-        this._state = value;
+        this.state = value;
     }
 }

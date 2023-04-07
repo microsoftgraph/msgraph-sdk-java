@@ -3,28 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class PermissionGrantConditionSet extends Entity implements Parsable {
     /** A list of appId values for the client applications to match with, or a list with the single value all to match any client application. Default is the single value all. */
-    private java.util.List<String> _clientApplicationIds;
+    private java.util.List<String> clientApplicationIds;
     /** A list of Microsoft Partner Network (MPN) IDs for verified publishers of the client application, or a list with the single value all to match with client apps from any publisher. Default is the single value all. */
-    private java.util.List<String> _clientApplicationPublisherIds;
+    private java.util.List<String> clientApplicationPublisherIds;
     /** Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it does not have a verified publisher. Default is false. */
-    private Boolean _clientApplicationsFromVerifiedPublisherOnly;
+    private Boolean clientApplicationsFromVerifiedPublisherOnly;
     /** A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all. */
-    private java.util.List<String> _clientApplicationTenantIds;
+    private java.util.List<String> clientApplicationTenantIds;
     /** The permission classification for the permission being granted, or all to match with any permission classification (including permissions which are not classified). Default is all. */
-    private String _permissionClassification;
+    private String permissionClassification;
     /** The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the oauth2PermissionScopes property of the API's **servicePrincipal** object. The id of application permissions can be found in the appRoles property of the API's **servicePrincipal** object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's **servicePrincipal** object. Default is the single value all. */
-    private java.util.List<String> _permissions;
+    private java.util.List<String> permissions;
     /** The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required. */
-    private PermissionType _permissionType;
+    private PermissionType permissionType;
     /** The appId of the resource application (e.g. the API) for which a permission is being granted, or any to match with any resource application or API. Default is any. */
-    private String _resourceApplication;
+    private String resourceApplication;
     /**
      * Instantiates a new permissionGrantConditionSet and sets the default values.
      * @return a void
@@ -49,7 +47,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getClientApplicationIds() {
-        return this._clientApplicationIds;
+        return this.clientApplicationIds;
     }
     /**
      * Gets the clientApplicationPublisherIds property value. A list of Microsoft Partner Network (MPN) IDs for verified publishers of the client application, or a list with the single value all to match with client apps from any publisher. Default is the single value all.
@@ -57,7 +55,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getClientApplicationPublisherIds() {
-        return this._clientApplicationPublisherIds;
+        return this.clientApplicationPublisherIds;
     }
     /**
      * Gets the clientApplicationsFromVerifiedPublisherOnly property value. Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it does not have a verified publisher. Default is false.
@@ -65,7 +63,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getClientApplicationsFromVerifiedPublisherOnly() {
-        return this._clientApplicationsFromVerifiedPublisherOnly;
+        return this.clientApplicationsFromVerifiedPublisherOnly;
     }
     /**
      * Gets the clientApplicationTenantIds property value. A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
@@ -73,15 +71,15 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getClientApplicationTenantIds() {
-        return this._clientApplicationTenantIds;
+        return this.clientApplicationTenantIds;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("clientApplicationIds", (n) -> { this.setClientApplicationIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("clientApplicationPublisherIds", (n) -> { this.setClientApplicationPublisherIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("clientApplicationsFromVerifiedPublisherOnly", (n) -> { this.setClientApplicationsFromVerifiedPublisherOnly(n.getBooleanValue()); });
@@ -98,7 +96,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPermissionClassification() {
-        return this._permissionClassification;
+        return this.permissionClassification;
     }
     /**
      * Gets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the oauth2PermissionScopes property of the API's **servicePrincipal** object. The id of application permissions can be found in the appRoles property of the API's **servicePrincipal** object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's **servicePrincipal** object. Default is the single value all.
@@ -106,7 +104,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getPermissions() {
-        return this._permissions;
+        return this.permissions;
     }
     /**
      * Gets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
@@ -114,7 +112,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PermissionType getPermissionType() {
-        return this._permissionType;
+        return this.permissionType;
     }
     /**
      * Gets the resourceApplication property value. The appId of the resource application (e.g. the API) for which a permission is being granted, or any to match with any resource application or API. Default is any.
@@ -122,7 +120,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getResourceApplication() {
-        return this._resourceApplication;
+        return this.resourceApplication;
     }
     /**
      * Serializes information the current object
@@ -149,7 +147,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setClientApplicationIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._clientApplicationIds = value;
+        this.clientApplicationIds = value;
     }
     /**
      * Sets the clientApplicationPublisherIds property value. A list of Microsoft Partner Network (MPN) IDs for verified publishers of the client application, or a list with the single value all to match with client apps from any publisher. Default is the single value all.
@@ -158,7 +156,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setClientApplicationPublisherIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._clientApplicationPublisherIds = value;
+        this.clientApplicationPublisherIds = value;
     }
     /**
      * Sets the clientApplicationsFromVerifiedPublisherOnly property value. Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it does not have a verified publisher. Default is false.
@@ -167,7 +165,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setClientApplicationsFromVerifiedPublisherOnly(@javax.annotation.Nullable final Boolean value) {
-        this._clientApplicationsFromVerifiedPublisherOnly = value;
+        this.clientApplicationsFromVerifiedPublisherOnly = value;
     }
     /**
      * Sets the clientApplicationTenantIds property value. A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
@@ -176,7 +174,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setClientApplicationTenantIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._clientApplicationTenantIds = value;
+        this.clientApplicationTenantIds = value;
     }
     /**
      * Sets the permissionClassification property value. The permission classification for the permission being granted, or all to match with any permission classification (including permissions which are not classified). Default is all.
@@ -185,7 +183,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPermissionClassification(@javax.annotation.Nullable final String value) {
-        this._permissionClassification = value;
+        this.permissionClassification = value;
     }
     /**
      * Sets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the oauth2PermissionScopes property of the API's **servicePrincipal** object. The id of application permissions can be found in the appRoles property of the API's **servicePrincipal** object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's **servicePrincipal** object. Default is the single value all.
@@ -194,7 +192,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPermissions(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._permissions = value;
+        this.permissions = value;
     }
     /**
      * Sets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
@@ -203,7 +201,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPermissionType(@javax.annotation.Nullable final PermissionType value) {
-        this._permissionType = value;
+        this.permissionType = value;
     }
     /**
      * Sets the resourceApplication property value. The appId of the resource application (e.g. the API) for which a permission is being granted, or any to match with any resource application or API. Default is any.
@@ -212,6 +210,6 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setResourceApplication(@javax.annotation.Nullable final String value) {
-        this._resourceApplication = value;
+        this.resourceApplication = value;
     }
 }

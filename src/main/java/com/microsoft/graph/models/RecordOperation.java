@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RecordOperation extends CommsOperation implements Parsable {
     /** The access token required to retrieve the recording. */
-    private String _recordingAccessToken;
+    private String recordingAccessToken;
     /** The location where the recording is located. */
-    private String _recordingLocation;
+    private String recordingLocation;
     /**
      * Instantiates a new RecordOperation and sets the default values.
      * @return a void
@@ -32,11 +31,11 @@ public class RecordOperation extends CommsOperation implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("recordingAccessToken", (n) -> { this.setRecordingAccessToken(n.getStringValue()); });
         deserializerMap.put("recordingLocation", (n) -> { this.setRecordingLocation(n.getStringValue()); });
         return deserializerMap;
@@ -47,7 +46,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRecordingAccessToken() {
-        return this._recordingAccessToken;
+        return this.recordingAccessToken;
     }
     /**
      * Gets the recordingLocation property value. The location where the recording is located.
@@ -55,7 +54,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRecordingLocation() {
-        return this._recordingLocation;
+        return this.recordingLocation;
     }
     /**
      * Serializes information the current object
@@ -76,7 +75,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRecordingAccessToken(@javax.annotation.Nullable final String value) {
-        this._recordingAccessToken = value;
+        this.recordingAccessToken = value;
     }
     /**
      * Sets the recordingLocation property value. The location where the recording is located.
@@ -85,6 +84,6 @@ public class RecordOperation extends CommsOperation implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRecordingLocation(@javax.annotation.Nullable final String value) {
-        this._recordingLocation = value;
+        this.recordingLocation = value;
     }
 }

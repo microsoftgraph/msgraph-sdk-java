@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DataPolicyOperation extends Entity implements Parsable {
     /** Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Null until the operation completes. */
-    private OffsetDateTime _completedDateTime;
+    private OffsetDateTime completedDateTime;
     /** Specifies the progress of an operation. */
-    private Double _progress;
+    private Double progress;
     /** Possible values are: notStarted, running, complete, failed, unknownFutureValue. */
-    private DataPolicyOperationStatus _status;
+    private DataPolicyOperationStatus status;
     /** The URL location to where data is being exported for export requests. */
-    private String _storageLocation;
+    private String storageLocation;
     /** Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _submittedDateTime;
+    private OffsetDateTime submittedDateTime;
     /** The id for the user on whom the operation is performed. */
-    private String _userId;
+    private String userId;
     /**
-     * Instantiates a new DataPolicyOperation and sets the default values.
+     * Instantiates a new dataPolicyOperation and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -32,7 +31,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DataPolicyOperation
+     * @return a dataPolicyOperation
      */
     @javax.annotation.Nonnull
     public static DataPolicyOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -45,15 +44,15 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
-        return this._completedDateTime;
+        return this.completedDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("progress", (n) -> { this.setProgress(n.getDoubleValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DataPolicyOperationStatus.class)); });
@@ -68,7 +67,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Double getProgress() {
-        return this._progress;
+        return this.progress;
     }
     /**
      * Gets the status property value. Possible values are: notStarted, running, complete, failed, unknownFutureValue.
@@ -76,7 +75,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DataPolicyOperationStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the storageLocation property value. The URL location to where data is being exported for export requests.
@@ -84,7 +83,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStorageLocation() {
-        return this._storageLocation;
+        return this.storageLocation;
     }
     /**
      * Gets the submittedDateTime property value. Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -92,7 +91,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getSubmittedDateTime() {
-        return this._submittedDateTime;
+        return this.submittedDateTime;
     }
     /**
      * Gets the userId property value. The id for the user on whom the operation is performed.
@@ -100,7 +99,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
@@ -125,7 +124,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._completedDateTime = value;
+        this.completedDateTime = value;
     }
     /**
      * Sets the progress property value. Specifies the progress of an operation.
@@ -134,7 +133,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setProgress(@javax.annotation.Nullable final Double value) {
-        this._progress = value;
+        this.progress = value;
     }
     /**
      * Sets the status property value. Possible values are: notStarted, running, complete, failed, unknownFutureValue.
@@ -143,7 +142,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final DataPolicyOperationStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the storageLocation property value. The URL location to where data is being exported for export requests.
@@ -152,7 +151,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStorageLocation(@javax.annotation.Nullable final String value) {
-        this._storageLocation = value;
+        this.storageLocation = value;
     }
     /**
      * Sets the submittedDateTime property value. Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -161,7 +160,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSubmittedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._submittedDateTime = value;
+        this.submittedDateTime = value;
     }
     /**
      * Sets the userId property value. The id for the user on whom the operation is performed.
@@ -170,6 +169,6 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }

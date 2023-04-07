@@ -3,33 +3,32 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Invitation extends Entity implements Parsable {
     /** The user created as part of the invitation creation. Read-Only */
-    private User _invitedUser;
+    private User invitedUser;
     /** The display name of the user being invited. */
-    private String _invitedUserDisplayName;
+    private String invitedUserDisplayName;
     /** The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name. */
-    private String _invitedUserEmailAddress;
+    private String invitedUserEmailAddress;
     /** Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list. */
-    private InvitedUserMessageInfo _invitedUserMessageInfo;
+    private InvitedUserMessageInfo invitedUserMessageInfo;
     /** The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator. */
-    private String _invitedUserType;
+    private String invitedUserType;
     /** The URL the user can use to redeem their invitation. Read-only. */
-    private String _inviteRedeemUrl;
+    private String inviteRedeemUrl;
     /** The URL the user should be redirected to once the invitation is redeemed. Required. */
-    private String _inviteRedirectUrl;
+    private String inviteRedirectUrl;
     /** Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user. */
-    private Boolean _resetRedemption;
+    private Boolean resetRedemption;
     /** Indicates whether an email should be sent to the user being invited. The default is false. */
-    private Boolean _sendInvitationMessage;
+    private Boolean sendInvitationMessage;
     /** The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error. */
-    private String _status;
+    private String status;
     /**
-     * Instantiates a new Invitation and sets the default values.
+     * Instantiates a new invitation and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -39,7 +38,7 @@ public class Invitation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Invitation
+     * @return a invitation
      */
     @javax.annotation.Nonnull
     public static Invitation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -48,11 +47,11 @@ public class Invitation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("invitedUser", (n) -> { this.setInvitedUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
         deserializerMap.put("invitedUserDisplayName", (n) -> { this.setInvitedUserDisplayName(n.getStringValue()); });
         deserializerMap.put("invitedUserEmailAddress", (n) -> { this.setInvitedUserEmailAddress(n.getStringValue()); });
@@ -71,7 +70,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public User getInvitedUser() {
-        return this._invitedUser;
+        return this.invitedUser;
     }
     /**
      * Gets the invitedUserDisplayName property value. The display name of the user being invited.
@@ -79,7 +78,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInvitedUserDisplayName() {
-        return this._invitedUserDisplayName;
+        return this.invitedUserDisplayName;
     }
     /**
      * Gets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
@@ -87,7 +86,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInvitedUserEmailAddress() {
-        return this._invitedUserEmailAddress;
+        return this.invitedUserEmailAddress;
     }
     /**
      * Gets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
@@ -95,7 +94,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public InvitedUserMessageInfo getInvitedUserMessageInfo() {
-        return this._invitedUserMessageInfo;
+        return this.invitedUserMessageInfo;
     }
     /**
      * Gets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
@@ -103,7 +102,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInvitedUserType() {
-        return this._invitedUserType;
+        return this.invitedUserType;
     }
     /**
      * Gets the inviteRedeemUrl property value. The URL the user can use to redeem their invitation. Read-only.
@@ -111,7 +110,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInviteRedeemUrl() {
-        return this._inviteRedeemUrl;
+        return this.inviteRedeemUrl;
     }
     /**
      * Gets the inviteRedirectUrl property value. The URL the user should be redirected to once the invitation is redeemed. Required.
@@ -119,7 +118,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInviteRedirectUrl() {
-        return this._inviteRedirectUrl;
+        return this.inviteRedirectUrl;
     }
     /**
      * Gets the resetRedemption property value. Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user.
@@ -127,7 +126,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getResetRedemption() {
-        return this._resetRedemption;
+        return this.resetRedemption;
     }
     /**
      * Gets the sendInvitationMessage property value. Indicates whether an email should be sent to the user being invited. The default is false.
@@ -135,7 +134,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getSendInvitationMessage() {
-        return this._sendInvitationMessage;
+        return this.sendInvitationMessage;
     }
     /**
      * Gets the status property value. The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.
@@ -143,7 +142,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
@@ -172,7 +171,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInvitedUser(@javax.annotation.Nullable final User value) {
-        this._invitedUser = value;
+        this.invitedUser = value;
     }
     /**
      * Sets the invitedUserDisplayName property value. The display name of the user being invited.
@@ -181,7 +180,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInvitedUserDisplayName(@javax.annotation.Nullable final String value) {
-        this._invitedUserDisplayName = value;
+        this.invitedUserDisplayName = value;
     }
     /**
      * Sets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
@@ -190,7 +189,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInvitedUserEmailAddress(@javax.annotation.Nullable final String value) {
-        this._invitedUserEmailAddress = value;
+        this.invitedUserEmailAddress = value;
     }
     /**
      * Sets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
@@ -199,7 +198,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInvitedUserMessageInfo(@javax.annotation.Nullable final InvitedUserMessageInfo value) {
-        this._invitedUserMessageInfo = value;
+        this.invitedUserMessageInfo = value;
     }
     /**
      * Sets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
@@ -208,7 +207,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInvitedUserType(@javax.annotation.Nullable final String value) {
-        this._invitedUserType = value;
+        this.invitedUserType = value;
     }
     /**
      * Sets the inviteRedeemUrl property value. The URL the user can use to redeem their invitation. Read-only.
@@ -217,7 +216,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInviteRedeemUrl(@javax.annotation.Nullable final String value) {
-        this._inviteRedeemUrl = value;
+        this.inviteRedeemUrl = value;
     }
     /**
      * Sets the inviteRedirectUrl property value. The URL the user should be redirected to once the invitation is redeemed. Required.
@@ -226,7 +225,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInviteRedirectUrl(@javax.annotation.Nullable final String value) {
-        this._inviteRedirectUrl = value;
+        this.inviteRedirectUrl = value;
     }
     /**
      * Sets the resetRedemption property value. Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user.
@@ -235,7 +234,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setResetRedemption(@javax.annotation.Nullable final Boolean value) {
-        this._resetRedemption = value;
+        this.resetRedemption = value;
     }
     /**
      * Sets the sendInvitationMessage property value. Indicates whether an email should be sent to the user being invited. The default is false.
@@ -244,7 +243,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSendInvitationMessage(@javax.annotation.Nullable final Boolean value) {
-        this._sendInvitationMessage = value;
+        this.sendInvitationMessage = value;
     }
     /**
      * Sets the status property value. The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.
@@ -253,6 +252,6 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
-        this._status = value;
+        this.status = value;
     }
 }

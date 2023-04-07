@@ -4,13 +4,12 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OmaSettingDateTime extends OmaSetting implements Parsable {
     /** Value. */
-    private OffsetDateTime _value;
+    private OffsetDateTime value;
     /**
      * Instantiates a new OmaSettingDateTime and sets the default values.
      * @return a void
@@ -32,11 +31,11 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getOffsetDateTimeValue()); });
         return deserializerMap;
     }
@@ -46,7 +45,7 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
@@ -66,6 +65,6 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._value = value;
+        this.value = value;
     }
 }

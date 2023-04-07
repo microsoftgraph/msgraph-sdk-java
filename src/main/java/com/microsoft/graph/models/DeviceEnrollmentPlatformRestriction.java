@@ -4,24 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Platform specific enrollment restrictions */
+/**
+ * Platform specific enrollment restrictions
+ */
 public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Max OS version supported */
-    private String _osMaximumVersion;
+    private String osMaximumVersion;
     /** Min OS version supported */
-    private String _osMinimumVersion;
+    private String osMinimumVersion;
     /** Block personally owned devices from enrolling */
-    private Boolean _personalDeviceEnrollmentBlocked;
+    private Boolean personalDeviceEnrollmentBlocked;
     /** Block the platform from enrolling */
-    private Boolean _platformBlocked;
+    private Boolean platformBlocked;
     /**
      * Instantiates a new deviceEnrollmentPlatformRestriction and sets the default values.
      * @return a void
@@ -46,15 +47,15 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("osMaximumVersion", (n) -> { this.setOsMaximumVersion(n.getStringValue()); });
         deserializerMap.put("osMinimumVersion", (n) -> { this.setOsMinimumVersion(n.getStringValue()); });
@@ -68,7 +69,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the osMaximumVersion property value. Max OS version supported
@@ -76,7 +77,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public String getOsMaximumVersion() {
-        return this._osMaximumVersion;
+        return this.osMaximumVersion;
     }
     /**
      * Gets the osMinimumVersion property value. Min OS version supported
@@ -84,7 +85,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public String getOsMinimumVersion() {
-        return this._osMinimumVersion;
+        return this.osMinimumVersion;
     }
     /**
      * Gets the personalDeviceEnrollmentBlocked property value. Block personally owned devices from enrolling
@@ -92,7 +93,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public Boolean getPersonalDeviceEnrollmentBlocked() {
-        return this._personalDeviceEnrollmentBlocked;
+        return this.personalDeviceEnrollmentBlocked;
     }
     /**
      * Gets the platformBlocked property value. Block the platform from enrolling
@@ -100,7 +101,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public Boolean getPlatformBlocked() {
-        return this._platformBlocked;
+        return this.platformBlocked;
     }
     /**
      * Serializes information the current object
@@ -124,7 +125,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -133,7 +134,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the osMaximumVersion property value. Max OS version supported
@@ -142,7 +143,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
-        this._osMaximumVersion = value;
+        this.osMaximumVersion = value;
     }
     /**
      * Sets the osMinimumVersion property value. Min OS version supported
@@ -151,7 +152,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
-        this._osMinimumVersion = value;
+        this.osMinimumVersion = value;
     }
     /**
      * Sets the personalDeviceEnrollmentBlocked property value. Block personally owned devices from enrolling
@@ -160,7 +161,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setPersonalDeviceEnrollmentBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._personalDeviceEnrollmentBlocked = value;
+        this.personalDeviceEnrollmentBlocked = value;
     }
     /**
      * Sets the platformBlocked property value. Block the platform from enrolling
@@ -169,6 +170,6 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setPlatformBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._platformBlocked = value;
+        this.platformBlocked = value;
     }
 }

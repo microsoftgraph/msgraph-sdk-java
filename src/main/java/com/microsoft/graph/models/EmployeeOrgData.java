@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EmployeeOrgData implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The cost center associated with the user. Returned only on $select. Supports $filter. */
-    private String _costCenter;
+    private String costCenter;
     /** The name of the division in which the user works. Returned only on $select. Supports $filter. */
-    private String _division;
+    private String division;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new employeeOrgData and sets the default values.
      * @return a void
@@ -41,7 +40,7 @@ public class EmployeeOrgData implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the costCenter property value. The cost center associated with the user. Returned only on $select. Supports $filter.
@@ -49,7 +48,7 @@ public class EmployeeOrgData implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCostCenter() {
-        return this._costCenter;
+        return this.costCenter;
     }
     /**
      * Gets the division property value. The name of the division in which the user works. Returned only on $select. Supports $filter.
@@ -57,15 +56,15 @@ public class EmployeeOrgData implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDivision() {
-        return this._division;
+        return this.division;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("costCenter", (n) -> { this.setCostCenter(n.getStringValue()); });
         deserializerMap.put("division", (n) -> { this.setDivision(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -77,7 +76,7 @@ public class EmployeeOrgData implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -99,7 +98,7 @@ public class EmployeeOrgData implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the costCenter property value. The cost center associated with the user. Returned only on $select. Supports $filter.
@@ -108,7 +107,7 @@ public class EmployeeOrgData implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCostCenter(@javax.annotation.Nullable final String value) {
-        this._costCenter = value;
+        this.costCenter = value;
     }
     /**
      * Sets the division property value. The name of the division in which the user works. Returned only on $select. Supports $filter.
@@ -117,7 +116,7 @@ public class EmployeeOrgData implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDivision(@javax.annotation.Nullable final String value) {
-        this._division = value;
+        this.division = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -126,6 +125,6 @@ public class EmployeeOrgData implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

@@ -3,23 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
     /** Value to use when configuring the Target property of the SRV record at the DNS host. */
-    private String _nameTarget;
+    private String nameTarget;
     /** Value to use when configuring the port property of the SRV record at the DNS host. */
-    private Integer _port;
+    private Integer port;
     /** Value to use when configuring the priority property of the SRV record at the DNS host. */
-    private Integer _priority;
+    private Integer priority;
     /** Value to use when configuring the protocol property of the SRV record at the DNS host. */
-    private String _protocol;
+    private String protocol;
     /** Value to use when configuring the service property of the SRV record at the DNS host. */
-    private String _service;
+    private String service;
     /** Value to use when configuring the weight property of the SRV record at the DNS host. */
-    private Integer _weight;
+    private Integer weight;
     /**
      * Instantiates a new DomainDnsSrvRecord and sets the default values.
      * @return a void
@@ -40,11 +39,11 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("nameTarget", (n) -> { this.setNameTarget(n.getStringValue()); });
         deserializerMap.put("port", (n) -> { this.setPort(n.getIntegerValue()); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
@@ -59,7 +58,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nullable
     public String getNameTarget() {
-        return this._nameTarget;
+        return this.nameTarget;
     }
     /**
      * Gets the port property value. Value to use when configuring the port property of the SRV record at the DNS host.
@@ -67,7 +66,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getPort() {
-        return this._port;
+        return this.port;
     }
     /**
      * Gets the priority property value. Value to use when configuring the priority property of the SRV record at the DNS host.
@@ -75,7 +74,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getPriority() {
-        return this._priority;
+        return this.priority;
     }
     /**
      * Gets the protocol property value. Value to use when configuring the protocol property of the SRV record at the DNS host.
@@ -83,7 +82,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nullable
     public String getProtocol() {
-        return this._protocol;
+        return this.protocol;
     }
     /**
      * Gets the service property value. Value to use when configuring the service property of the SRV record at the DNS host.
@@ -91,7 +90,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nullable
     public String getService() {
-        return this._service;
+        return this.service;
     }
     /**
      * Gets the weight property value. Value to use when configuring the weight property of the SRV record at the DNS host.
@@ -99,7 +98,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getWeight() {
-        return this._weight;
+        return this.weight;
     }
     /**
      * Serializes information the current object
@@ -124,7 +123,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setNameTarget(@javax.annotation.Nullable final String value) {
-        this._nameTarget = value;
+        this.nameTarget = value;
     }
     /**
      * Sets the port property value. Value to use when configuring the port property of the SRV record at the DNS host.
@@ -133,7 +132,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPort(@javax.annotation.Nullable final Integer value) {
-        this._port = value;
+        this.port = value;
     }
     /**
      * Sets the priority property value. Value to use when configuring the priority property of the SRV record at the DNS host.
@@ -142,7 +141,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
-        this._priority = value;
+        this.priority = value;
     }
     /**
      * Sets the protocol property value. Value to use when configuring the protocol property of the SRV record at the DNS host.
@@ -151,7 +150,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setProtocol(@javax.annotation.Nullable final String value) {
-        this._protocol = value;
+        this.protocol = value;
     }
     /**
      * Sets the service property value. Value to use when configuring the service property of the SRV record at the DNS host.
@@ -160,7 +159,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setService(@javax.annotation.Nullable final String value) {
-        this._service = value;
+        this.service = value;
     }
     /**
      * Sets the weight property value. Value to use when configuring the weight property of the SRV record at the DNS host.
@@ -169,6 +168,6 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWeight(@javax.annotation.Nullable final Integer value) {
-        this._weight = value;
+        this.weight = value;
     }
 }

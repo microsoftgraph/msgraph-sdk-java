@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CallTranscriptEventMessageDetail extends EventMessageDetail implements Parsable {
     /** Unique identifier of the call. */
-    private String _callId;
+    private String callId;
     /** Unique identifier for a call transcript. */
-    private String _callTranscriptICalUid;
+    private String callTranscriptICalUid;
     /** The organizer of the meeting. */
-    private IdentitySet _meetingOrganizer;
+    private IdentitySet meetingOrganizer;
     /**
      * Instantiates a new CallTranscriptEventMessageDetail and sets the default values.
      * @return a void
@@ -39,7 +38,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      */
     @javax.annotation.Nullable
     public String getCallId() {
-        return this._callId;
+        return this.callId;
     }
     /**
      * Gets the callTranscriptICalUid property value. Unique identifier for a call transcript.
@@ -47,15 +46,15 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      */
     @javax.annotation.Nullable
     public String getCallTranscriptICalUid() {
-        return this._callTranscriptICalUid;
+        return this.callTranscriptICalUid;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("callId", (n) -> { this.setCallId(n.getStringValue()); });
         deserializerMap.put("callTranscriptICalUid", (n) -> { this.setCallTranscriptICalUid(n.getStringValue()); });
         deserializerMap.put("meetingOrganizer", (n) -> { this.setMeetingOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -67,7 +66,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      */
     @javax.annotation.Nullable
     public IdentitySet getMeetingOrganizer() {
-        return this._meetingOrganizer;
+        return this.meetingOrganizer;
     }
     /**
      * Serializes information the current object
@@ -89,7 +88,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      */
     @javax.annotation.Nonnull
     public void setCallId(@javax.annotation.Nullable final String value) {
-        this._callId = value;
+        this.callId = value;
     }
     /**
      * Sets the callTranscriptICalUid property value. Unique identifier for a call transcript.
@@ -98,7 +97,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      */
     @javax.annotation.Nonnull
     public void setCallTranscriptICalUid(@javax.annotation.Nullable final String value) {
-        this._callTranscriptICalUid = value;
+        this.callTranscriptICalUid = value;
     }
     /**
      * Sets the meetingOrganizer property value. The organizer of the meeting.
@@ -107,6 +106,6 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      */
     @javax.annotation.Nonnull
     public void setMeetingOrganizer(@javax.annotation.Nullable final IdentitySet value) {
-        this._meetingOrganizer = value;
+        this.meetingOrganizer = value;
     }
 }

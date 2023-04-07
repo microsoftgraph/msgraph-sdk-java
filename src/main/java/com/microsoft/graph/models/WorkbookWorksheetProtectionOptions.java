@@ -4,37 +4,36 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Represents the worksheet protection option of allowing using auto filter feature. */
-    private Boolean _allowAutoFilter;
+    private Boolean allowAutoFilter;
     /** Represents the worksheet protection option of allowing deleting columns. */
-    private Boolean _allowDeleteColumns;
+    private Boolean allowDeleteColumns;
     /** Represents the worksheet protection option of allowing deleting rows. */
-    private Boolean _allowDeleteRows;
+    private Boolean allowDeleteRows;
     /** Represents the worksheet protection option of allowing formatting cells. */
-    private Boolean _allowFormatCells;
+    private Boolean allowFormatCells;
     /** Represents the worksheet protection option of allowing formatting columns. */
-    private Boolean _allowFormatColumns;
+    private Boolean allowFormatColumns;
     /** Represents the worksheet protection option of allowing formatting rows. */
-    private Boolean _allowFormatRows;
+    private Boolean allowFormatRows;
     /** Represents the worksheet protection option of allowing inserting columns. */
-    private Boolean _allowInsertColumns;
+    private Boolean allowInsertColumns;
     /** Represents the worksheet protection option of allowing inserting hyperlinks. */
-    private Boolean _allowInsertHyperlinks;
+    private Boolean allowInsertHyperlinks;
     /** Represents the worksheet protection option of allowing inserting rows. */
-    private Boolean _allowInsertRows;
+    private Boolean allowInsertRows;
     /** Represents the worksheet protection option of allowing using pivot table feature. */
-    private Boolean _allowPivotTables;
+    private Boolean allowPivotTables;
     /** Represents the worksheet protection option of allowing using sort feature. */
-    private Boolean _allowSort;
+    private Boolean allowSort;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new workbookWorksheetProtectionOptions and sets the default values.
      * @return a void
@@ -59,7 +58,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the allowAutoFilter property value. Represents the worksheet protection option of allowing using auto filter feature.
@@ -67,7 +66,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Boolean getAllowAutoFilter() {
-        return this._allowAutoFilter;
+        return this.allowAutoFilter;
     }
     /**
      * Gets the allowDeleteColumns property value. Represents the worksheet protection option of allowing deleting columns.
@@ -75,7 +74,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Boolean getAllowDeleteColumns() {
-        return this._allowDeleteColumns;
+        return this.allowDeleteColumns;
     }
     /**
      * Gets the allowDeleteRows property value. Represents the worksheet protection option of allowing deleting rows.
@@ -83,7 +82,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Boolean getAllowDeleteRows() {
-        return this._allowDeleteRows;
+        return this.allowDeleteRows;
     }
     /**
      * Gets the allowFormatCells property value. Represents the worksheet protection option of allowing formatting cells.
@@ -91,7 +90,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Boolean getAllowFormatCells() {
-        return this._allowFormatCells;
+        return this.allowFormatCells;
     }
     /**
      * Gets the allowFormatColumns property value. Represents the worksheet protection option of allowing formatting columns.
@@ -99,7 +98,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Boolean getAllowFormatColumns() {
-        return this._allowFormatColumns;
+        return this.allowFormatColumns;
     }
     /**
      * Gets the allowFormatRows property value. Represents the worksheet protection option of allowing formatting rows.
@@ -107,7 +106,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Boolean getAllowFormatRows() {
-        return this._allowFormatRows;
+        return this.allowFormatRows;
     }
     /**
      * Gets the allowInsertColumns property value. Represents the worksheet protection option of allowing inserting columns.
@@ -115,7 +114,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Boolean getAllowInsertColumns() {
-        return this._allowInsertColumns;
+        return this.allowInsertColumns;
     }
     /**
      * Gets the allowInsertHyperlinks property value. Represents the worksheet protection option of allowing inserting hyperlinks.
@@ -123,7 +122,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Boolean getAllowInsertHyperlinks() {
-        return this._allowInsertHyperlinks;
+        return this.allowInsertHyperlinks;
     }
     /**
      * Gets the allowInsertRows property value. Represents the worksheet protection option of allowing inserting rows.
@@ -131,7 +130,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Boolean getAllowInsertRows() {
-        return this._allowInsertRows;
+        return this.allowInsertRows;
     }
     /**
      * Gets the allowPivotTables property value. Represents the worksheet protection option of allowing using pivot table feature.
@@ -139,7 +138,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Boolean getAllowPivotTables() {
-        return this._allowPivotTables;
+        return this.allowPivotTables;
     }
     /**
      * Gets the allowSort property value. Represents the worksheet protection option of allowing using sort feature.
@@ -147,15 +146,15 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Boolean getAllowSort() {
-        return this._allowSort;
+        return this.allowSort;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(12);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("allowAutoFilter", (n) -> { this.setAllowAutoFilter(n.getBooleanValue()); });
         deserializerMap.put("allowDeleteColumns", (n) -> { this.setAllowDeleteColumns(n.getBooleanValue()); });
         deserializerMap.put("allowDeleteRows", (n) -> { this.setAllowDeleteRows(n.getBooleanValue()); });
@@ -176,7 +175,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -207,7 +206,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the allowAutoFilter property value. Represents the worksheet protection option of allowing using auto filter feature.
@@ -216,7 +215,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setAllowAutoFilter(@javax.annotation.Nullable final Boolean value) {
-        this._allowAutoFilter = value;
+        this.allowAutoFilter = value;
     }
     /**
      * Sets the allowDeleteColumns property value. Represents the worksheet protection option of allowing deleting columns.
@@ -225,7 +224,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setAllowDeleteColumns(@javax.annotation.Nullable final Boolean value) {
-        this._allowDeleteColumns = value;
+        this.allowDeleteColumns = value;
     }
     /**
      * Sets the allowDeleteRows property value. Represents the worksheet protection option of allowing deleting rows.
@@ -234,7 +233,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setAllowDeleteRows(@javax.annotation.Nullable final Boolean value) {
-        this._allowDeleteRows = value;
+        this.allowDeleteRows = value;
     }
     /**
      * Sets the allowFormatCells property value. Represents the worksheet protection option of allowing formatting cells.
@@ -243,7 +242,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setAllowFormatCells(@javax.annotation.Nullable final Boolean value) {
-        this._allowFormatCells = value;
+        this.allowFormatCells = value;
     }
     /**
      * Sets the allowFormatColumns property value. Represents the worksheet protection option of allowing formatting columns.
@@ -252,7 +251,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setAllowFormatColumns(@javax.annotation.Nullable final Boolean value) {
-        this._allowFormatColumns = value;
+        this.allowFormatColumns = value;
     }
     /**
      * Sets the allowFormatRows property value. Represents the worksheet protection option of allowing formatting rows.
@@ -261,7 +260,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setAllowFormatRows(@javax.annotation.Nullable final Boolean value) {
-        this._allowFormatRows = value;
+        this.allowFormatRows = value;
     }
     /**
      * Sets the allowInsertColumns property value. Represents the worksheet protection option of allowing inserting columns.
@@ -270,7 +269,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setAllowInsertColumns(@javax.annotation.Nullable final Boolean value) {
-        this._allowInsertColumns = value;
+        this.allowInsertColumns = value;
     }
     /**
      * Sets the allowInsertHyperlinks property value. Represents the worksheet protection option of allowing inserting hyperlinks.
@@ -279,7 +278,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setAllowInsertHyperlinks(@javax.annotation.Nullable final Boolean value) {
-        this._allowInsertHyperlinks = value;
+        this.allowInsertHyperlinks = value;
     }
     /**
      * Sets the allowInsertRows property value. Represents the worksheet protection option of allowing inserting rows.
@@ -288,7 +287,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setAllowInsertRows(@javax.annotation.Nullable final Boolean value) {
-        this._allowInsertRows = value;
+        this.allowInsertRows = value;
     }
     /**
      * Sets the allowPivotTables property value. Represents the worksheet protection option of allowing using pivot table feature.
@@ -297,7 +296,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setAllowPivotTables(@javax.annotation.Nullable final Boolean value) {
-        this._allowPivotTables = value;
+        this.allowPivotTables = value;
     }
     /**
      * Sets the allowSort property value. Represents the worksheet protection option of allowing using sort feature.
@@ -306,7 +305,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setAllowSort(@javax.annotation.Nullable final Boolean value) {
-        this._allowSort = value;
+        this.allowSort = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -315,6 +314,6 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

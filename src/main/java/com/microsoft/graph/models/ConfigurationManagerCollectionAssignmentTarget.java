@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable {
     /** The collection Id that is the target of the assignment. */
-    private String _collectionId;
+    private String collectionId;
     /**
      * Instantiates a new ConfigurationManagerCollectionAssignmentTarget and sets the default values.
      * @return a void
@@ -35,15 +34,15 @@ public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndApp
      */
     @javax.annotation.Nullable
     public String getCollectionId() {
-        return this._collectionId;
+        return this.collectionId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("collectionId", (n) -> { this.setCollectionId(n.getStringValue()); });
         return deserializerMap;
     }
@@ -65,6 +64,6 @@ public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndApp
      */
     @javax.annotation.Nonnull
     public void setCollectionId(@javax.annotation.Nullable final String value) {
-        this._collectionId = value;
+        this.collectionId = value;
     }
 }

@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerPlanContainer implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The identifier of the resource that contains the plan. */
-    private String _containerId;
+    private Map<String, Object> additionalData;
+    /** The identifier of the resource that contains the plan. Optional. */
+    private String containerId;
     /** The OdataType property */
-    private String _odataType;
-    /** The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. */
-    private PlannerContainerType _type;
-    /** The full canonical URL of the container. */
-    private String _url;
+    private String odataType;
+    /** The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. Optional. */
+    private PlannerContainerType type;
+    /** The full canonical URL of the container. Optional. */
+    private String url;
     /**
      * Instantiates a new plannerPlanContainer and sets the default values.
      * @return a void
@@ -43,23 +42,23 @@ public class PlannerPlanContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
-     * Gets the containerId property value. The identifier of the resource that contains the plan.
+     * Gets the containerId property value. The identifier of the resource that contains the plan. Optional.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getContainerId() {
-        return this._containerId;
+        return this.containerId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("containerId", (n) -> { this.setContainerId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PlannerContainerType.class)); });
@@ -72,23 +71,23 @@ public class PlannerPlanContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
-     * Gets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster.
+     * Gets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. Optional.
      * @return a plannerContainerType
      */
     @javax.annotation.Nullable
     public PlannerContainerType getType() {
-        return this._type;
+        return this.type;
     }
     /**
-     * Gets the url property value. The full canonical URL of the container.
+     * Gets the url property value. The full canonical URL of the container. Optional.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getUrl() {
-        return this._url;
+        return this.url;
     }
     /**
      * Serializes information the current object
@@ -111,16 +110,16 @@ public class PlannerPlanContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
-     * Sets the containerId property value. The identifier of the resource that contains the plan.
+     * Sets the containerId property value. The identifier of the resource that contains the plan. Optional.
      * @param value Value to set for the containerId property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setContainerId(@javax.annotation.Nullable final String value) {
-        this._containerId = value;
+        this.containerId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -129,24 +128,24 @@ public class PlannerPlanContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
-     * Sets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster.
+     * Sets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. Optional.
      * @param value Value to set for the type property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final PlannerContainerType value) {
-        this._type = value;
+        this.type = value;
     }
     /**
-     * Sets the url property value. The full canonical URL of the container.
+     * Sets the url property value. The full canonical URL of the container. Optional.
      * @param value Value to set for the url property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setUrl(@javax.annotation.Nullable final String value) {
-        this._url = value;
+        this.url = value;
     }
 }

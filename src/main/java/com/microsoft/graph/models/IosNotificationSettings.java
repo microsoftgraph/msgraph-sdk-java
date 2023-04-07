@@ -4,34 +4,35 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** An item describing notification setting. */
+/**
+ * An item describing notification setting.
+ */
 public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Notification Settings Alert Type. */
-    private IosNotificationAlertType _alertType;
+    private IosNotificationAlertType alertType;
     /** Application name to be associated with the bundleID. */
-    private String _appName;
+    private String appName;
     /** Indicates whether badges are allowed for this app. */
-    private Boolean _badgesEnabled;
+    private Boolean badgesEnabled;
     /** Bundle id of app to which to apply these notification settings. */
-    private String _bundleID;
+    private String bundleID;
     /** Indicates whether notifications are allowed for this app. */
-    private Boolean _enabled;
+    private Boolean enabled;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Publisher to be associated with the bundleID. */
-    private String _publisher;
+    private String publisher;
     /** Indicates whether notifications can be shown in notification center. */
-    private Boolean _showInNotificationCenter;
+    private Boolean showInNotificationCenter;
     /** Indicates whether notifications can be shown on the lock screen. */
-    private Boolean _showOnLockScreen;
+    private Boolean showOnLockScreen;
     /** Indicates whether sounds are allowed for this app. */
-    private Boolean _soundsEnabled;
+    private Boolean soundsEnabled;
     /**
      * Instantiates a new iosNotificationSettings and sets the default values.
      * @return a void
@@ -56,7 +57,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the alertType property value. Notification Settings Alert Type.
@@ -64,7 +65,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public IosNotificationAlertType getAlertType() {
-        return this._alertType;
+        return this.alertType;
     }
     /**
      * Gets the appName property value. Application name to be associated with the bundleID.
@@ -72,7 +73,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAppName() {
-        return this._appName;
+        return this.appName;
     }
     /**
      * Gets the badgesEnabled property value. Indicates whether badges are allowed for this app.
@@ -80,7 +81,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getBadgesEnabled() {
-        return this._badgesEnabled;
+        return this.badgesEnabled;
     }
     /**
      * Gets the bundleID property value. Bundle id of app to which to apply these notification settings.
@@ -88,7 +89,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getBundleID() {
-        return this._bundleID;
+        return this.bundleID;
     }
     /**
      * Gets the enabled property value. Indicates whether notifications are allowed for this app.
@@ -96,15 +97,15 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getEnabled() {
-        return this._enabled;
+        return this.enabled;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("alertType", (n) -> { this.setAlertType(n.getEnumValue(IosNotificationAlertType.class)); });
         deserializerMap.put("appName", (n) -> { this.setAppName(n.getStringValue()); });
         deserializerMap.put("badgesEnabled", (n) -> { this.setBadgesEnabled(n.getBooleanValue()); });
@@ -123,7 +124,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the publisher property value. Publisher to be associated with the bundleID.
@@ -131,7 +132,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getPublisher() {
-        return this._publisher;
+        return this.publisher;
     }
     /**
      * Gets the showInNotificationCenter property value. Indicates whether notifications can be shown in notification center.
@@ -139,7 +140,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getShowInNotificationCenter() {
-        return this._showInNotificationCenter;
+        return this.showInNotificationCenter;
     }
     /**
      * Gets the showOnLockScreen property value. Indicates whether notifications can be shown on the lock screen.
@@ -147,7 +148,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getShowOnLockScreen() {
-        return this._showOnLockScreen;
+        return this.showOnLockScreen;
     }
     /**
      * Gets the soundsEnabled property value. Indicates whether sounds are allowed for this app.
@@ -155,7 +156,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getSoundsEnabled() {
-        return this._soundsEnabled;
+        return this.soundsEnabled;
     }
     /**
      * Serializes information the current object
@@ -184,7 +185,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the alertType property value. Notification Settings Alert Type.
@@ -193,7 +194,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAlertType(@javax.annotation.Nullable final IosNotificationAlertType value) {
-        this._alertType = value;
+        this.alertType = value;
     }
     /**
      * Sets the appName property value. Application name to be associated with the bundleID.
@@ -202,7 +203,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppName(@javax.annotation.Nullable final String value) {
-        this._appName = value;
+        this.appName = value;
     }
     /**
      * Sets the badgesEnabled property value. Indicates whether badges are allowed for this app.
@@ -211,7 +212,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setBadgesEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._badgesEnabled = value;
+        this.badgesEnabled = value;
     }
     /**
      * Sets the bundleID property value. Bundle id of app to which to apply these notification settings.
@@ -220,7 +221,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setBundleID(@javax.annotation.Nullable final String value) {
-        this._bundleID = value;
+        this.bundleID = value;
     }
     /**
      * Sets the enabled property value. Indicates whether notifications are allowed for this app.
@@ -229,7 +230,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._enabled = value;
+        this.enabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -238,7 +239,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the publisher property value. Publisher to be associated with the bundleID.
@@ -247,7 +248,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
-        this._publisher = value;
+        this.publisher = value;
     }
     /**
      * Sets the showInNotificationCenter property value. Indicates whether notifications can be shown in notification center.
@@ -256,7 +257,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setShowInNotificationCenter(@javax.annotation.Nullable final Boolean value) {
-        this._showInNotificationCenter = value;
+        this.showInNotificationCenter = value;
     }
     /**
      * Sets the showOnLockScreen property value. Indicates whether notifications can be shown on the lock screen.
@@ -265,7 +266,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setShowOnLockScreen(@javax.annotation.Nullable final Boolean value) {
-        this._showOnLockScreen = value;
+        this.showOnLockScreen = value;
     }
     /**
      * Sets the soundsEnabled property value. Indicates whether sounds are allowed for this app.
@@ -274,6 +275,6 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSoundsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._soundsEnabled = value;
+        this.soundsEnabled = value;
     }
 }

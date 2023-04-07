@@ -3,19 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Planner extends Entity implements Parsable {
     /** Read-only. Nullable. Returns a collection of the specified buckets */
-    private java.util.List<PlannerBucket> _buckets;
+    private java.util.List<PlannerBucket> buckets;
     /** Read-only. Nullable. Returns a collection of the specified plans */
-    private java.util.List<PlannerPlan> _plans;
+    private java.util.List<PlannerPlan> plans;
     /** Read-only. Nullable. Returns a collection of the specified tasks */
-    private java.util.List<PlannerTask> _tasks;
+    private java.util.List<PlannerTask> tasks;
     /**
-     * Instantiates a new Planner and sets the default values.
+     * Instantiates a new planner and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -25,7 +24,7 @@ public class Planner extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Planner
+     * @return a planner
      */
     @javax.annotation.Nonnull
     public static Planner createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -38,15 +37,15 @@ public class Planner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PlannerBucket> getBuckets() {
-        return this._buckets;
+        return this.buckets;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("buckets", (n) -> { this.setBuckets(n.getCollectionOfObjectValues(PlannerBucket::createFromDiscriminatorValue)); });
         deserializerMap.put("plans", (n) -> { this.setPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
         deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
@@ -58,7 +57,7 @@ public class Planner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PlannerPlan> getPlans() {
-        return this._plans;
+        return this.plans;
     }
     /**
      * Gets the tasks property value. Read-only. Nullable. Returns a collection of the specified tasks
@@ -66,7 +65,7 @@ public class Planner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PlannerTask> getTasks() {
-        return this._tasks;
+        return this.tasks;
     }
     /**
      * Serializes information the current object
@@ -88,7 +87,7 @@ public class Planner extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setBuckets(@javax.annotation.Nullable final java.util.List<PlannerBucket> value) {
-        this._buckets = value;
+        this.buckets = value;
     }
     /**
      * Sets the plans property value. Read-only. Nullable. Returns a collection of the specified plans
@@ -97,7 +96,7 @@ public class Planner extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPlans(@javax.annotation.Nullable final java.util.List<PlannerPlan> value) {
-        this._plans = value;
+        this.plans = value;
     }
     /**
      * Sets the tasks property value. Read-only. Nullable. Returns a collection of the specified tasks
@@ -106,6 +105,6 @@ public class Planner extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTasks(@javax.annotation.Nullable final java.util.List<PlannerTask> value) {
-        this._tasks = value;
+        this.tasks = value;
     }
 }

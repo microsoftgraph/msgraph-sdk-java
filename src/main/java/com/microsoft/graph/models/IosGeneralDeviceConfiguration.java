@@ -3,273 +3,272 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
     /** Indicates whether or not to allow account modification when the device is in supervised mode. */
-    private Boolean _accountBlockModification;
+    private Boolean accountBlockModification;
     /** Indicates whether or not to allow activation lock when the device is in the supervised mode. */
-    private Boolean _activationLockAllowWhenSupervised;
+    private Boolean activationLockAllowWhenSupervised;
     /** Indicates whether or not to allow AirDrop when the device is in supervised mode. */
-    private Boolean _airDropBlocked;
+    private Boolean airDropBlocked;
     /** Indicates whether or not to cause AirDrop to be considered an unmanaged drop target (iOS 9.0 and later). */
-    private Boolean _airDropForceUnmanagedDropTarget;
+    private Boolean airDropForceUnmanagedDropTarget;
     /** Indicates whether or not to enforce all devices receiving AirPlay requests from this device to use a pairing password. */
-    private Boolean _airPlayForcePairingPasswordForOutgoingRequests;
+    private Boolean airPlayForcePairingPasswordForOutgoingRequests;
     /** Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later). */
-    private Boolean _appleNewsBlocked;
+    private Boolean appleNewsBlocked;
     /** Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later). */
-    private Boolean _appleWatchBlockPairing;
+    private Boolean appleWatchBlockPairing;
     /** Indicates whether or not to force a paired Apple Watch to use Wrist Detection (iOS 8.2 and later). */
-    private Boolean _appleWatchForceWristDetection;
+    private Boolean appleWatchForceWristDetection;
     /** Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later. This collection can contain a maximum of 500 elements. */
-    private java.util.List<AppListItem> _appsSingleAppModeList;
+    private java.util.List<AppListItem> appsSingleAppModeList;
     /** Indicates whether or not to block the automatic downloading of apps purchased on other devices when the device is in supervised mode (iOS 9.0 and later). */
-    private Boolean _appStoreBlockAutomaticDownloads;
+    private Boolean appStoreBlockAutomaticDownloads;
     /** Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later. */
-    private Boolean _appStoreBlocked;
+    private Boolean appStoreBlocked;
     /** Indicates whether or not to block the user from making in app purchases. */
-    private Boolean _appStoreBlockInAppPurchases;
+    private Boolean appStoreBlockInAppPurchases;
     /** Indicates whether or not to block the App Store app, not restricting installation through Host apps. Applies to supervised mode only (iOS 9.0 and later). */
-    private Boolean _appStoreBlockUIAppInstallation;
+    private Boolean appStoreBlockUIAppInstallation;
     /** Indicates whether or not to require a password when using the app store. */
-    private Boolean _appStoreRequirePassword;
+    private Boolean appStoreRequirePassword;
     /** List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements. */
-    private java.util.List<AppListItem> _appsVisibilityList;
+    private java.util.List<AppListItem> appsVisibilityList;
     /** Possible values of the compliance app list. */
-    private AppListType _appsVisibilityListType;
+    private AppListType appsVisibilityListType;
     /** Indicates whether or not to allow modification of Bluetooth settings when the device is in supervised mode (iOS 10.0 and later). */
-    private Boolean _bluetoothBlockModification;
+    private Boolean bluetoothBlockModification;
     /** Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later. */
-    private Boolean _cameraBlocked;
+    private Boolean cameraBlocked;
     /** Indicates whether or not to block data roaming. */
-    private Boolean _cellularBlockDataRoaming;
+    private Boolean cellularBlockDataRoaming;
     /** Indicates whether or not to block global background fetch while roaming. */
-    private Boolean _cellularBlockGlobalBackgroundFetchWhileRoaming;
+    private Boolean cellularBlockGlobalBackgroundFetchWhileRoaming;
     /** Indicates whether or not to allow changes to cellular app data usage settings when the device is in supervised mode. */
-    private Boolean _cellularBlockPerAppDataModification;
+    private Boolean cellularBlockPerAppDataModification;
     /** Indicates whether or not to block Personal Hotspot. */
-    private Boolean _cellularBlockPersonalHotspot;
+    private Boolean cellularBlockPersonalHotspot;
     /** Indicates whether or not to block voice roaming. */
-    private Boolean _cellularBlockVoiceRoaming;
+    private Boolean cellularBlockVoiceRoaming;
     /** Indicates whether or not to block untrusted TLS certificates. */
-    private Boolean _certificatesBlockUntrustedTlsCertificates;
+    private Boolean certificatesBlockUntrustedTlsCertificates;
     /** Indicates whether or not to allow remote screen observation by Classroom app when the device is in supervised mode (iOS 9.3 and later). */
-    private Boolean _classroomAppBlockRemoteScreenObservation;
+    private Boolean classroomAppBlockRemoteScreenObservation;
     /** Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode. */
-    private Boolean _classroomAppForceUnpromptedScreenObservation;
+    private Boolean classroomAppForceUnpromptedScreenObservation;
     /** Possible values of the compliance app list. */
-    private AppListType _compliantAppListType;
+    private AppListType compliantAppListType;
     /** List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements. */
-    private java.util.List<AppListItem> _compliantAppsList;
+    private java.util.List<AppListItem> compliantAppsList;
     /** Indicates whether or not to block the user from installing configuration profiles and certificates interactively when the device is in supervised mode. */
-    private Boolean _configurationProfileBlockChanges;
+    private Boolean configurationProfileBlockChanges;
     /** Indicates whether or not to block definition lookup when the device is in supervised mode (iOS 8.1.3 and later ). */
-    private Boolean _definitionLookupBlocked;
+    private Boolean definitionLookupBlocked;
     /** Indicates whether or not to allow the user to enables restrictions in the device settings when the device is in supervised mode. */
-    private Boolean _deviceBlockEnableRestrictions;
+    private Boolean deviceBlockEnableRestrictions;
     /** Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode. */
-    private Boolean _deviceBlockEraseContentAndSettings;
+    private Boolean deviceBlockEraseContentAndSettings;
     /** Indicates whether or not to allow device name modification when the device is in supervised mode (iOS 9.0 and later). */
-    private Boolean _deviceBlockNameModification;
+    private Boolean deviceBlockNameModification;
     /** Indicates whether or not to block diagnostic data submission. */
-    private Boolean _diagnosticDataBlockSubmission;
+    private Boolean diagnosticDataBlockSubmission;
     /** Indicates whether or not to allow diagnostics submission settings modification when the device is in supervised mode (iOS 9.3.2 and later). */
-    private Boolean _diagnosticDataBlockSubmissionModification;
+    private Boolean diagnosticDataBlockSubmissionModification;
     /** Indicates whether or not to block the user from viewing managed documents in unmanaged apps. */
-    private Boolean _documentsBlockManagedDocumentsInUnmanagedApps;
+    private Boolean documentsBlockManagedDocumentsInUnmanagedApps;
     /** Indicates whether or not to block the user from viewing unmanaged documents in managed apps. */
-    private Boolean _documentsBlockUnmanagedDocumentsInManagedApps;
+    private Boolean documentsBlockUnmanagedDocumentsInManagedApps;
     /** An email address lacking a suffix that matches any of these strings will be considered out-of-domain. */
-    private java.util.List<String> _emailInDomainSuffixes;
+    private java.util.List<String> emailInDomainSuffixes;
     /** Indicates whether or not to block the user from trusting an enterprise app. */
-    private Boolean _enterpriseAppBlockTrust;
+    private Boolean enterpriseAppBlockTrust;
     /** [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device. */
-    private Boolean _enterpriseAppBlockTrustModification;
+    private Boolean enterpriseAppBlockTrustModification;
     /** Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later. */
-    private Boolean _faceTimeBlocked;
+    private Boolean faceTimeBlocked;
     /** Indicates whether or not to block changes to Find My Friends when the device is in supervised mode. */
-    private Boolean _findMyFriendsBlocked;
+    private Boolean findMyFriendsBlocked;
     /** Indicates whether or not to block the user from using Game Center when the device is in supervised mode. */
-    private Boolean _gameCenterBlocked;
+    private Boolean gameCenterBlocked;
     /** Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later. */
-    private Boolean _gamingBlockGameCenterFriends;
+    private Boolean gamingBlockGameCenterFriends;
     /** Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later. */
-    private Boolean _gamingBlockMultiplayer;
+    private Boolean gamingBlockMultiplayer;
     /** indicates whether or not to allow host pairing to control the devices an iOS device can pair with when the iOS device is in supervised mode. */
-    private Boolean _hostPairingBlocked;
+    private Boolean hostPairingBlocked;
     /** Indicates whether or not to block the user from using the iBooks Store when the device is in supervised mode. */
-    private Boolean _iBooksStoreBlocked;
+    private Boolean iBooksStoreBlocked;
     /** Indicates whether or not to block the user from downloading media from the iBookstore that has been tagged as erotica. */
-    private Boolean _iBooksStoreBlockErotica;
+    private Boolean iBooksStoreBlockErotica;
     /** Indicates whether or not to block the user from continuing work they started on iOS device to another iOS or macOS device. */
-    private Boolean _iCloudBlockActivityContinuation;
+    private Boolean iCloudBlockActivityContinuation;
     /** Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later. */
-    private Boolean _iCloudBlockBackup;
+    private Boolean iCloudBlockBackup;
     /** Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later. */
-    private Boolean _iCloudBlockDocumentSync;
+    private Boolean iCloudBlockDocumentSync;
     /** Indicates whether or not to block Managed Apps Cloud Sync. */
-    private Boolean _iCloudBlockManagedAppsSync;
+    private Boolean iCloudBlockManagedAppsSync;
     /** Indicates whether or not to block iCloud Photo Library. */
-    private Boolean _iCloudBlockPhotoLibrary;
+    private Boolean iCloudBlockPhotoLibrary;
     /** Indicates whether or not to block iCloud Photo Stream Sync. */
-    private Boolean _iCloudBlockPhotoStreamSync;
+    private Boolean iCloudBlockPhotoStreamSync;
     /** Indicates whether or not to block Shared Photo Stream. */
-    private Boolean _iCloudBlockSharedPhotoStream;
+    private Boolean iCloudBlockSharedPhotoStream;
     /** Indicates whether or not to require backups to iCloud be encrypted. */
-    private Boolean _iCloudRequireEncryptedBackup;
+    private Boolean iCloudRequireEncryptedBackup;
     /** Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later. */
-    private Boolean _iTunesBlockExplicitContent;
+    private Boolean iTunesBlockExplicitContent;
     /** Indicates whether or not to block Music service and revert Music app to classic mode when the device is in supervised mode (iOS 9.3 and later and macOS 10.12 and later). */
-    private Boolean _iTunesBlockMusicService;
+    private Boolean iTunesBlockMusicService;
     /** Indicates whether or not to block the user from using iTunes Radio when the device is in supervised mode (iOS 9.3 and later). */
-    private Boolean _iTunesBlockRadio;
+    private Boolean iTunesBlockRadio;
     /** Indicates whether or not to block keyboard auto-correction when the device is in supervised mode (iOS 8.1.3 and later). */
-    private Boolean _keyboardBlockAutoCorrect;
+    private Boolean keyboardBlockAutoCorrect;
     /** Indicates whether or not to block the user from using dictation input when the device is in supervised mode. */
-    private Boolean _keyboardBlockDictation;
+    private Boolean keyboardBlockDictation;
     /** Indicates whether or not to block predictive keyboards when device is in supervised mode (iOS 8.1.3 and later). */
-    private Boolean _keyboardBlockPredictive;
+    private Boolean keyboardBlockPredictive;
     /** Indicates whether or not to block keyboard shortcuts when the device is in supervised mode (iOS 9.0 and later). */
-    private Boolean _keyboardBlockShortcuts;
+    private Boolean keyboardBlockShortcuts;
     /** Indicates whether or not to block keyboard spell-checking when the device is in supervised mode (iOS 8.1.3 and later). */
-    private Boolean _keyboardBlockSpellCheck;
+    private Boolean keyboardBlockSpellCheck;
     /** Indicates whether or not to allow assistive speak while in kiosk mode. */
-    private Boolean _kioskModeAllowAssistiveSpeak;
+    private Boolean kioskModeAllowAssistiveSpeak;
     /** Indicates whether or not to allow access to the Assistive Touch Settings while in kiosk mode. */
-    private Boolean _kioskModeAllowAssistiveTouchSettings;
+    private Boolean kioskModeAllowAssistiveTouchSettings;
     /** Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead. */
-    private Boolean _kioskModeAllowAutoLock;
+    private Boolean kioskModeAllowAutoLock;
     /** Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode. */
-    private Boolean _kioskModeAllowColorInversionSettings;
+    private Boolean kioskModeAllowColorInversionSettings;
     /** Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead. */
-    private Boolean _kioskModeAllowRingerSwitch;
+    private Boolean kioskModeAllowRingerSwitch;
     /** Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead. */
-    private Boolean _kioskModeAllowScreenRotation;
+    private Boolean kioskModeAllowScreenRotation;
     /** Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead. */
-    private Boolean _kioskModeAllowSleepButton;
+    private Boolean kioskModeAllowSleepButton;
     /** Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead. */
-    private Boolean _kioskModeAllowTouchscreen;
+    private Boolean kioskModeAllowTouchscreen;
     /** Indicates whether or not to allow access to the voice over settings while in kiosk mode. */
-    private Boolean _kioskModeAllowVoiceOverSettings;
+    private Boolean kioskModeAllowVoiceOverSettings;
     /** Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead. */
-    private Boolean _kioskModeAllowVolumeButtons;
+    private Boolean kioskModeAllowVolumeButtons;
     /** Indicates whether or not to allow access to the zoom settings while in kiosk mode. */
-    private Boolean _kioskModeAllowZoomSettings;
+    private Boolean kioskModeAllowZoomSettings;
     /** URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known. */
-    private String _kioskModeAppStoreUrl;
+    private String kioskModeAppStoreUrl;
     /** ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set. */
-    private String _kioskModeBuiltInAppId;
+    private String kioskModeBuiltInAppId;
     /** Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored. */
-    private String _kioskModeManagedAppId;
+    private String kioskModeManagedAppId;
     /** Indicates whether or not to require assistive touch while in kiosk mode. */
-    private Boolean _kioskModeRequireAssistiveTouch;
+    private Boolean kioskModeRequireAssistiveTouch;
     /** Indicates whether or not to require color inversion while in kiosk mode. */
-    private Boolean _kioskModeRequireColorInversion;
+    private Boolean kioskModeRequireColorInversion;
     /** Indicates whether or not to require mono audio while in kiosk mode. */
-    private Boolean _kioskModeRequireMonoAudio;
+    private Boolean kioskModeRequireMonoAudio;
     /** Indicates whether or not to require voice over while in kiosk mode. */
-    private Boolean _kioskModeRequireVoiceOver;
+    private Boolean kioskModeRequireVoiceOver;
     /** Indicates whether or not to require zoom while in kiosk mode. */
-    private Boolean _kioskModeRequireZoom;
+    private Boolean kioskModeRequireZoom;
     /** Indicates whether or not to block the user from using control center on the lock screen. */
-    private Boolean _lockScreenBlockControlCenter;
+    private Boolean lockScreenBlockControlCenter;
     /** Indicates whether or not to block the user from using the notification view on the lock screen. */
-    private Boolean _lockScreenBlockNotificationView;
+    private Boolean lockScreenBlockNotificationView;
     /** Indicates whether or not to block the user from using passbook when the device is locked. */
-    private Boolean _lockScreenBlockPassbook;
+    private Boolean lockScreenBlockPassbook;
     /** Indicates whether or not to block the user from using the Today View on the lock screen. */
-    private Boolean _lockScreenBlockTodayView;
+    private Boolean lockScreenBlockTodayView;
     /** Apps rating as in media content */
-    private RatingAppsType _mediaContentRatingApps;
+    private RatingAppsType mediaContentRatingApps;
     /** Media content rating settings for Australia */
-    private MediaContentRatingAustralia _mediaContentRatingAustralia;
+    private MediaContentRatingAustralia mediaContentRatingAustralia;
     /** Media content rating settings for Canada */
-    private MediaContentRatingCanada _mediaContentRatingCanada;
+    private MediaContentRatingCanada mediaContentRatingCanada;
     /** Media content rating settings for France */
-    private MediaContentRatingFrance _mediaContentRatingFrance;
+    private MediaContentRatingFrance mediaContentRatingFrance;
     /** Media content rating settings for Germany */
-    private MediaContentRatingGermany _mediaContentRatingGermany;
+    private MediaContentRatingGermany mediaContentRatingGermany;
     /** Media content rating settings for Ireland */
-    private MediaContentRatingIreland _mediaContentRatingIreland;
+    private MediaContentRatingIreland mediaContentRatingIreland;
     /** Media content rating settings for Japan */
-    private MediaContentRatingJapan _mediaContentRatingJapan;
+    private MediaContentRatingJapan mediaContentRatingJapan;
     /** Media content rating settings for New Zealand */
-    private MediaContentRatingNewZealand _mediaContentRatingNewZealand;
+    private MediaContentRatingNewZealand mediaContentRatingNewZealand;
     /** Media content rating settings for United Kingdom */
-    private MediaContentRatingUnitedKingdom _mediaContentRatingUnitedKingdom;
+    private MediaContentRatingUnitedKingdom mediaContentRatingUnitedKingdom;
     /** Media content rating settings for United States */
-    private MediaContentRatingUnitedStates _mediaContentRatingUnitedStates;
+    private MediaContentRatingUnitedStates mediaContentRatingUnitedStates;
     /** Indicates whether or not to block the user from using the Messages app on the supervised device. */
-    private Boolean _messagesBlocked;
+    private Boolean messagesBlocked;
     /** List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements. */
-    private java.util.List<IosNetworkUsageRule> _networkUsageRules;
+    private java.util.List<IosNetworkUsageRule> networkUsageRules;
     /** Indicates whether or not to allow notifications settings modification (iOS 9.3 and later). */
-    private Boolean _notificationsBlockSettingsModification;
+    private Boolean notificationsBlockSettingsModification;
     /** Block modification of registered Touch ID fingerprints when in supervised mode. */
-    private Boolean _passcodeBlockFingerprintModification;
+    private Boolean passcodeBlockFingerprintModification;
     /** Indicates whether or not to block fingerprint unlock. */
-    private Boolean _passcodeBlockFingerprintUnlock;
+    private Boolean passcodeBlockFingerprintUnlock;
     /** Indicates whether or not to allow passcode modification on the supervised device (iOS 9.0 and later). */
-    private Boolean _passcodeBlockModification;
+    private Boolean passcodeBlockModification;
     /** Indicates whether or not to block simple passcodes. */
-    private Boolean _passcodeBlockSimple;
+    private Boolean passcodeBlockSimple;
     /** Number of days before the passcode expires. Valid values 1 to 65535 */
-    private Integer _passcodeExpirationDays;
+    private Integer passcodeExpirationDays;
     /** Number of character sets a passcode must contain. Valid values 0 to 4 */
-    private Integer _passcodeMinimumCharacterSetCount;
+    private Integer passcodeMinimumCharacterSetCount;
     /** Minimum length of passcode. Valid values 4 to 14 */
-    private Integer _passcodeMinimumLength;
+    private Integer passcodeMinimumLength;
     /** Minutes of inactivity before a passcode is required. */
-    private Integer _passcodeMinutesOfInactivityBeforeLock;
+    private Integer passcodeMinutesOfInactivityBeforeLock;
     /** Minutes of inactivity before the screen times out. */
-    private Integer _passcodeMinutesOfInactivityBeforeScreenTimeout;
+    private Integer passcodeMinutesOfInactivityBeforeScreenTimeout;
     /** Number of previous passcodes to block. Valid values 1 to 24 */
-    private Integer _passcodePreviousPasscodeBlockCount;
+    private Integer passcodePreviousPasscodeBlockCount;
     /** Indicates whether or not to require a passcode. */
-    private Boolean _passcodeRequired;
+    private Boolean passcodeRequired;
     /** Possible values of required passwords. */
-    private RequiredPasswordType _passcodeRequiredType;
+    private RequiredPasswordType passcodeRequiredType;
     /** Number of sign in failures allowed before wiping the device. Valid values 2 to 11 */
-    private Integer _passcodeSignInFailureCountBeforeWipe;
+    private Integer passcodeSignInFailureCountBeforeWipe;
     /** Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later). */
-    private Boolean _podcastsBlocked;
+    private Boolean podcastsBlocked;
     /** Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later. */
-    private Boolean _safariBlockAutofill;
+    private Boolean safariBlockAutofill;
     /** Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later. */
-    private Boolean _safariBlocked;
+    private Boolean safariBlocked;
     /** Indicates whether or not to block JavaScript in Safari. */
-    private Boolean _safariBlockJavaScript;
+    private Boolean safariBlockJavaScript;
     /** Indicates whether or not to block popups in Safari. */
-    private Boolean _safariBlockPopups;
+    private Boolean safariBlockPopups;
     /** Web Browser Cookie Settings. */
-    private WebBrowserCookieSettings _safariCookieSettings;
+    private WebBrowserCookieSettings safariCookieSettings;
     /** URLs matching the patterns listed here will be considered managed. */
-    private java.util.List<String> _safariManagedDomains;
+    private java.util.List<String> safariManagedDomains;
     /** Users can save passwords in Safari only from URLs matching the patterns listed here. Applies to devices in supervised mode (iOS 9.3 and later). */
-    private java.util.List<String> _safariPasswordAutoFillDomains;
+    private java.util.List<String> safariPasswordAutoFillDomains;
     /** Indicates whether or not to require fraud warning in Safari. */
-    private Boolean _safariRequireFraudWarning;
+    private Boolean safariRequireFraudWarning;
     /** Indicates whether or not to block the user from taking Screenshots. */
-    private Boolean _screenCaptureBlocked;
+    private Boolean screenCaptureBlocked;
     /** Indicates whether or not to block the user from using Siri. */
-    private Boolean _siriBlocked;
+    private Boolean siriBlocked;
     /** Indicates whether or not to block the user from using Siri when locked. */
-    private Boolean _siriBlockedWhenLocked;
+    private Boolean siriBlockedWhenLocked;
     /** Indicates whether or not to block Siri from querying user-generated content when used on a supervised device. */
-    private Boolean _siriBlockUserGeneratedContent;
+    private Boolean siriBlockUserGeneratedContent;
     /** Indicates whether or not to prevent Siri from dictating, or speaking profane language on supervised device. */
-    private Boolean _siriRequireProfanityFilter;
+    private Boolean siriRequireProfanityFilter;
     /** Indicates whether or not to block Spotlight search from returning internet results on supervised device. */
-    private Boolean _spotlightBlockInternetResults;
+    private Boolean spotlightBlockInternetResults;
     /** Indicates whether or not to block voice dialing. */
-    private Boolean _voiceDialingBlocked;
+    private Boolean voiceDialingBlocked;
     /** Indicates whether or not to allow wallpaper modification on supervised device (iOS 9.0 and later) . */
-    private Boolean _wallpaperBlockModification;
+    private Boolean wallpaperBlockModification;
     /** Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced. */
-    private Boolean _wiFiConnectOnlyToConfiguredNetworks;
+    private Boolean wiFiConnectOnlyToConfiguredNetworks;
     /**
      * Instantiates a new IosGeneralDeviceConfiguration and sets the default values.
      * @return a void
@@ -295,7 +294,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getAccountBlockModification() {
-        return this._accountBlockModification;
+        return this.accountBlockModification;
     }
     /**
      * Gets the activationLockAllowWhenSupervised property value. Indicates whether or not to allow activation lock when the device is in the supervised mode.
@@ -303,7 +302,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getActivationLockAllowWhenSupervised() {
-        return this._activationLockAllowWhenSupervised;
+        return this.activationLockAllowWhenSupervised;
     }
     /**
      * Gets the airDropBlocked property value. Indicates whether or not to allow AirDrop when the device is in supervised mode.
@@ -311,7 +310,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getAirDropBlocked() {
-        return this._airDropBlocked;
+        return this.airDropBlocked;
     }
     /**
      * Gets the airDropForceUnmanagedDropTarget property value. Indicates whether or not to cause AirDrop to be considered an unmanaged drop target (iOS 9.0 and later).
@@ -319,7 +318,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getAirDropForceUnmanagedDropTarget() {
-        return this._airDropForceUnmanagedDropTarget;
+        return this.airDropForceUnmanagedDropTarget;
     }
     /**
      * Gets the airPlayForcePairingPasswordForOutgoingRequests property value. Indicates whether or not to enforce all devices receiving AirPlay requests from this device to use a pairing password.
@@ -327,7 +326,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getAirPlayForcePairingPasswordForOutgoingRequests() {
-        return this._airPlayForcePairingPasswordForOutgoingRequests;
+        return this.airPlayForcePairingPasswordForOutgoingRequests;
     }
     /**
      * Gets the appleNewsBlocked property value. Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
@@ -335,7 +334,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getAppleNewsBlocked() {
-        return this._appleNewsBlocked;
+        return this.appleNewsBlocked;
     }
     /**
      * Gets the appleWatchBlockPairing property value. Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
@@ -343,7 +342,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getAppleWatchBlockPairing() {
-        return this._appleWatchBlockPairing;
+        return this.appleWatchBlockPairing;
     }
     /**
      * Gets the appleWatchForceWristDetection property value. Indicates whether or not to force a paired Apple Watch to use Wrist Detection (iOS 8.2 and later).
@@ -351,7 +350,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getAppleWatchForceWristDetection() {
-        return this._appleWatchForceWristDetection;
+        return this.appleWatchForceWristDetection;
     }
     /**
      * Gets the appsSingleAppModeList property value. Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later. This collection can contain a maximum of 500 elements.
@@ -359,7 +358,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public java.util.List<AppListItem> getAppsSingleAppModeList() {
-        return this._appsSingleAppModeList;
+        return this.appsSingleAppModeList;
     }
     /**
      * Gets the appStoreBlockAutomaticDownloads property value. Indicates whether or not to block the automatic downloading of apps purchased on other devices when the device is in supervised mode (iOS 9.0 and later).
@@ -367,7 +366,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getAppStoreBlockAutomaticDownloads() {
-        return this._appStoreBlockAutomaticDownloads;
+        return this.appStoreBlockAutomaticDownloads;
     }
     /**
      * Gets the appStoreBlocked property value. Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
@@ -375,7 +374,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getAppStoreBlocked() {
-        return this._appStoreBlocked;
+        return this.appStoreBlocked;
     }
     /**
      * Gets the appStoreBlockInAppPurchases property value. Indicates whether or not to block the user from making in app purchases.
@@ -383,7 +382,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getAppStoreBlockInAppPurchases() {
-        return this._appStoreBlockInAppPurchases;
+        return this.appStoreBlockInAppPurchases;
     }
     /**
      * Gets the appStoreBlockUIAppInstallation property value. Indicates whether or not to block the App Store app, not restricting installation through Host apps. Applies to supervised mode only (iOS 9.0 and later).
@@ -391,7 +390,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getAppStoreBlockUIAppInstallation() {
-        return this._appStoreBlockUIAppInstallation;
+        return this.appStoreBlockUIAppInstallation;
     }
     /**
      * Gets the appStoreRequirePassword property value. Indicates whether or not to require a password when using the app store.
@@ -399,7 +398,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getAppStoreRequirePassword() {
-        return this._appStoreRequirePassword;
+        return this.appStoreRequirePassword;
     }
     /**
      * Gets the appsVisibilityList property value. List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
@@ -407,7 +406,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public java.util.List<AppListItem> getAppsVisibilityList() {
-        return this._appsVisibilityList;
+        return this.appsVisibilityList;
     }
     /**
      * Gets the appsVisibilityListType property value. Possible values of the compliance app list.
@@ -415,7 +414,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public AppListType getAppsVisibilityListType() {
-        return this._appsVisibilityListType;
+        return this.appsVisibilityListType;
     }
     /**
      * Gets the bluetoothBlockModification property value. Indicates whether or not to allow modification of Bluetooth settings when the device is in supervised mode (iOS 10.0 and later).
@@ -423,7 +422,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getBluetoothBlockModification() {
-        return this._bluetoothBlockModification;
+        return this.bluetoothBlockModification;
     }
     /**
      * Gets the cameraBlocked property value. Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
@@ -431,7 +430,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getCameraBlocked() {
-        return this._cameraBlocked;
+        return this.cameraBlocked;
     }
     /**
      * Gets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
@@ -439,7 +438,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getCellularBlockDataRoaming() {
-        return this._cellularBlockDataRoaming;
+        return this.cellularBlockDataRoaming;
     }
     /**
      * Gets the cellularBlockGlobalBackgroundFetchWhileRoaming property value. Indicates whether or not to block global background fetch while roaming.
@@ -447,7 +446,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getCellularBlockGlobalBackgroundFetchWhileRoaming() {
-        return this._cellularBlockGlobalBackgroundFetchWhileRoaming;
+        return this.cellularBlockGlobalBackgroundFetchWhileRoaming;
     }
     /**
      * Gets the cellularBlockPerAppDataModification property value. Indicates whether or not to allow changes to cellular app data usage settings when the device is in supervised mode.
@@ -455,7 +454,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getCellularBlockPerAppDataModification() {
-        return this._cellularBlockPerAppDataModification;
+        return this.cellularBlockPerAppDataModification;
     }
     /**
      * Gets the cellularBlockPersonalHotspot property value. Indicates whether or not to block Personal Hotspot.
@@ -463,7 +462,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getCellularBlockPersonalHotspot() {
-        return this._cellularBlockPersonalHotspot;
+        return this.cellularBlockPersonalHotspot;
     }
     /**
      * Gets the cellularBlockVoiceRoaming property value. Indicates whether or not to block voice roaming.
@@ -471,7 +470,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getCellularBlockVoiceRoaming() {
-        return this._cellularBlockVoiceRoaming;
+        return this.cellularBlockVoiceRoaming;
     }
     /**
      * Gets the certificatesBlockUntrustedTlsCertificates property value. Indicates whether or not to block untrusted TLS certificates.
@@ -479,7 +478,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getCertificatesBlockUntrustedTlsCertificates() {
-        return this._certificatesBlockUntrustedTlsCertificates;
+        return this.certificatesBlockUntrustedTlsCertificates;
     }
     /**
      * Gets the classroomAppBlockRemoteScreenObservation property value. Indicates whether or not to allow remote screen observation by Classroom app when the device is in supervised mode (iOS 9.3 and later).
@@ -487,7 +486,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getClassroomAppBlockRemoteScreenObservation() {
-        return this._classroomAppBlockRemoteScreenObservation;
+        return this.classroomAppBlockRemoteScreenObservation;
     }
     /**
      * Gets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode.
@@ -495,7 +494,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getClassroomAppForceUnpromptedScreenObservation() {
-        return this._classroomAppForceUnpromptedScreenObservation;
+        return this.classroomAppForceUnpromptedScreenObservation;
     }
     /**
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
@@ -503,7 +502,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public AppListType getCompliantAppListType() {
-        return this._compliantAppListType;
+        return this.compliantAppListType;
     }
     /**
      * Gets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
@@ -511,7 +510,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public java.util.List<AppListItem> getCompliantAppsList() {
-        return this._compliantAppsList;
+        return this.compliantAppsList;
     }
     /**
      * Gets the configurationProfileBlockChanges property value. Indicates whether or not to block the user from installing configuration profiles and certificates interactively when the device is in supervised mode.
@@ -519,7 +518,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getConfigurationProfileBlockChanges() {
-        return this._configurationProfileBlockChanges;
+        return this.configurationProfileBlockChanges;
     }
     /**
      * Gets the definitionLookupBlocked property value. Indicates whether or not to block definition lookup when the device is in supervised mode (iOS 8.1.3 and later ).
@@ -527,7 +526,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getDefinitionLookupBlocked() {
-        return this._definitionLookupBlocked;
+        return this.definitionLookupBlocked;
     }
     /**
      * Gets the deviceBlockEnableRestrictions property value. Indicates whether or not to allow the user to enables restrictions in the device settings when the device is in supervised mode.
@@ -535,7 +534,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getDeviceBlockEnableRestrictions() {
-        return this._deviceBlockEnableRestrictions;
+        return this.deviceBlockEnableRestrictions;
     }
     /**
      * Gets the deviceBlockEraseContentAndSettings property value. Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode.
@@ -543,7 +542,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getDeviceBlockEraseContentAndSettings() {
-        return this._deviceBlockEraseContentAndSettings;
+        return this.deviceBlockEraseContentAndSettings;
     }
     /**
      * Gets the deviceBlockNameModification property value. Indicates whether or not to allow device name modification when the device is in supervised mode (iOS 9.0 and later).
@@ -551,7 +550,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getDeviceBlockNameModification() {
-        return this._deviceBlockNameModification;
+        return this.deviceBlockNameModification;
     }
     /**
      * Gets the diagnosticDataBlockSubmission property value. Indicates whether or not to block diagnostic data submission.
@@ -559,7 +558,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getDiagnosticDataBlockSubmission() {
-        return this._diagnosticDataBlockSubmission;
+        return this.diagnosticDataBlockSubmission;
     }
     /**
      * Gets the diagnosticDataBlockSubmissionModification property value. Indicates whether or not to allow diagnostics submission settings modification when the device is in supervised mode (iOS 9.3.2 and later).
@@ -567,7 +566,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getDiagnosticDataBlockSubmissionModification() {
-        return this._diagnosticDataBlockSubmissionModification;
+        return this.diagnosticDataBlockSubmissionModification;
     }
     /**
      * Gets the documentsBlockManagedDocumentsInUnmanagedApps property value. Indicates whether or not to block the user from viewing managed documents in unmanaged apps.
@@ -575,7 +574,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getDocumentsBlockManagedDocumentsInUnmanagedApps() {
-        return this._documentsBlockManagedDocumentsInUnmanagedApps;
+        return this.documentsBlockManagedDocumentsInUnmanagedApps;
     }
     /**
      * Gets the documentsBlockUnmanagedDocumentsInManagedApps property value. Indicates whether or not to block the user from viewing unmanaged documents in managed apps.
@@ -583,7 +582,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getDocumentsBlockUnmanagedDocumentsInManagedApps() {
-        return this._documentsBlockUnmanagedDocumentsInManagedApps;
+        return this.documentsBlockUnmanagedDocumentsInManagedApps;
     }
     /**
      * Gets the emailInDomainSuffixes property value. An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
@@ -591,7 +590,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public java.util.List<String> getEmailInDomainSuffixes() {
-        return this._emailInDomainSuffixes;
+        return this.emailInDomainSuffixes;
     }
     /**
      * Gets the enterpriseAppBlockTrust property value. Indicates whether or not to block the user from trusting an enterprise app.
@@ -599,7 +598,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getEnterpriseAppBlockTrust() {
-        return this._enterpriseAppBlockTrust;
+        return this.enterpriseAppBlockTrust;
     }
     /**
      * Gets the enterpriseAppBlockTrustModification property value. [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
@@ -607,7 +606,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getEnterpriseAppBlockTrustModification() {
-        return this._enterpriseAppBlockTrustModification;
+        return this.enterpriseAppBlockTrustModification;
     }
     /**
      * Gets the faceTimeBlocked property value. Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
@@ -615,15 +614,15 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getFaceTimeBlocked() {
-        return this._faceTimeBlocked;
+        return this.faceTimeBlocked;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountBlockModification", (n) -> { this.setAccountBlockModification(n.getBooleanValue()); });
         deserializerMap.put("activationLockAllowWhenSupervised", (n) -> { this.setActivationLockAllowWhenSupervised(n.getBooleanValue()); });
         deserializerMap.put("airDropBlocked", (n) -> { this.setAirDropBlocked(n.getBooleanValue()); });
@@ -763,7 +762,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getFindMyFriendsBlocked() {
-        return this._findMyFriendsBlocked;
+        return this.findMyFriendsBlocked;
     }
     /**
      * Gets the gameCenterBlocked property value. Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
@@ -771,7 +770,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getGameCenterBlocked() {
-        return this._gameCenterBlocked;
+        return this.gameCenterBlocked;
     }
     /**
      * Gets the gamingBlockGameCenterFriends property value. Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
@@ -779,7 +778,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getGamingBlockGameCenterFriends() {
-        return this._gamingBlockGameCenterFriends;
+        return this.gamingBlockGameCenterFriends;
     }
     /**
      * Gets the gamingBlockMultiplayer property value. Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
@@ -787,7 +786,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getGamingBlockMultiplayer() {
-        return this._gamingBlockMultiplayer;
+        return this.gamingBlockMultiplayer;
     }
     /**
      * Gets the hostPairingBlocked property value. indicates whether or not to allow host pairing to control the devices an iOS device can pair with when the iOS device is in supervised mode.
@@ -795,7 +794,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getHostPairingBlocked() {
-        return this._hostPairingBlocked;
+        return this.hostPairingBlocked;
     }
     /**
      * Gets the iBooksStoreBlocked property value. Indicates whether or not to block the user from using the iBooks Store when the device is in supervised mode.
@@ -803,7 +802,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getIBooksStoreBlocked() {
-        return this._iBooksStoreBlocked;
+        return this.iBooksStoreBlocked;
     }
     /**
      * Gets the iBooksStoreBlockErotica property value. Indicates whether or not to block the user from downloading media from the iBookstore that has been tagged as erotica.
@@ -811,7 +810,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getIBooksStoreBlockErotica() {
-        return this._iBooksStoreBlockErotica;
+        return this.iBooksStoreBlockErotica;
     }
     /**
      * Gets the iCloudBlockActivityContinuation property value. Indicates whether or not to block the user from continuing work they started on iOS device to another iOS or macOS device.
@@ -819,7 +818,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getICloudBlockActivityContinuation() {
-        return this._iCloudBlockActivityContinuation;
+        return this.iCloudBlockActivityContinuation;
     }
     /**
      * Gets the iCloudBlockBackup property value. Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
@@ -827,7 +826,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getICloudBlockBackup() {
-        return this._iCloudBlockBackup;
+        return this.iCloudBlockBackup;
     }
     /**
      * Gets the iCloudBlockDocumentSync property value. Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
@@ -835,7 +834,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getICloudBlockDocumentSync() {
-        return this._iCloudBlockDocumentSync;
+        return this.iCloudBlockDocumentSync;
     }
     /**
      * Gets the iCloudBlockManagedAppsSync property value. Indicates whether or not to block Managed Apps Cloud Sync.
@@ -843,7 +842,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getICloudBlockManagedAppsSync() {
-        return this._iCloudBlockManagedAppsSync;
+        return this.iCloudBlockManagedAppsSync;
     }
     /**
      * Gets the iCloudBlockPhotoLibrary property value. Indicates whether or not to block iCloud Photo Library.
@@ -851,7 +850,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getICloudBlockPhotoLibrary() {
-        return this._iCloudBlockPhotoLibrary;
+        return this.iCloudBlockPhotoLibrary;
     }
     /**
      * Gets the iCloudBlockPhotoStreamSync property value. Indicates whether or not to block iCloud Photo Stream Sync.
@@ -859,7 +858,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getICloudBlockPhotoStreamSync() {
-        return this._iCloudBlockPhotoStreamSync;
+        return this.iCloudBlockPhotoStreamSync;
     }
     /**
      * Gets the iCloudBlockSharedPhotoStream property value. Indicates whether or not to block Shared Photo Stream.
@@ -867,7 +866,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getICloudBlockSharedPhotoStream() {
-        return this._iCloudBlockSharedPhotoStream;
+        return this.iCloudBlockSharedPhotoStream;
     }
     /**
      * Gets the iCloudRequireEncryptedBackup property value. Indicates whether or not to require backups to iCloud be encrypted.
@@ -875,7 +874,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getICloudRequireEncryptedBackup() {
-        return this._iCloudRequireEncryptedBackup;
+        return this.iCloudRequireEncryptedBackup;
     }
     /**
      * Gets the iTunesBlockExplicitContent property value. Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
@@ -883,7 +882,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getITunesBlockExplicitContent() {
-        return this._iTunesBlockExplicitContent;
+        return this.iTunesBlockExplicitContent;
     }
     /**
      * Gets the iTunesBlockMusicService property value. Indicates whether or not to block Music service and revert Music app to classic mode when the device is in supervised mode (iOS 9.3 and later and macOS 10.12 and later).
@@ -891,7 +890,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getITunesBlockMusicService() {
-        return this._iTunesBlockMusicService;
+        return this.iTunesBlockMusicService;
     }
     /**
      * Gets the iTunesBlockRadio property value. Indicates whether or not to block the user from using iTunes Radio when the device is in supervised mode (iOS 9.3 and later).
@@ -899,7 +898,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getITunesBlockRadio() {
-        return this._iTunesBlockRadio;
+        return this.iTunesBlockRadio;
     }
     /**
      * Gets the keyboardBlockAutoCorrect property value. Indicates whether or not to block keyboard auto-correction when the device is in supervised mode (iOS 8.1.3 and later).
@@ -907,7 +906,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKeyboardBlockAutoCorrect() {
-        return this._keyboardBlockAutoCorrect;
+        return this.keyboardBlockAutoCorrect;
     }
     /**
      * Gets the keyboardBlockDictation property value. Indicates whether or not to block the user from using dictation input when the device is in supervised mode.
@@ -915,7 +914,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKeyboardBlockDictation() {
-        return this._keyboardBlockDictation;
+        return this.keyboardBlockDictation;
     }
     /**
      * Gets the keyboardBlockPredictive property value. Indicates whether or not to block predictive keyboards when device is in supervised mode (iOS 8.1.3 and later).
@@ -923,7 +922,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKeyboardBlockPredictive() {
-        return this._keyboardBlockPredictive;
+        return this.keyboardBlockPredictive;
     }
     /**
      * Gets the keyboardBlockShortcuts property value. Indicates whether or not to block keyboard shortcuts when the device is in supervised mode (iOS 9.0 and later).
@@ -931,7 +930,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKeyboardBlockShortcuts() {
-        return this._keyboardBlockShortcuts;
+        return this.keyboardBlockShortcuts;
     }
     /**
      * Gets the keyboardBlockSpellCheck property value. Indicates whether or not to block keyboard spell-checking when the device is in supervised mode (iOS 8.1.3 and later).
@@ -939,7 +938,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKeyboardBlockSpellCheck() {
-        return this._keyboardBlockSpellCheck;
+        return this.keyboardBlockSpellCheck;
     }
     /**
      * Gets the kioskModeAllowAssistiveSpeak property value. Indicates whether or not to allow assistive speak while in kiosk mode.
@@ -947,7 +946,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeAllowAssistiveSpeak() {
-        return this._kioskModeAllowAssistiveSpeak;
+        return this.kioskModeAllowAssistiveSpeak;
     }
     /**
      * Gets the kioskModeAllowAssistiveTouchSettings property value. Indicates whether or not to allow access to the Assistive Touch Settings while in kiosk mode.
@@ -955,7 +954,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeAllowAssistiveTouchSettings() {
-        return this._kioskModeAllowAssistiveTouchSettings;
+        return this.kioskModeAllowAssistiveTouchSettings;
     }
     /**
      * Gets the kioskModeAllowAutoLock property value. Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
@@ -963,7 +962,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeAllowAutoLock() {
-        return this._kioskModeAllowAutoLock;
+        return this.kioskModeAllowAutoLock;
     }
     /**
      * Gets the kioskModeAllowColorInversionSettings property value. Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode.
@@ -971,7 +970,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeAllowColorInversionSettings() {
-        return this._kioskModeAllowColorInversionSettings;
+        return this.kioskModeAllowColorInversionSettings;
     }
     /**
      * Gets the kioskModeAllowRingerSwitch property value. Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
@@ -979,7 +978,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeAllowRingerSwitch() {
-        return this._kioskModeAllowRingerSwitch;
+        return this.kioskModeAllowRingerSwitch;
     }
     /**
      * Gets the kioskModeAllowScreenRotation property value. Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
@@ -987,7 +986,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeAllowScreenRotation() {
-        return this._kioskModeAllowScreenRotation;
+        return this.kioskModeAllowScreenRotation;
     }
     /**
      * Gets the kioskModeAllowSleepButton property value. Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
@@ -995,7 +994,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeAllowSleepButton() {
-        return this._kioskModeAllowSleepButton;
+        return this.kioskModeAllowSleepButton;
     }
     /**
      * Gets the kioskModeAllowTouchscreen property value. Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
@@ -1003,7 +1002,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeAllowTouchscreen() {
-        return this._kioskModeAllowTouchscreen;
+        return this.kioskModeAllowTouchscreen;
     }
     /**
      * Gets the kioskModeAllowVoiceOverSettings property value. Indicates whether or not to allow access to the voice over settings while in kiosk mode.
@@ -1011,7 +1010,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeAllowVoiceOverSettings() {
-        return this._kioskModeAllowVoiceOverSettings;
+        return this.kioskModeAllowVoiceOverSettings;
     }
     /**
      * Gets the kioskModeAllowVolumeButtons property value. Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
@@ -1019,7 +1018,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeAllowVolumeButtons() {
-        return this._kioskModeAllowVolumeButtons;
+        return this.kioskModeAllowVolumeButtons;
     }
     /**
      * Gets the kioskModeAllowZoomSettings property value. Indicates whether or not to allow access to the zoom settings while in kiosk mode.
@@ -1027,7 +1026,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeAllowZoomSettings() {
-        return this._kioskModeAllowZoomSettings;
+        return this.kioskModeAllowZoomSettings;
     }
     /**
      * Gets the kioskModeAppStoreUrl property value. URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known.
@@ -1035,7 +1034,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public String getKioskModeAppStoreUrl() {
-        return this._kioskModeAppStoreUrl;
+        return this.kioskModeAppStoreUrl;
     }
     /**
      * Gets the kioskModeBuiltInAppId property value. ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
@@ -1043,7 +1042,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public String getKioskModeBuiltInAppId() {
-        return this._kioskModeBuiltInAppId;
+        return this.kioskModeBuiltInAppId;
     }
     /**
      * Gets the kioskModeManagedAppId property value. Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
@@ -1051,7 +1050,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public String getKioskModeManagedAppId() {
-        return this._kioskModeManagedAppId;
+        return this.kioskModeManagedAppId;
     }
     /**
      * Gets the kioskModeRequireAssistiveTouch property value. Indicates whether or not to require assistive touch while in kiosk mode.
@@ -1059,7 +1058,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeRequireAssistiveTouch() {
-        return this._kioskModeRequireAssistiveTouch;
+        return this.kioskModeRequireAssistiveTouch;
     }
     /**
      * Gets the kioskModeRequireColorInversion property value. Indicates whether or not to require color inversion while in kiosk mode.
@@ -1067,7 +1066,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeRequireColorInversion() {
-        return this._kioskModeRequireColorInversion;
+        return this.kioskModeRequireColorInversion;
     }
     /**
      * Gets the kioskModeRequireMonoAudio property value. Indicates whether or not to require mono audio while in kiosk mode.
@@ -1075,7 +1074,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeRequireMonoAudio() {
-        return this._kioskModeRequireMonoAudio;
+        return this.kioskModeRequireMonoAudio;
     }
     /**
      * Gets the kioskModeRequireVoiceOver property value. Indicates whether or not to require voice over while in kiosk mode.
@@ -1083,7 +1082,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeRequireVoiceOver() {
-        return this._kioskModeRequireVoiceOver;
+        return this.kioskModeRequireVoiceOver;
     }
     /**
      * Gets the kioskModeRequireZoom property value. Indicates whether or not to require zoom while in kiosk mode.
@@ -1091,7 +1090,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeRequireZoom() {
-        return this._kioskModeRequireZoom;
+        return this.kioskModeRequireZoom;
     }
     /**
      * Gets the lockScreenBlockControlCenter property value. Indicates whether or not to block the user from using control center on the lock screen.
@@ -1099,7 +1098,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getLockScreenBlockControlCenter() {
-        return this._lockScreenBlockControlCenter;
+        return this.lockScreenBlockControlCenter;
     }
     /**
      * Gets the lockScreenBlockNotificationView property value. Indicates whether or not to block the user from using the notification view on the lock screen.
@@ -1107,7 +1106,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getLockScreenBlockNotificationView() {
-        return this._lockScreenBlockNotificationView;
+        return this.lockScreenBlockNotificationView;
     }
     /**
      * Gets the lockScreenBlockPassbook property value. Indicates whether or not to block the user from using passbook when the device is locked.
@@ -1115,7 +1114,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getLockScreenBlockPassbook() {
-        return this._lockScreenBlockPassbook;
+        return this.lockScreenBlockPassbook;
     }
     /**
      * Gets the lockScreenBlockTodayView property value. Indicates whether or not to block the user from using the Today View on the lock screen.
@@ -1123,7 +1122,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getLockScreenBlockTodayView() {
-        return this._lockScreenBlockTodayView;
+        return this.lockScreenBlockTodayView;
     }
     /**
      * Gets the mediaContentRatingApps property value. Apps rating as in media content
@@ -1131,7 +1130,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public RatingAppsType getMediaContentRatingApps() {
-        return this._mediaContentRatingApps;
+        return this.mediaContentRatingApps;
     }
     /**
      * Gets the mediaContentRatingAustralia property value. Media content rating settings for Australia
@@ -1139,7 +1138,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public MediaContentRatingAustralia getMediaContentRatingAustralia() {
-        return this._mediaContentRatingAustralia;
+        return this.mediaContentRatingAustralia;
     }
     /**
      * Gets the mediaContentRatingCanada property value. Media content rating settings for Canada
@@ -1147,7 +1146,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public MediaContentRatingCanada getMediaContentRatingCanada() {
-        return this._mediaContentRatingCanada;
+        return this.mediaContentRatingCanada;
     }
     /**
      * Gets the mediaContentRatingFrance property value. Media content rating settings for France
@@ -1155,7 +1154,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public MediaContentRatingFrance getMediaContentRatingFrance() {
-        return this._mediaContentRatingFrance;
+        return this.mediaContentRatingFrance;
     }
     /**
      * Gets the mediaContentRatingGermany property value. Media content rating settings for Germany
@@ -1163,7 +1162,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public MediaContentRatingGermany getMediaContentRatingGermany() {
-        return this._mediaContentRatingGermany;
+        return this.mediaContentRatingGermany;
     }
     /**
      * Gets the mediaContentRatingIreland property value. Media content rating settings for Ireland
@@ -1171,7 +1170,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public MediaContentRatingIreland getMediaContentRatingIreland() {
-        return this._mediaContentRatingIreland;
+        return this.mediaContentRatingIreland;
     }
     /**
      * Gets the mediaContentRatingJapan property value. Media content rating settings for Japan
@@ -1179,7 +1178,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public MediaContentRatingJapan getMediaContentRatingJapan() {
-        return this._mediaContentRatingJapan;
+        return this.mediaContentRatingJapan;
     }
     /**
      * Gets the mediaContentRatingNewZealand property value. Media content rating settings for New Zealand
@@ -1187,7 +1186,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public MediaContentRatingNewZealand getMediaContentRatingNewZealand() {
-        return this._mediaContentRatingNewZealand;
+        return this.mediaContentRatingNewZealand;
     }
     /**
      * Gets the mediaContentRatingUnitedKingdom property value. Media content rating settings for United Kingdom
@@ -1195,7 +1194,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public MediaContentRatingUnitedKingdom getMediaContentRatingUnitedKingdom() {
-        return this._mediaContentRatingUnitedKingdom;
+        return this.mediaContentRatingUnitedKingdom;
     }
     /**
      * Gets the mediaContentRatingUnitedStates property value. Media content rating settings for United States
@@ -1203,7 +1202,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public MediaContentRatingUnitedStates getMediaContentRatingUnitedStates() {
-        return this._mediaContentRatingUnitedStates;
+        return this.mediaContentRatingUnitedStates;
     }
     /**
      * Gets the messagesBlocked property value. Indicates whether or not to block the user from using the Messages app on the supervised device.
@@ -1211,7 +1210,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getMessagesBlocked() {
-        return this._messagesBlocked;
+        return this.messagesBlocked;
     }
     /**
      * Gets the networkUsageRules property value. List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
@@ -1219,7 +1218,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public java.util.List<IosNetworkUsageRule> getNetworkUsageRules() {
-        return this._networkUsageRules;
+        return this.networkUsageRules;
     }
     /**
      * Gets the notificationsBlockSettingsModification property value. Indicates whether or not to allow notifications settings modification (iOS 9.3 and later).
@@ -1227,7 +1226,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getNotificationsBlockSettingsModification() {
-        return this._notificationsBlockSettingsModification;
+        return this.notificationsBlockSettingsModification;
     }
     /**
      * Gets the passcodeBlockFingerprintModification property value. Block modification of registered Touch ID fingerprints when in supervised mode.
@@ -1235,7 +1234,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getPasscodeBlockFingerprintModification() {
-        return this._passcodeBlockFingerprintModification;
+        return this.passcodeBlockFingerprintModification;
     }
     /**
      * Gets the passcodeBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.
@@ -1243,7 +1242,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getPasscodeBlockFingerprintUnlock() {
-        return this._passcodeBlockFingerprintUnlock;
+        return this.passcodeBlockFingerprintUnlock;
     }
     /**
      * Gets the passcodeBlockModification property value. Indicates whether or not to allow passcode modification on the supervised device (iOS 9.0 and later).
@@ -1251,7 +1250,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getPasscodeBlockModification() {
-        return this._passcodeBlockModification;
+        return this.passcodeBlockModification;
     }
     /**
      * Gets the passcodeBlockSimple property value. Indicates whether or not to block simple passcodes.
@@ -1259,7 +1258,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getPasscodeBlockSimple() {
-        return this._passcodeBlockSimple;
+        return this.passcodeBlockSimple;
     }
     /**
      * Gets the passcodeExpirationDays property value. Number of days before the passcode expires. Valid values 1 to 65535
@@ -1267,7 +1266,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Integer getPasscodeExpirationDays() {
-        return this._passcodeExpirationDays;
+        return this.passcodeExpirationDays;
     }
     /**
      * Gets the passcodeMinimumCharacterSetCount property value. Number of character sets a passcode must contain. Valid values 0 to 4
@@ -1275,7 +1274,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Integer getPasscodeMinimumCharacterSetCount() {
-        return this._passcodeMinimumCharacterSetCount;
+        return this.passcodeMinimumCharacterSetCount;
     }
     /**
      * Gets the passcodeMinimumLength property value. Minimum length of passcode. Valid values 4 to 14
@@ -1283,7 +1282,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Integer getPasscodeMinimumLength() {
-        return this._passcodeMinimumLength;
+        return this.passcodeMinimumLength;
     }
     /**
      * Gets the passcodeMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a passcode is required.
@@ -1291,7 +1290,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Integer getPasscodeMinutesOfInactivityBeforeLock() {
-        return this._passcodeMinutesOfInactivityBeforeLock;
+        return this.passcodeMinutesOfInactivityBeforeLock;
     }
     /**
      * Gets the passcodeMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
@@ -1299,7 +1298,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Integer getPasscodeMinutesOfInactivityBeforeScreenTimeout() {
-        return this._passcodeMinutesOfInactivityBeforeScreenTimeout;
+        return this.passcodeMinutesOfInactivityBeforeScreenTimeout;
     }
     /**
      * Gets the passcodePreviousPasscodeBlockCount property value. Number of previous passcodes to block. Valid values 1 to 24
@@ -1307,7 +1306,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Integer getPasscodePreviousPasscodeBlockCount() {
-        return this._passcodePreviousPasscodeBlockCount;
+        return this.passcodePreviousPasscodeBlockCount;
     }
     /**
      * Gets the passcodeRequired property value. Indicates whether or not to require a passcode.
@@ -1315,7 +1314,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getPasscodeRequired() {
-        return this._passcodeRequired;
+        return this.passcodeRequired;
     }
     /**
      * Gets the passcodeRequiredType property value. Possible values of required passwords.
@@ -1323,7 +1322,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public RequiredPasswordType getPasscodeRequiredType() {
-        return this._passcodeRequiredType;
+        return this.passcodeRequiredType;
     }
     /**
      * Gets the passcodeSignInFailureCountBeforeWipe property value. Number of sign in failures allowed before wiping the device. Valid values 2 to 11
@@ -1331,7 +1330,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Integer getPasscodeSignInFailureCountBeforeWipe() {
-        return this._passcodeSignInFailureCountBeforeWipe;
+        return this.passcodeSignInFailureCountBeforeWipe;
     }
     /**
      * Gets the podcastsBlocked property value. Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later).
@@ -1339,7 +1338,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getPodcastsBlocked() {
-        return this._podcastsBlocked;
+        return this.podcastsBlocked;
     }
     /**
      * Gets the safariBlockAutofill property value. Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
@@ -1347,7 +1346,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getSafariBlockAutofill() {
-        return this._safariBlockAutofill;
+        return this.safariBlockAutofill;
     }
     /**
      * Gets the safariBlocked property value. Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
@@ -1355,7 +1354,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getSafariBlocked() {
-        return this._safariBlocked;
+        return this.safariBlocked;
     }
     /**
      * Gets the safariBlockJavaScript property value. Indicates whether or not to block JavaScript in Safari.
@@ -1363,7 +1362,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getSafariBlockJavaScript() {
-        return this._safariBlockJavaScript;
+        return this.safariBlockJavaScript;
     }
     /**
      * Gets the safariBlockPopups property value. Indicates whether or not to block popups in Safari.
@@ -1371,7 +1370,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getSafariBlockPopups() {
-        return this._safariBlockPopups;
+        return this.safariBlockPopups;
     }
     /**
      * Gets the safariCookieSettings property value. Web Browser Cookie Settings.
@@ -1379,7 +1378,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public WebBrowserCookieSettings getSafariCookieSettings() {
-        return this._safariCookieSettings;
+        return this.safariCookieSettings;
     }
     /**
      * Gets the safariManagedDomains property value. URLs matching the patterns listed here will be considered managed.
@@ -1387,7 +1386,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSafariManagedDomains() {
-        return this._safariManagedDomains;
+        return this.safariManagedDomains;
     }
     /**
      * Gets the safariPasswordAutoFillDomains property value. Users can save passwords in Safari only from URLs matching the patterns listed here. Applies to devices in supervised mode (iOS 9.3 and later).
@@ -1395,7 +1394,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSafariPasswordAutoFillDomains() {
-        return this._safariPasswordAutoFillDomains;
+        return this.safariPasswordAutoFillDomains;
     }
     /**
      * Gets the safariRequireFraudWarning property value. Indicates whether or not to require fraud warning in Safari.
@@ -1403,7 +1402,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getSafariRequireFraudWarning() {
-        return this._safariRequireFraudWarning;
+        return this.safariRequireFraudWarning;
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether or not to block the user from taking Screenshots.
@@ -1411,7 +1410,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
-        return this._screenCaptureBlocked;
+        return this.screenCaptureBlocked;
     }
     /**
      * Gets the siriBlocked property value. Indicates whether or not to block the user from using Siri.
@@ -1419,7 +1418,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getSiriBlocked() {
-        return this._siriBlocked;
+        return this.siriBlocked;
     }
     /**
      * Gets the siriBlockedWhenLocked property value. Indicates whether or not to block the user from using Siri when locked.
@@ -1427,7 +1426,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getSiriBlockedWhenLocked() {
-        return this._siriBlockedWhenLocked;
+        return this.siriBlockedWhenLocked;
     }
     /**
      * Gets the siriBlockUserGeneratedContent property value. Indicates whether or not to block Siri from querying user-generated content when used on a supervised device.
@@ -1435,7 +1434,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getSiriBlockUserGeneratedContent() {
-        return this._siriBlockUserGeneratedContent;
+        return this.siriBlockUserGeneratedContent;
     }
     /**
      * Gets the siriRequireProfanityFilter property value. Indicates whether or not to prevent Siri from dictating, or speaking profane language on supervised device.
@@ -1443,7 +1442,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getSiriRequireProfanityFilter() {
-        return this._siriRequireProfanityFilter;
+        return this.siriRequireProfanityFilter;
     }
     /**
      * Gets the spotlightBlockInternetResults property value. Indicates whether or not to block Spotlight search from returning internet results on supervised device.
@@ -1451,7 +1450,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getSpotlightBlockInternetResults() {
-        return this._spotlightBlockInternetResults;
+        return this.spotlightBlockInternetResults;
     }
     /**
      * Gets the voiceDialingBlocked property value. Indicates whether or not to block voice dialing.
@@ -1459,7 +1458,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getVoiceDialingBlocked() {
-        return this._voiceDialingBlocked;
+        return this.voiceDialingBlocked;
     }
     /**
      * Gets the wallpaperBlockModification property value. Indicates whether or not to allow wallpaper modification on supervised device (iOS 9.0 and later) .
@@ -1467,7 +1466,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getWallpaperBlockModification() {
-        return this._wallpaperBlockModification;
+        return this.wallpaperBlockModification;
     }
     /**
      * Gets the wiFiConnectOnlyToConfiguredNetworks property value. Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
@@ -1475,7 +1474,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getWiFiConnectOnlyToConfiguredNetworks() {
-        return this._wiFiConnectOnlyToConfiguredNetworks;
+        return this.wiFiConnectOnlyToConfiguredNetworks;
     }
     /**
      * Serializes information the current object
@@ -1625,7 +1624,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setAccountBlockModification(@javax.annotation.Nullable final Boolean value) {
-        this._accountBlockModification = value;
+        this.accountBlockModification = value;
     }
     /**
      * Sets the activationLockAllowWhenSupervised property value. Indicates whether or not to allow activation lock when the device is in the supervised mode.
@@ -1634,7 +1633,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setActivationLockAllowWhenSupervised(@javax.annotation.Nullable final Boolean value) {
-        this._activationLockAllowWhenSupervised = value;
+        this.activationLockAllowWhenSupervised = value;
     }
     /**
      * Sets the airDropBlocked property value. Indicates whether or not to allow AirDrop when the device is in supervised mode.
@@ -1643,7 +1642,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setAirDropBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._airDropBlocked = value;
+        this.airDropBlocked = value;
     }
     /**
      * Sets the airDropForceUnmanagedDropTarget property value. Indicates whether or not to cause AirDrop to be considered an unmanaged drop target (iOS 9.0 and later).
@@ -1652,7 +1651,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setAirDropForceUnmanagedDropTarget(@javax.annotation.Nullable final Boolean value) {
-        this._airDropForceUnmanagedDropTarget = value;
+        this.airDropForceUnmanagedDropTarget = value;
     }
     /**
      * Sets the airPlayForcePairingPasswordForOutgoingRequests property value. Indicates whether or not to enforce all devices receiving AirPlay requests from this device to use a pairing password.
@@ -1661,7 +1660,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setAirPlayForcePairingPasswordForOutgoingRequests(@javax.annotation.Nullable final Boolean value) {
-        this._airPlayForcePairingPasswordForOutgoingRequests = value;
+        this.airPlayForcePairingPasswordForOutgoingRequests = value;
     }
     /**
      * Sets the appleNewsBlocked property value. Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
@@ -1670,7 +1669,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setAppleNewsBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._appleNewsBlocked = value;
+        this.appleNewsBlocked = value;
     }
     /**
      * Sets the appleWatchBlockPairing property value. Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
@@ -1679,7 +1678,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setAppleWatchBlockPairing(@javax.annotation.Nullable final Boolean value) {
-        this._appleWatchBlockPairing = value;
+        this.appleWatchBlockPairing = value;
     }
     /**
      * Sets the appleWatchForceWristDetection property value. Indicates whether or not to force a paired Apple Watch to use Wrist Detection (iOS 8.2 and later).
@@ -1688,7 +1687,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setAppleWatchForceWristDetection(@javax.annotation.Nullable final Boolean value) {
-        this._appleWatchForceWristDetection = value;
+        this.appleWatchForceWristDetection = value;
     }
     /**
      * Sets the appsSingleAppModeList property value. Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later. This collection can contain a maximum of 500 elements.
@@ -1697,7 +1696,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setAppsSingleAppModeList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
-        this._appsSingleAppModeList = value;
+        this.appsSingleAppModeList = value;
     }
     /**
      * Sets the appStoreBlockAutomaticDownloads property value. Indicates whether or not to block the automatic downloading of apps purchased on other devices when the device is in supervised mode (iOS 9.0 and later).
@@ -1706,7 +1705,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setAppStoreBlockAutomaticDownloads(@javax.annotation.Nullable final Boolean value) {
-        this._appStoreBlockAutomaticDownloads = value;
+        this.appStoreBlockAutomaticDownloads = value;
     }
     /**
      * Sets the appStoreBlocked property value. Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
@@ -1715,7 +1714,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setAppStoreBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._appStoreBlocked = value;
+        this.appStoreBlocked = value;
     }
     /**
      * Sets the appStoreBlockInAppPurchases property value. Indicates whether or not to block the user from making in app purchases.
@@ -1724,7 +1723,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setAppStoreBlockInAppPurchases(@javax.annotation.Nullable final Boolean value) {
-        this._appStoreBlockInAppPurchases = value;
+        this.appStoreBlockInAppPurchases = value;
     }
     /**
      * Sets the appStoreBlockUIAppInstallation property value. Indicates whether or not to block the App Store app, not restricting installation through Host apps. Applies to supervised mode only (iOS 9.0 and later).
@@ -1733,7 +1732,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setAppStoreBlockUIAppInstallation(@javax.annotation.Nullable final Boolean value) {
-        this._appStoreBlockUIAppInstallation = value;
+        this.appStoreBlockUIAppInstallation = value;
     }
     /**
      * Sets the appStoreRequirePassword property value. Indicates whether or not to require a password when using the app store.
@@ -1742,7 +1741,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setAppStoreRequirePassword(@javax.annotation.Nullable final Boolean value) {
-        this._appStoreRequirePassword = value;
+        this.appStoreRequirePassword = value;
     }
     /**
      * Sets the appsVisibilityList property value. List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
@@ -1751,7 +1750,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setAppsVisibilityList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
-        this._appsVisibilityList = value;
+        this.appsVisibilityList = value;
     }
     /**
      * Sets the appsVisibilityListType property value. Possible values of the compliance app list.
@@ -1760,7 +1759,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setAppsVisibilityListType(@javax.annotation.Nullable final AppListType value) {
-        this._appsVisibilityListType = value;
+        this.appsVisibilityListType = value;
     }
     /**
      * Sets the bluetoothBlockModification property value. Indicates whether or not to allow modification of Bluetooth settings when the device is in supervised mode (iOS 10.0 and later).
@@ -1769,7 +1768,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setBluetoothBlockModification(@javax.annotation.Nullable final Boolean value) {
-        this._bluetoothBlockModification = value;
+        this.bluetoothBlockModification = value;
     }
     /**
      * Sets the cameraBlocked property value. Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
@@ -1778,7 +1777,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setCameraBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._cameraBlocked = value;
+        this.cameraBlocked = value;
     }
     /**
      * Sets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
@@ -1787,7 +1786,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setCellularBlockDataRoaming(@javax.annotation.Nullable final Boolean value) {
-        this._cellularBlockDataRoaming = value;
+        this.cellularBlockDataRoaming = value;
     }
     /**
      * Sets the cellularBlockGlobalBackgroundFetchWhileRoaming property value. Indicates whether or not to block global background fetch while roaming.
@@ -1796,7 +1795,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setCellularBlockGlobalBackgroundFetchWhileRoaming(@javax.annotation.Nullable final Boolean value) {
-        this._cellularBlockGlobalBackgroundFetchWhileRoaming = value;
+        this.cellularBlockGlobalBackgroundFetchWhileRoaming = value;
     }
     /**
      * Sets the cellularBlockPerAppDataModification property value. Indicates whether or not to allow changes to cellular app data usage settings when the device is in supervised mode.
@@ -1805,7 +1804,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setCellularBlockPerAppDataModification(@javax.annotation.Nullable final Boolean value) {
-        this._cellularBlockPerAppDataModification = value;
+        this.cellularBlockPerAppDataModification = value;
     }
     /**
      * Sets the cellularBlockPersonalHotspot property value. Indicates whether or not to block Personal Hotspot.
@@ -1814,7 +1813,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setCellularBlockPersonalHotspot(@javax.annotation.Nullable final Boolean value) {
-        this._cellularBlockPersonalHotspot = value;
+        this.cellularBlockPersonalHotspot = value;
     }
     /**
      * Sets the cellularBlockVoiceRoaming property value. Indicates whether or not to block voice roaming.
@@ -1823,7 +1822,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setCellularBlockVoiceRoaming(@javax.annotation.Nullable final Boolean value) {
-        this._cellularBlockVoiceRoaming = value;
+        this.cellularBlockVoiceRoaming = value;
     }
     /**
      * Sets the certificatesBlockUntrustedTlsCertificates property value. Indicates whether or not to block untrusted TLS certificates.
@@ -1832,7 +1831,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setCertificatesBlockUntrustedTlsCertificates(@javax.annotation.Nullable final Boolean value) {
-        this._certificatesBlockUntrustedTlsCertificates = value;
+        this.certificatesBlockUntrustedTlsCertificates = value;
     }
     /**
      * Sets the classroomAppBlockRemoteScreenObservation property value. Indicates whether or not to allow remote screen observation by Classroom app when the device is in supervised mode (iOS 9.3 and later).
@@ -1841,7 +1840,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setClassroomAppBlockRemoteScreenObservation(@javax.annotation.Nullable final Boolean value) {
-        this._classroomAppBlockRemoteScreenObservation = value;
+        this.classroomAppBlockRemoteScreenObservation = value;
     }
     /**
      * Sets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode.
@@ -1850,7 +1849,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setClassroomAppForceUnpromptedScreenObservation(@javax.annotation.Nullable final Boolean value) {
-        this._classroomAppForceUnpromptedScreenObservation = value;
+        this.classroomAppForceUnpromptedScreenObservation = value;
     }
     /**
      * Sets the compliantAppListType property value. Possible values of the compliance app list.
@@ -1859,7 +1858,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setCompliantAppListType(@javax.annotation.Nullable final AppListType value) {
-        this._compliantAppListType = value;
+        this.compliantAppListType = value;
     }
     /**
      * Sets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
@@ -1868,7 +1867,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setCompliantAppsList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
-        this._compliantAppsList = value;
+        this.compliantAppsList = value;
     }
     /**
      * Sets the configurationProfileBlockChanges property value. Indicates whether or not to block the user from installing configuration profiles and certificates interactively when the device is in supervised mode.
@@ -1877,7 +1876,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setConfigurationProfileBlockChanges(@javax.annotation.Nullable final Boolean value) {
-        this._configurationProfileBlockChanges = value;
+        this.configurationProfileBlockChanges = value;
     }
     /**
      * Sets the definitionLookupBlocked property value. Indicates whether or not to block definition lookup when the device is in supervised mode (iOS 8.1.3 and later ).
@@ -1886,7 +1885,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setDefinitionLookupBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._definitionLookupBlocked = value;
+        this.definitionLookupBlocked = value;
     }
     /**
      * Sets the deviceBlockEnableRestrictions property value. Indicates whether or not to allow the user to enables restrictions in the device settings when the device is in supervised mode.
@@ -1895,7 +1894,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setDeviceBlockEnableRestrictions(@javax.annotation.Nullable final Boolean value) {
-        this._deviceBlockEnableRestrictions = value;
+        this.deviceBlockEnableRestrictions = value;
     }
     /**
      * Sets the deviceBlockEraseContentAndSettings property value. Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode.
@@ -1904,7 +1903,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setDeviceBlockEraseContentAndSettings(@javax.annotation.Nullable final Boolean value) {
-        this._deviceBlockEraseContentAndSettings = value;
+        this.deviceBlockEraseContentAndSettings = value;
     }
     /**
      * Sets the deviceBlockNameModification property value. Indicates whether or not to allow device name modification when the device is in supervised mode (iOS 9.0 and later).
@@ -1913,7 +1912,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setDeviceBlockNameModification(@javax.annotation.Nullable final Boolean value) {
-        this._deviceBlockNameModification = value;
+        this.deviceBlockNameModification = value;
     }
     /**
      * Sets the diagnosticDataBlockSubmission property value. Indicates whether or not to block diagnostic data submission.
@@ -1922,7 +1921,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setDiagnosticDataBlockSubmission(@javax.annotation.Nullable final Boolean value) {
-        this._diagnosticDataBlockSubmission = value;
+        this.diagnosticDataBlockSubmission = value;
     }
     /**
      * Sets the diagnosticDataBlockSubmissionModification property value. Indicates whether or not to allow diagnostics submission settings modification when the device is in supervised mode (iOS 9.3.2 and later).
@@ -1931,7 +1930,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setDiagnosticDataBlockSubmissionModification(@javax.annotation.Nullable final Boolean value) {
-        this._diagnosticDataBlockSubmissionModification = value;
+        this.diagnosticDataBlockSubmissionModification = value;
     }
     /**
      * Sets the documentsBlockManagedDocumentsInUnmanagedApps property value. Indicates whether or not to block the user from viewing managed documents in unmanaged apps.
@@ -1940,7 +1939,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setDocumentsBlockManagedDocumentsInUnmanagedApps(@javax.annotation.Nullable final Boolean value) {
-        this._documentsBlockManagedDocumentsInUnmanagedApps = value;
+        this.documentsBlockManagedDocumentsInUnmanagedApps = value;
     }
     /**
      * Sets the documentsBlockUnmanagedDocumentsInManagedApps property value. Indicates whether or not to block the user from viewing unmanaged documents in managed apps.
@@ -1949,7 +1948,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setDocumentsBlockUnmanagedDocumentsInManagedApps(@javax.annotation.Nullable final Boolean value) {
-        this._documentsBlockUnmanagedDocumentsInManagedApps = value;
+        this.documentsBlockUnmanagedDocumentsInManagedApps = value;
     }
     /**
      * Sets the emailInDomainSuffixes property value. An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
@@ -1958,7 +1957,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setEmailInDomainSuffixes(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._emailInDomainSuffixes = value;
+        this.emailInDomainSuffixes = value;
     }
     /**
      * Sets the enterpriseAppBlockTrust property value. Indicates whether or not to block the user from trusting an enterprise app.
@@ -1967,7 +1966,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setEnterpriseAppBlockTrust(@javax.annotation.Nullable final Boolean value) {
-        this._enterpriseAppBlockTrust = value;
+        this.enterpriseAppBlockTrust = value;
     }
     /**
      * Sets the enterpriseAppBlockTrustModification property value. [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
@@ -1976,7 +1975,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setEnterpriseAppBlockTrustModification(@javax.annotation.Nullable final Boolean value) {
-        this._enterpriseAppBlockTrustModification = value;
+        this.enterpriseAppBlockTrustModification = value;
     }
     /**
      * Sets the faceTimeBlocked property value. Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
@@ -1985,7 +1984,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setFaceTimeBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._faceTimeBlocked = value;
+        this.faceTimeBlocked = value;
     }
     /**
      * Sets the findMyFriendsBlocked property value. Indicates whether or not to block changes to Find My Friends when the device is in supervised mode.
@@ -1994,7 +1993,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setFindMyFriendsBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._findMyFriendsBlocked = value;
+        this.findMyFriendsBlocked = value;
     }
     /**
      * Sets the gameCenterBlocked property value. Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
@@ -2003,7 +2002,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setGameCenterBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._gameCenterBlocked = value;
+        this.gameCenterBlocked = value;
     }
     /**
      * Sets the gamingBlockGameCenterFriends property value. Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
@@ -2012,7 +2011,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setGamingBlockGameCenterFriends(@javax.annotation.Nullable final Boolean value) {
-        this._gamingBlockGameCenterFriends = value;
+        this.gamingBlockGameCenterFriends = value;
     }
     /**
      * Sets the gamingBlockMultiplayer property value. Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
@@ -2021,7 +2020,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setGamingBlockMultiplayer(@javax.annotation.Nullable final Boolean value) {
-        this._gamingBlockMultiplayer = value;
+        this.gamingBlockMultiplayer = value;
     }
     /**
      * Sets the hostPairingBlocked property value. indicates whether or not to allow host pairing to control the devices an iOS device can pair with when the iOS device is in supervised mode.
@@ -2030,7 +2029,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setHostPairingBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._hostPairingBlocked = value;
+        this.hostPairingBlocked = value;
     }
     /**
      * Sets the iBooksStoreBlocked property value. Indicates whether or not to block the user from using the iBooks Store when the device is in supervised mode.
@@ -2039,7 +2038,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setIBooksStoreBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._iBooksStoreBlocked = value;
+        this.iBooksStoreBlocked = value;
     }
     /**
      * Sets the iBooksStoreBlockErotica property value. Indicates whether or not to block the user from downloading media from the iBookstore that has been tagged as erotica.
@@ -2048,7 +2047,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setIBooksStoreBlockErotica(@javax.annotation.Nullable final Boolean value) {
-        this._iBooksStoreBlockErotica = value;
+        this.iBooksStoreBlockErotica = value;
     }
     /**
      * Sets the iCloudBlockActivityContinuation property value. Indicates whether or not to block the user from continuing work they started on iOS device to another iOS or macOS device.
@@ -2057,7 +2056,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setICloudBlockActivityContinuation(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudBlockActivityContinuation = value;
+        this.iCloudBlockActivityContinuation = value;
     }
     /**
      * Sets the iCloudBlockBackup property value. Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
@@ -2066,7 +2065,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setICloudBlockBackup(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudBlockBackup = value;
+        this.iCloudBlockBackup = value;
     }
     /**
      * Sets the iCloudBlockDocumentSync property value. Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
@@ -2075,7 +2074,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setICloudBlockDocumentSync(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudBlockDocumentSync = value;
+        this.iCloudBlockDocumentSync = value;
     }
     /**
      * Sets the iCloudBlockManagedAppsSync property value. Indicates whether or not to block Managed Apps Cloud Sync.
@@ -2084,7 +2083,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setICloudBlockManagedAppsSync(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudBlockManagedAppsSync = value;
+        this.iCloudBlockManagedAppsSync = value;
     }
     /**
      * Sets the iCloudBlockPhotoLibrary property value. Indicates whether or not to block iCloud Photo Library.
@@ -2093,7 +2092,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setICloudBlockPhotoLibrary(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudBlockPhotoLibrary = value;
+        this.iCloudBlockPhotoLibrary = value;
     }
     /**
      * Sets the iCloudBlockPhotoStreamSync property value. Indicates whether or not to block iCloud Photo Stream Sync.
@@ -2102,7 +2101,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setICloudBlockPhotoStreamSync(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudBlockPhotoStreamSync = value;
+        this.iCloudBlockPhotoStreamSync = value;
     }
     /**
      * Sets the iCloudBlockSharedPhotoStream property value. Indicates whether or not to block Shared Photo Stream.
@@ -2111,7 +2110,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setICloudBlockSharedPhotoStream(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudBlockSharedPhotoStream = value;
+        this.iCloudBlockSharedPhotoStream = value;
     }
     /**
      * Sets the iCloudRequireEncryptedBackup property value. Indicates whether or not to require backups to iCloud be encrypted.
@@ -2120,7 +2119,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setICloudRequireEncryptedBackup(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudRequireEncryptedBackup = value;
+        this.iCloudRequireEncryptedBackup = value;
     }
     /**
      * Sets the iTunesBlockExplicitContent property value. Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
@@ -2129,7 +2128,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setITunesBlockExplicitContent(@javax.annotation.Nullable final Boolean value) {
-        this._iTunesBlockExplicitContent = value;
+        this.iTunesBlockExplicitContent = value;
     }
     /**
      * Sets the iTunesBlockMusicService property value. Indicates whether or not to block Music service and revert Music app to classic mode when the device is in supervised mode (iOS 9.3 and later and macOS 10.12 and later).
@@ -2138,7 +2137,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setITunesBlockMusicService(@javax.annotation.Nullable final Boolean value) {
-        this._iTunesBlockMusicService = value;
+        this.iTunesBlockMusicService = value;
     }
     /**
      * Sets the iTunesBlockRadio property value. Indicates whether or not to block the user from using iTunes Radio when the device is in supervised mode (iOS 9.3 and later).
@@ -2147,7 +2146,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setITunesBlockRadio(@javax.annotation.Nullable final Boolean value) {
-        this._iTunesBlockRadio = value;
+        this.iTunesBlockRadio = value;
     }
     /**
      * Sets the keyboardBlockAutoCorrect property value. Indicates whether or not to block keyboard auto-correction when the device is in supervised mode (iOS 8.1.3 and later).
@@ -2156,7 +2155,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKeyboardBlockAutoCorrect(@javax.annotation.Nullable final Boolean value) {
-        this._keyboardBlockAutoCorrect = value;
+        this.keyboardBlockAutoCorrect = value;
     }
     /**
      * Sets the keyboardBlockDictation property value. Indicates whether or not to block the user from using dictation input when the device is in supervised mode.
@@ -2165,7 +2164,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKeyboardBlockDictation(@javax.annotation.Nullable final Boolean value) {
-        this._keyboardBlockDictation = value;
+        this.keyboardBlockDictation = value;
     }
     /**
      * Sets the keyboardBlockPredictive property value. Indicates whether or not to block predictive keyboards when device is in supervised mode (iOS 8.1.3 and later).
@@ -2174,7 +2173,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKeyboardBlockPredictive(@javax.annotation.Nullable final Boolean value) {
-        this._keyboardBlockPredictive = value;
+        this.keyboardBlockPredictive = value;
     }
     /**
      * Sets the keyboardBlockShortcuts property value. Indicates whether or not to block keyboard shortcuts when the device is in supervised mode (iOS 9.0 and later).
@@ -2183,7 +2182,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKeyboardBlockShortcuts(@javax.annotation.Nullable final Boolean value) {
-        this._keyboardBlockShortcuts = value;
+        this.keyboardBlockShortcuts = value;
     }
     /**
      * Sets the keyboardBlockSpellCheck property value. Indicates whether or not to block keyboard spell-checking when the device is in supervised mode (iOS 8.1.3 and later).
@@ -2192,7 +2191,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKeyboardBlockSpellCheck(@javax.annotation.Nullable final Boolean value) {
-        this._keyboardBlockSpellCheck = value;
+        this.keyboardBlockSpellCheck = value;
     }
     /**
      * Sets the kioskModeAllowAssistiveSpeak property value. Indicates whether or not to allow assistive speak while in kiosk mode.
@@ -2201,7 +2200,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeAllowAssistiveSpeak(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeAllowAssistiveSpeak = value;
+        this.kioskModeAllowAssistiveSpeak = value;
     }
     /**
      * Sets the kioskModeAllowAssistiveTouchSettings property value. Indicates whether or not to allow access to the Assistive Touch Settings while in kiosk mode.
@@ -2210,7 +2209,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeAllowAssistiveTouchSettings(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeAllowAssistiveTouchSettings = value;
+        this.kioskModeAllowAssistiveTouchSettings = value;
     }
     /**
      * Sets the kioskModeAllowAutoLock property value. Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
@@ -2219,7 +2218,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeAllowAutoLock(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeAllowAutoLock = value;
+        this.kioskModeAllowAutoLock = value;
     }
     /**
      * Sets the kioskModeAllowColorInversionSettings property value. Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode.
@@ -2228,7 +2227,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeAllowColorInversionSettings(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeAllowColorInversionSettings = value;
+        this.kioskModeAllowColorInversionSettings = value;
     }
     /**
      * Sets the kioskModeAllowRingerSwitch property value. Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
@@ -2237,7 +2236,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeAllowRingerSwitch(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeAllowRingerSwitch = value;
+        this.kioskModeAllowRingerSwitch = value;
     }
     /**
      * Sets the kioskModeAllowScreenRotation property value. Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
@@ -2246,7 +2245,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeAllowScreenRotation(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeAllowScreenRotation = value;
+        this.kioskModeAllowScreenRotation = value;
     }
     /**
      * Sets the kioskModeAllowSleepButton property value. Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
@@ -2255,7 +2254,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeAllowSleepButton(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeAllowSleepButton = value;
+        this.kioskModeAllowSleepButton = value;
     }
     /**
      * Sets the kioskModeAllowTouchscreen property value. Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
@@ -2264,7 +2263,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeAllowTouchscreen(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeAllowTouchscreen = value;
+        this.kioskModeAllowTouchscreen = value;
     }
     /**
      * Sets the kioskModeAllowVoiceOverSettings property value. Indicates whether or not to allow access to the voice over settings while in kiosk mode.
@@ -2273,7 +2272,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeAllowVoiceOverSettings(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeAllowVoiceOverSettings = value;
+        this.kioskModeAllowVoiceOverSettings = value;
     }
     /**
      * Sets the kioskModeAllowVolumeButtons property value. Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
@@ -2282,7 +2281,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeAllowVolumeButtons(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeAllowVolumeButtons = value;
+        this.kioskModeAllowVolumeButtons = value;
     }
     /**
      * Sets the kioskModeAllowZoomSettings property value. Indicates whether or not to allow access to the zoom settings while in kiosk mode.
@@ -2291,7 +2290,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeAllowZoomSettings(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeAllowZoomSettings = value;
+        this.kioskModeAllowZoomSettings = value;
     }
     /**
      * Sets the kioskModeAppStoreUrl property value. URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known.
@@ -2300,7 +2299,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeAppStoreUrl(@javax.annotation.Nullable final String value) {
-        this._kioskModeAppStoreUrl = value;
+        this.kioskModeAppStoreUrl = value;
     }
     /**
      * Sets the kioskModeBuiltInAppId property value. ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
@@ -2309,7 +2308,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeBuiltInAppId(@javax.annotation.Nullable final String value) {
-        this._kioskModeBuiltInAppId = value;
+        this.kioskModeBuiltInAppId = value;
     }
     /**
      * Sets the kioskModeManagedAppId property value. Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
@@ -2318,7 +2317,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeManagedAppId(@javax.annotation.Nullable final String value) {
-        this._kioskModeManagedAppId = value;
+        this.kioskModeManagedAppId = value;
     }
     /**
      * Sets the kioskModeRequireAssistiveTouch property value. Indicates whether or not to require assistive touch while in kiosk mode.
@@ -2327,7 +2326,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeRequireAssistiveTouch(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeRequireAssistiveTouch = value;
+        this.kioskModeRequireAssistiveTouch = value;
     }
     /**
      * Sets the kioskModeRequireColorInversion property value. Indicates whether or not to require color inversion while in kiosk mode.
@@ -2336,7 +2335,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeRequireColorInversion(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeRequireColorInversion = value;
+        this.kioskModeRequireColorInversion = value;
     }
     /**
      * Sets the kioskModeRequireMonoAudio property value. Indicates whether or not to require mono audio while in kiosk mode.
@@ -2345,7 +2344,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeRequireMonoAudio(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeRequireMonoAudio = value;
+        this.kioskModeRequireMonoAudio = value;
     }
     /**
      * Sets the kioskModeRequireVoiceOver property value. Indicates whether or not to require voice over while in kiosk mode.
@@ -2354,7 +2353,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeRequireVoiceOver(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeRequireVoiceOver = value;
+        this.kioskModeRequireVoiceOver = value;
     }
     /**
      * Sets the kioskModeRequireZoom property value. Indicates whether or not to require zoom while in kiosk mode.
@@ -2363,7 +2362,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setKioskModeRequireZoom(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeRequireZoom = value;
+        this.kioskModeRequireZoom = value;
     }
     /**
      * Sets the lockScreenBlockControlCenter property value. Indicates whether or not to block the user from using control center on the lock screen.
@@ -2372,7 +2371,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setLockScreenBlockControlCenter(@javax.annotation.Nullable final Boolean value) {
-        this._lockScreenBlockControlCenter = value;
+        this.lockScreenBlockControlCenter = value;
     }
     /**
      * Sets the lockScreenBlockNotificationView property value. Indicates whether or not to block the user from using the notification view on the lock screen.
@@ -2381,7 +2380,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setLockScreenBlockNotificationView(@javax.annotation.Nullable final Boolean value) {
-        this._lockScreenBlockNotificationView = value;
+        this.lockScreenBlockNotificationView = value;
     }
     /**
      * Sets the lockScreenBlockPassbook property value. Indicates whether or not to block the user from using passbook when the device is locked.
@@ -2390,7 +2389,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setLockScreenBlockPassbook(@javax.annotation.Nullable final Boolean value) {
-        this._lockScreenBlockPassbook = value;
+        this.lockScreenBlockPassbook = value;
     }
     /**
      * Sets the lockScreenBlockTodayView property value. Indicates whether or not to block the user from using the Today View on the lock screen.
@@ -2399,7 +2398,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setLockScreenBlockTodayView(@javax.annotation.Nullable final Boolean value) {
-        this._lockScreenBlockTodayView = value;
+        this.lockScreenBlockTodayView = value;
     }
     /**
      * Sets the mediaContentRatingApps property value. Apps rating as in media content
@@ -2408,7 +2407,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setMediaContentRatingApps(@javax.annotation.Nullable final RatingAppsType value) {
-        this._mediaContentRatingApps = value;
+        this.mediaContentRatingApps = value;
     }
     /**
      * Sets the mediaContentRatingAustralia property value. Media content rating settings for Australia
@@ -2417,7 +2416,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setMediaContentRatingAustralia(@javax.annotation.Nullable final MediaContentRatingAustralia value) {
-        this._mediaContentRatingAustralia = value;
+        this.mediaContentRatingAustralia = value;
     }
     /**
      * Sets the mediaContentRatingCanada property value. Media content rating settings for Canada
@@ -2426,7 +2425,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setMediaContentRatingCanada(@javax.annotation.Nullable final MediaContentRatingCanada value) {
-        this._mediaContentRatingCanada = value;
+        this.mediaContentRatingCanada = value;
     }
     /**
      * Sets the mediaContentRatingFrance property value. Media content rating settings for France
@@ -2435,7 +2434,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setMediaContentRatingFrance(@javax.annotation.Nullable final MediaContentRatingFrance value) {
-        this._mediaContentRatingFrance = value;
+        this.mediaContentRatingFrance = value;
     }
     /**
      * Sets the mediaContentRatingGermany property value. Media content rating settings for Germany
@@ -2444,7 +2443,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setMediaContentRatingGermany(@javax.annotation.Nullable final MediaContentRatingGermany value) {
-        this._mediaContentRatingGermany = value;
+        this.mediaContentRatingGermany = value;
     }
     /**
      * Sets the mediaContentRatingIreland property value. Media content rating settings for Ireland
@@ -2453,7 +2452,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setMediaContentRatingIreland(@javax.annotation.Nullable final MediaContentRatingIreland value) {
-        this._mediaContentRatingIreland = value;
+        this.mediaContentRatingIreland = value;
     }
     /**
      * Sets the mediaContentRatingJapan property value. Media content rating settings for Japan
@@ -2462,7 +2461,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setMediaContentRatingJapan(@javax.annotation.Nullable final MediaContentRatingJapan value) {
-        this._mediaContentRatingJapan = value;
+        this.mediaContentRatingJapan = value;
     }
     /**
      * Sets the mediaContentRatingNewZealand property value. Media content rating settings for New Zealand
@@ -2471,7 +2470,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setMediaContentRatingNewZealand(@javax.annotation.Nullable final MediaContentRatingNewZealand value) {
-        this._mediaContentRatingNewZealand = value;
+        this.mediaContentRatingNewZealand = value;
     }
     /**
      * Sets the mediaContentRatingUnitedKingdom property value. Media content rating settings for United Kingdom
@@ -2480,7 +2479,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setMediaContentRatingUnitedKingdom(@javax.annotation.Nullable final MediaContentRatingUnitedKingdom value) {
-        this._mediaContentRatingUnitedKingdom = value;
+        this.mediaContentRatingUnitedKingdom = value;
     }
     /**
      * Sets the mediaContentRatingUnitedStates property value. Media content rating settings for United States
@@ -2489,7 +2488,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setMediaContentRatingUnitedStates(@javax.annotation.Nullable final MediaContentRatingUnitedStates value) {
-        this._mediaContentRatingUnitedStates = value;
+        this.mediaContentRatingUnitedStates = value;
     }
     /**
      * Sets the messagesBlocked property value. Indicates whether or not to block the user from using the Messages app on the supervised device.
@@ -2498,7 +2497,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setMessagesBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._messagesBlocked = value;
+        this.messagesBlocked = value;
     }
     /**
      * Sets the networkUsageRules property value. List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
@@ -2507,7 +2506,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setNetworkUsageRules(@javax.annotation.Nullable final java.util.List<IosNetworkUsageRule> value) {
-        this._networkUsageRules = value;
+        this.networkUsageRules = value;
     }
     /**
      * Sets the notificationsBlockSettingsModification property value. Indicates whether or not to allow notifications settings modification (iOS 9.3 and later).
@@ -2516,7 +2515,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setNotificationsBlockSettingsModification(@javax.annotation.Nullable final Boolean value) {
-        this._notificationsBlockSettingsModification = value;
+        this.notificationsBlockSettingsModification = value;
     }
     /**
      * Sets the passcodeBlockFingerprintModification property value. Block modification of registered Touch ID fingerprints when in supervised mode.
@@ -2525,7 +2524,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasscodeBlockFingerprintModification(@javax.annotation.Nullable final Boolean value) {
-        this._passcodeBlockFingerprintModification = value;
+        this.passcodeBlockFingerprintModification = value;
     }
     /**
      * Sets the passcodeBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.
@@ -2534,7 +2533,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasscodeBlockFingerprintUnlock(@javax.annotation.Nullable final Boolean value) {
-        this._passcodeBlockFingerprintUnlock = value;
+        this.passcodeBlockFingerprintUnlock = value;
     }
     /**
      * Sets the passcodeBlockModification property value. Indicates whether or not to allow passcode modification on the supervised device (iOS 9.0 and later).
@@ -2543,7 +2542,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasscodeBlockModification(@javax.annotation.Nullable final Boolean value) {
-        this._passcodeBlockModification = value;
+        this.passcodeBlockModification = value;
     }
     /**
      * Sets the passcodeBlockSimple property value. Indicates whether or not to block simple passcodes.
@@ -2552,7 +2551,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasscodeBlockSimple(@javax.annotation.Nullable final Boolean value) {
-        this._passcodeBlockSimple = value;
+        this.passcodeBlockSimple = value;
     }
     /**
      * Sets the passcodeExpirationDays property value. Number of days before the passcode expires. Valid values 1 to 65535
@@ -2561,7 +2560,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasscodeExpirationDays(@javax.annotation.Nullable final Integer value) {
-        this._passcodeExpirationDays = value;
+        this.passcodeExpirationDays = value;
     }
     /**
      * Sets the passcodeMinimumCharacterSetCount property value. Number of character sets a passcode must contain. Valid values 0 to 4
@@ -2570,7 +2569,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasscodeMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
-        this._passcodeMinimumCharacterSetCount = value;
+        this.passcodeMinimumCharacterSetCount = value;
     }
     /**
      * Sets the passcodeMinimumLength property value. Minimum length of passcode. Valid values 4 to 14
@@ -2579,7 +2578,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasscodeMinimumLength(@javax.annotation.Nullable final Integer value) {
-        this._passcodeMinimumLength = value;
+        this.passcodeMinimumLength = value;
     }
     /**
      * Sets the passcodeMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a passcode is required.
@@ -2588,7 +2587,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasscodeMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
-        this._passcodeMinutesOfInactivityBeforeLock = value;
+        this.passcodeMinutesOfInactivityBeforeLock = value;
     }
     /**
      * Sets the passcodeMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
@@ -2597,7 +2596,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasscodeMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
-        this._passcodeMinutesOfInactivityBeforeScreenTimeout = value;
+        this.passcodeMinutesOfInactivityBeforeScreenTimeout = value;
     }
     /**
      * Sets the passcodePreviousPasscodeBlockCount property value. Number of previous passcodes to block. Valid values 1 to 24
@@ -2606,7 +2605,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasscodePreviousPasscodeBlockCount(@javax.annotation.Nullable final Integer value) {
-        this._passcodePreviousPasscodeBlockCount = value;
+        this.passcodePreviousPasscodeBlockCount = value;
     }
     /**
      * Sets the passcodeRequired property value. Indicates whether or not to require a passcode.
@@ -2615,7 +2614,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasscodeRequired(@javax.annotation.Nullable final Boolean value) {
-        this._passcodeRequired = value;
+        this.passcodeRequired = value;
     }
     /**
      * Sets the passcodeRequiredType property value. Possible values of required passwords.
@@ -2624,7 +2623,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasscodeRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
-        this._passcodeRequiredType = value;
+        this.passcodeRequiredType = value;
     }
     /**
      * Sets the passcodeSignInFailureCountBeforeWipe property value. Number of sign in failures allowed before wiping the device. Valid values 2 to 11
@@ -2633,7 +2632,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPasscodeSignInFailureCountBeforeWipe(@javax.annotation.Nullable final Integer value) {
-        this._passcodeSignInFailureCountBeforeWipe = value;
+        this.passcodeSignInFailureCountBeforeWipe = value;
     }
     /**
      * Sets the podcastsBlocked property value. Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later).
@@ -2642,7 +2641,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setPodcastsBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._podcastsBlocked = value;
+        this.podcastsBlocked = value;
     }
     /**
      * Sets the safariBlockAutofill property value. Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
@@ -2651,7 +2650,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setSafariBlockAutofill(@javax.annotation.Nullable final Boolean value) {
-        this._safariBlockAutofill = value;
+        this.safariBlockAutofill = value;
     }
     /**
      * Sets the safariBlocked property value. Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
@@ -2660,7 +2659,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setSafariBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._safariBlocked = value;
+        this.safariBlocked = value;
     }
     /**
      * Sets the safariBlockJavaScript property value. Indicates whether or not to block JavaScript in Safari.
@@ -2669,7 +2668,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setSafariBlockJavaScript(@javax.annotation.Nullable final Boolean value) {
-        this._safariBlockJavaScript = value;
+        this.safariBlockJavaScript = value;
     }
     /**
      * Sets the safariBlockPopups property value. Indicates whether or not to block popups in Safari.
@@ -2678,7 +2677,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setSafariBlockPopups(@javax.annotation.Nullable final Boolean value) {
-        this._safariBlockPopups = value;
+        this.safariBlockPopups = value;
     }
     /**
      * Sets the safariCookieSettings property value. Web Browser Cookie Settings.
@@ -2687,7 +2686,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setSafariCookieSettings(@javax.annotation.Nullable final WebBrowserCookieSettings value) {
-        this._safariCookieSettings = value;
+        this.safariCookieSettings = value;
     }
     /**
      * Sets the safariManagedDomains property value. URLs matching the patterns listed here will be considered managed.
@@ -2696,7 +2695,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setSafariManagedDomains(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._safariManagedDomains = value;
+        this.safariManagedDomains = value;
     }
     /**
      * Sets the safariPasswordAutoFillDomains property value. Users can save passwords in Safari only from URLs matching the patterns listed here. Applies to devices in supervised mode (iOS 9.3 and later).
@@ -2705,7 +2704,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setSafariPasswordAutoFillDomains(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._safariPasswordAutoFillDomains = value;
+        this.safariPasswordAutoFillDomains = value;
     }
     /**
      * Sets the safariRequireFraudWarning property value. Indicates whether or not to require fraud warning in Safari.
@@ -2714,7 +2713,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setSafariRequireFraudWarning(@javax.annotation.Nullable final Boolean value) {
-        this._safariRequireFraudWarning = value;
+        this.safariRequireFraudWarning = value;
     }
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether or not to block the user from taking Screenshots.
@@ -2723,7 +2722,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._screenCaptureBlocked = value;
+        this.screenCaptureBlocked = value;
     }
     /**
      * Sets the siriBlocked property value. Indicates whether or not to block the user from using Siri.
@@ -2732,7 +2731,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setSiriBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._siriBlocked = value;
+        this.siriBlocked = value;
     }
     /**
      * Sets the siriBlockedWhenLocked property value. Indicates whether or not to block the user from using Siri when locked.
@@ -2741,7 +2740,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setSiriBlockedWhenLocked(@javax.annotation.Nullable final Boolean value) {
-        this._siriBlockedWhenLocked = value;
+        this.siriBlockedWhenLocked = value;
     }
     /**
      * Sets the siriBlockUserGeneratedContent property value. Indicates whether or not to block Siri from querying user-generated content when used on a supervised device.
@@ -2750,7 +2749,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setSiriBlockUserGeneratedContent(@javax.annotation.Nullable final Boolean value) {
-        this._siriBlockUserGeneratedContent = value;
+        this.siriBlockUserGeneratedContent = value;
     }
     /**
      * Sets the siriRequireProfanityFilter property value. Indicates whether or not to prevent Siri from dictating, or speaking profane language on supervised device.
@@ -2759,7 +2758,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setSiriRequireProfanityFilter(@javax.annotation.Nullable final Boolean value) {
-        this._siriRequireProfanityFilter = value;
+        this.siriRequireProfanityFilter = value;
     }
     /**
      * Sets the spotlightBlockInternetResults property value. Indicates whether or not to block Spotlight search from returning internet results on supervised device.
@@ -2768,7 +2767,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setSpotlightBlockInternetResults(@javax.annotation.Nullable final Boolean value) {
-        this._spotlightBlockInternetResults = value;
+        this.spotlightBlockInternetResults = value;
     }
     /**
      * Sets the voiceDialingBlocked property value. Indicates whether or not to block voice dialing.
@@ -2777,7 +2776,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setVoiceDialingBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._voiceDialingBlocked = value;
+        this.voiceDialingBlocked = value;
     }
     /**
      * Sets the wallpaperBlockModification property value. Indicates whether or not to allow wallpaper modification on supervised device (iOS 9.0 and later) .
@@ -2786,7 +2785,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setWallpaperBlockModification(@javax.annotation.Nullable final Boolean value) {
-        this._wallpaperBlockModification = value;
+        this.wallpaperBlockModification = value;
     }
     /**
      * Sets the wiFiConnectOnlyToConfiguredNetworks property value. Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
@@ -2795,6 +2794,6 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public void setWiFiConnectOnlyToConfiguredNetworks(@javax.annotation.Nullable final Boolean value) {
-        this._wiFiConnectOnlyToConfiguredNetworks = value;
+        this.wiFiConnectOnlyToConfiguredNetworks = value;
     }
 }

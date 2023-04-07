@@ -3,25 +3,24 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AdminConsentRequestPolicy extends Entity implements Parsable {
     /** Specifies whether the admin consent request feature is enabled or disabled. Required. */
-    private Boolean _isEnabled;
+    private Boolean isEnabled;
     /** Specifies whether reviewers will receive notifications. Required. */
-    private Boolean _notifyReviewers;
+    private Boolean notifyReviewers;
     /** Specifies whether reviewers will receive reminder emails. Required. */
-    private Boolean _remindersEnabled;
+    private Boolean remindersEnabled;
     /** Specifies the duration the request is active before it automatically expires if no decision is applied. */
-    private Integer _requestDurationInDays;
+    private Integer requestDurationInDays;
     /** The list of reviewers for the admin consent. Required. */
-    private java.util.List<AccessReviewReviewerScope> _reviewers;
+    private java.util.List<AccessReviewReviewerScope> reviewers;
     /** Specifies the version of this policy. When the policy is updated, this version is updated. Read-only. */
-    private Integer _version;
+    private Integer version;
     /**
-     * Instantiates a new adminConsentRequestPolicy and sets the default values.
+     * Instantiates a new AdminConsentRequestPolicy and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +30,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a adminConsentRequestPolicy
+     * @return a AdminConsentRequestPolicy
      */
     @javax.annotation.Nonnull
     public static AdminConsentRequestPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +39,11 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("notifyReviewers", (n) -> { this.setNotifyReviewers(n.getBooleanValue()); });
         deserializerMap.put("remindersEnabled", (n) -> { this.setRemindersEnabled(n.getBooleanValue()); });
@@ -59,7 +58,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this._isEnabled;
+        return this.isEnabled;
     }
     /**
      * Gets the notifyReviewers property value. Specifies whether reviewers will receive notifications. Required.
@@ -67,7 +66,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getNotifyReviewers() {
-        return this._notifyReviewers;
+        return this.notifyReviewers;
     }
     /**
      * Gets the remindersEnabled property value. Specifies whether reviewers will receive reminder emails. Required.
@@ -75,7 +74,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getRemindersEnabled() {
-        return this._remindersEnabled;
+        return this.remindersEnabled;
     }
     /**
      * Gets the requestDurationInDays property value. Specifies the duration the request is active before it automatically expires if no decision is applied.
@@ -83,7 +82,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getRequestDurationInDays() {
-        return this._requestDurationInDays;
+        return this.requestDurationInDays;
     }
     /**
      * Gets the reviewers property value. The list of reviewers for the admin consent. Required.
@@ -91,7 +90,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getReviewers() {
-        return this._reviewers;
+        return this.reviewers;
     }
     /**
      * Gets the version property value. Specifies the version of this policy. When the policy is updated, this version is updated. Read-only.
@@ -99,7 +98,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
@@ -124,7 +123,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isEnabled = value;
+        this.isEnabled = value;
     }
     /**
      * Sets the notifyReviewers property value. Specifies whether reviewers will receive notifications. Required.
@@ -133,7 +132,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setNotifyReviewers(@javax.annotation.Nullable final Boolean value) {
-        this._notifyReviewers = value;
+        this.notifyReviewers = value;
     }
     /**
      * Sets the remindersEnabled property value. Specifies whether reviewers will receive reminder emails. Required.
@@ -142,7 +141,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRemindersEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._remindersEnabled = value;
+        this.remindersEnabled = value;
     }
     /**
      * Sets the requestDurationInDays property value. Specifies the duration the request is active before it automatically expires if no decision is applied.
@@ -151,7 +150,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRequestDurationInDays(@javax.annotation.Nullable final Integer value) {
-        this._requestDurationInDays = value;
+        this.requestDurationInDays = value;
     }
     /**
      * Sets the reviewers property value. The list of reviewers for the admin consent. Required.
@@ -160,7 +159,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
-        this._reviewers = value;
+        this.reviewers = value;
     }
     /**
      * Sets the version property value. Specifies the version of this policy. When the policy is updated, this version is updated. Read-only.
@@ -169,6 +168,6 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
-        this._version = value;
+        this.version = value;
     }
 }

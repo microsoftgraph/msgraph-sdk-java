@@ -5,16 +5,14 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the reply method. */
 public class ReplyPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The Post property */
-    private Post _post;
+    private Post post;
     /**
      * Instantiates a new replyPostRequestBody and sets the default values.
      * @return a void
@@ -39,16 +37,16 @@ public class ReplyPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
-        deserializerMap.put("post", (n) -> { this.setPost(n.getObjectValue(Post::createFromDiscriminatorValue)); });
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        deserializerMap.put("Post", (n) -> { this.setPost(n.getObjectValue(Post::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -57,7 +55,7 @@ public class ReplyPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Post getPost() {
-        return this._post;
+        return this.post;
     }
     /**
      * Serializes information the current object
@@ -67,7 +65,7 @@ public class ReplyPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeObjectValue("post", this.getPost());
+        writer.writeObjectValue("Post", this.getPost());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -77,7 +75,7 @@ public class ReplyPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the post property value. The Post property
@@ -86,6 +84,6 @@ public class ReplyPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPost(@javax.annotation.Nullable final Post value) {
-        this._post = value;
+        this.post = value;
     }
 }

@@ -3,21 +3,20 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration implements Parsable {
     /** Indicates whether or not to allow the app from printing during the test. */
-    private Boolean _allowPrinting;
+    private Boolean allowPrinting;
     /** Indicates whether or not to allow screen capture capability during a test. */
-    private Boolean _allowScreenCapture;
+    private Boolean allowScreenCapture;
     /** Indicates whether or not to allow text suggestions during the test. */
-    private Boolean _allowTextSuggestion;
+    private Boolean allowTextSuggestion;
     /** The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username). */
-    private String _configurationAccount;
+    private String configurationAccount;
     /** Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/). */
-    private String _launchUri;
+    private String launchUri;
     /**
      * Instantiates a new Windows10SecureAssessmentConfiguration and sets the default values.
      * @return a void
@@ -43,7 +42,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nullable
     public Boolean getAllowPrinting() {
-        return this._allowPrinting;
+        return this.allowPrinting;
     }
     /**
      * Gets the allowScreenCapture property value. Indicates whether or not to allow screen capture capability during a test.
@@ -51,7 +50,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nullable
     public Boolean getAllowScreenCapture() {
-        return this._allowScreenCapture;
+        return this.allowScreenCapture;
     }
     /**
      * Gets the allowTextSuggestion property value. Indicates whether or not to allow text suggestions during the test.
@@ -59,7 +58,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nullable
     public Boolean getAllowTextSuggestion() {
-        return this._allowTextSuggestion;
+        return this.allowTextSuggestion;
     }
     /**
      * Gets the configurationAccount property value. The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
@@ -67,15 +66,15 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nullable
     public String getConfigurationAccount() {
-        return this._configurationAccount;
+        return this.configurationAccount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowPrinting", (n) -> { this.setAllowPrinting(n.getBooleanValue()); });
         deserializerMap.put("allowScreenCapture", (n) -> { this.setAllowScreenCapture(n.getBooleanValue()); });
         deserializerMap.put("allowTextSuggestion", (n) -> { this.setAllowTextSuggestion(n.getBooleanValue()); });
@@ -89,7 +88,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nullable
     public String getLaunchUri() {
-        return this._launchUri;
+        return this.launchUri;
     }
     /**
      * Serializes information the current object
@@ -113,7 +112,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nonnull
     public void setAllowPrinting(@javax.annotation.Nullable final Boolean value) {
-        this._allowPrinting = value;
+        this.allowPrinting = value;
     }
     /**
      * Sets the allowScreenCapture property value. Indicates whether or not to allow screen capture capability during a test.
@@ -122,7 +121,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nonnull
     public void setAllowScreenCapture(@javax.annotation.Nullable final Boolean value) {
-        this._allowScreenCapture = value;
+        this.allowScreenCapture = value;
     }
     /**
      * Sets the allowTextSuggestion property value. Indicates whether or not to allow text suggestions during the test.
@@ -131,7 +130,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nonnull
     public void setAllowTextSuggestion(@javax.annotation.Nullable final Boolean value) {
-        this._allowTextSuggestion = value;
+        this.allowTextSuggestion = value;
     }
     /**
      * Sets the configurationAccount property value. The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
@@ -140,7 +139,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nonnull
     public void setConfigurationAccount(@javax.annotation.Nullable final String value) {
-        this._configurationAccount = value;
+        this.configurationAccount = value;
     }
     /**
      * Sets the launchUri property value. Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
@@ -149,6 +148,6 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nonnull
     public void setLaunchUri(@javax.annotation.Nullable final String value) {
-        this._launchUri = value;
+        this.launchUri = value;
     }
 }

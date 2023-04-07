@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /** Defines strong authentication configurations. This configuration includes the default authentication mode and the different rules for strong authentication bindings. */
-    private X509CertificateAuthenticationModeConfiguration _authenticationModeConfiguration;
+    private X509CertificateAuthenticationModeConfiguration authenticationModeConfiguration;
     /** Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored. */
-    private java.util.List<X509CertificateUserBinding> _certificateUserBindings;
-    /** A collection of users or groups who are enabled to use the authentication method. */
-    private java.util.List<AuthenticationMethodTarget> _includeTargets;
+    private java.util.List<X509CertificateUserBinding> certificateUserBindings;
+    /** A collection of groups that are enabled to use the authentication method. */
+    private java.util.List<AuthenticationMethodTarget> includeTargets;
     /**
      * Instantiates a new X509CertificateAuthenticationMethodConfiguration and sets the default values.
      * @return a void
@@ -39,7 +38,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      */
     @javax.annotation.Nullable
     public X509CertificateAuthenticationModeConfiguration getAuthenticationModeConfiguration() {
-        return this._authenticationModeConfiguration;
+        return this.authenticationModeConfiguration;
     }
     /**
      * Gets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
@@ -47,27 +46,27 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      */
     @javax.annotation.Nullable
     public java.util.List<X509CertificateUserBinding> getCertificateUserBindings() {
-        return this._certificateUserBindings;
+        return this.certificateUserBindings;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationModeConfiguration", (n) -> { this.setAuthenticationModeConfiguration(n.getObjectValue(X509CertificateAuthenticationModeConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("certificateUserBindings", (n) -> { this.setCertificateUserBindings(n.getCollectionOfObjectValues(X509CertificateUserBinding::createFromDiscriminatorValue)); });
         deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method.
+     * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
      * @return a authenticationMethodTarget
      */
     @javax.annotation.Nullable
     public java.util.List<AuthenticationMethodTarget> getIncludeTargets() {
-        return this._includeTargets;
+        return this.includeTargets;
     }
     /**
      * Serializes information the current object
@@ -89,7 +88,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      */
     @javax.annotation.Nonnull
     public void setAuthenticationModeConfiguration(@javax.annotation.Nullable final X509CertificateAuthenticationModeConfiguration value) {
-        this._authenticationModeConfiguration = value;
+        this.authenticationModeConfiguration = value;
     }
     /**
      * Sets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
@@ -98,15 +97,15 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      */
     @javax.annotation.Nonnull
     public void setCertificateUserBindings(@javax.annotation.Nullable final java.util.List<X509CertificateUserBinding> value) {
-        this._certificateUserBindings = value;
+        this.certificateUserBindings = value;
     }
     /**
-     * Sets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method.
+     * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
      * @param value Value to set for the includeTargets property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setIncludeTargets(@javax.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
-        this._includeTargets = value;
+        this.includeTargets = value;
     }
 }

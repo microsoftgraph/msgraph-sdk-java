@@ -3,7 +3,6 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
 public enum CaseStatus implements ValuedEnum {
     Unknown("unknown"),
     Active("active"),

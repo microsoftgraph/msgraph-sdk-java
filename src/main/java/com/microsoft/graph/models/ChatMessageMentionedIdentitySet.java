@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable {
     /** If present, represents a conversation (for example, team or channel) @mentioned in a message. */
-    private TeamworkConversationIdentity _conversation;
+    private TeamworkConversationIdentity conversation;
     /**
      * Instantiates a new ChatMessageMentionedIdentitySet and sets the default values.
      * @return a void
@@ -35,15 +34,15 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      */
     @javax.annotation.Nullable
     public TeamworkConversationIdentity getConversation() {
-        return this._conversation;
+        return this.conversation;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("conversation", (n) -> { this.setConversation(n.getObjectValue(TeamworkConversationIdentity::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -65,6 +64,6 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      */
     @javax.annotation.Nonnull
     public void setConversation(@javax.annotation.Nullable final TeamworkConversationIdentity value) {
-        this._conversation = value;
+        this.conversation = value;
     }
 }

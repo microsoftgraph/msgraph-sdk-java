@@ -3,12 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
 public enum OnlineMeetingRole implements ValuedEnum {
     Attendee("attendee"),
     Presenter("presenter"),
     UnknownFutureValue("unknownFutureValue"),
-    Producer("producer");
+    Producer("producer"),
+    Coorganizer("coorganizer");
     public final String value;
     OnlineMeetingRole(final String value) {
         this.value = value;
@@ -23,6 +23,7 @@ public enum OnlineMeetingRole implements ValuedEnum {
             case "presenter": return Presenter;
             case "unknownFutureValue": return UnknownFutureValue;
             case "producer": return Producer;
+            case "coorganizer": return Coorganizer;
             default: return null;
         }
     }

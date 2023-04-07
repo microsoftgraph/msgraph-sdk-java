@@ -4,20 +4,21 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** RemoteAssistPartner resources represent the metadata and status of a given Remote Assistance partner service. */
+/**
+ * RemoteAssistPartner resources represent the metadata and status of a given Remote Assistance partner service.
+ */
 public class RemoteAssistancePartner extends Entity implements Parsable {
     /** Display name of the partner. */
-    private String _displayName;
+    private String displayName;
     /** Timestamp of the last request sent to Intune by the TEM partner. */
-    private OffsetDateTime _lastConnectionDateTime;
+    private OffsetDateTime lastConnectionDateTime;
     /** The current TeamViewer connector status */
-    private RemoteAssistanceOnboardingStatus _onboardingStatus;
+    private RemoteAssistanceOnboardingStatus onboardingStatus;
     /** URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service. */
-    private String _onboardingUrl;
+    private String onboardingUrl;
     /**
      * Instantiates a new remoteAssistancePartner and sets the default values.
      * @return a void
@@ -42,15 +43,15 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastConnectionDateTime", (n) -> { this.setLastConnectionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("onboardingStatus", (n) -> { this.setOnboardingStatus(n.getEnumValue(RemoteAssistanceOnboardingStatus.class)); });
@@ -63,7 +64,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastConnectionDateTime() {
-        return this._lastConnectionDateTime;
+        return this.lastConnectionDateTime;
     }
     /**
      * Gets the onboardingStatus property value. The current TeamViewer connector status
@@ -71,7 +72,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RemoteAssistanceOnboardingStatus getOnboardingStatus() {
-        return this._onboardingStatus;
+        return this.onboardingStatus;
     }
     /**
      * Gets the onboardingUrl property value. URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
@@ -79,7 +80,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOnboardingUrl() {
-        return this._onboardingUrl;
+        return this.onboardingUrl;
     }
     /**
      * Serializes information the current object
@@ -102,7 +103,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastConnectionDateTime property value. Timestamp of the last request sent to Intune by the TEM partner.
@@ -111,7 +112,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastConnectionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastConnectionDateTime = value;
+        this.lastConnectionDateTime = value;
     }
     /**
      * Sets the onboardingStatus property value. The current TeamViewer connector status
@@ -120,7 +121,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOnboardingStatus(@javax.annotation.Nullable final RemoteAssistanceOnboardingStatus value) {
-        this._onboardingStatus = value;
+        this.onboardingStatus = value;
     }
     /**
      * Sets the onboardingUrl property value. URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
@@ -129,6 +130,6 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOnboardingUrl(@javax.annotation.Nullable final String value) {
-        this._onboardingUrl = value;
+        this.onboardingUrl = value;
     }
 }

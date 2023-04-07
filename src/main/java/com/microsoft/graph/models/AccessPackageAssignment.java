@@ -4,26 +4,24 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class AccessPackageAssignment extends Entity implements Parsable {
     /** Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters. */
-    private AccessPackage _accessPackage;
+    private AccessPackage accessPackage;
     /** Read-only. Supports $filter (eq) on the id property and $expand query parameters. */
-    private AccessPackageAssignmentPolicy _assignmentPolicy;
+    private AccessPackageAssignmentPolicy assignmentPolicy;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
-    private OffsetDateTime _expiredDateTime;
+    private OffsetDateTime expiredDateTime;
     /** When the access assignment is to be in place. Read-only. */
-    private EntitlementManagementSchedule _schedule;
+    private EntitlementManagementSchedule schedule;
     /** The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq). */
-    private AccessPackageAssignmentState _state;
+    private AccessPackageAssignmentState state;
     /** More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only. */
-    private String _status;
+    private String status;
     /** The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId. */
-    private AccessPackageSubject _target;
+    private AccessPackageSubject target;
     /**
      * Instantiates a new accessPackageAssignment and sets the default values.
      * @return a void
@@ -48,7 +46,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackage getAccessPackage() {
-        return this._accessPackage;
+        return this.accessPackage;
     }
     /**
      * Gets the assignmentPolicy property value. Read-only. Supports $filter (eq) on the id property and $expand query parameters.
@@ -56,7 +54,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackageAssignmentPolicy getAssignmentPolicy() {
-        return this._assignmentPolicy;
+        return this.assignmentPolicy;
     }
     /**
      * Gets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -64,15 +62,15 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getExpiredDateTime() {
-        return this._expiredDateTime;
+        return this.expiredDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackage", (n) -> { this.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
         deserializerMap.put("assignmentPolicy", (n) -> { this.setAssignmentPolicy(n.getObjectValue(AccessPackageAssignmentPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("expiredDateTime", (n) -> { this.setExpiredDateTime(n.getOffsetDateTimeValue()); });
@@ -88,7 +86,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EntitlementManagementSchedule getSchedule() {
-        return this._schedule;
+        return this.schedule;
     }
     /**
      * Gets the state property value. The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq).
@@ -96,7 +94,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackageAssignmentState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Gets the status property value. More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
@@ -104,7 +102,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the target property value. The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
@@ -112,7 +110,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackageSubject getTarget() {
-        return this._target;
+        return this.target;
     }
     /**
      * Serializes information the current object
@@ -138,7 +136,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAccessPackage(@javax.annotation.Nullable final AccessPackage value) {
-        this._accessPackage = value;
+        this.accessPackage = value;
     }
     /**
      * Sets the assignmentPolicy property value. Read-only. Supports $filter (eq) on the id property and $expand query parameters.
@@ -147,7 +145,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAssignmentPolicy(@javax.annotation.Nullable final AccessPackageAssignmentPolicy value) {
-        this._assignmentPolicy = value;
+        this.assignmentPolicy = value;
     }
     /**
      * Sets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -156,7 +154,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setExpiredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._expiredDateTime = value;
+        this.expiredDateTime = value;
     }
     /**
      * Sets the schedule property value. When the access assignment is to be in place. Read-only.
@@ -165,7 +163,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSchedule(@javax.annotation.Nullable final EntitlementManagementSchedule value) {
-        this._schedule = value;
+        this.schedule = value;
     }
     /**
      * Sets the state property value. The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq).
@@ -174,7 +172,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final AccessPackageAssignmentState value) {
-        this._state = value;
+        this.state = value;
     }
     /**
      * Sets the status property value. More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
@@ -183,7 +181,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the target property value. The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
@@ -192,6 +190,6 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final AccessPackageSubject value) {
-        this._target = value;
+        this.target = value;
     }
 }

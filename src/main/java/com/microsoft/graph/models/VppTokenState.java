@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
+/** Possible states associated with an Apple Volume Purchase Program token. */
 public enum VppTokenState implements ValuedEnum {
     /** Default state. */
     Unknown("unknown"),

@@ -3,27 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsable {
     /** The script output comparison value. Do not specify a value if the rule is used for detection. */
-    private String _comparisonValue;
+    private String comparisonValue;
     /** The display name for the rule. Do not specify this value if the rule is used for detection. */
-    private String _displayName;
+    private String displayName;
     /** A value indicating whether a signature check is enforced. */
-    private Boolean _enforceSignatureCheck;
+    private Boolean enforceSignatureCheck;
     /** Contains all supported Powershell Script output detection type. */
-    private Win32LobAppPowerShellScriptRuleOperationType _operationType;
+    private Win32LobAppPowerShellScriptRuleOperationType operationType;
     /** Contains properties for detection operator. */
-    private Win32LobAppRuleOperator _operator;
+    private Win32LobAppRuleOperator operator;
     /** A value indicating whether the script should run as 32-bit. */
-    private Boolean _runAs32Bit;
+    private Boolean runAs32Bit;
     /** The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user. */
-    private RunAsAccountType _runAsAccount;
+    private RunAsAccountType runAsAccount;
     /** The base64-encoded script content. */
-    private String _scriptContent;
+    private String scriptContent;
     /**
      * Instantiates a new Win32LobAppPowerShellScriptRule and sets the default values.
      * @return a void
@@ -49,7 +48,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     @javax.annotation.Nullable
     public String getComparisonValue() {
-        return this._comparisonValue;
+        return this.comparisonValue;
     }
     /**
      * Gets the displayName property value. The display name for the rule. Do not specify this value if the rule is used for detection.
@@ -57,7 +56,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the enforceSignatureCheck property value. A value indicating whether a signature check is enforced.
@@ -65,15 +64,15 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     @javax.annotation.Nullable
     public Boolean getEnforceSignatureCheck() {
-        return this._enforceSignatureCheck;
+        return this.enforceSignatureCheck;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("comparisonValue", (n) -> { this.setComparisonValue(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("enforceSignatureCheck", (n) -> { this.setEnforceSignatureCheck(n.getBooleanValue()); });
@@ -90,7 +89,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     @javax.annotation.Nullable
     public Win32LobAppPowerShellScriptRuleOperationType getOperationType() {
-        return this._operationType;
+        return this.operationType;
     }
     /**
      * Gets the operator property value. Contains properties for detection operator.
@@ -98,7 +97,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     @javax.annotation.Nullable
     public Win32LobAppRuleOperator getOperator() {
-        return this._operator;
+        return this.operator;
     }
     /**
      * Gets the runAs32Bit property value. A value indicating whether the script should run as 32-bit.
@@ -106,7 +105,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     @javax.annotation.Nullable
     public Boolean getRunAs32Bit() {
-        return this._runAs32Bit;
+        return this.runAs32Bit;
     }
     /**
      * Gets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
@@ -114,7 +113,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     @javax.annotation.Nullable
     public RunAsAccountType getRunAsAccount() {
-        return this._runAsAccount;
+        return this.runAsAccount;
     }
     /**
      * Gets the scriptContent property value. The base64-encoded script content.
@@ -122,7 +121,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     @javax.annotation.Nullable
     public String getScriptContent() {
-        return this._scriptContent;
+        return this.scriptContent;
     }
     /**
      * Serializes information the current object
@@ -149,7 +148,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     @javax.annotation.Nonnull
     public void setComparisonValue(@javax.annotation.Nullable final String value) {
-        this._comparisonValue = value;
+        this.comparisonValue = value;
     }
     /**
      * Sets the displayName property value. The display name for the rule. Do not specify this value if the rule is used for detection.
@@ -158,7 +157,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the enforceSignatureCheck property value. A value indicating whether a signature check is enforced.
@@ -167,7 +166,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     @javax.annotation.Nonnull
     public void setEnforceSignatureCheck(@javax.annotation.Nullable final Boolean value) {
-        this._enforceSignatureCheck = value;
+        this.enforceSignatureCheck = value;
     }
     /**
      * Sets the operationType property value. Contains all supported Powershell Script output detection type.
@@ -176,7 +175,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     @javax.annotation.Nonnull
     public void setOperationType(@javax.annotation.Nullable final Win32LobAppPowerShellScriptRuleOperationType value) {
-        this._operationType = value;
+        this.operationType = value;
     }
     /**
      * Sets the operator property value. Contains properties for detection operator.
@@ -185,7 +184,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     @javax.annotation.Nonnull
     public void setOperator(@javax.annotation.Nullable final Win32LobAppRuleOperator value) {
-        this._operator = value;
+        this.operator = value;
     }
     /**
      * Sets the runAs32Bit property value. A value indicating whether the script should run as 32-bit.
@@ -194,7 +193,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     @javax.annotation.Nonnull
     public void setRunAs32Bit(@javax.annotation.Nullable final Boolean value) {
-        this._runAs32Bit = value;
+        this.runAs32Bit = value;
     }
     /**
      * Sets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
@@ -203,7 +202,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     @javax.annotation.Nonnull
     public void setRunAsAccount(@javax.annotation.Nullable final RunAsAccountType value) {
-        this._runAsAccount = value;
+        this.runAsAccount = value;
     }
     /**
      * Sets the scriptContent property value. The base64-encoded script content.
@@ -212,6 +211,6 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     @javax.annotation.Nonnull
     public void setScriptContent(@javax.annotation.Nullable final String value) {
-        this._scriptContent = value;
+        this.scriptContent = value;
     }
 }

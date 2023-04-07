@@ -6,18 +6,16 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the transfer method. */
 public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The transferee property */
-    private ParticipantInfo _transferee;
+    private ParticipantInfo transferee;
     /** The transferTarget property */
-    private InvitationParticipantInfo _transferTarget;
+    private InvitationParticipantInfo transferTarget;
     /**
      * Instantiates a new transferPostRequestBody and sets the default values.
      * @return a void
@@ -42,15 +40,15 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("transferee", (n) -> { this.setTransferee(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("transferTarget", (n) -> { this.setTransferTarget(n.getObjectValue(InvitationParticipantInfo::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -61,7 +59,7 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ParticipantInfo getTransferee() {
-        return this._transferee;
+        return this.transferee;
     }
     /**
      * Gets the transferTarget property value. The transferTarget property
@@ -69,7 +67,7 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public InvitationParticipantInfo getTransferTarget() {
-        return this._transferTarget;
+        return this.transferTarget;
     }
     /**
      * Serializes information the current object
@@ -90,7 +88,7 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the transferee property value. The transferee property
@@ -99,7 +97,7 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTransferee(@javax.annotation.Nullable final ParticipantInfo value) {
-        this._transferee = value;
+        this.transferee = value;
     }
     /**
      * Sets the transferTarget property value. The transferTarget property
@@ -108,6 +106,6 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTransferTarget(@javax.annotation.Nullable final InvitationParticipantInfo value) {
-        this._transferTarget = value;
+        this.transferTarget = value;
     }
 }

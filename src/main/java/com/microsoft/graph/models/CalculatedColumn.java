@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CalculatedColumn implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** For dateTime output types, the format of the value. Must be one of dateOnly or dateTime. */
-    private String _format;
+    private String format;
     /** The formula used to compute the value for this column. */
-    private String _formula;
+    private String formula;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text. */
-    private String _outputType;
+    private String outputType;
     /**
      * Instantiates a new calculatedColumn and sets the default values.
      * @return a void
@@ -43,15 +42,15 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("format", (n) -> { this.setFormat(n.getStringValue()); });
         deserializerMap.put("formula", (n) -> { this.setFormula(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -64,7 +63,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getFormat() {
-        return this._format;
+        return this.format;
     }
     /**
      * Gets the formula property value. The formula used to compute the value for this column.
@@ -72,7 +71,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getFormula() {
-        return this._formula;
+        return this.formula;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -80,7 +79,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the outputType property value. The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.
@@ -88,7 +87,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOutputType() {
-        return this._outputType;
+        return this.outputType;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the format property value. For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.
@@ -120,7 +119,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final String value) {
-        this._format = value;
+        this.format = value;
     }
     /**
      * Sets the formula property value. The formula used to compute the value for this column.
@@ -129,7 +128,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFormula(@javax.annotation.Nullable final String value) {
-        this._formula = value;
+        this.formula = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -138,7 +137,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the outputType property value. The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.
@@ -147,6 +146,6 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOutputType(@javax.annotation.Nullable final String value) {
-        this._outputType = value;
+        this.outputType = value;
     }
 }

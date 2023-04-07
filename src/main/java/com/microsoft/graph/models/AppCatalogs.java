@@ -1,16 +1,17 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the appCatalogs singleton. */
-public class AppCatalogs extends Entity implements Parsable {
+public class AppCatalogs extends Entity implements AdditionalDataHolder, Parsable {
+    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    private Map<String, Object> additionalData;
     /** The teamsApps property */
-    private java.util.List<TeamsApp> _teamsApps;
+    private java.util.List<TeamsApp> teamsApps;
     /**
      * Instantiates a new appCatalogs and sets the default values.
      * @return a void
@@ -18,6 +19,7 @@ public class AppCatalogs extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AppCatalogs() {
         super();
+        this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,12 +32,20 @@ public class AppCatalogs extends Entity implements Parsable {
         return new AppCatalogs();
     }
     /**
-     * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return a Map<String, Object>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, Object> getAdditionalData() {
+        return this.additionalData;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("teamsApps", (n) -> { this.setTeamsApps(n.getCollectionOfObjectValues(TeamsApp::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -45,7 +55,7 @@ public class AppCatalogs extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TeamsApp> getTeamsApps() {
-        return this._teamsApps;
+        return this.teamsApps;
     }
     /**
      * Serializes information the current object
@@ -57,6 +67,16 @@ public class AppCatalogs extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("teamsApps", this.getTeamsApps());
+        writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+        this.additionalData = value;
     }
     /**
      * Sets the teamsApps property value. The teamsApps property
@@ -65,6 +85,6 @@ public class AppCatalogs extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTeamsApps(@javax.annotation.Nullable final java.util.List<TeamsApp> value) {
-        this._teamsApps = value;
+        this.teamsApps = value;
     }
 }

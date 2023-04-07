@@ -1,39 +1,36 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.MailSearchFolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class MailFolder extends Entity implements Parsable {
     /** The number of immediate child mailFolders in the current mailFolder. */
-    private Integer _childFolderCount;
+    private Integer childFolderCount;
     /** The collection of child folders in the mailFolder. */
-    private java.util.List<MailFolder> _childFolders;
+    private java.util.List<MailFolder> childFolders;
     /** The mailFolder's display name. */
-    private String _displayName;
+    private String displayName;
     /** Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders. */
-    private Boolean _isHidden;
+    private Boolean isHidden;
     /** The collection of rules that apply to the user's Inbox folder. */
-    private java.util.List<MessageRule> _messageRules;
+    private java.util.List<MessageRule> messageRules;
     /** The collection of messages in the mailFolder. */
-    private java.util.List<Message> _messages;
+    private java.util.List<Message> messages;
     /** The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable. */
-    private java.util.List<MultiValueLegacyExtendedProperty> _multiValueExtendedProperties;
+    private java.util.List<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
     /** The unique identifier for the mailFolder's parent mailFolder. */
-    private String _parentFolderId;
+    private String parentFolderId;
     /** The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable. */
-    private java.util.List<SingleValueLegacyExtendedProperty> _singleValueExtendedProperties;
+    private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
     /** The number of items in the mailFolder. */
-    private Integer _totalItemCount;
+    private Integer totalItemCount;
     /** The number of items in the mailFolder marked as unread. */
-    private Integer _unreadItemCount;
+    private Integer unreadItemCount;
     /**
-     * Instantiates a new mailFolder and sets the default values.
+     * Instantiates a new MailFolder and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -43,7 +40,7 @@ public class MailFolder extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mailFolder
+     * @return a MailFolder
      */
     @javax.annotation.Nonnull
     public static MailFolder createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +60,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getChildFolderCount() {
-        return this._childFolderCount;
+        return this.childFolderCount;
     }
     /**
      * Gets the childFolders property value. The collection of child folders in the mailFolder.
@@ -71,7 +68,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MailFolder> getChildFolders() {
-        return this._childFolders;
+        return this.childFolders;
     }
     /**
      * Gets the displayName property value. The mailFolder's display name.
@@ -79,15 +76,15 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("childFolderCount", (n) -> { this.setChildFolderCount(n.getIntegerValue()); });
         deserializerMap.put("childFolders", (n) -> { this.setChildFolders(n.getCollectionOfObjectValues(MailFolder::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -107,7 +104,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsHidden() {
-        return this._isHidden;
+        return this.isHidden;
     }
     /**
      * Gets the messageRules property value. The collection of rules that apply to the user's Inbox folder.
@@ -115,7 +112,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MessageRule> getMessageRules() {
-        return this._messageRules;
+        return this.messageRules;
     }
     /**
      * Gets the messages property value. The collection of messages in the mailFolder.
@@ -123,7 +120,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Message> getMessages() {
-        return this._messages;
+        return this.messages;
     }
     /**
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
@@ -131,7 +128,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
-        return this._multiValueExtendedProperties;
+        return this.multiValueExtendedProperties;
     }
     /**
      * Gets the parentFolderId property value. The unique identifier for the mailFolder's parent mailFolder.
@@ -139,7 +136,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getParentFolderId() {
-        return this._parentFolderId;
+        return this.parentFolderId;
     }
     /**
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
@@ -147,7 +144,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
-        return this._singleValueExtendedProperties;
+        return this.singleValueExtendedProperties;
     }
     /**
      * Gets the totalItemCount property value. The number of items in the mailFolder.
@@ -155,7 +152,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getTotalItemCount() {
-        return this._totalItemCount;
+        return this.totalItemCount;
     }
     /**
      * Gets the unreadItemCount property value. The number of items in the mailFolder marked as unread.
@@ -163,7 +160,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getUnreadItemCount() {
-        return this._unreadItemCount;
+        return this.unreadItemCount;
     }
     /**
      * Serializes information the current object
@@ -193,7 +190,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setChildFolderCount(@javax.annotation.Nullable final Integer value) {
-        this._childFolderCount = value;
+        this.childFolderCount = value;
     }
     /**
      * Sets the childFolders property value. The collection of child folders in the mailFolder.
@@ -202,7 +199,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setChildFolders(@javax.annotation.Nullable final java.util.List<MailFolder> value) {
-        this._childFolders = value;
+        this.childFolders = value;
     }
     /**
      * Sets the displayName property value. The mailFolder's display name.
@@ -211,7 +208,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the isHidden property value. Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
@@ -220,7 +217,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsHidden(@javax.annotation.Nullable final Boolean value) {
-        this._isHidden = value;
+        this.isHidden = value;
     }
     /**
      * Sets the messageRules property value. The collection of rules that apply to the user's Inbox folder.
@@ -229,7 +226,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMessageRules(@javax.annotation.Nullable final java.util.List<MessageRule> value) {
-        this._messageRules = value;
+        this.messageRules = value;
     }
     /**
      * Sets the messages property value. The collection of messages in the mailFolder.
@@ -238,7 +235,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMessages(@javax.annotation.Nullable final java.util.List<Message> value) {
-        this._messages = value;
+        this.messages = value;
     }
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
@@ -247,7 +244,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
-        this._multiValueExtendedProperties = value;
+        this.multiValueExtendedProperties = value;
     }
     /**
      * Sets the parentFolderId property value. The unique identifier for the mailFolder's parent mailFolder.
@@ -256,7 +253,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setParentFolderId(@javax.annotation.Nullable final String value) {
-        this._parentFolderId = value;
+        this.parentFolderId = value;
     }
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
@@ -265,7 +262,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
-        this._singleValueExtendedProperties = value;
+        this.singleValueExtendedProperties = value;
     }
     /**
      * Sets the totalItemCount property value. The number of items in the mailFolder.
@@ -274,7 +271,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTotalItemCount(@javax.annotation.Nullable final Integer value) {
-        this._totalItemCount = value;
+        this.totalItemCount = value;
     }
     /**
      * Sets the unreadItemCount property value. The number of items in the mailFolder marked as unread.
@@ -283,6 +280,6 @@ public class MailFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUnreadItemCount(@javax.annotation.Nullable final Integer value) {
-        this._unreadItemCount = value;
+        this.unreadItemCount = value;
     }
 }

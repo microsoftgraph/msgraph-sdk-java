@@ -3,83 +3,82 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows10EndpointProtectionConfiguration extends DeviceConfiguration implements Parsable {
     /** Allow persisting user generated data inside the App Guard Containter (favorites, cookies, web passwords, etc.) */
-    private Boolean _applicationGuardAllowPersistence;
+    private Boolean applicationGuardAllowPersistence;
     /** Allow printing to Local Printers from Container */
-    private Boolean _applicationGuardAllowPrintToLocalPrinters;
+    private Boolean applicationGuardAllowPrintToLocalPrinters;
     /** Allow printing to Network Printers from Container */
-    private Boolean _applicationGuardAllowPrintToNetworkPrinters;
+    private Boolean applicationGuardAllowPrintToNetworkPrinters;
     /** Allow printing to PDF from Container */
-    private Boolean _applicationGuardAllowPrintToPDF;
+    private Boolean applicationGuardAllowPrintToPDF;
     /** Allow printing to XPS from Container */
-    private Boolean _applicationGuardAllowPrintToXPS;
+    private Boolean applicationGuardAllowPrintToXPS;
     /** Possible values for applicationGuardBlockClipboardSharingType */
-    private ApplicationGuardBlockClipboardSharingType _applicationGuardBlockClipboardSharing;
+    private ApplicationGuardBlockClipboardSharingType applicationGuardBlockClipboardSharing;
     /** Possible values for applicationGuardBlockFileTransfer */
-    private ApplicationGuardBlockFileTransferType _applicationGuardBlockFileTransfer;
+    private ApplicationGuardBlockFileTransferType applicationGuardBlockFileTransfer;
     /** Block enterprise sites to load non-enterprise content, such as third party plug-ins */
-    private Boolean _applicationGuardBlockNonEnterpriseContent;
+    private Boolean applicationGuardBlockNonEnterpriseContent;
     /** Enable Windows Defender Application Guard */
-    private Boolean _applicationGuardEnabled;
+    private Boolean applicationGuardEnabled;
     /** Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.) */
-    private Boolean _applicationGuardForceAuditing;
+    private Boolean applicationGuardForceAuditing;
     /** Possible values of AppLocker Application Control Types */
-    private AppLockerApplicationControlType _appLockerApplicationControl;
+    private AppLockerApplicationControlType appLockerApplicationControl;
     /** Allows the Admin to disable the warning prompt for other disk encryption on the user machines. */
-    private Boolean _bitLockerDisableWarningForOtherDiskEncryption;
+    private Boolean bitLockerDisableWarningForOtherDiskEncryption;
     /** Allows the admin to require encryption to be turned on using BitLocker. This policy is valid only for a mobile SKU. */
-    private Boolean _bitLockerEnableStorageCardEncryptionOnMobile;
+    private Boolean bitLockerEnableStorageCardEncryptionOnMobile;
     /** Allows the admin to require encryption to be turned on using BitLocker. */
-    private Boolean _bitLockerEncryptDevice;
+    private Boolean bitLockerEncryptDevice;
     /** BitLocker Removable Drive Policy. */
-    private BitLockerRemovableDrivePolicy _bitLockerRemovableDrivePolicy;
+    private BitLockerRemovableDrivePolicy bitLockerRemovableDrivePolicy;
     /** List of folder paths to be added to the list of protected folders */
-    private java.util.List<String> _defenderAdditionalGuardedFolders;
+    private java.util.List<String> defenderAdditionalGuardedFolders;
     /** List of exe files and folders to be excluded from attack surface reduction rules */
-    private java.util.List<String> _defenderAttackSurfaceReductionExcludedPaths;
+    private java.util.List<String> defenderAttackSurfaceReductionExcludedPaths;
     /** Xml content containing information regarding exploit protection details. */
-    private byte[] _defenderExploitProtectionXml;
+    private byte[] defenderExploitProtectionXml;
     /** Name of the file from which DefenderExploitProtectionXml was obtained. */
-    private String _defenderExploitProtectionXmlFileName;
+    private String defenderExploitProtectionXmlFileName;
     /** List of paths to exe that are allowed to access protected folders */
-    private java.util.List<String> _defenderGuardedFoldersAllowedAppPaths;
+    private java.util.List<String> defenderGuardedFoldersAllowedAppPaths;
     /** Indicates whether or not to block user from overriding Exploit Protection settings. */
-    private Boolean _defenderSecurityCenterBlockExploitProtectionOverride;
+    private Boolean defenderSecurityCenterBlockExploitProtectionOverride;
     /** Blocks stateful FTP connections to the device */
-    private Boolean _firewallBlockStatefulFTP;
+    private Boolean firewallBlockStatefulFTP;
     /** Possible values for firewallCertificateRevocationListCheckMethod */
-    private FirewallCertificateRevocationListCheckMethodType _firewallCertificateRevocationListCheckMethod;
+    private FirewallCertificateRevocationListCheckMethodType firewallCertificateRevocationListCheckMethod;
     /** Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600 */
-    private Integer _firewallIdleTimeoutForSecurityAssociationInSeconds;
+    private Integer firewallIdleTimeoutForSecurityAssociationInSeconds;
     /** Configures IPSec exemptions to allow both IPv4 and IPv6 DHCP traffic */
-    private Boolean _firewallIPSecExemptionsAllowDHCP;
+    private Boolean firewallIPSecExemptionsAllowDHCP;
     /** Configures IPSec exemptions to allow ICMP */
-    private Boolean _firewallIPSecExemptionsAllowICMP;
+    private Boolean firewallIPSecExemptionsAllowICMP;
     /** Configures IPSec exemptions to allow neighbor discovery IPv6 ICMP type-codes */
-    private Boolean _firewallIPSecExemptionsAllowNeighborDiscovery;
+    private Boolean firewallIPSecExemptionsAllowNeighborDiscovery;
     /** Configures IPSec exemptions to allow router discovery IPv6 ICMP type-codes */
-    private Boolean _firewallIPSecExemptionsAllowRouterDiscovery;
+    private Boolean firewallIPSecExemptionsAllowRouterDiscovery;
     /** If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set */
-    private Boolean _firewallMergeKeyingModuleSettings;
+    private Boolean firewallMergeKeyingModuleSettings;
     /** Possible values for firewallPacketQueueingMethod */
-    private FirewallPacketQueueingMethodType _firewallPacketQueueingMethod;
+    private FirewallPacketQueueingMethodType firewallPacketQueueingMethod;
     /** Possible values for firewallPreSharedKeyEncodingMethod */
-    private FirewallPreSharedKeyEncodingMethodType _firewallPreSharedKeyEncodingMethod;
+    private FirewallPreSharedKeyEncodingMethodType firewallPreSharedKeyEncodingMethod;
     /** Configures the firewall profile settings for domain networks */
-    private WindowsFirewallNetworkProfile _firewallProfileDomain;
+    private WindowsFirewallNetworkProfile firewallProfileDomain;
     /** Configures the firewall profile settings for private networks */
-    private WindowsFirewallNetworkProfile _firewallProfilePrivate;
+    private WindowsFirewallNetworkProfile firewallProfilePrivate;
     /** Configures the firewall profile settings for public networks */
-    private WindowsFirewallNetworkProfile _firewallProfilePublic;
+    private WindowsFirewallNetworkProfile firewallProfilePublic;
     /** Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files. */
-    private Boolean _smartScreenBlockOverrideForFiles;
+    private Boolean smartScreenBlockOverrideForFiles;
     /** Allows IT Admins to configure SmartScreen for Windows. */
-    private Boolean _smartScreenEnableInShell;
+    private Boolean smartScreenEnableInShell;
     /**
      * Instantiates a new Windows10EndpointProtectionConfiguration and sets the default values.
      * @return a void
@@ -105,7 +104,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardAllowPersistence() {
-        return this._applicationGuardAllowPersistence;
+        return this.applicationGuardAllowPersistence;
     }
     /**
      * Gets the applicationGuardAllowPrintToLocalPrinters property value. Allow printing to Local Printers from Container
@@ -113,7 +112,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardAllowPrintToLocalPrinters() {
-        return this._applicationGuardAllowPrintToLocalPrinters;
+        return this.applicationGuardAllowPrintToLocalPrinters;
     }
     /**
      * Gets the applicationGuardAllowPrintToNetworkPrinters property value. Allow printing to Network Printers from Container
@@ -121,7 +120,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardAllowPrintToNetworkPrinters() {
-        return this._applicationGuardAllowPrintToNetworkPrinters;
+        return this.applicationGuardAllowPrintToNetworkPrinters;
     }
     /**
      * Gets the applicationGuardAllowPrintToPDF property value. Allow printing to PDF from Container
@@ -129,7 +128,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardAllowPrintToPDF() {
-        return this._applicationGuardAllowPrintToPDF;
+        return this.applicationGuardAllowPrintToPDF;
     }
     /**
      * Gets the applicationGuardAllowPrintToXPS property value. Allow printing to XPS from Container
@@ -137,7 +136,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardAllowPrintToXPS() {
-        return this._applicationGuardAllowPrintToXPS;
+        return this.applicationGuardAllowPrintToXPS;
     }
     /**
      * Gets the applicationGuardBlockClipboardSharing property value. Possible values for applicationGuardBlockClipboardSharingType
@@ -145,7 +144,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public ApplicationGuardBlockClipboardSharingType getApplicationGuardBlockClipboardSharing() {
-        return this._applicationGuardBlockClipboardSharing;
+        return this.applicationGuardBlockClipboardSharing;
     }
     /**
      * Gets the applicationGuardBlockFileTransfer property value. Possible values for applicationGuardBlockFileTransfer
@@ -153,7 +152,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public ApplicationGuardBlockFileTransferType getApplicationGuardBlockFileTransfer() {
-        return this._applicationGuardBlockFileTransfer;
+        return this.applicationGuardBlockFileTransfer;
     }
     /**
      * Gets the applicationGuardBlockNonEnterpriseContent property value. Block enterprise sites to load non-enterprise content, such as third party plug-ins
@@ -161,7 +160,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardBlockNonEnterpriseContent() {
-        return this._applicationGuardBlockNonEnterpriseContent;
+        return this.applicationGuardBlockNonEnterpriseContent;
     }
     /**
      * Gets the applicationGuardEnabled property value. Enable Windows Defender Application Guard
@@ -169,7 +168,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardEnabled() {
-        return this._applicationGuardEnabled;
+        return this.applicationGuardEnabled;
     }
     /**
      * Gets the applicationGuardForceAuditing property value. Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.)
@@ -177,7 +176,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardForceAuditing() {
-        return this._applicationGuardForceAuditing;
+        return this.applicationGuardForceAuditing;
     }
     /**
      * Gets the appLockerApplicationControl property value. Possible values of AppLocker Application Control Types
@@ -185,7 +184,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public AppLockerApplicationControlType getAppLockerApplicationControl() {
-        return this._appLockerApplicationControl;
+        return this.appLockerApplicationControl;
     }
     /**
      * Gets the bitLockerDisableWarningForOtherDiskEncryption property value. Allows the Admin to disable the warning prompt for other disk encryption on the user machines.
@@ -193,7 +192,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getBitLockerDisableWarningForOtherDiskEncryption() {
-        return this._bitLockerDisableWarningForOtherDiskEncryption;
+        return this.bitLockerDisableWarningForOtherDiskEncryption;
     }
     /**
      * Gets the bitLockerEnableStorageCardEncryptionOnMobile property value. Allows the admin to require encryption to be turned on using BitLocker. This policy is valid only for a mobile SKU.
@@ -201,7 +200,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getBitLockerEnableStorageCardEncryptionOnMobile() {
-        return this._bitLockerEnableStorageCardEncryptionOnMobile;
+        return this.bitLockerEnableStorageCardEncryptionOnMobile;
     }
     /**
      * Gets the bitLockerEncryptDevice property value. Allows the admin to require encryption to be turned on using BitLocker.
@@ -209,7 +208,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getBitLockerEncryptDevice() {
-        return this._bitLockerEncryptDevice;
+        return this.bitLockerEncryptDevice;
     }
     /**
      * Gets the bitLockerRemovableDrivePolicy property value. BitLocker Removable Drive Policy.
@@ -217,7 +216,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public BitLockerRemovableDrivePolicy getBitLockerRemovableDrivePolicy() {
-        return this._bitLockerRemovableDrivePolicy;
+        return this.bitLockerRemovableDrivePolicy;
     }
     /**
      * Gets the defenderAdditionalGuardedFolders property value. List of folder paths to be added to the list of protected folders
@@ -225,7 +224,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDefenderAdditionalGuardedFolders() {
-        return this._defenderAdditionalGuardedFolders;
+        return this.defenderAdditionalGuardedFolders;
     }
     /**
      * Gets the defenderAttackSurfaceReductionExcludedPaths property value. List of exe files and folders to be excluded from attack surface reduction rules
@@ -233,15 +232,15 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDefenderAttackSurfaceReductionExcludedPaths() {
-        return this._defenderAttackSurfaceReductionExcludedPaths;
+        return this.defenderAttackSurfaceReductionExcludedPaths;
     }
     /**
      * Gets the defenderExploitProtectionXml property value. Xml content containing information regarding exploit protection details.
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getDefenderExploitProtectionXml() {
-        return this._defenderExploitProtectionXml;
+        return this.defenderExploitProtectionXml;
     }
     /**
      * Gets the defenderExploitProtectionXmlFileName property value. Name of the file from which DefenderExploitProtectionXml was obtained.
@@ -249,7 +248,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public String getDefenderExploitProtectionXmlFileName() {
-        return this._defenderExploitProtectionXmlFileName;
+        return this.defenderExploitProtectionXmlFileName;
     }
     /**
      * Gets the defenderGuardedFoldersAllowedAppPaths property value. List of paths to exe that are allowed to access protected folders
@@ -257,7 +256,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDefenderGuardedFoldersAllowedAppPaths() {
-        return this._defenderGuardedFoldersAllowedAppPaths;
+        return this.defenderGuardedFoldersAllowedAppPaths;
     }
     /**
      * Gets the defenderSecurityCenterBlockExploitProtectionOverride property value. Indicates whether or not to block user from overriding Exploit Protection settings.
@@ -265,15 +264,15 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderSecurityCenterBlockExploitProtectionOverride() {
-        return this._defenderSecurityCenterBlockExploitProtectionOverride;
+        return this.defenderSecurityCenterBlockExploitProtectionOverride;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicationGuardAllowPersistence", (n) -> { this.setApplicationGuardAllowPersistence(n.getBooleanValue()); });
         deserializerMap.put("applicationGuardAllowPrintToLocalPrinters", (n) -> { this.setApplicationGuardAllowPrintToLocalPrinters(n.getBooleanValue()); });
         deserializerMap.put("applicationGuardAllowPrintToNetworkPrinters", (n) -> { this.setApplicationGuardAllowPrintToNetworkPrinters(n.getBooleanValue()); });
@@ -318,7 +317,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getFirewallBlockStatefulFTP() {
-        return this._firewallBlockStatefulFTP;
+        return this.firewallBlockStatefulFTP;
     }
     /**
      * Gets the firewallCertificateRevocationListCheckMethod property value. Possible values for firewallCertificateRevocationListCheckMethod
@@ -326,7 +325,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public FirewallCertificateRevocationListCheckMethodType getFirewallCertificateRevocationListCheckMethod() {
-        return this._firewallCertificateRevocationListCheckMethod;
+        return this.firewallCertificateRevocationListCheckMethod;
     }
     /**
      * Gets the firewallIdleTimeoutForSecurityAssociationInSeconds property value. Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600
@@ -334,7 +333,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Integer getFirewallIdleTimeoutForSecurityAssociationInSeconds() {
-        return this._firewallIdleTimeoutForSecurityAssociationInSeconds;
+        return this.firewallIdleTimeoutForSecurityAssociationInSeconds;
     }
     /**
      * Gets the firewallIPSecExemptionsAllowDHCP property value. Configures IPSec exemptions to allow both IPv4 and IPv6 DHCP traffic
@@ -342,7 +341,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getFirewallIPSecExemptionsAllowDHCP() {
-        return this._firewallIPSecExemptionsAllowDHCP;
+        return this.firewallIPSecExemptionsAllowDHCP;
     }
     /**
      * Gets the firewallIPSecExemptionsAllowICMP property value. Configures IPSec exemptions to allow ICMP
@@ -350,7 +349,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getFirewallIPSecExemptionsAllowICMP() {
-        return this._firewallIPSecExemptionsAllowICMP;
+        return this.firewallIPSecExemptionsAllowICMP;
     }
     /**
      * Gets the firewallIPSecExemptionsAllowNeighborDiscovery property value. Configures IPSec exemptions to allow neighbor discovery IPv6 ICMP type-codes
@@ -358,7 +357,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getFirewallIPSecExemptionsAllowNeighborDiscovery() {
-        return this._firewallIPSecExemptionsAllowNeighborDiscovery;
+        return this.firewallIPSecExemptionsAllowNeighborDiscovery;
     }
     /**
      * Gets the firewallIPSecExemptionsAllowRouterDiscovery property value. Configures IPSec exemptions to allow router discovery IPv6 ICMP type-codes
@@ -366,7 +365,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getFirewallIPSecExemptionsAllowRouterDiscovery() {
-        return this._firewallIPSecExemptionsAllowRouterDiscovery;
+        return this.firewallIPSecExemptionsAllowRouterDiscovery;
     }
     /**
      * Gets the firewallMergeKeyingModuleSettings property value. If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set
@@ -374,7 +373,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getFirewallMergeKeyingModuleSettings() {
-        return this._firewallMergeKeyingModuleSettings;
+        return this.firewallMergeKeyingModuleSettings;
     }
     /**
      * Gets the firewallPacketQueueingMethod property value. Possible values for firewallPacketQueueingMethod
@@ -382,7 +381,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public FirewallPacketQueueingMethodType getFirewallPacketQueueingMethod() {
-        return this._firewallPacketQueueingMethod;
+        return this.firewallPacketQueueingMethod;
     }
     /**
      * Gets the firewallPreSharedKeyEncodingMethod property value. Possible values for firewallPreSharedKeyEncodingMethod
@@ -390,7 +389,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public FirewallPreSharedKeyEncodingMethodType getFirewallPreSharedKeyEncodingMethod() {
-        return this._firewallPreSharedKeyEncodingMethod;
+        return this.firewallPreSharedKeyEncodingMethod;
     }
     /**
      * Gets the firewallProfileDomain property value. Configures the firewall profile settings for domain networks
@@ -398,7 +397,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public WindowsFirewallNetworkProfile getFirewallProfileDomain() {
-        return this._firewallProfileDomain;
+        return this.firewallProfileDomain;
     }
     /**
      * Gets the firewallProfilePrivate property value. Configures the firewall profile settings for private networks
@@ -406,7 +405,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public WindowsFirewallNetworkProfile getFirewallProfilePrivate() {
-        return this._firewallProfilePrivate;
+        return this.firewallProfilePrivate;
     }
     /**
      * Gets the firewallProfilePublic property value. Configures the firewall profile settings for public networks
@@ -414,7 +413,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public WindowsFirewallNetworkProfile getFirewallProfilePublic() {
-        return this._firewallProfilePublic;
+        return this.firewallProfilePublic;
     }
     /**
      * Gets the smartScreenBlockOverrideForFiles property value. Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
@@ -422,7 +421,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getSmartScreenBlockOverrideForFiles() {
-        return this._smartScreenBlockOverrideForFiles;
+        return this.smartScreenBlockOverrideForFiles;
     }
     /**
      * Gets the smartScreenEnableInShell property value. Allows IT Admins to configure SmartScreen for Windows.
@@ -430,7 +429,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getSmartScreenEnableInShell() {
-        return this._smartScreenEnableInShell;
+        return this.smartScreenEnableInShell;
     }
     /**
      * Serializes information the current object
@@ -485,7 +484,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setApplicationGuardAllowPersistence(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardAllowPersistence = value;
+        this.applicationGuardAllowPersistence = value;
     }
     /**
      * Sets the applicationGuardAllowPrintToLocalPrinters property value. Allow printing to Local Printers from Container
@@ -494,7 +493,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setApplicationGuardAllowPrintToLocalPrinters(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardAllowPrintToLocalPrinters = value;
+        this.applicationGuardAllowPrintToLocalPrinters = value;
     }
     /**
      * Sets the applicationGuardAllowPrintToNetworkPrinters property value. Allow printing to Network Printers from Container
@@ -503,7 +502,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setApplicationGuardAllowPrintToNetworkPrinters(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardAllowPrintToNetworkPrinters = value;
+        this.applicationGuardAllowPrintToNetworkPrinters = value;
     }
     /**
      * Sets the applicationGuardAllowPrintToPDF property value. Allow printing to PDF from Container
@@ -512,7 +511,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setApplicationGuardAllowPrintToPDF(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardAllowPrintToPDF = value;
+        this.applicationGuardAllowPrintToPDF = value;
     }
     /**
      * Sets the applicationGuardAllowPrintToXPS property value. Allow printing to XPS from Container
@@ -521,7 +520,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setApplicationGuardAllowPrintToXPS(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardAllowPrintToXPS = value;
+        this.applicationGuardAllowPrintToXPS = value;
     }
     /**
      * Sets the applicationGuardBlockClipboardSharing property value. Possible values for applicationGuardBlockClipboardSharingType
@@ -530,7 +529,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setApplicationGuardBlockClipboardSharing(@javax.annotation.Nullable final ApplicationGuardBlockClipboardSharingType value) {
-        this._applicationGuardBlockClipboardSharing = value;
+        this.applicationGuardBlockClipboardSharing = value;
     }
     /**
      * Sets the applicationGuardBlockFileTransfer property value. Possible values for applicationGuardBlockFileTransfer
@@ -539,7 +538,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setApplicationGuardBlockFileTransfer(@javax.annotation.Nullable final ApplicationGuardBlockFileTransferType value) {
-        this._applicationGuardBlockFileTransfer = value;
+        this.applicationGuardBlockFileTransfer = value;
     }
     /**
      * Sets the applicationGuardBlockNonEnterpriseContent property value. Block enterprise sites to load non-enterprise content, such as third party plug-ins
@@ -548,7 +547,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setApplicationGuardBlockNonEnterpriseContent(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardBlockNonEnterpriseContent = value;
+        this.applicationGuardBlockNonEnterpriseContent = value;
     }
     /**
      * Sets the applicationGuardEnabled property value. Enable Windows Defender Application Guard
@@ -557,7 +556,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setApplicationGuardEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardEnabled = value;
+        this.applicationGuardEnabled = value;
     }
     /**
      * Sets the applicationGuardForceAuditing property value. Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.)
@@ -566,7 +565,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setApplicationGuardForceAuditing(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardForceAuditing = value;
+        this.applicationGuardForceAuditing = value;
     }
     /**
      * Sets the appLockerApplicationControl property value. Possible values of AppLocker Application Control Types
@@ -575,7 +574,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setAppLockerApplicationControl(@javax.annotation.Nullable final AppLockerApplicationControlType value) {
-        this._appLockerApplicationControl = value;
+        this.appLockerApplicationControl = value;
     }
     /**
      * Sets the bitLockerDisableWarningForOtherDiskEncryption property value. Allows the Admin to disable the warning prompt for other disk encryption on the user machines.
@@ -584,7 +583,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setBitLockerDisableWarningForOtherDiskEncryption(@javax.annotation.Nullable final Boolean value) {
-        this._bitLockerDisableWarningForOtherDiskEncryption = value;
+        this.bitLockerDisableWarningForOtherDiskEncryption = value;
     }
     /**
      * Sets the bitLockerEnableStorageCardEncryptionOnMobile property value. Allows the admin to require encryption to be turned on using BitLocker. This policy is valid only for a mobile SKU.
@@ -593,7 +592,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setBitLockerEnableStorageCardEncryptionOnMobile(@javax.annotation.Nullable final Boolean value) {
-        this._bitLockerEnableStorageCardEncryptionOnMobile = value;
+        this.bitLockerEnableStorageCardEncryptionOnMobile = value;
     }
     /**
      * Sets the bitLockerEncryptDevice property value. Allows the admin to require encryption to be turned on using BitLocker.
@@ -602,7 +601,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setBitLockerEncryptDevice(@javax.annotation.Nullable final Boolean value) {
-        this._bitLockerEncryptDevice = value;
+        this.bitLockerEncryptDevice = value;
     }
     /**
      * Sets the bitLockerRemovableDrivePolicy property value. BitLocker Removable Drive Policy.
@@ -611,7 +610,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setBitLockerRemovableDrivePolicy(@javax.annotation.Nullable final BitLockerRemovableDrivePolicy value) {
-        this._bitLockerRemovableDrivePolicy = value;
+        this.bitLockerRemovableDrivePolicy = value;
     }
     /**
      * Sets the defenderAdditionalGuardedFolders property value. List of folder paths to be added to the list of protected folders
@@ -620,7 +619,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setDefenderAdditionalGuardedFolders(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._defenderAdditionalGuardedFolders = value;
+        this.defenderAdditionalGuardedFolders = value;
     }
     /**
      * Sets the defenderAttackSurfaceReductionExcludedPaths property value. List of exe files and folders to be excluded from attack surface reduction rules
@@ -629,7 +628,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setDefenderAttackSurfaceReductionExcludedPaths(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._defenderAttackSurfaceReductionExcludedPaths = value;
+        this.defenderAttackSurfaceReductionExcludedPaths = value;
     }
     /**
      * Sets the defenderExploitProtectionXml property value. Xml content containing information regarding exploit protection details.
@@ -638,7 +637,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setDefenderExploitProtectionXml(@javax.annotation.Nullable final byte[] value) {
-        this._defenderExploitProtectionXml = value;
+        this.defenderExploitProtectionXml = value;
     }
     /**
      * Sets the defenderExploitProtectionXmlFileName property value. Name of the file from which DefenderExploitProtectionXml was obtained.
@@ -647,7 +646,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setDefenderExploitProtectionXmlFileName(@javax.annotation.Nullable final String value) {
-        this._defenderExploitProtectionXmlFileName = value;
+        this.defenderExploitProtectionXmlFileName = value;
     }
     /**
      * Sets the defenderGuardedFoldersAllowedAppPaths property value. List of paths to exe that are allowed to access protected folders
@@ -656,7 +655,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setDefenderGuardedFoldersAllowedAppPaths(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._defenderGuardedFoldersAllowedAppPaths = value;
+        this.defenderGuardedFoldersAllowedAppPaths = value;
     }
     /**
      * Sets the defenderSecurityCenterBlockExploitProtectionOverride property value. Indicates whether or not to block user from overriding Exploit Protection settings.
@@ -665,7 +664,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setDefenderSecurityCenterBlockExploitProtectionOverride(@javax.annotation.Nullable final Boolean value) {
-        this._defenderSecurityCenterBlockExploitProtectionOverride = value;
+        this.defenderSecurityCenterBlockExploitProtectionOverride = value;
     }
     /**
      * Sets the firewallBlockStatefulFTP property value. Blocks stateful FTP connections to the device
@@ -674,7 +673,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setFirewallBlockStatefulFTP(@javax.annotation.Nullable final Boolean value) {
-        this._firewallBlockStatefulFTP = value;
+        this.firewallBlockStatefulFTP = value;
     }
     /**
      * Sets the firewallCertificateRevocationListCheckMethod property value. Possible values for firewallCertificateRevocationListCheckMethod
@@ -683,7 +682,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setFirewallCertificateRevocationListCheckMethod(@javax.annotation.Nullable final FirewallCertificateRevocationListCheckMethodType value) {
-        this._firewallCertificateRevocationListCheckMethod = value;
+        this.firewallCertificateRevocationListCheckMethod = value;
     }
     /**
      * Sets the firewallIdleTimeoutForSecurityAssociationInSeconds property value. Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600
@@ -692,7 +691,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setFirewallIdleTimeoutForSecurityAssociationInSeconds(@javax.annotation.Nullable final Integer value) {
-        this._firewallIdleTimeoutForSecurityAssociationInSeconds = value;
+        this.firewallIdleTimeoutForSecurityAssociationInSeconds = value;
     }
     /**
      * Sets the firewallIPSecExemptionsAllowDHCP property value. Configures IPSec exemptions to allow both IPv4 and IPv6 DHCP traffic
@@ -701,7 +700,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setFirewallIPSecExemptionsAllowDHCP(@javax.annotation.Nullable final Boolean value) {
-        this._firewallIPSecExemptionsAllowDHCP = value;
+        this.firewallIPSecExemptionsAllowDHCP = value;
     }
     /**
      * Sets the firewallIPSecExemptionsAllowICMP property value. Configures IPSec exemptions to allow ICMP
@@ -710,7 +709,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setFirewallIPSecExemptionsAllowICMP(@javax.annotation.Nullable final Boolean value) {
-        this._firewallIPSecExemptionsAllowICMP = value;
+        this.firewallIPSecExemptionsAllowICMP = value;
     }
     /**
      * Sets the firewallIPSecExemptionsAllowNeighborDiscovery property value. Configures IPSec exemptions to allow neighbor discovery IPv6 ICMP type-codes
@@ -719,7 +718,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setFirewallIPSecExemptionsAllowNeighborDiscovery(@javax.annotation.Nullable final Boolean value) {
-        this._firewallIPSecExemptionsAllowNeighborDiscovery = value;
+        this.firewallIPSecExemptionsAllowNeighborDiscovery = value;
     }
     /**
      * Sets the firewallIPSecExemptionsAllowRouterDiscovery property value. Configures IPSec exemptions to allow router discovery IPv6 ICMP type-codes
@@ -728,7 +727,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setFirewallIPSecExemptionsAllowRouterDiscovery(@javax.annotation.Nullable final Boolean value) {
-        this._firewallIPSecExemptionsAllowRouterDiscovery = value;
+        this.firewallIPSecExemptionsAllowRouterDiscovery = value;
     }
     /**
      * Sets the firewallMergeKeyingModuleSettings property value. If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set
@@ -737,7 +736,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setFirewallMergeKeyingModuleSettings(@javax.annotation.Nullable final Boolean value) {
-        this._firewallMergeKeyingModuleSettings = value;
+        this.firewallMergeKeyingModuleSettings = value;
     }
     /**
      * Sets the firewallPacketQueueingMethod property value. Possible values for firewallPacketQueueingMethod
@@ -746,7 +745,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setFirewallPacketQueueingMethod(@javax.annotation.Nullable final FirewallPacketQueueingMethodType value) {
-        this._firewallPacketQueueingMethod = value;
+        this.firewallPacketQueueingMethod = value;
     }
     /**
      * Sets the firewallPreSharedKeyEncodingMethod property value. Possible values for firewallPreSharedKeyEncodingMethod
@@ -755,7 +754,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setFirewallPreSharedKeyEncodingMethod(@javax.annotation.Nullable final FirewallPreSharedKeyEncodingMethodType value) {
-        this._firewallPreSharedKeyEncodingMethod = value;
+        this.firewallPreSharedKeyEncodingMethod = value;
     }
     /**
      * Sets the firewallProfileDomain property value. Configures the firewall profile settings for domain networks
@@ -764,7 +763,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setFirewallProfileDomain(@javax.annotation.Nullable final WindowsFirewallNetworkProfile value) {
-        this._firewallProfileDomain = value;
+        this.firewallProfileDomain = value;
     }
     /**
      * Sets the firewallProfilePrivate property value. Configures the firewall profile settings for private networks
@@ -773,7 +772,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setFirewallProfilePrivate(@javax.annotation.Nullable final WindowsFirewallNetworkProfile value) {
-        this._firewallProfilePrivate = value;
+        this.firewallProfilePrivate = value;
     }
     /**
      * Sets the firewallProfilePublic property value. Configures the firewall profile settings for public networks
@@ -782,7 +781,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setFirewallProfilePublic(@javax.annotation.Nullable final WindowsFirewallNetworkProfile value) {
-        this._firewallProfilePublic = value;
+        this.firewallProfilePublic = value;
     }
     /**
      * Sets the smartScreenBlockOverrideForFiles property value. Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
@@ -791,7 +790,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setSmartScreenBlockOverrideForFiles(@javax.annotation.Nullable final Boolean value) {
-        this._smartScreenBlockOverrideForFiles = value;
+        this.smartScreenBlockOverrideForFiles = value;
     }
     /**
      * Sets the smartScreenEnableInShell property value. Allows IT Admins to configure SmartScreen for Windows.
@@ -800,6 +799,6 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public void setSmartScreenEnableInShell(@javax.annotation.Nullable final Boolean value) {
-        this._smartScreenEnableInShell = value;
+        this.smartScreenEnableInShell = value;
     }
 }

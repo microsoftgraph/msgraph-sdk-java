@@ -3,29 +3,28 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MacOSLobApp extends MobileLobApp implements Parsable {
     /** The build number of the package. This should match the package CFBundleShortVersionString of the .pkg file. */
-    private String _buildNumber;
+    private String buildNumber;
     /** The primary bundleId of the package. */
-    private String _bundleId;
+    private String bundleId;
     /** List of ComplexType macOSLobChildApp objects. Represents the apps expected to be installed by the package. */
-    private java.util.List<MacOSLobChildApp> _childApps;
+    private java.util.List<MacOSLobChildApp> childApps;
     /** When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature. */
-    private Boolean _ignoreVersionDetection;
+    private Boolean ignoreVersionDetection;
     /** When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged. */
-    private Boolean _installAsManaged;
+    private Boolean installAsManaged;
     /** The MD5 hash codes. This is empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file. */
-    private java.util.List<String> _md5Hash;
+    private java.util.List<String> md5Hash;
     /** The chunk size for MD5 hash. This is '0' or empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file. */
-    private Integer _md5HashChunkSize;
+    private Integer md5HashChunkSize;
     /** ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application. */
-    private MacOSMinimumOperatingSystem _minimumSupportedOperatingSystem;
+    private MacOSMinimumOperatingSystem minimumSupportedOperatingSystem;
     /** The version number of the package. This should match the package CFBundleVersion in the packageinfo file. */
-    private String _versionNumber;
+    private String versionNumber;
     /**
      * Instantiates a new MacOSLobApp and sets the default values.
      * @return a void
@@ -51,7 +50,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getBuildNumber() {
-        return this._buildNumber;
+        return this.buildNumber;
     }
     /**
      * Gets the bundleId property value. The primary bundleId of the package.
@@ -59,7 +58,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getBundleId() {
-        return this._bundleId;
+        return this.bundleId;
     }
     /**
      * Gets the childApps property value. List of ComplexType macOSLobChildApp objects. Represents the apps expected to be installed by the package.
@@ -67,15 +66,15 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MacOSLobChildApp> getChildApps() {
-        return this._childApps;
+        return this.childApps;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("buildNumber", (n) -> { this.setBuildNumber(n.getStringValue()); });
         deserializerMap.put("bundleId", (n) -> { this.setBundleId(n.getStringValue()); });
         deserializerMap.put("childApps", (n) -> { this.setChildApps(n.getCollectionOfObjectValues(MacOSLobChildApp::createFromDiscriminatorValue)); });
@@ -93,7 +92,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIgnoreVersionDetection() {
-        return this._ignoreVersionDetection;
+        return this.ignoreVersionDetection;
     }
     /**
      * Gets the installAsManaged property value. When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged.
@@ -101,7 +100,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getInstallAsManaged() {
-        return this._installAsManaged;
+        return this.installAsManaged;
     }
     /**
      * Gets the md5Hash property value. The MD5 hash codes. This is empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
@@ -109,7 +108,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getMd5Hash() {
-        return this._md5Hash;
+        return this.md5Hash;
     }
     /**
      * Gets the md5HashChunkSize property value. The chunk size for MD5 hash. This is '0' or empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
@@ -117,7 +116,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getMd5HashChunkSize() {
-        return this._md5HashChunkSize;
+        return this.md5HashChunkSize;
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application.
@@ -125,7 +124,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public MacOSMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
-        return this._minimumSupportedOperatingSystem;
+        return this.minimumSupportedOperatingSystem;
     }
     /**
      * Gets the versionNumber property value. The version number of the package. This should match the package CFBundleVersion in the packageinfo file.
@@ -133,7 +132,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVersionNumber() {
-        return this._versionNumber;
+        return this.versionNumber;
     }
     /**
      * Serializes information the current object
@@ -161,7 +160,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setBuildNumber(@javax.annotation.Nullable final String value) {
-        this._buildNumber = value;
+        this.buildNumber = value;
     }
     /**
      * Sets the bundleId property value. The primary bundleId of the package.
@@ -170,7 +169,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setBundleId(@javax.annotation.Nullable final String value) {
-        this._bundleId = value;
+        this.bundleId = value;
     }
     /**
      * Sets the childApps property value. List of ComplexType macOSLobChildApp objects. Represents the apps expected to be installed by the package.
@@ -179,7 +178,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setChildApps(@javax.annotation.Nullable final java.util.List<MacOSLobChildApp> value) {
-        this._childApps = value;
+        this.childApps = value;
     }
     /**
      * Sets the ignoreVersionDetection property value. When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature.
@@ -188,7 +187,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIgnoreVersionDetection(@javax.annotation.Nullable final Boolean value) {
-        this._ignoreVersionDetection = value;
+        this.ignoreVersionDetection = value;
     }
     /**
      * Sets the installAsManaged property value. When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged.
@@ -197,7 +196,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInstallAsManaged(@javax.annotation.Nullable final Boolean value) {
-        this._installAsManaged = value;
+        this.installAsManaged = value;
     }
     /**
      * Sets the md5Hash property value. The MD5 hash codes. This is empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
@@ -206,7 +205,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMd5Hash(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._md5Hash = value;
+        this.md5Hash = value;
     }
     /**
      * Sets the md5HashChunkSize property value. The chunk size for MD5 hash. This is '0' or empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
@@ -215,7 +214,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMd5HashChunkSize(@javax.annotation.Nullable final Integer value) {
-        this._md5HashChunkSize = value;
+        this.md5HashChunkSize = value;
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application.
@@ -224,7 +223,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final MacOSMinimumOperatingSystem value) {
-        this._minimumSupportedOperatingSystem = value;
+        this.minimumSupportedOperatingSystem = value;
     }
     /**
      * Sets the versionNumber property value. The version number of the package. This should match the package CFBundleVersion in the packageinfo file.
@@ -233,6 +232,6 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVersionNumber(@javax.annotation.Nullable final String value) {
-        this._versionNumber = value;
+        this.versionNumber = value;
     }
 }

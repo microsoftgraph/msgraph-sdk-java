@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** If the resource initiating the activity is an app, this property indicates all the app related information like appId, Name, servicePrincipalId, Name. */
-    private AppIdentity _app;
+    private AppIdentity app;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** If the resource initiating the activity is a user, this property Indicates all the user related information like userId, Name, UserPrinicpalName. */
-    private UserIdentity _user;
+    private UserIdentity user;
     /**
      * Instantiates a new auditActivityInitiator and sets the default values.
      * @return a void
@@ -41,7 +40,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the app property value. If the resource initiating the activity is an app, this property indicates all the app related information like appId, Name, servicePrincipalId, Name.
@@ -49,15 +48,15 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public AppIdentity getApp() {
-        return this._app;
+        return this.app;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("app", (n) -> { this.setApp(n.getObjectValue(AppIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("user", (n) -> { this.setUser(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
@@ -69,7 +68,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the user property value. If the resource initiating the activity is a user, this property Indicates all the user related information like userId, Name, UserPrinicpalName.
@@ -77,7 +76,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public UserIdentity getUser() {
-        return this._user;
+        return this.user;
     }
     /**
      * Serializes information the current object
@@ -99,7 +98,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the app property value. If the resource initiating the activity is an app, this property indicates all the app related information like appId, Name, servicePrincipalId, Name.
@@ -108,7 +107,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setApp(@javax.annotation.Nullable final AppIdentity value) {
-        this._app = value;
+        this.app = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -117,7 +116,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the user property value. If the resource initiating the activity is a user, this property Indicates all the user related information like userId, Name, UserPrinicpalName.
@@ -126,6 +125,6 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUser(@javax.annotation.Nullable final UserIdentity value) {
-        this._user = value;
+        this.user = value;
     }
 }

@@ -4,32 +4,33 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A termsAndConditions entity represents the metadata and contents of a given Terms and Conditions (T&C) policy. T&C policies contents are presented to users upon their first attempt to enroll into Intune and subsequently upon edits where an administrator has required re-acceptance. They enable administrators to communicate the provisions to which a user must agree in order to have devices enrolled into Intune. */
+/**
+ * A termsAndConditions entity represents the metadata and contents of a given Terms and Conditions (T&C) policy. T&C policies contents are presented to users upon their first attempt to enroll into Intune and subsequently upon edits where an administrator has required re-acceptance. They enable administrators to communicate the provisions to which a user must agree in order to have devices enrolled into Intune.
+ */
 public class TermsAndConditions extends Entity implements Parsable {
     /** Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&C policy. This is shown to the user on prompts to accept the T&C policy. */
-    private String _acceptanceStatement;
+    private String acceptanceStatement;
     /** The list of acceptance statuses for this T&C policy. */
-    private java.util.List<TermsAndConditionsAcceptanceStatus> _acceptanceStatuses;
+    private java.util.List<TermsAndConditionsAcceptanceStatus> acceptanceStatuses;
     /** The list of assignments for this T&C policy. */
-    private java.util.List<TermsAndConditionsAssignment> _assignments;
+    private java.util.List<TermsAndConditionsAssignment> assignments;
     /** Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy. */
-    private String _bodyText;
+    private String bodyText;
     /** DateTime the object was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Administrator-supplied description of the T&C policy. */
-    private String _description;
+    private String description;
     /** Administrator-supplied name for the T&C policy. */
-    private String _displayName;
+    private String displayName;
     /** DateTime the object was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy. */
-    private String _title;
+    private String title;
     /** Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy. */
-    private Integer _version;
+    private Integer version;
     /**
      * Instantiates a new termsAndConditions and sets the default values.
      * @return a void
@@ -54,7 +55,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAcceptanceStatement() {
-        return this._acceptanceStatement;
+        return this.acceptanceStatement;
     }
     /**
      * Gets the acceptanceStatuses property value. The list of acceptance statuses for this T&C policy.
@@ -62,7 +63,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TermsAndConditionsAcceptanceStatus> getAcceptanceStatuses() {
-        return this._acceptanceStatuses;
+        return this.acceptanceStatuses;
     }
     /**
      * Gets the assignments property value. The list of assignments for this T&C policy.
@@ -70,7 +71,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TermsAndConditionsAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * Gets the bodyText property value. Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy.
@@ -78,7 +79,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getBodyText() {
-        return this._bodyText;
+        return this.bodyText;
     }
     /**
      * Gets the createdDateTime property value. DateTime the object was created.
@@ -86,7 +87,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. Administrator-supplied description of the T&C policy.
@@ -94,7 +95,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Administrator-supplied name for the T&C policy.
@@ -102,15 +103,15 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("acceptanceStatement", (n) -> { this.setAcceptanceStatement(n.getStringValue()); });
         deserializerMap.put("acceptanceStatuses", (n) -> { this.setAcceptanceStatuses(n.getCollectionOfObjectValues(TermsAndConditionsAcceptanceStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(TermsAndConditionsAssignment::createFromDiscriminatorValue)); });
@@ -129,7 +130,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the title property value. Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy.
@@ -137,7 +138,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTitle() {
-        return this._title;
+        return this.title;
     }
     /**
      * Gets the version property value. Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy.
@@ -145,7 +146,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
@@ -174,7 +175,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAcceptanceStatement(@javax.annotation.Nullable final String value) {
-        this._acceptanceStatement = value;
+        this.acceptanceStatement = value;
     }
     /**
      * Sets the acceptanceStatuses property value. The list of acceptance statuses for this T&C policy.
@@ -183,7 +184,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAcceptanceStatuses(@javax.annotation.Nullable final java.util.List<TermsAndConditionsAcceptanceStatus> value) {
-        this._acceptanceStatuses = value;
+        this.acceptanceStatuses = value;
     }
     /**
      * Sets the assignments property value. The list of assignments for this T&C policy.
@@ -192,7 +193,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<TermsAndConditionsAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the bodyText property value. Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy.
@@ -201,7 +202,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setBodyText(@javax.annotation.Nullable final String value) {
-        this._bodyText = value;
+        this.bodyText = value;
     }
     /**
      * Sets the createdDateTime property value. DateTime the object was created.
@@ -210,7 +211,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Administrator-supplied description of the T&C policy.
@@ -219,7 +220,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Administrator-supplied name for the T&C policy.
@@ -228,7 +229,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
@@ -237,7 +238,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the title property value. Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy.
@@ -246,7 +247,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
-        this._title = value;
+        this.title = value;
     }
     /**
      * Sets the version property value. Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy.
@@ -255,6 +256,6 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
-        this._version = value;
+        this.version = value;
     }
 }

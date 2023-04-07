@@ -4,27 +4,26 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Not yet documented */
-    private Boolean _calendarSyncEnabled;
+    private Boolean calendarSyncEnabled;
     /** Not yet documented */
-    private WindowsDeviceAccount _deviceAccount;
+    private WindowsDeviceAccount deviceAccount;
     /** Not yet documented */
-    private String _deviceAccountEmail;
+    private String deviceAccountEmail;
     /** Not yet documented */
-    private String _exchangeServer;
+    private String exchangeServer;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Not yet documented */
-    private Boolean _passwordRotationEnabled;
+    private Boolean passwordRotationEnabled;
     /** Not yet documented */
-    private String _sessionInitiationProtocalAddress;
+    private String sessionInitiationProtocalAddress;
     /**
      * Instantiates a new updateWindowsDeviceAccountActionParameter and sets the default values.
      * @return a void
@@ -49,7 +48,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the calendarSyncEnabled property value. Not yet documented
@@ -57,7 +56,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     @javax.annotation.Nullable
     public Boolean getCalendarSyncEnabled() {
-        return this._calendarSyncEnabled;
+        return this.calendarSyncEnabled;
     }
     /**
      * Gets the deviceAccount property value. Not yet documented
@@ -65,7 +64,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     @javax.annotation.Nullable
     public WindowsDeviceAccount getDeviceAccount() {
-        return this._deviceAccount;
+        return this.deviceAccount;
     }
     /**
      * Gets the deviceAccountEmail property value. Not yet documented
@@ -73,7 +72,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     @javax.annotation.Nullable
     public String getDeviceAccountEmail() {
-        return this._deviceAccountEmail;
+        return this.deviceAccountEmail;
     }
     /**
      * Gets the exchangeServer property value. Not yet documented
@@ -81,15 +80,15 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     @javax.annotation.Nullable
     public String getExchangeServer() {
-        return this._exchangeServer;
+        return this.exchangeServer;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("calendarSyncEnabled", (n) -> { this.setCalendarSyncEnabled(n.getBooleanValue()); });
         deserializerMap.put("deviceAccount", (n) -> { this.setDeviceAccount(n.getObjectValue(WindowsDeviceAccount::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceAccountEmail", (n) -> { this.setDeviceAccountEmail(n.getStringValue()); });
@@ -105,7 +104,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the passwordRotationEnabled property value. Not yet documented
@@ -113,7 +112,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     @javax.annotation.Nullable
     public Boolean getPasswordRotationEnabled() {
-        return this._passwordRotationEnabled;
+        return this.passwordRotationEnabled;
     }
     /**
      * Gets the sessionInitiationProtocalAddress property value. Not yet documented
@@ -121,7 +120,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     @javax.annotation.Nullable
     public String getSessionInitiationProtocalAddress() {
-        return this._sessionInitiationProtocalAddress;
+        return this.sessionInitiationProtocalAddress;
     }
     /**
      * Serializes information the current object
@@ -147,7 +146,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the calendarSyncEnabled property value. Not yet documented
@@ -156,7 +155,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setCalendarSyncEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._calendarSyncEnabled = value;
+        this.calendarSyncEnabled = value;
     }
     /**
      * Sets the deviceAccount property value. Not yet documented
@@ -165,7 +164,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setDeviceAccount(@javax.annotation.Nullable final WindowsDeviceAccount value) {
-        this._deviceAccount = value;
+        this.deviceAccount = value;
     }
     /**
      * Sets the deviceAccountEmail property value. Not yet documented
@@ -174,7 +173,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setDeviceAccountEmail(@javax.annotation.Nullable final String value) {
-        this._deviceAccountEmail = value;
+        this.deviceAccountEmail = value;
     }
     /**
      * Sets the exchangeServer property value. Not yet documented
@@ -183,7 +182,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setExchangeServer(@javax.annotation.Nullable final String value) {
-        this._exchangeServer = value;
+        this.exchangeServer = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -192,7 +191,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the passwordRotationEnabled property value. Not yet documented
@@ -201,7 +200,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setPasswordRotationEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._passwordRotationEnabled = value;
+        this.passwordRotationEnabled = value;
     }
     /**
      * Sets the sessionInitiationProtocalAddress property value. Not yet documented
@@ -210,6 +209,6 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     @javax.annotation.Nonnull
     public void setSessionInitiationProtocalAddress(@javax.annotation.Nullable final String value) {
-        this._sessionInitiationProtocalAddress = value;
+        this.sessionInitiationProtocalAddress = value;
     }
 }

@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Optional. Whether to hide the participant from the roster. */
-    private Boolean _hidden;
+    private Boolean hidden;
     /** The identity property */
-    private IdentitySet _identity;
+    private IdentitySet identity;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Optional. The ID of the target participant. */
-    private String _participantId;
+    private String participantId;
     /** Optional. Whether to remove them from the main mixer. */
-    private Boolean _removeFromDefaultAudioRoutingGroup;
+    private Boolean removeFromDefaultAudioRoutingGroup;
     /** Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully. */
-    private String _replacesCallId;
+    private String replacesCallId;
     /**
      * Instantiates a new invitationParticipantInfo and sets the default values.
      * @return a void
@@ -47,15 +46,15 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("hidden", (n) -> { this.setHidden(n.getBooleanValue()); });
         deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -70,7 +69,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public Boolean getHidden() {
-        return this._hidden;
+        return this.hidden;
     }
     /**
      * Gets the identity property value. The identity property
@@ -78,7 +77,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public IdentitySet getIdentity() {
-        return this._identity;
+        return this.identity;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -86,7 +85,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the participantId property value. Optional. The ID of the target participant.
@@ -94,7 +93,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getParticipantId() {
-        return this._participantId;
+        return this.participantId;
     }
     /**
      * Gets the removeFromDefaultAudioRoutingGroup property value. Optional. Whether to remove them from the main mixer.
@@ -102,7 +101,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public Boolean getRemoveFromDefaultAudioRoutingGroup() {
-        return this._removeFromDefaultAudioRoutingGroup;
+        return this.removeFromDefaultAudioRoutingGroup;
     }
     /**
      * Gets the replacesCallId property value. Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully.
@@ -110,7 +109,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getReplacesCallId() {
-        return this._replacesCallId;
+        return this.replacesCallId;
     }
     /**
      * Serializes information the current object
@@ -135,7 +134,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the hidden property value. Optional. Whether to hide the participant from the roster.
@@ -144,7 +143,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setHidden(@javax.annotation.Nullable final Boolean value) {
-        this._hidden = value;
+        this.hidden = value;
     }
     /**
      * Sets the identity property value. The identity property
@@ -153,7 +152,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setIdentity(@javax.annotation.Nullable final IdentitySet value) {
-        this._identity = value;
+        this.identity = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -162,7 +161,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the participantId property value. Optional. The ID of the target participant.
@@ -171,7 +170,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setParticipantId(@javax.annotation.Nullable final String value) {
-        this._participantId = value;
+        this.participantId = value;
     }
     /**
      * Sets the removeFromDefaultAudioRoutingGroup property value. Optional. Whether to remove them from the main mixer.
@@ -180,7 +179,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setRemoveFromDefaultAudioRoutingGroup(@javax.annotation.Nullable final Boolean value) {
-        this._removeFromDefaultAudioRoutingGroup = value;
+        this.removeFromDefaultAudioRoutingGroup = value;
     }
     /**
      * Sets the replacesCallId property value. Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully.
@@ -189,6 +188,6 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public void setReplacesCallId(@javax.annotation.Nullable final String value) {
-        this._replacesCallId = value;
+        this.replacesCallId = value;
     }
 }

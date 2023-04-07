@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IPv6Range extends IpRange implements Parsable {
     /** Lower address. */
-    private String _lowerAddress;
+    private String lowerAddress;
     /** Upper address. */
-    private String _upperAddress;
+    private String upperAddress;
     /**
      * Instantiates a new IPv6Range and sets the default values.
      * @return a void
@@ -33,11 +32,11 @@ public class IPv6Range extends IpRange implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("lowerAddress", (n) -> { this.setLowerAddress(n.getStringValue()); });
         deserializerMap.put("upperAddress", (n) -> { this.setUpperAddress(n.getStringValue()); });
         return deserializerMap;
@@ -48,7 +47,7 @@ public class IPv6Range extends IpRange implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLowerAddress() {
-        return this._lowerAddress;
+        return this.lowerAddress;
     }
     /**
      * Gets the upperAddress property value. Upper address.
@@ -56,7 +55,7 @@ public class IPv6Range extends IpRange implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUpperAddress() {
-        return this._upperAddress;
+        return this.upperAddress;
     }
     /**
      * Serializes information the current object
@@ -77,7 +76,7 @@ public class IPv6Range extends IpRange implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLowerAddress(@javax.annotation.Nullable final String value) {
-        this._lowerAddress = value;
+        this.lowerAddress = value;
     }
     /**
      * Sets the upperAddress property value. Upper address.
@@ -86,6 +85,6 @@ public class IPv6Range extends IpRange implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUpperAddress(@javax.annotation.Nullable final String value) {
-        this._upperAddress = value;
+        this.upperAddress = value;
     }
 }

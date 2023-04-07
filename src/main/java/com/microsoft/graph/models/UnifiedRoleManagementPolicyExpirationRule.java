@@ -4,15 +4,14 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.Period;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPolicyRule implements Parsable {
     /** Indicates whether expiration is required or if it's a permanently active assignment or eligibility. */
-    private Boolean _isExpirationRequired;
+    private Boolean isExpirationRequired;
     /** The maximum duration allowed for eligibility or assignment which is not permanent. Required when isExpirationRequired is true. */
-    private Period _maximumDuration;
+    private Period maximumDuration;
     /**
      * Instantiates a new UnifiedRoleManagementPolicyExpirationRule and sets the default values.
      * @return a void
@@ -34,11 +33,11 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isExpirationRequired", (n) -> { this.setIsExpirationRequired(n.getBooleanValue()); });
         deserializerMap.put("maximumDuration", (n) -> { this.setMaximumDuration(n.getPeriodValue()); });
         return deserializerMap;
@@ -49,7 +48,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
      */
     @javax.annotation.Nullable
     public Boolean getIsExpirationRequired() {
-        return this._isExpirationRequired;
+        return this.isExpirationRequired;
     }
     /**
      * Gets the maximumDuration property value. The maximum duration allowed for eligibility or assignment which is not permanent. Required when isExpirationRequired is true.
@@ -57,7 +56,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
      */
     @javax.annotation.Nullable
     public Period getMaximumDuration() {
-        return this._maximumDuration;
+        return this.maximumDuration;
     }
     /**
      * Serializes information the current object
@@ -78,7 +77,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
      */
     @javax.annotation.Nonnull
     public void setIsExpirationRequired(@javax.annotation.Nullable final Boolean value) {
-        this._isExpirationRequired = value;
+        this.isExpirationRequired = value;
     }
     /**
      * Sets the maximumDuration property value. The maximum duration allowed for eligibility or assignment which is not permanent. Required when isExpirationRequired is true.
@@ -87,6 +86,6 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
      */
     @javax.annotation.Nonnull
     public void setMaximumDuration(@javax.annotation.Nullable final Period value) {
-        this._maximumDuration = value;
+        this.maximumDuration = value;
     }
 }

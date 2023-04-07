@@ -3,19 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidLobApp extends MobileLobApp implements Parsable {
     /** The value for the minimum applicable operating system. */
-    private AndroidMinimumOperatingSystem _minimumSupportedOperatingSystem;
+    private AndroidMinimumOperatingSystem minimumSupportedOperatingSystem;
     /** The package identifier. */
-    private String _packageId;
+    private String packageId;
     /** The version code of Android Line of Business (LoB) app. */
-    private String _versionCode;
+    private String versionCode;
     /** The version name of Android Line of Business (LoB) app. */
-    private String _versionName;
+    private String versionName;
     /**
      * Instantiates a new AndroidLobApp and sets the default values.
      * @return a void
@@ -37,11 +36,11 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { this.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
         deserializerMap.put("packageId", (n) -> { this.setPackageId(n.getStringValue()); });
         deserializerMap.put("versionCode", (n) -> { this.setVersionCode(n.getStringValue()); });
@@ -54,7 +53,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public AndroidMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
-        return this._minimumSupportedOperatingSystem;
+        return this.minimumSupportedOperatingSystem;
     }
     /**
      * Gets the packageId property value. The package identifier.
@@ -62,7 +61,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPackageId() {
-        return this._packageId;
+        return this.packageId;
     }
     /**
      * Gets the versionCode property value. The version code of Android Line of Business (LoB) app.
@@ -70,7 +69,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVersionCode() {
-        return this._versionCode;
+        return this.versionCode;
     }
     /**
      * Gets the versionName property value. The version name of Android Line of Business (LoB) app.
@@ -78,7 +77,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVersionName() {
-        return this._versionName;
+        return this.versionName;
     }
     /**
      * Serializes information the current object
@@ -101,7 +100,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final AndroidMinimumOperatingSystem value) {
-        this._minimumSupportedOperatingSystem = value;
+        this.minimumSupportedOperatingSystem = value;
     }
     /**
      * Sets the packageId property value. The package identifier.
@@ -110,7 +109,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPackageId(@javax.annotation.Nullable final String value) {
-        this._packageId = value;
+        this.packageId = value;
     }
     /**
      * Sets the versionCode property value. The version code of Android Line of Business (LoB) app.
@@ -119,7 +118,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVersionCode(@javax.annotation.Nullable final String value) {
-        this._versionCode = value;
+        this.versionCode = value;
     }
     /**
      * Sets the versionName property value. The version name of Android Line of Business (LoB) app.
@@ -128,6 +127,6 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVersionName(@javax.annotation.Nullable final String value) {
-        this._versionName = value;
+        this.versionName = value;
     }
 }

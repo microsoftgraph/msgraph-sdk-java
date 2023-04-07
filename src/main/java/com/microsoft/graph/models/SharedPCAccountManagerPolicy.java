@@ -4,24 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** SharedPC Account Manager Policy. Only applies when the account manager is enabled. */
+/**
+ * SharedPC Account Manager Policy. Only applies when the account manager is enabled.
+ */
 public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsable {
     /** Possible values for when accounts are deleted on a shared PC. */
-    private SharedPCAccountDeletionPolicyType _accountDeletionPolicy;
+    private SharedPCAccountDeletionPolicyType accountDeletionPolicy;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Sets the percentage of available disk space a PC should have before it stops deleting cached shared PC accounts. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100 */
-    private Integer _cacheAccountsAboveDiskFreePercentage;
+    private Integer cacheAccountsAboveDiskFreePercentage;
     /** Specifies when the accounts will start being deleted when they have not been logged on during the specified period, given as number of days. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold. */
-    private Integer _inactiveThresholdDays;
+    private Integer inactiveThresholdDays;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Sets the percentage of disk space remaining on a PC before cached accounts will be deleted to free disk space. Accounts that have been inactive the longest will be deleted first. Only applies when AccountDeletionPolicy is DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100 */
-    private Integer _removeAccountsBelowDiskFreePercentage;
+    private Integer removeAccountsBelowDiskFreePercentage;
     /**
      * Instantiates a new sharedPCAccountManagerPolicy and sets the default values.
      * @return a void
@@ -46,7 +47,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public SharedPCAccountDeletionPolicyType getAccountDeletionPolicy() {
-        return this._accountDeletionPolicy;
+        return this.accountDeletionPolicy;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -54,7 +55,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the cacheAccountsAboveDiskFreePercentage property value. Sets the percentage of available disk space a PC should have before it stops deleting cached shared PC accounts. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
@@ -62,15 +63,15 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getCacheAccountsAboveDiskFreePercentage() {
-        return this._cacheAccountsAboveDiskFreePercentage;
+        return this.cacheAccountsAboveDiskFreePercentage;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("accountDeletionPolicy", (n) -> { this.setAccountDeletionPolicy(n.getEnumValue(SharedPCAccountDeletionPolicyType.class)); });
         deserializerMap.put("cacheAccountsAboveDiskFreePercentage", (n) -> { this.setCacheAccountsAboveDiskFreePercentage(n.getIntegerValue()); });
         deserializerMap.put("inactiveThresholdDays", (n) -> { this.setInactiveThresholdDays(n.getIntegerValue()); });
@@ -84,7 +85,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getInactiveThresholdDays() {
-        return this._inactiveThresholdDays;
+        return this.inactiveThresholdDays;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -92,7 +93,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the removeAccountsBelowDiskFreePercentage property value. Sets the percentage of disk space remaining on a PC before cached accounts will be deleted to free disk space. Accounts that have been inactive the longest will be deleted first. Only applies when AccountDeletionPolicy is DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
@@ -100,7 +101,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getRemoveAccountsBelowDiskFreePercentage() {
-        return this._removeAccountsBelowDiskFreePercentage;
+        return this.removeAccountsBelowDiskFreePercentage;
     }
     /**
      * Serializes information the current object
@@ -124,7 +125,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setAccountDeletionPolicy(@javax.annotation.Nullable final SharedPCAccountDeletionPolicyType value) {
-        this._accountDeletionPolicy = value;
+        this.accountDeletionPolicy = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -133,7 +134,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the cacheAccountsAboveDiskFreePercentage property value. Sets the percentage of available disk space a PC should have before it stops deleting cached shared PC accounts. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
@@ -142,7 +143,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setCacheAccountsAboveDiskFreePercentage(@javax.annotation.Nullable final Integer value) {
-        this._cacheAccountsAboveDiskFreePercentage = value;
+        this.cacheAccountsAboveDiskFreePercentage = value;
     }
     /**
      * Sets the inactiveThresholdDays property value. Specifies when the accounts will start being deleted when they have not been logged on during the specified period, given as number of days. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold.
@@ -151,7 +152,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setInactiveThresholdDays(@javax.annotation.Nullable final Integer value) {
-        this._inactiveThresholdDays = value;
+        this.inactiveThresholdDays = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -160,7 +161,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the removeAccountsBelowDiskFreePercentage property value. Sets the percentage of disk space remaining on a PC before cached accounts will be deleted to free disk space. Accounts that have been inactive the longest will be deleted first. Only applies when AccountDeletionPolicy is DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
@@ -169,6 +170,6 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setRemoveAccountsBelowDiskFreePercentage(@javax.annotation.Nullable final Integer value) {
-        this._removeAccountsBelowDiskFreePercentage = value;
+        this.removeAccountsBelowDiskFreePercentage = value;
     }
 }

@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ParticipantLeftNotification extends Entity implements Parsable {
     /** The call property */
-    private Call _call;
+    private Call call;
     /** ID of the participant under the policy who has left the meeting. */
-    private String _participantId;
+    private String participantId;
     /**
      * Instantiates a new ParticipantLeftNotification and sets the default values.
      * @return a void
@@ -36,15 +35,15 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Call getCall() {
-        return this._call;
+        return this.call;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("call", (n) -> { this.setCall(n.getObjectValue(Call::createFromDiscriminatorValue)); });
         deserializerMap.put("participantId", (n) -> { this.setParticipantId(n.getStringValue()); });
         return deserializerMap;
@@ -55,7 +54,7 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getParticipantId() {
-        return this._participantId;
+        return this.participantId;
     }
     /**
      * Serializes information the current object
@@ -76,7 +75,7 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCall(@javax.annotation.Nullable final Call value) {
-        this._call = value;
+        this.call = value;
     }
     /**
      * Sets the participantId property value. ID of the participant under the policy who has left the meeting.
@@ -85,6 +84,6 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setParticipantId(@javax.annotation.Nullable final String value) {
-        this._participantId = value;
+        this.participantId = value;
     }
 }

@@ -3,19 +3,18 @@ package com.microsoft.graph.models.callrecords;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ClientUserAgent extends UserAgent implements Parsable {
     /** The unique identifier of the Azure AD application used by this endpoint. */
-    private String _azureADAppId;
+    private String azureADAppId;
     /** Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs. */
-    private String _communicationServiceId;
+    private String communicationServiceId;
     /** The platform property */
-    private ClientPlatform _platform;
+    private ClientPlatform platform;
     /** The productFamily property */
-    private ProductFamily _productFamily;
+    private ProductFamily productFamily;
     /**
      * Instantiates a new ClientUserAgent and sets the default values.
      * @return a void
@@ -41,7 +40,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAzureADAppId() {
-        return this._azureADAppId;
+        return this.azureADAppId;
     }
     /**
      * Gets the communicationServiceId property value. Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
@@ -49,15 +48,15 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCommunicationServiceId() {
-        return this._communicationServiceId;
+        return this.communicationServiceId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("azureADAppId", (n) -> { this.setAzureADAppId(n.getStringValue()); });
         deserializerMap.put("communicationServiceId", (n) -> { this.setCommunicationServiceId(n.getStringValue()); });
         deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(ClientPlatform.class)); });
@@ -70,7 +69,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      */
     @javax.annotation.Nullable
     public ClientPlatform getPlatform() {
-        return this._platform;
+        return this.platform;
     }
     /**
      * Gets the productFamily property value. The productFamily property
@@ -78,7 +77,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      */
     @javax.annotation.Nullable
     public ProductFamily getProductFamily() {
-        return this._productFamily;
+        return this.productFamily;
     }
     /**
      * Serializes information the current object
@@ -101,7 +100,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAzureADAppId(@javax.annotation.Nullable final String value) {
-        this._azureADAppId = value;
+        this.azureADAppId = value;
     }
     /**
      * Sets the communicationServiceId property value. Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
@@ -110,7 +109,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCommunicationServiceId(@javax.annotation.Nullable final String value) {
-        this._communicationServiceId = value;
+        this.communicationServiceId = value;
     }
     /**
      * Sets the platform property value. The platform property
@@ -119,7 +118,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final ClientPlatform value) {
-        this._platform = value;
+        this.platform = value;
     }
     /**
      * Sets the productFamily property value. The productFamily property
@@ -128,6 +127,6 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setProductFamily(@javax.annotation.Nullable final ProductFamily value) {
-        this._productFamily = value;
+        this.productFamily = value;
     }
 }

@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EventMessageResponse extends EventMessage implements Parsable {
     /** The proposedNewTime property */
-    private TimeSlot _proposedNewTime;
+    private TimeSlot proposedNewTime;
     /** The responseType property */
-    private ResponseType _responseType;
+    private ResponseType responseType;
     /**
      * Instantiates a new EventMessageResponse and sets the default values.
      * @return a void
@@ -33,11 +32,11 @@ public class EventMessageResponse extends EventMessage implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("proposedNewTime", (n) -> { this.setProposedNewTime(n.getObjectValue(TimeSlot::createFromDiscriminatorValue)); });
         deserializerMap.put("responseType", (n) -> { this.setResponseType(n.getEnumValue(ResponseType.class)); });
         return deserializerMap;
@@ -48,7 +47,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
      */
     @javax.annotation.Nullable
     public TimeSlot getProposedNewTime() {
-        return this._proposedNewTime;
+        return this.proposedNewTime;
     }
     /**
      * Gets the responseType property value. The responseType property
@@ -56,7 +55,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
      */
     @javax.annotation.Nullable
     public ResponseType getResponseType() {
-        return this._responseType;
+        return this.responseType;
     }
     /**
      * Serializes information the current object
@@ -77,7 +76,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setProposedNewTime(@javax.annotation.Nullable final TimeSlot value) {
-        this._proposedNewTime = value;
+        this.proposedNewTime = value;
     }
     /**
      * Sets the responseType property value. The responseType property
@@ -86,6 +85,6 @@ public class EventMessageResponse extends EventMessage implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setResponseType(@javax.annotation.Nullable final ResponseType value) {
-        this._responseType = value;
+        this.responseType = value;
     }
 }

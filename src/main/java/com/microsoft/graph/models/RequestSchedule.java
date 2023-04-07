@@ -5,21 +5,20 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RequestSchedule implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** When the eligible or active assignment expires. */
-    private ExpirationPattern _expiration;
+    private ExpirationPattern expiration;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The frequency of the  eligible or active assignment. This property is currently unsupported in PIM. */
-    private PatternedRecurrence _recurrence;
+    private PatternedRecurrence recurrence;
     /** When the  eligible or active assignment becomes active. */
-    private OffsetDateTime _startDateTime;
+    private OffsetDateTime startDateTime;
     /**
      * Instantiates a new requestSchedule and sets the default values.
      * @return a void
@@ -44,7 +43,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the expiration property value. When the eligible or active assignment expires.
@@ -52,15 +51,15 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ExpirationPattern getExpiration() {
-        return this._expiration;
+        return this.expiration;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("expiration", (n) -> { this.setExpiration(n.getObjectValue(ExpirationPattern::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("recurrence", (n) -> { this.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
@@ -73,7 +72,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the recurrence property value. The frequency of the  eligible or active assignment. This property is currently unsupported in PIM.
@@ -81,7 +80,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public PatternedRecurrence getRecurrence() {
-        return this._recurrence;
+        return this.recurrence;
     }
     /**
      * Gets the startDateTime property value. When the  eligible or active assignment becomes active.
@@ -89,7 +88,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Serializes information the current object
@@ -112,7 +111,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the expiration property value. When the eligible or active assignment expires.
@@ -121,7 +120,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setExpiration(@javax.annotation.Nullable final ExpirationPattern value) {
-        this._expiration = value;
+        this.expiration = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -130,7 +129,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the recurrence property value. The frequency of the  eligible or active assignment. This property is currently unsupported in PIM.
@@ -139,7 +138,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRecurrence(@javax.annotation.Nullable final PatternedRecurrence value) {
-        this._recurrence = value;
+        this.recurrence = value;
     }
     /**
      * Sets the startDateTime property value. When the  eligible or active assignment becomes active.
@@ -148,6 +147,6 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
 }

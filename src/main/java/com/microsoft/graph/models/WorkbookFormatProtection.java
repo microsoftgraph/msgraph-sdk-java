@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookFormatProtection extends Entity implements Parsable {
     /** Indicates if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting. */
-    private Boolean _formulaHidden;
+    private Boolean formulaHidden;
     /** Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting. */
-    private Boolean _locked;
+    private Boolean locked;
     /**
      * Instantiates a new WorkbookFormatProtection and sets the default values.
      * @return a void
@@ -32,11 +31,11 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("formulaHidden", (n) -> { this.setFormulaHidden(n.getBooleanValue()); });
         deserializerMap.put("locked", (n) -> { this.setLocked(n.getBooleanValue()); });
         return deserializerMap;
@@ -47,7 +46,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getFormulaHidden() {
-        return this._formulaHidden;
+        return this.formulaHidden;
     }
     /**
      * Gets the locked property value. Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
@@ -55,7 +54,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getLocked() {
-        return this._locked;
+        return this.locked;
     }
     /**
      * Serializes information the current object
@@ -76,7 +75,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFormulaHidden(@javax.annotation.Nullable final Boolean value) {
-        this._formulaHidden = value;
+        this.formulaHidden = value;
     }
     /**
      * Sets the locked property value. Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
@@ -85,6 +84,6 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLocked(@javax.annotation.Nullable final Boolean value) {
-        this._locked = value;
+        this.locked = value;
     }
 }

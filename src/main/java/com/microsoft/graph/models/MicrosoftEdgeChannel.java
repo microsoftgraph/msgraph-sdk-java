@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** The enum to specify the channels for Microsoft Edge apps. */
 public enum MicrosoftEdgeChannel implements ValuedEnum {
     /** The Dev Channel is intended to help you plan and develop with the latest capabilities of Microsoft Edge. */
     Dev("dev"),

@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerGroup extends Entity implements Parsable {
     /** Read-only. Nullable. Returns the plannerPlans owned by the group. */
-    private java.util.List<PlannerPlan> _plans;
+    private java.util.List<PlannerPlan> plans;
     /**
      * Instantiates a new plannerGroup and sets the default values.
      * @return a void
@@ -30,11 +29,11 @@ public class PlannerGroup extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("plans", (n) -> { this.setPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -44,7 +43,7 @@ public class PlannerGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PlannerPlan> getPlans() {
-        return this._plans;
+        return this.plans;
     }
     /**
      * Serializes information the current object
@@ -64,6 +63,6 @@ public class PlannerGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPlans(@javax.annotation.Nullable final java.util.List<PlannerPlan> value) {
-        this._plans = value;
+        this.plans = value;
     }
 }

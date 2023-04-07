@@ -1,32 +1,30 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.DeviceEnrollmentLimitConfiguration;
-import com.microsoft.graph.models.DeviceEnrollmentPlatformRestrictionsConfiguration;
-import com.microsoft.graph.models.DeviceEnrollmentWindowsHelloForBusinessConfiguration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The Base Class of Device Enrollment Configuration */
+/**
+ * The Base Class of Device Enrollment Configuration
+ */
 public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     /** The list of group assignments for the device configuration profile */
-    private java.util.List<EnrollmentConfigurationAssignment> _assignments;
+    private java.util.List<EnrollmentConfigurationAssignment> assignments;
     /** Created date time in UTC of the device enrollment configuration */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The description of the device enrollment configuration */
-    private String _description;
+    private String description;
     /** The display name of the device enrollment configuration */
-    private String _displayName;
+    private String displayName;
     /** Last modified date time in UTC of the device enrollment configuration */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value. */
-    private Integer _priority;
+    private Integer priority;
     /** The version of the device enrollment configuration */
-    private Integer _version;
+    private Integer version;
     /**
      * Instantiates a new deviceEnrollmentConfiguration and sets the default values.
      * @return a void
@@ -60,7 +58,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EnrollmentConfigurationAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * Gets the createdDateTime property value. Created date time in UTC of the device enrollment configuration
@@ -68,7 +66,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. The description of the device enrollment configuration
@@ -76,7 +74,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The display name of the device enrollment configuration
@@ -84,15 +82,15 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(EnrollmentConfigurationAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -108,7 +106,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the priority property value. Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
@@ -116,7 +114,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getPriority() {
-        return this._priority;
+        return this.priority;
     }
     /**
      * Gets the version property value. The version of the device enrollment configuration
@@ -124,7 +122,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
@@ -150,7 +148,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<EnrollmentConfigurationAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the createdDateTime property value. Created date time in UTC of the device enrollment configuration
@@ -159,7 +157,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description of the device enrollment configuration
@@ -168,7 +166,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The display name of the device enrollment configuration
@@ -177,7 +175,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Last modified date time in UTC of the device enrollment configuration
@@ -186,7 +184,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the priority property value. Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
@@ -195,7 +193,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
-        this._priority = value;
+        this.priority = value;
     }
     /**
      * Sets the version property value. The version of the device enrollment configuration
@@ -204,6 +202,6 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
-        this._version = value;
+        this.version = value;
     }
 }
