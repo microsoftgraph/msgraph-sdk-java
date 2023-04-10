@@ -18,7 +18,7 @@ plugins {
 java {
     modularity.inferModulePath = true
     withSourcesJar()
-    //withJavadocJar()
+    withJavadocJar()
 }
 
 test {
