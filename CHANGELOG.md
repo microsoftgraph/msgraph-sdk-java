@@ -11,6 +11,198 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.52.0] - 2023-04-04
+
+### Added
+
+- Added triggerTypes to security.
+- Added resourceNamespaces to RbacApplication.
+
+## [5.51.0] - 2023-03-28
+
+### Added
+
+- Adds AuthenticationMethodConfiguration derived types instances
+- Added AuthenticationMethodsPolicyMigrationState
+
+## [5.50.0] - 2023-03-21
+
+### Added
+
+- Added members of type cast segment to administative units.
+
+## [5.49.0] - 2023-03-14
+
+### Added
+
+- Added conditional access external tenants and guests.
+- Added learning experience/content/provider.
+
+## [5.48.0] - 2023-03-08
+
+### Added
+
+- Adds delta function to DirectoryObject collection types
+- Access Management Policy  
+
+### Changed
+
+- Fixed invalid odata casts for memberOf and transitiveMemberOf methods
+
+## [5.47.0] - 2023-02-14
+
+### Added
+
+- Access package questions/management/collections/policy.
+- SharePoint/OneDrive options.
+
+## [5.46.0] - 2023-02-07
+
+### Added
+
+- Tenant relationship.
+- Delegated Admin Access Assignment.
+
+## [5.45.0] - 2023-01-24
+
+### Added
+
+- defaultUsageLocation property in Organization.
+- teamsAppId in ChatMessageAttachment.
+
+### Changed
+
+- Removed workbook items at the root which was not supported by the service.
+
+## [5.44.0] - 2023-01-17
+
+### Added
+
+- Ios minimum operating system version 15.
+- Contained apps on mobile app content.
+- Include company portal link on notification template branding options.
+- JoinMeetingIdSettings on OnlineMeeting.
+- PartnerTenantType on Organization.
+- CommitedContainedApp on WindowsUniveralAppX
+- DevicesWithoutCompliancePolicyReport
+
+## [5.43.0] - 2022-12-16
+
+### Added
+
+- CrossCloudAzureActiveDirectoryTenant model. 
+- DomainPromote models and related requests.
+- RiskyServicePrincipal models and related requests. 
+- SecurityRunHunting models and related requests. 
+- ServicePrincipalRiskDetection model and related requests. 
+- Security Namespace Additions:  
+- DefenderAvStatus model. 
+- DetectionSource model. 
+- DetectionStatus model.  
+- DeviceHealthStatus model. 
+- DeviceRiskScore model. 
+- EmailSender model. 
+- EvidenceRemediationStatus model. 
+- EvidenceRole model. 
+- EvidenceVerdict model.
+- (Entity)Evidence models.
+- FileDetails model. 
+- HuntingQueryResults model. 
+- HuntingRowResult model. 
+- LoggedOnUser model. 
+- OnboardingStatus model.
+- ServiceSource model. 
+- SinglePropertySchema model. 
+- UserAccount model. 
+- VmCloudProvider model. 
+- VmMetadata model.
+- Alert models and related requests.
+- Incident models and related requests. 
+ 
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Classes related to the removed and added models/requests have been updated to reflect the addition and removal of these models/requests.
+
+## [5.42.0] - 2022-12-07
+
+### Added
+
+- AnonymousGuestConversationMember model and related requests. 
+- MicrosoftAccountUserConversationMember model and related requests. 
+- SkypeForBusinessUserConversationMember model and related requests. 
+- SkypeUserConversationMember model and related requests. 
+- Security Namespace Additions: 
+- EdiscoveryPurgeDataOperation model and related requests.
+- EdiscoverySearchPurgeData model and related requests. 
+- PurgeAreas model. 
+- PurgeType model.  
+ 
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Classes related to the removed and added models/requests have been updated to reflect the addition and removal of these models/requests.
+
+## [5.41.0] - 2022-11-09
+
+### Added
+
+- AuditActor model.
+- AuditProperty model. 
+- AuditResource model. 
+- ChannelMembersNotificationRecipient model. 
+- ChatMembersNotificationRecipient model. 
+- MacOSLobChildApp model. 
+- MacOSMinimumOperatingSystem model. 
+- MicrosoftEdgeChannel model. 
+- TeamMembersNotificationRecipient model. 
+- AuditEvent models and related requests. 
+- DeviceManagementPartnerTerminate models and related requests. 
+- EducationAssignmentSetUpFeedbackResourcesFolder models and related requests. 
+- EducationFeedbackResourceOutcome models and related requests. 
+- MacOSLobApp models and related requests. 
+- MacOSMicrosoftEdgeApp model and related requests. 
+ 
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Classes related to the removed and added models/requests have been updated to reflect the addition and removal of these models/requests.
+- Remove withRequireChangeOnNextSignIn from AuthenticationMethodResetPasswordParameterSet as this only applied for certain first party apps and shouldn't have been added prior.  
+
+## [5.40.0] - 2022-11-03
+
+### Added
+ 
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Models and Requests returning or consuming a 'Report' model have been changed to return or cosume a java.io.InputStream. 
+- Fixed case where some intances of functionOptions were not being added to request options. 
+- Fixed case where in some instances parameters weren't being added to request body. 
+
+## [5.39.0] - 2022-10-20
+
+### Added
+
+- AuthenticationMethodFeatureConfiguration model. 
+- ChatViewpoint model. 
+- ConditionalAccessPolicyDetail model. 
+- FeatureTarget models. 
+- MicrosoftAuthenticatorFeatureSettings model. 
+- TemplateScenarios model. 
+- ChatHideForUser models and related requests. 
+- ChatMarkChatReadForUser models and related requests. 
+- ChatMarkChatUnreadForUser models and related requests. 
+- ChatMessageInfo model and related requests. 
+- ChatUnhideForUser models and related requests. 
+- ConditionalAccessTemplate model and related requests. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Classes related to the removed and added models/requests have been updated to reflect the addition and removal of these models/requests.
+- Bumped Microsoft-Graph-Core to 2.0.14
+
 ## [5.38.0] - 2022-10-12
 
 ### Added
