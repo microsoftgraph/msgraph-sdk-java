@@ -3,27 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingStaffMember extends BookingStaffMemberBase implements Parsable {
     /** True means that if the staff member is a Microsoft 365 user, the Bookings API would verify the staff member's availability in their personal calendar in Microsoft 365, before making a booking. */
-    private Boolean _availabilityIsAffectedByPersonalCalendar;
+    private Boolean availabilityIsAffectedByPersonalCalendar;
     /** The name of the staff member, as displayed to customers. Required. */
-    private String _displayName;
+    private String displayName;
     /** The email address of the staff member. This can be in the same Microsoft 365 tenant as the business, or in a different email domain. This email address can be used if the sendConfirmationsToOwner property is set to true in the scheduling policy of the business. Required. */
-    private String _emailAddress;
-    /** The isEmailNotificationEnabled property */
-    private Boolean _isEmailNotificationEnabled;
+    private String emailAddress;
+    /** True indicates that a staff member will be notified via email when a booking assigned to them is created or changed. */
+    private Boolean isEmailNotificationEnabled;
     /** The role property */
-    private BookingStaffRole _role;
+    private BookingStaffRole role;
     /** The time zone of the staff member. For a list of possible values, see dateTimeTimeZone. */
-    private String _timeZone;
+    private String timeZone;
     /** True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting. */
-    private Boolean _useBusinessHours;
+    private Boolean useBusinessHours;
     /** The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business. */
-    private java.util.List<BookingWorkHours> _workingHours;
+    private java.util.List<BookingWorkHours> workingHours;
     /**
      * Instantiates a new BookingStaffMember and sets the default values.
      * @return a void
@@ -49,7 +48,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @javax.annotation.Nullable
     public Boolean getAvailabilityIsAffectedByPersonalCalendar() {
-        return this._availabilityIsAffectedByPersonalCalendar;
+        return this.availabilityIsAffectedByPersonalCalendar;
     }
     /**
      * Gets the displayName property value. The name of the staff member, as displayed to customers. Required.
@@ -57,7 +56,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the emailAddress property value. The email address of the staff member. This can be in the same Microsoft 365 tenant as the business, or in a different email domain. This email address can be used if the sendConfirmationsToOwner property is set to true in the scheduling policy of the business. Required.
@@ -65,15 +64,15 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @javax.annotation.Nullable
     public String getEmailAddress() {
-        return this._emailAddress;
+        return this.emailAddress;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("availabilityIsAffectedByPersonalCalendar", (n) -> { this.setAvailabilityIsAffectedByPersonalCalendar(n.getBooleanValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
@@ -85,12 +84,12 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
         return deserializerMap;
     }
     /**
-     * Gets the isEmailNotificationEnabled property value. The isEmailNotificationEnabled property
+     * Gets the isEmailNotificationEnabled property value. True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getIsEmailNotificationEnabled() {
-        return this._isEmailNotificationEnabled;
+        return this.isEmailNotificationEnabled;
     }
     /**
      * Gets the role property value. The role property
@@ -98,7 +97,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @javax.annotation.Nullable
     public BookingStaffRole getRole() {
-        return this._role;
+        return this.role;
     }
     /**
      * Gets the timeZone property value. The time zone of the staff member. For a list of possible values, see dateTimeTimeZone.
@@ -106,7 +105,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @javax.annotation.Nullable
     public String getTimeZone() {
-        return this._timeZone;
+        return this.timeZone;
     }
     /**
      * Gets the useBusinessHours property value. True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
@@ -114,7 +113,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @javax.annotation.Nullable
     public Boolean getUseBusinessHours() {
-        return this._useBusinessHours;
+        return this.useBusinessHours;
     }
     /**
      * Gets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
@@ -122,7 +121,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @javax.annotation.Nullable
     public java.util.List<BookingWorkHours> getWorkingHours() {
-        return this._workingHours;
+        return this.workingHours;
     }
     /**
      * Serializes information the current object
@@ -149,7 +148,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @javax.annotation.Nonnull
     public void setAvailabilityIsAffectedByPersonalCalendar(@javax.annotation.Nullable final Boolean value) {
-        this._availabilityIsAffectedByPersonalCalendar = value;
+        this.availabilityIsAffectedByPersonalCalendar = value;
     }
     /**
      * Sets the displayName property value. The name of the staff member, as displayed to customers. Required.
@@ -158,7 +157,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the emailAddress property value. The email address of the staff member. This can be in the same Microsoft 365 tenant as the business, or in a different email domain. This email address can be used if the sendConfirmationsToOwner property is set to true in the scheduling policy of the business. Required.
@@ -167,16 +166,16 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final String value) {
-        this._emailAddress = value;
+        this.emailAddress = value;
     }
     /**
-     * Sets the isEmailNotificationEnabled property value. The isEmailNotificationEnabled property
+     * Sets the isEmailNotificationEnabled property value. True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
      * @param value Value to set for the isEmailNotificationEnabled property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setIsEmailNotificationEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isEmailNotificationEnabled = value;
+        this.isEmailNotificationEnabled = value;
     }
     /**
      * Sets the role property value. The role property
@@ -185,7 +184,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @javax.annotation.Nonnull
     public void setRole(@javax.annotation.Nullable final BookingStaffRole value) {
-        this._role = value;
+        this.role = value;
     }
     /**
      * Sets the timeZone property value. The time zone of the staff member. For a list of possible values, see dateTimeTimeZone.
@@ -194,7 +193,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @javax.annotation.Nonnull
     public void setTimeZone(@javax.annotation.Nullable final String value) {
-        this._timeZone = value;
+        this.timeZone = value;
     }
     /**
      * Sets the useBusinessHours property value. True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
@@ -203,7 +202,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @javax.annotation.Nonnull
     public void setUseBusinessHours(@javax.annotation.Nullable final Boolean value) {
-        this._useBusinessHours = value;
+        this.useBusinessHours = value;
     }
     /**
      * Sets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
@@ -212,6 +211,6 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     @javax.annotation.Nonnull
     public void setWorkingHours(@javax.annotation.Nullable final java.util.List<BookingWorkHours> value) {
-        this._workingHours = value;
+        this.workingHours = value;
     }
 }

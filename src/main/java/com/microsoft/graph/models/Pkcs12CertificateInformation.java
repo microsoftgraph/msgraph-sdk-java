@@ -4,23 +4,22 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate which is not yet expired but whose notBefore time is in the past. */
-    private Boolean _isActive;
+    private Boolean isActive;
     /** The certificate's expiry. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.) */
-    private Long _notAfter;
+    private Long notAfter;
     /** The certificate's issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.) */
-    private Long _notBefore;
+    private Long notBefore;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The certificate thumbprint. */
-    private String _thumbprint;
+    private String thumbprint;
     /**
      * Instantiates a new pkcs12CertificateInformation and sets the default values.
      * @return a void
@@ -45,15 +44,15 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("isActive", (n) -> { this.setIsActive(n.getBooleanValue()); });
         deserializerMap.put("notAfter", (n) -> { this.setNotAfter(n.getLongValue()); });
         deserializerMap.put("notBefore", (n) -> { this.setNotBefore(n.getLongValue()); });
@@ -67,7 +66,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Boolean getIsActive() {
-        return this._isActive;
+        return this.isActive;
     }
     /**
      * Gets the notAfter property value. The certificate's expiry. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
@@ -75,7 +74,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Long getNotAfter() {
-        return this._notAfter;
+        return this.notAfter;
     }
     /**
      * Gets the notBefore property value. The certificate's issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
@@ -83,7 +82,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Long getNotBefore() {
-        return this._notBefore;
+        return this.notBefore;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -91,7 +90,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the thumbprint property value. The certificate thumbprint.
@@ -99,7 +98,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public String getThumbprint() {
-        return this._thumbprint;
+        return this.thumbprint;
     }
     /**
      * Serializes information the current object
@@ -123,7 +122,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate which is not yet expired but whose notBefore time is in the past.
@@ -132,7 +131,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setIsActive(@javax.annotation.Nullable final Boolean value) {
-        this._isActive = value;
+        this.isActive = value;
     }
     /**
      * Sets the notAfter property value. The certificate's expiry. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
@@ -141,7 +140,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setNotAfter(@javax.annotation.Nullable final Long value) {
-        this._notAfter = value;
+        this.notAfter = value;
     }
     /**
      * Sets the notBefore property value. The certificate's issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
@@ -150,7 +149,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setNotBefore(@javax.annotation.Nullable final Long value) {
-        this._notBefore = value;
+        this.notBefore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -159,7 +158,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the thumbprint property value. The certificate thumbprint.
@@ -168,6 +167,6 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public void setThumbprint(@javax.annotation.Nullable final String value) {
-        this._thumbprint = value;
+        this.thumbprint = value;
     }
 }

@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the getRecentNotebooks method. */
 public enum OnenoteSourceService implements ValuedEnum {
     Unknown("Unknown"),
     OneDrive("OneDrive"),

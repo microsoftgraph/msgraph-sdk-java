@@ -1,16 +1,14 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.Attendee;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttendeeBase extends Recipient implements Parsable {
     /** The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type. */
-    private AttendeeType _type;
+    private AttendeeType type;
     /**
      * Instantiates a new AttendeeBase and sets the default values.
      * @return a void
@@ -39,11 +37,11 @@ public class AttendeeBase extends Recipient implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AttendeeType.class)); });
         return deserializerMap;
     }
@@ -53,7 +51,7 @@ public class AttendeeBase extends Recipient implements Parsable {
      */
     @javax.annotation.Nullable
     public AttendeeType getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
@@ -73,6 +71,6 @@ public class AttendeeBase extends Recipient implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final AttendeeType value) {
-        this._type = value;
+        this.type = value;
     }
 }

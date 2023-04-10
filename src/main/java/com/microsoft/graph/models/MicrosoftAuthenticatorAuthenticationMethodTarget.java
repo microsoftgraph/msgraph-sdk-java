@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMethodTarget implements Parsable {
     /** The authenticationMode property */
-    private MicrosoftAuthenticatorAuthenticationMode _authenticationMode;
+    private MicrosoftAuthenticatorAuthenticationMode authenticationMode;
     /**
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodTarget and sets the default values.
      * @return a void
@@ -34,15 +33,15 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
      */
     @javax.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMode getAuthenticationMode() {
-        return this._authenticationMode;
+        return this.authenticationMode;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationMode", (n) -> { this.setAuthenticationMode(n.getEnumValue(MicrosoftAuthenticatorAuthenticationMode.class)); });
         return deserializerMap;
     }
@@ -64,6 +63,6 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
      */
     @javax.annotation.Nonnull
     public void setAuthenticationMode(@javax.annotation.Nullable final MicrosoftAuthenticatorAuthenticationMode value) {
-        this._authenticationMode = value;
+        this.authenticationMode = value;
     }
 }

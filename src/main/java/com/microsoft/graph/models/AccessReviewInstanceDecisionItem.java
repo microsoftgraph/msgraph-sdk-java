@@ -4,38 +4,36 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class AccessReviewInstanceDecisionItem extends Entity implements Parsable {
     /** The identifier of the accessReviewInstance parent. Supports $select. Read-only. */
-    private String _accessReviewId;
+    private String accessReviewId;
     /** The identifier of the user who applied the decision. Read-only. */
-    private UserIdentity _appliedBy;
+    private UserIdentity appliedBy;
     /** The timestamp when the approval decision was applied.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't applied the decision or it was automatically applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only. */
-    private OffsetDateTime _appliedDateTime;
+    private OffsetDateTime appliedDateTime;
     /** The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only. */
-    private String _applyResult;
+    private String applyResult;
     /** Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow. Supports $select, $orderby, and $filter (eq only). */
-    private String _decision;
+    private String decision;
     /** Justification left by the reviewer when they made the decision. */
-    private String _justification;
+    private String justification;
     /** Every decision item in an access review represents a principal's access to a resource. This property represents details of the principal. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is 'Bob' and the resource is 'Sales'. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only. */
-    private Identity _principal;
+    private Identity principal;
     /** A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only. */
-    private String _principalLink;
+    private String principalLink;
     /** A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only. */
-    private String _recommendation;
+    private String recommendation;
     /** Every decision item in an access review represents a principal's access to a resource. This property represents details of the resource. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is Bob and the resource is 'Sales'. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource. Read-only. */
-    private AccessReviewInstanceDecisionItemResource _resource;
+    private AccessReviewInstanceDecisionItemResource resource;
     /** A link to the resource. For example, https://graph.microsoft.com/v1.0/servicePrincipals/c86300f3-8695-4320-9f6e-32a2555f5ff8. Supports $select. Read-only. */
-    private String _resourceLink;
+    private String resourceLink;
     /** The identifier of the reviewer.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Supports $select. Read-only. */
-    private UserIdentity _reviewedBy;
+    private UserIdentity reviewedBy;
     /** The timestamp when the review decision occurred. Supports $select. Read-only. */
-    private OffsetDateTime _reviewedDateTime;
+    private OffsetDateTime reviewedDateTime;
     /**
      * Instantiates a new accessReviewInstanceDecisionItem and sets the default values.
      * @return a void
@@ -60,7 +58,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getAccessReviewId() {
-        return this._accessReviewId;
+        return this.accessReviewId;
     }
     /**
      * Gets the appliedBy property value. The identifier of the user who applied the decision. Read-only.
@@ -68,7 +66,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public UserIdentity getAppliedBy() {
-        return this._appliedBy;
+        return this.appliedBy;
     }
     /**
      * Gets the appliedDateTime property value. The timestamp when the approval decision was applied.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't applied the decision or it was automatically applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
@@ -76,7 +74,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public OffsetDateTime getAppliedDateTime() {
-        return this._appliedDateTime;
+        return this.appliedDateTime;
     }
     /**
      * Gets the applyResult property value. The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
@@ -84,7 +82,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getApplyResult() {
-        return this._applyResult;
+        return this.applyResult;
     }
     /**
      * Gets the decision property value. Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow. Supports $select, $orderby, and $filter (eq only).
@@ -92,15 +90,15 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getDecision() {
-        return this._decision;
+        return this.decision;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessReviewId", (n) -> { this.setAccessReviewId(n.getStringValue()); });
         deserializerMap.put("appliedBy", (n) -> { this.setAppliedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("appliedDateTime", (n) -> { this.setAppliedDateTime(n.getOffsetDateTimeValue()); });
@@ -122,7 +120,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getJustification() {
-        return this._justification;
+        return this.justification;
     }
     /**
      * Gets the principal property value. Every decision item in an access review represents a principal's access to a resource. This property represents details of the principal. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is 'Bob' and the resource is 'Sales'. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.
@@ -130,7 +128,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public Identity getPrincipal() {
-        return this._principal;
+        return this.principal;
     }
     /**
      * Gets the principalLink property value. A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
@@ -138,7 +136,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getPrincipalLink() {
-        return this._principalLink;
+        return this.principalLink;
     }
     /**
      * Gets the recommendation property value. A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only.
@@ -146,7 +144,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getRecommendation() {
-        return this._recommendation;
+        return this.recommendation;
     }
     /**
      * Gets the resource property value. Every decision item in an access review represents a principal's access to a resource. This property represents details of the resource. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is Bob and the resource is 'Sales'. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource. Read-only.
@@ -154,7 +152,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public AccessReviewInstanceDecisionItemResource getResource() {
-        return this._resource;
+        return this.resource;
     }
     /**
      * Gets the resourceLink property value. A link to the resource. For example, https://graph.microsoft.com/v1.0/servicePrincipals/c86300f3-8695-4320-9f6e-32a2555f5ff8. Supports $select. Read-only.
@@ -162,7 +160,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getResourceLink() {
-        return this._resourceLink;
+        return this.resourceLink;
     }
     /**
      * Gets the reviewedBy property value. The identifier of the reviewer.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Supports $select. Read-only.
@@ -170,7 +168,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public UserIdentity getReviewedBy() {
-        return this._reviewedBy;
+        return this.reviewedBy;
     }
     /**
      * Gets the reviewedDateTime property value. The timestamp when the review decision occurred. Supports $select. Read-only.
@@ -178,7 +176,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public OffsetDateTime getReviewedDateTime() {
-        return this._reviewedDateTime;
+        return this.reviewedDateTime;
     }
     /**
      * Serializes information the current object
@@ -210,7 +208,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setAccessReviewId(@javax.annotation.Nullable final String value) {
-        this._accessReviewId = value;
+        this.accessReviewId = value;
     }
     /**
      * Sets the appliedBy property value. The identifier of the user who applied the decision. Read-only.
@@ -219,7 +217,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setAppliedBy(@javax.annotation.Nullable final UserIdentity value) {
-        this._appliedBy = value;
+        this.appliedBy = value;
     }
     /**
      * Sets the appliedDateTime property value. The timestamp when the approval decision was applied.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't applied the decision or it was automatically applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
@@ -228,7 +226,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setAppliedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._appliedDateTime = value;
+        this.appliedDateTime = value;
     }
     /**
      * Sets the applyResult property value. The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
@@ -237,7 +235,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setApplyResult(@javax.annotation.Nullable final String value) {
-        this._applyResult = value;
+        this.applyResult = value;
     }
     /**
      * Sets the decision property value. Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow. Supports $select, $orderby, and $filter (eq only).
@@ -246,7 +244,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setDecision(@javax.annotation.Nullable final String value) {
-        this._decision = value;
+        this.decision = value;
     }
     /**
      * Sets the justification property value. Justification left by the reviewer when they made the decision.
@@ -255,7 +253,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setJustification(@javax.annotation.Nullable final String value) {
-        this._justification = value;
+        this.justification = value;
     }
     /**
      * Sets the principal property value. Every decision item in an access review represents a principal's access to a resource. This property represents details of the principal. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is 'Bob' and the resource is 'Sales'. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.
@@ -264,7 +262,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setPrincipal(@javax.annotation.Nullable final Identity value) {
-        this._principal = value;
+        this.principal = value;
     }
     /**
      * Sets the principalLink property value. A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
@@ -273,7 +271,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setPrincipalLink(@javax.annotation.Nullable final String value) {
-        this._principalLink = value;
+        this.principalLink = value;
     }
     /**
      * Sets the recommendation property value. A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only.
@@ -282,7 +280,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setRecommendation(@javax.annotation.Nullable final String value) {
-        this._recommendation = value;
+        this.recommendation = value;
     }
     /**
      * Sets the resource property value. Every decision item in an access review represents a principal's access to a resource. This property represents details of the resource. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is Bob and the resource is 'Sales'. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource. Read-only.
@@ -291,7 +289,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final AccessReviewInstanceDecisionItemResource value) {
-        this._resource = value;
+        this.resource = value;
     }
     /**
      * Sets the resourceLink property value. A link to the resource. For example, https://graph.microsoft.com/v1.0/servicePrincipals/c86300f3-8695-4320-9f6e-32a2555f5ff8. Supports $select. Read-only.
@@ -300,7 +298,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setResourceLink(@javax.annotation.Nullable final String value) {
-        this._resourceLink = value;
+        this.resourceLink = value;
     }
     /**
      * Sets the reviewedBy property value. The identifier of the reviewer.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Supports $select. Read-only.
@@ -309,7 +307,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setReviewedBy(@javax.annotation.Nullable final UserIdentity value) {
-        this._reviewedBy = value;
+        this.reviewedBy = value;
     }
     /**
      * Sets the reviewedDateTime property value. The timestamp when the review decision occurred. Supports $select. Read-only.
@@ -318,6 +316,6 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public void setReviewedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._reviewedDateTime = value;
+        this.reviewedDateTime = value;
     }
 }

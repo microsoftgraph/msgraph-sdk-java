@@ -1,42 +1,42 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.IosVppEBook;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** An abstract class containing the base properties for Managed eBook. */
+/**
+ * An abstract class containing the base properties for Managed eBook.
+ */
 public class ManagedEBook extends Entity implements Parsable {
     /** The list of assignments for this eBook. */
-    private java.util.List<ManagedEBookAssignment> _assignments;
+    private java.util.List<ManagedEBookAssignment> assignments;
     /** The date and time when the eBook file was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Description. */
-    private String _description;
+    private String description;
     /** The list of installation states for this eBook. */
-    private java.util.List<DeviceInstallState> _deviceStates;
+    private java.util.List<DeviceInstallState> deviceStates;
     /** Name of the eBook. */
-    private String _displayName;
+    private String displayName;
     /** The more information Url. */
-    private String _informationUrl;
+    private String informationUrl;
     /** Mobile App Install Summary. */
-    private EBookInstallSummary _installSummary;
+    private EBookInstallSummary installSummary;
     /** Book cover. */
-    private MimeContent _largeCover;
+    private MimeContent largeCover;
     /** The date and time when the eBook was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The privacy statement Url. */
-    private String _privacyInformationUrl;
+    private String privacyInformationUrl;
     /** The date and time when the eBook was published. */
-    private OffsetDateTime _publishedDateTime;
+    private OffsetDateTime publishedDateTime;
     /** Publisher. */
-    private String _publisher;
+    private String publisher;
     /** The list of installation states for this eBook. */
-    private java.util.List<UserInstallStateSummary> _userStateSummary;
+    private java.util.List<UserInstallStateSummary> userStateSummary;
     /**
      * Instantiates a new managedEBook and sets the default values.
      * @return a void
@@ -68,7 +68,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedEBookAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * Gets the createdDateTime property value. The date and time when the eBook file was created.
@@ -76,7 +76,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. Description.
@@ -84,7 +84,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the deviceStates property value. The list of installation states for this eBook.
@@ -92,7 +92,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceInstallState> getDeviceStates() {
-        return this._deviceStates;
+        return this.deviceStates;
     }
     /**
      * Gets the displayName property value. Name of the eBook.
@@ -100,15 +100,15 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(ManagedEBookAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -130,7 +130,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInformationUrl() {
-        return this._informationUrl;
+        return this.informationUrl;
     }
     /**
      * Gets the installSummary property value. Mobile App Install Summary.
@@ -138,7 +138,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EBookInstallSummary getInstallSummary() {
-        return this._installSummary;
+        return this.installSummary;
     }
     /**
      * Gets the largeCover property value. Book cover.
@@ -146,7 +146,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public MimeContent getLargeCover() {
-        return this._largeCover;
+        return this.largeCover;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the eBook was last modified.
@@ -154,7 +154,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the privacyInformationUrl property value. The privacy statement Url.
@@ -162,7 +162,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPrivacyInformationUrl() {
-        return this._privacyInformationUrl;
+        return this.privacyInformationUrl;
     }
     /**
      * Gets the publishedDateTime property value. The date and time when the eBook was published.
@@ -170,7 +170,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getPublishedDateTime() {
-        return this._publishedDateTime;
+        return this.publishedDateTime;
     }
     /**
      * Gets the publisher property value. Publisher.
@@ -178,7 +178,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPublisher() {
-        return this._publisher;
+        return this.publisher;
     }
     /**
      * Gets the userStateSummary property value. The list of installation states for this eBook.
@@ -186,7 +186,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UserInstallStateSummary> getUserStateSummary() {
-        return this._userStateSummary;
+        return this.userStateSummary;
     }
     /**
      * Serializes information the current object
@@ -218,7 +218,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<ManagedEBookAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when the eBook file was created.
@@ -227,7 +227,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Description.
@@ -236,7 +236,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the deviceStates property value. The list of installation states for this eBook.
@@ -245,7 +245,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceStates(@javax.annotation.Nullable final java.util.List<DeviceInstallState> value) {
-        this._deviceStates = value;
+        this.deviceStates = value;
     }
     /**
      * Sets the displayName property value. Name of the eBook.
@@ -254,7 +254,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the informationUrl property value. The more information Url.
@@ -263,7 +263,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInformationUrl(@javax.annotation.Nullable final String value) {
-        this._informationUrl = value;
+        this.informationUrl = value;
     }
     /**
      * Sets the installSummary property value. Mobile App Install Summary.
@@ -272,7 +272,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInstallSummary(@javax.annotation.Nullable final EBookInstallSummary value) {
-        this._installSummary = value;
+        this.installSummary = value;
     }
     /**
      * Sets the largeCover property value. Book cover.
@@ -281,7 +281,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLargeCover(@javax.annotation.Nullable final MimeContent value) {
-        this._largeCover = value;
+        this.largeCover = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the eBook was last modified.
@@ -290,7 +290,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the privacyInformationUrl property value. The privacy statement Url.
@@ -299,7 +299,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPrivacyInformationUrl(@javax.annotation.Nullable final String value) {
-        this._privacyInformationUrl = value;
+        this.privacyInformationUrl = value;
     }
     /**
      * Sets the publishedDateTime property value. The date and time when the eBook was published.
@@ -308,7 +308,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPublishedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._publishedDateTime = value;
+        this.publishedDateTime = value;
     }
     /**
      * Sets the publisher property value. Publisher.
@@ -317,7 +317,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
-        this._publisher = value;
+        this.publisher = value;
     }
     /**
      * Sets the userStateSummary property value. The list of installation states for this eBook.
@@ -326,6 +326,6 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserStateSummary(@javax.annotation.Nullable final java.util.List<UserInstallStateSummary> value) {
-        this._userStateSummary = value;
+        this.userStateSummary = value;
     }
 }

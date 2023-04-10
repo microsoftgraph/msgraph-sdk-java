@@ -1,22 +1,19 @@
 package com.microsoft.graph.models.callrecords;
 
-import com.microsoft.graph.models.callrecords.ParticipantEndpoint;
-import com.microsoft.graph.models.callrecords.ServiceEndpoint;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Endpoint implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** User-agent reported by this endpoint. */
-    private UserAgent _userAgent;
+    private UserAgent userAgent;
     /**
      * Instantiates a new endpoint and sets the default values.
      * @return a void
@@ -49,15 +46,15 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("userAgent", (n) -> { this.setUserAgent(n.getObjectValue(UserAgent::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -68,7 +65,7 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the userAgent property value. User-agent reported by this endpoint.
@@ -76,7 +73,7 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public UserAgent getUserAgent() {
-        return this._userAgent;
+        return this.userAgent;
     }
     /**
      * Serializes information the current object
@@ -97,7 +94,7 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -106,7 +103,7 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the userAgent property value. User-agent reported by this endpoint.
@@ -115,6 +112,6 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserAgent(@javax.annotation.Nullable final UserAgent value) {
-        this._userAgent = value;
+        this.userAgent = value;
     }
 }

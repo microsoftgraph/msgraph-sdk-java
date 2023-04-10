@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider implements Parsable {
     /** Collection of domain names of the external organizations that the tenant is federating with. Supports $filter (eq). */
-    private java.util.List<ExternalDomainName> _domains;
+    private java.util.List<ExternalDomainName> domains;
     /**
      * Instantiates a new SamlOrWsFedExternalDomainFederation and sets the default values.
      * @return a void
@@ -35,15 +34,15 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
      */
     @javax.annotation.Nullable
     public java.util.List<ExternalDomainName> getDomains() {
-        return this._domains;
+        return this.domains;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("domains", (n) -> { this.setDomains(n.getCollectionOfObjectValues(ExternalDomainName::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -65,6 +64,6 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
      */
     @javax.annotation.Nonnull
     public void setDomains(@javax.annotation.Nullable final java.util.List<ExternalDomainName> value) {
-        this._domains = value;
+        this.domains = value;
     }
 }

@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintConnector extends Entity implements Parsable {
     /** The connector's version. */
-    private String _appVersion;
+    private String appVersion;
     /** The name of the connector. */
-    private String _displayName;
+    private String displayName;
     /** The connector machine's hostname. */
-    private String _fullyQualifiedDomainName;
+    private String fullyQualifiedDomainName;
     /** The physical and/or organizational location of the connector. */
-    private PrinterLocation _location;
+    private PrinterLocation location;
     /** The connector machine's operating system version. */
-    private String _operatingSystem;
+    private String operatingSystem;
     /** The DateTimeOffset when the connector was registered. */
-    private OffsetDateTime _registeredDateTime;
+    private OffsetDateTime registeredDateTime;
     /**
-     * Instantiates a new PrintConnector and sets the default values.
+     * Instantiates a new printConnector and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -32,7 +31,7 @@ public class PrintConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrintConnector
+     * @return a printConnector
      */
     @javax.annotation.Nonnull
     public static PrintConnector createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +44,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppVersion() {
-        return this._appVersion;
+        return this.appVersion;
     }
     /**
      * Gets the displayName property value. The name of the connector.
@@ -53,15 +52,15 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appVersion", (n) -> { this.setAppVersion(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("fullyQualifiedDomainName", (n) -> { this.setFullyQualifiedDomainName(n.getStringValue()); });
@@ -76,7 +75,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getFullyQualifiedDomainName() {
-        return this._fullyQualifiedDomainName;
+        return this.fullyQualifiedDomainName;
     }
     /**
      * Gets the location property value. The physical and/or organizational location of the connector.
@@ -84,7 +83,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrinterLocation getLocation() {
-        return this._location;
+        return this.location;
     }
     /**
      * Gets the operatingSystem property value. The connector machine's operating system version.
@@ -92,7 +91,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOperatingSystem() {
-        return this._operatingSystem;
+        return this.operatingSystem;
     }
     /**
      * Gets the registeredDateTime property value. The DateTimeOffset when the connector was registered.
@@ -100,7 +99,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getRegisteredDateTime() {
-        return this._registeredDateTime;
+        return this.registeredDateTime;
     }
     /**
      * Serializes information the current object
@@ -125,7 +124,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppVersion(@javax.annotation.Nullable final String value) {
-        this._appVersion = value;
+        this.appVersion = value;
     }
     /**
      * Sets the displayName property value. The name of the connector.
@@ -134,7 +133,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the fullyQualifiedDomainName property value. The connector machine's hostname.
@@ -143,7 +142,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFullyQualifiedDomainName(@javax.annotation.Nullable final String value) {
-        this._fullyQualifiedDomainName = value;
+        this.fullyQualifiedDomainName = value;
     }
     /**
      * Sets the location property value. The physical and/or organizational location of the connector.
@@ -152,7 +151,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final PrinterLocation value) {
-        this._location = value;
+        this.location = value;
     }
     /**
      * Sets the operatingSystem property value. The connector machine's operating system version.
@@ -161,7 +160,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOperatingSystem(@javax.annotation.Nullable final String value) {
-        this._operatingSystem = value;
+        this.operatingSystem = value;
     }
     /**
      * Sets the registeredDateTime property value. The DateTimeOffset when the connector was registered.
@@ -170,6 +169,6 @@ public class PrintConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRegisteredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._registeredDateTime = value;
+        this.registeredDateTime = value;
     }
 }

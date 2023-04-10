@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationAssignmentIndividualRecipient extends EducationAssignmentRecipient implements Parsable {
     /** A collection of IDs of the recipients. */
-    private java.util.List<String> _recipients;
+    private java.util.List<String> recipients;
     /**
      * Instantiates a new EducationAssignmentIndividualRecipient and sets the default values.
      * @return a void
@@ -31,11 +30,11 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("recipients", (n) -> { this.setRecipients(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
@@ -45,7 +44,7 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
      */
     @javax.annotation.Nullable
     public java.util.List<String> getRecipients() {
-        return this._recipients;
+        return this.recipients;
     }
     /**
      * Serializes information the current object
@@ -65,6 +64,6 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
      */
     @javax.annotation.Nonnull
     public void setRecipients(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._recipients = value;
+        this.recipients = value;
     }
 }

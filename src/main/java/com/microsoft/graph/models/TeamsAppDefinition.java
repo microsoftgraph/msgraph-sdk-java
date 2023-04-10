@@ -4,30 +4,28 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the appCatalogs singleton. */
 public class TeamsAppDefinition extends Entity implements Parsable {
     /** The details of the bot specified in the Teams app manifest. */
-    private TeamworkBot _bot;
+    private TeamworkBot bot;
     /** The createdBy property */
-    private IdentitySet _createdBy;
+    private IdentitySet createdBy;
     /** Verbose description of the application. */
-    private String _description;
+    private String description;
     /** The name of the app provided by the app developer. */
-    private String _displayName;
+    private String displayName;
     /** The lastModifiedDateTime property */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin. */
-    private TeamsAppPublishingState _publishingState;
+    private TeamsAppPublishingState publishingState;
     /** Short description of the application. */
-    private String _shortDescription;
+    private String shortDescription;
     /** The ID from the Teams app manifest. */
-    private String _teamsAppId;
+    private String teamsAppId;
     /** The version number of the application. */
-    private String _version;
+    private String version;
     /**
      * Instantiates a new teamsAppDefinition and sets the default values.
      * @return a void
@@ -52,7 +50,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamworkBot getBot() {
-        return this._bot;
+        return this.bot;
     }
     /**
      * Gets the createdBy property value. The createdBy property
@@ -60,7 +58,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the description property value. Verbose description of the application.
@@ -68,7 +66,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The name of the app provided by the app developer.
@@ -76,15 +74,15 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("bot", (n) -> { this.setBot(n.getObjectValue(TeamworkBot::createFromDiscriminatorValue)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -102,7 +100,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
@@ -110,7 +108,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamsAppPublishingState getPublishingState() {
-        return this._publishingState;
+        return this.publishingState;
     }
     /**
      * Gets the shortDescription property value. Short description of the application.
@@ -118,7 +116,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getShortDescription() {
-        return this._shortDescription;
+        return this.shortDescription;
     }
     /**
      * Gets the teamsAppId property value. The ID from the Teams app manifest.
@@ -126,7 +124,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTeamsAppId() {
-        return this._teamsAppId;
+        return this.teamsAppId;
     }
     /**
      * Gets the version property value. The version number of the application.
@@ -134,7 +132,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
@@ -162,7 +160,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setBot(@javax.annotation.Nullable final TeamworkBot value) {
-        this._bot = value;
+        this.bot = value;
     }
     /**
      * Sets the createdBy property value. The createdBy property
@@ -171,7 +169,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the description property value. Verbose description of the application.
@@ -180,7 +178,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The name of the app provided by the app developer.
@@ -189,7 +187,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -198,7 +196,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
@@ -207,7 +205,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPublishingState(@javax.annotation.Nullable final TeamsAppPublishingState value) {
-        this._publishingState = value;
+        this.publishingState = value;
     }
     /**
      * Sets the shortDescription property value. Short description of the application.
@@ -216,7 +214,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setShortDescription(@javax.annotation.Nullable final String value) {
-        this._shortDescription = value;
+        this.shortDescription = value;
     }
     /**
      * Sets the teamsAppId property value. The ID from the Teams app manifest.
@@ -225,7 +223,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTeamsAppId(@javax.annotation.Nullable final String value) {
-        this._teamsAppId = value;
+        this.teamsAppId = value;
     }
     /**
      * Sets the version property value. The version number of the application.
@@ -234,6 +232,6 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

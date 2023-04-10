@@ -1,29 +1,22 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.DomainDnsCnameRecord;
-import com.microsoft.graph.models.DomainDnsMxRecord;
-import com.microsoft.graph.models.DomainDnsSrvRecord;
-import com.microsoft.graph.models.DomainDnsTxtRecord;
-import com.microsoft.graph.models.DomainDnsUnavailableRecord;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class DomainDnsRecord extends Entity implements Parsable {
     /** If false, this record must be configured by the customer at the DNS host for Microsoft Online Services to operate correctly with the domain. */
-    private Boolean _isOptional;
+    private Boolean isOptional;
     /** Value used when configuring the name of the DNS record at the DNS host. */
-    private String _label;
+    private String label;
     /** Indicates what type of DNS record this entity represents.The value can be one of the following: CName, Mx, Srv, Txt. */
-    private String _recordType;
+    private String recordType;
     /** Microsoft Online Service or feature that has a dependency on this DNS record.Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. */
-    private String _supportedService;
+    private String supportedService;
     /** Value to use when configuring the time-to-live (ttl) property of the DNS record at the DNS host. Not nullable. */
-    private Integer _ttl;
+    private Integer ttl;
     /**
      * Instantiates a new domainDnsRecord and sets the default values.
      * @return a void
@@ -55,11 +48,11 @@ public class DomainDnsRecord extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isOptional", (n) -> { this.setIsOptional(n.getBooleanValue()); });
         deserializerMap.put("label", (n) -> { this.setLabel(n.getStringValue()); });
         deserializerMap.put("recordType", (n) -> { this.setRecordType(n.getStringValue()); });
@@ -73,7 +66,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsOptional() {
-        return this._isOptional;
+        return this.isOptional;
     }
     /**
      * Gets the label property value. Value used when configuring the name of the DNS record at the DNS host.
@@ -81,7 +74,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLabel() {
-        return this._label;
+        return this.label;
     }
     /**
      * Gets the recordType property value. Indicates what type of DNS record this entity represents.The value can be one of the following: CName, Mx, Srv, Txt.
@@ -89,7 +82,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRecordType() {
-        return this._recordType;
+        return this.recordType;
     }
     /**
      * Gets the supportedService property value. Microsoft Online Service or feature that has a dependency on this DNS record.Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
@@ -97,7 +90,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSupportedService() {
-        return this._supportedService;
+        return this.supportedService;
     }
     /**
      * Gets the ttl property value. Value to use when configuring the time-to-live (ttl) property of the DNS record at the DNS host. Not nullable.
@@ -105,7 +98,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getTtl() {
-        return this._ttl;
+        return this.ttl;
     }
     /**
      * Serializes information the current object
@@ -129,7 +122,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsOptional(@javax.annotation.Nullable final Boolean value) {
-        this._isOptional = value;
+        this.isOptional = value;
     }
     /**
      * Sets the label property value. Value used when configuring the name of the DNS record at the DNS host.
@@ -138,7 +131,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLabel(@javax.annotation.Nullable final String value) {
-        this._label = value;
+        this.label = value;
     }
     /**
      * Sets the recordType property value. Indicates what type of DNS record this entity represents.The value can be one of the following: CName, Mx, Srv, Txt.
@@ -147,7 +140,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRecordType(@javax.annotation.Nullable final String value) {
-        this._recordType = value;
+        this.recordType = value;
     }
     /**
      * Sets the supportedService property value. Microsoft Online Service or feature that has a dependency on this DNS record.Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
@@ -156,7 +149,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSupportedService(@javax.annotation.Nullable final String value) {
-        this._supportedService = value;
+        this.supportedService = value;
     }
     /**
      * Sets the ttl property value. Value to use when configuring the time-to-live (ttl) property of the DNS record at the DNS host. Not nullable.
@@ -165,6 +158,6 @@ public class DomainDnsRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTtl(@javax.annotation.Nullable final Integer value) {
-        this._ttl = value;
+        this.ttl = value;
     }
 }

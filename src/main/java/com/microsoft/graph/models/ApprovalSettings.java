@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ApprovalSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** One of SingleStage, Serial, Parallel, NoApproval (default). NoApproval is used when isApprovalRequired is false. */
-    private String _approvalMode;
+    private String approvalMode;
     /** If approval is required, the one or two elements of this collection define each of the stages of approval. An empty array if no approval is required. */
-    private java.util.List<UnifiedApprovalStage> _approvalStages;
+    private java.util.List<UnifiedApprovalStage> approvalStages;
     /** Indicates whether approval is required for requests in this policy. */
-    private Boolean _isApprovalRequired;
+    private Boolean isApprovalRequired;
     /** Indicates whether approval is required for a user to extend their assignment. */
-    private Boolean _isApprovalRequiredForExtension;
+    private Boolean isApprovalRequiredForExtension;
     /** Indicates whether the requestor is required to supply a justification in their request. */
-    private Boolean _isRequestorJustificationRequired;
+    private Boolean isRequestorJustificationRequired;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new approvalSettings and sets the default values.
      * @return a void
@@ -47,7 +46,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the approvalMode property value. One of SingleStage, Serial, Parallel, NoApproval (default). NoApproval is used when isApprovalRequired is false.
@@ -55,7 +54,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getApprovalMode() {
-        return this._approvalMode;
+        return this.approvalMode;
     }
     /**
      * Gets the approvalStages property value. If approval is required, the one or two elements of this collection define each of the stages of approval. An empty array if no approval is required.
@@ -63,15 +62,15 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedApprovalStage> getApprovalStages() {
-        return this._approvalStages;
+        return this.approvalStages;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("approvalMode", (n) -> { this.setApprovalMode(n.getStringValue()); });
         deserializerMap.put("approvalStages", (n) -> { this.setApprovalStages(n.getCollectionOfObjectValues(UnifiedApprovalStage::createFromDiscriminatorValue)); });
         deserializerMap.put("isApprovalRequired", (n) -> { this.setIsApprovalRequired(n.getBooleanValue()); });
@@ -86,7 +85,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsApprovalRequired() {
-        return this._isApprovalRequired;
+        return this.isApprovalRequired;
     }
     /**
      * Gets the isApprovalRequiredForExtension property value. Indicates whether approval is required for a user to extend their assignment.
@@ -94,7 +93,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsApprovalRequiredForExtension() {
-        return this._isApprovalRequiredForExtension;
+        return this.isApprovalRequiredForExtension;
     }
     /**
      * Gets the isRequestorJustificationRequired property value. Indicates whether the requestor is required to supply a justification in their request.
@@ -102,7 +101,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsRequestorJustificationRequired() {
-        return this._isRequestorJustificationRequired;
+        return this.isRequestorJustificationRequired;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -110,7 +109,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -135,7 +134,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the approvalMode property value. One of SingleStage, Serial, Parallel, NoApproval (default). NoApproval is used when isApprovalRequired is false.
@@ -144,7 +143,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setApprovalMode(@javax.annotation.Nullable final String value) {
-        this._approvalMode = value;
+        this.approvalMode = value;
     }
     /**
      * Sets the approvalStages property value. If approval is required, the one or two elements of this collection define each of the stages of approval. An empty array if no approval is required.
@@ -153,7 +152,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setApprovalStages(@javax.annotation.Nullable final java.util.List<UnifiedApprovalStage> value) {
-        this._approvalStages = value;
+        this.approvalStages = value;
     }
     /**
      * Sets the isApprovalRequired property value. Indicates whether approval is required for requests in this policy.
@@ -162,7 +161,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsApprovalRequired(@javax.annotation.Nullable final Boolean value) {
-        this._isApprovalRequired = value;
+        this.isApprovalRequired = value;
     }
     /**
      * Sets the isApprovalRequiredForExtension property value. Indicates whether approval is required for a user to extend their assignment.
@@ -171,7 +170,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsApprovalRequiredForExtension(@javax.annotation.Nullable final Boolean value) {
-        this._isApprovalRequiredForExtension = value;
+        this.isApprovalRequiredForExtension = value;
     }
     /**
      * Sets the isRequestorJustificationRequired property value. Indicates whether the requestor is required to supply a justification in their request.
@@ -180,7 +179,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsRequestorJustificationRequired(@javax.annotation.Nullable final Boolean value) {
-        this._isRequestorJustificationRequired = value;
+        this.isRequestorJustificationRequired = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -189,6 +188,6 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

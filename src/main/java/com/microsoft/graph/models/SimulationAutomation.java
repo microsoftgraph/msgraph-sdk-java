@@ -4,32 +4,30 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class SimulationAutomation extends Entity implements Parsable {
     /** Identity of the user who created the attack simulation automation. */
-    private EmailIdentity _createdBy;
+    private EmailIdentity createdBy;
     /** Date and time when the attack simulation automation was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Description of the attack simulation automation. */
-    private String _description;
+    private String description;
     /** Display name of the attack simulation automation. Supports $filter and $orderby. */
-    private String _displayName;
+    private String displayName;
     /** Identity of the user who most recently modified the attack simulation automation. */
-    private EmailIdentity _lastModifiedBy;
+    private EmailIdentity lastModifiedBy;
     /** Date and time when the attack simulation automation was most recently modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** Date and time of the latest run of the attack simulation automation. */
-    private OffsetDateTime _lastRunDateTime;
+    private OffsetDateTime lastRunDateTime;
     /** Date and time of the upcoming run of the attack simulation automation. */
-    private OffsetDateTime _nextRunDateTime;
+    private OffsetDateTime nextRunDateTime;
     /** A collection of simulation automation runs. */
-    private java.util.List<SimulationAutomationRun> _runs;
+    private java.util.List<SimulationAutomationRun> runs;
     /** Status of the attack simulation automation. Supports $filter and $orderby. The possible values are: unknown, draft, notRunning, running, completed, unknownFutureValue. */
-    private SimulationAutomationStatus _status;
+    private SimulationAutomationStatus status;
     /**
      * Instantiates a new simulationAutomation and sets the default values.
      * @return a void
@@ -54,7 +52,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EmailIdentity getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdDateTime property value. Date and time when the attack simulation automation was created.
@@ -62,7 +60,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. Description of the attack simulation automation.
@@ -70,7 +68,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Display name of the attack simulation automation. Supports $filter and $orderby.
@@ -78,15 +76,15 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -105,7 +103,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
-        return this._lastModifiedBy;
+        return this.lastModifiedBy;
     }
     /**
      * Gets the lastModifiedDateTime property value. Date and time when the attack simulation automation was most recently modified.
@@ -113,7 +111,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the lastRunDateTime property value. Date and time of the latest run of the attack simulation automation.
@@ -121,7 +119,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastRunDateTime() {
-        return this._lastRunDateTime;
+        return this.lastRunDateTime;
     }
     /**
      * Gets the nextRunDateTime property value. Date and time of the upcoming run of the attack simulation automation.
@@ -129,7 +127,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getNextRunDateTime() {
-        return this._nextRunDateTime;
+        return this.nextRunDateTime;
     }
     /**
      * Gets the runs property value. A collection of simulation automation runs.
@@ -137,7 +135,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SimulationAutomationRun> getRuns() {
-        return this._runs;
+        return this.runs;
     }
     /**
      * Gets the status property value. Status of the attack simulation automation. Supports $filter and $orderby. The possible values are: unknown, draft, notRunning, running, completed, unknownFutureValue.
@@ -145,7 +143,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SimulationAutomationStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
@@ -174,7 +172,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final EmailIdentity value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. Date and time when the attack simulation automation was created.
@@ -183,7 +181,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Description of the attack simulation automation.
@@ -192,7 +190,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Display name of the attack simulation automation. Supports $filter and $orderby.
@@ -201,7 +199,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation automation.
@@ -210,7 +208,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final EmailIdentity value) {
-        this._lastModifiedBy = value;
+        this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Date and time when the attack simulation automation was most recently modified.
@@ -219,7 +217,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the lastRunDateTime property value. Date and time of the latest run of the attack simulation automation.
@@ -228,7 +226,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastRunDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastRunDateTime = value;
+        this.lastRunDateTime = value;
     }
     /**
      * Sets the nextRunDateTime property value. Date and time of the upcoming run of the attack simulation automation.
@@ -237,7 +235,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setNextRunDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._nextRunDateTime = value;
+        this.nextRunDateTime = value;
     }
     /**
      * Sets the runs property value. A collection of simulation automation runs.
@@ -246,7 +244,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRuns(@javax.annotation.Nullable final java.util.List<SimulationAutomationRun> value) {
-        this._runs = value;
+        this.runs = value;
     }
     /**
      * Sets the status property value. Status of the attack simulation automation. Supports $filter and $orderby. The possible values are: unknown, draft, notRunning, running, completed, unknownFutureValue.
@@ -255,6 +253,6 @@ public class SimulationAutomation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final SimulationAutomationStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }

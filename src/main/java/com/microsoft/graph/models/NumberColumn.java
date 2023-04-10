@@ -4,23 +4,22 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class NumberColumn implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** How many decimal places to display. See below for information about the possible values. */
-    private String _decimalPlaces;
+    private String decimalPlaces;
     /** How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number. */
-    private String _displayAs;
+    private String displayAs;
     /** The maximum permitted value. */
-    private Double _maximum;
+    private Double maximum;
     /** The minimum permitted value. */
-    private Double _minimum;
+    private Double minimum;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new numberColumn and sets the default values.
      * @return a void
@@ -45,7 +44,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the decimalPlaces property value. How many decimal places to display. See below for information about the possible values.
@@ -53,7 +52,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDecimalPlaces() {
-        return this._decimalPlaces;
+        return this.decimalPlaces;
     }
     /**
      * Gets the displayAs property value. How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
@@ -61,15 +60,15 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayAs() {
-        return this._displayAs;
+        return this.displayAs;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("decimalPlaces", (n) -> { this.setDecimalPlaces(n.getStringValue()); });
         deserializerMap.put("displayAs", (n) -> { this.setDisplayAs(n.getStringValue()); });
         deserializerMap.put("maximum", (n) -> { this.setMaximum(n.getDoubleValue()); });
@@ -83,7 +82,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Double getMaximum() {
-        return this._maximum;
+        return this.maximum;
     }
     /**
      * Gets the minimum property value. The minimum permitted value.
@@ -91,7 +90,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Double getMinimum() {
-        return this._minimum;
+        return this.minimum;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -99,7 +98,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -123,7 +122,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the decimalPlaces property value. How many decimal places to display. See below for information about the possible values.
@@ -132,7 +131,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDecimalPlaces(@javax.annotation.Nullable final String value) {
-        this._decimalPlaces = value;
+        this.decimalPlaces = value;
     }
     /**
      * Sets the displayAs property value. How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
@@ -141,7 +140,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayAs(@javax.annotation.Nullable final String value) {
-        this._displayAs = value;
+        this.displayAs = value;
     }
     /**
      * Sets the maximum property value. The maximum permitted value.
@@ -150,7 +149,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMaximum(@javax.annotation.Nullable final Double value) {
-        this._maximum = value;
+        this.maximum = value;
     }
     /**
      * Sets the minimum property value. The minimum permitted value.
@@ -159,7 +158,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMinimum(@javax.annotation.Nullable final Double value) {
-        this._minimum = value;
+        this.minimum = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -168,6 +167,6 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

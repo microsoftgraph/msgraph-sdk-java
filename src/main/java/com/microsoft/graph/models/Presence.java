@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Presence extends Entity implements Parsable {
     /** The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive, InAMeeting, Offline, OffWork, OutOfOffice, PresenceUnknown, Presenting, UrgentInterruptionsOnly. */
-    private String _activity;
+    private String activity;
     /** The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown */
-    private String _availability;
+    private String availability;
     /**
-     * Instantiates a new presence and sets the default values.
+     * Instantiates a new Presence and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +22,7 @@ public class Presence extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a presence
+     * @return a Presence
      */
     @javax.annotation.Nonnull
     public static Presence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +35,7 @@ public class Presence extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getActivity() {
-        return this._activity;
+        return this.activity;
     }
     /**
      * Gets the availability property value. The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown
@@ -44,15 +43,15 @@ public class Presence extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAvailability() {
-        return this._availability;
+        return this.availability;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activity", (n) -> { this.setActivity(n.getStringValue()); });
         deserializerMap.put("availability", (n) -> { this.setAvailability(n.getStringValue()); });
         return deserializerMap;
@@ -76,7 +75,7 @@ public class Presence extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setActivity(@javax.annotation.Nullable final String value) {
-        this._activity = value;
+        this.activity = value;
     }
     /**
      * Sets the availability property value. The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown
@@ -85,6 +84,6 @@ public class Presence extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAvailability(@javax.annotation.Nullable final String value) {
-        this._availability = value;
+        this.availability = value;
     }
 }

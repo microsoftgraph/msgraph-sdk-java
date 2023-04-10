@@ -3,25 +3,24 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageSubject extends Entity implements Parsable {
     /** The connected organization of the subject. Read-only. Nullable. */
-    private ConnectedOrganization _connectedOrganization;
+    private ConnectedOrganization connectedOrganization;
     /** The display name of the subject. */
-    private String _displayName;
+    private String displayName;
     /** The email address of the subject. */
-    private String _email;
+    private String email;
     /** The object identifier of the subject. null if the subject is not yet a user in the tenant. */
-    private String _objectId;
+    private String objectId;
     /** A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier. */
-    private String _onPremisesSecurityIdentifier;
+    private String onPremisesSecurityIdentifier;
     /** The principal name, if known, of the subject. */
-    private String _principalName;
+    private String principalName;
     /** The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue. */
-    private AccessPackageSubjectType _subjectType;
+    private AccessPackageSubjectType subjectType;
     /**
      * Instantiates a new accessPackageSubject and sets the default values.
      * @return a void
@@ -46,7 +45,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ConnectedOrganization getConnectedOrganization() {
-        return this._connectedOrganization;
+        return this.connectedOrganization;
     }
     /**
      * Gets the displayName property value. The display name of the subject.
@@ -54,7 +53,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the email property value. The email address of the subject.
@@ -62,15 +61,15 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEmail() {
-        return this._email;
+        return this.email;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("connectedOrganization", (n) -> { this.setConnectedOrganization(n.getObjectValue(ConnectedOrganization::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
@@ -86,7 +85,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getObjectId() {
-        return this._objectId;
+        return this.objectId;
     }
     /**
      * Gets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
@@ -94,7 +93,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOnPremisesSecurityIdentifier() {
-        return this._onPremisesSecurityIdentifier;
+        return this.onPremisesSecurityIdentifier;
     }
     /**
      * Gets the principalName property value. The principal name, if known, of the subject.
@@ -102,7 +101,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPrincipalName() {
-        return this._principalName;
+        return this.principalName;
     }
     /**
      * Gets the subjectType property value. The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
@@ -110,7 +109,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackageSubjectType getSubjectType() {
-        return this._subjectType;
+        return this.subjectType;
     }
     /**
      * Serializes information the current object
@@ -136,7 +135,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setConnectedOrganization(@javax.annotation.Nullable final ConnectedOrganization value) {
-        this._connectedOrganization = value;
+        this.connectedOrganization = value;
     }
     /**
      * Sets the displayName property value. The display name of the subject.
@@ -145,7 +144,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the email property value. The email address of the subject.
@@ -154,7 +153,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
-        this._email = value;
+        this.email = value;
     }
     /**
      * Sets the objectId property value. The object identifier of the subject. null if the subject is not yet a user in the tenant.
@@ -163,7 +162,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setObjectId(@javax.annotation.Nullable final String value) {
-        this._objectId = value;
+        this.objectId = value;
     }
     /**
      * Sets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
@@ -172,7 +171,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOnPremisesSecurityIdentifier(@javax.annotation.Nullable final String value) {
-        this._onPremisesSecurityIdentifier = value;
+        this.onPremisesSecurityIdentifier = value;
     }
     /**
      * Sets the principalName property value. The principal name, if known, of the subject.
@@ -181,7 +180,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPrincipalName(@javax.annotation.Nullable final String value) {
-        this._principalName = value;
+        this.principalName = value;
     }
     /**
      * Sets the subjectType property value. The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
@@ -190,6 +189,6 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSubjectType(@javax.annotation.Nullable final AccessPackageSubjectType value) {
-        this._subjectType = value;
+        this.subjectType = value;
     }
 }

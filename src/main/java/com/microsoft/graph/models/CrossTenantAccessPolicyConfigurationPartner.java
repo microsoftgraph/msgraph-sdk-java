@@ -4,29 +4,28 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration. */
-    private CrossTenantAccessPolicyB2BSetting _b2bCollaborationInbound;
+    private CrossTenantAccessPolicyB2BSetting b2bCollaborationInbound;
     /** Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration. */
-    private CrossTenantAccessPolicyB2BSetting _b2bCollaborationOutbound;
+    private CrossTenantAccessPolicyB2BSetting b2bCollaborationOutbound;
     /** Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect. */
-    private CrossTenantAccessPolicyB2BSetting _b2bDirectConnectInbound;
+    private CrossTenantAccessPolicyB2BSetting b2bDirectConnectInbound;
     /** Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect. */
-    private CrossTenantAccessPolicyB2BSetting _b2bDirectConnectOutbound;
+    private CrossTenantAccessPolicyB2BSetting b2bDirectConnectOutbound;
     /** Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations. */
-    private CrossTenantAccessPolicyInboundTrust _inboundTrust;
+    private CrossTenantAccessPolicyInboundTrust inboundTrust;
     /** Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization. */
-    private Boolean _isServiceProvider;
+    private Boolean isServiceProvider;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The tenant identifier for the partner Azure AD organization. Read-only. Key. */
-    private String _tenantId;
+    private String tenantId;
     /**
      * Instantiates a new crossTenantAccessPolicyConfigurationPartner and sets the default values.
      * @return a void
@@ -51,7 +50,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
@@ -59,7 +58,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bCollaborationInbound() {
-        return this._b2bCollaborationInbound;
+        return this.b2bCollaborationInbound;
     }
     /**
      * Gets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
@@ -67,7 +66,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bCollaborationOutbound() {
-        return this._b2bCollaborationOutbound;
+        return this.b2bCollaborationOutbound;
     }
     /**
      * Gets the b2bDirectConnectInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect.
@@ -75,7 +74,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bDirectConnectInbound() {
-        return this._b2bDirectConnectInbound;
+        return this.b2bDirectConnectInbound;
     }
     /**
      * Gets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
@@ -83,15 +82,15 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bDirectConnectOutbound() {
-        return this._b2bDirectConnectOutbound;
+        return this.b2bDirectConnectOutbound;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("b2bCollaborationInbound", (n) -> { this.setB2bCollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationOutbound", (n) -> { this.setB2bCollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bDirectConnectInbound", (n) -> { this.setB2bDirectConnectInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
@@ -108,7 +107,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nullable
     public CrossTenantAccessPolicyInboundTrust getInboundTrust() {
-        return this._inboundTrust;
+        return this.inboundTrust;
     }
     /**
      * Gets the isServiceProvider property value. Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
@@ -116,7 +115,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nullable
     public Boolean getIsServiceProvider() {
-        return this._isServiceProvider;
+        return this.isServiceProvider;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -124,7 +123,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the tenantId property value. The tenant identifier for the partner Azure AD organization. Read-only. Key.
@@ -132,7 +131,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Serializes information the current object
@@ -159,7 +158,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
@@ -168,7 +167,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public void setB2bCollaborationInbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
-        this._b2bCollaborationInbound = value;
+        this.b2bCollaborationInbound = value;
     }
     /**
      * Sets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
@@ -177,7 +176,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public void setB2bCollaborationOutbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
-        this._b2bCollaborationOutbound = value;
+        this.b2bCollaborationOutbound = value;
     }
     /**
      * Sets the b2bDirectConnectInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect.
@@ -186,7 +185,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public void setB2bDirectConnectInbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
-        this._b2bDirectConnectInbound = value;
+        this.b2bDirectConnectInbound = value;
     }
     /**
      * Sets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
@@ -195,7 +194,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public void setB2bDirectConnectOutbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
-        this._b2bDirectConnectOutbound = value;
+        this.b2bDirectConnectOutbound = value;
     }
     /**
      * Sets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
@@ -204,7 +203,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public void setInboundTrust(@javax.annotation.Nullable final CrossTenantAccessPolicyInboundTrust value) {
-        this._inboundTrust = value;
+        this.inboundTrust = value;
     }
     /**
      * Sets the isServiceProvider property value. Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
@@ -213,7 +212,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public void setIsServiceProvider(@javax.annotation.Nullable final Boolean value) {
-        this._isServiceProvider = value;
+        this.isServiceProvider = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -222,7 +221,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the tenantId property value. The tenant identifier for the partner Azure AD organization. Read-only. Key.
@@ -231,6 +230,6 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
 }

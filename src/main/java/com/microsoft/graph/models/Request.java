@@ -1,30 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.UnifiedRoleAssignmentScheduleRequest;
-import com.microsoft.graph.models.UnifiedRoleEligibilityScheduleRequest;
-import com.microsoft.graph.models.UserConsentRequest;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class Request extends Entity implements Parsable {
     /** The identifier of the approval of the request. */
-    private String _approvalId;
+    private String approvalId;
     /** The request completion date time. */
-    private OffsetDateTime _completedDateTime;
+    private OffsetDateTime completedDateTime;
     /** The principal that created the request. */
-    private IdentitySet _createdBy;
+    private IdentitySet createdBy;
     /** The request creation date time. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Free text field to define any custom data for the request. Not used. */
-    private String _customData;
+    private String customData;
     /** The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable. */
-    private String _status;
+    private String status;
     /**
      * Instantiates a new request and sets the default values.
      * @return a void
@@ -58,7 +53,7 @@ public class Request extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getApprovalId() {
-        return this._approvalId;
+        return this.approvalId;
     }
     /**
      * Gets the completedDateTime property value. The request completion date time.
@@ -66,7 +61,7 @@ public class Request extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
-        return this._completedDateTime;
+        return this.completedDateTime;
     }
     /**
      * Gets the createdBy property value. The principal that created the request.
@@ -74,7 +69,7 @@ public class Request extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdDateTime property value. The request creation date time.
@@ -82,7 +77,7 @@ public class Request extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the customData property value. Free text field to define any custom data for the request. Not used.
@@ -90,15 +85,15 @@ public class Request extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCustomData() {
-        return this._customData;
+        return this.customData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("approvalId", (n) -> { this.setApprovalId(n.getStringValue()); });
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -113,7 +108,7 @@ public class Request extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
@@ -138,7 +133,7 @@ public class Request extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setApprovalId(@javax.annotation.Nullable final String value) {
-        this._approvalId = value;
+        this.approvalId = value;
     }
     /**
      * Sets the completedDateTime property value. The request completion date time.
@@ -147,7 +142,7 @@ public class Request extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._completedDateTime = value;
+        this.completedDateTime = value;
     }
     /**
      * Sets the createdBy property value. The principal that created the request.
@@ -156,7 +151,7 @@ public class Request extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The request creation date time.
@@ -165,7 +160,7 @@ public class Request extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the customData property value. Free text field to define any custom data for the request. Not used.
@@ -174,7 +169,7 @@ public class Request extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCustomData(@javax.annotation.Nullable final String value) {
-        this._customData = value;
+        this.customData = value;
     }
     /**
      * Sets the status property value. The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable.
@@ -183,6 +178,6 @@ public class Request extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
-        this._status = value;
+        this.status = value;
     }
 }

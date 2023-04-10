@@ -3,19 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class Contract extends DirectoryObject implements Parsable {
     /** Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below. */
-    private String _contractType;
+    private String contractType;
     /** The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource. */
-    private String _customerId;
+    private UUID customerId;
     /** A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes. */
-    private String _defaultDomainName;
+    private String defaultDomainName;
     /** A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes. */
-    private String _displayName;
+    private String displayName;
     /**
      * Instantiates a new Contract and sets the default values.
      * @return a void
@@ -41,15 +41,15 @@ public class Contract extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getContractType() {
-        return this._contractType;
+        return this.contractType;
     }
     /**
      * Gets the customerId property value. The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getCustomerId() {
-        return this._customerId;
+    public UUID getCustomerId() {
+        return this.customerId;
     }
     /**
      * Gets the defaultDomainName property value. A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
@@ -57,7 +57,7 @@ public class Contract extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDefaultDomainName() {
-        return this._defaultDomainName;
+        return this.defaultDomainName;
     }
     /**
      * Gets the displayName property value. A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
@@ -65,17 +65,17 @@ public class Contract extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contractType", (n) -> { this.setContractType(n.getStringValue()); });
-        deserializerMap.put("customerId", (n) -> { this.setCustomerId(n.getStringValue()); });
+        deserializerMap.put("customerId", (n) -> { this.setCustomerId(n.getUUIDValue()); });
         deserializerMap.put("defaultDomainName", (n) -> { this.setDefaultDomainName(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         return deserializerMap;
@@ -90,7 +90,7 @@ public class Contract extends DirectoryObject implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("contractType", this.getContractType());
-        writer.writeStringValue("customerId", this.getCustomerId());
+        writer.writeUUIDValue("customerId", this.getCustomerId());
         writer.writeStringValue("defaultDomainName", this.getDefaultDomainName());
         writer.writeStringValue("displayName", this.getDisplayName());
     }
@@ -101,7 +101,7 @@ public class Contract extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContractType(@javax.annotation.Nullable final String value) {
-        this._contractType = value;
+        this.contractType = value;
     }
     /**
      * Sets the customerId property value. The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource.
@@ -109,8 +109,8 @@ public class Contract extends DirectoryObject implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setCustomerId(@javax.annotation.Nullable final String value) {
-        this._customerId = value;
+    public void setCustomerId(@javax.annotation.Nullable final UUID value) {
+        this.customerId = value;
     }
     /**
      * Sets the defaultDomainName property value. A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
@@ -119,7 +119,7 @@ public class Contract extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDefaultDomainName(@javax.annotation.Nullable final String value) {
-        this._defaultDomainName = value;
+        this.defaultDomainName = value;
     }
     /**
      * Sets the displayName property value. A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
@@ -128,6 +128,6 @@ public class Contract extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
 }

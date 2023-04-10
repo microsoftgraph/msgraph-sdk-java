@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OpenShiftChangeRequest extends ScheduleChangeRequest implements Parsable {
     /** ID for the open shift. */
-    private String _openShiftId;
+    private String openShiftId;
     /**
      * Instantiates a new OpenShiftChangeRequest and sets the default values.
      * @return a void
@@ -31,11 +30,11 @@ public class OpenShiftChangeRequest extends ScheduleChangeRequest implements Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("openShiftId", (n) -> { this.setOpenShiftId(n.getStringValue()); });
         return deserializerMap;
     }
@@ -45,7 +44,7 @@ public class OpenShiftChangeRequest extends ScheduleChangeRequest implements Par
      */
     @javax.annotation.Nullable
     public String getOpenShiftId() {
-        return this._openShiftId;
+        return this.openShiftId;
     }
     /**
      * Serializes information the current object
@@ -65,6 +64,6 @@ public class OpenShiftChangeRequest extends ScheduleChangeRequest implements Par
      */
     @javax.annotation.Nonnull
     public void setOpenShiftId(@javax.annotation.Nullable final String value) {
-        this._openShiftId = value;
+        this.openShiftId = value;
     }
 }

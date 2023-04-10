@@ -4,33 +4,32 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class HostSecurityState implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Host FQDN (Fully Qualified Domain Name) (for example, machine.company.com). */
-    private String _fqdn;
+    private String fqdn;
     /** The isAzureAdJoined property */
-    private Boolean _isAzureAdJoined;
+    private Boolean isAzureAdJoined;
     /** The isAzureAdRegistered property */
-    private Boolean _isAzureAdRegistered;
+    private Boolean isAzureAdRegistered;
     /** True if the host is domain joined to an on-premises Active Directory domain. */
-    private Boolean _isHybridAzureDomainJoined;
+    private Boolean isHybridAzureDomainJoined;
     /** The local host name, without the DNS domain name. */
-    private String _netBiosName;
+    private String netBiosName;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Host Operating System. (For example, Windows10, MacOS, RHEL, etc.). */
-    private String _os;
+    private String os;
     /** Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert. */
-    private String _privateIpAddress;
+    private String privateIpAddress;
     /** Publicly routable IPv4 or IPv6 address (see RFC 1918) at time of the alert. */
-    private String _publicIpAddress;
+    private String publicIpAddress;
     /** Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage. */
-    private String _riskScore;
+    private String riskScore;
     /**
      * Instantiates a new hostSecurityState and sets the default values.
      * @return a void
@@ -55,15 +54,15 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("fqdn", (n) -> { this.setFqdn(n.getStringValue()); });
         deserializerMap.put("isAzureAdJoined", (n) -> { this.setIsAzureAdJoined(n.getBooleanValue()); });
         deserializerMap.put("isAzureAdRegistered", (n) -> { this.setIsAzureAdRegistered(n.getBooleanValue()); });
@@ -82,7 +81,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getFqdn() {
-        return this._fqdn;
+        return this.fqdn;
     }
     /**
      * Gets the isAzureAdJoined property value. The isAzureAdJoined property
@@ -90,7 +89,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsAzureAdJoined() {
-        return this._isAzureAdJoined;
+        return this.isAzureAdJoined;
     }
     /**
      * Gets the isAzureAdRegistered property value. The isAzureAdRegistered property
@@ -98,7 +97,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsAzureAdRegistered() {
-        return this._isAzureAdRegistered;
+        return this.isAzureAdRegistered;
     }
     /**
      * Gets the isHybridAzureDomainJoined property value. True if the host is domain joined to an on-premises Active Directory domain.
@@ -106,7 +105,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsHybridAzureDomainJoined() {
-        return this._isHybridAzureDomainJoined;
+        return this.isHybridAzureDomainJoined;
     }
     /**
      * Gets the netBiosName property value. The local host name, without the DNS domain name.
@@ -114,7 +113,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getNetBiosName() {
-        return this._netBiosName;
+        return this.netBiosName;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -122,7 +121,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the os property value. Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
@@ -130,7 +129,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOs() {
-        return this._os;
+        return this.os;
     }
     /**
      * Gets the privateIpAddress property value. Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert.
@@ -138,7 +137,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getPrivateIpAddress() {
-        return this._privateIpAddress;
+        return this.privateIpAddress;
     }
     /**
      * Gets the publicIpAddress property value. Publicly routable IPv4 or IPv6 address (see RFC 1918) at time of the alert.
@@ -146,7 +145,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getPublicIpAddress() {
-        return this._publicIpAddress;
+        return this.publicIpAddress;
     }
     /**
      * Gets the riskScore property value. Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage.
@@ -154,7 +153,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getRiskScore() {
-        return this._riskScore;
+        return this.riskScore;
     }
     /**
      * Serializes information the current object
@@ -183,7 +182,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the fqdn property value. Host FQDN (Fully Qualified Domain Name) (for example, machine.company.com).
@@ -192,7 +191,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFqdn(@javax.annotation.Nullable final String value) {
-        this._fqdn = value;
+        this.fqdn = value;
     }
     /**
      * Sets the isAzureAdJoined property value. The isAzureAdJoined property
@@ -201,7 +200,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsAzureAdJoined(@javax.annotation.Nullable final Boolean value) {
-        this._isAzureAdJoined = value;
+        this.isAzureAdJoined = value;
     }
     /**
      * Sets the isAzureAdRegistered property value. The isAzureAdRegistered property
@@ -210,7 +209,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsAzureAdRegistered(@javax.annotation.Nullable final Boolean value) {
-        this._isAzureAdRegistered = value;
+        this.isAzureAdRegistered = value;
     }
     /**
      * Sets the isHybridAzureDomainJoined property value. True if the host is domain joined to an on-premises Active Directory domain.
@@ -219,7 +218,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsHybridAzureDomainJoined(@javax.annotation.Nullable final Boolean value) {
-        this._isHybridAzureDomainJoined = value;
+        this.isHybridAzureDomainJoined = value;
     }
     /**
      * Sets the netBiosName property value. The local host name, without the DNS domain name.
@@ -228,7 +227,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setNetBiosName(@javax.annotation.Nullable final String value) {
-        this._netBiosName = value;
+        this.netBiosName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -237,7 +236,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the os property value. Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
@@ -246,7 +245,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOs(@javax.annotation.Nullable final String value) {
-        this._os = value;
+        this.os = value;
     }
     /**
      * Sets the privateIpAddress property value. Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert.
@@ -255,7 +254,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPrivateIpAddress(@javax.annotation.Nullable final String value) {
-        this._privateIpAddress = value;
+        this.privateIpAddress = value;
     }
     /**
      * Sets the publicIpAddress property value. Publicly routable IPv4 or IPv6 address (see RFC 1918) at time of the alert.
@@ -264,7 +263,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPublicIpAddress(@javax.annotation.Nullable final String value) {
-        this._publicIpAddress = value;
+        this.publicIpAddress = value;
     }
     /**
      * Sets the riskScore property value. Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage.
@@ -273,6 +272,6 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final String value) {
-        this._riskScore = value;
+        this.riskScore = value;
     }
 }

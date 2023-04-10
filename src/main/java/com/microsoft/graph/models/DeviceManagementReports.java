@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementReports extends Entity implements Parsable {
     /** Entity representing a job to export a report */
-    private java.util.List<DeviceManagementExportJob> _exportJobs;
+    private java.util.List<DeviceManagementExportJob> exportJobs;
     /**
      * Instantiates a new deviceManagementReports and sets the default values.
      * @return a void
@@ -34,15 +33,15 @@ public class DeviceManagementReports extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementExportJob> getExportJobs() {
-        return this._exportJobs;
+        return this.exportJobs;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("exportJobs", (n) -> { this.setExportJobs(n.getCollectionOfObjectValues(DeviceManagementExportJob::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -64,6 +63,6 @@ public class DeviceManagementReports extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setExportJobs(@javax.annotation.Nullable final java.util.List<DeviceManagementExportJob> value) {
-        this._exportJobs = value;
+        this.exportJobs = value;
     }
 }

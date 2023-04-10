@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessClientApplications implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Service principal IDs excluded from the policy scope. */
-    private java.util.List<String> _excludeServicePrincipals;
+    private java.util.List<String> excludeServicePrincipals;
     /** Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant. */
-    private java.util.List<String> _includeServicePrincipals;
+    private java.util.List<String> includeServicePrincipals;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new conditionalAccessClientApplications and sets the default values.
      * @return a void
@@ -41,7 +40,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the excludeServicePrincipals property value. Service principal IDs excluded from the policy scope.
@@ -49,15 +48,15 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public java.util.List<String> getExcludeServicePrincipals() {
-        return this._excludeServicePrincipals;
+        return this.excludeServicePrincipals;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("excludeServicePrincipals", (n) -> { this.setExcludeServicePrincipals(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("includeServicePrincipals", (n) -> { this.setIncludeServicePrincipals(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -69,7 +68,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public java.util.List<String> getIncludeServicePrincipals() {
-        return this._includeServicePrincipals;
+        return this.includeServicePrincipals;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -77,7 +76,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -99,7 +98,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the excludeServicePrincipals property value. Service principal IDs excluded from the policy scope.
@@ -108,7 +107,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setExcludeServicePrincipals(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._excludeServicePrincipals = value;
+        this.excludeServicePrincipals = value;
     }
     /**
      * Sets the includeServicePrincipals property value. Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant.
@@ -117,7 +116,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setIncludeServicePrincipals(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._includeServicePrincipals = value;
+        this.includeServicePrincipals = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -126,6 +125,6 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** List of assigned trainings and their information in an attack simulation and training campaign. */
-    private java.util.List<AssignedTrainingInfo> _assignedTrainingsInfos;
+    private java.util.List<AssignedTrainingInfo> assignedTrainingsInfos;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Number of users who were assigned trainings in an attack simulation and training campaign. */
-    private Integer _trainingsAssignedUserCount;
+    private Integer trainingsAssignedUserCount;
     /**
      * Instantiates a new trainingEventsContent and sets the default values.
      * @return a void
@@ -41,7 +40,7 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the assignedTrainingsInfos property value. List of assigned trainings and their information in an attack simulation and training campaign.
@@ -49,15 +48,15 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AssignedTrainingInfo> getAssignedTrainingsInfos() {
-        return this._assignedTrainingsInfos;
+        return this.assignedTrainingsInfos;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("assignedTrainingsInfos", (n) -> { this.setAssignedTrainingsInfos(n.getCollectionOfObjectValues(AssignedTrainingInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("trainingsAssignedUserCount", (n) -> { this.setTrainingsAssignedUserCount(n.getIntegerValue()); });
@@ -69,7 +68,7 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the trainingsAssignedUserCount property value. Number of users who were assigned trainings in an attack simulation and training campaign.
@@ -77,7 +76,7 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getTrainingsAssignedUserCount() {
-        return this._trainingsAssignedUserCount;
+        return this.trainingsAssignedUserCount;
     }
     /**
      * Serializes information the current object
@@ -99,7 +98,7 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the assignedTrainingsInfos property value. List of assigned trainings and their information in an attack simulation and training campaign.
@@ -108,7 +107,7 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAssignedTrainingsInfos(@javax.annotation.Nullable final java.util.List<AssignedTrainingInfo> value) {
-        this._assignedTrainingsInfos = value;
+        this.assignedTrainingsInfos = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -117,7 +116,7 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the trainingsAssignedUserCount property value. Number of users who were assigned trainings in an attack simulation and training campaign.
@@ -126,6 +125,6 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTrainingsAssignedUserCount(@javax.annotation.Nullable final Integer value) {
-        this._trainingsAssignedUserCount = value;
+        this.trainingsAssignedUserCount = value;
     }
 }

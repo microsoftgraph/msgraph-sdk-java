@@ -7,26 +7,24 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the createOrGet method. */
 public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The chatInfo property */
-    private ChatInfo _chatInfo;
+    private ChatInfo chatInfo;
     /** The endDateTime property */
-    private OffsetDateTime _endDateTime;
+    private OffsetDateTime endDateTime;
     /** The externalId property */
-    private String _externalId;
+    private String externalId;
     /** The participants property */
-    private MeetingParticipants _participants;
+    private MeetingParticipants participants;
     /** The startDateTime property */
-    private OffsetDateTime _startDateTime;
+    private OffsetDateTime startDateTime;
     /** The subject property */
-    private String _subject;
+    private String subject;
     /**
      * Instantiates a new createOrGetPostRequestBody and sets the default values.
      * @return a void
@@ -51,7 +49,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the chatInfo property value. The chatInfo property
@@ -59,7 +57,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public ChatInfo getChatInfo() {
-        return this._chatInfo;
+        return this.chatInfo;
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
@@ -67,7 +65,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * Gets the externalId property value. The externalId property
@@ -75,15 +73,15 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public String getExternalId() {
-        return this._externalId;
+        return this.externalId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("chatInfo", (n) -> { this.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
@@ -98,7 +96,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public MeetingParticipants getParticipants() {
-        return this._participants;
+        return this.participants;
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
@@ -106,7 +104,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Gets the subject property value. The subject property
@@ -114,7 +112,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public String getSubject() {
-        return this._subject;
+        return this.subject;
     }
     /**
      * Serializes information the current object
@@ -139,7 +137,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the chatInfo property value. The chatInfo property
@@ -148,7 +146,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setChatInfo(@javax.annotation.Nullable final ChatInfo value) {
-        this._chatInfo = value;
+        this.chatInfo = value;
     }
     /**
      * Sets the endDateTime property value. The endDateTime property
@@ -157,7 +155,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
      * Sets the externalId property value. The externalId property
@@ -166,7 +164,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
-        this._externalId = value;
+        this.externalId = value;
     }
     /**
      * Sets the participants property value. The participants property
@@ -175,7 +173,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setParticipants(@javax.annotation.Nullable final MeetingParticipants value) {
-        this._participants = value;
+        this.participants = value;
     }
     /**
      * Sets the startDateTime property value. The startDateTime property
@@ -184,7 +182,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
     /**
      * Sets the subject property value. The subject property
@@ -193,6 +191,6 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
-        this._subject = value;
+        this.subject = value;
     }
 }

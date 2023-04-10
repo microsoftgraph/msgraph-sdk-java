@@ -3,23 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentityContainer extends Entity implements Parsable {
     /** Represents entry point for API connectors. */
-    private java.util.List<IdentityApiConnector> _apiConnectors;
+    private java.util.List<IdentityApiConnector> apiConnectors;
     /** Represents entry point for B2X/self-service sign-up identity userflows. */
-    private java.util.List<B2xIdentityUserFlow> _b2xUserFlows;
+    private java.util.List<B2xIdentityUserFlow> b2xUserFlows;
     /** the entry point for the Conditional Access (CA) object model. */
-    private ConditionalAccessRoot _conditionalAccess;
+    private ConditionalAccessRoot conditionalAccess;
     /** The identityProviders property */
-    private java.util.List<IdentityProviderBase> _identityProviders;
+    private java.util.List<IdentityProviderBase> identityProviders;
     /** Represents entry point for identity userflow attributes. */
-    private java.util.List<IdentityUserFlowAttribute> _userFlowAttributes;
+    private java.util.List<IdentityUserFlowAttribute> userFlowAttributes;
     /**
-     * Instantiates a new IdentityContainer and sets the default values.
+     * Instantiates a new identityContainer and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -29,7 +28,7 @@ public class IdentityContainer extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IdentityContainer
+     * @return a identityContainer
      */
     @javax.annotation.Nonnull
     public static IdentityContainer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +41,7 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<IdentityApiConnector> getApiConnectors() {
-        return this._apiConnectors;
+        return this.apiConnectors;
     }
     /**
      * Gets the b2xUserFlows property value. Represents entry point for B2X/self-service sign-up identity userflows.
@@ -50,7 +49,7 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<B2xIdentityUserFlow> getB2xUserFlows() {
-        return this._b2xUserFlows;
+        return this.b2xUserFlows;
     }
     /**
      * Gets the conditionalAccess property value. the entry point for the Conditional Access (CA) object model.
@@ -58,15 +57,15 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ConditionalAccessRoot getConditionalAccess() {
-        return this._conditionalAccess;
+        return this.conditionalAccess;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("apiConnectors", (n) -> { this.setApiConnectors(n.getCollectionOfObjectValues(IdentityApiConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("b2xUserFlows", (n) -> { this.setB2xUserFlows(n.getCollectionOfObjectValues(B2xIdentityUserFlow::createFromDiscriminatorValue)); });
         deserializerMap.put("conditionalAccess", (n) -> { this.setConditionalAccess(n.getObjectValue(ConditionalAccessRoot::createFromDiscriminatorValue)); });
@@ -80,7 +79,7 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<IdentityProviderBase> getIdentityProviders() {
-        return this._identityProviders;
+        return this.identityProviders;
     }
     /**
      * Gets the userFlowAttributes property value. Represents entry point for identity userflow attributes.
@@ -88,7 +87,7 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<IdentityUserFlowAttribute> getUserFlowAttributes() {
-        return this._userFlowAttributes;
+        return this.userFlowAttributes;
     }
     /**
      * Serializes information the current object
@@ -112,7 +111,7 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setApiConnectors(@javax.annotation.Nullable final java.util.List<IdentityApiConnector> value) {
-        this._apiConnectors = value;
+        this.apiConnectors = value;
     }
     /**
      * Sets the b2xUserFlows property value. Represents entry point for B2X/self-service sign-up identity userflows.
@@ -121,7 +120,7 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setB2xUserFlows(@javax.annotation.Nullable final java.util.List<B2xIdentityUserFlow> value) {
-        this._b2xUserFlows = value;
+        this.b2xUserFlows = value;
     }
     /**
      * Sets the conditionalAccess property value. the entry point for the Conditional Access (CA) object model.
@@ -130,7 +129,7 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setConditionalAccess(@javax.annotation.Nullable final ConditionalAccessRoot value) {
-        this._conditionalAccess = value;
+        this.conditionalAccess = value;
     }
     /**
      * Sets the identityProviders property value. The identityProviders property
@@ -139,7 +138,7 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIdentityProviders(@javax.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
-        this._identityProviders = value;
+        this.identityProviders = value;
     }
     /**
      * Sets the userFlowAttributes property value. Represents entry point for identity userflow attributes.
@@ -148,6 +147,6 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserFlowAttributes(@javax.annotation.Nullable final java.util.List<IdentityUserFlowAttribute> value) {
-        this._userFlowAttributes = value;
+        this.userFlowAttributes = value;
     }
 }

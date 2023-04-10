@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationPointsOutcome extends EducationOutcome implements Parsable {
     /** The numeric grade the teacher has given the student for this assignment. */
-    private EducationAssignmentPointsGrade _points;
+    private EducationAssignmentPointsGrade points;
     /** A copy of the points property that is made when the grade is released to the student. */
-    private EducationAssignmentPointsGrade _publishedPoints;
+    private EducationAssignmentPointsGrade publishedPoints;
     /**
      * Instantiates a new EducationPointsOutcome and sets the default values.
      * @return a void
@@ -33,11 +32,11 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("points", (n) -> { this.setPoints(n.getObjectValue(EducationAssignmentPointsGrade::createFromDiscriminatorValue)); });
         deserializerMap.put("publishedPoints", (n) -> { this.setPublishedPoints(n.getObjectValue(EducationAssignmentPointsGrade::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -48,7 +47,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
      */
     @javax.annotation.Nullable
     public EducationAssignmentPointsGrade getPoints() {
-        return this._points;
+        return this.points;
     }
     /**
      * Gets the publishedPoints property value. A copy of the points property that is made when the grade is released to the student.
@@ -56,7 +55,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
      */
     @javax.annotation.Nullable
     public EducationAssignmentPointsGrade getPublishedPoints() {
-        return this._publishedPoints;
+        return this.publishedPoints;
     }
     /**
      * Serializes information the current object
@@ -77,7 +76,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
      */
     @javax.annotation.Nonnull
     public void setPoints(@javax.annotation.Nullable final EducationAssignmentPointsGrade value) {
-        this._points = value;
+        this.points = value;
     }
     /**
      * Sets the publishedPoints property value. A copy of the points property that is made when the grade is released to the student.
@@ -86,6 +85,6 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
      */
     @javax.annotation.Nonnull
     public void setPublishedPoints(@javax.annotation.Nullable final EducationAssignmentPointsGrade value) {
-        this._publishedPoints = value;
+        this.publishedPoints = value;
     }
 }

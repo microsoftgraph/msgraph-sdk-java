@@ -3,19 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AadUserConversationMember extends ConversationMember implements Parsable {
     /** The email address of the user. */
-    private String _email;
+    private String email;
     /** TenantId which the Azure AD user belongs to. */
-    private String _tenantId;
+    private String tenantId;
     /** The user property */
-    private User _user;
+    private User user;
     /** The guid of the user. */
-    private String _userId;
+    private String userId;
     /**
      * Instantiates a new AadUserConversationMember and sets the default values.
      * @return a void
@@ -41,15 +40,15 @@ public class AadUserConversationMember extends ConversationMember implements Par
      */
     @javax.annotation.Nullable
     public String getEmail() {
-        return this._email;
+        return this.email;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         deserializerMap.put("user", (n) -> { this.setUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
@@ -62,7 +61,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Gets the user property value. The user property
@@ -70,7 +69,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
      */
     @javax.annotation.Nullable
     public User getUser() {
-        return this._user;
+        return this.user;
     }
     /**
      * Gets the userId property value. The guid of the user.
@@ -78,7 +77,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
@@ -101,7 +100,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
      */
     @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
-        this._email = value;
+        this.email = value;
     }
     /**
      * Sets the tenantId property value. TenantId which the Azure AD user belongs to.
@@ -110,7 +109,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
      */
     @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
     /**
      * Sets the user property value. The user property
@@ -119,7 +118,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
      */
     @javax.annotation.Nonnull
     public void setUser(@javax.annotation.Nullable final User value) {
-        this._user = value;
+        this.user = value;
     }
     /**
      * Sets the userId property value. The guid of the user.
@@ -128,6 +127,6 @@ public class AadUserConversationMember extends ConversationMember implements Par
      */
     @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }

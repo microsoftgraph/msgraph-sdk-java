@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidCustomConfiguration extends DeviceConfiguration implements Parsable {
     /** OMA settings. This collection can contain a maximum of 1000 elements. */
-    private java.util.List<OmaSetting> _omaSettings;
+    private java.util.List<OmaSetting> omaSettings;
     /**
      * Instantiates a new AndroidCustomConfiguration and sets the default values.
      * @return a void
@@ -31,11 +30,11 @@ public class AndroidCustomConfiguration extends DeviceConfiguration implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("omaSettings", (n) -> { this.setOmaSettings(n.getCollectionOfObjectValues(OmaSetting::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -45,7 +44,7 @@ public class AndroidCustomConfiguration extends DeviceConfiguration implements P
      */
     @javax.annotation.Nullable
     public java.util.List<OmaSetting> getOmaSettings() {
-        return this._omaSettings;
+        return this.omaSettings;
     }
     /**
      * Serializes information the current object
@@ -65,6 +64,6 @@ public class AndroidCustomConfiguration extends DeviceConfiguration implements P
      */
     @javax.annotation.Nonnull
     public void setOmaSettings(@javax.annotation.Nullable final java.util.List<OmaSetting> value) {
-        this._omaSettings = value;
+        this.omaSettings = value;
     }
 }

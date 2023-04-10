@@ -1,21 +1,15 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.Notebook;
-import com.microsoft.graph.models.OnenoteEntityHierarchyModel;
-import com.microsoft.graph.models.OnenotePage;
-import com.microsoft.graph.models.OnenoteSection;
-import com.microsoft.graph.models.SectionGroup;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel implements Parsable {
     /** The date and time when the page was created. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /**
      * Instantiates a new OnenoteEntitySchemaObjectModel and sets the default values.
      * @return a void
@@ -52,15 +46,15 @@ public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel imple
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         return deserializerMap;
     }
@@ -82,6 +76,6 @@ public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel imple
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
 }

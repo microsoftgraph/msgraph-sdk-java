@@ -4,39 +4,38 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Chat extends Entity implements Parsable {
     /** The chatType property */
-    private ChatType _chatType;
+    private ChatType chatType;
     /** Date and time at which the chat was created. Read-only. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** A collection of all the apps in the chat. Nullable. */
-    private java.util.List<TeamsAppInstallation> _installedApps;
+    private java.util.List<TeamsAppInstallation> installedApps;
     /** Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property. */
-    private ChatMessageInfo _lastMessagePreview;
+    private ChatMessageInfo lastMessagePreview;
     /** Date and time at which the chat was renamed or list of members were last changed. Read-only. */
-    private OffsetDateTime _lastUpdatedDateTime;
+    private OffsetDateTime lastUpdatedDateTime;
     /** A collection of all the members in the chat. Nullable. */
-    private java.util.List<ConversationMember> _members;
+    private java.util.List<ConversationMember> members;
     /** A collection of all the messages in the chat. Nullable. */
-    private java.util.List<ChatMessage> _messages;
+    private java.util.List<ChatMessage> messages;
     /** Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only. */
-    private TeamworkOnlineMeetingInfo _onlineMeetingInfo;
+    private TeamworkOnlineMeetingInfo onlineMeetingInfo;
     /** A collection of all the pinned messages in the chat. Nullable. */
-    private java.util.List<PinnedChatMessageInfo> _pinnedMessages;
+    private java.util.List<PinnedChatMessageInfo> pinnedMessages;
     /** A collection of all the tabs in the chat. Nullable. */
-    private java.util.List<TeamsTab> _tabs;
+    private java.util.List<TeamsTab> tabs;
     /** The identifier of the tenant in which the chat was created. Read-only. */
-    private String _tenantId;
+    private String tenantId;
     /** (Optional) Subject or topic for the chat. Only available for group chats. */
-    private String _topic;
+    private String topic;
     /** Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context. */
-    private ChatViewpoint _viewpoint;
+    private ChatViewpoint viewpoint;
     /** The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only. */
-    private String _webUrl;
+    private String webUrl;
     /**
      * Instantiates a new chat and sets the default values.
      * @return a void
@@ -61,7 +60,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ChatType getChatType() {
-        return this._chatType;
+        return this.chatType;
     }
     /**
      * Gets the createdDateTime property value. Date and time at which the chat was created. Read-only.
@@ -69,15 +68,15 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("chatType", (n) -> { this.setChatType(n.getEnumValue(ChatType.class)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("installedApps", (n) -> { this.setInstalledApps(n.getCollectionOfObjectValues(TeamsAppInstallation::createFromDiscriminatorValue)); });
@@ -100,7 +99,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TeamsAppInstallation> getInstalledApps() {
-        return this._installedApps;
+        return this.installedApps;
     }
     /**
      * Gets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
@@ -108,7 +107,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ChatMessageInfo getLastMessagePreview() {
-        return this._lastMessagePreview;
+        return this.lastMessagePreview;
     }
     /**
      * Gets the lastUpdatedDateTime property value. Date and time at which the chat was renamed or list of members were last changed. Read-only.
@@ -116,7 +115,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this._lastUpdatedDateTime;
+        return this.lastUpdatedDateTime;
     }
     /**
      * Gets the members property value. A collection of all the members in the chat. Nullable.
@@ -124,7 +123,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ConversationMember> getMembers() {
-        return this._members;
+        return this.members;
     }
     /**
      * Gets the messages property value. A collection of all the messages in the chat. Nullable.
@@ -132,7 +131,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ChatMessage> getMessages() {
-        return this._messages;
+        return this.messages;
     }
     /**
      * Gets the onlineMeetingInfo property value. Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
@@ -140,7 +139,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamworkOnlineMeetingInfo getOnlineMeetingInfo() {
-        return this._onlineMeetingInfo;
+        return this.onlineMeetingInfo;
     }
     /**
      * Gets the pinnedMessages property value. A collection of all the pinned messages in the chat. Nullable.
@@ -148,7 +147,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PinnedChatMessageInfo> getPinnedMessages() {
-        return this._pinnedMessages;
+        return this.pinnedMessages;
     }
     /**
      * Gets the tabs property value. A collection of all the tabs in the chat. Nullable.
@@ -156,7 +155,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TeamsTab> getTabs() {
-        return this._tabs;
+        return this.tabs;
     }
     /**
      * Gets the tenantId property value. The identifier of the tenant in which the chat was created. Read-only.
@@ -164,7 +163,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Gets the topic property value. (Optional) Subject or topic for the chat. Only available for group chats.
@@ -172,7 +171,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTopic() {
-        return this._topic;
+        return this.topic;
     }
     /**
      * Gets the viewpoint property value. Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
@@ -180,7 +179,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ChatViewpoint getViewpoint() {
-        return this._viewpoint;
+        return this.viewpoint;
     }
     /**
      * Gets the webUrl property value. The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only.
@@ -188,7 +187,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getWebUrl() {
-        return this._webUrl;
+        return this.webUrl;
     }
     /**
      * Serializes information the current object
@@ -221,7 +220,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setChatType(@javax.annotation.Nullable final ChatType value) {
-        this._chatType = value;
+        this.chatType = value;
     }
     /**
      * Sets the createdDateTime property value. Date and time at which the chat was created. Read-only.
@@ -230,7 +229,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the installedApps property value. A collection of all the apps in the chat. Nullable.
@@ -239,7 +238,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInstalledApps(@javax.annotation.Nullable final java.util.List<TeamsAppInstallation> value) {
-        this._installedApps = value;
+        this.installedApps = value;
     }
     /**
      * Sets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
@@ -248,7 +247,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastMessagePreview(@javax.annotation.Nullable final ChatMessageInfo value) {
-        this._lastMessagePreview = value;
+        this.lastMessagePreview = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. Date and time at which the chat was renamed or list of members were last changed. Read-only.
@@ -257,7 +256,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastUpdatedDateTime = value;
+        this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the members property value. A collection of all the members in the chat. Nullable.
@@ -266,7 +265,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<ConversationMember> value) {
-        this._members = value;
+        this.members = value;
     }
     /**
      * Sets the messages property value. A collection of all the messages in the chat. Nullable.
@@ -275,7 +274,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMessages(@javax.annotation.Nullable final java.util.List<ChatMessage> value) {
-        this._messages = value;
+        this.messages = value;
     }
     /**
      * Sets the onlineMeetingInfo property value. Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
@@ -284,7 +283,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOnlineMeetingInfo(@javax.annotation.Nullable final TeamworkOnlineMeetingInfo value) {
-        this._onlineMeetingInfo = value;
+        this.onlineMeetingInfo = value;
     }
     /**
      * Sets the pinnedMessages property value. A collection of all the pinned messages in the chat. Nullable.
@@ -293,7 +292,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPinnedMessages(@javax.annotation.Nullable final java.util.List<PinnedChatMessageInfo> value) {
-        this._pinnedMessages = value;
+        this.pinnedMessages = value;
     }
     /**
      * Sets the tabs property value. A collection of all the tabs in the chat. Nullable.
@@ -302,7 +301,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTabs(@javax.annotation.Nullable final java.util.List<TeamsTab> value) {
-        this._tabs = value;
+        this.tabs = value;
     }
     /**
      * Sets the tenantId property value. The identifier of the tenant in which the chat was created. Read-only.
@@ -311,7 +310,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
     /**
      * Sets the topic property value. (Optional) Subject or topic for the chat. Only available for group chats.
@@ -320,7 +319,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTopic(@javax.annotation.Nullable final String value) {
-        this._topic = value;
+        this.topic = value;
     }
     /**
      * Sets the viewpoint property value. Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
@@ -329,7 +328,7 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setViewpoint(@javax.annotation.Nullable final ChatViewpoint value) {
-        this._viewpoint = value;
+        this.viewpoint = value;
     }
     /**
      * Sets the webUrl property value. The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only.
@@ -338,6 +337,6 @@ public class Chat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
-        this._webUrl = value;
+        this.webUrl = value;
     }
 }

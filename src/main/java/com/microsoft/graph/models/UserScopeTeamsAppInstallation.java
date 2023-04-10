@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implements Parsable {
     /** The chat between the user and Teams app. */
-    private Chat _chat;
+    private Chat chat;
     /**
      * Instantiates a new UserScopeTeamsAppInstallation and sets the default values.
      * @return a void
@@ -35,15 +34,15 @@ public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implemen
      */
     @javax.annotation.Nullable
     public Chat getChat() {
-        return this._chat;
+        return this.chat;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("chat", (n) -> { this.setChat(n.getObjectValue(Chat::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -65,6 +64,6 @@ public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implemen
      */
     @javax.annotation.Nonnull
     public void setChat(@javax.annotation.Nullable final Chat value) {
-        this._chat = value;
+        this.chat = value;
     }
 }

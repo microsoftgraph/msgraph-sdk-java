@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class File implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Hashes of the file's binary content, if available. Read-only. */
-    private Hashes _hashes;
+    private Hashes hashes;
     /** The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only. */
-    private String _mimeType;
+    private String mimeType;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The processingMetadata property */
-    private Boolean _processingMetadata;
+    private Boolean processingMetadata;
     /**
      * Instantiates a new file and sets the default values.
      * @return a void
@@ -43,15 +42,15 @@ public class File implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("hashes", (n) -> { this.setHashes(n.getObjectValue(Hashes::createFromDiscriminatorValue)); });
         deserializerMap.put("mimeType", (n) -> { this.setMimeType(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -64,7 +63,7 @@ public class File implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Hashes getHashes() {
-        return this._hashes;
+        return this.hashes;
     }
     /**
      * Gets the mimeType property value. The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.
@@ -72,7 +71,7 @@ public class File implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getMimeType() {
-        return this._mimeType;
+        return this.mimeType;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -80,7 +79,7 @@ public class File implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the processingMetadata property value. The processingMetadata property
@@ -88,7 +87,7 @@ public class File implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getProcessingMetadata() {
-        return this._processingMetadata;
+        return this.processingMetadata;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class File implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the hashes property value. Hashes of the file's binary content, if available. Read-only.
@@ -120,7 +119,7 @@ public class File implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setHashes(@javax.annotation.Nullable final Hashes value) {
-        this._hashes = value;
+        this.hashes = value;
     }
     /**
      * Sets the mimeType property value. The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.
@@ -129,7 +128,7 @@ public class File implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setMimeType(@javax.annotation.Nullable final String value) {
-        this._mimeType = value;
+        this.mimeType = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -138,7 +137,7 @@ public class File implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the processingMetadata property value. The processingMetadata property
@@ -147,6 +146,6 @@ public class File implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setProcessingMetadata(@javax.annotation.Nullable final Boolean value) {
-        this._processingMetadata = value;
+        this.processingMetadata = value;
     }
 }

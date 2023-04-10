@@ -4,27 +4,26 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only. */
-    private String _countryCode;
+    private String countryCode;
     /** The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only. */
-    private EndpointType _endpointType;
+    private EndpointType endpointType;
     /** The identity property */
-    private IdentitySet _identity;
+    private IdentitySet identity;
     /** The language culture string. Read-only. */
-    private String _languageId;
+    private String languageId;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The participant ID of the participant. Read-only. */
-    private String _participantId;
+    private String participantId;
     /** The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only. */
-    private String _region;
+    private String region;
     /**
      * Instantiates a new participantInfo and sets the default values.
      * @return a void
@@ -49,7 +48,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the countryCode property value. The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
@@ -57,7 +56,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCountryCode() {
-        return this._countryCode;
+        return this.countryCode;
     }
     /**
      * Gets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
@@ -65,15 +64,15 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public EndpointType getEndpointType() {
-        return this._endpointType;
+        return this.endpointType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("countryCode", (n) -> { this.setCountryCode(n.getStringValue()); });
         deserializerMap.put("endpointType", (n) -> { this.setEndpointType(n.getEnumValue(EndpointType.class)); });
         deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -89,7 +88,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getIdentity() {
-        return this._identity;
+        return this.identity;
     }
     /**
      * Gets the languageId property value. The language culture string. Read-only.
@@ -97,7 +96,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getLanguageId() {
-        return this._languageId;
+        return this.languageId;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -105,7 +104,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the participantId property value. The participant ID of the participant. Read-only.
@@ -113,7 +112,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getParticipantId() {
-        return this._participantId;
+        return this.participantId;
     }
     /**
      * Gets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
@@ -121,7 +120,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getRegion() {
-        return this._region;
+        return this.region;
     }
     /**
      * Serializes information the current object
@@ -147,7 +146,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the countryCode property value. The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
@@ -156,7 +155,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCountryCode(@javax.annotation.Nullable final String value) {
-        this._countryCode = value;
+        this.countryCode = value;
     }
     /**
      * Sets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
@@ -165,7 +164,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEndpointType(@javax.annotation.Nullable final EndpointType value) {
-        this._endpointType = value;
+        this.endpointType = value;
     }
     /**
      * Sets the identity property value. The identity property
@@ -174,7 +173,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIdentity(@javax.annotation.Nullable final IdentitySet value) {
-        this._identity = value;
+        this.identity = value;
     }
     /**
      * Sets the languageId property value. The language culture string. Read-only.
@@ -183,7 +182,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLanguageId(@javax.annotation.Nullable final String value) {
-        this._languageId = value;
+        this.languageId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -192,7 +191,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the participantId property value. The participant ID of the participant. Read-only.
@@ -201,7 +200,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setParticipantId(@javax.annotation.Nullable final String value) {
-        this._participantId = value;
+        this.participantId = value;
     }
     /**
      * Sets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
@@ -210,6 +209,6 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRegion(@javax.annotation.Nullable final String value) {
-        this._region = value;
+        this.region = value;
     }
 }

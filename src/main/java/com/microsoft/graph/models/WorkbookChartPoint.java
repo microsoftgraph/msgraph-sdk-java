@@ -3,16 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookChartPoint extends Entity implements Parsable {
     /** Encapsulates the format properties chart point. Read-only. */
-    private WorkbookChartPointFormat _format;
+    private WorkbookChartPointFormat format;
     /** Returns the value of a chart point. Read-only. */
-    private Json _value;
+    private Json value;
     /**
      * Instantiates a new workbookChartPoint and sets the default values.
      * @return a void
@@ -33,11 +31,11 @@ public class WorkbookChartPoint extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartPointFormat::createFromDiscriminatorValue)); });
         deserializerMap.put("value", (n) -> { this.setValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -48,7 +46,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartPointFormat getFormat() {
-        return this._format;
+        return this.format;
     }
     /**
      * Gets the value property value. Returns the value of a chart point. Read-only.
@@ -56,7 +54,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Json getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
@@ -77,7 +75,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final WorkbookChartPointFormat value) {
-        this._format = value;
+        this.format = value;
     }
     /**
      * Sets the value property value. Returns the value of a chart point. Read-only.
@@ -86,6 +84,6 @@ public class WorkbookChartPoint extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final Json value) {
-        this._value = value;
+        this.value = value;
     }
 }

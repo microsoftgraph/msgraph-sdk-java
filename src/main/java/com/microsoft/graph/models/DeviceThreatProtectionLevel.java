@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Device threat protection levels for the Device Threat Protection API. */
 public enum DeviceThreatProtectionLevel implements ValuedEnum {
     /** Default Value. Do not use. */
     Unavailable("unavailable"),

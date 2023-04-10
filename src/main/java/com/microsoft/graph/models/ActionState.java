@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** State of the action on the device */
 public enum ActionState implements ValuedEnum {
     /** Not a valid action state */
     None("none"),

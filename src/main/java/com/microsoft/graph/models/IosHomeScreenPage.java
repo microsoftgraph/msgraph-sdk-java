@@ -4,20 +4,21 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A page containing apps, folders, and web clips on the Home Screen. */
+/**
+ * A page containing apps, folders, and web clips on the Home Screen.
+ */
 public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Name of the page */
-    private String _displayName;
+    private String displayName;
     /** A list of apps, folders, and web clips to appear on a page. This collection can contain a maximum of 500 elements. */
-    private java.util.List<IosHomeScreenItem> _icons;
+    private java.util.List<IosHomeScreenItem> icons;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new iosHomeScreenPage and sets the default values.
      * @return a void
@@ -42,7 +43,7 @@ public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the displayName property value. Name of the page
@@ -50,15 +51,15 @@ public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("icons", (n) -> { this.setIcons(n.getCollectionOfObjectValues(IosHomeScreenItem::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -70,7 +71,7 @@ public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<IosHomeScreenItem> getIcons() {
-        return this._icons;
+        return this.icons;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -78,7 +79,7 @@ public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
@@ -100,7 +101,7 @@ public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the displayName property value. Name of the page
@@ -109,7 +110,7 @@ public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the icons property value. A list of apps, folders, and web clips to appear on a page. This collection can contain a maximum of 500 elements.
@@ -118,7 +119,7 @@ public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIcons(@javax.annotation.Nullable final java.util.List<IosHomeScreenItem> value) {
-        this._icons = value;
+        this.icons = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -127,6 +128,6 @@ public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

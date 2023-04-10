@@ -4,29 +4,28 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceDetail implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Indicates the browser information of the used for signing in. */
-    private String _browser;
+    private String browser;
     /** Refers to the UniqueID of the device used for signing in. */
-    private String _deviceId;
+    private String deviceId;
     /** Refers to the name of the device used for signing in. */
-    private String _displayName;
+    private String displayName;
     /** Indicates whether the device is compliant. */
-    private Boolean _isCompliant;
+    private Boolean isCompliant;
     /** Indicates whether the device is managed. */
-    private Boolean _isManaged;
+    private Boolean isManaged;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Indicates the operating system name and version used for signing in. */
-    private String _operatingSystem;
+    private String operatingSystem;
     /** Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined. */
-    private String _trustType;
+    private String trustType;
     /**
      * Instantiates a new deviceDetail and sets the default values.
      * @return a void
@@ -51,7 +50,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the browser property value. Indicates the browser information of the used for signing in.
@@ -59,7 +58,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getBrowser() {
-        return this._browser;
+        return this.browser;
     }
     /**
      * Gets the deviceId property value. Refers to the UniqueID of the device used for signing in.
@@ -67,7 +66,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceId() {
-        return this._deviceId;
+        return this.deviceId;
     }
     /**
      * Gets the displayName property value. Refers to the name of the device used for signing in.
@@ -75,15 +74,15 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("browser", (n) -> { this.setBrowser(n.getStringValue()); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -100,7 +99,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsCompliant() {
-        return this._isCompliant;
+        return this.isCompliant;
     }
     /**
      * Gets the isManaged property value. Indicates whether the device is managed.
@@ -108,7 +107,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsManaged() {
-        return this._isManaged;
+        return this.isManaged;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -116,7 +115,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the operatingSystem property value. Indicates the operating system name and version used for signing in.
@@ -124,7 +123,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOperatingSystem() {
-        return this._operatingSystem;
+        return this.operatingSystem;
     }
     /**
      * Gets the trustType property value. Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
@@ -132,7 +131,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getTrustType() {
-        return this._trustType;
+        return this.trustType;
     }
     /**
      * Serializes information the current object
@@ -159,7 +158,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the browser property value. Indicates the browser information of the used for signing in.
@@ -168,7 +167,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setBrowser(@javax.annotation.Nullable final String value) {
-        this._browser = value;
+        this.browser = value;
     }
     /**
      * Sets the deviceId property value. Refers to the UniqueID of the device used for signing in.
@@ -177,7 +176,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
-        this._deviceId = value;
+        this.deviceId = value;
     }
     /**
      * Sets the displayName property value. Refers to the name of the device used for signing in.
@@ -186,7 +185,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the isCompliant property value. Indicates whether the device is compliant.
@@ -195,7 +194,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsCompliant(@javax.annotation.Nullable final Boolean value) {
-        this._isCompliant = value;
+        this.isCompliant = value;
     }
     /**
      * Sets the isManaged property value. Indicates whether the device is managed.
@@ -204,7 +203,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsManaged(@javax.annotation.Nullable final Boolean value) {
-        this._isManaged = value;
+        this.isManaged = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -213,7 +212,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the operatingSystem property value. Indicates the operating system name and version used for signing in.
@@ -222,7 +221,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOperatingSystem(@javax.annotation.Nullable final String value) {
-        this._operatingSystem = value;
+        this.operatingSystem = value;
     }
     /**
      * Sets the trustType property value. Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
@@ -231,6 +230,6 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setTrustType(@javax.annotation.Nullable final String value) {
-        this._trustType = value;
+        this.trustType = value;
     }
 }

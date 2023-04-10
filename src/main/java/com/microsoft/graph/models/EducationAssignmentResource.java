@@ -3,16 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class EducationAssignmentResource extends Entity implements Parsable {
     /** Indicates whether this resource should be copied to each student submission for modification and submission. Required */
-    private Boolean _distributeForStudentWork;
+    private Boolean distributeForStudentWork;
     /** Resource object that has been associated with this assignment. */
-    private EducationResource _resource;
+    private EducationResource resource;
     /**
      * Instantiates a new educationAssignmentResource and sets the default values.
      * @return a void
@@ -37,15 +35,15 @@ public class EducationAssignmentResource extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getDistributeForStudentWork() {
-        return this._distributeForStudentWork;
+        return this.distributeForStudentWork;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("distributeForStudentWork", (n) -> { this.setDistributeForStudentWork(n.getBooleanValue()); });
         deserializerMap.put("resource", (n) -> { this.setResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -56,7 +54,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EducationResource getResource() {
-        return this._resource;
+        return this.resource;
     }
     /**
      * Serializes information the current object
@@ -77,7 +75,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDistributeForStudentWork(@javax.annotation.Nullable final Boolean value) {
-        this._distributeForStudentWork = value;
+        this.distributeForStudentWork = value;
     }
     /**
      * Sets the resource property value. Resource object that has been associated with this assignment.
@@ -86,6 +84,6 @@ public class EducationAssignmentResource extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final EducationResource value) {
-        this._resource = value;
+        this.resource = value;
     }
 }

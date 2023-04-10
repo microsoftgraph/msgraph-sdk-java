@@ -1,25 +1,22 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.InternalDomainFederation;
-import com.microsoft.graph.models.SamlOrWsFedExternalDomainFederation;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable {
     /** Issuer URI of the federation server. */
-    private String _issuerUri;
+    private String issuerUri;
     /** URI of the metadata exchange endpoint used for authentication from rich client applications. */
-    private String _metadataExchangeUri;
+    private String metadataExchangeUri;
     /** URI that web-based clients are directed to when signing in to Azure Active Directory (Azure AD) services. */
-    private String _passiveSignInUri;
+    private String passiveSignInUri;
     /** Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue. */
-    private AuthenticationProtocol _preferredAuthenticationProtocol;
+    private AuthenticationProtocol preferredAuthenticationProtocol;
     /** Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Azure AD updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Azure AD monitors the metadata daily and will update the federation settings for the domain when a new certificate is available. */
-    private String _signingCertificate;
+    private String signingCertificate;
     /**
      * Instantiates a new SamlOrWsFedProvider and sets the default values.
      * @return a void
@@ -49,11 +46,11 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("issuerUri", (n) -> { this.setIssuerUri(n.getStringValue()); });
         deserializerMap.put("metadataExchangeUri", (n) -> { this.setMetadataExchangeUri(n.getStringValue()); });
         deserializerMap.put("passiveSignInUri", (n) -> { this.setPassiveSignInUri(n.getStringValue()); });
@@ -67,7 +64,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      */
     @javax.annotation.Nullable
     public String getIssuerUri() {
-        return this._issuerUri;
+        return this.issuerUri;
     }
     /**
      * Gets the metadataExchangeUri property value. URI of the metadata exchange endpoint used for authentication from rich client applications.
@@ -75,7 +72,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      */
     @javax.annotation.Nullable
     public String getMetadataExchangeUri() {
-        return this._metadataExchangeUri;
+        return this.metadataExchangeUri;
     }
     /**
      * Gets the passiveSignInUri property value. URI that web-based clients are directed to when signing in to Azure Active Directory (Azure AD) services.
@@ -83,7 +80,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      */
     @javax.annotation.Nullable
     public String getPassiveSignInUri() {
-        return this._passiveSignInUri;
+        return this.passiveSignInUri;
     }
     /**
      * Gets the preferredAuthenticationProtocol property value. Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue.
@@ -91,7 +88,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      */
     @javax.annotation.Nullable
     public AuthenticationProtocol getPreferredAuthenticationProtocol() {
-        return this._preferredAuthenticationProtocol;
+        return this.preferredAuthenticationProtocol;
     }
     /**
      * Gets the signingCertificate property value. Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Azure AD updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Azure AD monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
@@ -99,7 +96,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      */
     @javax.annotation.Nullable
     public String getSigningCertificate() {
-        return this._signingCertificate;
+        return this.signingCertificate;
     }
     /**
      * Serializes information the current object
@@ -123,7 +120,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setIssuerUri(@javax.annotation.Nullable final String value) {
-        this._issuerUri = value;
+        this.issuerUri = value;
     }
     /**
      * Sets the metadataExchangeUri property value. URI of the metadata exchange endpoint used for authentication from rich client applications.
@@ -132,7 +129,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setMetadataExchangeUri(@javax.annotation.Nullable final String value) {
-        this._metadataExchangeUri = value;
+        this.metadataExchangeUri = value;
     }
     /**
      * Sets the passiveSignInUri property value. URI that web-based clients are directed to when signing in to Azure Active Directory (Azure AD) services.
@@ -141,7 +138,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setPassiveSignInUri(@javax.annotation.Nullable final String value) {
-        this._passiveSignInUri = value;
+        this.passiveSignInUri = value;
     }
     /**
      * Sets the preferredAuthenticationProtocol property value. Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue.
@@ -150,7 +147,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setPreferredAuthenticationProtocol(@javax.annotation.Nullable final AuthenticationProtocol value) {
-        this._preferredAuthenticationProtocol = value;
+        this.preferredAuthenticationProtocol = value;
     }
     /**
      * Sets the signingCertificate property value. Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Azure AD updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Azure AD monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
@@ -159,6 +156,6 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      */
     @javax.annotation.Nonnull
     public void setSigningCertificate(@javax.annotation.Nullable final String value) {
-        this._signingCertificate = value;
+        this.signingCertificate = value;
     }
 }

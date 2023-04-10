@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerPlanDetails extends Entity implements Parsable {
     /** An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan. */
-    private PlannerCategoryDescriptions _categoryDescriptions;
+    private PlannerCategoryDescriptions categoryDescriptions;
     /** Set of user IDs that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required for them to access the plan owned by the group. */
-    private PlannerUserIds _sharedWith;
+    private PlannerUserIds sharedWith;
     /**
      * Instantiates a new plannerPlanDetails and sets the default values.
      * @return a void
@@ -36,15 +35,15 @@ public class PlannerPlanDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PlannerCategoryDescriptions getCategoryDescriptions() {
-        return this._categoryDescriptions;
+        return this.categoryDescriptions;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("categoryDescriptions", (n) -> { this.setCategoryDescriptions(n.getObjectValue(PlannerCategoryDescriptions::createFromDiscriminatorValue)); });
         deserializerMap.put("sharedWith", (n) -> { this.setSharedWith(n.getObjectValue(PlannerUserIds::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -55,7 +54,7 @@ public class PlannerPlanDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PlannerUserIds getSharedWith() {
-        return this._sharedWith;
+        return this.sharedWith;
     }
     /**
      * Serializes information the current object
@@ -76,7 +75,7 @@ public class PlannerPlanDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCategoryDescriptions(@javax.annotation.Nullable final PlannerCategoryDescriptions value) {
-        this._categoryDescriptions = value;
+        this.categoryDescriptions = value;
     }
     /**
      * Sets the sharedWith property value. Set of user IDs that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required for them to access the plan owned by the group.
@@ -85,6 +84,6 @@ public class PlannerPlanDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSharedWith(@javax.annotation.Nullable final PlannerUserIds value) {
-        this._sharedWith = value;
+        this.sharedWith = value;
     }
 }

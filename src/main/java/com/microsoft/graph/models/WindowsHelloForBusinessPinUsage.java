@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Windows Hello for Business pin usage options */
 public enum WindowsHelloForBusinessPinUsage implements ValuedEnum {
     /** Allowed the usage of certain pin rule */
     Allowed("allowed"),

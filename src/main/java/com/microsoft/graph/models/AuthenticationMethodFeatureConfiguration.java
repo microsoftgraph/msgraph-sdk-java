@@ -4,21 +4,20 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** A single entity that is excluded from this feature. */
-    private FeatureTarget _excludeTarget;
+    private FeatureTarget excludeTarget;
     /** A single entity that is included in this feature. */
-    private FeatureTarget _includeTarget;
+    private FeatureTarget includeTarget;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled. */
-    private AdvancedConfigState _state;
+    private AdvancedConfigState state;
     /**
      * Instantiates a new authenticationMethodFeatureConfiguration and sets the default values.
      * @return a void
@@ -43,7 +42,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the excludeTarget property value. A single entity that is excluded from this feature.
@@ -51,15 +50,15 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public FeatureTarget getExcludeTarget() {
-        return this._excludeTarget;
+        return this.excludeTarget;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("excludeTarget", (n) -> { this.setExcludeTarget(n.getObjectValue(FeatureTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("includeTarget", (n) -> { this.setIncludeTarget(n.getObjectValue(FeatureTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -72,7 +71,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public FeatureTarget getIncludeTarget() {
-        return this._includeTarget;
+        return this.includeTarget;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -80,7 +79,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
@@ -88,7 +87,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public AdvancedConfigState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Serializes information the current object
@@ -111,7 +110,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the excludeTarget property value. A single entity that is excluded from this feature.
@@ -120,7 +119,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public void setExcludeTarget(@javax.annotation.Nullable final FeatureTarget value) {
-        this._excludeTarget = value;
+        this.excludeTarget = value;
     }
     /**
      * Sets the includeTarget property value. A single entity that is included in this feature.
@@ -129,7 +128,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public void setIncludeTarget(@javax.annotation.Nullable final FeatureTarget value) {
-        this._includeTarget = value;
+        this.includeTarget = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -138,7 +137,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
@@ -147,6 +146,6 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final AdvancedConfigState value) {
-        this._state = value;
+        this.state = value;
     }
 }

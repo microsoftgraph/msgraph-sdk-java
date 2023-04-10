@@ -3,17 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TimeOff extends ChangeTrackedEntity implements Parsable {
     /** The draft version of this timeOff that is viewable by managers. Required. */
-    private TimeOffItem _draftTimeOff;
+    private TimeOffItem draftTimeOff;
     /** The shared version of this timeOff that is viewable by both employees and managers. Required. */
-    private TimeOffItem _sharedTimeOff;
+    private TimeOffItem sharedTimeOff;
     /** ID of the user assigned to the timeOff. Required. */
-    private String _userId;
+    private String userId;
     /**
      * Instantiates a new TimeOff and sets the default values.
      * @return a void
@@ -39,15 +38,15 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public TimeOffItem getDraftTimeOff() {
-        return this._draftTimeOff;
+        return this.draftTimeOff;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("draftTimeOff", (n) -> { this.setDraftTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
         deserializerMap.put("sharedTimeOff", (n) -> { this.setSharedTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
@@ -59,7 +58,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public TimeOffItem getSharedTimeOff() {
-        return this._sharedTimeOff;
+        return this.sharedTimeOff;
     }
     /**
      * Gets the userId property value. ID of the user assigned to the timeOff. Required.
@@ -67,7 +66,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
@@ -89,7 +88,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDraftTimeOff(@javax.annotation.Nullable final TimeOffItem value) {
-        this._draftTimeOff = value;
+        this.draftTimeOff = value;
     }
     /**
      * Sets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Required.
@@ -98,7 +97,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSharedTimeOff(@javax.annotation.Nullable final TimeOffItem value) {
-        this._sharedTimeOff = value;
+        this.sharedTimeOff = value;
     }
     /**
      * Sets the userId property value. ID of the user assigned to the timeOff. Required.
@@ -107,6 +106,6 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }

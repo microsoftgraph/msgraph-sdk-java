@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GroupMembers extends SubjectSet implements Parsable {
     /** The name of the group in Azure AD. Read only. */
-    private String _description;
+    private String description;
     /** The ID of the group in Azure AD. */
-    private String _groupId;
+    private String groupId;
     /**
      * Instantiates a new GroupMembers and sets the default values.
      * @return a void
@@ -37,15 +36,15 @@ public class GroupMembers extends SubjectSet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("groupId", (n) -> { this.setGroupId(n.getStringValue()); });
         return deserializerMap;
@@ -56,7 +55,7 @@ public class GroupMembers extends SubjectSet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getGroupId() {
-        return this._groupId;
+        return this.groupId;
     }
     /**
      * Serializes information the current object
@@ -77,7 +76,7 @@ public class GroupMembers extends SubjectSet implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the groupId property value. The ID of the group in Azure AD.
@@ -86,6 +85,6 @@ public class GroupMembers extends SubjectSet implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setGroupId(@javax.annotation.Nullable final String value) {
-        this._groupId = value;
+        this.groupId = value;
     }
 }

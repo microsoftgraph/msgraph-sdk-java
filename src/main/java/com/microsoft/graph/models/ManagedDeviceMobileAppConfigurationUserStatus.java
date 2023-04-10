@@ -4,22 +4,23 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties, inherited properties and actions for an MDM mobile app configuration status for a user. */
+/**
+ * Contains properties, inherited properties and actions for an MDM mobile app configuration status for a user.
+ */
 public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implements Parsable {
     /** Devices count for that user. */
-    private Integer _devicesCount;
+    private Integer devicesCount;
     /** Last modified date time of the policy report. */
-    private OffsetDateTime _lastReportedDateTime;
+    private OffsetDateTime lastReportedDateTime;
     /** The status property */
-    private ComplianceStatus _status;
+    private ComplianceStatus status;
     /** User name of the DevicePolicyStatus. */
-    private String _userDisplayName;
+    private String userDisplayName;
     /** UserPrincipalName. */
-    private String _userPrincipalName;
+    private String userPrincipalName;
     /**
      * Instantiates a new managedDeviceMobileAppConfigurationUserStatus and sets the default values.
      * @return a void
@@ -44,15 +45,15 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
      */
     @javax.annotation.Nullable
     public Integer getDevicesCount() {
-        return this._devicesCount;
+        return this.devicesCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("devicesCount", (n) -> { this.setDevicesCount(n.getIntegerValue()); });
         deserializerMap.put("lastReportedDateTime", (n) -> { this.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ComplianceStatus.class)); });
@@ -66,7 +67,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
-        return this._lastReportedDateTime;
+        return this.lastReportedDateTime;
     }
     /**
      * Gets the status property value. The status property
@@ -74,7 +75,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
      */
     @javax.annotation.Nullable
     public ComplianceStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the userDisplayName property value. User name of the DevicePolicyStatus.
@@ -82,7 +83,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
      */
     @javax.annotation.Nullable
     public String getUserDisplayName() {
-        return this._userDisplayName;
+        return this.userDisplayName;
     }
     /**
      * Gets the userPrincipalName property value. UserPrincipalName.
@@ -90,7 +91,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
@@ -114,7 +115,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
      */
     @javax.annotation.Nonnull
     public void setDevicesCount(@javax.annotation.Nullable final Integer value) {
-        this._devicesCount = value;
+        this.devicesCount = value;
     }
     /**
      * Sets the lastReportedDateTime property value. Last modified date time of the policy report.
@@ -123,7 +124,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
      */
     @javax.annotation.Nonnull
     public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastReportedDateTime = value;
+        this.lastReportedDateTime = value;
     }
     /**
      * Sets the status property value. The status property
@@ -132,7 +133,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ComplianceStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the userDisplayName property value. User name of the DevicePolicyStatus.
@@ -141,7 +142,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
      */
     @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
-        this._userDisplayName = value;
+        this.userDisplayName = value;
     }
     /**
      * Sets the userPrincipalName property value. UserPrincipalName.
@@ -150,6 +151,6 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
      */
     @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

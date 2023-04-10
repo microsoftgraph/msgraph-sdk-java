@@ -5,21 +5,20 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The published time of the post. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The content of the service issue post. The supported value for the contentType property is html. */
-    private ItemBody _description;
+    private ItemBody description;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue. */
-    private PostType _postType;
+    private PostType postType;
     /**
      * Instantiates a new serviceHealthIssuePost and sets the default values.
      * @return a void
@@ -44,7 +43,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the createdDateTime property value. The published time of the post.
@@ -52,7 +51,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. The content of the service issue post. The supported value for the contentType property is html.
@@ -60,15 +59,15 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ItemBody getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -81,7 +80,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the postType property value. The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
@@ -89,7 +88,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public PostType getPostType() {
-        return this._postType;
+        return this.postType;
     }
     /**
      * Serializes information the current object
@@ -112,7 +111,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the createdDateTime property value. The published time of the post.
@@ -121,7 +120,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The content of the service issue post. The supported value for the contentType property is html.
@@ -130,7 +129,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final ItemBody value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -139,7 +138,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the postType property value. The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
@@ -148,6 +147,6 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPostType(@javax.annotation.Nullable final PostType value) {
-        this._postType = value;
+        this.postType = value;
     }
 }

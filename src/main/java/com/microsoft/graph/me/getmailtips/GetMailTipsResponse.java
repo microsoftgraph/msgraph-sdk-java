@@ -5,14 +5,12 @@ import com.microsoft.graph.models.MailTips;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getMailTips method. */
 public class GetMailTipsResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
-    private java.util.List<MailTips> _value;
+    private java.util.List<MailTips> value;
     /**
      * Instantiates a new getMailTipsResponse and sets the default values.
      * @return a void
@@ -33,11 +31,11 @@ public class GetMailTipsResponse extends BaseCollectionPaginationCountResponse i
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(MailTips::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -47,7 +45,7 @@ public class GetMailTipsResponse extends BaseCollectionPaginationCountResponse i
      */
     @javax.annotation.Nullable
     public java.util.List<MailTips> getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
@@ -67,6 +65,6 @@ public class GetMailTipsResponse extends BaseCollectionPaginationCountResponse i
      */
     @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final java.util.List<MailTips> value) {
-        this._value = value;
+        this.value = value;
     }
 }

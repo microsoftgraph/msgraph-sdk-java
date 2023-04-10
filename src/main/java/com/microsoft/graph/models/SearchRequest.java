@@ -4,39 +4,42 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SearchRequest implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The aggregationFilters property */
-    private java.util.List<String> _aggregationFilters;
+    private java.util.List<String> aggregationFilters;
     /** The aggregations property */
-    private java.util.List<AggregationOption> _aggregations;
+    private java.util.List<AggregationOption> aggregations;
     /** The contentSources property */
-    private java.util.List<String> _contentSources;
+    private java.util.List<String> contentSources;
     /** The enableTopResults property */
-    private Boolean _enableTopResults;
+    private Boolean enableTopResults;
     /** The entityTypes property */
-    private java.util.List<EntityType> _entityTypes;
+    private java.util.List<EntityType> entityTypes;
     /** The fields property */
-    private java.util.List<String> _fields;
+    private java.util.List<String> fields;
     /** The from property */
-    private Integer _from;
+    private Integer from;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The query property */
-    private SearchQuery _query;
+    private SearchQuery query;
     /** The queryAlterationOptions property */
-    private SearchAlterationOptions _queryAlterationOptions;
+    private SearchAlterationOptions queryAlterationOptions;
+    /** The region property */
+    private String region;
     /** The resultTemplateOptions property */
-    private ResultTemplateOption _resultTemplateOptions;
+    private ResultTemplateOption resultTemplateOptions;
+    /** The sharePointOneDriveOptions property */
+    private SharePointOneDriveOptions sharePointOneDriveOptions;
     /** The size property */
-    private Integer _size;
+    private Integer size;
     /** The sortProperties property */
-    private java.util.List<SortProperty> _sortProperties;
+    private java.util.List<SortProperty> sortProperties;
     /**
      * Instantiates a new searchRequest and sets the default values.
      * @return a void
@@ -61,7 +64,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the aggregationFilters property value. The aggregationFilters property
@@ -69,7 +72,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAggregationFilters() {
-        return this._aggregationFilters;
+        return this.aggregationFilters;
     }
     /**
      * Gets the aggregations property value. The aggregations property
@@ -77,7 +80,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AggregationOption> getAggregations() {
-        return this._aggregations;
+        return this.aggregations;
     }
     /**
      * Gets the contentSources property value. The contentSources property
@@ -85,7 +88,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getContentSources() {
-        return this._contentSources;
+        return this.contentSources;
     }
     /**
      * Gets the enableTopResults property value. The enableTopResults property
@@ -93,7 +96,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getEnableTopResults() {
-        return this._enableTopResults;
+        return this.enableTopResults;
     }
     /**
      * Gets the entityTypes property value. The entityTypes property
@@ -101,15 +104,15 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EntityType> getEntityTypes() {
-        return this._entityTypes;
+        return this.entityTypes;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(13);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(15);
         deserializerMap.put("aggregationFilters", (n) -> { this.setAggregationFilters(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("aggregations", (n) -> { this.setAggregations(n.getCollectionOfObjectValues(AggregationOption::createFromDiscriminatorValue)); });
         deserializerMap.put("contentSources", (n) -> { this.setContentSources(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -120,7 +123,9 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("query", (n) -> { this.setQuery(n.getObjectValue(SearchQuery::createFromDiscriminatorValue)); });
         deserializerMap.put("queryAlterationOptions", (n) -> { this.setQueryAlterationOptions(n.getObjectValue(SearchAlterationOptions::createFromDiscriminatorValue)); });
+        deserializerMap.put("region", (n) -> { this.setRegion(n.getStringValue()); });
         deserializerMap.put("resultTemplateOptions", (n) -> { this.setResultTemplateOptions(n.getObjectValue(ResultTemplateOption::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharePointOneDriveOptions", (n) -> { this.setSharePointOneDriveOptions(n.getObjectValue(SharePointOneDriveOptions::createFromDiscriminatorValue)); });
         deserializerMap.put("size", (n) -> { this.setSize(n.getIntegerValue()); });
         deserializerMap.put("sortProperties", (n) -> { this.setSortProperties(n.getCollectionOfObjectValues(SortProperty::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -131,7 +136,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getFields() {
-        return this._fields;
+        return this.fields;
     }
     /**
      * Gets the from property value. The from property
@@ -139,7 +144,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getFrom() {
-        return this._from;
+        return this.from;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -147,7 +152,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the query property value. The query property
@@ -155,7 +160,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public SearchQuery getQuery() {
-        return this._query;
+        return this.query;
     }
     /**
      * Gets the queryAlterationOptions property value. The queryAlterationOptions property
@@ -163,7 +168,15 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public SearchAlterationOptions getQueryAlterationOptions() {
-        return this._queryAlterationOptions;
+        return this.queryAlterationOptions;
+    }
+    /**
+     * Gets the region property value. The region property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getRegion() {
+        return this.region;
     }
     /**
      * Gets the resultTemplateOptions property value. The resultTemplateOptions property
@@ -171,7 +184,15 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ResultTemplateOption getResultTemplateOptions() {
-        return this._resultTemplateOptions;
+        return this.resultTemplateOptions;
+    }
+    /**
+     * Gets the sharePointOneDriveOptions property value. The sharePointOneDriveOptions property
+     * @return a sharePointOneDriveOptions
+     */
+    @javax.annotation.Nullable
+    public SharePointOneDriveOptions getSharePointOneDriveOptions() {
+        return this.sharePointOneDriveOptions;
     }
     /**
      * Gets the size property value. The size property
@@ -179,7 +200,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getSize() {
-        return this._size;
+        return this.size;
     }
     /**
      * Gets the sortProperties property value. The sortProperties property
@@ -187,7 +208,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SortProperty> getSortProperties() {
-        return this._sortProperties;
+        return this.sortProperties;
     }
     /**
      * Serializes information the current object
@@ -207,7 +228,9 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("query", this.getQuery());
         writer.writeObjectValue("queryAlterationOptions", this.getQueryAlterationOptions());
+        writer.writeStringValue("region", this.getRegion());
         writer.writeObjectValue("resultTemplateOptions", this.getResultTemplateOptions());
+        writer.writeObjectValue("sharePointOneDriveOptions", this.getSharePointOneDriveOptions());
         writer.writeIntegerValue("size", this.getSize());
         writer.writeCollectionOfObjectValues("sortProperties", this.getSortProperties());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -219,7 +242,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the aggregationFilters property value. The aggregationFilters property
@@ -228,7 +251,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAggregationFilters(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._aggregationFilters = value;
+        this.aggregationFilters = value;
     }
     /**
      * Sets the aggregations property value. The aggregations property
@@ -237,7 +260,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAggregations(@javax.annotation.Nullable final java.util.List<AggregationOption> value) {
-        this._aggregations = value;
+        this.aggregations = value;
     }
     /**
      * Sets the contentSources property value. The contentSources property
@@ -246,7 +269,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentSources(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._contentSources = value;
+        this.contentSources = value;
     }
     /**
      * Sets the enableTopResults property value. The enableTopResults property
@@ -255,7 +278,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEnableTopResults(@javax.annotation.Nullable final Boolean value) {
-        this._enableTopResults = value;
+        this.enableTopResults = value;
     }
     /**
      * Sets the entityTypes property value. The entityTypes property
@@ -264,7 +287,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setEntityTypes(@javax.annotation.Nullable final java.util.List<EntityType> value) {
-        this._entityTypes = value;
+        this.entityTypes = value;
     }
     /**
      * Sets the fields property value. The fields property
@@ -273,7 +296,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFields(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._fields = value;
+        this.fields = value;
     }
     /**
      * Sets the from property value. The from property
@@ -282,7 +305,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setFrom(@javax.annotation.Nullable final Integer value) {
-        this._from = value;
+        this.from = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -291,7 +314,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the query property value. The query property
@@ -300,7 +323,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setQuery(@javax.annotation.Nullable final SearchQuery value) {
-        this._query = value;
+        this.query = value;
     }
     /**
      * Sets the queryAlterationOptions property value. The queryAlterationOptions property
@@ -309,7 +332,16 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setQueryAlterationOptions(@javax.annotation.Nullable final SearchAlterationOptions value) {
-        this._queryAlterationOptions = value;
+        this.queryAlterationOptions = value;
+    }
+    /**
+     * Sets the region property value. The region property
+     * @param value Value to set for the region property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRegion(@javax.annotation.Nullable final String value) {
+        this.region = value;
     }
     /**
      * Sets the resultTemplateOptions property value. The resultTemplateOptions property
@@ -318,7 +350,16 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setResultTemplateOptions(@javax.annotation.Nullable final ResultTemplateOption value) {
-        this._resultTemplateOptions = value;
+        this.resultTemplateOptions = value;
+    }
+    /**
+     * Sets the sharePointOneDriveOptions property value. The sharePointOneDriveOptions property
+     * @param value Value to set for the sharePointOneDriveOptions property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSharePointOneDriveOptions(@javax.annotation.Nullable final SharePointOneDriveOptions value) {
+        this.sharePointOneDriveOptions = value;
     }
     /**
      * Sets the size property value. The size property
@@ -327,7 +368,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Integer value) {
-        this._size = value;
+        this.size = value;
     }
     /**
      * Sets the sortProperties property value. The sortProperties property
@@ -336,6 +377,6 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setSortProperties(@javax.annotation.Nullable final java.util.List<SortProperty> value) {
-        this._sortProperties = value;
+        this.sortProperties = value;
     }
 }

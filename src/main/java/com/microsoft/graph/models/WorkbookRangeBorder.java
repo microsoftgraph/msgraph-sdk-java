@@ -3,20 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class WorkbookRangeBorder extends Entity implements Parsable {
     /** HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange'). */
-    private String _color;
+    private String color;
     /** Constant value that indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only. */
-    private String _sideIndex;
+    private String sideIndex;
     /** One of the constants of line style specifying the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot. */
-    private String _style;
+    private String style;
     /** Specifies the weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick. */
-    private String _weight;
+    private String weight;
     /**
      * Instantiates a new workbookRangeBorder and sets the default values.
      * @return a void
@@ -41,15 +39,15 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getColor() {
-        return this._color;
+        return this.color;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("color", (n) -> { this.setColor(n.getStringValue()); });
         deserializerMap.put("sideIndex", (n) -> { this.setSideIndex(n.getStringValue()); });
         deserializerMap.put("style", (n) -> { this.setStyle(n.getStringValue()); });
@@ -62,7 +60,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSideIndex() {
-        return this._sideIndex;
+        return this.sideIndex;
     }
     /**
      * Gets the style property value. One of the constants of line style specifying the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
@@ -70,7 +68,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStyle() {
-        return this._style;
+        return this.style;
     }
     /**
      * Gets the weight property value. Specifies the weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
@@ -78,7 +76,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getWeight() {
-        return this._weight;
+        return this.weight;
     }
     /**
      * Serializes information the current object
@@ -101,7 +99,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setColor(@javax.annotation.Nullable final String value) {
-        this._color = value;
+        this.color = value;
     }
     /**
      * Sets the sideIndex property value. Constant value that indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
@@ -110,7 +108,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSideIndex(@javax.annotation.Nullable final String value) {
-        this._sideIndex = value;
+        this.sideIndex = value;
     }
     /**
      * Sets the style property value. One of the constants of line style specifying the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
@@ -119,7 +117,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStyle(@javax.annotation.Nullable final String value) {
-        this._style = value;
+        this.style = value;
     }
     /**
      * Sets the weight property value. Specifies the weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
@@ -128,6 +126,6 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWeight(@javax.annotation.Nullable final String value) {
-        this._weight = value;
+        this.weight = value;
     }
 }

@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Additional details in case of error. */
-    private String _additionalDetails;
+    private String additionalDetails;
     /** Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue */
-    private ProvisioningStatusErrorCategory _errorCategory;
+    private ProvisioningStatusErrorCategory errorCategory;
     /** Unique error code if any occurred. Learn more */
-    private String _errorCode;
+    private String errorCode;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Summarizes the status and describes why the status happened. */
-    private String _reason;
+    private String reason;
     /** Provides the resolution for the corresponding error. */
-    private String _recommendedAction;
+    private String recommendedAction;
     /**
      * Instantiates a new provisioningErrorInfo and sets the default values.
      * @return a void
@@ -47,7 +46,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the additionalDetails property value. Additional details in case of error.
@@ -55,7 +54,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAdditionalDetails() {
-        return this._additionalDetails;
+        return this.additionalDetails;
     }
     /**
      * Gets the errorCategory property value. Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
@@ -63,7 +62,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ProvisioningStatusErrorCategory getErrorCategory() {
-        return this._errorCategory;
+        return this.errorCategory;
     }
     /**
      * Gets the errorCode property value. Unique error code if any occurred. Learn more
@@ -71,15 +70,15 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getErrorCode() {
-        return this._errorCode;
+        return this.errorCode;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("additionalDetails", (n) -> { this.setAdditionalDetails(n.getStringValue()); });
         deserializerMap.put("errorCategory", (n) -> { this.setErrorCategory(n.getEnumValue(ProvisioningStatusErrorCategory.class)); });
         deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getStringValue()); });
@@ -94,7 +93,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the reason property value. Summarizes the status and describes why the status happened.
@@ -102,7 +101,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getReason() {
-        return this._reason;
+        return this.reason;
     }
     /**
      * Gets the recommendedAction property value. Provides the resolution for the corresponding error.
@@ -110,7 +109,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getRecommendedAction() {
-        return this._recommendedAction;
+        return this.recommendedAction;
     }
     /**
      * Serializes information the current object
@@ -135,7 +134,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the additionalDetails property value. Additional details in case of error.
@@ -144,7 +143,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalDetails(@javax.annotation.Nullable final String value) {
-        this._additionalDetails = value;
+        this.additionalDetails = value;
     }
     /**
      * Sets the errorCategory property value. Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
@@ -153,7 +152,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setErrorCategory(@javax.annotation.Nullable final ProvisioningStatusErrorCategory value) {
-        this._errorCategory = value;
+        this.errorCategory = value;
     }
     /**
      * Sets the errorCode property value. Unique error code if any occurred. Learn more
@@ -162,7 +161,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final String value) {
-        this._errorCode = value;
+        this.errorCode = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -171,7 +170,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the reason property value. Summarizes the status and describes why the status happened.
@@ -180,7 +179,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setReason(@javax.annotation.Nullable final String value) {
-        this._reason = value;
+        this.reason = value;
     }
     /**
      * Sets the recommendedAction property value. Provides the resolution for the corresponding error.
@@ -189,6 +188,6 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setRecommendedAction(@javax.annotation.Nullable final String value) {
-        this._recommendedAction = value;
+        this.recommendedAction = value;
     }
 }

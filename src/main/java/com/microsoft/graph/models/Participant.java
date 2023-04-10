@@ -3,24 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the cloudCommunications singleton. */
 public class Participant extends Entity implements Parsable {
     /** The info property */
-    private ParticipantInfo _info;
+    private ParticipantInfo info;
     /** true if the participant is in lobby. */
-    private Boolean _isInLobby;
+    private Boolean isInLobby;
     /** true if the participant is muted (client or server muted). */
-    private Boolean _isMuted;
+    private Boolean isMuted;
     /** The list of media streams. */
-    private java.util.List<MediaStream> _mediaStreams;
+    private java.util.List<MediaStream> mediaStreams;
     /** A blob of data provided by the participant in the roster. */
-    private String _metadata;
+    private String metadata;
     /** Information about whether the participant has recording capability. */
-    private RecordingInfo _recordingInfo;
+    private RecordingInfo recordingInfo;
     /**
      * Instantiates a new participant and sets the default values.
      * @return a void
@@ -41,11 +39,11 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("info", (n) -> { this.setInfo(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("isInLobby", (n) -> { this.setIsInLobby(n.getBooleanValue()); });
         deserializerMap.put("isMuted", (n) -> { this.setIsMuted(n.getBooleanValue()); });
@@ -60,7 +58,7 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ParticipantInfo getInfo() {
-        return this._info;
+        return this.info;
     }
     /**
      * Gets the isInLobby property value. true if the participant is in lobby.
@@ -68,7 +66,7 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsInLobby() {
-        return this._isInLobby;
+        return this.isInLobby;
     }
     /**
      * Gets the isMuted property value. true if the participant is muted (client or server muted).
@@ -76,7 +74,7 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsMuted() {
-        return this._isMuted;
+        return this.isMuted;
     }
     /**
      * Gets the mediaStreams property value. The list of media streams.
@@ -84,7 +82,7 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MediaStream> getMediaStreams() {
-        return this._mediaStreams;
+        return this.mediaStreams;
     }
     /**
      * Gets the metadata property value. A blob of data provided by the participant in the roster.
@@ -92,7 +90,7 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMetadata() {
-        return this._metadata;
+        return this.metadata;
     }
     /**
      * Gets the recordingInfo property value. Information about whether the participant has recording capability.
@@ -100,7 +98,7 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RecordingInfo getRecordingInfo() {
-        return this._recordingInfo;
+        return this.recordingInfo;
     }
     /**
      * Serializes information the current object
@@ -125,7 +123,7 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInfo(@javax.annotation.Nullable final ParticipantInfo value) {
-        this._info = value;
+        this.info = value;
     }
     /**
      * Sets the isInLobby property value. true if the participant is in lobby.
@@ -134,7 +132,7 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsInLobby(@javax.annotation.Nullable final Boolean value) {
-        this._isInLobby = value;
+        this.isInLobby = value;
     }
     /**
      * Sets the isMuted property value. true if the participant is muted (client or server muted).
@@ -143,7 +141,7 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsMuted(@javax.annotation.Nullable final Boolean value) {
-        this._isMuted = value;
+        this.isMuted = value;
     }
     /**
      * Sets the mediaStreams property value. The list of media streams.
@@ -152,7 +150,7 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMediaStreams(@javax.annotation.Nullable final java.util.List<MediaStream> value) {
-        this._mediaStreams = value;
+        this.mediaStreams = value;
     }
     /**
      * Sets the metadata property value. A blob of data provided by the participant in the roster.
@@ -161,7 +159,7 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setMetadata(@javax.annotation.Nullable final String value) {
-        this._metadata = value;
+        this.metadata = value;
     }
     /**
      * Sets the recordingInfo property value. Information about whether the participant has recording capability.
@@ -170,6 +168,6 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRecordingInfo(@javax.annotation.Nullable final RecordingInfo value) {
-        this._recordingInfo = value;
+        this.recordingInfo = value;
     }
 }

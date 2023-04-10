@@ -4,44 +4,45 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal. */
+/**
+ * intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
+ */
 public class IntuneBrand implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Email address of the person/organization responsible for IT support. */
-    private String _contactITEmailAddress;
+    private String contactITEmailAddress;
     /** Name of the person/organization responsible for IT support. */
-    private String _contactITName;
+    private String contactITName;
     /** Text comments regarding the person/organization responsible for IT support. */
-    private String _contactITNotes;
+    private String contactITNotes;
     /** Phone number of the person/organization responsible for IT support. */
-    private String _contactITPhoneNumber;
+    private String contactITPhoneNumber;
     /** Logo image displayed in Company Portal apps which have a dark background behind the logo. */
-    private MimeContent _darkBackgroundLogo;
+    private MimeContent darkBackgroundLogo;
     /** Company/organization name that is displayed to end users. */
-    private String _displayName;
+    private String displayName;
     /** Logo image displayed in Company Portal apps which have a light background behind the logo. */
-    private MimeContent _lightBackgroundLogo;
+    private MimeContent lightBackgroundLogo;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Display name of the company/organizations IT helpdesk site. */
-    private String _onlineSupportSiteName;
+    private String onlineSupportSiteName;
     /** URL to the company/organizations IT helpdesk site. */
-    private String _onlineSupportSiteUrl;
+    private String onlineSupportSiteUrl;
     /** URL to the company/organizations privacy policy. */
-    private String _privacyUrl;
+    private String privacyUrl;
     /** Boolean that represents whether the administrator-supplied display name will be shown next to the logo image. */
-    private Boolean _showDisplayNameNextToLogo;
+    private Boolean showDisplayNameNextToLogo;
     /** Boolean that represents whether the administrator-supplied logo images are shown or not shown. */
-    private Boolean _showLogo;
+    private Boolean showLogo;
     /** Boolean that represents whether the administrator-supplied display name will be shown next to the logo image. */
-    private Boolean _showNameNextToLogo;
+    private Boolean showNameNextToLogo;
     /** Primary theme color used in the Company Portal applications and web portal. */
-    private RgbColor _themeColor;
+    private RgbColor themeColor;
     /**
      * Instantiates a new intuneBrand and sets the default values.
      * @return a void
@@ -66,7 +67,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the contactITEmailAddress property value. Email address of the person/organization responsible for IT support.
@@ -74,7 +75,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getContactITEmailAddress() {
-        return this._contactITEmailAddress;
+        return this.contactITEmailAddress;
     }
     /**
      * Gets the contactITName property value. Name of the person/organization responsible for IT support.
@@ -82,7 +83,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getContactITName() {
-        return this._contactITName;
+        return this.contactITName;
     }
     /**
      * Gets the contactITNotes property value. Text comments regarding the person/organization responsible for IT support.
@@ -90,7 +91,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getContactITNotes() {
-        return this._contactITNotes;
+        return this.contactITNotes;
     }
     /**
      * Gets the contactITPhoneNumber property value. Phone number of the person/organization responsible for IT support.
@@ -98,7 +99,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getContactITPhoneNumber() {
-        return this._contactITPhoneNumber;
+        return this.contactITPhoneNumber;
     }
     /**
      * Gets the darkBackgroundLogo property value. Logo image displayed in Company Portal apps which have a dark background behind the logo.
@@ -106,7 +107,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public MimeContent getDarkBackgroundLogo() {
-        return this._darkBackgroundLogo;
+        return this.darkBackgroundLogo;
     }
     /**
      * Gets the displayName property value. Company/organization name that is displayed to end users.
@@ -114,15 +115,15 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(15);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(15);
         deserializerMap.put("contactITEmailAddress", (n) -> { this.setContactITEmailAddress(n.getStringValue()); });
         deserializerMap.put("contactITName", (n) -> { this.setContactITName(n.getStringValue()); });
         deserializerMap.put("contactITNotes", (n) -> { this.setContactITNotes(n.getStringValue()); });
@@ -146,7 +147,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public MimeContent getLightBackgroundLogo() {
-        return this._lightBackgroundLogo;
+        return this.lightBackgroundLogo;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -154,7 +155,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site.
@@ -162,7 +163,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOnlineSupportSiteName() {
-        return this._onlineSupportSiteName;
+        return this.onlineSupportSiteName;
     }
     /**
      * Gets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site.
@@ -170,7 +171,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOnlineSupportSiteUrl() {
-        return this._onlineSupportSiteUrl;
+        return this.onlineSupportSiteUrl;
     }
     /**
      * Gets the privacyUrl property value. URL to the company/organizations privacy policy.
@@ -178,7 +179,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getPrivacyUrl() {
-        return this._privacyUrl;
+        return this.privacyUrl;
     }
     /**
      * Gets the showDisplayNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
@@ -186,7 +187,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getShowDisplayNameNextToLogo() {
-        return this._showDisplayNameNextToLogo;
+        return this.showDisplayNameNextToLogo;
     }
     /**
      * Gets the showLogo property value. Boolean that represents whether the administrator-supplied logo images are shown or not shown.
@@ -194,7 +195,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getShowLogo() {
-        return this._showLogo;
+        return this.showLogo;
     }
     /**
      * Gets the showNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
@@ -202,7 +203,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getShowNameNextToLogo() {
-        return this._showNameNextToLogo;
+        return this.showNameNextToLogo;
     }
     /**
      * Gets the themeColor property value. Primary theme color used in the Company Portal applications and web portal.
@@ -210,7 +211,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public RgbColor getThemeColor() {
-        return this._themeColor;
+        return this.themeColor;
     }
     /**
      * Serializes information the current object
@@ -244,7 +245,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the contactITEmailAddress property value. Email address of the person/organization responsible for IT support.
@@ -253,7 +254,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setContactITEmailAddress(@javax.annotation.Nullable final String value) {
-        this._contactITEmailAddress = value;
+        this.contactITEmailAddress = value;
     }
     /**
      * Sets the contactITName property value. Name of the person/organization responsible for IT support.
@@ -262,7 +263,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setContactITName(@javax.annotation.Nullable final String value) {
-        this._contactITName = value;
+        this.contactITName = value;
     }
     /**
      * Sets the contactITNotes property value. Text comments regarding the person/organization responsible for IT support.
@@ -271,7 +272,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setContactITNotes(@javax.annotation.Nullable final String value) {
-        this._contactITNotes = value;
+        this.contactITNotes = value;
     }
     /**
      * Sets the contactITPhoneNumber property value. Phone number of the person/organization responsible for IT support.
@@ -280,7 +281,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setContactITPhoneNumber(@javax.annotation.Nullable final String value) {
-        this._contactITPhoneNumber = value;
+        this.contactITPhoneNumber = value;
     }
     /**
      * Sets the darkBackgroundLogo property value. Logo image displayed in Company Portal apps which have a dark background behind the logo.
@@ -289,7 +290,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDarkBackgroundLogo(@javax.annotation.Nullable final MimeContent value) {
-        this._darkBackgroundLogo = value;
+        this.darkBackgroundLogo = value;
     }
     /**
      * Sets the displayName property value. Company/organization name that is displayed to end users.
@@ -298,7 +299,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lightBackgroundLogo property value. Logo image displayed in Company Portal apps which have a light background behind the logo.
@@ -307,7 +308,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setLightBackgroundLogo(@javax.annotation.Nullable final MimeContent value) {
-        this._lightBackgroundLogo = value;
+        this.lightBackgroundLogo = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -316,7 +317,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site.
@@ -325,7 +326,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOnlineSupportSiteName(@javax.annotation.Nullable final String value) {
-        this._onlineSupportSiteName = value;
+        this.onlineSupportSiteName = value;
     }
     /**
      * Sets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site.
@@ -334,7 +335,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOnlineSupportSiteUrl(@javax.annotation.Nullable final String value) {
-        this._onlineSupportSiteUrl = value;
+        this.onlineSupportSiteUrl = value;
     }
     /**
      * Sets the privacyUrl property value. URL to the company/organizations privacy policy.
@@ -343,7 +344,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setPrivacyUrl(@javax.annotation.Nullable final String value) {
-        this._privacyUrl = value;
+        this.privacyUrl = value;
     }
     /**
      * Sets the showDisplayNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
@@ -352,7 +353,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setShowDisplayNameNextToLogo(@javax.annotation.Nullable final Boolean value) {
-        this._showDisplayNameNextToLogo = value;
+        this.showDisplayNameNextToLogo = value;
     }
     /**
      * Sets the showLogo property value. Boolean that represents whether the administrator-supplied logo images are shown or not shown.
@@ -361,7 +362,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setShowLogo(@javax.annotation.Nullable final Boolean value) {
-        this._showLogo = value;
+        this.showLogo = value;
     }
     /**
      * Sets the showNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
@@ -370,7 +371,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setShowNameNextToLogo(@javax.annotation.Nullable final Boolean value) {
-        this._showNameNextToLogo = value;
+        this.showNameNextToLogo = value;
     }
     /**
      * Sets the themeColor property value. Primary theme color used in the Company Portal applications and web portal.
@@ -379,6 +380,6 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setThemeColor(@javax.annotation.Nullable final RgbColor value) {
-        this._themeColor = value;
+        this.themeColor = value;
     }
 }

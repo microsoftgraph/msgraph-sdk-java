@@ -4,19 +4,18 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Each item in this collection indicates a slot and the status of the staff member. */
-    private java.util.List<AvailabilityItem> _availabilityItems;
+    private java.util.List<AvailabilityItem> availabilityItems;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The ID of the staff member. */
-    private String _staffId;
+    private String staffId;
     /**
      * Instantiates a new staffAvailabilityItem and sets the default values.
      * @return a void
@@ -41,7 +40,7 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the availabilityItems property value. Each item in this collection indicates a slot and the status of the staff member.
@@ -49,15 +48,15 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AvailabilityItem> getAvailabilityItems() {
-        return this._availabilityItems;
+        return this.availabilityItems;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("availabilityItems", (n) -> { this.setAvailabilityItems(n.getCollectionOfObjectValues(AvailabilityItem::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("staffId", (n) -> { this.setStaffId(n.getStringValue()); });
@@ -69,7 +68,7 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the staffId property value. The ID of the staff member.
@@ -77,7 +76,7 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getStaffId() {
-        return this._staffId;
+        return this.staffId;
     }
     /**
      * Serializes information the current object
@@ -99,7 +98,7 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the availabilityItems property value. Each item in this collection indicates a slot and the status of the staff member.
@@ -108,7 +107,7 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAvailabilityItems(@javax.annotation.Nullable final java.util.List<AvailabilityItem> value) {
-        this._availabilityItems = value;
+        this.availabilityItems = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -117,7 +116,7 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the staffId property value. The ID of the staff member.
@@ -126,6 +125,6 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setStaffId(@javax.annotation.Nullable final String value) {
-        this._staffId = value;
+        this.staffId = value;
     }
 }

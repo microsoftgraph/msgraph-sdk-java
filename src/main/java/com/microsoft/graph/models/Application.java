@@ -4,95 +4,99 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class Application extends DirectoryObject implements Parsable {
     /** Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Office 365 call the application in the context of a document the user is working on. */
-    private java.util.List<AddIn> _addIns;
+    private java.util.List<AddIn> addIns;
     /** Specifies settings for an application that implements a web API. */
-    private ApiApplication _api;
+    private ApiApplication api;
     /** The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only. Supports $filter (eq). */
-    private String _appId;
+    private String appId;
     /** Unique identifier of the applicationTemplate. Supports $filter (eq, not, ne). */
-    private String _applicationTemplateId;
+    private String applicationTemplateId;
+    /** The appManagementPolicy applied to this application. */
+    private java.util.List<AppManagementPolicy> appManagementPolicies;
     /** The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable. */
-    private java.util.List<AppRole> _appRoles;
+    private java.util.List<AppRole> appRoles;
     /** Specifies the certification status of the application. */
-    private Certification _certification;
+    private Certification certification;
     /** The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Supports $filter (/$count eq 0, /$count ne 0). Read-only. */
-    private DirectoryObject _createdOnBehalfOf;
+    private DirectoryObject createdOnBehalfOf;
     /** The defaultRedirectUri property */
-    private String _defaultRedirectUri;
+    private String defaultRedirectUri;
     /** Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search. */
-    private String _description;
+    private String description;
     /** Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not). */
-    private String _disabledByMicrosoftStatus;
+    private String disabledByMicrosoftStatus;
     /** The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
-    private String _displayName;
+    private String displayName;
     /** Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0). */
-    private java.util.List<ExtensionProperty> _extensionProperties;
+    private java.util.List<ExtensionProperty> extensionProperties;
     /** Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0). */
-    private java.util.List<FederatedIdentityCredential> _federatedIdentityCredentials;
+    private java.util.List<FederatedIdentityCredential> federatedIdentityCredentials;
     /** Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of). */
-    private String _groupMembershipClaims;
+    private String groupMembershipClaims;
     /** The homeRealmDiscoveryPolicies property */
-    private java.util.List<HomeRealmDiscoveryPolicy> _homeRealmDiscoveryPolicies;
+    private java.util.List<HomeRealmDiscoveryPolicy> homeRealmDiscoveryPolicies;
     /** Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith). */
-    private java.util.List<String> _identifierUris;
+    private java.util.List<String> identifierUris;
     /** Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values). */
-    private InformationalUrl _info;
+    private InformationalUrl info;
     /** Specifies whether this application supports device authentication without a user. The default is false. */
-    private Boolean _isDeviceOnlyAuthSupported;
+    private Boolean isDeviceOnlyAuthSupported;
     /** Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property. */
-    private Boolean _isFallbackPublicClient;
+    private Boolean isFallbackPublicClient;
     /** The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le). */
-    private java.util.List<KeyCredential> _keyCredentials;
+    private java.util.List<KeyCredential> keyCredentials;
     /** The main logo for the application. Not nullable. */
-    private byte[] _logo;
+    private byte[] logo;
     /** Notes relevant for the management of the application. */
-    private String _notes;
+    private String notes;
     /** The oauth2RequirePostResponse property */
-    private Boolean _oauth2RequirePostResponse;
+    private Boolean oauth2RequirePostResponse;
     /** Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app. */
-    private OptionalClaims _optionalClaims;
+    private OptionalClaims optionalClaims;
     /** Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). */
-    private java.util.List<DirectoryObject> _owners;
+    private java.util.List<DirectoryObject> owners;
     /** Specifies parental control settings for an application. */
-    private ParentalControlSettings _parentalControlSettings;
+    private ParentalControlSettings parentalControlSettings;
     /** The collection of password credentials associated with the application. Not nullable. */
-    private java.util.List<PasswordCredential> _passwordCredentials;
+    private java.util.List<PasswordCredential> passwordCredentials;
     /** Specifies settings for installed clients such as desktop or mobile devices. */
-    private PublicClientApplication _publicClient;
+    private PublicClientApplication publicClient;
     /** The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain. Supports $filter (eq, ne, ge, le, startsWith). */
-    private String _publisherDomain;
+    private String publisherDomain;
+    /** Specifies whether this application requires Azure AD to verify the signed authentication requests. */
+    private RequestSignatureVerification requestSignatureVerification;
     /** Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. For more information, see Limits on requested permissions per app. Not nullable. Supports $filter (eq, not, ge, le). */
-    private java.util.List<RequiredResourceAccess> _requiredResourceAccess;
+    private java.util.List<RequiredResourceAccess> requiredResourceAccess;
     /** The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable. */
-    private String _samlMetadataUrl;
+    private String samlMetadataUrl;
     /** References application or service contact information from a Service or Asset Management database. Nullable. */
-    private String _serviceManagementReference;
+    private String serviceManagementReference;
     /** Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. The value for this property has implications on other app object properties. As a result, if you change this property, you may need to change other properties first. For more information, see Validation differences for signInAudience.Supports $filter (eq, ne, not). */
-    private String _signInAudience;
+    private String signInAudience;
     /** Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens. */
-    private SpaApplication _spa;
-    /** Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith). */
-    private java.util.List<String> _tags;
+    private SpaApplication spa;
+    /** Custom strings that can be used to categorize and identify the application. Not nullable. Strings added here will also appear in the tags property of any associated service principals.Supports $filter (eq, not, ge, le, startsWith). */
+    private java.util.List<String> tags;
     /** Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user. */
-    private String _tokenEncryptionKeyId;
+    private UUID tokenEncryptionKeyId;
     /** The tokenIssuancePolicies property */
-    private java.util.List<TokenIssuancePolicy> _tokenIssuancePolicies;
+    private java.util.List<TokenIssuancePolicy> tokenIssuancePolicies;
     /** The tokenLifetimePolicies property */
-    private java.util.List<TokenLifetimePolicy> _tokenLifetimePolicies;
+    private java.util.List<TokenLifetimePolicy> tokenLifetimePolicies;
     /** Specifies the verified publisher of the application. For more information about how publisher verification helps support application security, trustworthiness, and compliance, see Publisher verification. */
-    private VerifiedPublisher _verifiedPublisher;
+    private VerifiedPublisher verifiedPublisher;
     /** Specifies settings for a web application. */
-    private WebApplication _web;
+    private WebApplication web;
     /**
-     * Instantiates a new Application and sets the default values.
+     * Instantiates a new application and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -103,7 +107,7 @@ public class Application extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Application
+     * @return a application
      */
     @javax.annotation.Nonnull
     public static Application createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -116,7 +120,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AddIn> getAddIns() {
-        return this._addIns;
+        return this.addIns;
     }
     /**
      * Gets the api property value. Specifies settings for an application that implements a web API.
@@ -124,7 +128,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public ApiApplication getApi() {
-        return this._api;
+        return this.api;
     }
     /**
      * Gets the appId property value. The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only. Supports $filter (eq).
@@ -132,7 +136,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppId() {
-        return this._appId;
+        return this.appId;
     }
     /**
      * Gets the applicationTemplateId property value. Unique identifier of the applicationTemplate. Supports $filter (eq, not, ne).
@@ -140,7 +144,15 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getApplicationTemplateId() {
-        return this._applicationTemplateId;
+        return this.applicationTemplateId;
+    }
+    /**
+     * Gets the appManagementPolicies property value. The appManagementPolicy applied to this application.
+     * @return a appManagementPolicy
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AppManagementPolicy> getAppManagementPolicies() {
+        return this.appManagementPolicies;
     }
     /**
      * Gets the appRoles property value. The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
@@ -148,7 +160,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AppRole> getAppRoles() {
-        return this._appRoles;
+        return this.appRoles;
     }
     /**
      * Gets the certification property value. Specifies the certification status of the application.
@@ -156,7 +168,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Certification getCertification() {
-        return this._certification;
+        return this.certification;
     }
     /**
      * Gets the createdDateTime property value. The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy.
@@ -164,7 +176,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the createdOnBehalfOf property value. Supports $filter (/$count eq 0, /$count ne 0). Read-only.
@@ -172,7 +184,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public DirectoryObject getCreatedOnBehalfOf() {
-        return this._createdOnBehalfOf;
+        return this.createdOnBehalfOf;
     }
     /**
      * Gets the defaultRedirectUri property value. The defaultRedirectUri property
@@ -180,7 +192,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDefaultRedirectUri() {
-        return this._defaultRedirectUri;
+        return this.defaultRedirectUri;
     }
     /**
      * Gets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
@@ -188,7 +200,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the disabledByMicrosoftStatus property value. Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
@@ -196,7 +208,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisabledByMicrosoftStatus() {
-        return this._disabledByMicrosoftStatus;
+        return this.disabledByMicrosoftStatus;
     }
     /**
      * Gets the displayName property value. The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
@@ -204,7 +216,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
@@ -212,7 +224,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ExtensionProperty> getExtensionProperties() {
-        return this._extensionProperties;
+        return this.extensionProperties;
     }
     /**
      * Gets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
@@ -220,19 +232,20 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<FederatedIdentityCredential> getFederatedIdentityCredentials() {
-        return this._federatedIdentityCredentials;
+        return this.federatedIdentityCredentials;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("addIns", (n) -> { this.setAddIns(n.getCollectionOfObjectValues(AddIn::createFromDiscriminatorValue)); });
         deserializerMap.put("api", (n) -> { this.setApi(n.getObjectValue(ApiApplication::createFromDiscriminatorValue)); });
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("applicationTemplateId", (n) -> { this.setApplicationTemplateId(n.getStringValue()); });
+        deserializerMap.put("appManagementPolicies", (n) -> { this.setAppManagementPolicies(n.getCollectionOfObjectValues(AppManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("appRoles", (n) -> { this.setAppRoles(n.getCollectionOfObjectValues(AppRole::createFromDiscriminatorValue)); });
         deserializerMap.put("certification", (n) -> { this.setCertification(n.getObjectValue(Certification::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -259,13 +272,14 @@ public class Application extends DirectoryObject implements Parsable {
         deserializerMap.put("passwordCredentials", (n) -> { this.setPasswordCredentials(n.getCollectionOfObjectValues(PasswordCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("publicClient", (n) -> { this.setPublicClient(n.getObjectValue(PublicClientApplication::createFromDiscriminatorValue)); });
         deserializerMap.put("publisherDomain", (n) -> { this.setPublisherDomain(n.getStringValue()); });
+        deserializerMap.put("requestSignatureVerification", (n) -> { this.setRequestSignatureVerification(n.getObjectValue(RequestSignatureVerification::createFromDiscriminatorValue)); });
         deserializerMap.put("requiredResourceAccess", (n) -> { this.setRequiredResourceAccess(n.getCollectionOfObjectValues(RequiredResourceAccess::createFromDiscriminatorValue)); });
         deserializerMap.put("samlMetadataUrl", (n) -> { this.setSamlMetadataUrl(n.getStringValue()); });
         deserializerMap.put("serviceManagementReference", (n) -> { this.setServiceManagementReference(n.getStringValue()); });
         deserializerMap.put("signInAudience", (n) -> { this.setSignInAudience(n.getStringValue()); });
         deserializerMap.put("spa", (n) -> { this.setSpa(n.getObjectValue(SpaApplication::createFromDiscriminatorValue)); });
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("tokenEncryptionKeyId", (n) -> { this.setTokenEncryptionKeyId(n.getStringValue()); });
+        deserializerMap.put("tokenEncryptionKeyId", (n) -> { this.setTokenEncryptionKeyId(n.getUUIDValue()); });
         deserializerMap.put("tokenIssuancePolicies", (n) -> { this.setTokenIssuancePolicies(n.getCollectionOfObjectValues(TokenIssuancePolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("tokenLifetimePolicies", (n) -> { this.setTokenLifetimePolicies(n.getCollectionOfObjectValues(TokenLifetimePolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("verifiedPublisher", (n) -> { this.setVerifiedPublisher(n.getObjectValue(VerifiedPublisher::createFromDiscriminatorValue)); });
@@ -278,7 +292,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getGroupMembershipClaims() {
-        return this._groupMembershipClaims;
+        return this.groupMembershipClaims;
     }
     /**
      * Gets the homeRealmDiscoveryPolicies property value. The homeRealmDiscoveryPolicies property
@@ -286,7 +300,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<HomeRealmDiscoveryPolicy> getHomeRealmDiscoveryPolicies() {
-        return this._homeRealmDiscoveryPolicies;
+        return this.homeRealmDiscoveryPolicies;
     }
     /**
      * Gets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
@@ -294,7 +308,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getIdentifierUris() {
-        return this._identifierUris;
+        return this.identifierUris;
     }
     /**
      * Gets the info property value. Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
@@ -302,7 +316,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public InformationalUrl getInfo() {
-        return this._info;
+        return this.info;
     }
     /**
      * Gets the isDeviceOnlyAuthSupported property value. Specifies whether this application supports device authentication without a user. The default is false.
@@ -310,7 +324,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsDeviceOnlyAuthSupported() {
-        return this._isDeviceOnlyAuthSupported;
+        return this.isDeviceOnlyAuthSupported;
     }
     /**
      * Gets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
@@ -318,7 +332,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsFallbackPublicClient() {
-        return this._isFallbackPublicClient;
+        return this.isFallbackPublicClient;
     }
     /**
      * Gets the keyCredentials property value. The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le).
@@ -326,15 +340,15 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<KeyCredential> getKeyCredentials() {
-        return this._keyCredentials;
+        return this.keyCredentials;
     }
     /**
      * Gets the logo property value. The main logo for the application. Not nullable.
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getLogo() {
-        return this._logo;
+        return this.logo;
     }
     /**
      * Gets the notes property value. Notes relevant for the management of the application.
@@ -342,7 +356,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getNotes() {
-        return this._notes;
+        return this.notes;
     }
     /**
      * Gets the oauth2RequirePostResponse property value. The oauth2RequirePostResponse property
@@ -350,7 +364,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getOauth2RequirePostResponse() {
-        return this._oauth2RequirePostResponse;
+        return this.oauth2RequirePostResponse;
     }
     /**
      * Gets the optionalClaims property value. Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
@@ -358,7 +372,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OptionalClaims getOptionalClaims() {
-        return this._optionalClaims;
+        return this.optionalClaims;
     }
     /**
      * Gets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
@@ -366,7 +380,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getOwners() {
-        return this._owners;
+        return this.owners;
     }
     /**
      * Gets the parentalControlSettings property value. Specifies parental control settings for an application.
@@ -374,7 +388,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public ParentalControlSettings getParentalControlSettings() {
-        return this._parentalControlSettings;
+        return this.parentalControlSettings;
     }
     /**
      * Gets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
@@ -382,7 +396,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PasswordCredential> getPasswordCredentials() {
-        return this._passwordCredentials;
+        return this.passwordCredentials;
     }
     /**
      * Gets the publicClient property value. Specifies settings for installed clients such as desktop or mobile devices.
@@ -390,7 +404,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public PublicClientApplication getPublicClient() {
-        return this._publicClient;
+        return this.publicClient;
     }
     /**
      * Gets the publisherDomain property value. The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain. Supports $filter (eq, ne, ge, le, startsWith).
@@ -398,7 +412,15 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPublisherDomain() {
-        return this._publisherDomain;
+        return this.publisherDomain;
+    }
+    /**
+     * Gets the requestSignatureVerification property value. Specifies whether this application requires Azure AD to verify the signed authentication requests.
+     * @return a requestSignatureVerification
+     */
+    @javax.annotation.Nullable
+    public RequestSignatureVerification getRequestSignatureVerification() {
+        return this.requestSignatureVerification;
     }
     /**
      * Gets the requiredResourceAccess property value. Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. For more information, see Limits on requested permissions per app. Not nullable. Supports $filter (eq, not, ge, le).
@@ -406,7 +428,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<RequiredResourceAccess> getRequiredResourceAccess() {
-        return this._requiredResourceAccess;
+        return this.requiredResourceAccess;
     }
     /**
      * Gets the samlMetadataUrl property value. The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable.
@@ -414,7 +436,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSamlMetadataUrl() {
-        return this._samlMetadataUrl;
+        return this.samlMetadataUrl;
     }
     /**
      * Gets the serviceManagementReference property value. References application or service contact information from a Service or Asset Management database. Nullable.
@@ -422,7 +444,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getServiceManagementReference() {
-        return this._serviceManagementReference;
+        return this.serviceManagementReference;
     }
     /**
      * Gets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. The value for this property has implications on other app object properties. As a result, if you change this property, you may need to change other properties first. For more information, see Validation differences for signInAudience.Supports $filter (eq, ne, not).
@@ -430,7 +452,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSignInAudience() {
-        return this._signInAudience;
+        return this.signInAudience;
     }
     /**
      * Gets the spa property value. Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens.
@@ -438,23 +460,23 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public SpaApplication getSpa() {
-        return this._spa;
+        return this.spa;
     }
     /**
-     * Gets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+     * Gets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Strings added here will also appear in the tags property of any associated service principals.Supports $filter (eq, not, ge, le, startsWith).
      * @return a string
      */
     @javax.annotation.Nullable
     public java.util.List<String> getTags() {
-        return this._tags;
+        return this.tags;
     }
     /**
      * Gets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getTokenEncryptionKeyId() {
-        return this._tokenEncryptionKeyId;
+    public UUID getTokenEncryptionKeyId() {
+        return this.tokenEncryptionKeyId;
     }
     /**
      * Gets the tokenIssuancePolicies property value. The tokenIssuancePolicies property
@@ -462,7 +484,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TokenIssuancePolicy> getTokenIssuancePolicies() {
-        return this._tokenIssuancePolicies;
+        return this.tokenIssuancePolicies;
     }
     /**
      * Gets the tokenLifetimePolicies property value. The tokenLifetimePolicies property
@@ -470,7 +492,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TokenLifetimePolicy> getTokenLifetimePolicies() {
-        return this._tokenLifetimePolicies;
+        return this.tokenLifetimePolicies;
     }
     /**
      * Gets the verifiedPublisher property value. Specifies the verified publisher of the application. For more information about how publisher verification helps support application security, trustworthiness, and compliance, see Publisher verification.
@@ -478,7 +500,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public VerifiedPublisher getVerifiedPublisher() {
-        return this._verifiedPublisher;
+        return this.verifiedPublisher;
     }
     /**
      * Gets the web property value. Specifies settings for a web application.
@@ -486,7 +508,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public WebApplication getWeb() {
-        return this._web;
+        return this.web;
     }
     /**
      * Serializes information the current object
@@ -501,6 +523,7 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeObjectValue("api", this.getApi());
         writer.writeStringValue("appId", this.getAppId());
         writer.writeStringValue("applicationTemplateId", this.getApplicationTemplateId());
+        writer.writeCollectionOfObjectValues("appManagementPolicies", this.getAppManagementPolicies());
         writer.writeCollectionOfObjectValues("appRoles", this.getAppRoles());
         writer.writeObjectValue("certification", this.getCertification());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -527,13 +550,14 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("passwordCredentials", this.getPasswordCredentials());
         writer.writeObjectValue("publicClient", this.getPublicClient());
         writer.writeStringValue("publisherDomain", this.getPublisherDomain());
+        writer.writeObjectValue("requestSignatureVerification", this.getRequestSignatureVerification());
         writer.writeCollectionOfObjectValues("requiredResourceAccess", this.getRequiredResourceAccess());
         writer.writeStringValue("samlMetadataUrl", this.getSamlMetadataUrl());
         writer.writeStringValue("serviceManagementReference", this.getServiceManagementReference());
         writer.writeStringValue("signInAudience", this.getSignInAudience());
         writer.writeObjectValue("spa", this.getSpa());
         writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
-        writer.writeStringValue("tokenEncryptionKeyId", this.getTokenEncryptionKeyId());
+        writer.writeUUIDValue("tokenEncryptionKeyId", this.getTokenEncryptionKeyId());
         writer.writeCollectionOfObjectValues("tokenIssuancePolicies", this.getTokenIssuancePolicies());
         writer.writeCollectionOfObjectValues("tokenLifetimePolicies", this.getTokenLifetimePolicies());
         writer.writeObjectValue("verifiedPublisher", this.getVerifiedPublisher());
@@ -546,7 +570,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAddIns(@javax.annotation.Nullable final java.util.List<AddIn> value) {
-        this._addIns = value;
+        this.addIns = value;
     }
     /**
      * Sets the api property value. Specifies settings for an application that implements a web API.
@@ -555,7 +579,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setApi(@javax.annotation.Nullable final ApiApplication value) {
-        this._api = value;
+        this.api = value;
     }
     /**
      * Sets the appId property value. The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only. Supports $filter (eq).
@@ -564,7 +588,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
-        this._appId = value;
+        this.appId = value;
     }
     /**
      * Sets the applicationTemplateId property value. Unique identifier of the applicationTemplate. Supports $filter (eq, not, ne).
@@ -573,7 +597,16 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setApplicationTemplateId(@javax.annotation.Nullable final String value) {
-        this._applicationTemplateId = value;
+        this.applicationTemplateId = value;
+    }
+    /**
+     * Sets the appManagementPolicies property value. The appManagementPolicy applied to this application.
+     * @param value Value to set for the appManagementPolicies property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAppManagementPolicies(@javax.annotation.Nullable final java.util.List<AppManagementPolicy> value) {
+        this.appManagementPolicies = value;
     }
     /**
      * Sets the appRoles property value. The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
@@ -582,7 +615,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setAppRoles(@javax.annotation.Nullable final java.util.List<AppRole> value) {
-        this._appRoles = value;
+        this.appRoles = value;
     }
     /**
      * Sets the certification property value. Specifies the certification status of the application.
@@ -591,7 +624,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCertification(@javax.annotation.Nullable final Certification value) {
-        this._certification = value;
+        this.certification = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy.
@@ -600,7 +633,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the createdOnBehalfOf property value. Supports $filter (/$count eq 0, /$count ne 0). Read-only.
@@ -609,7 +642,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedOnBehalfOf(@javax.annotation.Nullable final DirectoryObject value) {
-        this._createdOnBehalfOf = value;
+        this.createdOnBehalfOf = value;
     }
     /**
      * Sets the defaultRedirectUri property value. The defaultRedirectUri property
@@ -618,7 +651,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDefaultRedirectUri(@javax.annotation.Nullable final String value) {
-        this._defaultRedirectUri = value;
+        this.defaultRedirectUri = value;
     }
     /**
      * Sets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
@@ -627,7 +660,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the disabledByMicrosoftStatus property value. Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
@@ -636,7 +669,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisabledByMicrosoftStatus(@javax.annotation.Nullable final String value) {
-        this._disabledByMicrosoftStatus = value;
+        this.disabledByMicrosoftStatus = value;
     }
     /**
      * Sets the displayName property value. The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
@@ -645,7 +678,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
@@ -654,7 +687,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setExtensionProperties(@javax.annotation.Nullable final java.util.List<ExtensionProperty> value) {
-        this._extensionProperties = value;
+        this.extensionProperties = value;
     }
     /**
      * Sets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
@@ -663,7 +696,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFederatedIdentityCredentials(@javax.annotation.Nullable final java.util.List<FederatedIdentityCredential> value) {
-        this._federatedIdentityCredentials = value;
+        this.federatedIdentityCredentials = value;
     }
     /**
      * Sets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
@@ -672,7 +705,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setGroupMembershipClaims(@javax.annotation.Nullable final String value) {
-        this._groupMembershipClaims = value;
+        this.groupMembershipClaims = value;
     }
     /**
      * Sets the homeRealmDiscoveryPolicies property value. The homeRealmDiscoveryPolicies property
@@ -681,7 +714,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setHomeRealmDiscoveryPolicies(@javax.annotation.Nullable final java.util.List<HomeRealmDiscoveryPolicy> value) {
-        this._homeRealmDiscoveryPolicies = value;
+        this.homeRealmDiscoveryPolicies = value;
     }
     /**
      * Sets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
@@ -690,7 +723,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIdentifierUris(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._identifierUris = value;
+        this.identifierUris = value;
     }
     /**
      * Sets the info property value. Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
@@ -699,7 +732,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setInfo(@javax.annotation.Nullable final InformationalUrl value) {
-        this._info = value;
+        this.info = value;
     }
     /**
      * Sets the isDeviceOnlyAuthSupported property value. Specifies whether this application supports device authentication without a user. The default is false.
@@ -708,7 +741,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsDeviceOnlyAuthSupported(@javax.annotation.Nullable final Boolean value) {
-        this._isDeviceOnlyAuthSupported = value;
+        this.isDeviceOnlyAuthSupported = value;
     }
     /**
      * Sets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
@@ -717,7 +750,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsFallbackPublicClient(@javax.annotation.Nullable final Boolean value) {
-        this._isFallbackPublicClient = value;
+        this.isFallbackPublicClient = value;
     }
     /**
      * Sets the keyCredentials property value. The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le).
@@ -726,7 +759,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setKeyCredentials(@javax.annotation.Nullable final java.util.List<KeyCredential> value) {
-        this._keyCredentials = value;
+        this.keyCredentials = value;
     }
     /**
      * Sets the logo property value. The main logo for the application. Not nullable.
@@ -735,7 +768,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLogo(@javax.annotation.Nullable final byte[] value) {
-        this._logo = value;
+        this.logo = value;
     }
     /**
      * Sets the notes property value. Notes relevant for the management of the application.
@@ -744,7 +777,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final String value) {
-        this._notes = value;
+        this.notes = value;
     }
     /**
      * Sets the oauth2RequirePostResponse property value. The oauth2RequirePostResponse property
@@ -753,7 +786,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOauth2RequirePostResponse(@javax.annotation.Nullable final Boolean value) {
-        this._oauth2RequirePostResponse = value;
+        this.oauth2RequirePostResponse = value;
     }
     /**
      * Sets the optionalClaims property value. Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
@@ -762,7 +795,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOptionalClaims(@javax.annotation.Nullable final OptionalClaims value) {
-        this._optionalClaims = value;
+        this.optionalClaims = value;
     }
     /**
      * Sets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
@@ -771,7 +804,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setOwners(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._owners = value;
+        this.owners = value;
     }
     /**
      * Sets the parentalControlSettings property value. Specifies parental control settings for an application.
@@ -780,7 +813,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setParentalControlSettings(@javax.annotation.Nullable final ParentalControlSettings value) {
-        this._parentalControlSettings = value;
+        this.parentalControlSettings = value;
     }
     /**
      * Sets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
@@ -789,7 +822,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPasswordCredentials(@javax.annotation.Nullable final java.util.List<PasswordCredential> value) {
-        this._passwordCredentials = value;
+        this.passwordCredentials = value;
     }
     /**
      * Sets the publicClient property value. Specifies settings for installed clients such as desktop or mobile devices.
@@ -798,7 +831,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPublicClient(@javax.annotation.Nullable final PublicClientApplication value) {
-        this._publicClient = value;
+        this.publicClient = value;
     }
     /**
      * Sets the publisherDomain property value. The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain. Supports $filter (eq, ne, ge, le, startsWith).
@@ -807,7 +840,16 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setPublisherDomain(@javax.annotation.Nullable final String value) {
-        this._publisherDomain = value;
+        this.publisherDomain = value;
+    }
+    /**
+     * Sets the requestSignatureVerification property value. Specifies whether this application requires Azure AD to verify the signed authentication requests.
+     * @param value Value to set for the requestSignatureVerification property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRequestSignatureVerification(@javax.annotation.Nullable final RequestSignatureVerification value) {
+        this.requestSignatureVerification = value;
     }
     /**
      * Sets the requiredResourceAccess property value. Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. For more information, see Limits on requested permissions per app. Not nullable. Supports $filter (eq, not, ge, le).
@@ -816,7 +858,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setRequiredResourceAccess(@javax.annotation.Nullable final java.util.List<RequiredResourceAccess> value) {
-        this._requiredResourceAccess = value;
+        this.requiredResourceAccess = value;
     }
     /**
      * Sets the samlMetadataUrl property value. The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable.
@@ -825,7 +867,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSamlMetadataUrl(@javax.annotation.Nullable final String value) {
-        this._samlMetadataUrl = value;
+        this.samlMetadataUrl = value;
     }
     /**
      * Sets the serviceManagementReference property value. References application or service contact information from a Service or Asset Management database. Nullable.
@@ -834,7 +876,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setServiceManagementReference(@javax.annotation.Nullable final String value) {
-        this._serviceManagementReference = value;
+        this.serviceManagementReference = value;
     }
     /**
      * Sets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. The value for this property has implications on other app object properties. As a result, if you change this property, you may need to change other properties first. For more information, see Validation differences for signInAudience.Supports $filter (eq, ne, not).
@@ -843,7 +885,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSignInAudience(@javax.annotation.Nullable final String value) {
-        this._signInAudience = value;
+        this.signInAudience = value;
     }
     /**
      * Sets the spa property value. Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens.
@@ -852,16 +894,16 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setSpa(@javax.annotation.Nullable final SpaApplication value) {
-        this._spa = value;
+        this.spa = value;
     }
     /**
-     * Sets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+     * Sets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Strings added here will also appear in the tags property of any associated service principals.Supports $filter (eq, not, ge, le, startsWith).
      * @param value Value to set for the tags property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._tags = value;
+        this.tags = value;
     }
     /**
      * Sets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
@@ -869,8 +911,8 @@ public class Application extends DirectoryObject implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setTokenEncryptionKeyId(@javax.annotation.Nullable final String value) {
-        this._tokenEncryptionKeyId = value;
+    public void setTokenEncryptionKeyId(@javax.annotation.Nullable final UUID value) {
+        this.tokenEncryptionKeyId = value;
     }
     /**
      * Sets the tokenIssuancePolicies property value. The tokenIssuancePolicies property
@@ -879,7 +921,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTokenIssuancePolicies(@javax.annotation.Nullable final java.util.List<TokenIssuancePolicy> value) {
-        this._tokenIssuancePolicies = value;
+        this.tokenIssuancePolicies = value;
     }
     /**
      * Sets the tokenLifetimePolicies property value. The tokenLifetimePolicies property
@@ -888,7 +930,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTokenLifetimePolicies(@javax.annotation.Nullable final java.util.List<TokenLifetimePolicy> value) {
-        this._tokenLifetimePolicies = value;
+        this.tokenLifetimePolicies = value;
     }
     /**
      * Sets the verifiedPublisher property value. Specifies the verified publisher of the application. For more information about how publisher verification helps support application security, trustworthiness, and compliance, see Publisher verification.
@@ -897,7 +939,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setVerifiedPublisher(@javax.annotation.Nullable final VerifiedPublisher value) {
-        this._verifiedPublisher = value;
+        this.verifiedPublisher = value;
     }
     /**
      * Sets the web property value. Specifies settings for a web application.
@@ -906,6 +948,6 @@ public class Application extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setWeb(@javax.annotation.Nullable final WebApplication value) {
-        this._web = value;
+        this.web = value;
     }
 }

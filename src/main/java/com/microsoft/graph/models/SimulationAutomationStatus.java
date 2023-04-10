@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
 public enum SimulationAutomationStatus implements ValuedEnum {
     Unknown("unknown"),
     Draft("draft"),

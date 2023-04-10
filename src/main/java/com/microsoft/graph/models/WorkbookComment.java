@@ -3,18 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookComment extends Entity implements Parsable {
     /** The content of comment. */
-    private String _content;
+    private String content;
     /** Indicates the type for the comment. */
-    private String _contentType;
+    private String contentType;
     /** The replies property */
-    private java.util.List<WorkbookCommentReply> _replies;
+    private java.util.List<WorkbookCommentReply> replies;
     /**
      * Instantiates a new workbookComment and sets the default values.
      * @return a void
@@ -39,7 +37,7 @@ public class WorkbookComment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getContent() {
-        return this._content;
+        return this.content;
     }
     /**
      * Gets the contentType property value. Indicates the type for the comment.
@@ -47,15 +45,15 @@ public class WorkbookComment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getContentType() {
-        return this._contentType;
+        return this.contentType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getStringValue()); });
         deserializerMap.put("replies", (n) -> { this.setReplies(n.getCollectionOfObjectValues(WorkbookCommentReply::createFromDiscriminatorValue)); });
@@ -67,7 +65,7 @@ public class WorkbookComment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WorkbookCommentReply> getReplies() {
-        return this._replies;
+        return this.replies;
     }
     /**
      * Serializes information the current object
@@ -89,7 +87,7 @@ public class WorkbookComment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final String value) {
-        this._content = value;
+        this.content = value;
     }
     /**
      * Sets the contentType property value. Indicates the type for the comment.
@@ -98,7 +96,7 @@ public class WorkbookComment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setContentType(@javax.annotation.Nullable final String value) {
-        this._contentType = value;
+        this.contentType = value;
     }
     /**
      * Sets the replies property value. The replies property
@@ -107,6 +105,6 @@ public class WorkbookComment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setReplies(@javax.annotation.Nullable final java.util.List<WorkbookCommentReply> value) {
-        this._replies = value;
+        this.replies = value;
     }
 }

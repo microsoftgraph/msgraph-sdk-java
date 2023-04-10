@@ -4,20 +4,21 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Proxied Domain */
+/**
+ * Proxied Domain
+ */
 public class ProxiedDomain implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The IP address or FQDN */
-    private String _ipAddressOrFQDN;
+    private String ipAddressOrFQDN;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Proxy IP or FQDN */
-    private String _proxy;
+    private String proxy;
     /**
      * Instantiates a new proxiedDomain and sets the default values.
      * @return a void
@@ -42,15 +43,15 @@ public class ProxiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("ipAddressOrFQDN", (n) -> { this.setIpAddressOrFQDN(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("proxy", (n) -> { this.setProxy(n.getStringValue()); });
@@ -62,7 +63,7 @@ public class ProxiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getIpAddressOrFQDN() {
-        return this._ipAddressOrFQDN;
+        return this.ipAddressOrFQDN;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -70,7 +71,7 @@ public class ProxiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the proxy property value. Proxy IP or FQDN
@@ -78,7 +79,7 @@ public class ProxiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getProxy() {
-        return this._proxy;
+        return this.proxy;
     }
     /**
      * Serializes information the current object
@@ -100,7 +101,7 @@ public class ProxiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the ipAddressOrFQDN property value. The IP address or FQDN
@@ -109,7 +110,7 @@ public class ProxiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setIpAddressOrFQDN(@javax.annotation.Nullable final String value) {
-        this._ipAddressOrFQDN = value;
+        this.ipAddressOrFQDN = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -118,7 +119,7 @@ public class ProxiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the proxy property value. Proxy IP or FQDN
@@ -127,6 +128,6 @@ public class ProxiedDomain implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public void setProxy(@javax.annotation.Nullable final String value) {
-        this._proxy = value;
+        this.proxy = value;
     }
 }

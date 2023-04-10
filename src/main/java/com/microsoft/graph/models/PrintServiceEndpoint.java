@@ -3,16 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class PrintServiceEndpoint extends Entity implements Parsable {
     /** A human-readable display name for the endpoint. */
-    private String _displayName;
+    private String displayName;
     /** The URI that can be used to access the service. */
-    private String _uri;
+    private String uri;
     /**
      * Instantiates a new printServiceEndpoint and sets the default values.
      * @return a void
@@ -37,15 +35,15 @@ public class PrintServiceEndpoint extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("uri", (n) -> { this.setUri(n.getStringValue()); });
         return deserializerMap;
@@ -56,7 +54,7 @@ public class PrintServiceEndpoint extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUri() {
-        return this._uri;
+        return this.uri;
     }
     /**
      * Serializes information the current object
@@ -77,7 +75,7 @@ public class PrintServiceEndpoint extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the uri property value. The URI that can be used to access the service.
@@ -86,6 +84,6 @@ public class PrintServiceEndpoint extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setUri(@javax.annotation.Nullable final String value) {
-        this._uri = value;
+        this.uri = value;
     }
 }

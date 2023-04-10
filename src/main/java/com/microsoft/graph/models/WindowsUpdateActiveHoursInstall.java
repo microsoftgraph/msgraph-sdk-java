@@ -4,15 +4,14 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType implements Parsable {
     /** Active Hours End */
-    private LocalTime _activeHoursEnd;
+    private LocalTime activeHoursEnd;
     /** Active Hours Start */
-    private LocalTime _activeHoursStart;
+    private LocalTime activeHoursStart;
     /**
      * Instantiates a new WindowsUpdateActiveHoursInstall and sets the default values.
      * @return a void
@@ -38,7 +37,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      */
     @javax.annotation.Nullable
     public LocalTime getActiveHoursEnd() {
-        return this._activeHoursEnd;
+        return this.activeHoursEnd;
     }
     /**
      * Gets the activeHoursStart property value. Active Hours Start
@@ -46,15 +45,15 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      */
     @javax.annotation.Nullable
     public LocalTime getActiveHoursStart() {
-        return this._activeHoursStart;
+        return this.activeHoursStart;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeHoursEnd", (n) -> { this.setActiveHoursEnd(n.getLocalTimeValue()); });
         deserializerMap.put("activeHoursStart", (n) -> { this.setActiveHoursStart(n.getLocalTimeValue()); });
         return deserializerMap;
@@ -78,7 +77,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      */
     @javax.annotation.Nonnull
     public void setActiveHoursEnd(@javax.annotation.Nullable final LocalTime value) {
-        this._activeHoursEnd = value;
+        this.activeHoursEnd = value;
     }
     /**
      * Sets the activeHoursStart property value. Active Hours Start
@@ -87,6 +86,6 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      */
     @javax.annotation.Nonnull
     public void setActiveHoursStart(@javax.annotation.Nullable final LocalTime value) {
-        this._activeHoursStart = value;
+        this.activeHoursStart = value;
     }
 }

@@ -3,15 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConnectedOrganizationMembers extends SubjectSet implements Parsable {
     /** The ID of the connected organization in entitlement management. */
-    private String _connectedOrganizationId;
+    private String connectedOrganizationId;
     /** The name of the connected organization. */
-    private String _description;
+    private String description;
     /**
      * Instantiates a new ConnectedOrganizationMembers and sets the default values.
      * @return a void
@@ -37,7 +36,7 @@ public class ConnectedOrganizationMembers extends SubjectSet implements Parsable
      */
     @javax.annotation.Nullable
     public String getConnectedOrganizationId() {
-        return this._connectedOrganizationId;
+        return this.connectedOrganizationId;
     }
     /**
      * Gets the description property value. The name of the connected organization.
@@ -45,15 +44,15 @@ public class ConnectedOrganizationMembers extends SubjectSet implements Parsable
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("connectedOrganizationId", (n) -> { this.setConnectedOrganizationId(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         return deserializerMap;
@@ -77,7 +76,7 @@ public class ConnectedOrganizationMembers extends SubjectSet implements Parsable
      */
     @javax.annotation.Nonnull
     public void setConnectedOrganizationId(@javax.annotation.Nullable final String value) {
-        this._connectedOrganizationId = value;
+        this.connectedOrganizationId = value;
     }
     /**
      * Sets the description property value. The name of the connected organization.
@@ -86,6 +85,6 @@ public class ConnectedOrganizationMembers extends SubjectSet implements Parsable
      */
     @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
 }

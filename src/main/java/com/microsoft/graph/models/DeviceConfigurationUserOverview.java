@@ -4,25 +4,24 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceConfigurationUserOverview extends Entity implements Parsable {
     /** Version of the policy for that overview */
-    private Integer _configurationVersion;
+    private Integer configurationVersion;
     /** Number of error Users */
-    private Integer _errorCount;
+    private Integer errorCount;
     /** Number of failed Users */
-    private Integer _failedCount;
+    private Integer failedCount;
     /** Last update time */
-    private OffsetDateTime _lastUpdateDateTime;
+    private OffsetDateTime lastUpdateDateTime;
     /** Number of not applicable users */
-    private Integer _notApplicableCount;
+    private Integer notApplicableCount;
     /** Number of pending Users */
-    private Integer _pendingCount;
+    private Integer pendingCount;
     /** Number of succeeded Users */
-    private Integer _successCount;
+    private Integer successCount;
     /**
      * Instantiates a new deviceConfigurationUserOverview and sets the default values.
      * @return a void
@@ -47,7 +46,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public Integer getConfigurationVersion() {
-        return this._configurationVersion;
+        return this.configurationVersion;
     }
     /**
      * Gets the errorCount property value. Number of error Users
@@ -55,7 +54,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public Integer getErrorCount() {
-        return this._errorCount;
+        return this.errorCount;
     }
     /**
      * Gets the failedCount property value. Number of failed Users
@@ -63,15 +62,15 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public Integer getFailedCount() {
-        return this._failedCount;
+        return this.failedCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("configurationVersion", (n) -> { this.setConfigurationVersion(n.getIntegerValue()); });
         deserializerMap.put("errorCount", (n) -> { this.setErrorCount(n.getIntegerValue()); });
         deserializerMap.put("failedCount", (n) -> { this.setFailedCount(n.getIntegerValue()); });
@@ -87,7 +86,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastUpdateDateTime() {
-        return this._lastUpdateDateTime;
+        return this.lastUpdateDateTime;
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable users
@@ -95,7 +94,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public Integer getNotApplicableCount() {
-        return this._notApplicableCount;
+        return this.notApplicableCount;
     }
     /**
      * Gets the pendingCount property value. Number of pending Users
@@ -103,7 +102,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public Integer getPendingCount() {
-        return this._pendingCount;
+        return this.pendingCount;
     }
     /**
      * Gets the successCount property value. Number of succeeded Users
@@ -111,7 +110,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public Integer getSuccessCount() {
-        return this._successCount;
+        return this.successCount;
     }
     /**
      * Serializes information the current object
@@ -137,7 +136,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setConfigurationVersion(@javax.annotation.Nullable final Integer value) {
-        this._configurationVersion = value;
+        this.configurationVersion = value;
     }
     /**
      * Sets the errorCount property value. Number of error Users
@@ -146,7 +145,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setErrorCount(@javax.annotation.Nullable final Integer value) {
-        this._errorCount = value;
+        this.errorCount = value;
     }
     /**
      * Sets the failedCount property value. Number of failed Users
@@ -155,7 +154,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setFailedCount(@javax.annotation.Nullable final Integer value) {
-        this._failedCount = value;
+        this.failedCount = value;
     }
     /**
      * Sets the lastUpdateDateTime property value. Last update time
@@ -164,7 +163,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setLastUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastUpdateDateTime = value;
+        this.lastUpdateDateTime = value;
     }
     /**
      * Sets the notApplicableCount property value. Number of not applicable users
@@ -173,7 +172,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setNotApplicableCount(@javax.annotation.Nullable final Integer value) {
-        this._notApplicableCount = value;
+        this.notApplicableCount = value;
     }
     /**
      * Sets the pendingCount property value. Number of pending Users
@@ -182,7 +181,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setPendingCount(@javax.annotation.Nullable final Integer value) {
-        this._pendingCount = value;
+        this.pendingCount = value;
     }
     /**
      * Sets the successCount property value. Number of succeeded Users
@@ -191,6 +190,6 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setSuccessCount(@javax.annotation.Nullable final Integer value) {
-        this._successCount = value;
+        this.successCount = value;
     }
 }

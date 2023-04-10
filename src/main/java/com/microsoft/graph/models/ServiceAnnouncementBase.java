@@ -1,27 +1,23 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.ServiceHealthIssue;
-import com.microsoft.graph.models.ServiceUpdateMessage;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class ServiceAnnouncementBase extends Entity implements Parsable {
     /** Additional details about service event. This property doesn't support filters. */
-    private java.util.List<KeyValuePair> _details;
+    private java.util.List<KeyValuePair> details;
     /** The end time of the service event. */
-    private OffsetDateTime _endDateTime;
+    private OffsetDateTime endDateTime;
     /** The last modified time of the service event. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The start time of the service event. */
-    private OffsetDateTime _startDateTime;
+    private OffsetDateTime startDateTime;
     /** The title of the service event. */
-    private String _title;
+    private String title;
     /**
      * Instantiates a new serviceAnnouncementBase and sets the default values.
      * @return a void
@@ -54,7 +50,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<KeyValuePair> getDetails() {
-        return this._details;
+        return this.details;
     }
     /**
      * Gets the endDateTime property value. The end time of the service event.
@@ -62,15 +58,15 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("details", (n) -> { this.setDetails(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -84,7 +80,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the startDateTime property value. The start time of the service event.
@@ -92,7 +88,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Gets the title property value. The title of the service event.
@@ -100,7 +96,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTitle() {
-        return this._title;
+        return this.title;
     }
     /**
      * Serializes information the current object
@@ -124,7 +120,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDetails(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this._details = value;
+        this.details = value;
     }
     /**
      * Sets the endDateTime property value. The end time of the service event.
@@ -133,7 +129,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The last modified time of the service event.
@@ -142,7 +138,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the startDateTime property value. The start time of the service event.
@@ -151,7 +147,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
     /**
      * Sets the title property value. The title of the service event.
@@ -160,6 +156,6 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
-        this._title = value;
+        this.title = value;
     }
 }

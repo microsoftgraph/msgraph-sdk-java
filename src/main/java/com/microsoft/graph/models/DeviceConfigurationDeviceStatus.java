@@ -4,26 +4,24 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class DeviceConfigurationDeviceStatus extends Entity implements Parsable {
     /** The DateTime when device compliance grace period expires */
-    private OffsetDateTime _complianceGracePeriodExpirationDateTime;
+    private OffsetDateTime complianceGracePeriodExpirationDateTime;
     /** Device name of the DevicePolicyStatus. */
-    private String _deviceDisplayName;
+    private String deviceDisplayName;
     /** The device model that is being reported */
-    private String _deviceModel;
+    private String deviceModel;
     /** Last modified date time of the policy report. */
-    private OffsetDateTime _lastReportedDateTime;
+    private OffsetDateTime lastReportedDateTime;
     /** The status property */
-    private ComplianceStatus _status;
+    private ComplianceStatus status;
     /** The User Name that is being reported */
-    private String _userName;
+    private String userName;
     /** UserPrincipalName. */
-    private String _userPrincipalName;
+    private String userPrincipalName;
     /**
      * Instantiates a new deviceConfigurationDeviceStatus and sets the default values.
      * @return a void
@@ -48,7 +46,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public OffsetDateTime getComplianceGracePeriodExpirationDateTime() {
-        return this._complianceGracePeriodExpirationDateTime;
+        return this.complianceGracePeriodExpirationDateTime;
     }
     /**
      * Gets the deviceDisplayName property value. Device name of the DevicePolicyStatus.
@@ -56,7 +54,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getDeviceDisplayName() {
-        return this._deviceDisplayName;
+        return this.deviceDisplayName;
     }
     /**
      * Gets the deviceModel property value. The device model that is being reported
@@ -64,15 +62,15 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getDeviceModel() {
-        return this._deviceModel;
+        return this.deviceModel;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("complianceGracePeriodExpirationDateTime", (n) -> { this.setComplianceGracePeriodExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("deviceDisplayName", (n) -> { this.setDeviceDisplayName(n.getStringValue()); });
         deserializerMap.put("deviceModel", (n) -> { this.setDeviceModel(n.getStringValue()); });
@@ -88,7 +86,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
-        return this._lastReportedDateTime;
+        return this.lastReportedDateTime;
     }
     /**
      * Gets the status property value. The status property
@@ -96,7 +94,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public ComplianceStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the userName property value. The User Name that is being reported
@@ -104,7 +102,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getUserName() {
-        return this._userName;
+        return this.userName;
     }
     /**
      * Gets the userPrincipalName property value. UserPrincipalName.
@@ -112,7 +110,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
@@ -138,7 +136,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setComplianceGracePeriodExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._complianceGracePeriodExpirationDateTime = value;
+        this.complianceGracePeriodExpirationDateTime = value;
     }
     /**
      * Sets the deviceDisplayName property value. Device name of the DevicePolicyStatus.
@@ -147,7 +145,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
-        this._deviceDisplayName = value;
+        this.deviceDisplayName = value;
     }
     /**
      * Sets the deviceModel property value. The device model that is being reported
@@ -156,7 +154,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setDeviceModel(@javax.annotation.Nullable final String value) {
-        this._deviceModel = value;
+        this.deviceModel = value;
     }
     /**
      * Sets the lastReportedDateTime property value. Last modified date time of the policy report.
@@ -165,7 +163,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastReportedDateTime = value;
+        this.lastReportedDateTime = value;
     }
     /**
      * Sets the status property value. The status property
@@ -174,7 +172,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ComplianceStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the userName property value. The User Name that is being reported
@@ -183,7 +181,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
-        this._userName = value;
+        this.userName = value;
     }
     /**
      * Sets the userPrincipalName property value. UserPrincipalName.
@@ -192,6 +190,6 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

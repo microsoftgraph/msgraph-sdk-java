@@ -1,32 +1,27 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AgreementFile;
-import com.microsoft.graph.models.AgreementFileLocalization;
-import com.microsoft.graph.models.AgreementFileVersion;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class AgreementFileProperties extends Entity implements Parsable {
     /** The date time representing when the file was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Localized display name of the policy file of an agreement. The localized display name is shown to end users who view the agreement. */
-    private String _displayName;
+    private String displayName;
     /** Data that represents the terms of use PDF document. Read-only. */
-    private AgreementFileData _fileData;
+    private AgreementFileData fileData;
     /** Name of the agreement file (for example, TOU.pdf). Read-only. */
-    private String _fileName;
+    private String fileName;
     /** If none of the languages matches the client preference, indicates whether this is the default agreement file . If none of the files are marked as default, the first one is treated as the default. Read-only. */
-    private Boolean _isDefault;
+    private Boolean isDefault;
     /** Indicates whether the agreement file is a major version update. Major version updates invalidate the agreement's acceptances on the corresponding language. */
-    private Boolean _isMajorVersion;
+    private Boolean isMajorVersion;
     /** The language of the agreement file in the format 'languagecode2-country/regioncode2'. 'languagecode2' is a lowercase two-letter code derived from ISO 639-1, while 'country/regioncode2' is derived from ISO 3166 and usually consists of two uppercase letters, or a BCP-47 language tag. For example, U.S. English is en-US. Read-only. */
-    private String _language;
+    private String language;
     /**
      * Instantiates a new agreementFileProperties and sets the default values.
      * @return a void
@@ -60,7 +55,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the displayName property value. Localized display name of the policy file of an agreement. The localized display name is shown to end users who view the agreement.
@@ -68,15 +63,15 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("fileData", (n) -> { this.setFileData(n.getObjectValue(AgreementFileData::createFromDiscriminatorValue)); });
@@ -92,7 +87,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AgreementFileData getFileData() {
-        return this._fileData;
+        return this.fileData;
     }
     /**
      * Gets the fileName property value. Name of the agreement file (for example, TOU.pdf). Read-only.
@@ -100,7 +95,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getFileName() {
-        return this._fileName;
+        return this.fileName;
     }
     /**
      * Gets the isDefault property value. If none of the languages matches the client preference, indicates whether this is the default agreement file . If none of the files are marked as default, the first one is treated as the default. Read-only.
@@ -108,7 +103,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsDefault() {
-        return this._isDefault;
+        return this.isDefault;
     }
     /**
      * Gets the isMajorVersion property value. Indicates whether the agreement file is a major version update. Major version updates invalidate the agreement's acceptances on the corresponding language.
@@ -116,7 +111,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsMajorVersion() {
-        return this._isMajorVersion;
+        return this.isMajorVersion;
     }
     /**
      * Gets the language property value. The language of the agreement file in the format 'languagecode2-country/regioncode2'. 'languagecode2' is a lowercase two-letter code derived from ISO 639-1, while 'country/regioncode2' is derived from ISO 3166 and usually consists of two uppercase letters, or a BCP-47 language tag. For example, U.S. English is en-US. Read-only.
@@ -124,7 +119,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLanguage() {
-        return this._language;
+        return this.language;
     }
     /**
      * Serializes information the current object
@@ -150,7 +145,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the displayName property value. Localized display name of the policy file of an agreement. The localized display name is shown to end users who view the agreement.
@@ -159,7 +154,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the fileData property value. Data that represents the terms of use PDF document. Read-only.
@@ -168,7 +163,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFileData(@javax.annotation.Nullable final AgreementFileData value) {
-        this._fileData = value;
+        this.fileData = value;
     }
     /**
      * Sets the fileName property value. Name of the agreement file (for example, TOU.pdf). Read-only.
@@ -177,7 +172,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setFileName(@javax.annotation.Nullable final String value) {
-        this._fileName = value;
+        this.fileName = value;
     }
     /**
      * Sets the isDefault property value. If none of the languages matches the client preference, indicates whether this is the default agreement file . If none of the files are marked as default, the first one is treated as the default. Read-only.
@@ -186,7 +181,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
-        this._isDefault = value;
+        this.isDefault = value;
     }
     /**
      * Sets the isMajorVersion property value. Indicates whether the agreement file is a major version update. Major version updates invalidate the agreement's acceptances on the corresponding language.
@@ -195,7 +190,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setIsMajorVersion(@javax.annotation.Nullable final Boolean value) {
-        this._isMajorVersion = value;
+        this.isMajorVersion = value;
     }
     /**
      * Sets the language property value. The language of the agreement file in the format 'languagecode2-country/regioncode2'. 'languagecode2' is a lowercase two-letter code derived from ISO 639-1, while 'country/regioncode2' is derived from ISO 3166 and usually consists of two uppercase letters, or a BCP-47 language tag. For example, U.S. English is en-US. Read-only.
@@ -204,6 +199,6 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public void setLanguage(@javax.annotation.Nullable final String value) {
-        this._language = value;
+        this.language = value;
     }
 }

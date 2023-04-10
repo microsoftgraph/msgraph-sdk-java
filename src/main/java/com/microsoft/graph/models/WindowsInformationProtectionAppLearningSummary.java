@@ -3,18 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Windows Information Protection AppLearning Summary entity. */
+/**
+ * Windows Information Protection AppLearning Summary entity.
+ */
 public class WindowsInformationProtectionAppLearningSummary extends Entity implements Parsable {
     /** Application Name */
-    private String _applicationName;
+    private String applicationName;
     /** Possible types of Application */
-    private ApplicationType _applicationType;
+    private ApplicationType applicationType;
     /** Device Count */
-    private Integer _deviceCount;
+    private Integer deviceCount;
     /**
      * Instantiates a new windowsInformationProtectionAppLearningSummary and sets the default values.
      * @return a void
@@ -39,7 +40,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      */
     @javax.annotation.Nullable
     public String getApplicationName() {
-        return this._applicationName;
+        return this.applicationName;
     }
     /**
      * Gets the applicationType property value. Possible types of Application
@@ -47,7 +48,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      */
     @javax.annotation.Nullable
     public ApplicationType getApplicationType() {
-        return this._applicationType;
+        return this.applicationType;
     }
     /**
      * Gets the deviceCount property value. Device Count
@@ -55,15 +56,15 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      */
     @javax.annotation.Nullable
     public Integer getDeviceCount() {
-        return this._deviceCount;
+        return this.deviceCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicationName", (n) -> { this.setApplicationName(n.getStringValue()); });
         deserializerMap.put("applicationType", (n) -> { this.setApplicationType(n.getEnumValue(ApplicationType.class)); });
         deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getIntegerValue()); });
@@ -89,7 +90,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      */
     @javax.annotation.Nonnull
     public void setApplicationName(@javax.annotation.Nullable final String value) {
-        this._applicationName = value;
+        this.applicationName = value;
     }
     /**
      * Sets the applicationType property value. Possible types of Application
@@ -98,7 +99,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      */
     @javax.annotation.Nonnull
     public void setApplicationType(@javax.annotation.Nullable final ApplicationType value) {
-        this._applicationType = value;
+        this.applicationType = value;
     }
     /**
      * Sets the deviceCount property value. Device Count
@@ -107,6 +108,6 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      */
     @javax.annotation.Nonnull
     public void setDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._deviceCount = value;
+        this.deviceCount = value;
     }
 }
