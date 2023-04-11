@@ -28,7 +28,7 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
         return new AppliesToRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.policies.featureRolloutPolicies.item.appliesTo.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.featureRolloutPolicies.item.appliesTo.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */

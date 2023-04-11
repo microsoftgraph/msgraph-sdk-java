@@ -10,7 +10,7 @@ public class InferenceClassification extends Entity implements Parsable {
     /** A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable. */
     private java.util.List<InferenceClassificationOverride> overrides;
     /**
-     * Instantiates a new InferenceClassification and sets the default values.
+     * Instantiates a new inferenceClassification and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -20,7 +20,7 @@ public class InferenceClassification extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a InferenceClassification
+     * @return a inferenceClassification
      */
     @javax.annotation.Nonnull
     public static InferenceClassification createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

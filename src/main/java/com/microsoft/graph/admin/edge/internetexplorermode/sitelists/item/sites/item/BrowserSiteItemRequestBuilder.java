@@ -78,7 +78,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get sites from admin
+     * A collection of sites defined for the site list.
      * @return a CompletableFuture of browserSite
      */
     @javax.annotation.Nonnull
@@ -96,7 +96,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get sites from admin
+     * A collection of sites defined for the site list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSite
      */
@@ -182,7 +182,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get sites from admin
+     * A collection of sites defined for the site list.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +190,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get sites from admin
+     * A collection of sites defined for the site list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +248,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get sites from admin
+     * A collection of sites defined for the site list.
      */
     public class GetQueryParameters {
         /** Expand related entities */

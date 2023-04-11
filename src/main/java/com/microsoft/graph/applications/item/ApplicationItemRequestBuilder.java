@@ -148,7 +148,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
         return new UnsetVerifiedPublisherRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.applications.item.appManagementPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.applications.item.appManagementPolicies.item collection
      * @param id Unique identifier of the item
      * @return a AppManagementPolicyItemRequestBuilder
      */
@@ -294,7 +294,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
         return new HomeRealmDiscoveryPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.applications.item.owners.item collection
+     * Gets an item from the com.Microsoft.Graph.applications.item.owners.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -404,7 +404,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.microsoft.graph.applications.item.tokenIssuancePolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.applications.item.tokenIssuancePolicies.item collection
      * @param id Unique identifier of the item
      * @return a TokenIssuancePolicyItemRequestBuilder
      */
@@ -416,7 +416,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
         return new TokenIssuancePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.applications.item.tokenLifetimePolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.applications.item.tokenLifetimePolicies.item collection
      * @param id Unique identifier of the item
      * @return a TokenLifetimePolicyItemRequestBuilder
      */

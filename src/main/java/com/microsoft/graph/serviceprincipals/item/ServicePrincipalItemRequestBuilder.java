@@ -8,8 +8,8 @@ import com.microsoft.graph.serviceprincipals.item.addtokensigningcertificate.Add
 import com.microsoft.graph.serviceprincipals.item.appmanagementpolicies.AppManagementPoliciesRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.appmanagementpolicies.item.AppManagementPolicyItemRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.approleassignedto.AppRoleAssignedToRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.approleassignedto.item.AppRoleAssignmentItemRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.approleassignments.AppRoleAssignmentsRequestBuilder;
-import com.microsoft.graph.serviceprincipals.item.approleassignments.item.AppRoleAssignmentItemRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.claimsmappingpolicies.ClaimsMappingPoliciesRequestBuilder;
@@ -25,11 +25,11 @@ import com.microsoft.graph.serviceprincipals.item.getmembergroups.GetMemberGroup
 import com.microsoft.graph.serviceprincipals.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.homerealmdiscoverypolicies.item.HomeRealmDiscoveryPolicyItemRequestBuilder;
-import com.microsoft.graph.serviceprincipals.item.memberof.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.oauth2permissiongrants.item.OAuth2PermissionGrantItemRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.ownedobjects.OwnedObjectsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.owners.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.owners.OwnersRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.removekey.RemoveKeyRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.removepassword.RemovePasswordRequestBuilder;
@@ -224,7 +224,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         return new com.microsoft.graph.serviceprincipals.item.approleassignments.item.AppRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.servicePrincipals.item.claimsMappingPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.claimsMappingPolicies.item collection
      * @param id Unique identifier of the item
      * @return a ClaimsMappingPolicyItemRequestBuilder
      */
@@ -382,7 +382,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.microsoft.graph.servicePrincipals.item.homeRealmDiscoveryPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.homeRealmDiscoveryPolicies.item collection
      * @param id Unique identifier of the item
      * @return a HomeRealmDiscoveryPolicyItemRequestBuilder
      */
@@ -430,7 +430,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         return new com.microsoft.graph.serviceprincipals.item.ownedobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.servicePrincipals.item.owners.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.owners.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */

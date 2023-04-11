@@ -78,7 +78,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get sharedCookies from admin
+     * A collection of shared cookies defined for the site list.
      * @return a CompletableFuture of browserSharedCookie
      */
     @javax.annotation.Nonnull
@@ -96,7 +96,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get sharedCookies from admin
+     * A collection of shared cookies defined for the site list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSharedCookie
      */
@@ -182,7 +182,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get sharedCookies from admin
+     * A collection of shared cookies defined for the site list.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +190,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get sharedCookies from admin
+     * A collection of shared cookies defined for the site list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +248,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get sharedCookies from admin
+     * A collection of shared cookies defined for the site list.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -1,8 +1,8 @@
 package com.microsoft.graph.drives.item;
 
 import com.microsoft.graph.drives.item.bundles.BundlesRequestBuilder;
-import com.microsoft.graph.drives.item.bundles.item.DriveItemItemRequestBuilder;
 import com.microsoft.graph.drives.item.following.FollowingRequestBuilder;
+import com.microsoft.graph.drives.item.following.item.DriveItemItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.ItemsRequestBuilder;
 import com.microsoft.graph.drives.item.list.ListRequestBuilder;
 import com.microsoft.graph.drives.item.recent.RecentRequestBuilder;

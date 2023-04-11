@@ -12,7 +12,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     /** Represents an attack simulation training campaign in a tenant. */
     private java.util.List<Simulation> simulations;
     /**
-     * Instantiates a new AttackSimulationRoot and sets the default values.
+     * Instantiates a new attackSimulationRoot and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AttackSimulationRoot
+     * @return a attackSimulationRoot
      */
     @javax.annotation.Nonnull
     public static AttackSimulationRoot createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

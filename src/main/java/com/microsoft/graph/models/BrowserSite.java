@@ -11,21 +11,21 @@ import java.util.Objects;
  * Singleton entity which is used to specify IE mode site metadata
  */
 public class BrowserSite extends Entity implements Parsable {
-    /** Boolean attribute that controls the behavior of redirected sites */
+    /** Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain. */
     private Boolean allowRedirect;
-    /** The comment for the site */
+    /** The comment for the site. */
     private String comment;
     /** The compatibilityMode property */
     private BrowserSiteCompatibilityMode compatibilityMode;
-    /** The datetime that the site is created */
+    /** The date and time when the site was created. */
     private OffsetDateTime createdDateTime;
-    /** The datetime that the admin deleted the site */
+    /** The date and time when the site was deleted. */
     private OffsetDateTime deletedDateTime;
-    /** The collection stores site revision metadata and audit logs. */
+    /** The history of modifications applied to the site. */
     private java.util.List<BrowserSiteHistory> history;
-    /** The admin who made the last update on the site. */
+    /** The user who last modified the site. */
     private IdentitySet lastModifiedBy;
-    /** The datetime that the admin updated the site. */
+    /** The date and time when the site was last modified. */
     private OffsetDateTime lastModifiedDateTime;
     /** The mergeType property */
     private BrowserSiteMergeType mergeType;
@@ -33,7 +33,7 @@ public class BrowserSite extends Entity implements Parsable {
     private BrowserSiteStatus status;
     /** The targetEnvironment property */
     private BrowserSiteTargetEnvironment targetEnvironment;
-    /** The URL of the site */
+    /** The URL of the site. */
     private String webUrl;
     /**
      * Instantiates a new browserSite and sets the default values.
@@ -54,7 +54,7 @@ public class BrowserSite extends Entity implements Parsable {
         return new BrowserSite();
     }
     /**
-     * Gets the allowRedirect property value. Boolean attribute that controls the behavior of redirected sites
+     * Gets the allowRedirect property value. Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -62,7 +62,7 @@ public class BrowserSite extends Entity implements Parsable {
         return this.allowRedirect;
     }
     /**
-     * Gets the comment property value. The comment for the site
+     * Gets the comment property value. The comment for the site.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -78,7 +78,7 @@ public class BrowserSite extends Entity implements Parsable {
         return this.compatibilityMode;
     }
     /**
-     * Gets the createdDateTime property value. The datetime that the site is created
+     * Gets the createdDateTime property value. The date and time when the site was created.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -86,7 +86,7 @@ public class BrowserSite extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
-     * Gets the deletedDateTime property value. The datetime that the admin deleted the site
+     * Gets the deletedDateTime property value. The date and time when the site was deleted.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -115,7 +115,7 @@ public class BrowserSite extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the history property value. The collection stores site revision metadata and audit logs.
+     * Gets the history property value. The history of modifications applied to the site.
      * @return a browserSiteHistory
      */
     @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class BrowserSite extends Entity implements Parsable {
         return this.history;
     }
     /**
-     * Gets the lastModifiedBy property value. The admin who made the last update on the site.
+     * Gets the lastModifiedBy property value. The user who last modified the site.
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -131,7 +131,7 @@ public class BrowserSite extends Entity implements Parsable {
         return this.lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The datetime that the admin updated the site.
+     * Gets the lastModifiedDateTime property value. The date and time when the site was last modified.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -163,7 +163,7 @@ public class BrowserSite extends Entity implements Parsable {
         return this.targetEnvironment;
     }
     /**
-     * Gets the webUrl property value. The URL of the site
+     * Gets the webUrl property value. The URL of the site.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -193,7 +193,7 @@ public class BrowserSite extends Entity implements Parsable {
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
-     * Sets the allowRedirect property value. Boolean attribute that controls the behavior of redirected sites
+     * Sets the allowRedirect property value. Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain.
      * @param value Value to set for the allowRedirect property.
      * @return a void
      */
@@ -202,7 +202,7 @@ public class BrowserSite extends Entity implements Parsable {
         this.allowRedirect = value;
     }
     /**
-     * Sets the comment property value. The comment for the site
+     * Sets the comment property value. The comment for the site.
      * @param value Value to set for the comment property.
      * @return a void
      */
@@ -220,7 +220,7 @@ public class BrowserSite extends Entity implements Parsable {
         this.compatibilityMode = value;
     }
     /**
-     * Sets the createdDateTime property value. The datetime that the site is created
+     * Sets the createdDateTime property value. The date and time when the site was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -229,7 +229,7 @@ public class BrowserSite extends Entity implements Parsable {
         this.createdDateTime = value;
     }
     /**
-     * Sets the deletedDateTime property value. The datetime that the admin deleted the site
+     * Sets the deletedDateTime property value. The date and time when the site was deleted.
      * @param value Value to set for the deletedDateTime property.
      * @return a void
      */
@@ -238,7 +238,7 @@ public class BrowserSite extends Entity implements Parsable {
         this.deletedDateTime = value;
     }
     /**
-     * Sets the history property value. The collection stores site revision metadata and audit logs.
+     * Sets the history property value. The history of modifications applied to the site.
      * @param value Value to set for the history property.
      * @return a void
      */
@@ -247,7 +247,7 @@ public class BrowserSite extends Entity implements Parsable {
         this.history = value;
     }
     /**
-     * Sets the lastModifiedBy property value. The admin who made the last update on the site.
+     * Sets the lastModifiedBy property value. The user who last modified the site.
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
@@ -256,7 +256,7 @@ public class BrowserSite extends Entity implements Parsable {
         this.lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The datetime that the admin updated the site.
+     * Sets the lastModifiedDateTime property value. The date and time when the site was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
@@ -292,7 +292,7 @@ public class BrowserSite extends Entity implements Parsable {
         this.targetEnvironment = value;
     }
     /**
-     * Sets the webUrl property value. The URL of the site
+     * Sets the webUrl property value. The URL of the site.
      * @param value Value to set for the webUrl property.
      * @return a void
      */

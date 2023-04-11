@@ -18,7 +18,7 @@ public class IdentityContainer extends Entity implements Parsable {
     /** Represents entry point for identity userflow attributes. */
     private java.util.List<IdentityUserFlowAttribute> userFlowAttributes;
     /**
-     * Instantiates a new identityContainer and sets the default values.
+     * Instantiates a new IdentityContainer and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -28,7 +28,7 @@ public class IdentityContainer extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identityContainer
+     * @return a IdentityContainer
      */
     @javax.annotation.Nonnull
     public static IdentityContainer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -1,17 +1,22 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.callrecords.CallRecord;
+import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class CloudCommunications extends Entity implements Parsable {
+public class CloudCommunications implements AdditionalDataHolder, Parsable {
+    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    private Map<String, Object> additionalData;
     /** The callRecords property */
     private java.util.List<CallRecord> callRecords;
     /** The calls property */
     private java.util.List<Call> calls;
+    /** The OdataType property */
+    private String odataType;
     /** The onlineMeetings property */
     private java.util.List<OnlineMeeting> onlineMeetings;
     /** The presences property */
@@ -22,7 +27,7 @@ public class CloudCommunications extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CloudCommunications() {
-        super();
+        this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,6 +38,14 @@ public class CloudCommunications extends Entity implements Parsable {
     public static CloudCommunications createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudCommunications();
+    }
+    /**
+     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return a Map<String, Object>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Object> getAdditionalData() {
+        return this.additionalData;
     }
     /**
      * Gets the callRecords property value. The callRecords property
@@ -56,12 +69,21 @@ public class CloudCommunications extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("callRecords", (n) -> { this.setCallRecords(n.getCollectionOfObjectValues(CallRecord::createFromDiscriminatorValue)); });
         deserializerMap.put("calls", (n) -> { this.setCalls(n.getCollectionOfObjectValues(Call::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("onlineMeetings", (n) -> { this.setOnlineMeetings(n.getCollectionOfObjectValues(OnlineMeeting::createFromDiscriminatorValue)); });
         deserializerMap.put("presences", (n) -> { this.setPresences(n.getCollectionOfObjectValues(Presence::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this.odataType;
     }
     /**
      * Gets the onlineMeetings property value. The onlineMeetings property
@@ -87,11 +109,21 @@ public class CloudCommunications extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        super.serialize(writer);
         writer.writeCollectionOfObjectValues("callRecords", this.getCallRecords());
         writer.writeCollectionOfObjectValues("calls", this.getCalls());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("onlineMeetings", this.getOnlineMeetings());
         writer.writeCollectionOfObjectValues("presences", this.getPresences());
+        writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+        this.additionalData = value;
     }
     /**
      * Sets the callRecords property value. The callRecords property
@@ -110,6 +142,15 @@ public class CloudCommunications extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setCalls(@javax.annotation.Nullable final java.util.List<Call> value) {
         this.calls = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this.odataType = value;
     }
     /**
      * Sets the onlineMeetings property value. The onlineMeetings property

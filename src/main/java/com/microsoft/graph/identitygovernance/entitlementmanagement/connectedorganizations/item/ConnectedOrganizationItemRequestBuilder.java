@@ -91,7 +91,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Gets an item from the com.microsoft.graph.identityGovernance.entitlementManagement.connectedOrganizations.item.externalSponsors.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item.externalSponsors.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -140,7 +140,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Gets an item from the com.microsoft.graph.identityGovernance.entitlementManagement.connectedOrganizations.item.internalSponsors.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item.internalSponsors.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */

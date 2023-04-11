@@ -87,7 +87,7 @@ public class Alert extends Entity implements Parsable {
     /** Threat intelligence pertaining to one or more vulnerabilities related to this alert. */
     private java.util.List<VulnerabilityState> vulnerabilityStates;
     /**
-     * Instantiates a new Alert and sets the default values.
+     * Instantiates a new alert and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class Alert extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Alert
+     * @return a alert
      */
     @javax.annotation.Nonnull
     public static Alert createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

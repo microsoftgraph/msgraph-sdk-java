@@ -6,16 +6,13 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/**
- * Policy used to configure detailed management settings targeted to specific security groups
- */
 public class TargetedManagedAppProtection extends ManagedAppProtection implements Parsable {
     /** Navigation property to list of inclusion and exclusion groups to which the policy is deployed. */
     private java.util.List<TargetedManagedAppPolicyAssignment> assignments;
     /** Indicates if the policy is deployed to any inclusion groups or not. */
     private Boolean isAssigned;
     /**
-     * Instantiates a new targetedManagedAppProtection and sets the default values.
+     * Instantiates a new TargetedManagedAppProtection and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -26,7 +23,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a targetedManagedAppProtection
+     * @return a TargetedManagedAppProtection
      */
     @javax.annotation.Nonnull
     public static TargetedManagedAppProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -6,8 +6,8 @@ import com.microsoft.graph.users.item.calendargroups.item.calendars.item.allowed
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.calendarpermissions.CalendarPermissionsRequestBuilder;
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.calendarpermissions.item.CalendarPermissionItemRequestBuilder;
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.calendarview.CalendarViewRequestBuilder;
+import com.microsoft.graph.users.item.calendargroups.item.calendars.item.calendarview.item.EventItemRequestBuilder;
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.events.EventsRequestBuilder;
-import com.microsoft.graph.users.item.calendargroups.item.calendars.item.events.item.EventItemRequestBuilder;
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.getschedule.GetScheduleRequestBuilder;
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;

@@ -1,15 +1,12 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class AppCatalogs extends Entity implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> additionalData;
+public class AppCatalogs extends Entity implements Parsable {
     /** The teamsApps property */
     private java.util.List<TeamsApp> teamsApps;
     /**
@@ -19,7 +16,6 @@ public class AppCatalogs extends Entity implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public AppCatalogs() {
         super();
-        this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +26,6 @@ public class AppCatalogs extends Entity implements AdditionalDataHolder, Parsabl
     public static AppCatalogs createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AppCatalogs();
-    }
-    /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
-     */
-    @javax.annotation.Nonnull
-    public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
@@ -67,16 +55,6 @@ public class AppCatalogs extends Entity implements AdditionalDataHolder, Parsabl
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("teamsApps", this.getTeamsApps());
-        writer.writeAdditionalData(this.getAdditionalData());
-    }
-    /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
     }
     /**
      * Sets the teamsApps property value. The teamsApps property

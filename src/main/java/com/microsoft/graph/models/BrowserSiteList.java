@@ -11,23 +11,23 @@ import java.util.Objects;
  * A singleton entity which is used to specify IE mode site list metadata
  */
 public class BrowserSiteList extends Entity implements Parsable {
-    /** Description for the site list */
+    /** The description of the site list. */
     private String description;
-    /** Display name of this site list */
+    /** The name of the site list. */
     private String displayName;
-    /** Name of the admin who made the last update on the site list */
+    /** The user who last modified the site list. */
     private IdentitySet lastModifiedBy;
-    /** The datetime that the admin last updated the site list. */
+    /** The date and time when the site list was last modified. */
     private OffsetDateTime lastModifiedDateTime;
-    /** Name of the admin who published the site list */
+    /** The user who published the site list. */
     private IdentitySet publishedBy;
-    /** The datetime that admin published the site list to users in their organization. */
+    /** The date and time when the site list was published. */
     private OffsetDateTime publishedDateTime;
-    /** Admin can have multiple revisions of the site list and the revision is generated whenever admin create/update the site list. */
+    /** The current revision of the site list. */
     private String revision;
-    /** The sharedCookies property */
+    /** A collection of shared cookies defined for the site list. */
     private java.util.List<BrowserSharedCookie> sharedCookies;
-    /** The sites property */
+    /** A collection of sites defined for the site list. */
     private java.util.List<BrowserSite> sites;
     /** The status property */
     private BrowserSiteListStatus status;
@@ -50,7 +50,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         return new BrowserSiteList();
     }
     /**
-     * Gets the description property value. Description for the site list
+     * Gets the description property value. The description of the site list.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         return this.description;
     }
     /**
-     * Gets the displayName property value. Display name of this site list
+     * Gets the displayName property value. The name of the site list.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -85,7 +85,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedBy property value. Name of the admin who made the last update on the site list
+     * Gets the lastModifiedBy property value. The user who last modified the site list.
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -93,7 +93,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         return this.lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The datetime that the admin last updated the site list.
+     * Gets the lastModifiedDateTime property value. The date and time when the site list was last modified.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         return this.lastModifiedDateTime;
     }
     /**
-     * Gets the publishedBy property value. Name of the admin who published the site list
+     * Gets the publishedBy property value. The user who published the site list.
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         return this.publishedBy;
     }
     /**
-     * Gets the publishedDateTime property value. The datetime that admin published the site list to users in their organization.
+     * Gets the publishedDateTime property value. The date and time when the site list was published.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -117,7 +117,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         return this.publishedDateTime;
     }
     /**
-     * Gets the revision property value. Admin can have multiple revisions of the site list and the revision is generated whenever admin create/update the site list.
+     * Gets the revision property value. The current revision of the site list.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -125,7 +125,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         return this.revision;
     }
     /**
-     * Gets the sharedCookies property value. The sharedCookies property
+     * Gets the sharedCookies property value. A collection of shared cookies defined for the site list.
      * @return a browserSharedCookie
      */
     @javax.annotation.Nullable
@@ -133,7 +133,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         return this.sharedCookies;
     }
     /**
-     * Gets the sites property value. The sites property
+     * Gets the sites property value. A collection of sites defined for the site list.
      * @return a browserSite
      */
     @javax.annotation.Nullable
@@ -169,7 +169,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the description property value. Description for the site list
+     * Sets the description property value. The description of the site list.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -178,7 +178,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         this.description = value;
     }
     /**
-     * Sets the displayName property value. Display name of this site list
+     * Sets the displayName property value. The name of the site list.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -187,7 +187,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the lastModifiedBy property value. Name of the admin who made the last update on the site list
+     * Sets the lastModifiedBy property value. The user who last modified the site list.
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
@@ -196,7 +196,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         this.lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The datetime that the admin last updated the site list.
+     * Sets the lastModifiedDateTime property value. The date and time when the site list was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
@@ -205,7 +205,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         this.lastModifiedDateTime = value;
     }
     /**
-     * Sets the publishedBy property value. Name of the admin who published the site list
+     * Sets the publishedBy property value. The user who published the site list.
      * @param value Value to set for the publishedBy property.
      * @return a void
      */
@@ -214,7 +214,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         this.publishedBy = value;
     }
     /**
-     * Sets the publishedDateTime property value. The datetime that admin published the site list to users in their organization.
+     * Sets the publishedDateTime property value. The date and time when the site list was published.
      * @param value Value to set for the publishedDateTime property.
      * @return a void
      */
@@ -223,7 +223,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         this.publishedDateTime = value;
     }
     /**
-     * Sets the revision property value. Admin can have multiple revisions of the site list and the revision is generated whenever admin create/update the site list.
+     * Sets the revision property value. The current revision of the site list.
      * @param value Value to set for the revision property.
      * @return a void
      */
@@ -232,7 +232,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         this.revision = value;
     }
     /**
-     * Sets the sharedCookies property value. The sharedCookies property
+     * Sets the sharedCookies property value. A collection of shared cookies defined for the site list.
      * @param value Value to set for the sharedCookies property.
      * @return a void
      */
@@ -241,7 +241,7 @@ public class BrowserSiteList extends Entity implements Parsable {
         this.sharedCookies = value;
     }
     /**
-     * Sets the sites property value. The sites property
+     * Sets the sites property value. A collection of sites defined for the site list.
      * @param value Value to set for the sites property.
      * @return a void
      */

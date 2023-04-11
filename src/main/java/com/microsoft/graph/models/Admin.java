@@ -10,12 +10,14 @@ import java.util.Objects;
 public class Admin implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
-    /** The edge property */
+    /** A container for Microsoft Edge resources. Read-only. */
     private Edge edge;
     /** The OdataType property */
     private String odataType;
     /** A container for service communications resources. Read-only. */
     private ServiceAnnouncement serviceAnnouncement;
+    /** The sharepoint property */
+    private Sharepoint sharepoint;
     /**
      * Instantiates a new Admin and sets the default values.
      * @return a void
@@ -43,7 +45,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the edge property value. The edge property
+     * Gets the edge property value. A container for Microsoft Edge resources. Read-only.
      * @return a edge
      */
     @javax.annotation.Nullable
@@ -56,10 +58,11 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("edge", (n) -> { this.setEdge(n.getObjectValue(Edge::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("serviceAnnouncement", (n) -> { this.setServiceAnnouncement(n.getObjectValue(ServiceAnnouncement::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharepoint", (n) -> { this.setSharepoint(n.getObjectValue(Sharepoint::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -79,6 +82,14 @@ public class Admin implements AdditionalDataHolder, Parsable {
         return this.serviceAnnouncement;
     }
     /**
+     * Gets the sharepoint property value. The sharepoint property
+     * @return a sharepoint
+     */
+    @javax.annotation.Nullable
+    public Sharepoint getSharepoint() {
+        return this.sharepoint;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +100,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("edge", this.getEdge());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("serviceAnnouncement", this.getServiceAnnouncement());
+        writer.writeObjectValue("sharepoint", this.getSharepoint());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -101,7 +113,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the edge property value. The edge property
+     * Sets the edge property value. A container for Microsoft Edge resources. Read-only.
      * @param value Value to set for the edge property.
      * @return a void
      */
@@ -126,5 +138,14 @@ public class Admin implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setServiceAnnouncement(@javax.annotation.Nullable final ServiceAnnouncement value) {
         this.serviceAnnouncement = value;
+    }
+    /**
+     * Sets the sharepoint property value. The sharepoint property
+     * @param value Value to set for the sharepoint property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSharepoint(@javax.annotation.Nullable final Sharepoint value) {
+        this.sharepoint = value;
     }
 }

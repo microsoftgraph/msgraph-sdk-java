@@ -84,7 +84,7 @@ public class EdgeRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get edge from admin
+     * A container for Microsoft Edge resources. Read-only.
      * @return a CompletableFuture of edge
      */
     @javax.annotation.Nonnull
@@ -102,7 +102,7 @@ public class EdgeRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get edge from admin
+     * A container for Microsoft Edge resources. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of edge
      */
@@ -188,7 +188,7 @@ public class EdgeRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get edge from admin
+     * A container for Microsoft Edge resources. Read-only.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +196,7 @@ public class EdgeRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get edge from admin
+     * A container for Microsoft Edge resources. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,7 +254,7 @@ public class EdgeRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get edge from admin
+     * A container for Microsoft Edge resources. Read-only.
      */
     public class GetQueryParameters {
         /** Expand related entities */
