@@ -11,23 +11,23 @@ import java.util.Objects;
 public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
-    /** The comment of the cookie */
+    /** The comment for the shared cookie. */
     private String comment;
-    /** The name of the cookie */
+    /** The name of the cookie. */
     private String displayName;
-    /** Boolean attribute that determines whether a cookie is  a host-only or domain cookie */
+    /** Controls whether a cookie is a host-only or domain cookie. */
     private Boolean hostOnly;
-    /** The URL of the cookie */
+    /** The URL of the cookie. */
     private String hostOrDomain;
     /** The lastModifiedBy property */
     private IdentitySet lastModifiedBy;
     /** The OdataType property */
     private String odataType;
-    /** The path of the cookie */
+    /** The path of the cookie. */
     private String path;
-    /** The time the cookie was published */
+    /** The date and time when the cookie was last published. */
     private OffsetDateTime publishedDateTime;
-    /** Specifies how the cookies are shared between Microsoft Edge and Internet Explorer */
+    /** Specifies how the cookies are shared between Microsoft Edge and Internet Explorer. The possible values are: microsoftEdge, internetExplorer11, both, unknownFutureValue. */
     private BrowserSharedCookieSourceEnvironment sourceEnvironment;
     /**
      * Instantiates a new browserSharedCookieHistory and sets the default values.
@@ -56,7 +56,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
         return this.additionalData;
     }
     /**
-     * Gets the comment property value. The comment of the cookie
+     * Gets the comment property value. The comment for the shared cookie.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -64,7 +64,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
         return this.comment;
     }
     /**
-     * Gets the displayName property value. The name of the cookie
+     * Gets the displayName property value. The name of the cookie.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the hostOnly property value. Boolean attribute that determines whether a cookie is  a host-only or domain cookie
+     * Gets the hostOnly property value. Controls whether a cookie is a host-only or domain cookie.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -98,7 +98,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
         return this.hostOnly;
     }
     /**
-     * Gets the hostOrDomain property value. The URL of the cookie
+     * Gets the hostOrDomain property value. The URL of the cookie.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -122,7 +122,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
         return this.odataType;
     }
     /**
-     * Gets the path property value. The path of the cookie
+     * Gets the path property value. The path of the cookie.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -130,7 +130,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
         return this.path;
     }
     /**
-     * Gets the publishedDateTime property value. The time the cookie was published
+     * Gets the publishedDateTime property value. The date and time when the cookie was last published.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
         return this.publishedDateTime;
     }
     /**
-     * Gets the sourceEnvironment property value. Specifies how the cookies are shared between Microsoft Edge and Internet Explorer
+     * Gets the sourceEnvironment property value. Specifies how the cookies are shared between Microsoft Edge and Internet Explorer. The possible values are: microsoftEdge, internetExplorer11, both, unknownFutureValue.
      * @return a browserSharedCookieSourceEnvironment
      */
     @javax.annotation.Nullable
@@ -174,7 +174,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
         this.additionalData = value;
     }
     /**
-     * Sets the comment property value. The comment of the cookie
+     * Sets the comment property value. The comment for the shared cookie.
      * @param value Value to set for the comment property.
      * @return a void
      */
@@ -183,7 +183,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
         this.comment = value;
     }
     /**
-     * Sets the displayName property value. The name of the cookie
+     * Sets the displayName property value. The name of the cookie.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -192,7 +192,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
         this.displayName = value;
     }
     /**
-     * Sets the hostOnly property value. Boolean attribute that determines whether a cookie is  a host-only or domain cookie
+     * Sets the hostOnly property value. Controls whether a cookie is a host-only or domain cookie.
      * @param value Value to set for the hostOnly property.
      * @return a void
      */
@@ -201,7 +201,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
         this.hostOnly = value;
     }
     /**
-     * Sets the hostOrDomain property value. The URL of the cookie
+     * Sets the hostOrDomain property value. The URL of the cookie.
      * @param value Value to set for the hostOrDomain property.
      * @return a void
      */
@@ -228,7 +228,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
         this.odataType = value;
     }
     /**
-     * Sets the path property value. The path of the cookie
+     * Sets the path property value. The path of the cookie.
      * @param value Value to set for the path property.
      * @return a void
      */
@@ -237,7 +237,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
         this.path = value;
     }
     /**
-     * Sets the publishedDateTime property value. The time the cookie was published
+     * Sets the publishedDateTime property value. The date and time when the cookie was last published.
      * @param value Value to set for the publishedDateTime property.
      * @return a void
      */
@@ -246,7 +246,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
         this.publishedDateTime = value;
     }
     /**
-     * Sets the sourceEnvironment property value. Specifies how the cookies are shared between Microsoft Edge and Internet Explorer
+     * Sets the sourceEnvironment property value. Specifies how the cookies are shared between Microsoft Edge and Internet Explorer. The possible values are: microsoftEdge, internetExplorer11, both, unknownFutureValue.
      * @param value Value to set for the sourceEnvironment property.
      * @return a void
      */

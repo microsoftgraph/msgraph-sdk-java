@@ -10,7 +10,7 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
     /** A collection of userConsentRequest objects for a specific application. */
     private java.util.List<AppConsentRequest> appConsentRequests;
     /**
-     * Instantiates a new appConsentApprovalRoute and sets the default values.
+     * Instantiates a new AppConsentApprovalRoute and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -20,7 +20,7 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appConsentApprovalRoute
+     * @return a AppConsentApprovalRoute
      */
     @javax.annotation.Nonnull
     public static AppConsentApprovalRoute createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

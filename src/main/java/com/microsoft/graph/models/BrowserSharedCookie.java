@@ -8,25 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BrowserSharedCookie extends Entity implements Parsable {
-    /** The comment of the cookie */
+    /** The comment for the shared cookie. */
     private String comment;
-    /** The datetime that the admin created the cookie */
+    /** The date and time when the shared cookie was created. */
     private OffsetDateTime createdDateTime;
-    /** The datetime that the admin deleted the cookie */
+    /** The date and time when the shared cookie was deleted. */
     private OffsetDateTime deletedDateTime;
-    /** The name of the cookie */
+    /** The name of the cookie. */
     private String displayName;
-    /** The history of the cookie */
+    /** The history of modifications applied to the cookie. */
     private java.util.List<BrowserSharedCookieHistory> history;
-    /** Boolean attribute that determines whether a cookie is  a host-only or domain cookie */
+    /** Controls whether a cookie is a host-only or domain cookie. */
     private Boolean hostOnly;
-    /** The URL of the cookie */
+    /** The URL of the cookie. */
     private String hostOrDomain;
-    /** The identity of the admin who last updated the cookie */
+    /** The user who last modified the cookie. */
     private IdentitySet lastModifiedBy;
-    /** The datetime that the admin last updated the cookie */
+    /** The date and time when the cookie was last modified. */
     private OffsetDateTime lastModifiedDateTime;
-    /** The path of the cookie */
+    /** The path of the cookie. */
     private String path;
     /** The sourceEnvironment property */
     private BrowserSharedCookieSourceEnvironment sourceEnvironment;
@@ -51,7 +51,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         return new BrowserSharedCookie();
     }
     /**
-     * Gets the comment property value. The comment of the cookie
+     * Gets the comment property value. The comment for the shared cookie.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -59,7 +59,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         return this.comment;
     }
     /**
-     * Gets the createdDateTime property value. The datetime that the admin created the cookie
+     * Gets the createdDateTime property value. The date and time when the shared cookie was created.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -67,7 +67,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
-     * Gets the deletedDateTime property value. The datetime that the admin deleted the cookie
+     * Gets the deletedDateTime property value. The date and time when the shared cookie was deleted.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -75,7 +75,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         return this.deletedDateTime;
     }
     /**
-     * Gets the displayName property value. The name of the cookie
+     * Gets the displayName property value. The name of the cookie.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -104,7 +104,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the history property value. The history of the cookie
+     * Gets the history property value. The history of modifications applied to the cookie.
      * @return a browserSharedCookieHistory
      */
     @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         return this.history;
     }
     /**
-     * Gets the hostOnly property value. Boolean attribute that determines whether a cookie is  a host-only or domain cookie
+     * Gets the hostOnly property value. Controls whether a cookie is a host-only or domain cookie.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -120,7 +120,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         return this.hostOnly;
     }
     /**
-     * Gets the hostOrDomain property value. The URL of the cookie
+     * Gets the hostOrDomain property value. The URL of the cookie.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -128,7 +128,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         return this.hostOrDomain;
     }
     /**
-     * Gets the lastModifiedBy property value. The identity of the admin who last updated the cookie
+     * Gets the lastModifiedBy property value. The user who last modified the cookie.
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -136,7 +136,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         return this.lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The datetime that the admin last updated the cookie
+     * Gets the lastModifiedDateTime property value. The date and time when the cookie was last modified.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -144,7 +144,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         return this.lastModifiedDateTime;
     }
     /**
-     * Gets the path property value. The path of the cookie
+     * Gets the path property value. The path of the cookie.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -190,7 +190,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the comment property value. The comment of the cookie
+     * Sets the comment property value. The comment for the shared cookie.
      * @param value Value to set for the comment property.
      * @return a void
      */
@@ -199,7 +199,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         this.comment = value;
     }
     /**
-     * Sets the createdDateTime property value. The datetime that the admin created the cookie
+     * Sets the createdDateTime property value. The date and time when the shared cookie was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -208,7 +208,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         this.createdDateTime = value;
     }
     /**
-     * Sets the deletedDateTime property value. The datetime that the admin deleted the cookie
+     * Sets the deletedDateTime property value. The date and time when the shared cookie was deleted.
      * @param value Value to set for the deletedDateTime property.
      * @return a void
      */
@@ -217,7 +217,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         this.deletedDateTime = value;
     }
     /**
-     * Sets the displayName property value. The name of the cookie
+     * Sets the displayName property value. The name of the cookie.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -226,7 +226,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the history property value. The history of the cookie
+     * Sets the history property value. The history of modifications applied to the cookie.
      * @param value Value to set for the history property.
      * @return a void
      */
@@ -235,7 +235,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         this.history = value;
     }
     /**
-     * Sets the hostOnly property value. Boolean attribute that determines whether a cookie is  a host-only or domain cookie
+     * Sets the hostOnly property value. Controls whether a cookie is a host-only or domain cookie.
      * @param value Value to set for the hostOnly property.
      * @return a void
      */
@@ -244,7 +244,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         this.hostOnly = value;
     }
     /**
-     * Sets the hostOrDomain property value. The URL of the cookie
+     * Sets the hostOrDomain property value. The URL of the cookie.
      * @param value Value to set for the hostOrDomain property.
      * @return a void
      */
@@ -253,7 +253,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         this.hostOrDomain = value;
     }
     /**
-     * Sets the lastModifiedBy property value. The identity of the admin who last updated the cookie
+     * Sets the lastModifiedBy property value. The user who last modified the cookie.
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
@@ -262,7 +262,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         this.lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The datetime that the admin last updated the cookie
+     * Sets the lastModifiedDateTime property value. The date and time when the cookie was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
@@ -271,7 +271,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
         this.lastModifiedDateTime = value;
     }
     /**
-     * Sets the path property value. The path of the cookie
+     * Sets the path property value. The path of the cookie.
      * @param value Value to set for the path property.
      * @return a void
      */

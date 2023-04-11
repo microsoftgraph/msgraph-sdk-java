@@ -161,7 +161,7 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.microsoft.graph.directoryRoles.item.members.item collection
+     * Gets an item from the com.Microsoft.Graph.directoryRoles.item.members.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */

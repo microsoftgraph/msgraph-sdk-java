@@ -10,7 +10,7 @@ public class Initiator extends Identity implements Parsable {
     /** Type of initiator. Possible values are: user, application, system, unknownFutureValue. */
     private InitiatorType initiatorType;
     /**
-     * Instantiates a new initiator and sets the default values.
+     * Instantiates a new Initiator and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -21,7 +21,7 @@ public class Initiator extends Identity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a initiator
+     * @return a Initiator
      */
     @javax.annotation.Nonnull
     public static Initiator createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

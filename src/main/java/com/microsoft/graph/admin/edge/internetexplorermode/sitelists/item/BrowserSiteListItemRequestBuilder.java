@@ -98,7 +98,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get siteLists from admin
+     * A collection of site lists to support Internet Explorer mode.
      * @return a CompletableFuture of browserSiteList
      */
     @javax.annotation.Nonnull
@@ -116,7 +116,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get siteLists from admin
+     * A collection of site lists to support Internet Explorer mode.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSiteList
      */
@@ -226,7 +226,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get siteLists from admin
+     * A collection of site lists to support Internet Explorer mode.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -234,7 +234,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get siteLists from admin
+     * A collection of site lists to support Internet Explorer mode.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -292,7 +292,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get siteLists from admin
+     * A collection of site lists to support Internet Explorer mode.
      */
     public class GetQueryParameters {
         /** Expand related entities */

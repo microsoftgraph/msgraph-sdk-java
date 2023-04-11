@@ -247,7 +247,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.microsoft.graph.devices.item.registeredOwners.item collection
+     * Gets an item from the com.Microsoft.Graph.devices.item.registeredOwners.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -259,7 +259,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         return new com.microsoft.graph.devices.item.registeredowners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.devices.item.registeredUsers.item collection
+     * Gets an item from the com.Microsoft.Graph.devices.item.registeredUsers.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */

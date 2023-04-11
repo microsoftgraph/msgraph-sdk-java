@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Edge extends Entity implements Parsable {
-    /** The internetExplorerMode property */
+    /** A container for Internet Explorer mode resources. */
     private InternetExplorerMode internetExplorerMode;
     /**
      * Instantiates a new edge and sets the default values.
@@ -38,7 +38,7 @@ public class Edge extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the internetExplorerMode property value. The internetExplorerMode property
+     * Gets the internetExplorerMode property value. A container for Internet Explorer mode resources.
      * @return a internetExplorerMode
      */
     @javax.annotation.Nullable
@@ -57,7 +57,7 @@ public class Edge extends Entity implements Parsable {
         writer.writeObjectValue("internetExplorerMode", this.getInternetExplorerMode());
     }
     /**
-     * Sets the internetExplorerMode property value. The internetExplorerMode property
+     * Sets the internetExplorerMode property value. A container for Internet Explorer mode resources.
      * @param value Value to set for the internetExplorerMode property.
      * @return a void
      */

@@ -85,7 +85,7 @@ public class InternetExplorerModeRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get internetExplorerMode from admin
+     * A container for Internet Explorer mode resources.
      * @return a CompletableFuture of internetExplorerMode
      */
     @javax.annotation.Nonnull
@@ -103,7 +103,7 @@ public class InternetExplorerModeRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get internetExplorerMode from admin
+     * A container for Internet Explorer mode resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of internetExplorerMode
      */
@@ -201,7 +201,7 @@ public class InternetExplorerModeRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get internetExplorerMode from admin
+     * A container for Internet Explorer mode resources.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -209,7 +209,7 @@ public class InternetExplorerModeRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get internetExplorerMode from admin
+     * A container for Internet Explorer mode resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -267,7 +267,7 @@ public class InternetExplorerModeRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get internetExplorerMode from admin
+     * A container for Internet Explorer mode resources.
      */
     public class GetQueryParameters {
         /** Expand related entities */

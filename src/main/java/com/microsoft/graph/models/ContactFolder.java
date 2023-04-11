@@ -20,7 +20,7 @@ public class ContactFolder extends Entity implements Parsable {
     /** The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable. */
     private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
     /**
-     * Instantiates a new ContactFolder and sets the default values.
+     * Instantiates a new contactFolder and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -30,7 +30,7 @@ public class ContactFolder extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ContactFolder
+     * @return a contactFolder
      */
     @javax.annotation.Nonnull
     public static ContactFolder createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

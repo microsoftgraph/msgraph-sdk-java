@@ -177,7 +177,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.microsoft.graph.identityGovernance.entitlementManagement.catalogs.item.accessPackages.item.incompatibleAccessPackages.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.catalogs.item.accessPackages.item.incompatibleAccessPackages.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageItemRequestBuilder
      */
@@ -189,7 +189,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         return new com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.incompatibleaccesspackages.item.AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.identityGovernance.entitlementManagement.catalogs.item.accessPackages.item.incompatibleGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.catalogs.item.accessPackages.item.incompatibleGroups.item collection
      * @param id Unique identifier of the item
      * @return a GroupItemRequestBuilder
      */

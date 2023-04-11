@@ -56,8 +56,10 @@ public class OnlineMeeting extends Entity implements Parsable {
     private String subject;
     /** The video teleconferencing ID. Read-only. */
     private String videoTeleconferenceId;
+    /** Specifies whether a watermark should be applied to a content type by the client application. */
+    private WatermarkProtectionValues watermarkProtection;
     /**
-     * Instantiates a new OnlineMeeting and sets the default values.
+     * Instantiates a new onlineMeeting and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -67,7 +69,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnlineMeeting
+     * @return a onlineMeeting
      */
     @javax.annotation.Nonnull
     public static OnlineMeeting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -209,6 +211,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
         deserializerMap.put("videoTeleconferenceId", (n) -> { this.setVideoTeleconferenceId(n.getStringValue()); });
+        deserializerMap.put("watermarkProtection", (n) -> { this.setWatermarkProtection(n.getObjectValue(WatermarkProtectionValues::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -300,6 +303,14 @@ public class OnlineMeeting extends Entity implements Parsable {
         return this.videoTeleconferenceId;
     }
     /**
+     * Gets the watermarkProtection property value. Specifies whether a watermark should be applied to a content type by the client application.
+     * @return a watermarkProtectionValues
+     */
+    @javax.annotation.Nullable
+    public WatermarkProtectionValues getWatermarkProtection() {
+        return this.watermarkProtection;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -332,6 +343,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeStringValue("subject", this.getSubject());
         writer.writeStringValue("videoTeleconferenceId", this.getVideoTeleconferenceId());
+        writer.writeObjectValue("watermarkProtection", this.getWatermarkProtection());
     }
     /**
      * Sets the allowAttendeeToEnableCamera property value. Indicates whether attendees can turn on their camera.
@@ -548,5 +560,14 @@ public class OnlineMeeting extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setVideoTeleconferenceId(@javax.annotation.Nullable final String value) {
         this.videoTeleconferenceId = value;
+    }
+    /**
+     * Sets the watermarkProtection property value. Specifies whether a watermark should be applied to a content type by the client application.
+     * @param value Value to set for the watermarkProtection property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setWatermarkProtection(@javax.annotation.Nullable final WatermarkProtectionValues value) {
+        this.watermarkProtection = value;
     }
 }

@@ -72,9 +72,9 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users{?%24top,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of user objects.
+     * Retrieve the properties and relationships of user object.
      * @return a CompletableFuture of UserCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/user-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get() {
@@ -91,10 +91,10 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of user objects.
+     * Retrieve the properties and relationships of user object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UserCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/user-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -153,7 +153,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of user objects.
+     * Retrieve the properties and relationships of user object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -161,7 +161,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of user objects.
+     * Retrieve the properties and relationships of user object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -214,7 +214,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of user objects.
+     * Retrieve the properties and relationships of user object.
      */
     public class GetQueryParameters {
         /** Include count of items */

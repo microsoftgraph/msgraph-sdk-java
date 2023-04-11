@@ -6,14 +6,11 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/**
- * Configuration used to deliver a set of custom settings as-is to apps for users to whom the configuration is scoped
- */
 public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsable {
     /** A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service */
     private java.util.List<KeyValuePair> customSettings;
     /**
-     * Instantiates a new managedAppConfiguration and sets the default values.
+     * Instantiates a new ManagedAppConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -24,7 +21,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedAppConfiguration
+     * @return a ManagedAppConfiguration
      */
     @javax.annotation.Nonnull
     public static ManagedAppConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

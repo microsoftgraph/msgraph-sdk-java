@@ -7,10 +7,10 @@ import com.microsoft.graph.education.classes.item.assignments.AssignmentsRequest
 import com.microsoft.graph.education.classes.item.assignments.item.EducationAssignmentItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignmentsettings.AssignmentSettingsRequestBuilder;
 import com.microsoft.graph.education.classes.item.group.GroupRequestBuilder;
+import com.microsoft.graph.education.classes.item.members.item.EducationUserItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.members.MembersRequestBuilder;
 import com.microsoft.graph.education.classes.item.schools.item.EducationSchoolItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.schools.SchoolsRequestBuilder;
-import com.microsoft.graph.education.classes.item.teachers.item.EducationUserItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.teachers.TeachersRequestBuilder;
 import com.microsoft.graph.models.EducationClass;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -191,7 +191,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.microsoft.graph.education.classes.item.members.item collection
+     * Gets an item from the com.Microsoft.Graph.education.classes.item.members.item collection
      * @param id Unique identifier of the item
      * @return a EducationUserItemRequestBuilder
      */
@@ -255,7 +255,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         return new EducationSchoolItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.education.classes.item.teachers.item collection
+     * Gets an item from the com.Microsoft.Graph.education.classes.item.teachers.item collection
      * @param id Unique identifier of the item
      * @return a EducationUserItemRequestBuilder
      */

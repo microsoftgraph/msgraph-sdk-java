@@ -148,7 +148,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.microsoft.graph.directory.administrativeUnits.item.members.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.administrativeUnits.item.members.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */

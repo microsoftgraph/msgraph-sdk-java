@@ -41,7 +41,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return new UsersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.education.schools.item.classes.item collection
+     * Gets an item from the com.Microsoft.Graph.education.schools.item.classes.item collection
      * @param id Unique identifier of the item
      * @return a EducationClassItemRequestBuilder
      */
@@ -275,7 +275,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.microsoft.graph.education.schools.item.users.item collection
+     * Gets an item from the com.Microsoft.Graph.education.schools.item.users.item collection
      * @param id Unique identifier of the item
      * @return a EducationUserItemRequestBuilder
      */

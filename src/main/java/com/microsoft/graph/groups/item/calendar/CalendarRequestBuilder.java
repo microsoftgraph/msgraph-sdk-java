@@ -4,8 +4,8 @@ import com.microsoft.graph.groups.item.calendar.allowedcalendarsharingroleswithu
 import com.microsoft.graph.groups.item.calendar.calendarpermissions.CalendarPermissionsRequestBuilder;
 import com.microsoft.graph.groups.item.calendar.calendarpermissions.item.CalendarPermissionItemRequestBuilder;
 import com.microsoft.graph.groups.item.calendar.calendarview.CalendarViewRequestBuilder;
-import com.microsoft.graph.groups.item.calendar.calendarview.item.EventItemRequestBuilder;
 import com.microsoft.graph.groups.item.calendar.events.EventsRequestBuilder;
+import com.microsoft.graph.groups.item.calendar.events.item.EventItemRequestBuilder;
 import com.microsoft.graph.groups.item.calendar.getschedule.GetScheduleRequestBuilder;
 import com.microsoft.graph.groups.item.calendar.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.groups.item.calendar.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;

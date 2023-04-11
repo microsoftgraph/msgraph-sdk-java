@@ -41,7 +41,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
         return new PrinterRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.print.shares.item.allowedGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.print.shares.item.allowedGroups.item collection
      * @param id Unique identifier of the item
      * @return a GroupItemRequestBuilder
      */
@@ -53,7 +53,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
         return new GroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.print.shares.item.allowedUsers.item collection
+     * Gets an item from the com.Microsoft.Graph.print.shares.item.allowedUsers.item collection
      * @param id Unique identifier of the item
      * @return a UserItemRequestBuilder
      */

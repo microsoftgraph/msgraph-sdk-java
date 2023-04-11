@@ -66,7 +66,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return new SubmissionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.education.users.item.assignments.item.categories.item collection
+     * Gets an item from the com.Microsoft.Graph.education.users.item.assignments.item.categories.item collection
      * @param id Unique identifier of the item
      * @return a EducationCategoryItemRequestBuilder
      */

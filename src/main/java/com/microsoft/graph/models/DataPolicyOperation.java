@@ -21,7 +21,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     /** The id for the user on whom the operation is performed. */
     private String userId;
     /**
-     * Instantiates a new dataPolicyOperation and sets the default values.
+     * Instantiates a new DataPolicyOperation and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +31,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a dataPolicyOperation
+     * @return a DataPolicyOperation
      */
     @javax.annotation.Nonnull
     public static DataPolicyOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

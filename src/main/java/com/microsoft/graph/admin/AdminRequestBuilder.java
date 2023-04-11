@@ -2,6 +2,7 @@ package com.microsoft.graph.admin;
 
 import com.microsoft.graph.admin.edge.EdgeRequestBuilder;
 import com.microsoft.graph.admin.serviceannouncement.ServiceAnnouncementRequestBuilder;
+import com.microsoft.graph.admin.sharepoint.SharepointRequestBuilder;
 import com.microsoft.graph.models.Admin;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -31,6 +32,11 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ServiceAnnouncementRequestBuilder serviceAnnouncement() {
         return new ServiceAnnouncementRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the sharepoint property of the microsoft.graph.admin entity. */
+    @javax.annotation.Nonnull
+    public SharepointRequestBuilder sharepoint() {
+        return new SharepointRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new AdminRequestBuilder and sets the default values.

@@ -307,7 +307,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return new IdentityUserFlowAttributeAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.identity.b2xUserFlows.item.userFlowIdentityProviders.item collection
+     * Gets an item from the com.Microsoft.Graph.identity.b2xUserFlows.item.userFlowIdentityProviders.item collection
      * @param id Unique identifier of the item
      * @return a IdentityProviderBaseItemRequestBuilder
      */

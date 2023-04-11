@@ -7,7 +7,6 @@ import com.microsoft.graph.groups.item.approleassignments.item.AppRoleAssignment
 import com.microsoft.graph.groups.item.assignlicense.AssignLicenseRequestBuilder;
 import com.microsoft.graph.groups.item.calendar.CalendarRequestBuilder;
 import com.microsoft.graph.groups.item.calendarview.CalendarViewRequestBuilder;
-import com.microsoft.graph.groups.item.calendarview.item.EventItemRequestBuilder;
 import com.microsoft.graph.groups.item.checkgrantedpermissionsforapp.CheckGrantedPermissionsForAppRequestBuilder;
 import com.microsoft.graph.groups.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
 import com.microsoft.graph.groups.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
@@ -18,6 +17,7 @@ import com.microsoft.graph.groups.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.groups.item.drives.DrivesRequestBuilder;
 import com.microsoft.graph.groups.item.drives.item.DriveItemRequestBuilder;
 import com.microsoft.graph.groups.item.events.EventsRequestBuilder;
+import com.microsoft.graph.groups.item.events.item.EventItemRequestBuilder;
 import com.microsoft.graph.groups.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.groups.item.extensions.item.ExtensionItemRequestBuilder;
 import com.microsoft.graph.groups.item.getmembergroups.GetMemberGroupsRequestBuilder;
@@ -279,7 +279,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.groups.item.acceptedSenders.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.acceptedSenders.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -485,7 +485,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return new com.microsoft.graph.groups.item.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.groups.item.members.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.members.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -509,7 +509,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return new com.microsoft.graph.groups.item.memberswithlicenseerrors.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.groups.item.owners.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.owners.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -521,10 +521,10 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return new com.microsoft.graph.groups.item.owners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Update the properties of a group object.
+     * Add a member to a security or Microsoft 365 group through the **members** navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
      * @param body The request body
      * @return a CompletableFuture of group
-     * @see <a href="https://docs.microsoft.com/graph/api/group-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/group-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> patch(@javax.annotation.Nonnull final Group body) {
@@ -541,11 +541,11 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a group object.
+     * Add a member to a security or Microsoft 365 group through the **members** navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of group
-     * @see <a href="https://docs.microsoft.com/graph/api/group-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/group-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> patch(@javax.annotation.Nonnull final Group body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -587,7 +587,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return new ProfilePhotoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.microsoft.graph.groups.item.rejectedSenders.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.rejectedSenders.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -691,7 +691,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a group object.
+     * Add a member to a security or Microsoft 365 group through the **members** navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -700,7 +700,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a group object.
+     * Add a member to a security or Microsoft 365 group through the **members** navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
