@@ -56,6 +56,15 @@ public class UserAccount implements IJsonBackedObject {
     public String azureAdUserId;
 
     /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
+    @Expose
+	@Nullable
+    public String displayName;
+
+    /**
      * The Domain Name.
      * The name of the Active Directory domain of which the user is a member.
      */

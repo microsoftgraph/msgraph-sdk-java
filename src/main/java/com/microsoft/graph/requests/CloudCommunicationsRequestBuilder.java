@@ -59,26 +59,6 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder<CloudC
 
 
     /**
-     *  Gets a request builder for the Call collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.CallCollectionRequestBuilder calls() {
-        return new com.microsoft.graph.requests.CallCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calls"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the Call item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.CallRequestBuilder calls(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.CallRequestBuilder(getRequestUrlWithAdditionalSegment("calls") + "/" + id, getClient(), null);
-    }
-    /**
      *  Gets a request builder for the CallRecord collection
      *
      * @return the collection request builder
@@ -97,6 +77,26 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder<CloudC
     @Nonnull
     public com.microsoft.graph.callrecords.requests.CallRecordRequestBuilder callRecords(@Nonnull final String id) {
         return new com.microsoft.graph.callrecords.requests.CallRecordRequestBuilder(getRequestUrlWithAdditionalSegment("callRecords") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Call collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CallCollectionRequestBuilder calls() {
+        return new com.microsoft.graph.requests.CallCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calls"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Call item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CallRequestBuilder calls(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CallRequestBuilder(getRequestUrlWithAdditionalSegment("calls") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the OnlineMeeting collection

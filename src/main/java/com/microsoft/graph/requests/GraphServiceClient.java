@@ -1090,6 +1090,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the Admin
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AdminRequestBuilder admin() {
+        return new com.microsoft.graph.requests.AdminRequestBuilder(getServiceRoot() + "/admin", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the EducationRoot
      */
     @Nonnull
@@ -1175,16 +1185,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public com.microsoft.graph.requests.ReportRootRequestBuilder reports() {
         return new com.microsoft.graph.requests.ReportRootRequestBuilder(getServiceRoot() + "/reports", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the Admin
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.AdminRequestBuilder admin() {
-        return new com.microsoft.graph.requests.AdminRequestBuilder(getServiceRoot() + "/admin", this, null);
     }
 
     /**
