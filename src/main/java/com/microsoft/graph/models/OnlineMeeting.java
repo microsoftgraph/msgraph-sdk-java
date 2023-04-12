@@ -18,6 +18,7 @@ import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.JoinMeetingIdSettings;
 import com.microsoft.graph.models.LobbyBypassSettings;
 import com.microsoft.graph.models.MeetingParticipants;
+import com.microsoft.graph.models.WatermarkProtectionValues;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage;
 
@@ -233,6 +234,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String videoTeleconferenceId;
+
+    /**
+     * The Watermark Protection.
+     * Specifies whether a watermark should be applied to a content type by the client application.
+     */
+    @SerializedName(value = "watermarkProtection", alternate = {"WatermarkProtection"})
+    @Expose
+	@Nullable
+    public WatermarkProtectionValues watermarkProtection;
 
     /**
      * The Attendance Reports.

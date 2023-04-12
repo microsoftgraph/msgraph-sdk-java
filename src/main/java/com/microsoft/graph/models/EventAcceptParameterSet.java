@@ -21,15 +21,6 @@ import java.util.ArrayList;
  */
 public class EventAcceptParameterSet {
     /**
-     * The comment.
-     * 
-     */
-    @SerializedName(value = "comment", alternate = {"Comment"})
-    @Expose
-	@Nullable
-    public String comment;
-
-    /**
      * The send Response.
      * 
      */
@@ -37,6 +28,15 @@ public class EventAcceptParameterSet {
     @Expose
 	@Nullable
     public Boolean sendResponse;
+
+    /**
+     * The comment.
+     * 
+     */
+    @SerializedName(value = "comment", alternate = {"Comment"})
+    @Expose
+	@Nullable
+    public String comment;
 
 
     /**
@@ -48,8 +48,8 @@ public class EventAcceptParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected EventAcceptParameterSet(@Nonnull final EventAcceptParameterSetBuilder builder) {
-        this.comment = builder.comment;
         this.sendResponse = builder.sendResponse;
+        this.comment = builder.comment;
     }
     /**
      * Gets a new builder for the body
@@ -64,21 +64,6 @@ public class EventAcceptParameterSet {
      */
     public static final class EventAcceptParameterSetBuilder {
         /**
-         * The comment parameter value
-         */
-        @Nullable
-        protected String comment;
-        /**
-         * Sets the Comment
-         * @param val the value to set it to
-         * @return the current builder object
-         */
-        @Nonnull
-        public EventAcceptParameterSetBuilder withComment(@Nullable final String val) {
-            this.comment = val;
-            return this;
-        }
-        /**
          * The sendResponse parameter value
          */
         @Nullable
@@ -91,6 +76,21 @@ public class EventAcceptParameterSet {
         @Nonnull
         public EventAcceptParameterSetBuilder withSendResponse(@Nullable final Boolean val) {
             this.sendResponse = val;
+            return this;
+        }
+        /**
+         * The comment parameter value
+         */
+        @Nullable
+        protected String comment;
+        /**
+         * Sets the Comment
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public EventAcceptParameterSetBuilder withComment(@Nullable final String val) {
+            this.comment = val;
             return this;
         }
         /**
@@ -114,11 +114,11 @@ public class EventAcceptParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
-        if(this.comment != null) {
-            result.add(new com.microsoft.graph.options.FunctionOption("comment", comment));
-        }
         if(this.sendResponse != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("sendResponse", sendResponse));
+        }
+        if(this.comment != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("comment", comment));
         }
         return result;
     }

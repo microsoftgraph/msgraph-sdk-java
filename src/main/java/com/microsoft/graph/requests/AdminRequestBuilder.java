@@ -58,6 +58,26 @@ public class AdminRequestBuilder extends BaseRequestBuilder<Admin> {
 
 
     /**
+     * Gets the request builder for Edge
+     *
+     * @return the EdgeRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.EdgeRequestBuilder edge() {
+        return new com.microsoft.graph.requests.EdgeRequestBuilder(getRequestUrlWithAdditionalSegment("edge"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Sharepoint
+     *
+     * @return the SharepointRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.SharepointRequestBuilder sharepoint() {
+        return new com.microsoft.graph.requests.SharepointRequestBuilder(getRequestUrlWithAdditionalSegment("sharepoint"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for ServiceAnnouncement
      *
      * @return the ServiceAnnouncementRequestBuilder instance

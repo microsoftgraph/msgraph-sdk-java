@@ -9,9 +9,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.CallCollectionPage;
 import com.microsoft.graph.callrecords.requests.CallRecordCollectionPage;
+import com.microsoft.graph.requests.CallCollectionPage;
 import com.microsoft.graph.requests.OnlineMeetingCollectionPage;
 import com.microsoft.graph.requests.PresenceCollectionPage;
 
@@ -27,17 +26,21 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Cloud Communications.
  */
-public class CloudCommunications extends Entity implements IJsonBackedObject {
+public class CloudCommunications implements IJsonBackedObject {
 
-
-    /**
-     * The Calls.
-     * 
-     */
-    @SerializedName(value = "calls", alternate = {"Calls"})
+    /** the OData type of the object as returned by the service */
+    @SerializedName("@odata.type")
     @Expose
-	@Nullable
-    public com.microsoft.graph.requests.CallCollectionPage calls;
+    @Nullable
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    @Nonnull
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Call Records.
@@ -47,6 +50,15 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.callrecords.requests.CallRecordCollectionPage callRecords;
+
+    /**
+     * The Calls.
+     * 
+     */
+    @SerializedName(value = "calls", alternate = {"Calls"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.CallCollectionPage calls;
 
     /**
      * The Online Meetings.
@@ -76,12 +88,12 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
 
-        if (json.has("calls")) {
-            calls = serializer.deserializeObject(json.get("calls"), com.microsoft.graph.requests.CallCollectionPage.class);
-        }
-
         if (json.has("callRecords")) {
             callRecords = serializer.deserializeObject(json.get("callRecords"), com.microsoft.graph.callrecords.requests.CallRecordCollectionPage.class);
+        }
+
+        if (json.has("calls")) {
+            calls = serializer.deserializeObject(json.get("calls"), com.microsoft.graph.requests.CallCollectionPage.class);
         }
 
         if (json.has("onlineMeetings")) {

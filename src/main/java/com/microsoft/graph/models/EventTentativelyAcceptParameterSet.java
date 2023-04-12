@@ -21,13 +21,13 @@ import java.util.ArrayList;
  */
 public class EventTentativelyAcceptParameterSet {
     /**
-     * The comment.
+     * The proposed New Time.
      * 
      */
-    @SerializedName(value = "comment", alternate = {"Comment"})
+    @SerializedName(value = "proposedNewTime", alternate = {"ProposedNewTime"})
     @Expose
 	@Nullable
-    public String comment;
+    public TimeSlot proposedNewTime;
 
     /**
      * The send Response.
@@ -39,13 +39,13 @@ public class EventTentativelyAcceptParameterSet {
     public Boolean sendResponse;
 
     /**
-     * The proposed New Time.
+     * The comment.
      * 
      */
-    @SerializedName(value = "proposedNewTime", alternate = {"ProposedNewTime"})
+    @SerializedName(value = "comment", alternate = {"Comment"})
     @Expose
 	@Nullable
-    public TimeSlot proposedNewTime;
+    public String comment;
 
 
     /**
@@ -57,9 +57,9 @@ public class EventTentativelyAcceptParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected EventTentativelyAcceptParameterSet(@Nonnull final EventTentativelyAcceptParameterSetBuilder builder) {
-        this.comment = builder.comment;
-        this.sendResponse = builder.sendResponse;
         this.proposedNewTime = builder.proposedNewTime;
+        this.sendResponse = builder.sendResponse;
+        this.comment = builder.comment;
     }
     /**
      * Gets a new builder for the body
@@ -74,18 +74,18 @@ public class EventTentativelyAcceptParameterSet {
      */
     public static final class EventTentativelyAcceptParameterSetBuilder {
         /**
-         * The comment parameter value
+         * The proposedNewTime parameter value
          */
         @Nullable
-        protected String comment;
+        protected TimeSlot proposedNewTime;
         /**
-         * Sets the Comment
+         * Sets the ProposedNewTime
          * @param val the value to set it to
          * @return the current builder object
          */
         @Nonnull
-        public EventTentativelyAcceptParameterSetBuilder withComment(@Nullable final String val) {
-            this.comment = val;
+        public EventTentativelyAcceptParameterSetBuilder withProposedNewTime(@Nullable final TimeSlot val) {
+            this.proposedNewTime = val;
             return this;
         }
         /**
@@ -104,18 +104,18 @@ public class EventTentativelyAcceptParameterSet {
             return this;
         }
         /**
-         * The proposedNewTime parameter value
+         * The comment parameter value
          */
         @Nullable
-        protected TimeSlot proposedNewTime;
+        protected String comment;
         /**
-         * Sets the ProposedNewTime
+         * Sets the Comment
          * @param val the value to set it to
          * @return the current builder object
          */
         @Nonnull
-        public EventTentativelyAcceptParameterSetBuilder withProposedNewTime(@Nullable final TimeSlot val) {
-            this.proposedNewTime = val;
+        public EventTentativelyAcceptParameterSetBuilder withComment(@Nullable final String val) {
+            this.comment = val;
             return this;
         }
         /**
@@ -139,14 +139,14 @@ public class EventTentativelyAcceptParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
-        if(this.comment != null) {
-            result.add(new com.microsoft.graph.options.FunctionOption("comment", comment));
+        if(this.proposedNewTime != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("proposedNewTime", proposedNewTime));
         }
         if(this.sendResponse != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("sendResponse", sendResponse));
         }
-        if(this.proposedNewTime != null) {
-            result.add(new com.microsoft.graph.options.FunctionOption("proposedNewTime", proposedNewTime));
+        if(this.comment != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("comment", comment));
         }
         return result;
     }
