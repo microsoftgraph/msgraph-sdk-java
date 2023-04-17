@@ -23,6 +23,8 @@ apply plugin: "com.android.library"
 apply plugin: "com.github.ben-manes.versions"
 
 android {
+    namespace 'com.microsoft.graph'
+
     compileSdkVersion 33
 
     defaultConfig {
