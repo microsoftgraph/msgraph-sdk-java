@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.assignments;
 
 import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.assignments.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.assignments.item.DeviceCompliancePolicyAssignmentItemRequestBuilder;
 import com.microsoft.graph.models.DeviceCompliancePolicyAssignment;
 import com.microsoft.graph.models.DeviceCompliancePolicyAssignmentCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.deviceCompliancePolicy entity.
+     * @param deviceCompliancePolicyAssignmentId Unique identifier of the item
+     * @return a DeviceCompliancePolicyAssignmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceCompliancePolicyAssignmentItemRequestBuilder byDeviceCompliancePolicyAssignmentId(@javax.annotation.Nonnull final String deviceCompliancePolicyAssignmentId) {
+        Objects.requireNonNull(deviceCompliancePolicyAssignmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceCompliancePolicyAssignment%2Did", deviceCompliancePolicyAssignmentId);
+        return new DeviceCompliancePolicyAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AssignmentsRequestBuilder and sets the default values.

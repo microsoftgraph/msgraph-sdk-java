@@ -1,19 +1,12 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.AccessPackageAssignmentApprovalsRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.item.ApprovalItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.AccessPackagesRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.AccessPackageItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentpolicies.AssignmentPoliciesRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentpolicies.item.AccessPackageAssignmentPolicyItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentrequests.AssignmentRequestsRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentrequests.item.AccessPackageAssignmentRequestItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.AssignmentsRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.item.AccessPackageAssignmentItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.CatalogsRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.AccessPackageCatalogItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.ConnectedOrganizationsRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.ConnectedOrganizationItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.settings.SettingsRequestBuilder;
 import com.microsoft.graph.models.EntitlementManagement;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -74,90 +67,6 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public SettingsRequestBuilder settings() {
         return new SettingsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the accessPackageAssignmentApprovals property of the microsoft.graph.entitlementManagement entity.
-     * @param id Unique identifier of the item
-     * @return a ApprovalItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ApprovalItemRequestBuilder accessPackageAssignmentApprovals(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("approval%2Did", id);
-        return new ApprovalItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the accessPackages property of the microsoft.graph.entitlementManagement entity.
-     * @param id Unique identifier of the item
-     * @return a AccessPackageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageItemRequestBuilder accessPackages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackage%2Did", id);
-        return new AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the assignmentPolicies property of the microsoft.graph.entitlementManagement entity.
-     * @param id Unique identifier of the item
-     * @return a AccessPackageAssignmentPolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageAssignmentPolicyItemRequestBuilder assignmentPolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackageAssignmentPolicy%2Did", id);
-        return new AccessPackageAssignmentPolicyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the assignmentRequests property of the microsoft.graph.entitlementManagement entity.
-     * @param id Unique identifier of the item
-     * @return a AccessPackageAssignmentRequestItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageAssignmentRequestItemRequestBuilder assignmentRequests(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackageAssignmentRequest%2Did", id);
-        return new AccessPackageAssignmentRequestItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the assignments property of the microsoft.graph.entitlementManagement entity.
-     * @param id Unique identifier of the item
-     * @return a AccessPackageAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackageAssignment%2Did", id);
-        return new AccessPackageAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the catalogs property of the microsoft.graph.entitlementManagement entity.
-     * @param id Unique identifier of the item
-     * @return a AccessPackageCatalogItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageCatalogItemRequestBuilder catalogs(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackageCatalog%2Did", id);
-        return new AccessPackageCatalogItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the connectedOrganizations property of the microsoft.graph.entitlementManagement entity.
-     * @param id Unique identifier of the item
-     * @return a ConnectedOrganizationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ConnectedOrganizationItemRequestBuilder connectedOrganizations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("connectedOrganization%2Did", id);
-        return new ConnectedOrganizationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new EntitlementManagementRequestBuilder and sets the default values.

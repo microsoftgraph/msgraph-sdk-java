@@ -2,7 +2,6 @@ package com.microsoft.graph.identitygovernance.entitlementmanagement.connectedor
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.externalsponsors.ExternalSponsorsRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.InternalSponsorsRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.models.ConnectedOrganization;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -91,18 +90,6 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item.externalSponsors.item collection
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.externalsponsors.item.DirectoryObjectItemRequestBuilder externalSponsors(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.externalsponsors.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * References to a directory or domain of another organization whose users can request access.
      * @return a CompletableFuture of connectedOrganization
      */
@@ -138,18 +125,6 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item.internalSponsors.item collection
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.item.DirectoryObjectItemRequestBuilder internalSponsors(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property connectedOrganizations in identityGovernance

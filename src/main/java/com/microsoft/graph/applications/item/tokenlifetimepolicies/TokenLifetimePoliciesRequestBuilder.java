@@ -1,6 +1,7 @@
 package com.microsoft.graph.applications.item.tokenlifetimepolicies;
 
 import com.microsoft.graph.applications.item.tokenlifetimepolicies.count.CountRequestBuilder;
+import com.microsoft.graph.applications.item.tokenlifetimepolicies.item.TokenLifetimePolicyItemRequestBuilder;
 import com.microsoft.graph.applications.item.tokenlifetimepolicies.ref.RefRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TokenLifetimePolicyCollectionResponse;
@@ -31,6 +32,18 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.applications.item.tokenLifetimePolicies.item collection
+     * @param tokenLifetimePolicyId Unique identifier of the item
+     * @return a TokenLifetimePolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TokenLifetimePolicyItemRequestBuilder byTokenLifetimePolicyId(@javax.annotation.Nonnull final String tokenLifetimePolicyId) {
+        Objects.requireNonNull(tokenLifetimePolicyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("tokenLifetimePolicy%2Did", tokenLifetimePolicyId);
+        return new TokenLifetimePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TokenLifetimePoliciesRequestBuilder and sets the default values.

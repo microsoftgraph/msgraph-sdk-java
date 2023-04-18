@@ -1,6 +1,7 @@
 package com.microsoft.graph.auditlogs.directoryaudits;
 
 import com.microsoft.graph.auditlogs.directoryaudits.count.CountRequestBuilder;
+import com.microsoft.graph.auditlogs.directoryaudits.item.DirectoryAuditItemRequestBuilder;
 import com.microsoft.graph.models.DirectoryAudit;
 import com.microsoft.graph.models.DirectoryAuditCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class DirectoryAuditsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the directoryAudits property of the microsoft.graph.auditLogRoot entity.
+     * @param directoryAuditId Unique identifier of the item
+     * @return a DirectoryAuditItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DirectoryAuditItemRequestBuilder byDirectoryAuditId(@javax.annotation.Nonnull final String directoryAuditId) {
+        Objects.requireNonNull(directoryAuditId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("directoryAudit%2Did", directoryAuditId);
+        return new DirectoryAuditItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DirectoryAuditsRequestBuilder and sets the default values.

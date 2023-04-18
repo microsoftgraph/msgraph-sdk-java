@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.SiteSource;
 import com.microsoft.graph.models.security.SiteSourceCollectionResponse;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.sitesources.count.CountRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.sitesources.item.SiteSourceItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the siteSources property of the microsoft.graph.security.ediscoveryCustodian entity.
+     * @param siteSourceId Unique identifier of the item
+     * @return a SiteSourceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SiteSourceItemRequestBuilder bySiteSourceId(@javax.annotation.Nonnull final String siteSourceId) {
+        Objects.requireNonNull(siteSourceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("siteSource%2Did", siteSourceId);
+        return new SiteSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SiteSourcesRequestBuilder and sets the default values.

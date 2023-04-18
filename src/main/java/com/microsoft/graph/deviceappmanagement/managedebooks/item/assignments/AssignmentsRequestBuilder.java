@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.managedebooks.item.assignments;
 
 import com.microsoft.graph.deviceappmanagement.managedebooks.item.assignments.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedebooks.item.assignments.item.ManagedEBookAssignmentItemRequestBuilder;
 import com.microsoft.graph.models.ManagedEBookAssignment;
 import com.microsoft.graph.models.ManagedEBookAssignmentCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.managedEBook entity.
+     * @param managedEBookAssignmentId Unique identifier of the item
+     * @return a ManagedEBookAssignmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedEBookAssignmentItemRequestBuilder byManagedEBookAssignmentId(@javax.annotation.Nonnull final String managedEBookAssignmentId) {
+        Objects.requireNonNull(managedEBookAssignmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedEBookAssignment%2Did", managedEBookAssignmentId);
+        return new ManagedEBookAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AssignmentsRequestBuilder and sets the default values.

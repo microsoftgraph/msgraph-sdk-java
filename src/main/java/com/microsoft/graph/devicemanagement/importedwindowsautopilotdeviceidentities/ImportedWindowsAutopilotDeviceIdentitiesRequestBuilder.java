@@ -2,6 +2,7 @@ package com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceident
 
 import com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.count.CountRequestBuilder;
 import com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.importEscaped.ImportRequestBuilder;
+import com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.item.ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder;
 import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentity;
 import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentityCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -32,6 +33,18 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
     @javax.annotation.Nonnull
     public ImportRequestBuilder importEscaped() {
         return new ImportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the importedWindowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity.
+     * @param importedWindowsAutopilotDeviceIdentityId Unique identifier of the item
+     * @return a ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder byImportedWindowsAutopilotDeviceIdentityId(@javax.annotation.Nonnull final String importedWindowsAutopilotDeviceIdentityId) {
+        Objects.requireNonNull(importedWindowsAutopilotDeviceIdentityId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("importedWindowsAutopilotDeviceIdentity%2Did", importedWindowsAutopilotDeviceIdentityId);
+        return new ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder and sets the default values.

@@ -3,9 +3,7 @@ package com.microsoft.graph.tenantrelationships;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TenantRelationship;
 import com.microsoft.graph.tenantrelationships.delegatedadmincustomers.DelegatedAdminCustomersRequestBuilder;
-import com.microsoft.graph.tenantrelationships.delegatedadmincustomers.item.DelegatedAdminCustomerItemRequestBuilder;
 import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.DelegatedAdminRelationshipsRequestBuilder;
-import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.DelegatedAdminRelationshipItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -53,30 +51,6 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public TenantRelationshipsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/tenantRelationships{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the delegatedAdminCustomers property of the microsoft.graph.tenantRelationship entity.
-     * @param id Unique identifier of the item
-     * @return a DelegatedAdminCustomerItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DelegatedAdminCustomerItemRequestBuilder delegatedAdminCustomers(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("delegatedAdminCustomer%2Did", id);
-        return new DelegatedAdminCustomerItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the delegatedAdminRelationships property of the microsoft.graph.tenantRelationship entity.
-     * @param id Unique identifier of the item
-     * @return a DelegatedAdminRelationshipItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DelegatedAdminRelationshipItemRequestBuilder delegatedAdminRelationships(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("delegatedAdminRelationship%2Did", id);
-        return new DelegatedAdminRelationshipItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get tenantRelationships

@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethod;
 import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethodCollectionResponse;
 import com.microsoft.graph.users.item.authentication.temporaryaccesspassmethods.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.authentication.temporaryaccesspassmethods.item.TemporaryAccessPassAuthenticationMethodItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class TemporaryAccessPassMethodsRequestBuilder extends BaseRequestBuilder
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the temporaryAccessPassMethods property of the microsoft.graph.authentication entity.
+     * @param temporaryAccessPassAuthenticationMethodId Unique identifier of the item
+     * @return a TemporaryAccessPassAuthenticationMethodItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TemporaryAccessPassAuthenticationMethodItemRequestBuilder byTemporaryAccessPassAuthenticationMethodId(@javax.annotation.Nonnull final String temporaryAccessPassAuthenticationMethodId) {
+        Objects.requireNonNull(temporaryAccessPassAuthenticationMethodId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("temporaryAccessPassAuthenticationMethod%2Did", temporaryAccessPassAuthenticationMethodId);
+        return new TemporaryAccessPassAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TemporaryAccessPassMethodsRequestBuilder and sets the default values.

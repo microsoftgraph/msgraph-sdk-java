@@ -2,9 +2,7 @@ package com.microsoft.graph.deviceappmanagement.mobileapps.item;
 
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.assign.AssignRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.assignments.AssignmentsRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.mobileapps.item.assignments.item.MobileAppAssignmentItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.categories.CategoriesRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.mobileapps.item.categories.item.MobileAppCategoryItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmanagedmobilelobapp.GraphManagedMobileLobAppRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmobilelobapp.GraphMobileLobAppRequestBuilder;
 import com.microsoft.graph.models.MobileApp;
@@ -51,30 +49,6 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GraphMobileLobAppRequestBuilder graphMobileLobApp() {
         return new GraphMobileLobAppRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity.
-     * @param id Unique identifier of the item
-     * @return a MobileAppAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MobileAppAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("mobileAppAssignment%2Did", id);
-        return new MobileAppAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the categories property of the microsoft.graph.mobileApp entity.
-     * @param id Unique identifier of the item
-     * @return a MobileAppCategoryItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MobileAppCategoryItemRequestBuilder categories(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("mobileAppCategory%2Did", id);
-        return new MobileAppCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MobileAppItemRequestBuilder and sets the default values.

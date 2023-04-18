@@ -1,7 +1,6 @@
 package com.microsoft.graph.devicemanagement.reports;
 
 import com.microsoft.graph.devicemanagement.reports.exportjobs.ExportJobsRequestBuilder;
-import com.microsoft.graph.devicemanagement.reports.exportjobs.item.DeviceManagementExportJobItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getcachedreport.GetCachedReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getcompliancepolicynoncompliancereport.GetCompliancePolicyNonComplianceReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getcompliancepolicynoncompliancesummaryreport.GetCompliancePolicyNonComplianceSummaryReportRequestBuilder;
@@ -191,18 +190,6 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the exportJobs property of the microsoft.graph.deviceManagementReports entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceManagementExportJobItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceManagementExportJobItemRequestBuilder exportJobs(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceManagementExportJob%2Did", id);
-        return new DeviceManagementExportJobItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Reports singleton

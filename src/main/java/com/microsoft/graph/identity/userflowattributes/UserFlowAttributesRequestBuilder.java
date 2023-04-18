@@ -1,6 +1,7 @@
 package com.microsoft.graph.identity.userflowattributes;
 
 import com.microsoft.graph.identity.userflowattributes.count.CountRequestBuilder;
+import com.microsoft.graph.identity.userflowattributes.item.IdentityUserFlowAttributeItemRequestBuilder;
 import com.microsoft.graph.models.IdentityUserFlowAttribute;
 import com.microsoft.graph.models.IdentityUserFlowAttributeCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userFlowAttributes property of the microsoft.graph.identityContainer entity.
+     * @param identityUserFlowAttributeId Unique identifier of the item
+     * @return a IdentityUserFlowAttributeItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public IdentityUserFlowAttributeItemRequestBuilder byIdentityUserFlowAttributeId(@javax.annotation.Nonnull final String identityUserFlowAttributeId) {
+        Objects.requireNonNull(identityUserFlowAttributeId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("identityUserFlowAttribute%2Did", identityUserFlowAttributeId);
+        return new IdentityUserFlowAttributeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new UserFlowAttributesRequestBuilder and sets the default values.

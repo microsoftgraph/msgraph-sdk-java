@@ -1,6 +1,5 @@
 package com.microsoft.graph.admin.edge.internetexplorermode;
 
-import com.microsoft.graph.admin.edge.internetexplorermode.sitelists.item.BrowserSiteListItemRequestBuilder;
 import com.microsoft.graph.admin.edge.internetexplorermode.sitelists.SiteListsRequestBuilder;
 import com.microsoft.graph.models.InternetExplorerMode;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -160,18 +159,6 @@ public class InternetExplorerModeRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the siteLists property of the microsoft.graph.internetExplorerMode entity.
-     * @param id Unique identifier of the item
-     * @return a BrowserSiteListItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public BrowserSiteListItemRequestBuilder siteLists(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("browserSiteList%2Did", id);
-        return new BrowserSiteListItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property internetExplorerMode for admin

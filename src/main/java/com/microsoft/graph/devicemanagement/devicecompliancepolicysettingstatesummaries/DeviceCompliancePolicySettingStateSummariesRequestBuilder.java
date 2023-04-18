@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries;
 
 import com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.item.DeviceCompliancePolicySettingStateSummaryItemRequestBuilder;
 import com.microsoft.graph.models.DeviceCompliancePolicySettingStateSummary;
 import com.microsoft.graph.models.DeviceCompliancePolicySettingStateSummaryCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deviceCompliancePolicySettingStateSummaries property of the microsoft.graph.deviceManagement entity.
+     * @param deviceCompliancePolicySettingStateSummaryId Unique identifier of the item
+     * @return a DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceCompliancePolicySettingStateSummaryItemRequestBuilder byDeviceCompliancePolicySettingStateSummaryId(@javax.annotation.Nonnull final String deviceCompliancePolicySettingStateSummaryId) {
+        Objects.requireNonNull(deviceCompliancePolicySettingStateSummaryId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceCompliancePolicySettingStateSummary%2Did", deviceCompliancePolicySettingStateSummaryId);
+        return new DeviceCompliancePolicySettingStateSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DeviceCompliancePolicySettingStateSummariesRequestBuilder and sets the default values.

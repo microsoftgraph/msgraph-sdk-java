@@ -1,5 +1,6 @@
 package com.microsoft.graph.invitations.item.inviteduser;
 
+import com.microsoft.graph.invitations.item.inviteduser.mailboxsettings.MailboxSettingsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.User;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +21,11 @@ import java.util.Objects;
  * Provides operations to manage the invitedUser property of the microsoft.graph.invitation entity.
  */
 public class InvitedUserRequestBuilder extends BaseRequestBuilder {
+    /** The mailboxSettings property */
+    @javax.annotation.Nonnull
+    public MailboxSettingsRequestBuilder mailboxSettings() {
+        return new MailboxSettingsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new InvitedUserRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

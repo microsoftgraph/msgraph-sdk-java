@@ -1,10 +1,8 @@
 package com.microsoft.graph.agreements.item;
 
 import com.microsoft.graph.agreements.item.acceptances.AcceptancesRequestBuilder;
-import com.microsoft.graph.agreements.item.acceptances.item.AgreementAcceptanceItemRequestBuilder;
 import com.microsoft.graph.agreements.item.file.FileRequestBuilder;
 import com.microsoft.graph.agreements.item.files.FilesRequestBuilder;
-import com.microsoft.graph.agreements.item.files.item.AgreementFileLocalizationItemRequestBuilder;
 import com.microsoft.graph.models.Agreement;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -39,18 +37,6 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public FilesRequestBuilder files() {
         return new FilesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the acceptances property of the microsoft.graph.agreement entity.
-     * @param id Unique identifier of the item
-     * @return a AgreementAcceptanceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AgreementAcceptanceItemRequestBuilder acceptances(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("agreementAcceptance%2Did", id);
-        return new AgreementAcceptanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AgreementItemRequestBuilder and sets the default values.
@@ -108,18 +94,6 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the files property of the microsoft.graph.agreement entity.
-     * @param id Unique identifier of the item
-     * @return a AgreementFileLocalizationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AgreementFileLocalizationItemRequestBuilder files(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("agreementFileLocalization%2Did", id);
-        return new AgreementFileLocalizationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get entity from agreements by key

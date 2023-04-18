@@ -4,6 +4,7 @@ import com.microsoft.graph.models.EmailAuthenticationMethod;
 import com.microsoft.graph.models.EmailAuthenticationMethodCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.authentication.emailmethods.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.authentication.emailmethods.item.EmailAuthenticationMethodItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the emailMethods property of the microsoft.graph.authentication entity.
+     * @param emailAuthenticationMethodId Unique identifier of the item
+     * @return a EmailAuthenticationMethodItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EmailAuthenticationMethodItemRequestBuilder byEmailAuthenticationMethodId(@javax.annotation.Nonnull final String emailAuthenticationMethodId) {
+        Objects.requireNonNull(emailAuthenticationMethodId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("emailAuthenticationMethod%2Did", emailAuthenticationMethodId);
+        return new EmailAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new EmailMethodsRequestBuilder and sets the default values.

@@ -4,6 +4,7 @@ import com.microsoft.graph.applications.count.CountRequestBuilder;
 import com.microsoft.graph.applications.delta.DeltaRequestBuilder;
 import com.microsoft.graph.applications.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
 import com.microsoft.graph.applications.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.applications.item.ApplicationItemRequestBuilder;
 import com.microsoft.graph.applications.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.graph.models.Application;
 import com.microsoft.graph.models.ApplicationCollectionResponse;
@@ -50,6 +51,18 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of application entities.
+     * @param applicationId Unique identifier of the item
+     * @return a ApplicationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ApplicationItemRequestBuilder byApplicationId(@javax.annotation.Nonnull final String applicationId) {
+        Objects.requireNonNull(applicationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("application%2Did", applicationId);
+        return new ApplicationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ApplicationsRequestBuilder and sets the default values.

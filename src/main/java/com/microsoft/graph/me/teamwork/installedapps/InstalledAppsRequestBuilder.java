@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.teamwork.installedapps;
 
 import com.microsoft.graph.me.teamwork.installedapps.count.CountRequestBuilder;
+import com.microsoft.graph.me.teamwork.installedapps.item.UserScopeTeamsAppInstallationItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UserScopeTeamsAppInstallation;
 import com.microsoft.graph.models.UserScopeTeamsAppInstallationCollectionResponse;
@@ -26,6 +27,18 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the installedApps property of the microsoft.graph.userTeamwork entity.
+     * @param userScopeTeamsAppInstallationId Unique identifier of the item
+     * @return a UserScopeTeamsAppInstallationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UserScopeTeamsAppInstallationItemRequestBuilder byUserScopeTeamsAppInstallationId(@javax.annotation.Nonnull final String userScopeTeamsAppInstallationId) {
+        Objects.requireNonNull(userScopeTeamsAppInstallationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("userScopeTeamsAppInstallation%2Did", userScopeTeamsAppInstallationId);
+        return new UserScopeTeamsAppInstallationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new InstalledAppsRequestBuilder and sets the default values.

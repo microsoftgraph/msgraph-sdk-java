@@ -4,6 +4,7 @@ import com.microsoft.graph.models.BookingCurrency;
 import com.microsoft.graph.models.BookingCurrencyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.solutions.bookingcurrencies.count.CountRequestBuilder;
+import com.microsoft.graph.solutions.bookingcurrencies.item.BookingCurrencyItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the bookingCurrencies property of the microsoft.graph.solutionsRoot entity.
+     * @param bookingCurrencyId Unique identifier of the item
+     * @return a BookingCurrencyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public BookingCurrencyItemRequestBuilder byBookingCurrencyId(@javax.annotation.Nonnull final String bookingCurrencyId) {
+        Objects.requireNonNull(bookingCurrencyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("bookingCurrency%2Did", bookingCurrencyId);
+        return new BookingCurrencyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new BookingCurrenciesRequestBuilder and sets the default values.

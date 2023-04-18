@@ -5,6 +5,7 @@ import com.microsoft.graph.models.TodoTaskList;
 import com.microsoft.graph.models.TodoTaskListCollectionResponse;
 import com.microsoft.graph.users.item.todo.lists.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.todo.lists.delta.DeltaRequestBuilder;
+import com.microsoft.graph.users.item.todo.lists.item.TodoTaskListItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -32,6 +33,18 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the lists property of the microsoft.graph.todo entity.
+     * @param todoTaskListId Unique identifier of the item
+     * @return a TodoTaskListItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TodoTaskListItemRequestBuilder byTodoTaskListId(@javax.annotation.Nonnull final String todoTaskListId) {
+        Objects.requireNonNull(todoTaskListId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("todoTaskList%2Did", todoTaskListId);
+        return new TodoTaskListItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ListsRequestBuilder and sets the default values.

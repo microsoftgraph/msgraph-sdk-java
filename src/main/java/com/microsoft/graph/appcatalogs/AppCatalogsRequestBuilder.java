@@ -1,6 +1,5 @@
 package com.microsoft.graph.appcatalogs;
 
-import com.microsoft.graph.appcatalogs.teamsapps.item.TeamsAppItemRequestBuilder;
 import com.microsoft.graph.appcatalogs.teamsapps.TeamsAppsRequestBuilder;
 import com.microsoft.graph.models.AppCatalogs;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -123,18 +122,6 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the teamsApps property of the microsoft.graph.appCatalogs entity.
-     * @param id Unique identifier of the item
-     * @return a TeamsAppItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TeamsAppItemRequestBuilder teamsApps(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("teamsApp%2Did", id);
-        return new TeamsAppItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get appCatalogs

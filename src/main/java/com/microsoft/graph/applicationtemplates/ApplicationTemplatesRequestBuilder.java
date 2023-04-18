@@ -1,6 +1,7 @@
 package com.microsoft.graph.applicationtemplates;
 
 import com.microsoft.graph.applicationtemplates.count.CountRequestBuilder;
+import com.microsoft.graph.applicationtemplates.item.ApplicationTemplateItemRequestBuilder;
 import com.microsoft.graph.models.ApplicationTemplateCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of applicationTemplate entities.
+     * @param applicationTemplateId Unique identifier of the item
+     * @return a ApplicationTemplateItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ApplicationTemplateItemRequestBuilder byApplicationTemplateId(@javax.annotation.Nonnull final String applicationTemplateId) {
+        Objects.requireNonNull(applicationTemplateId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("applicationTemplate%2Did", applicationTemplateId);
+        return new ApplicationTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ApplicationTemplatesRequestBuilder and sets the default values.

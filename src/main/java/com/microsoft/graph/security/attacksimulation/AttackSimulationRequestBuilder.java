@@ -2,9 +2,7 @@ package com.microsoft.graph.security.attacksimulation;
 
 import com.microsoft.graph.models.AttackSimulationRoot;
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.security.attacksimulation.simulationautomations.item.SimulationAutomationItemRequestBuilder;
 import com.microsoft.graph.security.attacksimulation.simulationautomations.SimulationAutomationsRequestBuilder;
-import com.microsoft.graph.security.attacksimulation.simulations.item.SimulationItemRequestBuilder;
 import com.microsoft.graph.security.attacksimulation.simulations.SimulationsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -167,30 +165,6 @@ public class AttackSimulationRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the simulationAutomations property of the microsoft.graph.attackSimulationRoot entity.
-     * @param id Unique identifier of the item
-     * @return a SimulationAutomationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SimulationAutomationItemRequestBuilder simulationAutomations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("simulationAutomation%2Did", id);
-        return new SimulationAutomationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the simulations property of the microsoft.graph.attackSimulationRoot entity.
-     * @param id Unique identifier of the item
-     * @return a SimulationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SimulationItemRequestBuilder simulations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("simulation%2Did", id);
-        return new SimulationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property attackSimulation for security

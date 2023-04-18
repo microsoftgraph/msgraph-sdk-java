@@ -1,7 +1,6 @@
 package com.microsoft.graph.groups.item.sites.item.termstores.item.sets.item.children.item;
 
 import com.microsoft.graph.groups.item.sites.item.termstores.item.sets.item.children.item.children.ChildrenRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.termstores.item.sets.item.children.item.relations.item.RelationItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.termstores.item.sets.item.children.item.relations.RelationsRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.termstores.item.sets.item.children.item.set.SetRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -38,18 +37,6 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public SetRequestBuilder set() {
         return new SetRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the children property of the microsoft.graph.termStore.term entity.
-     * @param id Unique identifier of the item
-     * @return a TermItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TermItemRequestBuilder children(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("term%2Did1", id);
-        return new TermItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TermItemRequestBuilder and sets the default values.
@@ -184,18 +171,6 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the relations property of the microsoft.graph.termStore.term entity.
-     * @param id Unique identifier of the item
-     * @return a RelationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public RelationItemRequestBuilder relations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("relation%2Did", id);
-        return new RelationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property children for groups

@@ -1,6 +1,7 @@
 package com.microsoft.graph.drives.item.items.item.analytics.itemactivitystats;
 
 import com.microsoft.graph.drives.item.items.item.analytics.itemactivitystats.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.analytics.itemactivitystats.item.ItemActivityStatItemRequestBuilder;
 import com.microsoft.graph.models.ItemActivityStat;
 import com.microsoft.graph.models.ItemActivityStatCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ItemActivityStatsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the itemActivityStats property of the microsoft.graph.itemAnalytics entity.
+     * @param itemActivityStatId Unique identifier of the item
+     * @return a ItemActivityStatItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ItemActivityStatItemRequestBuilder byItemActivityStatId(@javax.annotation.Nonnull final String itemActivityStatId) {
+        Objects.requireNonNull(itemActivityStatId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("itemActivityStat%2Did", itemActivityStatId);
+        return new ItemActivityStatItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ItemActivityStatsRequestBuilder and sets the default values.

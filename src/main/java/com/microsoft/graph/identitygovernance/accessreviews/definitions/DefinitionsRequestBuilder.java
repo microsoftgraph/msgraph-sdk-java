@@ -2,6 +2,7 @@ package com.microsoft.graph.identitygovernance.accessreviews.definitions;
 
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.count.CountRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.AccessReviewScheduleDefinitionItemRequestBuilder;
 import com.microsoft.graph.models.AccessReviewScheduleDefinition;
 import com.microsoft.graph.models.AccessReviewScheduleDefinitionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -27,6 +28,18 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the definitions property of the microsoft.graph.accessReviewSet entity.
+     * @param accessReviewScheduleDefinitionId Unique identifier of the item
+     * @return a AccessReviewScheduleDefinitionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AccessReviewScheduleDefinitionItemRequestBuilder byAccessReviewScheduleDefinitionId(@javax.annotation.Nonnull final String accessReviewScheduleDefinitionId) {
+        Objects.requireNonNull(accessReviewScheduleDefinitionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("accessReviewScheduleDefinition%2Did", accessReviewScheduleDefinitionId);
+        return new AccessReviewScheduleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DefinitionsRequestBuilder and sets the default values.

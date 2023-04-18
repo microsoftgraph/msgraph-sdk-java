@@ -3,7 +3,6 @@ package com.microsoft.graph.policies.authenticationmethodspolicy;
 import com.microsoft.graph.models.AuthenticationMethodsPolicy;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.policies.authenticationmethodspolicy.authenticationmethodconfigurations.AuthenticationMethodConfigurationsRequestBuilder;
-import com.microsoft.graph.policies.authenticationmethodspolicy.authenticationmethodconfigurations.item.AuthenticationMethodConfigurationItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,18 +25,6 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
     @javax.annotation.Nonnull
     public AuthenticationMethodConfigurationsRequestBuilder authenticationMethodConfigurations() {
         return new AuthenticationMethodConfigurationsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the authenticationMethodConfigurations property of the microsoft.graph.authenticationMethodsPolicy entity.
-     * @param id Unique identifier of the item
-     * @return a AuthenticationMethodConfigurationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AuthenticationMethodConfigurationItemRequestBuilder authenticationMethodConfigurations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("authenticationMethodConfiguration%2Did", id);
-        return new AuthenticationMethodConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AuthenticationMethodsPolicyRequestBuilder and sets the default values.

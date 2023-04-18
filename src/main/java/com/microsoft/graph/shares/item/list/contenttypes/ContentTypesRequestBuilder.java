@@ -7,6 +7,7 @@ import com.microsoft.graph.shares.item.list.contenttypes.addcopy.AddCopyRequestB
 import com.microsoft.graph.shares.item.list.contenttypes.addcopyfromcontenttypehub.AddCopyFromContentTypeHubRequestBuilder;
 import com.microsoft.graph.shares.item.list.contenttypes.count.CountRequestBuilder;
 import com.microsoft.graph.shares.item.list.contenttypes.getcompatiblehubcontenttypes.GetCompatibleHubContentTypesRequestBuilder;
+import com.microsoft.graph.shares.item.list.contenttypes.item.ContentTypeItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -44,6 +45,18 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GetCompatibleHubContentTypesRequestBuilder getCompatibleHubContentTypes() {
         return new GetCompatibleHubContentTypesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the contentTypes property of the microsoft.graph.list entity.
+     * @param contentTypeId Unique identifier of the item
+     * @return a ContentTypeItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ContentTypeItemRequestBuilder byContentTypeId(@javax.annotation.Nonnull final String contentTypeId) {
+        Objects.requireNonNull(contentTypeId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("contentType%2Did", contentTypeId);
+        return new ContentTypeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ContentTypesRequestBuilder and sets the default values.

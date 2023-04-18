@@ -3,9 +3,7 @@ package com.microsoft.graph.users.item.teamwork;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UserTeamwork;
 import com.microsoft.graph.users.item.teamwork.associatedteams.AssociatedTeamsRequestBuilder;
-import com.microsoft.graph.users.item.teamwork.associatedteams.item.AssociatedTeamInfoItemRequestBuilder;
 import com.microsoft.graph.users.item.teamwork.installedapps.InstalledAppsRequestBuilder;
-import com.microsoft.graph.users.item.teamwork.installedapps.item.UserScopeTeamsAppInstallationItemRequestBuilder;
 import com.microsoft.graph.users.item.teamwork.sendactivitynotification.SendActivityNotificationRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -39,18 +37,6 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public SendActivityNotificationRequestBuilder sendActivityNotification() {
         return new SendActivityNotificationRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the associatedTeams property of the microsoft.graph.userTeamwork entity.
-     * @param id Unique identifier of the item
-     * @return a AssociatedTeamInfoItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AssociatedTeamInfoItemRequestBuilder associatedTeams(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("associatedTeamInfo%2Did", id);
-        return new AssociatedTeamInfoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TeamworkRequestBuilder and sets the default values.
@@ -145,18 +131,6 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the installedApps property of the microsoft.graph.userTeamwork entity.
-     * @param id Unique identifier of the item
-     * @return a UserScopeTeamsAppInstallationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UserScopeTeamsAppInstallationItemRequestBuilder installedApps(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("userScopeTeamsAppInstallation%2Did", id);
-        return new UserScopeTeamsAppInstallationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property teamwork in users

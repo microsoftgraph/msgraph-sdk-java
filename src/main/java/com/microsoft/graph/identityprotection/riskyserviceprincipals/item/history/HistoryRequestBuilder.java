@@ -1,6 +1,7 @@
 package com.microsoft.graph.identityprotection.riskyserviceprincipals.item.history;
 
 import com.microsoft.graph.identityprotection.riskyserviceprincipals.item.history.count.CountRequestBuilder;
+import com.microsoft.graph.identityprotection.riskyserviceprincipals.item.history.item.RiskyServicePrincipalHistoryItemItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.RiskyServicePrincipalHistoryItem;
 import com.microsoft.graph.models.RiskyServicePrincipalHistoryItemCollectionResponse;
@@ -26,6 +27,18 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the history property of the microsoft.graph.riskyServicePrincipal entity.
+     * @param riskyServicePrincipalHistoryItemId Unique identifier of the item
+     * @return a RiskyServicePrincipalHistoryItemItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public RiskyServicePrincipalHistoryItemItemRequestBuilder byRiskyServicePrincipalHistoryItemId(@javax.annotation.Nonnull final String riskyServicePrincipalHistoryItemId) {
+        Objects.requireNonNull(riskyServicePrincipalHistoryItemId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("riskyServicePrincipalHistoryItem%2Did", riskyServicePrincipalHistoryItemId);
+        return new RiskyServicePrincipalHistoryItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new HistoryRequestBuilder and sets the default values.

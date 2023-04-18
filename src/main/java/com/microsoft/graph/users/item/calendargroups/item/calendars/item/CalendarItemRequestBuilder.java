@@ -4,14 +4,10 @@ import com.microsoft.graph.models.Calendar;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.allowedcalendarsharingroleswithuser.AllowedCalendarSharingRolesWithUserRequestBuilder;
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.calendarpermissions.CalendarPermissionsRequestBuilder;
-import com.microsoft.graph.users.item.calendargroups.item.calendars.item.calendarpermissions.item.CalendarPermissionItemRequestBuilder;
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.calendarview.CalendarViewRequestBuilder;
-import com.microsoft.graph.users.item.calendargroups.item.calendars.item.calendarview.item.EventItemRequestBuilder;
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.events.EventsRequestBuilder;
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.getschedule.GetScheduleRequestBuilder;
-import com.microsoft.graph.users.item.calendargroups.item.calendars.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import com.microsoft.graph.users.item.calendargroups.item.calendars.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -72,30 +68,6 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
         return new AllowedCalendarSharingRolesWithUserRequestBuilder(pathParameters, requestAdapter, user);
     }
     /**
-     * Provides operations to manage the calendarPermissions property of the microsoft.graph.calendar entity.
-     * @param id Unique identifier of the item
-     * @return a CalendarPermissionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public CalendarPermissionItemRequestBuilder calendarPermissions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("calendarPermission%2Did", id);
-        return new CalendarPermissionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the calendarView property of the microsoft.graph.calendar entity.
-     * @param id Unique identifier of the item
-     * @return a EventItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.users.item.calendargroups.item.calendars.item.calendarview.item.EventItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("event%2Did", id);
-        return new com.microsoft.graph.users.item.calendargroups.item.calendars.item.calendarview.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new CalendarItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -153,18 +125,6 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the events property of the microsoft.graph.calendar entity.
-     * @param id Unique identifier of the item
-     * @return a EventItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.users.item.calendargroups.item.calendars.item.events.item.EventItemRequestBuilder events(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("event%2Did", id);
-        return new com.microsoft.graph.users.item.calendargroups.item.calendars.item.events.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * The calendars in the calendar group. Navigation property. Read-only. Nullable.
      * @return a CompletableFuture of calendar
      */
@@ -200,18 +160,6 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.calendar entity.
-     * @param id Unique identifier of the item
-     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("multiValueLegacyExtendedProperty%2Did", id);
-        return new MultiValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property calendars in users
@@ -252,18 +200,6 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.calendar entity.
-     * @param id Unique identifier of the item
-     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("singleValueLegacyExtendedProperty%2Did", id);
-        return new SingleValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property calendars for users

@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.onlinemeetings.item.attendancereports.item.attendancerecords;
 
 import com.microsoft.graph.me.onlinemeetings.item.attendancereports.item.attendancerecords.count.CountRequestBuilder;
+import com.microsoft.graph.me.onlinemeetings.item.attendancereports.item.attendancerecords.item.AttendanceRecordItemRequestBuilder;
 import com.microsoft.graph.models.AttendanceRecord;
 import com.microsoft.graph.models.AttendanceRecordCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class AttendanceRecordsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the attendanceRecords property of the microsoft.graph.meetingAttendanceReport entity.
+     * @param attendanceRecordId Unique identifier of the item
+     * @return a AttendanceRecordItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AttendanceRecordItemRequestBuilder byAttendanceRecordId(@javax.annotation.Nonnull final String attendanceRecordId) {
+        Objects.requireNonNull(attendanceRecordId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("attendanceRecord%2Did", attendanceRecordId);
+        return new AttendanceRecordItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AttendanceRecordsRequestBuilder and sets the default values.

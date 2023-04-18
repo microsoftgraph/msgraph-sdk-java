@@ -1,6 +1,7 @@
 package com.microsoft.graph.admin.serviceannouncement.messages.item.attachments;
 
 import com.microsoft.graph.admin.serviceannouncement.messages.item.attachments.count.CountRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.messages.item.attachments.item.ServiceAnnouncementAttachmentItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ServiceAnnouncementAttachment;
 import com.microsoft.graph.models.ServiceAnnouncementAttachmentCollectionResponse;
@@ -26,6 +27,18 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the attachments property of the microsoft.graph.serviceUpdateMessage entity.
+     * @param serviceAnnouncementAttachmentId Unique identifier of the item
+     * @return a ServiceAnnouncementAttachmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ServiceAnnouncementAttachmentItemRequestBuilder byServiceAnnouncementAttachmentId(@javax.annotation.Nonnull final String serviceAnnouncementAttachmentId) {
+        Objects.requireNonNull(serviceAnnouncementAttachmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("serviceAnnouncementAttachment%2Did", serviceAnnouncementAttachmentId);
+        return new ServiceAnnouncementAttachmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AttachmentsRequestBuilder and sets the default values.

@@ -2,7 +2,6 @@ package com.microsoft.graph.tenantrelationships.delegatedadmincustomers.item;
 
 import com.microsoft.graph.models.DelegatedAdminCustomer;
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.tenantrelationships.delegatedadmincustomers.item.servicemanagementdetails.item.DelegatedAdminServiceManagementDetailItemRequestBuilder;
 import com.microsoft.graph.tenantrelationships.delegatedadmincustomers.item.servicemanagementdetails.ServiceManagementDetailsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -160,18 +159,6 @@ public class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the serviceManagementDetails property of the microsoft.graph.delegatedAdminCustomer entity.
-     * @param id Unique identifier of the item
-     * @return a DelegatedAdminServiceManagementDetailItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DelegatedAdminServiceManagementDetailItemRequestBuilder serviceManagementDetails(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("delegatedAdminServiceManagementDetail%2Did", id);
-        return new DelegatedAdminServiceManagementDetailItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property delegatedAdminCustomers for tenantRelationships

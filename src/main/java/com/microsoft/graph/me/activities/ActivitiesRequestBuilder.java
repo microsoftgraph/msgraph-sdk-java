@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.activities;
 
 import com.microsoft.graph.me.activities.count.CountRequestBuilder;
+import com.microsoft.graph.me.activities.item.UserActivityItemRequestBuilder;
 import com.microsoft.graph.me.activities.recent.RecentRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UserActivity;
@@ -32,6 +33,18 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public RecentRequestBuilder recent() {
         return new RecentRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the activities property of the microsoft.graph.user entity.
+     * @param userActivityId Unique identifier of the item
+     * @return a UserActivityItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UserActivityItemRequestBuilder byUserActivityId(@javax.annotation.Nonnull final String userActivityId) {
+        Objects.requireNonNull(userActivityId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("userActivity%2Did", userActivityId);
+        return new UserActivityItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ActivitiesRequestBuilder and sets the default values.

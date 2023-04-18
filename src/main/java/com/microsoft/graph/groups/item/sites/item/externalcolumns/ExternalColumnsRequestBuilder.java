@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.sites.item.externalcolumns;
 
 import com.microsoft.graph.groups.item.sites.item.externalcolumns.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.externalcolumns.item.ColumnDefinitionItemRequestBuilder;
 import com.microsoft.graph.models.ColumnDefinitionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class ExternalColumnsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the externalColumns property of the microsoft.graph.site entity.
+     * @param columnDefinitionId Unique identifier of the item
+     * @return a ColumnDefinitionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ColumnDefinitionItemRequestBuilder byColumnDefinitionId(@javax.annotation.Nonnull final String columnDefinitionId) {
+        Objects.requireNonNull(columnDefinitionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("columnDefinition%2Did", columnDefinitionId);
+        return new ColumnDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ExternalColumnsRequestBuilder and sets the default values.

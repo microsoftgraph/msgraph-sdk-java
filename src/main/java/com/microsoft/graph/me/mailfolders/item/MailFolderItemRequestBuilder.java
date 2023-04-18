@@ -2,14 +2,10 @@ package com.microsoft.graph.me.mailfolders.item;
 
 import com.microsoft.graph.me.mailfolders.item.childfolders.ChildFoldersRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.copy.CopyRequestBuilder;
-import com.microsoft.graph.me.mailfolders.item.messagerules.item.MessageRuleItemRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.messagerules.MessageRulesRequestBuilder;
-import com.microsoft.graph.me.mailfolders.item.messages.item.MessageItemRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.messages.MessagesRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.move.MoveRequestBuilder;
-import com.microsoft.graph.me.mailfolders.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import com.microsoft.graph.me.mailfolders.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.models.MailFolder;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -67,18 +63,6 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         return new SingleValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the childFolders property of the microsoft.graph.mailFolder entity.
-     * @param id Unique identifier of the item
-     * @return a MailFolderItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MailFolderItemRequestBuilder childFolders(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("mailFolder%2Did1", id);
-        return new MailFolderItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new MailFolderItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -86,7 +70,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public MailFolderItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/me/mailFolders/{mailFolder%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/me/mailFolders/{mailFolder%2Did}{?includeHiddenFolders*,%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new MailFolderItemRequestBuilder and sets the default values.
@@ -96,7 +80,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public MailFolderItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/me/mailFolders/{mailFolder%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/me/mailFolders/{mailFolder%2Did}{?includeHiddenFolders*,%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property mailFolders for me
@@ -173,42 +157,6 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the messageRules property of the microsoft.graph.mailFolder entity.
-     * @param id Unique identifier of the item
-     * @return a MessageRuleItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MessageRuleItemRequestBuilder messageRules(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("messageRule%2Did", id);
-        return new MessageRuleItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the messages property of the microsoft.graph.mailFolder entity.
-     * @param id Unique identifier of the item
-     * @return a MessageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MessageItemRequestBuilder messages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("message%2Did", id);
-        return new MessageItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.mailFolder entity.
-     * @param id Unique identifier of the item
-     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("multiValueLegacyExtendedProperty%2Did", id);
-        return new MultiValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property mailFolders in me
      * @param body The request body
      * @return a CompletableFuture of mailFolder
@@ -247,18 +195,6 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.mailFolder entity.
-     * @param id Unique identifier of the item
-     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("singleValueLegacyExtendedProperty%2Did", id);
-        return new SingleValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property mailFolders for me
@@ -361,6 +297,9 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
+        /** Include Hidden Folders */
+        @javax.annotation.Nullable
+        public String includeHiddenFolders;
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable

@@ -2,6 +2,7 @@ package com.microsoft.graph.me.calendar.events.item.instances.item.attachments;
 
 import com.microsoft.graph.me.calendar.events.item.instances.item.attachments.count.CountRequestBuilder;
 import com.microsoft.graph.me.calendar.events.item.instances.item.attachments.createuploadsession.CreateUploadSessionRequestBuilder;
+import com.microsoft.graph.me.calendar.events.item.instances.item.attachments.item.AttachmentItemRequestBuilder;
 import com.microsoft.graph.models.Attachment;
 import com.microsoft.graph.models.AttachmentCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -32,6 +33,18 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CreateUploadSessionRequestBuilder createUploadSession() {
         return new CreateUploadSessionRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the attachments property of the microsoft.graph.event entity.
+     * @param attachmentId Unique identifier of the item
+     * @return a AttachmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AttachmentItemRequestBuilder byAttachmentId(@javax.annotation.Nonnull final String attachmentId) {
+        Objects.requireNonNull(attachmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("attachment%2Did", attachmentId);
+        return new AttachmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AttachmentsRequestBuilder and sets the default values.

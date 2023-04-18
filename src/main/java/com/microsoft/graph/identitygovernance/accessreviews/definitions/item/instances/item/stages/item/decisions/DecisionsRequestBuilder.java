@@ -2,6 +2,7 @@ package com.microsoft.graph.identitygovernance.accessreviews.definitions.item.in
 
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.count.CountRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.AccessReviewInstanceDecisionItemItemRequestBuilder;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItem;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItemCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -27,6 +28,18 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the decisions property of the microsoft.graph.accessReviewStage entity.
+     * @param accessReviewInstanceDecisionItemId Unique identifier of the item
+     * @return a AccessReviewInstanceDecisionItemItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AccessReviewInstanceDecisionItemItemRequestBuilder byAccessReviewInstanceDecisionItemId(@javax.annotation.Nonnull final String accessReviewInstanceDecisionItemId) {
+        Objects.requireNonNull(accessReviewInstanceDecisionItemId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("accessReviewInstanceDecisionItem%2Did", accessReviewInstanceDecisionItemId);
+        return new AccessReviewInstanceDecisionItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DecisionsRequestBuilder and sets the default values.

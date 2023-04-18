@@ -4,6 +4,7 @@ import com.microsoft.graph.models.FeatureRolloutPolicy;
 import com.microsoft.graph.models.FeatureRolloutPolicyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.policies.featurerolloutpolicies.count.CountRequestBuilder;
+import com.microsoft.graph.policies.featurerolloutpolicies.item.FeatureRolloutPolicyItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.policyRoot entity.
+     * @param featureRolloutPolicyId Unique identifier of the item
+     * @return a FeatureRolloutPolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public FeatureRolloutPolicyItemRequestBuilder byFeatureRolloutPolicyId(@javax.annotation.Nonnull final String featureRolloutPolicyId) {
+        Objects.requireNonNull(featureRolloutPolicyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("featureRolloutPolicy%2Did", featureRolloutPolicyId);
+        return new FeatureRolloutPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new FeatureRolloutPoliciesRequestBuilder and sets the default values.

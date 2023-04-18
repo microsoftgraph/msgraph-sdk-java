@@ -3,19 +3,13 @@ package com.microsoft.graph.security.cases.ediscoverycases.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryCase;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.CustodiansRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.EdiscoveryCustodianItemRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.EdiscoveryNoncustodialDataSourceItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.NoncustodialDataSourcesRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.operations.item.CaseOperationItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.operations.OperationsRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.EdiscoveryReviewSetItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.ReviewSetsRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.EdiscoverySearchItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.SearchesRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.securityclose.SecurityCloseRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.securityreopen.SecurityReopenRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.settings.SettingsRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.tags.item.EdiscoveryReviewTagItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.tags.TagsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -101,18 +95,6 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity.
-     * @param id Unique identifier of the item
-     * @return a EdiscoveryCustodianItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EdiscoveryCustodianItemRequestBuilder custodians(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("ediscoveryCustodian%2Did", id);
-        return new EdiscoveryCustodianItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Delete navigation property ediscoveryCases for security
      * @return a CompletableFuture of void
      */
@@ -187,30 +169,6 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the noncustodialDataSources property of the microsoft.graph.security.ediscoveryCase entity.
-     * @param id Unique identifier of the item
-     * @return a EdiscoveryNoncustodialDataSourceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EdiscoveryNoncustodialDataSourceItemRequestBuilder noncustodialDataSources(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("ediscoveryNoncustodialDataSource%2Did", id);
-        return new EdiscoveryNoncustodialDataSourceItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the operations property of the microsoft.graph.security.ediscoveryCase entity.
-     * @param id Unique identifier of the item
-     * @return a CaseOperationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public CaseOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("caseOperation%2Did", id);
-        return new CaseOperationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property ediscoveryCases in security
      * @param body The request body
      * @return a CompletableFuture of ediscoveryCase
@@ -249,42 +207,6 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the reviewSets property of the microsoft.graph.security.ediscoveryCase entity.
-     * @param id Unique identifier of the item
-     * @return a EdiscoveryReviewSetItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EdiscoveryReviewSetItemRequestBuilder reviewSets(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("ediscoveryReviewSet%2Did", id);
-        return new EdiscoveryReviewSetItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the searches property of the microsoft.graph.security.ediscoveryCase entity.
-     * @param id Unique identifier of the item
-     * @return a EdiscoverySearchItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EdiscoverySearchItemRequestBuilder searches(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("ediscoverySearch%2Did", id);
-        return new EdiscoverySearchItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the tags property of the microsoft.graph.security.ediscoveryCase entity.
-     * @param id Unique identifier of the item
-     * @return a EdiscoveryReviewTagItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EdiscoveryReviewTagItemRequestBuilder tags(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("ediscoveryReviewTag%2Did", id);
-        return new EdiscoveryReviewTagItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property ediscoveryCases for security

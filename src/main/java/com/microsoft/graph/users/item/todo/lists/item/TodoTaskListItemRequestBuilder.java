@@ -3,8 +3,6 @@ package com.microsoft.graph.users.item.todo.lists.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TodoTaskList;
 import com.microsoft.graph.users.item.todo.lists.item.extensions.ExtensionsRequestBuilder;
-import com.microsoft.graph.users.item.todo.lists.item.extensions.item.ExtensionItemRequestBuilder;
-import com.microsoft.graph.users.item.todo.lists.item.tasks.item.TodoTaskItemRequestBuilder;
 import com.microsoft.graph.users.item.todo.lists.item.tasks.TasksRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -92,18 +90,6 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the extensions property of the microsoft.graph.todoTaskList entity.
-     * @param id Unique identifier of the item
-     * @return a ExtensionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("extension%2Did", id);
-        return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * The task lists in the users mailbox.
      * @return a CompletableFuture of todoTaskList
      */
@@ -179,18 +165,6 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the tasks property of the microsoft.graph.todoTaskList entity.
-     * @param id Unique identifier of the item
-     * @return a TodoTaskItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TodoTaskItemRequestBuilder tasks(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("todoTask%2Did", id);
-        return new TodoTaskItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property lists for users

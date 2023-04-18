@@ -2,7 +2,6 @@ package com.microsoft.graph.planner.buckets.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PlannerBucket;
-import com.microsoft.graph.planner.buckets.item.tasks.item.PlannerTaskItemRequestBuilder;
 import com.microsoft.graph.planner.buckets.item.tasks.TasksRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -160,18 +159,6 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the tasks property of the microsoft.graph.plannerBucket entity.
-     * @param id Unique identifier of the item
-     * @return a PlannerTaskItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PlannerTaskItemRequestBuilder tasks(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("plannerTask%2Did", id);
-        return new PlannerTaskItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property buckets for planner

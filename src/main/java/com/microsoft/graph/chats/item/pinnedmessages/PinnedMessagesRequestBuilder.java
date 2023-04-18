@@ -1,6 +1,7 @@
 package com.microsoft.graph.chats.item.pinnedmessages;
 
 import com.microsoft.graph.chats.item.pinnedmessages.count.CountRequestBuilder;
+import com.microsoft.graph.chats.item.pinnedmessages.item.PinnedChatMessageInfoItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PinnedChatMessageInfo;
 import com.microsoft.graph.models.PinnedChatMessageInfoCollectionResponse;
@@ -26,6 +27,18 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the pinnedMessages property of the microsoft.graph.chat entity.
+     * @param pinnedChatMessageInfoId Unique identifier of the item
+     * @return a PinnedChatMessageInfoItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PinnedChatMessageInfoItemRequestBuilder byPinnedChatMessageInfoId(@javax.annotation.Nonnull final String pinnedChatMessageInfoId) {
+        Objects.requireNonNull(pinnedChatMessageInfoId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("pinnedChatMessageInfo%2Did", pinnedChatMessageInfoId);
+        return new PinnedChatMessageInfoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PinnedMessagesRequestBuilder and sets the default values.

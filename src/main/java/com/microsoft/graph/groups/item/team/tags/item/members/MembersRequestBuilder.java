@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.team.tags.item.members;
 
 import com.microsoft.graph.groups.item.team.tags.item.members.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.team.tags.item.members.item.TeamworkTagMemberItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TeamworkTagMember;
 import com.microsoft.graph.models.TeamworkTagMemberCollectionResponse;
@@ -26,6 +27,18 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the members property of the microsoft.graph.teamworkTag entity.
+     * @param teamworkTagMemberId Unique identifier of the item
+     * @return a TeamworkTagMemberItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TeamworkTagMemberItemRequestBuilder byTeamworkTagMemberId(@javax.annotation.Nonnull final String teamworkTagMemberId) {
+        Objects.requireNonNull(teamworkTagMemberId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("teamworkTagMember%2Did", teamworkTagMemberId);
+        return new TeamworkTagMemberItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MembersRequestBuilder and sets the default values.

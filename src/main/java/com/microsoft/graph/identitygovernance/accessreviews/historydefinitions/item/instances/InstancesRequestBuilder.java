@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.accessreviews.historydefinitions.item.instances;
 
 import com.microsoft.graph.identitygovernance.accessreviews.historydefinitions.item.instances.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.historydefinitions.item.instances.item.AccessReviewHistoryInstanceItemRequestBuilder;
 import com.microsoft.graph.models.AccessReviewHistoryInstance;
 import com.microsoft.graph.models.AccessReviewHistoryInstanceCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the instances property of the microsoft.graph.accessReviewHistoryDefinition entity.
+     * @param accessReviewHistoryInstanceId Unique identifier of the item
+     * @return a AccessReviewHistoryInstanceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AccessReviewHistoryInstanceItemRequestBuilder byAccessReviewHistoryInstanceId(@javax.annotation.Nonnull final String accessReviewHistoryInstanceId) {
+        Objects.requireNonNull(accessReviewHistoryInstanceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("accessReviewHistoryInstance%2Did", accessReviewHistoryInstanceId);
+        return new AccessReviewHistoryInstanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new InstancesRequestBuilder and sets the default values.

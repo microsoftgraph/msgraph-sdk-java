@@ -1,6 +1,7 @@
 package com.microsoft.graph.groupsettings;
 
 import com.microsoft.graph.groupsettings.count.CountRequestBuilder;
+import com.microsoft.graph.groupsettings.item.GroupSettingItemRequestBuilder;
 import com.microsoft.graph.models.GroupSetting;
 import com.microsoft.graph.models.GroupSettingCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class GroupSettingsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of groupSetting entities.
+     * @param groupSettingId Unique identifier of the item
+     * @return a GroupSettingItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GroupSettingItemRequestBuilder byGroupSettingId(@javax.annotation.Nonnull final String groupSettingId) {
+        Objects.requireNonNull(groupSettingId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("groupSetting%2Did", groupSettingId);
+        return new GroupSettingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new GroupSettingsRequestBuilder and sets the default values.

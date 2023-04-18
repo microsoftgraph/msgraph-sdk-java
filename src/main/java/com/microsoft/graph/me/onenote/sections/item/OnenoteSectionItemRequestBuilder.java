@@ -2,7 +2,6 @@ package com.microsoft.graph.me.onenote.sections.item;
 
 import com.microsoft.graph.me.onenote.sections.item.copytonotebook.CopyToNotebookRequestBuilder;
 import com.microsoft.graph.me.onenote.sections.item.copytosectiongroup.CopyToSectionGroupRequestBuilder;
-import com.microsoft.graph.me.onenote.sections.item.pages.item.OnenotePageItemRequestBuilder;
 import com.microsoft.graph.me.onenote.sections.item.pages.PagesRequestBuilder;
 import com.microsoft.graph.me.onenote.sections.item.parentnotebook.ParentNotebookRequestBuilder;
 import com.microsoft.graph.me.onenote.sections.item.parentsectiongroup.ParentSectionGroupRequestBuilder;
@@ -144,18 +143,6 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the pages property of the microsoft.graph.onenoteSection entity.
-     * @param id Unique identifier of the item
-     * @return a OnenotePageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public OnenotePageItemRequestBuilder pages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("onenotePage%2Did", id);
-        return new OnenotePageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property sections in me

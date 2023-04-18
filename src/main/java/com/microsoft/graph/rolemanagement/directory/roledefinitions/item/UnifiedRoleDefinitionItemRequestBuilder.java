@@ -121,18 +121,6 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Provides operations to manage the inheritsPermissionsFrom property of the microsoft.graph.unifiedRoleDefinition entity.
-     * @param id Unique identifier of the item
-     * @return a UnifiedRoleDefinitionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UnifiedRoleDefinitionItemRequestBuilder inheritsPermissionsFrom(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("unifiedRoleDefinition%2Did1", id);
-        return new UnifiedRoleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property roleDefinitions in roleManagement
      * @param body The request body
      * @return a CompletableFuture of unifiedRoleDefinition

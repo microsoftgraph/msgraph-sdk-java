@@ -2,6 +2,7 @@ package com.microsoft.graph.places;
 
 import com.microsoft.graph.places.count.CountRequestBuilder;
 import com.microsoft.graph.places.graphroom.GraphRoomRequestBuilder;
+import com.microsoft.graph.places.item.PlaceItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
@@ -19,6 +20,18 @@ public class PlacesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GraphRoomRequestBuilder graphRoom() {
         return new GraphRoomRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of place entities.
+     * @param placeId Unique identifier of the item
+     * @return a PlaceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PlaceItemRequestBuilder byPlaceId(@javax.annotation.Nonnull final String placeId) {
+        Objects.requireNonNull(placeId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("place%2Did", placeId);
+        return new PlaceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PlacesRequestBuilder and sets the default values.

@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.deviceconfigurations;
 
 import com.microsoft.graph.devicemanagement.deviceconfigurations.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.DeviceConfigurationItemRequestBuilder;
 import com.microsoft.graph.models.DeviceConfiguration;
 import com.microsoft.graph.models.DeviceConfigurationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deviceConfigurations property of the microsoft.graph.deviceManagement entity.
+     * @param deviceConfigurationId Unique identifier of the item
+     * @return a DeviceConfigurationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceConfigurationItemRequestBuilder byDeviceConfigurationId(@javax.annotation.Nonnull final String deviceConfigurationId) {
+        Objects.requireNonNull(deviceConfigurationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceConfiguration%2Did", deviceConfigurationId);
+        return new DeviceConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DeviceConfigurationsRequestBuilder and sets the default values.

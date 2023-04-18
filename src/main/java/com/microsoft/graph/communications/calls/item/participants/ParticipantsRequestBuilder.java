@@ -2,6 +2,7 @@ package com.microsoft.graph.communications.calls.item.participants;
 
 import com.microsoft.graph.communications.calls.item.participants.count.CountRequestBuilder;
 import com.microsoft.graph.communications.calls.item.participants.invite.InviteRequestBuilder;
+import com.microsoft.graph.communications.calls.item.participants.item.ParticipantItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Participant;
 import com.microsoft.graph.models.ParticipantCollectionResponse;
@@ -32,6 +33,18 @@ public class ParticipantsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public InviteRequestBuilder invite() {
         return new InviteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the participants property of the microsoft.graph.call entity.
+     * @param participantId Unique identifier of the item
+     * @return a ParticipantItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ParticipantItemRequestBuilder byParticipantId(@javax.annotation.Nonnull final String participantId) {
+        Objects.requireNonNull(participantId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("participant%2Did", participantId);
+        return new ParticipantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ParticipantsRequestBuilder and sets the default values.

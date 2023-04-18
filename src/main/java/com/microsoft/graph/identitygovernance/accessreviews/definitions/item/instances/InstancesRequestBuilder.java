@@ -2,6 +2,7 @@ package com.microsoft.graph.identitygovernance.accessreviews.definitions.item.in
 
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.count.CountRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.AccessReviewInstanceItemRequestBuilder;
 import com.microsoft.graph.models.AccessReviewInstance;
 import com.microsoft.graph.models.AccessReviewInstanceCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -27,6 +28,18 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the instances property of the microsoft.graph.accessReviewScheduleDefinition entity.
+     * @param accessReviewInstanceId Unique identifier of the item
+     * @return a AccessReviewInstanceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AccessReviewInstanceItemRequestBuilder byAccessReviewInstanceId(@javax.annotation.Nonnull final String accessReviewInstanceId) {
+        Objects.requireNonNull(accessReviewInstanceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("accessReviewInstance%2Did", accessReviewInstanceId);
+        return new AccessReviewInstanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new InstancesRequestBuilder and sets the default values.

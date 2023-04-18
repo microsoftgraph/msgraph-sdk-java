@@ -2,7 +2,6 @@ package com.microsoft.graph.branding;
 
 import com.microsoft.graph.branding.backgroundimage.BackgroundImageRequestBuilder;
 import com.microsoft.graph.branding.bannerlogo.BannerLogoRequestBuilder;
-import com.microsoft.graph.branding.localizations.item.OrganizationalBrandingLocalizationItemRequestBuilder;
 import com.microsoft.graph.branding.localizations.LocalizationsRequestBuilder;
 import com.microsoft.graph.branding.squarelogo.SquareLogoRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -101,18 +100,6 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the localizations property of the microsoft.graph.organizationalBranding entity.
-     * @param id Unique identifier of the item
-     * @return a OrganizationalBrandingLocalizationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public OrganizationalBrandingLocalizationItemRequestBuilder localizations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("organizationalBrandingLocalization%2Did", id);
-        return new OrganizationalBrandingLocalizationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update branding

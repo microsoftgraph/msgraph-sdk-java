@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.manageddevices.item.devicecompliancepolicystates;
 
 import com.microsoft.graph.me.manageddevices.item.devicecompliancepolicystates.count.CountRequestBuilder;
+import com.microsoft.graph.me.manageddevices.item.devicecompliancepolicystates.item.DeviceCompliancePolicyStateItemRequestBuilder;
 import com.microsoft.graph.models.DeviceCompliancePolicyState;
 import com.microsoft.graph.models.DeviceCompliancePolicyStateCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuild
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deviceCompliancePolicyStates property of the microsoft.graph.managedDevice entity.
+     * @param deviceCompliancePolicyStateId Unique identifier of the item
+     * @return a DeviceCompliancePolicyStateItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceCompliancePolicyStateItemRequestBuilder byDeviceCompliancePolicyStateId(@javax.annotation.Nonnull final String deviceCompliancePolicyStateId) {
+        Objects.requireNonNull(deviceCompliancePolicyStateId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceCompliancePolicyState%2Did", deviceCompliancePolicyStateId);
+        return new DeviceCompliancePolicyStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DeviceCompliancePolicyStatesRequestBuilder and sets the default values.

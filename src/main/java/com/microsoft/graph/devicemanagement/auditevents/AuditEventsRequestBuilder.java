@@ -3,6 +3,7 @@ package com.microsoft.graph.devicemanagement.auditevents;
 import com.microsoft.graph.devicemanagement.auditevents.count.CountRequestBuilder;
 import com.microsoft.graph.devicemanagement.auditevents.getauditactivitytypeswithcategory.GetAuditActivityTypesWithCategoryRequestBuilder;
 import com.microsoft.graph.devicemanagement.auditevents.getauditcategories.GetAuditCategoriesRequestBuilder;
+import com.microsoft.graph.devicemanagement.auditevents.item.AuditEventItemRequestBuilder;
 import com.microsoft.graph.models.AuditEvent;
 import com.microsoft.graph.models.AuditEventCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -33,6 +34,18 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GetAuditCategoriesRequestBuilder getAuditCategories() {
         return new GetAuditCategoriesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the auditEvents property of the microsoft.graph.deviceManagement entity.
+     * @param auditEventId Unique identifier of the item
+     * @return a AuditEventItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AuditEventItemRequestBuilder byAuditEventId(@javax.annotation.Nonnull final String auditEventId) {
+        Objects.requireNonNull(auditEventId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("auditEvent%2Did", auditEventId);
+        return new AuditEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AuditEventsRequestBuilder and sets the default values.

@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.joinedteams.item.schedule.timeoffrequests;
 
 import com.microsoft.graph.me.joinedteams.item.schedule.timeoffrequests.count.CountRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.schedule.timeoffrequests.item.TimeOffRequestItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TimeOffRequest;
 import com.microsoft.graph.models.TimeOffRequestCollectionResponse;
@@ -26,6 +27,18 @@ public class TimeOffRequestsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the timeOffRequests property of the microsoft.graph.schedule entity.
+     * @param timeOffRequestId Unique identifier of the item
+     * @return a TimeOffRequestItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TimeOffRequestItemRequestBuilder byTimeOffRequestId(@javax.annotation.Nonnull final String timeOffRequestId) {
+        Objects.requireNonNull(timeOffRequestId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("timeOffRequest%2Did", timeOffRequestId);
+        return new TimeOffRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TimeOffRequestsRequestBuilder and sets the default values.

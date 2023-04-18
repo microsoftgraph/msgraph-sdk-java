@@ -2,6 +2,7 @@ package com.microsoft.graph.education.classes.item.assignmentcategories;
 
 import com.microsoft.graph.education.classes.item.assignmentcategories.count.CountRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignmentcategories.delta.DeltaRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignmentcategories.item.EducationCategoryItemRequestBuilder;
 import com.microsoft.graph.models.EducationCategory;
 import com.microsoft.graph.models.EducationCategoryCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -32,6 +33,18 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the assignmentCategories property of the microsoft.graph.educationClass entity.
+     * @param educationCategoryId Unique identifier of the item
+     * @return a EducationCategoryItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EducationCategoryItemRequestBuilder byEducationCategoryId(@javax.annotation.Nonnull final String educationCategoryId) {
+        Objects.requireNonNull(educationCategoryId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("educationCategory%2Did", educationCategoryId);
+        return new EducationCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AssignmentCategoriesRequestBuilder and sets the default values.

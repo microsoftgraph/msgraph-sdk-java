@@ -1,14 +1,11 @@
 package com.microsoft.graph.education.classes.item.assignments.item;
 
 import com.microsoft.graph.education.classes.item.assignments.item.categories.CategoriesRequestBuilder;
-import com.microsoft.graph.education.classes.item.assignments.item.categories.item.EducationCategoryItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.publish.PublishRequestBuilder;
-import com.microsoft.graph.education.classes.item.assignments.item.resources.item.EducationAssignmentResourceItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.resources.ResourcesRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.rubric.RubricRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.setupfeedbackresourcesfolder.SetUpFeedbackResourcesFolderRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.setupresourcesfolder.SetUpResourcesFolderRequestBuilder;
-import com.microsoft.graph.education.classes.item.assignments.item.submissions.item.EducationSubmissionItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.submissions.SubmissionsRequestBuilder;
 import com.microsoft.graph.models.EducationAssignment;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -64,18 +61,6 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public SubmissionsRequestBuilder submissions() {
         return new SubmissionsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.education.classes.item.assignments.item.categories.item collection
-     * @param id Unique identifier of the item
-     * @return a EducationCategoryItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EducationCategoryItemRequestBuilder categories(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("educationCategory%2Did", id);
-        return new EducationCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new EducationAssignmentItemRequestBuilder and sets the default values.
@@ -210,30 +195,6 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the resources property of the microsoft.graph.educationAssignment entity.
-     * @param id Unique identifier of the item
-     * @return a EducationAssignmentResourceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EducationAssignmentResourceItemRequestBuilder resources(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("educationAssignmentResource%2Did", id);
-        return new EducationAssignmentResourceItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the submissions property of the microsoft.graph.educationAssignment entity.
-     * @param id Unique identifier of the item
-     * @return a EducationSubmissionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EducationSubmissionItemRequestBuilder submissions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("educationSubmission%2Did", id);
-        return new EducationSubmissionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property assignments for education

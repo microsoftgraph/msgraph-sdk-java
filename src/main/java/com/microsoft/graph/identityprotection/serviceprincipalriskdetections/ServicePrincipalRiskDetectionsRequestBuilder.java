@@ -1,6 +1,7 @@
 package com.microsoft.graph.identityprotection.serviceprincipalriskdetections;
 
 import com.microsoft.graph.identityprotection.serviceprincipalriskdetections.count.CountRequestBuilder;
+import com.microsoft.graph.identityprotection.serviceprincipalriskdetections.item.ServicePrincipalRiskDetectionItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ServicePrincipalRiskDetection;
 import com.microsoft.graph.models.ServicePrincipalRiskDetectionCollectionResponse;
@@ -26,6 +27,18 @@ public class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBui
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the servicePrincipalRiskDetections property of the microsoft.graph.identityProtectionRoot entity.
+     * @param servicePrincipalRiskDetectionId Unique identifier of the item
+     * @return a ServicePrincipalRiskDetectionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ServicePrincipalRiskDetectionItemRequestBuilder byServicePrincipalRiskDetectionId(@javax.annotation.Nonnull final String servicePrincipalRiskDetectionId) {
+        Objects.requireNonNull(servicePrincipalRiskDetectionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("servicePrincipalRiskDetection%2Did", servicePrincipalRiskDetectionId);
+        return new ServicePrincipalRiskDetectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ServicePrincipalRiskDetectionsRequestBuilder and sets the default values.

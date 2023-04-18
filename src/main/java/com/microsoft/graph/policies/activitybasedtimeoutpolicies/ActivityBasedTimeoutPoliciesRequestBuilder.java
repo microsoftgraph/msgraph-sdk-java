@@ -4,6 +4,7 @@ import com.microsoft.graph.models.ActivityBasedTimeoutPolicy;
 import com.microsoft.graph.models.ActivityBasedTimeoutPolicyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.policies.activitybasedtimeoutpolicies.count.CountRequestBuilder;
+import com.microsoft.graph.policies.activitybasedtimeoutpolicies.item.ActivityBasedTimeoutPolicyItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the activityBasedTimeoutPolicies property of the microsoft.graph.policyRoot entity.
+     * @param activityBasedTimeoutPolicyId Unique identifier of the item
+     * @return a ActivityBasedTimeoutPolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ActivityBasedTimeoutPolicyItemRequestBuilder byActivityBasedTimeoutPolicyId(@javax.annotation.Nonnull final String activityBasedTimeoutPolicyId) {
+        Objects.requireNonNull(activityBasedTimeoutPolicyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("activityBasedTimeoutPolicy%2Did", activityBasedTimeoutPolicyId);
+        return new ActivityBasedTimeoutPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ActivityBasedTimeoutPoliciesRequestBuilder and sets the default values.

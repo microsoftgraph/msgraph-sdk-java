@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.deviceenrollmentconfigurations.item.assignments;
 
 import com.microsoft.graph.devicemanagement.deviceenrollmentconfigurations.item.assignments.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceenrollmentconfigurations.item.assignments.item.EnrollmentConfigurationAssignmentItemRequestBuilder;
 import com.microsoft.graph.models.EnrollmentConfigurationAssignment;
 import com.microsoft.graph.models.EnrollmentConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.deviceEnrollmentConfiguration entity.
+     * @param enrollmentConfigurationAssignmentId Unique identifier of the item
+     * @return a EnrollmentConfigurationAssignmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EnrollmentConfigurationAssignmentItemRequestBuilder byEnrollmentConfigurationAssignmentId(@javax.annotation.Nonnull final String enrollmentConfigurationAssignmentId) {
+        Objects.requireNonNull(enrollmentConfigurationAssignmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("enrollmentConfigurationAssignment%2Did", enrollmentConfigurationAssignmentId);
+        return new EnrollmentConfigurationAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AssignmentsRequestBuilder and sets the default values.

@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.exchangeconnectors;
 
 import com.microsoft.graph.devicemanagement.exchangeconnectors.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.exchangeconnectors.item.DeviceManagementExchangeConnectorItemRequestBuilder;
 import com.microsoft.graph.models.DeviceManagementExchangeConnector;
 import com.microsoft.graph.models.DeviceManagementExchangeConnectorCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the exchangeConnectors property of the microsoft.graph.deviceManagement entity.
+     * @param deviceManagementExchangeConnectorId Unique identifier of the item
+     * @return a DeviceManagementExchangeConnectorItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceManagementExchangeConnectorItemRequestBuilder byDeviceManagementExchangeConnectorId(@javax.annotation.Nonnull final String deviceManagementExchangeConnectorId) {
+        Objects.requireNonNull(deviceManagementExchangeConnectorId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceManagementExchangeConnector%2Did", deviceManagementExchangeConnectorId);
+        return new DeviceManagementExchangeConnectorItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ExchangeConnectorsRequestBuilder and sets the default values.

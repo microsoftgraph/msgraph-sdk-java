@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Shift;
 import com.microsoft.graph.models.ShiftCollectionResponse;
 import com.microsoft.graph.teams.item.schedule.shifts.count.CountRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.shifts.item.ShiftItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the shifts property of the microsoft.graph.schedule entity.
+     * @param shiftId Unique identifier of the item
+     * @return a ShiftItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ShiftItemRequestBuilder byShiftId(@javax.annotation.Nonnull final String shiftId) {
+        Objects.requireNonNull(shiftId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("shift%2Did", shiftId);
+        return new ShiftItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ShiftsRequestBuilder and sets the default values.

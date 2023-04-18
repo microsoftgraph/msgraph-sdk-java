@@ -7,6 +7,7 @@ import com.microsoft.graph.directory.deleteditems.getbyids.GetByIdsRequestBuilde
 import com.microsoft.graph.directory.deleteditems.graphapplication.GraphApplicationRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.graphgroup.GraphGroupRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.graphuser.GraphUserRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
@@ -68,6 +69,18 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deletedItems property of the microsoft.graph.directory entity.
+     * @param directoryObjectId Unique identifier of the item
+     * @return a DirectoryObjectItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DirectoryObjectItemRequestBuilder byDirectoryObjectId(@javax.annotation.Nonnull final String directoryObjectId) {
+        Objects.requireNonNull(directoryObjectId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("directoryObject%2Did", directoryObjectId);
+        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DeletedItemsRequestBuilder and sets the default values.

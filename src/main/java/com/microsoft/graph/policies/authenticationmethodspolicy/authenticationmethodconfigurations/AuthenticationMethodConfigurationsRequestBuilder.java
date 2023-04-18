@@ -4,6 +4,7 @@ import com.microsoft.graph.models.AuthenticationMethodConfiguration;
 import com.microsoft.graph.models.AuthenticationMethodConfigurationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.policies.authenticationmethodspolicy.authenticationmethodconfigurations.count.CountRequestBuilder;
+import com.microsoft.graph.policies.authenticationmethodspolicy.authenticationmethodconfigurations.item.AuthenticationMethodConfigurationItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class AuthenticationMethodConfigurationsRequestBuilder extends BaseReques
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the authenticationMethodConfigurations property of the microsoft.graph.authenticationMethodsPolicy entity.
+     * @param authenticationMethodConfigurationId Unique identifier of the item
+     * @return a AuthenticationMethodConfigurationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AuthenticationMethodConfigurationItemRequestBuilder byAuthenticationMethodConfigurationId(@javax.annotation.Nonnull final String authenticationMethodConfigurationId) {
+        Objects.requireNonNull(authenticationMethodConfigurationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("authenticationMethodConfiguration%2Did", authenticationMethodConfigurationId);
+        return new AuthenticationMethodConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AuthenticationMethodConfigurationsRequestBuilder and sets the default values.

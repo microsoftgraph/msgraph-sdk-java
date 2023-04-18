@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.termsofuse.agreementacceptances;
 
 import com.microsoft.graph.identitygovernance.termsofuse.agreementacceptances.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.termsofuse.agreementacceptances.item.AgreementAcceptanceItemRequestBuilder;
 import com.microsoft.graph.models.AgreementAcceptance;
 import com.microsoft.graph.models.AgreementAcceptanceCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the agreementAcceptances property of the microsoft.graph.termsOfUseContainer entity.
+     * @param agreementAcceptanceId Unique identifier of the item
+     * @return a AgreementAcceptanceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AgreementAcceptanceItemRequestBuilder byAgreementAcceptanceId(@javax.annotation.Nonnull final String agreementAcceptanceId) {
+        Objects.requireNonNull(agreementAcceptanceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("agreementAcceptance%2Did", agreementAcceptanceId);
+        return new AgreementAcceptanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AgreementAcceptancesRequestBuilder and sets the default values.

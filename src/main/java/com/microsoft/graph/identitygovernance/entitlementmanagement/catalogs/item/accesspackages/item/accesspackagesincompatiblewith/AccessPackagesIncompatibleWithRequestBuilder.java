@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.accesspackagesincompatiblewith;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.accesspackagesincompatiblewith.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.accesspackagesincompatiblewith.item.AccessPackageItemRequestBuilder;
 import com.microsoft.graph.models.AccessPackageCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the accessPackagesIncompatibleWith property of the microsoft.graph.accessPackage entity.
+     * @param accessPackageId1 Unique identifier of the item
+     * @return a AccessPackageItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AccessPackageItemRequestBuilder byAccessPackageId1(@javax.annotation.Nonnull final String accessPackageId1) {
+        Objects.requireNonNull(accessPackageId1);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("accessPackage%2Did1", accessPackageId1);
+        return new AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AccessPackagesIncompatibleWithRequestBuilder and sets the default values.

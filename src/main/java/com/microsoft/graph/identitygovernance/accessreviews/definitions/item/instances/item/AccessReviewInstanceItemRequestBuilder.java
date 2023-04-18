@@ -4,12 +4,9 @@ import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.ins
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.applydecisions.ApplyDecisionsRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.batchrecorddecisions.BatchRecordDecisionsRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.contactedreviewers.ContactedReviewersRequestBuilder;
-import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.contactedreviewers.item.AccessReviewReviewerItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.decisions.DecisionsRequestBuilder;
-import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.decisions.item.AccessReviewInstanceDecisionItemItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.resetdecisions.ResetDecisionsRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.sendreminder.SendReminderRequestBuilder;
-import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.AccessReviewStageItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.StagesRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stop.StopRequestBuilder;
 import com.microsoft.graph.models.AccessReviewInstance;
@@ -96,30 +93,6 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public AccessReviewInstanceItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition%2Did}/instances/{accessReviewInstance%2Did}{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the contactedReviewers property of the microsoft.graph.accessReviewInstance entity.
-     * @param id Unique identifier of the item
-     * @return a AccessReviewReviewerItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessReviewReviewerItemRequestBuilder contactedReviewers(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessReviewReviewer%2Did", id);
-        return new AccessReviewReviewerItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the decisions property of the microsoft.graph.accessReviewInstance entity.
-     * @param id Unique identifier of the item
-     * @return a AccessReviewInstanceDecisionItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessReviewInstanceDecisionItemItemRequestBuilder decisions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessReviewInstanceDecisionItem%2Did", id);
-        return new AccessReviewInstanceDecisionItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property instances for identityGovernance
@@ -234,18 +207,6 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the stages property of the microsoft.graph.accessReviewInstance entity.
-     * @param id Unique identifier of the item
-     * @return a AccessReviewStageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessReviewStageItemRequestBuilder stages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessReviewStage%2Did", id);
-        return new AccessReviewStageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property instances for identityGovernance

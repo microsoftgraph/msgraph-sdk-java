@@ -1,15 +1,11 @@
 package com.microsoft.graph.education.classes.item;
 
 import com.microsoft.graph.education.classes.item.assignmentcategories.AssignmentCategoriesRequestBuilder;
-import com.microsoft.graph.education.classes.item.assignmentcategories.item.EducationCategoryItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignmentdefaults.AssignmentDefaultsRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.AssignmentsRequestBuilder;
-import com.microsoft.graph.education.classes.item.assignments.item.EducationAssignmentItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignmentsettings.AssignmentSettingsRequestBuilder;
 import com.microsoft.graph.education.classes.item.group.GroupRequestBuilder;
-import com.microsoft.graph.education.classes.item.members.item.EducationUserItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.members.MembersRequestBuilder;
-import com.microsoft.graph.education.classes.item.schools.item.EducationSchoolItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.schools.SchoolsRequestBuilder;
 import com.microsoft.graph.education.classes.item.teachers.TeachersRequestBuilder;
 import com.microsoft.graph.models.EducationClass;
@@ -71,30 +67,6 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public TeachersRequestBuilder teachers() {
         return new TeachersRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the assignmentCategories property of the microsoft.graph.educationClass entity.
-     * @param id Unique identifier of the item
-     * @return a EducationCategoryItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EducationCategoryItemRequestBuilder assignmentCategories(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("educationCategory%2Did", id);
-        return new EducationCategoryItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the assignments property of the microsoft.graph.educationClass entity.
-     * @param id Unique identifier of the item
-     * @return a EducationAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EducationAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("educationAssignment%2Did", id);
-        return new EducationAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new EducationClassItemRequestBuilder and sets the default values.
@@ -191,18 +163,6 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.education.classes.item.members.item collection
-     * @param id Unique identifier of the item
-     * @return a EducationUserItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.education.classes.item.members.item.EducationUserItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("educationUser%2Did", id);
-        return new com.microsoft.graph.education.classes.item.members.item.EducationUserItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property classes in education
      * @param body The request body
      * @return a CompletableFuture of educationClass
@@ -241,30 +201,6 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the schools property of the microsoft.graph.educationClass entity.
-     * @param id Unique identifier of the item
-     * @return a EducationSchoolItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EducationSchoolItemRequestBuilder schools(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("educationSchool%2Did", id);
-        return new EducationSchoolItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.education.classes.item.teachers.item collection
-     * @param id Unique identifier of the item
-     * @return a EducationUserItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.education.classes.item.teachers.item.EducationUserItemRequestBuilder teachers(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("educationUser%2Did", id);
-        return new com.microsoft.graph.education.classes.item.teachers.item.EducationUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property classes for education

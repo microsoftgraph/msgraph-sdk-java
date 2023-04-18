@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.threads;
 
 import com.microsoft.graph.groups.item.threads.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.threads.item.ConversationThreadItemRequestBuilder;
 import com.microsoft.graph.models.ConversationThread;
 import com.microsoft.graph.models.ConversationThreadCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the threads property of the microsoft.graph.group entity.
+     * @param conversationThreadId Unique identifier of the item
+     * @return a ConversationThreadItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ConversationThreadItemRequestBuilder byConversationThreadId(@javax.annotation.Nonnull final String conversationThreadId) {
+        Objects.requireNonNull(conversationThreadId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("conversationThread%2Did", conversationThreadId);
+        return new ConversationThreadItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ThreadsRequestBuilder and sets the default values.

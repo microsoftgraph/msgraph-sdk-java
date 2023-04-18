@@ -1,5 +1,6 @@
 package com.microsoft.graph.agreementacceptances;
 
+import com.microsoft.graph.agreementacceptances.item.AgreementAcceptanceItemRequestBuilder;
 import com.microsoft.graph.models.AgreementAcceptance;
 import com.microsoft.graph.models.AgreementAcceptanceCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -21,6 +22,18 @@ import java.util.Objects;
  * Provides operations to manage the collection of agreementAcceptance entities.
  */
 public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the collection of agreementAcceptance entities.
+     * @param agreementAcceptanceId Unique identifier of the item
+     * @return a AgreementAcceptanceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AgreementAcceptanceItemRequestBuilder byAgreementAcceptanceId(@javax.annotation.Nonnull final String agreementAcceptanceId) {
+        Objects.requireNonNull(agreementAcceptanceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("agreementAcceptance%2Did", agreementAcceptanceId);
+        return new AgreementAcceptanceItemRequestBuilder(urlTplParams, requestAdapter);
+    }
     /**
      * Instantiates a new AgreementAcceptancesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

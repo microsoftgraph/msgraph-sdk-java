@@ -1,12 +1,8 @@
 package com.microsoft.graph.identity.b2xuserflows.item;
 
 import com.microsoft.graph.identity.b2xuserflows.item.identityproviders.IdentityProvidersRequestBuilder;
-import com.microsoft.graph.identity.b2xuserflows.item.identityproviders.item.IdentityProviderItemRequestBuilder;
-import com.microsoft.graph.identity.b2xuserflows.item.languages.item.UserFlowLanguageConfigurationItemRequestBuilder;
 import com.microsoft.graph.identity.b2xuserflows.item.languages.LanguagesRequestBuilder;
-import com.microsoft.graph.identity.b2xuserflows.item.userattributeassignments.item.IdentityUserFlowAttributeAssignmentItemRequestBuilder;
 import com.microsoft.graph.identity.b2xuserflows.item.userattributeassignments.UserAttributeAssignmentsRequestBuilder;
-import com.microsoft.graph.identity.b2xuserflows.item.userflowidentityproviders.item.IdentityProviderBaseItemRequestBuilder;
 import com.microsoft.graph.identity.b2xuserflows.item.userflowidentityproviders.UserFlowIdentityProvidersRequestBuilder;
 import com.microsoft.graph.models.B2xIdentityUserFlow;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -143,30 +139,6 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the identityProviders property of the microsoft.graph.b2xIdentityUserFlow entity.
-     * @param id Unique identifier of the item
-     * @return a IdentityProviderItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public IdentityProviderItemRequestBuilder identityProviders(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("identityProvider%2Did", id);
-        return new IdentityProviderItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the languages property of the microsoft.graph.b2xIdentityUserFlow entity.
-     * @param id Unique identifier of the item
-     * @return a UserFlowLanguageConfigurationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UserFlowLanguageConfigurationItemRequestBuilder languages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("userFlowLanguageConfiguration%2Did", id);
-        return new UserFlowLanguageConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property b2xUserFlows in identity
      * @param body The request body
      * @return a CompletableFuture of b2xIdentityUserFlow
@@ -293,30 +265,6 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the userAttributeAssignments property of the microsoft.graph.b2xIdentityUserFlow entity.
-     * @param id Unique identifier of the item
-     * @return a IdentityUserFlowAttributeAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public IdentityUserFlowAttributeAssignmentItemRequestBuilder userAttributeAssignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("identityUserFlowAttributeAssignment%2Did", id);
-        return new IdentityUserFlowAttributeAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.identity.b2xUserFlows.item.userFlowIdentityProviders.item collection
-     * @param id Unique identifier of the item
-     * @return a IdentityProviderBaseItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public IdentityProviderBaseItemRequestBuilder userFlowIdentityProviders(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("identityProviderBase%2Did", id);
-        return new IdentityProviderBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

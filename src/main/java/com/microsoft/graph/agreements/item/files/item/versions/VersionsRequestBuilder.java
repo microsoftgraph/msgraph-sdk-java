@@ -1,6 +1,7 @@
 package com.microsoft.graph.agreements.item.files.item.versions;
 
 import com.microsoft.graph.agreements.item.files.item.versions.count.CountRequestBuilder;
+import com.microsoft.graph.agreements.item.files.item.versions.item.AgreementFileVersionItemRequestBuilder;
 import com.microsoft.graph.models.AgreementFileVersion;
 import com.microsoft.graph.models.AgreementFileVersionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the versions property of the microsoft.graph.agreementFileLocalization entity.
+     * @param agreementFileVersionId Unique identifier of the item
+     * @return a AgreementFileVersionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AgreementFileVersionItemRequestBuilder byAgreementFileVersionId(@javax.annotation.Nonnull final String agreementFileVersionId) {
+        Objects.requireNonNull(agreementFileVersionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("agreementFileVersion%2Did", agreementFileVersionId);
+        return new AgreementFileVersionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new VersionsRequestBuilder and sets the default values.

@@ -2,6 +2,7 @@ package com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tabl
 
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.rows.add.AddRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.rows.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.rows.item.WorkbookTableRowItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.rows.itematwithindex.ItemAtWithIndexRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookTableRow;
@@ -35,6 +36,18 @@ public class RowsRequestBuilder extends BaseRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the rows property of the microsoft.graph.workbookTable entity.
+     * @param workbookTableRowId Unique identifier of the item
+     * @return a WorkbookTableRowItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public WorkbookTableRowItemRequestBuilder byWorkbookTableRowId(@javax.annotation.Nonnull final String workbookTableRowId) {
+        Objects.requireNonNull(workbookTableRowId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("workbookTableRow%2Did", workbookTableRowId);
+        return new WorkbookTableRowItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
      * Instantiates a new RowsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -57,7 +70,7 @@ public class RowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of tablerow objects.
      * @return a CompletableFuture of WorkbookTableRowCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/tablerow-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/table-list-rows?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableRowCollectionResponse> get() {
@@ -77,7 +90,7 @@ public class RowsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of tablerow objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of WorkbookTableRowCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/tablerow-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/table-list-rows?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableRowCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

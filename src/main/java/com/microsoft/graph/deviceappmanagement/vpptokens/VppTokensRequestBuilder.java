@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.vpptokens;
 
 import com.microsoft.graph.deviceappmanagement.vpptokens.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.vpptokens.item.VppTokenItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.VppToken;
 import com.microsoft.graph.models.VppTokenCollectionResponse;
@@ -26,6 +27,18 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the vppTokens property of the microsoft.graph.deviceAppManagement entity.
+     * @param vppTokenId Unique identifier of the item
+     * @return a VppTokenItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public VppTokenItemRequestBuilder byVppTokenId(@javax.annotation.Nonnull final String vppTokenId) {
+        Objects.requireNonNull(vppTokenId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("vppToken%2Did", vppTokenId);
+        return new VppTokenItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new VppTokensRequestBuilder and sets the default values.

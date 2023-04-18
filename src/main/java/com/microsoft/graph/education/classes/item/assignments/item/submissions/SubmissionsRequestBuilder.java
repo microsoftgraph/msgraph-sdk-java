@@ -1,6 +1,7 @@
 package com.microsoft.graph.education.classes.item.assignments.item.submissions;
 
 import com.microsoft.graph.education.classes.item.assignments.item.submissions.count.CountRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignments.item.submissions.item.EducationSubmissionItemRequestBuilder;
 import com.microsoft.graph.models.EducationSubmission;
 import com.microsoft.graph.models.EducationSubmissionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the submissions property of the microsoft.graph.educationAssignment entity.
+     * @param educationSubmissionId Unique identifier of the item
+     * @return a EducationSubmissionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EducationSubmissionItemRequestBuilder byEducationSubmissionId(@javax.annotation.Nonnull final String educationSubmissionId) {
+        Objects.requireNonNull(educationSubmissionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("educationSubmission%2Did", educationSubmissionId);
+        return new EducationSubmissionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SubmissionsRequestBuilder and sets the default values.

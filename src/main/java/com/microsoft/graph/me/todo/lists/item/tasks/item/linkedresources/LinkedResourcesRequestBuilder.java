@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.todo.lists.item.tasks.item.linkedresources;
 
 import com.microsoft.graph.me.todo.lists.item.tasks.item.linkedresources.count.CountRequestBuilder;
+import com.microsoft.graph.me.todo.lists.item.tasks.item.linkedresources.item.LinkedResourceItemRequestBuilder;
 import com.microsoft.graph.models.LinkedResource;
 import com.microsoft.graph.models.LinkedResourceCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class LinkedResourcesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the linkedResources property of the microsoft.graph.todoTask entity.
+     * @param linkedResourceId Unique identifier of the item
+     * @return a LinkedResourceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public LinkedResourceItemRequestBuilder byLinkedResourceId(@javax.annotation.Nonnull final String linkedResourceId) {
+        Objects.requireNonNull(linkedResourceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("linkedResource%2Did", linkedResourceId);
+        return new LinkedResourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new LinkedResourcesRequestBuilder and sets the default values.

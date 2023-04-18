@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.joinedteams.item.channels.item.tabs;
 
 import com.microsoft.graph.me.joinedteams.item.channels.item.tabs.count.CountRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.channels.item.tabs.item.TeamsTabItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TeamsTab;
 import com.microsoft.graph.models.TeamsTabCollectionResponse;
@@ -26,6 +27,18 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tabs property of the microsoft.graph.channel entity.
+     * @param teamsTabId Unique identifier of the item
+     * @return a TeamsTabItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TeamsTabItemRequestBuilder byTeamsTabId(@javax.annotation.Nonnull final String teamsTabId) {
+        Objects.requireNonNull(teamsTabId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("teamsTab%2Did", teamsTabId);
+        return new TeamsTabItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TabsRequestBuilder and sets the default values.

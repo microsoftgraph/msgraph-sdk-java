@@ -2,6 +2,7 @@ package com.microsoft.graph.drives.item.items.item.workbook.worksheets;
 
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.add.AddRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.WorkbookWorksheetItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookWorksheet;
 import com.microsoft.graph.models.WorkbookWorksheetCollectionResponse;
@@ -32,6 +33,18 @@ public class WorksheetsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the worksheets property of the microsoft.graph.workbook entity.
+     * @param workbookWorksheetId Unique identifier of the item
+     * @return a WorkbookWorksheetItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public WorkbookWorksheetItemRequestBuilder byWorkbookWorksheetId(@javax.annotation.Nonnull final String workbookWorksheetId) {
+        Objects.requireNonNull(workbookWorksheetId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("workbookWorksheet%2Did", workbookWorksheetId);
+        return new WorkbookWorksheetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new WorksheetsRequestBuilder and sets the default values.

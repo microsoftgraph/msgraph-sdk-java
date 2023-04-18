@@ -2,7 +2,6 @@ package com.microsoft.graph.security.triggers;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.TriggersRoot;
-import com.microsoft.graph.security.triggers.retentionevents.item.RetentionEventItemRequestBuilder;
 import com.microsoft.graph.security.triggers.retentionevents.RetentionEventsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -160,18 +159,6 @@ public class TriggersRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the retentionEvents property of the microsoft.graph.security.triggersRoot entity.
-     * @param id Unique identifier of the item
-     * @return a RetentionEventItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public RetentionEventItemRequestBuilder retentionEvents(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("retentionEvent%2Did", id);
-        return new RetentionEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property triggers for security

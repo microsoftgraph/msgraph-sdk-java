@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OnenotePage;
 import com.microsoft.graph.models.OnenotePageCollectionResponse;
 import com.microsoft.graph.users.item.onenote.notebooks.item.sections.item.pages.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.onenote.notebooks.item.sections.item.pages.item.OnenotePageItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the pages property of the microsoft.graph.onenoteSection entity.
+     * @param onenotePageId Unique identifier of the item
+     * @return a OnenotePageItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public OnenotePageItemRequestBuilder byOnenotePageId(@javax.annotation.Nonnull final String onenotePageId) {
+        Objects.requireNonNull(onenotePageId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("onenotePage%2Did", onenotePageId);
+        return new OnenotePageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PagesRequestBuilder and sets the default values.

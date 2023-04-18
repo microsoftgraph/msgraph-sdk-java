@@ -3,7 +3,6 @@ package com.microsoft.graph.groups.item;
 import com.microsoft.graph.groups.item.acceptedsenders.AcceptedSendersRequestBuilder;
 import com.microsoft.graph.groups.item.addfavorite.AddFavoriteRequestBuilder;
 import com.microsoft.graph.groups.item.approleassignments.AppRoleAssignmentsRequestBuilder;
-import com.microsoft.graph.groups.item.approleassignments.item.AppRoleAssignmentItemRequestBuilder;
 import com.microsoft.graph.groups.item.assignlicense.AssignLicenseRequestBuilder;
 import com.microsoft.graph.groups.item.calendar.CalendarRequestBuilder;
 import com.microsoft.graph.groups.item.calendarview.CalendarViewRequestBuilder;
@@ -11,28 +10,21 @@ import com.microsoft.graph.groups.item.checkgrantedpermissionsforapp.CheckGrante
 import com.microsoft.graph.groups.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
 import com.microsoft.graph.groups.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import com.microsoft.graph.groups.item.conversations.ConversationsRequestBuilder;
-import com.microsoft.graph.groups.item.conversations.item.ConversationItemRequestBuilder;
 import com.microsoft.graph.groups.item.createdonbehalfof.CreatedOnBehalfOfRequestBuilder;
 import com.microsoft.graph.groups.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.groups.item.drives.DrivesRequestBuilder;
-import com.microsoft.graph.groups.item.drives.item.DriveItemRequestBuilder;
 import com.microsoft.graph.groups.item.events.EventsRequestBuilder;
-import com.microsoft.graph.groups.item.events.item.EventItemRequestBuilder;
 import com.microsoft.graph.groups.item.extensions.ExtensionsRequestBuilder;
-import com.microsoft.graph.groups.item.extensions.item.ExtensionItemRequestBuilder;
 import com.microsoft.graph.groups.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.groups.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.groups.item.grouplifecyclepolicies.GroupLifecyclePoliciesRequestBuilder;
-import com.microsoft.graph.groups.item.grouplifecyclepolicies.item.GroupLifecyclePolicyItemRequestBuilder;
 import com.microsoft.graph.groups.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.groups.item.members.MembersRequestBuilder;
 import com.microsoft.graph.groups.item.memberswithlicenseerrors.MembersWithLicenseErrorsRequestBuilder;
 import com.microsoft.graph.groups.item.onenote.OnenoteRequestBuilder;
 import com.microsoft.graph.groups.item.owners.OwnersRequestBuilder;
-import com.microsoft.graph.groups.item.permissiongrants.item.ResourceSpecificPermissionGrantItemRequestBuilder;
 import com.microsoft.graph.groups.item.permissiongrants.PermissionGrantsRequestBuilder;
 import com.microsoft.graph.groups.item.photo.PhotoRequestBuilder;
-import com.microsoft.graph.groups.item.photos.item.ProfilePhotoItemRequestBuilder;
 import com.microsoft.graph.groups.item.photos.PhotosRequestBuilder;
 import com.microsoft.graph.groups.item.planner.PlannerRequestBuilder;
 import com.microsoft.graph.groups.item.rejectedsenders.RejectedSendersRequestBuilder;
@@ -40,16 +32,12 @@ import com.microsoft.graph.groups.item.removefavorite.RemoveFavoriteRequestBuild
 import com.microsoft.graph.groups.item.renew.RenewRequestBuilder;
 import com.microsoft.graph.groups.item.resetunseencount.ResetUnseenCountRequestBuilder;
 import com.microsoft.graph.groups.item.restore.RestoreRequestBuilder;
-import com.microsoft.graph.groups.item.settings.item.GroupSettingItemRequestBuilder;
 import com.microsoft.graph.groups.item.settings.SettingsRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.SiteItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.SitesRequestBuilder;
 import com.microsoft.graph.groups.item.subscribebymail.SubscribeByMailRequestBuilder;
 import com.microsoft.graph.groups.item.team.TeamRequestBuilder;
-import com.microsoft.graph.groups.item.threads.item.ConversationThreadItemRequestBuilder;
 import com.microsoft.graph.groups.item.threads.ThreadsRequestBuilder;
 import com.microsoft.graph.groups.item.transitivememberof.TransitiveMemberOfRequestBuilder;
-import com.microsoft.graph.groups.item.transitivemembers.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.groups.item.transitivemembers.TransitiveMembersRequestBuilder;
 import com.microsoft.graph.groups.item.unsubscribebymail.UnsubscribeByMailRequestBuilder;
 import com.microsoft.graph.groups.item.validateproperties.ValidatePropertiesRequestBuilder;
@@ -279,42 +267,6 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.acceptedSenders.item collection
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.groups.item.acceptedsenders.item.DirectoryObjectItemRequestBuilder acceptedSenders(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.groups.item.acceptedsenders.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the appRoleAssignments property of the microsoft.graph.group entity.
-     * @param id Unique identifier of the item
-     * @return a AppRoleAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AppRoleAssignmentItemRequestBuilder appRoleAssignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("appRoleAssignment%2Did", id);
-        return new AppRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the calendarView property of the microsoft.graph.group entity.
-     * @param id Unique identifier of the item
-     * @return a EventItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.groups.item.calendarview.item.EventItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("event%2Did", id);
-        return new com.microsoft.graph.groups.item.calendarview.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new GroupItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -333,18 +285,6 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public GroupItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the conversations property of the microsoft.graph.group entity.
-     * @param id Unique identifier of the item
-     * @return a ConversationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ConversationItemRequestBuilder conversations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("conversation%2Did", id);
-        return new ConversationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete group. When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they're permanently deleted. This isn't applicable to Security groups and Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.
@@ -386,42 +326,6 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the drives property of the microsoft.graph.group entity.
-     * @param id Unique identifier of the item
-     * @return a DriveItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DriveItemRequestBuilder drives(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("drive%2Did", id);
-        return new DriveItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the events property of the microsoft.graph.group entity.
-     * @param id Unique identifier of the item
-     * @return a EventItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.groups.item.events.item.EventItemRequestBuilder events(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("event%2Did", id);
-        return new com.microsoft.graph.groups.item.events.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the extensions property of the microsoft.graph.group entity.
-     * @param id Unique identifier of the item
-     * @return a ExtensionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("extension%2Did", id);
-        return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that are _not_ returned by default, specify them in a `$select` OData query option. The **hasMembersWithLicenseErrors** and **isArchived** properties are an exception and are not returned in the `$select` query.
      * @return a CompletableFuture of group
      * @see <a href="https://docs.microsoft.com/graph/api/group-get?view=graph-rest-1.0">Find more info here</a>
@@ -459,66 +363,6 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the groupLifecyclePolicies property of the microsoft.graph.group entity.
-     * @param id Unique identifier of the item
-     * @return a GroupLifecyclePolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GroupLifecyclePolicyItemRequestBuilder groupLifecyclePolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("groupLifecyclePolicy%2Did", id);
-        return new GroupLifecyclePolicyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the memberOf property of the microsoft.graph.group entity.
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.groups.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.groups.item.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.members.item collection
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.groups.item.members.item.DirectoryObjectItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.groups.item.members.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the membersWithLicenseErrors property of the microsoft.graph.group entity.
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.groups.item.memberswithlicenseerrors.item.DirectoryObjectItemRequestBuilder membersWithLicenseErrors(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.groups.item.memberswithlicenseerrors.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.owners.item collection
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.groups.item.owners.item.DirectoryObjectItemRequestBuilder owners(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.groups.item.owners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Add a member to a security or Microsoft 365 group through the **members** navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
@@ -561,78 +405,6 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the permissionGrants property of the microsoft.graph.group entity.
-     * @param id Unique identifier of the item
-     * @return a ResourceSpecificPermissionGrantItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ResourceSpecificPermissionGrantItemRequestBuilder permissionGrants(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("resourceSpecificPermissionGrant%2Did", id);
-        return new ResourceSpecificPermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the photos property of the microsoft.graph.group entity.
-     * @param id Unique identifier of the item
-     * @return a ProfilePhotoItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ProfilePhotoItemRequestBuilder photos(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("profilePhoto%2Did", id);
-        return new ProfilePhotoItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.rejectedSenders.item collection
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.groups.item.rejectedsenders.item.DirectoryObjectItemRequestBuilder rejectedSenders(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.groups.item.rejectedsenders.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the settings property of the microsoft.graph.group entity.
-     * @param id Unique identifier of the item
-     * @return a GroupSettingItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GroupSettingItemRequestBuilder settings(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("groupSetting%2Did", id);
-        return new GroupSettingItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the sites property of the microsoft.graph.group entity.
-     * @param id Unique identifier of the item
-     * @return a SiteItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SiteItemRequestBuilder sites(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("site%2Did", id);
-        return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the threads property of the microsoft.graph.group entity.
-     * @param id Unique identifier of the item
-     * @return a ConversationThreadItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ConversationThreadItemRequestBuilder threads(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("conversationThread%2Did", id);
-        return new ConversationThreadItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete group. When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they're permanently deleted. This isn't applicable to Security groups and Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.
@@ -721,30 +493,6 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.group entity.
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.groups.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.groups.item.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the transitiveMembers property of the microsoft.graph.group entity.
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.groups.item.transitivemembers.item.DirectoryObjectItemRequestBuilder transitiveMembers(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.groups.item.transitivemembers.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

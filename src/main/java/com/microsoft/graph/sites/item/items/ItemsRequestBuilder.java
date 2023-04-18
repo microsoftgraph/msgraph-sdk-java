@@ -3,6 +3,7 @@ package com.microsoft.graph.sites.item.items;
 import com.microsoft.graph.models.BaseItemCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.sites.item.items.count.CountRequestBuilder;
+import com.microsoft.graph.sites.item.items.item.BaseItemItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -25,6 +26,18 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the items property of the microsoft.graph.site entity.
+     * @param baseItemId Unique identifier of the item
+     * @return a BaseItemItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public BaseItemItemRequestBuilder byBaseItemId(@javax.annotation.Nonnull final String baseItemId) {
+        Objects.requireNonNull(baseItemId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("baseItem%2Did", baseItemId);
+        return new BaseItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ItemsRequestBuilder and sets the default values.

@@ -1,6 +1,7 @@
 package com.microsoft.graph.chats.item.installedapps;
 
 import com.microsoft.graph.chats.item.installedapps.count.CountRequestBuilder;
+import com.microsoft.graph.chats.item.installedapps.item.TeamsAppInstallationItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TeamsAppInstallation;
 import com.microsoft.graph.models.TeamsAppInstallationCollectionResponse;
@@ -26,6 +27,18 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the installedApps property of the microsoft.graph.chat entity.
+     * @param teamsAppInstallationId Unique identifier of the item
+     * @return a TeamsAppInstallationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TeamsAppInstallationItemRequestBuilder byTeamsAppInstallationId(@javax.annotation.Nonnull final String teamsAppInstallationId) {
+        Objects.requireNonNull(teamsAppInstallationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("teamsAppInstallation%2Did", teamsAppInstallationId);
+        return new TeamsAppInstallationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new InstalledAppsRequestBuilder and sets the default values.

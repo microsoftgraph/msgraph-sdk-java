@@ -1,6 +1,5 @@
 package com.microsoft.graph.agreements.item.files.item;
 
-import com.microsoft.graph.agreements.item.files.item.versions.item.AgreementFileVersionItemRequestBuilder;
 import com.microsoft.graph.agreements.item.files.item.versions.VersionsRequestBuilder;
 import com.microsoft.graph.models.AgreementFileLocalization;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -248,18 +247,6 @@ public class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuil
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the versions property of the microsoft.graph.agreementFileLocalization entity.
-     * @param id Unique identifier of the item
-     * @return a AgreementFileVersionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AgreementFileVersionItemRequestBuilder versions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("agreementFileVersion%2Did", id);
-        return new AgreementFileVersionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

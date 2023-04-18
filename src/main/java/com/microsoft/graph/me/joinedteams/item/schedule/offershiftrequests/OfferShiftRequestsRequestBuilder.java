@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.joinedteams.item.schedule.offershiftrequests;
 
 import com.microsoft.graph.me.joinedteams.item.schedule.offershiftrequests.count.CountRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.schedule.offershiftrequests.item.OfferShiftRequestItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OfferShiftRequest;
 import com.microsoft.graph.models.OfferShiftRequestCollectionResponse;
@@ -26,6 +27,18 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity.
+     * @param offerShiftRequestId Unique identifier of the item
+     * @return a OfferShiftRequestItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public OfferShiftRequestItemRequestBuilder byOfferShiftRequestId(@javax.annotation.Nonnull final String offerShiftRequestId) {
+        Objects.requireNonNull(offerShiftRequestId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("offerShiftRequest%2Did", offerShiftRequestId);
+        return new OfferShiftRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OfferShiftRequestsRequestBuilder and sets the default values.

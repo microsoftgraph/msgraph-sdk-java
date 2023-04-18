@@ -3,16 +3,10 @@ package com.microsoft.graph.print;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Print;
 import com.microsoft.graph.print.connectors.ConnectorsRequestBuilder;
-import com.microsoft.graph.print.connectors.item.PrintConnectorItemRequestBuilder;
-import com.microsoft.graph.print.operations.item.PrintOperationItemRequestBuilder;
 import com.microsoft.graph.print.operations.OperationsRequestBuilder;
-import com.microsoft.graph.print.printers.item.PrinterItemRequestBuilder;
 import com.microsoft.graph.print.printers.PrintersRequestBuilder;
-import com.microsoft.graph.print.services.item.PrintServiceItemRequestBuilder;
 import com.microsoft.graph.print.services.ServicesRequestBuilder;
-import com.microsoft.graph.print.shares.item.PrinterShareItemRequestBuilder;
 import com.microsoft.graph.print.shares.SharesRequestBuilder;
-import com.microsoft.graph.print.taskdefinitions.item.PrintTaskDefinitionItemRequestBuilder;
 import com.microsoft.graph.print.taskdefinitions.TaskDefinitionsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -61,18 +55,6 @@ public class PrintRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public TaskDefinitionsRequestBuilder taskDefinitions() {
         return new TaskDefinitionsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the connectors property of the microsoft.graph.print entity.
-     * @param id Unique identifier of the item
-     * @return a PrintConnectorItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PrintConnectorItemRequestBuilder connectors(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("printConnector%2Did", id);
-        return new PrintConnectorItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PrintRequestBuilder and sets the default values.
@@ -132,18 +114,6 @@ public class PrintRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the operations property of the microsoft.graph.print entity.
-     * @param id Unique identifier of the item
-     * @return a PrintOperationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PrintOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("printOperation%2Did", id);
-        return new PrintOperationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update print
      * @param body The request body
      * @return a CompletableFuture of Print
@@ -182,54 +152,6 @@ public class PrintRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the printers property of the microsoft.graph.print entity.
-     * @param id Unique identifier of the item
-     * @return a PrinterItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PrinterItemRequestBuilder printers(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("printer%2Did", id);
-        return new PrinterItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the services property of the microsoft.graph.print entity.
-     * @param id Unique identifier of the item
-     * @return a PrintServiceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PrintServiceItemRequestBuilder services(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("printService%2Did", id);
-        return new PrintServiceItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the shares property of the microsoft.graph.print entity.
-     * @param id Unique identifier of the item
-     * @return a PrinterShareItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PrinterShareItemRequestBuilder shares(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("printerShare%2Did", id);
-        return new PrinterShareItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the taskDefinitions property of the microsoft.graph.print entity.
-     * @param id Unique identifier of the item
-     * @return a PrintTaskDefinitionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PrintTaskDefinitionItemRequestBuilder taskDefinitions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("printTaskDefinition%2Did", id);
-        return new PrintTaskDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get print

@@ -4,6 +4,7 @@ import com.microsoft.graph.models.ListItem;
 import com.microsoft.graph.models.ListItemCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.shares.item.list.items.count.CountRequestBuilder;
+import com.microsoft.graph.shares.item.list.items.item.ListItemItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the items property of the microsoft.graph.list entity.
+     * @param listItemId Unique identifier of the item
+     * @return a ListItemItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ListItemItemRequestBuilder byListItemId(@javax.annotation.Nonnull final String listItemId) {
+        Objects.requireNonNull(listItemId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("listItem%2Did", listItemId);
+        return new ListItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ItemsRequestBuilder and sets the default values.

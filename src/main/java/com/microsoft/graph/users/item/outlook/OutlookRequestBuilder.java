@@ -2,7 +2,6 @@ package com.microsoft.graph.users.item.outlook;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OutlookUser;
-import com.microsoft.graph.users.item.outlook.mastercategories.item.OutlookCategoryItemRequestBuilder;
 import com.microsoft.graph.users.item.outlook.mastercategories.MasterCategoriesRequestBuilder;
 import com.microsoft.graph.users.item.outlook.supportedlanguages.SupportedLanguagesRequestBuilder;
 import com.microsoft.graph.users.item.outlook.supportedtimezones.SupportedTimeZonesRequestBuilder;
@@ -96,18 +95,6 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity.
-     * @param id Unique identifier of the item
-     * @return a OutlookCategoryItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public OutlookCategoryItemRequestBuilder masterCategories(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("outlookCategory%2Did", id);
-        return new OutlookCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Provides operations to call the supportedTimeZones method.

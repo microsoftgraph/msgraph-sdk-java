@@ -4,6 +4,7 @@ import com.microsoft.graph.models.ColumnLink;
 import com.microsoft.graph.models.ColumnLinkCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.sites.item.contenttypes.item.columnlinks.count.CountRequestBuilder;
+import com.microsoft.graph.sites.item.contenttypes.item.columnlinks.item.ColumnLinkItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class ColumnLinksRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the columnLinks property of the microsoft.graph.contentType entity.
+     * @param columnLinkId Unique identifier of the item
+     * @return a ColumnLinkItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ColumnLinkItemRequestBuilder byColumnLinkId(@javax.annotation.Nonnull final String columnLinkId) {
+        Objects.requireNonNull(columnLinkId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("columnLink%2Did", columnLinkId);
+        return new ColumnLinkItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ColumnLinksRequestBuilder and sets the default values.

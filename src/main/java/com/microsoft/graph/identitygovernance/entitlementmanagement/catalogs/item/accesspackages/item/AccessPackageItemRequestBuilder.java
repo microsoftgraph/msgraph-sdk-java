@@ -2,12 +2,10 @@ package com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.it
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.accesspackagesincompatiblewith.AccessPackagesIncompatibleWithRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.assignmentpolicies.AssignmentPoliciesRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.assignmentpolicies.item.AccessPackageAssignmentPolicyItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.catalog.CatalogRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.getapplicablepolicyrequirements.GetApplicablePolicyRequirementsRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.incompatibleaccesspackages.IncompatibleAccessPackagesRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.incompatiblegroups.IncompatibleGroupsRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.incompatiblegroups.item.GroupItemRequestBuilder;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -57,30 +55,6 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public IncompatibleGroupsRequestBuilder incompatibleGroups() {
         return new IncompatibleGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the accessPackagesIncompatibleWith property of the microsoft.graph.accessPackage entity.
-     * @param id Unique identifier of the item
-     * @return a AccessPackageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.accesspackagesincompatiblewith.item.AccessPackageItemRequestBuilder accessPackagesIncompatibleWith(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackage%2Did1", id);
-        return new com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.accesspackagesincompatiblewith.item.AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the assignmentPolicies property of the microsoft.graph.accessPackage entity.
-     * @param id Unique identifier of the item
-     * @return a AccessPackageAssignmentPolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageAssignmentPolicyItemRequestBuilder assignmentPolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackageAssignmentPolicy%2Did", id);
-        return new AccessPackageAssignmentPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AccessPackageItemRequestBuilder and sets the default values.
@@ -175,30 +149,6 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.catalogs.item.accessPackages.item.incompatibleAccessPackages.item collection
-     * @param id Unique identifier of the item
-     * @return a AccessPackageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.incompatibleaccesspackages.item.AccessPackageItemRequestBuilder incompatibleAccessPackages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackage%2Did1", id);
-        return new com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.incompatibleaccesspackages.item.AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.catalogs.item.accessPackages.item.incompatibleGroups.item collection
-     * @param id Unique identifier of the item
-     * @return a GroupItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GroupItemRequestBuilder incompatibleGroups(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("group%2Did", id);
-        return new GroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property accessPackages in identityGovernance

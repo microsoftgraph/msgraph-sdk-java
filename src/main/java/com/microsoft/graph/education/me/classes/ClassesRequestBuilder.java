@@ -1,6 +1,7 @@
 package com.microsoft.graph.education.me.classes;
 
 import com.microsoft.graph.education.me.classes.count.CountRequestBuilder;
+import com.microsoft.graph.education.me.classes.item.EducationClassItemRequestBuilder;
 import com.microsoft.graph.models.EducationClassCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the classes property of the microsoft.graph.educationUser entity.
+     * @param educationClassId Unique identifier of the item
+     * @return a EducationClassItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EducationClassItemRequestBuilder byEducationClassId(@javax.annotation.Nonnull final String educationClassId) {
+        Objects.requireNonNull(educationClassId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("educationClass%2Did", educationClassId);
+        return new EducationClassItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ClassesRequestBuilder and sets the default values.

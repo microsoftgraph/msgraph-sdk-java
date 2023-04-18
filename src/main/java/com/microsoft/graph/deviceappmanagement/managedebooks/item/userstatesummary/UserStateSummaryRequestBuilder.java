@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary;
 
 import com.microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary.item.UserInstallStateSummaryItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UserInstallStateSummary;
 import com.microsoft.graph.models.UserInstallStateSummaryCollectionResponse;
@@ -26,6 +27,18 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userStateSummary property of the microsoft.graph.managedEBook entity.
+     * @param userInstallStateSummaryId Unique identifier of the item
+     * @return a UserInstallStateSummaryItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UserInstallStateSummaryItemRequestBuilder byUserInstallStateSummaryId(@javax.annotation.Nonnull final String userInstallStateSummaryId) {
+        Objects.requireNonNull(userInstallStateSummaryId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("userInstallStateSummary%2Did", userInstallStateSummaryId);
+        return new UserInstallStateSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new UserStateSummaryRequestBuilder and sets the default values.

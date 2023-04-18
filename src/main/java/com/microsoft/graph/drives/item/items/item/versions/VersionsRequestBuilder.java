@@ -1,6 +1,7 @@
 package com.microsoft.graph.drives.item.items.item.versions;
 
 import com.microsoft.graph.drives.item.items.item.versions.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.versions.item.DriveItemVersionItemRequestBuilder;
 import com.microsoft.graph.models.DriveItemVersion;
 import com.microsoft.graph.models.DriveItemVersionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the versions property of the microsoft.graph.driveItem entity.
+     * @param driveItemVersionId Unique identifier of the item
+     * @return a DriveItemVersionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DriveItemVersionItemRequestBuilder byDriveItemVersionId(@javax.annotation.Nonnull final String driveItemVersionId) {
+        Objects.requireNonNull(driveItemVersionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("driveItemVersion%2Did", driveItemVersionId);
+        return new DriveItemVersionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new VersionsRequestBuilder and sets the default values.

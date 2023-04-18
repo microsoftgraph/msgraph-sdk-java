@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.planner.plans.item.buckets.item.tasks;
 
 import com.microsoft.graph.groups.item.planner.plans.item.buckets.item.tasks.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.planner.plans.item.buckets.item.tasks.item.PlannerTaskItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PlannerTask;
 import com.microsoft.graph.models.PlannerTaskCollectionResponse;
@@ -26,6 +27,18 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tasks property of the microsoft.graph.plannerBucket entity.
+     * @param plannerTaskId Unique identifier of the item
+     * @return a PlannerTaskItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PlannerTaskItemRequestBuilder byPlannerTaskId(@javax.annotation.Nonnull final String plannerTaskId) {
+        Objects.requireNonNull(plannerTaskId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("plannerTask%2Did", plannerTaskId);
+        return new PlannerTaskItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TasksRequestBuilder and sets the default values.

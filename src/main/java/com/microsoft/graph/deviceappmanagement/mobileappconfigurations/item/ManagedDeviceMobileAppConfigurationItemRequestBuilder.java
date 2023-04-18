@@ -2,11 +2,8 @@ package com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item;
 
 import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.assign.AssignRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.assignments.AssignmentsRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.assignments.item.ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.devicestatuses.DeviceStatusesRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.devicestatuses.item.ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.devicestatussummary.DeviceStatusSummaryRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.userstatuses.item.ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.userstatuses.UserStatusesRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.userstatussummary.UserStatusSummaryRequestBuilder;
 import com.microsoft.graph.models.ManagedDeviceMobileAppConfiguration;
@@ -58,18 +55,6 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
     @javax.annotation.Nonnull
     public UserStatusSummaryRequestBuilder userStatusSummary() {
         return new UserStatusSummaryRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the assignments property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
-     * @param id Unique identifier of the item
-     * @return a ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("managedDeviceMobileAppConfigurationAssignment%2Did", id);
-        return new ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ManagedDeviceMobileAppConfigurationItemRequestBuilder and sets the default values.
@@ -127,18 +112,6 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the deviceStatuses property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
-     * @param id Unique identifier of the item
-     * @return a ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder deviceStatuses(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("managedDeviceMobileAppConfigurationDeviceStatus%2Did", id);
-        return new ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * The Managed Device Mobile Application Configurations.
@@ -304,18 +277,6 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the userStatuses property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
-     * @param id Unique identifier of the item
-     * @return a ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder userStatuses(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("managedDeviceMobileAppConfigurationUserStatus%2Did", id);
-        return new ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

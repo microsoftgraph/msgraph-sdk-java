@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.accessreviews.historydefinitions;
 
 import com.microsoft.graph.identitygovernance.accessreviews.historydefinitions.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.historydefinitions.item.AccessReviewHistoryDefinitionItemRequestBuilder;
 import com.microsoft.graph.models.AccessReviewHistoryDefinition;
 import com.microsoft.graph.models.AccessReviewHistoryDefinitionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the historyDefinitions property of the microsoft.graph.accessReviewSet entity.
+     * @param accessReviewHistoryDefinitionId Unique identifier of the item
+     * @return a AccessReviewHistoryDefinitionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AccessReviewHistoryDefinitionItemRequestBuilder byAccessReviewHistoryDefinitionId(@javax.annotation.Nonnull final String accessReviewHistoryDefinitionId) {
+        Objects.requireNonNull(accessReviewHistoryDefinitionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("accessReviewHistoryDefinition%2Did", accessReviewHistoryDefinitionId);
+        return new AccessReviewHistoryDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new HistoryDefinitionsRequestBuilder and sets the default values.

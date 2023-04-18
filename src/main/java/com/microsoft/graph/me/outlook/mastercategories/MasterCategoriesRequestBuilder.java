@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.outlook.mastercategories;
 
 import com.microsoft.graph.me.outlook.mastercategories.count.CountRequestBuilder;
+import com.microsoft.graph.me.outlook.mastercategories.item.OutlookCategoryItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OutlookCategory;
 import com.microsoft.graph.models.OutlookCategoryCollectionResponse;
@@ -26,6 +27,18 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity.
+     * @param outlookCategoryId Unique identifier of the item
+     * @return a OutlookCategoryItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public OutlookCategoryItemRequestBuilder byOutlookCategoryId(@javax.annotation.Nonnull final String outlookCategoryId) {
+        Objects.requireNonNull(outlookCategoryId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("outlookCategory%2Did", outlookCategoryId);
+        return new OutlookCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MasterCategoriesRequestBuilder and sets the default values.

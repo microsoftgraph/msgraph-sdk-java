@@ -1,7 +1,6 @@
 package com.microsoft.graph.me.calendargroups.item;
 
 import com.microsoft.graph.me.calendargroups.item.calendars.CalendarsRequestBuilder;
-import com.microsoft.graph.me.calendargroups.item.calendars.item.CalendarItemRequestBuilder;
 import com.microsoft.graph.models.CalendarGroup;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -26,18 +25,6 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CalendarsRequestBuilder calendars() {
         return new CalendarsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the calendars property of the microsoft.graph.calendarGroup entity.
-     * @param id Unique identifier of the item
-     * @return a CalendarItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public CalendarItemRequestBuilder calendars(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("calendar%2Did", id);
-        return new CalendarItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new CalendarGroupItemRequestBuilder and sets the default values.

@@ -2,6 +2,7 @@ package com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.it
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.count.CountRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.AccessPackageItemRequestBuilder;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.AccessPackageCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -27,6 +28,18 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the accessPackages property of the microsoft.graph.accessPackageCatalog entity.
+     * @param accessPackageId Unique identifier of the item
+     * @return a AccessPackageItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AccessPackageItemRequestBuilder byAccessPackageId(@javax.annotation.Nonnull final String accessPackageId) {
+        Objects.requireNonNull(accessPackageId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("accessPackage%2Did", accessPackageId);
+        return new AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AccessPackagesRequestBuilder and sets the default values.

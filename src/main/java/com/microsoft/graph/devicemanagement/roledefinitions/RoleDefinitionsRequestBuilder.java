@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.roledefinitions;
 
 import com.microsoft.graph.devicemanagement.roledefinitions.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.roledefinitions.item.RoleDefinitionItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.RoleDefinition;
 import com.microsoft.graph.models.RoleDefinitionCollectionResponse;
@@ -26,6 +27,18 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the roleDefinitions property of the microsoft.graph.deviceManagement entity.
+     * @param roleDefinitionId Unique identifier of the item
+     * @return a RoleDefinitionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public RoleDefinitionItemRequestBuilder byRoleDefinitionId(@javax.annotation.Nonnull final String roleDefinitionId) {
+        Objects.requireNonNull(roleDefinitionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("roleDefinition%2Did", roleDefinitionId);
+        return new RoleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RoleDefinitionsRequestBuilder and sets the default values.

@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.contactedreviewers;
 
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.contactedreviewers.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.contactedreviewers.item.AccessReviewReviewerItemRequestBuilder;
 import com.microsoft.graph.models.AccessReviewReviewer;
 import com.microsoft.graph.models.AccessReviewReviewerCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ContactedReviewersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the contactedReviewers property of the microsoft.graph.accessReviewInstance entity.
+     * @param accessReviewReviewerId Unique identifier of the item
+     * @return a AccessReviewReviewerItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AccessReviewReviewerItemRequestBuilder byAccessReviewReviewerId(@javax.annotation.Nonnull final String accessReviewReviewerId) {
+        Objects.requireNonNull(accessReviewReviewerId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("accessReviewReviewer%2Did", accessReviewReviewerId);
+        return new AccessReviewReviewerItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ContactedReviewersRequestBuilder and sets the default values.

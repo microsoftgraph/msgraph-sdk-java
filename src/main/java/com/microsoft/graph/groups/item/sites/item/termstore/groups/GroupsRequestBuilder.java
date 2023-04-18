@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.sites.item.termstore.groups;
 
 import com.microsoft.graph.groups.item.sites.item.termstore.groups.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.termstore.groups.item.GroupItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.termstore.Group;
 import com.microsoft.graph.models.termstore.GroupCollectionResponse;
@@ -26,6 +27,18 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the groups property of the microsoft.graph.termStore.store entity.
+     * @param groupId1 Unique identifier of the item
+     * @return a GroupItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GroupItemRequestBuilder byGroupId1(@javax.annotation.Nonnull final String groupId1) {
+        Objects.requireNonNull(groupId1);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("group%2Did1", groupId1);
+        return new GroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new GroupsRequestBuilder and sets the default values.

@@ -1,9 +1,7 @@
 package com.microsoft.graph.admin.edge.internetexplorermode.sitelists.item;
 
 import com.microsoft.graph.admin.edge.internetexplorermode.sitelists.item.publish.PublishRequestBuilder;
-import com.microsoft.graph.admin.edge.internetexplorermode.sitelists.item.sharedcookies.item.BrowserSharedCookieItemRequestBuilder;
 import com.microsoft.graph.admin.edge.internetexplorermode.sitelists.item.sharedcookies.SharedCookiesRequestBuilder;
-import com.microsoft.graph.admin.edge.internetexplorermode.sitelists.item.sites.item.BrowserSiteItemRequestBuilder;
 import com.microsoft.graph.admin.edge.internetexplorermode.sitelists.item.sites.SitesRequestBuilder;
 import com.microsoft.graph.models.BrowserSiteList;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -173,30 +171,6 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the sharedCookies property of the microsoft.graph.browserSiteList entity.
-     * @param id Unique identifier of the item
-     * @return a BrowserSharedCookieItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public BrowserSharedCookieItemRequestBuilder sharedCookies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("browserSharedCookie%2Did", id);
-        return new BrowserSharedCookieItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the sites property of the microsoft.graph.browserSiteList entity.
-     * @param id Unique identifier of the item
-     * @return a BrowserSiteItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public BrowserSiteItemRequestBuilder sites(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("browserSite%2Did", id);
-        return new BrowserSiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property siteLists for admin

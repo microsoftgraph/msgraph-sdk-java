@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UnifiedRoleDefinition;
 import com.microsoft.graph.models.UnifiedRoleDefinitionCollectionResponse;
 import com.microsoft.graph.rolemanagement.directory.roledefinitions.item.inheritspermissionsfrom.count.CountRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roledefinitions.item.inheritspermissionsfrom.item.UnifiedRoleDefinitionItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class InheritsPermissionsFromRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the inheritsPermissionsFrom property of the microsoft.graph.unifiedRoleDefinition entity.
+     * @param unifiedRoleDefinitionId1 Unique identifier of the item
+     * @return a UnifiedRoleDefinitionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UnifiedRoleDefinitionItemRequestBuilder byUnifiedRoleDefinitionId1(@javax.annotation.Nonnull final String unifiedRoleDefinitionId1) {
+        Objects.requireNonNull(unifiedRoleDefinitionId1);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("unifiedRoleDefinition%2Did1", unifiedRoleDefinitionId1);
+        return new UnifiedRoleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new InheritsPermissionsFromRequestBuilder and sets the default values.

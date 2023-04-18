@@ -2,6 +2,7 @@ package com.microsoft.graph.drives.item.items.item.workbook.tables.item.columns;
 
 import com.microsoft.graph.drives.item.items.item.workbook.tables.item.columns.add.AddRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.tables.item.columns.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.tables.item.columns.item.WorkbookTableColumnItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.tables.item.columns.itematwithindex.ItemAtWithIndexRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookTableColumn;
@@ -33,6 +34,18 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the columns property of the microsoft.graph.workbookTable entity.
+     * @param workbookTableColumnId Unique identifier of the item
+     * @return a WorkbookTableColumnItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public WorkbookTableColumnItemRequestBuilder byWorkbookTableColumnId(@javax.annotation.Nonnull final String workbookTableColumnId) {
+        Objects.requireNonNull(workbookTableColumnId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("workbookTableColumn%2Did", workbookTableColumnId);
+        return new WorkbookTableColumnItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ColumnsRequestBuilder and sets the default values.

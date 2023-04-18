@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.assignments;
 
 import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.assignments.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.assignments.item.ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder;
 import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationAssignment;
 import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
+     * @param managedDeviceMobileAppConfigurationAssignmentId Unique identifier of the item
+     * @return a ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder byManagedDeviceMobileAppConfigurationAssignmentId(@javax.annotation.Nonnull final String managedDeviceMobileAppConfigurationAssignmentId) {
+        Objects.requireNonNull(managedDeviceMobileAppConfigurationAssignmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedDeviceMobileAppConfigurationAssignment%2Did", managedDeviceMobileAppConfigurationAssignmentId);
+        return new ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AssignmentsRequestBuilder and sets the default values.

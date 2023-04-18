@@ -1,10 +1,7 @@
 package com.microsoft.graph.admin.serviceannouncement;
 
 import com.microsoft.graph.admin.serviceannouncement.healthoverviews.HealthOverviewsRequestBuilder;
-import com.microsoft.graph.admin.serviceannouncement.healthoverviews.item.ServiceHealthItemRequestBuilder;
 import com.microsoft.graph.admin.serviceannouncement.issues.IssuesRequestBuilder;
-import com.microsoft.graph.admin.serviceannouncement.issues.item.ServiceHealthIssueItemRequestBuilder;
-import com.microsoft.graph.admin.serviceannouncement.messages.item.ServiceUpdateMessageItemRequestBuilder;
 import com.microsoft.graph.admin.serviceannouncement.messages.MessagesRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ServiceAnnouncement;
@@ -134,42 +131,6 @@ public class ServiceAnnouncementRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the healthOverviews property of the microsoft.graph.serviceAnnouncement entity.
-     * @param id Unique identifier of the item
-     * @return a ServiceHealthItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ServiceHealthItemRequestBuilder healthOverviews(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("serviceHealth%2Did", id);
-        return new ServiceHealthItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the issues property of the microsoft.graph.serviceAnnouncement entity.
-     * @param id Unique identifier of the item
-     * @return a ServiceHealthIssueItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ServiceHealthIssueItemRequestBuilder issues(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("serviceHealthIssue%2Did", id);
-        return new ServiceHealthIssueItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity.
-     * @param id Unique identifier of the item
-     * @return a ServiceUpdateMessageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ServiceUpdateMessageItemRequestBuilder messages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("serviceUpdateMessage%2Did", id);
-        return new ServiceUpdateMessageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property serviceAnnouncement in admin

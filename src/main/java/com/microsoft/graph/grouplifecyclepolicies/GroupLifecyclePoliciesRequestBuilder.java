@@ -1,6 +1,7 @@
 package com.microsoft.graph.grouplifecyclepolicies;
 
 import com.microsoft.graph.grouplifecyclepolicies.count.CountRequestBuilder;
+import com.microsoft.graph.grouplifecyclepolicies.item.GroupLifecyclePolicyItemRequestBuilder;
 import com.microsoft.graph.models.GroupLifecyclePolicy;
 import com.microsoft.graph.models.GroupLifecyclePolicyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of groupLifecyclePolicy entities.
+     * @param groupLifecyclePolicyId Unique identifier of the item
+     * @return a GroupLifecyclePolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GroupLifecyclePolicyItemRequestBuilder byGroupLifecyclePolicyId(@javax.annotation.Nonnull final String groupLifecyclePolicyId) {
+        Objects.requireNonNull(groupLifecyclePolicyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("groupLifecyclePolicy%2Did", groupLifecyclePolicyId);
+        return new GroupLifecyclePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new GroupLifecyclePoliciesRequestBuilder and sets the default values.

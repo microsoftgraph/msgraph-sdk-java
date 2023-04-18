@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SharedInsight;
 import com.microsoft.graph.models.SharedInsightCollectionResponse;
 import com.microsoft.graph.users.item.insights.shared.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.insights.shared.item.SharedInsightItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class SharedRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity.
+     * @param sharedInsightId Unique identifier of the item
+     * @return a SharedInsightItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SharedInsightItemRequestBuilder bySharedInsightId(@javax.annotation.Nonnull final String sharedInsightId) {
+        Objects.requireNonNull(sharedInsightId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("sharedInsight%2Did", sharedInsightId);
+        return new SharedInsightItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SharedRequestBuilder and sets the default values.

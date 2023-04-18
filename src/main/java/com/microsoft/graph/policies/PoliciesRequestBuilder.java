@@ -3,33 +3,23 @@ package com.microsoft.graph.policies;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PolicyRoot;
 import com.microsoft.graph.policies.activitybasedtimeoutpolicies.ActivityBasedTimeoutPoliciesRequestBuilder;
-import com.microsoft.graph.policies.activitybasedtimeoutpolicies.item.ActivityBasedTimeoutPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.adminconsentrequestpolicy.AdminConsentRequestPolicyRequestBuilder;
 import com.microsoft.graph.policies.appmanagementpolicies.AppManagementPoliciesRequestBuilder;
-import com.microsoft.graph.policies.appmanagementpolicies.item.AppManagementPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.authenticationflowspolicy.AuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.policies.authenticationmethodspolicy.AuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.policies.authenticationstrengthpolicies.AuthenticationStrengthPoliciesRequestBuilder;
 import com.microsoft.graph.policies.authorizationpolicy.AuthorizationPolicyRequestBuilder;
 import com.microsoft.graph.policies.claimsmappingpolicies.ClaimsMappingPoliciesRequestBuilder;
-import com.microsoft.graph.policies.claimsmappingpolicies.item.ClaimsMappingPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.conditionalaccesspolicies.ConditionalAccessPoliciesRequestBuilder;
-import com.microsoft.graph.policies.conditionalaccesspolicies.item.ConditionalAccessPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.crosstenantaccesspolicy.CrossTenantAccessPolicyRequestBuilder;
 import com.microsoft.graph.policies.defaultappmanagementpolicy.DefaultAppManagementPolicyRequestBuilder;
 import com.microsoft.graph.policies.featurerolloutpolicies.FeatureRolloutPoliciesRequestBuilder;
-import com.microsoft.graph.policies.featurerolloutpolicies.item.FeatureRolloutPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
-import com.microsoft.graph.policies.homerealmdiscoverypolicies.item.HomeRealmDiscoveryPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.identitysecuritydefaultsenforcementpolicy.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
-import com.microsoft.graph.policies.permissiongrantpolicies.item.PermissionGrantPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.permissiongrantpolicies.PermissionGrantPoliciesRequestBuilder;
-import com.microsoft.graph.policies.rolemanagementpolicies.item.UnifiedRoleManagementPolicyItemRequestBuilder;
 import com.microsoft.graph.policies.rolemanagementpolicies.RoleManagementPoliciesRequestBuilder;
-import com.microsoft.graph.policies.rolemanagementpolicyassignments.item.UnifiedRoleManagementPolicyAssignmentItemRequestBuilder;
 import com.microsoft.graph.policies.rolemanagementpolicyassignments.RoleManagementPolicyAssignmentsRequestBuilder;
-import com.microsoft.graph.policies.tokenissuancepolicies.item.TokenIssuancePolicyItemRequestBuilder;
 import com.microsoft.graph.policies.tokenissuancepolicies.TokenIssuancePoliciesRequestBuilder;
-import com.microsoft.graph.policies.tokenlifetimepolicies.item.TokenLifetimePolicyItemRequestBuilder;
 import com.microsoft.graph.policies.tokenlifetimepolicies.TokenLifetimePoliciesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -73,6 +63,11 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
         return new AuthenticationMethodsPolicyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the authenticationStrengthPolicies property of the microsoft.graph.policyRoot entity. */
+    @javax.annotation.Nonnull
+    public AuthenticationStrengthPoliciesRequestBuilder authenticationStrengthPolicies() {
+        return new AuthenticationStrengthPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the authorizationPolicy property of the microsoft.graph.policyRoot entity. */
     @javax.annotation.Nonnull
@@ -140,54 +135,6 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return new TokenLifetimePoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the activityBasedTimeoutPolicies property of the microsoft.graph.policyRoot entity.
-     * @param id Unique identifier of the item
-     * @return a ActivityBasedTimeoutPolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ActivityBasedTimeoutPolicyItemRequestBuilder activityBasedTimeoutPolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("activityBasedTimeoutPolicy%2Did", id);
-        return new ActivityBasedTimeoutPolicyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the appManagementPolicies property of the microsoft.graph.policyRoot entity.
-     * @param id Unique identifier of the item
-     * @return a AppManagementPolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AppManagementPolicyItemRequestBuilder appManagementPolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("appManagementPolicy%2Did", id);
-        return new AppManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the claimsMappingPolicies property of the microsoft.graph.policyRoot entity.
-     * @param id Unique identifier of the item
-     * @return a ClaimsMappingPolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ClaimsMappingPolicyItemRequestBuilder claimsMappingPolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("claimsMappingPolicy%2Did", id);
-        return new ClaimsMappingPolicyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the conditionalAccessPolicies property of the microsoft.graph.policyRoot entity.
-     * @param id Unique identifier of the item
-     * @return a ConditionalAccessPolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ConditionalAccessPolicyItemRequestBuilder conditionalAccessPolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("conditionalAccessPolicy%2Did", id);
-        return new ConditionalAccessPolicyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new PoliciesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -206,18 +153,6 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public PoliciesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/policies{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.policyRoot entity.
-     * @param id Unique identifier of the item
-     * @return a FeatureRolloutPolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public FeatureRolloutPolicyItemRequestBuilder featureRolloutPolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("featureRolloutPolicy%2Did", id);
-        return new FeatureRolloutPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get policies
@@ -255,18 +190,6 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.policyRoot entity.
-     * @param id Unique identifier of the item
-     * @return a HomeRealmDiscoveryPolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public HomeRealmDiscoveryPolicyItemRequestBuilder homeRealmDiscoveryPolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("homeRealmDiscoveryPolicy%2Did", id);
-        return new HomeRealmDiscoveryPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update policies
@@ -309,42 +232,6 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the permissionGrantPolicies property of the microsoft.graph.policyRoot entity.
-     * @param id Unique identifier of the item
-     * @return a PermissionGrantPolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PermissionGrantPolicyItemRequestBuilder permissionGrantPolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("permissionGrantPolicy%2Did", id);
-        return new PermissionGrantPolicyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the roleManagementPolicies property of the microsoft.graph.policyRoot entity.
-     * @param id Unique identifier of the item
-     * @return a UnifiedRoleManagementPolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UnifiedRoleManagementPolicyItemRequestBuilder roleManagementPolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("unifiedRoleManagementPolicy%2Did", id);
-        return new UnifiedRoleManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the roleManagementPolicyAssignments property of the microsoft.graph.policyRoot entity.
-     * @param id Unique identifier of the item
-     * @return a UnifiedRoleManagementPolicyAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UnifiedRoleManagementPolicyAssignmentItemRequestBuilder roleManagementPolicyAssignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("unifiedRoleManagementPolicyAssignment%2Did", id);
-        return new UnifiedRoleManagementPolicyAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Get policies
      * @return a RequestInformation
      */
@@ -372,30 +259,6 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.policyRoot entity.
-     * @param id Unique identifier of the item
-     * @return a TokenIssuancePolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TokenIssuancePolicyItemRequestBuilder tokenIssuancePolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("tokenIssuancePolicy%2Did", id);
-        return new TokenIssuancePolicyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.policyRoot entity.
-     * @param id Unique identifier of the item
-     * @return a TokenLifetimePolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TokenLifetimePolicyItemRequestBuilder tokenLifetimePolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("tokenLifetimePolicy%2Did", id);
-        return new TokenLifetimePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update policies

@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.notificationmessagetemplates.item.localizednotificationmessages;
 
 import com.microsoft.graph.devicemanagement.notificationmessagetemplates.item.localizednotificationmessages.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.notificationmessagetemplates.item.localizednotificationmessages.item.LocalizedNotificationMessageItemRequestBuilder;
 import com.microsoft.graph.models.LocalizedNotificationMessage;
 import com.microsoft.graph.models.LocalizedNotificationMessageCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuil
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the localizedNotificationMessages property of the microsoft.graph.notificationMessageTemplate entity.
+     * @param localizedNotificationMessageId Unique identifier of the item
+     * @return a LocalizedNotificationMessageItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public LocalizedNotificationMessageItemRequestBuilder byLocalizedNotificationMessageId(@javax.annotation.Nonnull final String localizedNotificationMessageId) {
+        Objects.requireNonNull(localizedNotificationMessageId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("localizedNotificationMessage%2Did", localizedNotificationMessageId);
+        return new LocalizedNotificationMessageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new LocalizedNotificationMessagesRequestBuilder and sets the default values.

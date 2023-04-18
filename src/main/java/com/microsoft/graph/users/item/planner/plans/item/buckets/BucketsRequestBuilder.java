@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PlannerBucket;
 import com.microsoft.graph.models.PlannerBucketCollectionResponse;
 import com.microsoft.graph.users.item.planner.plans.item.buckets.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.planner.plans.item.buckets.item.PlannerBucketItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the buckets property of the microsoft.graph.plannerPlan entity.
+     * @param plannerBucketId Unique identifier of the item
+     * @return a PlannerBucketItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PlannerBucketItemRequestBuilder byPlannerBucketId(@javax.annotation.Nonnull final String plannerBucketId) {
+        Objects.requireNonNull(plannerBucketId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("plannerBucket%2Did", plannerBucketId);
+        return new PlannerBucketItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new BucketsRequestBuilder and sets the default values.

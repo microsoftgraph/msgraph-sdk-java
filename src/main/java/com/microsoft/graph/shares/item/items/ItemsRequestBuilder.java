@@ -3,6 +3,7 @@ package com.microsoft.graph.shares.item.items;
 import com.microsoft.graph.models.DriveItemCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.shares.item.items.count.CountRequestBuilder;
+import com.microsoft.graph.shares.item.items.item.DriveItemItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -25,6 +26,18 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the items property of the microsoft.graph.sharedDriveItem entity.
+     * @param driveItemId Unique identifier of the item
+     * @return a DriveItemItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DriveItemItemRequestBuilder byDriveItemId(@javax.annotation.Nonnull final String driveItemId) {
+        Objects.requireNonNull(driveItemId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("driveItem%2Did", driveItemId);
+        return new DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ItemsRequestBuilder and sets the default values.

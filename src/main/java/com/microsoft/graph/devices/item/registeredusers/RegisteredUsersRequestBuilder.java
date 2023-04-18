@@ -5,6 +5,7 @@ import com.microsoft.graph.devices.item.registeredusers.graphapproleassignment.G
 import com.microsoft.graph.devices.item.registeredusers.graphendpoint.GraphEndpointRequestBuilder;
 import com.microsoft.graph.devices.item.registeredusers.graphserviceprincipal.GraphServicePrincipalRequestBuilder;
 import com.microsoft.graph.devices.item.registeredusers.graphuser.GraphUserRequestBuilder;
+import com.microsoft.graph.devices.item.registeredusers.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.devices.item.registeredusers.ref.RefRequestBuilder;
 import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -55,6 +56,18 @@ public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.devices.item.registeredUsers.item collection
+     * @param directoryObjectId Unique identifier of the item
+     * @return a DirectoryObjectItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DirectoryObjectItemRequestBuilder byDirectoryObjectId(@javax.annotation.Nonnull final String directoryObjectId) {
+        Objects.requireNonNull(directoryObjectId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("directoryObject%2Did", directoryObjectId);
+        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RegisteredUsersRequestBuilder and sets the default values.

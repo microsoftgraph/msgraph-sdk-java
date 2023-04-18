@@ -2,7 +2,6 @@ package com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryReviewSet;
-import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.item.EdiscoveryReviewSetQueryItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.QueriesRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.securityaddtoreviewset.SecurityAddToReviewSetRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -166,18 +165,6 @@ public class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the queries property of the microsoft.graph.security.ediscoveryReviewSet entity.
-     * @param id Unique identifier of the item
-     * @return a EdiscoveryReviewSetQueryItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EdiscoveryReviewSetQueryItemRequestBuilder queries(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("ediscoveryReviewSetQuery%2Did", id);
-        return new EdiscoveryReviewSetQueryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property reviewSets for security

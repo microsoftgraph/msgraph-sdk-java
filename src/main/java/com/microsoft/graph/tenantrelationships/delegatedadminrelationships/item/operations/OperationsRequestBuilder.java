@@ -4,6 +4,7 @@ import com.microsoft.graph.models.DelegatedAdminRelationshipOperation;
 import com.microsoft.graph.models.DelegatedAdminRelationshipOperationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.operations.count.CountRequestBuilder;
+import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.operations.item.DelegatedAdminRelationshipOperationItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.delegatedAdminRelationship entity.
+     * @param delegatedAdminRelationshipOperationId Unique identifier of the item
+     * @return a DelegatedAdminRelationshipOperationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DelegatedAdminRelationshipOperationItemRequestBuilder byDelegatedAdminRelationshipOperationId(@javax.annotation.Nonnull final String delegatedAdminRelationshipOperationId) {
+        Objects.requireNonNull(delegatedAdminRelationshipOperationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("delegatedAdminRelationshipOperation%2Did", delegatedAdminRelationshipOperationId);
+        return new DelegatedAdminRelationshipOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.

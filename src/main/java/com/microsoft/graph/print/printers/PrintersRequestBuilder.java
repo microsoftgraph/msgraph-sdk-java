@@ -5,6 +5,7 @@ import com.microsoft.graph.models.Printer;
 import com.microsoft.graph.models.PrinterCollectionResponse;
 import com.microsoft.graph.print.printers.count.CountRequestBuilder;
 import com.microsoft.graph.print.printers.create.CreateRequestBuilder;
+import com.microsoft.graph.print.printers.item.PrinterItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -32,6 +33,18 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CreateRequestBuilder create() {
         return new CreateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the printers property of the microsoft.graph.print entity.
+     * @param printerId Unique identifier of the item
+     * @return a PrinterItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PrinterItemRequestBuilder byPrinterId(@javax.annotation.Nonnull final String printerId) {
+        Objects.requireNonNull(printerId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("printer%2Did", printerId);
+        return new PrinterItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PrintersRequestBuilder and sets the default values.

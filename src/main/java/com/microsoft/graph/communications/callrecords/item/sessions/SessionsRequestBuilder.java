@@ -1,6 +1,7 @@
 package com.microsoft.graph.communications.callrecords.item.sessions;
 
 import com.microsoft.graph.communications.callrecords.item.sessions.count.CountRequestBuilder;
+import com.microsoft.graph.communications.callrecords.item.sessions.item.SessionItemRequestBuilder;
 import com.microsoft.graph.models.callrecords.Session;
 import com.microsoft.graph.models.callrecords.SessionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sessions property of the microsoft.graph.callRecords.callRecord entity.
+     * @param sessionId Unique identifier of the item
+     * @return a SessionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SessionItemRequestBuilder bySessionId(@javax.annotation.Nonnull final String sessionId) {
+        Objects.requireNonNull(sessionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("session%2Did", sessionId);
+        return new SessionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SessionsRequestBuilder and sets the default values.

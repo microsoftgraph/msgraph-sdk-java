@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.sites.item.termstores.item.groups.item.sets.item.terms.item.children.item.relations;
 
 import com.microsoft.graph.groups.item.sites.item.termstores.item.groups.item.sets.item.terms.item.children.item.relations.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.termstores.item.groups.item.sets.item.terms.item.children.item.relations.item.RelationItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.termstore.Relation;
 import com.microsoft.graph.models.termstore.RelationCollectionResponse;
@@ -26,6 +27,18 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the relations property of the microsoft.graph.termStore.term entity.
+     * @param relationId Unique identifier of the item
+     * @return a RelationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public RelationItemRequestBuilder byRelationId(@javax.annotation.Nonnull final String relationId) {
+        Objects.requireNonNull(relationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("relation%2Did", relationId);
+        return new RelationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RelationsRequestBuilder and sets the default values.

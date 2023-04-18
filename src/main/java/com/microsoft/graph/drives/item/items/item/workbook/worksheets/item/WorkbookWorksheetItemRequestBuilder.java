@@ -2,15 +2,11 @@ package com.microsoft.graph.drives.item.items.item.workbook.worksheets.item;
 
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.cellwithrowwithcolumn.CellWithRowWithColumnRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.ChartsRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.item.WorkbookChartItemRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.names.item.WorkbookNamedItemItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.names.NamesRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.pivottables.item.WorkbookPivotTableItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.pivottables.PivotTablesRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.protection.ProtectionRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.range.RangeRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.rangewithaddress.RangeWithAddressRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.WorkbookTableItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.TablesRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrange.UsedRangeRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.UsedRangeWithValuesOnlyRequestBuilder;
@@ -80,18 +76,6 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(column);
         Objects.requireNonNull(row);
         return new CellWithRowWithColumnRequestBuilder(pathParameters, requestAdapter, column, row);
-    }
-    /**
-     * Provides operations to manage the charts property of the microsoft.graph.workbookWorksheet entity.
-     * @param id Unique identifier of the item
-     * @return a WorkbookChartItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WorkbookChartItemRequestBuilder charts(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("workbookChart%2Did", id);
-        return new WorkbookChartItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new WorkbookWorksheetItemRequestBuilder and sets the default values.
@@ -188,18 +172,6 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the names property of the microsoft.graph.workbookWorksheet entity.
-     * @param id Unique identifier of the item
-     * @return a WorkbookNamedItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WorkbookNamedItemItemRequestBuilder names(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("workbookNamedItem%2Did", id);
-        return new WorkbookNamedItemItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property worksheets in drives
      * @param body The request body
      * @return a CompletableFuture of workbookWorksheet
@@ -240,18 +212,6 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the pivotTables property of the microsoft.graph.workbookWorksheet entity.
-     * @param id Unique identifier of the item
-     * @return a WorkbookPivotTableItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WorkbookPivotTableItemRequestBuilder pivotTables(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("workbookPivotTable%2Did", id);
-        return new WorkbookPivotTableItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Provides operations to call the range method.
      * @param address Usage: address='{address}'
      * @return a rangeWithAddressRequestBuilder
@@ -260,18 +220,6 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
     public RangeWithAddressRequestBuilder rangeWithAddress(@javax.annotation.Nonnull final String address) {
         Objects.requireNonNull(address);
         return new RangeWithAddressRequestBuilder(pathParameters, requestAdapter, address);
-    }
-    /**
-     * Provides operations to manage the tables property of the microsoft.graph.workbookWorksheet entity.
-     * @param id Unique identifier of the item
-     * @return a WorkbookTableItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WorkbookTableItemRequestBuilder tables(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("workbookTable%2Did", id);
-        return new WorkbookTableItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property worksheets for drives

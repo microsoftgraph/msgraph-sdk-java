@@ -1,6 +1,5 @@
 package com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item;
 
-import com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.item.UserConsentRequestItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.UserConsentRequestsRequestBuilder;
 import com.microsoft.graph.models.AppConsentRequest;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -248,18 +247,6 @@ public class AppConsentRequestItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the userConsentRequests property of the microsoft.graph.appConsentRequest entity.
-     * @param id Unique identifier of the item
-     * @return a UserConsentRequestItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UserConsentRequestItemRequestBuilder userConsentRequests(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("userConsentRequest%2Did", id);
-        return new UserConsentRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

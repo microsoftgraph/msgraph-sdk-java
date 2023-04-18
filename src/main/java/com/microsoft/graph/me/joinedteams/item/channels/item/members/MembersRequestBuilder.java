@@ -2,6 +2,7 @@ package com.microsoft.graph.me.joinedteams.item.channels.item.members;
 
 import com.microsoft.graph.me.joinedteams.item.channels.item.members.add.AddRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.channels.item.members.count.CountRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.channels.item.members.item.ConversationMemberItemRequestBuilder;
 import com.microsoft.graph.models.ConversationMember;
 import com.microsoft.graph.models.ConversationMemberCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -32,6 +33,18 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the members property of the microsoft.graph.channel entity.
+     * @param conversationMemberId Unique identifier of the item
+     * @return a ConversationMemberItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ConversationMemberItemRequestBuilder byConversationMemberId(@javax.annotation.Nonnull final String conversationMemberId) {
+        Objects.requireNonNull(conversationMemberId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("conversationMember%2Did", conversationMemberId);
+        return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MembersRequestBuilder and sets the default values.

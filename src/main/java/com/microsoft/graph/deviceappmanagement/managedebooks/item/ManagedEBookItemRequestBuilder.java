@@ -2,11 +2,8 @@ package com.microsoft.graph.deviceappmanagement.managedebooks.item;
 
 import com.microsoft.graph.deviceappmanagement.managedebooks.item.assign.AssignRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.managedebooks.item.assignments.AssignmentsRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.managedebooks.item.assignments.item.ManagedEBookAssignmentItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.managedebooks.item.devicestates.DeviceStatesRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.managedebooks.item.devicestates.item.DeviceInstallStateItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.managedebooks.item.installsummary.InstallSummaryRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary.item.UserInstallStateSummaryItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary.UserStateSummaryRequestBuilder;
 import com.microsoft.graph.models.ManagedEBook;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -52,18 +49,6 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public UserStateSummaryRequestBuilder userStateSummary() {
         return new UserStateSummaryRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the assignments property of the microsoft.graph.managedEBook entity.
-     * @param id Unique identifier of the item
-     * @return a ManagedEBookAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ManagedEBookAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("managedEBookAssignment%2Did", id);
-        return new ManagedEBookAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ManagedEBookItemRequestBuilder and sets the default values.
@@ -121,18 +106,6 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the deviceStates property of the microsoft.graph.managedEBook entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceInstallStateItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceInstallStateItemRequestBuilder deviceStates(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceInstallState%2Did", id);
-        return new DeviceInstallStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * The Managed eBook.
@@ -298,18 +271,6 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the userStateSummary property of the microsoft.graph.managedEBook entity.
-     * @param id Unique identifier of the item
-     * @return a UserInstallStateSummaryItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UserInstallStateSummaryItemRequestBuilder userStateSummary(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("userInstallStateSummary%2Did", id);
-        return new UserInstallStateSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

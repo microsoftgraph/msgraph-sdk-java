@@ -4,6 +4,7 @@ import com.microsoft.graph.models.BookingStaffMemberBase;
 import com.microsoft.graph.models.BookingStaffMemberBaseCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.solutions.bookingbusinesses.item.staffmembers.count.CountRequestBuilder;
+import com.microsoft.graph.solutions.bookingbusinesses.item.staffmembers.item.BookingStaffMemberBaseItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the staffMembers property of the microsoft.graph.bookingBusiness entity.
+     * @param bookingStaffMemberBaseId Unique identifier of the item
+     * @return a BookingStaffMemberBaseItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public BookingStaffMemberBaseItemRequestBuilder byBookingStaffMemberBaseId(@javax.annotation.Nonnull final String bookingStaffMemberBaseId) {
+        Objects.requireNonNull(bookingStaffMemberBaseId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("bookingStaffMemberBase%2Did", bookingStaffMemberBaseId);
+        return new BookingStaffMemberBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new StaffMembersRequestBuilder and sets the default values.

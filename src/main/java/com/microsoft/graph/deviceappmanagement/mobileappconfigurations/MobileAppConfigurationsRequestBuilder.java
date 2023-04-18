@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.mobileappconfigurations;
 
 import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.ManagedDeviceMobileAppConfigurationItemRequestBuilder;
 import com.microsoft.graph.models.ManagedDeviceMobileAppConfiguration;
 import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the mobileAppConfigurations property of the microsoft.graph.deviceAppManagement entity.
+     * @param managedDeviceMobileAppConfigurationId Unique identifier of the item
+     * @return a ManagedDeviceMobileAppConfigurationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedDeviceMobileAppConfigurationItemRequestBuilder byManagedDeviceMobileAppConfigurationId(@javax.annotation.Nonnull final String managedDeviceMobileAppConfigurationId) {
+        Objects.requireNonNull(managedDeviceMobileAppConfigurationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedDeviceMobileAppConfiguration%2Did", managedDeviceMobileAppConfigurationId);
+        return new ManagedDeviceMobileAppConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MobileAppConfigurationsRequestBuilder and sets the default values.

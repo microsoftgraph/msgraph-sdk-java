@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TeamsAsyncOperation;
 import com.microsoft.graph.models.TeamsAsyncOperationCollectionResponse;
 import com.microsoft.graph.users.item.joinedteams.item.operations.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.joinedteams.item.operations.item.TeamsAsyncOperationItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.team entity.
+     * @param teamsAsyncOperationId Unique identifier of the item
+     * @return a TeamsAsyncOperationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TeamsAsyncOperationItemRequestBuilder byTeamsAsyncOperationId(@javax.annotation.Nonnull final String teamsAsyncOperationId) {
+        Objects.requireNonNull(teamsAsyncOperationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("teamsAsyncOperation%2Did", teamsAsyncOperationId);
+        return new TeamsAsyncOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.

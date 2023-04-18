@@ -1,7 +1,6 @@
 package com.microsoft.graph.identitygovernance.accessreviews.historydefinitions.item;
 
 import com.microsoft.graph.identitygovernance.accessreviews.historydefinitions.item.instances.InstancesRequestBuilder;
-import com.microsoft.graph.identitygovernance.accessreviews.historydefinitions.item.instances.item.AccessReviewHistoryInstanceItemRequestBuilder;
 import com.microsoft.graph.models.AccessReviewHistoryDefinition;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -120,18 +119,6 @@ public class AccessReviewHistoryDefinitionItemRequestBuilder extends BaseRequest
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the instances property of the microsoft.graph.accessReviewHistoryDefinition entity.
-     * @param id Unique identifier of the item
-     * @return a AccessReviewHistoryInstanceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessReviewHistoryInstanceItemRequestBuilder instances(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessReviewHistoryInstance%2Did", id);
-        return new AccessReviewHistoryInstanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property historyDefinitions in identityGovernance

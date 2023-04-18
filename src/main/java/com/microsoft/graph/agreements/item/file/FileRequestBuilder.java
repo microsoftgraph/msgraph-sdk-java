@@ -1,6 +1,5 @@
 package com.microsoft.graph.agreements.item.file;
 
-import com.microsoft.graph.agreements.item.file.localizations.item.AgreementFileLocalizationItemRequestBuilder;
 import com.microsoft.graph.agreements.item.file.localizations.LocalizationsRequestBuilder;
 import com.microsoft.graph.models.AgreementFile;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -122,18 +121,6 @@ public class FileRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the localizations property of the microsoft.graph.agreementFile entity.
-     * @param id Unique identifier of the item
-     * @return a AgreementFileLocalizationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AgreementFileLocalizationItemRequestBuilder localizations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("agreementFileLocalization%2Did", id);
-        return new AgreementFileLocalizationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property file in agreements

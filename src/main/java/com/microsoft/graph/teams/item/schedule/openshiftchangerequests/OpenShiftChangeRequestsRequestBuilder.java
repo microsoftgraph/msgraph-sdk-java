@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OpenShiftChangeRequest;
 import com.microsoft.graph.models.OpenShiftChangeRequestCollectionResponse;
 import com.microsoft.graph.teams.item.schedule.openshiftchangerequests.count.CountRequestBuilder;
+import com.microsoft.graph.teams.item.schedule.openshiftchangerequests.item.OpenShiftChangeRequestItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the openShiftChangeRequests property of the microsoft.graph.schedule entity.
+     * @param openShiftChangeRequestId Unique identifier of the item
+     * @return a OpenShiftChangeRequestItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public OpenShiftChangeRequestItemRequestBuilder byOpenShiftChangeRequestId(@javax.annotation.Nonnull final String openShiftChangeRequestId) {
+        Objects.requireNonNull(openShiftChangeRequestId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("openShiftChangeRequest%2Did", openShiftChangeRequestId);
+        return new OpenShiftChangeRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OpenShiftChangeRequestsRequestBuilder and sets the default values.

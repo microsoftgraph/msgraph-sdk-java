@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.agreementacceptances;
 
 import com.microsoft.graph.me.agreementacceptances.count.CountRequestBuilder;
+import com.microsoft.graph.me.agreementacceptances.item.AgreementAcceptanceItemRequestBuilder;
 import com.microsoft.graph.models.AgreementAcceptanceCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the agreementAcceptances property of the microsoft.graph.user entity.
+     * @param agreementAcceptanceId Unique identifier of the item
+     * @return a AgreementAcceptanceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AgreementAcceptanceItemRequestBuilder byAgreementAcceptanceId(@javax.annotation.Nonnull final String agreementAcceptanceId) {
+        Objects.requireNonNull(agreementAcceptanceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("agreementAcceptance%2Did", agreementAcceptanceId);
+        return new AgreementAcceptanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AgreementAcceptancesRequestBuilder and sets the default values.

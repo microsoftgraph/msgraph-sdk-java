@@ -38,6 +38,8 @@ public class ChatMessage extends Entity implements Parsable {
     private String locale;
     /** List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel. */
     private java.util.List<ChatMessageMention> mentions;
+    /** The messageHistory property */
+    private java.util.List<ChatMessageHistoryItem> messageHistory;
     /** The messageType property */
     private ChatMessageType messageType;
     /** Defines the properties of a policy violation set by a data loss prevention (DLP) application. */
@@ -158,6 +160,7 @@ public class ChatMessage extends Entity implements Parsable {
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("locale", (n) -> { this.setLocale(n.getStringValue()); });
         deserializerMap.put("mentions", (n) -> { this.setMentions(n.getCollectionOfObjectValues(ChatMessageMention::createFromDiscriminatorValue)); });
+        deserializerMap.put("messageHistory", (n) -> { this.setMessageHistory(n.getCollectionOfObjectValues(ChatMessageHistoryItem::createFromDiscriminatorValue)); });
         deserializerMap.put("messageType", (n) -> { this.setMessageType(n.getEnumValue(ChatMessageType.class)); });
         deserializerMap.put("policyViolation", (n) -> { this.setPolicyViolation(n.getObjectValue(ChatMessagePolicyViolation::createFromDiscriminatorValue)); });
         deserializerMap.put("reactions", (n) -> { this.setReactions(n.getCollectionOfObjectValues(ChatMessageReaction::createFromDiscriminatorValue)); });
@@ -223,6 +226,14 @@ public class ChatMessage extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<ChatMessageMention> getMentions() {
         return this.mentions;
+    }
+    /**
+     * Gets the messageHistory property value. The messageHistory property
+     * @return a chatMessageHistoryItem
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ChatMessageHistoryItem> getMessageHistory() {
+        return this.messageHistory;
     }
     /**
      * Gets the messageType property value. The messageType property
@@ -312,6 +323,7 @@ public class ChatMessage extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("locale", this.getLocale());
         writer.writeCollectionOfObjectValues("mentions", this.getMentions());
+        writer.writeCollectionOfObjectValues("messageHistory", this.getMessageHistory());
         writer.writeEnumValue("messageType", this.getMessageType());
         writer.writeObjectValue("policyViolation", this.getPolicyViolation());
         writer.writeCollectionOfObjectValues("reactions", this.getReactions());
@@ -455,6 +467,15 @@ public class ChatMessage extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setMentions(@javax.annotation.Nullable final java.util.List<ChatMessageMention> value) {
         this.mentions = value;
+    }
+    /**
+     * Sets the messageHistory property value. The messageHistory property
+     * @param value Value to set for the messageHistory property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMessageHistory(@javax.annotation.Nullable final java.util.List<ChatMessageHistoryItem> value) {
+        this.messageHistory = value;
     }
     /**
      * Sets the messageType property value. The messageType property

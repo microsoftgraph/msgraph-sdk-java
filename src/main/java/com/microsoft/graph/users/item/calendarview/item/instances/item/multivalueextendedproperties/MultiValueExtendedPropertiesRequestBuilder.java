@@ -4,6 +4,7 @@ import com.microsoft.graph.models.MultiValueLegacyExtendedProperty;
 import com.microsoft.graph.models.MultiValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.calendarview.item.instances.item.multivalueextendedproperties.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.calendarview.item.instances.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class MultiValueExtendedPropertiesRequestBuilder extends BaseRequestBuild
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.event entity.
+     * @param multiValueLegacyExtendedPropertyId Unique identifier of the item
+     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public MultiValueLegacyExtendedPropertyItemRequestBuilder byMultiValueLegacyExtendedPropertyId(@javax.annotation.Nonnull final String multiValueLegacyExtendedPropertyId) {
+        Objects.requireNonNull(multiValueLegacyExtendedPropertyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("multiValueLegacyExtendedProperty%2Did", multiValueLegacyExtendedPropertyId);
+        return new MultiValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MultiValueExtendedPropertiesRequestBuilder and sets the default values.

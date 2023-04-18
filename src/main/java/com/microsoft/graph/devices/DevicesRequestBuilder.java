@@ -4,6 +4,7 @@ import com.microsoft.graph.devices.count.CountRequestBuilder;
 import com.microsoft.graph.devices.delta.DeltaRequestBuilder;
 import com.microsoft.graph.devices.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
 import com.microsoft.graph.devices.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.devices.item.DeviceItemRequestBuilder;
 import com.microsoft.graph.devices.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.graph.models.Device;
 import com.microsoft.graph.models.DeviceCollectionResponse;
@@ -50,6 +51,18 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of device entities.
+     * @param deviceId Unique identifier of the item
+     * @return a DeviceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceItemRequestBuilder byDeviceId(@javax.annotation.Nonnull final String deviceId) {
+        Objects.requireNonNull(deviceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("device%2Did", deviceId);
+        return new DeviceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DevicesRequestBuilder and sets the default values.

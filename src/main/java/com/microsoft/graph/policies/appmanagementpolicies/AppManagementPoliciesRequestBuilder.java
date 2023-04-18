@@ -4,6 +4,7 @@ import com.microsoft.graph.models.AppManagementPolicy;
 import com.microsoft.graph.models.AppManagementPolicyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.policies.appmanagementpolicies.count.CountRequestBuilder;
+import com.microsoft.graph.policies.appmanagementpolicies.item.AppManagementPolicyItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the appManagementPolicies property of the microsoft.graph.policyRoot entity.
+     * @param appManagementPolicyId Unique identifier of the item
+     * @return a AppManagementPolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AppManagementPolicyItemRequestBuilder byAppManagementPolicyId(@javax.annotation.Nonnull final String appManagementPolicyId) {
+        Objects.requireNonNull(appManagementPolicyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("appManagementPolicy%2Did", appManagementPolicyId);
+        return new AppManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AppManagementPoliciesRequestBuilder and sets the default values.

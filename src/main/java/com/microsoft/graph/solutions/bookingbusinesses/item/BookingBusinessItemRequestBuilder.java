@@ -3,17 +3,12 @@ package com.microsoft.graph.solutions.bookingbusinesses.item;
 import com.microsoft.graph.models.BookingBusiness;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.solutions.bookingbusinesses.item.appointments.AppointmentsRequestBuilder;
-import com.microsoft.graph.solutions.bookingbusinesses.item.appointments.item.BookingAppointmentItemRequestBuilder;
 import com.microsoft.graph.solutions.bookingbusinesses.item.calendarview.CalendarViewRequestBuilder;
 import com.microsoft.graph.solutions.bookingbusinesses.item.customers.CustomersRequestBuilder;
-import com.microsoft.graph.solutions.bookingbusinesses.item.customers.item.BookingCustomerBaseItemRequestBuilder;
 import com.microsoft.graph.solutions.bookingbusinesses.item.customquestions.CustomQuestionsRequestBuilder;
-import com.microsoft.graph.solutions.bookingbusinesses.item.customquestions.item.BookingCustomQuestionItemRequestBuilder;
 import com.microsoft.graph.solutions.bookingbusinesses.item.getstaffavailability.GetStaffAvailabilityRequestBuilder;
 import com.microsoft.graph.solutions.bookingbusinesses.item.publish.PublishRequestBuilder;
-import com.microsoft.graph.solutions.bookingbusinesses.item.services.item.BookingServiceItemRequestBuilder;
 import com.microsoft.graph.solutions.bookingbusinesses.item.services.ServicesRequestBuilder;
-import com.microsoft.graph.solutions.bookingbusinesses.item.staffmembers.item.BookingStaffMemberBaseItemRequestBuilder;
 import com.microsoft.graph.solutions.bookingbusinesses.item.staffmembers.StaffMembersRequestBuilder;
 import com.microsoft.graph.solutions.bookingbusinesses.item.unpublish.UnpublishRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -80,30 +75,6 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return new UnpublishRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the appointments property of the microsoft.graph.bookingBusiness entity.
-     * @param id Unique identifier of the item
-     * @return a BookingAppointmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.solutions.bookingbusinesses.item.appointments.item.BookingAppointmentItemRequestBuilder appointments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("bookingAppointment%2Did", id);
-        return new com.microsoft.graph.solutions.bookingbusinesses.item.appointments.item.BookingAppointmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the calendarView property of the microsoft.graph.bookingBusiness entity.
-     * @param id Unique identifier of the item
-     * @return a BookingAppointmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.solutions.bookingbusinesses.item.calendarview.item.BookingAppointmentItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("bookingAppointment%2Did", id);
-        return new com.microsoft.graph.solutions.bookingbusinesses.item.calendarview.item.BookingAppointmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new BookingBusinessItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -122,30 +93,6 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public BookingBusinessItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the customers property of the microsoft.graph.bookingBusiness entity.
-     * @param id Unique identifier of the item
-     * @return a BookingCustomerBaseItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public BookingCustomerBaseItemRequestBuilder customers(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("bookingCustomerBase%2Did", id);
-        return new BookingCustomerBaseItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the customQuestions property of the microsoft.graph.bookingBusiness entity.
-     * @param id Unique identifier of the item
-     * @return a BookingCustomQuestionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public BookingCustomQuestionItemRequestBuilder customQuestions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("bookingCustomQuestion%2Did", id);
-        return new BookingCustomQuestionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property bookingBusinesses for solutions
@@ -260,30 +207,6 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the services property of the microsoft.graph.bookingBusiness entity.
-     * @param id Unique identifier of the item
-     * @return a BookingServiceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public BookingServiceItemRequestBuilder services(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("bookingService%2Did", id);
-        return new BookingServiceItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the staffMembers property of the microsoft.graph.bookingBusiness entity.
-     * @param id Unique identifier of the item
-     * @return a BookingStaffMemberBaseItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public BookingStaffMemberBaseItemRequestBuilder staffMembers(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("bookingStaffMemberBase%2Did", id);
-        return new BookingStaffMemberBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property bookingBusinesses for solutions

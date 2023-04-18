@@ -5,6 +5,7 @@ import com.microsoft.graph.models.Team;
 import com.microsoft.graph.models.TeamCollectionResponse;
 import com.microsoft.graph.users.item.joinedteams.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.getallmessages.GetAllMessagesRequestBuilder;
+import com.microsoft.graph.users.item.joinedteams.item.TeamItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -32,6 +33,18 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GetAllMessagesRequestBuilder getAllMessages() {
         return new GetAllMessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the joinedTeams property of the microsoft.graph.user entity.
+     * @param teamId Unique identifier of the item
+     * @return a TeamItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TeamItemRequestBuilder byTeamId(@javax.annotation.Nonnull final String teamId) {
+        Objects.requireNonNull(teamId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("team%2Did", teamId);
+        return new TeamItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new JoinedTeamsRequestBuilder and sets the default values.

@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UnifiedRoleManagementPolicy;
 import com.microsoft.graph.models.UnifiedRoleManagementPolicyCollectionResponse;
 import com.microsoft.graph.policies.rolemanagementpolicies.count.CountRequestBuilder;
+import com.microsoft.graph.policies.rolemanagementpolicies.item.UnifiedRoleManagementPolicyItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class RoleManagementPoliciesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the roleManagementPolicies property of the microsoft.graph.policyRoot entity.
+     * @param unifiedRoleManagementPolicyId Unique identifier of the item
+     * @return a UnifiedRoleManagementPolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UnifiedRoleManagementPolicyItemRequestBuilder byUnifiedRoleManagementPolicyId(@javax.annotation.Nonnull final String unifiedRoleManagementPolicyId) {
+        Objects.requireNonNull(unifiedRoleManagementPolicyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("unifiedRoleManagementPolicy%2Did", unifiedRoleManagementPolicyId);
+        return new UnifiedRoleManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RoleManagementPoliciesRequestBuilder and sets the default values.

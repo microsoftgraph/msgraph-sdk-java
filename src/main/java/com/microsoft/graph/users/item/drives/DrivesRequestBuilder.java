@@ -3,6 +3,7 @@ package com.microsoft.graph.users.item.drives;
 import com.microsoft.graph.models.DriveCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.drives.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.drives.item.DriveItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -25,6 +26,18 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the drives property of the microsoft.graph.user entity.
+     * @param driveId Unique identifier of the item
+     * @return a DriveItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DriveItemRequestBuilder byDriveId(@javax.annotation.Nonnull final String driveId) {
+        Objects.requireNonNull(driveId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("drive%2Did", driveId);
+        return new DriveItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DrivesRequestBuilder and sets the default values.

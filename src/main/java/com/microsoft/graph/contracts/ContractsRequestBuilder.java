@@ -4,6 +4,7 @@ import com.microsoft.graph.contracts.count.CountRequestBuilder;
 import com.microsoft.graph.contracts.delta.DeltaRequestBuilder;
 import com.microsoft.graph.contracts.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
 import com.microsoft.graph.contracts.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.contracts.item.ContractItemRequestBuilder;
 import com.microsoft.graph.contracts.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.graph.models.Contract;
 import com.microsoft.graph.models.ContractCollectionResponse;
@@ -50,6 +51,18 @@ public class ContractsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of contract entities.
+     * @param contractId Unique identifier of the item
+     * @return a ContractItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ContractItemRequestBuilder byContractId(@javax.annotation.Nonnull final String contractId) {
+        Objects.requireNonNull(contractId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("contract%2Did", contractId);
+        return new ContractItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ContractsRequestBuilder and sets the default values.

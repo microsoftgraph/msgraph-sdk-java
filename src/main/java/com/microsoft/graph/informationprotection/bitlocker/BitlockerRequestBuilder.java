@@ -1,6 +1,5 @@
 package com.microsoft.graph.informationprotection.bitlocker;
 
-import com.microsoft.graph.informationprotection.bitlocker.recoverykeys.item.BitlockerRecoveryKeyItemRequestBuilder;
 import com.microsoft.graph.informationprotection.bitlocker.recoverykeys.RecoveryKeysRequestBuilder;
 import com.microsoft.graph.models.Bitlocker;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -83,18 +82,6 @@ public class BitlockerRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the recoveryKeys property of the microsoft.graph.bitlocker entity.
-     * @param id Unique identifier of the item
-     * @return a BitlockerRecoveryKeyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public BitlockerRecoveryKeyItemRequestBuilder recoveryKeys(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("bitlockerRecoveryKey%2Did", id);
-        return new BitlockerRecoveryKeyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get bitlocker from informationProtection

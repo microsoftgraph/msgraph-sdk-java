@@ -2,6 +2,7 @@ package com.microsoft.graph.me.createdobjects;
 
 import com.microsoft.graph.me.createdobjects.count.CountRequestBuilder;
 import com.microsoft.graph.me.createdobjects.graphserviceprincipal.GraphServicePrincipalRequestBuilder;
+import com.microsoft.graph.me.createdobjects.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -31,6 +32,18 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GraphServicePrincipalRequestBuilder graphServicePrincipal() {
         return new GraphServicePrincipalRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the createdObjects property of the microsoft.graph.user entity.
+     * @param directoryObjectId Unique identifier of the item
+     * @return a DirectoryObjectItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DirectoryObjectItemRequestBuilder byDirectoryObjectId(@javax.annotation.Nonnull final String directoryObjectId) {
+        Objects.requireNonNull(directoryObjectId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("directoryObject%2Did", directoryObjectId);
+        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new CreatedObjectsRequestBuilder and sets the default values.

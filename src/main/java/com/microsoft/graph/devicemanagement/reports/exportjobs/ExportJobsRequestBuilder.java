@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.reports.exportjobs;
 
 import com.microsoft.graph.devicemanagement.reports.exportjobs.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.reports.exportjobs.item.DeviceManagementExportJobItemRequestBuilder;
 import com.microsoft.graph.models.DeviceManagementExportJob;
 import com.microsoft.graph.models.DeviceManagementExportJobCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the exportJobs property of the microsoft.graph.deviceManagementReports entity.
+     * @param deviceManagementExportJobId Unique identifier of the item
+     * @return a DeviceManagementExportJobItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceManagementExportJobItemRequestBuilder byDeviceManagementExportJobId(@javax.annotation.Nonnull final String deviceManagementExportJobId) {
+        Objects.requireNonNull(deviceManagementExportJobId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceManagementExportJob%2Did", deviceManagementExportJobId);
+        return new DeviceManagementExportJobItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ExportJobsRequestBuilder and sets the default values.

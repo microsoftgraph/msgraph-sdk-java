@@ -1,6 +1,5 @@
 package com.microsoft.graph.informationprotection.threatassessmentrequests.item;
 
-import com.microsoft.graph.informationprotection.threatassessmentrequests.item.results.item.ThreatAssessmentResultItemRequestBuilder;
 import com.microsoft.graph.informationprotection.threatassessmentrequests.item.results.ResultsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ThreatAssessmentRequest;
@@ -160,18 +159,6 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the results property of the microsoft.graph.threatAssessmentRequest entity.
-     * @param id Unique identifier of the item
-     * @return a ThreatAssessmentResultItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ThreatAssessmentResultItemRequestBuilder results(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("threatAssessmentResult%2Did", id);
-        return new ThreatAssessmentResultItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property threatAssessmentRequests for informationProtection

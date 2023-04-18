@@ -2,23 +2,14 @@ package com.microsoft.graph.rolemanagement.directory;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.RbacApplication;
-import com.microsoft.graph.rolemanagement.directory.resourcenamespaces.item.UnifiedRbacResourceNamespaceItemRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.resourcenamespaces.ResourceNamespacesRequestBuilder;
-import com.microsoft.graph.rolemanagement.directory.roleassignments.item.UnifiedRoleAssignmentItemRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleassignments.RoleAssignmentsRequestBuilder;
-import com.microsoft.graph.rolemanagement.directory.roleassignmentscheduleinstances.item.UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleassignmentscheduleinstances.RoleAssignmentScheduleInstancesRequestBuilder;
-import com.microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests.item.UnifiedRoleAssignmentScheduleRequestItemRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests.RoleAssignmentScheduleRequestsRequestBuilder;
-import com.microsoft.graph.rolemanagement.directory.roleassignmentschedules.item.UnifiedRoleAssignmentScheduleItemRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleassignmentschedules.RoleAssignmentSchedulesRequestBuilder;
-import com.microsoft.graph.rolemanagement.directory.roledefinitions.item.UnifiedRoleDefinitionItemRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roledefinitions.RoleDefinitionsRequestBuilder;
-import com.microsoft.graph.rolemanagement.directory.roleeligibilityscheduleinstances.item.UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleeligibilityscheduleinstances.RoleEligibilityScheduleInstancesRequestBuilder;
-import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.item.UnifiedRoleEligibilityScheduleRequestItemRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.RoleEligibilityScheduleRequestsRequestBuilder;
-import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedules.item.UnifiedRoleEligibilityScheduleItemRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedules.RoleEligibilitySchedulesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -216,114 +207,6 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplication entity.
-     * @param id Unique identifier of the item
-     * @return a UnifiedRbacResourceNamespaceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UnifiedRbacResourceNamespaceItemRequestBuilder resourceNamespaces(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("unifiedRbacResourceNamespace%2Did", id);
-        return new UnifiedRbacResourceNamespaceItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity.
-     * @param id Unique identifier of the item
-     * @return a UnifiedRoleAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UnifiedRoleAssignmentItemRequestBuilder roleAssignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("unifiedRoleAssignment%2Did", id);
-        return new UnifiedRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the roleAssignmentScheduleInstances property of the microsoft.graph.rbacApplication entity.
-     * @param id Unique identifier of the item
-     * @return a UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder roleAssignmentScheduleInstances(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("unifiedRoleAssignmentScheduleInstance%2Did", id);
-        return new UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the roleAssignmentScheduleRequests property of the microsoft.graph.rbacApplication entity.
-     * @param id Unique identifier of the item
-     * @return a UnifiedRoleAssignmentScheduleRequestItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UnifiedRoleAssignmentScheduleRequestItemRequestBuilder roleAssignmentScheduleRequests(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("unifiedRoleAssignmentScheduleRequest%2Did", id);
-        return new UnifiedRoleAssignmentScheduleRequestItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the roleAssignmentSchedules property of the microsoft.graph.rbacApplication entity.
-     * @param id Unique identifier of the item
-     * @return a UnifiedRoleAssignmentScheduleItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UnifiedRoleAssignmentScheduleItemRequestBuilder roleAssignmentSchedules(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("unifiedRoleAssignmentSchedule%2Did", id);
-        return new UnifiedRoleAssignmentScheduleItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the roleDefinitions property of the microsoft.graph.rbacApplication entity.
-     * @param id Unique identifier of the item
-     * @return a UnifiedRoleDefinitionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UnifiedRoleDefinitionItemRequestBuilder roleDefinitions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("unifiedRoleDefinition%2Did", id);
-        return new UnifiedRoleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the roleEligibilityScheduleInstances property of the microsoft.graph.rbacApplication entity.
-     * @param id Unique identifier of the item
-     * @return a UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder roleEligibilityScheduleInstances(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("unifiedRoleEligibilityScheduleInstance%2Did", id);
-        return new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the roleEligibilityScheduleRequests property of the microsoft.graph.rbacApplication entity.
-     * @param id Unique identifier of the item
-     * @return a UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UnifiedRoleEligibilityScheduleRequestItemRequestBuilder roleEligibilityScheduleRequests(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("unifiedRoleEligibilityScheduleRequest%2Did", id);
-        return new UnifiedRoleEligibilityScheduleRequestItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the roleEligibilitySchedules property of the microsoft.graph.rbacApplication entity.
-     * @param id Unique identifier of the item
-     * @return a UnifiedRoleEligibilityScheduleItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UnifiedRoleEligibilityScheduleItemRequestBuilder roleEligibilitySchedules(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("unifiedRoleEligibilitySchedule%2Did", id);
-        return new UnifiedRoleEligibilityScheduleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property directory for roleManagement

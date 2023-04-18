@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.photos;
 
 import com.microsoft.graph.me.photos.count.CountRequestBuilder;
+import com.microsoft.graph.me.photos.item.ProfilePhotoItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ProfilePhotoCollectionResponse;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the photos property of the microsoft.graph.user entity.
+     * @param profilePhotoId Unique identifier of the item
+     * @return a ProfilePhotoItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ProfilePhotoItemRequestBuilder byProfilePhotoId(@javax.annotation.Nonnull final String profilePhotoId) {
+        Objects.requireNonNull(profilePhotoId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("profilePhoto%2Did", profilePhotoId);
+        return new ProfilePhotoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PhotosRequestBuilder and sets the default values.

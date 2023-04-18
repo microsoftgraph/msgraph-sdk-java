@@ -3,6 +3,7 @@ package com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.cu
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.DataSourceCollectionResponse;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.custodiansources.count.CountRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.custodiansources.item.DataSourceItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -25,6 +26,18 @@ public class CustodianSourcesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the custodianSources property of the microsoft.graph.security.ediscoverySearch entity.
+     * @param dataSourceId Unique identifier of the item
+     * @return a DataSourceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DataSourceItemRequestBuilder byDataSourceId(@javax.annotation.Nonnull final String dataSourceId) {
+        Objects.requireNonNull(dataSourceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("dataSource%2Did", dataSourceId);
+        return new DataSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new CustodianSourcesRequestBuilder and sets the default values.

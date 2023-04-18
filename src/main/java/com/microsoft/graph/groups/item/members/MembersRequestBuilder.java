@@ -7,6 +7,7 @@ import com.microsoft.graph.groups.item.members.graphgroup.GraphGroupRequestBuild
 import com.microsoft.graph.groups.item.members.graphorgcontact.GraphOrgContactRequestBuilder;
 import com.microsoft.graph.groups.item.members.graphserviceprincipal.GraphServicePrincipalRequestBuilder;
 import com.microsoft.graph.groups.item.members.graphuser.GraphUserRequestBuilder;
+import com.microsoft.graph.groups.item.members.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.groups.item.members.ref.RefRequestBuilder;
 import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -67,6 +68,18 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.groups.item.members.item collection
+     * @param directoryObjectId Unique identifier of the item
+     * @return a DirectoryObjectItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DirectoryObjectItemRequestBuilder byDirectoryObjectId(@javax.annotation.Nonnull final String directoryObjectId) {
+        Objects.requireNonNull(directoryObjectId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("directoryObject%2Did", directoryObjectId);
+        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MembersRequestBuilder and sets the default values.

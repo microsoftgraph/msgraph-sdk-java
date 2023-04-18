@@ -4,6 +4,7 @@ import com.microsoft.graph.models.ClaimsMappingPolicy;
 import com.microsoft.graph.models.ClaimsMappingPolicyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.policies.claimsmappingpolicies.count.CountRequestBuilder;
+import com.microsoft.graph.policies.claimsmappingpolicies.item.ClaimsMappingPolicyItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the claimsMappingPolicies property of the microsoft.graph.policyRoot entity.
+     * @param claimsMappingPolicyId Unique identifier of the item
+     * @return a ClaimsMappingPolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ClaimsMappingPolicyItemRequestBuilder byClaimsMappingPolicyId(@javax.annotation.Nonnull final String claimsMappingPolicyId) {
+        Objects.requireNonNull(claimsMappingPolicyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("claimsMappingPolicy%2Did", claimsMappingPolicyId);
+        return new ClaimsMappingPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ClaimsMappingPoliciesRequestBuilder and sets the default values.

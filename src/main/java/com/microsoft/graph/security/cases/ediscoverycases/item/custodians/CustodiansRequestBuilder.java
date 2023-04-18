@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryCustodian;
 import com.microsoft.graph.models.security.EdiscoveryCustodianCollectionResponse;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.count.CountRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.EdiscoveryCustodianItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.securityapplyhold.SecurityApplyHoldRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.securityremovehold.SecurityRemoveHoldRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -38,6 +39,18 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public SecurityRemoveHoldRequestBuilder securityRemoveHold() {
         return new SecurityRemoveHoldRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity.
+     * @param ediscoveryCustodianId Unique identifier of the item
+     * @return a EdiscoveryCustodianItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EdiscoveryCustodianItemRequestBuilder byEdiscoveryCustodianId(@javax.annotation.Nonnull final String ediscoveryCustodianId) {
+        Objects.requireNonNull(ediscoveryCustodianId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("ediscoveryCustodian%2Did", ediscoveryCustodianId);
+        return new EdiscoveryCustodianItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new CustodiansRequestBuilder and sets the default values.

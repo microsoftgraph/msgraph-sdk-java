@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.CaseOperation;
 import com.microsoft.graph.models.security.CaseOperationCollectionResponse;
 import com.microsoft.graph.security.cases.ediscoverycases.item.operations.count.CountRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.operations.item.CaseOperationItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.security.ediscoveryCase entity.
+     * @param caseOperationId Unique identifier of the item
+     * @return a CaseOperationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public CaseOperationItemRequestBuilder byCaseOperationId(@javax.annotation.Nonnull final String caseOperationId) {
+        Objects.requireNonNull(caseOperationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("caseOperation%2Did", caseOperationId);
+        return new CaseOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.

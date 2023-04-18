@@ -2,6 +2,7 @@ package com.microsoft.graph.identitygovernance.appconsent.appconsentrequests;
 
 import com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.count.CountRequestBuilder;
 import com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.AppConsentRequestItemRequestBuilder;
 import com.microsoft.graph.models.AppConsentRequest;
 import com.microsoft.graph.models.AppConsentRequestCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -27,6 +28,18 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the appConsentRequests property of the microsoft.graph.appConsentApprovalRoute entity.
+     * @param appConsentRequestId Unique identifier of the item
+     * @return a AppConsentRequestItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AppConsentRequestItemRequestBuilder byAppConsentRequestId(@javax.annotation.Nonnull final String appConsentRequestId) {
+        Objects.requireNonNull(appConsentRequestId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("appConsentRequest%2Did", appConsentRequestId);
+        return new AppConsentRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AppConsentRequestsRequestBuilder and sets the default values.

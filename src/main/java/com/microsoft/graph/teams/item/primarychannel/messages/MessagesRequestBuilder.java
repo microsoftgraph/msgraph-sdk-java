@@ -5,6 +5,7 @@ import com.microsoft.graph.models.ChatMessageCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.teams.item.primarychannel.messages.count.CountRequestBuilder;
 import com.microsoft.graph.teams.item.primarychannel.messages.delta.DeltaRequestBuilder;
+import com.microsoft.graph.teams.item.primarychannel.messages.item.ChatMessageItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -32,6 +33,18 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the messages property of the microsoft.graph.channel entity.
+     * @param chatMessageId Unique identifier of the item
+     * @return a ChatMessageItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ChatMessageItemRequestBuilder byChatMessageId(@javax.annotation.Nonnull final String chatMessageId) {
+        Objects.requireNonNull(chatMessageId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("chatMessage%2Did", chatMessageId);
+        return new ChatMessageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MessagesRequestBuilder and sets the default values.

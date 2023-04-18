@@ -3,7 +3,6 @@ package com.microsoft.graph.shares.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SharedDriveItem;
 import com.microsoft.graph.shares.item.driveitem.DriveItemRequestBuilder;
-import com.microsoft.graph.shares.item.items.item.DriveItemItemRequestBuilder;
 import com.microsoft.graph.shares.item.items.ItemsRequestBuilder;
 import com.microsoft.graph.shares.item.list.ListRequestBuilder;
 import com.microsoft.graph.shares.item.listitem.ListItemRequestBuilder;
@@ -158,18 +157,6 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the items property of the microsoft.graph.sharedDriveItem entity.
-     * @param id Unique identifier of the item
-     * @return a DriveItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DriveItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("driveItem%2Did", id);
-        return new DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update entity in shares

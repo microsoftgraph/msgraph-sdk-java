@@ -1,6 +1,5 @@
 package com.microsoft.graph.groups.item.sites.item.termstores.item.groups.item;
 
-import com.microsoft.graph.groups.item.sites.item.termstores.item.groups.item.sets.item.SetItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.termstores.item.groups.item.sets.SetsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.termstore.Group;
@@ -160,18 +159,6 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the sets property of the microsoft.graph.termStore.group entity.
-     * @param id Unique identifier of the item
-     * @return a SetItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SetItemRequestBuilder sets(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("set%2Did", id);
-        return new SetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property groups for groups

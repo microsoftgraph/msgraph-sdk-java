@@ -2,6 +2,7 @@ package com.microsoft.graph.groups.item.sites;
 
 import com.microsoft.graph.groups.item.sites.add.AddRequestBuilder;
 import com.microsoft.graph.groups.item.sites.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.SiteItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.remove.RemoveRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SiteCollectionResponse;
@@ -37,6 +38,18 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public RemoveRequestBuilder remove() {
         return new RemoveRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sites property of the microsoft.graph.group entity.
+     * @param siteId Unique identifier of the item
+     * @return a SiteItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SiteItemRequestBuilder bySiteId(@javax.annotation.Nonnull final String siteId) {
+        Objects.requireNonNull(siteId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("site%2Did", siteId);
+        return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SitesRequestBuilder and sets the default values.

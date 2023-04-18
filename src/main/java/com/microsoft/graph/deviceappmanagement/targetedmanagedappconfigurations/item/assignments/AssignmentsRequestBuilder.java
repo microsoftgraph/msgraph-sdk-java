@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.assignments;
 
 import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.assignments.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.assignments.item.TargetedManagedAppPolicyAssignmentItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.TargetedManagedAppPolicyAssignmentCollectionResponse;
@@ -26,6 +27,18 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.targetedManagedAppConfiguration entity.
+     * @param targetedManagedAppPolicyAssignmentId Unique identifier of the item
+     * @return a TargetedManagedAppPolicyAssignmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TargetedManagedAppPolicyAssignmentItemRequestBuilder byTargetedManagedAppPolicyAssignmentId(@javax.annotation.Nonnull final String targetedManagedAppPolicyAssignmentId) {
+        Objects.requireNonNull(targetedManagedAppPolicyAssignmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("targetedManagedAppPolicyAssignment%2Did", targetedManagedAppPolicyAssignmentId);
+        return new TargetedManagedAppPolicyAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AssignmentsRequestBuilder and sets the default values.

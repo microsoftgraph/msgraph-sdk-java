@@ -1,6 +1,7 @@
 package com.microsoft.graph.drives.item.special;
 
 import com.microsoft.graph.drives.item.special.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.special.item.DriveItemItemRequestBuilder;
 import com.microsoft.graph.models.DriveItemCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class SpecialRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the special property of the microsoft.graph.drive entity.
+     * @param driveItemId Unique identifier of the item
+     * @return a DriveItemItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DriveItemItemRequestBuilder byDriveItemId(@javax.annotation.Nonnull final String driveItemId) {
+        Objects.requireNonNull(driveItemId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("driveItem%2Did", driveItemId);
+        return new DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SpecialRequestBuilder and sets the default values.

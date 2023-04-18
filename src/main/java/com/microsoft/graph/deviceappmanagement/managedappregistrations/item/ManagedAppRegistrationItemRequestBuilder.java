@@ -1,9 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.managedappregistrations.item;
 
 import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.appliedpolicies.AppliedPoliciesRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.appliedpolicies.item.ManagedAppPolicyItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.IntendedPoliciesRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.operations.item.ManagedAppOperationItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.operations.OperationsRequestBuilder;
 import com.microsoft.graph.models.ManagedAppRegistration;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -39,18 +37,6 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the appliedPolicies property of the microsoft.graph.managedAppRegistration entity.
-     * @param id Unique identifier of the item
-     * @return a ManagedAppPolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.deviceappmanagement.managedappregistrations.item.appliedpolicies.item.ManagedAppPolicyItemRequestBuilder appliedPolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("managedAppPolicy%2Did", id);
-        return new com.microsoft.graph.deviceappmanagement.managedappregistrations.item.appliedpolicies.item.ManagedAppPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ManagedAppRegistrationItemRequestBuilder and sets the default values.
@@ -145,30 +131,6 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the intendedPolicies property of the microsoft.graph.managedAppRegistration entity.
-     * @param id Unique identifier of the item
-     * @return a ManagedAppPolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.item.ManagedAppPolicyItemRequestBuilder intendedPolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("managedAppPolicy%2Did", id);
-        return new com.microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.item.ManagedAppPolicyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the operations property of the microsoft.graph.managedAppRegistration entity.
-     * @param id Unique identifier of the item
-     * @return a ManagedAppOperationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ManagedAppOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("managedAppOperation%2Did", id);
-        return new ManagedAppOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property managedAppRegistrations in deviceAppManagement

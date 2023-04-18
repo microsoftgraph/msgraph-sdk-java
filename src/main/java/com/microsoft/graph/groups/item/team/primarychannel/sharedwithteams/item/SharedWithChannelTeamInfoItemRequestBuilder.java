@@ -1,7 +1,6 @@
 package com.microsoft.graph.groups.item.team.primarychannel.sharedwithteams.item;
 
 import com.microsoft.graph.groups.item.team.primarychannel.sharedwithteams.item.allowedmembers.AllowedMembersRequestBuilder;
-import com.microsoft.graph.groups.item.team.primarychannel.sharedwithteams.item.allowedmembers.item.ConversationMemberItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SharedWithChannelTeamInfo;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -26,18 +25,6 @@ public class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuil
     @javax.annotation.Nonnull
     public AllowedMembersRequestBuilder allowedMembers() {
         return new AllowedMembersRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the allowedMembers property of the microsoft.graph.sharedWithChannelTeamInfo entity.
-     * @param id Unique identifier of the item
-     * @return a ConversationMemberItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ConversationMemberItemRequestBuilder allowedMembers(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("conversationMember%2Did", id);
-        return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SharedWithChannelTeamInfoItemRequestBuilder and sets the default values.

@@ -1,6 +1,7 @@
 package com.microsoft.graph.drives.item.items.item.workbook.comments;
 
 import com.microsoft.graph.drives.item.items.item.workbook.comments.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.comments.item.WorkbookCommentItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookComment;
 import com.microsoft.graph.models.WorkbookCommentCollectionResponse;
@@ -26,6 +27,18 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the comments property of the microsoft.graph.workbook entity.
+     * @param workbookCommentId Unique identifier of the item
+     * @return a WorkbookCommentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public WorkbookCommentItemRequestBuilder byWorkbookCommentId(@javax.annotation.Nonnull final String workbookCommentId) {
+        Objects.requireNonNull(workbookCommentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("workbookComment%2Did", workbookCommentId);
+        return new WorkbookCommentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new CommentsRequestBuilder and sets the default values.

@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.oauth2permissiongrants;
 
 import com.microsoft.graph.me.oauth2permissiongrants.count.CountRequestBuilder;
+import com.microsoft.graph.me.oauth2permissiongrants.item.OAuth2PermissionGrantItemRequestBuilder;
 import com.microsoft.graph.models.OAuth2PermissionGrantCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the oauth2PermissionGrants property of the microsoft.graph.user entity.
+     * @param oAuth2PermissionGrantId Unique identifier of the item
+     * @return a OAuth2PermissionGrantItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public OAuth2PermissionGrantItemRequestBuilder byOAuth2PermissionGrantId(@javax.annotation.Nonnull final String oAuth2PermissionGrantId) {
+        Objects.requireNonNull(oAuth2PermissionGrantId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("oAuth2PermissionGrant%2Did", oAuth2PermissionGrantId);
+        return new OAuth2PermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new Oauth2PermissionGrantsRequestBuilder and sets the default values.

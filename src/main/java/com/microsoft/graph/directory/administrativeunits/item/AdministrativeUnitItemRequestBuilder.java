@@ -1,10 +1,7 @@
 package com.microsoft.graph.directory.administrativeunits.item;
 
 import com.microsoft.graph.directory.administrativeunits.item.extensions.ExtensionsRequestBuilder;
-import com.microsoft.graph.directory.administrativeunits.item.extensions.item.ExtensionItemRequestBuilder;
-import com.microsoft.graph.directory.administrativeunits.item.members.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.directory.administrativeunits.item.members.MembersRequestBuilder;
-import com.microsoft.graph.directory.administrativeunits.item.scopedrolemembers.item.ScopedRoleMembershipItemRequestBuilder;
 import com.microsoft.graph.directory.administrativeunits.item.scopedrolemembers.ScopedRoleMembersRequestBuilder;
 import com.microsoft.graph.models.AdministrativeUnit;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -99,18 +96,6 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the extensions property of the microsoft.graph.administrativeUnit entity.
-     * @param id Unique identifier of the item
-     * @return a ExtensionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("extension%2Did", id);
-        return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Conceptual container for user and group directory objects.
      * @return a CompletableFuture of administrativeUnit
      */
@@ -146,18 +131,6 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.directory.administrativeUnits.item.members.item collection
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DirectoryObjectItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property administrativeUnits in directory
@@ -198,18 +171,6 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the scopedRoleMembers property of the microsoft.graph.administrativeUnit entity.
-     * @param id Unique identifier of the item
-     * @return a ScopedRoleMembershipItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ScopedRoleMembershipItemRequestBuilder scopedRoleMembers(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("scopedRoleMembership%2Did", id);
-        return new ScopedRoleMembershipItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property administrativeUnits for directory

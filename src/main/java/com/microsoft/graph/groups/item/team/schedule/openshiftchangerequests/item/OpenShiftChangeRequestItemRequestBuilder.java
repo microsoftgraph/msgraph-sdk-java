@@ -78,7 +78,7 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Get openShiftChangeRequests from groups
+     * The open shift requests in the schedule.
      * @return a CompletableFuture of openShiftChangeRequest
      */
     @javax.annotation.Nonnull
@@ -96,7 +96,7 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Get openShiftChangeRequests from groups
+     * The open shift requests in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of openShiftChangeRequest
      */
@@ -182,7 +182,7 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Get openShiftChangeRequests from groups
+     * The open shift requests in the schedule.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +190,7 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Get openShiftChangeRequests from groups
+     * The open shift requests in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +248,7 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get openShiftChangeRequests from groups
+     * The open shift requests in the schedule.
      */
     public class GetQueryParameters {
         /** Expand related entities */

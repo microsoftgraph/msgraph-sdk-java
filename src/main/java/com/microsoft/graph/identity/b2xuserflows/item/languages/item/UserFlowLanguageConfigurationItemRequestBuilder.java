@@ -1,7 +1,6 @@
 package com.microsoft.graph.identity.b2xuserflows.item.languages.item;
 
 import com.microsoft.graph.identity.b2xuserflows.item.languages.item.defaultpages.DefaultPagesRequestBuilder;
-import com.microsoft.graph.identity.b2xuserflows.item.languages.item.overridespages.item.UserFlowLanguagePageItemRequestBuilder;
 import com.microsoft.graph.identity.b2xuserflows.item.languages.item.overridespages.OverridesPagesRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UserFlowLanguageConfiguration;
@@ -52,18 +51,6 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
     @javax.annotation.Nullable
     public UserFlowLanguageConfigurationItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/languages/{userFlowLanguageConfiguration%2Did}{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the defaultPages property of the microsoft.graph.userFlowLanguageConfiguration entity.
-     * @param id Unique identifier of the item
-     * @return a UserFlowLanguagePageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.identity.b2xuserflows.item.languages.item.defaultpages.item.UserFlowLanguagePageItemRequestBuilder defaultPages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("userFlowLanguagePage%2Did", id);
-        return new com.microsoft.graph.identity.b2xuserflows.item.languages.item.defaultpages.item.UserFlowLanguagePageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property languages for identity
@@ -138,18 +125,6 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the overridesPages property of the microsoft.graph.userFlowLanguageConfiguration entity.
-     * @param id Unique identifier of the item
-     * @return a UserFlowLanguagePageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.identity.b2xuserflows.item.languages.item.overridespages.item.UserFlowLanguagePageItemRequestBuilder overridesPages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("userFlowLanguagePage%2Did", id);
-        return new com.microsoft.graph.identity.b2xuserflows.item.languages.item.overridespages.item.UserFlowLanguagePageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property languages in identity

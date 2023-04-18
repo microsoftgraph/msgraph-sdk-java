@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.deviceenrollmentconfigurations;
 
 import com.microsoft.graph.devicemanagement.deviceenrollmentconfigurations.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceenrollmentconfigurations.item.DeviceEnrollmentConfigurationItemRequestBuilder;
 import com.microsoft.graph.models.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.DeviceEnrollmentConfigurationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deviceEnrollmentConfigurations property of the microsoft.graph.deviceManagement entity.
+     * @param deviceEnrollmentConfigurationId Unique identifier of the item
+     * @return a DeviceEnrollmentConfigurationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceEnrollmentConfigurationItemRequestBuilder byDeviceEnrollmentConfigurationId(@javax.annotation.Nonnull final String deviceEnrollmentConfigurationId) {
+        Objects.requireNonNull(deviceEnrollmentConfigurationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceEnrollmentConfiguration%2Did", deviceEnrollmentConfigurationId);
+        return new DeviceEnrollmentConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DeviceEnrollmentConfigurationsRequestBuilder and sets the default values.

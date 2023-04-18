@@ -3,7 +3,6 @@ package com.microsoft.graph.reports;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ReportRoot;
 import com.microsoft.graph.reports.dailyprintusagebyprinter.DailyPrintUsageByPrinterRequestBuilder;
-import com.microsoft.graph.reports.dailyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder;
 import com.microsoft.graph.reports.dailyprintusagebyuser.DailyPrintUsageByUserRequestBuilder;
 import com.microsoft.graph.reports.deviceconfigurationdeviceactivity.DeviceConfigurationDeviceActivityRequestBuilder;
 import com.microsoft.graph.reports.deviceconfigurationuseractivity.DeviceConfigurationUserActivityRequestBuilder;
@@ -102,7 +101,6 @@ import com.microsoft.graph.reports.manageddeviceenrollmentfailuredetailswithskip
 import com.microsoft.graph.reports.manageddeviceenrollmenttopfailures.ManagedDeviceEnrollmentTopFailuresRequestBuilder;
 import com.microsoft.graph.reports.manageddeviceenrollmenttopfailureswithperiod.ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder;
 import com.microsoft.graph.reports.monthlyprintusagebyprinter.MonthlyPrintUsageByPrinterRequestBuilder;
-import com.microsoft.graph.reports.monthlyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder;
 import com.microsoft.graph.reports.monthlyprintusagebyuser.MonthlyPrintUsageByUserRequestBuilder;
 import com.microsoft.graph.reports.security.SecurityRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -204,30 +202,6 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public ReportsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/reports{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
-     * @param id Unique identifier of the item
-     * @return a PrintUsageByPrinterItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.reports.dailyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder dailyPrintUsageByPrinter(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("printUsageByPrinter%2Did", id);
-        return new com.microsoft.graph.reports.dailyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the dailyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
-     * @param id Unique identifier of the item
-     * @return a PrintUsageByUserItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.reports.dailyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder dailyPrintUsageByUser(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("printUsageByUser%2Did", id);
-        return new com.microsoft.graph.reports.dailyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get reports
@@ -1173,30 +1147,6 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     public ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder managedDeviceEnrollmentTopFailuresWithPeriod(@javax.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
         return new ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
-    }
-    /**
-     * Provides operations to manage the monthlyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
-     * @param id Unique identifier of the item
-     * @return a PrintUsageByPrinterItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.reports.monthlyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder monthlyPrintUsageByPrinter(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("printUsageByPrinter%2Did", id);
-        return new com.microsoft.graph.reports.monthlyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the monthlyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
-     * @param id Unique identifier of the item
-     * @return a PrintUsageByUserItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.reports.monthlyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder monthlyPrintUsageByUser(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("printUsageByUser%2Did", id);
-        return new com.microsoft.graph.reports.monthlyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update reports

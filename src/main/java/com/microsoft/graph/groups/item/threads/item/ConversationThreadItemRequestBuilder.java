@@ -1,6 +1,5 @@
 package com.microsoft.graph.groups.item.threads.item;
 
-import com.microsoft.graph.groups.item.threads.item.posts.item.PostItemRequestBuilder;
 import com.microsoft.graph.groups.item.threads.item.posts.PostsRequestBuilder;
 import com.microsoft.graph.groups.item.threads.item.reply.ReplyRequestBuilder;
 import com.microsoft.graph.models.ConversationThread;
@@ -166,18 +165,6 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the posts property of the microsoft.graph.conversationThread entity.
-     * @param id Unique identifier of the item
-     * @return a PostItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PostItemRequestBuilder posts(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("post%2Did", id);
-        return new PostItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property threads for groups

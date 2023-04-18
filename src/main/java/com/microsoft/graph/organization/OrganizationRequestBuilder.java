@@ -7,6 +7,7 @@ import com.microsoft.graph.organization.count.CountRequestBuilder;
 import com.microsoft.graph.organization.delta.DeltaRequestBuilder;
 import com.microsoft.graph.organization.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
 import com.microsoft.graph.organization.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.organization.item.OrganizationItemRequestBuilder;
 import com.microsoft.graph.organization.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -50,6 +51,18 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of organization entities.
+     * @param organizationId Unique identifier of the item
+     * @return a OrganizationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public OrganizationItemRequestBuilder byOrganizationId(@javax.annotation.Nonnull final String organizationId) {
+        Objects.requireNonNull(organizationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("organization%2Did", organizationId);
+        return new OrganizationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OrganizationRequestBuilder and sets the default values.

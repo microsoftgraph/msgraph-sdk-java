@@ -5,6 +5,7 @@ import com.microsoft.graph.models.UnifiedRoleEligibilityScheduleRequest;
 import com.microsoft.graph.models.UnifiedRoleEligibilityScheduleRequestCollectionResponse;
 import com.microsoft.graph.rolemanagement.entitlementmanagement.roleeligibilityschedulerequests.count.CountRequestBuilder;
 import com.microsoft.graph.rolemanagement.entitlementmanagement.roleeligibilityschedulerequests.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.roleeligibilityschedulerequests.item.UnifiedRoleEligibilityScheduleRequestItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -27,6 +28,18 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the roleEligibilityScheduleRequests property of the microsoft.graph.rbacApplication entity.
+     * @param unifiedRoleEligibilityScheduleRequestId Unique identifier of the item
+     * @return a UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UnifiedRoleEligibilityScheduleRequestItemRequestBuilder byUnifiedRoleEligibilityScheduleRequestId(@javax.annotation.Nonnull final String unifiedRoleEligibilityScheduleRequestId) {
+        Objects.requireNonNull(unifiedRoleEligibilityScheduleRequestId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("unifiedRoleEligibilityScheduleRequest%2Did", unifiedRoleEligibilityScheduleRequestId);
+        return new UnifiedRoleEligibilityScheduleRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RoleEligibilityScheduleRequestsRequestBuilder and sets the default values.

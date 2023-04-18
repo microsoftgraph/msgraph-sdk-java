@@ -1,9 +1,7 @@
 package com.microsoft.graph.groups.item.planner.plans.item;
 
 import com.microsoft.graph.groups.item.planner.plans.item.buckets.BucketsRequestBuilder;
-import com.microsoft.graph.groups.item.planner.plans.item.buckets.item.PlannerBucketItemRequestBuilder;
 import com.microsoft.graph.groups.item.planner.plans.item.details.DetailsRequestBuilder;
-import com.microsoft.graph.groups.item.planner.plans.item.tasks.item.PlannerTaskItemRequestBuilder;
 import com.microsoft.graph.groups.item.planner.plans.item.tasks.TasksRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PlannerPlan;
@@ -39,18 +37,6 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public TasksRequestBuilder tasks() {
         return new TasksRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the buckets property of the microsoft.graph.plannerPlan entity.
-     * @param id Unique identifier of the item
-     * @return a PlannerBucketItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PlannerBucketItemRequestBuilder buckets(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("plannerBucket%2Did", id);
-        return new PlannerBucketItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PlannerPlanItemRequestBuilder and sets the default values.
@@ -185,18 +171,6 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the tasks property of the microsoft.graph.plannerPlan entity.
-     * @param id Unique identifier of the item
-     * @return a PlannerTaskItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PlannerTaskItemRequestBuilder tasks(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("plannerTask%2Did", id);
-        return new PlannerTaskItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property plans for groups

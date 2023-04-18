@@ -1,12 +1,8 @@
 package com.microsoft.graph.identityprotection;
 
-import com.microsoft.graph.identityprotection.riskdetections.item.RiskDetectionItemRequestBuilder;
 import com.microsoft.graph.identityprotection.riskdetections.RiskDetectionsRequestBuilder;
-import com.microsoft.graph.identityprotection.riskyserviceprincipals.item.RiskyServicePrincipalItemRequestBuilder;
 import com.microsoft.graph.identityprotection.riskyserviceprincipals.RiskyServicePrincipalsRequestBuilder;
-import com.microsoft.graph.identityprotection.riskyusers.item.RiskyUserItemRequestBuilder;
 import com.microsoft.graph.identityprotection.riskyusers.RiskyUsersRequestBuilder;
-import com.microsoft.graph.identityprotection.serviceprincipalriskdetections.item.ServicePrincipalRiskDetectionItemRequestBuilder;
 import com.microsoft.graph.identityprotection.serviceprincipalriskdetections.ServicePrincipalRiskDetectionsRequestBuilder;
 import com.microsoft.graph.models.IdentityProtectionRoot;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -144,54 +140,6 @@ public class IdentityProtectionRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the riskDetections property of the microsoft.graph.identityProtectionRoot entity.
-     * @param id Unique identifier of the item
-     * @return a RiskDetectionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public RiskDetectionItemRequestBuilder riskDetections(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("riskDetection%2Did", id);
-        return new RiskDetectionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the riskyServicePrincipals property of the microsoft.graph.identityProtectionRoot entity.
-     * @param id Unique identifier of the item
-     * @return a RiskyServicePrincipalItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public RiskyServicePrincipalItemRequestBuilder riskyServicePrincipals(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("riskyServicePrincipal%2Did", id);
-        return new RiskyServicePrincipalItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the riskyUsers property of the microsoft.graph.identityProtectionRoot entity.
-     * @param id Unique identifier of the item
-     * @return a RiskyUserItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public RiskyUserItemRequestBuilder riskyUsers(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("riskyUser%2Did", id);
-        return new RiskyUserItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the servicePrincipalRiskDetections property of the microsoft.graph.identityProtectionRoot entity.
-     * @param id Unique identifier of the item
-     * @return a ServicePrincipalRiskDetectionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ServicePrincipalRiskDetectionItemRequestBuilder servicePrincipalRiskDetections(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("servicePrincipalRiskDetection%2Did", id);
-        return new ServicePrincipalRiskDetectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get identityProtection

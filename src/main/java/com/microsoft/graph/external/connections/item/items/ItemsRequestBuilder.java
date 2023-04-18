@@ -1,6 +1,7 @@
 package com.microsoft.graph.external.connections.item.items;
 
 import com.microsoft.graph.external.connections.item.items.count.CountRequestBuilder;
+import com.microsoft.graph.external.connections.item.items.item.ExternalItemItemRequestBuilder;
 import com.microsoft.graph.models.externalconnectors.ExternalItem;
 import com.microsoft.graph.models.externalconnectors.ExternalItemCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the items property of the microsoft.graph.externalConnectors.externalConnection entity.
+     * @param externalItemId Unique identifier of the item
+     * @return a ExternalItemItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ExternalItemItemRequestBuilder byExternalItemId(@javax.annotation.Nonnull final String externalItemId) {
+        Objects.requireNonNull(externalItemId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("externalItem%2Did", externalItemId);
+        return new ExternalItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ItemsRequestBuilder and sets the default values.

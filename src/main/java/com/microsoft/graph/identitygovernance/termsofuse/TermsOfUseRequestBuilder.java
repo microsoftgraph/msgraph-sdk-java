@@ -1,9 +1,7 @@
 package com.microsoft.graph.identitygovernance.termsofuse;
 
 import com.microsoft.graph.identitygovernance.termsofuse.agreementacceptances.AgreementAcceptancesRequestBuilder;
-import com.microsoft.graph.identitygovernance.termsofuse.agreementacceptances.item.AgreementAcceptanceItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.termsofuse.agreements.AgreementsRequestBuilder;
-import com.microsoft.graph.identitygovernance.termsofuse.agreements.item.AgreementItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TermsOfUseContainer;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -33,30 +31,6 @@ public class TermsOfUseRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public AgreementsRequestBuilder agreements() {
         return new AgreementsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the agreementAcceptances property of the microsoft.graph.termsOfUseContainer entity.
-     * @param id Unique identifier of the item
-     * @return a AgreementAcceptanceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AgreementAcceptanceItemRequestBuilder agreementAcceptances(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("agreementAcceptance%2Did", id);
-        return new AgreementAcceptanceItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the agreements property of the microsoft.graph.termsOfUseContainer entity.
-     * @param id Unique identifier of the item
-     * @return a AgreementItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AgreementItemRequestBuilder agreements(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("agreement%2Did", id);
-        return new AgreementItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TermsOfUseRequestBuilder and sets the default values.

@@ -3,6 +3,7 @@ package com.microsoft.graph.identityprotection.riskyusers;
 import com.microsoft.graph.identityprotection.riskyusers.confirmcompromised.ConfirmCompromisedRequestBuilder;
 import com.microsoft.graph.identityprotection.riskyusers.count.CountRequestBuilder;
 import com.microsoft.graph.identityprotection.riskyusers.dismiss.DismissRequestBuilder;
+import com.microsoft.graph.identityprotection.riskyusers.item.RiskyUserItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.RiskyUser;
 import com.microsoft.graph.models.RiskyUserCollectionResponse;
@@ -38,6 +39,18 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public DismissRequestBuilder dismiss() {
         return new DismissRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the riskyUsers property of the microsoft.graph.identityProtectionRoot entity.
+     * @param riskyUserId Unique identifier of the item
+     * @return a RiskyUserItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public RiskyUserItemRequestBuilder byRiskyUserId(@javax.annotation.Nonnull final String riskyUserId) {
+        Objects.requireNonNull(riskyUserId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("riskyUser%2Did", riskyUserId);
+        return new RiskyUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RiskyUsersRequestBuilder and sets the default values.

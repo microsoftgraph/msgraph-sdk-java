@@ -1,6 +1,7 @@
 package com.microsoft.graph.invitations;
 
 import com.microsoft.graph.invitations.count.CountRequestBuilder;
+import com.microsoft.graph.invitations.item.InvitationItemRequestBuilder;
 import com.microsoft.graph.models.Invitation;
 import com.microsoft.graph.models.InvitationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class InvitationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of invitation entities.
+     * @param invitationId Unique identifier of the item
+     * @return a InvitationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public InvitationItemRequestBuilder byInvitationId(@javax.annotation.Nonnull final String invitationId) {
+        Objects.requireNonNull(invitationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("invitation%2Did", invitationId);
+        return new InvitationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new InvitationsRequestBuilder and sets the default values.

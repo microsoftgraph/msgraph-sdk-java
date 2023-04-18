@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.devicemanagementtroubleshootingevents;
 
 import com.microsoft.graph.me.devicemanagementtroubleshootingevents.count.CountRequestBuilder;
+import com.microsoft.graph.me.devicemanagementtroubleshootingevents.item.DeviceManagementTroubleshootingEventItemRequestBuilder;
 import com.microsoft.graph.models.DeviceManagementTroubleshootingEvent;
 import com.microsoft.graph.models.DeviceManagementTroubleshootingEventCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class DeviceManagementTroubleshootingEventsRequestBuilder extends BaseReq
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deviceManagementTroubleshootingEvents property of the microsoft.graph.user entity.
+     * @param deviceManagementTroubleshootingEventId Unique identifier of the item
+     * @return a DeviceManagementTroubleshootingEventItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceManagementTroubleshootingEventItemRequestBuilder byDeviceManagementTroubleshootingEventId(@javax.annotation.Nonnull final String deviceManagementTroubleshootingEventId) {
+        Objects.requireNonNull(deviceManagementTroubleshootingEventId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceManagementTroubleshootingEvent%2Did", deviceManagementTroubleshootingEventId);
+        return new DeviceManagementTroubleshootingEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DeviceManagementTroubleshootingEventsRequestBuilder and sets the default values.

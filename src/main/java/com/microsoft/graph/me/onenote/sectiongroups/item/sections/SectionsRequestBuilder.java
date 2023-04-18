@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.onenote.sectiongroups.item.sections;
 
 import com.microsoft.graph.me.onenote.sectiongroups.item.sections.count.CountRequestBuilder;
+import com.microsoft.graph.me.onenote.sectiongroups.item.sections.item.OnenoteSectionItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OnenoteSection;
 import com.microsoft.graph.models.OnenoteSectionCollectionResponse;
@@ -26,6 +27,18 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sections property of the microsoft.graph.sectionGroup entity.
+     * @param onenoteSectionId Unique identifier of the item
+     * @return a OnenoteSectionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public OnenoteSectionItemRequestBuilder byOnenoteSectionId(@javax.annotation.Nonnull final String onenoteSectionId) {
+        Objects.requireNonNull(onenoteSectionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("onenoteSection%2Did", onenoteSectionId);
+        return new OnenoteSectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SectionsRequestBuilder and sets the default values.

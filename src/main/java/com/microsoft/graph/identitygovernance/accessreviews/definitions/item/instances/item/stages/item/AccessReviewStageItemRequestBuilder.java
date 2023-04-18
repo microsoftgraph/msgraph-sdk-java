@@ -1,7 +1,6 @@
 package com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item;
 
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.DecisionsRequestBuilder;
-import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.AccessReviewInstanceDecisionItemItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.stop.StopRequestBuilder;
 import com.microsoft.graph.models.AccessReviewStage;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -52,18 +51,6 @@ public class AccessReviewStageItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public AccessReviewStageItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition%2Did}/instances/{accessReviewInstance%2Did}/stages/{accessReviewStage%2Did}{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the decisions property of the microsoft.graph.accessReviewStage entity.
-     * @param id Unique identifier of the item
-     * @return a AccessReviewInstanceDecisionItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessReviewInstanceDecisionItemItemRequestBuilder decisions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessReviewInstanceDecisionItem%2Did", id);
-        return new AccessReviewInstanceDecisionItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property stages for identityGovernance

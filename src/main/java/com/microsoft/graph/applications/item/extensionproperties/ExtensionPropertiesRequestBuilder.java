@@ -1,6 +1,7 @@
 package com.microsoft.graph.applications.item.extensionproperties;
 
 import com.microsoft.graph.applications.item.extensionproperties.count.CountRequestBuilder;
+import com.microsoft.graph.applications.item.extensionproperties.item.ExtensionPropertyItemRequestBuilder;
 import com.microsoft.graph.models.ExtensionProperty;
 import com.microsoft.graph.models.ExtensionPropertyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the extensionProperties property of the microsoft.graph.application entity.
+     * @param extensionPropertyId Unique identifier of the item
+     * @return a ExtensionPropertyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ExtensionPropertyItemRequestBuilder byExtensionPropertyId(@javax.annotation.Nonnull final String extensionPropertyId) {
+        Objects.requireNonNull(extensionPropertyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("extensionProperty%2Did", extensionPropertyId);
+        return new ExtensionPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ExtensionPropertiesRequestBuilder and sets the default values.

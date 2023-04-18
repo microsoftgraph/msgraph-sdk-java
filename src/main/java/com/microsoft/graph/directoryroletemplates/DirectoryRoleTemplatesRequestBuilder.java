@@ -4,6 +4,7 @@ import com.microsoft.graph.directoryroletemplates.count.CountRequestBuilder;
 import com.microsoft.graph.directoryroletemplates.delta.DeltaRequestBuilder;
 import com.microsoft.graph.directoryroletemplates.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
 import com.microsoft.graph.directoryroletemplates.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.directoryroletemplates.item.DirectoryRoleTemplateItemRequestBuilder;
 import com.microsoft.graph.directoryroletemplates.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.graph.models.DirectoryRoleTemplate;
 import com.microsoft.graph.models.DirectoryRoleTemplateCollectionResponse;
@@ -50,6 +51,18 @@ public class DirectoryRoleTemplatesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of directoryRoleTemplate entities.
+     * @param directoryRoleTemplateId Unique identifier of the item
+     * @return a DirectoryRoleTemplateItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DirectoryRoleTemplateItemRequestBuilder byDirectoryRoleTemplateId(@javax.annotation.Nonnull final String directoryRoleTemplateId) {
+        Objects.requireNonNull(directoryRoleTemplateId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("directoryRoleTemplate%2Did", directoryRoleTemplateId);
+        return new DirectoryRoleTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DirectoryRoleTemplatesRequestBuilder and sets the default values.

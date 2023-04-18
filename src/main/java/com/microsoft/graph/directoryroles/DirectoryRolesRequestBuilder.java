@@ -4,6 +4,7 @@ import com.microsoft.graph.directoryroles.count.CountRequestBuilder;
 import com.microsoft.graph.directoryroles.delta.DeltaRequestBuilder;
 import com.microsoft.graph.directoryroles.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
 import com.microsoft.graph.directoryroles.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.directoryroles.item.DirectoryRoleItemRequestBuilder;
 import com.microsoft.graph.directoryroles.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.graph.models.DirectoryRole;
 import com.microsoft.graph.models.DirectoryRoleCollectionResponse;
@@ -50,6 +51,18 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of directoryRole entities.
+     * @param directoryRoleId Unique identifier of the item
+     * @return a DirectoryRoleItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DirectoryRoleItemRequestBuilder byDirectoryRoleId(@javax.annotation.Nonnull final String directoryRoleId) {
+        Objects.requireNonNull(directoryRoleId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("directoryRole%2Did", directoryRoleId);
+        return new DirectoryRoleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DirectoryRolesRequestBuilder and sets the default values.

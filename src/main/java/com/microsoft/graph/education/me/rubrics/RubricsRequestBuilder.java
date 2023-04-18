@@ -1,6 +1,7 @@
 package com.microsoft.graph.education.me.rubrics;
 
 import com.microsoft.graph.education.me.rubrics.count.CountRequestBuilder;
+import com.microsoft.graph.education.me.rubrics.item.EducationRubricItemRequestBuilder;
 import com.microsoft.graph.models.EducationRubric;
 import com.microsoft.graph.models.EducationRubricCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the rubrics property of the microsoft.graph.educationUser entity.
+     * @param educationRubricId Unique identifier of the item
+     * @return a EducationRubricItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EducationRubricItemRequestBuilder byEducationRubricId(@javax.annotation.Nonnull final String educationRubricId) {
+        Objects.requireNonNull(educationRubricId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("educationRubric%2Did", educationRubricId);
+        return new EducationRubricItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RubricsRequestBuilder and sets the default values.

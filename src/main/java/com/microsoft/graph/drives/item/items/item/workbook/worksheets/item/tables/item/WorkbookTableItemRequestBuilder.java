@@ -2,13 +2,11 @@ package com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tabl
 
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.clearfilters.ClearFiltersRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.columns.ColumnsRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.columns.item.WorkbookTableColumnItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.converttorange.ConvertToRangeRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.databodyrange.DataBodyRangeRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.headerrowrange.HeaderRowRangeRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.range.RangeRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.reapplyfilters.ReapplyFiltersRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.rows.item.WorkbookTableRowItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.rows.RowsRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.sort.SortRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.item.totalrowrange.TotalRowRangeRequestBuilder;
@@ -87,18 +85,6 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public WorksheetRequestBuilder worksheet() {
         return new WorksheetRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the columns property of the microsoft.graph.workbookTable entity.
-     * @param id Unique identifier of the item
-     * @return a WorkbookTableColumnItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WorkbookTableColumnItemRequestBuilder columns(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("workbookTableColumn%2Did", id);
-        return new WorkbookTableColumnItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new WorkbookTableItemRequestBuilder and sets the default values.
@@ -233,18 +219,6 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the rows property of the microsoft.graph.workbookTable entity.
-     * @param id Unique identifier of the item
-     * @return a WorkbookTableRowItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WorkbookTableRowItemRequestBuilder rows(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("workbookTableRow%2Did", id);
-        return new WorkbookTableRowItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property tables for drives

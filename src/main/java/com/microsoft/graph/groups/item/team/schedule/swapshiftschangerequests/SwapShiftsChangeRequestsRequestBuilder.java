@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.team.schedule.swapshiftschangerequests;
 
 import com.microsoft.graph.groups.item.team.schedule.swapshiftschangerequests.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.team.schedule.swapshiftschangerequests.item.SwapShiftsChangeRequestItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SwapShiftsChangeRequest;
 import com.microsoft.graph.models.SwapShiftsChangeRequestCollectionResponse;
@@ -26,6 +27,18 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the swapShiftsChangeRequests property of the microsoft.graph.schedule entity.
+     * @param swapShiftsChangeRequestId Unique identifier of the item
+     * @return a SwapShiftsChangeRequestItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SwapShiftsChangeRequestItemRequestBuilder bySwapShiftsChangeRequestId(@javax.annotation.Nonnull final String swapShiftsChangeRequestId) {
+        Objects.requireNonNull(swapShiftsChangeRequestId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("swapShiftsChangeRequest%2Did", swapShiftsChangeRequestId);
+        return new SwapShiftsChangeRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SwapShiftsChangeRequestsRequestBuilder and sets the default values.

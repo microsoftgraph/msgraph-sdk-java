@@ -3,6 +3,7 @@ package com.microsoft.graph.serviceprincipals.item.claimsmappingpolicies;
 import com.microsoft.graph.models.ClaimsMappingPolicyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.serviceprincipals.item.claimsmappingpolicies.count.CountRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.claimsmappingpolicies.item.ClaimsMappingPolicyItemRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.claimsmappingpolicies.ref.RefRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -31,6 +32,18 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.claimsMappingPolicies.item collection
+     * @param claimsMappingPolicyId Unique identifier of the item
+     * @return a ClaimsMappingPolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ClaimsMappingPolicyItemRequestBuilder byClaimsMappingPolicyId(@javax.annotation.Nonnull final String claimsMappingPolicyId) {
+        Objects.requireNonNull(claimsMappingPolicyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("claimsMappingPolicy%2Did", claimsMappingPolicyId);
+        return new ClaimsMappingPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ClaimsMappingPoliciesRequestBuilder and sets the default values.

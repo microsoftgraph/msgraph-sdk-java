@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SiteCollectionResponse;
 import com.microsoft.graph.sites.add.AddRequestBuilder;
 import com.microsoft.graph.sites.count.CountRequestBuilder;
+import com.microsoft.graph.sites.item.SiteItemRequestBuilder;
 import com.microsoft.graph.sites.remove.RemoveRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -39,6 +40,18 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         return new RemoveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the collection of site entities.
+     * @param siteId Unique identifier of the item
+     * @return a SiteItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SiteItemRequestBuilder bySiteId(@javax.annotation.Nonnull final String siteId) {
+        Objects.requireNonNull(siteId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("site%2Did", siteId);
+        return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
      * Instantiates a new SitesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -59,9 +72,9 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Search across a SharePoint tenant for [sites][] that match keywords provided. The only property that works for sorting is **createdDateTime**. The search filter is a free text search that uses multiple properties when retrieving the search results.
+     * List all available sites][] in an organization. Specific filter criteria and query options are also supported and described below: In addition, you can use a **[$search][]** query against the `/sites` collection to find sites matching given keywords. For more guidance about building applications that use site discovery for scanning purposes, see [Best practices for discovering files and detecting changes at scale.
      * @return a CompletableFuture of SiteCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/site-search?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/site-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SiteCollectionResponse> get() {
@@ -78,10 +91,10 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Search across a SharePoint tenant for [sites][] that match keywords provided. The only property that works for sorting is **createdDateTime**. The search filter is a free text search that uses multiple properties when retrieving the search results.
+     * List all available sites][] in an organization. Specific filter criteria and query options are also supported and described below: In addition, you can use a **[$search][]** query against the `/sites` collection to find sites matching given keywords. For more guidance about building applications that use site discovery for scanning purposes, see [Best practices for discovering files and detecting changes at scale.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SiteCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/site-search?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/site-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SiteCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,7 +111,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Search across a SharePoint tenant for [sites][] that match keywords provided. The only property that works for sorting is **createdDateTime**. The search filter is a free text search that uses multiple properties when retrieving the search results.
+     * List all available sites][] in an organization. Specific filter criteria and query options are also supported and described below: In addition, you can use a **[$search][]** query against the `/sites` collection to find sites matching given keywords. For more guidance about building applications that use site discovery for scanning purposes, see [Best practices for discovering files and detecting changes at scale.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -106,7 +119,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Search across a SharePoint tenant for [sites][] that match keywords provided. The only property that works for sorting is **createdDateTime**. The search filter is a free text search that uses multiple properties when retrieving the search results.
+     * List all available sites][] in an organization. Specific filter criteria and query options are also supported and described below: In addition, you can use a **[$search][]** query against the `/sites` collection to find sites matching given keywords. For more guidance about building applications that use site discovery for scanning purposes, see [Best practices for discovering files and detecting changes at scale.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -127,7 +140,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Search across a SharePoint tenant for [sites][] that match keywords provided. The only property that works for sorting is **createdDateTime**. The search filter is a free text search that uses multiple properties when retrieving the search results.
+     * List all available sites][] in an organization. Specific filter criteria and query options are also supported and described below: In addition, you can use a **[$search][]** query against the `/sites` collection to find sites matching given keywords. For more guidance about building applications that use site discovery for scanning purposes, see [Best practices for discovering files and detecting changes at scale.
      */
     public class GetQueryParameters {
         /** Include count of items */

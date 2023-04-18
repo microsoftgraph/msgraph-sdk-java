@@ -3,6 +3,7 @@ package com.microsoft.graph.users.item.authentication.softwareoathmethods;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SoftwareOathAuthenticationMethodCollectionResponse;
 import com.microsoft.graph.users.item.authentication.softwareoathmethods.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.authentication.softwareoathmethods.item.SoftwareOathAuthenticationMethodItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -25,6 +26,18 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity.
+     * @param softwareOathAuthenticationMethodId Unique identifier of the item
+     * @return a SoftwareOathAuthenticationMethodItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SoftwareOathAuthenticationMethodItemRequestBuilder bySoftwareOathAuthenticationMethodId(@javax.annotation.Nonnull final String softwareOathAuthenticationMethodId) {
+        Objects.requireNonNull(softwareOathAuthenticationMethodId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("softwareOathAuthenticationMethod%2Did", softwareOathAuthenticationMethodId);
+        return new SoftwareOathAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SoftwareOathMethodsRequestBuilder and sets the default values.

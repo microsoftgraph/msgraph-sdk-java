@@ -1,6 +1,7 @@
 package com.microsoft.graph.drives.item.list.contenttypes.item.basetypes;
 
 import com.microsoft.graph.drives.item.list.contenttypes.item.basetypes.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.list.contenttypes.item.basetypes.item.ContentTypeItemRequestBuilder;
 import com.microsoft.graph.models.ContentTypeCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class BaseTypesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the baseTypes property of the microsoft.graph.contentType entity.
+     * @param contentTypeId1 Unique identifier of the item
+     * @return a ContentTypeItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ContentTypeItemRequestBuilder byContentTypeId1(@javax.annotation.Nonnull final String contentTypeId1) {
+        Objects.requireNonNull(contentTypeId1);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("contentType%2Did1", contentTypeId1);
+        return new ContentTypeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new BaseTypesRequestBuilder and sets the default values.

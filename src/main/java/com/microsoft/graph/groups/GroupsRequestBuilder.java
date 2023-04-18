@@ -4,6 +4,7 @@ import com.microsoft.graph.groups.count.CountRequestBuilder;
 import com.microsoft.graph.groups.delta.DeltaRequestBuilder;
 import com.microsoft.graph.groups.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
 import com.microsoft.graph.groups.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.groups.item.GroupItemRequestBuilder;
 import com.microsoft.graph.groups.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.graph.models.Group;
 import com.microsoft.graph.models.GroupCollectionResponse;
@@ -50,6 +51,18 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of group entities.
+     * @param groupId Unique identifier of the item
+     * @return a GroupItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GroupItemRequestBuilder byGroupId(@javax.annotation.Nonnull final String groupId) {
+        Objects.requireNonNull(groupId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("group%2Did", groupId);
+        return new GroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new GroupsRequestBuilder and sets the default values.

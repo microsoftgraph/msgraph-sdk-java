@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.sites.item.termstores.item.sets.item.parentgroup.sets;
 
 import com.microsoft.graph.groups.item.sites.item.termstores.item.sets.item.parentgroup.sets.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.termstores.item.sets.item.parentgroup.sets.item.SetItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.termstore.Set;
 import com.microsoft.graph.models.termstore.SetCollectionResponse;
@@ -26,6 +27,18 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sets property of the microsoft.graph.termStore.group entity.
+     * @param setId1 Unique identifier of the item
+     * @return a SetItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SetItemRequestBuilder bySetId1(@javax.annotation.Nonnull final String setId1) {
+        Objects.requireNonNull(setId1);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("set%2Did1", setId1);
+        return new SetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SetsRequestBuilder and sets the default values.

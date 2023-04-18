@@ -1,7 +1,6 @@
 package com.microsoft.graph.informationprotection;
 
 import com.microsoft.graph.informationprotection.bitlocker.BitlockerRequestBuilder;
-import com.microsoft.graph.informationprotection.threatassessmentrequests.item.ThreatAssessmentRequestItemRequestBuilder;
 import com.microsoft.graph.informationprotection.threatassessmentrequests.ThreatAssessmentRequestsRequestBuilder;
 import com.microsoft.graph.models.InformationProtection;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -129,18 +128,6 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the threatAssessmentRequests property of the microsoft.graph.informationProtection entity.
-     * @param id Unique identifier of the item
-     * @return a ThreatAssessmentRequestItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ThreatAssessmentRequestItemRequestBuilder threatAssessmentRequests(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("threatAssessmentRequest%2Did", id);
-        return new ThreatAssessmentRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get informationProtection

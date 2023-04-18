@@ -5,6 +5,7 @@ import com.microsoft.graph.models.AttachmentCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.events.item.attachments.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.events.item.attachments.createuploadsession.CreateUploadSessionRequestBuilder;
+import com.microsoft.graph.users.item.calendargroups.item.calendars.item.events.item.attachments.item.AttachmentItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -32,6 +33,18 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CreateUploadSessionRequestBuilder createUploadSession() {
         return new CreateUploadSessionRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the attachments property of the microsoft.graph.event entity.
+     * @param attachmentId Unique identifier of the item
+     * @return a AttachmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AttachmentItemRequestBuilder byAttachmentId(@javax.annotation.Nonnull final String attachmentId) {
+        Objects.requireNonNull(attachmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("attachment%2Did", attachmentId);
+        return new AttachmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AttachmentsRequestBuilder and sets the default values.

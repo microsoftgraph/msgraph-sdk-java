@@ -1,7 +1,6 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.AccessPackagesRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.AccessPackageItemRequestBuilder;
 import com.microsoft.graph.models.AccessPackageCatalog;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -26,18 +25,6 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public AccessPackagesRequestBuilder accessPackages() {
         return new AccessPackagesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the accessPackages property of the microsoft.graph.accessPackageCatalog entity.
-     * @param id Unique identifier of the item
-     * @return a AccessPackageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageItemRequestBuilder accessPackages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackage%2Did", id);
-        return new AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AccessPackageCatalogItemRequestBuilder and sets the default values.

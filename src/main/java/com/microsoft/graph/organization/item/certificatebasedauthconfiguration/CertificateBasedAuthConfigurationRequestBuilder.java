@@ -3,6 +3,7 @@ package com.microsoft.graph.organization.item.certificatebasedauthconfiguration;
 import com.microsoft.graph.models.CertificateBasedAuthConfigurationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.organization.item.certificatebasedauthconfiguration.count.CountRequestBuilder;
+import com.microsoft.graph.organization.item.certificatebasedauthconfiguration.item.CertificateBasedAuthConfigurationItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -25,6 +26,18 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the certificateBasedAuthConfiguration property of the microsoft.graph.organization entity.
+     * @param certificateBasedAuthConfigurationId Unique identifier of the item
+     * @return a CertificateBasedAuthConfigurationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public CertificateBasedAuthConfigurationItemRequestBuilder byCertificateBasedAuthConfigurationId(@javax.annotation.Nonnull final String certificateBasedAuthConfigurationId) {
+        Objects.requireNonNull(certificateBasedAuthConfigurationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("certificateBasedAuthConfiguration%2Did", certificateBasedAuthConfigurationId);
+        return new CertificateBasedAuthConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new CertificateBasedAuthConfigurationRequestBuilder and sets the default values.

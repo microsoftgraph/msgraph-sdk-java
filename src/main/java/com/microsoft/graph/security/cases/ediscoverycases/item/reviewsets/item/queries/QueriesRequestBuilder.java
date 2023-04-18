@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryReviewSetQuery;
 import com.microsoft.graph.models.security.EdiscoveryReviewSetQueryCollectionResponse;
 import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.count.CountRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.item.EdiscoveryReviewSetQueryItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the queries property of the microsoft.graph.security.ediscoveryReviewSet entity.
+     * @param ediscoveryReviewSetQueryId Unique identifier of the item
+     * @return a EdiscoveryReviewSetQueryItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EdiscoveryReviewSetQueryItemRequestBuilder byEdiscoveryReviewSetQueryId(@javax.annotation.Nonnull final String ediscoveryReviewSetQueryId) {
+        Objects.requireNonNull(ediscoveryReviewSetQueryId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("ediscoveryReviewSetQuery%2Did", ediscoveryReviewSetQueryId);
+        return new EdiscoveryReviewSetQueryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new QueriesRequestBuilder and sets the default values.

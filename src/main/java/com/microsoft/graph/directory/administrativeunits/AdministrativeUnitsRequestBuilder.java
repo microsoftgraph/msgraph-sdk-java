@@ -2,6 +2,7 @@ package com.microsoft.graph.directory.administrativeunits;
 
 import com.microsoft.graph.directory.administrativeunits.count.CountRequestBuilder;
 import com.microsoft.graph.directory.administrativeunits.delta.DeltaRequestBuilder;
+import com.microsoft.graph.directory.administrativeunits.item.AdministrativeUnitItemRequestBuilder;
 import com.microsoft.graph.models.AdministrativeUnit;
 import com.microsoft.graph.models.AdministrativeUnitCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -32,6 +33,18 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity.
+     * @param administrativeUnitId Unique identifier of the item
+     * @return a AdministrativeUnitItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AdministrativeUnitItemRequestBuilder byAdministrativeUnitId(@javax.annotation.Nonnull final String administrativeUnitId) {
+        Objects.requireNonNull(administrativeUnitId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("administrativeUnit%2Did", administrativeUnitId);
+        return new AdministrativeUnitItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AdministrativeUnitsRequestBuilder and sets the default values.

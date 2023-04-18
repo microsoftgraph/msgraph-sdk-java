@@ -1,6 +1,7 @@
 package com.microsoft.graph.datapolicyoperations;
 
 import com.microsoft.graph.datapolicyoperations.count.CountRequestBuilder;
+import com.microsoft.graph.datapolicyoperations.item.DataPolicyOperationItemRequestBuilder;
 import com.microsoft.graph.models.DataPolicyOperation;
 import com.microsoft.graph.models.DataPolicyOperationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of dataPolicyOperation entities.
+     * @param dataPolicyOperationId Unique identifier of the item
+     * @return a DataPolicyOperationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DataPolicyOperationItemRequestBuilder byDataPolicyOperationId(@javax.annotation.Nonnull final String dataPolicyOperationId) {
+        Objects.requireNonNull(dataPolicyOperationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("dataPolicyOperation%2Did", dataPolicyOperationId);
+        return new DataPolicyOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DataPolicyOperationsRequestBuilder and sets the default values.

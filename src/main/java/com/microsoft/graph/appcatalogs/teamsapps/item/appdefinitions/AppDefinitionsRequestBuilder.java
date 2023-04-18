@@ -1,6 +1,7 @@
 package com.microsoft.graph.appcatalogs.teamsapps.item.appdefinitions;
 
 import com.microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.count.CountRequestBuilder;
+import com.microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.item.TeamsAppDefinitionItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TeamsAppDefinition;
 import com.microsoft.graph.models.TeamsAppDefinitionCollectionResponse;
@@ -26,6 +27,18 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the appDefinitions property of the microsoft.graph.teamsApp entity.
+     * @param teamsAppDefinitionId Unique identifier of the item
+     * @return a TeamsAppDefinitionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TeamsAppDefinitionItemRequestBuilder byTeamsAppDefinitionId(@javax.annotation.Nonnull final String teamsAppDefinitionId) {
+        Objects.requireNonNull(teamsAppDefinitionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("teamsAppDefinition%2Did", teamsAppDefinitionId);
+        return new TeamsAppDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AppDefinitionsRequestBuilder and sets the default values.

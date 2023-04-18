@@ -3,7 +3,6 @@ package com.microsoft.graph.users.item.activities.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UserActivity;
 import com.microsoft.graph.users.item.activities.item.historyitems.HistoryItemsRequestBuilder;
-import com.microsoft.graph.users.item.activities.item.historyitems.item.ActivityHistoryItemItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -120,18 +119,6 @@ public class UserActivityItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the historyItems property of the microsoft.graph.userActivity entity.
-     * @param id Unique identifier of the item
-     * @return a ActivityHistoryItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ActivityHistoryItemItemRequestBuilder historyItems(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("activityHistoryItem%2Did", id);
-        return new ActivityHistoryItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property activities in users

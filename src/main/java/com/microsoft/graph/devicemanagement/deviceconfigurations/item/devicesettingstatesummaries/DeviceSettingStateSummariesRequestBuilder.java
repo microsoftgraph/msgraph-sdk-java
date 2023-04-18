@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.deviceconfigurations.item.devicesettingstatesummaries;
 
 import com.microsoft.graph.devicemanagement.deviceconfigurations.item.devicesettingstatesummaries.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.devicesettingstatesummaries.item.SettingStateDeviceSummaryItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SettingStateDeviceSummary;
 import com.microsoft.graph.models.SettingStateDeviceSummaryCollectionResponse;
@@ -26,6 +27,18 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceConfiguration entity.
+     * @param settingStateDeviceSummaryId Unique identifier of the item
+     * @return a SettingStateDeviceSummaryItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SettingStateDeviceSummaryItemRequestBuilder bySettingStateDeviceSummaryId(@javax.annotation.Nonnull final String settingStateDeviceSummaryId) {
+        Objects.requireNonNull(settingStateDeviceSummaryId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("settingStateDeviceSummary%2Did", settingStateDeviceSummaryId);
+        return new SettingStateDeviceSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DeviceSettingStateSummariesRequestBuilder and sets the default values.

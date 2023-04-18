@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UnifiedRoleAssignment;
 import com.microsoft.graph.models.UnifiedRoleAssignmentCollectionResponse;
 import com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignments.count.CountRequestBuilder;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignments.item.UnifiedRoleAssignmentItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity.
+     * @param unifiedRoleAssignmentId Unique identifier of the item
+     * @return a UnifiedRoleAssignmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UnifiedRoleAssignmentItemRequestBuilder byUnifiedRoleAssignmentId(@javax.annotation.Nonnull final String unifiedRoleAssignmentId) {
+        Objects.requireNonNull(unifiedRoleAssignmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("unifiedRoleAssignment%2Did", unifiedRoleAssignmentId);
+        return new UnifiedRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RoleAssignmentsRequestBuilder and sets the default values.

@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.scopedrolememberof;
 
 import com.microsoft.graph.me.scopedrolememberof.count.CountRequestBuilder;
+import com.microsoft.graph.me.scopedrolememberof.item.ScopedRoleMembershipItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ScopedRoleMembership;
 import com.microsoft.graph.models.ScopedRoleMembershipCollectionResponse;
@@ -26,6 +27,18 @@ public class ScopedRoleMemberOfRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the scopedRoleMemberOf property of the microsoft.graph.user entity.
+     * @param scopedRoleMembershipId Unique identifier of the item
+     * @return a ScopedRoleMembershipItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ScopedRoleMembershipItemRequestBuilder byScopedRoleMembershipId(@javax.annotation.Nonnull final String scopedRoleMembershipId) {
+        Objects.requireNonNull(scopedRoleMembershipId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("scopedRoleMembership%2Did", scopedRoleMembershipId);
+        return new ScopedRoleMembershipItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ScopedRoleMemberOfRequestBuilder and sets the default values.

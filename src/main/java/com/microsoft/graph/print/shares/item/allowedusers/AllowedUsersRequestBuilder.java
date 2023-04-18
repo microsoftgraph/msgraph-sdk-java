@@ -3,6 +3,7 @@ package com.microsoft.graph.print.shares.item.allowedusers;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UserCollectionResponse;
 import com.microsoft.graph.print.shares.item.allowedusers.count.CountRequestBuilder;
+import com.microsoft.graph.print.shares.item.allowedusers.item.UserItemRequestBuilder;
 import com.microsoft.graph.print.shares.item.allowedusers.ref.RefRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -31,6 +32,18 @@ public class AllowedUsersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.print.shares.item.allowedUsers.item collection
+     * @param userId Unique identifier of the item
+     * @return a UserItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UserItemRequestBuilder byUserId(@javax.annotation.Nonnull final String userId) {
+        Objects.requireNonNull(userId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("user%2Did", userId);
+        return new UserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AllowedUsersRequestBuilder and sets the default values.

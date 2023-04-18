@@ -3,14 +3,9 @@ package com.microsoft.graph.users.item.todo.lists.item.tasks.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TodoTask;
 import com.microsoft.graph.users.item.todo.lists.item.tasks.item.attachments.AttachmentsRequestBuilder;
-import com.microsoft.graph.users.item.todo.lists.item.tasks.item.attachments.item.AttachmentBaseItemRequestBuilder;
 import com.microsoft.graph.users.item.todo.lists.item.tasks.item.attachmentsessions.AttachmentSessionsRequestBuilder;
-import com.microsoft.graph.users.item.todo.lists.item.tasks.item.attachmentsessions.item.AttachmentSessionItemRequestBuilder;
 import com.microsoft.graph.users.item.todo.lists.item.tasks.item.checklistitems.ChecklistItemsRequestBuilder;
-import com.microsoft.graph.users.item.todo.lists.item.tasks.item.checklistitems.item.ChecklistItemItemRequestBuilder;
 import com.microsoft.graph.users.item.todo.lists.item.tasks.item.extensions.ExtensionsRequestBuilder;
-import com.microsoft.graph.users.item.todo.lists.item.tasks.item.extensions.item.ExtensionItemRequestBuilder;
-import com.microsoft.graph.users.item.todo.lists.item.tasks.item.linkedresources.item.LinkedResourceItemRequestBuilder;
 import com.microsoft.graph.users.item.todo.lists.item.tasks.item.linkedresources.LinkedResourcesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -54,42 +49,6 @@ public class TodoTaskItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public LinkedResourcesRequestBuilder linkedResources() {
         return new LinkedResourcesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the attachments property of the microsoft.graph.todoTask entity.
-     * @param id Unique identifier of the item
-     * @return a AttachmentBaseItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AttachmentBaseItemRequestBuilder attachments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("attachmentBase%2Did", id);
-        return new AttachmentBaseItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the attachmentSessions property of the microsoft.graph.todoTask entity.
-     * @param id Unique identifier of the item
-     * @return a AttachmentSessionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AttachmentSessionItemRequestBuilder attachmentSessions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("attachmentSession%2Did", id);
-        return new AttachmentSessionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the checklistItems property of the microsoft.graph.todoTask entity.
-     * @param id Unique identifier of the item
-     * @return a ChecklistItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ChecklistItemItemRequestBuilder checklistItems(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("checklistItem%2Did", id);
-        return new ChecklistItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TodoTaskItemRequestBuilder and sets the default values.
@@ -149,18 +108,6 @@ public class TodoTaskItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the extensions property of the microsoft.graph.todoTask entity.
-     * @param id Unique identifier of the item
-     * @return a ExtensionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("extension%2Did", id);
-        return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * The tasks in this task list. Read-only. Nullable.
      * @return a CompletableFuture of todoTask
      */
@@ -196,18 +143,6 @@ public class TodoTaskItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the linkedResources property of the microsoft.graph.todoTask entity.
-     * @param id Unique identifier of the item
-     * @return a LinkedResourceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public LinkedResourceItemRequestBuilder linkedResources(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("linkedResource%2Did", id);
-        return new LinkedResourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property tasks in users

@@ -1,7 +1,6 @@
 package com.microsoft.graph.me.joinedteams.item.channels.item.messages.item.replies.item;
 
 import com.microsoft.graph.me.joinedteams.item.channels.item.messages.item.replies.item.hostedcontents.HostedContentsRequestBuilder;
-import com.microsoft.graph.me.joinedteams.item.channels.item.messages.item.replies.item.hostedcontents.item.ChatMessageHostedContentItemRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.channels.item.messages.item.replies.item.softdelete.SoftDeleteRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.channels.item.messages.item.replies.item.undosoftdelete.UndoSoftDeleteRequestBuilder;
 import com.microsoft.graph.models.ChatMessage;
@@ -132,18 +131,6 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the hostedContents property of the microsoft.graph.chatMessage entity.
-     * @param id Unique identifier of the item
-     * @return a ChatMessageHostedContentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ChatMessageHostedContentItemRequestBuilder hostedContents(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("chatMessageHostedContent%2Did", id);
-        return new ChatMessageHostedContentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property replies in me

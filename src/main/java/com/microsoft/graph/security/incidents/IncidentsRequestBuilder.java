@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.Incident;
 import com.microsoft.graph.models.security.IncidentCollectionResponse;
 import com.microsoft.graph.security.incidents.count.CountRequestBuilder;
+import com.microsoft.graph.security.incidents.item.IncidentItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class IncidentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the incidents property of the microsoft.graph.security entity.
+     * @param incidentId Unique identifier of the item
+     * @return a IncidentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public IncidentItemRequestBuilder byIncidentId(@javax.annotation.Nonnull final String incidentId) {
+        Objects.requireNonNull(incidentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("incident%2Did", incidentId);
+        return new IncidentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new IncidentsRequestBuilder and sets the default values.

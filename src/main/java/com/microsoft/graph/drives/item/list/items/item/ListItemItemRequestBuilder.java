@@ -2,12 +2,10 @@ package com.microsoft.graph.drives.item.list.items.item;
 
 import com.microsoft.graph.drives.item.list.items.item.analytics.AnalyticsRequestBuilder;
 import com.microsoft.graph.drives.item.list.items.item.documentsetversions.DocumentSetVersionsRequestBuilder;
-import com.microsoft.graph.drives.item.list.items.item.documentsetversions.item.DocumentSetVersionItemRequestBuilder;
 import com.microsoft.graph.drives.item.list.items.item.driveitem.DriveItemRequestBuilder;
 import com.microsoft.graph.drives.item.list.items.item.fields.FieldsRequestBuilder;
 import com.microsoft.graph.drives.item.list.items.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
 import com.microsoft.graph.drives.item.list.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-import com.microsoft.graph.drives.item.list.items.item.versions.item.ListItemVersionItemRequestBuilder;
 import com.microsoft.graph.drives.item.list.items.item.versions.VersionsRequestBuilder;
 import com.microsoft.graph.models.ListItem;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -115,18 +113,6 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity.
-     * @param id Unique identifier of the item
-     * @return a DocumentSetVersionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DocumentSetVersionItemRequestBuilder documentSetVersions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("documentSetVersion%2Did", id);
-        return new DocumentSetVersionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * All items contained in the list.
@@ -306,18 +292,6 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the versions property of the microsoft.graph.listItem entity.
-     * @param id Unique identifier of the item
-     * @return a ListItemVersionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ListItemVersionItemRequestBuilder versions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("listItemVersion%2Did", id);
-        return new ListItemVersionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

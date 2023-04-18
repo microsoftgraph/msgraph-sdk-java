@@ -1,9 +1,7 @@
 package com.microsoft.graph.me.onenote.notebooks.item;
 
 import com.microsoft.graph.me.onenote.notebooks.item.copynotebook.CopyNotebookRequestBuilder;
-import com.microsoft.graph.me.onenote.notebooks.item.sectiongroups.item.SectionGroupItemRequestBuilder;
 import com.microsoft.graph.me.onenote.notebooks.item.sectiongroups.SectionGroupsRequestBuilder;
-import com.microsoft.graph.me.onenote.notebooks.item.sections.item.OnenoteSectionItemRequestBuilder;
 import com.microsoft.graph.me.onenote.notebooks.item.sections.SectionsRequestBuilder;
 import com.microsoft.graph.models.Notebook;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -173,30 +171,6 @@ public class NotebookItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the sectionGroups property of the microsoft.graph.notebook entity.
-     * @param id Unique identifier of the item
-     * @return a SectionGroupItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SectionGroupItemRequestBuilder sectionGroups(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("sectionGroup%2Did", id);
-        return new SectionGroupItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the sections property of the microsoft.graph.notebook entity.
-     * @param id Unique identifier of the item
-     * @return a OnenoteSectionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public OnenoteSectionItemRequestBuilder sections(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("onenoteSection%2Did", id);
-        return new OnenoteSectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property notebooks for me

@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TimeOffReason;
 import com.microsoft.graph.models.TimeOffReasonCollectionResponse;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.timeoffreasons.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.joinedteams.item.schedule.timeoffreasons.item.TimeOffReasonItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the timeOffReasons property of the microsoft.graph.schedule entity.
+     * @param timeOffReasonId Unique identifier of the item
+     * @return a TimeOffReasonItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TimeOffReasonItemRequestBuilder byTimeOffReasonId(@javax.annotation.Nonnull final String timeOffReasonId) {
+        Objects.requireNonNull(timeOffReasonId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("timeOffReason%2Did", timeOffReasonId);
+        return new TimeOffReasonItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TimeOffReasonsRequestBuilder and sets the default values.

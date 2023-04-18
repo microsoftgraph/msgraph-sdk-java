@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.calendargroups;
 
 import com.microsoft.graph.me.calendargroups.count.CountRequestBuilder;
+import com.microsoft.graph.me.calendargroups.item.CalendarGroupItemRequestBuilder;
 import com.microsoft.graph.models.CalendarGroup;
 import com.microsoft.graph.models.CalendarGroupCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the calendarGroups property of the microsoft.graph.user entity.
+     * @param calendarGroupId Unique identifier of the item
+     * @return a CalendarGroupItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public CalendarGroupItemRequestBuilder byCalendarGroupId(@javax.annotation.Nonnull final String calendarGroupId) {
+        Objects.requireNonNull(calendarGroupId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("calendarGroup%2Did", calendarGroupId);
+        return new CalendarGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new CalendarGroupsRequestBuilder and sets the default values.

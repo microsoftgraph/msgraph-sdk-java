@@ -5,6 +5,7 @@ import com.microsoft.graph.models.OnlineMeeting;
 import com.microsoft.graph.models.OnlineMeetingCollectionResponse;
 import com.microsoft.graph.users.item.onlinemeetings.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.onlinemeetings.createorget.CreateOrGetRequestBuilder;
+import com.microsoft.graph.users.item.onlinemeetings.item.OnlineMeetingItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -32,6 +33,18 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CreateOrGetRequestBuilder createOrGet() {
         return new CreateOrGetRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the onlineMeetings property of the microsoft.graph.user entity.
+     * @param onlineMeetingId Unique identifier of the item
+     * @return a OnlineMeetingItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public OnlineMeetingItemRequestBuilder byOnlineMeetingId(@javax.annotation.Nonnull final String onlineMeetingId) {
+        Objects.requireNonNull(onlineMeetingId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("onlineMeeting%2Did", onlineMeetingId);
+        return new OnlineMeetingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OnlineMeetingsRequestBuilder and sets the default values.

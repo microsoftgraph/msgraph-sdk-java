@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.rejectedsenders;
 
 import com.microsoft.graph.groups.item.rejectedsenders.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.rejectedsenders.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.groups.item.rejectedsenders.ref.RefRequestBuilder;
 import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -31,6 +32,18 @@ public class RejectedSendersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.groups.item.rejectedSenders.item collection
+     * @param directoryObjectId Unique identifier of the item
+     * @return a DirectoryObjectItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DirectoryObjectItemRequestBuilder byDirectoryObjectId(@javax.annotation.Nonnull final String directoryObjectId) {
+        Objects.requireNonNull(directoryObjectId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("directoryObject%2Did", directoryObjectId);
+        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RejectedSendersRequestBuilder and sets the default values.

@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.termstore.Term;
 import com.microsoft.graph.models.termstore.TermCollectionResponse;
 import com.microsoft.graph.sites.item.termstore.sets.item.parentgroup.sets.item.terms.item.children.count.CountRequestBuilder;
+import com.microsoft.graph.sites.item.termstore.sets.item.parentgroup.sets.item.terms.item.children.item.TermItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the children property of the microsoft.graph.termStore.term entity.
+     * @param termId1 Unique identifier of the item
+     * @return a TermItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TermItemRequestBuilder byTermId1(@javax.annotation.Nonnull final String termId1) {
+        Objects.requireNonNull(termId1);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("term%2Did1", termId1);
+        return new TermItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ChildrenRequestBuilder and sets the default values.

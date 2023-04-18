@@ -1,6 +1,7 @@
 package com.microsoft.graph.connections.item.operations;
 
 import com.microsoft.graph.connections.item.operations.count.CountRequestBuilder;
+import com.microsoft.graph.connections.item.operations.item.ConnectionOperationItemRequestBuilder;
 import com.microsoft.graph.models.externalconnectors.ConnectionOperation;
 import com.microsoft.graph.models.externalconnectors.ConnectionOperationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.externalConnectors.externalConnection entity.
+     * @param connectionOperationId Unique identifier of the item
+     * @return a ConnectionOperationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ConnectionOperationItemRequestBuilder byConnectionOperationId(@javax.annotation.Nonnull final String connectionOperationId) {
+        Objects.requireNonNull(connectionOperationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("connectionOperation%2Did", connectionOperationId);
+        return new ConnectionOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.

@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SectionGroup;
 import com.microsoft.graph.models.SectionGroupCollectionResponse;
 import com.microsoft.graph.users.item.onenote.notebooks.item.sectiongroups.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.onenote.notebooks.item.sectiongroups.item.SectionGroupItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sectionGroups property of the microsoft.graph.notebook entity.
+     * @param sectionGroupId Unique identifier of the item
+     * @return a SectionGroupItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SectionGroupItemRequestBuilder bySectionGroupId(@javax.annotation.Nonnull final String sectionGroupId) {
+        Objects.requireNonNull(sectionGroupId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("sectionGroup%2Did", sectionGroupId);
+        return new SectionGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SectionGroupsRequestBuilder and sets the default values.

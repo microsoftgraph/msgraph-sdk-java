@@ -1,6 +1,5 @@
 package com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.item.approval;
 
-import com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.item.approval.stages.item.ApprovalStageItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.item.approval.stages.StagesRequestBuilder;
 import com.microsoft.graph.models.Approval;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -160,18 +159,6 @@ public class ApprovalRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the stages property of the microsoft.graph.approval entity.
-     * @param id Unique identifier of the item
-     * @return a ApprovalStageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ApprovalStageItemRequestBuilder stages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("approvalStage%2Did", id);
-        return new ApprovalStageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property approval for identityGovernance

@@ -1,6 +1,7 @@
 package com.microsoft.graph.informationprotection.bitlocker.recoverykeys;
 
 import com.microsoft.graph.informationprotection.bitlocker.recoverykeys.count.CountRequestBuilder;
+import com.microsoft.graph.informationprotection.bitlocker.recoverykeys.item.BitlockerRecoveryKeyItemRequestBuilder;
 import com.microsoft.graph.models.BitlockerRecoveryKeyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class RecoveryKeysRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the recoveryKeys property of the microsoft.graph.bitlocker entity.
+     * @param bitlockerRecoveryKeyId Unique identifier of the item
+     * @return a BitlockerRecoveryKeyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public BitlockerRecoveryKeyItemRequestBuilder byBitlockerRecoveryKeyId(@javax.annotation.Nonnull final String bitlockerRecoveryKeyId) {
+        Objects.requireNonNull(bitlockerRecoveryKeyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("bitlockerRecoveryKey%2Did", bitlockerRecoveryKeyId);
+        return new BitlockerRecoveryKeyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RecoveryKeysRequestBuilder and sets the default values.

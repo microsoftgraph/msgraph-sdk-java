@@ -3,6 +3,7 @@ package com.microsoft.graph.users.item.todo.lists.item.tasks.item.attachmentsess
 import com.microsoft.graph.models.AttachmentSessionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.todo.lists.item.tasks.item.attachmentsessions.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.todo.lists.item.tasks.item.attachmentsessions.item.AttachmentSessionItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -25,6 +26,18 @@ public class AttachmentSessionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the attachmentSessions property of the microsoft.graph.todoTask entity.
+     * @param attachmentSessionId Unique identifier of the item
+     * @return a AttachmentSessionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AttachmentSessionItemRequestBuilder byAttachmentSessionId(@javax.annotation.Nonnull final String attachmentSessionId) {
+        Objects.requireNonNull(attachmentSessionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("attachmentSession%2Did", attachmentSessionId);
+        return new AttachmentSessionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AttachmentSessionsRequestBuilder and sets the default values.

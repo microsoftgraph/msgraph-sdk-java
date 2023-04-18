@@ -1,7 +1,6 @@
 package com.microsoft.graph.external;
 
 import com.microsoft.graph.external.connections.ConnectionsRequestBuilder;
-import com.microsoft.graph.external.connections.item.ExternalConnectionItemRequestBuilder;
 import com.microsoft.graph.models.externalconnectors.External;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -26,18 +25,6 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ConnectionsRequestBuilder connections() {
         return new ConnectionsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the connections property of the microsoft.graph.externalConnectors.external entity.
-     * @param id Unique identifier of the item
-     * @return a ExternalConnectionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ExternalConnectionItemRequestBuilder connections(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("externalConnection%2Did", id);
-        return new ExternalConnectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ExternalRequestBuilder and sets the default values.

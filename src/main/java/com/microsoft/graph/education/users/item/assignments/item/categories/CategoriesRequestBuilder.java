@@ -2,6 +2,7 @@ package com.microsoft.graph.education.users.item.assignments.item.categories;
 
 import com.microsoft.graph.education.users.item.assignments.item.categories.count.CountRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.categories.delta.DeltaRequestBuilder;
+import com.microsoft.graph.education.users.item.assignments.item.categories.item.EducationCategoryItemRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.categories.ref.RefRequestBuilder;
 import com.microsoft.graph.models.EducationCategory;
 import com.microsoft.graph.models.EducationCategoryCollectionResponse;
@@ -38,6 +39,18 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.education.users.item.assignments.item.categories.item collection
+     * @param educationCategoryId Unique identifier of the item
+     * @return a EducationCategoryItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EducationCategoryItemRequestBuilder byEducationCategoryId(@javax.annotation.Nonnull final String educationCategoryId) {
+        Objects.requireNonNull(educationCategoryId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("educationCategory%2Did", educationCategoryId);
+        return new EducationCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new CategoriesRequestBuilder and sets the default values.

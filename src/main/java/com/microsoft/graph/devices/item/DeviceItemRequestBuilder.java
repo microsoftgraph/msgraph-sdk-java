@@ -3,12 +3,10 @@ package com.microsoft.graph.devices.item;
 import com.microsoft.graph.devices.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
 import com.microsoft.graph.devices.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import com.microsoft.graph.devices.item.extensions.ExtensionsRequestBuilder;
-import com.microsoft.graph.devices.item.extensions.item.ExtensionItemRequestBuilder;
 import com.microsoft.graph.devices.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.devices.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.devices.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.devices.item.registeredowners.RegisteredOwnersRequestBuilder;
-import com.microsoft.graph.devices.item.registeredusers.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.devices.item.registeredusers.RegisteredUsersRequestBuilder;
 import com.microsoft.graph.devices.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.devices.item.transitivememberof.TransitiveMemberOfRequestBuilder;
@@ -142,18 +140,6 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the extensions property of the microsoft.graph.device entity.
-     * @param id Unique identifier of the item
-     * @return a ExtensionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("extension%2Did", id);
-        return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Get the properties and relationships of a device object.
      * @return a CompletableFuture of device
      * @see <a href="https://docs.microsoft.com/graph/api/device-get?view=graph-rest-1.0">Find more info here</a>
@@ -191,18 +177,6 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the memberOf property of the microsoft.graph.device entity.
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.devices.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.devices.item.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps.
@@ -245,30 +219,6 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.devices.item.registeredOwners.item collection
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.devices.item.registeredowners.item.DirectoryObjectItemRequestBuilder registeredOwners(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.devices.item.registeredowners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.devices.item.registeredUsers.item collection
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.devices.item.registeredusers.item.DirectoryObjectItemRequestBuilder registeredUsers(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.devices.item.registeredusers.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete a registered device.
@@ -357,18 +307,6 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.device entity.
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.devices.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.devices.item.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

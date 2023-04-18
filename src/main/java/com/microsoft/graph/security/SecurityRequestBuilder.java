@@ -3,15 +3,11 @@ package com.microsoft.graph.security;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Security;
 import com.microsoft.graph.security.alerts_v2.AlertsV2RequestBuilder;
-import com.microsoft.graph.security.alerts_v2.item.AlertItemRequestBuilder;
 import com.microsoft.graph.security.alerts.AlertsRequestBuilder;
 import com.microsoft.graph.security.attacksimulation.AttackSimulationRequestBuilder;
 import com.microsoft.graph.security.cases.CasesRequestBuilder;
 import com.microsoft.graph.security.incidents.IncidentsRequestBuilder;
-import com.microsoft.graph.security.incidents.item.IncidentItemRequestBuilder;
-import com.microsoft.graph.security.securescorecontrolprofiles.item.SecureScoreControlProfileItemRequestBuilder;
 import com.microsoft.graph.security.securescorecontrolprofiles.SecureScoreControlProfilesRequestBuilder;
-import com.microsoft.graph.security.securescores.item.SecureScoreItemRequestBuilder;
 import com.microsoft.graph.security.securescores.SecureScoresRequestBuilder;
 import com.microsoft.graph.security.securityrunhuntingquery.SecurityRunHuntingQueryRequestBuilder;
 import com.microsoft.graph.security.triggers.TriggersRequestBuilder;
@@ -85,30 +81,6 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         return new TriggerTypesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the alerts property of the microsoft.graph.security entity.
-     * @param id Unique identifier of the item
-     * @return a AlertItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.security.alerts.item.AlertItemRequestBuilder alerts(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("alert%2Did", id);
-        return new com.microsoft.graph.security.alerts.item.AlertItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the alerts_v2 property of the microsoft.graph.security entity.
-     * @param id Unique identifier of the item
-     * @return a AlertItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.security.alerts_v2.item.AlertItemRequestBuilder alerts_v2(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("alert%2Did", id);
-        return new com.microsoft.graph.security.alerts_v2.item.AlertItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new SecurityRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -166,18 +138,6 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the incidents property of the microsoft.graph.security entity.
-     * @param id Unique identifier of the item
-     * @return a IncidentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public IncidentItemRequestBuilder incidents(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("incident%2Did", id);
-        return new IncidentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update security
      * @param body The request body
      * @return a CompletableFuture of security
@@ -216,30 +176,6 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity.
-     * @param id Unique identifier of the item
-     * @return a SecureScoreControlProfileItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SecureScoreControlProfileItemRequestBuilder secureScoreControlProfiles(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("secureScoreControlProfile%2Did", id);
-        return new SecureScoreControlProfileItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the secureScores property of the microsoft.graph.security entity.
-     * @param id Unique identifier of the item
-     * @return a SecureScoreItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SecureScoreItemRequestBuilder secureScores(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("secureScore%2Did", id);
-        return new SecureScoreItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get security

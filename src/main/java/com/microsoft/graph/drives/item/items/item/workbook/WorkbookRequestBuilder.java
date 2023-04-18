@@ -3,19 +3,14 @@ package com.microsoft.graph.drives.item.items.item.workbook;
 import com.microsoft.graph.drives.item.items.item.workbook.application.ApplicationRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.closesession.CloseSessionRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.comments.CommentsRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.comments.item.WorkbookCommentItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.createsession.CreateSessionRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.FunctionsRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.names.item.WorkbookNamedItemItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.names.NamesRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.operations.item.WorkbookOperationItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.operations.OperationsRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.refreshsession.RefreshSessionRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.sessioninforesourcewithkey.SessionInfoResourceWithKeyRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.tablerowoperationresultwithkey.TableRowOperationResultWithKeyRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.tables.item.WorkbookTableItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.tables.TablesRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.WorkbookWorksheetItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.WorksheetsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Workbook;
@@ -86,18 +81,6 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public WorksheetsRequestBuilder worksheets() {
         return new WorksheetsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the comments property of the microsoft.graph.workbook entity.
-     * @param id Unique identifier of the item
-     * @return a WorkbookCommentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WorkbookCommentItemRequestBuilder comments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("workbookComment%2Did", id);
-        return new WorkbookCommentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new WorkbookRequestBuilder and sets the default values.
@@ -194,30 +177,6 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the names property of the microsoft.graph.workbook entity.
-     * @param id Unique identifier of the item
-     * @return a WorkbookNamedItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WorkbookNamedItemItemRequestBuilder names(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("workbookNamedItem%2Did", id);
-        return new WorkbookNamedItemItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the operations property of the microsoft.graph.workbook entity.
-     * @param id Unique identifier of the item
-     * @return a WorkbookOperationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WorkbookOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("workbookOperation%2Did", id);
-        return new WorkbookOperationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property workbook in drives
      * @param body The request body
      * @return a CompletableFuture of workbook
@@ -276,18 +235,6 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
     public TableRowOperationResultWithKeyRequestBuilder tableRowOperationResultWithKey(@javax.annotation.Nonnull final String key) {
         Objects.requireNonNull(key);
         return new TableRowOperationResultWithKeyRequestBuilder(pathParameters, requestAdapter, key);
-    }
-    /**
-     * Provides operations to manage the tables property of the microsoft.graph.workbook entity.
-     * @param id Unique identifier of the item
-     * @return a WorkbookTableItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WorkbookTableItemRequestBuilder tables(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("workbookTable%2Did", id);
-        return new WorkbookTableItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property workbook for drives
@@ -376,18 +323,6 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the worksheets property of the microsoft.graph.workbook entity.
-     * @param id Unique identifier of the item
-     * @return a WorkbookWorksheetItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WorkbookWorksheetItemRequestBuilder worksheets(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("workbookWorksheet%2Did", id);
-        return new WorkbookWorksheetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

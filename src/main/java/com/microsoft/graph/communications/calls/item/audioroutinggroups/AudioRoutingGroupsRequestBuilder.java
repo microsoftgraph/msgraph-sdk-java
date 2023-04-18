@@ -1,6 +1,7 @@
 package com.microsoft.graph.communications.calls.item.audioroutinggroups;
 
 import com.microsoft.graph.communications.calls.item.audioroutinggroups.count.CountRequestBuilder;
+import com.microsoft.graph.communications.calls.item.audioroutinggroups.item.AudioRoutingGroupItemRequestBuilder;
 import com.microsoft.graph.models.AudioRoutingGroup;
 import com.microsoft.graph.models.AudioRoutingGroupCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the audioRoutingGroups property of the microsoft.graph.call entity.
+     * @param audioRoutingGroupId Unique identifier of the item
+     * @return a AudioRoutingGroupItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AudioRoutingGroupItemRequestBuilder byAudioRoutingGroupId(@javax.annotation.Nonnull final String audioRoutingGroupId) {
+        Objects.requireNonNull(audioRoutingGroupId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("audioRoutingGroup%2Did", audioRoutingGroupId);
+        return new AudioRoutingGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AudioRoutingGroupsRequestBuilder and sets the default values.

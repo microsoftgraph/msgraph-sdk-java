@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryReviewTag;
 import com.microsoft.graph.models.security.EdiscoveryReviewTagCollectionResponse;
 import com.microsoft.graph.security.cases.ediscoverycases.item.tags.count.CountRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.tags.item.EdiscoveryReviewTagItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.tags.securityashierarchy.SecurityAsHierarchyRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -32,6 +33,18 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public SecurityAsHierarchyRequestBuilder securityAsHierarchy() {
         return new SecurityAsHierarchyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tags property of the microsoft.graph.security.ediscoveryCase entity.
+     * @param ediscoveryReviewTagId Unique identifier of the item
+     * @return a EdiscoveryReviewTagItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EdiscoveryReviewTagItemRequestBuilder byEdiscoveryReviewTagId(@javax.annotation.Nonnull final String ediscoveryReviewTagId) {
+        Objects.requireNonNull(ediscoveryReviewTagId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("ediscoveryReviewTag%2Did", ediscoveryReviewTagId);
+        return new EdiscoveryReviewTagItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TagsRequestBuilder and sets the default values.

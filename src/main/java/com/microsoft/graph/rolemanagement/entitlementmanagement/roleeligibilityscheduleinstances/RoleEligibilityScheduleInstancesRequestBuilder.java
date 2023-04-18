@@ -5,6 +5,7 @@ import com.microsoft.graph.models.UnifiedRoleEligibilityScheduleInstance;
 import com.microsoft.graph.models.UnifiedRoleEligibilityScheduleInstanceCollectionResponse;
 import com.microsoft.graph.rolemanagement.entitlementmanagement.roleeligibilityscheduleinstances.count.CountRequestBuilder;
 import com.microsoft.graph.rolemanagement.entitlementmanagement.roleeligibilityscheduleinstances.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.roleeligibilityscheduleinstances.item.UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -27,6 +28,18 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the roleEligibilityScheduleInstances property of the microsoft.graph.rbacApplication entity.
+     * @param unifiedRoleEligibilityScheduleInstanceId Unique identifier of the item
+     * @return a UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder byUnifiedRoleEligibilityScheduleInstanceId(@javax.annotation.Nonnull final String unifiedRoleEligibilityScheduleInstanceId) {
+        Objects.requireNonNull(unifiedRoleEligibilityScheduleInstanceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("unifiedRoleEligibilityScheduleInstance%2Did", unifiedRoleEligibilityScheduleInstanceId);
+        return new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RoleEligibilityScheduleInstancesRequestBuilder and sets the default values.

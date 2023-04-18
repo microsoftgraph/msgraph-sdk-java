@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.joinedteams.item.channels.item.sharedwithteams;
 
 import com.microsoft.graph.me.joinedteams.item.channels.item.sharedwithteams.count.CountRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.channels.item.sharedwithteams.item.SharedWithChannelTeamInfoItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SharedWithChannelTeamInfo;
 import com.microsoft.graph.models.SharedWithChannelTeamInfoCollectionResponse;
@@ -26,6 +27,18 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sharedWithTeams property of the microsoft.graph.channel entity.
+     * @param sharedWithChannelTeamInfoId Unique identifier of the item
+     * @return a SharedWithChannelTeamInfoItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SharedWithChannelTeamInfoItemRequestBuilder bySharedWithChannelTeamInfoId(@javax.annotation.Nonnull final String sharedWithChannelTeamInfoId) {
+        Objects.requireNonNull(sharedWithChannelTeamInfoId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("sharedWithChannelTeamInfo%2Did", sharedWithChannelTeamInfoId);
+        return new SharedWithChannelTeamInfoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SharedWithTeamsRequestBuilder and sets the default values.

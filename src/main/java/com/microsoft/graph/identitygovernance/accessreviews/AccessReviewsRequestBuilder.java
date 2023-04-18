@@ -1,9 +1,7 @@
 package com.microsoft.graph.identitygovernance.accessreviews;
 
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.DefinitionsRequestBuilder;
-import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.AccessReviewScheduleDefinitionItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.historydefinitions.HistoryDefinitionsRequestBuilder;
-import com.microsoft.graph.identitygovernance.accessreviews.historydefinitions.item.AccessReviewHistoryDefinitionItemRequestBuilder;
 import com.microsoft.graph.models.AccessReviewSet;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -53,18 +51,6 @@ public class AccessReviewsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public AccessReviewsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance/accessReviews{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the definitions property of the microsoft.graph.accessReviewSet entity.
-     * @param id Unique identifier of the item
-     * @return a AccessReviewScheduleDefinitionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessReviewScheduleDefinitionItemRequestBuilder definitions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessReviewScheduleDefinition%2Did", id);
-        return new AccessReviewScheduleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property accessReviews for identityGovernance
@@ -139,18 +125,6 @@ public class AccessReviewsRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the historyDefinitions property of the microsoft.graph.accessReviewSet entity.
-     * @param id Unique identifier of the item
-     * @return a AccessReviewHistoryDefinitionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessReviewHistoryDefinitionItemRequestBuilder historyDefinitions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessReviewHistoryDefinition%2Did", id);
-        return new AccessReviewHistoryDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property accessReviews in identityGovernance

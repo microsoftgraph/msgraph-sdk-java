@@ -1,6 +1,7 @@
 package com.microsoft.graph.admin.serviceannouncement.issues;
 
 import com.microsoft.graph.admin.serviceannouncement.issues.count.CountRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.issues.item.ServiceHealthIssueItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ServiceHealthIssue;
 import com.microsoft.graph.models.ServiceHealthIssueCollectionResponse;
@@ -26,6 +27,18 @@ public class IssuesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the issues property of the microsoft.graph.serviceAnnouncement entity.
+     * @param serviceHealthIssueId Unique identifier of the item
+     * @return a ServiceHealthIssueItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ServiceHealthIssueItemRequestBuilder byServiceHealthIssueId(@javax.annotation.Nonnull final String serviceHealthIssueId) {
+        Objects.requireNonNull(serviceHealthIssueId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("serviceHealthIssue%2Did", serviceHealthIssueId);
+        return new ServiceHealthIssueItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new IssuesRequestBuilder and sets the default values.

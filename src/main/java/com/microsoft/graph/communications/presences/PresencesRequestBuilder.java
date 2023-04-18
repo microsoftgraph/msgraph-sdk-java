@@ -1,6 +1,7 @@
 package com.microsoft.graph.communications.presences;
 
 import com.microsoft.graph.communications.presences.count.CountRequestBuilder;
+import com.microsoft.graph.communications.presences.item.PresenceItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Presence;
 import com.microsoft.graph.models.PresenceCollectionResponse;
@@ -26,6 +27,18 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity.
+     * @param presenceId Unique identifier of the item
+     * @return a PresenceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PresenceItemRequestBuilder byPresenceId(@javax.annotation.Nonnull final String presenceId) {
+        Objects.requireNonNull(presenceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("presence%2Did", presenceId);
+        return new PresenceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PresencesRequestBuilder and sets the default values.

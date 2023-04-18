@@ -3,6 +3,7 @@ package com.microsoft.graph.drives.item.items.item.workbook.names;
 import com.microsoft.graph.drives.item.items.item.workbook.names.add.AddRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.names.addformulalocal.AddFormulaLocalRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.names.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.names.item.WorkbookNamedItemItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookNamedItem;
 import com.microsoft.graph.models.WorkbookNamedItemCollectionResponse;
@@ -40,6 +41,18 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the names property of the microsoft.graph.workbook entity.
+     * @param workbookNamedItemId Unique identifier of the item
+     * @return a WorkbookNamedItemItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public WorkbookNamedItemItemRequestBuilder byWorkbookNamedItemId(@javax.annotation.Nonnull final String workbookNamedItemId) {
+        Objects.requireNonNull(workbookNamedItemId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("workbookNamedItem%2Did", workbookNamedItemId);
+        return new WorkbookNamedItemItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
      * Instantiates a new NamesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -62,7 +75,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of nameditem objects.
      * @return a CompletableFuture of WorkbookNamedItemCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/nameditem-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/workbook-list-names?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItemCollectionResponse> get() {
@@ -82,7 +95,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of nameditem objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of WorkbookNamedItemCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/nameditem-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/workbook-list-names?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItemCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

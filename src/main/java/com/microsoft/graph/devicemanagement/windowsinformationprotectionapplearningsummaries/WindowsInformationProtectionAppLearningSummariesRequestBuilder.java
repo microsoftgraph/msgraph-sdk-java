@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.windowsinformationprotectionapplearningsummaries;
 
 import com.microsoft.graph.devicemanagement.windowsinformationprotectionapplearningsummaries.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsinformationprotectionapplearningsummaries.item.WindowsInformationProtectionAppLearningSummaryItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WindowsInformationProtectionAppLearningSummary;
 import com.microsoft.graph.models.WindowsInformationProtectionAppLearningSummaryCollectionResponse;
@@ -26,6 +27,18 @@ public class WindowsInformationProtectionAppLearningSummariesRequestBuilder exte
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the windowsInformationProtectionAppLearningSummaries property of the microsoft.graph.deviceManagement entity.
+     * @param windowsInformationProtectionAppLearningSummaryId Unique identifier of the item
+     * @return a WindowsInformationProtectionAppLearningSummaryItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public WindowsInformationProtectionAppLearningSummaryItemRequestBuilder byWindowsInformationProtectionAppLearningSummaryId(@javax.annotation.Nonnull final String windowsInformationProtectionAppLearningSummaryId) {
+        Objects.requireNonNull(windowsInformationProtectionAppLearningSummaryId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("windowsInformationProtectionAppLearningSummary%2Did", windowsInformationProtectionAppLearningSummaryId);
+        return new WindowsInformationProtectionAppLearningSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new WindowsInformationProtectionAppLearningSummariesRequestBuilder and sets the default values.

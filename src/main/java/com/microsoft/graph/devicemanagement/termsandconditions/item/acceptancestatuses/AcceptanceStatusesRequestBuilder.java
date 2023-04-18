@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.termsandconditions.item.acceptancestatuses;
 
 import com.microsoft.graph.devicemanagement.termsandconditions.item.acceptancestatuses.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.termsandconditions.item.acceptancestatuses.item.TermsAndConditionsAcceptanceStatusItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TermsAndConditionsAcceptanceStatus;
 import com.microsoft.graph.models.TermsAndConditionsAcceptanceStatusCollectionResponse;
@@ -26,6 +27,18 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the acceptanceStatuses property of the microsoft.graph.termsAndConditions entity.
+     * @param termsAndConditionsAcceptanceStatusId Unique identifier of the item
+     * @return a TermsAndConditionsAcceptanceStatusItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TermsAndConditionsAcceptanceStatusItemRequestBuilder byTermsAndConditionsAcceptanceStatusId(@javax.annotation.Nonnull final String termsAndConditionsAcceptanceStatusId) {
+        Objects.requireNonNull(termsAndConditionsAcceptanceStatusId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("termsAndConditionsAcceptanceStatus%2Did", termsAndConditionsAcceptanceStatusId);
+        return new TermsAndConditionsAcceptanceStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AcceptanceStatusesRequestBuilder and sets the default values.

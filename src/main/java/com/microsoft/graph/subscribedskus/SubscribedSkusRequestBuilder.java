@@ -3,6 +3,7 @@ package com.microsoft.graph.subscribedskus;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SubscribedSku;
 import com.microsoft.graph.models.SubscribedSkuCollectionResponse;
+import com.microsoft.graph.subscribedskus.item.SubscribedSkuItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -21,6 +22,18 @@ import java.util.Objects;
  * Provides operations to manage the collection of subscribedSku entities.
  */
 public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the collection of subscribedSku entities.
+     * @param subscribedSkuId Unique identifier of the item
+     * @return a SubscribedSkuItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SubscribedSkuItemRequestBuilder bySubscribedSkuId(@javax.annotation.Nonnull final String subscribedSkuId) {
+        Objects.requireNonNull(subscribedSkuId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("subscribedSku%2Did", subscribedSkuId);
+        return new SubscribedSkuItemRequestBuilder(urlTplParams, requestAdapter);
+    }
     /**
      * Instantiates a new SubscribedSkusRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.telecomexpensemanagementpartners;
 
 import com.microsoft.graph.devicemanagement.telecomexpensemanagementpartners.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.telecomexpensemanagementpartners.item.TelecomExpenseManagementPartnerItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TelecomExpenseManagementPartner;
 import com.microsoft.graph.models.TelecomExpenseManagementPartnerCollectionResponse;
@@ -26,6 +27,18 @@ public class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestB
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the telecomExpenseManagementPartners property of the microsoft.graph.deviceManagement entity.
+     * @param telecomExpenseManagementPartnerId Unique identifier of the item
+     * @return a TelecomExpenseManagementPartnerItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TelecomExpenseManagementPartnerItemRequestBuilder byTelecomExpenseManagementPartnerId(@javax.annotation.Nonnull final String telecomExpenseManagementPartnerId) {
+        Objects.requireNonNull(telecomExpenseManagementPartnerId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("telecomExpenseManagementPartner%2Did", telecomExpenseManagementPartnerId);
+        return new TelecomExpenseManagementPartnerItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TelecomExpenseManagementPartnersRequestBuilder and sets the default values.

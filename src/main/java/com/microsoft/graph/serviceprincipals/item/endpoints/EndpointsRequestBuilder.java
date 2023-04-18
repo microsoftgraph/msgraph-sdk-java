@@ -4,6 +4,7 @@ import com.microsoft.graph.models.Endpoint;
 import com.microsoft.graph.models.EndpointCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.serviceprincipals.item.endpoints.count.CountRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.endpoints.item.EndpointItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the endpoints property of the microsoft.graph.servicePrincipal entity.
+     * @param endpointId Unique identifier of the item
+     * @return a EndpointItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EndpointItemRequestBuilder byEndpointId(@javax.annotation.Nonnull final String endpointId) {
+        Objects.requireNonNull(endpointId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("endpoint%2Did", endpointId);
+        return new EndpointItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new EndpointsRequestBuilder and sets the default values.

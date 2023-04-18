@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.deviceconfigurations.item.assignments;
 
 import com.microsoft.graph.devicemanagement.deviceconfigurations.item.assignments.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.assignments.item.DeviceConfigurationAssignmentItemRequestBuilder;
 import com.microsoft.graph.models.DeviceConfigurationAssignment;
 import com.microsoft.graph.models.DeviceConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.deviceConfiguration entity.
+     * @param deviceConfigurationAssignmentId Unique identifier of the item
+     * @return a DeviceConfigurationAssignmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceConfigurationAssignmentItemRequestBuilder byDeviceConfigurationAssignmentId(@javax.annotation.Nonnull final String deviceConfigurationAssignmentId) {
+        Objects.requireNonNull(deviceConfigurationAssignmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceConfigurationAssignment%2Did", deviceConfigurationAssignmentId);
+        return new DeviceConfigurationAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AssignmentsRequestBuilder and sets the default values.

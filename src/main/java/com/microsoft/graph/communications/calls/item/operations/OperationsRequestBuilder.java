@@ -1,6 +1,7 @@
 package com.microsoft.graph.communications.calls.item.operations;
 
 import com.microsoft.graph.communications.calls.item.operations.count.CountRequestBuilder;
+import com.microsoft.graph.communications.calls.item.operations.item.CommsOperationItemRequestBuilder;
 import com.microsoft.graph.models.CommsOperation;
 import com.microsoft.graph.models.CommsOperationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.call entity.
+     * @param commsOperationId Unique identifier of the item
+     * @return a CommsOperationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public CommsOperationItemRequestBuilder byCommsOperationId(@javax.annotation.Nonnull final String commsOperationId) {
+        Objects.requireNonNull(commsOperationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("commsOperation%2Did", commsOperationId);
+        return new CommsOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.

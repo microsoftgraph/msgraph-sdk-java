@@ -2,6 +2,7 @@ package com.microsoft.graph.me.mailfolders.item.childfolders.item.messages;
 
 import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.count.CountRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.delta.DeltaRequestBuilder;
+import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.MessageItemRequestBuilder;
 import com.microsoft.graph.models.Message;
 import com.microsoft.graph.models.MessageCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -32,6 +33,18 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the messages property of the microsoft.graph.mailFolder entity.
+     * @param messageId Unique identifier of the item
+     * @return a MessageItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public MessageItemRequestBuilder byMessageId(@javax.annotation.Nonnull final String messageId) {
+        Objects.requireNonNull(messageId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("message%2Did", messageId);
+        return new MessageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MessagesRequestBuilder and sets the default values.

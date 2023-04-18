@@ -1,6 +1,7 @@
 package com.microsoft.graph.education.me.assignments.item.submissions.item.submittedresources;
 
 import com.microsoft.graph.education.me.assignments.item.submissions.item.submittedresources.count.CountRequestBuilder;
+import com.microsoft.graph.education.me.assignments.item.submissions.item.submittedresources.item.EducationSubmissionResourceItemRequestBuilder;
 import com.microsoft.graph.models.EducationSubmissionResource;
 import com.microsoft.graph.models.EducationSubmissionResourceCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class SubmittedResourcesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the submittedResources property of the microsoft.graph.educationSubmission entity.
+     * @param educationSubmissionResourceId Unique identifier of the item
+     * @return a EducationSubmissionResourceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EducationSubmissionResourceItemRequestBuilder byEducationSubmissionResourceId(@javax.annotation.Nonnull final String educationSubmissionResourceId) {
+        Objects.requireNonNull(educationSubmissionResourceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("educationSubmissionResource%2Did", educationSubmissionResourceId);
+        return new EducationSubmissionResourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SubmittedResourcesRequestBuilder and sets the default values.

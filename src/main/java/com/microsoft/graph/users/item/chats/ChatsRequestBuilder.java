@@ -5,6 +5,7 @@ import com.microsoft.graph.models.ChatCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.chats.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.chats.getallmessages.GetAllMessagesRequestBuilder;
+import com.microsoft.graph.users.item.chats.item.ChatItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -32,6 +33,18 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GetAllMessagesRequestBuilder getAllMessages() {
         return new GetAllMessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the chats property of the microsoft.graph.user entity.
+     * @param chatId Unique identifier of the item
+     * @return a ChatItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ChatItemRequestBuilder byChatId(@javax.annotation.Nonnull final String chatId) {
+        Objects.requireNonNull(chatId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("chat%2Did", chatId);
+        return new ChatItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ChatsRequestBuilder and sets the default values.

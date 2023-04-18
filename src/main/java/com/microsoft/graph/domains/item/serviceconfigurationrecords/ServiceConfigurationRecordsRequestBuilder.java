@@ -1,6 +1,7 @@
 package com.microsoft.graph.domains.item.serviceconfigurationrecords;
 
 import com.microsoft.graph.domains.item.serviceconfigurationrecords.count.CountRequestBuilder;
+import com.microsoft.graph.domains.item.serviceconfigurationrecords.item.DomainDnsRecordItemRequestBuilder;
 import com.microsoft.graph.models.DomainDnsRecord;
 import com.microsoft.graph.models.DomainDnsRecordCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilde
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the serviceConfigurationRecords property of the microsoft.graph.domain entity.
+     * @param domainDnsRecordId Unique identifier of the item
+     * @return a DomainDnsRecordItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DomainDnsRecordItemRequestBuilder byDomainDnsRecordId(@javax.annotation.Nonnull final String domainDnsRecordId) {
+        Objects.requireNonNull(domainDnsRecordId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("domainDnsRecord%2Did", domainDnsRecordId);
+        return new DomainDnsRecordItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ServiceConfigurationRecordsRequestBuilder and sets the default values.

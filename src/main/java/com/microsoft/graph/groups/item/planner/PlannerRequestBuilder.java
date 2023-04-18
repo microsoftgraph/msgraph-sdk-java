@@ -1,6 +1,5 @@
 package com.microsoft.graph.groups.item.planner;
 
-import com.microsoft.graph.groups.item.planner.plans.item.PlannerPlanItemRequestBuilder;
 import com.microsoft.graph.groups.item.planner.plans.PlansRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PlannerGroup;
@@ -160,18 +159,6 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the plans property of the microsoft.graph.plannerGroup entity.
-     * @param id Unique identifier of the item
-     * @return a PlannerPlanItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PlannerPlanItemRequestBuilder plans(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("plannerPlan%2Did", id);
-        return new PlannerPlanItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property planner for groups

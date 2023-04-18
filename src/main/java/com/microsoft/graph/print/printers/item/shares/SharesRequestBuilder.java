@@ -3,6 +3,7 @@ package com.microsoft.graph.print.printers.item.shares;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PrinterShareCollectionResponse;
 import com.microsoft.graph.print.printers.item.shares.count.CountRequestBuilder;
+import com.microsoft.graph.print.printers.item.shares.item.PrinterShareItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -25,6 +26,18 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the shares property of the microsoft.graph.printer entity.
+     * @param printerShareId Unique identifier of the item
+     * @return a PrinterShareItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PrinterShareItemRequestBuilder byPrinterShareId(@javax.annotation.Nonnull final String printerShareId) {
+        Objects.requireNonNull(printerShareId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("printerShare%2Did", printerShareId);
+        return new PrinterShareItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SharesRequestBuilder and sets the default values.

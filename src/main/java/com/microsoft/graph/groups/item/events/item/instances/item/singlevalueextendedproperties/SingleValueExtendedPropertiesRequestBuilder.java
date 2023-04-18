@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.events.item.instances.item.singlevalueextendedproperties;
 
 import com.microsoft.graph.groups.item.events.item.instances.item.singlevalueextendedproperties.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.events.item.instances.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.SingleValueLegacyExtendedPropertyCollectionResponse;
@@ -26,6 +27,18 @@ public class SingleValueExtendedPropertiesRequestBuilder extends BaseRequestBuil
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.event entity.
+     * @param singleValueLegacyExtendedPropertyId Unique identifier of the item
+     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SingleValueLegacyExtendedPropertyItemRequestBuilder bySingleValueLegacyExtendedPropertyId(@javax.annotation.Nonnull final String singleValueLegacyExtendedPropertyId) {
+        Objects.requireNonNull(singleValueLegacyExtendedPropertyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("singleValueLegacyExtendedProperty%2Did", singleValueLegacyExtendedPropertyId);
+        return new SingleValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SingleValueExtendedPropertiesRequestBuilder and sets the default values.

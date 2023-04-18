@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Team;
 import com.microsoft.graph.teams.count.CountRequestBuilder;
 import com.microsoft.graph.teams.getallmessages.GetAllMessagesRequestBuilder;
+import com.microsoft.graph.teams.item.TeamItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -30,6 +31,18 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GetAllMessagesRequestBuilder getAllMessages() {
         return new GetAllMessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of team entities.
+     * @param teamId Unique identifier of the item
+     * @return a TeamItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TeamItemRequestBuilder byTeamId(@javax.annotation.Nonnull final String teamId) {
+        Objects.requireNonNull(teamId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("team%2Did", teamId);
+        return new TeamItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TeamsRequestBuilder and sets the default values.

@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.insights.used;
 
 import com.microsoft.graph.me.insights.used.count.CountRequestBuilder;
+import com.microsoft.graph.me.insights.used.item.UsedInsightItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UsedInsight;
 import com.microsoft.graph.models.UsedInsightCollectionResponse;
@@ -26,6 +27,18 @@ public class UsedRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity.
+     * @param usedInsightId Unique identifier of the item
+     * @return a UsedInsightItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UsedInsightItemRequestBuilder byUsedInsightId(@javax.annotation.Nonnull final String usedInsightId) {
+        Objects.requireNonNull(usedInsightId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("usedInsight%2Did", usedInsightId);
+        return new UsedInsightItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new UsedRequestBuilder and sets the default values.

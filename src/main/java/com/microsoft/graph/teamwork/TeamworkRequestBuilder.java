@@ -3,9 +3,7 @@ package com.microsoft.graph.teamwork;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Teamwork;
 import com.microsoft.graph.teamwork.deletedteams.DeletedTeamsRequestBuilder;
-import com.microsoft.graph.teamwork.deletedteams.item.DeletedTeamItemRequestBuilder;
 import com.microsoft.graph.teamwork.sendactivitynotificationtorecipients.SendActivityNotificationToRecipientsRequestBuilder;
-import com.microsoft.graph.teamwork.workforceintegrations.item.WorkforceIntegrationItemRequestBuilder;
 import com.microsoft.graph.teamwork.workforceintegrations.WorkforceIntegrationsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -59,18 +57,6 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public TeamworkRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/teamwork{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the deletedTeams property of the microsoft.graph.teamwork entity.
-     * @param id Unique identifier of the item
-     * @return a DeletedTeamItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeletedTeamItemRequestBuilder deletedTeams(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deletedTeam%2Did", id);
-        return new DeletedTeamItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get teamwork
@@ -209,18 +195,6 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the workforceIntegrations property of the microsoft.graph.teamwork entity.
-     * @param id Unique identifier of the item
-     * @return a WorkforceIntegrationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WorkforceIntegrationItemRequestBuilder workforceIntegrations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("workforceIntegration%2Did", id);
-        return new WorkforceIntegrationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get teamwork

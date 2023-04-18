@@ -1,6 +1,7 @@
 package com.microsoft.graph.auditlogs.signins;
 
 import com.microsoft.graph.auditlogs.signins.count.CountRequestBuilder;
+import com.microsoft.graph.auditlogs.signins.item.SignInItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SignIn;
 import com.microsoft.graph.models.SignInCollectionResponse;
@@ -26,6 +27,18 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the signIns property of the microsoft.graph.auditLogRoot entity.
+     * @param signInId Unique identifier of the item
+     * @return a SignInItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SignInItemRequestBuilder bySignInId(@javax.annotation.Nonnull final String signInId) {
+        Objects.requireNonNull(signInId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("signIn%2Did", signInId);
+        return new SignInItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SignInsRequestBuilder and sets the default values.

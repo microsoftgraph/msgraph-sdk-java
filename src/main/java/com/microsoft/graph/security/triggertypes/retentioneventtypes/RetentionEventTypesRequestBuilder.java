@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.RetentionEventType;
 import com.microsoft.graph.models.security.RetentionEventTypeCollectionResponse;
 import com.microsoft.graph.security.triggertypes.retentioneventtypes.count.CountRequestBuilder;
+import com.microsoft.graph.security.triggertypes.retentioneventtypes.item.RetentionEventTypeItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class RetentionEventTypesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the retentionEventTypes property of the microsoft.graph.security.triggerTypesRoot entity.
+     * @param retentionEventTypeId Unique identifier of the item
+     * @return a RetentionEventTypeItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public RetentionEventTypeItemRequestBuilder byRetentionEventTypeId(@javax.annotation.Nonnull final String retentionEventTypeId) {
+        Objects.requireNonNull(retentionEventTypeId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("retentionEventType%2Did", retentionEventTypeId);
+        return new RetentionEventTypeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RetentionEventTypesRequestBuilder and sets the default values.

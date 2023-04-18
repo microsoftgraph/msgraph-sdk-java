@@ -1,6 +1,7 @@
 package com.microsoft.graph.applications.item.appmanagementpolicies;
 
 import com.microsoft.graph.applications.item.appmanagementpolicies.count.CountRequestBuilder;
+import com.microsoft.graph.applications.item.appmanagementpolicies.item.AppManagementPolicyItemRequestBuilder;
 import com.microsoft.graph.applications.item.appmanagementpolicies.ref.RefRequestBuilder;
 import com.microsoft.graph.models.AppManagementPolicyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -31,6 +32,18 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.applications.item.appManagementPolicies.item collection
+     * @param appManagementPolicyId Unique identifier of the item
+     * @return a AppManagementPolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AppManagementPolicyItemRequestBuilder byAppManagementPolicyId(@javax.annotation.Nonnull final String appManagementPolicyId) {
+        Objects.requireNonNull(appManagementPolicyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("appManagementPolicy%2Did", appManagementPolicyId);
+        return new AppManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AppManagementPoliciesRequestBuilder and sets the default values.

@@ -2,7 +2,6 @@ package com.microsoft.graph.users.item.todo;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Todo;
-import com.microsoft.graph.users.item.todo.lists.item.TodoTaskListItemRequestBuilder;
 import com.microsoft.graph.users.item.todo.lists.ListsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -120,18 +119,6 @@ public class TodoRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the lists property of the microsoft.graph.todo entity.
-     * @param id Unique identifier of the item
-     * @return a TodoTaskListItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TodoTaskListItemRequestBuilder lists(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("todoTaskList%2Did", id);
-        return new TodoTaskListItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property todo in users

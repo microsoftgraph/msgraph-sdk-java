@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.item.scheduledactionconfigurations;
 
 import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.item.scheduledactionconfigurations.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.item.scheduledactionconfigurations.item.DeviceComplianceActionItemItemRequestBuilder;
 import com.microsoft.graph.models.DeviceComplianceActionItem;
 import com.microsoft.graph.models.DeviceComplianceActionItemCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the scheduledActionConfigurations property of the microsoft.graph.deviceComplianceScheduledActionForRule entity.
+     * @param deviceComplianceActionItemId Unique identifier of the item
+     * @return a DeviceComplianceActionItemItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceComplianceActionItemItemRequestBuilder byDeviceComplianceActionItemId(@javax.annotation.Nonnull final String deviceComplianceActionItemId) {
+        Objects.requireNonNull(deviceComplianceActionItemId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceComplianceActionItem%2Did", deviceComplianceActionItemId);
+        return new DeviceComplianceActionItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ScheduledActionConfigurationsRequestBuilder and sets the default values.

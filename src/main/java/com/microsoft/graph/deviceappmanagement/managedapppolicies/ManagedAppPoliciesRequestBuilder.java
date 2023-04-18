@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.managedapppolicies;
 
 import com.microsoft.graph.deviceappmanagement.managedapppolicies.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedapppolicies.item.ManagedAppPolicyItemRequestBuilder;
 import com.microsoft.graph.models.ManagedAppPolicy;
 import com.microsoft.graph.models.ManagedAppPolicyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the managedAppPolicies property of the microsoft.graph.deviceAppManagement entity.
+     * @param managedAppPolicyId Unique identifier of the item
+     * @return a ManagedAppPolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedAppPolicyItemRequestBuilder byManagedAppPolicyId(@javax.annotation.Nonnull final String managedAppPolicyId) {
+        Objects.requireNonNull(managedAppPolicyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedAppPolicy%2Did", managedAppPolicyId);
+        return new ManagedAppPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ManagedAppPoliciesRequestBuilder and sets the default values.

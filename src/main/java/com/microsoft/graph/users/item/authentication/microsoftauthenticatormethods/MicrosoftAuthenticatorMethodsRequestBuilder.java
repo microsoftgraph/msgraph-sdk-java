@@ -3,6 +3,7 @@ package com.microsoft.graph.users.item.authentication.microsoftauthenticatormeth
 import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethodCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.authentication.microsoftauthenticatormethods.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -25,6 +26,18 @@ public class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuil
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the microsoftAuthenticatorMethods property of the microsoft.graph.authentication entity.
+     * @param microsoftAuthenticatorAuthenticationMethodId Unique identifier of the item
+     * @return a MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder byMicrosoftAuthenticatorAuthenticationMethodId(@javax.annotation.Nonnull final String microsoftAuthenticatorAuthenticationMethodId) {
+        Objects.requireNonNull(microsoftAuthenticatorAuthenticationMethodId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("microsoftAuthenticatorAuthenticationMethod%2Did", microsoftAuthenticatorAuthenticationMethodId);
+        return new MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MicrosoftAuthenticatorMethodsRequestBuilder and sets the default values.

@@ -161,12 +161,16 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.auditEvent": return new AuditEvent();
             case "#microsoft.graph.auditLogRoot": return new AuditLogRoot();
             case "#microsoft.graph.authentication": return new Authentication();
+            case "#microsoft.graph.authenticationCombinationConfiguration": return new AuthenticationCombinationConfiguration();
             case "#microsoft.graph.authenticationContextClassReference": return new AuthenticationContextClassReference();
             case "#microsoft.graph.authenticationFlowsPolicy": return new AuthenticationFlowsPolicy();
             case "#microsoft.graph.authenticationMethod": return new AuthenticationMethod();
             case "#microsoft.graph.authenticationMethodConfiguration": return new AuthenticationMethodConfiguration();
+            case "#microsoft.graph.authenticationMethodModeDetail": return new AuthenticationMethodModeDetail();
             case "#microsoft.graph.authenticationMethodsPolicy": return new AuthenticationMethodsPolicy();
             case "#microsoft.graph.authenticationMethodTarget": return new AuthenticationMethodTarget();
+            case "#microsoft.graph.authenticationStrengthPolicy": return new AuthenticationStrengthPolicy();
+            case "#microsoft.graph.authenticationStrengthRoot": return new AuthenticationStrengthRoot();
             case "#microsoft.graph.authoredNote": return new AuthoredNote();
             case "#microsoft.graph.authorizationPolicy": return new AuthorizationPolicy();
             case "#microsoft.graph.azureCommunicationServicesUserConversationMember": return new AzureCommunicationServicesUserConversationMember();
@@ -335,6 +339,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.federatedIdentityCredential": return new FederatedIdentityCredential();
             case "#microsoft.graph.fido2AuthenticationMethod": return new Fido2AuthenticationMethod();
             case "#microsoft.graph.fido2AuthenticationMethodConfiguration": return new Fido2AuthenticationMethodConfiguration();
+            case "#microsoft.graph.fido2CombinationConfiguration": return new Fido2CombinationConfiguration();
             case "#microsoft.graph.fieldValueSet": return new FieldValueSet();
             case "#microsoft.graph.fileAssessmentRequest": return new FileAssessmentRequest();
             case "#microsoft.graph.fileAttachment": return new FileAttachment();
@@ -592,11 +597,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.settingStateDeviceSummary": return new SettingStateDeviceSummary();
             case "#microsoft.graph.sharedDriveItem": return new SharedDriveItem();
             case "#microsoft.graph.sharedInsight": return new SharedInsight();
-            case "#microsoft.graph.sharedPCConfiguration": return new SharedPCConfiguration();
-            case "#microsoft.graph.sharedWithChannelTeamInfo": return new SharedWithChannelTeamInfo();
-            case "#microsoft.graph.sharepoint": return new Sharepoint();
-            case "#microsoft.graph.sharepointSettings": return new SharepointSettings();
-            case "#microsoft.graph.shift": return new Shift();
         }
         return null;
     }
@@ -608,6 +608,11 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@javax.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.sharedPCConfiguration": return new SharedPCConfiguration();
+            case "#microsoft.graph.sharedWithChannelTeamInfo": return new SharedWithChannelTeamInfo();
+            case "#microsoft.graph.sharepoint": return new Sharepoint();
+            case "#microsoft.graph.sharepointSettings": return new SharepointSettings();
+            case "#microsoft.graph.shift": return new Shift();
             case "#microsoft.graph.shiftPreferences": return new ShiftPreferences();
             case "#microsoft.graph.signIn": return new SignIn();
             case "#microsoft.graph.simulation": return new Simulation();

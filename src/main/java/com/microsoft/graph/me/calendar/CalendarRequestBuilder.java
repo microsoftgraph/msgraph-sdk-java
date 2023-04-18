@@ -2,14 +2,10 @@ package com.microsoft.graph.me.calendar;
 
 import com.microsoft.graph.me.calendar.allowedcalendarsharingroleswithuser.AllowedCalendarSharingRolesWithUserRequestBuilder;
 import com.microsoft.graph.me.calendar.calendarpermissions.CalendarPermissionsRequestBuilder;
-import com.microsoft.graph.me.calendar.calendarpermissions.item.CalendarPermissionItemRequestBuilder;
 import com.microsoft.graph.me.calendar.calendarview.CalendarViewRequestBuilder;
-import com.microsoft.graph.me.calendar.calendarview.item.EventItemRequestBuilder;
 import com.microsoft.graph.me.calendar.events.EventsRequestBuilder;
 import com.microsoft.graph.me.calendar.getschedule.GetScheduleRequestBuilder;
-import com.microsoft.graph.me.calendar.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.me.calendar.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import com.microsoft.graph.me.calendar.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.me.calendar.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.models.Calendar;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -72,30 +68,6 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return new AllowedCalendarSharingRolesWithUserRequestBuilder(pathParameters, requestAdapter, user);
     }
     /**
-     * Provides operations to manage the calendarPermissions property of the microsoft.graph.calendar entity.
-     * @param id Unique identifier of the item
-     * @return a CalendarPermissionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public CalendarPermissionItemRequestBuilder calendarPermissions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("calendarPermission%2Did", id);
-        return new CalendarPermissionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the calendarView property of the microsoft.graph.calendar entity.
-     * @param id Unique identifier of the item
-     * @return a EventItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.me.calendar.calendarview.item.EventItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("event%2Did", id);
-        return new com.microsoft.graph.me.calendar.calendarview.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new CalendarRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -114,18 +86,6 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public CalendarRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/me/calendar{?%24select}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the events property of the microsoft.graph.calendar entity.
-     * @param id Unique identifier of the item
-     * @return a EventItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.me.calendar.events.item.EventItemRequestBuilder events(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("event%2Did", id);
-        return new com.microsoft.graph.me.calendar.events.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get the properties and relationships of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
@@ -165,18 +125,6 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.calendar entity.
-     * @param id Unique identifier of the item
-     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("multiValueLegacyExtendedProperty%2Did", id);
-        return new MultiValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the properties of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group.
@@ -219,18 +167,6 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.calendar entity.
-     * @param id Unique identifier of the item
-     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("singleValueLegacyExtendedProperty%2Did", id);
-        return new SingleValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get the properties and relationships of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:

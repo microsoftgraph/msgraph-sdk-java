@@ -3,7 +3,6 @@ package com.microsoft.graph.policies.crosstenantaccesspolicy;
 import com.microsoft.graph.models.CrossTenantAccessPolicy;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.policies.crosstenantaccesspolicy.defaultEscaped.DefaultRequestBuilder;
-import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.item.CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder;
 import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.PartnersRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -128,18 +127,6 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the partners property of the microsoft.graph.crossTenantAccessPolicy entity.
-     * @param id Unique identifier of the item
-     * @return a CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder partners(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("crossTenantAccessPolicyConfigurationPartner%2DtenantId", id);
-        return new CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the properties of a cross-tenant access policy.

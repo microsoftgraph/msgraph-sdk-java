@@ -3,7 +3,6 @@ package com.microsoft.graph.policies.permissiongrantpolicies.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PermissionGrantPolicy;
 import com.microsoft.graph.policies.permissiongrantpolicies.item.excludes.ExcludesRequestBuilder;
-import com.microsoft.graph.policies.permissiongrantpolicies.item.excludes.item.PermissionGrantConditionSetItemRequestBuilder;
 import com.microsoft.graph.policies.permissiongrantpolicies.item.includes.IncludesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -91,18 +90,6 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Provides operations to manage the excludes property of the microsoft.graph.permissionGrantPolicy entity.
-     * @param id Unique identifier of the item
-     * @return a PermissionGrantConditionSetItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.policies.permissiongrantpolicies.item.excludes.item.PermissionGrantConditionSetItemRequestBuilder excludes(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("permissionGrantConditionSet%2Did", id);
-        return new com.microsoft.graph.policies.permissiongrantpolicies.item.excludes.item.PermissionGrantConditionSetItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * The policy that specifies the conditions under which consent can be granted.
      * @return a CompletableFuture of permissionGrantPolicy
      */
@@ -138,18 +125,6 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the includes property of the microsoft.graph.permissionGrantPolicy entity.
-     * @param id Unique identifier of the item
-     * @return a PermissionGrantConditionSetItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.policies.permissiongrantpolicies.item.includes.item.PermissionGrantConditionSetItemRequestBuilder includes(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("permissionGrantConditionSet%2Did", id);
-        return new com.microsoft.graph.policies.permissiongrantpolicies.item.includes.item.PermissionGrantConditionSetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property permissionGrantPolicies in policies

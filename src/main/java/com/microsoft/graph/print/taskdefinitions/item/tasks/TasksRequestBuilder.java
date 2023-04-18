@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PrintTask;
 import com.microsoft.graph.models.PrintTaskCollectionResponse;
 import com.microsoft.graph.print.taskdefinitions.item.tasks.count.CountRequestBuilder;
+import com.microsoft.graph.print.taskdefinitions.item.tasks.item.PrintTaskItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tasks property of the microsoft.graph.printTaskDefinition entity.
+     * @param printTaskId Unique identifier of the item
+     * @return a PrintTaskItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PrintTaskItemRequestBuilder byPrintTaskId(@javax.annotation.Nonnull final String printTaskId) {
+        Objects.requireNonNull(printTaskId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("printTask%2Did", printTaskId);
+        return new PrintTaskItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TasksRequestBuilder and sets the default values.

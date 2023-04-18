@@ -1,7 +1,6 @@
 package com.microsoft.graph.drives.item.items.item.analytics;
 
 import com.microsoft.graph.drives.item.items.item.analytics.alltime.AllTimeRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.analytics.itemactivitystats.item.ItemActivityStatItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.analytics.itemactivitystats.ItemActivityStatsRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.analytics.lastsevendays.LastSevenDaysRequestBuilder;
 import com.microsoft.graph.models.ItemAnalytics;
@@ -132,18 +131,6 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the itemActivityStats property of the microsoft.graph.itemAnalytics entity.
-     * @param id Unique identifier of the item
-     * @return a ItemActivityStatItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ItemActivityStatItemRequestBuilder itemActivityStats(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("itemActivityStat%2Did", id);
-        return new ItemActivityStatItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property analytics in drives

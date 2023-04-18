@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.windowsinformationprotectionnetworklearningsummaries;
 
 import com.microsoft.graph.devicemanagement.windowsinformationprotectionnetworklearningsummaries.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsinformationprotectionnetworklearningsummaries.item.WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WindowsInformationProtectionNetworkLearningSummary;
 import com.microsoft.graph.models.WindowsInformationProtectionNetworkLearningSummaryCollectionResponse;
@@ -26,6 +27,18 @@ public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder 
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the windowsInformationProtectionNetworkLearningSummaries property of the microsoft.graph.deviceManagement entity.
+     * @param windowsInformationProtectionNetworkLearningSummaryId Unique identifier of the item
+     * @return a WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder byWindowsInformationProtectionNetworkLearningSummaryId(@javax.annotation.Nonnull final String windowsInformationProtectionNetworkLearningSummaryId) {
+        Objects.requireNonNull(windowsInformationProtectionNetworkLearningSummaryId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("windowsInformationProtectionNetworkLearningSummary%2Did", windowsInformationProtectionNetworkLearningSummaryId);
+        return new WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new WindowsInformationProtectionNetworkLearningSummariesRequestBuilder and sets the default values.

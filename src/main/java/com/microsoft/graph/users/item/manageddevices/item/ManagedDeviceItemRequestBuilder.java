@@ -7,9 +7,7 @@ import com.microsoft.graph.users.item.manageddevices.item.cleanwindowsdevice.Cle
 import com.microsoft.graph.users.item.manageddevices.item.deleteuserfromsharedappledevice.DeleteUserFromSharedAppleDeviceRequestBuilder;
 import com.microsoft.graph.users.item.manageddevices.item.devicecategory.DeviceCategoryRequestBuilder;
 import com.microsoft.graph.users.item.manageddevices.item.devicecompliancepolicystates.DeviceCompliancePolicyStatesRequestBuilder;
-import com.microsoft.graph.users.item.manageddevices.item.devicecompliancepolicystates.item.DeviceCompliancePolicyStateItemRequestBuilder;
 import com.microsoft.graph.users.item.manageddevices.item.deviceconfigurationstates.DeviceConfigurationStatesRequestBuilder;
-import com.microsoft.graph.users.item.manageddevices.item.deviceconfigurationstates.item.DeviceConfigurationStateItemRequestBuilder;
 import com.microsoft.graph.users.item.manageddevices.item.disablelostmode.DisableLostModeRequestBuilder;
 import com.microsoft.graph.users.item.manageddevices.item.locatedevice.LocateDeviceRequestBuilder;
 import com.microsoft.graph.users.item.manageddevices.item.logoutsharedappledeviceactiveuser.LogoutSharedAppleDeviceActiveUserRequestBuilder;
@@ -210,30 +208,6 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the deviceCompliancePolicyStates property of the microsoft.graph.managedDevice entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceCompliancePolicyStateItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceCompliancePolicyStateItemRequestBuilder deviceCompliancePolicyStates(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceCompliancePolicyState%2Did", id);
-        return new DeviceCompliancePolicyStateItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the deviceConfigurationStates property of the microsoft.graph.managedDevice entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceConfigurationStateItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceConfigurationStateItemRequestBuilder deviceConfigurationStates(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceConfigurationState%2Did", id);
-        return new DeviceConfigurationStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * The managed devices associated with the user.

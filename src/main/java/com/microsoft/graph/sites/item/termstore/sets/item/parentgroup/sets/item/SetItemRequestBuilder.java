@@ -3,8 +3,6 @@ package com.microsoft.graph.sites.item.termstore.sets.item.parentgroup.sets.item
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.termstore.Set;
 import com.microsoft.graph.sites.item.termstore.sets.item.parentgroup.sets.item.children.ChildrenRequestBuilder;
-import com.microsoft.graph.sites.item.termstore.sets.item.parentgroup.sets.item.children.item.TermItemRequestBuilder;
-import com.microsoft.graph.sites.item.termstore.sets.item.parentgroup.sets.item.relations.item.RelationItemRequestBuilder;
 import com.microsoft.graph.sites.item.termstore.sets.item.parentgroup.sets.item.relations.RelationsRequestBuilder;
 import com.microsoft.graph.sites.item.termstore.sets.item.parentgroup.sets.item.terms.TermsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -39,18 +37,6 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public TermsRequestBuilder terms() {
         return new TermsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the children property of the microsoft.graph.termStore.set entity.
-     * @param id Unique identifier of the item
-     * @return a TermItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.sites.item.termstore.sets.item.parentgroup.sets.item.children.item.TermItemRequestBuilder children(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("term%2Did", id);
-        return new com.microsoft.graph.sites.item.termstore.sets.item.parentgroup.sets.item.children.item.TermItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SetItemRequestBuilder and sets the default values.
@@ -185,30 +171,6 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the relations property of the microsoft.graph.termStore.set entity.
-     * @param id Unique identifier of the item
-     * @return a RelationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public RelationItemRequestBuilder relations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("relation%2Did", id);
-        return new RelationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the terms property of the microsoft.graph.termStore.set entity.
-     * @param id Unique identifier of the item
-     * @return a TermItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.sites.item.termstore.sets.item.parentgroup.sets.item.terms.item.TermItemRequestBuilder terms(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("term%2Did", id);
-        return new com.microsoft.graph.sites.item.termstore.sets.item.parentgroup.sets.item.terms.item.TermItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property sets for sites

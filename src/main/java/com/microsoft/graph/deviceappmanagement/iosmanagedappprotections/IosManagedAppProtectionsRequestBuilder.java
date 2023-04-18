@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.iosmanagedappprotections;
 
 import com.microsoft.graph.deviceappmanagement.iosmanagedappprotections.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.iosmanagedappprotections.item.IosManagedAppProtectionItemRequestBuilder;
 import com.microsoft.graph.models.IosManagedAppProtection;
 import com.microsoft.graph.models.IosManagedAppProtectionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the iosManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
+     * @param iosManagedAppProtectionId Unique identifier of the item
+     * @return a IosManagedAppProtectionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public IosManagedAppProtectionItemRequestBuilder byIosManagedAppProtectionId(@javax.annotation.Nonnull final String iosManagedAppProtectionId) {
+        Objects.requireNonNull(iosManagedAppProtectionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("iosManagedAppProtection%2Did", iosManagedAppProtectionId);
+        return new IosManagedAppProtectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new IosManagedAppProtectionsRequestBuilder and sets the default values.

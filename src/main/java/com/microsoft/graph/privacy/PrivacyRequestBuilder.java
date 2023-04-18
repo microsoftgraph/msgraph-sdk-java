@@ -2,7 +2,6 @@ package com.microsoft.graph.privacy;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Privacy;
-import com.microsoft.graph.privacy.subjectrightsrequests.item.SubjectRightsRequestItemRequestBuilder;
 import com.microsoft.graph.privacy.subjectrightsrequests.SubjectRightsRequestsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -123,18 +122,6 @@ public class PrivacyRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the subjectRightsRequests property of the microsoft.graph.privacy entity.
-     * @param id Unique identifier of the item
-     * @return a SubjectRightsRequestItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SubjectRightsRequestItemRequestBuilder subjectRightsRequests(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("subjectRightsRequest%2Did", id);
-        return new SubjectRightsRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get privacy

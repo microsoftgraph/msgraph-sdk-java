@@ -1,6 +1,7 @@
 package com.microsoft.graph.applications.item.tokenissuancepolicies;
 
 import com.microsoft.graph.applications.item.tokenissuancepolicies.count.CountRequestBuilder;
+import com.microsoft.graph.applications.item.tokenissuancepolicies.item.TokenIssuancePolicyItemRequestBuilder;
 import com.microsoft.graph.applications.item.tokenissuancepolicies.ref.RefRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TokenIssuancePolicyCollectionResponse;
@@ -31,6 +32,18 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.applications.item.tokenIssuancePolicies.item collection
+     * @param tokenIssuancePolicyId Unique identifier of the item
+     * @return a TokenIssuancePolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TokenIssuancePolicyItemRequestBuilder byTokenIssuancePolicyId(@javax.annotation.Nonnull final String tokenIssuancePolicyId) {
+        Objects.requireNonNull(tokenIssuancePolicyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("tokenIssuancePolicy%2Did", tokenIssuancePolicyId);
+        return new TokenIssuancePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TokenIssuancePoliciesRequestBuilder and sets the default values.

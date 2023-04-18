@@ -3,6 +3,7 @@ package com.microsoft.graph.communications.callrecords;
 import com.microsoft.graph.communications.callrecords.callrecordsgetdirectroutingcallswithfromdatetimewithtodatetime.CallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder;
 import com.microsoft.graph.communications.callrecords.callrecordsgetpstncallswithfromdatetimewithtodatetime.CallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder;
 import com.microsoft.graph.communications.callrecords.count.CountRequestBuilder;
+import com.microsoft.graph.communications.callrecords.item.CallRecordItemRequestBuilder;
 import com.microsoft.graph.models.callrecords.CallRecord;
 import com.microsoft.graph.models.callrecords.CallRecordCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -29,6 +30,18 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the callRecords property of the microsoft.graph.cloudCommunications entity.
+     * @param callRecordId Unique identifier of the item
+     * @return a CallRecordItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public CallRecordItemRequestBuilder byCallRecordId(@javax.annotation.Nonnull final String callRecordId) {
+        Objects.requireNonNull(callRecordId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("callRecord%2Did", callRecordId);
+        return new CallRecordItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Provides operations to call the getDirectRoutingCalls method.

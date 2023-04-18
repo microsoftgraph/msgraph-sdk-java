@@ -5,6 +5,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.memberof.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.memberof.graphadministrativeunit.GraphAdministrativeUnitRequestBuilder;
 import com.microsoft.graph.users.item.memberof.graphgroup.GraphGroupRequestBuilder;
+import com.microsoft.graph.users.item.memberof.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -37,6 +38,18 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GraphGroupRequestBuilder graphGroup() {
         return new GraphGroupRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the memberOf property of the microsoft.graph.user entity.
+     * @param directoryObjectId Unique identifier of the item
+     * @return a DirectoryObjectItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DirectoryObjectItemRequestBuilder byDirectoryObjectId(@javax.annotation.Nonnull final String directoryObjectId) {
+        Objects.requireNonNull(directoryObjectId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("directoryObject%2Did", directoryObjectId);
+        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MemberOfRequestBuilder and sets the default values.

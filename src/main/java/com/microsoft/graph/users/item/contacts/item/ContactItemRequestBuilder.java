@@ -3,11 +3,8 @@ package com.microsoft.graph.users.item.contacts.item;
 import com.microsoft.graph.models.Contact;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.contacts.item.extensions.ExtensionsRequestBuilder;
-import com.microsoft.graph.users.item.contacts.item.extensions.item.ExtensionItemRequestBuilder;
-import com.microsoft.graph.users.item.contacts.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.users.item.contacts.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.users.item.contacts.item.photo.PhotoRequestBuilder;
-import com.microsoft.graph.users.item.contacts.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.users.item.contacts.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -105,18 +102,6 @@ public class ContactItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the extensions property of the microsoft.graph.contact entity.
-     * @param id Unique identifier of the item
-     * @return a ExtensionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("extension%2Did", id);
-        return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * The user's contacts. Read-only. Nullable.
      * @return a CompletableFuture of contact
      */
@@ -152,18 +137,6 @@ public class ContactItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.contact entity.
-     * @param id Unique identifier of the item
-     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("multiValueLegacyExtendedProperty%2Did", id);
-        return new MultiValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property contacts in users
@@ -204,18 +177,6 @@ public class ContactItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.contact entity.
-     * @param id Unique identifier of the item
-     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("singleValueLegacyExtendedProperty%2Did", id);
-        return new SingleValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property contacts for users

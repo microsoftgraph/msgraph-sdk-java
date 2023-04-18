@@ -3,15 +3,11 @@ package com.microsoft.graph.groups.item.team.channels.item;
 import com.microsoft.graph.groups.item.team.channels.item.completemigration.CompleteMigrationRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.doesuserhaveaccessuseriduseridtenantidtenantiduserprincipalnameuserprincipalname.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.filesfolder.FilesFolderRequestBuilder;
-import com.microsoft.graph.groups.item.team.channels.item.members.item.ConversationMemberItemRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.members.MembersRequestBuilder;
-import com.microsoft.graph.groups.item.team.channels.item.messages.item.ChatMessageItemRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.messages.MessagesRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.provisionemail.ProvisionEmailRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.removeemail.RemoveEmailRequestBuilder;
-import com.microsoft.graph.groups.item.team.channels.item.sharedwithteams.item.SharedWithChannelTeamInfoItemRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.sharedwithteams.SharedWithTeamsRequestBuilder;
-import com.microsoft.graph.groups.item.team.channels.item.tabs.item.TeamsTabItemRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.tabs.TabsRequestBuilder;
 import com.microsoft.graph.models.Channel;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -173,30 +169,6 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the members property of the microsoft.graph.channel entity.
-     * @param id Unique identifier of the item
-     * @return a ConversationMemberItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ConversationMemberItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("conversationMember%2Did", id);
-        return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the messages property of the microsoft.graph.channel entity.
-     * @param id Unique identifier of the item
-     * @return a ChatMessageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ChatMessageItemRequestBuilder messages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("chatMessage%2Did", id);
-        return new ChatMessageItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property channels in groups
      * @param body The request body
      * @return a CompletableFuture of channel
@@ -235,30 +207,6 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the sharedWithTeams property of the microsoft.graph.channel entity.
-     * @param id Unique identifier of the item
-     * @return a SharedWithChannelTeamInfoItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SharedWithChannelTeamInfoItemRequestBuilder sharedWithTeams(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("sharedWithChannelTeamInfo%2Did", id);
-        return new SharedWithChannelTeamInfoItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the tabs property of the microsoft.graph.channel entity.
-     * @param id Unique identifier of the item
-     * @return a TeamsTabItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TeamsTabItemRequestBuilder tabs(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("teamsTab%2Did", id);
-        return new TeamsTabItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property channels for groups

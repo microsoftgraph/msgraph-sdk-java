@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OnenoteOperation;
 import com.microsoft.graph.models.OnenoteOperationCollectionResponse;
 import com.microsoft.graph.users.item.onenote.operations.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.onenote.operations.item.OnenoteOperationItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.onenote entity.
+     * @param onenoteOperationId Unique identifier of the item
+     * @return a OnenoteOperationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public OnenoteOperationItemRequestBuilder byOnenoteOperationId(@javax.annotation.Nonnull final String onenoteOperationId) {
+        Objects.requireNonNull(onenoteOperationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("onenoteOperation%2Did", onenoteOperationId);
+        return new OnenoteOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.

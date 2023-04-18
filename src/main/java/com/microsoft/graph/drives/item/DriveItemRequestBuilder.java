@@ -2,7 +2,6 @@ package com.microsoft.graph.drives.item;
 
 import com.microsoft.graph.drives.item.bundles.BundlesRequestBuilder;
 import com.microsoft.graph.drives.item.following.FollowingRequestBuilder;
-import com.microsoft.graph.drives.item.following.item.DriveItemItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.ItemsRequestBuilder;
 import com.microsoft.graph.drives.item.list.ListRequestBuilder;
 import com.microsoft.graph.drives.item.recent.RecentRequestBuilder;
@@ -71,18 +70,6 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
         return new SpecialRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the bundles property of the microsoft.graph.drive entity.
-     * @param id Unique identifier of the item
-     * @return a DriveItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.drives.item.bundles.item.DriveItemItemRequestBuilder bundles(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("driveItem%2Did", id);
-        return new com.microsoft.graph.drives.item.bundles.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new DriveItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -140,21 +127,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the following property of the microsoft.graph.drive entity.
-     * @param id Unique identifier of the item
-     * @return a DriveItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.drives.item.following.item.DriveItemItemRequestBuilder following(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("driveItem%2Did", id);
-        return new com.microsoft.graph.drives.item.following.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
+     * Get entity from drives by key
      * @return a CompletableFuture of drive
-     * @see <a href="https://docs.microsoft.com/graph/api/drive-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Drive> get() {
@@ -171,10 +145,9 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
+     * Get entity from drives by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of drive
-     * @see <a href="https://docs.microsoft.com/graph/api/drive-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Drive> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -189,18 +162,6 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the items property of the microsoft.graph.drive entity.
-     * @param id Unique identifier of the item
-     * @return a DriveItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.drives.item.items.item.DriveItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("driveItem%2Did", id);
-        return new com.microsoft.graph.drives.item.items.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update entity in drives
@@ -253,18 +214,6 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
         return new SearchWithQRequestBuilder(pathParameters, requestAdapter, q);
     }
     /**
-     * Provides operations to manage the special property of the microsoft.graph.drive entity.
-     * @param id Unique identifier of the item
-     * @return a DriveItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.drives.item.special.item.DriveItemItemRequestBuilder special(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("driveItem%2Did", id);
-        return new com.microsoft.graph.drives.item.special.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Delete entity from drives
      * @return a RequestInformation
      */
@@ -292,7 +241,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
+     * Get entity from drives by key
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -300,7 +249,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
+     * Get entity from drives by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -358,7 +307,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
+     * Get entity from drives by key
      */
     public class GetQueryParameters {
         /** Expand related entities */

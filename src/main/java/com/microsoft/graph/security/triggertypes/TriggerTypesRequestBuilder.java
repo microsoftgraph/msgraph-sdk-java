@@ -2,7 +2,6 @@ package com.microsoft.graph.security.triggertypes;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.TriggerTypesRoot;
-import com.microsoft.graph.security.triggertypes.retentioneventtypes.item.RetentionEventTypeItemRequestBuilder;
 import com.microsoft.graph.security.triggertypes.retentioneventtypes.RetentionEventTypesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -160,18 +159,6 @@ public class TriggerTypesRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the retentionEventTypes property of the microsoft.graph.security.triggerTypesRoot entity.
-     * @param id Unique identifier of the item
-     * @return a RetentionEventTypeItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public RetentionEventTypeItemRequestBuilder retentionEventTypes(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("retentionEventType%2Did", id);
-        return new RetentionEventTypeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property triggerTypes for security

@@ -2,7 +2,6 @@ package com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.it
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.assignmentpolicies.item.accesspackage.AccessPackageRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.assignmentpolicies.item.catalog.CatalogRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.assignmentpolicies.item.questions.item.AccessPackageQuestionItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.assignmentpolicies.item.questions.QuestionsRequestBuilder;
 import com.microsoft.graph.models.AccessPackageAssignmentPolicy;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -172,18 +171,6 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the questions property of the microsoft.graph.accessPackageAssignmentPolicy entity.
-     * @param id Unique identifier of the item
-     * @return a AccessPackageQuestionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageQuestionItemRequestBuilder questions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackageQuestion%2Did", id);
-        return new AccessPackageQuestionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property assignmentPolicies for identityGovernance

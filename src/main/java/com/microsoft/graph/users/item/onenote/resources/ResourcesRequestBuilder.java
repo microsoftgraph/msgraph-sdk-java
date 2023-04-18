@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OnenoteResource;
 import com.microsoft.graph.models.OnenoteResourceCollectionResponse;
 import com.microsoft.graph.users.item.onenote.resources.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.onenote.resources.item.OnenoteResourceItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the resources property of the microsoft.graph.onenote entity.
+     * @param onenoteResourceId Unique identifier of the item
+     * @return a OnenoteResourceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public OnenoteResourceItemRequestBuilder byOnenoteResourceId(@javax.annotation.Nonnull final String onenoteResourceId) {
+        Objects.requireNonNull(onenoteResourceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("onenoteResource%2Did", onenoteResourceId);
+        return new OnenoteResourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ResourcesRequestBuilder and sets the default values.

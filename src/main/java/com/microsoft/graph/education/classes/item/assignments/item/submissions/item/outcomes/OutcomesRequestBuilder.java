@@ -1,6 +1,7 @@
 package com.microsoft.graph.education.classes.item.assignments.item.submissions.item.outcomes;
 
 import com.microsoft.graph.education.classes.item.assignments.item.submissions.item.outcomes.count.CountRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignments.item.submissions.item.outcomes.item.EducationOutcomeItemRequestBuilder;
 import com.microsoft.graph.models.EducationOutcome;
 import com.microsoft.graph.models.EducationOutcomeCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class OutcomesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the outcomes property of the microsoft.graph.educationSubmission entity.
+     * @param educationOutcomeId Unique identifier of the item
+     * @return a EducationOutcomeItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EducationOutcomeItemRequestBuilder byEducationOutcomeId(@javax.annotation.Nonnull final String educationOutcomeId) {
+        Objects.requireNonNull(educationOutcomeId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("educationOutcome%2Did", educationOutcomeId);
+        return new EducationOutcomeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OutcomesRequestBuilder and sets the default values.

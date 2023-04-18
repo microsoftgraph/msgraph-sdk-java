@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.devicemanagementpartners;
 
 import com.microsoft.graph.devicemanagement.devicemanagementpartners.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicemanagementpartners.item.DeviceManagementPartnerItemRequestBuilder;
 import com.microsoft.graph.models.DeviceManagementPartner;
 import com.microsoft.graph.models.DeviceManagementPartnerCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deviceManagementPartners property of the microsoft.graph.deviceManagement entity.
+     * @param deviceManagementPartnerId Unique identifier of the item
+     * @return a DeviceManagementPartnerItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceManagementPartnerItemRequestBuilder byDeviceManagementPartnerId(@javax.annotation.Nonnull final String deviceManagementPartnerId) {
+        Objects.requireNonNull(deviceManagementPartnerId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceManagementPartner%2Did", deviceManagementPartnerId);
+        return new DeviceManagementPartnerItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DeviceManagementPartnersRequestBuilder and sets the default values.

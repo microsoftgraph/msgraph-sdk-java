@@ -1,6 +1,7 @@
 package com.microsoft.graph.identity.b2xuserflows.item.languages.item.defaultpages;
 
 import com.microsoft.graph.identity.b2xuserflows.item.languages.item.defaultpages.count.CountRequestBuilder;
+import com.microsoft.graph.identity.b2xuserflows.item.languages.item.defaultpages.item.UserFlowLanguagePageItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UserFlowLanguagePage;
 import com.microsoft.graph.models.UserFlowLanguagePageCollectionResponse;
@@ -26,6 +27,18 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the defaultPages property of the microsoft.graph.userFlowLanguageConfiguration entity.
+     * @param userFlowLanguagePageId Unique identifier of the item
+     * @return a UserFlowLanguagePageItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UserFlowLanguagePageItemRequestBuilder byUserFlowLanguagePageId(@javax.annotation.Nonnull final String userFlowLanguagePageId) {
+        Objects.requireNonNull(userFlowLanguagePageId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("userFlowLanguagePage%2Did", userFlowLanguagePageId);
+        return new UserFlowLanguagePageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DefaultPagesRequestBuilder and sets the default values.

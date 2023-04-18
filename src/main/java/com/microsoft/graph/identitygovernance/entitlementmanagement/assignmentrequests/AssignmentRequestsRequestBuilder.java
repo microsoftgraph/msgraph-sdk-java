@@ -2,6 +2,7 @@ package com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentr
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentrequests.count.CountRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentrequests.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentrequests.item.AccessPackageAssignmentRequestItemRequestBuilder;
 import com.microsoft.graph.models.AccessPackageAssignmentRequest;
 import com.microsoft.graph.models.AccessPackageAssignmentRequestCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -27,6 +28,18 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the assignmentRequests property of the microsoft.graph.entitlementManagement entity.
+     * @param accessPackageAssignmentRequestId Unique identifier of the item
+     * @return a AccessPackageAssignmentRequestItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AccessPackageAssignmentRequestItemRequestBuilder byAccessPackageAssignmentRequestId(@javax.annotation.Nonnull final String accessPackageAssignmentRequestId) {
+        Objects.requireNonNull(accessPackageAssignmentRequestId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("accessPackageAssignmentRequest%2Did", accessPackageAssignmentRequestId);
+        return new AccessPackageAssignmentRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AssignmentRequestsRequestBuilder and sets the default values.

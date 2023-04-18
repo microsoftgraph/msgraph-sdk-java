@@ -4,6 +4,7 @@ import com.microsoft.graph.models.DelegatedAdminServiceManagementDetail;
 import com.microsoft.graph.models.DelegatedAdminServiceManagementDetailCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.tenantrelationships.delegatedadmincustomers.item.servicemanagementdetails.count.CountRequestBuilder;
+import com.microsoft.graph.tenantrelationships.delegatedadmincustomers.item.servicemanagementdetails.item.DelegatedAdminServiceManagementDetailItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the serviceManagementDetails property of the microsoft.graph.delegatedAdminCustomer entity.
+     * @param delegatedAdminServiceManagementDetailId Unique identifier of the item
+     * @return a DelegatedAdminServiceManagementDetailItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DelegatedAdminServiceManagementDetailItemRequestBuilder byDelegatedAdminServiceManagementDetailId(@javax.annotation.Nonnull final String delegatedAdminServiceManagementDetailId) {
+        Objects.requireNonNull(delegatedAdminServiceManagementDetailId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("delegatedAdminServiceManagementDetail%2Did", delegatedAdminServiceManagementDetailId);
+        return new DelegatedAdminServiceManagementDetailItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ServiceManagementDetailsRequestBuilder and sets the default values.

@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PhoneAuthenticationMethod;
 import com.microsoft.graph.models.PhoneAuthenticationMethodCollectionResponse;
 import com.microsoft.graph.users.item.authentication.phonemethods.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.authentication.phonemethods.item.PhoneAuthenticationMethodItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class PhoneMethodsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the phoneMethods property of the microsoft.graph.authentication entity.
+     * @param phoneAuthenticationMethodId Unique identifier of the item
+     * @return a PhoneAuthenticationMethodItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PhoneAuthenticationMethodItemRequestBuilder byPhoneAuthenticationMethodId(@javax.annotation.Nonnull final String phoneAuthenticationMethodId) {
+        Objects.requireNonNull(phoneAuthenticationMethodId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("phoneAuthenticationMethod%2Did", phoneAuthenticationMethodId);
+        return new PhoneAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PhoneMethodsRequestBuilder and sets the default values.

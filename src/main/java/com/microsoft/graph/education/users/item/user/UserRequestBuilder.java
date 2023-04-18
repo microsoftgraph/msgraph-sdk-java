@@ -1,5 +1,6 @@
 package com.microsoft.graph.education.users.item.user;
 
+import com.microsoft.graph.education.users.item.user.mailboxsettings.MailboxSettingsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.User;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +21,11 @@ import java.util.Objects;
  * Provides operations to manage the user property of the microsoft.graph.educationUser entity.
  */
 public class UserRequestBuilder extends BaseRequestBuilder {
+    /** The mailboxSettings property */
+    @javax.annotation.Nonnull
+    public MailboxSettingsRequestBuilder mailboxSettings() {
+        return new MailboxSettingsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new UserRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

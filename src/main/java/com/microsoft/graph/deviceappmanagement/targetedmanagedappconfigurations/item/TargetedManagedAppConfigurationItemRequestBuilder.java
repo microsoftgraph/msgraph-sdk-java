@@ -1,10 +1,8 @@
 package com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item;
 
 import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.apps.AppsRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.apps.item.ManagedMobileAppItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.assign.AssignRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.assignments.AssignmentsRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.assignments.item.TargetedManagedAppPolicyAssignmentItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.deploymentsummary.DeploymentSummaryRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.targetapps.TargetAppsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -51,30 +49,6 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     @javax.annotation.Nonnull
     public TargetAppsRequestBuilder targetApps() {
         return new TargetAppsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the apps property of the microsoft.graph.targetedManagedAppConfiguration entity.
-     * @param id Unique identifier of the item
-     * @return a ManagedMobileAppItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ManagedMobileAppItemRequestBuilder apps(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("managedMobileApp%2Did", id);
-        return new ManagedMobileAppItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the assignments property of the microsoft.graph.targetedManagedAppConfiguration entity.
-     * @param id Unique identifier of the item
-     * @return a TargetedManagedAppPolicyAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TargetedManagedAppPolicyAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("targetedManagedAppPolicyAssignment%2Did", id);
-        return new TargetedManagedAppPolicyAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TargetedManagedAppConfigurationItemRequestBuilder and sets the default values.

@@ -4,6 +4,7 @@ import com.microsoft.graph.models.ConditionalAccessPolicy;
 import com.microsoft.graph.models.ConditionalAccessPolicyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.policies.conditionalaccesspolicies.count.CountRequestBuilder;
+import com.microsoft.graph.policies.conditionalaccesspolicies.item.ConditionalAccessPolicyItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the conditionalAccessPolicies property of the microsoft.graph.policyRoot entity.
+     * @param conditionalAccessPolicyId Unique identifier of the item
+     * @return a ConditionalAccessPolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ConditionalAccessPolicyItemRequestBuilder byConditionalAccessPolicyId(@javax.annotation.Nonnull final String conditionalAccessPolicyId) {
+        Objects.requireNonNull(conditionalAccessPolicyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("conditionalAccessPolicy%2Did", conditionalAccessPolicyId);
+        return new ConditionalAccessPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ConditionalAccessPoliciesRequestBuilder and sets the default values.

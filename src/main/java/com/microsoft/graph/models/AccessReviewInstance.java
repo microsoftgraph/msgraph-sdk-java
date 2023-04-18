@@ -27,7 +27,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
     /** Specifies the status of an accessReview. Possible values: Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed. Supports $select, $orderby, and $filter (eq only). Read-only. */
     private String status;
     /**
-     * Instantiates a new AccessReviewInstance and sets the default values.
+     * Instantiates a new accessReviewInstance and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -37,7 +37,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReviewInstance
+     * @return a accessReviewInstance
      */
     @javax.annotation.Nonnull
     public static AccessReviewInstance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

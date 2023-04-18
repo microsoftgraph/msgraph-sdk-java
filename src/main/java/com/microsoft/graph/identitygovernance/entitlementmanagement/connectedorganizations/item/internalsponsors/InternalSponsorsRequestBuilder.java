@@ -4,6 +4,7 @@ import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorg
 import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.delta.DeltaRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.ref.RefRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.graph.models.DirectoryObject;
@@ -56,6 +57,18 @@ public class InternalSponsorsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item.internalSponsors.item collection
+     * @param directoryObjectId Unique identifier of the item
+     * @return a DirectoryObjectItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DirectoryObjectItemRequestBuilder byDirectoryObjectId(@javax.annotation.Nonnull final String directoryObjectId) {
+        Objects.requireNonNull(directoryObjectId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("directoryObject%2Did", directoryObjectId);
+        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new InternalSponsorsRequestBuilder and sets the default values.

@@ -1,6 +1,5 @@
 package com.microsoft.graph.employeeexperience;
 
-import com.microsoft.graph.employeeexperience.learningproviders.item.LearningProviderItemRequestBuilder;
 import com.microsoft.graph.employeeexperience.learningproviders.LearningProvidersRequestBuilder;
 import com.microsoft.graph.models.EmployeeExperience;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -83,18 +82,6 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the learningProviders property of the microsoft.graph.employeeExperience entity.
-     * @param id Unique identifier of the item
-     * @return a LearningProviderItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public LearningProviderItemRequestBuilder learningProviders(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("learningProvider%2Did", id);
-        return new LearningProviderItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update employeeExperience

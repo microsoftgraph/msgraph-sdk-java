@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SecureScoreControlProfile;
 import com.microsoft.graph.models.SecureScoreControlProfileCollectionResponse;
 import com.microsoft.graph.security.securescorecontrolprofiles.count.CountRequestBuilder;
+import com.microsoft.graph.security.securescorecontrolprofiles.item.SecureScoreControlProfileItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class SecureScoreControlProfilesRequestBuilder extends BaseRequestBuilder
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity.
+     * @param secureScoreControlProfileId Unique identifier of the item
+     * @return a SecureScoreControlProfileItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SecureScoreControlProfileItemRequestBuilder bySecureScoreControlProfileId(@javax.annotation.Nonnull final String secureScoreControlProfileId) {
+        Objects.requireNonNull(secureScoreControlProfileId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("secureScoreControlProfile%2Did", secureScoreControlProfileId);
+        return new SecureScoreControlProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SecureScoreControlProfilesRequestBuilder and sets the default values.
