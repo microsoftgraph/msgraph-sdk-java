@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TokenLifetimePolicy;
 import com.microsoft.graph.models.TokenLifetimePolicyCollectionResponse;
 import com.microsoft.graph.policies.tokenlifetimepolicies.count.CountRequestBuilder;
+import com.microsoft.graph.policies.tokenlifetimepolicies.item.TokenLifetimePolicyItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.policyRoot entity.
+     * @param tokenLifetimePolicyId Unique identifier of the item
+     * @return a TokenLifetimePolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TokenLifetimePolicyItemRequestBuilder byTokenLifetimePolicyId(@javax.annotation.Nonnull final String tokenLifetimePolicyId) {
+        Objects.requireNonNull(tokenLifetimePolicyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("tokenLifetimePolicy%2Did", tokenLifetimePolicyId);
+        return new TokenLifetimePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TokenLifetimePoliciesRequestBuilder and sets the default values.

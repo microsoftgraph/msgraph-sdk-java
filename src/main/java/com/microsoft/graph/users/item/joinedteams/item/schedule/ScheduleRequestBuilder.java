@@ -2,24 +2,15 @@ package com.microsoft.graph.users.item.joinedteams.item.schedule;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Schedule;
-import com.microsoft.graph.users.item.joinedteams.item.schedule.offershiftrequests.item.OfferShiftRequestItemRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.offershiftrequests.OfferShiftRequestsRequestBuilder;
-import com.microsoft.graph.users.item.joinedteams.item.schedule.openshiftchangerequests.item.OpenShiftChangeRequestItemRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.openshiftchangerequests.OpenShiftChangeRequestsRequestBuilder;
-import com.microsoft.graph.users.item.joinedteams.item.schedule.openshifts.item.OpenShiftItemRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.openshifts.OpenShiftsRequestBuilder;
-import com.microsoft.graph.users.item.joinedteams.item.schedule.schedulinggroups.item.SchedulingGroupItemRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.schedulinggroups.SchedulingGroupsRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.share.ShareRequestBuilder;
-import com.microsoft.graph.users.item.joinedteams.item.schedule.shifts.item.ShiftItemRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.shifts.ShiftsRequestBuilder;
-import com.microsoft.graph.users.item.joinedteams.item.schedule.swapshiftschangerequests.item.SwapShiftsChangeRequestItemRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.swapshiftschangerequests.SwapShiftsChangeRequestsRequestBuilder;
-import com.microsoft.graph.users.item.joinedteams.item.schedule.timeoffreasons.item.TimeOffReasonItemRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.timeoffreasons.TimeOffReasonsRequestBuilder;
-import com.microsoft.graph.users.item.joinedteams.item.schedule.timeoffrequests.item.TimeOffRequestItemRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.timeoffrequests.TimeOffRequestsRequestBuilder;
-import com.microsoft.graph.users.item.joinedteams.item.schedule.timesoff.item.TimeOffItemRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.timesoff.TimesOffRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -186,42 +177,6 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity.
-     * @param id Unique identifier of the item
-     * @return a OfferShiftRequestItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public OfferShiftRequestItemRequestBuilder offerShiftRequests(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("offerShiftRequest%2Did", id);
-        return new OfferShiftRequestItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the openShiftChangeRequests property of the microsoft.graph.schedule entity.
-     * @param id Unique identifier of the item
-     * @return a OpenShiftChangeRequestItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public OpenShiftChangeRequestItemRequestBuilder openShiftChangeRequests(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("openShiftChangeRequest%2Did", id);
-        return new OpenShiftChangeRequestItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the openShifts property of the microsoft.graph.schedule entity.
-     * @param id Unique identifier of the item
-     * @return a OpenShiftItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public OpenShiftItemRequestBuilder openShifts(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("openShift%2Did", id);
-        return new OpenShiftItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property schedule in users
      * @param body The request body
      * @return a CompletableFuture of schedule
@@ -260,78 +215,6 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the schedulingGroups property of the microsoft.graph.schedule entity.
-     * @param id Unique identifier of the item
-     * @return a SchedulingGroupItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SchedulingGroupItemRequestBuilder schedulingGroups(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("schedulingGroup%2Did", id);
-        return new SchedulingGroupItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the shifts property of the microsoft.graph.schedule entity.
-     * @param id Unique identifier of the item
-     * @return a ShiftItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ShiftItemRequestBuilder shifts(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("shift%2Did", id);
-        return new ShiftItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the swapShiftsChangeRequests property of the microsoft.graph.schedule entity.
-     * @param id Unique identifier of the item
-     * @return a SwapShiftsChangeRequestItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SwapShiftsChangeRequestItemRequestBuilder swapShiftsChangeRequests(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("swapShiftsChangeRequest%2Did", id);
-        return new SwapShiftsChangeRequestItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the timeOffReasons property of the microsoft.graph.schedule entity.
-     * @param id Unique identifier of the item
-     * @return a TimeOffReasonItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TimeOffReasonItemRequestBuilder timeOffReasons(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("timeOffReason%2Did", id);
-        return new TimeOffReasonItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the timeOffRequests property of the microsoft.graph.schedule entity.
-     * @param id Unique identifier of the item
-     * @return a TimeOffRequestItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TimeOffRequestItemRequestBuilder timeOffRequests(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("timeOffRequest%2Did", id);
-        return new TimeOffRequestItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the timesOff property of the microsoft.graph.schedule entity.
-     * @param id Unique identifier of the item
-     * @return a TimeOffItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TimeOffItemRequestBuilder timesOff(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("timeOff%2Did", id);
-        return new TimeOffItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property schedule for users

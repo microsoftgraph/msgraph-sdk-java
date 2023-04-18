@@ -8,11 +8,8 @@ import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.s
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.securityrelease.SecurityReleaseRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.securityremovehold.SecurityRemoveHoldRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.securityupdateindex.SecurityUpdateIndexRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.sitesources.item.SiteSourceItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.sitesources.SiteSourcesRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.unifiedgroupsources.item.UnifiedGroupSourceItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.unifiedgroupsources.UnifiedGroupSourcesRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.usersources.item.UserSourceItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.usersources.UserSourcesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -212,18 +209,6 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the siteSources property of the microsoft.graph.security.ediscoveryCustodian entity.
-     * @param id Unique identifier of the item
-     * @return a SiteSourceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SiteSourceItemRequestBuilder siteSources(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("siteSource%2Did", id);
-        return new SiteSourceItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Delete navigation property custodians for security
      * @return a RequestInformation
      */
@@ -310,30 +295,6 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the unifiedGroupSources property of the microsoft.graph.security.ediscoveryCustodian entity.
-     * @param id Unique identifier of the item
-     * @return a UnifiedGroupSourceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UnifiedGroupSourceItemRequestBuilder unifiedGroupSources(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("unifiedGroupSource%2Did", id);
-        return new UnifiedGroupSourceItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the userSources property of the microsoft.graph.security.ediscoveryCustodian entity.
-     * @param id Unique identifier of the item
-     * @return a UserSourceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UserSourceItemRequestBuilder userSources(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("userSource%2Did", id);
-        return new UserSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

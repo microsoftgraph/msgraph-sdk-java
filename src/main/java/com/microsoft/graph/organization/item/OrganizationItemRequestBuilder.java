@@ -4,11 +4,9 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Organization;
 import com.microsoft.graph.organization.item.branding.BrandingRequestBuilder;
 import com.microsoft.graph.organization.item.certificatebasedauthconfiguration.CertificateBasedAuthConfigurationRequestBuilder;
-import com.microsoft.graph.organization.item.certificatebasedauthconfiguration.item.CertificateBasedAuthConfigurationItemRequestBuilder;
 import com.microsoft.graph.organization.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
 import com.microsoft.graph.organization.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import com.microsoft.graph.organization.item.extensions.ExtensionsRequestBuilder;
-import com.microsoft.graph.organization.item.extensions.item.ExtensionItemRequestBuilder;
 import com.microsoft.graph.organization.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.organization.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.organization.item.restore.RestoreRequestBuilder;
@@ -77,18 +75,6 @@ public class OrganizationItemRequestBuilder extends BaseRequestBuilder {
         return new SetMobileDeviceManagementAuthorityRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the certificateBasedAuthConfiguration property of the microsoft.graph.organization entity.
-     * @param id Unique identifier of the item
-     * @return a CertificateBasedAuthConfigurationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public CertificateBasedAuthConfigurationItemRequestBuilder certificateBasedAuthConfiguration(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("certificateBasedAuthConfiguration%2Did", id);
-        return new CertificateBasedAuthConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new OrganizationItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -144,18 +130,6 @@ public class OrganizationItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the extensions property of the microsoft.graph.organization entity.
-     * @param id Unique identifier of the item
-     * @return a ExtensionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("extension%2Did", id);
-        return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get the properties and relationships of the currently authenticated organization. Since the **organization** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **organization** instance.

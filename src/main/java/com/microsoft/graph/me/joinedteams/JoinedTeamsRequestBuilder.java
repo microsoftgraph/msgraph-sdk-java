@@ -2,6 +2,7 @@ package com.microsoft.graph.me.joinedteams;
 
 import com.microsoft.graph.me.joinedteams.count.CountRequestBuilder;
 import com.microsoft.graph.me.joinedteams.getallmessages.GetAllMessagesRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.TeamItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Team;
 import com.microsoft.graph.models.TeamCollectionResponse;
@@ -32,6 +33,18 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GetAllMessagesRequestBuilder getAllMessages() {
         return new GetAllMessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the joinedTeams property of the microsoft.graph.user entity.
+     * @param teamId Unique identifier of the item
+     * @return a TeamItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TeamItemRequestBuilder byTeamId(@javax.annotation.Nonnull final String teamId) {
+        Objects.requireNonNull(teamId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("team%2Did", teamId);
+        return new TeamItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new JoinedTeamsRequestBuilder and sets the default values.

@@ -1,7 +1,6 @@
 package com.microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary.item;
 
 import com.microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary.item.devicestates.DeviceStatesRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary.item.devicestates.item.DeviceInstallStateItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UserInstallStateSummary;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -83,18 +82,6 @@ public class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilde
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the deviceStates property of the microsoft.graph.userInstallStateSummary entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceInstallStateItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceInstallStateItemRequestBuilder deviceStates(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceInstallState%2Did", id);
-        return new DeviceInstallStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * The list of installation states for this eBook.

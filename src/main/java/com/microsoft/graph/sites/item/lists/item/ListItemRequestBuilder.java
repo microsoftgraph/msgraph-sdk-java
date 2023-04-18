@@ -3,15 +3,10 @@ package com.microsoft.graph.sites.item.lists.item;
 import com.microsoft.graph.models.List;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.sites.item.lists.item.columns.ColumnsRequestBuilder;
-import com.microsoft.graph.sites.item.lists.item.columns.item.ColumnDefinitionItemRequestBuilder;
 import com.microsoft.graph.sites.item.lists.item.contenttypes.ContentTypesRequestBuilder;
-import com.microsoft.graph.sites.item.lists.item.contenttypes.item.ContentTypeItemRequestBuilder;
 import com.microsoft.graph.sites.item.lists.item.drive.DriveRequestBuilder;
-import com.microsoft.graph.sites.item.lists.item.items.item.ListItemItemRequestBuilder;
 import com.microsoft.graph.sites.item.lists.item.items.ItemsRequestBuilder;
-import com.microsoft.graph.sites.item.lists.item.operations.item.RichLongRunningOperationItemRequestBuilder;
 import com.microsoft.graph.sites.item.lists.item.operations.OperationsRequestBuilder;
-import com.microsoft.graph.sites.item.lists.item.subscriptions.item.SubscriptionItemRequestBuilder;
 import com.microsoft.graph.sites.item.lists.item.subscriptions.SubscriptionsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -62,18 +57,6 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         return new SubscriptionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the columns property of the microsoft.graph.list entity.
-     * @param id Unique identifier of the item
-     * @return a ColumnDefinitionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ColumnDefinitionItemRequestBuilder columns(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("columnDefinition%2Did", id);
-        return new ColumnDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new ListItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -92,18 +75,6 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public ListItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/lists/{list%2Did}{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the contentTypes property of the microsoft.graph.list entity.
-     * @param id Unique identifier of the item
-     * @return a ContentTypeItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ContentTypeItemRequestBuilder contentTypes(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("contentType%2Did", id);
-        return new ContentTypeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property lists for sites
@@ -180,30 +151,6 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the items property of the microsoft.graph.list entity.
-     * @param id Unique identifier of the item
-     * @return a ListItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ListItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("listItem%2Did", id);
-        return new ListItemItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the operations property of the microsoft.graph.list entity.
-     * @param id Unique identifier of the item
-     * @return a RichLongRunningOperationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public RichLongRunningOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("richLongRunningOperation%2Did", id);
-        return new RichLongRunningOperationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property lists in sites
      * @param body The request body
      * @return a CompletableFuture of list
@@ -242,18 +189,6 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the subscriptions property of the microsoft.graph.list entity.
-     * @param id Unique identifier of the item
-     * @return a SubscriptionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SubscriptionItemRequestBuilder subscriptions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("subscription%2Did", id);
-        return new SubscriptionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property lists for sites

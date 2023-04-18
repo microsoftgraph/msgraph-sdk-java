@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UnifiedRoleManagementPolicyRule;
 import com.microsoft.graph.models.UnifiedRoleManagementPolicyRuleCollectionResponse;
 import com.microsoft.graph.policies.rolemanagementpolicies.item.rules.count.CountRequestBuilder;
+import com.microsoft.graph.policies.rolemanagementpolicies.item.rules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class RulesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the rules property of the microsoft.graph.unifiedRoleManagementPolicy entity.
+     * @param unifiedRoleManagementPolicyRuleId Unique identifier of the item
+     * @return a UnifiedRoleManagementPolicyRuleItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UnifiedRoleManagementPolicyRuleItemRequestBuilder byUnifiedRoleManagementPolicyRuleId(@javax.annotation.Nonnull final String unifiedRoleManagementPolicyRuleId) {
+        Objects.requireNonNull(unifiedRoleManagementPolicyRuleId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("unifiedRoleManagementPolicyRule%2Did", unifiedRoleManagementPolicyRuleId);
+        return new UnifiedRoleManagementPolicyRuleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RulesRequestBuilder and sets the default values.

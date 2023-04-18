@@ -2,6 +2,7 @@ package com.microsoft.graph.me.todo.lists.item.tasks.item.attachments;
 
 import com.microsoft.graph.me.todo.lists.item.tasks.item.attachments.count.CountRequestBuilder;
 import com.microsoft.graph.me.todo.lists.item.tasks.item.attachments.createuploadsession.CreateUploadSessionRequestBuilder;
+import com.microsoft.graph.me.todo.lists.item.tasks.item.attachments.item.AttachmentBaseItemRequestBuilder;
 import com.microsoft.graph.models.AttachmentBase;
 import com.microsoft.graph.models.AttachmentBaseCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -32,6 +33,18 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CreateUploadSessionRequestBuilder createUploadSession() {
         return new CreateUploadSessionRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the attachments property of the microsoft.graph.todoTask entity.
+     * @param attachmentBaseId Unique identifier of the item
+     * @return a AttachmentBaseItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AttachmentBaseItemRequestBuilder byAttachmentBaseId(@javax.annotation.Nonnull final String attachmentBaseId) {
+        Objects.requireNonNull(attachmentBaseId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("attachmentBase%2Did", attachmentBaseId);
+        return new AttachmentBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AttachmentsRequestBuilder and sets the default values.

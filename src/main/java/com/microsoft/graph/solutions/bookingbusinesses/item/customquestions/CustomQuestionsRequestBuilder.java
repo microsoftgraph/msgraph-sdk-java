@@ -4,6 +4,7 @@ import com.microsoft.graph.models.BookingCustomQuestion;
 import com.microsoft.graph.models.BookingCustomQuestionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.solutions.bookingbusinesses.item.customquestions.count.CountRequestBuilder;
+import com.microsoft.graph.solutions.bookingbusinesses.item.customquestions.item.BookingCustomQuestionItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the customQuestions property of the microsoft.graph.bookingBusiness entity.
+     * @param bookingCustomQuestionId Unique identifier of the item
+     * @return a BookingCustomQuestionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public BookingCustomQuestionItemRequestBuilder byBookingCustomQuestionId(@javax.annotation.Nonnull final String bookingCustomQuestionId) {
+        Objects.requireNonNull(bookingCustomQuestionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("bookingCustomQuestion%2Did", bookingCustomQuestionId);
+        return new BookingCustomQuestionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new CustomQuestionsRequestBuilder and sets the default values.

@@ -2,6 +2,7 @@ package com.microsoft.graph.me.joinedteams.item.primarychannel.messages.item.rep
 
 import com.microsoft.graph.me.joinedteams.item.primarychannel.messages.item.replies.count.CountRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.primarychannel.messages.item.replies.delta.DeltaRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.primarychannel.messages.item.replies.item.ChatMessageItemRequestBuilder;
 import com.microsoft.graph.models.ChatMessage;
 import com.microsoft.graph.models.ChatMessageCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -32,6 +33,18 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the replies property of the microsoft.graph.chatMessage entity.
+     * @param chatMessageId1 Unique identifier of the item
+     * @return a ChatMessageItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ChatMessageItemRequestBuilder byChatMessageId1(@javax.annotation.Nonnull final String chatMessageId1) {
+        Objects.requireNonNull(chatMessageId1);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("chatMessage%2Did1", chatMessageId1);
+        return new ChatMessageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RepliesRequestBuilder and sets the default values.
@@ -93,10 +106,10 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Send a new reply to a chatMessage in a specified channel.
+     * Create a new reply to a chatMessage in a specified channel.
      * @param body The request body
      * @return a CompletableFuture of chatMessage
-     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessage> post(@javax.annotation.Nonnull final ChatMessage body) {
@@ -113,11 +126,11 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Send a new reply to a chatMessage in a specified channel.
+     * Create a new reply to a chatMessage in a specified channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chatMessage
-     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessage> post(@javax.annotation.Nonnull final ChatMessage body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -164,7 +177,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Send a new reply to a chatMessage in a specified channel.
+     * Create a new reply to a chatMessage in a specified channel.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -173,7 +186,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Send a new reply to a chatMessage in a specified channel.
+     * Create a new reply to a chatMessage in a specified channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

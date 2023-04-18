@@ -4,6 +4,7 @@ import com.microsoft.graph.models.LicenseDetails;
 import com.microsoft.graph.models.LicenseDetailsCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.licensedetails.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.licensedetails.item.LicenseDetailsItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the licenseDetails property of the microsoft.graph.user entity.
+     * @param licenseDetailsId Unique identifier of the item
+     * @return a LicenseDetailsItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public LicenseDetailsItemRequestBuilder byLicenseDetailsId(@javax.annotation.Nonnull final String licenseDetailsId) {
+        Objects.requireNonNull(licenseDetailsId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("licenseDetails%2Did", licenseDetailsId);
+        return new LicenseDetailsItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new LicenseDetailsRequestBuilder and sets the default values.

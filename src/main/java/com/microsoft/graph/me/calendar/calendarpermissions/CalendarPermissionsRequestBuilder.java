@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.calendar.calendarpermissions;
 
 import com.microsoft.graph.me.calendar.calendarpermissions.count.CountRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarpermissions.item.CalendarPermissionItemRequestBuilder;
 import com.microsoft.graph.models.CalendarPermission;
 import com.microsoft.graph.models.CalendarPermissionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the calendarPermissions property of the microsoft.graph.calendar entity.
+     * @param calendarPermissionId Unique identifier of the item
+     * @return a CalendarPermissionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public CalendarPermissionItemRequestBuilder byCalendarPermissionId(@javax.annotation.Nonnull final String calendarPermissionId) {
+        Objects.requireNonNull(calendarPermissionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("calendarPermission%2Did", calendarPermissionId);
+        return new CalendarPermissionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new CalendarPermissionsRequestBuilder and sets the default values.

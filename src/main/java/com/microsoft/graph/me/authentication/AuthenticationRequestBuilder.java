@@ -1,24 +1,14 @@
 package com.microsoft.graph.me.authentication;
 
 import com.microsoft.graph.me.authentication.emailmethods.EmailMethodsRequestBuilder;
-import com.microsoft.graph.me.authentication.emailmethods.item.EmailAuthenticationMethodItemRequestBuilder;
 import com.microsoft.graph.me.authentication.fido2methods.Fido2MethodsRequestBuilder;
-import com.microsoft.graph.me.authentication.fido2methods.item.Fido2AuthenticationMethodItemRequestBuilder;
-import com.microsoft.graph.me.authentication.methods.item.AuthenticationMethodItemRequestBuilder;
 import com.microsoft.graph.me.authentication.methods.MethodsRequestBuilder;
-import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.MicrosoftAuthenticatorMethodsRequestBuilder;
-import com.microsoft.graph.me.authentication.operations.item.LongRunningOperationItemRequestBuilder;
 import com.microsoft.graph.me.authentication.operations.OperationsRequestBuilder;
-import com.microsoft.graph.me.authentication.passwordmethods.item.PasswordAuthenticationMethodItemRequestBuilder;
 import com.microsoft.graph.me.authentication.passwordmethods.PasswordMethodsRequestBuilder;
-import com.microsoft.graph.me.authentication.phonemethods.item.PhoneAuthenticationMethodItemRequestBuilder;
 import com.microsoft.graph.me.authentication.phonemethods.PhoneMethodsRequestBuilder;
-import com.microsoft.graph.me.authentication.softwareoathmethods.item.SoftwareOathAuthenticationMethodItemRequestBuilder;
 import com.microsoft.graph.me.authentication.softwareoathmethods.SoftwareOathMethodsRequestBuilder;
-import com.microsoft.graph.me.authentication.temporaryaccesspassmethods.item.TemporaryAccessPassAuthenticationMethodItemRequestBuilder;
 import com.microsoft.graph.me.authentication.temporaryaccesspassmethods.TemporaryAccessPassMethodsRequestBuilder;
-import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder;
 import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.WindowsHelloForBusinessMethodsRequestBuilder;
 import com.microsoft.graph.models.Authentication;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -148,30 +138,6 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the emailMethods property of the microsoft.graph.authentication entity.
-     * @param id Unique identifier of the item
-     * @return a EmailAuthenticationMethodItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EmailAuthenticationMethodItemRequestBuilder emailMethods(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("emailAuthenticationMethod%2Did", id);
-        return new EmailAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the fido2Methods property of the microsoft.graph.authentication entity.
-     * @param id Unique identifier of the item
-     * @return a Fido2AuthenticationMethodItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public Fido2AuthenticationMethodItemRequestBuilder fido2Methods(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("fido2AuthenticationMethod%2Did", id);
-        return new Fido2AuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * The authentication methods that are supported for the user.
      * @return a CompletableFuture of authentication
      */
@@ -207,54 +173,6 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the methods property of the microsoft.graph.authentication entity.
-     * @param id Unique identifier of the item
-     * @return a AuthenticationMethodItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AuthenticationMethodItemRequestBuilder methods(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("authenticationMethod%2Did", id);
-        return new AuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the microsoftAuthenticatorMethods property of the microsoft.graph.authentication entity.
-     * @param id Unique identifier of the item
-     * @return a MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder microsoftAuthenticatorMethods(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("microsoftAuthenticatorAuthenticationMethod%2Did", id);
-        return new MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the operations property of the microsoft.graph.authentication entity.
-     * @param id Unique identifier of the item
-     * @return a LongRunningOperationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public LongRunningOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("longRunningOperation%2Did", id);
-        return new LongRunningOperationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the passwordMethods property of the microsoft.graph.authentication entity.
-     * @param id Unique identifier of the item
-     * @return a PasswordAuthenticationMethodItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PasswordAuthenticationMethodItemRequestBuilder passwordMethods(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("passwordAuthenticationMethod%2Did", id);
-        return new PasswordAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property authentication in me
@@ -295,42 +213,6 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the phoneMethods property of the microsoft.graph.authentication entity.
-     * @param id Unique identifier of the item
-     * @return a PhoneAuthenticationMethodItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PhoneAuthenticationMethodItemRequestBuilder phoneMethods(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("phoneAuthenticationMethod%2Did", id);
-        return new PhoneAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity.
-     * @param id Unique identifier of the item
-     * @return a SoftwareOathAuthenticationMethodItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SoftwareOathAuthenticationMethodItemRequestBuilder softwareOathMethods(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("softwareOathAuthenticationMethod%2Did", id);
-        return new SoftwareOathAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the temporaryAccessPassMethods property of the microsoft.graph.authentication entity.
-     * @param id Unique identifier of the item
-     * @return a TemporaryAccessPassAuthenticationMethodItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TemporaryAccessPassAuthenticationMethodItemRequestBuilder temporaryAccessPassMethods(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("temporaryAccessPassAuthenticationMethod%2Did", id);
-        return new TemporaryAccessPassAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property authentication for me
@@ -419,18 +301,6 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the windowsHelloForBusinessMethods property of the microsoft.graph.authentication entity.
-     * @param id Unique identifier of the item
-     * @return a WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder windowsHelloForBusinessMethods(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("windowsHelloForBusinessAuthenticationMethod%2Did", id);
-        return new WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

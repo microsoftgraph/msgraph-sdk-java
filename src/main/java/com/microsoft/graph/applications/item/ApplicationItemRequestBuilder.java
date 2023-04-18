@@ -3,28 +3,21 @@ package com.microsoft.graph.applications.item;
 import com.microsoft.graph.applications.item.addkey.AddKeyRequestBuilder;
 import com.microsoft.graph.applications.item.addpassword.AddPasswordRequestBuilder;
 import com.microsoft.graph.applications.item.appmanagementpolicies.AppManagementPoliciesRequestBuilder;
-import com.microsoft.graph.applications.item.appmanagementpolicies.item.AppManagementPolicyItemRequestBuilder;
 import com.microsoft.graph.applications.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
 import com.microsoft.graph.applications.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import com.microsoft.graph.applications.item.createdonbehalfof.CreatedOnBehalfOfRequestBuilder;
 import com.microsoft.graph.applications.item.extensionproperties.ExtensionPropertiesRequestBuilder;
-import com.microsoft.graph.applications.item.extensionproperties.item.ExtensionPropertyItemRequestBuilder;
 import com.microsoft.graph.applications.item.federatedidentitycredentials.FederatedIdentityCredentialsRequestBuilder;
-import com.microsoft.graph.applications.item.federatedidentitycredentials.item.FederatedIdentityCredentialItemRequestBuilder;
 import com.microsoft.graph.applications.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.applications.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.applications.item.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
-import com.microsoft.graph.applications.item.homerealmdiscoverypolicies.item.HomeRealmDiscoveryPolicyItemRequestBuilder;
 import com.microsoft.graph.applications.item.logo.LogoRequestBuilder;
-import com.microsoft.graph.applications.item.owners.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.applications.item.owners.OwnersRequestBuilder;
 import com.microsoft.graph.applications.item.removekey.RemoveKeyRequestBuilder;
 import com.microsoft.graph.applications.item.removepassword.RemovePasswordRequestBuilder;
 import com.microsoft.graph.applications.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.applications.item.setverifiedpublisher.SetVerifiedPublisherRequestBuilder;
-import com.microsoft.graph.applications.item.tokenissuancepolicies.item.TokenIssuancePolicyItemRequestBuilder;
 import com.microsoft.graph.applications.item.tokenissuancepolicies.TokenIssuancePoliciesRequestBuilder;
-import com.microsoft.graph.applications.item.tokenlifetimepolicies.item.TokenLifetimePolicyItemRequestBuilder;
 import com.microsoft.graph.applications.item.tokenlifetimepolicies.TokenLifetimePoliciesRequestBuilder;
 import com.microsoft.graph.applications.item.unsetverifiedpublisher.UnsetVerifiedPublisherRequestBuilder;
 import com.microsoft.graph.models.Application;
@@ -148,18 +141,6 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
         return new UnsetVerifiedPublisherRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.applications.item.appManagementPolicies.item collection
-     * @param id Unique identifier of the item
-     * @return a AppManagementPolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AppManagementPolicyItemRequestBuilder appManagementPolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("appManagementPolicy%2Did", id);
-        return new AppManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new ApplicationItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -219,30 +200,6 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the extensionProperties property of the microsoft.graph.application entity.
-     * @param id Unique identifier of the item
-     * @return a ExtensionPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ExtensionPropertyItemRequestBuilder extensionProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("extensionProperty%2Did", id);
-        return new ExtensionPropertyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.application entity.
-     * @param id Unique identifier of the item
-     * @return a FederatedIdentityCredentialItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public FederatedIdentityCredentialItemRequestBuilder federatedIdentityCredentials(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("federatedIdentityCredential%2Did", id);
-        return new FederatedIdentityCredentialItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Get the properties and relationships of an application object.
      * @return a CompletableFuture of application
      * @see <a href="https://docs.microsoft.com/graph/api/application-get?view=graph-rest-1.0">Find more info here</a>
@@ -280,30 +237,6 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.application entity.
-     * @param id Unique identifier of the item
-     * @return a HomeRealmDiscoveryPolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public HomeRealmDiscoveryPolicyItemRequestBuilder homeRealmDiscoveryPolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("homeRealmDiscoveryPolicy%2Did", id);
-        return new HomeRealmDiscoveryPolicyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.applications.item.owners.item collection
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DirectoryObjectItemRequestBuilder owners(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the properties of an application object.
@@ -402,30 +335,6 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.applications.item.tokenIssuancePolicies.item collection
-     * @param id Unique identifier of the item
-     * @return a TokenIssuancePolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TokenIssuancePolicyItemRequestBuilder tokenIssuancePolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("tokenIssuancePolicy%2Did", id);
-        return new TokenIssuancePolicyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.applications.item.tokenLifetimePolicies.item collection
-     * @param id Unique identifier of the item
-     * @return a TokenLifetimePolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TokenLifetimePolicyItemRequestBuilder tokenLifetimePolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("tokenLifetimePolicy%2Did", id);
-        return new TokenLifetimePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the properties of an application object.

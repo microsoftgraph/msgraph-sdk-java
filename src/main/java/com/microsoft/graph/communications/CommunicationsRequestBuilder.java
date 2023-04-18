@@ -1,13 +1,9 @@
 package com.microsoft.graph.communications;
 
 import com.microsoft.graph.communications.callrecords.CallRecordsRequestBuilder;
-import com.microsoft.graph.communications.callrecords.item.CallRecordItemRequestBuilder;
 import com.microsoft.graph.communications.calls.CallsRequestBuilder;
-import com.microsoft.graph.communications.calls.item.CallItemRequestBuilder;
 import com.microsoft.graph.communications.getpresencesbyuserid.GetPresencesByUserIdRequestBuilder;
-import com.microsoft.graph.communications.onlinemeetings.item.OnlineMeetingItemRequestBuilder;
 import com.microsoft.graph.communications.onlinemeetings.OnlineMeetingsRequestBuilder;
-import com.microsoft.graph.communications.presences.item.PresenceItemRequestBuilder;
 import com.microsoft.graph.communications.presences.PresencesRequestBuilder;
 import com.microsoft.graph.models.CloudCommunications;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -53,30 +49,6 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public PresencesRequestBuilder presences() {
         return new PresencesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the callRecords property of the microsoft.graph.cloudCommunications entity.
-     * @param id Unique identifier of the item
-     * @return a CallRecordItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public CallRecordItemRequestBuilder callRecords(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("callRecord%2Did", id);
-        return new CallRecordItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity.
-     * @param id Unique identifier of the item
-     * @return a CallItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public CallItemRequestBuilder calls(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("call%2Did", id);
-        return new CallItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new CommunicationsRequestBuilder and sets the default values.
@@ -136,18 +108,6 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the onlineMeetings property of the microsoft.graph.cloudCommunications entity.
-     * @param id Unique identifier of the item
-     * @return a OnlineMeetingItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public OnlineMeetingItemRequestBuilder onlineMeetings(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("onlineMeeting%2Did", id);
-        return new OnlineMeetingItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update communications
      * @param body The request body
      * @return a CompletableFuture of CloudCommunications
@@ -186,18 +146,6 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity.
-     * @param id Unique identifier of the item
-     * @return a PresenceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PresenceItemRequestBuilder presences(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("presence%2Did", id);
-        return new PresenceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get communications

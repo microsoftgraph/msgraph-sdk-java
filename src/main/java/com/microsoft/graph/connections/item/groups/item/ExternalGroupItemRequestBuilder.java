@@ -1,6 +1,5 @@
 package com.microsoft.graph.connections.item.groups.item;
 
-import com.microsoft.graph.connections.item.groups.item.members.item.IdentityItemRequestBuilder;
 import com.microsoft.graph.connections.item.groups.item.members.MembersRequestBuilder;
 import com.microsoft.graph.models.externalconnectors.ExternalGroup;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -120,18 +119,6 @@ public class ExternalGroupItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the members property of the microsoft.graph.externalConnectors.externalGroup entity.
-     * @param id Unique identifier of the item
-     * @return a IdentityItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public IdentityItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("identity%2Did", id);
-        return new IdentityItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property groups in connections

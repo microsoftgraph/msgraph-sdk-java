@@ -2,8 +2,6 @@ package com.microsoft.graph.education.schools.item;
 
 import com.microsoft.graph.education.schools.item.administrativeunit.AdministrativeUnitRequestBuilder;
 import com.microsoft.graph.education.schools.item.classes.ClassesRequestBuilder;
-import com.microsoft.graph.education.schools.item.classes.item.EducationClassItemRequestBuilder;
-import com.microsoft.graph.education.schools.item.users.item.EducationUserItemRequestBuilder;
 import com.microsoft.graph.education.schools.item.users.UsersRequestBuilder;
 import com.microsoft.graph.models.EducationSchool;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -39,18 +37,6 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public UsersRequestBuilder users() {
         return new UsersRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.education.schools.item.classes.item collection
-     * @param id Unique identifier of the item
-     * @return a EducationClassItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EducationClassItemRequestBuilder classes(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("educationClass%2Did", id);
-        return new EducationClassItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new EducationSchoolItemRequestBuilder and sets the default values.
@@ -273,18 +259,6 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.education.schools.item.users.item collection
-     * @param id Unique identifier of the item
-     * @return a EducationUserItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EducationUserItemRequestBuilder users(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("educationUser%2Did", id);
-        return new EducationUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

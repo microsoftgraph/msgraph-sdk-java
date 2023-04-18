@@ -4,6 +4,7 @@ import com.microsoft.graph.models.ChatMessageHostedContent;
 import com.microsoft.graph.models.ChatMessageHostedContentCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.joinedteams.item.primarychannel.messages.item.replies.item.hostedcontents.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.joinedteams.item.primarychannel.messages.item.replies.item.hostedcontents.item.ChatMessageHostedContentItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class HostedContentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the hostedContents property of the microsoft.graph.chatMessage entity.
+     * @param chatMessageHostedContentId Unique identifier of the item
+     * @return a ChatMessageHostedContentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ChatMessageHostedContentItemRequestBuilder byChatMessageHostedContentId(@javax.annotation.Nonnull final String chatMessageHostedContentId) {
+        Objects.requireNonNull(chatMessageHostedContentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("chatMessageHostedContent%2Did", chatMessageHostedContentId);
+        return new ChatMessageHostedContentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new HostedContentsRequestBuilder and sets the default values.

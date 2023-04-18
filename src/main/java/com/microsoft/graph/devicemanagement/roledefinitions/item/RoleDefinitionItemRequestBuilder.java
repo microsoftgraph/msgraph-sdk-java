@@ -1,6 +1,5 @@
 package com.microsoft.graph.devicemanagement.roledefinitions.item;
 
-import com.microsoft.graph.devicemanagement.roledefinitions.item.roleassignments.item.RoleAssignmentItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.roledefinitions.item.roleassignments.RoleAssignmentsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.RoleDefinition;
@@ -160,18 +159,6 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the roleAssignments property of the microsoft.graph.roleDefinition entity.
-     * @param id Unique identifier of the item
-     * @return a RoleAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public RoleAssignmentItemRequestBuilder roleAssignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("roleAssignment%2Did", id);
-        return new RoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property roleDefinitions for deviceManagement

@@ -2,6 +2,7 @@ package com.microsoft.graph.drives.item.items.item.workbook.tables;
 
 import com.microsoft.graph.drives.item.items.item.workbook.tables.add.AddRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.tables.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.tables.item.WorkbookTableItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.tables.itematwithindex.ItemAtWithIndexRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookTable;
@@ -33,6 +34,18 @@ public class TablesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tables property of the microsoft.graph.workbook entity.
+     * @param workbookTableId Unique identifier of the item
+     * @return a WorkbookTableItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public WorkbookTableItemRequestBuilder byWorkbookTableId(@javax.annotation.Nonnull final String workbookTableId) {
+        Objects.requireNonNull(workbookTableId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("workbookTable%2Did", workbookTableId);
+        return new WorkbookTableItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TablesRequestBuilder and sets the default values.

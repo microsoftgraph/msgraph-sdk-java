@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UnifiedRbacResourceNamespace;
 import com.microsoft.graph.models.UnifiedRbacResourceNamespaceCollectionResponse;
 import com.microsoft.graph.rolemanagement.directory.resourcenamespaces.count.CountRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.resourcenamespaces.item.UnifiedRbacResourceNamespaceItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class ResourceNamespacesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplication entity.
+     * @param unifiedRbacResourceNamespaceId Unique identifier of the item
+     * @return a UnifiedRbacResourceNamespaceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UnifiedRbacResourceNamespaceItemRequestBuilder byUnifiedRbacResourceNamespaceId(@javax.annotation.Nonnull final String unifiedRbacResourceNamespaceId) {
+        Objects.requireNonNull(unifiedRbacResourceNamespaceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("unifiedRbacResourceNamespace%2Did", unifiedRbacResourceNamespaceId);
+        return new UnifiedRbacResourceNamespaceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ResourceNamespacesRequestBuilder and sets the default values.

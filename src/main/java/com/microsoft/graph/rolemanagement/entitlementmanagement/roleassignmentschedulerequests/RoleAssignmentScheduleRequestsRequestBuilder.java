@@ -5,6 +5,7 @@ import com.microsoft.graph.models.UnifiedRoleAssignmentScheduleRequest;
 import com.microsoft.graph.models.UnifiedRoleAssignmentScheduleRequestCollectionResponse;
 import com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.count.CountRequestBuilder;
 import com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.UnifiedRoleAssignmentScheduleRequestItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -27,6 +28,18 @@ public class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBui
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the roleAssignmentScheduleRequests property of the microsoft.graph.rbacApplication entity.
+     * @param unifiedRoleAssignmentScheduleRequestId Unique identifier of the item
+     * @return a UnifiedRoleAssignmentScheduleRequestItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UnifiedRoleAssignmentScheduleRequestItemRequestBuilder byUnifiedRoleAssignmentScheduleRequestId(@javax.annotation.Nonnull final String unifiedRoleAssignmentScheduleRequestId) {
+        Objects.requireNonNull(unifiedRoleAssignmentScheduleRequestId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("unifiedRoleAssignmentScheduleRequest%2Did", unifiedRoleAssignmentScheduleRequestId);
+        return new UnifiedRoleAssignmentScheduleRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RoleAssignmentScheduleRequestsRequestBuilder and sets the default values.

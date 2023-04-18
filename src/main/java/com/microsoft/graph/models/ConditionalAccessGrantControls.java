@@ -10,6 +10,8 @@ import java.util.Objects;
 public class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
+    /** The authenticationStrength property */
+    private AuthenticationStrengthPolicy authenticationStrength;
     /** List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue. */
     private java.util.List<ConditionalAccessGrantControl> builtInControls;
     /** List of custom controls IDs required by the policy. For more information, see Custom controls. */
@@ -47,6 +49,14 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
         return this.additionalData;
     }
     /**
+     * Gets the authenticationStrength property value. The authenticationStrength property
+     * @return a authenticationStrengthPolicy
+     */
+    @javax.annotation.Nullable
+    public AuthenticationStrengthPolicy getAuthenticationStrength() {
+        return this.authenticationStrength;
+    }
+    /**
      * Gets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
      * @return a conditionalAccessGrantControl
      */
@@ -68,7 +78,8 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("authenticationStrength", (n) -> { this.setAuthenticationStrength(n.getObjectValue(AuthenticationStrengthPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("builtInControls", (n) -> { this.setBuiltInControls(n.getCollectionOfEnumValues(ConditionalAccessGrantControl.class)); });
         deserializerMap.put("customAuthenticationFactors", (n) -> { this.setCustomAuthenticationFactors(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -108,6 +119,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("authenticationStrength", this.getAuthenticationStrength());
         writer.writeCollectionOfEnumValues("builtInControls", this.getBuiltInControls());
         writer.writeCollectionOfPrimitiveValues("customAuthenticationFactors", this.getCustomAuthenticationFactors());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -123,6 +135,15 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
+    }
+    /**
+     * Sets the authenticationStrength property value. The authenticationStrength property
+     * @param value Value to set for the authenticationStrength property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAuthenticationStrength(@javax.annotation.Nullable final AuthenticationStrengthPolicy value) {
+        this.authenticationStrength = value;
     }
     /**
      * Sets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.

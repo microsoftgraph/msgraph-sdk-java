@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.roleassignments;
 
 import com.microsoft.graph.devicemanagement.roleassignments.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.roleassignments.item.DeviceAndAppManagementRoleAssignmentItemRequestBuilder;
 import com.microsoft.graph.models.DeviceAndAppManagementRoleAssignment;
 import com.microsoft.graph.models.DeviceAndAppManagementRoleAssignmentCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the roleAssignments property of the microsoft.graph.deviceManagement entity.
+     * @param deviceAndAppManagementRoleAssignmentId Unique identifier of the item
+     * @return a DeviceAndAppManagementRoleAssignmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceAndAppManagementRoleAssignmentItemRequestBuilder byDeviceAndAppManagementRoleAssignmentId(@javax.annotation.Nonnull final String deviceAndAppManagementRoleAssignmentId) {
+        Objects.requireNonNull(deviceAndAppManagementRoleAssignmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceAndAppManagementRoleAssignment%2Did", deviceAndAppManagementRoleAssignmentId);
+        return new DeviceAndAppManagementRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RoleAssignmentsRequestBuilder and sets the default values.

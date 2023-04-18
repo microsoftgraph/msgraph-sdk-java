@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.item.stages;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.item.stages.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.item.stages.item.ApprovalStageItemRequestBuilder;
 import com.microsoft.graph.models.ApprovalStage;
 import com.microsoft.graph.models.ApprovalStageCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the stages property of the microsoft.graph.approval entity.
+     * @param approvalStageId Unique identifier of the item
+     * @return a ApprovalStageItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ApprovalStageItemRequestBuilder byApprovalStageId(@javax.annotation.Nonnull final String approvalStageId) {
+        Objects.requireNonNull(approvalStageId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("approvalStage%2Did", approvalStageId);
+        return new ApprovalStageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new StagesRequestBuilder and sets the default values.

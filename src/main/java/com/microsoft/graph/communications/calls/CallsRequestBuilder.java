@@ -1,6 +1,7 @@
 package com.microsoft.graph.communications.calls;
 
 import com.microsoft.graph.communications.calls.count.CountRequestBuilder;
+import com.microsoft.graph.communications.calls.item.CallItemRequestBuilder;
 import com.microsoft.graph.communications.calls.logteleconferencedevicequality.LogTeleconferenceDeviceQualityRequestBuilder;
 import com.microsoft.graph.models.Call;
 import com.microsoft.graph.models.CallCollectionResponse;
@@ -32,6 +33,18 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public LogTeleconferenceDeviceQualityRequestBuilder logTeleconferenceDeviceQuality() {
         return new LogTeleconferenceDeviceQualityRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity.
+     * @param callId Unique identifier of the item
+     * @return a CallItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public CallItemRequestBuilder byCallId(@javax.annotation.Nonnull final String callId) {
+        Objects.requireNonNull(callId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("call%2Did", callId);
+        return new CallItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new CallsRequestBuilder and sets the default values.

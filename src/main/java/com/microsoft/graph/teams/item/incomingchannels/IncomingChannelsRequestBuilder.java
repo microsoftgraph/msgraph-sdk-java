@@ -3,6 +3,7 @@ package com.microsoft.graph.teams.item.incomingchannels;
 import com.microsoft.graph.models.ChannelCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.teams.item.incomingchannels.count.CountRequestBuilder;
+import com.microsoft.graph.teams.item.incomingchannels.item.ChannelItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -25,6 +26,18 @@ public class IncomingChannelsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the incomingChannels property of the microsoft.graph.team entity.
+     * @param channelId Unique identifier of the item
+     * @return a ChannelItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ChannelItemRequestBuilder byChannelId(@javax.annotation.Nonnull final String channelId) {
+        Objects.requireNonNull(channelId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("channel%2Did", channelId);
+        return new ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new IncomingChannelsRequestBuilder and sets the default values.

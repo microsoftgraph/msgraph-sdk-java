@@ -2,9 +2,7 @@ package com.microsoft.graph.users.item.planner;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PlannerUser;
-import com.microsoft.graph.users.item.planner.plans.item.PlannerPlanItemRequestBuilder;
 import com.microsoft.graph.users.item.planner.plans.PlansRequestBuilder;
-import com.microsoft.graph.users.item.planner.tasks.item.PlannerTaskItemRequestBuilder;
 import com.microsoft.graph.users.item.planner.tasks.TasksRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -167,30 +165,6 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the plans property of the microsoft.graph.plannerUser entity.
-     * @param id Unique identifier of the item
-     * @return a PlannerPlanItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PlannerPlanItemRequestBuilder plans(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("plannerPlan%2Did", id);
-        return new PlannerPlanItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the tasks property of the microsoft.graph.plannerUser entity.
-     * @param id Unique identifier of the item
-     * @return a PlannerTaskItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PlannerTaskItemRequestBuilder tasks(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("plannerTask%2Did", id);
-        return new PlannerTaskItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property planner for users

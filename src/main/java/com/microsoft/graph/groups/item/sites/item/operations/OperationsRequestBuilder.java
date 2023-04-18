@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.sites.item.operations;
 
 import com.microsoft.graph.groups.item.sites.item.operations.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.operations.item.RichLongRunningOperationItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.RichLongRunningOperation;
 import com.microsoft.graph.models.RichLongRunningOperationCollectionResponse;
@@ -26,6 +27,18 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.site entity.
+     * @param richLongRunningOperationId Unique identifier of the item
+     * @return a RichLongRunningOperationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public RichLongRunningOperationItemRequestBuilder byRichLongRunningOperationId(@javax.annotation.Nonnull final String richLongRunningOperationId) {
+        Objects.requireNonNull(richLongRunningOperationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("richLongRunningOperation%2Did", richLongRunningOperationId);
+        return new RichLongRunningOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.

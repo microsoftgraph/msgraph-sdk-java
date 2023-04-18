@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.managedappregistrations;
 
 import com.microsoft.graph.me.managedappregistrations.count.CountRequestBuilder;
+import com.microsoft.graph.me.managedappregistrations.item.ManagedAppRegistrationItemRequestBuilder;
 import com.microsoft.graph.models.ManagedAppRegistrationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the managedAppRegistrations property of the microsoft.graph.user entity.
+     * @param managedAppRegistrationId Unique identifier of the item
+     * @return a ManagedAppRegistrationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedAppRegistrationItemRequestBuilder byManagedAppRegistrationId(@javax.annotation.Nonnull final String managedAppRegistrationId) {
+        Objects.requireNonNull(managedAppRegistrationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedAppRegistration%2Did", managedAppRegistrationId);
+        return new ManagedAppRegistrationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ManagedAppRegistrationsRequestBuilder and sets the default values.

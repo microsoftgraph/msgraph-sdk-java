@@ -1,7 +1,6 @@
 package com.microsoft.graph.identityprotection.riskyserviceprincipals.item;
 
 import com.microsoft.graph.identityprotection.riskyserviceprincipals.item.history.HistoryRequestBuilder;
-import com.microsoft.graph.identityprotection.riskyserviceprincipals.item.history.item.RiskyServicePrincipalHistoryItemItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.RiskyServicePrincipal;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -120,18 +119,6 @@ public class RiskyServicePrincipalItemRequestBuilder extends BaseRequestBuilder 
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the history property of the microsoft.graph.riskyServicePrincipal entity.
-     * @param id Unique identifier of the item
-     * @return a RiskyServicePrincipalHistoryItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public RiskyServicePrincipalHistoryItemItemRequestBuilder history(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("riskyServicePrincipalHistoryItem%2Did", id);
-        return new RiskyServicePrincipalHistoryItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property riskyServicePrincipals in identityProtection

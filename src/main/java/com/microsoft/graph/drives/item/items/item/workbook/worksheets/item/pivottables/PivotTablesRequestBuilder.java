@@ -1,6 +1,7 @@
 package com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.pivottables;
 
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.pivottables.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.pivottables.item.WorkbookPivotTableItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.pivottables.refreshall.RefreshAllRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookPivotTable;
@@ -32,6 +33,18 @@ public class PivotTablesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public RefreshAllRequestBuilder refreshAll() {
         return new RefreshAllRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the pivotTables property of the microsoft.graph.workbookWorksheet entity.
+     * @param workbookPivotTableId Unique identifier of the item
+     * @return a WorkbookPivotTableItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public WorkbookPivotTableItemRequestBuilder byWorkbookPivotTableId(@javax.annotation.Nonnull final String workbookPivotTableId) {
+        Objects.requireNonNull(workbookPivotTableId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("workbookPivotTable%2Did", workbookPivotTableId);
+        return new WorkbookPivotTableItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PivotTablesRequestBuilder and sets the default values.

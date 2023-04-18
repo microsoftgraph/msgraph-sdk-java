@@ -8,7 +8,6 @@ import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.chart
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.item.imagewithwidthwithheight.ImageWithWidthWithHeightRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.item.imagewithwidthwithheightwithfittingmode.ImageWithWidthWithHeightWithFittingModeRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.item.legend.LegendRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.item.series.item.WorkbookChartSeriesItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.item.series.SeriesRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.item.setdata.SetDataRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.item.setposition.SetPositionRequestBuilder;
@@ -253,18 +252,6 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the series property of the microsoft.graph.workbookChart entity.
-     * @param id Unique identifier of the item
-     * @return a WorkbookChartSeriesItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WorkbookChartSeriesItemRequestBuilder series(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("workbookChartSeries%2Did", id);
-        return new WorkbookChartSeriesItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property charts for drives

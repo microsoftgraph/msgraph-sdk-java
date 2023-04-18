@@ -1,6 +1,7 @@
 package com.microsoft.graph.communications.calls.item.contentsharingsessions;
 
 import com.microsoft.graph.communications.calls.item.contentsharingsessions.count.CountRequestBuilder;
+import com.microsoft.graph.communications.calls.item.contentsharingsessions.item.ContentSharingSessionItemRequestBuilder;
 import com.microsoft.graph.models.ContentSharingSession;
 import com.microsoft.graph.models.ContentSharingSessionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the contentSharingSessions property of the microsoft.graph.call entity.
+     * @param contentSharingSessionId Unique identifier of the item
+     * @return a ContentSharingSessionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ContentSharingSessionItemRequestBuilder byContentSharingSessionId(@javax.annotation.Nonnull final String contentSharingSessionId) {
+        Objects.requireNonNull(contentSharingSessionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("contentSharingSession%2Did", contentSharingSessionId);
+        return new ContentSharingSessionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ContentSharingSessionsRequestBuilder and sets the default values.

@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.managedappstatuses;
 
 import com.microsoft.graph.deviceappmanagement.managedappstatuses.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedappstatuses.item.ManagedAppStatusItemRequestBuilder;
 import com.microsoft.graph.models.ManagedAppStatus;
 import com.microsoft.graph.models.ManagedAppStatusCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the managedAppStatuses property of the microsoft.graph.deviceAppManagement entity.
+     * @param managedAppStatusId Unique identifier of the item
+     * @return a ManagedAppStatusItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedAppStatusItemRequestBuilder byManagedAppStatusId(@javax.annotation.Nonnull final String managedAppStatusId) {
+        Objects.requireNonNull(managedAppStatusId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedAppStatus%2Did", managedAppStatusId);
+        return new ManagedAppStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ManagedAppStatusesRequestBuilder and sets the default values.

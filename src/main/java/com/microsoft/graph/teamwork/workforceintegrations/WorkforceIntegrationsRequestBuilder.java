@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkforceIntegration;
 import com.microsoft.graph.models.WorkforceIntegrationCollectionResponse;
 import com.microsoft.graph.teamwork.workforceintegrations.count.CountRequestBuilder;
+import com.microsoft.graph.teamwork.workforceintegrations.item.WorkforceIntegrationItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the workforceIntegrations property of the microsoft.graph.teamwork entity.
+     * @param workforceIntegrationId Unique identifier of the item
+     * @return a WorkforceIntegrationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public WorkforceIntegrationItemRequestBuilder byWorkforceIntegrationId(@javax.annotation.Nonnull final String workforceIntegrationId) {
+        Objects.requireNonNull(workforceIntegrationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("workforceIntegration%2Did", workforceIntegrationId);
+        return new WorkforceIntegrationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new WorkforceIntegrationsRequestBuilder and sets the default values.

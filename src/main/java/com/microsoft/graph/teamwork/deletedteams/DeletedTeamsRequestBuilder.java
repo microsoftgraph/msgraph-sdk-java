@@ -5,6 +5,7 @@ import com.microsoft.graph.models.DeletedTeamCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.teamwork.deletedteams.count.CountRequestBuilder;
 import com.microsoft.graph.teamwork.deletedteams.getallmessages.GetAllMessagesRequestBuilder;
+import com.microsoft.graph.teamwork.deletedteams.item.DeletedTeamItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -32,6 +33,18 @@ public class DeletedTeamsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GetAllMessagesRequestBuilder getAllMessages() {
         return new GetAllMessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deletedTeams property of the microsoft.graph.teamwork entity.
+     * @param deletedTeamId Unique identifier of the item
+     * @return a DeletedTeamItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeletedTeamItemRequestBuilder byDeletedTeamId(@javax.annotation.Nonnull final String deletedTeamId) {
+        Objects.requireNonNull(deletedTeamId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deletedTeam%2Did", deletedTeamId);
+        return new DeletedTeamItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DeletedTeamsRequestBuilder and sets the default values.

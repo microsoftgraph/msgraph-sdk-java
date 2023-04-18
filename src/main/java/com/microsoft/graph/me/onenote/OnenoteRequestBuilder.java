@@ -1,16 +1,10 @@
 package com.microsoft.graph.me.onenote;
 
-import com.microsoft.graph.me.onenote.notebooks.item.NotebookItemRequestBuilder;
 import com.microsoft.graph.me.onenote.notebooks.NotebooksRequestBuilder;
-import com.microsoft.graph.me.onenote.operations.item.OnenoteOperationItemRequestBuilder;
 import com.microsoft.graph.me.onenote.operations.OperationsRequestBuilder;
-import com.microsoft.graph.me.onenote.pages.item.OnenotePageItemRequestBuilder;
 import com.microsoft.graph.me.onenote.pages.PagesRequestBuilder;
-import com.microsoft.graph.me.onenote.resources.item.OnenoteResourceItemRequestBuilder;
 import com.microsoft.graph.me.onenote.resources.ResourcesRequestBuilder;
-import com.microsoft.graph.me.onenote.sectiongroups.item.SectionGroupItemRequestBuilder;
 import com.microsoft.graph.me.onenote.sectiongroups.SectionGroupsRequestBuilder;
-import com.microsoft.graph.me.onenote.sections.item.OnenoteSectionItemRequestBuilder;
 import com.microsoft.graph.me.onenote.sections.SectionsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Onenote;
@@ -157,42 +151,6 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the notebooks property of the microsoft.graph.onenote entity.
-     * @param id Unique identifier of the item
-     * @return a NotebookItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public NotebookItemRequestBuilder notebooks(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("notebook%2Did", id);
-        return new NotebookItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the operations property of the microsoft.graph.onenote entity.
-     * @param id Unique identifier of the item
-     * @return a OnenoteOperationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public OnenoteOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("onenoteOperation%2Did", id);
-        return new OnenoteOperationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the pages property of the microsoft.graph.onenote entity.
-     * @param id Unique identifier of the item
-     * @return a OnenotePageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public OnenotePageItemRequestBuilder pages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("onenotePage%2Did", id);
-        return new OnenotePageItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property onenote in me
      * @param body The request body
      * @return a CompletableFuture of onenote
@@ -231,42 +189,6 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the resources property of the microsoft.graph.onenote entity.
-     * @param id Unique identifier of the item
-     * @return a OnenoteResourceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public OnenoteResourceItemRequestBuilder resources(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("onenoteResource%2Did", id);
-        return new OnenoteResourceItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the sectionGroups property of the microsoft.graph.onenote entity.
-     * @param id Unique identifier of the item
-     * @return a SectionGroupItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SectionGroupItemRequestBuilder sectionGroups(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("sectionGroup%2Did", id);
-        return new SectionGroupItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the sections property of the microsoft.graph.onenote entity.
-     * @param id Unique identifier of the item
-     * @return a OnenoteSectionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public OnenoteSectionItemRequestBuilder sections(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("onenoteSection%2Did", id);
-        return new OnenoteSectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property onenote for me

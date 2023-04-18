@@ -2,6 +2,7 @@ package com.microsoft.graph.identity.b2xuserflows.item.userattributeassignments;
 
 import com.microsoft.graph.identity.b2xuserflows.item.userattributeassignments.count.CountRequestBuilder;
 import com.microsoft.graph.identity.b2xuserflows.item.userattributeassignments.getorder.GetOrderRequestBuilder;
+import com.microsoft.graph.identity.b2xuserflows.item.userattributeassignments.item.IdentityUserFlowAttributeAssignmentItemRequestBuilder;
 import com.microsoft.graph.identity.b2xuserflows.item.userattributeassignments.setorder.SetOrderRequestBuilder;
 import com.microsoft.graph.models.IdentityUserFlowAttributeAssignment;
 import com.microsoft.graph.models.IdentityUserFlowAttributeAssignmentCollectionResponse;
@@ -38,6 +39,18 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public SetOrderRequestBuilder setOrder() {
         return new SetOrderRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userAttributeAssignments property of the microsoft.graph.b2xIdentityUserFlow entity.
+     * @param identityUserFlowAttributeAssignmentId Unique identifier of the item
+     * @return a IdentityUserFlowAttributeAssignmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public IdentityUserFlowAttributeAssignmentItemRequestBuilder byIdentityUserFlowAttributeAssignmentId(@javax.annotation.Nonnull final String identityUserFlowAttributeAssignmentId) {
+        Objects.requireNonNull(identityUserFlowAttributeAssignmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("identityUserFlowAttributeAssignment%2Did", identityUserFlowAttributeAssignmentId);
+        return new IdentityUserFlowAttributeAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new UserAttributeAssignmentsRequestBuilder and sets the default values.

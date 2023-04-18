@@ -7,6 +7,7 @@ import com.microsoft.graph.users.count.CountRequestBuilder;
 import com.microsoft.graph.users.delta.DeltaRequestBuilder;
 import com.microsoft.graph.users.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
 import com.microsoft.graph.users.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.users.item.UserItemRequestBuilder;
 import com.microsoft.graph.users.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -52,6 +53,18 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the collection of user entities.
+     * @param userId Unique identifier of the item
+     * @return a UserItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UserItemRequestBuilder byUserId(@javax.annotation.Nonnull final String userId) {
+        Objects.requireNonNull(userId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("user%2Did", userId);
+        return new UserItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
      * Instantiates a new UsersRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -72,9 +85,9 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users{?%24top,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of user object.
+     * Retrieve a list of user objects.
      * @return a CompletableFuture of UserCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get() {
@@ -91,10 +104,10 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of user object.
+     * Retrieve a list of user objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UserCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -153,7 +166,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of user object.
+     * Retrieve a list of user objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -161,7 +174,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of user object.
+     * Retrieve a list of user objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -214,7 +227,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of user object.
+     * Retrieve a list of user objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

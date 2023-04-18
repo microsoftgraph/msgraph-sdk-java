@@ -4,6 +4,7 @@ import com.microsoft.graph.models.Calendar;
 import com.microsoft.graph.models.CalendarCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.calendars.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.calendars.item.CalendarItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the calendars property of the microsoft.graph.user entity.
+     * @param calendarId Unique identifier of the item
+     * @return a CalendarItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public CalendarItemRequestBuilder byCalendarId(@javax.annotation.Nonnull final String calendarId) {
+        Objects.requireNonNull(calendarId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("calendar%2Did", calendarId);
+        return new CalendarItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new CalendarsRequestBuilder and sets the default values.

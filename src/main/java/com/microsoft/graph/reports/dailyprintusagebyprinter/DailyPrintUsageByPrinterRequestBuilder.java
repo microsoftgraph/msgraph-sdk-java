@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PrintUsageByPrinter;
 import com.microsoft.graph.models.PrintUsageByPrinterCollectionResponse;
 import com.microsoft.graph.reports.dailyprintusagebyprinter.count.CountRequestBuilder;
+import com.microsoft.graph.reports.dailyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class DailyPrintUsageByPrinterRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
+     * @param printUsageByPrinterId Unique identifier of the item
+     * @return a PrintUsageByPrinterItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PrintUsageByPrinterItemRequestBuilder byPrintUsageByPrinterId(@javax.annotation.Nonnull final String printUsageByPrinterId) {
+        Objects.requireNonNull(printUsageByPrinterId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("printUsageByPrinter%2Did", printUsageByPrinterId);
+        return new PrintUsageByPrinterItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DailyPrintUsageByPrinterRequestBuilder and sets the default values.

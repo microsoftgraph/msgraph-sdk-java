@@ -1,6 +1,7 @@
 package com.microsoft.graph.admin.edge.internetexplorermode.sitelists;
 
 import com.microsoft.graph.admin.edge.internetexplorermode.sitelists.count.CountRequestBuilder;
+import com.microsoft.graph.admin.edge.internetexplorermode.sitelists.item.BrowserSiteListItemRequestBuilder;
 import com.microsoft.graph.models.BrowserSiteList;
 import com.microsoft.graph.models.BrowserSiteListCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the siteLists property of the microsoft.graph.internetExplorerMode entity.
+     * @param browserSiteListId Unique identifier of the item
+     * @return a BrowserSiteListItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public BrowserSiteListItemRequestBuilder byBrowserSiteListId(@javax.annotation.Nonnull final String browserSiteListId) {
+        Objects.requireNonNull(browserSiteListId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("browserSiteList%2Did", browserSiteListId);
+        return new BrowserSiteListItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SiteListsRequestBuilder and sets the default values.

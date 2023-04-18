@@ -1,6 +1,5 @@
 package com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.item;
 
-import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.item.scheduledactionconfigurations.item.DeviceComplianceActionItemItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.item.scheduledactionconfigurations.ScheduledActionConfigurationsRequestBuilder;
 import com.microsoft.graph.models.DeviceComplianceScheduledActionForRule;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -160,18 +159,6 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the scheduledActionConfigurations property of the microsoft.graph.deviceComplianceScheduledActionForRule entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceComplianceActionItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceComplianceActionItemItemRequestBuilder scheduledActionConfigurations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceComplianceActionItem%2Did", id);
-        return new DeviceComplianceActionItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property scheduledActionsForRule for deviceManagement

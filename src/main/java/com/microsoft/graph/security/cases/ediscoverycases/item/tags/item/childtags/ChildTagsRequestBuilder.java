@@ -3,6 +3,7 @@ package com.microsoft.graph.security.cases.ediscoverycases.item.tags.item.childt
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryReviewTagCollectionResponse;
 import com.microsoft.graph.security.cases.ediscoverycases.item.tags.item.childtags.count.CountRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.tags.item.childtags.item.EdiscoveryReviewTagItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -25,6 +26,18 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the childTags property of the microsoft.graph.security.ediscoveryReviewTag entity.
+     * @param ediscoveryReviewTagId1 Unique identifier of the item
+     * @return a EdiscoveryReviewTagItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EdiscoveryReviewTagItemRequestBuilder byEdiscoveryReviewTagId1(@javax.annotation.Nonnull final String ediscoveryReviewTagId1) {
+        Objects.requireNonNull(ediscoveryReviewTagId1);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("ediscoveryReviewTag%2Did1", ediscoveryReviewTagId1);
+        return new EdiscoveryReviewTagItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ChildTagsRequestBuilder and sets the default values.

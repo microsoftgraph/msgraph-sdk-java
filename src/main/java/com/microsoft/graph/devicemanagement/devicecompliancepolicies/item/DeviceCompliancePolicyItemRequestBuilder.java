@@ -2,16 +2,11 @@ package com.microsoft.graph.devicemanagement.devicecompliancepolicies.item;
 
 import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.assign.AssignRequestBuilder;
 import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.assignments.AssignmentsRequestBuilder;
-import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.assignments.item.DeviceCompliancePolicyAssignmentItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.devicesettingstatesummaries.DeviceSettingStateSummariesRequestBuilder;
-import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.devicesettingstatesummaries.item.SettingStateDeviceSummaryItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.devicestatuses.DeviceStatusesRequestBuilder;
-import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.devicestatuses.item.DeviceComplianceDeviceStatusItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.devicestatusoverview.DeviceStatusOverviewRequestBuilder;
 import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduleactionsforrules.ScheduleActionsForRulesRequestBuilder;
-import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.item.DeviceComplianceScheduledActionForRuleItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.ScheduledActionsForRuleRequestBuilder;
-import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.userstatuses.item.DeviceComplianceUserStatusItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.userstatuses.UserStatusesRequestBuilder;
 import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.userstatusoverview.UserStatusOverviewRequestBuilder;
 import com.microsoft.graph.models.DeviceCompliancePolicy;
@@ -80,18 +75,6 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return new UserStatusOverviewRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the assignments property of the microsoft.graph.deviceCompliancePolicy entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceCompliancePolicyAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceCompliancePolicyAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceCompliancePolicyAssignment%2Did", id);
-        return new DeviceCompliancePolicyAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new DeviceCompliancePolicyItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -147,30 +130,6 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceCompliancePolicy entity.
-     * @param id Unique identifier of the item
-     * @return a SettingStateDeviceSummaryItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SettingStateDeviceSummaryItemRequestBuilder deviceSettingStateSummaries(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("settingStateDeviceSummary%2Did", id);
-        return new SettingStateDeviceSummaryItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the deviceStatuses property of the microsoft.graph.deviceCompliancePolicy entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceComplianceDeviceStatusItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceComplianceDeviceStatusItemRequestBuilder deviceStatuses(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceComplianceDeviceStatus%2Did", id);
-        return new DeviceComplianceDeviceStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * The device compliance policies.
@@ -248,18 +207,6 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the scheduledActionsForRule property of the microsoft.graph.deviceCompliancePolicy entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceComplianceScheduledActionForRuleItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceComplianceScheduledActionForRuleItemRequestBuilder scheduledActionsForRule(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceComplianceScheduledActionForRule%2Did", id);
-        return new DeviceComplianceScheduledActionForRuleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property deviceCompliancePolicies for deviceManagement
@@ -348,18 +295,6 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the userStatuses property of the microsoft.graph.deviceCompliancePolicy entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceComplianceUserStatusItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceComplianceUserStatusItemRequestBuilder userStatuses(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceComplianceUserStatus%2Did", id);
-        return new DeviceComplianceUserStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

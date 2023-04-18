@@ -3,28 +3,20 @@ package com.microsoft.graph.groups.item.sites.item;
 import com.microsoft.graph.groups.item.sites.item.analytics.AnalyticsRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.columns.ColumnsRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.contenttypes.ContentTypesRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.contenttypes.item.ContentTypeItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.drives.DrivesRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.drives.item.DriveItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.externalcolumns.ExternalColumnsRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.externalcolumns.item.ColumnDefinitionItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.getapplicablecontenttypesforlistwithlistid.GetApplicableContentTypesForListWithListIdRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.getbypathwithpath.GetByPathWithPathRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.items.item.BaseItemItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.items.ItemsRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.lists.item.ListItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.ListsRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.onenote.OnenoteRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.operations.item.RichLongRunningOperationItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.operations.OperationsRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.permissions.item.PermissionItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.permissions.PermissionsRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.sites.SitesRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.termstore.TermStoreRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.termstores.item.StoreItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.termstores.TermStoresRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Site;
@@ -122,18 +114,6 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
         return new TermStoresRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the columns property of the microsoft.graph.site entity.
-     * @param id Unique identifier of the item
-     * @return a ColumnDefinitionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.groups.item.sites.item.columns.item.ColumnDefinitionItemRequestBuilder columns(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("columnDefinition%2Did", id);
-        return new com.microsoft.graph.groups.item.sites.item.columns.item.ColumnDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new SiteItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -152,42 +132,6 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public SiteItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the contentTypes property of the microsoft.graph.site entity.
-     * @param id Unique identifier of the item
-     * @return a ContentTypeItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ContentTypeItemRequestBuilder contentTypes(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("contentType%2Did", id);
-        return new ContentTypeItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the drives property of the microsoft.graph.site entity.
-     * @param id Unique identifier of the item
-     * @return a DriveItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DriveItemRequestBuilder drives(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("drive%2Did", id);
-        return new DriveItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the externalColumns property of the microsoft.graph.site entity.
-     * @param id Unique identifier of the item
-     * @return a ColumnDefinitionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.groups.item.sites.item.externalcolumns.item.ColumnDefinitionItemRequestBuilder externalColumns(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("columnDefinition%2Did", id);
-        return new com.microsoft.graph.groups.item.sites.item.externalcolumns.item.ColumnDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
@@ -261,42 +205,6 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
         return new GetByPathWithPathRequestBuilder(pathParameters, requestAdapter, path);
     }
     /**
-     * Provides operations to manage the items property of the microsoft.graph.site entity.
-     * @param id Unique identifier of the item
-     * @return a BaseItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public BaseItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("baseItem%2Did", id);
-        return new BaseItemItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the lists property of the microsoft.graph.site entity.
-     * @param id Unique identifier of the item
-     * @return a ListItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ListItemRequestBuilder lists(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("list%2Did", id);
-        return new ListItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the operations property of the microsoft.graph.site entity.
-     * @param id Unique identifier of the item
-     * @return a RichLongRunningOperationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public RichLongRunningOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("richLongRunningOperation%2Did", id);
-        return new RichLongRunningOperationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property sites in groups
      * @param body The request body
      * @return a CompletableFuture of site
@@ -335,42 +243,6 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the permissions property of the microsoft.graph.site entity.
-     * @param id Unique identifier of the item
-     * @return a PermissionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PermissionItemRequestBuilder permissions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("permission%2Did", id);
-        return new PermissionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the sites property of the microsoft.graph.site entity.
-     * @param id Unique identifier of the item
-     * @return a SiteItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SiteItemRequestBuilder sites(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("site%2Did1", id);
-        return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the termStores property of the microsoft.graph.site entity.
-     * @param id Unique identifier of the item
-     * @return a StoreItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public StoreItemRequestBuilder termStores(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("store%2Did", id);
-        return new StoreItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.

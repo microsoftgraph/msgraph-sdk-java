@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UnifiedRbacResourceAction;
 import com.microsoft.graph.models.UnifiedRbacResourceActionCollectionResponse;
 import com.microsoft.graph.rolemanagement.directory.resourcenamespaces.item.resourceactions.count.CountRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.resourcenamespaces.item.resourceactions.item.UnifiedRbacResourceActionItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class ResourceActionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the resourceActions property of the microsoft.graph.unifiedRbacResourceNamespace entity.
+     * @param unifiedRbacResourceActionId Unique identifier of the item
+     * @return a UnifiedRbacResourceActionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UnifiedRbacResourceActionItemRequestBuilder byUnifiedRbacResourceActionId(@javax.annotation.Nonnull final String unifiedRbacResourceActionId) {
+        Objects.requireNonNull(unifiedRbacResourceActionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("unifiedRbacResourceAction%2Did", unifiedRbacResourceActionId);
+        return new UnifiedRbacResourceActionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ResourceActionsRequestBuilder and sets the default values.

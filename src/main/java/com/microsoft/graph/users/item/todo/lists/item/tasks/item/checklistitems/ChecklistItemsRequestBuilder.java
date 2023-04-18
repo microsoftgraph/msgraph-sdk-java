@@ -4,6 +4,7 @@ import com.microsoft.graph.models.ChecklistItem;
 import com.microsoft.graph.models.ChecklistItemCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.todo.lists.item.tasks.item.checklistitems.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.todo.lists.item.tasks.item.checklistitems.item.ChecklistItemItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -28,6 +29,18 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the checklistItems property of the microsoft.graph.todoTask entity.
+     * @param checklistItemId Unique identifier of the item
+     * @return a ChecklistItemItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ChecklistItemItemRequestBuilder byChecklistItemId(@javax.annotation.Nonnull final String checklistItemId) {
+        Objects.requireNonNull(checklistItemId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("checklistItem%2Did", checklistItemId);
+        return new ChecklistItemItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
      * Instantiates a new ChecklistItemsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -48,8 +61,9 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/todo/lists/{todoTaskList%2Did}/tasks/{todoTask%2Did}/checklistItems{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * A collection of checklistItems linked to a task.
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
      * @return a CompletableFuture of ChecklistItemCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/todotask-list-checklistitems?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChecklistItemCollectionResponse> get() {
@@ -66,9 +80,10 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of checklistItems linked to a task.
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ChecklistItemCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/todotask-list-checklistitems?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChecklistItemCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -85,9 +100,10 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to checklistItems for users
+     * Create a new checklistItem object.
      * @param body The request body
      * @return a CompletableFuture of checklistItem
+     * @see <a href="https://docs.microsoft.com/graph/api/todotask-post-checklistitems?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChecklistItem> post(@javax.annotation.Nonnull final ChecklistItem body) {
@@ -104,10 +120,11 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to checklistItems for users
+     * Create a new checklistItem object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of checklistItem
+     * @see <a href="https://docs.microsoft.com/graph/api/todotask-post-checklistitems?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChecklistItem> post(@javax.annotation.Nonnull final ChecklistItem body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -125,7 +142,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of checklistItems linked to a task.
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -133,7 +150,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of checklistItems linked to a task.
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -154,7 +171,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to checklistItems for users
+     * Create a new checklistItem object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -163,7 +180,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to checklistItems for users
+     * Create a new checklistItem object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -186,7 +203,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of checklistItems linked to a task.
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
      */
     public class GetQueryParameters {
         /** Include count of items */

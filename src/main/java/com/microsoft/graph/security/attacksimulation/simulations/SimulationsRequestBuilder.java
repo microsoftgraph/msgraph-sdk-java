@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Simulation;
 import com.microsoft.graph.models.SimulationCollectionResponse;
 import com.microsoft.graph.security.attacksimulation.simulations.count.CountRequestBuilder;
+import com.microsoft.graph.security.attacksimulation.simulations.item.SimulationItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the simulations property of the microsoft.graph.attackSimulationRoot entity.
+     * @param simulationId Unique identifier of the item
+     * @return a SimulationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SimulationItemRequestBuilder bySimulationId(@javax.annotation.Nonnull final String simulationId) {
+        Objects.requireNonNull(simulationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("simulation%2Did", simulationId);
+        return new SimulationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SimulationsRequestBuilder and sets the default values.

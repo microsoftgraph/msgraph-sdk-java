@@ -1,6 +1,7 @@
 package com.microsoft.graph.drives;
 
 import com.microsoft.graph.drives.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.DriveItemRequestBuilder;
 import com.microsoft.graph.models.Drive;
 import com.microsoft.graph.models.DriveCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -28,6 +29,18 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the collection of drive entities.
+     * @param driveId Unique identifier of the item
+     * @return a DriveItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DriveItemRequestBuilder byDriveId(@javax.annotation.Nonnull final String driveId) {
+        Objects.requireNonNull(driveId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("drive%2Did", driveId);
+        return new DriveItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
      * Instantiates a new DrivesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -48,7 +61,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
+     * Get entities from drives
      * @return a CompletableFuture of DriveCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -66,7 +79,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
+     * Get entities from drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DriveCollectionResponse
      */
@@ -125,7 +138,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
+     * Get entities from drives
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -133,7 +146,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
+     * Get entities from drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -186,7 +199,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
+     * Get entities from drives
      */
     public class GetQueryParameters {
         /** Include count of items */

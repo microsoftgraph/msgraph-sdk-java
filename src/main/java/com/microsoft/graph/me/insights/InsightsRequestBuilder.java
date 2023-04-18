@@ -1,10 +1,7 @@
 package com.microsoft.graph.me.insights;
 
-import com.microsoft.graph.me.insights.shared.item.SharedInsightItemRequestBuilder;
 import com.microsoft.graph.me.insights.shared.SharedRequestBuilder;
-import com.microsoft.graph.me.insights.trending.item.TrendingItemRequestBuilder;
 import com.microsoft.graph.me.insights.trending.TrendingRequestBuilder;
-import com.microsoft.graph.me.insights.used.item.UsedInsightItemRequestBuilder;
 import com.microsoft.graph.me.insights.used.UsedRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OfficeGraphInsights;
@@ -176,18 +173,6 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity.
-     * @param id Unique identifier of the item
-     * @return a SharedInsightItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SharedInsightItemRequestBuilder shared(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("sharedInsight%2Did", id);
-        return new SharedInsightItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Delete navigation property insights for me
      * @return a RequestInformation
      */
@@ -274,30 +259,6 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the trending property of the microsoft.graph.officeGraphInsights entity.
-     * @param id Unique identifier of the item
-     * @return a TrendingItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TrendingItemRequestBuilder trending(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("trending%2Did", id);
-        return new TrendingItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity.
-     * @param id Unique identifier of the item
-     * @return a UsedInsightItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UsedInsightItemRequestBuilder used(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("usedInsight%2Did", id);
-        return new UsedInsightItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

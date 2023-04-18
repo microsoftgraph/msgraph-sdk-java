@@ -4,6 +4,7 @@ import com.microsoft.graph.models.LongRunningOperation;
 import com.microsoft.graph.models.LongRunningOperationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.authentication.operations.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.authentication.operations.item.LongRunningOperationItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.authentication entity.
+     * @param longRunningOperationId Unique identifier of the item
+     * @return a LongRunningOperationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public LongRunningOperationItemRequestBuilder byLongRunningOperationId(@javax.annotation.Nonnull final String longRunningOperationId) {
+        Objects.requireNonNull(longRunningOperationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("longRunningOperation%2Did", longRunningOperationId);
+        return new LongRunningOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.

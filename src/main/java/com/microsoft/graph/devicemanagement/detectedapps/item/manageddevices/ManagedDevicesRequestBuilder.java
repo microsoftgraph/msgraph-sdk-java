@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.detectedapps.item.manageddevices;
 
 import com.microsoft.graph.devicemanagement.detectedapps.item.manageddevices.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.detectedapps.item.manageddevices.item.ManagedDeviceItemRequestBuilder;
 import com.microsoft.graph.models.ManagedDeviceCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the managedDevices property of the microsoft.graph.detectedApp entity.
+     * @param managedDeviceId Unique identifier of the item
+     * @return a ManagedDeviceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedDeviceItemRequestBuilder byManagedDeviceId(@javax.annotation.Nonnull final String managedDeviceId) {
+        Objects.requireNonNull(managedDeviceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedDevice%2Did", managedDeviceId);
+        return new ManagedDeviceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ManagedDevicesRequestBuilder and sets the default values.

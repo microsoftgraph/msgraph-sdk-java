@@ -3,46 +3,32 @@ package com.microsoft.graph.users.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.User;
 import com.microsoft.graph.users.item.activities.ActivitiesRequestBuilder;
-import com.microsoft.graph.users.item.activities.item.UserActivityItemRequestBuilder;
 import com.microsoft.graph.users.item.agreementacceptances.AgreementAcceptancesRequestBuilder;
-import com.microsoft.graph.users.item.agreementacceptances.item.AgreementAcceptanceItemRequestBuilder;
 import com.microsoft.graph.users.item.approleassignments.AppRoleAssignmentsRequestBuilder;
-import com.microsoft.graph.users.item.approleassignments.item.AppRoleAssignmentItemRequestBuilder;
 import com.microsoft.graph.users.item.assignlicense.AssignLicenseRequestBuilder;
 import com.microsoft.graph.users.item.authentication.AuthenticationRequestBuilder;
 import com.microsoft.graph.users.item.calendar.CalendarRequestBuilder;
 import com.microsoft.graph.users.item.calendargroups.CalendarGroupsRequestBuilder;
-import com.microsoft.graph.users.item.calendargroups.item.CalendarGroupItemRequestBuilder;
 import com.microsoft.graph.users.item.calendars.CalendarsRequestBuilder;
-import com.microsoft.graph.users.item.calendars.item.CalendarItemRequestBuilder;
 import com.microsoft.graph.users.item.calendarview.CalendarViewRequestBuilder;
-import com.microsoft.graph.users.item.calendarview.item.EventItemRequestBuilder;
 import com.microsoft.graph.users.item.changepassword.ChangePasswordRequestBuilder;
 import com.microsoft.graph.users.item.chats.ChatsRequestBuilder;
-import com.microsoft.graph.users.item.chats.item.ChatItemRequestBuilder;
 import com.microsoft.graph.users.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
 import com.microsoft.graph.users.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import com.microsoft.graph.users.item.contactfolders.ContactFoldersRequestBuilder;
-import com.microsoft.graph.users.item.contactfolders.item.ContactFolderItemRequestBuilder;
 import com.microsoft.graph.users.item.contacts.ContactsRequestBuilder;
-import com.microsoft.graph.users.item.contacts.item.ContactItemRequestBuilder;
 import com.microsoft.graph.users.item.createdobjects.CreatedObjectsRequestBuilder;
-import com.microsoft.graph.users.item.createdobjects.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.users.item.devicemanagementtroubleshootingevents.DeviceManagementTroubleshootingEventsRequestBuilder;
-import com.microsoft.graph.users.item.devicemanagementtroubleshootingevents.item.DeviceManagementTroubleshootingEventItemRequestBuilder;
 import com.microsoft.graph.users.item.directreports.DirectReportsRequestBuilder;
 import com.microsoft.graph.users.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.users.item.drives.DrivesRequestBuilder;
-import com.microsoft.graph.users.item.drives.item.DriveItemRequestBuilder;
 import com.microsoft.graph.users.item.events.EventsRequestBuilder;
 import com.microsoft.graph.users.item.exportdeviceandappmanagementdata.ExportDeviceAndAppManagementDataRequestBuilder;
 import com.microsoft.graph.users.item.exportdeviceandappmanagementdatawithskipwithtop.ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder;
 import com.microsoft.graph.users.item.exportpersonaldata.ExportPersonalDataRequestBuilder;
 import com.microsoft.graph.users.item.extensions.ExtensionsRequestBuilder;
-import com.microsoft.graph.users.item.extensions.item.ExtensionItemRequestBuilder;
 import com.microsoft.graph.users.item.findmeetingtimes.FindMeetingTimesRequestBuilder;
 import com.microsoft.graph.users.item.followedsites.FollowedSitesRequestBuilder;
-import com.microsoft.graph.users.item.followedsites.item.SiteItemRequestBuilder;
 import com.microsoft.graph.users.item.getmailtips.GetMailTipsRequestBuilder;
 import com.microsoft.graph.users.item.getmanagedappdiagnosticstatuses.GetManagedAppDiagnosticStatusesRequestBuilder;
 import com.microsoft.graph.users.item.getmanagedapppolicies.GetManagedAppPoliciesRequestBuilder;
@@ -51,32 +37,23 @@ import com.microsoft.graph.users.item.getmembergroups.GetMemberGroupsRequestBuil
 import com.microsoft.graph.users.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.users.item.inferenceclassification.InferenceClassificationRequestBuilder;
 import com.microsoft.graph.users.item.insights.InsightsRequestBuilder;
-import com.microsoft.graph.users.item.joinedteams.item.TeamItemRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.JoinedTeamsRequestBuilder;
-import com.microsoft.graph.users.item.licensedetails.item.LicenseDetailsItemRequestBuilder;
 import com.microsoft.graph.users.item.licensedetails.LicenseDetailsRequestBuilder;
-import com.microsoft.graph.users.item.mailfolders.item.MailFolderItemRequestBuilder;
+import com.microsoft.graph.users.item.mailboxsettings.MailboxSettingsRequestBuilder;
 import com.microsoft.graph.users.item.mailfolders.MailFoldersRequestBuilder;
-import com.microsoft.graph.users.item.managedappregistrations.item.ManagedAppRegistrationItemRequestBuilder;
 import com.microsoft.graph.users.item.managedappregistrations.ManagedAppRegistrationsRequestBuilder;
-import com.microsoft.graph.users.item.manageddevices.item.ManagedDeviceItemRequestBuilder;
 import com.microsoft.graph.users.item.manageddevices.ManagedDevicesRequestBuilder;
 import com.microsoft.graph.users.item.manager.ManagerRequestBuilder;
 import com.microsoft.graph.users.item.memberof.MemberOfRequestBuilder;
-import com.microsoft.graph.users.item.messages.item.MessageItemRequestBuilder;
 import com.microsoft.graph.users.item.messages.MessagesRequestBuilder;
-import com.microsoft.graph.users.item.oauth2permissiongrants.item.OAuth2PermissionGrantItemRequestBuilder;
 import com.microsoft.graph.users.item.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
 import com.microsoft.graph.users.item.onenote.OnenoteRequestBuilder;
-import com.microsoft.graph.users.item.onlinemeetings.item.OnlineMeetingItemRequestBuilder;
 import com.microsoft.graph.users.item.onlinemeetings.OnlineMeetingsRequestBuilder;
 import com.microsoft.graph.users.item.outlook.OutlookRequestBuilder;
 import com.microsoft.graph.users.item.owneddevices.OwnedDevicesRequestBuilder;
 import com.microsoft.graph.users.item.ownedobjects.OwnedObjectsRequestBuilder;
-import com.microsoft.graph.users.item.people.item.PersonItemRequestBuilder;
 import com.microsoft.graph.users.item.people.PeopleRequestBuilder;
 import com.microsoft.graph.users.item.photo.PhotoRequestBuilder;
-import com.microsoft.graph.users.item.photos.item.ProfilePhotoItemRequestBuilder;
 import com.microsoft.graph.users.item.photos.PhotosRequestBuilder;
 import com.microsoft.graph.users.item.planner.PlannerRequestBuilder;
 import com.microsoft.graph.users.item.presence.PresenceRequestBuilder;
@@ -86,7 +63,6 @@ import com.microsoft.graph.users.item.removealldevicesfrommanagement.RemoveAllDe
 import com.microsoft.graph.users.item.reprocesslicenseassignment.ReprocessLicenseAssignmentRequestBuilder;
 import com.microsoft.graph.users.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.users.item.revokesigninsessions.RevokeSignInSessionsRequestBuilder;
-import com.microsoft.graph.users.item.scopedrolememberof.item.ScopedRoleMembershipItemRequestBuilder;
 import com.microsoft.graph.users.item.scopedrolememberof.ScopedRoleMemberOfRequestBuilder;
 import com.microsoft.graph.users.item.sendmail.SendMailRequestBuilder;
 import com.microsoft.graph.users.item.settings.SettingsRequestBuilder;
@@ -293,6 +269,11 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     public LicenseDetailsRequestBuilder licenseDetails() {
         return new LicenseDetailsRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The mailboxSettings property */
+    @javax.annotation.Nonnull
+    public MailboxSettingsRequestBuilder mailboxSettings() {
+        return new MailboxSettingsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Provides operations to manage the mailFolders property of the microsoft.graph.user entity. */
     @javax.annotation.Nonnull
     public MailFoldersRequestBuilder mailFolders() {
@@ -444,90 +425,6 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new WipeManagedAppRegistrationsByDeviceTagRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the activities property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a UserActivityItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UserActivityItemRequestBuilder activities(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("userActivity%2Did", id);
-        return new UserActivityItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the agreementAcceptances property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a AgreementAcceptanceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AgreementAcceptanceItemRequestBuilder agreementAcceptances(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("agreementAcceptance%2Did", id);
-        return new AgreementAcceptanceItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the appRoleAssignments property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a AppRoleAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AppRoleAssignmentItemRequestBuilder appRoleAssignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("appRoleAssignment%2Did", id);
-        return new AppRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the calendarGroups property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a CalendarGroupItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public CalendarGroupItemRequestBuilder calendarGroups(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("calendarGroup%2Did", id);
-        return new CalendarGroupItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the calendars property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a CalendarItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public CalendarItemRequestBuilder calendars(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("calendar%2Did", id);
-        return new CalendarItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the calendarView property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a EventItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.users.item.calendarview.item.EventItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("event%2Did", id);
-        return new com.microsoft.graph.users.item.calendarview.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the chats property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a ChatItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ChatItemRequestBuilder chats(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("chat%2Did", id);
-        return new ChatItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new UserItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -546,42 +443,6 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public UserItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the contactFolders property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a ContactFolderItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ContactFolderItemRequestBuilder contactFolders(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("contactFolder%2Did", id);
-        return new ContactFolderItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the contacts property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a ContactItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ContactItemRequestBuilder contacts(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("contact%2Did", id);
-        return new ContactItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the createdObjects property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.users.item.createdobjects.item.DirectoryObjectItemRequestBuilder createdObjects(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.users.item.createdobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
@@ -623,54 +484,6 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the deviceManagementTroubleshootingEvents property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceManagementTroubleshootingEventItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceManagementTroubleshootingEventItemRequestBuilder deviceManagementTroubleshootingEvents(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceManagementTroubleshootingEvent%2Did", id);
-        return new DeviceManagementTroubleshootingEventItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the directReports property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.users.item.directreports.item.DirectoryObjectItemRequestBuilder directReports(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.users.item.directreports.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the drives property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a DriveItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DriveItemRequestBuilder drives(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("drive%2Did", id);
-        return new DriveItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the events property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a EventItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.users.item.events.item.EventItemRequestBuilder events(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("event%2Did", id);
-        return new com.microsoft.graph.users.item.events.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Provides operations to call the exportDeviceAndAppManagementData method.
      * @param skip Usage: skip={skip}
      * @param top Usage: top={top}
@@ -681,30 +494,6 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(skip);
         Objects.requireNonNull(top);
         return new ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder(pathParameters, requestAdapter, skip, top);
-    }
-    /**
-     * Provides operations to manage the extensions property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a ExtensionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("extension%2Did", id);
-        return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the followedSites property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a SiteItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SiteItemRequestBuilder followedSites(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("site%2Did", id);
-        return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Retrieve the properties and relationships of user object.
@@ -744,138 +533,6 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the joinedTeams property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a TeamItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TeamItemRequestBuilder joinedTeams(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("team%2Did", id);
-        return new TeamItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the licenseDetails property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a LicenseDetailsItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public LicenseDetailsItemRequestBuilder licenseDetails(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("licenseDetails%2Did", id);
-        return new LicenseDetailsItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the mailFolders property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a MailFolderItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MailFolderItemRequestBuilder mailFolders(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("mailFolder%2Did", id);
-        return new MailFolderItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the managedAppRegistrations property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a ManagedAppRegistrationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ManagedAppRegistrationItemRequestBuilder managedAppRegistrations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("managedAppRegistration%2Did", id);
-        return new ManagedAppRegistrationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the managedDevices property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a ManagedDeviceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ManagedDeviceItemRequestBuilder managedDevices(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("managedDevice%2Did", id);
-        return new ManagedDeviceItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the memberOf property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.users.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.users.item.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the messages property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a MessageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MessageItemRequestBuilder messages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("message%2Did", id);
-        return new MessageItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the oauth2PermissionGrants property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a OAuth2PermissionGrantItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public OAuth2PermissionGrantItemRequestBuilder oauth2PermissionGrants(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("oAuth2PermissionGrant%2Did", id);
-        return new OAuth2PermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the onlineMeetings property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a OnlineMeetingItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public OnlineMeetingItemRequestBuilder onlineMeetings(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("onlineMeeting%2Did", id);
-        return new OnlineMeetingItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the ownedDevices property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.users.item.owneddevices.item.DirectoryObjectItemRequestBuilder ownedDevices(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.users.item.owneddevices.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the ownedObjects property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.users.item.ownedobjects.item.DirectoryObjectItemRequestBuilder ownedObjects(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.users.item.ownedobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
@@ -920,42 +577,6 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the people property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a PersonItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PersonItemRequestBuilder people(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("person%2Did", id);
-        return new PersonItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the photos property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a ProfilePhotoItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ProfilePhotoItemRequestBuilder photos(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("profilePhoto%2Did", id);
-        return new ProfilePhotoItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the registeredDevices property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.users.item.registereddevices.item.DirectoryObjectItemRequestBuilder registeredDevices(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.users.item.registereddevices.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Provides operations to call the reminderView method.
      * @param EndDateTime Usage: EndDateTime='{EndDateTime}'
      * @param StartDateTime Usage: StartDateTime='{StartDateTime}'
@@ -966,18 +587,6 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(startDateTime);
         return new ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
-    }
-    /**
-     * Provides operations to manage the scopedRoleMemberOf property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a ScopedRoleMembershipItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ScopedRoleMembershipItemRequestBuilder scopedRoleMemberOf(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("scopedRoleMembership%2Did", id);
-        return new ScopedRoleMembershipItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
@@ -1066,18 +675,6 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.user entity.
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.users.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new com.microsoft.graph.users.item.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

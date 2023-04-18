@@ -3,6 +3,7 @@ package com.microsoft.graph.identityprotection.riskyserviceprincipals;
 import com.microsoft.graph.identityprotection.riskyserviceprincipals.confirmcompromised.ConfirmCompromisedRequestBuilder;
 import com.microsoft.graph.identityprotection.riskyserviceprincipals.count.CountRequestBuilder;
 import com.microsoft.graph.identityprotection.riskyserviceprincipals.dismiss.DismissRequestBuilder;
+import com.microsoft.graph.identityprotection.riskyserviceprincipals.item.RiskyServicePrincipalItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.RiskyServicePrincipal;
 import com.microsoft.graph.models.RiskyServicePrincipalCollectionResponse;
@@ -38,6 +39,18 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public DismissRequestBuilder dismiss() {
         return new DismissRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the riskyServicePrincipals property of the microsoft.graph.identityProtectionRoot entity.
+     * @param riskyServicePrincipalId Unique identifier of the item
+     * @return a RiskyServicePrincipalItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public RiskyServicePrincipalItemRequestBuilder byRiskyServicePrincipalId(@javax.annotation.Nonnull final String riskyServicePrincipalId) {
+        Objects.requireNonNull(riskyServicePrincipalId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("riskyServicePrincipal%2Did", riskyServicePrincipalId);
+        return new RiskyServicePrincipalItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RiskyServicePrincipalsRequestBuilder and sets the default values.

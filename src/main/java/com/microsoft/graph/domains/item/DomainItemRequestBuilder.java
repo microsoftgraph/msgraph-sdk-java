@@ -1,12 +1,9 @@
 package com.microsoft.graph.domains.item;
 
 import com.microsoft.graph.domains.item.domainnamereferences.DomainNameReferencesRequestBuilder;
-import com.microsoft.graph.domains.item.domainnamereferences.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.domains.item.federationconfiguration.FederationConfigurationRequestBuilder;
-import com.microsoft.graph.domains.item.federationconfiguration.item.InternalDomainFederationItemRequestBuilder;
 import com.microsoft.graph.domains.item.forcedelete.ForceDeleteRequestBuilder;
 import com.microsoft.graph.domains.item.promote.PromoteRequestBuilder;
-import com.microsoft.graph.domains.item.serviceconfigurationrecords.item.DomainDnsRecordItemRequestBuilder;
 import com.microsoft.graph.domains.item.serviceconfigurationrecords.ServiceConfigurationRecordsRequestBuilder;
 import com.microsoft.graph.domains.item.verificationdnsrecords.VerificationDnsRecordsRequestBuilder;
 import com.microsoft.graph.domains.item.verify.VerifyRequestBuilder;
@@ -125,30 +122,6 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the domainNameReferences property of the microsoft.graph.domain entity.
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DirectoryObjectItemRequestBuilder domainNameReferences(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the federationConfiguration property of the microsoft.graph.domain entity.
-     * @param id Unique identifier of the item
-     * @return a InternalDomainFederationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public InternalDomainFederationItemRequestBuilder federationConfiguration(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("internalDomainFederation%2Did", id);
-        return new InternalDomainFederationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Retrieve the properties and relationships of domain object.
      * @return a CompletableFuture of domain
      * @see <a href="https://docs.microsoft.com/graph/api/domain-get?view=graph-rest-1.0">Find more info here</a>
@@ -228,18 +201,6 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the serviceConfigurationRecords property of the microsoft.graph.domain entity.
-     * @param id Unique identifier of the item
-     * @return a DomainDnsRecordItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.domains.item.serviceconfigurationrecords.item.DomainDnsRecordItemRequestBuilder serviceConfigurationRecords(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("domainDnsRecord%2Did", id);
-        return new com.microsoft.graph.domains.item.serviceconfigurationrecords.item.DomainDnsRecordItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Deletes a domain from a tenant.
@@ -328,18 +289,6 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the verificationDnsRecords property of the microsoft.graph.domain entity.
-     * @param id Unique identifier of the item
-     * @return a DomainDnsRecordItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.domains.item.verificationdnsrecords.item.DomainDnsRecordItemRequestBuilder verificationDnsRecords(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("domainDnsRecord%2Did", id);
-        return new com.microsoft.graph.domains.item.verificationdnsrecords.item.DomainDnsRecordItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

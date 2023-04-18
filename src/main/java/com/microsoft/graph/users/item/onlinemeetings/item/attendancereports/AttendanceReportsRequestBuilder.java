@@ -4,6 +4,7 @@ import com.microsoft.graph.models.MeetingAttendanceReport;
 import com.microsoft.graph.models.MeetingAttendanceReportCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.onlinemeetings.item.attendancereports.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.onlinemeetings.item.attendancereports.item.MeetingAttendanceReportItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeeting entity.
+     * @param meetingAttendanceReportId Unique identifier of the item
+     * @return a MeetingAttendanceReportItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public MeetingAttendanceReportItemRequestBuilder byMeetingAttendanceReportId(@javax.annotation.Nonnull final String meetingAttendanceReportId) {
+        Objects.requireNonNull(meetingAttendanceReportId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("meetingAttendanceReport%2Did", meetingAttendanceReportId);
+        return new MeetingAttendanceReportItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AttendanceReportsRequestBuilder and sets the default values.

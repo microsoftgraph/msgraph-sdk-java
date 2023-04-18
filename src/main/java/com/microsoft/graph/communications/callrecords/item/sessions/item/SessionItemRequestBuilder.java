@@ -1,6 +1,5 @@
 package com.microsoft.graph.communications.callrecords.item.sessions.item;
 
-import com.microsoft.graph.communications.callrecords.item.sessions.item.segments.item.SegmentItemRequestBuilder;
 import com.microsoft.graph.communications.callrecords.item.sessions.item.segments.SegmentsRequestBuilder;
 import com.microsoft.graph.models.callrecords.Session;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -160,18 +159,6 @@ public class SessionItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the segments property of the microsoft.graph.callRecords.session entity.
-     * @param id Unique identifier of the item
-     * @return a SegmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SegmentItemRequestBuilder segments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("segment%2Did", id);
-        return new SegmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property sessions for communications

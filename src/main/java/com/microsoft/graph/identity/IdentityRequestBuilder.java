@@ -1,13 +1,9 @@
 package com.microsoft.graph.identity;
 
 import com.microsoft.graph.identity.apiconnectors.ApiConnectorsRequestBuilder;
-import com.microsoft.graph.identity.apiconnectors.item.IdentityApiConnectorItemRequestBuilder;
 import com.microsoft.graph.identity.b2xuserflows.B2xUserFlowsRequestBuilder;
-import com.microsoft.graph.identity.b2xuserflows.item.B2xIdentityUserFlowItemRequestBuilder;
 import com.microsoft.graph.identity.conditionalaccess.ConditionalAccessRequestBuilder;
 import com.microsoft.graph.identity.identityproviders.IdentityProvidersRequestBuilder;
-import com.microsoft.graph.identity.identityproviders.item.IdentityProviderBaseItemRequestBuilder;
-import com.microsoft.graph.identity.userflowattributes.item.IdentityUserFlowAttributeItemRequestBuilder;
 import com.microsoft.graph.identity.userflowattributes.UserFlowAttributesRequestBuilder;
 import com.microsoft.graph.models.IdentityContainer;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -53,30 +49,6 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public UserFlowAttributesRequestBuilder userFlowAttributes() {
         return new UserFlowAttributesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the apiConnectors property of the microsoft.graph.identityContainer entity.
-     * @param id Unique identifier of the item
-     * @return a IdentityApiConnectorItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public IdentityApiConnectorItemRequestBuilder apiConnectors(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("identityApiConnector%2Did", id);
-        return new IdentityApiConnectorItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the b2xUserFlows property of the microsoft.graph.identityContainer entity.
-     * @param id Unique identifier of the item
-     * @return a B2xIdentityUserFlowItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public B2xIdentityUserFlowItemRequestBuilder b2xUserFlows(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("b2xIdentityUserFlow%2Did", id);
-        return new B2xIdentityUserFlowItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new IdentityRequestBuilder and sets the default values.
@@ -134,18 +106,6 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the identityProviders property of the microsoft.graph.identityContainer entity.
-     * @param id Unique identifier of the item
-     * @return a IdentityProviderBaseItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public IdentityProviderBaseItemRequestBuilder identityProviders(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("identityProviderBase%2Did", id);
-        return new IdentityProviderBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update identity
@@ -247,18 +207,6 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the userFlowAttributes property of the microsoft.graph.identityContainer entity.
-     * @param id Unique identifier of the item
-     * @return a IdentityUserFlowAttributeItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public IdentityUserFlowAttributeItemRequestBuilder userFlowAttributes(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("identityUserFlowAttribute%2Did", id);
-        return new IdentityUserFlowAttributeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get identity

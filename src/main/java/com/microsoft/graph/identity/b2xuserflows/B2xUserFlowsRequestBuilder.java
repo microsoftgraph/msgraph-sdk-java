@@ -1,6 +1,7 @@
 package com.microsoft.graph.identity.b2xuserflows;
 
 import com.microsoft.graph.identity.b2xuserflows.count.CountRequestBuilder;
+import com.microsoft.graph.identity.b2xuserflows.item.B2xIdentityUserFlowItemRequestBuilder;
 import com.microsoft.graph.models.B2xIdentityUserFlow;
 import com.microsoft.graph.models.B2xIdentityUserFlowCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the b2xUserFlows property of the microsoft.graph.identityContainer entity.
+     * @param b2xIdentityUserFlowId Unique identifier of the item
+     * @return a B2xIdentityUserFlowItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public B2xIdentityUserFlowItemRequestBuilder byB2xIdentityUserFlowId(@javax.annotation.Nonnull final String b2xIdentityUserFlowId) {
+        Objects.requireNonNull(b2xIdentityUserFlowId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("b2xIdentityUserFlow%2Did", b2xIdentityUserFlowId);
+        return new B2xIdentityUserFlowItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new B2xUserFlowsRequestBuilder and sets the default values.

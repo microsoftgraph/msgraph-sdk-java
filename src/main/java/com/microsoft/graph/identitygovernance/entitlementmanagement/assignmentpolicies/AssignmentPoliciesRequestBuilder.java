@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentpolicies;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentpolicies.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentpolicies.item.AccessPackageAssignmentPolicyItemRequestBuilder;
 import com.microsoft.graph.models.AccessPackageAssignmentPolicy;
 import com.microsoft.graph.models.AccessPackageAssignmentPolicyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class AssignmentPoliciesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the assignmentPolicies property of the microsoft.graph.entitlementManagement entity.
+     * @param accessPackageAssignmentPolicyId Unique identifier of the item
+     * @return a AccessPackageAssignmentPolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AccessPackageAssignmentPolicyItemRequestBuilder byAccessPackageAssignmentPolicyId(@javax.annotation.Nonnull final String accessPackageAssignmentPolicyId) {
+        Objects.requireNonNull(accessPackageAssignmentPolicyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("accessPackageAssignmentPolicy%2Did", accessPackageAssignmentPolicyId);
+        return new AccessPackageAssignmentPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AssignmentPoliciesRequestBuilder and sets the default values.

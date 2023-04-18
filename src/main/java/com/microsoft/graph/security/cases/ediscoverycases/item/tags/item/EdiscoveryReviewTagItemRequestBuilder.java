@@ -33,18 +33,6 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         return new ParentRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the childTags property of the microsoft.graph.security.ediscoveryReviewTag entity.
-     * @param id Unique identifier of the item
-     * @return a EdiscoveryReviewTagItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EdiscoveryReviewTagItemRequestBuilder childTags(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("ediscoveryReviewTag%2Did1", id);
-        return new EdiscoveryReviewTagItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new EdiscoveryReviewTagItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.

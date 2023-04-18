@@ -1,7 +1,6 @@
 package com.microsoft.graph.identitygovernance.appconsent;
 
 import com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.AppConsentRequestsRequestBuilder;
-import com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.AppConsentRequestItemRequestBuilder;
 import com.microsoft.graph.models.AppConsentApprovalRoute;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -26,18 +25,6 @@ public class AppConsentRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public AppConsentRequestsRequestBuilder appConsentRequests() {
         return new AppConsentRequestsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the appConsentRequests property of the microsoft.graph.appConsentApprovalRoute entity.
-     * @param id Unique identifier of the item
-     * @return a AppConsentRequestItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AppConsentRequestItemRequestBuilder appConsentRequests(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("appConsentRequest%2Did", id);
-        return new AppConsentRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AppConsentRequestBuilder and sets the default values.

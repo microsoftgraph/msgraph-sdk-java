@@ -5,6 +5,7 @@ import com.microsoft.graph.models.MailFolderCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.mailfolders.item.childfolders.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.mailfolders.item.childfolders.delta.DeltaRequestBuilder;
+import com.microsoft.graph.users.item.mailfolders.item.childfolders.item.MailFolderItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -32,6 +33,18 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the childFolders property of the microsoft.graph.mailFolder entity.
+     * @param mailFolderId1 Unique identifier of the item
+     * @return a MailFolderItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public MailFolderItemRequestBuilder byMailFolderId1(@javax.annotation.Nonnull final String mailFolderId1) {
+        Objects.requireNonNull(mailFolderId1);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("mailFolder%2Did1", mailFolderId1);
+        return new MailFolderItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ChildFoldersRequestBuilder and sets the default values.
@@ -93,10 +106,10 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the **isHidden** property to `true` on creation.
+     * Create a new mailSearchFolder in the specified user's mailbox.
      * @param body The request body
      * @return a CompletableFuture of mailFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-post-childfolders?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/mailsearchfolder-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> post(@javax.annotation.Nonnull final MailFolder body) {
@@ -113,11 +126,11 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the **isHidden** property to `true` on creation.
+     * Create a new mailSearchFolder in the specified user's mailbox.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mailFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-post-childfolders?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/mailsearchfolder-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> post(@javax.annotation.Nonnull final MailFolder body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -164,7 +177,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the **isHidden** property to `true` on creation.
+     * Create a new mailSearchFolder in the specified user's mailbox.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -173,7 +186,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the **isHidden** property to `true` on creation.
+     * Create a new mailSearchFolder in the specified user's mailbox.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

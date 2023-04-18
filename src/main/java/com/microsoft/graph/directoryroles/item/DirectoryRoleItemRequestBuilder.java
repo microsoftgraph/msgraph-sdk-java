@@ -4,10 +4,8 @@ import com.microsoft.graph.directoryroles.item.checkmembergroups.CheckMemberGrou
 import com.microsoft.graph.directoryroles.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import com.microsoft.graph.directoryroles.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.directoryroles.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import com.microsoft.graph.directoryroles.item.members.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.directoryroles.item.members.MembersRequestBuilder;
 import com.microsoft.graph.directoryroles.item.restore.RestoreRequestBuilder;
-import com.microsoft.graph.directoryroles.item.scopedmembers.item.ScopedRoleMembershipItemRequestBuilder;
 import com.microsoft.graph.directoryroles.item.scopedmembers.ScopedMembersRequestBuilder;
 import com.microsoft.graph.models.DirectoryRole;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -161,18 +159,6 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.directoryRoles.item.members.item collection
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DirectoryObjectItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update entity in directoryRoles
      * @param body The request body
      * @return a CompletableFuture of directoryRole
@@ -211,18 +197,6 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the scopedMembers property of the microsoft.graph.directoryRole entity.
-     * @param id Unique identifier of the item
-     * @return a ScopedRoleMembershipItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ScopedRoleMembershipItemRequestBuilder scopedMembers(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("scopedRoleMembership%2Did", id);
-        return new ScopedRoleMembershipItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete entity from directoryRoles

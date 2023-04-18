@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.inreplyto.multivalueextendedproperties;
 
 import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.inreplyto.multivalueextendedproperties.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.inreplyto.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.models.MultiValueLegacyExtendedProperty;
 import com.microsoft.graph.models.MultiValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class MultiValueExtendedPropertiesRequestBuilder extends BaseRequestBuild
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.post entity.
+     * @param multiValueLegacyExtendedPropertyId Unique identifier of the item
+     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public MultiValueLegacyExtendedPropertyItemRequestBuilder byMultiValueLegacyExtendedPropertyId(@javax.annotation.Nonnull final String multiValueLegacyExtendedPropertyId) {
+        Objects.requireNonNull(multiValueLegacyExtendedPropertyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("multiValueLegacyExtendedProperty%2Did", multiValueLegacyExtendedPropertyId);
+        return new MultiValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MultiValueExtendedPropertiesRequestBuilder and sets the default values.

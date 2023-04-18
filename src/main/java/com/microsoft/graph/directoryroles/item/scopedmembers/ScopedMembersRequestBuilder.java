@@ -1,6 +1,7 @@
 package com.microsoft.graph.directoryroles.item.scopedmembers;
 
 import com.microsoft.graph.directoryroles.item.scopedmembers.count.CountRequestBuilder;
+import com.microsoft.graph.directoryroles.item.scopedmembers.item.ScopedRoleMembershipItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ScopedRoleMembership;
 import com.microsoft.graph.models.ScopedRoleMembershipCollectionResponse;
@@ -26,6 +27,18 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the scopedMembers property of the microsoft.graph.directoryRole entity.
+     * @param scopedRoleMembershipId Unique identifier of the item
+     * @return a ScopedRoleMembershipItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ScopedRoleMembershipItemRequestBuilder byScopedRoleMembershipId(@javax.annotation.Nonnull final String scopedRoleMembershipId) {
+        Objects.requireNonNull(scopedRoleMembershipId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("scopedRoleMembership%2Did", scopedRoleMembershipId);
+        return new ScopedRoleMembershipItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ScopedMembersRequestBuilder and sets the default values.

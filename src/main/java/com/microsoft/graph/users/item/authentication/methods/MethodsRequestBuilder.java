@@ -4,6 +4,7 @@ import com.microsoft.graph.models.AuthenticationMethod;
 import com.microsoft.graph.models.AuthenticationMethodCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.authentication.methods.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.authentication.methods.item.AuthenticationMethodItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class MethodsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the methods property of the microsoft.graph.authentication entity.
+     * @param authenticationMethodId Unique identifier of the item
+     * @return a AuthenticationMethodItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AuthenticationMethodItemRequestBuilder byAuthenticationMethodId(@javax.annotation.Nonnull final String authenticationMethodId) {
+        Objects.requireNonNull(authenticationMethodId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("authenticationMethod%2Did", authenticationMethodId);
+        return new AuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MethodsRequestBuilder and sets the default values.

@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.assignmentpolicies.item.questions;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.assignmentpolicies.item.questions.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.assignmentpolicies.item.questions.item.AccessPackageQuestionItemRequestBuilder;
 import com.microsoft.graph.models.AccessPackageQuestion;
 import com.microsoft.graph.models.AccessPackageQuestionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the questions property of the microsoft.graph.accessPackageAssignmentPolicy entity.
+     * @param accessPackageQuestionId Unique identifier of the item
+     * @return a AccessPackageQuestionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AccessPackageQuestionItemRequestBuilder byAccessPackageQuestionId(@javax.annotation.Nonnull final String accessPackageQuestionId) {
+        Objects.requireNonNull(accessPackageQuestionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("accessPackageQuestion%2Did", accessPackageQuestionId);
+        return new AccessPackageQuestionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new QuestionsRequestBuilder and sets the default values.

@@ -3,6 +3,7 @@ package com.microsoft.graph.devices.item.transitivememberof;
 import com.microsoft.graph.devices.item.transitivememberof.count.CountRequestBuilder;
 import com.microsoft.graph.devices.item.transitivememberof.graphadministrativeunit.GraphAdministrativeUnitRequestBuilder;
 import com.microsoft.graph.devices.item.transitivememberof.graphgroup.GraphGroupRequestBuilder;
+import com.microsoft.graph.devices.item.transitivememberof.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -37,6 +38,18 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GraphGroupRequestBuilder graphGroup() {
         return new GraphGroupRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.device entity.
+     * @param directoryObjectId Unique identifier of the item
+     * @return a DirectoryObjectItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DirectoryObjectItemRequestBuilder byDirectoryObjectId(@javax.annotation.Nonnull final String directoryObjectId) {
+        Objects.requireNonNull(directoryObjectId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("directoryObject%2Did", directoryObjectId);
+        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TransitiveMemberOfRequestBuilder and sets the default values.

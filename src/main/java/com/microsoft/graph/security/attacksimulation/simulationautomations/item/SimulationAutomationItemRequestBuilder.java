@@ -2,7 +2,6 @@ package com.microsoft.graph.security.attacksimulation.simulationautomations.item
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SimulationAutomation;
-import com.microsoft.graph.security.attacksimulation.simulationautomations.item.runs.item.SimulationAutomationRunItemRequestBuilder;
 import com.microsoft.graph.security.attacksimulation.simulationautomations.item.runs.RunsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -160,18 +159,6 @@ public class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the runs property of the microsoft.graph.simulationAutomation entity.
-     * @param id Unique identifier of the item
-     * @return a SimulationAutomationRunItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SimulationAutomationRunItemRequestBuilder runs(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("simulationAutomationRun%2Did", id);
-        return new SimulationAutomationRunItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property simulationAutomations for security

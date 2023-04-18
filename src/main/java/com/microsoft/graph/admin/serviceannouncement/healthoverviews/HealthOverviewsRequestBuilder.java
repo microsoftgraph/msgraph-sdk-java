@@ -1,6 +1,7 @@
 package com.microsoft.graph.admin.serviceannouncement.healthoverviews;
 
 import com.microsoft.graph.admin.serviceannouncement.healthoverviews.count.CountRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.healthoverviews.item.ServiceHealthItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ServiceHealth;
 import com.microsoft.graph.models.ServiceHealthCollectionResponse;
@@ -26,6 +27,18 @@ public class HealthOverviewsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the healthOverviews property of the microsoft.graph.serviceAnnouncement entity.
+     * @param serviceHealthId Unique identifier of the item
+     * @return a ServiceHealthItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ServiceHealthItemRequestBuilder byServiceHealthId(@javax.annotation.Nonnull final String serviceHealthId) {
+        Objects.requireNonNull(serviceHealthId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("serviceHealth%2Did", serviceHealthId);
+        return new ServiceHealthItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new HealthOverviewsRequestBuilder and sets the default values.

@@ -1,7 +1,6 @@
 package com.microsoft.graph.admin.serviceannouncement.messages.item;
 
 import com.microsoft.graph.admin.serviceannouncement.messages.item.attachments.AttachmentsRequestBuilder;
-import com.microsoft.graph.admin.serviceannouncement.messages.item.attachments.item.ServiceAnnouncementAttachmentItemRequestBuilder;
 import com.microsoft.graph.admin.serviceannouncement.messages.item.attachmentsarchive.AttachmentsArchiveRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ServiceUpdateMessage;
@@ -32,18 +31,6 @@ public class ServiceUpdateMessageItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public AttachmentsArchiveRequestBuilder attachmentsArchive() {
         return new AttachmentsArchiveRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the attachments property of the microsoft.graph.serviceUpdateMessage entity.
-     * @param id Unique identifier of the item
-     * @return a ServiceAnnouncementAttachmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ServiceAnnouncementAttachmentItemRequestBuilder attachments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("serviceAnnouncementAttachment%2Did", id);
-        return new ServiceAnnouncementAttachmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ServiceUpdateMessageItemRequestBuilder and sets the default values.

@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryCase;
 import com.microsoft.graph.models.security.EdiscoveryCaseCollectionResponse;
 import com.microsoft.graph.security.cases.ediscoverycases.count.CountRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.EdiscoveryCaseItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the ediscoveryCases property of the microsoft.graph.security.casesRoot entity.
+     * @param ediscoveryCaseId Unique identifier of the item
+     * @return a EdiscoveryCaseItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EdiscoveryCaseItemRequestBuilder byEdiscoveryCaseId(@javax.annotation.Nonnull final String ediscoveryCaseId) {
+        Objects.requireNonNull(ediscoveryCaseId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("ediscoveryCase%2Did", ediscoveryCaseId);
+        return new EdiscoveryCaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new EdiscoveryCasesRequestBuilder and sets the default values.

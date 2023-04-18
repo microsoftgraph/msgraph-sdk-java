@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.joinedteams.item.schedule.openshifts;
 
 import com.microsoft.graph.me.joinedteams.item.schedule.openshifts.count.CountRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.schedule.openshifts.item.OpenShiftItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OpenShift;
 import com.microsoft.graph.models.OpenShiftCollectionResponse;
@@ -26,6 +27,18 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the openShifts property of the microsoft.graph.schedule entity.
+     * @param openShiftId Unique identifier of the item
+     * @return a OpenShiftItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public OpenShiftItemRequestBuilder byOpenShiftId(@javax.annotation.Nonnull final String openShiftId) {
+        Objects.requireNonNull(openShiftId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("openShift%2Did", openShiftId);
+        return new OpenShiftItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OpenShiftsRequestBuilder and sets the default values.
@@ -87,9 +100,10 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to openShifts for me
+     * Create an instance of an openShift object.
      * @param body The request body
      * @return a CompletableFuture of openShift
+     * @see <a href="https://docs.microsoft.com/graph/api/openshift-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OpenShift> post(@javax.annotation.Nonnull final OpenShift body) {
@@ -106,10 +120,11 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to openShifts for me
+     * Create an instance of an openShift object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of openShift
+     * @see <a href="https://docs.microsoft.com/graph/api/openshift-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OpenShift> post(@javax.annotation.Nonnull final OpenShift body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -156,7 +171,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to openShifts for me
+     * Create an instance of an openShift object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -165,7 +180,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to openShifts for me
+     * Create an instance of an openShift object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

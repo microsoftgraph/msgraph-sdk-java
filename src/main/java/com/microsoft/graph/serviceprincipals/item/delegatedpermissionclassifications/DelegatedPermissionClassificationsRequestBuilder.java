@@ -4,6 +4,7 @@ import com.microsoft.graph.models.DelegatedPermissionClassification;
 import com.microsoft.graph.models.DelegatedPermissionClassificationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.serviceprincipals.item.delegatedpermissionclassifications.count.CountRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.delegatedpermissionclassifications.item.DelegatedPermissionClassificationItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the delegatedPermissionClassifications property of the microsoft.graph.servicePrincipal entity.
+     * @param delegatedPermissionClassificationId Unique identifier of the item
+     * @return a DelegatedPermissionClassificationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DelegatedPermissionClassificationItemRequestBuilder byDelegatedPermissionClassificationId(@javax.annotation.Nonnull final String delegatedPermissionClassificationId) {
+        Objects.requireNonNull(delegatedPermissionClassificationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("delegatedPermissionClassification%2Did", delegatedPermissionClassificationId);
+        return new DelegatedPermissionClassificationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DelegatedPermissionClassificationsRequestBuilder and sets the default values.

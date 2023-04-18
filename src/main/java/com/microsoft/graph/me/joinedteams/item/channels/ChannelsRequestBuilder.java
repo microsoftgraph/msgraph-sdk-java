@@ -2,6 +2,7 @@ package com.microsoft.graph.me.joinedteams.item.channels;
 
 import com.microsoft.graph.me.joinedteams.item.channels.count.CountRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.channels.getallmessages.GetAllMessagesRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.channels.item.ChannelItemRequestBuilder;
 import com.microsoft.graph.models.Channel;
 import com.microsoft.graph.models.ChannelCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -32,6 +33,18 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GetAllMessagesRequestBuilder getAllMessages() {
         return new GetAllMessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the channels property of the microsoft.graph.team entity.
+     * @param channelId Unique identifier of the item
+     * @return a ChannelItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ChannelItemRequestBuilder byChannelId(@javax.annotation.Nonnull final String channelId) {
+        Objects.requireNonNull(channelId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("channel%2Did", channelId);
+        return new ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ChannelsRequestBuilder and sets the default values.

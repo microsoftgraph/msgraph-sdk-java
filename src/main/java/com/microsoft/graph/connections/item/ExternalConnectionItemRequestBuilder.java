@@ -1,10 +1,7 @@
 package com.microsoft.graph.connections.item;
 
 import com.microsoft.graph.connections.item.groups.GroupsRequestBuilder;
-import com.microsoft.graph.connections.item.groups.item.ExternalGroupItemRequestBuilder;
-import com.microsoft.graph.connections.item.items.item.ExternalItemItemRequestBuilder;
 import com.microsoft.graph.connections.item.items.ItemsRequestBuilder;
-import com.microsoft.graph.connections.item.operations.item.ConnectionOperationItemRequestBuilder;
 import com.microsoft.graph.connections.item.operations.OperationsRequestBuilder;
 import com.microsoft.graph.connections.item.schema.SchemaRequestBuilder;
 import com.microsoft.graph.models.externalconnectors.ExternalConnection;
@@ -140,42 +137,6 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the groups property of the microsoft.graph.externalConnectors.externalConnection entity.
-     * @param id Unique identifier of the item
-     * @return a ExternalGroupItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ExternalGroupItemRequestBuilder groups(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("externalGroup%2Did", id);
-        return new ExternalGroupItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the items property of the microsoft.graph.externalConnectors.externalConnection entity.
-     * @param id Unique identifier of the item
-     * @return a ExternalItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ExternalItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("externalItem%2Did", id);
-        return new ExternalItemItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the operations property of the microsoft.graph.externalConnectors.externalConnection entity.
-     * @param id Unique identifier of the item
-     * @return a ConnectionOperationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ConnectionOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("connectionOperation%2Did", id);
-        return new ConnectionOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update entity in connections

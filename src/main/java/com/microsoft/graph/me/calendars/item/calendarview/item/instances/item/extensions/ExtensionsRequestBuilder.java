@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.calendars.item.calendarview.item.instances.item.extensions;
 
 import com.microsoft.graph.me.calendars.item.calendarview.item.instances.item.extensions.count.CountRequestBuilder;
+import com.microsoft.graph.me.calendars.item.calendarview.item.instances.item.extensions.item.ExtensionItemRequestBuilder;
 import com.microsoft.graph.models.Extension;
 import com.microsoft.graph.models.ExtensionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the extensions property of the microsoft.graph.event entity.
+     * @param extensionId Unique identifier of the item
+     * @return a ExtensionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ExtensionItemRequestBuilder byExtensionId(@javax.annotation.Nonnull final String extensionId) {
+        Objects.requireNonNull(extensionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("extension%2Did", extensionId);
+        return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ExtensionsRequestBuilder and sets the default values.

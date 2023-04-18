@@ -2,17 +2,13 @@ package com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.i
 
 import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.item.instances.item.accept.AcceptRequestBuilder;
 import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.item.instances.item.attachments.AttachmentsRequestBuilder;
-import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.item.instances.item.attachments.item.AttachmentItemRequestBuilder;
 import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.item.instances.item.calendar.CalendarRequestBuilder;
 import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.item.instances.item.cancel.CancelRequestBuilder;
 import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.item.instances.item.decline.DeclineRequestBuilder;
 import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.item.instances.item.dismissreminder.DismissReminderRequestBuilder;
 import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.item.instances.item.extensions.ExtensionsRequestBuilder;
-import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.item.instances.item.extensions.item.ExtensionItemRequestBuilder;
 import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.item.instances.item.forward.ForwardRequestBuilder;
-import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.item.instances.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.item.instances.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.item.instances.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.item.instances.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.item.instances.item.snoozereminder.SnoozeReminderRequestBuilder;
 import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.item.instances.item.tentativelyaccept.TentativelyAcceptRequestBuilder;
@@ -97,18 +93,6 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return new TentativelyAcceptRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the attachments property of the microsoft.graph.event entity.
-     * @param id Unique identifier of the item
-     * @return a AttachmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AttachmentItemRequestBuilder attachments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("attachment%2Did", id);
-        return new AttachmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new EventItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -127,18 +111,6 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public EventItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/me/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}/calendarView/{event%2Did}/instances/{event%2Did1}{?startDateTime*,endDateTime*,%24select}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the extensions property of the microsoft.graph.event entity.
-     * @param id Unique identifier of the item
-     * @return a ExtensionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("extension%2Did", id);
-        return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
@@ -176,30 +148,6 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.event entity.
-     * @param id Unique identifier of the item
-     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("multiValueLegacyExtendedProperty%2Did", id);
-        return new MultiValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.event entity.
-     * @param id Unique identifier of the item
-     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("singleValueLegacyExtendedProperty%2Did", id);
-        return new SingleValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.

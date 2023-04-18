@@ -3,6 +3,7 @@ package com.microsoft.graph.print.shares.item.allowedgroups;
 import com.microsoft.graph.models.GroupCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.print.shares.item.allowedgroups.count.CountRequestBuilder;
+import com.microsoft.graph.print.shares.item.allowedgroups.item.GroupItemRequestBuilder;
 import com.microsoft.graph.print.shares.item.allowedgroups.ref.RefRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -31,6 +32,18 @@ public class AllowedGroupsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.print.shares.item.allowedGroups.item collection
+     * @param groupId Unique identifier of the item
+     * @return a GroupItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GroupItemRequestBuilder byGroupId(@javax.annotation.Nonnull final String groupId) {
+        Objects.requireNonNull(groupId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("group%2Did", groupId);
+        return new GroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AllowedGroupsRequestBuilder and sets the default values.

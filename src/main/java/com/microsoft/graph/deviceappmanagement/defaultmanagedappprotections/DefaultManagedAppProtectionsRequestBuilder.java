@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.defaultmanagedappprotections;
 
 import com.microsoft.graph.deviceappmanagement.defaultmanagedappprotections.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.defaultmanagedappprotections.item.DefaultManagedAppProtectionItemRequestBuilder;
 import com.microsoft.graph.models.DefaultManagedAppProtection;
 import com.microsoft.graph.models.DefaultManagedAppProtectionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the defaultManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
+     * @param defaultManagedAppProtectionId Unique identifier of the item
+     * @return a DefaultManagedAppProtectionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DefaultManagedAppProtectionItemRequestBuilder byDefaultManagedAppProtectionId(@javax.annotation.Nonnull final String defaultManagedAppProtectionId) {
+        Objects.requireNonNull(defaultManagedAppProtectionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("defaultManagedAppProtection%2Did", defaultManagedAppProtectionId);
+        return new DefaultManagedAppProtectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DefaultManagedAppProtectionsRequestBuilder and sets the default values.

@@ -1,7 +1,6 @@
 package com.microsoft.graph.drives.item.items.item.analytics.itemactivitystats.item;
 
 import com.microsoft.graph.drives.item.items.item.analytics.itemactivitystats.item.activities.ActivitiesRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.analytics.itemactivitystats.item.activities.item.ItemActivityItemRequestBuilder;
 import com.microsoft.graph.models.ItemActivityStat;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -26,18 +25,6 @@ public class ItemActivityStatItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ActivitiesRequestBuilder activities() {
         return new ActivitiesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the activities property of the microsoft.graph.itemActivityStat entity.
-     * @param id Unique identifier of the item
-     * @return a ItemActivityItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ItemActivityItemRequestBuilder activities(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("itemActivity%2Did", id);
-        return new ItemActivityItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ItemActivityStatItemRequestBuilder and sets the default values.

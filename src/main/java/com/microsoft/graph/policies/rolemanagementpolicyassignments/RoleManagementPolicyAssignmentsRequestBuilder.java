@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UnifiedRoleManagementPolicyAssignment;
 import com.microsoft.graph.models.UnifiedRoleManagementPolicyAssignmentCollectionResponse;
 import com.microsoft.graph.policies.rolemanagementpolicyassignments.count.CountRequestBuilder;
+import com.microsoft.graph.policies.rolemanagementpolicyassignments.item.UnifiedRoleManagementPolicyAssignmentItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBu
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the roleManagementPolicyAssignments property of the microsoft.graph.policyRoot entity.
+     * @param unifiedRoleManagementPolicyAssignmentId Unique identifier of the item
+     * @return a UnifiedRoleManagementPolicyAssignmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UnifiedRoleManagementPolicyAssignmentItemRequestBuilder byUnifiedRoleManagementPolicyAssignmentId(@javax.annotation.Nonnull final String unifiedRoleManagementPolicyAssignmentId) {
+        Objects.requireNonNull(unifiedRoleManagementPolicyAssignmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("unifiedRoleManagementPolicyAssignment%2Did", unifiedRoleManagementPolicyAssignmentId);
+        return new UnifiedRoleManagementPolicyAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RoleManagementPolicyAssignmentsRequestBuilder and sets the default values.

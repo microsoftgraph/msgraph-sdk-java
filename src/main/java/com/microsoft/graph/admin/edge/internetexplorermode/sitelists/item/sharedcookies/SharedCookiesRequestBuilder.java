@@ -1,6 +1,7 @@
 package com.microsoft.graph.admin.edge.internetexplorermode.sitelists.item.sharedcookies;
 
 import com.microsoft.graph.admin.edge.internetexplorermode.sitelists.item.sharedcookies.count.CountRequestBuilder;
+import com.microsoft.graph.admin.edge.internetexplorermode.sitelists.item.sharedcookies.item.BrowserSharedCookieItemRequestBuilder;
 import com.microsoft.graph.models.BrowserSharedCookie;
 import com.microsoft.graph.models.BrowserSharedCookieCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sharedCookies property of the microsoft.graph.browserSiteList entity.
+     * @param browserSharedCookieId Unique identifier of the item
+     * @return a BrowserSharedCookieItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public BrowserSharedCookieItemRequestBuilder byBrowserSharedCookieId(@javax.annotation.Nonnull final String browserSharedCookieId) {
+        Objects.requireNonNull(browserSharedCookieId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("browserSharedCookie%2Did", browserSharedCookieId);
+        return new BrowserSharedCookieItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SharedCookiesRequestBuilder and sets the default values.

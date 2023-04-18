@@ -2,7 +2,6 @@ package com.microsoft.graph.rolemanagement.directory.resourcenamespaces.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UnifiedRbacResourceNamespace;
-import com.microsoft.graph.rolemanagement.directory.resourcenamespaces.item.resourceactions.item.UnifiedRbacResourceActionItemRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.resourcenamespaces.item.resourceactions.ResourceActionsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -160,18 +159,6 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the resourceActions property of the microsoft.graph.unifiedRbacResourceNamespace entity.
-     * @param id Unique identifier of the item
-     * @return a UnifiedRbacResourceActionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UnifiedRbacResourceActionItemRequestBuilder resourceActions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("unifiedRbacResourceAction%2Did", id);
-        return new UnifiedRbacResourceActionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property resourceNamespaces for roleManagement

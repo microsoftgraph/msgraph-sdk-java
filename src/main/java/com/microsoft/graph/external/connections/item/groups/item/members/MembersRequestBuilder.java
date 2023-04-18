@@ -1,6 +1,7 @@
 package com.microsoft.graph.external.connections.item.groups.item.members;
 
 import com.microsoft.graph.external.connections.item.groups.item.members.count.CountRequestBuilder;
+import com.microsoft.graph.external.connections.item.groups.item.members.item.IdentityItemRequestBuilder;
 import com.microsoft.graph.models.externalconnectors.Identity;
 import com.microsoft.graph.models.externalconnectors.IdentityCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the members property of the microsoft.graph.externalConnectors.externalGroup entity.
+     * @param identityId Unique identifier of the item
+     * @return a IdentityItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public IdentityItemRequestBuilder byIdentityId(@javax.annotation.Nonnull final String identityId) {
+        Objects.requireNonNull(identityId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("identity%2Did", identityId);
+        return new IdentityItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MembersRequestBuilder and sets the default values.

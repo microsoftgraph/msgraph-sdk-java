@@ -1,7 +1,6 @@
 package com.microsoft.graph.communications.onlinemeetings.item;
 
 import com.microsoft.graph.communications.onlinemeetings.item.attendancereports.AttendanceReportsRequestBuilder;
-import com.microsoft.graph.communications.onlinemeetings.item.attendancereports.item.MeetingAttendanceReportItemRequestBuilder;
 import com.microsoft.graph.communications.onlinemeetings.item.attendeereport.AttendeeReportRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OnlineMeeting;
@@ -32,18 +31,6 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public AttendeeReportRequestBuilder attendeeReport() {
         return new AttendeeReportRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeeting entity.
-     * @param id Unique identifier of the item
-     * @return a MeetingAttendanceReportItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MeetingAttendanceReportItemRequestBuilder attendanceReports(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("meetingAttendanceReport%2Did", id);
-        return new MeetingAttendanceReportItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OnlineMeetingItemRequestBuilder and sets the default values.

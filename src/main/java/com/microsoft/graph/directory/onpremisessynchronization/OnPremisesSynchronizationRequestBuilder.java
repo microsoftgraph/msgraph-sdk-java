@@ -1,6 +1,7 @@
 package com.microsoft.graph.directory.onpremisessynchronization;
 
 import com.microsoft.graph.directory.onpremisessynchronization.count.CountRequestBuilder;
+import com.microsoft.graph.directory.onpremisessynchronization.item.OnPremisesDirectorySynchronizationItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OnPremisesDirectorySynchronization;
 import com.microsoft.graph.models.OnPremisesDirectorySynchronizationCollectionResponse;
@@ -26,6 +27,18 @@ public class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder 
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the onPremisesSynchronization property of the microsoft.graph.directory entity.
+     * @param onPremisesDirectorySynchronizationId Unique identifier of the item
+     * @return a OnPremisesDirectorySynchronizationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public OnPremisesDirectorySynchronizationItemRequestBuilder byOnPremisesDirectorySynchronizationId(@javax.annotation.Nonnull final String onPremisesDirectorySynchronizationId) {
+        Objects.requireNonNull(onPremisesDirectorySynchronizationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("onPremisesDirectorySynchronization%2Did", onPremisesDirectorySynchronizationId);
+        return new OnPremisesDirectorySynchronizationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OnPremisesSynchronizationRequestBuilder and sets the default values.

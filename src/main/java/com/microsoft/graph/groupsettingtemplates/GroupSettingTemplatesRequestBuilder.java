@@ -4,6 +4,7 @@ import com.microsoft.graph.groupsettingtemplates.count.CountRequestBuilder;
 import com.microsoft.graph.groupsettingtemplates.delta.DeltaRequestBuilder;
 import com.microsoft.graph.groupsettingtemplates.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
 import com.microsoft.graph.groupsettingtemplates.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.groupsettingtemplates.item.GroupSettingTemplateItemRequestBuilder;
 import com.microsoft.graph.groupsettingtemplates.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.graph.models.GroupSettingTemplate;
 import com.microsoft.graph.models.GroupSettingTemplateCollectionResponse;
@@ -50,6 +51,18 @@ public class GroupSettingTemplatesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of groupSettingTemplate entities.
+     * @param groupSettingTemplateId Unique identifier of the item
+     * @return a GroupSettingTemplateItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GroupSettingTemplateItemRequestBuilder byGroupSettingTemplateId(@javax.annotation.Nonnull final String groupSettingTemplateId) {
+        Objects.requireNonNull(groupSettingTemplateId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("groupSettingTemplate%2Did", groupSettingTemplateId);
+        return new GroupSettingTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new GroupSettingTemplatesRequestBuilder and sets the default values.

@@ -1,6 +1,7 @@
 package com.microsoft.graph.localizations;
 
 import com.microsoft.graph.localizations.count.CountRequestBuilder;
+import com.microsoft.graph.localizations.item.OrganizationalBrandingLocalizationItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OrganizationalBrandingLocalization;
 import com.microsoft.graph.models.OrganizationalBrandingLocalizationCollectionResponse;
@@ -26,6 +27,18 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of organizationalBrandingLocalization entities.
+     * @param organizationalBrandingLocalizationId Unique identifier of the item
+     * @return a OrganizationalBrandingLocalizationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public OrganizationalBrandingLocalizationItemRequestBuilder byOrganizationalBrandingLocalizationId(@javax.annotation.Nonnull final String organizationalBrandingLocalizationId) {
+        Objects.requireNonNull(organizationalBrandingLocalizationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("organizationalBrandingLocalization%2Did", organizationalBrandingLocalizationId);
+        return new OrganizationalBrandingLocalizationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new LocalizationsRequestBuilder and sets the default values.

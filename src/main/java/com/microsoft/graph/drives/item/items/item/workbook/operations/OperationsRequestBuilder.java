@@ -1,6 +1,7 @@
 package com.microsoft.graph.drives.item.items.item.workbook.operations;
 
 import com.microsoft.graph.drives.item.items.item.workbook.operations.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.operations.item.WorkbookOperationItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookOperation;
 import com.microsoft.graph.models.WorkbookOperationCollectionResponse;
@@ -26,6 +27,18 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.workbook entity.
+     * @param workbookOperationId Unique identifier of the item
+     * @return a WorkbookOperationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public WorkbookOperationItemRequestBuilder byWorkbookOperationId(@javax.annotation.Nonnull final String workbookOperationId) {
+        Objects.requireNonNull(workbookOperationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("workbookOperation%2Did", workbookOperationId);
+        return new WorkbookOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.

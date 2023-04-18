@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.drives;
 
 import com.microsoft.graph.groups.item.drives.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.drives.item.DriveItemRequestBuilder;
 import com.microsoft.graph.models.DriveCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -27,6 +28,18 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the drives property of the microsoft.graph.group entity.
+     * @param driveId Unique identifier of the item
+     * @return a DriveItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DriveItemRequestBuilder byDriveId(@javax.annotation.Nonnull final String driveId) {
+        Objects.requireNonNull(driveId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("drive%2Did", driveId);
+        return new DriveItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
      * Instantiates a new DrivesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -47,9 +60,8 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/drives{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the list of Drive resources available for a target User, Group, or Site.
+     * The group's drives. Read-only.
      * @return a CompletableFuture of DriveCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/drive-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveCollectionResponse> get() {
@@ -66,10 +78,9 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the list of Drive resources available for a target User, Group, or Site.
+     * The group's drives. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DriveCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/drive-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,7 +97,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the list of Drive resources available for a target User, Group, or Site.
+     * The group's drives. Read-only.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +105,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of Drive resources available for a target User, Group, or Site.
+     * The group's drives. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -115,7 +126,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the list of Drive resources available for a target User, Group, or Site.
+     * The group's drives. Read-only.
      */
     public class GetQueryParameters {
         /** Include count of items */

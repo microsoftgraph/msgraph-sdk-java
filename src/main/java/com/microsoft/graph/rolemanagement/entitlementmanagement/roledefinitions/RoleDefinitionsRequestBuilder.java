@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UnifiedRoleDefinition;
 import com.microsoft.graph.models.UnifiedRoleDefinitionCollectionResponse;
 import com.microsoft.graph.rolemanagement.entitlementmanagement.roledefinitions.count.CountRequestBuilder;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.roledefinitions.item.UnifiedRoleDefinitionItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the roleDefinitions property of the microsoft.graph.rbacApplication entity.
+     * @param unifiedRoleDefinitionId Unique identifier of the item
+     * @return a UnifiedRoleDefinitionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UnifiedRoleDefinitionItemRequestBuilder byUnifiedRoleDefinitionId(@javax.annotation.Nonnull final String unifiedRoleDefinitionId) {
+        Objects.requireNonNull(unifiedRoleDefinitionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("unifiedRoleDefinition%2Did", unifiedRoleDefinitionId);
+        return new UnifiedRoleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RoleDefinitionsRequestBuilder and sets the default values.

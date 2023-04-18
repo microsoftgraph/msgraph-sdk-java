@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.devicecategories;
 
 import com.microsoft.graph.devicemanagement.devicecategories.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecategories.item.DeviceCategoryItemRequestBuilder;
 import com.microsoft.graph.models.DeviceCategory;
 import com.microsoft.graph.models.DeviceCategoryCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deviceCategories property of the microsoft.graph.deviceManagement entity.
+     * @param deviceCategoryId Unique identifier of the item
+     * @return a DeviceCategoryItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceCategoryItemRequestBuilder byDeviceCategoryId(@javax.annotation.Nonnull final String deviceCategoryId) {
+        Objects.requireNonNull(deviceCategoryId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceCategory%2Did", deviceCategoryId);
+        return new DeviceCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DeviceCategoriesRequestBuilder and sets the default values.

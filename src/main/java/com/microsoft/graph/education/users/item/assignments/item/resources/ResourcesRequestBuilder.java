@@ -1,6 +1,7 @@
 package com.microsoft.graph.education.users.item.assignments.item.resources;
 
 import com.microsoft.graph.education.users.item.assignments.item.resources.count.CountRequestBuilder;
+import com.microsoft.graph.education.users.item.assignments.item.resources.item.EducationAssignmentResourceItemRequestBuilder;
 import com.microsoft.graph.models.EducationAssignmentResource;
 import com.microsoft.graph.models.EducationAssignmentResourceCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the resources property of the microsoft.graph.educationAssignment entity.
+     * @param educationAssignmentResourceId Unique identifier of the item
+     * @return a EducationAssignmentResourceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EducationAssignmentResourceItemRequestBuilder byEducationAssignmentResourceId(@javax.annotation.Nonnull final String educationAssignmentResourceId) {
+        Objects.requireNonNull(educationAssignmentResourceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("educationAssignmentResource%2Did", educationAssignmentResourceId);
+        return new EducationAssignmentResourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ResourcesRequestBuilder and sets the default values.

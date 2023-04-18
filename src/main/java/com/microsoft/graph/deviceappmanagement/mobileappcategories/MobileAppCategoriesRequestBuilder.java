@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.mobileappcategories;
 
 import com.microsoft.graph.deviceappmanagement.mobileappcategories.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileappcategories.item.MobileAppCategoryItemRequestBuilder;
 import com.microsoft.graph.models.MobileAppCategory;
 import com.microsoft.graph.models.MobileAppCategoryCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the mobileAppCategories property of the microsoft.graph.deviceAppManagement entity.
+     * @param mobileAppCategoryId Unique identifier of the item
+     * @return a MobileAppCategoryItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public MobileAppCategoryItemRequestBuilder byMobileAppCategoryId(@javax.annotation.Nonnull final String mobileAppCategoryId) {
+        Objects.requireNonNull(mobileAppCategoryId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("mobileAppCategory%2Did", mobileAppCategoryId);
+        return new MobileAppCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MobileAppCategoriesRequestBuilder and sets the default values.

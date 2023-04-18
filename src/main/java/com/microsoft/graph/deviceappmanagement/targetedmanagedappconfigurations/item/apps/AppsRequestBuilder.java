@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.apps;
 
 import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.apps.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.apps.item.ManagedMobileAppItemRequestBuilder;
 import com.microsoft.graph.models.ManagedMobileApp;
 import com.microsoft.graph.models.ManagedMobileAppCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class AppsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the apps property of the microsoft.graph.targetedManagedAppConfiguration entity.
+     * @param managedMobileAppId Unique identifier of the item
+     * @return a ManagedMobileAppItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedMobileAppItemRequestBuilder byManagedMobileAppId(@javax.annotation.Nonnull final String managedMobileAppId) {
+        Objects.requireNonNull(managedMobileAppId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedMobileApp%2Did", managedMobileAppId);
+        return new ManagedMobileAppItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AppsRequestBuilder and sets the default values.

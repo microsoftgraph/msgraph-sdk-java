@@ -4,9 +4,7 @@ import com.microsoft.graph.drives.item.list.contenttypes.item.associatewithhubsi
 import com.microsoft.graph.drives.item.list.contenttypes.item.base.BaseRequestBuilderEscaped;
 import com.microsoft.graph.drives.item.list.contenttypes.item.basetypes.BaseTypesRequestBuilder;
 import com.microsoft.graph.drives.item.list.contenttypes.item.columnlinks.ColumnLinksRequestBuilder;
-import com.microsoft.graph.drives.item.list.contenttypes.item.columnlinks.item.ColumnLinkItemRequestBuilder;
 import com.microsoft.graph.drives.item.list.contenttypes.item.columnpositions.ColumnPositionsRequestBuilder;
-import com.microsoft.graph.drives.item.list.contenttypes.item.columnpositions.item.ColumnDefinitionItemRequestBuilder;
 import com.microsoft.graph.drives.item.list.contenttypes.item.columns.ColumnsRequestBuilder;
 import com.microsoft.graph.drives.item.list.contenttypes.item.copytodefaultcontentlocation.CopyToDefaultContentLocationRequestBuilder;
 import com.microsoft.graph.drives.item.list.contenttypes.item.ispublished.IsPublishedRequestBuilder;
@@ -81,54 +79,6 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public UnpublishRequestBuilder unpublish() {
         return new UnpublishRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the baseTypes property of the microsoft.graph.contentType entity.
-     * @param id Unique identifier of the item
-     * @return a ContentTypeItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ContentTypeItemRequestBuilder baseTypes(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("contentType%2Did1", id);
-        return new ContentTypeItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the columnLinks property of the microsoft.graph.contentType entity.
-     * @param id Unique identifier of the item
-     * @return a ColumnLinkItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ColumnLinkItemRequestBuilder columnLinks(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("columnLink%2Did", id);
-        return new ColumnLinkItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the columnPositions property of the microsoft.graph.contentType entity.
-     * @param id Unique identifier of the item
-     * @return a ColumnDefinitionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.drives.item.list.contenttypes.item.columnpositions.item.ColumnDefinitionItemRequestBuilder columnPositions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("columnDefinition%2Did", id);
-        return new com.microsoft.graph.drives.item.list.contenttypes.item.columnpositions.item.ColumnDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the columns property of the microsoft.graph.contentType entity.
-     * @param id Unique identifier of the item
-     * @return a ColumnDefinitionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.drives.item.list.contenttypes.item.columns.item.ColumnDefinitionItemRequestBuilder columns(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("columnDefinition%2Did", id);
-        return new com.microsoft.graph.drives.item.list.contenttypes.item.columns.item.ColumnDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ContentTypeItemRequestBuilder and sets the default values.

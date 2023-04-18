@@ -4,6 +4,7 @@ import com.microsoft.graph.models.InferenceClassificationOverride;
 import com.microsoft.graph.models.InferenceClassificationOverrideCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.inferenceclassification.overrides.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.inferenceclassification.overrides.item.InferenceClassificationOverrideItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class OverridesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the overrides property of the microsoft.graph.inferenceClassification entity.
+     * @param inferenceClassificationOverrideId Unique identifier of the item
+     * @return a InferenceClassificationOverrideItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public InferenceClassificationOverrideItemRequestBuilder byInferenceClassificationOverrideId(@javax.annotation.Nonnull final String inferenceClassificationOverrideId) {
+        Objects.requireNonNull(inferenceClassificationOverrideId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("inferenceClassificationOverride%2Did", inferenceClassificationOverrideId);
+        return new InferenceClassificationOverrideItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OverridesRequestBuilder and sets the default values.

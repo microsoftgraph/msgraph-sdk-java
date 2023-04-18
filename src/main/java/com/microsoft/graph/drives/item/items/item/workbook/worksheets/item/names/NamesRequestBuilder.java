@@ -3,6 +3,7 @@ package com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.name
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.names.add.AddRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.names.addformulalocal.AddFormulaLocalRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.names.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.names.item.WorkbookNamedItemItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookNamedItem;
 import com.microsoft.graph.models.WorkbookNamedItemCollectionResponse;
@@ -38,6 +39,18 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the names property of the microsoft.graph.workbookWorksheet entity.
+     * @param workbookNamedItemId Unique identifier of the item
+     * @return a WorkbookNamedItemItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public WorkbookNamedItemItemRequestBuilder byWorkbookNamedItemId(@javax.annotation.Nonnull final String workbookNamedItemId) {
+        Objects.requireNonNull(workbookNamedItemId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("workbookNamedItem%2Did", workbookNamedItemId);
+        return new WorkbookNamedItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new NamesRequestBuilder and sets the default values.

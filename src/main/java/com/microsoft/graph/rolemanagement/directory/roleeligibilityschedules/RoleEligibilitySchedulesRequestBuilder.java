@@ -5,6 +5,7 @@ import com.microsoft.graph.models.UnifiedRoleEligibilitySchedule;
 import com.microsoft.graph.models.UnifiedRoleEligibilityScheduleCollectionResponse;
 import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedules.count.CountRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedules.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedules.item.UnifiedRoleEligibilityScheduleItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -27,6 +28,18 @@ public class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the roleEligibilitySchedules property of the microsoft.graph.rbacApplication entity.
+     * @param unifiedRoleEligibilityScheduleId Unique identifier of the item
+     * @return a UnifiedRoleEligibilityScheduleItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UnifiedRoleEligibilityScheduleItemRequestBuilder byUnifiedRoleEligibilityScheduleId(@javax.annotation.Nonnull final String unifiedRoleEligibilityScheduleId) {
+        Objects.requireNonNull(unifiedRoleEligibilityScheduleId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("unifiedRoleEligibilitySchedule%2Did", unifiedRoleEligibilityScheduleId);
+        return new UnifiedRoleEligibilityScheduleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RoleEligibilitySchedulesRequestBuilder and sets the default values.

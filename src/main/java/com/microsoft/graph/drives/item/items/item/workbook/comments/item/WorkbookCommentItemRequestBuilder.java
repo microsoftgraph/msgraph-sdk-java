@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.comments.item;
 
-import com.microsoft.graph.drives.item.items.item.workbook.comments.item.replies.item.WorkbookCommentReplyItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.comments.item.replies.RepliesRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookComment;
@@ -160,18 +159,6 @@ public class WorkbookCommentItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the replies property of the microsoft.graph.workbookComment entity.
-     * @param id Unique identifier of the item
-     * @return a WorkbookCommentReplyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WorkbookCommentReplyItemRequestBuilder replies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("workbookCommentReply%2Did", id);
-        return new WorkbookCommentReplyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property comments for drives

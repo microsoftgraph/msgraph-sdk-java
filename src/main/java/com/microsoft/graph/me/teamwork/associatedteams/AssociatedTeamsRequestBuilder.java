@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.teamwork.associatedteams;
 
 import com.microsoft.graph.me.teamwork.associatedteams.count.CountRequestBuilder;
+import com.microsoft.graph.me.teamwork.associatedteams.item.AssociatedTeamInfoItemRequestBuilder;
 import com.microsoft.graph.models.AssociatedTeamInfo;
 import com.microsoft.graph.models.AssociatedTeamInfoCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class AssociatedTeamsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the associatedTeams property of the microsoft.graph.userTeamwork entity.
+     * @param associatedTeamInfoId Unique identifier of the item
+     * @return a AssociatedTeamInfoItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AssociatedTeamInfoItemRequestBuilder byAssociatedTeamInfoId(@javax.annotation.Nonnull final String associatedTeamInfoId) {
+        Objects.requireNonNull(associatedTeamInfoId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("associatedTeamInfo%2Did", associatedTeamInfoId);
+        return new AssociatedTeamInfoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AssociatedTeamsRequestBuilder and sets the default values.

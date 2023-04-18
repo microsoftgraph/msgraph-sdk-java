@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.ConnectedOrganizationItemRequestBuilder;
 import com.microsoft.graph.models.ConnectedOrganization;
 import com.microsoft.graph.models.ConnectedOrganizationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the connectedOrganizations property of the microsoft.graph.entitlementManagement entity.
+     * @param connectedOrganizationId Unique identifier of the item
+     * @return a ConnectedOrganizationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ConnectedOrganizationItemRequestBuilder byConnectedOrganizationId(@javax.annotation.Nonnull final String connectedOrganizationId) {
+        Objects.requireNonNull(connectedOrganizationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("connectedOrganization%2Did", connectedOrganizationId);
+        return new ConnectedOrganizationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ConnectedOrganizationsRequestBuilder and sets the default values.

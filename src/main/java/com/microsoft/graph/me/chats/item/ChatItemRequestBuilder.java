@@ -2,18 +2,13 @@ package com.microsoft.graph.me.chats.item;
 
 import com.microsoft.graph.me.chats.item.hideforuser.HideForUserRequestBuilder;
 import com.microsoft.graph.me.chats.item.installedapps.InstalledAppsRequestBuilder;
-import com.microsoft.graph.me.chats.item.installedapps.item.TeamsAppInstallationItemRequestBuilder;
 import com.microsoft.graph.me.chats.item.lastmessagepreview.LastMessagePreviewRequestBuilder;
 import com.microsoft.graph.me.chats.item.markchatreadforuser.MarkChatReadForUserRequestBuilder;
 import com.microsoft.graph.me.chats.item.markchatunreadforuser.MarkChatUnreadForUserRequestBuilder;
-import com.microsoft.graph.me.chats.item.members.item.ConversationMemberItemRequestBuilder;
 import com.microsoft.graph.me.chats.item.members.MembersRequestBuilder;
-import com.microsoft.graph.me.chats.item.messages.item.ChatMessageItemRequestBuilder;
 import com.microsoft.graph.me.chats.item.messages.MessagesRequestBuilder;
-import com.microsoft.graph.me.chats.item.pinnedmessages.item.PinnedChatMessageInfoItemRequestBuilder;
 import com.microsoft.graph.me.chats.item.pinnedmessages.PinnedMessagesRequestBuilder;
 import com.microsoft.graph.me.chats.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
-import com.microsoft.graph.me.chats.item.tabs.item.TeamsTabItemRequestBuilder;
 import com.microsoft.graph.me.chats.item.tabs.TabsRequestBuilder;
 import com.microsoft.graph.me.chats.item.unhideforuser.UnhideForUserRequestBuilder;
 import com.microsoft.graph.models.Chat;
@@ -186,42 +181,6 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the installedApps property of the microsoft.graph.chat entity.
-     * @param id Unique identifier of the item
-     * @return a TeamsAppInstallationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TeamsAppInstallationItemRequestBuilder installedApps(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("teamsAppInstallation%2Did", id);
-        return new TeamsAppInstallationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the members property of the microsoft.graph.chat entity.
-     * @param id Unique identifier of the item
-     * @return a ConversationMemberItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ConversationMemberItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("conversationMember%2Did", id);
-        return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the messages property of the microsoft.graph.chat entity.
-     * @param id Unique identifier of the item
-     * @return a ChatMessageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ChatMessageItemRequestBuilder messages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("chatMessage%2Did", id);
-        return new ChatMessageItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property chats in me
      * @param body The request body
      * @return a CompletableFuture of chat
@@ -260,30 +219,6 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the pinnedMessages property of the microsoft.graph.chat entity.
-     * @param id Unique identifier of the item
-     * @return a PinnedChatMessageInfoItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PinnedChatMessageInfoItemRequestBuilder pinnedMessages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("pinnedChatMessageInfo%2Did", id);
-        return new PinnedChatMessageInfoItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the tabs property of the microsoft.graph.chat entity.
-     * @param id Unique identifier of the item
-     * @return a TeamsTabItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TeamsTabItemRequestBuilder tabs(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("teamsTab%2Did", id);
-        return new TeamsTabItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property chats for me

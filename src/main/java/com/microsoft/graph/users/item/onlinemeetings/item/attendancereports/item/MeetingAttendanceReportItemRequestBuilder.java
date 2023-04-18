@@ -3,7 +3,6 @@ package com.microsoft.graph.users.item.onlinemeetings.item.attendancereports.ite
 import com.microsoft.graph.models.MeetingAttendanceReport;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.onlinemeetings.item.attendancereports.item.attendancerecords.AttendanceRecordsRequestBuilder;
-import com.microsoft.graph.users.item.onlinemeetings.item.attendancereports.item.attendancerecords.item.AttendanceRecordItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,18 +25,6 @@ public class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilde
     @javax.annotation.Nonnull
     public AttendanceRecordsRequestBuilder attendanceRecords() {
         return new AttendanceRecordsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the attendanceRecords property of the microsoft.graph.meetingAttendanceReport entity.
-     * @param id Unique identifier of the item
-     * @return a AttendanceRecordItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AttendanceRecordItemRequestBuilder attendanceRecords(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("attendanceRecord%2Did", id);
-        return new AttendanceRecordItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MeetingAttendanceReportItemRequestBuilder and sets the default values.

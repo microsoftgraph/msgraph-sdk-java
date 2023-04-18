@@ -1,6 +1,7 @@
 package com.microsoft.graph.informationprotection.threatassessmentrequests;
 
 import com.microsoft.graph.informationprotection.threatassessmentrequests.count.CountRequestBuilder;
+import com.microsoft.graph.informationprotection.threatassessmentrequests.item.ThreatAssessmentRequestItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ThreatAssessmentRequest;
 import com.microsoft.graph.models.ThreatAssessmentRequestCollectionResponse;
@@ -26,6 +27,18 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the threatAssessmentRequests property of the microsoft.graph.informationProtection entity.
+     * @param threatAssessmentRequestId Unique identifier of the item
+     * @return a ThreatAssessmentRequestItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ThreatAssessmentRequestItemRequestBuilder byThreatAssessmentRequestId(@javax.annotation.Nonnull final String threatAssessmentRequestId) {
+        Objects.requireNonNull(threatAssessmentRequestId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("threatAssessmentRequest%2Did", threatAssessmentRequestId);
+        return new ThreatAssessmentRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ThreatAssessmentRequestsRequestBuilder and sets the default values.

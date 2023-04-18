@@ -1,6 +1,7 @@
 package com.microsoft.graph.domains.item.federationconfiguration;
 
 import com.microsoft.graph.domains.item.federationconfiguration.count.CountRequestBuilder;
+import com.microsoft.graph.domains.item.federationconfiguration.item.InternalDomainFederationItemRequestBuilder;
 import com.microsoft.graph.models.InternalDomainFederation;
 import com.microsoft.graph.models.InternalDomainFederationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the federationConfiguration property of the microsoft.graph.domain entity.
+     * @param internalDomainFederationId Unique identifier of the item
+     * @return a InternalDomainFederationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public InternalDomainFederationItemRequestBuilder byInternalDomainFederationId(@javax.annotation.Nonnull final String internalDomainFederationId) {
+        Objects.requireNonNull(internalDomainFederationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("internalDomainFederation%2Did", internalDomainFederationId);
+        return new InternalDomainFederationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new FederationConfigurationRequestBuilder and sets the default values.

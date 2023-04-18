@@ -1,6 +1,7 @@
 package com.microsoft.graph.domains;
 
 import com.microsoft.graph.domains.count.CountRequestBuilder;
+import com.microsoft.graph.domains.item.DomainItemRequestBuilder;
 import com.microsoft.graph.models.Domain;
 import com.microsoft.graph.models.DomainCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of domain entities.
+     * @param domainId Unique identifier of the item
+     * @return a DomainItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DomainItemRequestBuilder byDomainId(@javax.annotation.Nonnull final String domainId) {
+        Objects.requireNonNull(domainId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("domain%2Did", domainId);
+        return new DomainItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DomainsRequestBuilder and sets the default values.

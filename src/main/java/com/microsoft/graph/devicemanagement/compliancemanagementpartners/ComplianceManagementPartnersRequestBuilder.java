@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.compliancemanagementpartners;
 
 import com.microsoft.graph.devicemanagement.compliancemanagementpartners.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.compliancemanagementpartners.item.ComplianceManagementPartnerItemRequestBuilder;
 import com.microsoft.graph.models.ComplianceManagementPartner;
 import com.microsoft.graph.models.ComplianceManagementPartnerCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuild
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the complianceManagementPartners property of the microsoft.graph.deviceManagement entity.
+     * @param complianceManagementPartnerId Unique identifier of the item
+     * @return a ComplianceManagementPartnerItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ComplianceManagementPartnerItemRequestBuilder byComplianceManagementPartnerId(@javax.annotation.Nonnull final String complianceManagementPartnerId) {
+        Objects.requireNonNull(complianceManagementPartnerId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("complianceManagementPartner%2Did", complianceManagementPartnerId);
+        return new ComplianceManagementPartnerItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ComplianceManagementPartnersRequestBuilder and sets the default values.

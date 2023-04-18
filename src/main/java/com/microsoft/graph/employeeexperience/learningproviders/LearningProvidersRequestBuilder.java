@@ -1,6 +1,7 @@
 package com.microsoft.graph.employeeexperience.learningproviders;
 
 import com.microsoft.graph.employeeexperience.learningproviders.count.CountRequestBuilder;
+import com.microsoft.graph.employeeexperience.learningproviders.item.LearningProviderItemRequestBuilder;
 import com.microsoft.graph.models.LearningProvider;
 import com.microsoft.graph.models.LearningProviderCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the learningProviders property of the microsoft.graph.employeeExperience entity.
+     * @param learningProviderId Unique identifier of the item
+     * @return a LearningProviderItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public LearningProviderItemRequestBuilder byLearningProviderId(@javax.annotation.Nonnull final String learningProviderId) {
+        Objects.requireNonNull(learningProviderId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("learningProvider%2Did", learningProviderId);
+        return new LearningProviderItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new LearningProvidersRequestBuilder and sets the default values.

@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations;
 
 import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.TargetedManagedAppConfigurationItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.TargetedManagedAppConfigurationCollectionResponse;
@@ -26,6 +27,18 @@ public class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestB
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the targetedManagedAppConfigurations property of the microsoft.graph.deviceAppManagement entity.
+     * @param targetedManagedAppConfigurationId Unique identifier of the item
+     * @return a TargetedManagedAppConfigurationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TargetedManagedAppConfigurationItemRequestBuilder byTargetedManagedAppConfigurationId(@javax.annotation.Nonnull final String targetedManagedAppConfigurationId) {
+        Objects.requireNonNull(targetedManagedAppConfigurationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("targetedManagedAppConfiguration%2Did", targetedManagedAppConfigurationId);
+        return new TargetedManagedAppConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TargetedManagedAppConfigurationsRequestBuilder and sets the default values.

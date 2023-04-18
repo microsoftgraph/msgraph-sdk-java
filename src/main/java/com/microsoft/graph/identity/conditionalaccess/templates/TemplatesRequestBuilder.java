@@ -1,6 +1,7 @@
 package com.microsoft.graph.identity.conditionalaccess.templates;
 
 import com.microsoft.graph.identity.conditionalaccess.templates.count.CountRequestBuilder;
+import com.microsoft.graph.identity.conditionalaccess.templates.item.ConditionalAccessTemplateItemRequestBuilder;
 import com.microsoft.graph.models.ConditionalAccessTemplateCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the templates property of the microsoft.graph.conditionalAccessRoot entity.
+     * @param conditionalAccessTemplateId Unique identifier of the item
+     * @return a ConditionalAccessTemplateItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ConditionalAccessTemplateItemRequestBuilder byConditionalAccessTemplateId(@javax.annotation.Nonnull final String conditionalAccessTemplateId) {
+        Objects.requireNonNull(conditionalAccessTemplateId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("conditionalAccessTemplate%2Did", conditionalAccessTemplateId);
+        return new ConditionalAccessTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TemplatesRequestBuilder and sets the default values.

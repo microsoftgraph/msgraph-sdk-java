@@ -1,10 +1,7 @@
 package com.microsoft.graph.auditlogs;
 
 import com.microsoft.graph.auditlogs.directoryaudits.DirectoryAuditsRequestBuilder;
-import com.microsoft.graph.auditlogs.directoryaudits.item.DirectoryAuditItemRequestBuilder;
-import com.microsoft.graph.auditlogs.provisioning.item.ProvisioningObjectSummaryItemRequestBuilder;
 import com.microsoft.graph.auditlogs.provisioning.ProvisioningRequestBuilder;
-import com.microsoft.graph.auditlogs.signins.item.SignInItemRequestBuilder;
 import com.microsoft.graph.auditlogs.signins.SignInsRequestBuilder;
 import com.microsoft.graph.models.AuditLogRoot;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -60,18 +57,6 @@ public class AuditLogsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public AuditLogsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/auditLogs{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the directoryAudits property of the microsoft.graph.auditLogRoot entity.
-     * @param id Unique identifier of the item
-     * @return a DirectoryAuditItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DirectoryAuditItemRequestBuilder directoryAudits(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryAudit%2Did", id);
-        return new DirectoryAuditItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get auditLogs
@@ -149,30 +134,6 @@ public class AuditLogsRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the provisioning property of the microsoft.graph.auditLogRoot entity.
-     * @param id Unique identifier of the item
-     * @return a ProvisioningObjectSummaryItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ProvisioningObjectSummaryItemRequestBuilder provisioning(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("provisioningObjectSummary%2Did", id);
-        return new ProvisioningObjectSummaryItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the signIns property of the microsoft.graph.auditLogRoot entity.
-     * @param id Unique identifier of the item
-     * @return a SignInItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SignInItemRequestBuilder signIns(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("signIn%2Did", id);
-        return new SignInItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get auditLogs

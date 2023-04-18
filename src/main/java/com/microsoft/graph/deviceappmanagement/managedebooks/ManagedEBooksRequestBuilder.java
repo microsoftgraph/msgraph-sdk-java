@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.managedebooks;
 
 import com.microsoft.graph.deviceappmanagement.managedebooks.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedebooks.item.ManagedEBookItemRequestBuilder;
 import com.microsoft.graph.models.ManagedEBook;
 import com.microsoft.graph.models.ManagedEBookCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the managedEBooks property of the microsoft.graph.deviceAppManagement entity.
+     * @param managedEBookId Unique identifier of the item
+     * @return a ManagedEBookItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedEBookItemRequestBuilder byManagedEBookId(@javax.annotation.Nonnull final String managedEBookId) {
+        Objects.requireNonNull(managedEBookId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedEBook%2Did", managedEBookId);
+        return new ManagedEBookItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ManagedEBooksRequestBuilder and sets the default values.

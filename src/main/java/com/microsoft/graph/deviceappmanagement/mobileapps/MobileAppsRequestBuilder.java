@@ -3,6 +3,7 @@ package com.microsoft.graph.deviceappmanagement.mobileapps;
 import com.microsoft.graph.deviceappmanagement.mobileapps.count.CountRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileapps.graphmanagedmobilelobapp.GraphManagedMobileLobAppRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileapps.graphmobilelobapp.GraphMobileLobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.MobileAppItemRequestBuilder;
 import com.microsoft.graph.models.MobileApp;
 import com.microsoft.graph.models.MobileAppCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -38,6 +39,18 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GraphMobileLobAppRequestBuilder graphMobileLobApp() {
         return new GraphMobileLobAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the mobileApps property of the microsoft.graph.deviceAppManagement entity.
+     * @param mobileAppId Unique identifier of the item
+     * @return a MobileAppItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public MobileAppItemRequestBuilder byMobileAppId(@javax.annotation.Nonnull final String mobileAppId) {
+        Objects.requireNonNull(mobileAppId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("mobileApp%2Did", mobileAppId);
+        return new MobileAppItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MobileAppsRequestBuilder and sets the default values.

@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SchemaExtension;
 import com.microsoft.graph.models.SchemaExtensionCollectionResponse;
 import com.microsoft.graph.schemaextensions.count.CountRequestBuilder;
+import com.microsoft.graph.schemaextensions.item.SchemaExtensionItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class SchemaExtensionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of schemaExtension entities.
+     * @param schemaExtensionId Unique identifier of the item
+     * @return a SchemaExtensionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SchemaExtensionItemRequestBuilder bySchemaExtensionId(@javax.annotation.Nonnull final String schemaExtensionId) {
+        Objects.requireNonNull(schemaExtensionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("schemaExtension%2Did", schemaExtensionId);
+        return new SchemaExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SchemaExtensionsRequestBuilder and sets the default values.

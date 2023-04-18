@@ -4,7 +4,6 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SubjectRightsRequest;
 import com.microsoft.graph.privacy.subjectrightsrequests.item.getfinalattachment.GetFinalAttachmentRequestBuilder;
 import com.microsoft.graph.privacy.subjectrightsrequests.item.getfinalreport.GetFinalReportRequestBuilder;
-import com.microsoft.graph.privacy.subjectrightsrequests.item.notes.item.AuthoredNoteItemRequestBuilder;
 import com.microsoft.graph.privacy.subjectrightsrequests.item.notes.NotesRequestBuilder;
 import com.microsoft.graph.privacy.subjectrightsrequests.item.team.TeamRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -138,18 +137,6 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity.
-     * @param id Unique identifier of the item
-     * @return a AuthoredNoteItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AuthoredNoteItemRequestBuilder notes(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("authoredNote%2Did", id);
-        return new AuthoredNoteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property subjectRightsRequests in privacy

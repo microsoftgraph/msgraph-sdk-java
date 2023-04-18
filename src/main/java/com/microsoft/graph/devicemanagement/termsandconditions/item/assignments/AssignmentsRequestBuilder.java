@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.termsandconditions.item.assignments;
 
 import com.microsoft.graph.devicemanagement.termsandconditions.item.assignments.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.termsandconditions.item.assignments.item.TermsAndConditionsAssignmentItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TermsAndConditionsAssignment;
 import com.microsoft.graph.models.TermsAndConditionsAssignmentCollectionResponse;
@@ -26,6 +27,18 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.termsAndConditions entity.
+     * @param termsAndConditionsAssignmentId Unique identifier of the item
+     * @return a TermsAndConditionsAssignmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TermsAndConditionsAssignmentItemRequestBuilder byTermsAndConditionsAssignmentId(@javax.annotation.Nonnull final String termsAndConditionsAssignmentId) {
+        Objects.requireNonNull(termsAndConditionsAssignmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("termsAndConditionsAssignment%2Did", termsAndConditionsAssignmentId);
+        return new TermsAndConditionsAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AssignmentsRequestBuilder and sets the default values.

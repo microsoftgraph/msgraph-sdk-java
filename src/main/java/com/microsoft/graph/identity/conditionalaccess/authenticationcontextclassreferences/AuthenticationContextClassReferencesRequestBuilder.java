@@ -1,6 +1,7 @@
 package com.microsoft.graph.identity.conditionalaccess.authenticationcontextclassreferences;
 
 import com.microsoft.graph.identity.conditionalaccess.authenticationcontextclassreferences.count.CountRequestBuilder;
+import com.microsoft.graph.identity.conditionalaccess.authenticationcontextclassreferences.item.AuthenticationContextClassReferenceItemRequestBuilder;
 import com.microsoft.graph.models.AuthenticationContextClassReference;
 import com.microsoft.graph.models.AuthenticationContextClassReferenceCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class AuthenticationContextClassReferencesRequestBuilder extends BaseRequ
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the authenticationContextClassReferences property of the microsoft.graph.conditionalAccessRoot entity.
+     * @param authenticationContextClassReferenceId Unique identifier of the item
+     * @return a AuthenticationContextClassReferenceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AuthenticationContextClassReferenceItemRequestBuilder byAuthenticationContextClassReferenceId(@javax.annotation.Nonnull final String authenticationContextClassReferenceId) {
+        Objects.requireNonNull(authenticationContextClassReferenceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("authenticationContextClassReference%2Did", authenticationContextClassReferenceId);
+        return new AuthenticationContextClassReferenceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AuthenticationContextClassReferencesRequestBuilder and sets the default values.

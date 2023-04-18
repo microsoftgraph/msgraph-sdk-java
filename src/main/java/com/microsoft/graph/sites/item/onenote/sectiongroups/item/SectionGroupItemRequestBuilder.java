@@ -5,7 +5,6 @@ import com.microsoft.graph.models.SectionGroup;
 import com.microsoft.graph.sites.item.onenote.sectiongroups.item.parentnotebook.ParentNotebookRequestBuilder;
 import com.microsoft.graph.sites.item.onenote.sectiongroups.item.parentsectiongroup.ParentSectionGroupRequestBuilder;
 import com.microsoft.graph.sites.item.onenote.sectiongroups.item.sectiongroups.SectionGroupsRequestBuilder;
-import com.microsoft.graph.sites.item.onenote.sectiongroups.item.sections.item.OnenoteSectionItemRequestBuilder;
 import com.microsoft.graph.sites.item.onenote.sectiongroups.item.sections.SectionsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -178,30 +177,6 @@ public class SectionGroupItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the sectionGroups property of the microsoft.graph.sectionGroup entity.
-     * @param id Unique identifier of the item
-     * @return a SectionGroupItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SectionGroupItemRequestBuilder sectionGroups(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("sectionGroup%2Did1", id);
-        return new SectionGroupItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the sections property of the microsoft.graph.sectionGroup entity.
-     * @param id Unique identifier of the item
-     * @return a OnenoteSectionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public OnenoteSectionItemRequestBuilder sections(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("onenoteSection%2Did", id);
-        return new OnenoteSectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property sectionGroups for sites

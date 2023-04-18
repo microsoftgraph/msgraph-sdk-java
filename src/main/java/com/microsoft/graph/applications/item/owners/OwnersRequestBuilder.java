@@ -5,6 +5,7 @@ import com.microsoft.graph.applications.item.owners.graphapproleassignment.Graph
 import com.microsoft.graph.applications.item.owners.graphendpoint.GraphEndpointRequestBuilder;
 import com.microsoft.graph.applications.item.owners.graphserviceprincipal.GraphServicePrincipalRequestBuilder;
 import com.microsoft.graph.applications.item.owners.graphuser.GraphUserRequestBuilder;
+import com.microsoft.graph.applications.item.owners.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.applications.item.owners.ref.RefRequestBuilder;
 import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -55,6 +56,18 @@ public class OwnersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.applications.item.owners.item collection
+     * @param directoryObjectId Unique identifier of the item
+     * @return a DirectoryObjectItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DirectoryObjectItemRequestBuilder byDirectoryObjectId(@javax.annotation.Nonnull final String directoryObjectId) {
+        Objects.requireNonNull(directoryObjectId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("directoryObject%2Did", directoryObjectId);
+        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OwnersRequestBuilder and sets the default values.

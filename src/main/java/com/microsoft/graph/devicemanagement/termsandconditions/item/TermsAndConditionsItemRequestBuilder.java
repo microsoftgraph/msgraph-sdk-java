@@ -1,9 +1,7 @@
 package com.microsoft.graph.devicemanagement.termsandconditions.item;
 
 import com.microsoft.graph.devicemanagement.termsandconditions.item.acceptancestatuses.AcceptanceStatusesRequestBuilder;
-import com.microsoft.graph.devicemanagement.termsandconditions.item.acceptancestatuses.item.TermsAndConditionsAcceptanceStatusItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.termsandconditions.item.assignments.AssignmentsRequestBuilder;
-import com.microsoft.graph.devicemanagement.termsandconditions.item.assignments.item.TermsAndConditionsAssignmentItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TermsAndConditions;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -33,30 +31,6 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the acceptanceStatuses property of the microsoft.graph.termsAndConditions entity.
-     * @param id Unique identifier of the item
-     * @return a TermsAndConditionsAcceptanceStatusItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TermsAndConditionsAcceptanceStatusItemRequestBuilder acceptanceStatuses(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("termsAndConditionsAcceptanceStatus%2Did", id);
-        return new TermsAndConditionsAcceptanceStatusItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the assignments property of the microsoft.graph.termsAndConditions entity.
-     * @param id Unique identifier of the item
-     * @return a TermsAndConditionsAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TermsAndConditionsAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("termsAndConditionsAssignment%2Did", id);
-        return new TermsAndConditionsAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TermsAndConditionsItemRequestBuilder and sets the default values.

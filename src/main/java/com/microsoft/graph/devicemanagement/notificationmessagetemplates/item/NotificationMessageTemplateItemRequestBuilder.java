@@ -1,6 +1,5 @@
 package com.microsoft.graph.devicemanagement.notificationmessagetemplates.item;
 
-import com.microsoft.graph.devicemanagement.notificationmessagetemplates.item.localizednotificationmessages.item.LocalizedNotificationMessageItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.notificationmessagetemplates.item.localizednotificationmessages.LocalizedNotificationMessagesRequestBuilder;
 import com.microsoft.graph.devicemanagement.notificationmessagetemplates.item.sendtestmessage.SendTestMessageRequestBuilder;
 import com.microsoft.graph.models.NotificationMessageTemplate;
@@ -126,18 +125,6 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the localizedNotificationMessages property of the microsoft.graph.notificationMessageTemplate entity.
-     * @param id Unique identifier of the item
-     * @return a LocalizedNotificationMessageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public LocalizedNotificationMessageItemRequestBuilder localizedNotificationMessages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("localizedNotificationMessage%2Did", id);
-        return new LocalizedNotificationMessageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property notificationMessageTemplates in deviceManagement

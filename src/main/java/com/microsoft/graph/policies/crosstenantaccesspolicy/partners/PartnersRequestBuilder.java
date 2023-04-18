@@ -4,6 +4,7 @@ import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationPartner;
 import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationPartnerCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.count.CountRequestBuilder;
+import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.item.CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the partners property of the microsoft.graph.crossTenantAccessPolicy entity.
+     * @param crossTenantAccessPolicyConfigurationPartnerTenantId Unique identifier of the item
+     * @return a CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder byCrossTenantAccessPolicyConfigurationPartnerTenantId(@javax.annotation.Nonnull final String crossTenantAccessPolicyConfigurationPartnerTenantId) {
+        Objects.requireNonNull(crossTenantAccessPolicyConfigurationPartnerTenantId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("crossTenantAccessPolicyConfigurationPartner%2DtenantId", crossTenantAccessPolicyConfigurationPartnerTenantId);
+        return new CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PartnersRequestBuilder and sets the default values.

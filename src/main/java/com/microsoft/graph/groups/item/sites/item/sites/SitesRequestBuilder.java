@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.sites.item.sites;
 
 import com.microsoft.graph.groups.item.sites.item.sites.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.sites.item.SiteItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SiteCollectionResponse;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sites property of the microsoft.graph.site entity.
+     * @param siteId1 Unique identifier of the item
+     * @return a SiteItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SiteItemRequestBuilder bySiteId1(@javax.annotation.Nonnull final String siteId1) {
+        Objects.requireNonNull(siteId1);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("site%2Did1", siteId1);
+        return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SitesRequestBuilder and sets the default values.

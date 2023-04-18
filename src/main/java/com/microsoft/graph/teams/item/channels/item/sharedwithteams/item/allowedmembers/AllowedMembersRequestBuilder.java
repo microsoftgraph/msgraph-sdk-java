@@ -3,6 +3,7 @@ package com.microsoft.graph.teams.item.channels.item.sharedwithteams.item.allowe
 import com.microsoft.graph.models.ConversationMemberCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.teams.item.channels.item.sharedwithteams.item.allowedmembers.count.CountRequestBuilder;
+import com.microsoft.graph.teams.item.channels.item.sharedwithteams.item.allowedmembers.item.ConversationMemberItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -25,6 +26,18 @@ public class AllowedMembersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the allowedMembers property of the microsoft.graph.sharedWithChannelTeamInfo entity.
+     * @param conversationMemberId Unique identifier of the item
+     * @return a ConversationMemberItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ConversationMemberItemRequestBuilder byConversationMemberId(@javax.annotation.Nonnull final String conversationMemberId) {
+        Objects.requireNonNull(conversationMemberId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("conversationMember%2Did", conversationMemberId);
+        return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AllowedMembersRequestBuilder and sets the default values.

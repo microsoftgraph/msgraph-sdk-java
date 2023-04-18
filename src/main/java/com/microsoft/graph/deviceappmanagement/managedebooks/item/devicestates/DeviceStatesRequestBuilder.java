@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.managedebooks.item.devicestates;
 
 import com.microsoft.graph.deviceappmanagement.managedebooks.item.devicestates.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedebooks.item.devicestates.item.DeviceInstallStateItemRequestBuilder;
 import com.microsoft.graph.models.DeviceInstallState;
 import com.microsoft.graph.models.DeviceInstallStateCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deviceStates property of the microsoft.graph.managedEBook entity.
+     * @param deviceInstallStateId Unique identifier of the item
+     * @return a DeviceInstallStateItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceInstallStateItemRequestBuilder byDeviceInstallStateId(@javax.annotation.Nonnull final String deviceInstallStateId) {
+        Objects.requireNonNull(deviceInstallStateId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceInstallState%2Did", deviceInstallStateId);
+        return new DeviceInstallStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DeviceStatesRequestBuilder and sets the default values.

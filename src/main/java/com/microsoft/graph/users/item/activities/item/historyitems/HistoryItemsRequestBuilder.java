@@ -4,6 +4,7 @@ import com.microsoft.graph.models.ActivityHistoryItem;
 import com.microsoft.graph.models.ActivityHistoryItemCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.activities.item.historyitems.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.activities.item.historyitems.item.ActivityHistoryItemItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class HistoryItemsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the historyItems property of the microsoft.graph.userActivity entity.
+     * @param activityHistoryItemId Unique identifier of the item
+     * @return a ActivityHistoryItemItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ActivityHistoryItemItemRequestBuilder byActivityHistoryItemId(@javax.annotation.Nonnull final String activityHistoryItemId) {
+        Objects.requireNonNull(activityHistoryItemId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("activityHistoryItem%2Did", activityHistoryItemId);
+        return new ActivityHistoryItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new HistoryItemsRequestBuilder and sets the default values.

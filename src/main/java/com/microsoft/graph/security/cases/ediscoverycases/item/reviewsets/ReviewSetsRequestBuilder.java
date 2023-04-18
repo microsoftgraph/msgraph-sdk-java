@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryReviewSet;
 import com.microsoft.graph.models.security.EdiscoveryReviewSetCollectionResponse;
 import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.count.CountRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.EdiscoveryReviewSetItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the reviewSets property of the microsoft.graph.security.ediscoveryCase entity.
+     * @param ediscoveryReviewSetId Unique identifier of the item
+     * @return a EdiscoveryReviewSetItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EdiscoveryReviewSetItemRequestBuilder byEdiscoveryReviewSetId(@javax.annotation.Nonnull final String ediscoveryReviewSetId) {
+        Objects.requireNonNull(ediscoveryReviewSetId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("ediscoveryReviewSet%2Did", ediscoveryReviewSetId);
+        return new EdiscoveryReviewSetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ReviewSetsRequestBuilder and sets the default values.

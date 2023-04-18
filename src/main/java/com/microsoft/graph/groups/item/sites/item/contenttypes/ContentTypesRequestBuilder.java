@@ -4,6 +4,7 @@ import com.microsoft.graph.groups.item.sites.item.contenttypes.addcopy.AddCopyRe
 import com.microsoft.graph.groups.item.sites.item.contenttypes.addcopyfromcontenttypehub.AddCopyFromContentTypeHubRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.contenttypes.count.CountRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.contenttypes.getcompatiblehubcontenttypes.GetCompatibleHubContentTypesRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.contenttypes.item.ContentTypeItemRequestBuilder;
 import com.microsoft.graph.models.ContentType;
 import com.microsoft.graph.models.ContentTypeCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -44,6 +45,18 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GetCompatibleHubContentTypesRequestBuilder getCompatibleHubContentTypes() {
         return new GetCompatibleHubContentTypesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the contentTypes property of the microsoft.graph.site entity.
+     * @param contentTypeId Unique identifier of the item
+     * @return a ContentTypeItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ContentTypeItemRequestBuilder byContentTypeId(@javax.annotation.Nonnull final String contentTypeId) {
+        Objects.requireNonNull(contentTypeId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("contentType%2Did", contentTypeId);
+        return new ContentTypeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ContentTypesRequestBuilder and sets the default values.

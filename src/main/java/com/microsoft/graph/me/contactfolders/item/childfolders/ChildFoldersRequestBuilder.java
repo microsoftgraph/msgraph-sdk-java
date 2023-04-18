@@ -2,6 +2,7 @@ package com.microsoft.graph.me.contactfolders.item.childfolders;
 
 import com.microsoft.graph.me.contactfolders.item.childfolders.count.CountRequestBuilder;
 import com.microsoft.graph.me.contactfolders.item.childfolders.delta.DeltaRequestBuilder;
+import com.microsoft.graph.me.contactfolders.item.childfolders.item.ContactFolderItemRequestBuilder;
 import com.microsoft.graph.models.ContactFolder;
 import com.microsoft.graph.models.ContactFolderCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -32,6 +33,18 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the childFolders property of the microsoft.graph.contactFolder entity.
+     * @param contactFolderId1 Unique identifier of the item
+     * @return a ContactFolderItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ContactFolderItemRequestBuilder byContactFolderId1(@javax.annotation.Nonnull final String contactFolderId1) {
+        Objects.requireNonNull(contactFolderId1);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("contactFolder%2Did1", contactFolderId1);
+        return new ContactFolderItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ChildFoldersRequestBuilder and sets the default values.

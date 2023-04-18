@@ -3,6 +3,7 @@ package com.microsoft.graph.users.item.joinedteams.item.allchannels;
 import com.microsoft.graph.models.ChannelCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.joinedteams.item.allchannels.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.joinedteams.item.allchannels.item.ChannelItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -25,6 +26,18 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the allChannels property of the microsoft.graph.team entity.
+     * @param channelId Unique identifier of the item
+     * @return a ChannelItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ChannelItemRequestBuilder byChannelId(@javax.annotation.Nonnull final String channelId) {
+        Objects.requireNonNull(channelId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("channel%2Did", channelId);
+        return new ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AllChannelsRequestBuilder and sets the default values.

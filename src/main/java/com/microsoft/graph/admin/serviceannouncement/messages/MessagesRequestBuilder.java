@@ -3,6 +3,7 @@ package com.microsoft.graph.admin.serviceannouncement.messages;
 import com.microsoft.graph.admin.serviceannouncement.messages.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.admin.serviceannouncement.messages.count.CountRequestBuilder;
 import com.microsoft.graph.admin.serviceannouncement.messages.favorite.FavoriteRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.messages.item.ServiceUpdateMessageItemRequestBuilder;
 import com.microsoft.graph.admin.serviceannouncement.messages.markread.MarkReadRequestBuilder;
 import com.microsoft.graph.admin.serviceannouncement.messages.markunread.MarkUnreadRequestBuilder;
 import com.microsoft.graph.admin.serviceannouncement.messages.unarchive.UnarchiveRequestBuilder;
@@ -62,6 +63,18 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public UnfavoriteRequestBuilder unfavorite() {
         return new UnfavoriteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity.
+     * @param serviceUpdateMessageId Unique identifier of the item
+     * @return a ServiceUpdateMessageItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ServiceUpdateMessageItemRequestBuilder byServiceUpdateMessageId(@javax.annotation.Nonnull final String serviceUpdateMessageId) {
+        Objects.requireNonNull(serviceUpdateMessageId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("serviceUpdateMessage%2Did", serviceUpdateMessageId);
+        return new ServiceUpdateMessageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MessagesRequestBuilder and sets the default values.

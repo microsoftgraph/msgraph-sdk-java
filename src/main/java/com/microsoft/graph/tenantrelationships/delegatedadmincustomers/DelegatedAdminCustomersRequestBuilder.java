@@ -4,6 +4,7 @@ import com.microsoft.graph.models.DelegatedAdminCustomer;
 import com.microsoft.graph.models.DelegatedAdminCustomerCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.tenantrelationships.delegatedadmincustomers.count.CountRequestBuilder;
+import com.microsoft.graph.tenantrelationships.delegatedadmincustomers.item.DelegatedAdminCustomerItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class DelegatedAdminCustomersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the delegatedAdminCustomers property of the microsoft.graph.tenantRelationship entity.
+     * @param delegatedAdminCustomerId Unique identifier of the item
+     * @return a DelegatedAdminCustomerItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DelegatedAdminCustomerItemRequestBuilder byDelegatedAdminCustomerId(@javax.annotation.Nonnull final String delegatedAdminCustomerId) {
+        Objects.requireNonNull(delegatedAdminCustomerId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("delegatedAdminCustomer%2Did", delegatedAdminCustomerId);
+        return new DelegatedAdminCustomerItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DelegatedAdminCustomersRequestBuilder and sets the default values.

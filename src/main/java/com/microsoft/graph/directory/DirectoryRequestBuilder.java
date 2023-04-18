@@ -1,12 +1,8 @@
 package com.microsoft.graph.directory;
 
 import com.microsoft.graph.directory.administrativeunits.AdministrativeUnitsRequestBuilder;
-import com.microsoft.graph.directory.administrativeunits.item.AdministrativeUnitItemRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.DeletedItemsRequestBuilder;
-import com.microsoft.graph.directory.deleteditems.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.directory.federationconfigurations.FederationConfigurationsRequestBuilder;
-import com.microsoft.graph.directory.federationconfigurations.item.IdentityProviderBaseItemRequestBuilder;
-import com.microsoft.graph.directory.onpremisessynchronization.item.OnPremisesDirectorySynchronizationItemRequestBuilder;
 import com.microsoft.graph.directory.onpremisessynchronization.OnPremisesSynchronizationRequestBuilder;
 import com.microsoft.graph.models.Directory;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -49,18 +45,6 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
         return new OnPremisesSynchronizationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity.
-     * @param id Unique identifier of the item
-     * @return a AdministrativeUnitItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AdministrativeUnitItemRequestBuilder administrativeUnits(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("administrativeUnit%2Did", id);
-        return new AdministrativeUnitItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new DirectoryRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -79,30 +63,6 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public DirectoryRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/directory{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the deletedItems property of the microsoft.graph.directory entity.
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DirectoryObjectItemRequestBuilder deletedItems(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the federationConfigurations property of the microsoft.graph.directory entity.
-     * @param id Unique identifier of the item
-     * @return a IdentityProviderBaseItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public IdentityProviderBaseItemRequestBuilder federationConfigurations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("identityProviderBase%2Did", id);
-        return new IdentityProviderBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get directory
@@ -140,18 +100,6 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the onPremisesSynchronization property of the microsoft.graph.directory entity.
-     * @param id Unique identifier of the item
-     * @return a OnPremisesDirectorySynchronizationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public OnPremisesDirectorySynchronizationItemRequestBuilder onPremisesSynchronization(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("onPremisesDirectorySynchronization%2Did", id);
-        return new OnPremisesDirectorySynchronizationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update directory

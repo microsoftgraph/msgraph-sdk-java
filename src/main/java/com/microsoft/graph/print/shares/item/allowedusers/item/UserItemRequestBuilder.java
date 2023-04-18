@@ -1,5 +1,6 @@
 package com.microsoft.graph.print.shares.item.allowedusers.item;
 
+import com.microsoft.graph.print.shares.item.allowedusers.item.mailboxsettings.MailboxSettingsRequestBuilder;
 import com.microsoft.graph.print.shares.item.allowedusers.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
@@ -9,6 +10,11 @@ import java.util.Objects;
  * Builds and executes requests for operations under /print/shares/{printerShare-id}/allowedUsers/{user-id}
  */
 public class UserItemRequestBuilder extends BaseRequestBuilder {
+    /** The mailboxSettings property */
+    @javax.annotation.Nonnull
+    public MailboxSettingsRequestBuilder mailboxSettings() {
+        return new MailboxSettingsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Provides operations to manage the collection of print entities. */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {

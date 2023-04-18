@@ -6,6 +6,7 @@ import com.microsoft.graph.users.item.registereddevices.count.CountRequestBuilde
 import com.microsoft.graph.users.item.registereddevices.graphapproleassignment.GraphAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.users.item.registereddevices.graphdevice.GraphDeviceRequestBuilder;
 import com.microsoft.graph.users.item.registereddevices.graphendpoint.GraphEndpointRequestBuilder;
+import com.microsoft.graph.users.item.registereddevices.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -43,6 +44,18 @@ public class RegisteredDevicesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GraphEndpointRequestBuilder graphEndpoint() {
         return new GraphEndpointRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the registeredDevices property of the microsoft.graph.user entity.
+     * @param directoryObjectId Unique identifier of the item
+     * @return a DirectoryObjectItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DirectoryObjectItemRequestBuilder byDirectoryObjectId(@javax.annotation.Nonnull final String directoryObjectId) {
+        Objects.requireNonNull(directoryObjectId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("directoryObject%2Did", directoryObjectId);
+        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RegisteredDevicesRequestBuilder and sets the default values.

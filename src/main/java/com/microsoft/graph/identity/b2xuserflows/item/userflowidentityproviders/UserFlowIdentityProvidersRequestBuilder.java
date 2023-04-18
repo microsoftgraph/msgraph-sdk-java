@@ -1,6 +1,7 @@
 package com.microsoft.graph.identity.b2xuserflows.item.userflowidentityproviders;
 
 import com.microsoft.graph.identity.b2xuserflows.item.userflowidentityproviders.count.CountRequestBuilder;
+import com.microsoft.graph.identity.b2xuserflows.item.userflowidentityproviders.item.IdentityProviderBaseItemRequestBuilder;
 import com.microsoft.graph.identity.b2xuserflows.item.userflowidentityproviders.ref.RefRequestBuilder;
 import com.microsoft.graph.models.IdentityProviderBaseCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -31,6 +32,18 @@ public class UserFlowIdentityProvidersRequestBuilder extends BaseRequestBuilder 
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.identity.b2xUserFlows.item.userFlowIdentityProviders.item collection
+     * @param identityProviderBaseId Unique identifier of the item
+     * @return a IdentityProviderBaseItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public IdentityProviderBaseItemRequestBuilder byIdentityProviderBaseId(@javax.annotation.Nonnull final String identityProviderBaseId) {
+        Objects.requireNonNull(identityProviderBaseId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("identityProviderBase%2Did", identityProviderBaseId);
+        return new IdentityProviderBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new UserFlowIdentityProvidersRequestBuilder and sets the default values.

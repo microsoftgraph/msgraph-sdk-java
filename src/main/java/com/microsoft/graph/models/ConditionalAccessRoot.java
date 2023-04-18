@@ -9,6 +9,8 @@ import java.util.Objects;
 public class ConditionalAccessRoot extends Entity implements Parsable {
     /** Read-only. Nullable. Returns a collection of the specified authentication context class references. */
     private java.util.List<AuthenticationContextClassReference> authenticationContextClassReferences;
+    /** The authenticationStrength property */
+    private AuthenticationStrengthRoot authenticationStrength;
     /** Read-only. Nullable. Returns a collection of the specified named locations. */
     private java.util.List<NamedLocation> namedLocations;
     /** Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies. */
@@ -16,7 +18,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     /** Read-only. Nullable. Returns a collection of the specified Conditional Access templates. */
     private java.util.List<ConditionalAccessTemplate> templates;
     /**
-     * Instantiates a new conditionalAccessRoot and sets the default values.
+     * Instantiates a new ConditionalAccessRoot and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -26,7 +28,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conditionalAccessRoot
+     * @return a ConditionalAccessRoot
      */
     @javax.annotation.Nonnull
     public static ConditionalAccessRoot createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -42,6 +44,14 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
         return this.authenticationContextClassReferences;
     }
     /**
+     * Gets the authenticationStrength property value. The authenticationStrength property
+     * @return a authenticationStrengthRoot
+     */
+    @javax.annotation.Nullable
+    public AuthenticationStrengthRoot getAuthenticationStrength() {
+        return this.authenticationStrength;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
@@ -49,6 +59,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationContextClassReferences", (n) -> { this.setAuthenticationContextClassReferences(n.getCollectionOfObjectValues(AuthenticationContextClassReference::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationStrength", (n) -> { this.setAuthenticationStrength(n.getObjectValue(AuthenticationStrengthRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("namedLocations", (n) -> { this.setNamedLocations(n.getCollectionOfObjectValues(NamedLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("policies", (n) -> { this.setPolicies(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("templates", (n) -> { this.setTemplates(n.getCollectionOfObjectValues(ConditionalAccessTemplate::createFromDiscriminatorValue)); });
@@ -88,6 +99,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("authenticationContextClassReferences", this.getAuthenticationContextClassReferences());
+        writer.writeObjectValue("authenticationStrength", this.getAuthenticationStrength());
         writer.writeCollectionOfObjectValues("namedLocations", this.getNamedLocations());
         writer.writeCollectionOfObjectValues("policies", this.getPolicies());
         writer.writeCollectionOfObjectValues("templates", this.getTemplates());
@@ -100,6 +112,15 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setAuthenticationContextClassReferences(@javax.annotation.Nullable final java.util.List<AuthenticationContextClassReference> value) {
         this.authenticationContextClassReferences = value;
+    }
+    /**
+     * Sets the authenticationStrength property value. The authenticationStrength property
+     * @param value Value to set for the authenticationStrength property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAuthenticationStrength(@javax.annotation.Nullable final AuthenticationStrengthRoot value) {
+        this.authenticationStrength = value;
     }
     /**
      * Sets the namedLocations property value. Read-only. Nullable. Returns a collection of the specified named locations.

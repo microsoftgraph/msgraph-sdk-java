@@ -2,6 +2,7 @@ package com.microsoft.graph.me.messages;
 
 import com.microsoft.graph.me.messages.count.CountRequestBuilder;
 import com.microsoft.graph.me.messages.delta.DeltaRequestBuilder;
+import com.microsoft.graph.me.messages.item.MessageItemRequestBuilder;
 import com.microsoft.graph.models.Message;
 import com.microsoft.graph.models.MessageCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -34,6 +35,18 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the messages property of the microsoft.graph.user entity.
+     * @param messageId Unique identifier of the item
+     * @return a MessageItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public MessageItemRequestBuilder byMessageId(@javax.annotation.Nonnull final String messageId) {
+        Objects.requireNonNull(messageId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("message%2Did", messageId);
+        return new MessageItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
      * Instantiates a new MessagesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -41,7 +54,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public MessagesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/me/messages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/me/messages{?includeHiddenMessages*,%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new MessagesRequestBuilder and sets the default values.
@@ -51,12 +64,12 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public MessagesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/me/messages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/me/messages{?includeHiddenMessages*,%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
+     * The messages in a mailbox or folder. Read-only. Nullable.
      * @return a CompletableFuture of MessageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/opentypeextension-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/user-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageCollectionResponse> get() {
@@ -73,10 +86,10 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
+     * The messages in a mailbox or folder. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of MessageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/opentypeextension-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/user-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -135,7 +148,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
+     * The messages in a mailbox or folder. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -143,7 +156,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
+     * The messages in a mailbox or folder. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -196,7 +209,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
+     * The messages in a mailbox or folder. Read-only. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */
@@ -211,6 +224,9 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         @QueryParameter(name = "%24filter")
         @javax.annotation.Nullable
         public String filter;
+        /** Include Hidden Messages */
+        @javax.annotation.Nullable
+        public String includeHiddenMessages;
         /** Order items by property values */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable

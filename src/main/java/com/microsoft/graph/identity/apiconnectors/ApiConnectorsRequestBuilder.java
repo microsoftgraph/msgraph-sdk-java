@@ -1,6 +1,7 @@
 package com.microsoft.graph.identity.apiconnectors;
 
 import com.microsoft.graph.identity.apiconnectors.count.CountRequestBuilder;
+import com.microsoft.graph.identity.apiconnectors.item.IdentityApiConnectorItemRequestBuilder;
 import com.microsoft.graph.models.IdentityApiConnector;
 import com.microsoft.graph.models.IdentityApiConnectorCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the apiConnectors property of the microsoft.graph.identityContainer entity.
+     * @param identityApiConnectorId Unique identifier of the item
+     * @return a IdentityApiConnectorItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public IdentityApiConnectorItemRequestBuilder byIdentityApiConnectorId(@javax.annotation.Nonnull final String identityApiConnectorId) {
+        Objects.requireNonNull(identityApiConnectorId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("identityApiConnector%2Did", identityApiConnectorId);
+        return new IdentityApiConnectorItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ApiConnectorsRequestBuilder and sets the default values.

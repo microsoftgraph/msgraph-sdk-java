@@ -4,6 +4,7 @@ import com.microsoft.graph.models.AuthoredNote;
 import com.microsoft.graph.models.AuthoredNoteCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.privacy.subjectrightsrequests.item.notes.count.CountRequestBuilder;
+import com.microsoft.graph.privacy.subjectrightsrequests.item.notes.item.AuthoredNoteItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity.
+     * @param authoredNoteId Unique identifier of the item
+     * @return a AuthoredNoteItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AuthoredNoteItemRequestBuilder byAuthoredNoteId(@javax.annotation.Nonnull final String authoredNoteId) {
+        Objects.requireNonNull(authoredNoteId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("authoredNote%2Did", authoredNoteId);
+        return new AuthoredNoteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new NotesRequestBuilder and sets the default values.

@@ -2,6 +2,7 @@ package com.microsoft.graph.directory.federationconfigurations;
 
 import com.microsoft.graph.directory.federationconfigurations.availableprovidertypes.AvailableProviderTypesRequestBuilder;
 import com.microsoft.graph.directory.federationconfigurations.count.CountRequestBuilder;
+import com.microsoft.graph.directory.federationconfigurations.item.IdentityProviderBaseItemRequestBuilder;
 import com.microsoft.graph.models.IdentityProviderBase;
 import com.microsoft.graph.models.IdentityProviderBaseCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -32,6 +33,18 @@ public class FederationConfigurationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the federationConfigurations property of the microsoft.graph.directory entity.
+     * @param identityProviderBaseId Unique identifier of the item
+     * @return a IdentityProviderBaseItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public IdentityProviderBaseItemRequestBuilder byIdentityProviderBaseId(@javax.annotation.Nonnull final String identityProviderBaseId) {
+        Objects.requireNonNull(identityProviderBaseId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("identityProviderBase%2Did", identityProviderBaseId);
+        return new IdentityProviderBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new FederationConfigurationsRequestBuilder and sets the default values.

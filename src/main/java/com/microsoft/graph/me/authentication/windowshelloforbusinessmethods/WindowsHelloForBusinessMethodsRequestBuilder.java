@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.authentication.windowshelloforbusinessmethods;
 
 import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.count.CountRequestBuilder;
+import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WindowsHelloForBusinessAuthenticationMethodCollectionResponse;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class WindowsHelloForBusinessMethodsRequestBuilder extends BaseRequestBui
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the windowsHelloForBusinessMethods property of the microsoft.graph.authentication entity.
+     * @param windowsHelloForBusinessAuthenticationMethodId Unique identifier of the item
+     * @return a WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder byWindowsHelloForBusinessAuthenticationMethodId(@javax.annotation.Nonnull final String windowsHelloForBusinessAuthenticationMethodId) {
+        Objects.requireNonNull(windowsHelloForBusinessAuthenticationMethodId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("windowsHelloForBusinessAuthenticationMethod%2Did", windowsHelloForBusinessAuthenticationMethodId);
+        return new WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new WindowsHelloForBusinessMethodsRequestBuilder and sets the default values.

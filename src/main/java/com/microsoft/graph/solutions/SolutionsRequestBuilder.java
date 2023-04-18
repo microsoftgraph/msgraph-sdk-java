@@ -3,9 +3,7 @@ package com.microsoft.graph.solutions;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SolutionsRoot;
 import com.microsoft.graph.solutions.bookingbusinesses.BookingBusinessesRequestBuilder;
-import com.microsoft.graph.solutions.bookingbusinesses.item.BookingBusinessItemRequestBuilder;
 import com.microsoft.graph.solutions.bookingcurrencies.BookingCurrenciesRequestBuilder;
-import com.microsoft.graph.solutions.bookingcurrencies.item.BookingCurrencyItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -33,30 +31,6 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public BookingCurrenciesRequestBuilder bookingCurrencies() {
         return new BookingCurrenciesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity.
-     * @param id Unique identifier of the item
-     * @return a BookingBusinessItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public BookingBusinessItemRequestBuilder bookingBusinesses(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("bookingBusiness%2Did", id);
-        return new BookingBusinessItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the bookingCurrencies property of the microsoft.graph.solutionsRoot entity.
-     * @param id Unique identifier of the item
-     * @return a BookingCurrencyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public BookingCurrencyItemRequestBuilder bookingCurrencies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("bookingCurrency%2Did", id);
-        return new BookingCurrencyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SolutionsRequestBuilder and sets the default values.

@@ -4,7 +4,6 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OrganizationalBranding;
 import com.microsoft.graph.organization.item.branding.backgroundimage.BackgroundImageRequestBuilder;
 import com.microsoft.graph.organization.item.branding.bannerlogo.BannerLogoRequestBuilder;
-import com.microsoft.graph.organization.item.branding.localizations.item.OrganizationalBrandingLocalizationItemRequestBuilder;
 import com.microsoft.graph.organization.item.branding.localizations.LocalizationsRequestBuilder;
 import com.microsoft.graph.organization.item.branding.squarelogo.SquareLogoRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -142,18 +141,6 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the localizations property of the microsoft.graph.organizationalBranding entity.
-     * @param id Unique identifier of the item
-     * @return a OrganizationalBrandingLocalizationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public OrganizationalBrandingLocalizationItemRequestBuilder localizations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("organizationalBrandingLocalization%2Did", id);
-        return new OrganizationalBrandingLocalizationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the properties of the default branding object specified by the organizationalBranding resource.

@@ -2,6 +2,7 @@ package com.microsoft.graph.education.me.assignments;
 
 import com.microsoft.graph.education.me.assignments.count.CountRequestBuilder;
 import com.microsoft.graph.education.me.assignments.delta.DeltaRequestBuilder;
+import com.microsoft.graph.education.me.assignments.item.EducationAssignmentItemRequestBuilder;
 import com.microsoft.graph.models.EducationAssignment;
 import com.microsoft.graph.models.EducationAssignmentCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -32,6 +33,18 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.educationUser entity.
+     * @param educationAssignmentId Unique identifier of the item
+     * @return a EducationAssignmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EducationAssignmentItemRequestBuilder byEducationAssignmentId(@javax.annotation.Nonnull final String educationAssignmentId) {
+        Objects.requireNonNull(educationAssignmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("educationAssignment%2Did", educationAssignmentId);
+        return new EducationAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AssignmentsRequestBuilder and sets the default values.

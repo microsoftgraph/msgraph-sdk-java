@@ -2,7 +2,6 @@ package com.microsoft.graph.users.item.inferenceclassification;
 
 import com.microsoft.graph.models.InferenceClassification;
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.users.item.inferenceclassification.overrides.item.InferenceClassificationOverrideItemRequestBuilder;
 import com.microsoft.graph.users.item.inferenceclassification.overrides.OverridesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -83,18 +82,6 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the overrides property of the microsoft.graph.inferenceClassification entity.
-     * @param id Unique identifier of the item
-     * @return a InferenceClassificationOverrideItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public InferenceClassificationOverrideItemRequestBuilder overrides(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("inferenceClassificationOverride%2Did", id);
-        return new InferenceClassificationOverrideItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property inferenceClassification in users

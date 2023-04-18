@@ -3,9 +3,7 @@ package com.microsoft.graph.print.shares.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PrinterShare;
 import com.microsoft.graph.print.shares.item.allowedgroups.AllowedGroupsRequestBuilder;
-import com.microsoft.graph.print.shares.item.allowedgroups.item.GroupItemRequestBuilder;
 import com.microsoft.graph.print.shares.item.allowedusers.AllowedUsersRequestBuilder;
-import com.microsoft.graph.print.shares.item.allowedusers.item.UserItemRequestBuilder;
 import com.microsoft.graph.print.shares.item.printer.PrinterRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -39,30 +37,6 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public PrinterRequestBuilder printer() {
         return new PrinterRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.print.shares.item.allowedGroups.item collection
-     * @param id Unique identifier of the item
-     * @return a GroupItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GroupItemRequestBuilder allowedGroups(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("group%2Did", id);
-        return new GroupItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.print.shares.item.allowedUsers.item collection
-     * @param id Unique identifier of the item
-     * @return a UserItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UserItemRequestBuilder allowedUsers(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("user%2Did", id);
-        return new UserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PrinterShareItemRequestBuilder and sets the default values.

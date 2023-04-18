@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.managedappregistrations.item.operations;
 
 import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.operations.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.operations.item.ManagedAppOperationItemRequestBuilder;
 import com.microsoft.graph.models.ManagedAppOperation;
 import com.microsoft.graph.models.ManagedAppOperationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.managedAppRegistration entity.
+     * @param managedAppOperationId Unique identifier of the item
+     * @return a ManagedAppOperationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedAppOperationItemRequestBuilder byManagedAppOperationId(@javax.annotation.Nonnull final String managedAppOperationId) {
+        Objects.requireNonNull(managedAppOperationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedAppOperation%2Did", managedAppOperationId);
+        return new ManagedAppOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.

@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.conversations;
 
 import com.microsoft.graph.groups.item.conversations.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.conversations.item.ConversationItemRequestBuilder;
 import com.microsoft.graph.models.Conversation;
 import com.microsoft.graph.models.ConversationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the conversations property of the microsoft.graph.group entity.
+     * @param conversationId Unique identifier of the item
+     * @return a ConversationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ConversationItemRequestBuilder byConversationId(@javax.annotation.Nonnull final String conversationId) {
+        Objects.requireNonNull(conversationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("conversation%2Did", conversationId);
+        return new ConversationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ConversationsRequestBuilder and sets the default values.
@@ -87,10 +100,10 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use reply thread or reply post to further post to that conversation.
+     * Create an open extension (openTypeExtension object) and add custom properties in a new or existing instance of a resource. You can create an open extension in a resource instance and store custom data to it all in the same operation, except for specific resources. See known limitations of open extensions for more information. The table in the Permissions section lists the resources that support open extensions.
      * @param body The request body
      * @return a CompletableFuture of conversation
-     * @see <a href="https://docs.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/opentypeextension-post-opentypeextension?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Conversation> post(@javax.annotation.Nonnull final Conversation body) {
@@ -107,11 +120,11 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use reply thread or reply post to further post to that conversation.
+     * Create an open extension (openTypeExtension object) and add custom properties in a new or existing instance of a resource. You can create an open extension in a resource instance and store custom data to it all in the same operation, except for specific resources. See known limitations of open extensions for more information. The table in the Permissions section lists the resources that support open extensions.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conversation
-     * @see <a href="https://docs.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/opentypeextension-post-opentypeextension?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Conversation> post(@javax.annotation.Nonnull final Conversation body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -158,7 +171,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use reply thread or reply post to further post to that conversation.
+     * Create an open extension (openTypeExtension object) and add custom properties in a new or existing instance of a resource. You can create an open extension in a resource instance and store custom data to it all in the same operation, except for specific resources. See known limitations of open extensions for more information. The table in the Permissions section lists the resources that support open extensions.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -167,7 +180,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use reply thread or reply post to further post to that conversation.
+     * Create an open extension (openTypeExtension object) and add custom properties in a new or existing instance of a resource. You can create an open extension in a resource instance and store custom data to it all in the same operation, except for specific resources. See known limitations of open extensions for more information. The table in the Permissions section lists the resources that support open extensions.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

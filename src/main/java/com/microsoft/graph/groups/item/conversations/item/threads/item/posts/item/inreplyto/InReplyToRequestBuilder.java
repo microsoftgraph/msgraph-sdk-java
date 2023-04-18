@@ -1,14 +1,10 @@
 package com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.inreplyto;
 
 import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.inreplyto.attachments.AttachmentsRequestBuilder;
-import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.inreplyto.attachments.item.AttachmentItemRequestBuilder;
 import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.inreplyto.extensions.ExtensionsRequestBuilder;
-import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.inreplyto.extensions.item.ExtensionItemRequestBuilder;
 import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.inreplyto.forward.ForwardRequestBuilder;
-import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.inreplyto.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.inreplyto.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.inreplyto.reply.ReplyRequestBuilder;
-import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.inreplyto.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.inreplyto.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Post;
@@ -61,18 +57,6 @@ public class InReplyToRequestBuilder extends BaseRequestBuilder {
         return new SingleValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the attachments property of the microsoft.graph.post entity.
-     * @param id Unique identifier of the item
-     * @return a AttachmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AttachmentItemRequestBuilder attachments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("attachment%2Did", id);
-        return new AttachmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new InReplyToRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -91,18 +75,6 @@ public class InReplyToRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public InReplyToRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/conversations/{conversation%2Did}/threads/{conversationThread%2Did}/posts/{post%2Did}/inReplyTo{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the extensions property of the microsoft.graph.post entity.
-     * @param id Unique identifier of the item
-     * @return a ExtensionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("extension%2Did", id);
-        return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Read-only. Supports $expand.
@@ -140,30 +112,6 @@ public class InReplyToRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.post entity.
-     * @param id Unique identifier of the item
-     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("multiValueLegacyExtendedProperty%2Did", id);
-        return new MultiValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.post entity.
-     * @param id Unique identifier of the item
-     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("singleValueLegacyExtendedProperty%2Did", id);
-        return new SingleValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Read-only. Supports $expand.

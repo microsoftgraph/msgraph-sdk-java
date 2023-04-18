@@ -1,6 +1,7 @@
 package com.microsoft.graph.auditlogs.provisioning;
 
 import com.microsoft.graph.auditlogs.provisioning.count.CountRequestBuilder;
+import com.microsoft.graph.auditlogs.provisioning.item.ProvisioningObjectSummaryItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ProvisioningObjectSummary;
 import com.microsoft.graph.models.ProvisioningObjectSummaryCollectionResponse;
@@ -26,6 +27,18 @@ public class ProvisioningRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the provisioning property of the microsoft.graph.auditLogRoot entity.
+     * @param provisioningObjectSummaryId Unique identifier of the item
+     * @return a ProvisioningObjectSummaryItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ProvisioningObjectSummaryItemRequestBuilder byProvisioningObjectSummaryId(@javax.annotation.Nonnull final String provisioningObjectSummaryId) {
+        Objects.requireNonNull(provisioningObjectSummaryId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("provisioningObjectSummary%2Did", provisioningObjectSummaryId);
+        return new ProvisioningObjectSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ProvisioningRequestBuilder and sets the default values.

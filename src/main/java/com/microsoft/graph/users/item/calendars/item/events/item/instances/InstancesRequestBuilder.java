@@ -4,6 +4,7 @@ import com.microsoft.graph.models.EventCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.calendars.item.events.item.instances.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.calendars.item.events.item.instances.delta.DeltaRequestBuilder;
+import com.microsoft.graph.users.item.calendars.item.events.item.instances.item.EventItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -31,6 +32,18 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the instances property of the microsoft.graph.event entity.
+     * @param eventId1 Unique identifier of the item
+     * @return a EventItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EventItemRequestBuilder byEventId1(@javax.annotation.Nonnull final String eventId1) {
+        Objects.requireNonNull(eventId1);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("event%2Did1", eventId1);
+        return new EventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new InstancesRequestBuilder and sets the default values.

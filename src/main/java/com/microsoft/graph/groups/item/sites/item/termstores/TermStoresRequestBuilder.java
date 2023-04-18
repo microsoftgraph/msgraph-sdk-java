@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.sites.item.termstores;
 
 import com.microsoft.graph.groups.item.sites.item.termstores.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.termstores.item.StoreItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.termstore.Store;
 import com.microsoft.graph.models.termstore.StoreCollectionResponse;
@@ -26,6 +27,18 @@ public class TermStoresRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the termStores property of the microsoft.graph.site entity.
+     * @param storeId Unique identifier of the item
+     * @return a StoreItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public StoreItemRequestBuilder byStoreId(@javax.annotation.Nonnull final String storeId) {
+        Objects.requireNonNull(storeId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("store%2Did", storeId);
+        return new StoreItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TermStoresRequestBuilder and sets the default values.

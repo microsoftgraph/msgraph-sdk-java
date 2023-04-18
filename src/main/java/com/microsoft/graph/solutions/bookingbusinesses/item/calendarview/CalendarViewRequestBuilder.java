@@ -4,6 +4,7 @@ import com.microsoft.graph.models.BookingAppointment;
 import com.microsoft.graph.models.BookingAppointmentCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.solutions.bookingbusinesses.item.calendarview.count.CountRequestBuilder;
+import com.microsoft.graph.solutions.bookingbusinesses.item.calendarview.item.BookingAppointmentItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the calendarView property of the microsoft.graph.bookingBusiness entity.
+     * @param bookingAppointmentId Unique identifier of the item
+     * @return a BookingAppointmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public BookingAppointmentItemRequestBuilder byBookingAppointmentId(@javax.annotation.Nonnull final String bookingAppointmentId) {
+        Objects.requireNonNull(bookingAppointmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("bookingAppointment%2Did", bookingAppointmentId);
+        return new BookingAppointmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new CalendarViewRequestBuilder and sets the default values.

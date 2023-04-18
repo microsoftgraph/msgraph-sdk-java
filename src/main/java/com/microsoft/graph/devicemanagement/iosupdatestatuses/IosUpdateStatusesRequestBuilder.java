@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.iosupdatestatuses;
 
 import com.microsoft.graph.devicemanagement.iosupdatestatuses.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.iosupdatestatuses.item.IosUpdateDeviceStatusItemRequestBuilder;
 import com.microsoft.graph.models.IosUpdateDeviceStatus;
 import com.microsoft.graph.models.IosUpdateDeviceStatusCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the iosUpdateStatuses property of the microsoft.graph.deviceManagement entity.
+     * @param iosUpdateDeviceStatusId Unique identifier of the item
+     * @return a IosUpdateDeviceStatusItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public IosUpdateDeviceStatusItemRequestBuilder byIosUpdateDeviceStatusId(@javax.annotation.Nonnull final String iosUpdateDeviceStatusId) {
+        Objects.requireNonNull(iosUpdateDeviceStatusId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("iosUpdateDeviceStatus%2Did", iosUpdateDeviceStatusId);
+        return new IosUpdateDeviceStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new IosUpdateStatusesRequestBuilder and sets the default values.

@@ -7,18 +7,13 @@ import com.microsoft.graph.groups.item.team.clone.CloneRequestBuilder;
 import com.microsoft.graph.groups.item.team.completemigration.CompleteMigrationRequestBuilder;
 import com.microsoft.graph.groups.item.team.group.GroupRequestBuilder;
 import com.microsoft.graph.groups.item.team.incomingchannels.IncomingChannelsRequestBuilder;
-import com.microsoft.graph.groups.item.team.incomingchannels.item.ChannelItemRequestBuilder;
 import com.microsoft.graph.groups.item.team.installedapps.InstalledAppsRequestBuilder;
-import com.microsoft.graph.groups.item.team.installedapps.item.TeamsAppInstallationItemRequestBuilder;
-import com.microsoft.graph.groups.item.team.members.item.ConversationMemberItemRequestBuilder;
 import com.microsoft.graph.groups.item.team.members.MembersRequestBuilder;
-import com.microsoft.graph.groups.item.team.operations.item.TeamsAsyncOperationItemRequestBuilder;
 import com.microsoft.graph.groups.item.team.operations.OperationsRequestBuilder;
 import com.microsoft.graph.groups.item.team.photo.PhotoRequestBuilder;
 import com.microsoft.graph.groups.item.team.primarychannel.PrimaryChannelRequestBuilder;
 import com.microsoft.graph.groups.item.team.schedule.ScheduleRequestBuilder;
 import com.microsoft.graph.groups.item.team.sendactivitynotification.SendActivityNotificationRequestBuilder;
-import com.microsoft.graph.groups.item.team.tags.item.TeamworkTagItemRequestBuilder;
 import com.microsoft.graph.groups.item.team.tags.TagsRequestBuilder;
 import com.microsoft.graph.groups.item.team.template.TemplateRequestBuilder;
 import com.microsoft.graph.groups.item.team.unarchive.UnarchiveRequestBuilder;
@@ -128,30 +123,6 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
         return new UnarchiveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the allChannels property of the microsoft.graph.team entity.
-     * @param id Unique identifier of the item
-     * @return a ChannelItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.groups.item.team.allchannels.item.ChannelItemRequestBuilder allChannels(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("channel%2Did", id);
-        return new com.microsoft.graph.groups.item.team.allchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the channels property of the microsoft.graph.team entity.
-     * @param id Unique identifier of the item
-     * @return a ChannelItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.groups.item.team.channels.item.ChannelItemRequestBuilder channels(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("channel%2Did", id);
-        return new com.microsoft.graph.groups.item.team.channels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new TeamRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -246,54 +217,6 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the incomingChannels property of the microsoft.graph.team entity.
-     * @param id Unique identifier of the item
-     * @return a ChannelItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.groups.item.team.incomingchannels.item.ChannelItemRequestBuilder incomingChannels(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("channel%2Did", id);
-        return new com.microsoft.graph.groups.item.team.incomingchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the installedApps property of the microsoft.graph.team entity.
-     * @param id Unique identifier of the item
-     * @return a TeamsAppInstallationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TeamsAppInstallationItemRequestBuilder installedApps(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("teamsAppInstallation%2Did", id);
-        return new TeamsAppInstallationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the members property of the microsoft.graph.team entity.
-     * @param id Unique identifier of the item
-     * @return a ConversationMemberItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ConversationMemberItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("conversationMember%2Did", id);
-        return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the operations property of the microsoft.graph.team entity.
-     * @param id Unique identifier of the item
-     * @return a TeamsAsyncOperationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TeamsAsyncOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("teamsAsyncOperation%2Did", id);
-        return new TeamsAsyncOperationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property team in groups
      * @param body The request body
      * @return a CompletableFuture of team
@@ -332,18 +255,6 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the tags property of the microsoft.graph.team entity.
-     * @param id Unique identifier of the item
-     * @return a TeamworkTagItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TeamworkTagItemRequestBuilder tags(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("teamworkTag%2Did", id);
-        return new TeamworkTagItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property team for groups

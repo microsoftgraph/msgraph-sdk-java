@@ -2,6 +2,7 @@ package com.microsoft.graph.identitygovernance.accessreviews.definitions.item.in
 
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.count.CountRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.AccessReviewStageItemRequestBuilder;
 import com.microsoft.graph.models.AccessReviewStage;
 import com.microsoft.graph.models.AccessReviewStageCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -27,6 +28,18 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the stages property of the microsoft.graph.accessReviewInstance entity.
+     * @param accessReviewStageId Unique identifier of the item
+     * @return a AccessReviewStageItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AccessReviewStageItemRequestBuilder byAccessReviewStageId(@javax.annotation.Nonnull final String accessReviewStageId) {
+        Objects.requireNonNull(accessReviewStageId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("accessReviewStage%2Did", accessReviewStageId);
+        return new AccessReviewStageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new StagesRequestBuilder and sets the default values.

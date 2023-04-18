@@ -3,7 +3,6 @@ package com.microsoft.graph.policies.rolemanagementpolicies.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UnifiedRoleManagementPolicy;
 import com.microsoft.graph.policies.rolemanagementpolicies.item.effectiverules.EffectiveRulesRequestBuilder;
-import com.microsoft.graph.policies.rolemanagementpolicies.item.effectiverules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder;
 import com.microsoft.graph.policies.rolemanagementpolicies.item.rules.RulesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -91,18 +90,6 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Provides operations to manage the effectiveRules property of the microsoft.graph.unifiedRoleManagementPolicy entity.
-     * @param id Unique identifier of the item
-     * @return a UnifiedRoleManagementPolicyRuleItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.policies.rolemanagementpolicies.item.effectiverules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder effectiveRules(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("unifiedRoleManagementPolicyRule%2Did", id);
-        return new com.microsoft.graph.policies.rolemanagementpolicies.item.effectiverules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Specifies the various policies associated with scopes and roles.
      * @return a CompletableFuture of unifiedRoleManagementPolicy
      */
@@ -178,18 +165,6 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the rules property of the microsoft.graph.unifiedRoleManagementPolicy entity.
-     * @param id Unique identifier of the item
-     * @return a UnifiedRoleManagementPolicyRuleItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public com.microsoft.graph.policies.rolemanagementpolicies.item.rules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder rules(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("unifiedRoleManagementPolicyRule%2Did", id);
-        return new com.microsoft.graph.policies.rolemanagementpolicies.item.rules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property roleManagementPolicies for policies

@@ -3,7 +3,6 @@ package com.microsoft.graph.teamwork.deletedteams.item;
 import com.microsoft.graph.models.DeletedTeam;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.teamwork.deletedteams.item.channels.ChannelsRequestBuilder;
-import com.microsoft.graph.teamwork.deletedteams.item.channels.item.ChannelItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,18 +25,6 @@ public class DeletedTeamItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ChannelsRequestBuilder channels() {
         return new ChannelsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the channels property of the microsoft.graph.deletedTeam entity.
-     * @param id Unique identifier of the item
-     * @return a ChannelItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ChannelItemRequestBuilder channels(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("channel%2Did", id);
-        return new ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DeletedTeamItemRequestBuilder and sets the default values.

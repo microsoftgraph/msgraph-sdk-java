@@ -6,6 +6,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.onenote.notebooks.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.onenote.notebooks.getnotebookfromweburl.GetNotebookFromWebUrlRequestBuilder;
 import com.microsoft.graph.users.item.onenote.notebooks.getrecentnotebookswithincludepersonalnotebooks.GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder;
+import com.microsoft.graph.users.item.onenote.notebooks.item.NotebookItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -33,6 +34,18 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GetNotebookFromWebUrlRequestBuilder getNotebookFromWebUrl() {
         return new GetNotebookFromWebUrlRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the notebooks property of the microsoft.graph.onenote entity.
+     * @param notebookId Unique identifier of the item
+     * @return a NotebookItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public NotebookItemRequestBuilder byNotebookId(@javax.annotation.Nonnull final String notebookId) {
+        Objects.requireNonNull(notebookId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("notebook%2Did", notebookId);
+        return new NotebookItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new NotebooksRequestBuilder and sets the default values.

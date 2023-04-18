@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.authentication.fido2methods;
 
 import com.microsoft.graph.me.authentication.fido2methods.count.CountRequestBuilder;
+import com.microsoft.graph.me.authentication.fido2methods.item.Fido2AuthenticationMethodItemRequestBuilder;
 import com.microsoft.graph.models.Fido2AuthenticationMethodCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the fido2Methods property of the microsoft.graph.authentication entity.
+     * @param fido2AuthenticationMethodId Unique identifier of the item
+     * @return a Fido2AuthenticationMethodItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public Fido2AuthenticationMethodItemRequestBuilder byFido2AuthenticationMethodId(@javax.annotation.Nonnull final String fido2AuthenticationMethodId) {
+        Objects.requireNonNull(fido2AuthenticationMethodId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("fido2AuthenticationMethod%2Did", fido2AuthenticationMethodId);
+        return new Fido2AuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new Fido2MethodsRequestBuilder and sets the default values.

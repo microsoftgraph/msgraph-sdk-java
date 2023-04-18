@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PrintOperation;
 import com.microsoft.graph.models.PrintOperationCollectionResponse;
 import com.microsoft.graph.print.operations.count.CountRequestBuilder;
+import com.microsoft.graph.print.operations.item.PrintOperationItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.print entity.
+     * @param printOperationId Unique identifier of the item
+     * @return a PrintOperationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PrintOperationItemRequestBuilder byPrintOperationId(@javax.annotation.Nonnull final String printOperationId) {
+        Objects.requireNonNull(printOperationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("printOperation%2Did", printOperationId);
+        return new PrintOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.

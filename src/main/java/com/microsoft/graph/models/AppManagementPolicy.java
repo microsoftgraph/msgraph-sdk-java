@@ -7,11 +7,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AppManagementPolicy extends PolicyBase implements Parsable {
-    /** The appliesTo property */
+    /** Collection of applications and service principals to which the policy is applied. */
     private java.util.List<DirectoryObject> appliesTo;
-    /** The isEnabled property */
+    /** Denotes whether the policy is enabled. */
     private Boolean isEnabled;
-    /** The restrictions property */
+    /** Restrictions that apply to an application or service principal object. */
     private AppManagementConfiguration restrictions;
     /**
      * Instantiates a new AppManagementPolicy and sets the default values.
@@ -33,7 +33,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
         return new AppManagementPolicy();
     }
     /**
-     * Gets the appliesTo property value. The appliesTo property
+     * Gets the appliesTo property value. Collection of applications and service principals to which the policy is applied.
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -53,7 +53,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Denotes whether the policy is enabled.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
         return this.isEnabled;
     }
     /**
-     * Gets the restrictions property value. The restrictions property
+     * Gets the restrictions property value. Restrictions that apply to an application or service principal object.
      * @return a appManagementConfiguration
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
         writer.writeObjectValue("restrictions", this.getRestrictions());
     }
     /**
-     * Sets the appliesTo property value. The appliesTo property
+     * Sets the appliesTo property value. Collection of applications and service principals to which the policy is applied.
      * @param value Value to set for the appliesTo property.
      * @return a void
      */
@@ -91,7 +91,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
         this.appliesTo = value;
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Denotes whether the policy is enabled.
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
@@ -100,7 +100,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
         this.isEnabled = value;
     }
     /**
-     * Sets the restrictions property value. The restrictions property
+     * Sets the restrictions property value. Restrictions that apply to an application or service principal object.
      * @param value Value to set for the restrictions property.
      * @return a void
      */

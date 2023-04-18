@@ -4,6 +4,7 @@ import com.microsoft.graph.models.MessageRule;
 import com.microsoft.graph.models.MessageRuleCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.mailfolders.item.messagerules.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.mailfolders.item.messagerules.item.MessageRuleItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the messageRules property of the microsoft.graph.mailFolder entity.
+     * @param messageRuleId Unique identifier of the item
+     * @return a MessageRuleItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public MessageRuleItemRequestBuilder byMessageRuleId(@javax.annotation.Nonnull final String messageRuleId) {
+        Objects.requireNonNull(messageRuleId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("messageRule%2Did", messageRuleId);
+        return new MessageRuleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MessageRulesRequestBuilder and sets the default values.

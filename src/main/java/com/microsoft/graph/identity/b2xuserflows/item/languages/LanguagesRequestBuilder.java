@@ -1,6 +1,7 @@
 package com.microsoft.graph.identity.b2xuserflows.item.languages;
 
 import com.microsoft.graph.identity.b2xuserflows.item.languages.count.CountRequestBuilder;
+import com.microsoft.graph.identity.b2xuserflows.item.languages.item.UserFlowLanguageConfigurationItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UserFlowLanguageConfiguration;
 import com.microsoft.graph.models.UserFlowLanguageConfigurationCollectionResponse;
@@ -26,6 +27,18 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the languages property of the microsoft.graph.b2xIdentityUserFlow entity.
+     * @param userFlowLanguageConfigurationId Unique identifier of the item
+     * @return a UserFlowLanguageConfigurationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UserFlowLanguageConfigurationItemRequestBuilder byUserFlowLanguageConfigurationId(@javax.annotation.Nonnull final String userFlowLanguageConfigurationId) {
+        Objects.requireNonNull(userFlowLanguageConfigurationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("userFlowLanguageConfiguration%2Did", userFlowLanguageConfigurationId);
+        return new UserFlowLanguageConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new LanguagesRequestBuilder and sets the default values.

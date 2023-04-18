@@ -4,6 +4,7 @@ import com.microsoft.graph.contacts.count.CountRequestBuilder;
 import com.microsoft.graph.contacts.delta.DeltaRequestBuilder;
 import com.microsoft.graph.contacts.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
 import com.microsoft.graph.contacts.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.contacts.item.OrgContactItemRequestBuilder;
 import com.microsoft.graph.contacts.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OrgContact;
@@ -50,6 +51,18 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of orgContact entities.
+     * @param orgContactId Unique identifier of the item
+     * @return a OrgContactItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public OrgContactItemRequestBuilder byOrgContactId(@javax.annotation.Nonnull final String orgContactId) {
+        Objects.requireNonNull(orgContactId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("orgContact%2Did", orgContactId);
+        return new OrgContactItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ContactsRequestBuilder and sets the default values.

@@ -24,7 +24,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     /** The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported. */
     private java.util.List<String> supportedSingleSignOnModes;
     /**
-     * Instantiates a new applicationTemplate and sets the default values.
+     * Instantiates a new ApplicationTemplate and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -34,7 +34,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a applicationTemplate
+     * @return a ApplicationTemplate
      */
     @javax.annotation.Nonnull
     public static ApplicationTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

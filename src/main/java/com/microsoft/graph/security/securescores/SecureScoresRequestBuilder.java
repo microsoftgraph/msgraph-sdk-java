@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SecureScore;
 import com.microsoft.graph.models.SecureScoreCollectionResponse;
 import com.microsoft.graph.security.securescores.count.CountRequestBuilder;
+import com.microsoft.graph.security.securescores.item.SecureScoreItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the secureScores property of the microsoft.graph.security entity.
+     * @param secureScoreId Unique identifier of the item
+     * @return a SecureScoreItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SecureScoreItemRequestBuilder bySecureScoreId(@javax.annotation.Nonnull final String secureScoreId) {
+        Objects.requireNonNull(secureScoreId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("secureScore%2Did", secureScoreId);
+        return new SecureScoreItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SecureScoresRequestBuilder and sets the default values.

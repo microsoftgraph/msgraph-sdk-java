@@ -1,7 +1,6 @@
 package com.microsoft.graph.admin.serviceannouncement.healthoverviews.item;
 
 import com.microsoft.graph.admin.serviceannouncement.healthoverviews.item.issues.IssuesRequestBuilder;
-import com.microsoft.graph.admin.serviceannouncement.healthoverviews.item.issues.item.ServiceHealthIssueItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ServiceHealth;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -120,18 +119,6 @@ public class ServiceHealthItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the issues property of the microsoft.graph.serviceHealth entity.
-     * @param id Unique identifier of the item
-     * @return a ServiceHealthIssueItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ServiceHealthIssueItemRequestBuilder issues(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("serviceHealthIssue%2Did", id);
-        return new ServiceHealthIssueItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property healthOverviews in admin

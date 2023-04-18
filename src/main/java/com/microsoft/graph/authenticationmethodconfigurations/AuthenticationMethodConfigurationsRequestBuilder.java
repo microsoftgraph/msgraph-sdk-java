@@ -1,6 +1,7 @@
 package com.microsoft.graph.authenticationmethodconfigurations;
 
 import com.microsoft.graph.authenticationmethodconfigurations.count.CountRequestBuilder;
+import com.microsoft.graph.authenticationmethodconfigurations.item.AuthenticationMethodConfigurationItemRequestBuilder;
 import com.microsoft.graph.models.AuthenticationMethodConfiguration;
 import com.microsoft.graph.models.AuthenticationMethodConfigurationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class AuthenticationMethodConfigurationsRequestBuilder extends BaseReques
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of authenticationMethodConfiguration entities.
+     * @param authenticationMethodConfigurationId Unique identifier of the item
+     * @return a AuthenticationMethodConfigurationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AuthenticationMethodConfigurationItemRequestBuilder byAuthenticationMethodConfigurationId(@javax.annotation.Nonnull final String authenticationMethodConfigurationId) {
+        Objects.requireNonNull(authenticationMethodConfigurationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("authenticationMethodConfiguration%2Did", authenticationMethodConfigurationId);
+        return new AuthenticationMethodConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AuthenticationMethodConfigurationsRequestBuilder and sets the default values.

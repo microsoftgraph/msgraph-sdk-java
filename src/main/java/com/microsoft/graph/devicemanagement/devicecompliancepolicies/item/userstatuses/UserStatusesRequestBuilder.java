@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.userstatuses;
 
 import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.userstatuses.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.userstatuses.item.DeviceComplianceUserStatusItemRequestBuilder;
 import com.microsoft.graph.models.DeviceComplianceUserStatus;
 import com.microsoft.graph.models.DeviceComplianceUserStatusCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userStatuses property of the microsoft.graph.deviceCompliancePolicy entity.
+     * @param deviceComplianceUserStatusId Unique identifier of the item
+     * @return a DeviceComplianceUserStatusItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceComplianceUserStatusItemRequestBuilder byDeviceComplianceUserStatusId(@javax.annotation.Nonnull final String deviceComplianceUserStatusId) {
+        Objects.requireNonNull(deviceComplianceUserStatusId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceComplianceUserStatus%2Did", deviceComplianceUserStatusId);
+        return new DeviceComplianceUserStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new UserStatusesRequestBuilder and sets the default values.

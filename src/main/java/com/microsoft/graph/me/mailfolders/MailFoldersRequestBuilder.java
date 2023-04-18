@@ -2,6 +2,7 @@ package com.microsoft.graph.me.mailfolders;
 
 import com.microsoft.graph.me.mailfolders.count.CountRequestBuilder;
 import com.microsoft.graph.me.mailfolders.delta.DeltaRequestBuilder;
+import com.microsoft.graph.me.mailfolders.item.MailFolderItemRequestBuilder;
 import com.microsoft.graph.models.MailFolder;
 import com.microsoft.graph.models.MailFolderCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -34,6 +35,18 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the mailFolders property of the microsoft.graph.user entity.
+     * @param mailFolderId Unique identifier of the item
+     * @return a MailFolderItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public MailFolderItemRequestBuilder byMailFolderId(@javax.annotation.Nonnull final String mailFolderId) {
+        Objects.requireNonNull(mailFolderId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("mailFolder%2Did", mailFolderId);
+        return new MailFolderItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
      * Instantiates a new MailFoldersRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -41,7 +54,7 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public MailFoldersRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/me/mailFolders{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/me/mailFolders{?includeHiddenFolders*,%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new MailFoldersRequestBuilder and sets the default values.
@@ -51,10 +64,10 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public MailFoldersRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/me/mailFolders{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/me/mailFolders{?includeHiddenFolders*,%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the mail folder collection directly under the root folder of the signed-in user. The returned collection includes any mail search folders directly under the root. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
+     * The user's mail folders. Read-only. Nullable.
      * @return a CompletableFuture of MailFolderCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/user-list-mailfolders?view=graph-rest-1.0">Find more info here</a>
      */
@@ -73,7 +86,7 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the mail folder collection directly under the root folder of the signed-in user. The returned collection includes any mail search folders directly under the root. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
+     * The user's mail folders. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of MailFolderCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/user-list-mailfolders?view=graph-rest-1.0">Find more info here</a>
@@ -135,7 +148,7 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the mail folder collection directly under the root folder of the signed-in user. The returned collection includes any mail search folders directly under the root. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
+     * The user's mail folders. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -143,7 +156,7 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the mail folder collection directly under the root folder of the signed-in user. The returned collection includes any mail search folders directly under the root. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
+     * The user's mail folders. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -196,7 +209,7 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the mail folder collection directly under the root folder of the signed-in user. The returned collection includes any mail search folders directly under the root. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
+     * The user's mail folders. Read-only. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */
@@ -211,6 +224,9 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
         @QueryParameter(name = "%24filter")
         @javax.annotation.Nullable
         public String filter;
+        /** Include Hidden Folders */
+        @javax.annotation.Nullable
+        public String includeHiddenFolders;
         /** Order items by property values */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable

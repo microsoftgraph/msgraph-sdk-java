@@ -1,11 +1,8 @@
 package com.microsoft.graph.education;
 
 import com.microsoft.graph.education.classes.ClassesRequestBuilder;
-import com.microsoft.graph.education.classes.item.EducationClassItemRequestBuilder;
 import com.microsoft.graph.education.me.MeRequestBuilder;
-import com.microsoft.graph.education.schools.item.EducationSchoolItemRequestBuilder;
 import com.microsoft.graph.education.schools.SchoolsRequestBuilder;
-import com.microsoft.graph.education.users.item.EducationUserItemRequestBuilder;
 import com.microsoft.graph.education.users.UsersRequestBuilder;
 import com.microsoft.graph.models.EducationRoot;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -46,18 +43,6 @@ public class EducationRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public UsersRequestBuilder users() {
         return new UsersRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the classes property of the microsoft.graph.educationRoot entity.
-     * @param id Unique identifier of the item
-     * @return a EducationClassItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EducationClassItemRequestBuilder classes(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("educationClass%2Did", id);
-        return new EducationClassItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new EducationRequestBuilder and sets the default values.
@@ -157,18 +142,6 @@ public class EducationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the schools property of the microsoft.graph.educationRoot entity.
-     * @param id Unique identifier of the item
-     * @return a EducationSchoolItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EducationSchoolItemRequestBuilder schools(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("educationSchool%2Did", id);
-        return new EducationSchoolItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Get education
      * @return a RequestInformation
      */
@@ -228,18 +201,6 @@ public class EducationRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the users property of the microsoft.graph.educationRoot entity.
-     * @param id Unique identifier of the item
-     * @return a EducationUserItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EducationUserItemRequestBuilder users(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("educationUser%2Did", id);
-        return new EducationUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get education

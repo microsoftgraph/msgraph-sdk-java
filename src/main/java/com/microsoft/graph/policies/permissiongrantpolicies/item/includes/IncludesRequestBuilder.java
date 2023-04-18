@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PermissionGrantConditionSet;
 import com.microsoft.graph.models.PermissionGrantConditionSetCollectionResponse;
 import com.microsoft.graph.policies.permissiongrantpolicies.item.includes.count.CountRequestBuilder;
+import com.microsoft.graph.policies.permissiongrantpolicies.item.includes.item.PermissionGrantConditionSetItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the includes property of the microsoft.graph.permissionGrantPolicy entity.
+     * @param permissionGrantConditionSetId Unique identifier of the item
+     * @return a PermissionGrantConditionSetItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PermissionGrantConditionSetItemRequestBuilder byPermissionGrantConditionSetId(@javax.annotation.Nonnull final String permissionGrantConditionSetId) {
+        Objects.requireNonNull(permissionGrantConditionSetId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("permissionGrantConditionSet%2Did", permissionGrantConditionSetId);
+        return new PermissionGrantConditionSetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new IncludesRequestBuilder and sets the default values.

@@ -2,6 +2,7 @@ package com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.char
 
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.add.AddRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.item.WorkbookChartItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itematwithindex.ItemAtWithIndexRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itemwithname.ItemWithNameRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -34,6 +35,18 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the charts property of the microsoft.graph.workbookWorksheet entity.
+     * @param workbookChartId Unique identifier of the item
+     * @return a WorkbookChartItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public WorkbookChartItemRequestBuilder byWorkbookChartId(@javax.annotation.Nonnull final String workbookChartId) {
+        Objects.requireNonNull(workbookChartId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("workbookChart%2Did", workbookChartId);
+        return new WorkbookChartItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ChartsRequestBuilder and sets the default values.

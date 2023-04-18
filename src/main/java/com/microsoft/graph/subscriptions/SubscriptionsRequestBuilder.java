@@ -3,6 +3,7 @@ package com.microsoft.graph.subscriptions;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Subscription;
 import com.microsoft.graph.models.SubscriptionCollectionResponse;
+import com.microsoft.graph.subscriptions.item.SubscriptionItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -21,6 +22,18 @@ import java.util.Objects;
  * Provides operations to manage the collection of subscription entities.
  */
 public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the collection of subscription entities.
+     * @param subscriptionId Unique identifier of the item
+     * @return a SubscriptionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SubscriptionItemRequestBuilder bySubscriptionId(@javax.annotation.Nonnull final String subscriptionId) {
+        Objects.requireNonNull(subscriptionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("subscription%2Did", subscriptionId);
+        return new SubscriptionItemRequestBuilder(urlTplParams, requestAdapter);
+    }
     /**
      * Instantiates a new SubscriptionsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

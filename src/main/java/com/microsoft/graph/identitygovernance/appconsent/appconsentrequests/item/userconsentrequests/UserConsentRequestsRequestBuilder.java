@@ -2,6 +2,7 @@ package com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.ite
 
 import com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.count.CountRequestBuilder;
 import com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.item.UserConsentRequestItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UserConsentRequest;
 import com.microsoft.graph.models.UserConsentRequestCollectionResponse;
@@ -27,6 +28,18 @@ public class UserConsentRequestsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userConsentRequests property of the microsoft.graph.appConsentRequest entity.
+     * @param userConsentRequestId Unique identifier of the item
+     * @return a UserConsentRequestItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UserConsentRequestItemRequestBuilder byUserConsentRequestId(@javax.annotation.Nonnull final String userConsentRequestId) {
+        Objects.requireNonNull(userConsentRequestId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("userConsentRequest%2Did", userConsentRequestId);
+        return new UserConsentRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new UserConsentRequestsRequestBuilder and sets the default values.

@@ -1,12 +1,9 @@
 package com.microsoft.graph.identity.conditionalaccess;
 
 import com.microsoft.graph.identity.conditionalaccess.authenticationcontextclassreferences.AuthenticationContextClassReferencesRequestBuilder;
-import com.microsoft.graph.identity.conditionalaccess.authenticationcontextclassreferences.item.AuthenticationContextClassReferenceItemRequestBuilder;
-import com.microsoft.graph.identity.conditionalaccess.namedlocations.item.NamedLocationItemRequestBuilder;
+import com.microsoft.graph.identity.conditionalaccess.authenticationstrength.AuthenticationStrengthRequestBuilder;
 import com.microsoft.graph.identity.conditionalaccess.namedlocations.NamedLocationsRequestBuilder;
-import com.microsoft.graph.identity.conditionalaccess.policies.item.ConditionalAccessPolicyItemRequestBuilder;
 import com.microsoft.graph.identity.conditionalaccess.policies.PoliciesRequestBuilder;
-import com.microsoft.graph.identity.conditionalaccess.templates.item.ConditionalAccessTemplateItemRequestBuilder;
 import com.microsoft.graph.identity.conditionalaccess.templates.TemplatesRequestBuilder;
 import com.microsoft.graph.models.ConditionalAccessRoot;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -33,6 +30,11 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     public AuthenticationContextClassReferencesRequestBuilder authenticationContextClassReferences() {
         return new AuthenticationContextClassReferencesRequestBuilder(pathParameters, requestAdapter);
     }
+    /** Provides operations to manage the authenticationStrength property of the microsoft.graph.conditionalAccessRoot entity. */
+    @javax.annotation.Nonnull
+    public AuthenticationStrengthRequestBuilder authenticationStrength() {
+        return new AuthenticationStrengthRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Provides operations to manage the namedLocations property of the microsoft.graph.conditionalAccessRoot entity. */
     @javax.annotation.Nonnull
     public NamedLocationsRequestBuilder namedLocations() {
@@ -47,18 +49,6 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public TemplatesRequestBuilder templates() {
         return new TemplatesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the authenticationContextClassReferences property of the microsoft.graph.conditionalAccessRoot entity.
-     * @param id Unique identifier of the item
-     * @return a AuthenticationContextClassReferenceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AuthenticationContextClassReferenceItemRequestBuilder authenticationContextClassReferences(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("authenticationContextClassReference%2Did", id);
-        return new AuthenticationContextClassReferenceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ConditionalAccessRequestBuilder and sets the default values.
@@ -155,18 +145,6 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the namedLocations property of the microsoft.graph.conditionalAccessRoot entity.
-     * @param id Unique identifier of the item
-     * @return a NamedLocationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public NamedLocationItemRequestBuilder namedLocations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("namedLocation%2Did", id);
-        return new NamedLocationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property conditionalAccess in identity
      * @param body The request body
      * @return a CompletableFuture of conditionalAccessRoot
@@ -205,30 +183,6 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the policies property of the microsoft.graph.conditionalAccessRoot entity.
-     * @param id Unique identifier of the item
-     * @return a ConditionalAccessPolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ConditionalAccessPolicyItemRequestBuilder policies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("conditionalAccessPolicy%2Did", id);
-        return new ConditionalAccessPolicyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the templates property of the microsoft.graph.conditionalAccessRoot entity.
-     * @param id Unique identifier of the item
-     * @return a ConditionalAccessTemplateItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ConditionalAccessTemplateItemRequestBuilder templates(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("conditionalAccessTemplate%2Did", id);
-        return new ConditionalAccessTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property conditionalAccess for identity

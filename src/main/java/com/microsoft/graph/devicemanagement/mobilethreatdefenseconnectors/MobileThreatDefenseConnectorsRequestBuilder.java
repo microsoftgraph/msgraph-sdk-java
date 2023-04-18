@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.mobilethreatdefenseconnectors;
 
 import com.microsoft.graph.devicemanagement.mobilethreatdefenseconnectors.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.mobilethreatdefenseconnectors.item.MobileThreatDefenseConnectorItemRequestBuilder;
 import com.microsoft.graph.models.MobileThreatDefenseConnector;
 import com.microsoft.graph.models.MobileThreatDefenseConnectorCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuil
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the mobileThreatDefenseConnectors property of the microsoft.graph.deviceManagement entity.
+     * @param mobileThreatDefenseConnectorId Unique identifier of the item
+     * @return a MobileThreatDefenseConnectorItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public MobileThreatDefenseConnectorItemRequestBuilder byMobileThreatDefenseConnectorId(@javax.annotation.Nonnull final String mobileThreatDefenseConnectorId) {
+        Objects.requireNonNull(mobileThreatDefenseConnectorId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("mobileThreatDefenseConnector%2Did", mobileThreatDefenseConnectorId);
+        return new MobileThreatDefenseConnectorItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MobileThreatDefenseConnectorsRequestBuilder and sets the default values.

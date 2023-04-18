@@ -1,7 +1,6 @@
 package com.microsoft.graph.me.joinedteams.item.channels.item.messages.item;
 
 import com.microsoft.graph.me.joinedteams.item.channels.item.messages.item.hostedcontents.HostedContentsRequestBuilder;
-import com.microsoft.graph.me.joinedteams.item.channels.item.messages.item.hostedcontents.item.ChatMessageHostedContentItemRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.channels.item.messages.item.replies.RepliesRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.channels.item.messages.item.softdelete.SoftDeleteRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.channels.item.messages.item.undosoftdelete.UndoSoftDeleteRequestBuilder;
@@ -140,18 +139,6 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the hostedContents property of the microsoft.graph.chatMessage entity.
-     * @param id Unique identifier of the item
-     * @return a ChatMessageHostedContentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ChatMessageHostedContentItemRequestBuilder hostedContents(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("chatMessageHostedContent%2Did", id);
-        return new ChatMessageHostedContentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property messages in me
      * @param body The request body
      * @return a CompletableFuture of chatMessage
@@ -190,18 +177,6 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the replies property of the microsoft.graph.chatMessage entity.
-     * @param id Unique identifier of the item
-     * @return a ChatMessageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ChatMessageItemRequestBuilder replies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("chatMessage%2Did1", id);
-        return new ChatMessageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property messages for me

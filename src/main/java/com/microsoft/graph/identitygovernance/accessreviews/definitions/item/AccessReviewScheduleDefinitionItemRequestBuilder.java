@@ -1,7 +1,6 @@
 package com.microsoft.graph.identitygovernance.accessreviews.definitions.item;
 
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.InstancesRequestBuilder;
-import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.AccessReviewInstanceItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.stop.StopRequestBuilder;
 import com.microsoft.graph.models.AccessReviewScheduleDefinition;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -126,18 +125,6 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the instances property of the microsoft.graph.accessReviewScheduleDefinition entity.
-     * @param id Unique identifier of the item
-     * @return a AccessReviewInstanceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessReviewInstanceItemRequestBuilder instances(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessReviewInstance%2Did", id);
-        return new AccessReviewInstanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property definitions in identityGovernance

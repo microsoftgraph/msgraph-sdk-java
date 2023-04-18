@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PrintServiceEndpoint;
 import com.microsoft.graph.models.PrintServiceEndpointCollectionResponse;
 import com.microsoft.graph.print.services.item.endpoints.count.CountRequestBuilder;
+import com.microsoft.graph.print.services.item.endpoints.item.PrintServiceEndpointItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the endpoints property of the microsoft.graph.printService entity.
+     * @param printServiceEndpointId Unique identifier of the item
+     * @return a PrintServiceEndpointItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PrintServiceEndpointItemRequestBuilder byPrintServiceEndpointId(@javax.annotation.Nonnull final String printServiceEndpointId) {
+        Objects.requireNonNull(printServiceEndpointId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("printServiceEndpoint%2Did", printServiceEndpointId);
+        return new PrintServiceEndpointItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new EndpointsRequestBuilder and sets the default values.

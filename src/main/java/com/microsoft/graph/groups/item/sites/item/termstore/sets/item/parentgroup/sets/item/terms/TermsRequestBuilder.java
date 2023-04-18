@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.terms;
 
 import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.terms.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.terms.item.TermItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.termstore.Term;
 import com.microsoft.graph.models.termstore.TermCollectionResponse;
@@ -26,6 +27,18 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the terms property of the microsoft.graph.termStore.set entity.
+     * @param termId Unique identifier of the item
+     * @return a TermItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TermItemRequestBuilder byTermId(@javax.annotation.Nonnull final String termId) {
+        Objects.requireNonNull(termId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("term%2Did", termId);
+        return new TermItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TermsRequestBuilder and sets the default values.

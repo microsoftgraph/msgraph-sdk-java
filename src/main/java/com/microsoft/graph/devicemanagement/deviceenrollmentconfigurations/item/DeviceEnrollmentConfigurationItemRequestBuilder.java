@@ -2,7 +2,6 @@ package com.microsoft.graph.devicemanagement.deviceenrollmentconfigurations.item
 
 import com.microsoft.graph.devicemanagement.deviceenrollmentconfigurations.item.assign.AssignRequestBuilder;
 import com.microsoft.graph.devicemanagement.deviceenrollmentconfigurations.item.assignments.AssignmentsRequestBuilder;
-import com.microsoft.graph.devicemanagement.deviceenrollmentconfigurations.item.assignments.item.EnrollmentConfigurationAssignmentItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.deviceenrollmentconfigurations.item.setpriority.SetPriorityRequestBuilder;
 import com.microsoft.graph.models.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -38,18 +37,6 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
     @javax.annotation.Nonnull
     public SetPriorityRequestBuilder setPriority() {
         return new SetPriorityRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the assignments property of the microsoft.graph.deviceEnrollmentConfiguration entity.
-     * @param id Unique identifier of the item
-     * @return a EnrollmentConfigurationAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EnrollmentConfigurationAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("enrollmentConfigurationAssignment%2Did", id);
-        return new EnrollmentConfigurationAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DeviceEnrollmentConfigurationItemRequestBuilder and sets the default values.

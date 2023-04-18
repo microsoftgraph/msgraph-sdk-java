@@ -1,7 +1,6 @@
 package com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.item;
 
 import com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.item.devicecompliancesettingstates.DeviceComplianceSettingStatesRequestBuilder;
-import com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.item.devicecompliancesettingstates.item.DeviceComplianceSettingStateItemRequestBuilder;
 import com.microsoft.graph.models.DeviceCompliancePolicySettingStateSummary;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -83,18 +82,6 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the deviceComplianceSettingStates property of the microsoft.graph.deviceCompliancePolicySettingStateSummary entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceComplianceSettingStateItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceComplianceSettingStateItemRequestBuilder deviceComplianceSettingStates(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceComplianceSettingState%2Did", id);
-        return new DeviceComplianceSettingStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * The summary states of compliance policy settings for this account.

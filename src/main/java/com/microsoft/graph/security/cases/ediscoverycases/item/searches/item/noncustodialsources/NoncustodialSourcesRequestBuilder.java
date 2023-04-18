@@ -3,6 +3,7 @@ package com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.no
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryNoncustodialDataSourceCollectionResponse;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.noncustodialsources.count.CountRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.noncustodialsources.item.EdiscoveryNoncustodialDataSourceItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -25,6 +26,18 @@ public class NoncustodialSourcesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the noncustodialSources property of the microsoft.graph.security.ediscoverySearch entity.
+     * @param ediscoveryNoncustodialDataSourceId Unique identifier of the item
+     * @return a EdiscoveryNoncustodialDataSourceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EdiscoveryNoncustodialDataSourceItemRequestBuilder byEdiscoveryNoncustodialDataSourceId(@javax.annotation.Nonnull final String ediscoveryNoncustodialDataSourceId) {
+        Objects.requireNonNull(ediscoveryNoncustodialDataSourceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("ediscoveryNoncustodialDataSource%2Did", ediscoveryNoncustodialDataSourceId);
+        return new EdiscoveryNoncustodialDataSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new NoncustodialSourcesRequestBuilder and sets the default values.

@@ -2,14 +2,10 @@ package com.microsoft.graph.devicemanagement.deviceconfigurations.item;
 
 import com.microsoft.graph.devicemanagement.deviceconfigurations.item.assign.AssignRequestBuilder;
 import com.microsoft.graph.devicemanagement.deviceconfigurations.item.assignments.AssignmentsRequestBuilder;
-import com.microsoft.graph.devicemanagement.deviceconfigurations.item.assignments.item.DeviceConfigurationAssignmentItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.deviceconfigurations.item.devicesettingstatesummaries.DeviceSettingStateSummariesRequestBuilder;
-import com.microsoft.graph.devicemanagement.deviceconfigurations.item.devicesettingstatesummaries.item.SettingStateDeviceSummaryItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.deviceconfigurations.item.devicestatuses.DeviceStatusesRequestBuilder;
-import com.microsoft.graph.devicemanagement.deviceconfigurations.item.devicestatuses.item.DeviceConfigurationDeviceStatusItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.deviceconfigurations.item.devicestatusoverview.DeviceStatusOverviewRequestBuilder;
 import com.microsoft.graph.devicemanagement.deviceconfigurations.item.getomasettingplaintextvaluewithsecretreferencevalueid.GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder;
-import com.microsoft.graph.devicemanagement.deviceconfigurations.item.userstatuses.item.DeviceConfigurationUserStatusItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.deviceconfigurations.item.userstatuses.UserStatusesRequestBuilder;
 import com.microsoft.graph.devicemanagement.deviceconfigurations.item.userstatusoverview.UserStatusOverviewRequestBuilder;
 import com.microsoft.graph.models.DeviceConfiguration;
@@ -68,18 +64,6 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return new UserStatusOverviewRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the assignments property of the microsoft.graph.deviceConfiguration entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceConfigurationAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceConfigurationAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceConfigurationAssignment%2Did", id);
-        return new DeviceConfigurationAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new DeviceConfigurationItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -135,30 +119,6 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceConfiguration entity.
-     * @param id Unique identifier of the item
-     * @return a SettingStateDeviceSummaryItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SettingStateDeviceSummaryItemRequestBuilder deviceSettingStateSummaries(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("settingStateDeviceSummary%2Did", id);
-        return new SettingStateDeviceSummaryItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the deviceStatuses property of the microsoft.graph.deviceConfiguration entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceConfigurationDeviceStatusItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceConfigurationDeviceStatusItemRequestBuilder deviceStatuses(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceConfigurationDeviceStatus%2Did", id);
-        return new DeviceConfigurationDeviceStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * The device configurations.
@@ -334,18 +294,6 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the userStatuses property of the microsoft.graph.deviceConfiguration entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceConfigurationUserStatusItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceConfigurationUserStatusItemRequestBuilder userStatuses(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceConfigurationUserStatus%2Did", id);
-        return new DeviceConfigurationUserStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

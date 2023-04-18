@@ -2,7 +2,6 @@ package com.microsoft.graph.sites.item.termstore.sets.item.parentgroup.sets.item
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.termstore.Term;
-import com.microsoft.graph.sites.item.termstore.sets.item.parentgroup.sets.item.children.item.children.item.relations.item.RelationItemRequestBuilder;
 import com.microsoft.graph.sites.item.termstore.sets.item.parentgroup.sets.item.children.item.children.item.relations.RelationsRequestBuilder;
 import com.microsoft.graph.sites.item.termstore.sets.item.parentgroup.sets.item.children.item.children.item.set.SetRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -166,18 +165,6 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the relations property of the microsoft.graph.termStore.term entity.
-     * @param id Unique identifier of the item
-     * @return a RelationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public RelationItemRequestBuilder relations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("relation%2Did", id);
-        return new RelationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property children for sites

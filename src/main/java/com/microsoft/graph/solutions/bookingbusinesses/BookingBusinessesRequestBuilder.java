@@ -4,6 +4,7 @@ import com.microsoft.graph.models.BookingBusiness;
 import com.microsoft.graph.models.BookingBusinessCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.solutions.bookingbusinesses.count.CountRequestBuilder;
+import com.microsoft.graph.solutions.bookingbusinesses.item.BookingBusinessItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class BookingBusinessesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity.
+     * @param bookingBusinessId Unique identifier of the item
+     * @return a BookingBusinessItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public BookingBusinessItemRequestBuilder byBookingBusinessId(@javax.annotation.Nonnull final String bookingBusinessId) {
+        Objects.requireNonNull(bookingBusinessId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("bookingBusiness%2Did", bookingBusinessId);
+        return new BookingBusinessItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new BookingBusinessesRequestBuilder and sets the default values.

@@ -1,6 +1,7 @@
 package com.microsoft.graph.communications.callrecords.item.sessions.item.segments;
 
 import com.microsoft.graph.communications.callrecords.item.sessions.item.segments.count.CountRequestBuilder;
+import com.microsoft.graph.communications.callrecords.item.sessions.item.segments.item.SegmentItemRequestBuilder;
 import com.microsoft.graph.models.callrecords.Segment;
 import com.microsoft.graph.models.callrecords.SegmentCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class SegmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the segments property of the microsoft.graph.callRecords.session entity.
+     * @param segmentId Unique identifier of the item
+     * @return a SegmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SegmentItemRequestBuilder bySegmentId(@javax.annotation.Nonnull final String segmentId) {
+        Objects.requireNonNull(segmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("segment%2Did", segmentId);
+        return new SegmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SegmentsRequestBuilder and sets the default values.

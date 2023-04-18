@@ -2,6 +2,7 @@ package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspacka
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.count.CountRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.item.ApprovalItemRequestBuilder;
 import com.microsoft.graph.models.Approval;
 import com.microsoft.graph.models.ApprovalCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -27,6 +28,18 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the accessPackageAssignmentApprovals property of the microsoft.graph.entitlementManagement entity.
+     * @param approvalId Unique identifier of the item
+     * @return a ApprovalItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ApprovalItemRequestBuilder byApprovalId(@javax.annotation.Nonnull final String approvalId) {
+        Objects.requireNonNull(approvalId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("approval%2Did", approvalId);
+        return new ApprovalItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AccessPackageAssignmentApprovalsRequestBuilder and sets the default values.

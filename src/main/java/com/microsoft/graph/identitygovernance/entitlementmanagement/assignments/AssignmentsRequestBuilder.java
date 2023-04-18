@@ -4,6 +4,7 @@ import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.additionalaccesswithaccesspackageidwithincompatibleaccesspackageid.AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.count.CountRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.item.AccessPackageAssignmentItemRequestBuilder;
 import com.microsoft.graph.models.AccessPackageAssignment;
 import com.microsoft.graph.models.AccessPackageAssignmentCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -46,6 +47,18 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(accessPackageId);
         Objects.requireNonNull(incompatibleAccessPackageId);
         return new AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder(pathParameters, requestAdapter, accessPackageId, incompatibleAccessPackageId);
+    }
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.entitlementManagement entity.
+     * @param accessPackageAssignmentId Unique identifier of the item
+     * @return a AccessPackageAssignmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AccessPackageAssignmentItemRequestBuilder byAccessPackageAssignmentId(@javax.annotation.Nonnull final String accessPackageAssignmentId) {
+        Objects.requireNonNull(accessPackageAssignmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("accessPackageAssignment%2Did", accessPackageAssignmentId);
+        return new AccessPackageAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AssignmentsRequestBuilder and sets the default values.

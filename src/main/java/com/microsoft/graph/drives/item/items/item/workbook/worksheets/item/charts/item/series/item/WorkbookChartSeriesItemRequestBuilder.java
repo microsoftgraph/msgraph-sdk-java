@@ -1,7 +1,6 @@
 package com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.item.series.item;
 
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.item.series.item.format.FormatRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.item.series.item.points.item.WorkbookChartPointItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.item.series.item.points.PointsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookChartSeries;
@@ -166,18 +165,6 @@ public class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the points property of the microsoft.graph.workbookChartSeries entity.
-     * @param id Unique identifier of the item
-     * @return a WorkbookChartPointItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WorkbookChartPointItemRequestBuilder points(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("workbookChartPoint%2Did", id);
-        return new WorkbookChartPointItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property series for drives

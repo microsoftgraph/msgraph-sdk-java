@@ -4,6 +4,7 @@ import com.microsoft.graph.directoryobjects.count.CountRequestBuilder;
 import com.microsoft.graph.directoryobjects.delta.DeltaRequestBuilder;
 import com.microsoft.graph.directoryobjects.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
 import com.microsoft.graph.directoryobjects.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.directoryobjects.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.directoryobjects.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
@@ -50,6 +51,18 @@ public class DirectoryObjectsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of directoryObject entities.
+     * @param directoryObjectId Unique identifier of the item
+     * @return a DirectoryObjectItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DirectoryObjectItemRequestBuilder byDirectoryObjectId(@javax.annotation.Nonnull final String directoryObjectId) {
+        Objects.requireNonNull(directoryObjectId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("directoryObject%2Did", directoryObjectId);
+        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DirectoryObjectsRequestBuilder and sets the default values.

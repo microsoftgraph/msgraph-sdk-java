@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryNoncustodialDataSource;
 import com.microsoft.graph.models.security.EdiscoveryNoncustodialDataSourceCollectionResponse;
 import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.count.CountRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.EdiscoveryNoncustodialDataSourceItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.securityapplyhold.SecurityApplyHoldRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.securityremovehold.SecurityRemoveHoldRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -38,6 +39,18 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public SecurityRemoveHoldRequestBuilder securityRemoveHold() {
         return new SecurityRemoveHoldRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the noncustodialDataSources property of the microsoft.graph.security.ediscoveryCase entity.
+     * @param ediscoveryNoncustodialDataSourceId Unique identifier of the item
+     * @return a EdiscoveryNoncustodialDataSourceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EdiscoveryNoncustodialDataSourceItemRequestBuilder byEdiscoveryNoncustodialDataSourceId(@javax.annotation.Nonnull final String ediscoveryNoncustodialDataSourceId) {
+        Objects.requireNonNull(ediscoveryNoncustodialDataSourceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("ediscoveryNoncustodialDataSource%2Did", ediscoveryNoncustodialDataSourceId);
+        return new EdiscoveryNoncustodialDataSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new NoncustodialDataSourcesRequestBuilder and sets the default values.

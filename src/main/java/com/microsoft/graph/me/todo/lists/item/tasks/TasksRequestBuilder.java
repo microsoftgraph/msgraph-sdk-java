@@ -2,6 +2,7 @@ package com.microsoft.graph.me.todo.lists.item.tasks;
 
 import com.microsoft.graph.me.todo.lists.item.tasks.count.CountRequestBuilder;
 import com.microsoft.graph.me.todo.lists.item.tasks.delta.DeltaRequestBuilder;
+import com.microsoft.graph.me.todo.lists.item.tasks.item.TodoTaskItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TodoTask;
 import com.microsoft.graph.models.TodoTaskCollectionResponse;
@@ -32,6 +33,18 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tasks property of the microsoft.graph.todoTaskList entity.
+     * @param todoTaskId Unique identifier of the item
+     * @return a TodoTaskItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TodoTaskItemRequestBuilder byTodoTaskId(@javax.annotation.Nonnull final String todoTaskId) {
+        Objects.requireNonNull(todoTaskId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("todoTask%2Did", todoTaskId);
+        return new TodoTaskItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TasksRequestBuilder and sets the default values.

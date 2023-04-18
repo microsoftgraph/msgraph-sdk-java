@@ -3,10 +3,7 @@ package com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item
 import com.microsoft.graph.models.DelegatedAdminRelationship;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.accessassignments.AccessAssignmentsRequestBuilder;
-import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.accessassignments.item.DelegatedAdminAccessAssignmentItemRequestBuilder;
-import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.operations.item.DelegatedAdminRelationshipOperationItemRequestBuilder;
 import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.operations.OperationsRequestBuilder;
-import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.requests.item.DelegatedAdminRelationshipRequestItemRequestBuilder;
 import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.requests.RequestsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -40,18 +37,6 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
     @javax.annotation.Nonnull
     public RequestsRequestBuilder requests() {
         return new RequestsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the accessAssignments property of the microsoft.graph.delegatedAdminRelationship entity.
-     * @param id Unique identifier of the item
-     * @return a DelegatedAdminAccessAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DelegatedAdminAccessAssignmentItemRequestBuilder accessAssignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("delegatedAdminAccessAssignment%2Did", id);
-        return new DelegatedAdminAccessAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DelegatedAdminRelationshipItemRequestBuilder and sets the default values.
@@ -148,18 +133,6 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Provides operations to manage the operations property of the microsoft.graph.delegatedAdminRelationship entity.
-     * @param id Unique identifier of the item
-     * @return a DelegatedAdminRelationshipOperationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DelegatedAdminRelationshipOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("delegatedAdminRelationshipOperation%2Did", id);
-        return new DelegatedAdminRelationshipOperationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property delegatedAdminRelationships in tenantRelationships
      * @param body The request body
      * @return a CompletableFuture of delegatedAdminRelationship
@@ -198,18 +171,6 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the requests property of the microsoft.graph.delegatedAdminRelationship entity.
-     * @param id Unique identifier of the item
-     * @return a DelegatedAdminRelationshipRequestItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DelegatedAdminRelationshipRequestItemRequestBuilder requests(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("delegatedAdminRelationshipRequest%2Did", id);
-        return new DelegatedAdminRelationshipRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property delegatedAdminRelationships for tenantRelationships

@@ -3,11 +3,8 @@ package com.microsoft.graph.print.printers.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Printer;
 import com.microsoft.graph.print.printers.item.connectors.ConnectorsRequestBuilder;
-import com.microsoft.graph.print.printers.item.connectors.item.PrintConnectorItemRequestBuilder;
 import com.microsoft.graph.print.printers.item.restorefactorydefaults.RestoreFactoryDefaultsRequestBuilder;
-import com.microsoft.graph.print.printers.item.shares.item.PrinterShareItemRequestBuilder;
 import com.microsoft.graph.print.printers.item.shares.SharesRequestBuilder;
-import com.microsoft.graph.print.printers.item.tasktriggers.item.PrintTaskTriggerItemRequestBuilder;
 import com.microsoft.graph.print.printers.item.tasktriggers.TaskTriggersRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -46,18 +43,6 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public TaskTriggersRequestBuilder taskTriggers() {
         return new TaskTriggersRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the connectors property of the microsoft.graph.printer entity.
-     * @param id Unique identifier of the item
-     * @return a PrintConnectorItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PrintConnectorItemRequestBuilder connectors(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("printConnector%2Did", id);
-        return new PrintConnectorItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PrinterItemRequestBuilder and sets the default values.
@@ -192,30 +177,6 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the shares property of the microsoft.graph.printer entity.
-     * @param id Unique identifier of the item
-     * @return a PrinterShareItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PrinterShareItemRequestBuilder shares(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("printerShare%2Did", id);
-        return new PrinterShareItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the taskTriggers property of the microsoft.graph.printer entity.
-     * @param id Unique identifier of the item
-     * @return a PrintTaskTriggerItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PrintTaskTriggerItemRequestBuilder taskTriggers(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("printTaskTrigger%2Did", id);
-        return new PrintTaskTriggerItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property printers for print

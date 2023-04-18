@@ -1,6 +1,7 @@
 package com.microsoft.graph.identityprotection.riskdetections;
 
 import com.microsoft.graph.identityprotection.riskdetections.count.CountRequestBuilder;
+import com.microsoft.graph.identityprotection.riskdetections.item.RiskDetectionItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.RiskDetection;
 import com.microsoft.graph.models.RiskDetectionCollectionResponse;
@@ -26,6 +27,18 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the riskDetections property of the microsoft.graph.identityProtectionRoot entity.
+     * @param riskDetectionId Unique identifier of the item
+     * @return a RiskDetectionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public RiskDetectionItemRequestBuilder byRiskDetectionId(@javax.annotation.Nonnull final String riskDetectionId) {
+        Objects.requireNonNull(riskDetectionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("riskDetection%2Did", riskDetectionId);
+        return new RiskDetectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RiskDetectionsRequestBuilder and sets the default values.

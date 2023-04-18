@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoverySearch;
 import com.microsoft.graph.models.security.EdiscoverySearchCollectionResponse;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.count.CountRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.EdiscoverySearchItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the searches property of the microsoft.graph.security.ediscoveryCase entity.
+     * @param ediscoverySearchId Unique identifier of the item
+     * @return a EdiscoverySearchItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EdiscoverySearchItemRequestBuilder byEdiscoverySearchId(@javax.annotation.Nonnull final String ediscoverySearchId) {
+        Objects.requireNonNull(ediscoverySearchId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("ediscoverySearch%2Did", ediscoverySearchId);
+        return new EdiscoverySearchItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SearchesRequestBuilder and sets the default values.

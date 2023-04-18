@@ -1,6 +1,7 @@
 package com.microsoft.graph.identityprotection.riskyusers.item.history;
 
 import com.microsoft.graph.identityprotection.riskyusers.item.history.count.CountRequestBuilder;
+import com.microsoft.graph.identityprotection.riskyusers.item.history.item.RiskyUserHistoryItemItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.RiskyUserHistoryItem;
 import com.microsoft.graph.models.RiskyUserHistoryItemCollectionResponse;
@@ -28,6 +29,18 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the history property of the microsoft.graph.riskyUser entity.
+     * @param riskyUserHistoryItemId Unique identifier of the item
+     * @return a RiskyUserHistoryItemItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public RiskyUserHistoryItemItemRequestBuilder byRiskyUserHistoryItemId(@javax.annotation.Nonnull final String riskyUserHistoryItemId) {
+        Objects.requireNonNull(riskyUserHistoryItemId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("riskyUserHistoryItem%2Did", riskyUserHistoryItemId);
+        return new RiskyUserHistoryItemItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
      * Instantiates a new HistoryRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -48,9 +61,9 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityProtection/riskyUsers/{riskyUser%2Did}/history{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the riskyUserHistoryItems from the history navigation property.
+     * Read the properties and relationships of a riskyUserHistoryItem object.
      * @return a CompletableFuture of RiskyUserHistoryItemCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/riskyuser-list-history?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/riskyuser-get-riskyuserhistoryitem?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyUserHistoryItemCollectionResponse> get() {
@@ -67,10 +80,10 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the riskyUserHistoryItems from the history navigation property.
+     * Read the properties and relationships of a riskyUserHistoryItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of RiskyUserHistoryItemCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/riskyuser-list-history?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/riskyuser-get-riskyuserhistoryitem?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyUserHistoryItemCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +140,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the riskyUserHistoryItems from the history navigation property.
+     * Read the properties and relationships of a riskyUserHistoryItem object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -135,7 +148,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the riskyUserHistoryItems from the history navigation property.
+     * Read the properties and relationships of a riskyUserHistoryItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +201,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the riskyUserHistoryItems from the history navigation property.
+     * Read the properties and relationships of a riskyUserHistoryItem object.
      */
     public class GetQueryParameters {
         /** Include count of items */

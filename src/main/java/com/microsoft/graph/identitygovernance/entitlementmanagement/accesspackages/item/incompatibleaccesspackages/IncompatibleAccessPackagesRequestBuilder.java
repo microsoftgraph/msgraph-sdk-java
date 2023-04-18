@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.incompatibleaccesspackages;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.incompatibleaccesspackages.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.incompatibleaccesspackages.item.AccessPackageItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.incompatibleaccesspackages.ref.RefRequestBuilder;
 import com.microsoft.graph.models.AccessPackageCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -31,6 +32,18 @@ public class IncompatibleAccessPackagesRequestBuilder extends BaseRequestBuilder
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackages.item.incompatibleAccessPackages.item collection
+     * @param accessPackageId1 Unique identifier of the item
+     * @return a AccessPackageItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AccessPackageItemRequestBuilder byAccessPackageId1(@javax.annotation.Nonnull final String accessPackageId1) {
+        Objects.requireNonNull(accessPackageId1);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("accessPackage%2Did1", accessPackageId1);
+        return new AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new IncompatibleAccessPackagesRequestBuilder and sets the default values.

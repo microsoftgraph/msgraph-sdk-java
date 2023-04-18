@@ -3,7 +3,6 @@ package com.microsoft.graph.security.incidents.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.Incident;
 import com.microsoft.graph.security.incidents.item.alerts.AlertsRequestBuilder;
-import com.microsoft.graph.security.incidents.item.alerts.item.AlertItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,18 +25,6 @@ public class IncidentItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public AlertsRequestBuilder alerts() {
         return new AlertsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the alerts property of the microsoft.graph.security.incident entity.
-     * @param id Unique identifier of the item
-     * @return a AlertItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AlertItemRequestBuilder alerts(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("alert%2Did", id);
-        return new AlertItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new IncidentItemRequestBuilder and sets the default values.

@@ -4,6 +4,7 @@ import com.microsoft.graph.me.owneddevices.count.CountRequestBuilder;
 import com.microsoft.graph.me.owneddevices.graphapproleassignment.GraphAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.me.owneddevices.graphdevice.GraphDeviceRequestBuilder;
 import com.microsoft.graph.me.owneddevices.graphendpoint.GraphEndpointRequestBuilder;
+import com.microsoft.graph.me.owneddevices.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -43,6 +44,18 @@ public class OwnedDevicesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GraphEndpointRequestBuilder graphEndpoint() {
         return new GraphEndpointRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the ownedDevices property of the microsoft.graph.user entity.
+     * @param directoryObjectId Unique identifier of the item
+     * @return a DirectoryObjectItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DirectoryObjectItemRequestBuilder byDirectoryObjectId(@javax.annotation.Nonnull final String directoryObjectId) {
+        Objects.requireNonNull(directoryObjectId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("directoryObject%2Did", directoryObjectId);
+        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OwnedDevicesRequestBuilder and sets the default values.

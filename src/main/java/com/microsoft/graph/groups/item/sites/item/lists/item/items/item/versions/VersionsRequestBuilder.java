@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.sites.item.lists.item.items.item.versions;
 
 import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.versions.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.versions.item.ListItemVersionItemRequestBuilder;
 import com.microsoft.graph.models.ListItemVersion;
 import com.microsoft.graph.models.ListItemVersionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the versions property of the microsoft.graph.listItem entity.
+     * @param listItemVersionId Unique identifier of the item
+     * @return a ListItemVersionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ListItemVersionItemRequestBuilder byListItemVersionId(@javax.annotation.Nonnull final String listItemVersionId) {
+        Objects.requireNonNull(listItemVersionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("listItemVersion%2Did", listItemVersionId);
+        return new ListItemVersionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new VersionsRequestBuilder and sets the default values.

@@ -6,6 +6,7 @@ import com.microsoft.graph.users.item.ownedobjects.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.ownedobjects.graphapplication.GraphApplicationRequestBuilder;
 import com.microsoft.graph.users.item.ownedobjects.graphgroup.GraphGroupRequestBuilder;
 import com.microsoft.graph.users.item.ownedobjects.graphserviceprincipal.GraphServicePrincipalRequestBuilder;
+import com.microsoft.graph.users.item.ownedobjects.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -43,6 +44,18 @@ public class OwnedObjectsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GraphServicePrincipalRequestBuilder graphServicePrincipal() {
         return new GraphServicePrincipalRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the ownedObjects property of the microsoft.graph.user entity.
+     * @param directoryObjectId Unique identifier of the item
+     * @return a DirectoryObjectItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DirectoryObjectItemRequestBuilder byDirectoryObjectId(@javax.annotation.Nonnull final String directoryObjectId) {
+        Objects.requireNonNull(directoryObjectId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("directoryObject%2Did", directoryObjectId);
+        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new OwnedObjectsRequestBuilder and sets the default values.

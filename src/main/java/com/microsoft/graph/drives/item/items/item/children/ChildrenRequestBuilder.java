@@ -1,6 +1,7 @@
 package com.microsoft.graph.drives.item.items.item.children;
 
 import com.microsoft.graph.drives.item.items.item.children.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.children.item.DriveItemItemRequestBuilder;
 import com.microsoft.graph.models.DriveItem;
 import com.microsoft.graph.models.DriveItemCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the children property of the microsoft.graph.driveItem entity.
+     * @param driveItemId1 Unique identifier of the item
+     * @return a DriveItemItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DriveItemItemRequestBuilder byDriveItemId1(@javax.annotation.Nonnull final String driveItemId1) {
+        Objects.requireNonNull(driveItemId1);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("driveItem%2Did1", driveItemId1);
+        return new DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ChildrenRequestBuilder and sets the default values.

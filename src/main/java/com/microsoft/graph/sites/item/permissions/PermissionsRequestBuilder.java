@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Permission;
 import com.microsoft.graph.models.PermissionCollectionResponse;
 import com.microsoft.graph.sites.item.permissions.count.CountRequestBuilder;
+import com.microsoft.graph.sites.item.permissions.item.PermissionItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the permissions property of the microsoft.graph.site entity.
+     * @param permissionId Unique identifier of the item
+     * @return a PermissionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PermissionItemRequestBuilder byPermissionId(@javax.annotation.Nonnull final String permissionId) {
+        Objects.requireNonNull(permissionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("permission%2Did", permissionId);
+        return new PermissionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PermissionsRequestBuilder and sets the default values.

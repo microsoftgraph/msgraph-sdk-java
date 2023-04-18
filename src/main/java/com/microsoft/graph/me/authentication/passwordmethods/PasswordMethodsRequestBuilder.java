@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.authentication.passwordmethods;
 
 import com.microsoft.graph.me.authentication.passwordmethods.count.CountRequestBuilder;
+import com.microsoft.graph.me.authentication.passwordmethods.item.PasswordAuthenticationMethodItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PasswordAuthenticationMethod;
 import com.microsoft.graph.models.PasswordAuthenticationMethodCollectionResponse;
@@ -26,6 +27,18 @@ public class PasswordMethodsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the passwordMethods property of the microsoft.graph.authentication entity.
+     * @param passwordAuthenticationMethodId Unique identifier of the item
+     * @return a PasswordAuthenticationMethodItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PasswordAuthenticationMethodItemRequestBuilder byPasswordAuthenticationMethodId(@javax.annotation.Nonnull final String passwordAuthenticationMethodId) {
+        Objects.requireNonNull(passwordAuthenticationMethodId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("passwordAuthenticationMethod%2Did", passwordAuthenticationMethodId);
+        return new PasswordAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PasswordMethodsRequestBuilder and sets the default values.

@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PrintConnector;
 import com.microsoft.graph.models.PrintConnectorCollectionResponse;
 import com.microsoft.graph.print.connectors.count.CountRequestBuilder;
+import com.microsoft.graph.print.connectors.item.PrintConnectorItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the connectors property of the microsoft.graph.print entity.
+     * @param printConnectorId Unique identifier of the item
+     * @return a PrintConnectorItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PrintConnectorItemRequestBuilder byPrintConnectorId(@javax.annotation.Nonnull final String printConnectorId) {
+        Objects.requireNonNull(printConnectorId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("printConnector%2Did", printConnectorId);
+        return new PrintConnectorItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ConnectorsRequestBuilder and sets the default values.

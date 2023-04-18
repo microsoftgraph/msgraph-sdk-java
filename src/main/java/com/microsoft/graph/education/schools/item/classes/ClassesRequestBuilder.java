@@ -1,6 +1,7 @@
 package com.microsoft.graph.education.schools.item.classes;
 
 import com.microsoft.graph.education.schools.item.classes.count.CountRequestBuilder;
+import com.microsoft.graph.education.schools.item.classes.item.EducationClassItemRequestBuilder;
 import com.microsoft.graph.education.schools.item.classes.ref.RefRequestBuilder;
 import com.microsoft.graph.models.EducationClassCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -31,6 +32,18 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.education.schools.item.classes.item collection
+     * @param educationClassId Unique identifier of the item
+     * @return a EducationClassItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EducationClassItemRequestBuilder byEducationClassId(@javax.annotation.Nonnull final String educationClassId) {
+        Objects.requireNonNull(educationClassId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("educationClass%2Did", educationClassId);
+        return new EducationClassItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ClassesRequestBuilder and sets the default values.

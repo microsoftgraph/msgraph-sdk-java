@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.roledefinitions.item.roleassignments;
 
 import com.microsoft.graph.devicemanagement.roledefinitions.item.roleassignments.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.roledefinitions.item.roleassignments.item.RoleAssignmentItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.RoleAssignment;
 import com.microsoft.graph.models.RoleAssignmentCollectionResponse;
@@ -26,6 +27,18 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the roleAssignments property of the microsoft.graph.roleDefinition entity.
+     * @param roleAssignmentId Unique identifier of the item
+     * @return a RoleAssignmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public RoleAssignmentItemRequestBuilder byRoleAssignmentId(@javax.annotation.Nonnull final String roleAssignmentId) {
+        Objects.requireNonNull(roleAssignmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("roleAssignment%2Did", roleAssignmentId);
+        return new RoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RoleAssignmentsRequestBuilder and sets the default values.

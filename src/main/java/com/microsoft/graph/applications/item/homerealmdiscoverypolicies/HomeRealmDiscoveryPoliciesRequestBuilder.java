@@ -1,6 +1,7 @@
 package com.microsoft.graph.applications.item.homerealmdiscoverypolicies;
 
 import com.microsoft.graph.applications.item.homerealmdiscoverypolicies.count.CountRequestBuilder;
+import com.microsoft.graph.applications.item.homerealmdiscoverypolicies.item.HomeRealmDiscoveryPolicyItemRequestBuilder;
 import com.microsoft.graph.models.HomeRealmDiscoveryPolicyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.application entity.
+     * @param homeRealmDiscoveryPolicyId Unique identifier of the item
+     * @return a HomeRealmDiscoveryPolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public HomeRealmDiscoveryPolicyItemRequestBuilder byHomeRealmDiscoveryPolicyId(@javax.annotation.Nonnull final String homeRealmDiscoveryPolicyId) {
+        Objects.requireNonNull(homeRealmDiscoveryPolicyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("homeRealmDiscoveryPolicy%2Did", homeRealmDiscoveryPolicyId);
+        return new HomeRealmDiscoveryPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new HomeRealmDiscoveryPoliciesRequestBuilder and sets the default values.

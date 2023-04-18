@@ -1,6 +1,5 @@
 package com.microsoft.graph.devicemanagement.detectedapps.item;
 
-import com.microsoft.graph.devicemanagement.detectedapps.item.manageddevices.item.ManagedDeviceItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.detectedapps.item.manageddevices.ManagedDevicesRequestBuilder;
 import com.microsoft.graph.models.DetectedApp;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -120,18 +119,6 @@ public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the managedDevices property of the microsoft.graph.detectedApp entity.
-     * @param id Unique identifier of the item
-     * @return a ManagedDeviceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ManagedDeviceItemRequestBuilder managedDevices(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("managedDevice%2Did", id);
-        return new ManagedDeviceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property detectedApps in deviceManagement

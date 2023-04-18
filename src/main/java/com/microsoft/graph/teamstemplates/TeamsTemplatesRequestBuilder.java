@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TeamsTemplate;
 import com.microsoft.graph.models.TeamsTemplateCollectionResponse;
 import com.microsoft.graph.teamstemplates.count.CountRequestBuilder;
+import com.microsoft.graph.teamstemplates.item.TeamsTemplateItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class TeamsTemplatesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of teamsTemplate entities.
+     * @param teamsTemplateId Unique identifier of the item
+     * @return a TeamsTemplateItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TeamsTemplateItemRequestBuilder byTeamsTemplateId(@javax.annotation.Nonnull final String teamsTemplateId) {
+        Objects.requireNonNull(teamsTemplateId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("teamsTemplate%2Did", teamsTemplateId);
+        return new TeamsTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TeamsTemplatesRequestBuilder and sets the default values.

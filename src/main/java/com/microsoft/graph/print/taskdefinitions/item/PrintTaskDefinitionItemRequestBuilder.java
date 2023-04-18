@@ -2,7 +2,6 @@ package com.microsoft.graph.print.taskdefinitions.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PrintTaskDefinition;
-import com.microsoft.graph.print.taskdefinitions.item.tasks.item.PrintTaskItemRequestBuilder;
 import com.microsoft.graph.print.taskdefinitions.item.tasks.TasksRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -160,18 +159,6 @@ public class PrintTaskDefinitionItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the tasks property of the microsoft.graph.printTaskDefinition entity.
-     * @param id Unique identifier of the item
-     * @return a PrintTaskItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PrintTaskItemRequestBuilder tasks(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("printTask%2Did", id);
-        return new PrintTaskItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property taskDefinitions for print

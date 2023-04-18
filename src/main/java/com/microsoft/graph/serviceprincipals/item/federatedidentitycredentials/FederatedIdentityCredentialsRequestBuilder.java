@@ -4,6 +4,7 @@ import com.microsoft.graph.models.FederatedIdentityCredential;
 import com.microsoft.graph.models.FederatedIdentityCredentialCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.serviceprincipals.item.federatedidentitycredentials.count.CountRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.federatedidentitycredentials.item.FederatedIdentityCredentialItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.servicePrincipal entity.
+     * @param federatedIdentityCredentialId Unique identifier of the item
+     * @return a FederatedIdentityCredentialItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public FederatedIdentityCredentialItemRequestBuilder byFederatedIdentityCredentialId(@javax.annotation.Nonnull final String federatedIdentityCredentialId) {
+        Objects.requireNonNull(federatedIdentityCredentialId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("federatedIdentityCredential%2Did", federatedIdentityCredentialId);
+        return new FederatedIdentityCredentialItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new FederatedIdentityCredentialsRequestBuilder and sets the default values.

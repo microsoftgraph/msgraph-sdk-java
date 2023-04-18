@@ -2,18 +2,14 @@ package com.microsoft.graph.me.calendar.calendarview.item;
 
 import com.microsoft.graph.me.calendar.calendarview.item.accept.AcceptRequestBuilder;
 import com.microsoft.graph.me.calendar.calendarview.item.attachments.AttachmentsRequestBuilder;
-import com.microsoft.graph.me.calendar.calendarview.item.attachments.item.AttachmentItemRequestBuilder;
 import com.microsoft.graph.me.calendar.calendarview.item.calendar.CalendarRequestBuilder;
 import com.microsoft.graph.me.calendar.calendarview.item.cancel.CancelRequestBuilder;
 import com.microsoft.graph.me.calendar.calendarview.item.decline.DeclineRequestBuilder;
 import com.microsoft.graph.me.calendar.calendarview.item.dismissreminder.DismissReminderRequestBuilder;
 import com.microsoft.graph.me.calendar.calendarview.item.extensions.ExtensionsRequestBuilder;
-import com.microsoft.graph.me.calendar.calendarview.item.extensions.item.ExtensionItemRequestBuilder;
 import com.microsoft.graph.me.calendar.calendarview.item.forward.ForwardRequestBuilder;
 import com.microsoft.graph.me.calendar.calendarview.item.instances.InstancesRequestBuilder;
-import com.microsoft.graph.me.calendar.calendarview.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.me.calendar.calendarview.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import com.microsoft.graph.me.calendar.calendarview.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.me.calendar.calendarview.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.me.calendar.calendarview.item.snoozereminder.SnoozeReminderRequestBuilder;
 import com.microsoft.graph.me.calendar.calendarview.item.tentativelyaccept.TentativelyAcceptRequestBuilder;
@@ -103,18 +99,6 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return new TentativelyAcceptRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the attachments property of the microsoft.graph.event entity.
-     * @param id Unique identifier of the item
-     * @return a AttachmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AttachmentItemRequestBuilder attachments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("attachment%2Did", id);
-        return new AttachmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new EventItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -133,18 +117,6 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public EventItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/me/calendar/calendarView/{event%2Did}{?startDateTime*,endDateTime*,%24select}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the extensions property of the microsoft.graph.event entity.
-     * @param id Unique identifier of the item
-     * @return a ExtensionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("extension%2Did", id);
-        return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * The calendar view for the calendar. Navigation property. Read-only.
@@ -182,42 +154,6 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the instances property of the microsoft.graph.event entity.
-     * @param id Unique identifier of the item
-     * @return a EventItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public EventItemRequestBuilder instances(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("event%2Did1", id);
-        return new EventItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.event entity.
-     * @param id Unique identifier of the item
-     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("multiValueLegacyExtendedProperty%2Did", id);
-        return new MultiValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.event entity.
-     * @param id Unique identifier of the item
-     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("singleValueLegacyExtendedProperty%2Did", id);
-        return new SingleValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * The calendar view for the calendar. Navigation property. Read-only.

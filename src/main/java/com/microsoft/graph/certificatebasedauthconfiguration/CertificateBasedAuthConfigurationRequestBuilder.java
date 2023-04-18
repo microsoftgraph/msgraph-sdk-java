@@ -1,6 +1,7 @@
 package com.microsoft.graph.certificatebasedauthconfiguration;
 
 import com.microsoft.graph.certificatebasedauthconfiguration.count.CountRequestBuilder;
+import com.microsoft.graph.certificatebasedauthconfiguration.item.CertificateBasedAuthConfigurationItemRequestBuilder;
 import com.microsoft.graph.models.CertificateBasedAuthConfiguration;
 import com.microsoft.graph.models.CertificateBasedAuthConfigurationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of certificateBasedAuthConfiguration entities.
+     * @param certificateBasedAuthConfigurationId Unique identifier of the item
+     * @return a CertificateBasedAuthConfigurationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public CertificateBasedAuthConfigurationItemRequestBuilder byCertificateBasedAuthConfigurationId(@javax.annotation.Nonnull final String certificateBasedAuthConfigurationId) {
+        Objects.requireNonNull(certificateBasedAuthConfigurationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("certificateBasedAuthConfiguration%2Did", certificateBasedAuthConfigurationId);
+        return new CertificateBasedAuthConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new CertificateBasedAuthConfigurationRequestBuilder and sets the default values.

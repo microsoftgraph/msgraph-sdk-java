@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.androidmanagedappprotections;
 
 import com.microsoft.graph.deviceappmanagement.androidmanagedappprotections.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.androidmanagedappprotections.item.AndroidManagedAppProtectionItemRequestBuilder;
 import com.microsoft.graph.models.AndroidManagedAppProtection;
 import com.microsoft.graph.models.AndroidManagedAppProtectionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the androidManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
+     * @param androidManagedAppProtectionId Unique identifier of the item
+     * @return a AndroidManagedAppProtectionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AndroidManagedAppProtectionItemRequestBuilder byAndroidManagedAppProtectionId(@javax.annotation.Nonnull final String androidManagedAppProtectionId) {
+        Objects.requireNonNull(androidManagedAppProtectionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("androidManagedAppProtection%2Did", androidManagedAppProtectionId);
+        return new AndroidManagedAppProtectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AndroidManagedAppProtectionsRequestBuilder and sets the default values.

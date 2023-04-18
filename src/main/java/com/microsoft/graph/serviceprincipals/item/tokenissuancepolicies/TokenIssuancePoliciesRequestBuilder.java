@@ -3,6 +3,7 @@ package com.microsoft.graph.serviceprincipals.item.tokenissuancepolicies;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TokenIssuancePolicyCollectionResponse;
 import com.microsoft.graph.serviceprincipals.item.tokenissuancepolicies.count.CountRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.tokenissuancepolicies.item.TokenIssuancePolicyItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -25,6 +26,18 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.servicePrincipal entity.
+     * @param tokenIssuancePolicyId Unique identifier of the item
+     * @return a TokenIssuancePolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TokenIssuancePolicyItemRequestBuilder byTokenIssuancePolicyId(@javax.annotation.Nonnull final String tokenIssuancePolicyId) {
+        Objects.requireNonNull(tokenIssuancePolicyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("tokenIssuancePolicy%2Did", tokenIssuancePolicyId);
+        return new TokenIssuancePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TokenIssuancePoliciesRequestBuilder and sets the default values.

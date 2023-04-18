@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.followedsites;
 
 import com.microsoft.graph.me.followedsites.count.CountRequestBuilder;
+import com.microsoft.graph.me.followedsites.item.SiteItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SiteCollectionResponse;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +26,18 @@ public class FollowedSitesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the followedSites property of the microsoft.graph.user entity.
+     * @param siteId Unique identifier of the item
+     * @return a SiteItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SiteItemRequestBuilder bySiteId(@javax.annotation.Nonnull final String siteId) {
+        Objects.requireNonNull(siteId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("site%2Did", siteId);
+        return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new FollowedSitesRequestBuilder and sets the default values.

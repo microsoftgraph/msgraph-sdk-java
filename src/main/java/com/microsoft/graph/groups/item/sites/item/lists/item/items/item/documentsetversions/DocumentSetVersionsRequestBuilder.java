@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.sites.item.lists.item.items.item.documentsetversions;
 
 import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.documentsetversions.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.documentsetversions.item.DocumentSetVersionItemRequestBuilder;
 import com.microsoft.graph.models.DocumentSetVersion;
 import com.microsoft.graph.models.DocumentSetVersionCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity.
+     * @param documentSetVersionId Unique identifier of the item
+     * @return a DocumentSetVersionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DocumentSetVersionItemRequestBuilder byDocumentSetVersionId(@javax.annotation.Nonnull final String documentSetVersionId) {
+        Objects.requireNonNull(documentSetVersionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("documentSetVersion%2Did", documentSetVersionId);
+        return new DocumentSetVersionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DocumentSetVersionsRequestBuilder and sets the default values.

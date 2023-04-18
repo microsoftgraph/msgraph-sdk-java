@@ -1,21 +1,17 @@
 package com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item;
 
 import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.attachments.AttachmentsRequestBuilder;
-import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.attachments.item.AttachmentItemRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.copy.CopyRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.createforward.CreateForwardRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.createreply.CreateReplyRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.createreplyall.CreateReplyAllRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.extensions.ExtensionsRequestBuilder;
-import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.extensions.item.ExtensionItemRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.forward.ForwardRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.move.MoveRequestBuilder;
-import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.reply.ReplyRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.replyall.ReplyAllRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.send.SendRequestBuilder;
-import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.value.ContentRequestBuilder;
 import com.microsoft.graph.models.Message;
@@ -109,18 +105,6 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
         return new SingleValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the attachments property of the microsoft.graph.message entity.
-     * @param id Unique identifier of the item
-     * @return a AttachmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AttachmentItemRequestBuilder attachments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("attachment%2Did", id);
-        return new AttachmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new MessageItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -178,18 +162,6 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the extensions property of the microsoft.graph.message entity.
-     * @param id Unique identifier of the item
-     * @return a ExtensionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("extension%2Did", id);
-        return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * The collection of messages in the mailFolder.
      * @return a CompletableFuture of message
      */
@@ -225,18 +197,6 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.message entity.
-     * @param id Unique identifier of the item
-     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("multiValueLegacyExtendedProperty%2Did", id);
-        return new MultiValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property messages in me
@@ -277,18 +237,6 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.message entity.
-     * @param id Unique identifier of the item
-     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("singleValueLegacyExtendedProperty%2Did", id);
-        return new SingleValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property messages for me

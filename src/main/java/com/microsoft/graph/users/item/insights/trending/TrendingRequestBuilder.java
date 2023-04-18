@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Trending;
 import com.microsoft.graph.models.TrendingCollectionResponse;
 import com.microsoft.graph.users.item.insights.trending.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.insights.trending.item.TrendingItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the trending property of the microsoft.graph.officeGraphInsights entity.
+     * @param trendingId Unique identifier of the item
+     * @return a TrendingItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TrendingItemRequestBuilder byTrendingId(@javax.annotation.Nonnull final String trendingId) {
+        Objects.requireNonNull(trendingId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("trending%2Did", trendingId);
+        return new TrendingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TrendingRequestBuilder and sets the default values.

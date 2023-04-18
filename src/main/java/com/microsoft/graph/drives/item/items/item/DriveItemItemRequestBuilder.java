@@ -15,18 +15,14 @@ import com.microsoft.graph.drives.item.items.item.getactivitiesbyinterval.GetAct
 import com.microsoft.graph.drives.item.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.invite.InviteRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.listitem.ListItemRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.permissions.item.PermissionItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.permissions.PermissionsRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.preview.PreviewRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.searchwithq.SearchWithQRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.subscriptions.item.SubscriptionItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.subscriptions.SubscriptionsRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.thumbnails.item.ThumbnailSetItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.thumbnails.ThumbnailsRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.unfollow.UnfollowRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.validatepermission.ValidatePermissionRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.versions.item.DriveItemVersionItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.versions.VersionsRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.WorkbookRequestBuilder;
 import com.microsoft.graph.models.DriveItem;
@@ -158,18 +154,6 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public WorkbookRequestBuilder workbook() {
         return new WorkbookRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the children property of the microsoft.graph.driveItem entity.
-     * @param id Unique identifier of the item
-     * @return a DriveItemItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DriveItemItemRequestBuilder children(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("driveItem%2Did1", id);
-        return new DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DriveItemItemRequestBuilder and sets the default values.
@@ -330,18 +314,6 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the permissions property of the microsoft.graph.driveItem entity.
-     * @param id Unique identifier of the item
-     * @return a PermissionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PermissionItemRequestBuilder permissions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("permission%2Did", id);
-        return new PermissionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Provides operations to call the search method.
      * @param q Usage: q='{q}'
      * @return a searchWithQRequestBuilder
@@ -350,30 +322,6 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     public SearchWithQRequestBuilder searchWithQ(@javax.annotation.Nonnull final String q) {
         Objects.requireNonNull(q);
         return new SearchWithQRequestBuilder(pathParameters, requestAdapter, q);
-    }
-    /**
-     * Provides operations to manage the subscriptions property of the microsoft.graph.driveItem entity.
-     * @param id Unique identifier of the item
-     * @return a SubscriptionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SubscriptionItemRequestBuilder subscriptions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("subscription%2Did", id);
-        return new SubscriptionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the thumbnails property of the microsoft.graph.driveItem entity.
-     * @param id Unique identifier of the item
-     * @return a ThumbnailSetItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ThumbnailSetItemRequestBuilder thumbnails(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("thumbnailSet%2Did", id);
-        return new ThumbnailSetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property items for drives
@@ -462,18 +410,6 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Provides operations to manage the versions property of the microsoft.graph.driveItem entity.
-     * @param id Unique identifier of the item
-     * @return a DriveItemVersionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DriveItemVersionItemRequestBuilder versions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("driveItemVersion%2Did", id);
-        return new DriveItemVersionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

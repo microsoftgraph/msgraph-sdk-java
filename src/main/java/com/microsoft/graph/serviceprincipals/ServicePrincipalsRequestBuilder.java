@@ -7,6 +7,7 @@ import com.microsoft.graph.serviceprincipals.count.CountRequestBuilder;
 import com.microsoft.graph.serviceprincipals.delta.DeltaRequestBuilder;
 import com.microsoft.graph.serviceprincipals.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
 import com.microsoft.graph.serviceprincipals.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.ServicePrincipalItemRequestBuilder;
 import com.microsoft.graph.serviceprincipals.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -50,6 +51,18 @@ public class ServicePrincipalsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of servicePrincipal entities.
+     * @param servicePrincipalId Unique identifier of the item
+     * @return a ServicePrincipalItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ServicePrincipalItemRequestBuilder byServicePrincipalId(@javax.annotation.Nonnull final String servicePrincipalId) {
+        Objects.requireNonNull(servicePrincipalId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("servicePrincipal%2Did", servicePrincipalId);
+        return new ServicePrincipalItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ServicePrincipalsRequestBuilder and sets the default values.

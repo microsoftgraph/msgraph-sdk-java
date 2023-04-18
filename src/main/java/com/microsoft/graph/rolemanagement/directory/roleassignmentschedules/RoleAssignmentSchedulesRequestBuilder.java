@@ -5,6 +5,7 @@ import com.microsoft.graph.models.UnifiedRoleAssignmentSchedule;
 import com.microsoft.graph.models.UnifiedRoleAssignmentScheduleCollectionResponse;
 import com.microsoft.graph.rolemanagement.directory.roleassignmentschedules.count.CountRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleassignmentschedules.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleassignmentschedules.item.UnifiedRoleAssignmentScheduleItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -27,6 +28,18 @@ public class RoleAssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the roleAssignmentSchedules property of the microsoft.graph.rbacApplication entity.
+     * @param unifiedRoleAssignmentScheduleId Unique identifier of the item
+     * @return a UnifiedRoleAssignmentScheduleItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UnifiedRoleAssignmentScheduleItemRequestBuilder byUnifiedRoleAssignmentScheduleId(@javax.annotation.Nonnull final String unifiedRoleAssignmentScheduleId) {
+        Objects.requireNonNull(unifiedRoleAssignmentScheduleId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("unifiedRoleAssignmentSchedule%2Did", unifiedRoleAssignmentScheduleId);
+        return new UnifiedRoleAssignmentScheduleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new RoleAssignmentSchedulesRequestBuilder and sets the default values.

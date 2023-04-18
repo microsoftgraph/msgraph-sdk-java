@@ -3,16 +3,12 @@ package com.microsoft.graph.communications.calls.item;
 import com.microsoft.graph.communications.calls.item.addlargegalleryview.AddLargeGalleryViewRequestBuilder;
 import com.microsoft.graph.communications.calls.item.answer.AnswerRequestBuilder;
 import com.microsoft.graph.communications.calls.item.audioroutinggroups.AudioRoutingGroupsRequestBuilder;
-import com.microsoft.graph.communications.calls.item.audioroutinggroups.item.AudioRoutingGroupItemRequestBuilder;
 import com.microsoft.graph.communications.calls.item.cancelmediaprocessing.CancelMediaProcessingRequestBuilder;
 import com.microsoft.graph.communications.calls.item.changescreensharingrole.ChangeScreenSharingRoleRequestBuilder;
 import com.microsoft.graph.communications.calls.item.contentsharingsessions.ContentSharingSessionsRequestBuilder;
-import com.microsoft.graph.communications.calls.item.contentsharingsessions.item.ContentSharingSessionItemRequestBuilder;
 import com.microsoft.graph.communications.calls.item.keepalive.KeepAliveRequestBuilder;
 import com.microsoft.graph.communications.calls.item.mute.MuteRequestBuilder;
-import com.microsoft.graph.communications.calls.item.operations.item.CommsOperationItemRequestBuilder;
 import com.microsoft.graph.communications.calls.item.operations.OperationsRequestBuilder;
-import com.microsoft.graph.communications.calls.item.participants.item.ParticipantItemRequestBuilder;
 import com.microsoft.graph.communications.calls.item.participants.ParticipantsRequestBuilder;
 import com.microsoft.graph.communications.calls.item.playprompt.PlayPromptRequestBuilder;
 import com.microsoft.graph.communications.calls.item.recordresponse.RecordResponseRequestBuilder;
@@ -133,18 +129,6 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         return new UpdateRecordingStatusRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the audioRoutingGroups property of the microsoft.graph.call entity.
-     * @param id Unique identifier of the item
-     * @return a AudioRoutingGroupItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AudioRoutingGroupItemRequestBuilder audioRoutingGroups(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("audioRoutingGroup%2Did", id);
-        return new AudioRoutingGroupItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new CallItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -163,18 +147,6 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public CallItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the contentSharingSessions property of the microsoft.graph.call entity.
-     * @param id Unique identifier of the item
-     * @return a ContentSharingSessionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ContentSharingSessionItemRequestBuilder contentSharingSessions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("contentSharingSession%2Did", id);
-        return new ContentSharingSessionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property calls for communications
@@ -249,30 +221,6 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the operations property of the microsoft.graph.call entity.
-     * @param id Unique identifier of the item
-     * @return a CommsOperationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public CommsOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("commsOperation%2Did", id);
-        return new CommsOperationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the participants property of the microsoft.graph.call entity.
-     * @param id Unique identifier of the item
-     * @return a ParticipantItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ParticipantItemRequestBuilder participants(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("participant%2Did", id);
-        return new ParticipantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property calls in communications

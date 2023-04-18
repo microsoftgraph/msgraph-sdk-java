@@ -1,10 +1,7 @@
 package com.microsoft.graph.me.contactfolders.item.childfolders.item;
 
 import com.microsoft.graph.me.contactfolders.item.childfolders.item.contacts.ContactsRequestBuilder;
-import com.microsoft.graph.me.contactfolders.item.childfolders.item.contacts.item.ContactItemRequestBuilder;
-import com.microsoft.graph.me.contactfolders.item.childfolders.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.me.contactfolders.item.childfolders.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import com.microsoft.graph.me.contactfolders.item.childfolders.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
 import com.microsoft.graph.me.contactfolders.item.childfolders.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.models.ContactFolder;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -60,18 +57,6 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public ContactFolderItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/me/contactFolders/{contactFolder%2Did}/childFolders/{contactFolder%2Did1}{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the contacts property of the microsoft.graph.contactFolder entity.
-     * @param id Unique identifier of the item
-     * @return a ContactItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ContactItemRequestBuilder contacts(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("contact%2Did", id);
-        return new ContactItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property childFolders for me
@@ -148,18 +133,6 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.contactFolder entity.
-     * @param id Unique identifier of the item
-     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("multiValueLegacyExtendedProperty%2Did", id);
-        return new MultiValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property childFolders in me
      * @param body The request body
      * @return a CompletableFuture of contactFolder
@@ -198,18 +171,6 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.contactFolder entity.
-     * @param id Unique identifier of the item
-     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("singleValueLegacyExtendedProperty%2Did", id);
-        return new SingleValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property childFolders for me

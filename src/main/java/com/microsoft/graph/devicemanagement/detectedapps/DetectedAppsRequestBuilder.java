@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.detectedapps;
 
 import com.microsoft.graph.devicemanagement.detectedapps.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.detectedapps.item.DetectedAppItemRequestBuilder;
 import com.microsoft.graph.models.DetectedApp;
 import com.microsoft.graph.models.DetectedAppCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class DetectedAppsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the detectedApps property of the microsoft.graph.deviceManagement entity.
+     * @param detectedAppId Unique identifier of the item
+     * @return a DetectedAppItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DetectedAppItemRequestBuilder byDetectedAppId(@javax.annotation.Nonnull final String detectedAppId) {
+        Objects.requireNonNull(detectedAppId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("detectedApp%2Did", detectedAppId);
+        return new DetectedAppItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DetectedAppsRequestBuilder and sets the default values.

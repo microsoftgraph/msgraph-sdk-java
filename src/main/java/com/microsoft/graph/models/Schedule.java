@@ -13,9 +13,9 @@ public class Schedule extends Entity implements Parsable {
     private java.util.List<OfferShiftRequest> offerShiftRequests;
     /** Indicates whether offer shift requests are enabled for the schedule. */
     private Boolean offerShiftRequestsEnabled;
-    /** The openShiftChangeRequests property */
+    /** The open shift requests in the schedule. */
     private java.util.List<OpenShiftChangeRequest> openShiftChangeRequests;
-    /** The openShifts property */
+    /** The set of open shifts in a scheduling group in the schedule. */
     private java.util.List<OpenShift> openShifts;
     /** Indicates whether open shifts are enabled for the schedule. */
     private Boolean openShiftsEnabled;
@@ -116,7 +116,7 @@ public class Schedule extends Entity implements Parsable {
         return this.offerShiftRequestsEnabled;
     }
     /**
-     * Gets the openShiftChangeRequests property value. The openShiftChangeRequests property
+     * Gets the openShiftChangeRequests property value. The open shift requests in the schedule.
      * @return a openShiftChangeRequest
      */
     @javax.annotation.Nullable
@@ -124,7 +124,7 @@ public class Schedule extends Entity implements Parsable {
         return this.openShiftChangeRequests;
     }
     /**
-     * Gets the openShifts property value. The openShifts property
+     * Gets the openShifts property value. The set of open shifts in a scheduling group in the schedule.
      * @return a openShift
      */
     @javax.annotation.Nullable
@@ -298,7 +298,7 @@ public class Schedule extends Entity implements Parsable {
         this.offerShiftRequestsEnabled = value;
     }
     /**
-     * Sets the openShiftChangeRequests property value. The openShiftChangeRequests property
+     * Sets the openShiftChangeRequests property value. The open shift requests in the schedule.
      * @param value Value to set for the openShiftChangeRequests property.
      * @return a void
      */
@@ -307,7 +307,7 @@ public class Schedule extends Entity implements Parsable {
         this.openShiftChangeRequests = value;
     }
     /**
-     * Sets the openShifts property value. The openShifts property
+     * Sets the openShifts property value. The set of open shifts in a scheduling group in the schedule.
      * @param value Value to set for the openShifts property.
      * @return a void
      */

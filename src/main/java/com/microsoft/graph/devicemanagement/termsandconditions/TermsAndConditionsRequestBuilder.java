@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.termsandconditions;
 
 import com.microsoft.graph.devicemanagement.termsandconditions.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.termsandconditions.item.TermsAndConditionsItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TermsAndConditions;
 import com.microsoft.graph.models.TermsAndConditionsCollectionResponse;
@@ -26,6 +27,18 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the termsAndConditions property of the microsoft.graph.deviceManagement entity.
+     * @param termsAndConditionsId Unique identifier of the item
+     * @return a TermsAndConditionsItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TermsAndConditionsItemRequestBuilder byTermsAndConditionsId(@javax.annotation.Nonnull final String termsAndConditionsId) {
+        Objects.requireNonNull(termsAndConditionsId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("termsAndConditions%2Did", termsAndConditionsId);
+        return new TermsAndConditionsItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TermsAndConditionsRequestBuilder and sets the default values.

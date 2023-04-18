@@ -1,7 +1,6 @@
 package com.microsoft.graph.appcatalogs.teamsapps.item;
 
 import com.microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.AppDefinitionsRequestBuilder;
-import com.microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.item.TeamsAppDefinitionItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TeamsApp;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -26,18 +25,6 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public AppDefinitionsRequestBuilder appDefinitions() {
         return new AppDefinitionsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the appDefinitions property of the microsoft.graph.teamsApp entity.
-     * @param id Unique identifier of the item
-     * @return a TeamsAppDefinitionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TeamsAppDefinitionItemRequestBuilder appDefinitions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("teamsAppDefinition%2Did", id);
-        return new TeamsAppDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TeamsAppItemRequestBuilder and sets the default values.

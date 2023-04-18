@@ -6,6 +6,7 @@ import com.microsoft.graph.models.ResourceSpecificPermissionGrantCollectionRespo
 import com.microsoft.graph.permissiongrants.delta.DeltaRequestBuilder;
 import com.microsoft.graph.permissiongrants.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
 import com.microsoft.graph.permissiongrants.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.permissiongrants.item.ResourceSpecificPermissionGrantItemRequestBuilder;
 import com.microsoft.graph.permissiongrants.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -44,6 +45,18 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of resourceSpecificPermissionGrant entities.
+     * @param resourceSpecificPermissionGrantId Unique identifier of the item
+     * @return a ResourceSpecificPermissionGrantItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ResourceSpecificPermissionGrantItemRequestBuilder byResourceSpecificPermissionGrantId(@javax.annotation.Nonnull final String resourceSpecificPermissionGrantId) {
+        Objects.requireNonNull(resourceSpecificPermissionGrantId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("resourceSpecificPermissionGrant%2Did", resourceSpecificPermissionGrantId);
+        return new ResourceSpecificPermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PermissionGrantsRequestBuilder and sets the default values.

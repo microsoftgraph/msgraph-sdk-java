@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.mdmwindowsinformationprotectionpolicies;
 
 import com.microsoft.graph.deviceappmanagement.mdmwindowsinformationprotectionpolicies.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mdmwindowsinformationprotectionpolicies.item.MdmWindowsInformationProtectionPolicyItemRequestBuilder;
 import com.microsoft.graph.models.MdmWindowsInformationProtectionPolicy;
 import com.microsoft.graph.models.MdmWindowsInformationProtectionPolicyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseR
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the mdmWindowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity.
+     * @param mdmWindowsInformationProtectionPolicyId Unique identifier of the item
+     * @return a MdmWindowsInformationProtectionPolicyItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public MdmWindowsInformationProtectionPolicyItemRequestBuilder byMdmWindowsInformationProtectionPolicyId(@javax.annotation.Nonnull final String mdmWindowsInformationProtectionPolicyId) {
+        Objects.requireNonNull(mdmWindowsInformationProtectionPolicyId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("mdmWindowsInformationProtectionPolicy%2Did", mdmWindowsInformationProtectionPolicyId);
+        return new MdmWindowsInformationProtectionPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MdmWindowsInformationProtectionPoliciesRequestBuilder and sets the default values.

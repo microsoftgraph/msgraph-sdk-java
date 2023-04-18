@@ -17,6 +17,8 @@ public class PolicyRoot extends Entity implements Parsable {
     private AuthenticationFlowsPolicy authenticationFlowsPolicy;
     /** The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD). */
     private AuthenticationMethodsPolicy authenticationMethodsPolicy;
+    /** The authenticationStrengthPolicies property */
+    private java.util.List<AuthenticationStrengthPolicy> authenticationStrengthPolicies;
     /** The policy that controls Azure AD authorization settings. */
     private AuthorizationPolicy authorizationPolicy;
     /** The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application. */
@@ -102,6 +104,14 @@ public class PolicyRoot extends Entity implements Parsable {
         return this.authenticationMethodsPolicy;
     }
     /**
+     * Gets the authenticationStrengthPolicies property value. The authenticationStrengthPolicies property
+     * @return a authenticationStrengthPolicy
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AuthenticationStrengthPolicy> getAuthenticationStrengthPolicies() {
+        return this.authenticationStrengthPolicies;
+    }
+    /**
      * Gets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.
      * @return a authorizationPolicy
      */
@@ -161,6 +171,7 @@ public class PolicyRoot extends Entity implements Parsable {
         deserializerMap.put("appManagementPolicies", (n) -> { this.setAppManagementPolicies(n.getCollectionOfObjectValues(AppManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationFlowsPolicy", (n) -> { this.setAuthenticationFlowsPolicy(n.getObjectValue(AuthenticationFlowsPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationMethodsPolicy", (n) -> { this.setAuthenticationMethodsPolicy(n.getObjectValue(AuthenticationMethodsPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationStrengthPolicies", (n) -> { this.setAuthenticationStrengthPolicies(n.getCollectionOfObjectValues(AuthenticationStrengthPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("authorizationPolicy", (n) -> { this.setAuthorizationPolicy(n.getObjectValue(AuthorizationPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("claimsMappingPolicies", (n) -> { this.setClaimsMappingPolicies(n.getCollectionOfObjectValues(ClaimsMappingPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("conditionalAccessPolicies", (n) -> { this.setConditionalAccessPolicies(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
@@ -246,6 +257,7 @@ public class PolicyRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("appManagementPolicies", this.getAppManagementPolicies());
         writer.writeObjectValue("authenticationFlowsPolicy", this.getAuthenticationFlowsPolicy());
         writer.writeObjectValue("authenticationMethodsPolicy", this.getAuthenticationMethodsPolicy());
+        writer.writeCollectionOfObjectValues("authenticationStrengthPolicies", this.getAuthenticationStrengthPolicies());
         writer.writeObjectValue("authorizationPolicy", this.getAuthorizationPolicy());
         writer.writeCollectionOfObjectValues("claimsMappingPolicies", this.getClaimsMappingPolicies());
         writer.writeCollectionOfObjectValues("conditionalAccessPolicies", this.getConditionalAccessPolicies());
@@ -304,6 +316,15 @@ public class PolicyRoot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setAuthenticationMethodsPolicy(@javax.annotation.Nullable final AuthenticationMethodsPolicy value) {
         this.authenticationMethodsPolicy = value;
+    }
+    /**
+     * Sets the authenticationStrengthPolicies property value. The authenticationStrengthPolicies property
+     * @param value Value to set for the authenticationStrengthPolicies property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAuthenticationStrengthPolicies(@javax.annotation.Nullable final java.util.List<AuthenticationStrengthPolicy> value) {
+        this.authenticationStrengthPolicies = value;
     }
     /**
      * Sets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.

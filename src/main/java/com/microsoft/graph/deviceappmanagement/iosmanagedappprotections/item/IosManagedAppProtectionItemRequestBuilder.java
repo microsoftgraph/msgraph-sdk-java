@@ -1,7 +1,6 @@
 package com.microsoft.graph.deviceappmanagement.iosmanagedappprotections.item;
 
 import com.microsoft.graph.deviceappmanagement.iosmanagedappprotections.item.apps.AppsRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.iosmanagedappprotections.item.apps.item.ManagedMobileAppItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.iosmanagedappprotections.item.deploymentsummary.DeploymentSummaryRequestBuilder;
 import com.microsoft.graph.models.IosManagedAppProtection;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -32,18 +31,6 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
     @javax.annotation.Nonnull
     public DeploymentSummaryRequestBuilder deploymentSummary() {
         return new DeploymentSummaryRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the apps property of the microsoft.graph.iosManagedAppProtection entity.
-     * @param id Unique identifier of the item
-     * @return a ManagedMobileAppItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ManagedMobileAppItemRequestBuilder apps(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("managedMobileApp%2Did", id);
-        return new ManagedMobileAppItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new IosManagedAppProtectionItemRequestBuilder and sets the default values.

@@ -2,6 +2,7 @@ package com.microsoft.graph.education.schools;
 
 import com.microsoft.graph.education.schools.count.CountRequestBuilder;
 import com.microsoft.graph.education.schools.delta.DeltaRequestBuilder;
+import com.microsoft.graph.education.schools.item.EducationSchoolItemRequestBuilder;
 import com.microsoft.graph.models.EducationSchool;
 import com.microsoft.graph.models.EducationSchoolCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -32,6 +33,18 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the schools property of the microsoft.graph.educationRoot entity.
+     * @param educationSchoolId Unique identifier of the item
+     * @return a EducationSchoolItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public EducationSchoolItemRequestBuilder byEducationSchoolId(@javax.annotation.Nonnull final String educationSchoolId) {
+        Objects.requireNonNull(educationSchoolId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("educationSchool%2Did", educationSchoolId);
+        return new EducationSchoolItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SchoolsRequestBuilder and sets the default values.

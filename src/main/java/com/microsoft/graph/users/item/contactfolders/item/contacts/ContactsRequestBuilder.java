@@ -5,6 +5,7 @@ import com.microsoft.graph.models.ContactCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.contactfolders.item.contacts.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.contactfolders.item.contacts.delta.DeltaRequestBuilder;
+import com.microsoft.graph.users.item.contactfolders.item.contacts.item.ContactItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -32,6 +33,18 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the contacts property of the microsoft.graph.contactFolder entity.
+     * @param contactId Unique identifier of the item
+     * @return a ContactItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ContactItemRequestBuilder byContactId(@javax.annotation.Nonnull final String contactId) {
+        Objects.requireNonNull(contactId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("contact%2Did", contactId);
+        return new ContactItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ContactsRequestBuilder and sets the default values.

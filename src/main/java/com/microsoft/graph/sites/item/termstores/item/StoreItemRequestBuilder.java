@@ -3,8 +3,6 @@ package com.microsoft.graph.sites.item.termstores.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.termstore.Store;
 import com.microsoft.graph.sites.item.termstores.item.groups.GroupsRequestBuilder;
-import com.microsoft.graph.sites.item.termstores.item.groups.item.GroupItemRequestBuilder;
-import com.microsoft.graph.sites.item.termstores.item.sets.item.SetItemRequestBuilder;
 import com.microsoft.graph.sites.item.termstores.item.sets.SetsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -129,18 +127,6 @@ public class StoreItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Provides operations to manage the groups property of the microsoft.graph.termStore.store entity.
-     * @param id Unique identifier of the item
-     * @return a GroupItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GroupItemRequestBuilder groups(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("group%2Did", id);
-        return new GroupItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update the navigation property termStores in sites
      * @param body The request body
      * @return a CompletableFuture of store
@@ -179,18 +165,6 @@ public class StoreItemRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the sets property of the microsoft.graph.termStore.store entity.
-     * @param id Unique identifier of the item
-     * @return a SetItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SetItemRequestBuilder sets(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("set%2Did", id);
-        return new SetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property termStores for sites

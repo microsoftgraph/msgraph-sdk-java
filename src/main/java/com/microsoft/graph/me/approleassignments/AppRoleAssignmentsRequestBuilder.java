@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.approleassignments;
 
 import com.microsoft.graph.me.approleassignments.count.CountRequestBuilder;
+import com.microsoft.graph.me.approleassignments.item.AppRoleAssignmentItemRequestBuilder;
 import com.microsoft.graph.models.AppRoleAssignment;
 import com.microsoft.graph.models.AppRoleAssignmentCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the appRoleAssignments property of the microsoft.graph.user entity.
+     * @param appRoleAssignmentId Unique identifier of the item
+     * @return a AppRoleAssignmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AppRoleAssignmentItemRequestBuilder byAppRoleAssignmentId(@javax.annotation.Nonnull final String appRoleAssignmentId) {
+        Objects.requireNonNull(appRoleAssignmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("appRoleAssignment%2Did", appRoleAssignmentId);
+        return new AppRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AppRoleAssignmentsRequestBuilder and sets the default values.

@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.userstatuses;
 
 import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.userstatuses.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.userstatuses.item.ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder;
 import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationUserStatus;
 import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userStatuses property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
+     * @param managedDeviceMobileAppConfigurationUserStatusId Unique identifier of the item
+     * @return a ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder byManagedDeviceMobileAppConfigurationUserStatusId(@javax.annotation.Nonnull final String managedDeviceMobileAppConfigurationUserStatusId) {
+        Objects.requireNonNull(managedDeviceMobileAppConfigurationUserStatusId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("managedDeviceMobileAppConfigurationUserStatus%2Did", managedDeviceMobileAppConfigurationUserStatusId);
+        return new ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new UserStatusesRequestBuilder and sets the default values.

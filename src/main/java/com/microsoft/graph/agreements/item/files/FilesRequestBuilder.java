@@ -1,6 +1,7 @@
 package com.microsoft.graph.agreements.item.files;
 
 import com.microsoft.graph.agreements.item.files.count.CountRequestBuilder;
+import com.microsoft.graph.agreements.item.files.item.AgreementFileLocalizationItemRequestBuilder;
 import com.microsoft.graph.models.AgreementFileLocalization;
 import com.microsoft.graph.models.AgreementFileLocalizationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the files property of the microsoft.graph.agreement entity.
+     * @param agreementFileLocalizationId Unique identifier of the item
+     * @return a AgreementFileLocalizationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AgreementFileLocalizationItemRequestBuilder byAgreementFileLocalizationId(@javax.annotation.Nonnull final String agreementFileLocalizationId) {
+        Objects.requireNonNull(agreementFileLocalizationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("agreementFileLocalization%2Did", agreementFileLocalizationId);
+        return new AgreementFileLocalizationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new FilesRequestBuilder and sets the default values.

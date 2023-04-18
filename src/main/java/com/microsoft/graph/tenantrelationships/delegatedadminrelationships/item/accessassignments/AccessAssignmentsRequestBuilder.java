@@ -4,6 +4,7 @@ import com.microsoft.graph.models.DelegatedAdminAccessAssignment;
 import com.microsoft.graph.models.DelegatedAdminAccessAssignmentCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.accessassignments.count.CountRequestBuilder;
+import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.item.accessassignments.item.DelegatedAdminAccessAssignmentItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the accessAssignments property of the microsoft.graph.delegatedAdminRelationship entity.
+     * @param delegatedAdminAccessAssignmentId Unique identifier of the item
+     * @return a DelegatedAdminAccessAssignmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DelegatedAdminAccessAssignmentItemRequestBuilder byDelegatedAdminAccessAssignmentId(@javax.annotation.Nonnull final String delegatedAdminAccessAssignmentId) {
+        Objects.requireNonNull(delegatedAdminAccessAssignmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("delegatedAdminAccessAssignment%2Did", delegatedAdminAccessAssignmentId);
+        return new DelegatedAdminAccessAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AccessAssignmentsRequestBuilder and sets the default values.

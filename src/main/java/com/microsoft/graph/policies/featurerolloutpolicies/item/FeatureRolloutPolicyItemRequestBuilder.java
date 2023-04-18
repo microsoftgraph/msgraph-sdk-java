@@ -3,7 +3,6 @@ package com.microsoft.graph.policies.featurerolloutpolicies.item;
 import com.microsoft.graph.models.FeatureRolloutPolicy;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.policies.featurerolloutpolicies.item.appliesto.AppliesToRequestBuilder;
-import com.microsoft.graph.policies.featurerolloutpolicies.item.appliesto.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,18 +25,6 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public AppliesToRequestBuilder appliesTo() {
         return new AppliesToRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.policies.featureRolloutPolicies.item.appliesTo.item collection
-     * @param id Unique identifier of the item
-     * @return a DirectoryObjectItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DirectoryObjectItemRequestBuilder appliesTo(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("directoryObject%2Did", id);
-        return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new FeatureRolloutPolicyItemRequestBuilder and sets the default values.

@@ -41,7 +41,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/appManagementPolicies/{appManagementPolicy%2Did}/appliesTo/{directoryObject%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get appliesTo from policies
+     * Collection of applications and service principals to which the policy is applied.
      * @return a CompletableFuture of directoryObject
      */
     @javax.annotation.Nonnull
@@ -59,7 +59,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get appliesTo from policies
+     * Collection of applications and service principals to which the policy is applied.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryObject
      */
@@ -78,7 +78,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get appliesTo from policies
+     * Collection of applications and service principals to which the policy is applied.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +86,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get appliesTo from policies
+     * Collection of applications and service principals to which the policy is applied.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -107,7 +107,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get appliesTo from policies
+     * Collection of applications and service principals to which the policy is applied.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.item.devicecompliancesettingstates;
 
 import com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.item.devicecompliancesettingstates.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.item.devicecompliancesettingstates.item.DeviceComplianceSettingStateItemRequestBuilder;
 import com.microsoft.graph.models.DeviceComplianceSettingState;
 import com.microsoft.graph.models.DeviceComplianceSettingStateCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deviceComplianceSettingStates property of the microsoft.graph.deviceCompliancePolicySettingStateSummary entity.
+     * @param deviceComplianceSettingStateId Unique identifier of the item
+     * @return a DeviceComplianceSettingStateItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceComplianceSettingStateItemRequestBuilder byDeviceComplianceSettingStateId(@javax.annotation.Nonnull final String deviceComplianceSettingStateId) {
+        Objects.requireNonNull(deviceComplianceSettingStateId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceComplianceSettingState%2Did", deviceComplianceSettingStateId);
+        return new DeviceComplianceSettingStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DeviceComplianceSettingStatesRequestBuilder and sets the default values.

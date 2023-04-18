@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PlannerPlan;
 import com.microsoft.graph.models.PlannerPlanCollectionResponse;
 import com.microsoft.graph.planner.plans.count.CountRequestBuilder;
+import com.microsoft.graph.planner.plans.item.PlannerPlanItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the plans property of the microsoft.graph.planner entity.
+     * @param plannerPlanId Unique identifier of the item
+     * @return a PlannerPlanItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PlannerPlanItemRequestBuilder byPlannerPlanId(@javax.annotation.Nonnull final String plannerPlanId) {
+        Objects.requireNonNull(plannerPlanId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("plannerPlan%2Did", plannerPlanId);
+        return new PlannerPlanItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PlansRequestBuilder and sets the default values.

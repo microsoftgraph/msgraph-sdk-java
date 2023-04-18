@@ -2,62 +2,37 @@ package com.microsoft.graph.devicemanagement;
 
 import com.microsoft.graph.devicemanagement.applepushnotificationcertificate.ApplePushNotificationCertificateRequestBuilder;
 import com.microsoft.graph.devicemanagement.auditevents.AuditEventsRequestBuilder;
-import com.microsoft.graph.devicemanagement.auditevents.item.AuditEventItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.compliancemanagementpartners.ComplianceManagementPartnersRequestBuilder;
-import com.microsoft.graph.devicemanagement.compliancemanagementpartners.item.ComplianceManagementPartnerItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.conditionalaccesssettings.ConditionalAccessSettingsRequestBuilder;
 import com.microsoft.graph.devicemanagement.detectedapps.DetectedAppsRequestBuilder;
-import com.microsoft.graph.devicemanagement.detectedapps.item.DetectedAppItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.devicecategories.DeviceCategoriesRequestBuilder;
-import com.microsoft.graph.devicemanagement.devicecategories.item.DeviceCategoryItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.devicecompliancepolicies.DeviceCompliancePoliciesRequestBuilder;
-import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.DeviceCompliancePolicyItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.devicecompliancepolicydevicestatesummary.DeviceCompliancePolicyDeviceStateSummaryRequestBuilder;
 import com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.DeviceCompliancePolicySettingStateSummariesRequestBuilder;
-import com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.item.DeviceCompliancePolicySettingStateSummaryItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.deviceconfigurationdevicestatesummaries.DeviceConfigurationDeviceStateSummariesRequestBuilder;
 import com.microsoft.graph.devicemanagement.deviceconfigurations.DeviceConfigurationsRequestBuilder;
-import com.microsoft.graph.devicemanagement.deviceconfigurations.item.DeviceConfigurationItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.deviceenrollmentconfigurations.DeviceEnrollmentConfigurationsRequestBuilder;
-import com.microsoft.graph.devicemanagement.deviceenrollmentconfigurations.item.DeviceEnrollmentConfigurationItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.devicemanagementpartners.DeviceManagementPartnersRequestBuilder;
-import com.microsoft.graph.devicemanagement.devicemanagementpartners.item.DeviceManagementPartnerItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.exchangeconnectors.ExchangeConnectorsRequestBuilder;
-import com.microsoft.graph.devicemanagement.exchangeconnectors.item.DeviceManagementExchangeConnectorItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.geteffectivepermissionswithscope.GetEffectivePermissionsWithScopeRequestBuilder;
 import com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder;
-import com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.item.ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.iosupdatestatuses.IosUpdateStatusesRequestBuilder;
-import com.microsoft.graph.devicemanagement.iosupdatestatuses.item.IosUpdateDeviceStatusItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.manageddeviceoverview.ManagedDeviceOverviewRequestBuilder;
-import com.microsoft.graph.devicemanagement.manageddevices.item.ManagedDeviceItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.manageddevices.ManagedDevicesRequestBuilder;
-import com.microsoft.graph.devicemanagement.mobilethreatdefenseconnectors.item.MobileThreatDefenseConnectorItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.mobilethreatdefenseconnectors.MobileThreatDefenseConnectorsRequestBuilder;
-import com.microsoft.graph.devicemanagement.notificationmessagetemplates.item.NotificationMessageTemplateItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.notificationmessagetemplates.NotificationMessageTemplatesRequestBuilder;
-import com.microsoft.graph.devicemanagement.remoteassistancepartners.item.RemoteAssistancePartnerItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.remoteassistancepartners.RemoteAssistancePartnersRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.ReportsRequestBuilder;
-import com.microsoft.graph.devicemanagement.resourceoperations.item.ResourceOperationItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.resourceoperations.ResourceOperationsRequestBuilder;
-import com.microsoft.graph.devicemanagement.roleassignments.item.DeviceAndAppManagementRoleAssignmentItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.roleassignments.RoleAssignmentsRequestBuilder;
-import com.microsoft.graph.devicemanagement.roledefinitions.item.RoleDefinitionItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.roledefinitions.RoleDefinitionsRequestBuilder;
 import com.microsoft.graph.devicemanagement.softwareupdatestatussummary.SoftwareUpdateStatusSummaryRequestBuilder;
-import com.microsoft.graph.devicemanagement.telecomexpensemanagementpartners.item.TelecomExpenseManagementPartnerItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.telecomexpensemanagementpartners.TelecomExpenseManagementPartnersRequestBuilder;
-import com.microsoft.graph.devicemanagement.termsandconditions.item.TermsAndConditionsItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.termsandconditions.TermsAndConditionsRequestBuilder;
-import com.microsoft.graph.devicemanagement.troubleshootingevents.item.DeviceManagementTroubleshootingEventItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.troubleshootingevents.TroubleshootingEventsRequestBuilder;
 import com.microsoft.graph.devicemanagement.verifywindowsenrollmentautodiscoverywithdomainname.VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder;
-import com.microsoft.graph.devicemanagement.windowsautopilotdeviceidentities.item.WindowsAutopilotDeviceIdentityItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.windowsautopilotdeviceidentities.WindowsAutopilotDeviceIdentitiesRequestBuilder;
-import com.microsoft.graph.devicemanagement.windowsinformationprotectionapplearningsummaries.item.WindowsInformationProtectionAppLearningSummaryItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.windowsinformationprotectionapplearningsummaries.WindowsInformationProtectionAppLearningSummariesRequestBuilder;
-import com.microsoft.graph.devicemanagement.windowsinformationprotectionnetworklearningsummaries.item.WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder;
 import com.microsoft.graph.devicemanagement.windowsinformationprotectionnetworklearningsummaries.WindowsInformationProtectionNetworkLearningSummariesRequestBuilder;
 import com.microsoft.graph.models.DeviceManagement;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -240,30 +215,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         return new WindowsInformationProtectionNetworkLearningSummariesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the auditEvents property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a AuditEventItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AuditEventItemRequestBuilder auditEvents(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("auditEvent%2Did", id);
-        return new AuditEventItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the complianceManagementPartners property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a ComplianceManagementPartnerItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ComplianceManagementPartnerItemRequestBuilder complianceManagementPartners(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("complianceManagementPartner%2Did", id);
-        return new ComplianceManagementPartnerItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Instantiates a new DeviceManagementRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -282,102 +233,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public DeviceManagementRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Provides operations to manage the detectedApps property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a DetectedAppItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DetectedAppItemRequestBuilder detectedApps(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("detectedApp%2Did", id);
-        return new DetectedAppItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the deviceCategories property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceCategoryItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceCategoryItemRequestBuilder deviceCategories(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceCategory%2Did", id);
-        return new DeviceCategoryItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the deviceCompliancePolicies property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceCompliancePolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceCompliancePolicyItemRequestBuilder deviceCompliancePolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceCompliancePolicy%2Did", id);
-        return new DeviceCompliancePolicyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the deviceCompliancePolicySettingStateSummaries property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceCompliancePolicySettingStateSummaryItemRequestBuilder deviceCompliancePolicySettingStateSummaries(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceCompliancePolicySettingStateSummary%2Did", id);
-        return new DeviceCompliancePolicySettingStateSummaryItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the deviceConfigurations property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceConfigurationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceConfigurationItemRequestBuilder deviceConfigurations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceConfiguration%2Did", id);
-        return new DeviceConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the deviceEnrollmentConfigurations property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceEnrollmentConfigurationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceEnrollmentConfigurationItemRequestBuilder deviceEnrollmentConfigurations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceEnrollmentConfiguration%2Did", id);
-        return new DeviceEnrollmentConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the deviceManagementPartners property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceManagementPartnerItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceManagementPartnerItemRequestBuilder deviceManagementPartners(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceManagementPartner%2Did", id);
-        return new DeviceManagementPartnerItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the exchangeConnectors property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceManagementExchangeConnectorItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceManagementExchangeConnectorItemRequestBuilder exchangeConnectors(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceManagementExchangeConnector%2Did", id);
-        return new DeviceManagementExchangeConnectorItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get deviceManagement
@@ -427,66 +282,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         return new GetEffectivePermissionsWithScopeRequestBuilder(pathParameters, requestAdapter, scope);
     }
     /**
-     * Provides operations to manage the importedWindowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder importedWindowsAutopilotDeviceIdentities(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("importedWindowsAutopilotDeviceIdentity%2Did", id);
-        return new ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the iosUpdateStatuses property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a IosUpdateDeviceStatusItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public IosUpdateDeviceStatusItemRequestBuilder iosUpdateStatuses(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("iosUpdateDeviceStatus%2Did", id);
-        return new IosUpdateDeviceStatusItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the managedDevices property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a ManagedDeviceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ManagedDeviceItemRequestBuilder managedDevices(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("managedDevice%2Did", id);
-        return new ManagedDeviceItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the mobileThreatDefenseConnectors property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a MobileThreatDefenseConnectorItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public MobileThreatDefenseConnectorItemRequestBuilder mobileThreatDefenseConnectors(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("mobileThreatDefenseConnector%2Did", id);
-        return new MobileThreatDefenseConnectorItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the notificationMessageTemplates property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a NotificationMessageTemplateItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public NotificationMessageTemplateItemRequestBuilder notificationMessageTemplates(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("notificationMessageTemplate%2Did", id);
-        return new NotificationMessageTemplateItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Update deviceManagement
      * @param body The request body
      * @return a CompletableFuture of deviceManagement
@@ -525,78 +320,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
-    }
-    /**
-     * Provides operations to manage the remoteAssistancePartners property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a RemoteAssistancePartnerItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public RemoteAssistancePartnerItemRequestBuilder remoteAssistancePartners(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("remoteAssistancePartner%2Did", id);
-        return new RemoteAssistancePartnerItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the resourceOperations property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a ResourceOperationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ResourceOperationItemRequestBuilder resourceOperations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("resourceOperation%2Did", id);
-        return new ResourceOperationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the roleAssignments property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceAndAppManagementRoleAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceAndAppManagementRoleAssignmentItemRequestBuilder roleAssignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceAndAppManagementRoleAssignment%2Did", id);
-        return new DeviceAndAppManagementRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the roleDefinitions property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a RoleDefinitionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public RoleDefinitionItemRequestBuilder roleDefinitions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("roleDefinition%2Did", id);
-        return new RoleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the telecomExpenseManagementPartners property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a TelecomExpenseManagementPartnerItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TelecomExpenseManagementPartnerItemRequestBuilder telecomExpenseManagementPartners(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("telecomExpenseManagementPartner%2Did", id);
-        return new TelecomExpenseManagementPartnerItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the termsAndConditions property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a TermsAndConditionsItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public TermsAndConditionsItemRequestBuilder termsAndConditions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("termsAndConditions%2Did", id);
-        return new TermsAndConditionsItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get deviceManagement
@@ -660,18 +383,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Provides operations to manage the troubleshootingEvents property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a DeviceManagementTroubleshootingEventItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeviceManagementTroubleshootingEventItemRequestBuilder troubleshootingEvents(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceManagementTroubleshootingEvent%2Did", id);
-        return new DeviceManagementTroubleshootingEventItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Provides operations to call the verifyWindowsEnrollmentAutoDiscovery method.
      * @param domainName Usage: domainName='{domainName}'
      * @return a verifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder
@@ -680,42 +391,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     public VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder verifyWindowsEnrollmentAutoDiscoveryWithDomainName(@javax.annotation.Nonnull final String domainName) {
         Objects.requireNonNull(domainName);
         return new VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder(pathParameters, requestAdapter, domainName);
-    }
-    /**
-     * Provides operations to manage the windowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a WindowsAutopilotDeviceIdentityItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WindowsAutopilotDeviceIdentityItemRequestBuilder windowsAutopilotDeviceIdentities(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("windowsAutopilotDeviceIdentity%2Did", id);
-        return new WindowsAutopilotDeviceIdentityItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the windowsInformationProtectionAppLearningSummaries property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a WindowsInformationProtectionAppLearningSummaryItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WindowsInformationProtectionAppLearningSummaryItemRequestBuilder windowsInformationProtectionAppLearningSummaries(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("windowsInformationProtectionAppLearningSummary%2Did", id);
-        return new WindowsInformationProtectionAppLearningSummaryItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the windowsInformationProtectionNetworkLearningSummaries property of the microsoft.graph.deviceManagement entity.
-     * @param id Unique identifier of the item
-     * @return a WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder windowsInformationProtectionNetworkLearningSummaries(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("windowsInformationProtectionNetworkLearningSummary%2Did", id);
-        return new WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get deviceManagement

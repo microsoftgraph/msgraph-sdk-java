@@ -1,6 +1,7 @@
 package com.microsoft.graph.domains.item.verificationdnsrecords;
 
 import com.microsoft.graph.domains.item.verificationdnsrecords.count.CountRequestBuilder;
+import com.microsoft.graph.domains.item.verificationdnsrecords.item.DomainDnsRecordItemRequestBuilder;
 import com.microsoft.graph.models.DomainDnsRecord;
 import com.microsoft.graph.models.DomainDnsRecordCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class VerificationDnsRecordsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the verificationDnsRecords property of the microsoft.graph.domain entity.
+     * @param domainDnsRecordId Unique identifier of the item
+     * @return a DomainDnsRecordItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DomainDnsRecordItemRequestBuilder byDomainDnsRecordId(@javax.annotation.Nonnull final String domainDnsRecordId) {
+        Objects.requireNonNull(domainDnsRecordId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("domainDnsRecord%2Did", domainDnsRecordId);
+        return new DomainDnsRecordItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new VerificationDnsRecordsRequestBuilder and sets the default values.

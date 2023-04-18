@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.UserSource;
 import com.microsoft.graph.models.security.UserSourceCollectionResponse;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.usersources.count.CountRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.usersources.item.UserSourceItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userSources property of the microsoft.graph.security.ediscoveryCustodian entity.
+     * @param userSourceId Unique identifier of the item
+     * @return a UserSourceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UserSourceItemRequestBuilder byUserSourceId(@javax.annotation.Nonnull final String userSourceId) {
+        Objects.requireNonNull(userSourceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("userSource%2Did", userSourceId);
+        return new UserSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new UserSourcesRequestBuilder and sets the default values.

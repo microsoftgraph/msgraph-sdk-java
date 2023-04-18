@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.deviceconfigurations.item.userstatuses;
 
 import com.microsoft.graph.devicemanagement.deviceconfigurations.item.userstatuses.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.userstatuses.item.DeviceConfigurationUserStatusItemRequestBuilder;
 import com.microsoft.graph.models.DeviceConfigurationUserStatus;
 import com.microsoft.graph.models.DeviceConfigurationUserStatusCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userStatuses property of the microsoft.graph.deviceConfiguration entity.
+     * @param deviceConfigurationUserStatusId Unique identifier of the item
+     * @return a DeviceConfigurationUserStatusItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceConfigurationUserStatusItemRequestBuilder byDeviceConfigurationUserStatusId(@javax.annotation.Nonnull final String deviceConfigurationUserStatusId) {
+        Objects.requireNonNull(deviceConfigurationUserStatusId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceConfigurationUserStatus%2Did", deviceConfigurationUserStatusId);
+        return new DeviceConfigurationUserStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new UserStatusesRequestBuilder and sets the default values.

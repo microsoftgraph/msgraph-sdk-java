@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.AccessPackageCatalogItemRequestBuilder;
 import com.microsoft.graph.models.AccessPackageCatalog;
 import com.microsoft.graph.models.AccessPackageCatalogCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the catalogs property of the microsoft.graph.entitlementManagement entity.
+     * @param accessPackageCatalogId Unique identifier of the item
+     * @return a AccessPackageCatalogItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AccessPackageCatalogItemRequestBuilder byAccessPackageCatalogId(@javax.annotation.Nonnull final String accessPackageCatalogId) {
+        Objects.requireNonNull(accessPackageCatalogId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("accessPackageCatalog%2Did", accessPackageCatalogId);
+        return new AccessPackageCatalogItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new CatalogsRequestBuilder and sets the default values.

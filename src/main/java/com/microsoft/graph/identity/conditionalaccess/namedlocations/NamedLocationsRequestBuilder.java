@@ -1,6 +1,7 @@
 package com.microsoft.graph.identity.conditionalaccess.namedlocations;
 
 import com.microsoft.graph.identity.conditionalaccess.namedlocations.count.CountRequestBuilder;
+import com.microsoft.graph.identity.conditionalaccess.namedlocations.item.NamedLocationItemRequestBuilder;
 import com.microsoft.graph.models.NamedLocation;
 import com.microsoft.graph.models.NamedLocationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the namedLocations property of the microsoft.graph.conditionalAccessRoot entity.
+     * @param namedLocationId Unique identifier of the item
+     * @return a NamedLocationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public NamedLocationItemRequestBuilder byNamedLocationId(@javax.annotation.Nonnull final String namedLocationId) {
+        Objects.requireNonNull(namedLocationId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("namedLocation%2Did", namedLocationId);
+        return new NamedLocationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new NamedLocationsRequestBuilder and sets the default values.

@@ -1,6 +1,7 @@
 package com.microsoft.graph.drives.item.items.item.thumbnails;
 
 import com.microsoft.graph.drives.item.items.item.thumbnails.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.thumbnails.item.ThumbnailSetItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ThumbnailSet;
 import com.microsoft.graph.models.ThumbnailSetCollectionResponse;
@@ -26,6 +27,18 @@ public class ThumbnailsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the thumbnails property of the microsoft.graph.driveItem entity.
+     * @param thumbnailSetId Unique identifier of the item
+     * @return a ThumbnailSetItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ThumbnailSetItemRequestBuilder byThumbnailSetId(@javax.annotation.Nonnull final String thumbnailSetId) {
+        Objects.requireNonNull(thumbnailSetId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("thumbnailSet%2Did", thumbnailSetId);
+        return new ThumbnailSetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ThumbnailsRequestBuilder and sets the default values.

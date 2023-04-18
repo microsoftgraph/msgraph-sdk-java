@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.windowsautopilotdeviceidentities;
 
 import com.microsoft.graph.devicemanagement.windowsautopilotdeviceidentities.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsautopilotdeviceidentities.item.WindowsAutopilotDeviceIdentityItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WindowsAutopilotDeviceIdentity;
 import com.microsoft.graph.models.WindowsAutopilotDeviceIdentityCollectionResponse;
@@ -26,6 +27,18 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the windowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity.
+     * @param windowsAutopilotDeviceIdentityId Unique identifier of the item
+     * @return a WindowsAutopilotDeviceIdentityItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public WindowsAutopilotDeviceIdentityItemRequestBuilder byWindowsAutopilotDeviceIdentityId(@javax.annotation.Nonnull final String windowsAutopilotDeviceIdentityId) {
+        Objects.requireNonNull(windowsAutopilotDeviceIdentityId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("windowsAutopilotDeviceIdentity%2Did", windowsAutopilotDeviceIdentityId);
+        return new WindowsAutopilotDeviceIdentityItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new WindowsAutopilotDeviceIdentitiesRequestBuilder and sets the default values.

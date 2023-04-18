@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SubjectRightsRequest;
 import com.microsoft.graph.models.SubjectRightsRequestCollectionResponse;
 import com.microsoft.graph.privacy.subjectrightsrequests.count.CountRequestBuilder;
+import com.microsoft.graph.privacy.subjectrightsrequests.item.SubjectRightsRequestItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the subjectRightsRequests property of the microsoft.graph.privacy entity.
+     * @param subjectRightsRequestId Unique identifier of the item
+     * @return a SubjectRightsRequestItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SubjectRightsRequestItemRequestBuilder bySubjectRightsRequestId(@javax.annotation.Nonnull final String subjectRightsRequestId) {
+        Objects.requireNonNull(subjectRightsRequestId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("subjectRightsRequest%2Did", subjectRightsRequestId);
+        return new SubjectRightsRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SubjectRightsRequestsRequestBuilder and sets the default values.

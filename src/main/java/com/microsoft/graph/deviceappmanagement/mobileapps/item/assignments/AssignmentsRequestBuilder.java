@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.mobileapps.item.assignments;
 
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.assignments.count.CountRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.assignments.item.MobileAppAssignmentItemRequestBuilder;
 import com.microsoft.graph.models.MobileAppAssignment;
 import com.microsoft.graph.models.MobileAppAssignmentCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity.
+     * @param mobileAppAssignmentId Unique identifier of the item
+     * @return a MobileAppAssignmentItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public MobileAppAssignmentItemRequestBuilder byMobileAppAssignmentId(@javax.annotation.Nonnull final String mobileAppAssignmentId) {
+        Objects.requireNonNull(mobileAppAssignmentId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("mobileAppAssignment%2Did", mobileAppAssignmentId);
+        return new MobileAppAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new AssignmentsRequestBuilder and sets the default values.

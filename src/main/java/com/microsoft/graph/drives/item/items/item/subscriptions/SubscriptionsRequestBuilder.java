@@ -1,6 +1,7 @@
 package com.microsoft.graph.drives.item.items.item.subscriptions;
 
 import com.microsoft.graph.drives.item.items.item.subscriptions.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.subscriptions.item.SubscriptionItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Subscription;
 import com.microsoft.graph.models.SubscriptionCollectionResponse;
@@ -26,6 +27,18 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the subscriptions property of the microsoft.graph.driveItem entity.
+     * @param subscriptionId Unique identifier of the item
+     * @return a SubscriptionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SubscriptionItemRequestBuilder bySubscriptionId(@javax.annotation.Nonnull final String subscriptionId) {
+        Objects.requireNonNull(subscriptionId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("subscription%2Did", subscriptionId);
+        return new SubscriptionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SubscriptionsRequestBuilder and sets the default values.

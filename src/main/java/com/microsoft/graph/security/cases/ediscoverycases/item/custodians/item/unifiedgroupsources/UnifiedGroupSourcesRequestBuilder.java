@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.UnifiedGroupSource;
 import com.microsoft.graph.models.security.UnifiedGroupSourceCollectionResponse;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.unifiedgroupsources.count.CountRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.unifiedgroupsources.item.UnifiedGroupSourceItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the unifiedGroupSources property of the microsoft.graph.security.ediscoveryCustodian entity.
+     * @param unifiedGroupSourceId Unique identifier of the item
+     * @return a UnifiedGroupSourceItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public UnifiedGroupSourceItemRequestBuilder byUnifiedGroupSourceId(@javax.annotation.Nonnull final String unifiedGroupSourceId) {
+        Objects.requireNonNull(unifiedGroupSourceId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("unifiedGroupSource%2Did", unifiedGroupSourceId);
+        return new UnifiedGroupSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new UnifiedGroupSourcesRequestBuilder and sets the default values.

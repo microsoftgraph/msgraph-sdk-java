@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.sites.item.lists;
 
 import com.microsoft.graph.groups.item.sites.item.lists.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.lists.item.ListItemRequestBuilder;
 import com.microsoft.graph.models.List;
 import com.microsoft.graph.models.ListCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,18 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the lists property of the microsoft.graph.site entity.
+     * @param listId Unique identifier of the item
+     * @return a ListItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ListItemRequestBuilder byListId(@javax.annotation.Nonnull final String listId) {
+        Objects.requireNonNull(listId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("list%2Did", listId);
+        return new ListItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ListsRequestBuilder and sets the default values.

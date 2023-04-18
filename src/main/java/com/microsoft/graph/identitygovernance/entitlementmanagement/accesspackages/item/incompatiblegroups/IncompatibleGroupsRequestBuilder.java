@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.incompatiblegroups;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.incompatiblegroups.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.incompatiblegroups.item.GroupItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.incompatiblegroups.ref.RefRequestBuilder;
 import com.microsoft.graph.models.GroupCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -31,6 +32,18 @@ public class IncompatibleGroupsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackages.item.incompatibleGroups.item collection
+     * @param groupId Unique identifier of the item
+     * @return a GroupItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GroupItemRequestBuilder byGroupId(@javax.annotation.Nonnull final String groupId) {
+        Objects.requireNonNull(groupId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("group%2Did", groupId);
+        return new GroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new IncompatibleGroupsRequestBuilder and sets the default values.

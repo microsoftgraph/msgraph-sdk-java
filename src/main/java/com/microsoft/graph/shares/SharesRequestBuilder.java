@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SharedDriveItem;
 import com.microsoft.graph.models.SharedDriveItemCollectionResponse;
 import com.microsoft.graph.shares.count.CountRequestBuilder;
+import com.microsoft.graph.shares.item.SharedDriveItemItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,18 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of sharedDriveItem entities.
+     * @param sharedDriveItemId Unique identifier of the item
+     * @return a SharedDriveItemItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SharedDriveItemItemRequestBuilder bySharedDriveItemId(@javax.annotation.Nonnull final String sharedDriveItemId) {
+        Objects.requireNonNull(sharedDriveItemId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("sharedDriveItem%2Did", sharedDriveItemId);
+        return new SharedDriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SharesRequestBuilder and sets the default values.

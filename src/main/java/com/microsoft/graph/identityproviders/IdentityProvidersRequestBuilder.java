@@ -2,6 +2,7 @@ package com.microsoft.graph.identityproviders;
 
 import com.microsoft.graph.identityproviders.availableprovidertypes.AvailableProviderTypesRequestBuilder;
 import com.microsoft.graph.identityproviders.count.CountRequestBuilder;
+import com.microsoft.graph.identityproviders.item.IdentityProviderItemRequestBuilder;
 import com.microsoft.graph.models.IdentityProvider;
 import com.microsoft.graph.models.IdentityProviderCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -32,6 +33,18 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of identityProvider entities.
+     * @param identityProviderId Unique identifier of the item
+     * @return a IdentityProviderItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public IdentityProviderItemRequestBuilder byIdentityProviderId(@javax.annotation.Nonnull final String identityProviderId) {
+        Objects.requireNonNull(identityProviderId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("identityProvider%2Did", identityProviderId);
+        return new IdentityProviderItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new IdentityProvidersRequestBuilder and sets the default values.
