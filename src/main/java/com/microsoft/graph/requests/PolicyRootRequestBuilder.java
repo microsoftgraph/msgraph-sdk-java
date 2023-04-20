@@ -66,6 +66,26 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
     public com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
         return new com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationMethodsPolicy"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the AuthenticationStrengthPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AuthenticationStrengthPolicyCollectionRequestBuilder authenticationStrengthPolicies() {
+        return new com.microsoft.graph.requests.AuthenticationStrengthPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationStrengthPolicies"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AuthenticationStrengthPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AuthenticationStrengthPolicyRequestBuilder authenticationStrengthPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AuthenticationStrengthPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationStrengthPolicies") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for AuthenticationFlowsPolicy

@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AuthenticationStrengthRoot;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AuthenticationContextClassReferenceCollectionPage;
 import com.microsoft.graph.requests.NamedLocationCollectionPage;
@@ -29,6 +30,15 @@ import javax.annotation.Nonnull;
  */
 public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Authentication Strength.
+     * 
+     */
+    @SerializedName(value = "authenticationStrength", alternate = {"AuthenticationStrength"})
+    @Expose
+	@Nullable
+    public AuthenticationStrengthRoot authenticationStrength;
 
     /**
      * The Authentication Context Class References.

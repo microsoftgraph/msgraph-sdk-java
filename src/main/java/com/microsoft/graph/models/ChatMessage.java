@@ -16,6 +16,7 @@ import com.microsoft.graph.models.EventMessageDetail;
 import com.microsoft.graph.models.ChatMessageFromIdentitySet;
 import com.microsoft.graph.models.ChatMessageImportance;
 import com.microsoft.graph.models.ChatMessageMention;
+import com.microsoft.graph.models.ChatMessageHistoryItem;
 import com.microsoft.graph.models.ChatMessageType;
 import com.microsoft.graph.models.ChatMessagePolicyViolation;
 import com.microsoft.graph.models.ChatMessageReaction;
@@ -163,6 +164,15 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<ChatMessageMention> mentions;
+
+    /**
+     * The Message History.
+     * 
+     */
+    @SerializedName(value = "messageHistory", alternate = {"MessageHistory"})
+    @Expose
+	@Nullable
+    public java.util.List<ChatMessageHistoryItem> messageHistory;
 
     /**
      * The Message Type.
