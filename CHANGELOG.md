@@ -11,6 +11,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.54.0] - 2023-04-20
+
+### Added
+
+- AuthenticationCombinationConfiguration model and requests.
+- AuthenticationMethodMode derived models and requests. 
+- AuthenticationStrengthPolicy derived models and requests.
+
 ## [5.53.0] - 2023-04-11
 
 ### Added
