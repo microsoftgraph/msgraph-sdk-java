@@ -79,6 +79,11 @@ import com.microsoft.graph.reports.getteamsdeviceusagedistributionusercountswith
 import com.microsoft.graph.reports.getteamsdeviceusageusercountswithperiod.GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.reports.getteamsdeviceusageuserdetailwithdate.GetTeamsDeviceUsageUserDetailWithDateRequestBuilder;
 import com.microsoft.graph.reports.getteamsdeviceusageuserdetailwithperiod.GetTeamsDeviceUsageUserDetailWithPeriodRequestBuilder;
+import com.microsoft.graph.reports.getteamsteamactivitycountswithperiod.GetTeamsTeamActivityCountsWithPeriodRequestBuilder;
+import com.microsoft.graph.reports.getteamsteamactivitydetailwithdate.GetTeamsTeamActivityDetailWithDateRequestBuilder;
+import com.microsoft.graph.reports.getteamsteamactivitydetailwithperiod.GetTeamsTeamActivityDetailWithPeriodRequestBuilder;
+import com.microsoft.graph.reports.getteamsteamactivitydistributioncountswithperiod.GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilder;
+import com.microsoft.graph.reports.getteamsteamcountswithperiod.GetTeamsTeamCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.reports.getteamsuseractivitycountswithperiod.GetTeamsUserActivityCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.reports.getteamsuseractivityusercountswithperiod.GetTeamsUserActivityUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.reports.getteamsuseractivityuserdetailwithdate.GetTeamsUserActivityUserDetailWithDateRequestBuilder;
@@ -947,6 +952,56 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     public GetTeamsDeviceUsageUserDetailWithPeriodRequestBuilder getTeamsDeviceUsageUserDetailWithPeriod(@javax.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
         return new GetTeamsDeviceUsageUserDetailWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+    }
+    /**
+     * Provides operations to call the getTeamsTeamActivityCounts method.
+     * @param period Usage: period='{period}'
+     * @return a getTeamsTeamActivityCountsWithPeriodRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetTeamsTeamActivityCountsWithPeriodRequestBuilder getTeamsTeamActivityCountsWithPeriod(@javax.annotation.Nonnull final String period) {
+        Objects.requireNonNull(period);
+        return new GetTeamsTeamActivityCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+    }
+    /**
+     * Provides operations to call the getTeamsTeamActivityDetail method.
+     * @param date Usage: date={date}
+     * @return a getTeamsTeamActivityDetailWithDateRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetTeamsTeamActivityDetailWithDateRequestBuilder getTeamsTeamActivityDetailWithDate(@javax.annotation.Nonnull final LocalDate date) {
+        Objects.requireNonNull(date);
+        return new GetTeamsTeamActivityDetailWithDateRequestBuilder(pathParameters, requestAdapter, date);
+    }
+    /**
+     * Provides operations to call the getTeamsTeamActivityDetail method.
+     * @param period Usage: period='{period}'
+     * @return a getTeamsTeamActivityDetailWithPeriodRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetTeamsTeamActivityDetailWithPeriodRequestBuilder getTeamsTeamActivityDetailWithPeriod(@javax.annotation.Nonnull final String period) {
+        Objects.requireNonNull(period);
+        return new GetTeamsTeamActivityDetailWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+    }
+    /**
+     * Provides operations to call the getTeamsTeamActivityDistributionCounts method.
+     * @param period Usage: period='{period}'
+     * @return a getTeamsTeamActivityDistributionCountsWithPeriodRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilder getTeamsTeamActivityDistributionCountsWithPeriod(@javax.annotation.Nonnull final String period) {
+        Objects.requireNonNull(period);
+        return new GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+    }
+    /**
+     * Provides operations to call the getTeamsTeamCounts method.
+     * @param period Usage: period='{period}'
+     * @return a getTeamsTeamCountsWithPeriodRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetTeamsTeamCountsWithPeriodRequestBuilder getTeamsTeamCountsWithPeriod(@javax.annotation.Nonnull final String period) {
+        Objects.requireNonNull(period);
+        return new GetTeamsTeamCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getTeamsUserActivityCounts method.

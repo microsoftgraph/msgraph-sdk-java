@@ -10,15 +10,15 @@ import java.util.Objects;
 public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
-    /** The additionalInformation property */
+    /** Information about why the updateAllowedCombinations action was successful or failed. */
     private String additionalInformation;
-    /** The conditionalAccessReferences property */
+    /** References to existing Conditional Access policies that use this authentication strength. */
     private java.util.List<String> conditionalAccessReferences;
-    /** The currentCombinations property */
+    /** The list of current authentication method combinations allowed by the authentication strength. */
     private java.util.List<AuthenticationMethodModes> currentCombinations;
     /** The OdataType property */
     private String odataType;
-    /** The previousCombinations property */
+    /** The list of former authentication method combinations allowed by the authentication strength before they were updated through the updateAllowedCombinations action. */
     private java.util.List<AuthenticationMethodModes> previousCombinations;
     /**
      * Instantiates a new updateAllowedCombinationsResult and sets the default values.
@@ -47,7 +47,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
         return this.additionalData;
     }
     /**
-     * Gets the additionalInformation property value. The additionalInformation property
+     * Gets the additionalInformation property value. Information about why the updateAllowedCombinations action was successful or failed.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -55,7 +55,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
         return this.additionalInformation;
     }
     /**
-     * Gets the conditionalAccessReferences property value. The conditionalAccessReferences property
+     * Gets the conditionalAccessReferences property value. References to existing Conditional Access policies that use this authentication strength.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -63,7 +63,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
         return this.conditionalAccessReferences;
     }
     /**
-     * Gets the currentCombinations property value. The currentCombinations property
+     * Gets the currentCombinations property value. The list of current authentication method combinations allowed by the authentication strength.
      * @return a authenticationMethodModes
      */
     @javax.annotation.Nullable
@@ -93,7 +93,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
         return this.odataType;
     }
     /**
-     * Gets the previousCombinations property value. The previousCombinations property
+     * Gets the previousCombinations property value. The list of former authentication method combinations allowed by the authentication strength before they were updated through the updateAllowedCombinations action.
      * @return a authenticationMethodModes
      */
     @javax.annotation.Nullable
@@ -125,7 +125,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
         this.additionalData = value;
     }
     /**
-     * Sets the additionalInformation property value. The additionalInformation property
+     * Sets the additionalInformation property value. Information about why the updateAllowedCombinations action was successful or failed.
      * @param value Value to set for the additionalInformation property.
      * @return a void
      */
@@ -134,7 +134,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
         this.additionalInformation = value;
     }
     /**
-     * Sets the conditionalAccessReferences property value. The conditionalAccessReferences property
+     * Sets the conditionalAccessReferences property value. References to existing Conditional Access policies that use this authentication strength.
      * @param value Value to set for the conditionalAccessReferences property.
      * @return a void
      */
@@ -143,7 +143,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
         this.conditionalAccessReferences = value;
     }
     /**
-     * Sets the currentCombinations property value. The currentCombinations property
+     * Sets the currentCombinations property value. The list of current authentication method combinations allowed by the authentication strength.
      * @param value Value to set for the currentCombinations property.
      * @return a void
      */
@@ -161,7 +161,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
         this.odataType = value;
     }
     /**
-     * Sets the previousCombinations property value. The previousCombinations property
+     * Sets the previousCombinations property value. The list of former authentication method combinations allowed by the authentication strength before they were updated through the updateAllowedCombinations action.
      * @param value Value to set for the previousCombinations property.
      * @return a void
      */

@@ -61,9 +61,8 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/list/items{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the collection of [items][item] in a [list][].
+     * All items contained in the list.
      * @return a CompletableFuture of ListItemCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/listitem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItemCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the collection of [items][item] in a [list][].
+     * All items contained in the list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ListItemCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/listitem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItemCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new [listItem][] in a [list][].
+     * Create new navigation property to items for shares
      * @param body The request body
      * @return a CompletableFuture of listItem
-     * @see <a href="https://docs.microsoft.com/graph/api/listitem-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItem> post(@javax.annotation.Nonnull final ListItem body) {
@@ -120,11 +117,10 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new [listItem][] in a [list][].
+     * Create new navigation property to items for shares
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of listItem
-     * @see <a href="https://docs.microsoft.com/graph/api/listitem-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItem> post(@javax.annotation.Nonnull final ListItem body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the collection of [items][item] in a [list][].
+     * All items contained in the list.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the collection of [items][item] in a [list][].
+     * All items contained in the list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new [listItem][] in a [list][].
+     * Create new navigation property to items for shares
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new [listItem][] in a [list][].
+     * Create new navigation property to items for shares
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the collection of [items][item] in a [list][].
+     * All items contained in the list.
      */
     public class GetQueryParameters {
         /** Include count of items */

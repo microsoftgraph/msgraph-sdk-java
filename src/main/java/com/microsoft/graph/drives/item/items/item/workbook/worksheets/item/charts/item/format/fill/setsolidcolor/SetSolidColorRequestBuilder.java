@@ -39,10 +39,9 @@ public class SetSolidColorRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/format/fill/setSolidColor", rawUrl);
     }
     /**
-     * Sets the fill formatting of a chart element to a uniform color.
+     * Invoke action setSolidColor
      * @param body The request body
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/chartfill-setsolidcolor?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final SetSolidColorPostRequestBody body) {
@@ -59,11 +58,10 @@ public class SetSolidColorRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Sets the fill formatting of a chart element to a uniform color.
+     * Invoke action setSolidColor
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/chartfill-setsolidcolor?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final SetSolidColorPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -81,7 +79,7 @@ public class SetSolidColorRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Sets the fill formatting of a chart element to a uniform color.
+     * Invoke action setSolidColor
      * @param body The request body
      * @return a RequestInformation
      */
@@ -90,7 +88,7 @@ public class SetSolidColorRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Sets the fill formatting of a chart element to a uniform color.
+     * Invoke action setSolidColor
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

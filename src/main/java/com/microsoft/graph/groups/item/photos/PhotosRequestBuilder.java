@@ -60,9 +60,8 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photos{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Retrieve a list of profilePhoto objects.
+     * The profile photos owned by the group. Read-only. Nullable.
      * @return a CompletableFuture of ProfilePhotoCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/group-list-photos?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProfilePhotoCollectionResponse> get() {
@@ -79,10 +78,9 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of profilePhoto objects.
+     * The profile photos owned by the group. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ProfilePhotoCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/group-list-photos?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProfilePhotoCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,7 +97,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of profilePhoto objects.
+     * The profile photos owned by the group. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -107,7 +105,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of profilePhoto objects.
+     * The profile photos owned by the group. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +126,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of profilePhoto objects.
+     * The profile photos owned by the group. Read-only. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */

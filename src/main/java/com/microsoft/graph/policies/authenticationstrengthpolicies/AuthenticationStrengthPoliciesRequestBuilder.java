@@ -61,7 +61,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/policies/authenticationStrengthPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get authenticationStrengthPolicies from policies
+     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
      * @return a CompletableFuture of AuthenticationStrengthPolicyCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Get authenticationStrengthPolicies from policies
+     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AuthenticationStrengthPolicyCollectionResponse
      */
@@ -138,7 +138,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Get authenticationStrengthPolicies from policies
+     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +146,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Get authenticationStrengthPolicies from policies
+     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Get authenticationStrengthPolicies from policies
+     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
      */
     public class GetQueryParameters {
         /** Include count of items */

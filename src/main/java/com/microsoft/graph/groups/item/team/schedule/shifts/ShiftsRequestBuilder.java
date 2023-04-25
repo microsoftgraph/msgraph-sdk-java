@@ -61,9 +61,8 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule/shifts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get the list of shift instances in a schedule.
+     * The shifts in the schedule.
      * @return a CompletableFuture of ShiftCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-shifts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ShiftCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the list of shift instances in a schedule.
+     * The shifts in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ShiftCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-shifts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ShiftCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new shift instance in a schedule. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
+     * Create new navigation property to shifts for groups
      * @param body The request body
      * @return a CompletableFuture of shift
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-post-shifts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Shift> post(@javax.annotation.Nonnull final Shift body) {
@@ -120,11 +117,10 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new shift instance in a schedule. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
+     * Create new navigation property to shifts for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of shift
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-post-shifts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Shift> post(@javax.annotation.Nonnull final Shift body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the list of shift instances in a schedule.
+     * The shifts in the schedule.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of shift instances in a schedule.
+     * The shifts in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new shift instance in a schedule. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
+     * Create new navigation property to shifts for groups
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new shift instance in a schedule. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
+     * Create new navigation property to shifts for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the list of shift instances in a schedule.
+     * The shifts in the schedule.
      */
     public class GetQueryParameters {
         /** Include count of items */

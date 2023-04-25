@@ -40,10 +40,9 @@ public class StartHoldMusicRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/participants/{participant%2Did}/startHoldMusic", rawUrl);
     }
     /**
-     * Put a participant on hold and play music in the background.
+     * Invoke action startHoldMusic
      * @param body The request body
      * @return a CompletableFuture of startHoldMusicOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/participant-startholdmusic?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StartHoldMusicOperation> post(@javax.annotation.Nonnull final StartHoldMusicPostRequestBody body) {
@@ -60,11 +59,10 @@ public class StartHoldMusicRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Put a participant on hold and play music in the background.
+     * Invoke action startHoldMusic
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of startHoldMusicOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/participant-startholdmusic?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StartHoldMusicOperation> post(@javax.annotation.Nonnull final StartHoldMusicPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -82,7 +80,7 @@ public class StartHoldMusicRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Put a participant on hold and play music in the background.
+     * Invoke action startHoldMusic
      * @param body The request body
      * @return a RequestInformation
      */
@@ -91,7 +89,7 @@ public class StartHoldMusicRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Put a participant on hold and play music in the background.
+     * Invoke action startHoldMusic
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

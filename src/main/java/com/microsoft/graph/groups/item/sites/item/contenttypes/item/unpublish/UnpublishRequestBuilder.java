@@ -39,9 +39,8 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/contentTypes/{contentType%2Did}/unpublish", rawUrl);
     }
     /**
-     * Unpublish a [contentType][] from a content type hub site.
+     * Invoke action unpublish
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-unpublish?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -58,10 +57,9 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Unpublish a [contentType][] from a content type hub site.
+     * Invoke action unpublish
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-unpublish?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +76,7 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Unpublish a [contentType][] from a content type hub site.
+     * Invoke action unpublish
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +84,7 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Unpublish a [contentType][] from a content type hub site.
+     * Invoke action unpublish
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

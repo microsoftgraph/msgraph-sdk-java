@@ -72,9 +72,8 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Retrieve appConsentRequest objects and their properties.
+     * A collection of userConsentRequest objects for a specific application.
      * @return a CompletableFuture of AppConsentRequestCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/appconsentapprovalroute-list-appconsentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppConsentRequestCollectionResponse> get() {
@@ -91,10 +90,9 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve appConsentRequest objects and their properties.
+     * A collection of userConsentRequest objects for a specific application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AppConsentRequestCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/appconsentapprovalroute-list-appconsentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppConsentRequestCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -151,7 +149,7 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve appConsentRequest objects and their properties.
+     * A collection of userConsentRequest objects for a specific application.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -159,7 +157,7 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve appConsentRequest objects and their properties.
+     * A collection of userConsentRequest objects for a specific application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -212,7 +210,7 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve appConsentRequest objects and their properties.
+     * A collection of userConsentRequest objects for a specific application.
      */
     public class GetQueryParameters {
         /** Include count of items */

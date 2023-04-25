@@ -73,9 +73,8 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the custodian objects and their properties.
+     * Returns a list of case ediscoveryCustodian objects for this case.
      * @return a CompletableFuture of EdiscoveryCustodianCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-list-custodians?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCustodianCollectionResponse> get() {
@@ -92,10 +91,9 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the custodian objects and their properties.
+     * Returns a list of case ediscoveryCustodian objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EdiscoveryCustodianCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-list-custodians?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCustodianCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -112,10 +110,9 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new ediscoveryCustodian object.After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
+     * Create new navigation property to custodians for security
      * @param body The request body
      * @return a CompletableFuture of ediscoveryCustodian
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-post-custodians?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCustodian> post(@javax.annotation.Nonnull final EdiscoveryCustodian body) {
@@ -132,11 +129,10 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new ediscoveryCustodian object.After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
+     * Create new navigation property to custodians for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryCustodian
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-post-custodians?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCustodian> post(@javax.annotation.Nonnull final EdiscoveryCustodian body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -154,7 +150,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the custodian objects and their properties.
+     * Returns a list of case ediscoveryCustodian objects for this case.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -162,7 +158,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the custodian objects and their properties.
+     * Returns a list of case ediscoveryCustodian objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -183,7 +179,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new ediscoveryCustodian object.After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
+     * Create new navigation property to custodians for security
      * @param body The request body
      * @return a RequestInformation
      */
@@ -192,7 +188,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new ediscoveryCustodian object.After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
+     * Create new navigation property to custodians for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -215,7 +211,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a list of the custodian objects and their properties.
+     * Returns a list of case ediscoveryCustodian objects for this case.
      */
     public class GetQueryParameters {
         /** Include count of items */

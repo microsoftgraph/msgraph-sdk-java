@@ -61,9 +61,8 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/termStore/groups/{group%2Did}/sets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the set objects and their properties.
+     * All sets under the group in a term [store].
      * @return a CompletableFuture of SetCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/termstore-group-list-sets?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SetCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the set objects and their properties.
+     * All sets under the group in a term [store].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SetCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/termstore-group-list-sets?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SetCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +138,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the set objects and their properties.
+     * All sets under the group in a term [store].
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +146,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the set objects and their properties.
+     * All sets under the group in a term [store].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +199,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a list of the set objects and their properties.
+     * All sets under the group in a term [store].
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -61,9 +61,8 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/schedule/openShifts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List openShift objects in a team.
+     * The set of open shifts in a scheduling group in the schedule.
      * @return a CompletableFuture of OpenShiftCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/openshift-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OpenShiftCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List openShift objects in a team.
+     * The set of open shifts in a scheduling group in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of OpenShiftCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/openshift-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OpenShiftCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create an instance of an openShift object.
+     * Create new navigation property to openShifts for users
      * @param body The request body
      * @return a CompletableFuture of openShift
-     * @see <a href="https://docs.microsoft.com/graph/api/openshift-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OpenShift> post(@javax.annotation.Nonnull final OpenShift body) {
@@ -120,11 +117,10 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create an instance of an openShift object.
+     * Create new navigation property to openShifts for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of openShift
-     * @see <a href="https://docs.microsoft.com/graph/api/openshift-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OpenShift> post(@javax.annotation.Nonnull final OpenShift body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List openShift objects in a team.
+     * The set of open shifts in a scheduling group in the schedule.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List openShift objects in a team.
+     * The set of open shifts in a scheduling group in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an instance of an openShift object.
+     * Create new navigation property to openShifts for users
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an instance of an openShift object.
+     * Create new navigation property to openShifts for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List openShift objects in a team.
+     * The set of open shifts in a scheduling group in the schedule.
      */
     public class GetQueryParameters {
         /** Include count of items */

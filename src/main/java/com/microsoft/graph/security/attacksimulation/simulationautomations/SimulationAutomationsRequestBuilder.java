@@ -61,9 +61,8 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/simulationAutomations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of attack simulation automations for a tenant.
+     * Represents simulation automation created to run on a tenant.
      * @return a CompletableFuture of SimulationAutomationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/attacksimulationroot-list-simulationautomations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SimulationAutomationCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of attack simulation automations for a tenant.
+     * Represents simulation automation created to run on a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SimulationAutomationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/attacksimulationroot-list-simulationautomations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SimulationAutomationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +138,7 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of attack simulation automations for a tenant.
+     * Represents simulation automation created to run on a tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +146,7 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of attack simulation automations for a tenant.
+     * Represents simulation automation created to run on a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +199,7 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a list of attack simulation automations for a tenant.
+     * Represents simulation automation created to run on a tenant.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -61,7 +61,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/authenticationStrength/policies/{authenticationStrengthPolicy%2Did}/combinationConfigurations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get combinationConfigurations from identity
+     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      * @return a CompletableFuture of AuthenticationCombinationConfigurationCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Get combinationConfigurations from identity
+     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AuthenticationCombinationConfigurationCollectionResponse
      */
@@ -138,7 +138,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Get combinationConfigurations from identity
+     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +146,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Get combinationConfigurations from identity
+     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Get combinationConfigurations from identity
+     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      */
     public class GetQueryParameters {
         /** Include count of items */

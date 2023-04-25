@@ -63,7 +63,6 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the app roles a user has been granted for an application. Supports $expand.
      * @return a CompletableFuture of AppRoleAssignmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignmentCollectionResponse> get() {
@@ -83,7 +82,6 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Represents the app roles a user has been granted for an application. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AppRoleAssignmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
+     * Create new navigation property to appRoleAssignments for me
      * @param body The request body
      * @return a CompletableFuture of appRoleAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/user-post-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignment> post(@javax.annotation.Nonnull final AppRoleAssignment body) {
@@ -120,11 +117,10 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
+     * Create new navigation property to appRoleAssignments for me
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of appRoleAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/user-post-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignment> post(@javax.annotation.Nonnull final AppRoleAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -171,7 +167,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
+     * Create new navigation property to appRoleAssignments for me
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
+     * Create new navigation property to appRoleAssignments for me
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -88,9 +88,8 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendar{?%24select}", rawUrl);
     }
     /**
-     * Get the properties and relationships of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
+     * The user's primary calendar. Read-only.
      * @return a CompletableFuture of calendar
-     * @see <a href="https://docs.microsoft.com/graph/api/calendar-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Calendar> get() {
@@ -107,10 +106,9 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the properties and relationships of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
+     * The user's primary calendar. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of calendar
-     * @see <a href="https://docs.microsoft.com/graph/api/calendar-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Calendar> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,10 +125,9 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group.
+     * Update the navigation property calendar in users
      * @param body The request body
      * @return a CompletableFuture of calendar
-     * @see <a href="https://docs.microsoft.com/graph/api/calendar-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Calendar> patch(@javax.annotation.Nonnull final Calendar body) {
@@ -147,11 +144,10 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group.
+     * Update the navigation property calendar in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of calendar
-     * @see <a href="https://docs.microsoft.com/graph/api/calendar-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Calendar> patch(@javax.annotation.Nonnull final Calendar body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -169,7 +165,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the properties and relationships of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
+     * The user's primary calendar. Read-only.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -177,7 +173,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
+     * The user's primary calendar. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -198,7 +194,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group.
+     * Update the navigation property calendar in users
      * @param body The request body
      * @return a RequestInformation
      */
@@ -207,7 +203,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group.
+     * Update the navigation property calendar in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -230,7 +226,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
+     * The user's primary calendar. Read-only.
      */
     public class GetQueryParameters {
         /** Select properties to be returned */

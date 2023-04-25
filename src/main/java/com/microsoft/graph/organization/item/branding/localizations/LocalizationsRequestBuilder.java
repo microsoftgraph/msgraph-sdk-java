@@ -61,9 +61,8 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/localizations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve all localization branding objects, including the default branding.
+     * Add different branding based on a locale.
      * @return a CompletableFuture of OrganizationalBrandingLocalizationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationalBrandingLocalizationCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve all localization branding objects, including the default branding.
+     * Add different branding based on a locale.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of OrganizationalBrandingLocalizationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationalBrandingLocalizationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new organizationalBrandingLocalization object. This creates a localized branding and at the same time, the default branding if it doesn't exist. The default branding is created only once. It's loaded when a localized branding isn't configured for the user's browser language. To retrieve the default branding, see Get branding.
+     * Create new navigation property to localizations for organization
      * @param body The request body
      * @return a CompletableFuture of organizationalBrandingLocalization
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbranding-post-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationalBrandingLocalization> post(@javax.annotation.Nonnull final OrganizationalBrandingLocalization body) {
@@ -120,11 +117,10 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new organizationalBrandingLocalization object. This creates a localized branding and at the same time, the default branding if it doesn't exist. The default branding is created only once. It's loaded when a localized branding isn't configured for the user's browser language. To retrieve the default branding, see Get branding.
+     * Create new navigation property to localizations for organization
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of organizationalBrandingLocalization
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbranding-post-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationalBrandingLocalization> post(@javax.annotation.Nonnull final OrganizationalBrandingLocalization body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve all localization branding objects, including the default branding.
+     * Add different branding based on a locale.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve all localization branding objects, including the default branding.
+     * Add different branding based on a locale.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new organizationalBrandingLocalization object. This creates a localized branding and at the same time, the default branding if it doesn't exist. The default branding is created only once. It's loaded when a localized branding isn't configured for the user's browser language. To retrieve the default branding, see Get branding.
+     * Create new navigation property to localizations for organization
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new organizationalBrandingLocalization object. This creates a localized branding and at the same time, the default branding if it doesn't exist. The default branding is created only once. It's loaded when a localized branding isn't configured for the user's browser language. To retrieve the default branding, see Get branding.
+     * Create new navigation property to localizations for organization
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve all localization branding objects, including the default branding.
+     * Add different branding based on a locale.
      */
     public class GetQueryParameters {
         /** Include count of items */

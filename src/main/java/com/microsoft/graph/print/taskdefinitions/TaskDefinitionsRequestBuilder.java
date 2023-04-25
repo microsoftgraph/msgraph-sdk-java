@@ -61,9 +61,8 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/taskDefinitions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of task definitions that the requesting app defined in the tenant. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
      * @return a CompletableFuture of PrintTaskDefinitionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/print-list-taskdefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskDefinitionCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of task definitions that the requesting app defined in the tenant. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PrintTaskDefinitionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/print-list-taskdefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * Create new navigation property to taskDefinitions for print
      * @param body The request body
      * @return a CompletableFuture of printTaskDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/print-post-taskdefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskDefinition> post(@javax.annotation.Nonnull final PrintTaskDefinition body) {
@@ -120,11 +117,10 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * Create new navigation property to taskDefinitions for print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printTaskDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/print-post-taskdefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskDefinition> post(@javax.annotation.Nonnull final PrintTaskDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of task definitions that the requesting app defined in the tenant. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of task definitions that the requesting app defined in the tenant. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * Create new navigation property to taskDefinitions for print
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * Create new navigation property to taskDefinitions for print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of task definitions that the requesting app defined in the tenant. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
      */
     public class GetQueryParameters {
         /** Include count of items */

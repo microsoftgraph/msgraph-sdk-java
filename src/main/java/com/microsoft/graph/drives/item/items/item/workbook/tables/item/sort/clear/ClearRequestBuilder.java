@@ -39,9 +39,8 @@ public class ClearRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/sort/clear", rawUrl);
     }
     /**
-     * Clears the sorting that is currently on the table. While this doesn't modify the table's ordering, it clears the state of the header buttons.
+     * Invoke action clear
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/tablesort-clear?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -58,10 +57,9 @@ public class ClearRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Clears the sorting that is currently on the table. While this doesn't modify the table's ordering, it clears the state of the header buttons.
+     * Invoke action clear
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/tablesort-clear?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +76,7 @@ public class ClearRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Clears the sorting that is currently on the table. While this doesn't modify the table's ordering, it clears the state of the header buttons.
+     * Invoke action clear
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +84,7 @@ public class ClearRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Clears the sorting that is currently on the table. While this doesn't modify the table's ordering, it clears the state of the header buttons.
+     * Invoke action clear
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

@@ -39,10 +39,9 @@ public class CheckinRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/checkin", rawUrl);
     }
     /**
-     * Check in a checked out **driveItem** resource, which makes the version of the document available to others.
+     * Invoke action checkin
      * @param body The request body
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-checkin?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final CheckinPostRequestBody body) {
@@ -59,11 +58,10 @@ public class CheckinRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Check in a checked out **driveItem** resource, which makes the version of the document available to others.
+     * Invoke action checkin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-checkin?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final CheckinPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -81,7 +79,7 @@ public class CheckinRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Check in a checked out **driveItem** resource, which makes the version of the document available to others.
+     * Invoke action checkin
      * @param body The request body
      * @return a RequestInformation
      */
@@ -90,7 +88,7 @@ public class CheckinRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Check in a checked out **driveItem** resource, which makes the version of the document available to others.
+     * Invoke action checkin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

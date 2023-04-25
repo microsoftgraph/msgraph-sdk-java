@@ -84,9 +84,8 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of charttitle object.
+     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
      * @return a CompletableFuture of workbookChartTitle
-     * @see <a href="https://docs.microsoft.com/graph/api/charttitle-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartTitle> get() {
@@ -103,10 +102,9 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of charttitle object.
+     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartTitle
-     * @see <a href="https://docs.microsoft.com/graph/api/charttitle-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartTitle> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -123,10 +121,9 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of charttitle object.
+     * Update the navigation property title in drives
      * @param body The request body
      * @return a CompletableFuture of workbookChartTitle
-     * @see <a href="https://docs.microsoft.com/graph/api/charttitle-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartTitle> patch(@javax.annotation.Nonnull final WorkbookChartTitle body) {
@@ -143,11 +140,10 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of charttitle object.
+     * Update the navigation property title in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartTitle
-     * @see <a href="https://docs.microsoft.com/graph/api/charttitle-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartTitle> patch(@javax.annotation.Nonnull final WorkbookChartTitle body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -192,7 +188,7 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of charttitle object.
+     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -200,7 +196,7 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of charttitle object.
+     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -221,7 +217,7 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of charttitle object.
+     * Update the navigation property title in drives
      * @param body The request body
      * @return a RequestInformation
      */
@@ -230,7 +226,7 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of charttitle object.
+     * Update the navigation property title in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -258,7 +254,7 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of charttitle object.
+     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
      */
     public class GetQueryParameters {
         /** Expand related entities */

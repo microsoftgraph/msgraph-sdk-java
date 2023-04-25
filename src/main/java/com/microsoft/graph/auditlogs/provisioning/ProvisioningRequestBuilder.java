@@ -61,9 +61,8 @@ public class ProvisioningRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/auditLogs/provisioning{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system. 
+     * Get provisioning from auditLogs
      * @return a CompletableFuture of ProvisioningObjectSummaryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/provisioningobjectsummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProvisioningObjectSummaryCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class ProvisioningRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system. 
+     * Get provisioning from auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ProvisioningObjectSummaryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/provisioningobjectsummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProvisioningObjectSummaryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +138,7 @@ public class ProvisioningRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system. 
+     * Get provisioning from auditLogs
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +146,7 @@ public class ProvisioningRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system. 
+     * Get provisioning from auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +199,7 @@ public class ProvisioningRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system. 
+     * Get provisioning from auditLogs
      */
     public class GetQueryParameters {
         /** Include count of items */

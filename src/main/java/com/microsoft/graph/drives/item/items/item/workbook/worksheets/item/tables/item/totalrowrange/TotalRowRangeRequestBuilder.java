@@ -40,9 +40,8 @@ public class TotalRowRangeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables/{workbookTable%2Did}/totalRowRange()", rawUrl);
     }
     /**
-     * Gets the range object associated with totals row of the table.
+     * Invoke function totalRowRange
      * @return a CompletableFuture of workbookRange
-     * @see <a href="https://docs.microsoft.com/graph/api/table-totalrowrange?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookRange> get() {
@@ -59,10 +58,9 @@ public class TotalRowRangeRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Gets the range object associated with totals row of the table.
+     * Invoke function totalRowRange
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookRange
-     * @see <a href="https://docs.microsoft.com/graph/api/table-totalrowrange?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookRange> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +77,7 @@ public class TotalRowRangeRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Gets the range object associated with totals row of the table.
+     * Invoke function totalRowRange
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -87,7 +85,7 @@ public class TotalRowRangeRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Gets the range object associated with totals row of the table.
+     * Invoke function totalRowRange
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

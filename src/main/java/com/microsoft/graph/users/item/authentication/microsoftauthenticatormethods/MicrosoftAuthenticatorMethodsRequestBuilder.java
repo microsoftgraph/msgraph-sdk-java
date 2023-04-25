@@ -60,9 +60,8 @@ public class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/microsoftAuthenticatorMethods{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the microsoftAuthenticatorAuthenticationMethod objects and their properties.
+     * The details of the Microsoft Authenticator app registered to a user for authentication.
      * @return a CompletableFuture of MicrosoftAuthenticatorAuthenticationMethodCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftAuthenticatorAuthenticationMethodCollectionResponse> get() {
@@ -79,10 +78,9 @@ public class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Get a list of the microsoftAuthenticatorAuthenticationMethod objects and their properties.
+     * The details of the Microsoft Authenticator app registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of MicrosoftAuthenticatorAuthenticationMethodCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftAuthenticatorAuthenticationMethodCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,7 +97,7 @@ public class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Get a list of the microsoftAuthenticatorAuthenticationMethod objects and their properties.
+     * The details of the Microsoft Authenticator app registered to a user for authentication.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -107,7 +105,7 @@ public class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the microsoftAuthenticatorAuthenticationMethod objects and their properties.
+     * The details of the Microsoft Authenticator app registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +126,7 @@ public class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Get a list of the microsoftAuthenticatorAuthenticationMethod objects and their properties.
+     * The details of the Microsoft Authenticator app registered to a user for authentication.
      */
     public class GetQueryParameters {
         /** Include count of items */

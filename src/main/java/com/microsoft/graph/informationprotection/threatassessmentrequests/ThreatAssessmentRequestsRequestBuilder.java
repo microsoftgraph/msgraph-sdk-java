@@ -61,9 +61,8 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/informationProtection/threatAssessmentRequests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
+     * Get threatAssessmentRequests from informationProtection
      * @return a CompletableFuture of ThreatAssessmentRequestCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/informationprotection-list-threatassessmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThreatAssessmentRequestCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
+     * Get threatAssessmentRequests from informationProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ThreatAssessmentRequestCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/informationprotection-list-threatassessmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThreatAssessmentRequestCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new threat assessment request. A threat assessment request can be one of the following types:
+     * Create new navigation property to threatAssessmentRequests for informationProtection
      * @param body The request body
      * @return a CompletableFuture of threatAssessmentRequest
-     * @see <a href="https://docs.microsoft.com/graph/api/informationprotection-post-threatassessmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> post(@javax.annotation.Nonnull final ThreatAssessmentRequest body) {
@@ -120,11 +117,10 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new threat assessment request. A threat assessment request can be one of the following types:
+     * Create new navigation property to threatAssessmentRequests for informationProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of threatAssessmentRequest
-     * @see <a href="https://docs.microsoft.com/graph/api/informationprotection-post-threatassessmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> post(@javax.annotation.Nonnull final ThreatAssessmentRequest body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
+     * Get threatAssessmentRequests from informationProtection
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
+     * Get threatAssessmentRequests from informationProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new threat assessment request. A threat assessment request can be one of the following types:
+     * Create new navigation property to threatAssessmentRequests for informationProtection
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new threat assessment request. A threat assessment request can be one of the following types:
+     * Create new navigation property to threatAssessmentRequests for informationProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
+     * Get threatAssessmentRequests from informationProtection
      */
     public class GetQueryParameters {
         /** Include count of items */

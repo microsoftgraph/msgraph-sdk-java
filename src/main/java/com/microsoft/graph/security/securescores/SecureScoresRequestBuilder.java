@@ -61,9 +61,8 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/secureScores{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of secureScore objects.
+     * Get secureScores from security
      * @return a CompletableFuture of SecureScoreCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-list-securescores?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecureScoreCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of secureScore objects.
+     * Get secureScores from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SecureScoreCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-list-securescores?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecureScoreCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +138,7 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of secureScore objects.
+     * Get secureScores from security
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +146,7 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of secureScore objects.
+     * Get secureScores from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +199,7 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of secureScore objects.
+     * Get secureScores from security
      */
     public class GetQueryParameters {
         /** Include count of items */

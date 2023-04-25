@@ -61,9 +61,8 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/extensionProperties{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
+     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      * @return a CompletableFuture of ExtensionPropertyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/application-list-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExtensionPropertyCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
+     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ExtensionPropertyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/application-list-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExtensionPropertyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new directory extension definition, represented by an extensionProperty object.
+     * Create new navigation property to extensionProperties for applications
      * @param body The request body
      * @return a CompletableFuture of extensionProperty
-     * @see <a href="https://docs.microsoft.com/graph/api/application-post-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExtensionProperty> post(@javax.annotation.Nonnull final ExtensionProperty body) {
@@ -120,11 +117,10 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new directory extension definition, represented by an extensionProperty object.
+     * Create new navigation property to extensionProperties for applications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of extensionProperty
-     * @see <a href="https://docs.microsoft.com/graph/api/application-post-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExtensionProperty> post(@javax.annotation.Nonnull final ExtensionProperty body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
+     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
+     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new directory extension definition, represented by an extensionProperty object.
+     * Create new navigation property to extensionProperties for applications
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new directory extension definition, represented by an extensionProperty object.
+     * Create new navigation property to extensionProperties for applications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
+     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      */
     public class GetQueryParameters {
         /** Include count of items */

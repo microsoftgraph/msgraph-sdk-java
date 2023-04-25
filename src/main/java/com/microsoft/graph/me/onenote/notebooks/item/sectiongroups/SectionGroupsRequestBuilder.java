@@ -61,9 +61,8 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/onenote/notebooks/{notebook%2Did}/sectionGroups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of section groups from the specified notebook.
+     * The section groups in the notebook. Read-only. Nullable.
      * @return a CompletableFuture of SectionGroupCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/notebook-list-sectiongroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SectionGroupCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of section groups from the specified notebook.
+     * The section groups in the notebook. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SectionGroupCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/notebook-list-sectiongroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SectionGroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new section group in the specified notebook.
+     * Create new navigation property to sectionGroups for me
      * @param body The request body
      * @return a CompletableFuture of sectionGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/notebook-post-sectiongroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SectionGroup> post(@javax.annotation.Nonnull final SectionGroup body) {
@@ -120,11 +117,10 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new section group in the specified notebook.
+     * Create new navigation property to sectionGroups for me
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of sectionGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/notebook-post-sectiongroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SectionGroup> post(@javax.annotation.Nonnull final SectionGroup body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of section groups from the specified notebook.
+     * The section groups in the notebook. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of section groups from the specified notebook.
+     * The section groups in the notebook. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new section group in the specified notebook.
+     * Create new navigation property to sectionGroups for me
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new section group in the specified notebook.
+     * Create new navigation property to sectionGroups for me
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of section groups from the specified notebook.
+     * The section groups in the notebook. Read-only. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */

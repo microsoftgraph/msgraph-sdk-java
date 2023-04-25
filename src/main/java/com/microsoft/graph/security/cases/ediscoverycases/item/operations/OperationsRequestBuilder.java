@@ -61,9 +61,8 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/operations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the caseOperation objects and their properties.
+     * Returns a list of case caseOperation objects for this case.
      * @return a CompletableFuture of CaseOperationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CaseOperationCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the caseOperation objects and their properties.
+     * Returns a list of case caseOperation objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CaseOperationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CaseOperationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +138,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the caseOperation objects and their properties.
+     * Returns a list of case caseOperation objects for this case.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +146,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the caseOperation objects and their properties.
+     * Returns a list of case caseOperation objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +199,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a list of the caseOperation objects and their properties.
+     * Returns a list of case caseOperation objects for this case.
      */
     public class GetQueryParameters {
         /** Include count of items */

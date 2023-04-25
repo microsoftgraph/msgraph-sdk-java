@@ -84,9 +84,8 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (**isServiceDefault** is `true`) or may be customized in your tenant (**isServiceDefault** is `false`).
+     * Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
      * @return a CompletableFuture of crossTenantAccessPolicyConfigurationDefault
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationdefault-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationDefault> get() {
@@ -103,10 +102,9 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (**isServiceDefault** is `true`) or may be customized in your tenant (**isServiceDefault** is `false`).
+     * Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of crossTenantAccessPolicyConfigurationDefault
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationdefault-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationDefault> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -123,10 +121,9 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the default configuration of a cross-tenant access policy.
+     * Update the navigation property default in policies
      * @param body The request body
      * @return a CompletableFuture of crossTenantAccessPolicyConfigurationDefault
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationdefault-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationDefault> patch(@javax.annotation.Nonnull final CrossTenantAccessPolicyConfigurationDefault body) {
@@ -143,11 +140,10 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the default configuration of a cross-tenant access policy.
+     * Update the navigation property default in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of crossTenantAccessPolicyConfigurationDefault
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationdefault-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationDefault> patch(@javax.annotation.Nonnull final CrossTenantAccessPolicyConfigurationDefault body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -192,7 +188,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (**isServiceDefault** is `true`) or may be customized in your tenant (**isServiceDefault** is `false`).
+     * Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -200,7 +196,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (**isServiceDefault** is `true`) or may be customized in your tenant (**isServiceDefault** is `false`).
+     * Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -221,7 +217,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the default configuration of a cross-tenant access policy.
+     * Update the navigation property default in policies
      * @param body The request body
      * @return a RequestInformation
      */
@@ -230,7 +226,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the default configuration of a cross-tenant access policy.
+     * Update the navigation property default in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -258,7 +254,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (**isServiceDefault** is `true`) or may be customized in your tenant (**isServiceDefault** is `false`).
+     * Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
      */
     public class GetQueryParameters {
         /** Expand related entities */

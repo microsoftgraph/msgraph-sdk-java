@@ -67,9 +67,8 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/todo/lists/{todoTaskList%2Did}/tasks{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the **todoTask** resources from the **tasks** navigation property of a specified todoTaskList.
+     * The tasks in this task list. Read-only. Nullable.
      * @return a CompletableFuture of TodoTaskCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/todotasklist-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TodoTaskCollectionResponse> get() {
@@ -86,10 +85,9 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the **todoTask** resources from the **tasks** navigation property of a specified todoTaskList.
+     * The tasks in this task list. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TodoTaskCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/todotasklist-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TodoTaskCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -106,10 +104,9 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new task object in a specified todoTaskList.
+     * Create new navigation property to tasks for users
      * @param body The request body
      * @return a CompletableFuture of todoTask
-     * @see <a href="https://docs.microsoft.com/graph/api/todotasklist-post-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TodoTask> post(@javax.annotation.Nonnull final TodoTask body) {
@@ -126,11 +123,10 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new task object in a specified todoTaskList.
+     * Create new navigation property to tasks for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of todoTask
-     * @see <a href="https://docs.microsoft.com/graph/api/todotasklist-post-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TodoTask> post(@javax.annotation.Nonnull final TodoTask body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -148,7 +144,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the **todoTask** resources from the **tasks** navigation property of a specified todoTaskList.
+     * The tasks in this task list. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -156,7 +152,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the **todoTask** resources from the **tasks** navigation property of a specified todoTaskList.
+     * The tasks in this task list. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +173,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new task object in a specified todoTaskList.
+     * Create new navigation property to tasks for users
      * @param body The request body
      * @return a RequestInformation
      */
@@ -186,7 +182,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new task object in a specified todoTaskList.
+     * Create new navigation property to tasks for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -209,7 +205,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the **todoTask** resources from the **tasks** navigation property of a specified todoTaskList.
+     * The tasks in this task list. Read-only. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */

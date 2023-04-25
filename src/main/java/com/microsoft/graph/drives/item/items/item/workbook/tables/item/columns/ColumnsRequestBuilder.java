@@ -68,9 +68,8 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/columns{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of tablecolumn objects.
+     * Represents a collection of all the columns in the table. Read-only.
      * @return a CompletableFuture of WorkbookTableColumnCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/table-list-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumnCollectionResponse> get() {
@@ -87,10 +86,9 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of tablecolumn objects.
+     * Represents a collection of all the columns in the table. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of WorkbookTableColumnCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/table-list-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumnCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -117,10 +115,9 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return new ItemAtWithIndexRequestBuilder(pathParameters, requestAdapter, index);
     }
     /**
-     * Use this API to create a new TableColumn.
+     * Create new navigation property to columns for drives
      * @param body The request body
      * @return a CompletableFuture of workbookTableColumn
-     * @see <a href="https://docs.microsoft.com/graph/api/table-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumn> post(@javax.annotation.Nonnull final WorkbookTableColumn body) {
@@ -137,11 +134,10 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use this API to create a new TableColumn.
+     * Create new navigation property to columns for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookTableColumn
-     * @see <a href="https://docs.microsoft.com/graph/api/table-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumn> post(@javax.annotation.Nonnull final WorkbookTableColumn body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -159,7 +155,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of tablecolumn objects.
+     * Represents a collection of all the columns in the table. Read-only.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -167,7 +163,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of tablecolumn objects.
+     * Represents a collection of all the columns in the table. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +184,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new TableColumn.
+     * Create new navigation property to columns for drives
      * @param body The request body
      * @return a RequestInformation
      */
@@ -197,7 +193,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new TableColumn.
+     * Create new navigation property to columns for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -220,7 +216,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of tablecolumn objects.
+     * Represents a collection of all the columns in the table. Read-only.
      */
     public class GetQueryParameters {
         /** Include count of items */

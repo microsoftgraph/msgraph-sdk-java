@@ -127,6 +127,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.agreementFileProperties": return new AgreementFileProperties();
             case "#microsoft.graph.agreementFileVersion": return new AgreementFileVersion();
             case "#microsoft.graph.alert": return new Alert();
+            case "#microsoft.graph.allowedValue": return new AllowedValue();
             case "#microsoft.graph.androidCompliancePolicy": return new AndroidCompliancePolicy();
             case "#microsoft.graph.androidCustomConfiguration": return new AndroidCustomConfiguration();
             case "#microsoft.graph.androidGeneralDeviceConfiguration": return new AndroidGeneralDeviceConfiguration();
@@ -157,6 +158,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.attachmentSession": return new AttachmentSession();
             case "#microsoft.graph.attackSimulationRoot": return new AttackSimulationRoot();
             case "#microsoft.graph.attendanceRecord": return new AttendanceRecord();
+            case "#microsoft.graph.attributeSet": return new AttributeSet();
             case "#microsoft.graph.audioRoutingGroup": return new AudioRoutingGroup();
             case "#microsoft.graph.auditEvent": return new AuditEvent();
             case "#microsoft.graph.auditLogRoot": return new AuditLogRoot();
@@ -229,6 +231,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.countryNamedLocation": return new CountryNamedLocation();
             case "#microsoft.graph.crossTenantAccessPolicy": return new CrossTenantAccessPolicy();
             case "#microsoft.graph.crossTenantAccessPolicyConfigurationDefault": return new CrossTenantAccessPolicyConfigurationDefault();
+            case "#microsoft.graph.customSecurityAttributeDefinition": return new CustomSecurityAttributeDefinition();
             case "#microsoft.graph.dataPolicyOperation": return new DataPolicyOperation();
             case "#microsoft.graph.defaultManagedAppProtection": return new DefaultManagedAppProtection();
             case "#microsoft.graph.delegatedAdminAccessAssignment": return new DelegatedAdminAccessAssignment();
@@ -594,9 +597,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.servicePrincipal": return new ServicePrincipal();
             case "#microsoft.graph.servicePrincipalRiskDetection": return new ServicePrincipalRiskDetection();
             case "#microsoft.graph.serviceUpdateMessage": return new ServiceUpdateMessage();
-            case "#microsoft.graph.settingStateDeviceSummary": return new SettingStateDeviceSummary();
-            case "#microsoft.graph.sharedDriveItem": return new SharedDriveItem();
-            case "#microsoft.graph.sharedInsight": return new SharedInsight();
         }
         return null;
     }
@@ -608,6 +608,9 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@javax.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.settingStateDeviceSummary": return new SettingStateDeviceSummary();
+            case "#microsoft.graph.sharedDriveItem": return new SharedDriveItem();
+            case "#microsoft.graph.sharedInsight": return new SharedInsight();
             case "#microsoft.graph.sharedPCConfiguration": return new SharedPCConfiguration();
             case "#microsoft.graph.sharedWithChannelTeamInfo": return new SharedWithChannelTeamInfo();
             case "#microsoft.graph.sharepoint": return new Sharepoint();

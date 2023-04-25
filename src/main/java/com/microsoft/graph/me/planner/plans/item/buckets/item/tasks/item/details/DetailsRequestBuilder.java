@@ -78,9 +78,8 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of a **plannerTaskDetails** object.
+     * Read-only. Nullable. Additional details about the task.
      * @return a CompletableFuture of plannerTaskDetails
-     * @see <a href="https://docs.microsoft.com/graph/api/plannertaskdetails-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTaskDetails> get() {
@@ -97,10 +96,9 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of a **plannerTaskDetails** object.
+     * Read-only. Nullable. Additional details about the task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerTaskDetails
-     * @see <a href="https://docs.microsoft.com/graph/api/plannertaskdetails-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTaskDetails> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +118,6 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property details in me
      * @param body The request body
      * @return a CompletableFuture of plannerTaskDetails
-     * @see <a href="https://docs.microsoft.com/graph/api/plannertaskdetails-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTaskDetails> patch(@javax.annotation.Nonnull final PlannerTaskDetails body) {
@@ -141,7 +138,6 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerTaskDetails
-     * @see <a href="https://docs.microsoft.com/graph/api/plannertaskdetails-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTaskDetails> patch(@javax.annotation.Nonnull final PlannerTaskDetails body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -186,7 +182,7 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a **plannerTaskDetails** object.
+     * Read-only. Nullable. Additional details about the task.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -194,7 +190,7 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a **plannerTaskDetails** object.
+     * Read-only. Nullable. Additional details about the task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -252,7 +248,7 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a **plannerTaskDetails** object.
+     * Read-only. Nullable. Additional details about the task.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -61,9 +61,8 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/settings{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of tenant-level or group-specific group settings objects.
+     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
      * @return a CompletableFuture of GroupSettingCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/group-list-settings?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupSettingCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of tenant-level or group-specific group settings objects.
+     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of GroupSettingCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/group-list-settings?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupSettingCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new setting based on the templates available in groupSettingTemplates. These settings can be at the tenant-level or at the group level. Group settings apply to only Microsoft 365 groups. The template named `Group.Unified` can be used to configure tenant-wide Microsoft 365 group settings, while the template named `Group.Unified.Guest` can be used to configure group-specific settings.
+     * Create new navigation property to settings for groups
      * @param body The request body
      * @return a CompletableFuture of groupSetting
-     * @see <a href="https://docs.microsoft.com/graph/api/group-post-settings?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupSetting> post(@javax.annotation.Nonnull final GroupSetting body) {
@@ -120,11 +117,10 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new setting based on the templates available in groupSettingTemplates. These settings can be at the tenant-level or at the group level. Group settings apply to only Microsoft 365 groups. The template named `Group.Unified` can be used to configure tenant-wide Microsoft 365 group settings, while the template named `Group.Unified.Guest` can be used to configure group-specific settings.
+     * Create new navigation property to settings for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of groupSetting
-     * @see <a href="https://docs.microsoft.com/graph/api/group-post-settings?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupSetting> post(@javax.annotation.Nonnull final GroupSetting body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of tenant-level or group-specific group settings objects.
+     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of tenant-level or group-specific group settings objects.
+     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new setting based on the templates available in groupSettingTemplates. These settings can be at the tenant-level or at the group level. Group settings apply to only Microsoft 365 groups. The template named `Group.Unified` can be used to configure tenant-wide Microsoft 365 group settings, while the template named `Group.Unified.Guest` can be used to configure group-specific settings.
+     * Create new navigation property to settings for groups
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new setting based on the templates available in groupSettingTemplates. These settings can be at the tenant-level or at the group level. Group settings apply to only Microsoft 365 groups. The template named `Group.Unified` can be used to configure tenant-wide Microsoft 365 group settings, while the template named `Group.Unified.Guest` can be used to configure group-specific settings.
+     * Create new navigation property to settings for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of tenant-level or group-specific group settings objects.
+     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */

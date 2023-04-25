@@ -60,9 +60,8 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/templates{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the conditionalAccessTemplate objects and their properties.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
      * @return a CompletableFuture of ConditionalAccessTemplateCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccessroot-list-templates?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessTemplateCollectionResponse> get() {
@@ -79,10 +78,9 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the conditionalAccessTemplate objects and their properties.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ConditionalAccessTemplateCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccessroot-list-templates?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessTemplateCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,7 +97,7 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the conditionalAccessTemplate objects and their properties.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -107,7 +105,7 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the conditionalAccessTemplate objects and their properties.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +126,7 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a list of the conditionalAccessTemplate objects and their properties.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
      */
     public class GetQueryParameters {
         /** Include count of items */

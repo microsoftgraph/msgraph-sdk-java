@@ -74,7 +74,6 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
     /**
      * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-list-memberof?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
@@ -94,7 +93,6 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
      * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-list-memberof?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

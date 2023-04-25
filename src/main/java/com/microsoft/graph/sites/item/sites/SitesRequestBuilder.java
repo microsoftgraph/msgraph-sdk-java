@@ -60,9 +60,8 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/sites{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a collection of subsites defined for a [site][].
+     * The collection of the sub-sites under this site.
      * @return a CompletableFuture of SiteCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/site-list-subsites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SiteCollectionResponse> get() {
@@ -79,10 +78,9 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a collection of subsites defined for a [site][].
+     * The collection of the sub-sites under this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SiteCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/site-list-subsites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SiteCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,7 +97,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a collection of subsites defined for a [site][].
+     * The collection of the sub-sites under this site.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -107,7 +105,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a collection of subsites defined for a [site][].
+     * The collection of the sub-sites under this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +126,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a collection of subsites defined for a [site][].
+     * The collection of the sub-sites under this site.
      */
     public class GetQueryParameters {
         /** Include count of items */

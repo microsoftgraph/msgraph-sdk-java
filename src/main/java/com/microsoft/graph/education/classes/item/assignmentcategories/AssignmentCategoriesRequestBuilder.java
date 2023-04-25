@@ -67,9 +67,8 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentCategories{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
+     * All categories associated with this class. Nullable.
      * @return a CompletableFuture of EducationCategoryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationCategoryCollectionResponse> get() {
@@ -86,10 +85,9 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
+     * All categories associated with this class. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EducationCategoryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationCategoryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -106,10 +104,9 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Creates a new educationCategory on an educationClass. Only teachers can perform this operation.
+     * Create new navigation property to assignmentCategories for education
      * @param body The request body
      * @return a CompletableFuture of educationCategory
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-post-category?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationCategory> post(@javax.annotation.Nonnull final EducationCategory body) {
@@ -126,11 +123,10 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Creates a new educationCategory on an educationClass. Only teachers can perform this operation.
+     * Create new navigation property to assignmentCategories for education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationCategory
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-post-category?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationCategory> post(@javax.annotation.Nonnull final EducationCategory body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -148,7 +144,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
+     * All categories associated with this class. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -156,7 +152,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
+     * All categories associated with this class. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +173,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Creates a new educationCategory on an educationClass. Only teachers can perform this operation.
+     * Create new navigation property to assignmentCategories for education
      * @param body The request body
      * @return a RequestInformation
      */
@@ -186,7 +182,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Creates a new educationCategory on an educationClass. Only teachers can perform this operation.
+     * Create new navigation property to assignmentCategories for education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -209,7 +205,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
+     * All categories associated with this class. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */

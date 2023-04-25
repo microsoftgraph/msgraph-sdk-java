@@ -102,9 +102,8 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a user's presence information.
+     * Get presence from users
      * @return a CompletableFuture of presence
-     * @see <a href="https://docs.microsoft.com/graph/api/presence-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Presence> get() {
@@ -121,10 +120,9 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a user's presence information.
+     * Get presence from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of presence
-     * @see <a href="https://docs.microsoft.com/graph/api/presence-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Presence> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -208,7 +206,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a user's presence information.
+     * Get presence from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -216,7 +214,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a user's presence information.
+     * Get presence from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -274,7 +272,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a user's presence information.
+     * Get presence from users
      */
     public class GetQueryParameters {
         /** Expand related entities */

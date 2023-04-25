@@ -78,9 +78,8 @@ public class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Read the properties and relationships of an authenticationFlowsPolicy object.
+     * The policy configuration of the self-service sign-up experience of external users.
      * @return a CompletableFuture of authenticationFlowsPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationflowspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationFlowsPolicy> get() {
@@ -97,10 +96,9 @@ public class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Read the properties and relationships of an authenticationFlowsPolicy object.
+     * The policy configuration of the self-service sign-up experience of external users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationFlowsPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationflowspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationFlowsPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -117,10 +115,9 @@ public class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Update the **selfServiceSignUp** property of an authenticationFlowsPolicy object. The properties **id**, **type**, and **description** cannot be modified.
+     * Update the navigation property authenticationFlowsPolicy in policies
      * @param body The request body
      * @return a CompletableFuture of authenticationFlowsPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationflowspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationFlowsPolicy> patch(@javax.annotation.Nonnull final AuthenticationFlowsPolicy body) {
@@ -137,11 +134,10 @@ public class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Update the **selfServiceSignUp** property of an authenticationFlowsPolicy object. The properties **id**, **type**, and **description** cannot be modified.
+     * Update the navigation property authenticationFlowsPolicy in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationFlowsPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationflowspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationFlowsPolicy> patch(@javax.annotation.Nonnull final AuthenticationFlowsPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -186,7 +182,7 @@ public class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an authenticationFlowsPolicy object.
+     * The policy configuration of the self-service sign-up experience of external users.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -194,7 +190,7 @@ public class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an authenticationFlowsPolicy object.
+     * The policy configuration of the self-service sign-up experience of external users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -215,7 +211,7 @@ public class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update the **selfServiceSignUp** property of an authenticationFlowsPolicy object. The properties **id**, **type**, and **description** cannot be modified.
+     * Update the navigation property authenticationFlowsPolicy in policies
      * @param body The request body
      * @return a RequestInformation
      */
@@ -224,7 +220,7 @@ public class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder 
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the **selfServiceSignUp** property of an authenticationFlowsPolicy object. The properties **id**, **type**, and **description** cannot be modified.
+     * Update the navigation property authenticationFlowsPolicy in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -252,7 +248,7 @@ public class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an authenticationFlowsPolicy object.
+     * The policy configuration of the self-service sign-up experience of external users.
      */
     public class GetQueryParameters {
         /** Expand related entities */

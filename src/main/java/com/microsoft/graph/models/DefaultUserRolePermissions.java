@@ -14,7 +14,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     private Boolean allowedToCreateApps;
     /** Indicates whether the default user role can create security groups. */
     private Boolean allowedToCreateSecurityGroups;
-    /** The allowedToReadBitlockerKeysForOwnedDevice property */
+    /** Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role. */
     private Boolean allowedToReadBitlockerKeysForOwnedDevice;
     /** Indicates whether the default user role can read other users. */
     private Boolean allowedToReadOtherUsers;
@@ -65,7 +65,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         return this.allowedToCreateSecurityGroups;
     }
     /**
-     * Gets the allowedToReadBitlockerKeysForOwnedDevice property value. The allowedToReadBitlockerKeysForOwnedDevice property
+     * Gets the allowedToReadBitlockerKeysForOwnedDevice property value. Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -155,7 +155,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         this.allowedToCreateSecurityGroups = value;
     }
     /**
-     * Sets the allowedToReadBitlockerKeysForOwnedDevice property value. The allowedToReadBitlockerKeysForOwnedDevice property
+     * Sets the allowedToReadBitlockerKeysForOwnedDevice property value. Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.
      * @param value Value to set for the allowedToReadBitlockerKeysForOwnedDevice property.
      * @return a void
      */

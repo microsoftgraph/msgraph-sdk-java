@@ -39,9 +39,8 @@ public class SecurityReopenRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/security.reopen", rawUrl);
     }
     /**
-     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case.
+     * Invoke action reopen
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-reopen?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -58,10 +57,9 @@ public class SecurityReopenRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case.
+     * Invoke action reopen
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-reopen?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +76,7 @@ public class SecurityReopenRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case.
+     * Invoke action reopen
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +84,7 @@ public class SecurityReopenRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case.
+     * Invoke action reopen
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

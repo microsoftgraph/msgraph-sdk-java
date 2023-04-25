@@ -61,9 +61,8 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/staffMembers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
+     * All the staff members that provide services in this business. Read-only. Nullable.
      * @return a CompletableFuture of BookingStaffMemberBaseCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list-staffmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingStaffMemberBaseCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
+     * All the staff members that provide services in this business. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of BookingStaffMemberBaseCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list-staffmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingStaffMemberBaseCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new bookingStaffMember in the specified bookingBusiness.
+     * Create new navigation property to staffMembers for solutions
      * @param body The request body
      * @return a CompletableFuture of bookingStaffMemberBase
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-post-staffmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingStaffMemberBase> post(@javax.annotation.Nonnull final BookingStaffMemberBase body) {
@@ -120,11 +117,10 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new bookingStaffMember in the specified bookingBusiness.
+     * Create new navigation property to staffMembers for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingStaffMemberBase
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-post-staffmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingStaffMemberBase> post(@javax.annotation.Nonnull final BookingStaffMemberBase body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
+     * All the staff members that provide services in this business. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
+     * All the staff members that provide services in this business. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new bookingStaffMember in the specified bookingBusiness.
+     * Create new navigation property to staffMembers for solutions
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new bookingStaffMember in the specified bookingBusiness.
+     * Create new navigation property to staffMembers for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
+     * All the staff members that provide services in this business. Read-only. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */

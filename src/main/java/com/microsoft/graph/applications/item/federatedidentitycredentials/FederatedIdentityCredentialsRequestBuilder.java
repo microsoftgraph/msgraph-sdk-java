@@ -61,9 +61,8 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/federatedIdentityCredentials{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties.
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      * @return a CompletableFuture of FederatedIdentityCredentialCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/application-list-federatedidentitycredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredentialCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties.
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of FederatedIdentityCredentialCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/application-list-federatedidentitycredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredentialCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Azure AD application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
+     * Create new navigation property to federatedIdentityCredentials for applications
      * @param body The request body
      * @return a CompletableFuture of federatedIdentityCredential
-     * @see <a href="https://docs.microsoft.com/graph/api/application-post-federatedidentitycredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> post(@javax.annotation.Nonnull final FederatedIdentityCredential body) {
@@ -120,11 +117,10 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Azure AD application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
+     * Create new navigation property to federatedIdentityCredentials for applications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of federatedIdentityCredential
-     * @see <a href="https://docs.microsoft.com/graph/api/application-post-federatedidentitycredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> post(@javax.annotation.Nonnull final FederatedIdentityCredential body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties.
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties.
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Azure AD application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
+     * Create new navigation property to federatedIdentityCredentials for applications
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Azure AD application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
+     * Create new navigation property to federatedIdentityCredentials for applications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties.
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      */
     public class GetQueryParameters {
         /** Include count of items */

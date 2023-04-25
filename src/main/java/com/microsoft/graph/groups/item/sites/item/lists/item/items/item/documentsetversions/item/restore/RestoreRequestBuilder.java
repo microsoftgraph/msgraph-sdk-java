@@ -39,9 +39,8 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/items/{listItem%2Did}/documentSetVersions/{documentSetVersion%2Did}/restore", rawUrl);
     }
     /**
-     * Restore a document set version.
+     * Invoke action restore
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/documentsetversion-restore?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -58,10 +57,9 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Restore a document set version.
+     * Invoke action restore
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/documentsetversion-restore?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +76,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Restore a document set version.
+     * Invoke action restore
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +84,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Restore a document set version.
+     * Invoke action restore
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

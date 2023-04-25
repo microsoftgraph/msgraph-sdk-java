@@ -60,9 +60,8 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}/connectors{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of printConnectors associated with the printer.
+     * The connectors that are associated with the printer.
      * @return a CompletableFuture of PrintConnectorCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/printer-list-connectors?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintConnectorCollectionResponse> get() {
@@ -79,10 +78,9 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of printConnectors associated with the printer.
+     * The connectors that are associated with the printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PrintConnectorCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/printer-list-connectors?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintConnectorCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,7 +97,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of printConnectors associated with the printer.
+     * The connectors that are associated with the printer.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -107,7 +105,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of printConnectors associated with the printer.
+     * The connectors that are associated with the printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +126,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of printConnectors associated with the printer.
+     * The connectors that are associated with the printer.
      */
     public class GetQueryParameters {
         /** Include count of items */

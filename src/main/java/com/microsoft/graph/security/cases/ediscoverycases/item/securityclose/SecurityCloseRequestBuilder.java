@@ -39,9 +39,8 @@ public class SecurityCloseRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/security.close", rawUrl);
     }
     /**
-     * Close an eDiscovery case. For details, see Close a case.
+     * Invoke action close
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-close?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -58,10 +57,9 @@ public class SecurityCloseRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Close an eDiscovery case. For details, see Close a case.
+     * Invoke action close
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-close?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +76,7 @@ public class SecurityCloseRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Close an eDiscovery case. For details, see Close a case.
+     * Invoke action close
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +84,7 @@ public class SecurityCloseRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Close an eDiscovery case. For details, see Close a case.
+     * Invoke action close
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

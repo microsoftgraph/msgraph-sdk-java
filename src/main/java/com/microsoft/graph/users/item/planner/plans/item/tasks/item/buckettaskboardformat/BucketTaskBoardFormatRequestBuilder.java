@@ -78,9 +78,8 @@ public class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of **plannerBucketTaskBoardTaskFormat** object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
      * @return a CompletableFuture of plannerBucketTaskBoardTaskFormat
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerbuckettaskboardtaskformat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucketTaskBoardTaskFormat> get() {
@@ -97,10 +96,9 @@ public class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of **plannerBucketTaskBoardTaskFormat** object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerBucketTaskBoardTaskFormat
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerbuckettaskboardtaskformat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucketTaskBoardTaskFormat> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +118,6 @@ public class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property bucketTaskBoardFormat in users
      * @param body The request body
      * @return a CompletableFuture of plannerBucketTaskBoardTaskFormat
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerbuckettaskboardtaskformat-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucketTaskBoardTaskFormat> patch(@javax.annotation.Nonnull final PlannerBucketTaskBoardTaskFormat body) {
@@ -141,7 +138,6 @@ public class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerBucketTaskBoardTaskFormat
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerbuckettaskboardtaskformat-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucketTaskBoardTaskFormat> patch(@javax.annotation.Nonnull final PlannerBucketTaskBoardTaskFormat body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -186,7 +182,7 @@ public class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of **plannerBucketTaskBoardTaskFormat** object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -194,7 +190,7 @@ public class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of **plannerBucketTaskBoardTaskFormat** object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -252,7 +248,7 @@ public class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of **plannerBucketTaskBoardTaskFormat** object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
      */
     public class GetQueryParameters {
         /** Expand related entities */

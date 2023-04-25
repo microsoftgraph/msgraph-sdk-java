@@ -72,9 +72,8 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * In Azure AD entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.
+     * Access package assignment requests created by or on behalf of a subject.
      * @return a CompletableFuture of AccessPackageAssignmentRequestCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-assignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentRequestCollectionResponse> get() {
@@ -91,10 +90,9 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * In Azure AD entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.
+     * Access package assignment requests created by or on behalf of a subject.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AccessPackageAssignmentRequestCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-assignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentRequestCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,10 +109,9 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * In Azure AD Entitlement Management, create a new accessPackageAssignmentRequest object.  This operation is used to assign a user to an access package, update the assignment, or to remove an access package assignment.
+     * Create new navigation property to assignmentRequests for identityGovernance
      * @param body The request body
      * @return a CompletableFuture of accessPackageAssignmentRequest
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-post-assignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentRequest> post(@javax.annotation.Nonnull final AccessPackageAssignmentRequest body) {
@@ -131,11 +128,10 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * In Azure AD Entitlement Management, create a new accessPackageAssignmentRequest object.  This operation is used to assign a user to an access package, update the assignment, or to remove an access package assignment.
+     * Create new navigation property to assignmentRequests for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageAssignmentRequest
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-post-assignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentRequest> post(@javax.annotation.Nonnull final AccessPackageAssignmentRequest body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -153,7 +149,7 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * In Azure AD entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.
+     * Access package assignment requests created by or on behalf of a subject.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -161,7 +157,7 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * In Azure AD entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.
+     * Access package assignment requests created by or on behalf of a subject.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * In Azure AD Entitlement Management, create a new accessPackageAssignmentRequest object.  This operation is used to assign a user to an access package, update the assignment, or to remove an access package assignment.
+     * Create new navigation property to assignmentRequests for identityGovernance
      * @param body The request body
      * @return a RequestInformation
      */
@@ -191,7 +187,7 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * In Azure AD Entitlement Management, create a new accessPackageAssignmentRequest object.  This operation is used to assign a user to an access package, update the assignment, or to remove an access package assignment.
+     * Create new navigation property to assignmentRequests for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -214,7 +210,7 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * In Azure AD entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.
+     * Access package assignment requests created by or on behalf of a subject.
      */
     public class GetQueryParameters {
         /** Include count of items */

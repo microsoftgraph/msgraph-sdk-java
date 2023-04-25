@@ -80,7 +80,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private java.util.List<PasswordCredential> passwordCredentials;
     /** Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, notSupported, and oidc. */
     private String preferredSingleSignOnMode;
-    /** Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions. */
+    /** This property can be used on SAML applications (apps that have preferredSingleSignOnMode set to saml) to control which certificate is used to sign the SAML responses. For applications that are not SAML, do not write or otherwise rely on this property. */
     private String preferredTokenSigningKeyThumbprint;
     /** The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable. */
     private java.util.List<String> replyUrls;
@@ -92,7 +92,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private java.util.List<String> servicePrincipalNames;
     /** Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use. */
     private String servicePrincipalType;
-    /** Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organizations Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organizations Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organizations Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only. */
+    /** Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization's Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization's Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization's Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only. */
     private String signInAudience;
     /** Custom strings that can be used to categorize and identify the service principal. Not nullable. The value is the union of strings set here and on the associated application entity's tags property.Supports $filter (eq, not, ge, le, startsWith). */
     private java.util.List<String> tags;
@@ -472,7 +472,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.preferredSingleSignOnMode;
     }
     /**
-     * Gets the preferredTokenSigningKeyThumbprint property value. Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
+     * Gets the preferredTokenSigningKeyThumbprint property value. This property can be used on SAML applications (apps that have preferredSingleSignOnMode set to saml) to control which certificate is used to sign the SAML responses. For applications that are not SAML, do not write or otherwise rely on this property.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -520,7 +520,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.servicePrincipalType;
     }
     /**
-     * Gets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organizations Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organizations Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organizations Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
+     * Gets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization's Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization's Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization's Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -959,7 +959,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.preferredSingleSignOnMode = value;
     }
     /**
-     * Sets the preferredTokenSigningKeyThumbprint property value. Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
+     * Sets the preferredTokenSigningKeyThumbprint property value. This property can be used on SAML applications (apps that have preferredSingleSignOnMode set to saml) to control which certificate is used to sign the SAML responses. For applications that are not SAML, do not write or otherwise rely on this property.
      * @param value Value to set for the preferredTokenSigningKeyThumbprint property.
      * @return a void
      */
@@ -1013,7 +1013,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.servicePrincipalType = value;
     }
     /**
-     * Sets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organizations Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organizations Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organizations Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
+     * Sets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization's Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization's Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization's Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
      * @param value Value to set for the signInAudience property.
      * @return a void
      */

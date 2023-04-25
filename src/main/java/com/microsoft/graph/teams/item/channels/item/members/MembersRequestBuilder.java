@@ -67,9 +67,8 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/channels/{channel%2Did}/members{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of conversationMembers from a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve the channel member list.
+     * A collection of membership records associated with the channel.
      * @return a CompletableFuture of ConversationMemberCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/channel-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMemberCollectionResponse> get() {
@@ -86,10 +85,9 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of conversationMembers from a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve the channel member list.
+     * A collection of membership records associated with the channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ConversationMemberCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/channel-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMemberCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -106,10 +104,9 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
+     * Create new navigation property to members for teams
      * @param body The request body
      * @return a CompletableFuture of conversationMember
-     * @see <a href="https://docs.microsoft.com/graph/api/channel-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> post(@javax.annotation.Nonnull final ConversationMember body) {
@@ -126,11 +123,10 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
+     * Create new navigation property to members for teams
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conversationMember
-     * @see <a href="https://docs.microsoft.com/graph/api/channel-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> post(@javax.annotation.Nonnull final ConversationMember body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -148,7 +144,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of conversationMembers from a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve the channel member list.
+     * A collection of membership records associated with the channel.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -156,7 +152,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of conversationMembers from a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve the channel member list.
+     * A collection of membership records associated with the channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +173,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
+     * Create new navigation property to members for teams
      * @param body The request body
      * @return a RequestInformation
      */
@@ -186,7 +182,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
+     * Create new navigation property to members for teams
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -209,7 +205,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of conversationMembers from a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve the channel member list.
+     * A collection of membership records associated with the channel.
      */
     public class GetQueryParameters {
         /** Include count of items */

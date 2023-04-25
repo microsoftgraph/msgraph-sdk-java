@@ -41,9 +41,8 @@ public class ManagerRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/contacts/{orgContact%2Did}/manager{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get this organizational contact's manager.
+     * Get manager from contacts
      * @return a CompletableFuture of directoryObject
-     * @see <a href="https://docs.microsoft.com/graph/api/orgcontact-get-manager?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObject> get() {
@@ -60,10 +59,9 @@ public class ManagerRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get this organizational contact's manager.
+     * Get manager from contacts
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryObject
-     * @see <a href="https://docs.microsoft.com/graph/api/orgcontact-get-manager?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObject> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -80,7 +78,7 @@ public class ManagerRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get this organizational contact's manager.
+     * Get manager from contacts
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +86,7 @@ public class ManagerRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get this organizational contact's manager.
+     * Get manager from contacts
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -109,7 +107,7 @@ public class ManagerRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get this organizational contact's manager.
+     * Get manager from contacts
      */
     public class GetQueryParameters {
         /** Expand related entities */

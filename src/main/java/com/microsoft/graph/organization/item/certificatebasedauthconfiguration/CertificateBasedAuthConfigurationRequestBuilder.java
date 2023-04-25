@@ -60,9 +60,8 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/certificateBasedAuthConfiguration{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of certificateBasedAuthConfiguration objects.
+     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      * @return a CompletableFuture of CertificateBasedAuthConfigurationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/certificatebasedauthconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfigurationCollectionResponse> get() {
@@ -79,10 +78,9 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Get a list of certificateBasedAuthConfiguration objects.
+     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CertificateBasedAuthConfigurationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/certificatebasedauthconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfigurationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,7 +97,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Get a list of certificateBasedAuthConfiguration objects.
+     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -107,7 +105,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of certificateBasedAuthConfiguration objects.
+     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +126,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Get a list of certificateBasedAuthConfiguration objects.
+     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      */
     public class GetQueryParameters {
         /** Include count of items */

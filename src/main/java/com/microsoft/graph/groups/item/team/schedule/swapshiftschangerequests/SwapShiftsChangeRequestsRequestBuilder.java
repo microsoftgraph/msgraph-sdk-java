@@ -61,9 +61,8 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule/swapShiftsChangeRequests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of swapShiftsChangeRequest objects in the team.
+     * Get swapShiftsChangeRequests from groups
      * @return a CompletableFuture of SwapShiftsChangeRequestCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/swapshiftschangerequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequestCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of swapShiftsChangeRequest objects in the team.
+     * Get swapShiftsChangeRequests from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SwapShiftsChangeRequestCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/swapshiftschangerequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequestCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create an instance of a swapShiftsChangeRequest object.
+     * Create new navigation property to swapShiftsChangeRequests for groups
      * @param body The request body
      * @return a CompletableFuture of swapShiftsChangeRequest
-     * @see <a href="https://docs.microsoft.com/graph/api/swapshiftschangerequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> post(@javax.annotation.Nonnull final SwapShiftsChangeRequest body) {
@@ -120,11 +117,10 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create an instance of a swapShiftsChangeRequest object.
+     * Create new navigation property to swapShiftsChangeRequests for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of swapShiftsChangeRequest
-     * @see <a href="https://docs.microsoft.com/graph/api/swapshiftschangerequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> post(@javax.annotation.Nonnull final SwapShiftsChangeRequest body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of swapShiftsChangeRequest objects in the team.
+     * Get swapShiftsChangeRequests from groups
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of swapShiftsChangeRequest objects in the team.
+     * Get swapShiftsChangeRequests from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an instance of a swapShiftsChangeRequest object.
+     * Create new navigation property to swapShiftsChangeRequests for groups
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an instance of a swapShiftsChangeRequest object.
+     * Create new navigation property to swapShiftsChangeRequests for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of swapShiftsChangeRequest objects in the team.
+     * Get swapShiftsChangeRequests from groups
      */
     public class GetQueryParameters {
         /** Include count of items */

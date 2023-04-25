@@ -39,9 +39,8 @@ public class ClearRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/axes/categoryAxis/minorGridlines/format/line/clear", rawUrl);
     }
     /**
-     * Clear the line format of a chart element.
+     * Invoke action clear
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/chartlineformat-clear?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -58,10 +57,9 @@ public class ClearRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Clear the line format of a chart element.
+     * Invoke action clear
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/chartlineformat-clear?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +76,7 @@ public class ClearRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Clear the line format of a chart element.
+     * Invoke action clear
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +84,7 @@ public class ClearRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Clear the line format of a chart element.
+     * Invoke action clear
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

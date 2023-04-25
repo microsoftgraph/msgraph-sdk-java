@@ -40,10 +40,9 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/mailFolders/{mailFolder%2Did}/childFolders/{mailFolder%2Did1}/move", rawUrl);
     }
     /**
-     * Move a mailfolder and its contents to another mailfolder.
+     * Invoke action move
      * @param body The request body
      * @return a CompletableFuture of mailFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-move?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> post(@javax.annotation.Nonnull final MovePostRequestBody body) {
@@ -60,11 +59,10 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Move a mailfolder and its contents to another mailfolder.
+     * Invoke action move
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mailFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-move?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> post(@javax.annotation.Nonnull final MovePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -82,7 +80,7 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Move a mailfolder and its contents to another mailfolder.
+     * Invoke action move
      * @param body The request body
      * @return a RequestInformation
      */
@@ -91,7 +89,7 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Move a mailfolder and its contents to another mailfolder.
+     * Invoke action move
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

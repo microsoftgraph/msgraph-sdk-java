@@ -39,10 +39,9 @@ public class HideForUserRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}/hideForUser", rawUrl);
     }
     /**
-     * Hide a chat for a user.
+     * Invoke action hideForUser
      * @param body The request body
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-hideforuser?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final HideForUserPostRequestBody body) {
@@ -59,11 +58,10 @@ public class HideForUserRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Hide a chat for a user.
+     * Invoke action hideForUser
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-hideforuser?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final HideForUserPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -81,7 +79,7 @@ public class HideForUserRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Hide a chat for a user.
+     * Invoke action hideForUser
      * @param body The request body
      * @return a RequestInformation
      */
@@ -90,7 +88,7 @@ public class HideForUserRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Hide a chat for a user.
+     * Invoke action hideForUser
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -39,9 +39,8 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/lists/{list%2Did}/contentTypes/{contentType%2Did}/publish", rawUrl);
     }
     /**
-     * Publishes a [contentType][] present in the content type hub site.
+     * Invoke action publish
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-publish?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -58,10 +57,9 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Publishes a [contentType][] present in the content type hub site.
+     * Invoke action publish
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-publish?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +76,7 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Publishes a [contentType][] present in the content type hub site.
+     * Invoke action publish
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +84,7 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Publishes a [contentType][] present in the content type hub site.
+     * Invoke action publish
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

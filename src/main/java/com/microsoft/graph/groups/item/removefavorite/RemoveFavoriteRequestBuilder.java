@@ -39,9 +39,8 @@ public class RemoveFavoriteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/removeFavorite", rawUrl);
     }
     /**
-     * Remove the group from the list of the current user's favorite groups. Supported for Microsoft 365 groups only.
+     * Invoke action removeFavorite
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/group-removefavorite?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -58,10 +57,9 @@ public class RemoveFavoriteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Remove the group from the list of the current user's favorite groups. Supported for Microsoft 365 groups only.
+     * Invoke action removeFavorite
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/group-removefavorite?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +76,7 @@ public class RemoveFavoriteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Remove the group from the list of the current user's favorite groups. Supported for Microsoft 365 groups only.
+     * Invoke action removeFavorite
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +84,7 @@ public class RemoveFavoriteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Remove the group from the list of the current user's favorite groups. Supported for Microsoft 365 groups only.
+     * Invoke action removeFavorite
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

@@ -96,7 +96,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Get policies from identity
+     * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      * @return a CompletableFuture of authenticationStrengthPolicy
      */
     @javax.annotation.Nonnull
@@ -114,7 +114,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Get policies from identity
+     * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationStrengthPolicy
      */
@@ -200,7 +200,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Get policies from identity
+     * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -208,7 +208,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Get policies from identity
+     * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -266,7 +266,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get policies from identity
+     * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      */
     public class GetQueryParameters {
         /** Expand related entities */

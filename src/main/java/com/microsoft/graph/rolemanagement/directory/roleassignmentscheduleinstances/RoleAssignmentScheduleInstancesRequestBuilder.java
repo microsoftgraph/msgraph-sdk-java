@@ -72,9 +72,8 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API.
+     * Instances for active role assignments.
      * @return a CompletableFuture of UnifiedRoleAssignmentScheduleInstanceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignmentscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentScheduleInstanceCollectionResponse> get() {
@@ -91,10 +90,9 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API.
+     * Instances for active role assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UnifiedRoleAssignmentScheduleInstanceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignmentscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentScheduleInstanceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -151,7 +149,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API.
+     * Instances for active role assignments.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -159,7 +157,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API.
+     * Instances for active role assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -212,7 +210,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API.
+     * Instances for active role assignments.
      */
     public class GetQueryParameters {
         /** Include count of items */

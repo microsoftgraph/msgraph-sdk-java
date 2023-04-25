@@ -39,9 +39,8 @@ public class RefreshRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/pivotTables/{workbookPivotTable%2Did}/refresh", rawUrl);
     }
     /**
-     * Refreshes the PivotTable.
+     * Invoke action refresh
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/workbookpivottable-refresh?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -58,10 +57,9 @@ public class RefreshRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Refreshes the PivotTable.
+     * Invoke action refresh
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/workbookpivottable-refresh?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +76,7 @@ public class RefreshRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Refreshes the PivotTable.
+     * Invoke action refresh
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +84,7 @@ public class RefreshRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Refreshes the PivotTable.
+     * Invoke action refresh
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

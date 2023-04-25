@@ -61,9 +61,8 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/apiConnectors{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties of an identityApiConnector object.
+     * Represents entry point for API connectors.
      * @return a CompletableFuture of IdentityApiConnectorCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identityapiconnector-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnectorCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties of an identityApiConnector object.
+     * Represents entry point for API connectors.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of IdentityApiConnectorCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identityapiconnector-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnectorCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new identityApiConnector object.
+     * Create new navigation property to apiConnectors for identity
      * @param body The request body
      * @return a CompletableFuture of identityApiConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/identityapiconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnector> post(@javax.annotation.Nonnull final IdentityApiConnector body) {
@@ -120,11 +117,10 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new identityApiConnector object.
+     * Create new navigation property to apiConnectors for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityApiConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/identityapiconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnector> post(@javax.annotation.Nonnull final IdentityApiConnector body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties of an identityApiConnector object.
+     * Represents entry point for API connectors.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of an identityApiConnector object.
+     * Represents entry point for API connectors.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new identityApiConnector object.
+     * Create new navigation property to apiConnectors for identity
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new identityApiConnector object.
+     * Create new navigation property to apiConnectors for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties of an identityApiConnector object.
+     * Represents entry point for API connectors.
      */
     public class GetQueryParameters {
         /** Include count of items */

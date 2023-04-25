@@ -61,9 +61,8 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/mailFolders/{mailFolder%2Did}/childFolders/{mailFolder%2Did1}/messageRules{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get all the messageRule objects defined for the user's inbox.
+     * The collection of rules that apply to the user's Inbox folder.
      * @return a CompletableFuture of MessageRuleCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-list-messagerules?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageRuleCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get all the messageRule objects defined for the user's inbox.
+     * The collection of rules that apply to the user's Inbox folder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of MessageRuleCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-list-messagerules?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageRuleCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a messageRule object by specifying a set of conditions and actions.  Outlook carries out those actions if an incoming message in the user's Inbox meets the specified conditions.
+     * Create new navigation property to messageRules for me
      * @param body The request body
      * @return a CompletableFuture of messageRule
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-post-messagerules?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageRule> post(@javax.annotation.Nonnull final MessageRule body) {
@@ -120,11 +117,10 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a messageRule object by specifying a set of conditions and actions.  Outlook carries out those actions if an incoming message in the user's Inbox meets the specified conditions.
+     * Create new navigation property to messageRules for me
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of messageRule
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-post-messagerules?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageRule> post(@javax.annotation.Nonnull final MessageRule body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get all the messageRule objects defined for the user's inbox.
+     * The collection of rules that apply to the user's Inbox folder.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get all the messageRule objects defined for the user's inbox.
+     * The collection of rules that apply to the user's Inbox folder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a messageRule object by specifying a set of conditions and actions.  Outlook carries out those actions if an incoming message in the user's Inbox meets the specified conditions.
+     * Create new navigation property to messageRules for me
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a messageRule object by specifying a set of conditions and actions.  Outlook carries out those actions if an incoming message in the user's Inbox meets the specified conditions.
+     * Create new navigation property to messageRules for me
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get all the messageRule objects defined for the user's inbox.
+     * The collection of rules that apply to the user's Inbox folder.
      */
     public class GetQueryParameters {
         /** Include count of items */

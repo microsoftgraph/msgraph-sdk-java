@@ -61,7 +61,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/authenticationStrength/policies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get policies from identity
+     * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      * @return a CompletableFuture of AuthenticationStrengthPolicyCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get policies from identity
+     * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AuthenticationStrengthPolicyCollectionResponse
      */
@@ -138,7 +138,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get policies from identity
+     * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +146,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get policies from identity
+     * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get policies from identity
+     * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -61,9 +61,8 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/userSources{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian.
+     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @return a CompletableFuture of UserSourceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-list-usersources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSourceCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian.
+     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UserSourceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-list-usersources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSourceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new userSource object associated with an eDiscovery custodian.
+     * Create new navigation property to userSources for security
      * @param body The request body
      * @return a CompletableFuture of userSource
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-post-usersources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSource> post(@javax.annotation.Nonnull final UserSource body) {
@@ -120,11 +117,10 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new userSource object associated with an eDiscovery custodian.
+     * Create new navigation property to userSources for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userSource
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-post-usersources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSource> post(@javax.annotation.Nonnull final UserSource body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian.
+     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian.
+     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new userSource object associated with an eDiscovery custodian.
+     * Create new navigation property to userSources for security
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new userSource object associated with an eDiscovery custodian.
+     * Create new navigation property to userSources for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian.
+     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      */
     public class GetQueryParameters {
         /** Include count of items */

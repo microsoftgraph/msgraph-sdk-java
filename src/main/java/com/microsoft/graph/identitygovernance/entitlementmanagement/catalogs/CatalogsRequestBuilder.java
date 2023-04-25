@@ -61,9 +61,8 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/catalogs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of accessPackageCatalog objects.
+     * A container for access packages.
      * @return a CompletableFuture of AccessPackageCatalogCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-catalogs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageCatalogCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of accessPackageCatalog objects.
+     * A container for access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AccessPackageCatalogCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-catalogs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageCatalogCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new accessPackageCatalog object.
+     * Create new navigation property to catalogs for identityGovernance
      * @param body The request body
      * @return a CompletableFuture of accessPackageCatalog
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-post-catalogs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageCatalog> post(@javax.annotation.Nonnull final AccessPackageCatalog body) {
@@ -120,11 +117,10 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new accessPackageCatalog object.
+     * Create new navigation property to catalogs for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageCatalog
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-post-catalogs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageCatalog> post(@javax.annotation.Nonnull final AccessPackageCatalog body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of accessPackageCatalog objects.
+     * A container for access packages.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of accessPackageCatalog objects.
+     * A container for access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new accessPackageCatalog object.
+     * Create new navigation property to catalogs for identityGovernance
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new accessPackageCatalog object.
+     * Create new navigation property to catalogs for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of accessPackageCatalog objects.
+     * A container for access packages.
      */
     public class GetQueryParameters {
         /** Include count of items */

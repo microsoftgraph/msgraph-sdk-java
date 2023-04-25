@@ -41,9 +41,8 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/lastIndexOperation{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
+     * Operation entity that represents the latest indexing for the custodian.
      * @return a CompletableFuture of ediscoveryIndexOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-list-lastindexoperation?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryIndexOperation> get() {
@@ -60,10 +59,9 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
+     * Operation entity that represents the latest indexing for the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryIndexOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-list-lastindexoperation?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryIndexOperation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -80,7 +78,7 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
+     * Operation entity that represents the latest indexing for the custodian.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +86,7 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
+     * Operation entity that represents the latest indexing for the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -109,7 +107,7 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
+     * Operation entity that represents the latest indexing for the custodian.
      */
     public class GetQueryParameters {
         /** Expand related entities */

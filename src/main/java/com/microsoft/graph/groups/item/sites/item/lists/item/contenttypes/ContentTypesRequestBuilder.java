@@ -79,9 +79,8 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/contentTypes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the collection of [contentType][contentType] resources in a [list][].
+     * The collection of content types present in this list.
      * @return a CompletableFuture of ContentTypeCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/list-list-contenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentTypeCollectionResponse> get() {
@@ -98,10 +97,9 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the collection of [contentType][contentType] resources in a [list][].
+     * The collection of content types present in this list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ContentTypeCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/list-list-contenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentTypeCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -158,7 +156,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the collection of [contentType][contentType] resources in a [list][].
+     * The collection of content types present in this list.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -166,7 +164,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the collection of [contentType][contentType] resources in a [list][].
+     * The collection of content types present in this list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -219,7 +217,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the collection of [contentType][contentType] resources in a [list][].
+     * The collection of content types present in this list.
      */
     public class GetQueryParameters {
         /** Include count of items */

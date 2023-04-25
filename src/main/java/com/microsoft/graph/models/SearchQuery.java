@@ -14,7 +14,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
     private String odataType;
     /** The search query containing the search terms. Required. */
     private String queryString;
-    /** The queryTemplate property */
+    /** Provides a way to decorate the query string. Supports both KQL and query variables. Optional. */
     private String queryTemplate;
     /**
      * Instantiates a new searchQuery and sets the default values.
@@ -71,7 +71,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
         return this.queryString;
     }
     /**
-     * Gets the queryTemplate property value. The queryTemplate property
+     * Gets the queryTemplate property value. Provides a way to decorate the query string. Supports both KQL and query variables. Optional.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -119,7 +119,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
         this.queryString = value;
     }
     /**
-     * Sets the queryTemplate property value. The queryTemplate property
+     * Sets the queryTemplate property value. Provides a way to decorate the query string. Supports both KQL and query variables. Optional.
      * @param value Value to set for the queryTemplate property.
      * @return a void
      */

@@ -61,9 +61,8 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/policies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of conditionalAccessPolicy objects.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @return a CompletableFuture of ConditionalAccessPolicyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicyCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of conditionalAccessPolicy objects.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ConditionalAccessPolicyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new conditionalAccessPolicy.
+     * Create new navigation property to policies for identity
      * @param body The request body
      * @return a CompletableFuture of conditionalAccessPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccessroot-post-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> post(@javax.annotation.Nonnull final ConditionalAccessPolicy body) {
@@ -120,11 +117,10 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new conditionalAccessPolicy.
+     * Create new navigation property to policies for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conditionalAccessPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccessroot-post-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> post(@javax.annotation.Nonnull final ConditionalAccessPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of conditionalAccessPolicy objects.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of conditionalAccessPolicy objects.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new conditionalAccessPolicy.
+     * Create new navigation property to policies for identity
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new conditionalAccessPolicy.
+     * Create new navigation property to policies for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of conditionalAccessPolicy objects.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      */
     public class GetQueryParameters {
         /** Include count of items */

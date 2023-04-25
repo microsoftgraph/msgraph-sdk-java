@@ -40,9 +40,8 @@ public class FollowRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/follow", rawUrl);
     }
     /**
-     * Follow a driveItem.
+     * Invoke action follow
      * @return a CompletableFuture of driveItem
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-follow?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> post() {
@@ -59,10 +58,9 @@ public class FollowRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Follow a driveItem.
+     * Invoke action follow
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of driveItem
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-follow?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +77,7 @@ public class FollowRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Follow a driveItem.
+     * Invoke action follow
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -87,7 +85,7 @@ public class FollowRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Follow a driveItem.
+     * Invoke action follow
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

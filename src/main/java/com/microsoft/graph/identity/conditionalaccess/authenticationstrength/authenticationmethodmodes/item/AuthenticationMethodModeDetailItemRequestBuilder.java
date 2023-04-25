@@ -78,7 +78,7 @@ public class AuthenticationMethodModeDetailItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Get authenticationMethodModes from identity
+     * Names and descriptions of all valid authentication method modes in the system.
      * @return a CompletableFuture of authenticationMethodModeDetail
      */
     @javax.annotation.Nonnull
@@ -96,7 +96,7 @@ public class AuthenticationMethodModeDetailItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Get authenticationMethodModes from identity
+     * Names and descriptions of all valid authentication method modes in the system.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationMethodModeDetail
      */
@@ -182,7 +182,7 @@ public class AuthenticationMethodModeDetailItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Get authenticationMethodModes from identity
+     * Names and descriptions of all valid authentication method modes in the system.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +190,7 @@ public class AuthenticationMethodModeDetailItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Get authenticationMethodModes from identity
+     * Names and descriptions of all valid authentication method modes in the system.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +248,7 @@ public class AuthenticationMethodModeDetailItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get authenticationMethodModes from identity
+     * Names and descriptions of all valid authentication method modes in the system.
      */
     public class GetQueryParameters {
         /** Expand related entities */

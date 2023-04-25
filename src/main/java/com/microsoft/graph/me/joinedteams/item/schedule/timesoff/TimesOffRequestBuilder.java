@@ -61,9 +61,8 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/joinedTeams/{team%2Did}/schedule/timesOff{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get the list of timeOff instances in a schedule.
+     * The instances of times off in the schedule.
      * @return a CompletableFuture of TimeOffCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the list of timeOff instances in a schedule.
+     * The instances of times off in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TimeOffCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new timeOff instance in a schedule.
+     * Create new navigation property to timesOff for me
      * @param body The request body
      * @return a CompletableFuture of timeOff
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-post-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOff> post(@javax.annotation.Nonnull final TimeOff body) {
@@ -120,11 +117,10 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new timeOff instance in a schedule.
+     * Create new navigation property to timesOff for me
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of timeOff
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-post-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOff> post(@javax.annotation.Nonnull final TimeOff body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the list of timeOff instances in a schedule.
+     * The instances of times off in the schedule.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of timeOff instances in a schedule.
+     * The instances of times off in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new timeOff instance in a schedule.
+     * Create new navigation property to timesOff for me
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new timeOff instance in a schedule.
+     * Create new navigation property to timesOff for me
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the list of timeOff instances in a schedule.
+     * The instances of times off in the schedule.
      */
     public class GetQueryParameters {
         /** Include count of items */

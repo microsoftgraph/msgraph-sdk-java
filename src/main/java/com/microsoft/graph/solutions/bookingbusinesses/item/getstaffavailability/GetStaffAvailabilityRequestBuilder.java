@@ -39,10 +39,9 @@ public class GetStaffAvailabilityRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/getStaffAvailability", rawUrl);
     }
     /**
-     * Get the availability information of staff members of a Microsoft Bookings calendar.
+     * Invoke action getStaffAvailability
      * @param body The request body
      * @return a CompletableFuture of getStaffAvailabilityResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-getstaffavailability?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetStaffAvailabilityResponse> post(@javax.annotation.Nonnull final GetStaffAvailabilityPostRequestBody body) {
@@ -59,11 +58,10 @@ public class GetStaffAvailabilityRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the availability information of staff members of a Microsoft Bookings calendar.
+     * Invoke action getStaffAvailability
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of getStaffAvailabilityResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-getstaffavailability?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetStaffAvailabilityResponse> post(@javax.annotation.Nonnull final GetStaffAvailabilityPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -81,7 +79,7 @@ public class GetStaffAvailabilityRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the availability information of staff members of a Microsoft Bookings calendar.
+     * Invoke action getStaffAvailability
      * @param body The request body
      * @return a RequestInformation
      */
@@ -90,7 +88,7 @@ public class GetStaffAvailabilityRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Get the availability information of staff members of a Microsoft Bookings calendar.
+     * Invoke action getStaffAvailability
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

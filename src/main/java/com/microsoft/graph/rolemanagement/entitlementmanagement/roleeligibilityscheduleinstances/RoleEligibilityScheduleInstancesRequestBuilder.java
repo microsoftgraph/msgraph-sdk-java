@@ -72,9 +72,8 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get the instances of role eligibilities.
+     * Instances for role eligibility requests.
      * @return a CompletableFuture of UnifiedRoleEligibilityScheduleInstanceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstanceCollectionResponse> get() {
@@ -91,10 +90,9 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Get the instances of role eligibilities.
+     * Instances for role eligibility requests.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UnifiedRoleEligibilityScheduleInstanceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstanceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -151,7 +149,7 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Get the instances of role eligibilities.
+     * Instances for role eligibility requests.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -159,7 +157,7 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Get the instances of role eligibilities.
+     * Instances for role eligibility requests.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -212,7 +210,7 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Get the instances of role eligibilities.
+     * Instances for role eligibility requests.
      */
     public class GetQueryParameters {
         /** Include count of items */

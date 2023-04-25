@@ -67,9 +67,8 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/administrativeUnits{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of administrativeUnit objects.
+     * Conceptual container for user and group directory objects.
      * @return a CompletableFuture of AdministrativeUnitCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/directory-list-administrativeunits?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnitCollectionResponse> get() {
@@ -86,10 +85,9 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of administrativeUnit objects.
+     * Conceptual container for user and group directory objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AdministrativeUnitCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/directory-list-administrativeunits?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnitCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -106,10 +104,9 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use this API to create a new administrativeUnit.
+     * Create new navigation property to administrativeUnits for directory
      * @param body The request body
      * @return a CompletableFuture of administrativeUnit
-     * @see <a href="https://docs.microsoft.com/graph/api/directory-post-administrativeunits?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> post(@javax.annotation.Nonnull final AdministrativeUnit body) {
@@ -126,11 +123,10 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use this API to create a new administrativeUnit.
+     * Create new navigation property to administrativeUnits for directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of administrativeUnit
-     * @see <a href="https://docs.microsoft.com/graph/api/directory-post-administrativeunits?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> post(@javax.annotation.Nonnull final AdministrativeUnit body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -148,7 +144,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of administrativeUnit objects.
+     * Conceptual container for user and group directory objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -156,7 +152,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of administrativeUnit objects.
+     * Conceptual container for user and group directory objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +173,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new administrativeUnit.
+     * Create new navigation property to administrativeUnits for directory
      * @param body The request body
      * @return a RequestInformation
      */
@@ -186,7 +182,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new administrativeUnit.
+     * Create new navigation property to administrativeUnits for directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -209,7 +205,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of administrativeUnit objects.
+     * Conceptual container for user and group directory objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

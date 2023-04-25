@@ -78,9 +78,8 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         }
     }
     /**
-     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
+     * The policy that represents the security defaults that protect against common attacks.
      * @return a CompletableFuture of identitySecurityDefaultsEnforcementPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/identitysecuritydefaultsenforcementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> get() {
@@ -97,10 +96,9 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         }
     }
     /**
-     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
+     * The policy that represents the security defaults that protect against common attacks.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identitySecurityDefaultsEnforcementPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/identitysecuritydefaultsenforcementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -117,10 +115,9 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         }
     }
     /**
-     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object.
+     * Update the navigation property identitySecurityDefaultsEnforcementPolicy in policies
      * @param body The request body
      * @return a CompletableFuture of identitySecurityDefaultsEnforcementPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/identitysecuritydefaultsenforcementpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> patch(@javax.annotation.Nonnull final IdentitySecurityDefaultsEnforcementPolicy body) {
@@ -137,11 +134,10 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         }
     }
     /**
-     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object.
+     * Update the navigation property identitySecurityDefaultsEnforcementPolicy in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identitySecurityDefaultsEnforcementPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/identitysecuritydefaultsenforcementpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> patch(@javax.annotation.Nonnull final IdentitySecurityDefaultsEnforcementPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -186,7 +182,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
+     * The policy that represents the security defaults that protect against common attacks.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -194,7 +190,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
+     * The policy that represents the security defaults that protect against common attacks.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -215,7 +211,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object.
+     * Update the navigation property identitySecurityDefaultsEnforcementPolicy in policies
      * @param body The request body
      * @return a RequestInformation
      */
@@ -224,7 +220,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object.
+     * Update the navigation property identitySecurityDefaultsEnforcementPolicy in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -252,7 +248,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
+     * The policy that represents the security defaults that protect against common attacks.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -61,7 +61,7 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/authenticationStrength/authenticationMethodModes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get authenticationMethodModes from identity
+     * Names and descriptions of all valid authentication method modes in the system.
      * @return a CompletableFuture of AuthenticationMethodModeDetailCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Get authenticationMethodModes from identity
+     * Names and descriptions of all valid authentication method modes in the system.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AuthenticationMethodModeDetailCollectionResponse
      */
@@ -138,7 +138,7 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Get authenticationMethodModes from identity
+     * Names and descriptions of all valid authentication method modes in the system.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +146,7 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Get authenticationMethodModes from identity
+     * Names and descriptions of all valid authentication method modes in the system.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Get authenticationMethodModes from identity
+     * Names and descriptions of all valid authentication method modes in the system.
      */
     public class GetQueryParameters {
         /** Include count of items */

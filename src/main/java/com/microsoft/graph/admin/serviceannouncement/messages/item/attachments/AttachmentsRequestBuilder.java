@@ -61,9 +61,8 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/serviceAnnouncement/messages/{serviceUpdateMessage%2Did}/attachments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of attachments associated with a service message.
+     * A collection of serviceAnnouncementAttachments.
      * @return a CompletableFuture of ServiceAnnouncementAttachmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceupdatemessage-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceAnnouncementAttachmentCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the list of attachments associated with a service message.
+     * A collection of serviceAnnouncementAttachments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ServiceAnnouncementAttachmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceupdatemessage-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceAnnouncementAttachmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +138,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the list of attachments associated with a service message.
+     * A collection of serviceAnnouncementAttachments.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +146,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of attachments associated with a service message.
+     * A collection of serviceAnnouncementAttachments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +199,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the list of attachments associated with a service message.
+     * A collection of serviceAnnouncementAttachments.
      */
     public class GetQueryParameters {
         /** Include count of items */

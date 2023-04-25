@@ -61,9 +61,8 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/lists/{list%2Did}/contentTypes/{contentType%2Did}/columns{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
+     * The collection of column definitions for this contentType.
      * @return a CompletableFuture of ColumnDefinitionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-list-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinitionCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
+     * The collection of column definitions for this contentType.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ColumnDefinitionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-list-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Add a column to a [content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition].
+     * Create new navigation property to columns for sites
      * @param body The request body
      * @return a CompletableFuture of columnDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinition> post(@javax.annotation.Nonnull final ColumnDefinition body) {
@@ -120,11 +117,10 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Add a column to a [content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition].
+     * Create new navigation property to columns for sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of columnDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinition> post(@javax.annotation.Nonnull final ColumnDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
+     * The collection of column definitions for this contentType.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
+     * The collection of column definitions for this contentType.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a column to a [content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition].
+     * Create new navigation property to columns for sites
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a column to a [content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition].
+     * Create new navigation property to columns for sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
+     * The collection of column definitions for this contentType.
      */
     public class GetQueryParameters {
         /** Include count of items */

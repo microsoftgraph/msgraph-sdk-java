@@ -84,9 +84,8 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of chartdatalabels object.
+     * Represents the datalabels on the chart. Read-only.
      * @return a CompletableFuture of workbookChartDataLabels
-     * @see <a href="https://docs.microsoft.com/graph/api/chartdatalabels-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartDataLabels> get() {
@@ -103,10 +102,9 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of chartdatalabels object.
+     * Represents the datalabels on the chart. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartDataLabels
-     * @see <a href="https://docs.microsoft.com/graph/api/chartdatalabels-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartDataLabels> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -123,10 +121,9 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of chartdatalabels object.
+     * Update the navigation property dataLabels in drives
      * @param body The request body
      * @return a CompletableFuture of workbookChartDataLabels
-     * @see <a href="https://docs.microsoft.com/graph/api/chartdatalabels-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartDataLabels> patch(@javax.annotation.Nonnull final WorkbookChartDataLabels body) {
@@ -143,11 +140,10 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of chartdatalabels object.
+     * Update the navigation property dataLabels in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartDataLabels
-     * @see <a href="https://docs.microsoft.com/graph/api/chartdatalabels-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartDataLabels> patch(@javax.annotation.Nonnull final WorkbookChartDataLabels body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -192,7 +188,7 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of chartdatalabels object.
+     * Represents the datalabels on the chart. Read-only.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -200,7 +196,7 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of chartdatalabels object.
+     * Represents the datalabels on the chart. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -221,7 +217,7 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of chartdatalabels object.
+     * Update the navigation property dataLabels in drives
      * @param body The request body
      * @return a RequestInformation
      */
@@ -230,7 +226,7 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of chartdatalabels object.
+     * Update the navigation property dataLabels in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -258,7 +254,7 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of chartdatalabels object.
+     * Represents the datalabels on the chart. Read-only.
      */
     public class GetQueryParameters {
         /** Expand related entities */

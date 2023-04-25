@@ -61,9 +61,8 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/masterCategories{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get all the categories that have been defined for the user.
+     * A list of categories defined for the user.
      * @return a CompletableFuture of OutlookCategoryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutlookCategoryCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get all the categories that have been defined for the user.
+     * A list of categories defined for the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of OutlookCategoryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutlookCategoryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create an outlookCategory object in the user's master list of categories.
+     * Create new navigation property to masterCategories for users
      * @param body The request body
      * @return a CompletableFuture of outlookCategory
-     * @see <a href="https://docs.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutlookCategory> post(@javax.annotation.Nonnull final OutlookCategory body) {
@@ -120,11 +117,10 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create an outlookCategory object in the user's master list of categories.
+     * Create new navigation property to masterCategories for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of outlookCategory
-     * @see <a href="https://docs.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutlookCategory> post(@javax.annotation.Nonnull final OutlookCategory body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get all the categories that have been defined for the user.
+     * A list of categories defined for the user.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get all the categories that have been defined for the user.
+     * A list of categories defined for the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an outlookCategory object in the user's master list of categories.
+     * Create new navigation property to masterCategories for users
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an outlookCategory object in the user's master list of categories.
+     * Create new navigation property to masterCategories for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get all the categories that have been defined for the user.
+     * A list of categories defined for the user.
      */
     public class GetQueryParameters {
         /** Include count of items */

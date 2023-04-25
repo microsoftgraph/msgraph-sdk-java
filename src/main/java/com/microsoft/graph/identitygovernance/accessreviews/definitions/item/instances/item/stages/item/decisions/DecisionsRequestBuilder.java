@@ -72,9 +72,8 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get the decisions from a stage in a multi-stage access review. The decisions in an accessReviewStage object are represented by an accessReviewInstanceDecisionItem object.
+     * Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed.
      * @return a CompletableFuture of AccessReviewInstanceDecisionItemCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewstage-list-decisions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstanceDecisionItemCollectionResponse> get() {
@@ -91,10 +90,9 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the decisions from a stage in a multi-stage access review. The decisions in an accessReviewStage object are represented by an accessReviewInstanceDecisionItem object.
+     * Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AccessReviewInstanceDecisionItemCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewstage-list-decisions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstanceDecisionItemCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -151,7 +149,7 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the decisions from a stage in a multi-stage access review. The decisions in an accessReviewStage object are represented by an accessReviewInstanceDecisionItem object.
+     * Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -159,7 +157,7 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the decisions from a stage in a multi-stage access review. The decisions in an accessReviewStage object are represented by an accessReviewInstanceDecisionItem object.
+     * Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -212,7 +210,7 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the decisions from a stage in a multi-stage access review. The decisions in an accessReviewStage object are represented by an accessReviewInstanceDecisionItem object.
+     * Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed.
      */
     public class GetQueryParameters {
         /** Include count of items */
