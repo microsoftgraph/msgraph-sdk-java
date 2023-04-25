@@ -39,7 +39,7 @@ Add the dependency in `dependencies` in pom.xml
   <version>5.54.0</version>
 </dependency>
 <dependency>
-  <!-- This dependency is only needed if you are using the TokenCrendentialAuthProvider -->
+  <!-- This dependency is only needed if you are using the TokenCredentialAuthProvider -->
   <groupId>com.azure</groupId>
   <artifactId>azure-identity</artifactId>
   <version>1.2.5</version>
