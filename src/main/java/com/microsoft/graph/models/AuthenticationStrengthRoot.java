@@ -40,7 +40,7 @@ public class AuthenticationStrengthRoot extends Entity implements IJsonBackedObj
 
     /**
      * The Authentication Method Modes.
-     * 
+     * Names and descriptions of all valid authentication method modes in the system.
      */
     @SerializedName(value = "authenticationMethodModes", alternate = {"AuthenticationMethodModes"})
     @Expose
@@ -49,7 +49,7 @@ public class AuthenticationStrengthRoot extends Entity implements IJsonBackedObj
 
     /**
      * The Policies.
-     * 
+     * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      */
     @SerializedName(value = "policies", alternate = {"Policies"})
     @Expose

@@ -58,7 +58,7 @@ public class DefaultUserRolePermissions implements IJsonBackedObject {
 
     /**
      * The Allowed To Read Bitlocker Keys For Owned Device.
-     * 
+     * Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.
      */
     @SerializedName(value = "allowedToReadBitlockerKeysForOwnedDevice", alternate = {"AllowedToReadBitlockerKeysForOwnedDevice"})
     @Expose

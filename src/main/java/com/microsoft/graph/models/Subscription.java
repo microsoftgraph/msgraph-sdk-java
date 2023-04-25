@@ -126,7 +126,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Notification Url.
-     * Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
+     * Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol. Any query string parameter included in the notificationUrl property will be included in the HTTP POST request when Microsoft Graph sends the change notifications.
      */
     @SerializedName(value = "notificationUrl", alternate = {"NotificationUrl"})
     @Expose

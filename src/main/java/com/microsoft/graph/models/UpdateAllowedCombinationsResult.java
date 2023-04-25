@@ -41,7 +41,7 @@ public class UpdateAllowedCombinationsResult implements IJsonBackedObject {
 
     /**
      * The Additional Information.
-     * 
+     * Information about why the updateAllowedCombinations action was successful or failed.
      */
     @SerializedName(value = "additionalInformation", alternate = {"AdditionalInformation"})
     @Expose
@@ -50,7 +50,7 @@ public class UpdateAllowedCombinationsResult implements IJsonBackedObject {
 
     /**
      * The Conditional Access References.
-     * 
+     * References to existing Conditional Access policies that use this authentication strength.
      */
     @SerializedName(value = "conditionalAccessReferences", alternate = {"ConditionalAccessReferences"})
     @Expose
@@ -59,7 +59,7 @@ public class UpdateAllowedCombinationsResult implements IJsonBackedObject {
 
     /**
      * The Current Combinations.
-     * 
+     * The list of current authentication method combinations allowed by the authentication strength.
      */
     @SerializedName(value = "currentCombinations", alternate = {"CurrentCombinations"})
     @Expose
@@ -68,7 +68,7 @@ public class UpdateAllowedCombinationsResult implements IJsonBackedObject {
 
     /**
      * The Previous Combinations.
-     * 
+     * The list of former authentication method combinations allowed by the authentication strength before they were updated through the updateAllowedCombinations action.
      */
     @SerializedName(value = "previousCombinations", alternate = {"PreviousCombinations"})
     @Expose

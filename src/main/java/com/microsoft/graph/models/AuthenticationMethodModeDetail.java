@@ -28,7 +28,7 @@ public class AuthenticationMethodModeDetail extends Entity implements IJsonBacke
 
     /**
      * The Authentication Method.
-     * 
+     * The authentication method that this mode modifies. The possible values are: password, voice, hardwareOath, softwareOath, sms, fido2, windowsHelloForBusiness, microsoftAuthenticator, temporaryAccessPass, email, x509Certificate, federation, unknownFutureValue.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
@@ -37,7 +37,7 @@ public class AuthenticationMethodModeDetail extends Entity implements IJsonBacke
 
     /**
      * The Display Name.
-     * 
+     * The display name of this mode
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

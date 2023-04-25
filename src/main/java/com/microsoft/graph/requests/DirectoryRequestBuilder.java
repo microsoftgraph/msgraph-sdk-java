@@ -77,6 +77,46 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
         return new com.microsoft.graph.requests.AdministrativeUnitRequestBuilder(getRequestUrlWithAdditionalSegment("administrativeUnits") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the AttributeSet collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AttributeSetCollectionRequestBuilder attributeSets() {
+        return new com.microsoft.graph.requests.AttributeSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attributeSets"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AttributeSet item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AttributeSetRequestBuilder attributeSets(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AttributeSetRequestBuilder(getRequestUrlWithAdditionalSegment("attributeSets") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the CustomSecurityAttributeDefinition collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CustomSecurityAttributeDefinitionCollectionRequestBuilder customSecurityAttributeDefinitions() {
+        return new com.microsoft.graph.requests.CustomSecurityAttributeDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customSecurityAttributeDefinitions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CustomSecurityAttributeDefinition item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CustomSecurityAttributeDefinitionRequestBuilder customSecurityAttributeDefinitions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CustomSecurityAttributeDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("customSecurityAttributeDefinitions") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the DirectoryObject collection
      *
      * @return the collection request builder

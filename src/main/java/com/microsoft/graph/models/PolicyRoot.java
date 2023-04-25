@@ -47,7 +47,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Authentication Methods Policy.
-     * The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
+     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
      */
     @SerializedName(value = "authenticationMethodsPolicy", alternate = {"AuthenticationMethodsPolicy"})
     @Expose
@@ -56,7 +56,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Authentication Strength Policies.
-     * 
+     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
      */
     @SerializedName(value = "authenticationStrengthPolicies", alternate = {"AuthenticationStrengthPolicies"})
     @Expose
