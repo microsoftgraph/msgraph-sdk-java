@@ -61,9 +61,8 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/permissions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the permission resources from the permissions navigation property on a site.
+     * The permissions associated with the site. Nullable.
      * @return a CompletableFuture of PermissionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/site-list-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the permission resources from the permissions navigation property on a site.
+     * The permissions associated with the site. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PermissionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/site-list-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new permission object on a site. 
+     * Create new navigation property to permissions for groups
      * @param body The request body
      * @return a CompletableFuture of permission
-     * @see <a href="https://docs.microsoft.com/graph/api/site-post-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Permission> post(@javax.annotation.Nonnull final Permission body) {
@@ -120,11 +117,10 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new permission object on a site. 
+     * Create new navigation property to permissions for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permission
-     * @see <a href="https://docs.microsoft.com/graph/api/site-post-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Permission> post(@javax.annotation.Nonnull final Permission body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the permission resources from the permissions navigation property on a site.
+     * The permissions associated with the site. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the permission resources from the permissions navigation property on a site.
+     * The permissions associated with the site. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new permission object on a site. 
+     * Create new navigation property to permissions for groups
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new permission object on a site. 
+     * Create new navigation property to permissions for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the permission resources from the permissions navigation property on a site.
+     * The permissions associated with the site. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */

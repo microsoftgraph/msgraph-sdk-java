@@ -67,9 +67,8 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}/members{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List all conversation members in a chat. This method supports federation. For one-on-one chats, at least one chat member must belong to the tenant the request initiates from. For group chats, the chat must be initiated by a user in the tenant the request initiates from.
+     * A collection of all the members in the chat. Nullable.
      * @return a CompletableFuture of ConversationMemberCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMemberCollectionResponse> get() {
@@ -86,10 +85,9 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List all conversation members in a chat. This method supports federation. For one-on-one chats, at least one chat member must belong to the tenant the request initiates from. For group chats, the chat must be initiated by a user in the tenant the request initiates from.
+     * A collection of all the members in the chat. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ConversationMemberCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMemberCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -106,10 +104,9 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Add a conversationMember to a chat.
+     * Create new navigation property to members for users
      * @param body The request body
      * @return a CompletableFuture of conversationMember
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> post(@javax.annotation.Nonnull final ConversationMember body) {
@@ -126,11 +123,10 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Add a conversationMember to a chat.
+     * Create new navigation property to members for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conversationMember
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> post(@javax.annotation.Nonnull final ConversationMember body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -148,7 +144,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List all conversation members in a chat. This method supports federation. For one-on-one chats, at least one chat member must belong to the tenant the request initiates from. For group chats, the chat must be initiated by a user in the tenant the request initiates from.
+     * A collection of all the members in the chat. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -156,7 +152,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List all conversation members in a chat. This method supports federation. For one-on-one chats, at least one chat member must belong to the tenant the request initiates from. For group chats, the chat must be initiated by a user in the tenant the request initiates from.
+     * A collection of all the members in the chat. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +173,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a conversationMember to a chat.
+     * Create new navigation property to members for users
      * @param body The request body
      * @return a RequestInformation
      */
@@ -186,7 +182,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a conversationMember to a chat.
+     * Create new navigation property to members for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -209,7 +205,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List all conversation members in a chat. This method supports federation. For one-on-one chats, at least one chat member must belong to the tenant the request initiates from. For group chats, the chat must be initiated by a user in the tenant the request initiates from.
+     * A collection of all the members in the chat. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */

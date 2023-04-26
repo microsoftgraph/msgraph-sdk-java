@@ -61,9 +61,8 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/tasks{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of **plannertask** objects.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      * @return a CompletableFuture of PlannerTaskCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/planner-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTaskCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of **plannertask** objects.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PlannerTaskCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/planner-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTaskCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new **plannerTask**.
+     * Create new navigation property to tasks for planner
      * @param body The request body
      * @return a CompletableFuture of plannerTask
-     * @see <a href="https://docs.microsoft.com/graph/api/planner-post-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTask> post(@javax.annotation.Nonnull final PlannerTask body) {
@@ -120,11 +117,10 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new **plannerTask**.
+     * Create new navigation property to tasks for planner
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerTask
-     * @see <a href="https://docs.microsoft.com/graph/api/planner-post-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTask> post(@javax.annotation.Nonnull final PlannerTask body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of **plannertask** objects.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of **plannertask** objects.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new **plannerTask**.
+     * Create new navigation property to tasks for planner
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new **plannerTask**.
+     * Create new navigation property to tasks for planner
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of **plannertask** objects.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      */
     public class GetQueryParameters {
         /** Include count of items */

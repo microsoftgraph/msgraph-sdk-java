@@ -66,9 +66,8 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/schools/{educationSchool%2Did}/users{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the educationUser resources associated with an educationSchool.
+     * Users in the school. Nullable.
      * @return a CompletableFuture of EducationUserCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationschool-list-users?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUserCollectionResponse> get() {
@@ -85,10 +84,9 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the educationUser resources associated with an educationSchool.
+     * Users in the school. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EducationUserCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationschool-list-users?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUserCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +103,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the educationUser resources associated with an educationSchool.
+     * Users in the school. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -113,7 +111,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the educationUser resources associated with an educationSchool.
+     * Users in the school. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -134,7 +132,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the educationUser resources associated with an educationSchool.
+     * Users in the school. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */

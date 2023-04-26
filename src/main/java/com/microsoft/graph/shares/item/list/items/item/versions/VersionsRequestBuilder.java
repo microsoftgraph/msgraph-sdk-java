@@ -61,9 +61,8 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/list/items/{listItem%2Did}/versions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * SharePoint can be configured to retain the history for list items. Previous versions may be retained for a finite period of time depending on admin settings which may be unique per user or location.
+     * The list of previous versions of the list item.
      * @return a CompletableFuture of ListItemVersionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/listitem-list-versions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItemVersionCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * SharePoint can be configured to retain the history for list items. Previous versions may be retained for a finite period of time depending on admin settings which may be unique per user or location.
+     * The list of previous versions of the list item.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ListItemVersionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/listitem-list-versions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItemVersionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +138,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * SharePoint can be configured to retain the history for list items. Previous versions may be retained for a finite period of time depending on admin settings which may be unique per user or location.
+     * The list of previous versions of the list item.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +146,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * SharePoint can be configured to retain the history for list items. Previous versions may be retained for a finite period of time depending on admin settings which may be unique per user or location.
+     * The list of previous versions of the list item.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +199,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * SharePoint can be configured to retain the history for list items. Previous versions may be retained for a finite period of time depending on admin settings which may be unique per user or location.
+     * The list of previous versions of the list item.
      */
     public class GetQueryParameters {
         /** Include count of items */

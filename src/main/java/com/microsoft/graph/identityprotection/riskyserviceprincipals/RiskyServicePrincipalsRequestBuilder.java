@@ -73,9 +73,8 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityProtection/riskyServicePrincipals{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of riskyServicePrincipal objects.
+     * Azure AD service principals that are at risk.
      * @return a CompletableFuture of RiskyServicePrincipalCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identityprotectionroot-list-riskyserviceprincipals?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyServicePrincipalCollectionResponse> get() {
@@ -92,10 +91,9 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of riskyServicePrincipal objects.
+     * Azure AD service principals that are at risk.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of RiskyServicePrincipalCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identityprotectionroot-list-riskyserviceprincipals?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyServicePrincipalCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -152,7 +150,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of riskyServicePrincipal objects.
+     * Azure AD service principals that are at risk.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -160,7 +158,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of riskyServicePrincipal objects.
+     * Azure AD service principals that are at risk.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -213,7 +211,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of riskyServicePrincipal objects.
+     * Azure AD service principals that are at risk.
      */
     public class GetQueryParameters {
         /** Include count of items */

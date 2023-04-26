@@ -78,7 +78,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         }
     }
     /**
-     * Get combinationConfigurations from policies
+     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      * @return a CompletableFuture of authenticationCombinationConfiguration
      */
     @javax.annotation.Nonnull
@@ -96,7 +96,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         }
     }
     /**
-     * Get combinationConfigurations from policies
+     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationCombinationConfiguration
      */
@@ -182,7 +182,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * Get combinationConfigurations from policies
+     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +190,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return toGetRequestInformation(null);
     }
     /**
-     * Get combinationConfigurations from policies
+     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +248,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get combinationConfigurations from policies
+     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      */
     public class GetQueryParameters {
         /** Expand related entities */

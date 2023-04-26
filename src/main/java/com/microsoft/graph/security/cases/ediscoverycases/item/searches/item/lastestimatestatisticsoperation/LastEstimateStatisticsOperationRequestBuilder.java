@@ -41,9 +41,8 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches/{ediscoverySearch%2Did}/lastEstimateStatisticsOperation{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties.
+     * The last estimate operation associated with the eDiscovery search.
      * @return a CompletableFuture of ediscoveryEstimateOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-list-lastestimatestatisticsoperation?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryEstimateOperation> get() {
@@ -60,10 +59,9 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties.
+     * The last estimate operation associated with the eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryEstimateOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-list-lastestimatestatisticsoperation?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryEstimateOperation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -80,7 +78,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties.
+     * The last estimate operation associated with the eDiscovery search.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +86,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties.
+     * The last estimate operation associated with the eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -109,7 +107,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties.
+     * The last estimate operation associated with the eDiscovery search.
      */
     public class GetQueryParameters {
         /** Expand related entities */

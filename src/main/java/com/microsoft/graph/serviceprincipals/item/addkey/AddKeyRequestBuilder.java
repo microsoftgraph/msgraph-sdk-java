@@ -40,10 +40,9 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/addKey", rawUrl);
     }
     /**
-     * Adds a key credential to a servicePrincipal. This method along with removeKey can be used by a servicePrincipal to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  ServicePrincipals that dont have any existing valid certificates (i.e.: no certificates have been added yet, or all certificates have expired), wont be able to use this service action. Update servicePrincipal can be used to perform an update instead.
+     * Invoke action addKey
      * @param body The request body
      * @return a CompletableFuture of KeyCredential
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-addkey?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<KeyCredential> post(@javax.annotation.Nonnull final AddKeyPostRequestBody body) {
@@ -60,11 +59,10 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Adds a key credential to a servicePrincipal. This method along with removeKey can be used by a servicePrincipal to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  ServicePrincipals that dont have any existing valid certificates (i.e.: no certificates have been added yet, or all certificates have expired), wont be able to use this service action. Update servicePrincipal can be used to perform an update instead.
+     * Invoke action addKey
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of KeyCredential
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-addkey?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<KeyCredential> post(@javax.annotation.Nonnull final AddKeyPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -82,7 +80,7 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Adds a key credential to a servicePrincipal. This method along with removeKey can be used by a servicePrincipal to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  ServicePrincipals that dont have any existing valid certificates (i.e.: no certificates have been added yet, or all certificates have expired), wont be able to use this service action. Update servicePrincipal can be used to perform an update instead.
+     * Invoke action addKey
      * @param body The request body
      * @return a RequestInformation
      */
@@ -91,7 +89,7 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Adds a key credential to a servicePrincipal. This method along with removeKey can be used by a servicePrincipal to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  ServicePrincipals that dont have any existing valid certificates (i.e.: no certificates have been added yet, or all certificates have expired), wont be able to use this service action. Update servicePrincipal can be used to perform an update instead.
+     * Invoke action addKey
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

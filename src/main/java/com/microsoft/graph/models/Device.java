@@ -46,7 +46,7 @@ public class Device extends DirectoryObject implements Parsable {
     private java.util.List<String> physicalIds;
     /** The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT. */
     private String profileType;
-    /** The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand. */
+    /** The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Read-only. Nullable. Supports $expand. */
     private java.util.List<DirectoryObject> registeredOwners;
     /** Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand. */
     private java.util.List<DirectoryObject> registeredUsers;
@@ -261,7 +261,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.profileType;
     }
     /**
-     * Gets the registeredOwners property value. The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.
+     * Gets the registeredOwners property value. The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Read-only. Nullable. Supports $expand.
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -506,7 +506,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.profileType = value;
     }
     /**
-     * Sets the registeredOwners property value. The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.
+     * Sets the registeredOwners property value. The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the registeredOwners property.
      * @return a void
      */

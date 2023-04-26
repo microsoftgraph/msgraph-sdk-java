@@ -61,9 +61,8 @@ public class TemporaryAccessPassMethodsRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/me/authentication/temporaryAccessPassMethods{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of a user's temporaryAccessPassAuthenticationMethod objects and their properties. This API will only return a single object in the collection as a user can have only one Temporary Access Pass method.
+     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
      * @return a CompletableFuture of TemporaryAccessPassAuthenticationMethodCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/authentication-list-temporaryaccesspassmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TemporaryAccessPassAuthenticationMethodCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class TemporaryAccessPassMethodsRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Retrieve a list of a user's temporaryAccessPassAuthenticationMethod objects and their properties. This API will only return a single object in the collection as a user can have only one Temporary Access Pass method.
+     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TemporaryAccessPassAuthenticationMethodCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/authentication-list-temporaryaccesspassmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TemporaryAccessPassAuthenticationMethodCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class TemporaryAccessPassMethodsRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Create a new temporaryAccessPassAuthenticationMethod object on a user. A user can only have one Temporary Access Pass that's usable within its specified lifetime. If the user requires a new Temporary Access Pass while the current Temporary Access Pass is valid, the admin can create a new Temporary Access Pass for the user, the previous Temporary Access Pass will be deleted, and a new Temporary Access Pass will be created.
+     * Create new navigation property to temporaryAccessPassMethods for me
      * @param body The request body
      * @return a CompletableFuture of temporaryAccessPassAuthenticationMethod
-     * @see <a href="https://docs.microsoft.com/graph/api/authentication-post-temporaryaccesspassmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TemporaryAccessPassAuthenticationMethod> post(@javax.annotation.Nonnull final TemporaryAccessPassAuthenticationMethod body) {
@@ -120,11 +117,10 @@ public class TemporaryAccessPassMethodsRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Create a new temporaryAccessPassAuthenticationMethod object on a user. A user can only have one Temporary Access Pass that's usable within its specified lifetime. If the user requires a new Temporary Access Pass while the current Temporary Access Pass is valid, the admin can create a new Temporary Access Pass for the user, the previous Temporary Access Pass will be deleted, and a new Temporary Access Pass will be created.
+     * Create new navigation property to temporaryAccessPassMethods for me
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of temporaryAccessPassAuthenticationMethod
-     * @see <a href="https://docs.microsoft.com/graph/api/authentication-post-temporaryaccesspassmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TemporaryAccessPassAuthenticationMethod> post(@javax.annotation.Nonnull final TemporaryAccessPassAuthenticationMethod body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class TemporaryAccessPassMethodsRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Retrieve a list of a user's temporaryAccessPassAuthenticationMethod objects and their properties. This API will only return a single object in the collection as a user can have only one Temporary Access Pass method.
+     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class TemporaryAccessPassMethodsRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of a user's temporaryAccessPassAuthenticationMethod objects and their properties. This API will only return a single object in the collection as a user can have only one Temporary Access Pass method.
+     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class TemporaryAccessPassMethodsRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Create a new temporaryAccessPassAuthenticationMethod object on a user. A user can only have one Temporary Access Pass that's usable within its specified lifetime. If the user requires a new Temporary Access Pass while the current Temporary Access Pass is valid, the admin can create a new Temporary Access Pass for the user, the previous Temporary Access Pass will be deleted, and a new Temporary Access Pass will be created.
+     * Create new navigation property to temporaryAccessPassMethods for me
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class TemporaryAccessPassMethodsRequestBuilder extends BaseRequestBuilder
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new temporaryAccessPassAuthenticationMethod object on a user. A user can only have one Temporary Access Pass that's usable within its specified lifetime. If the user requires a new Temporary Access Pass while the current Temporary Access Pass is valid, the admin can create a new Temporary Access Pass for the user, the previous Temporary Access Pass will be deleted, and a new Temporary Access Pass will be created.
+     * Create new navigation property to temporaryAccessPassMethods for me
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class TemporaryAccessPassMethodsRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Retrieve a list of a user's temporaryAccessPassAuthenticationMethod objects and their properties. This API will only return a single object in the collection as a user can have only one Temporary Access Pass method.
+     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
      */
     public class GetQueryParameters {
         /** Include count of items */

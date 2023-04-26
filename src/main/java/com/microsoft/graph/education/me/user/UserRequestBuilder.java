@@ -47,9 +47,8 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/me/user{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the simple directory **user** that corresponds to this **educationUser**.
+     * The directory user that corresponds to this user.
      * @return a CompletableFuture of user
-     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-get-user?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> get() {
@@ -66,10 +65,9 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the simple directory **user** that corresponds to this **educationUser**.
+     * The directory user that corresponds to this user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of user
-     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-get-user?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,7 +84,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the simple directory **user** that corresponds to this **educationUser**.
+     * The directory user that corresponds to this user.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +92,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the simple directory **user** that corresponds to this **educationUser**.
+     * The directory user that corresponds to this user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -115,7 +113,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the simple directory **user** that corresponds to this **educationUser**.
+     * The directory user that corresponds to this user.
      */
     public class GetQueryParameters {
         /** Expand related entities */

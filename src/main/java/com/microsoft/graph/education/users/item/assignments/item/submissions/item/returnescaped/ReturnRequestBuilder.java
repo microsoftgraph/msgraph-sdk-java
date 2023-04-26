@@ -40,9 +40,8 @@ public class ReturnRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/users/{educationUser%2Did}/assignments/{educationAssignment%2Did}/submissions/{educationSubmission%2Did}/return", rawUrl);
     }
     /**
-     * Make the grade and feedback associated with this submission available to the student.  This action changes the status of the submission from 'submitted' to 'returned' and indicates that feedback is provided or grading is done. This action can only be done by the teacher.
+     * Invoke action return
      * @return a CompletableFuture of educationSubmission
-     * @see <a href="https://docs.microsoft.com/graph/api/educationsubmission-return?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSubmission> post() {
@@ -59,10 +58,9 @@ public class ReturnRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Make the grade and feedback associated with this submission available to the student.  This action changes the status of the submission from 'submitted' to 'returned' and indicates that feedback is provided or grading is done. This action can only be done by the teacher.
+     * Invoke action return
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationSubmission
-     * @see <a href="https://docs.microsoft.com/graph/api/educationsubmission-return?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSubmission> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +77,7 @@ public class ReturnRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Make the grade and feedback associated with this submission available to the student.  This action changes the status of the submission from 'submitted' to 'returned' and indicates that feedback is provided or grading is done. This action can only be done by the teacher.
+     * Invoke action return
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -87,7 +85,7 @@ public class ReturnRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Make the grade and feedback associated with this submission available to the student.  This action changes the status of the submission from 'submitted' to 'returned' and indicates that feedback is provided or grading is done. This action can only be done by the teacher.
+     * Invoke action return
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

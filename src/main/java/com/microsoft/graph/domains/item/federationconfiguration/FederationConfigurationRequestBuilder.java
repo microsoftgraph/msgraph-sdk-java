@@ -98,10 +98,9 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new internalDomainFederation object.
+     * Create new navigation property to federationConfiguration for domains
      * @param body The request body
      * @return a CompletableFuture of internalDomainFederation
-     * @see <a href="https://docs.microsoft.com/graph/api/domain-post-federationconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternalDomainFederation> post(@javax.annotation.Nonnull final InternalDomainFederation body) {
@@ -118,11 +117,10 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new internalDomainFederation object.
+     * Create new navigation property to federationConfiguration for domains
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of internalDomainFederation
-     * @see <a href="https://docs.microsoft.com/graph/api/domain-post-federationconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternalDomainFederation> post(@javax.annotation.Nonnull final InternalDomainFederation body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +167,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new internalDomainFederation object.
+     * Create new navigation property to federationConfiguration for domains
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +176,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new internalDomainFederation object.
+     * Create new navigation property to federationConfiguration for domains
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -84,9 +84,8 @@ public class MinorGridlinesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of chartgridlines object.
+     * Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
      * @return a CompletableFuture of workbookChartGridlines
-     * @see <a href="https://docs.microsoft.com/graph/api/chartgridlines-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> get() {
@@ -103,10 +102,9 @@ public class MinorGridlinesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of chartgridlines object.
+     * Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartGridlines
-     * @see <a href="https://docs.microsoft.com/graph/api/chartgridlines-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -123,10 +121,9 @@ public class MinorGridlinesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of chartgridlines object.
+     * Update the navigation property minorGridlines in drives
      * @param body The request body
      * @return a CompletableFuture of workbookChartGridlines
-     * @see <a href="https://docs.microsoft.com/graph/api/chartgridlines-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> patch(@javax.annotation.Nonnull final WorkbookChartGridlines body) {
@@ -143,11 +140,10 @@ public class MinorGridlinesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of chartgridlines object.
+     * Update the navigation property minorGridlines in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartGridlines
-     * @see <a href="https://docs.microsoft.com/graph/api/chartgridlines-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> patch(@javax.annotation.Nonnull final WorkbookChartGridlines body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -192,7 +188,7 @@ public class MinorGridlinesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of chartgridlines object.
+     * Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -200,7 +196,7 @@ public class MinorGridlinesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of chartgridlines object.
+     * Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -221,7 +217,7 @@ public class MinorGridlinesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of chartgridlines object.
+     * Update the navigation property minorGridlines in drives
      * @param body The request body
      * @return a RequestInformation
      */
@@ -230,7 +226,7 @@ public class MinorGridlinesRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of chartgridlines object.
+     * Update the navigation property minorGridlines in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -258,7 +254,7 @@ public class MinorGridlinesRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of chartgridlines object.
+     * Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
      */
     public class GetQueryParameters {
         /** Expand related entities */

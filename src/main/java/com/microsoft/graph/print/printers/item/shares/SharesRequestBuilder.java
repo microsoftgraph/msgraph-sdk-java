@@ -60,9 +60,8 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}/shares{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of printer shares associated with the printer.
+     * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
      * @return a CompletableFuture of PrinterShareCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/printer-list-shares?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrinterShareCollectionResponse> get() {
@@ -79,10 +78,9 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of printer shares associated with the printer.
+     * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PrinterShareCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/printer-list-shares?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrinterShareCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,7 +97,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of printer shares associated with the printer.
+     * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -107,7 +105,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of printer shares associated with the printer.
+     * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +126,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of printer shares associated with the printer.
+     * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */

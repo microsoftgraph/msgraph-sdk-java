@@ -40,10 +40,9 @@ public class SubscribeToToneRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/subscribeToTone", rawUrl);
     }
     /**
-     * Subscribe to DTMF (dual-tone multi-frequency signaling). This allows you to be notified when the user presses keys on a 'dialpad'.
+     * Invoke action subscribeToTone
      * @param body The request body
      * @return a CompletableFuture of subscribeToToneOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/call-subscribetotone?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubscribeToToneOperation> post(@javax.annotation.Nonnull final SubscribeToTonePostRequestBody body) {
@@ -60,11 +59,10 @@ public class SubscribeToToneRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Subscribe to DTMF (dual-tone multi-frequency signaling). This allows you to be notified when the user presses keys on a 'dialpad'.
+     * Invoke action subscribeToTone
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of subscribeToToneOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/call-subscribetotone?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubscribeToToneOperation> post(@javax.annotation.Nonnull final SubscribeToTonePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -82,7 +80,7 @@ public class SubscribeToToneRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Subscribe to DTMF (dual-tone multi-frequency signaling). This allows you to be notified when the user presses keys on a 'dialpad'.
+     * Invoke action subscribeToTone
      * @param body The request body
      * @return a RequestInformation
      */
@@ -91,7 +89,7 @@ public class SubscribeToToneRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Subscribe to DTMF (dual-tone multi-frequency signaling). This allows you to be notified when the user presses keys on a 'dialpad'.
+     * Invoke action subscribeToTone
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

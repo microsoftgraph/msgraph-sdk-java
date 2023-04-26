@@ -78,9 +78,8 @@ public class FontRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of chartfont object.
+     * Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
      * @return a CompletableFuture of workbookChartFont
-     * @see <a href="https://docs.microsoft.com/graph/api/chartfont-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartFont> get() {
@@ -97,10 +96,9 @@ public class FontRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of chartfont object.
+     * Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartFont
-     * @see <a href="https://docs.microsoft.com/graph/api/chartfont-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartFont> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -117,10 +115,9 @@ public class FontRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of chartfont object.
+     * Update the navigation property font in drives
      * @param body The request body
      * @return a CompletableFuture of workbookChartFont
-     * @see <a href="https://docs.microsoft.com/graph/api/chartfont-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartFont> patch(@javax.annotation.Nonnull final WorkbookChartFont body) {
@@ -137,11 +134,10 @@ public class FontRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of chartfont object.
+     * Update the navigation property font in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartFont
-     * @see <a href="https://docs.microsoft.com/graph/api/chartfont-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartFont> patch(@javax.annotation.Nonnull final WorkbookChartFont body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -186,7 +182,7 @@ public class FontRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of chartfont object.
+     * Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -194,7 +190,7 @@ public class FontRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of chartfont object.
+     * Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -215,7 +211,7 @@ public class FontRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of chartfont object.
+     * Update the navigation property font in drives
      * @param body The request body
      * @return a RequestInformation
      */
@@ -224,7 +220,7 @@ public class FontRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of chartfont object.
+     * Update the navigation property font in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -252,7 +248,7 @@ public class FontRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of chartfont object.
+     * Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -67,9 +67,8 @@ public class DeletedTeamsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/deletedTeams{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the deletedTeam objects and their properties.
+     * The deleted team.
      * @return a CompletableFuture of DeletedTeamCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/teamwork-list-deletedteams?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeletedTeamCollectionResponse> get() {
@@ -86,10 +85,9 @@ public class DeletedTeamsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the deletedTeam objects and their properties.
+     * The deleted team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DeletedTeamCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/teamwork-list-deletedteams?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeletedTeamCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -146,7 +144,7 @@ public class DeletedTeamsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the deletedTeam objects and their properties.
+     * The deleted team.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -154,7 +152,7 @@ public class DeletedTeamsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the deletedTeam objects and their properties.
+     * The deleted team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +205,7 @@ public class DeletedTeamsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a list of the deletedTeam objects and their properties.
+     * The deleted team.
      */
     public class GetQueryParameters {
         /** Include count of items */

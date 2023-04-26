@@ -61,9 +61,8 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/planner/plans{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of **plannerplan** objects shared with a user object.
+     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      * @return a CompletableFuture of PlannerPlanCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/planneruser-list-plans?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlanCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of **plannerplan** objects shared with a user object.
+     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PlannerPlanCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/planneruser-list-plans?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlanCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +138,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of **plannerplan** objects shared with a user object.
+     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +146,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of **plannerplan** objects shared with a user object.
+     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +199,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of **plannerplan** objects shared with a user object.
+     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      */
     public class GetQueryParameters {
         /** Include count of items */

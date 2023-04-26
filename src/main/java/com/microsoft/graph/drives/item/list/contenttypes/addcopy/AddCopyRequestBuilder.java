@@ -40,10 +40,9 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/list/contentTypes/addCopy", rawUrl);
     }
     /**
-     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
+     * Invoke action addCopy
      * @param body The request body
      * @return a CompletableFuture of contentType
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-addcopy?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> post(@javax.annotation.Nonnull final AddCopyPostRequestBody body) {
@@ -60,11 +59,10 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
+     * Invoke action addCopy
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contentType
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-addcopy?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> post(@javax.annotation.Nonnull final AddCopyPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -82,7 +80,7 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
+     * Invoke action addCopy
      * @param body The request body
      * @return a RequestInformation
      */
@@ -91,7 +89,7 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
+     * Invoke action addCopy
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

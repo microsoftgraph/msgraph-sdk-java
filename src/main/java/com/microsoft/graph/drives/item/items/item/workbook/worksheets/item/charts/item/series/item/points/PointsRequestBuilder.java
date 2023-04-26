@@ -62,9 +62,8 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/series/{workbookChartSeries%2Did}/points{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of chartpoints objects.
+     * Represents a collection of all points in the series. Read-only.
      * @return a CompletableFuture of WorkbookChartPointCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chartseries-list-points?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartPointCollectionResponse> get() {
@@ -81,10 +80,9 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of chartpoints objects.
+     * Represents a collection of all points in the series. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of WorkbookChartPointCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chartseries-list-points?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartPointCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,10 +109,9 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return new ItemAtWithIndexRequestBuilder(pathParameters, requestAdapter, index);
     }
     /**
-     * Use this API to create a new ChartPoints.
+     * Create new navigation property to points for drives
      * @param body The request body
      * @return a CompletableFuture of workbookChartPoint
-     * @see <a href="https://docs.microsoft.com/graph/api/chartseries-post-points?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartPoint> post(@javax.annotation.Nonnull final WorkbookChartPoint body) {
@@ -131,11 +128,10 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use this API to create a new ChartPoints.
+     * Create new navigation property to points for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartPoint
-     * @see <a href="https://docs.microsoft.com/graph/api/chartseries-post-points?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartPoint> post(@javax.annotation.Nonnull final WorkbookChartPoint body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -153,7 +149,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of chartpoints objects.
+     * Represents a collection of all points in the series. Read-only.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -161,7 +157,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of chartpoints objects.
+     * Represents a collection of all points in the series. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new ChartPoints.
+     * Create new navigation property to points for drives
      * @param body The request body
      * @return a RequestInformation
      */
@@ -191,7 +187,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new ChartPoints.
+     * Create new navigation property to points for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -214,7 +210,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of chartpoints objects.
+     * Represents a collection of all points in the series. Read-only.
      */
     public class GetQueryParameters {
         /** Include count of items */

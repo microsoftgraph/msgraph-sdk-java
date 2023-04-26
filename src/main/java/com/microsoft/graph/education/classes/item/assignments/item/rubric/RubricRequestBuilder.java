@@ -84,9 +84,8 @@ public class RubricRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the educationRubric object attached to an educationAssignment, if one exists. Only teachers, students, and applications with application permissions can perform this operation.
+     * When set, the grading rubric attached to this assignment.
      * @return a CompletableFuture of educationRubric
-     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-get-rubric?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationRubric> get() {
@@ -103,10 +102,9 @@ public class RubricRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the educationRubric object attached to an educationAssignment, if one exists. Only teachers, students, and applications with application permissions can perform this operation.
+     * When set, the grading rubric attached to this assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationRubric
-     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-get-rubric?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationRubric> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -190,7 +188,7 @@ public class RubricRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the educationRubric object attached to an educationAssignment, if one exists. Only teachers, students, and applications with application permissions can perform this operation.
+     * When set, the grading rubric attached to this assignment.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -198,7 +196,7 @@ public class RubricRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the educationRubric object attached to an educationAssignment, if one exists. Only teachers, students, and applications with application permissions can perform this operation.
+     * When set, the grading rubric attached to this assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -256,7 +254,7 @@ public class RubricRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the educationRubric object attached to an educationAssignment, if one exists. Only teachers, students, and applications with application permissions can perform this operation.
+     * When set, the grading rubric attached to this assignment.
      */
     public class GetQueryParameters {
         /** Expand related entities */

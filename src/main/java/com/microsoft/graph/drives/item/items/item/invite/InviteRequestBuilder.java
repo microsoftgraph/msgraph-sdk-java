@@ -39,10 +39,9 @@ public class InviteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/invite", rawUrl);
     }
     /**
-     * Sends a sharing invitation for a **driveItem**.A sharing invitation provides permissions to the recipients and optionally sends them an email with a [sharing link][].
+     * Invoke action invite
      * @param body The request body
      * @return a CompletableFuture of inviteResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-invite?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InviteResponse> post(@javax.annotation.Nonnull final InvitePostRequestBody body) {
@@ -59,11 +58,10 @@ public class InviteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Sends a sharing invitation for a **driveItem**.A sharing invitation provides permissions to the recipients and optionally sends them an email with a [sharing link][].
+     * Invoke action invite
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of inviteResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-invite?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InviteResponse> post(@javax.annotation.Nonnull final InvitePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -81,7 +79,7 @@ public class InviteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Sends a sharing invitation for a **driveItem**.A sharing invitation provides permissions to the recipients and optionally sends them an email with a [sharing link][].
+     * Invoke action invite
      * @param body The request body
      * @return a RequestInformation
      */
@@ -90,7 +88,7 @@ public class InviteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Sends a sharing invitation for a **driveItem**.A sharing invitation provides permissions to the recipients and optionally sends them an email with a [sharing link][].
+     * Invoke action invite
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

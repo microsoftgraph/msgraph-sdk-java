@@ -40,10 +40,9 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/messages/{message%2Did}/copy", rawUrl);
     }
     /**
-     * Copy a message to a folder within the user's mailbox.
+     * Invoke action copy
      * @param body The request body
      * @return a CompletableFuture of message
-     * @see <a href="https://docs.microsoft.com/graph/api/message-copy?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Message> post(@javax.annotation.Nonnull final CopyPostRequestBody body) {
@@ -60,11 +59,10 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Copy a message to a folder within the user's mailbox.
+     * Invoke action copy
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of message
-     * @see <a href="https://docs.microsoft.com/graph/api/message-copy?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Message> post(@javax.annotation.Nonnull final CopyPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -82,7 +80,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Copy a message to a folder within the user's mailbox.
+     * Invoke action copy
      * @param body The request body
      * @return a RequestInformation
      */
@@ -91,7 +89,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Copy a message to a folder within the user's mailbox.
+     * Invoke action copy
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

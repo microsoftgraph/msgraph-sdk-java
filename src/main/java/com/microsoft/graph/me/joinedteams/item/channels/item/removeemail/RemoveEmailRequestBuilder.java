@@ -39,9 +39,8 @@ public class RemoveEmailRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/joinedTeams/{team%2Did}/channels/{channel%2Did}/removeEmail", rawUrl);
     }
     /**
-     * Remove the email address of a channel. You can remove an email address only if it was provisioned using the provisionEmail method or through the Microsoft Teams client.
+     * Invoke action removeEmail
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/channel-removeemail?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -58,10 +57,9 @@ public class RemoveEmailRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Remove the email address of a channel. You can remove an email address only if it was provisioned using the provisionEmail method or through the Microsoft Teams client.
+     * Invoke action removeEmail
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/channel-removeemail?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +76,7 @@ public class RemoveEmailRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Remove the email address of a channel. You can remove an email address only if it was provisioned using the provisionEmail method or through the Microsoft Teams client.
+     * Invoke action removeEmail
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +84,7 @@ public class RemoveEmailRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Remove the email address of a channel. You can remove an email address only if it was provisioned using the provisionEmail method or through the Microsoft Teams client.
+     * Invoke action removeEmail
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

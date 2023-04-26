@@ -42,9 +42,8 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/incompatibleAccessPackages/$ref{?%24top,%24skip,%24search,%24filter,%24count,%24orderby}", rawUrl);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
+     * The access packages whose assigned users are ineligible to be assigned this access package.
      * @return a CompletableFuture of StringCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-list-incompatibleaccesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StringCollectionResponse> get() {
@@ -61,10 +60,9 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
+     * The access packages whose assigned users are ineligible to be assigned this access package.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of StringCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-list-incompatibleaccesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StringCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,7 +119,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
+     * The access packages whose assigned users are ineligible to be assigned this access package.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -129,7 +127,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
+     * The access packages whose assigned users are ineligible to be assigned this access package.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +179,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
+     * The access packages whose assigned users are ineligible to be assigned this access package.
      */
     public class GetQueryParameters {
         /** Include count of items */

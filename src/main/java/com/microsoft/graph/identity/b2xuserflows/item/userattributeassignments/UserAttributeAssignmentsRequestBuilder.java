@@ -73,9 +73,8 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
+     * The user attribute assignments included in the user flow.
      * @return a CompletableFuture of IdentityUserFlowAttributeAssignmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-list-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttributeAssignmentCollectionResponse> get() {
@@ -92,10 +91,9 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
+     * The user attribute assignments included in the user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of IdentityUserFlowAttributeAssignmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-list-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttributeAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -112,10 +110,9 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
+     * Create new navigation property to userAttributeAssignments for identity
      * @param body The request body
      * @return a CompletableFuture of identityUserFlowAttributeAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-post-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttributeAssignment> post(@javax.annotation.Nonnull final IdentityUserFlowAttributeAssignment body) {
@@ -132,11 +129,10 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
+     * Create new navigation property to userAttributeAssignments for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityUserFlowAttributeAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-post-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttributeAssignment> post(@javax.annotation.Nonnull final IdentityUserFlowAttributeAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -154,7 +150,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
+     * The user attribute assignments included in the user flow.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -162,7 +158,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
+     * The user attribute assignments included in the user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -183,7 +179,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
+     * Create new navigation property to userAttributeAssignments for identity
      * @param body The request body
      * @return a RequestInformation
      */
@@ -192,7 +188,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
+     * Create new navigation property to userAttributeAssignments for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -215,7 +211,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
+     * The user attribute assignments included in the user flow.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -60,9 +60,8 @@ public class CustodianSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches/{ediscoverySearch%2Did}/custodianSources{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of custodial data sources associated with an eDiscovery search.
+     * Custodian sources that are included in the eDiscovery search.
      * @return a CompletableFuture of DataSourceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-list-custodiansources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSourceCollectionResponse> get() {
@@ -79,10 +78,9 @@ public class CustodianSourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the list of custodial data sources associated with an eDiscovery search.
+     * Custodian sources that are included in the eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DataSourceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-list-custodiansources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSourceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,7 +97,7 @@ public class CustodianSourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the list of custodial data sources associated with an eDiscovery search.
+     * Custodian sources that are included in the eDiscovery search.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -107,7 +105,7 @@ public class CustodianSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of custodial data sources associated with an eDiscovery search.
+     * Custodian sources that are included in the eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +126,7 @@ public class CustodianSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the list of custodial data sources associated with an eDiscovery search.
+     * Custodian sources that are included in the eDiscovery search.
      */
     public class GetQueryParameters {
         /** Include count of items */

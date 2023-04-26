@@ -66,9 +66,8 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/createdObjects{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object.
+     * Directory objects that were created by the user. Read-only. Nullable.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list-createdobjects?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
@@ -85,10 +84,9 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object.
+     * Directory objects that were created by the user. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list-createdobjects?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +103,7 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object.
+     * Directory objects that were created by the user. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -113,7 +111,7 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object.
+     * Directory objects that were created by the user. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -134,7 +132,7 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object.
+     * Directory objects that were created by the user. Read-only. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */

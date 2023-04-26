@@ -61,9 +61,8 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/schedule/timeOffReasons{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get the list of timeOffReasons in a schedule.
+     * The set of reasons for a time off in the schedule.
      * @return a CompletableFuture of TimeOffReasonCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-timeoffreasons?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffReasonCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the list of timeOffReasons in a schedule.
+     * The set of reasons for a time off in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TimeOffReasonCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-timeoffreasons?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffReasonCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new timeOffReason.
+     * Create new navigation property to timeOffReasons for users
      * @param body The request body
      * @return a CompletableFuture of timeOffReason
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-post-timeoffreasons?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffReason> post(@javax.annotation.Nonnull final TimeOffReason body) {
@@ -120,11 +117,10 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new timeOffReason.
+     * Create new navigation property to timeOffReasons for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of timeOffReason
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-post-timeoffreasons?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffReason> post(@javax.annotation.Nonnull final TimeOffReason body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the list of timeOffReasons in a schedule.
+     * The set of reasons for a time off in the schedule.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of timeOffReasons in a schedule.
+     * The set of reasons for a time off in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new timeOffReason.
+     * Create new navigation property to timeOffReasons for users
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new timeOffReason.
+     * Create new navigation property to timeOffReasons for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the list of timeOffReasons in a schedule.
+     * The set of reasons for a time off in the schedule.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -67,9 +67,8 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/primaryChannel/messages/{chatMessage%2Did}/replies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
+     * Replies for a specified message. Supports $expand for channel messages.
      * @return a CompletableFuture of ChatMessageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-list-replies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessageCollectionResponse> get() {
@@ -86,10 +85,9 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
+     * Replies for a specified message. Supports $expand for channel messages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ChatMessageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-list-replies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -106,10 +104,9 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new reply to a chatMessage in a specified channel.
+     * Create new navigation property to replies for teams
      * @param body The request body
      * @return a CompletableFuture of chatMessage
-     * @see <a href="https://docs.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessage> post(@javax.annotation.Nonnull final ChatMessage body) {
@@ -126,11 +123,10 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new reply to a chatMessage in a specified channel.
+     * Create new navigation property to replies for teams
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chatMessage
-     * @see <a href="https://docs.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessage> post(@javax.annotation.Nonnull final ChatMessage body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -148,7 +144,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
+     * Replies for a specified message. Supports $expand for channel messages.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -156,7 +152,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
+     * Replies for a specified message. Supports $expand for channel messages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +173,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new reply to a chatMessage in a specified channel.
+     * Create new navigation property to replies for teams
      * @param body The request body
      * @return a RequestInformation
      */
@@ -186,7 +182,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new reply to a chatMessage in a specified channel.
+     * Create new navigation property to replies for teams
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -209,7 +205,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
+     * Replies for a specified message. Supports $expand for channel messages.
      */
     public class GetQueryParameters {
         /** Include count of items */

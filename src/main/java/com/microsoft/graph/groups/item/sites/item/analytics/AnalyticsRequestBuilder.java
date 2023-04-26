@@ -1,5 +1,8 @@
 package com.microsoft.graph.groups.item.sites.item.analytics;
 
+import com.microsoft.graph.groups.item.sites.item.analytics.alltime.AllTimeRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.analytics.itemactivitystats.ItemActivityStatsRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.analytics.lastsevendays.LastSevenDaysRequestBuilder;
 import com.microsoft.graph.models.ItemAnalytics;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +23,21 @@ import java.util.Objects;
  * Provides operations to manage the analytics property of the microsoft.graph.site entity.
  */
 public class AnalyticsRequestBuilder extends BaseRequestBuilder {
+    /** Provides operations to manage the allTime property of the microsoft.graph.itemAnalytics entity. */
+    @javax.annotation.Nonnull
+    public AllTimeRequestBuilder allTime() {
+        return new AllTimeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the itemActivityStats property of the microsoft.graph.itemAnalytics entity. */
+    @javax.annotation.Nonnull
+    public ItemActivityStatsRequestBuilder itemActivityStats() {
+        return new ItemActivityStatsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the lastSevenDays property of the microsoft.graph.itemAnalytics entity. */
+    @javax.annotation.Nonnull
+    public LastSevenDaysRequestBuilder lastSevenDays() {
+        return new LastSevenDaysRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new AnalyticsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -39,6 +57,43 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public AnalyticsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/analytics{?%24select,%24expand}", rawUrl);
+    }
+    /**
+     * Delete navigation property analytics for groups
+     * @return a CompletableFuture of void
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete() {
+        try {
+            final RequestInformation requestInfo = toDeleteRequestInformation(null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Delete navigation property analytics for groups
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a CompletableFuture of void
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        try {
+            final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
     }
     /**
      * Analytics about the view activities that took place in this site.
@@ -78,6 +133,73 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
+     * Update the navigation property analytics in groups
+     * @param body The request body
+     * @return a CompletableFuture of itemAnalytics
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ItemAnalytics> patch(@javax.annotation.Nonnull final ItemAnalytics body) {
+        try {
+            final RequestInformation requestInfo = toPatchRequestInformation(body, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, ItemAnalytics::createFromDiscriminatorValue, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<ItemAnalytics> executionException = new java.util.concurrent.CompletableFuture<ItemAnalytics>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Update the navigation property analytics in groups
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a CompletableFuture of itemAnalytics
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ItemAnalytics> patch(@javax.annotation.Nonnull final ItemAnalytics body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        try {
+            final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, ItemAnalytics::createFromDiscriminatorValue, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<ItemAnalytics> executionException = new java.util.concurrent.CompletableFuture<ItemAnalytics>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Delete navigation property analytics for groups
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
+        return toDeleteRequestInformation(null);
+    }
+    /**
+     * Delete navigation property analytics for groups
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        if (requestConfiguration != null) {
+            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
      * Analytics about the view activities that took place in this site.
      * @return a RequestInformation
      */
@@ -107,6 +229,43 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Update the navigation property analytics in groups
+     * @param body The request body
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final ItemAnalytics body) throws URISyntaxException {
+        return toPatchRequestInformation(body, null);
+    }
+    /**
+     * Update the navigation property analytics in groups
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final ItemAnalytics body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        if (requestConfiguration != null) {
+            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class DeleteRequestConfiguration extends BaseRequestConfiguration {
+    }
+    /**
      * Analytics about the view activities that took place in this site.
      */
     public class GetQueryParameters {
@@ -126,5 +285,10 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
         /** Request query parameters */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class PatchRequestConfiguration extends BaseRequestConfiguration {
     }
 }

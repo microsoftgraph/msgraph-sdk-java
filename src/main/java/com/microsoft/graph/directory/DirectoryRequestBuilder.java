@@ -1,6 +1,8 @@
 package com.microsoft.graph.directory;
 
 import com.microsoft.graph.directory.administrativeunits.AdministrativeUnitsRequestBuilder;
+import com.microsoft.graph.directory.attributesets.AttributeSetsRequestBuilder;
+import com.microsoft.graph.directory.customsecurityattributedefinitions.CustomSecurityAttributeDefinitionsRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.DeletedItemsRequestBuilder;
 import com.microsoft.graph.directory.federationconfigurations.FederationConfigurationsRequestBuilder;
 import com.microsoft.graph.directory.onpremisessynchronization.OnPremisesSynchronizationRequestBuilder;
@@ -28,6 +30,16 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public AdministrativeUnitsRequestBuilder administrativeUnits() {
         return new AdministrativeUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the attributeSets property of the microsoft.graph.directory entity. */
+    @javax.annotation.Nonnull
+    public AttributeSetsRequestBuilder attributeSets() {
+        return new AttributeSetsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the customSecurityAttributeDefinitions property of the microsoft.graph.directory entity. */
+    @javax.annotation.Nonnull
+    public CustomSecurityAttributeDefinitionsRequestBuilder customSecurityAttributeDefinitions() {
+        return new CustomSecurityAttributeDefinitionsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the deletedItems property of the microsoft.graph.directory entity. */
     @javax.annotation.Nonnull

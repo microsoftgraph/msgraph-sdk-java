@@ -90,9 +90,8 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties and relationships of a crossTenantAccessPolicy object.
+     * The custom rules that define an access scenario when interacting with external Azure AD tenants.
      * @return a CompletableFuture of crossTenantAccessPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicy> get() {
@@ -109,10 +108,9 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties and relationships of a crossTenantAccessPolicy object.
+     * The custom rules that define an access scenario when interacting with external Azure AD tenants.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of crossTenantAccessPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -129,10 +127,9 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a cross-tenant access policy.
+     * Update the navigation property crossTenantAccessPolicy in policies
      * @param body The request body
      * @return a CompletableFuture of crossTenantAccessPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicy> patch(@javax.annotation.Nonnull final CrossTenantAccessPolicy body) {
@@ -149,11 +146,10 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a cross-tenant access policy.
+     * Update the navigation property crossTenantAccessPolicy in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of crossTenantAccessPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicy> patch(@javax.annotation.Nonnull final CrossTenantAccessPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -198,7 +194,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a crossTenantAccessPolicy object.
+     * The custom rules that define an access scenario when interacting with external Azure AD tenants.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -206,7 +202,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a crossTenantAccessPolicy object.
+     * The custom rules that define an access scenario when interacting with external Azure AD tenants.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -227,7 +223,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a cross-tenant access policy.
+     * Update the navigation property crossTenantAccessPolicy in policies
      * @param body The request body
      * @return a RequestInformation
      */
@@ -236,7 +232,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a cross-tenant access policy.
+     * Update the navigation property crossTenantAccessPolicy in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -264,7 +260,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a crossTenantAccessPolicy object.
+     * The custom rules that define an access scenario when interacting with external Azure AD tenants.
      */
     public class GetQueryParameters {
         /** Expand related entities */

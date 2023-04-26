@@ -98,10 +98,9 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new externalGroup object.
+     * Create new navigation property to groups for external
      * @param body The request body
      * @return a CompletableFuture of externalGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalconnection-post-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalGroup> post(@javax.annotation.Nonnull final ExternalGroup body) {
@@ -118,11 +117,10 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new externalGroup object.
+     * Create new navigation property to groups for external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of externalGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalconnection-post-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalGroup> post(@javax.annotation.Nonnull final ExternalGroup body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +167,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new externalGroup object.
+     * Create new navigation property to groups for external
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +176,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new externalGroup object.
+     * Create new navigation property to groups for external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

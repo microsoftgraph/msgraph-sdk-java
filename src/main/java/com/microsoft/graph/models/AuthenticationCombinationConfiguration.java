@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationCombinationConfiguration extends Entity implements Parsable {
-    /** The appliesToCombinations property */
+    /** Which authentication method combinations this configuration applies to. Must be an allowedCombinations object that's defined for the authenticationStrengthPolicy. The only possible value for fido2combinationConfigurations is 'fido2'. */
     private java.util.List<AuthenticationMethodModes> appliesToCombinations;
     /**
      * Instantiates a new AuthenticationCombinationConfiguration and sets the default values.
@@ -35,7 +35,7 @@ public class AuthenticationCombinationConfiguration extends Entity implements Pa
         return new AuthenticationCombinationConfiguration();
     }
     /**
-     * Gets the appliesToCombinations property value. The appliesToCombinations property
+     * Gets the appliesToCombinations property value. Which authentication method combinations this configuration applies to. Must be an allowedCombinations object that's defined for the authenticationStrengthPolicy. The only possible value for fido2combinationConfigurations is 'fido2'.
      * @return a authenticationMethodModes
      */
     @javax.annotation.Nullable
@@ -64,7 +64,7 @@ public class AuthenticationCombinationConfiguration extends Entity implements Pa
         writer.writeCollectionOfEnumValues("appliesToCombinations", this.getAppliesToCombinations());
     }
     /**
-     * Sets the appliesToCombinations property value. The appliesToCombinations property
+     * Sets the appliesToCombinations property value. Which authentication method combinations this configuration applies to. Must be an allowedCombinations object that's defined for the authenticationStrengthPolicy. The only possible value for fido2combinationConfigurations is 'fido2'.
      * @param value Value to set for the appliesToCombinations property.
      * @return a void
      */

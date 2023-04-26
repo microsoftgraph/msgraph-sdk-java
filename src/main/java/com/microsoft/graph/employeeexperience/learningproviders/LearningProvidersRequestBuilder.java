@@ -61,9 +61,8 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the learningProvider resources registered in Viva Learning for a tenant.
+     * A collection of learning providers.
      * @return a CompletableFuture of LearningProviderCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/employeeexperience-list-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningProviderCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the learningProvider resources registered in Viva Learning for a tenant.
+     * A collection of learning providers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of LearningProviderCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/employeeexperience-list-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningProviderCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes.
+     * Create new navigation property to learningProviders for employeeExperience
      * @param body The request body
      * @return a CompletableFuture of learningProvider
-     * @see <a href="https://docs.microsoft.com/graph/api/employeeexperience-post-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningProvider> post(@javax.annotation.Nonnull final LearningProvider body) {
@@ -120,11 +117,10 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes.
+     * Create new navigation property to learningProviders for employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of learningProvider
-     * @see <a href="https://docs.microsoft.com/graph/api/employeeexperience-post-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningProvider> post(@javax.annotation.Nonnull final LearningProvider body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the learningProvider resources registered in Viva Learning for a tenant.
+     * A collection of learning providers.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the learningProvider resources registered in Viva Learning for a tenant.
+     * A collection of learning providers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes.
+     * Create new navigation property to learningProviders for employeeExperience
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes.
+     * Create new navigation property to learningProviders for employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a list of the learningProvider resources registered in Viva Learning for a tenant.
+     * A collection of learning providers.
      */
     public class GetQueryParameters {
         /** Include count of items */

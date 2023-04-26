@@ -15,9 +15,9 @@ public class PolicyRoot extends Entity implements Parsable {
     private java.util.List<AppManagementPolicy> appManagementPolicies;
     /** The policy configuration of the self-service sign-up experience of external users. */
     private AuthenticationFlowsPolicy authenticationFlowsPolicy;
-    /** The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD). */
+    /** The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD). */
     private AuthenticationMethodsPolicy authenticationMethodsPolicy;
-    /** The authenticationStrengthPolicies property */
+    /** The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access. */
     private java.util.List<AuthenticationStrengthPolicy> authenticationStrengthPolicies;
     /** The policy that controls Azure AD authorization settings. */
     private AuthorizationPolicy authorizationPolicy;
@@ -96,7 +96,7 @@ public class PolicyRoot extends Entity implements Parsable {
         return this.authenticationFlowsPolicy;
     }
     /**
-     * Gets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
+     * Gets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
      * @return a authenticationMethodsPolicy
      */
     @javax.annotation.Nullable
@@ -104,7 +104,7 @@ public class PolicyRoot extends Entity implements Parsable {
         return this.authenticationMethodsPolicy;
     }
     /**
-     * Gets the authenticationStrengthPolicies property value. The authenticationStrengthPolicies property
+     * Gets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
      * @return a authenticationStrengthPolicy
      */
     @javax.annotation.Nullable
@@ -309,7 +309,7 @@ public class PolicyRoot extends Entity implements Parsable {
         this.authenticationFlowsPolicy = value;
     }
     /**
-     * Sets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
+     * Sets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
      * @param value Value to set for the authenticationMethodsPolicy property.
      * @return a void
      */
@@ -318,7 +318,7 @@ public class PolicyRoot extends Entity implements Parsable {
         this.authenticationMethodsPolicy = value;
     }
     /**
-     * Sets the authenticationStrengthPolicies property value. The authenticationStrengthPolicies property
+     * Sets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
      * @param value Value to set for the authenticationStrengthPolicies property.
      * @return a void
      */

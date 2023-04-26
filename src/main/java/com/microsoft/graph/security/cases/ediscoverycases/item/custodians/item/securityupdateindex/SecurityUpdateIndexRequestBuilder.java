@@ -39,9 +39,8 @@ public class SecurityUpdateIndexRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/security.updateIndex", rawUrl);
     }
     /**
-     * Trigger an indexOperation to make a custodian and associated sources searchable.
+     * Invoke action updateIndex
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-updateindex?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -58,10 +57,9 @@ public class SecurityUpdateIndexRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Trigger an indexOperation to make a custodian and associated sources searchable.
+     * Invoke action updateIndex
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-updateindex?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +76,7 @@ public class SecurityUpdateIndexRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Trigger an indexOperation to make a custodian and associated sources searchable.
+     * Invoke action updateIndex
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +84,7 @@ public class SecurityUpdateIndexRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Trigger an indexOperation to make a custodian and associated sources searchable.
+     * Invoke action updateIndex
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

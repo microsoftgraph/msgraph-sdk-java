@@ -7,11 +7,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationStrengthRoot extends Entity implements Parsable {
-    /** The authenticationMethodModes property */
+    /** Names and descriptions of all valid authentication method modes in the system. */
     private java.util.List<AuthenticationMethodModeDetail> authenticationMethodModes;
     /** The combinations property */
     private java.util.List<AuthenticationMethodModes> combinations;
-    /** The policies property */
+    /** A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies. */
     private java.util.List<AuthenticationStrengthPolicy> policies;
     /**
      * Instantiates a new AuthenticationStrengthRoot and sets the default values.
@@ -32,7 +32,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
         return new AuthenticationStrengthRoot();
     }
     /**
-     * Gets the authenticationMethodModes property value. The authenticationMethodModes property
+     * Gets the authenticationMethodModes property value. Names and descriptions of all valid authentication method modes in the system.
      * @return a authenticationMethodModeDetail
      */
     @javax.annotation.Nullable
@@ -60,7 +60,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the policies property value. The policies property
+     * Gets the policies property value. A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      * @return a authenticationStrengthPolicy
      */
     @javax.annotation.Nullable
@@ -81,7 +81,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("policies", this.getPolicies());
     }
     /**
-     * Sets the authenticationMethodModes property value. The authenticationMethodModes property
+     * Sets the authenticationMethodModes property value. Names and descriptions of all valid authentication method modes in the system.
      * @param value Value to set for the authenticationMethodModes property.
      * @return a void
      */
@@ -99,7 +99,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
         this.combinations = value;
     }
     /**
-     * Sets the policies property value. The policies property
+     * Sets the policies property value. A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      * @param value Value to set for the policies property.
      * @return a void
      */

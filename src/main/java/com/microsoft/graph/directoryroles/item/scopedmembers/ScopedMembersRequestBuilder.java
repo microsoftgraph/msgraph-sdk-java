@@ -61,9 +61,8 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directoryRoles/{directoryRole%2Did}/scopedMembers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of scopedRoleMembership objects for a directory role.
+     * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
      * @return a CompletableFuture of ScopedRoleMembershipCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/directoryrole-list-scopedmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ScopedRoleMembershipCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of scopedRoleMembership objects for a directory role.
+     * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ScopedRoleMembershipCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/directoryrole-list-scopedmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ScopedRoleMembershipCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +138,7 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of scopedRoleMembership objects for a directory role.
+     * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +146,7 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of scopedRoleMembership objects for a directory role.
+     * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +199,7 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of scopedRoleMembership objects for a directory role.
+     * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */

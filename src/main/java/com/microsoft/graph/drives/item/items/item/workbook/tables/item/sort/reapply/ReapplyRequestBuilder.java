@@ -39,9 +39,8 @@ public class ReapplyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/sort/reapply", rawUrl);
     }
     /**
-     * Reapplies the current sorting parameters to the table.
+     * Invoke action reapply
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/tablesort-reapply?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -58,10 +57,9 @@ public class ReapplyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Reapplies the current sorting parameters to the table.
+     * Invoke action reapply
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/tablesort-reapply?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +76,7 @@ public class ReapplyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Reapplies the current sorting parameters to the table.
+     * Invoke action reapply
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +84,7 @@ public class ReapplyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Reapplies the current sorting parameters to the table.
+     * Invoke action reapply
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

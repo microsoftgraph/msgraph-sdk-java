@@ -90,9 +90,8 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties and relationships of a store object.
+     * The default termStore under this site.
      * @return a CompletableFuture of store
-     * @see <a href="https://docs.microsoft.com/graph/api/termstore-store-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Store> get() {
@@ -109,10 +108,9 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties and relationships of a store object.
+     * The default termStore under this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of store
-     * @see <a href="https://docs.microsoft.com/graph/api/termstore-store-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Store> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -129,10 +127,9 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a store object.
+     * Update the navigation property termStore in groups
      * @param body The request body
      * @return a CompletableFuture of store
-     * @see <a href="https://docs.microsoft.com/graph/api/termstore-store-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Store> patch(@javax.annotation.Nonnull final Store body) {
@@ -149,11 +146,10 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a store object.
+     * Update the navigation property termStore in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of store
-     * @see <a href="https://docs.microsoft.com/graph/api/termstore-store-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Store> patch(@javax.annotation.Nonnull final Store body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -198,7 +194,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a store object.
+     * The default termStore under this site.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -206,7 +202,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a store object.
+     * The default termStore under this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -227,7 +223,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a store object.
+     * Update the navigation property termStore in groups
      * @param body The request body
      * @return a RequestInformation
      */
@@ -236,7 +232,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a store object.
+     * Update the navigation property termStore in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -264,7 +260,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a store object.
+     * The default termStore under this site.
      */
     public class GetQueryParameters {
         /** Expand related entities */

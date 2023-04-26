@@ -92,7 +92,6 @@ public class OwnersRequestBuilder extends BaseRequestBuilder {
     /**
      * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/application-list-owners?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
@@ -112,7 +111,6 @@ public class OwnersRequestBuilder extends BaseRequestBuilder {
      * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/application-list-owners?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

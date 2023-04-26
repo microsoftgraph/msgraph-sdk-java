@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Fido2CombinationConfiguration extends AuthenticationCombinationConfiguration implements Parsable {
-    /** The allowedAAGUIDs property */
+    /** A list of AAGUIDs allowed to be used as part of the specified authentication method combinations. */
     private java.util.List<String> allowedAAGUIDs;
     /**
      * Instantiates a new Fido2CombinationConfiguration and sets the default values.
@@ -29,7 +29,7 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
         return new Fido2CombinationConfiguration();
     }
     /**
-     * Gets the allowedAAGUIDs property value. The allowedAAGUIDs property
+     * Gets the allowedAAGUIDs property value. A list of AAGUIDs allowed to be used as part of the specified authentication method combinations.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
         writer.writeCollectionOfPrimitiveValues("allowedAAGUIDs", this.getAllowedAAGUIDs());
     }
     /**
-     * Sets the allowedAAGUIDs property value. The allowedAAGUIDs property
+     * Sets the allowedAAGUIDs property value. A list of AAGUIDs allowed to be used as part of the specified authentication method combinations.
      * @param value Value to set for the allowedAAGUIDs property.
      * @return a void
      */

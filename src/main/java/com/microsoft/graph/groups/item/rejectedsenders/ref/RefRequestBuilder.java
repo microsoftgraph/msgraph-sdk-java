@@ -42,9 +42,8 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/rejectedSenders/$ref{?%24top,%24skip,%24filter,%24count,%24orderby}", rawUrl);
     }
     /**
-     * Users in the rejected senders list cannot post to conversations of the group (identified in the GET request URL). Make sure you do not specify the same user or group in the rejected senders and accepted senders lists, otherwise you will get an error.
+     * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
      * @return a CompletableFuture of StringCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/group-list-rejectedsenders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StringCollectionResponse> get() {
@@ -61,10 +60,9 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Users in the rejected senders list cannot post to conversations of the group (identified in the GET request URL). Make sure you do not specify the same user or group in the rejected senders and accepted senders lists, otherwise you will get an error.
+     * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of StringCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/group-list-rejectedsenders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StringCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,7 +119,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Users in the rejected senders list cannot post to conversations of the group (identified in the GET request URL). Make sure you do not specify the same user or group in the rejected senders and accepted senders lists, otherwise you will get an error.
+     * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -129,7 +127,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Users in the rejected senders list cannot post to conversations of the group (identified in the GET request URL). Make sure you do not specify the same user or group in the rejected senders and accepted senders lists, otherwise you will get an error.
+     * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +179,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Users in the rejected senders list cannot post to conversations of the group (identified in the GET request URL). Make sure you do not specify the same user or group in the rejected senders and accepted senders lists, otherwise you will get an error.
+     * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
      */
     public class GetQueryParameters {
         /** Include count of items */

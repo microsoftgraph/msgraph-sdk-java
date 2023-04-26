@@ -98,10 +98,9 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create an identity resource for a new member in an externalGroup.
+     * Create new navigation property to members for external
      * @param body The request body
      * @return a CompletableFuture of identity
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalgroup-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Identity> post(@javax.annotation.Nonnull final Identity body) {
@@ -118,11 +117,10 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create an identity resource for a new member in an externalGroup.
+     * Create new navigation property to members for external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identity
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalgroup-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Identity> post(@javax.annotation.Nonnull final Identity body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +167,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an identity resource for a new member in an externalGroup.
+     * Create new navigation property to members for external
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +176,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an identity resource for a new member in an externalGroup.
+     * Create new navigation property to members for external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

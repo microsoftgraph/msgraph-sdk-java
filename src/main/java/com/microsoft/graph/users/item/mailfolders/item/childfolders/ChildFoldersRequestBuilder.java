@@ -67,9 +67,8 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/childFolders{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the folder collection under the specified folder. You can use the `.../me/mailFolders` shortcut to get the top-level folder collection and navigate to another folder. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
+     * The collection of child folders in the mailFolder.
      * @return a CompletableFuture of MailFolderCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolderCollectionResponse> get() {
@@ -86,10 +85,9 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the folder collection under the specified folder. You can use the `.../me/mailFolders` shortcut to get the top-level folder collection and navigate to another folder. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
+     * The collection of child folders in the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of MailFolderCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolderCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -106,10 +104,9 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new mailSearchFolder in the specified user's mailbox.
+     * Create new navigation property to childFolders for users
      * @param body The request body
      * @return a CompletableFuture of mailFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/mailsearchfolder-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> post(@javax.annotation.Nonnull final MailFolder body) {
@@ -126,11 +123,10 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new mailSearchFolder in the specified user's mailbox.
+     * Create new navigation property to childFolders for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mailFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/mailsearchfolder-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> post(@javax.annotation.Nonnull final MailFolder body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -148,7 +144,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the folder collection under the specified folder. You can use the `.../me/mailFolders` shortcut to get the top-level folder collection and navigate to another folder. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
+     * The collection of child folders in the mailFolder.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -156,7 +152,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the folder collection under the specified folder. You can use the `.../me/mailFolders` shortcut to get the top-level folder collection and navigate to another folder. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
+     * The collection of child folders in the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +173,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new mailSearchFolder in the specified user's mailbox.
+     * Create new navigation property to childFolders for users
      * @param body The request body
      * @return a RequestInformation
      */
@@ -186,7 +182,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new mailSearchFolder in the specified user's mailbox.
+     * Create new navigation property to childFolders for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -209,7 +205,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the folder collection under the specified folder. You can use the `.../me/mailFolders` shortcut to get the top-level folder collection and navigate to another folder. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
+     * The collection of child folders in the mailFolder.
      */
     public class GetQueryParameters {
         /** Include count of items */

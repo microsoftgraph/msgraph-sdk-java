@@ -78,9 +78,8 @@ public class BotRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the bot associated with a specific definition of the  TeamsApp.
+     * The details of the bot specified in the Teams app manifest.
      * @return a CompletableFuture of teamworkBot
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworkbot-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkBot> get() {
@@ -97,10 +96,9 @@ public class BotRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the bot associated with a specific definition of the  TeamsApp.
+     * The details of the bot specified in the Teams app manifest.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamworkBot
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworkbot-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkBot> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -184,7 +182,7 @@ public class BotRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the bot associated with a specific definition of the  TeamsApp.
+     * The details of the bot specified in the Teams app manifest.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -192,7 +190,7 @@ public class BotRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the bot associated with a specific definition of the  TeamsApp.
+     * The details of the bot specified in the Teams app manifest.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -250,7 +248,7 @@ public class BotRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the bot associated with a specific definition of the  TeamsApp.
+     * The details of the bot specified in the Teams app manifest.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -39,9 +39,8 @@ public class SecurityApplyHoldRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/security.applyHold", rawUrl);
     }
     /**
-     * Start the process of applying hold on eDiscovery custodians. After the operation is created, you can get the status by retrieving the `Location` parameter from the response headers. The location provides a URL that will return an eDiscoveryHoldOperation object.
+     * Invoke action applyHold
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-applyhold?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -58,10 +57,9 @@ public class SecurityApplyHoldRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Start the process of applying hold on eDiscovery custodians. After the operation is created, you can get the status by retrieving the `Location` parameter from the response headers. The location provides a URL that will return an eDiscoveryHoldOperation object.
+     * Invoke action applyHold
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-applyhold?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +76,7 @@ public class SecurityApplyHoldRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Start the process of applying hold on eDiscovery custodians. After the operation is created, you can get the status by retrieving the `Location` parameter from the response headers. The location provides a URL that will return an eDiscoveryHoldOperation object.
+     * Invoke action applyHold
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +84,7 @@ public class SecurityApplyHoldRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Start the process of applying hold on eDiscovery custodians. After the operation is created, you can get the status by retrieving the `Location` parameter from the response headers. The location provides a URL that will return an eDiscoveryHoldOperation object.
+     * Invoke action applyHold
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

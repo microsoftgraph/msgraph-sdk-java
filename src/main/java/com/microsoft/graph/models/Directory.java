@@ -9,6 +9,10 @@ import java.util.Objects;
 public class Directory extends Entity implements Parsable {
     /** Conceptual container for user and group directory objects. */
     private java.util.List<AdministrativeUnit> administrativeUnits;
+    /** The attributeSets property */
+    private java.util.List<AttributeSet> attributeSets;
+    /** The customSecurityAttributeDefinitions property */
+    private java.util.List<CustomSecurityAttributeDefinition> customSecurityAttributeDefinitions;
     /** Recently deleted items. Read-only. Nullable. */
     private java.util.List<DirectoryObject> deletedItems;
     /** Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol. */
@@ -42,6 +46,22 @@ public class Directory extends Entity implements Parsable {
         return this.administrativeUnits;
     }
     /**
+     * Gets the attributeSets property value. The attributeSets property
+     * @return a attributeSet
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AttributeSet> getAttributeSets() {
+        return this.attributeSets;
+    }
+    /**
+     * Gets the customSecurityAttributeDefinitions property value. The customSecurityAttributeDefinitions property
+     * @return a customSecurityAttributeDefinition
+     */
+    @javax.annotation.Nullable
+    public java.util.List<CustomSecurityAttributeDefinition> getCustomSecurityAttributeDefinitions() {
+        return this.customSecurityAttributeDefinitions;
+    }
+    /**
      * Gets the deletedItems property value. Recently deleted items. Read-only. Nullable.
      * @return a directoryObject
      */
@@ -65,6 +85,8 @@ public class Directory extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("administrativeUnits", (n) -> { this.setAdministrativeUnits(n.getCollectionOfObjectValues(AdministrativeUnit::createFromDiscriminatorValue)); });
+        deserializerMap.put("attributeSets", (n) -> { this.setAttributeSets(n.getCollectionOfObjectValues(AttributeSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("customSecurityAttributeDefinitions", (n) -> { this.setCustomSecurityAttributeDefinitions(n.getCollectionOfObjectValues(CustomSecurityAttributeDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("deletedItems", (n) -> { this.setDeletedItems(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("federationConfigurations", (n) -> { this.setFederationConfigurations(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesSynchronization", (n) -> { this.setOnPremisesSynchronization(n.getCollectionOfObjectValues(OnPremisesDirectorySynchronization::createFromDiscriminatorValue)); });
@@ -88,6 +110,8 @@ public class Directory extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("administrativeUnits", this.getAdministrativeUnits());
+        writer.writeCollectionOfObjectValues("attributeSets", this.getAttributeSets());
+        writer.writeCollectionOfObjectValues("customSecurityAttributeDefinitions", this.getCustomSecurityAttributeDefinitions());
         writer.writeCollectionOfObjectValues("deletedItems", this.getDeletedItems());
         writer.writeCollectionOfObjectValues("federationConfigurations", this.getFederationConfigurations());
         writer.writeCollectionOfObjectValues("onPremisesSynchronization", this.getOnPremisesSynchronization());
@@ -100,6 +124,24 @@ public class Directory extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setAdministrativeUnits(@javax.annotation.Nullable final java.util.List<AdministrativeUnit> value) {
         this.administrativeUnits = value;
+    }
+    /**
+     * Sets the attributeSets property value. The attributeSets property
+     * @param value Value to set for the attributeSets property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAttributeSets(@javax.annotation.Nullable final java.util.List<AttributeSet> value) {
+        this.attributeSets = value;
+    }
+    /**
+     * Sets the customSecurityAttributeDefinitions property value. The customSecurityAttributeDefinitions property
+     * @param value Value to set for the customSecurityAttributeDefinitions property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCustomSecurityAttributeDefinitions(@javax.annotation.Nullable final java.util.List<CustomSecurityAttributeDefinition> value) {
+        this.customSecurityAttributeDefinitions = value;
     }
     /**
      * Sets the deletedItems property value. Recently deleted items. Read-only. Nullable.

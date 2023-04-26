@@ -9,7 +9,7 @@ import java.util.Objects;
 public class AuthenticationMethodModeDetail extends Entity implements Parsable {
     /** The authenticationMethod property */
     private BaseAuthenticationMethod authenticationMethod;
-    /** The displayName property */
+    /** The display name of this mode */
     private String displayName;
     /**
      * Instantiates a new AuthenticationMethodModeDetail and sets the default values.
@@ -38,7 +38,7 @@ public class AuthenticationMethodModeDetail extends Entity implements Parsable {
         return this.authenticationMethod;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of this mode
      * @return a string
      */
     @javax.annotation.Nullable
@@ -78,7 +78,7 @@ public class AuthenticationMethodModeDetail extends Entity implements Parsable {
         this.authenticationMethod = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of this mode
      * @param value Value to set for the displayName property.
      * @return a void
      */

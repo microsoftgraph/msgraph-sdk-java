@@ -40,10 +40,9 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/addPassword", rawUrl);
     }
     /**
-     * Adds a strong password or secret to an application.
+     * Invoke action addPassword
      * @param body The request body
      * @return a CompletableFuture of PasswordCredential
-     * @see <a href="https://docs.microsoft.com/graph/api/application-addpassword?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PasswordCredential> post(@javax.annotation.Nonnull final AddPasswordPostRequestBody body) {
@@ -60,11 +59,10 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Adds a strong password or secret to an application.
+     * Invoke action addPassword
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PasswordCredential
-     * @see <a href="https://docs.microsoft.com/graph/api/application-addpassword?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PasswordCredential> post(@javax.annotation.Nonnull final AddPasswordPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -82,7 +80,7 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Adds a strong password or secret to an application.
+     * Invoke action addPassword
      * @param body The request body
      * @return a RequestInformation
      */
@@ -91,7 +89,7 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Adds a strong password or secret to an application.
+     * Invoke action addPassword
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

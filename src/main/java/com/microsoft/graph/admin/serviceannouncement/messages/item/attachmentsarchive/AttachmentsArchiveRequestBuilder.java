@@ -42,7 +42,6 @@ public class AttachmentsArchiveRequestBuilder extends BaseRequestBuilder {
     /**
      * The zip file that contains all attachments for a message.
      * @return a CompletableFuture of InputStream
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceannouncement-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> get() {
@@ -62,7 +61,6 @@ public class AttachmentsArchiveRequestBuilder extends BaseRequestBuilder {
      * The zip file that contains all attachments for a message.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceannouncement-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

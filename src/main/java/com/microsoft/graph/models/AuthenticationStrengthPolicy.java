@@ -8,17 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationStrengthPolicy extends Entity implements Parsable {
-    /** The allowedCombinations property */
+    /** A collection of authentication method modes that are required be used to satify this authentication strength. */
     private java.util.List<AuthenticationMethodModes> allowedCombinations;
-    /** The combinationConfigurations property */
+    /** Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods. */
     private java.util.List<AuthenticationCombinationConfiguration> combinationConfigurations;
-    /** The createdDateTime property */
+    /** The datetime when this policy was created. */
     private OffsetDateTime createdDateTime;
-    /** The description property */
+    /** The human-readable description of this policy. */
     private String description;
-    /** The displayName property */
+    /** The human-readable display name of this policy. Supports $filter (eq, ne, not , and in). */
     private String displayName;
-    /** The modifiedDateTime property */
+    /** The datetime when this policy was last modified. */
     private OffsetDateTime modifiedDateTime;
     /** The policyType property */
     private AuthenticationStrengthPolicyType policyType;
@@ -43,7 +43,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
         return new AuthenticationStrengthPolicy();
     }
     /**
-     * Gets the allowedCombinations property value. The allowedCombinations property
+     * Gets the allowedCombinations property value. A collection of authentication method modes that are required be used to satify this authentication strength.
      * @return a authenticationMethodModes
      */
     @javax.annotation.Nullable
@@ -51,7 +51,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
         return this.allowedCombinations;
     }
     /**
-     * Gets the combinationConfigurations property value. The combinationConfigurations property
+     * Gets the combinationConfigurations property value. Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      * @return a authenticationCombinationConfiguration
      */
     @javax.annotation.Nullable
@@ -59,7 +59,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
         return this.combinationConfigurations;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The datetime when this policy was created.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -67,7 +67,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The human-readable description of this policy.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -75,7 +75,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
         return this.description;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The human-readable display name of this policy. Supports $filter (eq, ne, not , and in).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the modifiedDateTime property value. The modifiedDateTime property
+     * Gets the modifiedDateTime property value. The datetime when this policy was last modified.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -142,7 +142,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
         writer.writeEnumValue("requirementsSatisfied", this.getRequirementsSatisfied());
     }
     /**
-     * Sets the allowedCombinations property value. The allowedCombinations property
+     * Sets the allowedCombinations property value. A collection of authentication method modes that are required be used to satify this authentication strength.
      * @param value Value to set for the allowedCombinations property.
      * @return a void
      */
@@ -151,7 +151,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
         this.allowedCombinations = value;
     }
     /**
-     * Sets the combinationConfigurations property value. The combinationConfigurations property
+     * Sets the combinationConfigurations property value. Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      * @param value Value to set for the combinationConfigurations property.
      * @return a void
      */
@@ -160,7 +160,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
         this.combinationConfigurations = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The datetime when this policy was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -169,7 +169,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
         this.createdDateTime = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The human-readable description of this policy.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -178,7 +178,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
         this.description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The human-readable display name of this policy. Supports $filter (eq, ne, not , and in).
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -187,7 +187,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the modifiedDateTime property value. The modifiedDateTime property
+     * Sets the modifiedDateTime property value. The datetime when this policy was last modified.
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */

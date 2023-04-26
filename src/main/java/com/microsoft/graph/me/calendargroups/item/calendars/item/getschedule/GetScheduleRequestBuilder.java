@@ -39,10 +39,9 @@ public class GetScheduleRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}/getSchedule", rawUrl);
     }
     /**
-     * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period.
+     * Invoke action getSchedule
      * @param body The request body
      * @return a CompletableFuture of getScheduleResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/calendar-getschedule?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetScheduleResponse> post(@javax.annotation.Nonnull final GetSchedulePostRequestBody body) {
@@ -59,11 +58,10 @@ public class GetScheduleRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period.
+     * Invoke action getSchedule
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of getScheduleResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/calendar-getschedule?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetScheduleResponse> post(@javax.annotation.Nonnull final GetSchedulePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -81,7 +79,7 @@ public class GetScheduleRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period.
+     * Invoke action getSchedule
      * @param body The request body
      * @return a RequestInformation
      */
@@ -90,7 +88,7 @@ public class GetScheduleRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period.
+     * Invoke action getSchedule
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

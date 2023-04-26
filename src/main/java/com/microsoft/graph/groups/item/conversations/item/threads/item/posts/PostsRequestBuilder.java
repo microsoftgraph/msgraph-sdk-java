@@ -60,9 +60,8 @@ public class PostsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/conversations/{conversation%2Did}/threads/{conversationThread%2Did}/posts{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the posts of the specified thread. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation.
+     * Get posts from groups
      * @return a CompletableFuture of PostCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/conversationthread-list-posts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PostCollectionResponse> get() {
@@ -79,10 +78,9 @@ public class PostsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the posts of the specified thread. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation.
+     * Get posts from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PostCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/conversationthread-list-posts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PostCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,7 +97,7 @@ public class PostsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the posts of the specified thread. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation.
+     * Get posts from groups
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -107,7 +105,7 @@ public class PostsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the posts of the specified thread. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation.
+     * Get posts from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +126,7 @@ public class PostsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the posts of the specified thread. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation.
+     * Get posts from groups
      */
     public class GetQueryParameters {
         /** Include count of items */

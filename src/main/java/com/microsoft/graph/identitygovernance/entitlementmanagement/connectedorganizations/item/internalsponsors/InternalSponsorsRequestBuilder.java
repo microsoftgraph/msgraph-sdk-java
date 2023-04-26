@@ -91,9 +91,8 @@ public class InternalSponsorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/connectedOrganizations/{connectedOrganization%2Did}/internalSponsors{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of a connectedOrganization's internal sponsors.  The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
+     * Get internalSponsors from identityGovernance
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/connectedorganization-list-internalsponsors?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
@@ -110,10 +109,9 @@ public class InternalSponsorsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of a connectedOrganization's internal sponsors.  The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
+     * Get internalSponsors from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/connectedorganization-list-internalsponsors?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -170,7 +168,7 @@ public class InternalSponsorsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of a connectedOrganization's internal sponsors.  The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
+     * Get internalSponsors from identityGovernance
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -178,7 +176,7 @@ public class InternalSponsorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of a connectedOrganization's internal sponsors.  The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
+     * Get internalSponsors from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -231,7 +229,7 @@ public class InternalSponsorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of a connectedOrganization's internal sponsors.  The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
+     * Get internalSponsors from identityGovernance
      */
     public class GetQueryParameters {
         /** Include count of items */

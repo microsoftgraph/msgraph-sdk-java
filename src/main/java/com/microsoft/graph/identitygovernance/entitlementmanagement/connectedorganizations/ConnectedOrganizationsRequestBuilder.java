@@ -61,9 +61,8 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/connectedOrganizations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of connectedOrganization objects.
+     * References to a directory or domain of another organization whose users can request access.
      * @return a CompletableFuture of ConnectedOrganizationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-connectedorganizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectedOrganizationCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of connectedOrganization objects.
+     * References to a directory or domain of another organization whose users can request access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ConnectedOrganizationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-connectedorganizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectedOrganizationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +138,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of connectedOrganization objects.
+     * References to a directory or domain of another organization whose users can request access.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +146,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of connectedOrganization objects.
+     * References to a directory or domain of another organization whose users can request access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +199,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of connectedOrganization objects.
+     * References to a directory or domain of another organization whose users can request access.
      */
     public class GetQueryParameters {
         /** Include count of items */

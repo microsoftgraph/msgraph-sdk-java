@@ -132,9 +132,8 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the default channel, **General**, of a team.
+     * The general channel for the team.
      * @return a CompletableFuture of channel
-     * @see <a href="https://docs.microsoft.com/graph/api/team-get-primarychannel?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Channel> get() {
@@ -151,10 +150,9 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the default channel, **General**, of a team.
+     * The general channel for the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of channel
-     * @see <a href="https://docs.microsoft.com/graph/api/team-get-primarychannel?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Channel> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -238,7 +236,7 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the default channel, **General**, of a team.
+     * The general channel for the team.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -246,7 +244,7 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the default channel, **General**, of a team.
+     * The general channel for the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -304,7 +302,7 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the default channel, **General**, of a team.
+     * The general channel for the team.
      */
     public class GetQueryParameters {
         /** Expand related entities */

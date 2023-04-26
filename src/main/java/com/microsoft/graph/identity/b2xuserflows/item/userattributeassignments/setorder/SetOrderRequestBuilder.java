@@ -39,10 +39,9 @@ public class SetOrderRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments/setOrder", rawUrl);
     }
     /**
-     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow.
+     * Invoke action setOrder
      * @param body The request body
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattributeassignment-setorder?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final SetOrderPostRequestBody body) {
@@ -59,11 +58,10 @@ public class SetOrderRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow.
+     * Invoke action setOrder
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattributeassignment-setorder?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final SetOrderPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -81,7 +79,7 @@ public class SetOrderRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow.
+     * Invoke action setOrder
      * @param body The request body
      * @return a RequestInformation
      */
@@ -90,7 +88,7 @@ public class SetOrderRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow.
+     * Invoke action setOrder
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

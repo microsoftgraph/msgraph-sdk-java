@@ -61,9 +61,8 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/permissionGrantPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the list of permissionGrantPolicy objects.
+     * The policy that specifies the conditions under which consent can be granted.
      * @return a CompletableFuture of PermissionGrantPolicyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantPolicyCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the list of permissionGrantPolicy objects.
+     * The policy that specifies the conditions under which consent can be granted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PermissionGrantPolicyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Creates a permissionGrantPolicy. A permission grant policy is used to describe the conditions under which permissions can be granted (for example, during application consent). After creating the permission grant policy, you can add include condition sets to add matching rules, and add exclude condition sets to add exclusion rules.
+     * Create new navigation property to permissionGrantPolicies for policies
      * @param body The request body
      * @return a CompletableFuture of permissionGrantPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-post-permissiongrantpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> post(@javax.annotation.Nonnull final PermissionGrantPolicy body) {
@@ -120,11 +117,10 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Creates a permissionGrantPolicy. A permission grant policy is used to describe the conditions under which permissions can be granted (for example, during application consent). After creating the permission grant policy, you can add include condition sets to add matching rules, and add exclude condition sets to add exclusion rules.
+     * Create new navigation property to permissionGrantPolicies for policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permissionGrantPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-post-permissiongrantpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> post(@javax.annotation.Nonnull final PermissionGrantPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the list of permissionGrantPolicy objects.
+     * The policy that specifies the conditions under which consent can be granted.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of permissionGrantPolicy objects.
+     * The policy that specifies the conditions under which consent can be granted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Creates a permissionGrantPolicy. A permission grant policy is used to describe the conditions under which permissions can be granted (for example, during application consent). After creating the permission grant policy, you can add include condition sets to add matching rules, and add exclude condition sets to add exclusion rules.
+     * Create new navigation property to permissionGrantPolicies for policies
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Creates a permissionGrantPolicy. A permission grant policy is used to describe the conditions under which permissions can be granted (for example, during application consent). After creating the permission grant policy, you can add include condition sets to add matching rules, and add exclude condition sets to add exclusion rules.
+     * Create new navigation property to permissionGrantPolicies for policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the list of permissionGrantPolicy objects.
+     * The policy that specifies the conditions under which consent can be granted.
      */
     public class GetQueryParameters {
         /** Include count of items */

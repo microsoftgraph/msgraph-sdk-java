@@ -67,9 +67,8 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/conversations/{conversation%2Did}/threads/{conversationThread%2Did}/posts/{post%2Did}/inReplyTo/attachments{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of attachment objects attached to a post.
+     * Read-only. Nullable. Supports $expand.
      * @return a CompletableFuture of AttachmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/post-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentCollectionResponse> get() {
@@ -86,10 +85,9 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of attachment objects attached to a post.
+     * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AttachmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/post-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -146,7 +144,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of attachment objects attached to a post.
+     * Read-only. Nullable. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -154,7 +152,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of attachment objects attached to a post.
+     * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +205,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of attachment objects attached to a post.
+     * Read-only. Nullable. Supports $expand.
      */
     public class GetQueryParameters {
         /** Include count of items */

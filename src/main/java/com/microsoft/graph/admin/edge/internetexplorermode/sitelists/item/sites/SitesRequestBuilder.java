@@ -61,9 +61,8 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/edge/internetExplorerMode/siteLists/{browserSiteList%2Did}/sites{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the browserSite objects and their properties.
+     * A collection of sites defined for the site list.
      * @return a CompletableFuture of BrowserSiteCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-list-sites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the browserSite objects and their properties.
+     * A collection of sites defined for the site list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of BrowserSiteCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-list-sites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new browserSite object in a browserSiteList.
+     * Create new navigation property to sites for admin
      * @param body The request body
      * @return a CompletableFuture of browserSite
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-post-sites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSite> post(@javax.annotation.Nonnull final BrowserSite body) {
@@ -120,11 +117,10 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new browserSite object in a browserSiteList.
+     * Create new navigation property to sites for admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSite
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-post-sites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSite> post(@javax.annotation.Nonnull final BrowserSite body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the browserSite objects and their properties.
+     * A collection of sites defined for the site list.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the browserSite objects and their properties.
+     * A collection of sites defined for the site list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new browserSite object in a browserSiteList.
+     * Create new navigation property to sites for admin
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new browserSite object in a browserSiteList.
+     * Create new navigation property to sites for admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a list of the browserSite objects and their properties.
+     * A collection of sites defined for the site list.
      */
     public class GetQueryParameters {
         /** Include count of items */

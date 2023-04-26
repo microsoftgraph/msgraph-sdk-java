@@ -61,9 +61,8 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/customers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of bookingCustomer objects of a business.
+     * All the customers of this business. Read-only. Nullable.
      * @return a CompletableFuture of BookingCustomerBaseCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list-customers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCustomerBaseCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of bookingCustomer objects of a business.
+     * All the customers of this business. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of BookingCustomerBaseCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list-customers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCustomerBaseCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new bookingCustomer object.
+     * Create new navigation property to customers for solutions
      * @param body The request body
      * @return a CompletableFuture of bookingCustomerBase
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-post-customers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCustomerBase> post(@javax.annotation.Nonnull final BookingCustomerBase body) {
@@ -120,11 +117,10 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new bookingCustomer object.
+     * Create new navigation property to customers for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingCustomerBase
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-post-customers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCustomerBase> post(@javax.annotation.Nonnull final BookingCustomerBase body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of bookingCustomer objects of a business.
+     * All the customers of this business. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of bookingCustomer objects of a business.
+     * All the customers of this business. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new bookingCustomer object.
+     * Create new navigation property to customers for solutions
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new bookingCustomer object.
+     * Create new navigation property to customers for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a list of bookingCustomer objects of a business.
+     * All the customers of this business. Read-only. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */

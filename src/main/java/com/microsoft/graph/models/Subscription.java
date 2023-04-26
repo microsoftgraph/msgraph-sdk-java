@@ -30,7 +30,7 @@ public class Subscription extends Entity implements Parsable {
     private String lifecycleNotificationUrl;
     /** Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.  Supported only for Universal Print Service. For more information, see Subscribe to change notifications from cloud printing APIs using Microsoft Graph. */
     private String notificationQueryOptions;
-    /** Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol. */
+    /** Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol. Any query string parameter included in the notificationUrl property will be included in the HTTP POST request when Microsoft Graph sends the change notifications. */
     private String notificationUrl;
     /** Optional. The app ID that the subscription service can use to generate the validation token. This allows the client to validate the authenticity of the notification received. */
     private String notificationUrlAppId;
@@ -166,7 +166,7 @@ public class Subscription extends Entity implements Parsable {
         return this.notificationQueryOptions;
     }
     /**
-     * Gets the notificationUrl property value. Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
+     * Gets the notificationUrl property value. Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol. Any query string parameter included in the notificationUrl property will be included in the HTTP POST request when Microsoft Graph sends the change notifications.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -313,7 +313,7 @@ public class Subscription extends Entity implements Parsable {
         this.notificationQueryOptions = value;
     }
     /**
-     * Sets the notificationUrl property value. Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
+     * Sets the notificationUrl property value. Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol. Any query string parameter included in the notificationUrl property will be included in the HTTP POST request when Microsoft Graph sends the change notifications.
      * @param value Value to set for the notificationUrl property.
      * @return a void
      */

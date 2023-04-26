@@ -61,9 +61,8 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/groupLifecyclePolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
+     * The collection of lifecycle policies for this group. Read-only. Nullable.
      * @return a CompletableFuture of GroupLifecyclePolicyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/group-list-grouplifecyclepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupLifecyclePolicyCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
+     * The collection of lifecycle policies for this group. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of GroupLifecyclePolicyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/group-list-grouplifecyclepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupLifecyclePolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +138,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
+     * The collection of lifecycle policies for this group. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +146,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
+     * The collection of lifecycle policies for this group. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +199,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
+     * The collection of lifecycle policies for this group. Read-only. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -96,7 +96,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Get authenticationStrengthPolicies from policies
+     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
      * @return a CompletableFuture of authenticationStrengthPolicy
      */
     @javax.annotation.Nonnull
@@ -114,7 +114,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Get authenticationStrengthPolicies from policies
+     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationStrengthPolicy
      */
@@ -200,7 +200,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Get authenticationStrengthPolicies from policies
+     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -208,7 +208,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Get authenticationStrengthPolicies from policies
+     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -266,7 +266,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get authenticationStrengthPolicies from policies
+     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
      */
     public class GetQueryParameters {
         /** Expand related entities */

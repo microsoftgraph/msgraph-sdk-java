@@ -84,9 +84,8 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties and relationships of an ediscoveryCaseSettings object.
+     * Returns a list of eDIscoverySettings objects in the case.
      * @return a CompletableFuture of ediscoveryCaseSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycasesettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCaseSettings> get() {
@@ -103,10 +102,9 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties and relationships of an ediscoveryCaseSettings object.
+     * Returns a list of eDIscoverySettings objects in the case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryCaseSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycasesettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCaseSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -123,10 +121,9 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of an ediscoveryCaseSettings object.
+     * Update the navigation property settings in security
      * @param body The request body
      * @return a CompletableFuture of ediscoveryCaseSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycasesettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCaseSettings> patch(@javax.annotation.Nonnull final EdiscoveryCaseSettings body) {
@@ -143,11 +140,10 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of an ediscoveryCaseSettings object.
+     * Update the navigation property settings in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryCaseSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycasesettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCaseSettings> patch(@javax.annotation.Nonnull final EdiscoveryCaseSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -192,7 +188,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an ediscoveryCaseSettings object.
+     * Returns a list of eDIscoverySettings objects in the case.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -200,7 +196,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an ediscoveryCaseSettings object.
+     * Returns a list of eDIscoverySettings objects in the case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -221,7 +217,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an ediscoveryCaseSettings object.
+     * Update the navigation property settings in security
      * @param body The request body
      * @return a RequestInformation
      */
@@ -230,7 +226,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an ediscoveryCaseSettings object.
+     * Update the navigation property settings in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -258,7 +254,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an ediscoveryCaseSettings object.
+     * Returns a list of eDIscoverySettings objects in the case.
      */
     public class GetQueryParameters {
         /** Expand related entities */

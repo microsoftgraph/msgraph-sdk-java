@@ -67,9 +67,8 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
+     * Get onlineMeetings from users
      * @return a CompletableFuture of OnlineMeetingCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeetingCollectionResponse> get() {
@@ -86,10 +85,9 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
+     * Get onlineMeetings from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of OnlineMeetingCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeetingCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -106,10 +104,9 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create an online meeting on behalf of a user.
+     * Create new navigation property to onlineMeetings for users
      * @param body The request body
      * @return a CompletableFuture of onlineMeeting
-     * @see <a href="https://docs.microsoft.com/graph/api/application-post-onlinemeetings?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> post(@javax.annotation.Nonnull final OnlineMeeting body) {
@@ -126,11 +123,10 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create an online meeting on behalf of a user.
+     * Create new navigation property to onlineMeetings for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onlineMeeting
-     * @see <a href="https://docs.microsoft.com/graph/api/application-post-onlinemeetings?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> post(@javax.annotation.Nonnull final OnlineMeeting body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -148,7 +144,7 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
+     * Get onlineMeetings from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -156,7 +152,7 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
+     * Get onlineMeetings from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +173,7 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an online meeting on behalf of a user.
+     * Create new navigation property to onlineMeetings for users
      * @param body The request body
      * @return a RequestInformation
      */
@@ -186,7 +182,7 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an online meeting on behalf of a user.
+     * Create new navigation property to onlineMeetings for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -209,7 +205,7 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
+     * Get onlineMeetings from users
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -84,9 +84,8 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Read the properties and relationships of an authenticationMethodsPolicy object.
+     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
      * @return a CompletableFuture of authenticationMethodsPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodsPolicy> get() {
@@ -103,10 +102,9 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Read the properties and relationships of an authenticationMethodsPolicy object.
+     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationMethodsPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodsPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -123,10 +121,9 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Update the properties of an authenticationMethodsPolicy object.
+     * Update the navigation property authenticationMethodsPolicy in policies
      * @param body The request body
      * @return a CompletableFuture of authenticationMethodsPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodsPolicy> patch(@javax.annotation.Nonnull final AuthenticationMethodsPolicy body) {
@@ -143,11 +140,10 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Update the properties of an authenticationMethodsPolicy object.
+     * Update the navigation property authenticationMethodsPolicy in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationMethodsPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodsPolicy> patch(@javax.annotation.Nonnull final AuthenticationMethodsPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -192,7 +188,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an authenticationMethodsPolicy object.
+     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -200,7 +196,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an authenticationMethodsPolicy object.
+     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -221,7 +217,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update the properties of an authenticationMethodsPolicy object.
+     * Update the navigation property authenticationMethodsPolicy in policies
      * @param body The request body
      * @return a RequestInformation
      */
@@ -230,7 +226,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an authenticationMethodsPolicy object.
+     * Update the navigation property authenticationMethodsPolicy in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -258,7 +254,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an authenticationMethodsPolicy object.
+     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -39,9 +39,8 @@ public class UnsetVerifiedPublisherRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/unsetVerifiedPublisher", rawUrl);
     }
     /**
-     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification.
+     * Invoke action unsetVerifiedPublisher
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/application-unsetverifiedpublisher?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -58,10 +57,9 @@ public class UnsetVerifiedPublisherRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification.
+     * Invoke action unsetVerifiedPublisher
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/application-unsetverifiedpublisher?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +76,7 @@ public class UnsetVerifiedPublisherRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification.
+     * Invoke action unsetVerifiedPublisher
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +84,7 @@ public class UnsetVerifiedPublisherRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification.
+     * Invoke action unsetVerifiedPublisher
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

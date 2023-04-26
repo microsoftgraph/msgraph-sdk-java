@@ -67,9 +67,8 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/mailFolders/{mailFolder%2Did}/messages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
+     * The collection of messages in the mailFolder.
      * @return a CompletableFuture of MessageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageCollectionResponse> get() {
@@ -86,10 +85,9 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
+     * The collection of messages in the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of MessageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -106,10 +104,9 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use this API to create a new Message in a mailfolder.
+     * Create new navigation property to messages for me
      * @param body The request body
      * @return a CompletableFuture of message
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-post-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Message> post(@javax.annotation.Nonnull final Message body) {
@@ -126,11 +123,10 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use this API to create a new Message in a mailfolder.
+     * Create new navigation property to messages for me
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of message
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-post-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Message> post(@javax.annotation.Nonnull final Message body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -148,7 +144,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
+     * The collection of messages in the mailFolder.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -156,7 +152,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
+     * The collection of messages in the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +173,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new Message in a mailfolder.
+     * Create new navigation property to messages for me
      * @param body The request body
      * @return a RequestInformation
      */
@@ -186,7 +182,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new Message in a mailfolder.
+     * Create new navigation property to messages for me
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -209,7 +205,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
+     * The collection of messages in the mailFolder.
      */
     public class GetQueryParameters {
         /** Include count of items */

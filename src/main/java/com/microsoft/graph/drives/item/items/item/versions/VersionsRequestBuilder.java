@@ -61,9 +61,8 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/versions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * OneDrive and SharePoint can be configured to retain the history for files.Depending on the service and configuration, a new version can be created for each edit, each time the file is saved, manually, or never. Previous versions of a document may be retained for a finite period of time depending on admin settings which may be unique per user or location.
+     * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
      * @return a CompletableFuture of DriveItemVersionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-list-versions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItemVersionCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * OneDrive and SharePoint can be configured to retain the history for files.Depending on the service and configuration, a new version can be created for each edit, each time the file is saved, manually, or never. Previous versions of a document may be retained for a finite period of time depending on admin settings which may be unique per user or location.
+     * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DriveItemVersionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-list-versions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItemVersionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +138,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * OneDrive and SharePoint can be configured to retain the history for files.Depending on the service and configuration, a new version can be created for each edit, each time the file is saved, manually, or never. Previous versions of a document may be retained for a finite period of time depending on admin settings which may be unique per user or location.
+     * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +146,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * OneDrive and SharePoint can be configured to retain the history for files.Depending on the service and configuration, a new version can be created for each edit, each time the file is saved, manually, or never. Previous versions of a document may be retained for a finite period of time depending on admin settings which may be unique per user or location.
+     * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +199,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * OneDrive and SharePoint can be configured to retain the history for files.Depending on the service and configuration, a new version can be created for each edit, each time the file is saved, manually, or never. Previous versions of a document may be retained for a finite period of time depending on admin settings which may be unique per user or location.
+     * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -78,9 +78,8 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of **plannerProgressTaskBoardTaskFormat** object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
      * @return a CompletableFuture of plannerProgressTaskBoardTaskFormat
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerProgressTaskBoardTaskFormat> get() {
@@ -97,10 +96,9 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of **plannerProgressTaskBoardTaskFormat** object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerProgressTaskBoardTaskFormat
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerProgressTaskBoardTaskFormat> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +118,6 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property progressTaskBoardFormat in planner
      * @param body The request body
      * @return a CompletableFuture of plannerProgressTaskBoardTaskFormat
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerProgressTaskBoardTaskFormat> patch(@javax.annotation.Nonnull final PlannerProgressTaskBoardTaskFormat body) {
@@ -141,7 +138,6 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerProgressTaskBoardTaskFormat
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerProgressTaskBoardTaskFormat> patch(@javax.annotation.Nonnull final PlannerProgressTaskBoardTaskFormat body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -186,7 +182,7 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of **plannerProgressTaskBoardTaskFormat** object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -194,7 +190,7 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of **plannerProgressTaskBoardTaskFormat** object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -252,7 +248,7 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of **plannerProgressTaskBoardTaskFormat** object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
      */
     public class GetQueryParameters {
         /** Expand related entities */

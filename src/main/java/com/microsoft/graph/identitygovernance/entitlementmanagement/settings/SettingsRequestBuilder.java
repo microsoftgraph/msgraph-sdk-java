@@ -78,9 +78,8 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties of an entitlementManagementSettings object.
+     * The settings that control the behavior of Azure AD entitlement management.
      * @return a CompletableFuture of entitlementManagementSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EntitlementManagementSettings> get() {
@@ -97,10 +96,9 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties of an entitlementManagementSettings object.
+     * The settings that control the behavior of Azure AD entitlement management.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of entitlementManagementSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EntitlementManagementSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -117,10 +115,9 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update an existing entitlementManagementSettings object to change one or more of its properties.
+     * Update the navigation property settings in identityGovernance
      * @param body The request body
      * @return a CompletableFuture of entitlementManagementSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EntitlementManagementSettings> patch(@javax.annotation.Nonnull final EntitlementManagementSettings body) {
@@ -137,11 +134,10 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update an existing entitlementManagementSettings object to change one or more of its properties.
+     * Update the navigation property settings in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of entitlementManagementSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EntitlementManagementSettings> patch(@javax.annotation.Nonnull final EntitlementManagementSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -186,7 +182,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties of an entitlementManagementSettings object.
+     * The settings that control the behavior of Azure AD entitlement management.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -194,7 +190,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of an entitlementManagementSettings object.
+     * The settings that control the behavior of Azure AD entitlement management.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -215,7 +211,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update an existing entitlementManagementSettings object to change one or more of its properties.
+     * Update the navigation property settings in identityGovernance
      * @param body The request body
      * @return a RequestInformation
      */
@@ -224,7 +220,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an existing entitlementManagementSettings object to change one or more of its properties.
+     * Update the navigation property settings in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -252,7 +248,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of an entitlementManagementSettings object.
+     * The settings that control the behavior of Azure AD entitlement management.
      */
     public class GetQueryParameters {
         /** Expand related entities */

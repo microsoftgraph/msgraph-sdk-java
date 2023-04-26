@@ -61,9 +61,8 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/joinedTeams/{team%2Did}/tags{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the tag objects and their properties.
+     * The tags associated with the team.
      * @return a CompletableFuture of TeamworkTagCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktag-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagCollectionResponse> get() {
@@ -80,10 +79,9 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the tag objects and their properties.
+     * The tags associated with the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TeamworkTagCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktag-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,10 +98,9 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a standard tag for members in a team.
+     * Create new navigation property to tags for me
      * @param body The request body
      * @return a CompletableFuture of teamworkTag
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktag-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTag> post(@javax.annotation.Nonnull final TeamworkTag body) {
@@ -120,11 +117,10 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a standard tag for members in a team.
+     * Create new navigation property to tags for me
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamworkTag
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktag-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTag> post(@javax.annotation.Nonnull final TeamworkTag body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -142,7 +138,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the tag objects and their properties.
+     * The tags associated with the team.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +146,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the tag objects and their properties.
+     * The tags associated with the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +167,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a standard tag for members in a team.
+     * Create new navigation property to tags for me
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +176,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a standard tag for members in a team.
+     * Create new navigation property to tags for me
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +199,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a list of the tag objects and their properties.
+     * The tags associated with the team.
      */
     public class GetQueryParameters {
         /** Include count of items */

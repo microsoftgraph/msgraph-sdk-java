@@ -42,9 +42,8 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/users/{educationUser%2Did}/assignments/{educationAssignment%2Did}/categories/$ref{?%24top,%24skip,%24search,%24filter,%24count,%24orderby}", rawUrl);
     }
     /**
-     * List all the categories associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
+     * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
      * @return a CompletableFuture of StringCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StringCollectionResponse> get() {
@@ -61,10 +60,9 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List all the categories associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
+     * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of StringCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StringCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,7 +119,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List all the categories associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
+     * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -129,7 +127,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List all the categories associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
+     * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +179,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List all the categories associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
+     * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
      */
     public class GetQueryParameters {
         /** Include count of items */

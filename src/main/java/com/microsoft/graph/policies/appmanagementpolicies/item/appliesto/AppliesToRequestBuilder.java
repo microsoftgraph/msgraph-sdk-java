@@ -60,9 +60,8 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/appManagementPolicies/{appManagementPolicy%2Did}/appliesTo{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List application and service principal objects that are assigned an appManagementPolicy policy object.
+     * Collection of applications and service principals to which the policy is applied.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/appManagementPolicy-list-appliesTo?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
@@ -79,10 +78,9 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List application and service principal objects that are assigned an appManagementPolicy policy object.
+     * Collection of applications and service principals to which the policy is applied.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/appManagementPolicy-list-appliesTo?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,7 +97,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List application and service principal objects that are assigned an appManagementPolicy policy object.
+     * Collection of applications and service principals to which the policy is applied.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -107,7 +105,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List application and service principal objects that are assigned an appManagementPolicy policy object.
+     * Collection of applications and service principals to which the policy is applied.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +126,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List application and service principal objects that are assigned an appManagementPolicy policy object.
+     * Collection of applications and service principals to which the policy is applied.
      */
     public class GetQueryParameters {
         /** Include count of items */
