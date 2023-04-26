@@ -2,7 +2,6 @@ package com.microsoft.serviceClient;
 
 import com.azure.core.credential.TokenCredential;
 import com.microsoft.graph.Requests.BaseGraphRequestAdapter;
-import com.microsoft.graph.Requests.IBaseClient;
 import com.microsoft.graph.Requests.GraphClientOption;
 import com.microsoft.info.Constants;
 import com.microsoft.kiota.RequestAdapter;
