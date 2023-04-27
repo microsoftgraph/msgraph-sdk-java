@@ -32,7 +32,7 @@ public class AuthenticationStrengthPolicy extends Entity implements IJsonBackedO
 
     /**
      * The Allowed Combinations.
-     * 
+     * A collection of authentication method modes that are required be used to satify this authentication strength.
      */
     @SerializedName(value = "allowedCombinations", alternate = {"AllowedCombinations"})
     @Expose
@@ -41,7 +41,7 @@ public class AuthenticationStrengthPolicy extends Entity implements IJsonBackedO
 
     /**
      * The Created Date Time.
-     * 
+     * The datetime when this policy was created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -50,7 +50,7 @@ public class AuthenticationStrengthPolicy extends Entity implements IJsonBackedO
 
     /**
      * The Description.
-     * 
+     * The human-readable description of this policy.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -59,7 +59,7 @@ public class AuthenticationStrengthPolicy extends Entity implements IJsonBackedO
 
     /**
      * The Display Name.
-     * 
+     * The human-readable display name of this policy. Supports $filter (eq, ne, not , and in).
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -68,7 +68,7 @@ public class AuthenticationStrengthPolicy extends Entity implements IJsonBackedO
 
     /**
      * The Modified Date Time.
-     * 
+     * The datetime when this policy was last modified.
      */
     @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
@@ -77,7 +77,7 @@ public class AuthenticationStrengthPolicy extends Entity implements IJsonBackedO
 
     /**
      * The Policy Type.
-     * 
+     * A descriptor of whether this policy is built into Azure AD or created by an admin for the tenant. The possible values are: builtIn, custom, unknownFutureValue. Supports $filter (eq, ne, not , and in).
      */
     @SerializedName(value = "policyType", alternate = {"PolicyType"})
     @Expose
@@ -86,7 +86,7 @@ public class AuthenticationStrengthPolicy extends Entity implements IJsonBackedO
 
     /**
      * The Requirements Satisfied.
-     * 
+     * A descriptor of whether this authentication strength grants the MFA claim upon successful satisfaction. The possible values are: none, mfa, unknownFutureValue.
      */
     @SerializedName(value = "requirementsSatisfied", alternate = {"RequirementsSatisfied"})
     @Expose
@@ -95,7 +95,7 @@ public class AuthenticationStrengthPolicy extends Entity implements IJsonBackedO
 
     /**
      * The Combination Configurations.
-     * 
+     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      */
     @SerializedName(value = "combinationConfigurations", alternate = {"CombinationConfigurations"})
     @Expose

@@ -28,7 +28,7 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
 
     /**
      * The Allowed AAGUIDs.
-     * 
+     * A list of AAGUIDs allowed to be used as part of the specified authentication method combinations.
      */
     @SerializedName(value = "allowedAAGUIDs", alternate = {"AllowedAAGUIDs"})
     @Expose

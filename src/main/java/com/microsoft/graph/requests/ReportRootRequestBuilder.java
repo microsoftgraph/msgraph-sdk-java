@@ -74,6 +74,10 @@ import com.microsoft.graph.models.ReportRootGetSkypeForBusinessPeerToPeerActivit
 import com.microsoft.graph.models.ReportRootGetTeamsDeviceUsageDistributionUserCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetTeamsDeviceUsageUserCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetTeamsDeviceUsageUserDetailParameterSet;
+import com.microsoft.graph.models.ReportRootGetTeamsTeamActivityCountsParameterSet;
+import com.microsoft.graph.models.ReportRootGetTeamsTeamActivityDetailParameterSet;
+import com.microsoft.graph.models.ReportRootGetTeamsTeamActivityDistributionCountsParameterSet;
+import com.microsoft.graph.models.ReportRootGetTeamsTeamCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetTeamsUserActivityCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetTeamsUserActivityUserCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetTeamsUserActivityUserDetailParameterSet;
@@ -863,6 +867,46 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     @Nonnull
     public ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder getTeamsDeviceUsageUserDetail(@Nonnull final ReportRootGetTeamsDeviceUsageUserDetailParameterSet parameters) {
         return new ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsDeviceUsageUserDetail"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ReportRootGetTeamsTeamActivityCountsRequestBuilder getTeamsTeamActivityCounts(@Nonnull final ReportRootGetTeamsTeamActivityCountsParameterSet parameters) {
+        return new ReportRootGetTeamsTeamActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsTeamActivityCounts"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ReportRootGetTeamsTeamActivityDetailRequestBuilder getTeamsTeamActivityDetail(@Nonnull final ReportRootGetTeamsTeamActivityDetailParameterSet parameters) {
+        return new ReportRootGetTeamsTeamActivityDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsTeamActivityDetail"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ReportRootGetTeamsTeamActivityDistributionCountsRequestBuilder getTeamsTeamActivityDistributionCounts(@Nonnull final ReportRootGetTeamsTeamActivityDistributionCountsParameterSet parameters) {
+        return new ReportRootGetTeamsTeamActivityDistributionCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsTeamActivityDistributionCounts"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ReportRootGetTeamsTeamCountsRequestBuilder getTeamsTeamCounts(@Nonnull final ReportRootGetTeamsTeamCountsParameterSet parameters) {
+        return new ReportRootGetTeamsTeamCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsTeamCounts"), getClient(), null, parameters);
     }
 
     /**
