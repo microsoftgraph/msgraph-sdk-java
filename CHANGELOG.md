@@ -11,6 +11,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.55.0] - 2023-04-27
+
+### Added
+
+- AllowedValue model and related requests.
+- AttributeSet model and related requests. 
+- CustomSecurityAttributeDefinition model and related requests. 
+- ReportRootGetTeamsTeam derived models and related requests. 
+
 ## [5.54.0] - 2023-04-20
 
 ### Added
