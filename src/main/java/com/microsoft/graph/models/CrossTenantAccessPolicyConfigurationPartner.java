@@ -10,6 +10,8 @@ import java.util.Objects;
 public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
+    /** The automaticUserConsentSettings property */
+    private InboundOutboundPolicyConfiguration automaticUserConsentSettings;
     /** Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration. */
     private CrossTenantAccessPolicyB2BSetting b2bCollaborationInbound;
     /** Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration. */
@@ -53,6 +55,14 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         return this.additionalData;
     }
     /**
+     * Gets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
+     * @return a inboundOutboundPolicyConfiguration
+     */
+    @javax.annotation.Nullable
+    public InboundOutboundPolicyConfiguration getAutomaticUserConsentSettings() {
+        return this.automaticUserConsentSettings;
+    }
+    /**
      * Gets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
      * @return a crossTenantAccessPolicyB2BSetting
      */
@@ -90,7 +100,8 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        deserializerMap.put("automaticUserConsentSettings", (n) -> { this.setAutomaticUserConsentSettings(n.getObjectValue(InboundOutboundPolicyConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationInbound", (n) -> { this.setB2bCollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationOutbound", (n) -> { this.setB2bCollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bDirectConnectInbound", (n) -> { this.setB2bDirectConnectInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
@@ -141,6 +152,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("automaticUserConsentSettings", this.getAutomaticUserConsentSettings());
         writer.writeObjectValue("b2bCollaborationInbound", this.getB2bCollaborationInbound());
         writer.writeObjectValue("b2bCollaborationOutbound", this.getB2bCollaborationOutbound());
         writer.writeObjectValue("b2bDirectConnectInbound", this.getB2bDirectConnectInbound());
@@ -159,6 +171,15 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
+    }
+    /**
+     * Sets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
+     * @param value Value to set for the automaticUserConsentSettings property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAutomaticUserConsentSettings(@javax.annotation.Nullable final InboundOutboundPolicyConfiguration value) {
+        this.automaticUserConsentSettings = value;
     }
     /**
      * Sets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.

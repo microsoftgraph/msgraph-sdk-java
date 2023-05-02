@@ -10,19 +10,19 @@ import java.util.Objects;
 public class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
-    /** If false, the requestor is not permitted to include a schedule in their request. */
+    /** False indicates that the requestor is not permitted to include a schedule in their request. */
     private Boolean allowCustomAssignmentSchedule;
-    /** If true, allows on-behalf-of requestors to create a request to add access for another principal. */
+    /** True allows on-behalf-of requestors to create a request to add access for another principal. */
     private Boolean enableOnBehalfRequestorsToAddAccess;
-    /** If true, allows on-behalf-of requestors to create a request to remove access for another principal. */
+    /** True allows on-behalf-of requestors to create a request to remove access for another principal. */
     private Boolean enableOnBehalfRequestorsToRemoveAccess;
-    /** If true, allows on-behalf-of requestors to create a request to update access for another principal. */
+    /** True allows on-behalf-of requestors to create a request to update access for another principal. */
     private Boolean enableOnBehalfRequestorsToUpdateAccess;
-    /** If true, allows requestors to create a request to add access for themselves. */
+    /** True allows requestors to create a request to add access for themselves. */
     private Boolean enableTargetsToSelfAddAccess;
-    /** If true, allows requestors to create a request to remove their access. */
+    /** True allows requestors to create a request to remove their access. */
     private Boolean enableTargetsToSelfRemoveAccess;
-    /** If true, allows requestors to create a request to update their access. */
+    /** True allows requestors to create a request to update their access. */
     private Boolean enableTargetsToSelfUpdateAccess;
     /** The OdataType property */
     private String odataType;
@@ -55,7 +55,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         return this.additionalData;
     }
     /**
-     * Gets the allowCustomAssignmentSchedule property value. If false, the requestor is not permitted to include a schedule in their request.
+     * Gets the allowCustomAssignmentSchedule property value. False indicates that the requestor is not permitted to include a schedule in their request.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -63,7 +63,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         return this.allowCustomAssignmentSchedule;
     }
     /**
-     * Gets the enableOnBehalfRequestorsToAddAccess property value. If true, allows on-behalf-of requestors to create a request to add access for another principal.
+     * Gets the enableOnBehalfRequestorsToAddAccess property value. True allows on-behalf-of requestors to create a request to add access for another principal.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         return this.enableOnBehalfRequestorsToAddAccess;
     }
     /**
-     * Gets the enableOnBehalfRequestorsToRemoveAccess property value. If true, allows on-behalf-of requestors to create a request to remove access for another principal.
+     * Gets the enableOnBehalfRequestorsToRemoveAccess property value. True allows on-behalf-of requestors to create a request to remove access for another principal.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         return this.enableOnBehalfRequestorsToRemoveAccess;
     }
     /**
-     * Gets the enableOnBehalfRequestorsToUpdateAccess property value. If true, allows on-behalf-of requestors to create a request to update access for another principal.
+     * Gets the enableOnBehalfRequestorsToUpdateAccess property value. True allows on-behalf-of requestors to create a request to update access for another principal.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         return this.enableOnBehalfRequestorsToUpdateAccess;
     }
     /**
-     * Gets the enableTargetsToSelfAddAccess property value. If true, allows requestors to create a request to add access for themselves.
+     * Gets the enableTargetsToSelfAddAccess property value. True allows requestors to create a request to add access for themselves.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         return this.enableTargetsToSelfAddAccess;
     }
     /**
-     * Gets the enableTargetsToSelfRemoveAccess property value. If true, allows requestors to create a request to remove their access.
+     * Gets the enableTargetsToSelfRemoveAccess property value. True allows requestors to create a request to remove their access.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -103,7 +103,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         return this.enableTargetsToSelfRemoveAccess;
     }
     /**
-     * Gets the enableTargetsToSelfUpdateAccess property value. If true, allows requestors to create a request to update their access.
+     * Gets the enableTargetsToSelfUpdateAccess property value. True allows requestors to create a request to update their access.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -173,7 +173,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         this.additionalData = value;
     }
     /**
-     * Sets the allowCustomAssignmentSchedule property value. If false, the requestor is not permitted to include a schedule in their request.
+     * Sets the allowCustomAssignmentSchedule property value. False indicates that the requestor is not permitted to include a schedule in their request.
      * @param value Value to set for the allowCustomAssignmentSchedule property.
      * @return a void
      */
@@ -182,7 +182,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         this.allowCustomAssignmentSchedule = value;
     }
     /**
-     * Sets the enableOnBehalfRequestorsToAddAccess property value. If true, allows on-behalf-of requestors to create a request to add access for another principal.
+     * Sets the enableOnBehalfRequestorsToAddAccess property value. True allows on-behalf-of requestors to create a request to add access for another principal.
      * @param value Value to set for the enableOnBehalfRequestorsToAddAccess property.
      * @return a void
      */
@@ -191,7 +191,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         this.enableOnBehalfRequestorsToAddAccess = value;
     }
     /**
-     * Sets the enableOnBehalfRequestorsToRemoveAccess property value. If true, allows on-behalf-of requestors to create a request to remove access for another principal.
+     * Sets the enableOnBehalfRequestorsToRemoveAccess property value. True allows on-behalf-of requestors to create a request to remove access for another principal.
      * @param value Value to set for the enableOnBehalfRequestorsToRemoveAccess property.
      * @return a void
      */
@@ -200,7 +200,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         this.enableOnBehalfRequestorsToRemoveAccess = value;
     }
     /**
-     * Sets the enableOnBehalfRequestorsToUpdateAccess property value. If true, allows on-behalf-of requestors to create a request to update access for another principal.
+     * Sets the enableOnBehalfRequestorsToUpdateAccess property value. True allows on-behalf-of requestors to create a request to update access for another principal.
      * @param value Value to set for the enableOnBehalfRequestorsToUpdateAccess property.
      * @return a void
      */
@@ -209,7 +209,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         this.enableOnBehalfRequestorsToUpdateAccess = value;
     }
     /**
-     * Sets the enableTargetsToSelfAddAccess property value. If true, allows requestors to create a request to add access for themselves.
+     * Sets the enableTargetsToSelfAddAccess property value. True allows requestors to create a request to add access for themselves.
      * @param value Value to set for the enableTargetsToSelfAddAccess property.
      * @return a void
      */
@@ -218,7 +218,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         this.enableTargetsToSelfAddAccess = value;
     }
     /**
-     * Sets the enableTargetsToSelfRemoveAccess property value. If true, allows requestors to create a request to remove their access.
+     * Sets the enableTargetsToSelfRemoveAccess property value. True allows requestors to create a request to remove their access.
      * @param value Value to set for the enableTargetsToSelfRemoveAccess property.
      * @return a void
      */
@@ -227,7 +227,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         this.enableTargetsToSelfRemoveAccess = value;
     }
     /**
-     * Sets the enableTargetsToSelfUpdateAccess property value. If true, allows requestors to create a request to update their access.
+     * Sets the enableTargetsToSelfUpdateAccess property value. True allows requestors to create a request to update their access.
      * @param value Value to set for the enableTargetsToSelfUpdateAccess property.
      * @return a void
      */

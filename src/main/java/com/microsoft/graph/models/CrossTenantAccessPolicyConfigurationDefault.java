@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Parsable {
+    /** The automaticUserConsentSettings property */
+    private InboundOutboundPolicyConfiguration automaticUserConsentSettings;
     /** Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B collaboration. */
     private CrossTenantAccessPolicyB2BSetting b2bCollaborationInbound;
     /** Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration. */
@@ -36,6 +38,14 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
     public static CrossTenantAccessPolicyConfigurationDefault createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CrossTenantAccessPolicyConfigurationDefault();
+    }
+    /**
+     * Gets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
+     * @return a inboundOutboundPolicyConfiguration
+     */
+    @javax.annotation.Nullable
+    public InboundOutboundPolicyConfiguration getAutomaticUserConsentSettings() {
+        return this.automaticUserConsentSettings;
     }
     /**
      * Gets the b2bCollaborationInbound property value. Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
@@ -76,6 +86,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("automaticUserConsentSettings", (n) -> { this.setAutomaticUserConsentSettings(n.getObjectValue(InboundOutboundPolicyConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationInbound", (n) -> { this.setB2bCollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationOutbound", (n) -> { this.setB2bCollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bDirectConnectInbound", (n) -> { this.setB2bDirectConnectInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
@@ -109,12 +120,22 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("automaticUserConsentSettings", this.getAutomaticUserConsentSettings());
         writer.writeObjectValue("b2bCollaborationInbound", this.getB2bCollaborationInbound());
         writer.writeObjectValue("b2bCollaborationOutbound", this.getB2bCollaborationOutbound());
         writer.writeObjectValue("b2bDirectConnectInbound", this.getB2bDirectConnectInbound());
         writer.writeObjectValue("b2bDirectConnectOutbound", this.getB2bDirectConnectOutbound());
         writer.writeObjectValue("inboundTrust", this.getInboundTrust());
         writer.writeBooleanValue("isServiceDefault", this.getIsServiceDefault());
+    }
+    /**
+     * Sets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
+     * @param value Value to set for the automaticUserConsentSettings property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAutomaticUserConsentSettings(@javax.annotation.Nullable final InboundOutboundPolicyConfiguration value) {
+        this.automaticUserConsentSettings = value;
     }
     /**
      * Sets the b2bCollaborationInbound property value. Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
