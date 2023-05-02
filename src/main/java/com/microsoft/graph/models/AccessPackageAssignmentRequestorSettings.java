@@ -41,7 +41,7 @@ public class AccessPackageAssignmentRequestorSettings implements IJsonBackedObje
 
     /**
      * The Allow Custom Assignment Schedule.
-     * If false, the requestor is not permitted to include a schedule in their request.
+     * False indicates that the requestor is not permitted to include a schedule in their request.
      */
     @SerializedName(value = "allowCustomAssignmentSchedule", alternate = {"AllowCustomAssignmentSchedule"})
     @Expose
@@ -50,7 +50,7 @@ public class AccessPackageAssignmentRequestorSettings implements IJsonBackedObje
 
     /**
      * The Enable On Behalf Requestors To Add Access.
-     * If true, allows on-behalf-of requestors to create a request to add access for another principal.
+     * True allows on-behalf-of requestors to create a request to add access for another principal.
      */
     @SerializedName(value = "enableOnBehalfRequestorsToAddAccess", alternate = {"EnableOnBehalfRequestorsToAddAccess"})
     @Expose
@@ -59,7 +59,7 @@ public class AccessPackageAssignmentRequestorSettings implements IJsonBackedObje
 
     /**
      * The Enable On Behalf Requestors To Remove Access.
-     * If true, allows on-behalf-of requestors to create a request to remove access for another principal.
+     * True allows on-behalf-of requestors to create a request to remove access for another principal.
      */
     @SerializedName(value = "enableOnBehalfRequestorsToRemoveAccess", alternate = {"EnableOnBehalfRequestorsToRemoveAccess"})
     @Expose
@@ -68,7 +68,7 @@ public class AccessPackageAssignmentRequestorSettings implements IJsonBackedObje
 
     /**
      * The Enable On Behalf Requestors To Update Access.
-     * If true, allows on-behalf-of requestors to create a request to update access for another principal.
+     * True allows on-behalf-of requestors to create a request to update access for another principal.
      */
     @SerializedName(value = "enableOnBehalfRequestorsToUpdateAccess", alternate = {"EnableOnBehalfRequestorsToUpdateAccess"})
     @Expose
@@ -77,7 +77,7 @@ public class AccessPackageAssignmentRequestorSettings implements IJsonBackedObje
 
     /**
      * The Enable Targets To Self Add Access.
-     * If true, allows requestors to create a request to add access for themselves.
+     * True allows requestors to create a request to add access for themselves.
      */
     @SerializedName(value = "enableTargetsToSelfAddAccess", alternate = {"EnableTargetsToSelfAddAccess"})
     @Expose
@@ -86,7 +86,7 @@ public class AccessPackageAssignmentRequestorSettings implements IJsonBackedObje
 
     /**
      * The Enable Targets To Self Remove Access.
-     * If true, allows requestors to create a request to remove their access.
+     * True allows requestors to create a request to remove their access.
      */
     @SerializedName(value = "enableTargetsToSelfRemoveAccess", alternate = {"EnableTargetsToSelfRemoveAccess"})
     @Expose
@@ -95,7 +95,7 @@ public class AccessPackageAssignmentRequestorSettings implements IJsonBackedObje
 
     /**
      * The Enable Targets To Self Update Access.
-     * If true, allows requestors to create a request to update their access.
+     * True allows requestors to create a request to update their access.
      */
     @SerializedName(value = "enableTargetsToSelfUpdateAccess", alternate = {"EnableTargetsToSelfUpdateAccess"})
     @Expose
