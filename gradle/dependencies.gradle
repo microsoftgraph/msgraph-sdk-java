@@ -2,12 +2,12 @@ dependencies {
     implementation 'com.google.guava:guava:31.1-jre'
 
     // Use JUnit test framework
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
     testImplementation 'org.mockito:mockito-inline:5.2.0'
     
-    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
-    
+    implementation 'com.squareup.okhttp3:okhttp:4.11.0'
+
     // Core Http library 
     api 'com.microsoft.graph:microsoft-graph-core:3.0.3-SNAPSHOT'
     implementation 'com.microsoft.kiota:microsoft-kiota-authentication-azure:0.4.2'
