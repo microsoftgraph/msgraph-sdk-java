@@ -11,6 +11,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.56.0] - 2023-05-03
+
+### Added 
+
+- InboundOutboundPolicyConfiguration model. 
+
+### Removed
+
+- CertificateBasedAuthConfiguration requests via reference removed.  
+
 ## [5.55.0] - 2023-04-27
 
 ### Added
