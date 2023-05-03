@@ -78,8 +78,8 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder<Organization>
      * @return the collection request builder
      */
     @Nonnull
-    public com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder certificateBasedAuthConfiguration() {
-        return new com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("certificateBasedAuthConfiguration"), getClient(), null);
+    public com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionRequestBuilder certificateBasedAuthConfiguration() {
+        return new com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("certificateBasedAuthConfiguration"), getClient(), null);
     }
 
     /**
@@ -89,8 +89,8 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder<Organization>
      * @param id the item identifier
      */
     @Nonnull
-    public com.microsoft.graph.requests.CertificateBasedAuthConfigurationWithReferenceRequestBuilder certificateBasedAuthConfiguration(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.CertificateBasedAuthConfigurationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("certificateBasedAuthConfiguration") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CertificateBasedAuthConfigurationRequestBuilder certificateBasedAuthConfiguration(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CertificateBasedAuthConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("certificateBasedAuthConfiguration") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Extension collection

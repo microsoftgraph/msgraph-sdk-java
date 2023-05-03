@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.InboundOutboundPolicyConfiguration;
 import com.microsoft.graph.models.CrossTenantAccessPolicyB2BSetting;
 import com.microsoft.graph.models.CrossTenantAccessPolicyInboundTrust;
 
@@ -38,6 +39,15 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Automatic User Consent Settings.
+     * 
+     */
+    @SerializedName(value = "automaticUserConsentSettings", alternate = {"AutomaticUserConsentSettings"})
+    @Expose
+	@Nullable
+    public InboundOutboundPolicyConfiguration automaticUserConsentSettings;
 
     /**
      * The B2b Collaboration Inbound.

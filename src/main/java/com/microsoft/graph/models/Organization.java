@@ -264,6 +264,8 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Certificate Based Auth Configuration.
      * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      */
+    @SerializedName(value = "certificateBasedAuthConfiguration", alternate = {"CertificateBasedAuthConfiguration"})
+    @Expose
 	@Nullable
     public com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionPage certificateBasedAuthConfiguration;
 
