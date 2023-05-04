@@ -48,6 +48,7 @@ public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClie
      * @param authenticationProvider The AuthenticationProvider for this GraphServiceClient.
      * @param client The OkHttpClient for the GraphServiceClient.
      */
+    @SuppressWarnings("LambdaLast")
     public GraphServiceClient(@Nonnull AuthenticationProvider authenticationProvider, @Nonnull OkHttpClient client) {
         this(new BaseGraphRequestAdapter(authenticationProvider, null, "v1.0", client));
     }
