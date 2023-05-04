@@ -47,6 +47,21 @@ jobs:
         run: chmod +x gradlew
       - name: Publish
         run: ./gradlew $PREVIEW_TASK 
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: kiota-drop
+          path: |
+            **/libs/*
+            build/generated-pom.xml
+            build/generated-pom.xml.asc
+            build.gradle
+            gradlew
+            gradlew.bat
+            settings.gradle
+            gradle.properties
+            **/gradle/**
+            Scripts/**
   
   maven_Release:
     if: ${{ github.ref == 'refs/heads/dev' }}
@@ -82,7 +97,7 @@ jobs:
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: drop
+          name: kiota-drop
           path: |
             **/libs/*
             build/generated-pom.xml
