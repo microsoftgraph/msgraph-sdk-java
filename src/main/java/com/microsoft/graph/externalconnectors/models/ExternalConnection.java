@@ -9,7 +9,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.externalconnectors.models.ActivitySettings;
 import com.microsoft.graph.externalconnectors.models.Configuration;
+import com.microsoft.graph.externalconnectors.models.SearchSettings;
 import com.microsoft.graph.externalconnectors.models.ConnectionState;
 import com.microsoft.graph.externalconnectors.models.Schema;
 import com.microsoft.graph.models.Entity;
@@ -31,6 +33,15 @@ import javax.annotation.Nonnull;
  */
 public class ExternalConnection extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Activity Settings.
+     * Collects configurable settings related to activities involving connector content.
+     */
+    @SerializedName(value = "activitySettings", alternate = {"ActivitySettings"})
+    @Expose
+	@Nullable
+    public ActivitySettings activitySettings;
 
     /**
      * The Configuration.
@@ -58,6 +69,15 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String name;
+
+    /**
+     * The Search Settings.
+     * The settings configuring the search experience for content in this connection, such as the display templates for search results.
+     */
+    @SerializedName(value = "searchSettings", alternate = {"SearchSettings"})
+    @Expose
+	@Nullable
+    public SearchSettings searchSettings;
 
     /**
      * The State.

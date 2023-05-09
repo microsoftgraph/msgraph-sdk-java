@@ -32,7 +32,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Allowed Domain Guids For Sync App.
-     * 
+     * Collection of trusted domain GUIDs for the OneDrive sync app.
      */
     @SerializedName(value = "allowedDomainGuidsForSyncApp", alternate = {"AllowedDomainGuidsForSyncApp"})
     @Expose
@@ -41,7 +41,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Available Managed Paths For Site Creation.
-     * 
+     * Collection of managed paths available for site creation. Read-only.
      */
     @SerializedName(value = "availableManagedPathsForSiteCreation", alternate = {"AvailableManagedPathsForSiteCreation"})
     @Expose
@@ -50,7 +50,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Deleted User Personal Site Retention Period In Days.
-     * 
+     * The number of days for preserving a deleted user's OneDrive.
      */
     @SerializedName(value = "deletedUserPersonalSiteRetentionPeriodInDays", alternate = {"DeletedUserPersonalSiteRetentionPeriodInDays"})
     @Expose
@@ -59,7 +59,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Excluded File Extensions For Sync App.
-     * 
+     * Collection of file extensions not uploaded by the OneDrive sync app.
      */
     @SerializedName(value = "excludedFileExtensionsForSyncApp", alternate = {"ExcludedFileExtensionsForSyncApp"})
     @Expose
@@ -68,7 +68,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Idle Session Sign Out.
-     * 
+     * Specifies the idle session sign-out policies for the tenant.
      */
     @SerializedName(value = "idleSessionSignOut", alternate = {"IdleSessionSignOut"})
     @Expose
@@ -77,7 +77,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Image Tagging Option.
-     * 
+     * Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
      */
     @SerializedName(value = "imageTaggingOption", alternate = {"ImageTaggingOption"})
     @Expose
@@ -86,7 +86,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Commenting On Site Pages Enabled.
-     * 
+     * Indicates whether comments are allowed on modern site pages in SharePoint.
      */
     @SerializedName(value = "isCommentingOnSitePagesEnabled", alternate = {"IsCommentingOnSitePagesEnabled"})
     @Expose
@@ -95,7 +95,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is File Activity Notification Enabled.
-     * 
+     * Indicates whether push notifications are enabled for OneDrive events.
      */
     @SerializedName(value = "isFileActivityNotificationEnabled", alternate = {"IsFileActivityNotificationEnabled"})
     @Expose
@@ -104,7 +104,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Legacy Auth Protocols Enabled.
-     * 
+     * Indicates whether legacy authentication protocols are enabled for the tenant.
      */
     @SerializedName(value = "isLegacyAuthProtocolsEnabled", alternate = {"IsLegacyAuthProtocolsEnabled"})
     @Expose
@@ -113,7 +113,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Loop Enabled.
-     * 
+     * Indicates whether if Fluid Framework is allowed on SharePoint sites.
      */
     @SerializedName(value = "isLoopEnabled", alternate = {"IsLoopEnabled"})
     @Expose
@@ -122,7 +122,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Mac Sync App Enabled.
-     * 
+     * Indicates whether files can be synced using the OneDrive sync app for Mac.
      */
     @SerializedName(value = "isMacSyncAppEnabled", alternate = {"IsMacSyncAppEnabled"})
     @Expose
@@ -131,7 +131,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Require Accepting User To Match Invited User Enabled.
-     * 
+     * Indicates whether guests must sign in using the same account to which sharing invitations are sent.
      */
     @SerializedName(value = "isRequireAcceptingUserToMatchInvitedUserEnabled", alternate = {"IsRequireAcceptingUserToMatchInvitedUserEnabled"})
     @Expose
@@ -140,7 +140,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Resharing By External Users Enabled.
-     * 
+     * Indicates whether guests are allowed to reshare files, folders, and sites they don't own.
      */
     @SerializedName(value = "isResharingByExternalUsersEnabled", alternate = {"IsResharingByExternalUsersEnabled"})
     @Expose
@@ -149,7 +149,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Share Point Mobile Notification Enabled.
-     * 
+     * Indicates whether mobile push notifications are enabled for SharePoint.
      */
     @SerializedName(value = "isSharePointMobileNotificationEnabled", alternate = {"IsSharePointMobileNotificationEnabled"})
     @Expose
@@ -158,7 +158,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Share Point Newsfeed Enabled.
-     * 
+     * Indicates whether the newsfeed is allowed on the modern site pages in SharePoint.
      */
     @SerializedName(value = "isSharePointNewsfeedEnabled", alternate = {"IsSharePointNewsfeedEnabled"})
     @Expose
@@ -167,7 +167,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Site Creation Enabled.
-     * 
+     * Indicates whether users are allowed to create sites.
      */
     @SerializedName(value = "isSiteCreationEnabled", alternate = {"IsSiteCreationEnabled"})
     @Expose
@@ -176,7 +176,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Site Creation UIEnabled.
-     * 
+     * Indicates whether the UI commands for creating sites are shown.
      */
     @SerializedName(value = "isSiteCreationUIEnabled", alternate = {"IsSiteCreationUIEnabled"})
     @Expose
@@ -185,7 +185,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Site Pages Creation Enabled.
-     * 
+     * Indicates whether creating new modern pages is allowed on SharePoint sites.
      */
     @SerializedName(value = "isSitePagesCreationEnabled", alternate = {"IsSitePagesCreationEnabled"})
     @Expose
@@ -194,7 +194,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Sites Storage Limit Automatic.
-     * 
+     * Indicates whether site storage space is automatically managed or if specific storage limits are set per site.
      */
     @SerializedName(value = "isSitesStorageLimitAutomatic", alternate = {"IsSitesStorageLimitAutomatic"})
     @Expose
@@ -203,7 +203,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Sync Button Hidden On Personal Site.
-     * 
+     * Indicates whether the sync button in OneDrive is hidden.
      */
     @SerializedName(value = "isSyncButtonHiddenOnPersonalSite", alternate = {"IsSyncButtonHiddenOnPersonalSite"})
     @Expose
@@ -212,7 +212,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Unmanaged Sync App For Tenant Restricted.
-     * 
+     * Indicates whether users are allowed to sync files only on PCs joined to specific domains.
      */
     @SerializedName(value = "isUnmanagedSyncAppForTenantRestricted", alternate = {"IsUnmanagedSyncAppForTenantRestricted"})
     @Expose
@@ -221,7 +221,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Personal Site Default Storage Limit In MB.
-     * 
+     * The default OneDrive storage limit for all new and existing users who are assigned a qualifying license. Measured in megabytes (MB).
      */
     @SerializedName(value = "personalSiteDefaultStorageLimitInMB", alternate = {"PersonalSiteDefaultStorageLimitInMB"})
     @Expose
@@ -230,7 +230,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Sharing Allowed Domain List.
-     * 
+     * Collection of email domains that are allowed for sharing outside the organization.
      */
     @SerializedName(value = "sharingAllowedDomainList", alternate = {"SharingAllowedDomainList"})
     @Expose
@@ -239,7 +239,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Sharing Blocked Domain List.
-     * 
+     * Collection of email domains that are blocked for sharing outside the organization.
      */
     @SerializedName(value = "sharingBlockedDomainList", alternate = {"SharingBlockedDomainList"})
     @Expose
@@ -248,7 +248,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Sharing Capability.
-     * 
+     * Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
      */
     @SerializedName(value = "sharingCapability", alternate = {"SharingCapability"})
     @Expose
@@ -257,7 +257,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Sharing Domain Restriction Mode.
-     * 
+     * Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList.
      */
     @SerializedName(value = "sharingDomainRestrictionMode", alternate = {"SharingDomainRestrictionMode"})
     @Expose
@@ -266,7 +266,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Site Creation Default Managed Path.
-     * 
+     * The value of the team site managed path. This is the path under which new team sites will be created.
      */
     @SerializedName(value = "siteCreationDefaultManagedPath", alternate = {"SiteCreationDefaultManagedPath"})
     @Expose
@@ -275,7 +275,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Site Creation Default Storage Limit In MB.
-     * 
+     * The default storage quota for a new site upon creation. Measured in megabytes (MB).
      */
     @SerializedName(value = "siteCreationDefaultStorageLimitInMB", alternate = {"SiteCreationDefaultStorageLimitInMB"})
     @Expose
@@ -284,7 +284,7 @@ public class SharepointSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Default Timezone.
-     * 
+     * The default timezone of a tenant for newly created sites. For a list of possible values, see SPRegionalSettings.TimeZones property.
      */
     @SerializedName(value = "tenantDefaultTimezone", alternate = {"TenantDefaultTimezone"})
     @Expose

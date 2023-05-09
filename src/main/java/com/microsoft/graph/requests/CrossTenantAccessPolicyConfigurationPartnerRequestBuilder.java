@@ -56,4 +56,14 @@ public class CrossTenantAccessPolicyConfigurationPartnerRequestBuilder extends B
     }
 
 
+
+    /**
+     * Gets the request builder for CrossTenantIdentitySyncPolicyPartner
+     *
+     * @return the CrossTenantIdentitySyncPolicyPartnerRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CrossTenantIdentitySyncPolicyPartnerRequestBuilder identitySynchronization() {
+        return new com.microsoft.graph.requests.CrossTenantIdentitySyncPolicyPartnerRequestBuilder(getRequestUrlWithAdditionalSegment("identitySynchronization"), getClient(), null);
+    }
 }

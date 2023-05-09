@@ -39,7 +39,7 @@ public class AttendanceRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Email Address.
-     * Email address of the user associated with this atttendance record.
+     * Email address of the user associated with this attendance record.
      */
     @SerializedName(value = "emailAddress", alternate = {"EmailAddress"})
     @Expose
@@ -48,7 +48,7 @@ public class AttendanceRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Identity.
-     * Identity of the user associated with this atttendance record.
+     * Identity of the user associated with this attendance record.
      */
     @SerializedName(value = "identity", alternate = {"Identity"})
     @Expose

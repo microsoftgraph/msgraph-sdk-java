@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.AccessPackageCatalog;
+import com.microsoft.graph.models.EntitlementManagement;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.AccessPackageAssignmentRequestRequirements;
 import com.microsoft.graph.models.AccessPackageFilterByCurrentUserOptions;
