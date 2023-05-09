@@ -2,6 +2,7 @@ package com.microsoft.graph.policies.crosstenantaccesspolicy.partners.item;
 
 import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationPartner;
 import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.item.identitysynchronization.IdentitySynchronizationRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -20,6 +21,11 @@ import java.util.Objects;
  * Provides operations to manage the partners property of the microsoft.graph.crossTenantAccessPolicy entity.
  */
 public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder extends BaseRequestBuilder {
+    /** Provides operations to manage the identitySynchronization property of the microsoft.graph.crossTenantAccessPolicyConfigurationPartner entity. */
+    @javax.annotation.Nonnull
+    public IdentitySynchronizationRequestBuilder identitySynchronization() {
+        return new IdentitySynchronizationRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

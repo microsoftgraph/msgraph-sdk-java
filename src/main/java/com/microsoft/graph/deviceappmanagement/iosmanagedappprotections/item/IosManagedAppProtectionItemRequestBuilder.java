@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.iosmanagedappprotections.item;
 
 import com.microsoft.graph.deviceappmanagement.iosmanagedappprotections.item.apps.AppsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.iosmanagedappprotections.item.assignments.AssignmentsRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.iosmanagedappprotections.item.deploymentsummary.DeploymentSummaryRequestBuilder;
 import com.microsoft.graph.models.IosManagedAppProtection;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,11 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
     @javax.annotation.Nonnull
     public AppsRequestBuilder apps() {
         return new AppsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the assignments property of the microsoft.graph.targetedManagedAppProtection entity. */
+    @javax.annotation.Nonnull
+    public AssignmentsRequestBuilder assignments() {
+        return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the deploymentSummary property of the microsoft.graph.iosManagedAppProtection entity. */
     @javax.annotation.Nonnull

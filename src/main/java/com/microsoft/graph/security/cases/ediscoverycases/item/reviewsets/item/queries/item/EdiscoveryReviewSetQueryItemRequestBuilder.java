@@ -2,7 +2,7 @@ package com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryReviewSetQuery;
-import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.item.securityapplytags.SecurityApplyTagsRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.item.microsoftgraphsecurityapplytags.MicrosoftGraphSecurityApplyTagsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -23,8 +23,8 @@ import java.util.Objects;
 public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
     /** Provides operations to call the applyTags method. */
     @javax.annotation.Nonnull
-    public SecurityApplyTagsRequestBuilder securityApplyTags() {
-        return new SecurityApplyTagsRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityApplyTagsRequestBuilder microsoftGraphSecurityApplyTags() {
+        return new MicrosoftGraphSecurityApplyTagsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new EdiscoveryReviewSetQueryItemRequestBuilder and sets the default values.

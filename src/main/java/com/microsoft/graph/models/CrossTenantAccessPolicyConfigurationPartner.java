@@ -20,6 +20,8 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
     private CrossTenantAccessPolicyB2BSetting b2bDirectConnectInbound;
     /** Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect. */
     private CrossTenantAccessPolicyB2BSetting b2bDirectConnectOutbound;
+    /** The identitySynchronization property */
+    private CrossTenantIdentitySyncPolicyPartner identitySynchronization;
     /** Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations. */
     private CrossTenantAccessPolicyInboundTrust inboundTrust;
     /** Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization. */
@@ -100,17 +102,26 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("automaticUserConsentSettings", (n) -> { this.setAutomaticUserConsentSettings(n.getObjectValue(InboundOutboundPolicyConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationInbound", (n) -> { this.setB2bCollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationOutbound", (n) -> { this.setB2bCollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bDirectConnectInbound", (n) -> { this.setB2bDirectConnectInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bDirectConnectOutbound", (n) -> { this.setB2bDirectConnectOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("identitySynchronization", (n) -> { this.setIdentitySynchronization(n.getObjectValue(CrossTenantIdentitySyncPolicyPartner::createFromDiscriminatorValue)); });
         deserializerMap.put("inboundTrust", (n) -> { this.setInboundTrust(n.getObjectValue(CrossTenantAccessPolicyInboundTrust::createFromDiscriminatorValue)); });
         deserializerMap.put("isServiceProvider", (n) -> { this.setIsServiceProvider(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the identitySynchronization property value. The identitySynchronization property
+     * @return a crossTenantIdentitySyncPolicyPartner
+     */
+    @javax.annotation.Nullable
+    public CrossTenantIdentitySyncPolicyPartner getIdentitySynchronization() {
+        return this.identitySynchronization;
     }
     /**
      * Gets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
@@ -157,6 +168,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         writer.writeObjectValue("b2bCollaborationOutbound", this.getB2bCollaborationOutbound());
         writer.writeObjectValue("b2bDirectConnectInbound", this.getB2bDirectConnectInbound());
         writer.writeObjectValue("b2bDirectConnectOutbound", this.getB2bDirectConnectOutbound());
+        writer.writeObjectValue("identitySynchronization", this.getIdentitySynchronization());
         writer.writeObjectValue("inboundTrust", this.getInboundTrust());
         writer.writeBooleanValue("isServiceProvider", this.getIsServiceProvider());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -216,6 +228,15 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
     @javax.annotation.Nonnull
     public void setB2bDirectConnectOutbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bDirectConnectOutbound = value;
+    }
+    /**
+     * Sets the identitySynchronization property value. The identitySynchronization property
+     * @param value Value to set for the identitySynchronization property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIdentitySynchronization(@javax.annotation.Nullable final CrossTenantIdentitySyncPolicyPartner value) {
+        this.identitySynchronization = value;
     }
     /**
      * Sets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.

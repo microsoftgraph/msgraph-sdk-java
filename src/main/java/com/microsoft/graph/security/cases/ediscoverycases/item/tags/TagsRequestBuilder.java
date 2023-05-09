@@ -5,7 +5,7 @@ import com.microsoft.graph.models.security.EdiscoveryReviewTag;
 import com.microsoft.graph.models.security.EdiscoveryReviewTagCollectionResponse;
 import com.microsoft.graph.security.cases.ediscoverycases.item.tags.count.CountRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.tags.item.EdiscoveryReviewTagItemRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.tags.securityashierarchy.SecurityAsHierarchyRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.tags.microsoftgraphsecurityashierarchy.MicrosoftGraphSecurityAsHierarchyRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -31,8 +31,8 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
     }
     /** Provides operations to call the asHierarchy method. */
     @javax.annotation.Nonnull
-    public SecurityAsHierarchyRequestBuilder securityAsHierarchy() {
-        return new SecurityAsHierarchyRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityAsHierarchyRequestBuilder microsoftGraphSecurityAsHierarchy() {
+        return new MicrosoftGraphSecurityAsHierarchyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tags property of the microsoft.graph.security.ediscoveryCase entity.

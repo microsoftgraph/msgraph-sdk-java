@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ExternalConnection extends Entity implements Parsable {
+    /** Collects configurable settings related to activities involving connector content. */
+    private ActivitySettings activitySettings;
     /** Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional. */
     private Configuration configuration;
     /** Description of the connection displayed in the Microsoft 365 admin center. Optional. */
@@ -22,10 +24,12 @@ public class ExternalConnection extends Entity implements Parsable {
     private java.util.List<ConnectionOperation> operations;
     /** The schema property */
     private Schema schema;
+    /** The settings configuring the search experience for content in this connection, such as the display templates for search results. */
+    private SearchSettings searchSettings;
     /** Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue. */
     private ConnectionState state;
     /**
-     * Instantiates a new ExternalConnection and sets the default values.
+     * Instantiates a new externalConnection and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,12 +39,20 @@ public class ExternalConnection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExternalConnection
+     * @return a externalConnection
      */
     @javax.annotation.Nonnull
     public static ExternalConnection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ExternalConnection();
+    }
+    /**
+     * Gets the activitySettings property value. Collects configurable settings related to activities involving connector content.
+     * @return a activitySettings
+     */
+    @javax.annotation.Nullable
+    public ActivitySettings getActivitySettings() {
+        return this.activitySettings;
     }
     /**
      * Gets the configuration property value. Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
@@ -65,6 +77,7 @@ public class ExternalConnection extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activitySettings", (n) -> { this.setActivitySettings(n.getObjectValue(ActivitySettings::createFromDiscriminatorValue)); });
         deserializerMap.put("configuration", (n) -> { this.setConfiguration(n.getObjectValue(Configuration::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("groups", (n) -> { this.setGroups(n.getCollectionOfObjectValues(ExternalGroup::createFromDiscriminatorValue)); });
@@ -72,6 +85,7 @@ public class ExternalConnection extends Entity implements Parsable {
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(ConnectionOperation::createFromDiscriminatorValue)); });
         deserializerMap.put("schema", (n) -> { this.setSchema(n.getObjectValue(Schema::createFromDiscriminatorValue)); });
+        deserializerMap.put("searchSettings", (n) -> { this.setSearchSettings(n.getObjectValue(SearchSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ConnectionState.class)); });
         return deserializerMap;
     }
@@ -116,6 +130,14 @@ public class ExternalConnection extends Entity implements Parsable {
         return this.schema;
     }
     /**
+     * Gets the searchSettings property value. The settings configuring the search experience for content in this connection, such as the display templates for search results.
+     * @return a searchSettings
+     */
+    @javax.annotation.Nullable
+    public SearchSettings getSearchSettings() {
+        return this.searchSettings;
+    }
+    /**
      * Gets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
      * @return a connectionState
      */
@@ -132,6 +154,7 @@ public class ExternalConnection extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("activitySettings", this.getActivitySettings());
         writer.writeObjectValue("configuration", this.getConfiguration());
         writer.writeStringValue("description", this.getDescription());
         writer.writeCollectionOfObjectValues("groups", this.getGroups());
@@ -139,6 +162,16 @@ public class ExternalConnection extends Entity implements Parsable {
         writer.writeStringValue("name", this.getName());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
         writer.writeObjectValue("schema", this.getSchema());
+        writer.writeObjectValue("searchSettings", this.getSearchSettings());
+    }
+    /**
+     * Sets the activitySettings property value. Collects configurable settings related to activities involving connector content.
+     * @param value Value to set for the activitySettings property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setActivitySettings(@javax.annotation.Nullable final ActivitySettings value) {
+        this.activitySettings = value;
     }
     /**
      * Sets the configuration property value. Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
@@ -202,6 +235,15 @@ public class ExternalConnection extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setSchema(@javax.annotation.Nullable final Schema value) {
         this.schema = value;
+    }
+    /**
+     * Sets the searchSettings property value. The settings configuring the search experience for content in this connection, such as the display templates for search results.
+     * @param value Value to set for the searchSettings property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSearchSettings(@javax.annotation.Nullable final SearchSettings value) {
+        this.searchSettings = value;
     }
     /**
      * Sets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.

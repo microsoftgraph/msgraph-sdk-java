@@ -10,13 +10,13 @@ import java.util.Objects;
 public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
-    /** The isEnabled property */
+    /** Indicates whether the idle session sign-out policy is enabled. */
     private Boolean isEnabled;
     /** The OdataType property */
     private String odataType;
-    /** The signOutAfterInSeconds property */
+    /** Number of seconds of inactivity after which a user is signed out. */
     private Long signOutAfterInSeconds;
-    /** The warnAfterInSeconds property */
+    /** Number of seconds of inactivity after which a user is notified that they'll be signed out. */
     private Long warnAfterInSeconds;
     /**
      * Instantiates a new idleSessionSignOut and sets the default values.
@@ -58,7 +58,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Indicates whether the idle session sign-out policy is enabled.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the signOutAfterInSeconds property value. The signOutAfterInSeconds property
+     * Gets the signOutAfterInSeconds property value. Number of seconds of inactivity after which a user is signed out.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
         return this.signOutAfterInSeconds;
     }
     /**
-     * Gets the warnAfterInSeconds property value. The warnAfterInSeconds property
+     * Gets the warnAfterInSeconds property value. Number of seconds of inactivity after which a user is notified that they'll be signed out.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Indicates whether the idle session sign-out policy is enabled.
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
@@ -131,7 +131,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the signOutAfterInSeconds property value. The signOutAfterInSeconds property
+     * Sets the signOutAfterInSeconds property value. Number of seconds of inactivity after which a user is signed out.
      * @param value Value to set for the signOutAfterInSeconds property.
      * @return a void
      */
@@ -140,7 +140,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
         this.signOutAfterInSeconds = value;
     }
     /**
-     * Sets the warnAfterInSeconds property value. The warnAfterInSeconds property
+     * Sets the warnAfterInSeconds property value. Number of seconds of inactivity after which a user is notified that they'll be signed out.
      * @param value Value to set for the warnAfterInSeconds property.
      * @return a void
      */

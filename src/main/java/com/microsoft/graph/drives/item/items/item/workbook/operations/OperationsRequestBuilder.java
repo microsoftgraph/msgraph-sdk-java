@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.operations;
 
-import com.microsoft.graph.drives.item.items.item.workbook.operations.count.CountRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.operations.item.WorkbookOperationItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookOperation;
@@ -23,11 +22,6 @@ import java.util.Objects;
  * Provides operations to manage the operations property of the microsoft.graph.workbook entity.
  */
 public class OperationsRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to count the resources in the collection. */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Provides operations to manage the operations property of the microsoft.graph.workbook entity.
      * @param workbookOperationId Unique identifier of the item

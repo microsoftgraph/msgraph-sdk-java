@@ -4,8 +4,11 @@ import com.microsoft.graph.directory.deleteditems.count.CountRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.delta.DeltaRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.graphadministrativeunit.GraphAdministrativeUnitRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.graphapplication.GraphApplicationRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.graphdevice.GraphDeviceRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.graphgroup.GraphGroupRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.graphserviceprincipal.GraphServicePrincipalRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.graphuser.GraphUserRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.validateproperties.ValidatePropertiesRequestBuilder;
@@ -50,15 +53,30 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
     public GetByIdsRequestBuilder getByIds() {
         return new GetByIdsRequestBuilder(pathParameters, requestAdapter);
     }
+    /** Casts the previous resource to administrativeUnit. */
+    @javax.annotation.Nonnull
+    public GraphAdministrativeUnitRequestBuilder graphAdministrativeUnit() {
+        return new GraphAdministrativeUnitRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Casts the previous resource to application. */
     @javax.annotation.Nonnull
     public GraphApplicationRequestBuilder graphApplication() {
         return new GraphApplicationRequestBuilder(pathParameters, requestAdapter);
     }
+    /** Casts the previous resource to device. */
+    @javax.annotation.Nonnull
+    public GraphDeviceRequestBuilder graphDevice() {
+        return new GraphDeviceRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Casts the previous resource to group. */
     @javax.annotation.Nonnull
     public GraphGroupRequestBuilder graphGroup() {
         return new GraphGroupRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Casts the previous resource to servicePrincipal. */
+    @javax.annotation.Nonnull
+    public GraphServicePrincipalRequestBuilder graphServicePrincipal() {
+        return new GraphServicePrincipalRequestBuilder(pathParameters, requestAdapter);
     }
     /** Casts the previous resource to user. */
     @javax.annotation.Nonnull

@@ -1,11 +1,5 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item;
 
-import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.accesspackagesincompatiblewith.AccessPackagesIncompatibleWithRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.assignmentpolicies.AssignmentPoliciesRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.catalog.CatalogRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.getapplicablepolicyrequirements.GetApplicablePolicyRequirementsRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.incompatibleaccesspackages.IncompatibleAccessPackagesRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.incompatiblegroups.IncompatibleGroupsRequestBuilder;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -26,36 +20,6 @@ import java.util.Objects;
  * Provides operations to manage the accessPackages property of the microsoft.graph.accessPackageCatalog entity.
  */
 public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the accessPackagesIncompatibleWith property of the microsoft.graph.accessPackage entity. */
-    @javax.annotation.Nonnull
-    public AccessPackagesIncompatibleWithRequestBuilder accessPackagesIncompatibleWith() {
-        return new AccessPackagesIncompatibleWithRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the assignmentPolicies property of the microsoft.graph.accessPackage entity. */
-    @javax.annotation.Nonnull
-    public AssignmentPoliciesRequestBuilder assignmentPolicies() {
-        return new AssignmentPoliciesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the catalog property of the microsoft.graph.accessPackage entity. */
-    @javax.annotation.Nonnull
-    public CatalogRequestBuilder catalog() {
-        return new CatalogRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to call the getApplicablePolicyRequirements method. */
-    @javax.annotation.Nonnull
-    public GetApplicablePolicyRequirementsRequestBuilder getApplicablePolicyRequirements() {
-        return new GetApplicablePolicyRequirementsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the incompatibleAccessPackages property of the microsoft.graph.accessPackage entity. */
-    @javax.annotation.Nonnull
-    public IncompatibleAccessPackagesRequestBuilder incompatibleAccessPackages() {
-        return new IncompatibleAccessPackagesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the incompatibleGroups property of the microsoft.graph.accessPackage entity. */
-    @javax.annotation.Nonnull
-    public IncompatibleGroupsRequestBuilder incompatibleGroups() {
-        return new IncompatibleGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Instantiates a new AccessPackageItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -75,43 +39,6 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public AccessPackageItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog%2Did}/accessPackages/{accessPackage%2Did}{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Delete navigation property accessPackages for identityGovernance
-     * @return a CompletableFuture of void
-     */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        try {
-            final RequestInformation requestInfo = toDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
-    }
-    /**
-     * Delete navigation property accessPackages for identityGovernance
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
-     */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
     }
     /**
      * The access packages in this catalog. Read-only. Nullable.
@@ -151,73 +78,6 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property accessPackages in identityGovernance
-     * @param body The request body
-     * @return a CompletableFuture of accessPackage
-     */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackage> patch(@javax.annotation.Nonnull final AccessPackage body) {
-        try {
-            final RequestInformation requestInfo = toPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, AccessPackage::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<AccessPackage> executionException = new java.util.concurrent.CompletableFuture<AccessPackage>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
-    }
-    /**
-     * Update the navigation property accessPackages in identityGovernance
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackage
-     */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackage> patch(@javax.annotation.Nonnull final AccessPackage body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, AccessPackage::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<AccessPackage> executionException = new java.util.concurrent.CompletableFuture<AccessPackage>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
-    }
-    /**
-     * Delete navigation property accessPackages for identityGovernance
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
-        return toDeleteRequestInformation(null);
-    }
-    /**
-     * Delete navigation property accessPackages for identityGovernance
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
      * The access packages in this catalog. Read-only. Nullable.
      * @return a RequestInformation
      */
@@ -247,43 +107,6 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property accessPackages in identityGovernance
-     * @param body The request body
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final AccessPackage body) throws URISyntaxException {
-        return toPatchRequestInformation(body, null);
-    }
-    /**
-     * Update the navigation property accessPackages in identityGovernance
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final AccessPackage body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Configuration for the request such as headers, query parameters, and middleware options.
-     */
-    public class DeleteRequestConfiguration extends BaseRequestConfiguration {
-    }
-    /**
      * The access packages in this catalog. Read-only. Nullable.
      */
     public class GetQueryParameters {
@@ -303,10 +126,5 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         /** Request query parameters */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
-    }
-    /**
-     * Configuration for the request such as headers, query parameters, and middleware options.
-     */
-    public class PatchRequestConfiguration extends BaseRequestConfiguration {
     }
 }

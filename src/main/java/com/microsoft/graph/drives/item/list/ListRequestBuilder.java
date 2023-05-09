@@ -2,8 +2,10 @@ package com.microsoft.graph.drives.item.list;
 
 import com.microsoft.graph.drives.item.list.columns.ColumnsRequestBuilder;
 import com.microsoft.graph.drives.item.list.contenttypes.ContentTypesRequestBuilder;
+import com.microsoft.graph.drives.item.list.createdbyuser.CreatedByUserRequestBuilder;
 import com.microsoft.graph.drives.item.list.drive.DriveRequestBuilder;
 import com.microsoft.graph.drives.item.list.items.ItemsRequestBuilder;
+import com.microsoft.graph.drives.item.list.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
 import com.microsoft.graph.drives.item.list.operations.OperationsRequestBuilder;
 import com.microsoft.graph.drives.item.list.subscriptions.SubscriptionsRequestBuilder;
 import com.microsoft.graph.models.List;
@@ -36,6 +38,11 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     public ContentTypesRequestBuilder contentTypes() {
         return new ContentTypesRequestBuilder(pathParameters, requestAdapter);
     }
+    /** Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity. */
+    @javax.annotation.Nonnull
+    public CreatedByUserRequestBuilder createdByUser() {
+        return new CreatedByUserRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Provides operations to manage the drive property of the microsoft.graph.list entity. */
     @javax.annotation.Nonnull
     public DriveRequestBuilder drive() {
@@ -45,6 +52,11 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ItemsRequestBuilder items() {
         return new ItemsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity. */
+    @javax.annotation.Nonnull
+    public LastModifiedByUserRequestBuilder lastModifiedByUser() {
+        return new LastModifiedByUserRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the operations property of the microsoft.graph.list entity. */
     @javax.annotation.Nonnull

@@ -34,7 +34,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     /** The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy. */
     private DelegatedAdminRelationshipStatus status;
     /**
-     * Instantiates a new delegatedAdminRelationship and sets the default values.
+     * Instantiates a new DelegatedAdminRelationship and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -44,7 +44,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a delegatedAdminRelationship
+     * @return a DelegatedAdminRelationship
      */
     @javax.annotation.Nonnull
     public static DelegatedAdminRelationship createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

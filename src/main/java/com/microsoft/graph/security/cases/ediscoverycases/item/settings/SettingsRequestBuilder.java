@@ -2,7 +2,7 @@ package com.microsoft.graph.security.cases.ediscoverycases.item.settings;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryCaseSettings;
-import com.microsoft.graph.security.cases.ediscoverycases.item.settings.securityresettodefault.SecurityResetToDefaultRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.settings.microsoftgraphsecurityresettodefault.MicrosoftGraphSecurityResetToDefaultRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -23,8 +23,8 @@ import java.util.Objects;
 public class SettingsRequestBuilder extends BaseRequestBuilder {
     /** Provides operations to call the resetToDefault method. */
     @javax.annotation.Nonnull
-    public SecurityResetToDefaultRequestBuilder securityResetToDefault() {
-        return new SecurityResetToDefaultRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityResetToDefaultRequestBuilder microsoftGraphSecurityResetToDefault() {
+        return new MicrosoftGraphSecurityResetToDefaultRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new SettingsRequestBuilder and sets the default values.

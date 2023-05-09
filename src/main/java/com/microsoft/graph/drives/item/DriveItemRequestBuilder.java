@@ -1,8 +1,10 @@
 package com.microsoft.graph.drives.item;
 
 import com.microsoft.graph.drives.item.bundles.BundlesRequestBuilder;
+import com.microsoft.graph.drives.item.createdbyuser.CreatedByUserRequestBuilder;
 import com.microsoft.graph.drives.item.following.FollowingRequestBuilder;
 import com.microsoft.graph.drives.item.items.ItemsRequestBuilder;
+import com.microsoft.graph.drives.item.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
 import com.microsoft.graph.drives.item.list.ListRequestBuilder;
 import com.microsoft.graph.drives.item.recent.RecentRequestBuilder;
 import com.microsoft.graph.drives.item.root.RootRequestBuilder;
@@ -34,6 +36,11 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
     public BundlesRequestBuilder bundles() {
         return new BundlesRequestBuilder(pathParameters, requestAdapter);
     }
+    /** Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity. */
+    @javax.annotation.Nonnull
+    public CreatedByUserRequestBuilder createdByUser() {
+        return new CreatedByUserRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Provides operations to manage the following property of the microsoft.graph.drive entity. */
     @javax.annotation.Nonnull
     public FollowingRequestBuilder following() {
@@ -43,6 +50,11 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ItemsRequestBuilder items() {
         return new ItemsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity. */
+    @javax.annotation.Nonnull
+    public LastModifiedByUserRequestBuilder lastModifiedByUser() {
+        return new LastModifiedByUserRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the list property of the microsoft.graph.drive entity. */
     @javax.annotation.Nonnull

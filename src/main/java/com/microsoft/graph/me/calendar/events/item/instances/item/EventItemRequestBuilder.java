@@ -8,8 +8,6 @@ import com.microsoft.graph.me.calendar.events.item.instances.item.decline.Declin
 import com.microsoft.graph.me.calendar.events.item.instances.item.dismissreminder.DismissReminderRequestBuilder;
 import com.microsoft.graph.me.calendar.events.item.instances.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.me.calendar.events.item.instances.item.forward.ForwardRequestBuilder;
-import com.microsoft.graph.me.calendar.events.item.instances.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import com.microsoft.graph.me.calendar.events.item.instances.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.me.calendar.events.item.instances.item.snoozereminder.SnoozeReminderRequestBuilder;
 import com.microsoft.graph.me.calendar.events.item.instances.item.tentativelyaccept.TentativelyAcceptRequestBuilder;
 import com.microsoft.graph.models.Event;
@@ -71,16 +69,6 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ForwardRequestBuilder forward() {
         return new ForwardRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.event entity. */
-    @javax.annotation.Nonnull
-    public MultiValueExtendedPropertiesRequestBuilder multiValueExtendedProperties() {
-        return new MultiValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.event entity. */
-    @javax.annotation.Nonnull
-    public SingleValueExtendedPropertiesRequestBuilder singleValueExtendedProperties() {
-        return new SingleValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to call the snoozeReminder method. */
     @javax.annotation.Nonnull

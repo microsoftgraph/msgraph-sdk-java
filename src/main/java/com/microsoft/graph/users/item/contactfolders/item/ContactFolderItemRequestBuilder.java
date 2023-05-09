@@ -4,8 +4,6 @@ import com.microsoft.graph.models.ContactFolder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.contactfolders.item.childfolders.ChildFoldersRequestBuilder;
 import com.microsoft.graph.users.item.contactfolders.item.contacts.ContactsRequestBuilder;
-import com.microsoft.graph.users.item.contactfolders.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import com.microsoft.graph.users.item.contactfolders.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -33,16 +31,6 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ContactsRequestBuilder contacts() {
         return new ContactsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.contactFolder entity. */
-    @javax.annotation.Nonnull
-    public MultiValueExtendedPropertiesRequestBuilder multiValueExtendedProperties() {
-        return new MultiValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.contactFolder entity. */
-    @javax.annotation.Nonnull
-    public SingleValueExtendedPropertiesRequestBuilder singleValueExtendedProperties() {
-        return new SingleValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new ContactFolderItemRequestBuilder and sets the default values.

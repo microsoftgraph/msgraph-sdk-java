@@ -11,8 +11,6 @@ import com.microsoft.graph.users.item.calendarview.item.dismissreminder.DismissR
 import com.microsoft.graph.users.item.calendarview.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.users.item.calendarview.item.forward.ForwardRequestBuilder;
 import com.microsoft.graph.users.item.calendarview.item.instances.InstancesRequestBuilder;
-import com.microsoft.graph.users.item.calendarview.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import com.microsoft.graph.users.item.calendarview.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.users.item.calendarview.item.snoozereminder.SnoozeReminderRequestBuilder;
 import com.microsoft.graph.users.item.calendarview.item.tentativelyaccept.TentativelyAcceptRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -77,16 +75,6 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public InstancesRequestBuilder instances() {
         return new InstancesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.event entity. */
-    @javax.annotation.Nonnull
-    public MultiValueExtendedPropertiesRequestBuilder multiValueExtendedProperties() {
-        return new MultiValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.event entity. */
-    @javax.annotation.Nonnull
-    public SingleValueExtendedPropertiesRequestBuilder singleValueExtendedProperties() {
-        return new SingleValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to call the snoozeReminder method. */
     @javax.annotation.Nonnull

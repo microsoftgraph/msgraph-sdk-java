@@ -5,8 +5,8 @@ import com.microsoft.graph.models.security.EdiscoveryNoncustodialDataSource;
 import com.microsoft.graph.models.security.EdiscoveryNoncustodialDataSourceCollectionResponse;
 import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.count.CountRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.EdiscoveryNoncustodialDataSourceItemRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.securityapplyhold.SecurityApplyHoldRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.securityremovehold.SecurityRemoveHoldRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.microsoftgraphsecurityapplyhold.MicrosoftGraphSecurityApplyHoldRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.microsoftgraphsecurityremovehold.MicrosoftGraphSecurityRemoveHoldRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -32,13 +32,13 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
     }
     /** Provides operations to call the applyHold method. */
     @javax.annotation.Nonnull
-    public SecurityApplyHoldRequestBuilder securityApplyHold() {
-        return new SecurityApplyHoldRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityApplyHoldRequestBuilder microsoftGraphSecurityApplyHold() {
+        return new MicrosoftGraphSecurityApplyHoldRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to call the removeHold method. */
     @javax.annotation.Nonnull
-    public SecurityRemoveHoldRequestBuilder securityRemoveHold() {
-        return new SecurityRemoveHoldRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityRemoveHoldRequestBuilder microsoftGraphSecurityRemoveHold() {
+        return new MicrosoftGraphSecurityRemoveHoldRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the noncustodialDataSources property of the microsoft.graph.security.ediscoveryCase entity.

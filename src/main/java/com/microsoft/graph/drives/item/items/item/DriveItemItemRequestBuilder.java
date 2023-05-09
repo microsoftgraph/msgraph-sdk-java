@@ -6,6 +6,7 @@ import com.microsoft.graph.drives.item.items.item.checkout.CheckoutRequestBuilde
 import com.microsoft.graph.drives.item.items.item.children.ChildrenRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.content.ContentRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.copy.CopyRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.createdbyuser.CreatedByUserRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.createlink.CreateLinkRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.createuploadsession.CreateUploadSessionRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.delta.DeltaRequestBuilder;
@@ -14,6 +15,7 @@ import com.microsoft.graph.drives.item.items.item.follow.FollowRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.invite.InviteRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.listitem.ListItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.permissions.PermissionsRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.preview.PreviewRequestBuilder;
@@ -75,6 +77,11 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     public CopyRequestBuilder copy() {
         return new CopyRequestBuilder(pathParameters, requestAdapter);
     }
+    /** Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity. */
+    @javax.annotation.Nonnull
+    public CreatedByUserRequestBuilder createdByUser() {
+        return new CreatedByUserRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Provides operations to call the createLink method. */
     @javax.annotation.Nonnull
     public CreateLinkRequestBuilder createLink() {
@@ -104,6 +111,11 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public InviteRequestBuilder invite() {
         return new InviteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity. */
+    @javax.annotation.Nonnull
+    public LastModifiedByUserRequestBuilder lastModifiedByUser() {
+        return new LastModifiedByUserRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the listItem property of the microsoft.graph.driveItem entity. */
     @javax.annotation.Nonnull

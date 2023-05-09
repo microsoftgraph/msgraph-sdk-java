@@ -8,11 +8,9 @@ import com.microsoft.graph.me.messages.item.createreplyall.CreateReplyAllRequest
 import com.microsoft.graph.me.messages.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.me.messages.item.forward.ForwardRequestBuilder;
 import com.microsoft.graph.me.messages.item.move.MoveRequestBuilder;
-import com.microsoft.graph.me.messages.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.me.messages.item.reply.ReplyRequestBuilder;
 import com.microsoft.graph.me.messages.item.replyall.ReplyAllRequestBuilder;
 import com.microsoft.graph.me.messages.item.send.SendRequestBuilder;
-import com.microsoft.graph.me.messages.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.me.messages.item.value.ContentRequestBuilder;
 import com.microsoft.graph.models.Message;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -79,11 +77,6 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     public MoveRequestBuilder move() {
         return new MoveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.message entity. */
-    @javax.annotation.Nonnull
-    public MultiValueExtendedPropertiesRequestBuilder multiValueExtendedProperties() {
-        return new MultiValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Provides operations to call the reply method. */
     @javax.annotation.Nonnull
     public ReplyRequestBuilder reply() {
@@ -98,11 +91,6 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public SendRequestBuilder send() {
         return new SendRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.message entity. */
-    @javax.annotation.Nonnull
-    public SingleValueExtendedPropertiesRequestBuilder singleValueExtendedProperties() {
-        return new SingleValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new MessageItemRequestBuilder and sets the default values.

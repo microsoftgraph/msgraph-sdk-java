@@ -1,5 +1,6 @@
 package com.microsoft.graph.devicemanagement.roleassignments.item;
 
+import com.microsoft.graph.devicemanagement.roleassignments.item.roledefinition.RoleDefinitionRequestBuilder;
 import com.microsoft.graph.models.DeviceAndAppManagementRoleAssignment;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +21,11 @@ import java.util.Objects;
  * Provides operations to manage the roleAssignments property of the microsoft.graph.deviceManagement entity.
  */
 public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
+    /** Provides operations to manage the roleDefinition property of the microsoft.graph.roleAssignment entity. */
+    @javax.annotation.Nonnull
+    public RoleDefinitionRequestBuilder roleDefinition() {
+        return new RoleDefinitionRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new DeviceAndAppManagementRoleAssignmentItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

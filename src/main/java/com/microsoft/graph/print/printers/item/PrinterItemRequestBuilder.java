@@ -3,6 +3,7 @@ package com.microsoft.graph.print.printers.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Printer;
 import com.microsoft.graph.print.printers.item.connectors.ConnectorsRequestBuilder;
+import com.microsoft.graph.print.printers.item.jobs.JobsRequestBuilder;
 import com.microsoft.graph.print.printers.item.restorefactorydefaults.RestoreFactoryDefaultsRequestBuilder;
 import com.microsoft.graph.print.printers.item.shares.SharesRequestBuilder;
 import com.microsoft.graph.print.printers.item.tasktriggers.TaskTriggersRequestBuilder;
@@ -28,6 +29,11 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ConnectorsRequestBuilder connectors() {
         return new ConnectorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the jobs property of the microsoft.graph.printerBase entity. */
+    @javax.annotation.Nonnull
+    public JobsRequestBuilder jobs() {
+        return new JobsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to call the restoreFactoryDefaults method. */
     @javax.annotation.Nonnull

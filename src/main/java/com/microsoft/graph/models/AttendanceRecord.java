@@ -9,9 +9,9 @@ import java.util.Objects;
 public class AttendanceRecord extends Entity implements Parsable {
     /** List of time periods between joining and leaving a meeting. */
     private java.util.List<AttendanceInterval> attendanceIntervals;
-    /** Email address of the user associated with this atttendance record. */
+    /** Email address of the user associated with this attendance record. */
     private String emailAddress;
-    /** Identity of the user associated with this atttendance record. */
+    /** Identity of the user associated with this attendance record. */
     private Identity identity;
     /** Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer. */
     private String role;
@@ -44,7 +44,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         return this.attendanceIntervals;
     }
     /**
-     * Gets the emailAddress property value. Email address of the user associated with this atttendance record.
+     * Gets the emailAddress property value. Email address of the user associated with this attendance record.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identity property value. Identity of the user associated with this atttendance record.
+     * Gets the identity property value. Identity of the user associated with this attendance record.
      * @return a identity
      */
     @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         this.attendanceIntervals = value;
     }
     /**
-     * Sets the emailAddress property value. Email address of the user associated with this atttendance record.
+     * Sets the emailAddress property value. Email address of the user associated with this attendance record.
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
@@ -123,7 +123,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         this.emailAddress = value;
     }
     /**
-     * Sets the identity property value. Identity of the user associated with this atttendance record.
+     * Sets the identity property value. Identity of the user associated with this attendance record.
      * @param value Value to set for the identity property.
      * @return a void
      */

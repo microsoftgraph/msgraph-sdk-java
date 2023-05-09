@@ -3,9 +3,7 @@ package com.microsoft.graph.users.item.contactfolders.item.childfolders.item.con
 import com.microsoft.graph.models.Contact;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.contactfolders.item.childfolders.item.contacts.item.extensions.ExtensionsRequestBuilder;
-import com.microsoft.graph.users.item.contactfolders.item.childfolders.item.contacts.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.users.item.contactfolders.item.childfolders.item.contacts.item.photo.PhotoRequestBuilder;
-import com.microsoft.graph.users.item.contactfolders.item.childfolders.item.contacts.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -29,20 +27,10 @@ public class ContactItemRequestBuilder extends BaseRequestBuilder {
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.contact entity. */
-    @javax.annotation.Nonnull
-    public MultiValueExtendedPropertiesRequestBuilder multiValueExtendedProperties() {
-        return new MultiValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Provides operations to manage the photo property of the microsoft.graph.contact entity. */
     @javax.annotation.Nonnull
     public PhotoRequestBuilder photo() {
         return new PhotoRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.contact entity. */
-    @javax.annotation.Nonnull
-    public SingleValueExtendedPropertiesRequestBuilder singleValueExtendedProperties() {
-        return new SingleValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new ContactItemRequestBuilder and sets the default values.

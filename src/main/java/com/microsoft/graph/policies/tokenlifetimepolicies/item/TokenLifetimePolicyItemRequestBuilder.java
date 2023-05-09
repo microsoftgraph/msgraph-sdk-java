@@ -2,6 +2,7 @@ package com.microsoft.graph.policies.tokenlifetimepolicies.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TokenLifetimePolicy;
+import com.microsoft.graph.policies.tokenlifetimepolicies.item.appliesto.AppliesToRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -20,6 +21,11 @@ import java.util.Objects;
  * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.policyRoot entity.
  */
 public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
+    /** Provides operations to manage the appliesTo property of the microsoft.graph.stsPolicy entity. */
+    @javax.annotation.Nonnull
+    public AppliesToRequestBuilder appliesTo() {
+        return new AppliesToRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new TokenLifetimePolicyItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

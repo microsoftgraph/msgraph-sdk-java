@@ -5,8 +5,8 @@ import com.microsoft.graph.models.security.EdiscoveryCustodian;
 import com.microsoft.graph.models.security.EdiscoveryCustodianCollectionResponse;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.count.CountRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.EdiscoveryCustodianItemRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.securityapplyhold.SecurityApplyHoldRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.securityremovehold.SecurityRemoveHoldRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.microsoftgraphsecurityapplyhold.MicrosoftGraphSecurityApplyHoldRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.microsoftgraphsecurityremovehold.MicrosoftGraphSecurityRemoveHoldRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -32,13 +32,13 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
     }
     /** Provides operations to call the applyHold method. */
     @javax.annotation.Nonnull
-    public SecurityApplyHoldRequestBuilder securityApplyHold() {
-        return new SecurityApplyHoldRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityApplyHoldRequestBuilder microsoftGraphSecurityApplyHold() {
+        return new MicrosoftGraphSecurityApplyHoldRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to call the removeHold method. */
     @javax.annotation.Nonnull
-    public SecurityRemoveHoldRequestBuilder securityRemoveHold() {
-        return new SecurityRemoveHoldRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityRemoveHoldRequestBuilder microsoftGraphSecurityRemoveHold() {
+        return new MicrosoftGraphSecurityRemoveHoldRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity.

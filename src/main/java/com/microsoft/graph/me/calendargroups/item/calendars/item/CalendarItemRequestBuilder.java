@@ -5,8 +5,6 @@ import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarpermiss
 import com.microsoft.graph.me.calendargroups.item.calendars.item.calendarview.CalendarViewRequestBuilder;
 import com.microsoft.graph.me.calendargroups.item.calendars.item.events.EventsRequestBuilder;
 import com.microsoft.graph.me.calendargroups.item.calendars.item.getschedule.GetScheduleRequestBuilder;
-import com.microsoft.graph.me.calendargroups.item.calendars.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import com.microsoft.graph.me.calendargroups.item.calendars.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.models.Calendar;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -46,16 +44,6 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GetScheduleRequestBuilder getSchedule() {
         return new GetScheduleRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.calendar entity. */
-    @javax.annotation.Nonnull
-    public MultiValueExtendedPropertiesRequestBuilder multiValueExtendedProperties() {
-        return new MultiValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.calendar entity. */
-    @javax.annotation.Nonnull
-    public SingleValueExtendedPropertiesRequestBuilder singleValueExtendedProperties() {
-        return new SingleValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the allowedCalendarSharingRoles method.

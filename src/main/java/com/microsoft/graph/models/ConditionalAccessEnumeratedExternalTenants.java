@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessEnumeratedExternalTenants extends ConditionalAccessExternalTenants implements Parsable {
-    /** The members property */
+    /** A collection of tenant IDs that define the scope of a policy targeting conditional access for guests and external users. */
     private java.util.List<String> members;
     /**
      * Instantiates a new ConditionalAccessEnumeratedExternalTenants and sets the default values.
@@ -39,7 +39,7 @@ public class ConditionalAccessEnumeratedExternalTenants extends ConditionalAcces
         return deserializerMap;
     }
     /**
-     * Gets the members property value. The members property
+     * Gets the members property value. A collection of tenant IDs that define the scope of a policy targeting conditional access for guests and external users.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class ConditionalAccessEnumeratedExternalTenants extends ConditionalAcces
         writer.writeCollectionOfPrimitiveValues("members", this.getMembers());
     }
     /**
-     * Sets the members property value. The members property
+     * Sets the members property value. A collection of tenant IDs that define the scope of a policy targeting conditional access for guests and external users.
      * @param value Value to set for the members property.
      * @return a void
      */

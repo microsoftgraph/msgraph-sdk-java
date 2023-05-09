@@ -7,9 +7,9 @@ import com.microsoft.graph.security.alerts.AlertsRequestBuilder;
 import com.microsoft.graph.security.attacksimulation.AttackSimulationRequestBuilder;
 import com.microsoft.graph.security.cases.CasesRequestBuilder;
 import com.microsoft.graph.security.incidents.IncidentsRequestBuilder;
+import com.microsoft.graph.security.microsoftgraphsecurityrunhuntingquery.MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
 import com.microsoft.graph.security.securescorecontrolprofiles.SecureScoreControlProfilesRequestBuilder;
 import com.microsoft.graph.security.securescores.SecureScoresRequestBuilder;
-import com.microsoft.graph.security.securityrunhuntingquery.SecurityRunHuntingQueryRequestBuilder;
 import com.microsoft.graph.security.triggers.TriggersRequestBuilder;
 import com.microsoft.graph.security.triggertypes.TriggerTypesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -55,6 +55,11 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     public IncidentsRequestBuilder incidents() {
         return new IncidentsRequestBuilder(pathParameters, requestAdapter);
     }
+    /** Provides operations to call the runHuntingQuery method. */
+    @javax.annotation.Nonnull
+    public MicrosoftGraphSecurityRunHuntingQueryRequestBuilder microsoftGraphSecurityRunHuntingQuery() {
+        return new MicrosoftGraphSecurityRunHuntingQueryRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity. */
     @javax.annotation.Nonnull
     public SecureScoreControlProfilesRequestBuilder secureScoreControlProfiles() {
@@ -64,11 +69,6 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public SecureScoresRequestBuilder secureScores() {
         return new SecureScoresRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to call the runHuntingQuery method. */
-    @javax.annotation.Nonnull
-    public SecurityRunHuntingQueryRequestBuilder securityRunHuntingQuery() {
-        return new SecurityRunHuntingQueryRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the triggers property of the microsoft.graph.security entity. */
     @javax.annotation.Nonnull

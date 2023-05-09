@@ -1,9 +1,9 @@
 package com.microsoft.graph.communications.callrecords;
 
-import com.microsoft.graph.communications.callrecords.callrecordsgetdirectroutingcallswithfromdatetimewithtodatetime.CallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder;
-import com.microsoft.graph.communications.callrecords.callrecordsgetpstncallswithfromdatetimewithtodatetime.CallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder;
 import com.microsoft.graph.communications.callrecords.count.CountRequestBuilder;
 import com.microsoft.graph.communications.callrecords.item.CallRecordItemRequestBuilder;
+import com.microsoft.graph.communications.callrecords.microsoftgraphcallrecordsgetdirectroutingcallswithfromdatetimewithtodatetime.MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder;
+import com.microsoft.graph.communications.callrecords.microsoftgraphcallrecordsgetpstncallswithfromdatetimewithtodatetime.MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder;
 import com.microsoft.graph.models.callrecords.CallRecord;
 import com.microsoft.graph.models.callrecords.CallRecordCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -42,30 +42,6 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("callRecord%2Did", callRecordId);
         return new CallRecordItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getDirectRoutingCalls method.
-     * @param fromDateTime Usage: fromDateTime={fromDateTime}
-     * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a callRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public CallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder callRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTime(@javax.annotation.Nonnull final OffsetDateTime fromDateTime, @javax.annotation.Nonnull final OffsetDateTime toDateTime) {
-        Objects.requireNonNull(fromDateTime);
-        Objects.requireNonNull(toDateTime);
-        return new CallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder(pathParameters, requestAdapter, fromDateTime, toDateTime);
-    }
-    /**
-     * Provides operations to call the getPstnCalls method.
-     * @param fromDateTime Usage: fromDateTime={fromDateTime}
-     * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a callRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public CallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder callRecordsGetPstnCallsWithFromDateTimeWithToDateTime(@javax.annotation.Nonnull final OffsetDateTime fromDateTime, @javax.annotation.Nonnull final OffsetDateTime toDateTime) {
-        Objects.requireNonNull(fromDateTime);
-        Objects.requireNonNull(toDateTime);
-        return new CallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder(pathParameters, requestAdapter, fromDateTime, toDateTime);
     }
     /**
      * Instantiates a new CallRecordsRequestBuilder and sets the default values.
@@ -123,6 +99,30 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
             executionException.completeExceptionally(ex);
             return executionException;
         }
+    }
+    /**
+     * Provides operations to call the getDirectRoutingCalls method.
+     * @param fromDateTime Usage: fromDateTime={fromDateTime}
+     * @param toDateTime Usage: toDateTime={toDateTime}
+     * @return a microsoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder microsoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTime(@javax.annotation.Nonnull final OffsetDateTime fromDateTime, @javax.annotation.Nonnull final OffsetDateTime toDateTime) {
+        Objects.requireNonNull(fromDateTime);
+        Objects.requireNonNull(toDateTime);
+        return new MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder(pathParameters, requestAdapter, fromDateTime, toDateTime);
+    }
+    /**
+     * Provides operations to call the getPstnCalls method.
+     * @param fromDateTime Usage: fromDateTime={fromDateTime}
+     * @param toDateTime Usage: toDateTime={toDateTime}
+     * @return a microsoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder microsoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime(@javax.annotation.Nonnull final OffsetDateTime fromDateTime, @javax.annotation.Nonnull final OffsetDateTime toDateTime) {
+        Objects.requireNonNull(fromDateTime);
+        Objects.requireNonNull(toDateTime);
+        return new MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder(pathParameters, requestAdapter, fromDateTime, toDateTime);
     }
     /**
      * Create new navigation property to callRecords for communications

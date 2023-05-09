@@ -10,7 +10,7 @@ import java.util.Objects;
 public class ConditionalAccessExternalTenants implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
-    /** The membershipKind property */
+    /** The membership kind. Possible values are: all, enumerated, unknownFutureValue. The enumerated member references an conditionalAccessEnumeratedExternalTenants object. */
     private ConditionalAccessExternalTenantsMembershipKind membershipKind;
     /** The OdataType property */
     private String odataType;
@@ -60,7 +60,7 @@ public class ConditionalAccessExternalTenants implements AdditionalDataHolder, P
         return deserializerMap;
     }
     /**
-     * Gets the membershipKind property value. The membershipKind property
+     * Gets the membershipKind property value. The membership kind. Possible values are: all, enumerated, unknownFutureValue. The enumerated member references an conditionalAccessEnumeratedExternalTenants object.
      * @return a conditionalAccessExternalTenantsMembershipKind
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class ConditionalAccessExternalTenants implements AdditionalDataHolder, P
         this.additionalData = value;
     }
     /**
-     * Sets the membershipKind property value. The membershipKind property
+     * Sets the membershipKind property value. The membership kind. Possible values are: all, enumerated, unknownFutureValue. The enumerated member references an conditionalAccessEnumeratedExternalTenants object.
      * @param value Value to set for the membershipKind property.
      * @return a void
      */

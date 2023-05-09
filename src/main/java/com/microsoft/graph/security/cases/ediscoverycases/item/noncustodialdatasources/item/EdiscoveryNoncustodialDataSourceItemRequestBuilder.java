@@ -4,10 +4,10 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryNoncustodialDataSource;
 import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.datasource.DataSourceRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.lastindexoperation.LastIndexOperationRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.securityapplyhold.SecurityApplyHoldRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.securityrelease.SecurityReleaseRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.securityremovehold.SecurityRemoveHoldRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.securityupdateindex.SecurityUpdateIndexRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.microsoftgraphsecurityapplyhold.MicrosoftGraphSecurityApplyHoldRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.microsoftgraphsecurityrelease.MicrosoftGraphSecurityReleaseRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.microsoftgraphsecurityremovehold.MicrosoftGraphSecurityRemoveHoldRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.microsoftgraphsecurityupdateindex.MicrosoftGraphSecurityUpdateIndexRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -38,23 +38,23 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
     }
     /** Provides operations to call the applyHold method. */
     @javax.annotation.Nonnull
-    public SecurityApplyHoldRequestBuilder securityApplyHold() {
-        return new SecurityApplyHoldRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityApplyHoldRequestBuilder microsoftGraphSecurityApplyHold() {
+        return new MicrosoftGraphSecurityApplyHoldRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to call the release method. */
     @javax.annotation.Nonnull
-    public SecurityReleaseRequestBuilder securityRelease() {
-        return new SecurityReleaseRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityReleaseRequestBuilder microsoftGraphSecurityRelease() {
+        return new MicrosoftGraphSecurityReleaseRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to call the removeHold method. */
     @javax.annotation.Nonnull
-    public SecurityRemoveHoldRequestBuilder securityRemoveHold() {
-        return new SecurityRemoveHoldRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityRemoveHoldRequestBuilder microsoftGraphSecurityRemoveHold() {
+        return new MicrosoftGraphSecurityRemoveHoldRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to call the updateIndex method. */
     @javax.annotation.Nonnull
-    public SecurityUpdateIndexRequestBuilder securityUpdateIndex() {
-        return new SecurityUpdateIndexRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityUpdateIndexRequestBuilder microsoftGraphSecurityUpdateIndex() {
+        return new MicrosoftGraphSecurityUpdateIndexRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new EdiscoveryNoncustodialDataSourceItemRequestBuilder and sets the default values.

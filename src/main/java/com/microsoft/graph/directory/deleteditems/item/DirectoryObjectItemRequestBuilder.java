@@ -4,8 +4,11 @@ import com.microsoft.graph.directory.deleteditems.item.checkmembergroups.CheckMe
 import com.microsoft.graph.directory.deleteditems.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.item.graphadministrativeunit.GraphAdministrativeUnitRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.item.graphapplication.GraphApplicationRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.item.graphdevice.GraphDeviceRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.item.graphgroup.GraphGroupRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.item.graphserviceprincipal.GraphServicePrincipalRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.item.graphuser.GraphUserRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.models.DirectoryObject;
@@ -48,15 +51,30 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     public GetMemberObjectsRequestBuilder getMemberObjects() {
         return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
+    /** Casts the previous resource to administrativeUnit. */
+    @javax.annotation.Nonnull
+    public GraphAdministrativeUnitRequestBuilder graphAdministrativeUnit() {
+        return new GraphAdministrativeUnitRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Casts the previous resource to application. */
     @javax.annotation.Nonnull
     public GraphApplicationRequestBuilder graphApplication() {
         return new GraphApplicationRequestBuilder(pathParameters, requestAdapter);
     }
+    /** Casts the previous resource to device. */
+    @javax.annotation.Nonnull
+    public GraphDeviceRequestBuilder graphDevice() {
+        return new GraphDeviceRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Casts the previous resource to group. */
     @javax.annotation.Nonnull
     public GraphGroupRequestBuilder graphGroup() {
         return new GraphGroupRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Casts the previous resource to servicePrincipal. */
+    @javax.annotation.Nonnull
+    public GraphServicePrincipalRequestBuilder graphServicePrincipal() {
+        return new GraphServicePrincipalRequestBuilder(pathParameters, requestAdapter);
     }
     /** Casts the previous resource to user. */
     @javax.annotation.Nonnull
