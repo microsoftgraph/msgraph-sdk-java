@@ -65,6 +65,15 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
     public java.time.OffsetDateTime complianceExpirationDateTime;
 
     /**
+     * The Device Category.
+     * User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
+     */
+    @SerializedName(value = "deviceCategory", alternate = {"DeviceCategory"})
+    @Expose
+	@Nullable
+    public String deviceCategory;
+
+    /**
      * The Device Id.
      * Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
      */
@@ -83,6 +92,15 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
     public String deviceMetadata;
 
     /**
+     * The Device Ownership.
+     * Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
+     */
+    @SerializedName(value = "deviceOwnership", alternate = {"DeviceOwnership"})
+    @Expose
+	@Nullable
+    public String deviceOwnership;
+
+    /**
      * The Device Version.
      * For internal use only.
      */
@@ -99,6 +117,15 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String displayName;
+
+    /**
+     * The Enrollment Profile Name.
+     * Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
+     */
+    @SerializedName(value = "enrollmentProfileName", alternate = {"EnrollmentProfileName"})
+    @Expose
+	@Nullable
+    public String enrollmentProfileName;
 
     /**
      * The Is Compliant.
@@ -180,6 +207,15 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String profileType;
+
+    /**
+     * The Registration Date Time.
+     * Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     */
+    @SerializedName(value = "registrationDateTime", alternate = {"RegistrationDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime registrationDateTime;
 
     /**
      * The System Labels.

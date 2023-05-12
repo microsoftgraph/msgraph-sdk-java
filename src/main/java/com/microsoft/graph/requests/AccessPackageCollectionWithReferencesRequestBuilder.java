@@ -7,6 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.models.AccessPackageCatalog;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.AccessPackageAssignmentRequestRequirements;
 import com.microsoft.graph.models.AccessPackageFilterByCurrentUserOptions;
@@ -26,7 +27,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class AccessPackageCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<AccessPackage, AccessPackageWithReferenceRequest, AccessPackageReferenceRequestBuilder, AccessPackageWithReferenceRequestBuilder, AccessPackageCollectionResponse, AccessPackageCollectionWithReferencesPage, AccessPackageCollectionReferenceRequest, AccessPackageCollectionReferenceRequestBuilder> {
 
     /**
-     * The request builder for this collection of AccessPackage
+     * The request builder for this collection of AccessPackageCatalog
      *
      * @param requestUrl     the request URL
      * @param client         the service client

@@ -197,6 +197,66 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
         return new com.microsoft.graph.requests.ApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id + "/microsoft.graph.application", getClient(), null);
     }
     /**
+     *  Gets a request builder for the ServicePrincipal collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ServicePrincipalCollectionRequestBuilder deletedItemsAsServicePrincipal() {
+        return new com.microsoft.graph.requests.ServicePrincipalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/microsoft.graph.servicePrincipal", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ServicePrincipal item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ServicePrincipalRequestBuilder deletedItemsAsServicePrincipal(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ServicePrincipalRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AdministrativeUnit collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AdministrativeUnitCollectionRequestBuilder deletedItemsAsAdministrativeUnit() {
+        return new com.microsoft.graph.requests.AdministrativeUnitCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/microsoft.graph.administrativeUnit", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AdministrativeUnit item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AdministrativeUnitRequestBuilder deletedItemsAsAdministrativeUnit(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AdministrativeUnitRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id + "/microsoft.graph.administrativeUnit", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Device collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceCollectionRequestBuilder deletedItemsAsDevice() {
+        return new com.microsoft.graph.requests.DeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/microsoft.graph.device", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Device item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceRequestBuilder deletedItemsAsDevice(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id + "/microsoft.graph.device", getClient(), null);
+    }
+    /**
      *  Gets a request builder for the IdentityProviderBase collection
      *
      * @return the collection request builder

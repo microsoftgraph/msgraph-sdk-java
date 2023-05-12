@@ -96,8 +96,6 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
      * The Access Packages.
      * The access packages in this catalog. Read-only. Nullable.
      */
-    @SerializedName(value = "accessPackages", alternate = {"AccessPackages"})
-    @Expose
 	@Nullable
     public com.microsoft.graph.requests.AccessPackageCollectionPage accessPackages;
 

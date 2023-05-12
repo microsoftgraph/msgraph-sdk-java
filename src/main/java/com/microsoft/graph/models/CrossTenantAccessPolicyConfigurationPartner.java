@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.InboundOutboundPolicyConfiguration;
 import com.microsoft.graph.models.CrossTenantAccessPolicyB2BSetting;
 import com.microsoft.graph.models.CrossTenantAccessPolicyInboundTrust;
+import com.microsoft.graph.models.CrossTenantIdentitySyncPolicyPartner;
 
 
 import com.google.gson.JsonObject;
@@ -111,6 +112,15 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
     @Expose
 	@Nullable
     public String tenantId;
+
+    /**
+     * The Identity Synchronization.
+     * 
+     */
+    @SerializedName(value = "identitySynchronization", alternate = {"IdentitySynchronization"})
+    @Expose
+	@Nullable
+    public CrossTenantIdentitySyncPolicyPartner identitySynchronization;
 
 
     /**

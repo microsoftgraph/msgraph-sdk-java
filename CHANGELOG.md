@@ -11,6 +11,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.57.0] - 2023-05-12
+
+### Added 
+
+- CrossTenantUserSyncInbound model.
+- CrossTenantIdentitySyncPolicyPartner model and related requests. 
+- The following models have been added to the externalConnectors namespace: 
+- ActivitySettings 
+- DisplayTemplate 
+- ItemIdResolver 
+- PropertyRule 
+- RuleOperation 
+- SearchSettings 
+- UrlMatchInfo
+- UrlToItemResolverBase. 
+
 ## [5.56.0] - 2023-05-03
 
 ### Added 

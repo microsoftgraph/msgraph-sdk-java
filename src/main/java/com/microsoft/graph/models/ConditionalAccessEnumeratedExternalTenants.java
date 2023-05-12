@@ -28,7 +28,7 @@ public class ConditionalAccessEnumeratedExternalTenants extends ConditionalAcces
 
     /**
      * The Members.
-     * 
+     * A collection of tenant IDs that define the scope of a policy targeting conditional access for guests and external users.
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
